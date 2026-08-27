@@ -1,0 +1,206 @@
+project:
+  id: Q-005-HPC-V3
+  title: Bubbleverse Q-005 pre-recombination numerical gate
+  created_local: "2026-08-27T10:17:00+02:00"
+  purpose: >
+    Directly compare a frozen LambdaCDM baseline with a one-field n=3 axion-like
+    Early Dark Energy model using the same mAxiCLASS theory binary and the same
+    ACT DR6-lite + Planck low-l EE + DESI DR2 BAO + BBN likelihood stack.
+    A third run adds the H0DN constraint only to measure prior-pull/hybrid behavior.
+  scientific_status: "PROGRAM GENERATED; ACTUAL NUMERICAL RESULT NOT YET COMPUTED"
+  execution_mode: "SERIAL_NO_MPI"
+
+sources:
+  K-024:
+    short: H0 Distance Network
+    H0: 73.50
+    sigma_H0: 0.81
+  K-029:
+    short: DESI DR2 Results II
+    arxiv: "2503.14738"
+    benchmark_H0: 68.51
+    benchmark_sigma_H0: 0.58
+  K-030:
+    short: CMB-SPA / SPT-3G D1 provenance
+    arxiv: "2506.20707"
+  K-033:
+    short: EDE ACT DR6 + DESI DR2
+    arxiv: "2505.08051"
+    profile_reference:
+      f_EDE: 0.09
+      sigma_f_EDE: 0.03
+      H0: 71.0
+      sigma_H0: 1.1
+  K-034:
+    short: ACT DR6 + DESI DR2 EDE / varying me constraint
+    arxiv: "2508.09025"
+  K-035:
+    short: Modified recombination with ACT DR6 + DESI DR2
+    arxiv: "2606.06495"
+
+frozen_software:
+  python: "3.10"
+  cobaya: "3.5.6"
+  pyyaml: "6.0.2"
+  scipy: "1.15.3"
+  numpy: "2.2.6"
+  py_bobyqa: "1.5.0"
+  mAxiCLASS:
+    repository: "https://github.com/marcobeIIa/mAxiCLASS.git"
+    commit: "b5a3af9818d04d2fe696e54972545e8c6805f4ea"
+    path: "external/mAxiCLASS"
+  act_dr6_lite:
+    repository: "https://github.com/ACTCollaboration/DR6-ACT-lite.git"
+    commit: "0e0cd2c703c62a0e980470b572602233b27750e1"
+    path: "external/DR6-ACT-lite"
+
+packages_path: "external/cobaya_packages"
+rendered_dir: "q005_rendered"
+results_dir: "q005_results"
+logs_dir: "q005_logs"
+
+likelihoods:
+  common:
+    planck_2018_lowl.EE_sroll2: null
+    act_dr6_cmbonly:
+      stop_at_error: true
+    bao.desi_dr2: null
+
+priors:
+  # Conservative BBN baryon-density prior used as an explicit calibration gate.
+  # This value is frozen here and must be treated as part of Q-005-HPC-V3.
+  bbn_omega_b:
+    mean: 0.02196
+    sigma: 0.00063
+  h0dn:
+    mean: 73.50
+    sigma: 0.81
+
+theory:
+  common_extra_args:
+    N_ur: 2.0328
+    N_ncdm: 1
+    m_ncdm: 0.06
+    T_ncdm: 0.71611
+    output: "tCl,pCl,lCl,mPk"
+    lensing: "yes"
+    P_k_max_h/Mpc: 2.0
+
+parameters:
+  common:
+    omega_b:
+      prior: {min: 0.018, max: 0.026}
+      ref: {dist: norm, loc: 0.0224, scale: 0.0002}
+      proposal: 0.0001
+      latex: "\\Omega_b h^2"
+    omega_cdm:
+      prior: {min: 0.08, max: 0.16}
+      ref: {dist: norm, loc: 0.120, scale: 0.002}
+      proposal: 0.001
+      latex: "\\Omega_c h^2"
+    H0:
+      prior: {min: 55.0, max: 85.0}
+      ref: {dist: norm, loc: 68.0, scale: 1.0}
+      proposal: 0.5
+      latex: "H_0"
+    tau_reio:
+      prior: {min: 0.01, max: 0.12}
+      ref: {dist: norm, loc: 0.055, scale: 0.008}
+      proposal: 0.004
+      latex: "\\tau"
+    n_s:
+      prior: {min: 0.88, max: 1.08}
+      ref: {dist: norm, loc: 0.965, scale: 0.01}
+      proposal: 0.005
+      latex: "n_s"
+    ln10^{10}A_s:
+      prior: {min: 2.7, max: 3.4}
+      ref: {dist: norm, loc: 3.045, scale: 0.03}
+      proposal: 0.01
+      latex: "\\ln(10^{10}A_s)"
+    Omega_m:
+      latex: "\\Omega_m"
+
+models:
+  lcdm:
+    description: "Frozen baseline using the same mAxiCLASS binary with no EDE sector enabled."
+    ede: false
+    local_h0_prior: false
+
+  ede:
+    description: "One-field axion-like EDE, n=3, theta_i fixed at 2.8."
+    ede: true
+    local_h0_prior: false
+    extra_args:
+      scf_potential: "axion"
+      n_axion: 3
+      scf_parameters: "2.8,0.0"
+      scf_evolve_as_fluid: "no"
+      scf_evolve_like_axionCAMB: "no"
+      do_shooting: "yes"
+      do_shooting_scf: "yes"
+      N_mscf: 0
+      attractor_ic_scf: "no"
+    params:
+      log10_axion_ac:
+        prior: {min: -4.5, max: -3.0}
+        ref: {dist: norm, loc: -3.55, scale: 0.20}
+        proposal: 0.05
+        latex: "\\log_{10} a_c"
+      fraction_axion_ac:
+        prior: {min: 0.0, max: 0.30}
+        ref: {dist: norm, loc: 0.09, scale: 0.03}
+        proposal: 0.015
+        latex: "f_{EDE}"
+
+  ede_local:
+    description: >
+      Same EDE model and likelihood stack, with the H0DN Gaussian constraint added
+      explicitly. This run is diagnostic only and must never be called CMB+BAO-only.
+    ede: true
+    local_h0_prior: true
+    inherit_model: ede
+
+sampler:
+  minimize:
+    method: bobyqa
+    ignore_prior: true
+    max_evals: 50000
+    best_of: 2
+    seed: 1701
+    override_bobyqa:
+      rhoend: 0.02
+
+gates:
+  act_reference:
+    enabled: true
+    lnL_reference: -395.48
+    absolute_tolerance: 0.10
+    note: >
+      Validation reference inherited from the established Bubbleverse ACT DR6-lite gate.
+      Main scientific runs must not start if a compatible reference evaluation cannot
+      reproduce this within tolerance.
+  theory_precision:
+    delta_chi2_floor: 0.10
+  nesting:
+    epsilon_fraction_axion_ac: 1.0e-8
+    max_abs_delta_chi2: 0.20
+  high_h0_without_local_prior:
+    threshold: 70.0
+  source_conflict_target:
+    description: >
+      Quantify whether a no-local-prior EDE best fit reaches the H0~71 region
+      associated with K-033 or remains strongly constrained toward small f_EDE.
+
+blocked_candidates:
+  varying_me:
+    status: "NOT INCLUDED IN DIRECT V1 MODEL COMPARISON"
+    reason: >
+      A scientifically safe common-theory implementation with the frozen mAxiCLASS EDE
+      binary has not been established in this package. Do not compare Delta-chi2 across
+      different Boltzmann/recombination binaries and call it a model preference.
+  free_recombination:
+    status: "NOT INCLUDED IN DIRECT V1 MODEL COMPARISON"
+    reason: >
+      K-035/K-036 require a documented recombination implementation/parameterization.
+      No arbitrary ionization-history freedom is invented here.
