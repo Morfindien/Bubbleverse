@@ -1,0 +1,344 @@
+project:
+  id: Q-005-HPC-V12
+  title: Bubbleverse Q-005 split-restart gate with single-evaluation smoke
+  created_local: '2026-08-28T00:11:00+02:00'
+  purpose: Preserve V11 production science and split-restart execution, but replace
+    the expensive BOBYQA smoke minimization with a single Cobaya evaluate point at
+    the configured reference values.
+  scientific_status: PROGRAM GENERATED — NOT YET EXECUTED
+  execution_mode: GITHUB_MATRIX_MODEL_X_RESTART_SERIAL_WITHIN_RESTART
+sources:
+  K-024:
+    short: H0 Distance Network
+    H0: 73.5
+    sigma_H0: 0.81
+  K-029:
+    short: DESI DR2 Results II
+    arxiv: '2503.14738'
+    benchmark_H0: 68.51
+    benchmark_sigma_H0: 0.58
+  K-030:
+    short: CMB-SPA / SPT-3G D1 provenance
+    arxiv: '2506.20707'
+    frozen_act_yaml_commit: 0e0cd2c703c62a0e980470b572602233b27750e1
+    frozen_act_likelihood_yaml: yamls/likelihoods/act_lite.yaml
+    frozen_act_cosmology_yaml: yamls/parameters/cosmology.yaml
+  K-033:
+    short: EDE ACT DR6 + DESI DR2
+    arxiv: '2505.08051'
+    profile_reference:
+      f_EDE: 0.09
+      sigma_f_EDE: 0.03
+      H0: 71.0
+      sigma_H0: 1.1
+  K-034:
+    short: ACT DR6 + DESI DR2 EDE / varying me constraint
+    arxiv: '2508.09025'
+  K-035:
+    short: Modified recombination with ACT DR6 + DESI DR2
+    arxiv: '2606.06495'
+frozen_software:
+  python: '3.10'
+  cobaya: 3.5.6
+  pyyaml: 6.0.2
+  scipy: 1.15.3
+  numpy: 2.2.6
+  py_bobyqa: 1.5.0
+  cython: 3.1.3
+  mAxiCLASS:
+    repository: https://github.com/marcobeIIa/mAxiCLASS.git
+    commit: b5a3af9818d04d2fe696e54972545e8c6805f4ea
+    path: external/mAxiCLASS
+    reported_class_version: v3.3.0
+    cobaya_ignore_obsolete: true
+    compatibility_note: 'This is a deliberately frozen modified CLASS implementation.
+      Cobaya 3.5.6 expects CLASS >= v3.3.3, so ignore_obsolete is enabled explicitly
+      rather than silently replacing the frozen scientific code.
+
+      '
+  act_dr6_lite:
+    repository: https://github.com/ACTCollaboration/DR6-ACT-lite.git
+    commit: 0e0cd2c703c62a0e980470b572602233b27750e1
+    path: external/DR6-ACT-lite
+  act_dr6_data:
+    primary_official_url: https://lambda.gsfc.nasa.gov/data/act/pspipe/sacc_files/dr6_data_cmbonly.tar.gz
+    fallback_official_url: https://portal.nersc.gov/project/act/dr6_data/dr6_data_cmbonly.tar.gz
+    data_folder: ACTDR6CMBonly
+    version: v1.0
+    filename: dr6_data_cmbonly.fits
+    provenance: 'Official ACT DR6.02 CMB-only power-spectrum data. NASA LAMBDA is
+      the primary official mirror; NERSC is retained as an official fallback. Likelihood
+      code remains frozen at ACT DR6-lite commit 0e0cd2c703c62a0e980470b572602233b27750e1.
+
+      '
+packages_path: external/cobaya_packages
+rendered_dir: q005_rendered
+results_dir: q005_results
+logs_dir: q005_logs
+likelihoods:
+  common:
+    planck_2018_lowl.EE_sroll2: null
+    act_dr6_cmbonly.ACTDR6CMBonly:
+      input_file: dr6_data_cmbonly.fits
+      lmax_theory: 9000
+      ell_cuts:
+        TT:
+        - 600
+        - 8500
+        TE:
+        - 600
+        - 8500
+        EE:
+        - 600
+        - 8500
+      stop_at_error: true
+      params:
+        A_act:
+          prior:
+            min: 0.5
+            max: 1.5
+          ref:
+            dist: norm
+            loc: 1.0
+            scale: 0.01
+          proposal: 0.003
+          latex: A_{\rm ACT}
+        P_act:
+          prior:
+            min: 0.9
+            max: 1.1
+          ref:
+            dist: norm
+            loc: 1.0
+            scale: 0.01
+          proposal: 0.01
+          latex: p_{\rm ACT}
+    bao.desi_dr2: null
+priors:
+  bbn_omega_b: &id001
+    mean: 0.02196
+    sigma: 0.00063
+  h0dn: &id002
+    mean: 73.5
+    sigma: 0.81
+theory:
+  common_extra_args:
+    N_ur: 2.0328
+    N_ncdm: 1
+    m_ncdm: 0.06
+    T_ncdm: 0.71611
+    output: tCl,pCl,lCl,mPk
+    lensing: 'yes'
+    P_k_max_h/Mpc: 2.0
+parameters:
+  common:
+    omega_b:
+      prior:
+        min: 0.018
+        max: 0.026
+      ref:
+        dist: norm
+        loc: 0.0224
+        scale: 0.0002
+      proposal: 0.0001
+      latex: \Omega_b h^2
+    omega_cdm:
+      prior:
+        min: 0.08
+        max: 0.16
+      ref:
+        dist: norm
+        loc: 0.12
+        scale: 0.002
+      proposal: 0.001
+      latex: \Omega_c h^2
+    H0:
+      prior:
+        min: 55.0
+        max: 85.0
+      ref:
+        dist: norm
+        loc: 68.0
+        scale: 1.0
+      proposal: 0.5
+      latex: H_0
+    tau_reio:
+      prior:
+        min: 0.01
+        max: 0.12
+      ref:
+        dist: norm
+        loc: 0.055
+        scale: 0.008
+      proposal: 0.004
+      latex: \tau
+    n_s:
+      prior:
+        min: 0.88
+        max: 1.08
+      ref:
+        dist: norm
+        loc: 0.965
+        scale: 0.01
+      proposal: 0.005
+      latex: n_s
+    logA:
+      prior:
+        min: 2.7
+        max: 3.4
+      ref:
+        dist: norm
+        loc: 3.045
+        scale: 0.03
+      proposal: 0.01
+      latex: \ln(10^{10}A_s)
+    A_s:
+      value: 'lambda logA: 1e-10*np.exp(logA)'
+      derived: true
+      latex: A_s
+    Omega_m:
+      latex: \Omega_m
+models:
+  lcdm:
+    description: Frozen baseline using the same mAxiCLASS binary with no EDE sector
+      enabled.
+    ede: false
+    local_h0_prior: false
+  ede:
+    description: One-field axion-like EDE, n=3, theta_i fixed at 2.8.
+    ede: true
+    local_h0_prior: false
+    extra_args:
+      scf_potential: axion
+      n_axion: 3
+      scf_parameters: 2.8,0.0
+      scf_evolve_as_fluid: 'no'
+      scf_evolve_like_axionCAMB: 'no'
+      do_shooting: 'yes'
+      do_shooting_scf: 'yes'
+      N_mscf: 0
+      attractor_ic_scf: 'no'
+    params:
+      log10_axion_ac:
+        prior:
+          min: -4.5
+          max: -3.0
+        ref:
+          dist: norm
+          loc: -3.55
+          scale: 0.2
+        proposal: 0.05
+        latex: \log_{10} a_c
+      fraction_axion_ac:
+        prior:
+          min: 0.0
+          max: 0.3
+        ref:
+          dist: norm
+          loc: 0.09
+          scale: 0.03
+        proposal: 0.015
+        latex: f_{EDE}
+  ede_local:
+    description: 'Same EDE model and likelihood stack, with the H0DN Gaussian constraint
+      added explicitly. This run is diagnostic only and must never be called CMB+BAO-only.
+
+      '
+    ede: true
+    local_h0_prior: true
+    inherit_model: ede
+sampler:
+  minimize:
+    method: bobyqa
+    ignore_prior: true
+    max_evals: 50000
+    best_of: 1
+    seed: 1701
+    override_bobyqa:
+      rhoend: 0.02
+gates:
+  act_reference:
+    enabled: true
+    lnL_reference: -395.48
+    absolute_tolerance: 0.1
+    note: 'Validation reference inherited from the established Bubbleverse ACT DR6-lite
+      gate. Main scientific runs must not start if a compatible reference evaluation
+      cannot reproduce this within tolerance.
+
+      '
+  theory_precision:
+    delta_chi2_floor: 0.1
+  nesting:
+    epsilon_fraction_axion_ac: 1.0e-08
+    max_abs_delta_chi2: 0.2
+  high_h0_without_local_prior:
+    threshold: 70.0
+  source_conflict_target:
+    description: 'Quantify whether a no-local-prior EDE best fit reaches the H0~71
+      region associated with K-033 or remains strongly constrained toward small f_EDE.
+
+      '
+blocked_candidates:
+  varying_me:
+    status: NOT INCLUDED IN DIRECT V1 MODEL COMPARISON
+    reason: 'A scientifically safe common-theory implementation with the frozen mAxiCLASS
+      EDE binary has not been established in this package. Do not compare Delta-chi2
+      across different Boltzmann/recombination binaries and call it a model preference.
+
+      '
+  free_recombination:
+    status: NOT INCLUDED IN DIRECT V1 MODEL COMPARISON
+    reason: 'K-035/K-036 require a documented recombination implementation/parameterization.
+      No arbitrary ionization-history freedom is invented here.
+
+      '
+data_distribution_provenance:
+  nasa_lambda_act_dr6:
+    status: OFFICIAL ACT DR6.02 MIRROR
+    url: https://lambda.gsfc.nasa.gov/data/act/pspipe/sacc_files/dr6_data_cmbonly.tar.gz
+    role: Primary science-data download for Q-005-HPC-V9
+  nersc_act_dr6:
+    status: OFFICIAL ACT MIRROR
+    url: https://portal.nersc.gov/project/act/dr6_data/dr6_data_cmbonly.tar.gz
+    role: Secondary fallback
+scientific_gaussian_constraints:
+  bbn_omega_b: *id001
+  h0dn: *id002
+priors_note: V10 does not put BBN/H0DN in Cobaya prior:. They are explicit external
+  likelihoods so ignore_prior=true cannot remove them from the minimization objective.
+likelihood_accounting:
+  rule: 'Use only explicit non-overlapping chi2 components: Planck low-l EE, ACT DR6
+    CMB-only, DESI DR2 BAO, BBN, and H0DN when active. Never sum aggregate chi2__
+    fields together with their subcomponents.'
+  sum_tolerance: 0.0001
+v9_provenance:
+  status: PRELIMINARY_NOT_DISCARDED
+  config_sha256: 20c85df734f6ab5d71f92bfc7a22887eabf4062dd7adf7bca8981e41b36312fe
+  script_sha256: cb7bd64b7c767bee92a978f3b920502f5c4bd1e43e957e3d3214e3a628f3e614
+  corrected_delta_chi2_ede_minus_lcdm: 3.77915
+  superseded_summary_delta_chi2: 1.967506
+runtime_safety:
+  github_job_timeout_minutes: 285
+  restart_count: 2
+  restart_ids:
+  - 0
+  - 1
+  seed_rule: seed = 1701 + restart_id
+  reason: Q5 has previously approached the GitHub hosted-job limit. V11 splits the
+    two optimizer starts formerly inside best_of=2 into separate jobs.
+  aggregation_rule: Choose the lowest scientifically valid chi2 total across completed
+    restarts for each model.
+  smoke_mode: SINGLE_EVALUATE_AT_REFERENCE_POINT
+  smoke_timeout_minutes: 30
+  v11_failure_correction: V11 smoke used BOBYQA max_evals=80 and EDE exceeded the
+    45-minute smoke job timeout. V12 smoke performs exactly one evaluate call; production
+    minimization is unchanged.
+q_memory:
+  q_id: Q-005
+  q_number: 5
+  original_question: Which remaining systematic and cosmological explanation classes
+    can quantitatively reduce the robust H0 tension while remaining compatible with
+    H0DN, CMB-SPA, DESI DR2 + BBN, the internal late-Universe calibration structure,
+    and physically alternative H0 routes?
+  parent_question: Q-005
+  current_stage: Q-005-HPC-V12
