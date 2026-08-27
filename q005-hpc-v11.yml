@@ -1,0 +1,351 @@
+name: Bubbleverse Q005 HPC V11 Split Jobs
+'on':
+  workflow_dispatch: {}
+jobs:
+  smoke:
+    name: Q005 V11 smoke ${{ matrix.model }}
+    strategy:
+      fail-fast: false
+      matrix:
+        model:
+        - lcdm
+        - ede
+        - ede_local
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    env: &id001
+      OMP_NUM_THREADS: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+      BUBBLEVERSE_EXECUTION_MODE: SPLIT_RESTART_SERIAL_NO_MPI
+    steps:
+    - &id002
+      uses: actions/checkout@v4
+    - &id003
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: pip
+        cache-dependency-path: q005_hpc_v11_requirements.txt
+    - &id004
+      name: Install Python dependencies
+      shell: bash
+      run: 'set -euxo pipefail
+
+        python -m pip install --upgrade pip
+
+        python -m pip install -r q005_hpc_v11_requirements.txt
+
+        python - <<''PY''
+
+        import importlib.metadata
+
+        import pybobyqa
+
+        version = importlib.metadata.version("Py-BOBYQA")
+
+        print("Py-BOBYQA distribution:", version)
+
+        print("pybobyqa module:", pybobyqa.__file__)
+
+        assert version == "1.5.0"
+
+        PY
+
+        python - <<''PY''
+
+        import importlib.util
+
+        print("mpi4py installed:", importlib.util.find_spec("mpi4py") is not None)
+
+        print("Bubbleverse execution mode: SERIAL_NO_MPI")
+
+        PY
+
+        '
+    - &id005
+      name: Checkout frozen mAxiCLASS
+      shell: bash
+      run: "set -euxo pipefail\nmkdir -p external\nif [ ! -d external/mAxiCLASS/.git ]; then\n  git clone https://github.com/marcobeIIa/mAxiCLASS.git\
+        \ external/mAxiCLASS\nfi\ngit -C external/mAxiCLASS fetch --all --tags\ngit -C external/mAxiCLASS checkout --detach\
+        \ b5a3af9818d04d2fe696e54972545e8c6805f4ea\ntest \"$(git -C external/mAxiCLASS rev-parse HEAD)\" = \"b5a3af9818d04d2fe696e54972545e8c6805f4ea\"\
+        \n"
+    - &id006
+      name: Build frozen mAxiCLASS for Cobaya
+      shell: bash
+      run: 'set -euxo pipefail
+
+        cd external/mAxiCLASS
+
+
+        make -j2
+
+
+        python - <<''PY''
+
+        import Cython
+
+        print("Cython:", Cython.__version__, Cython.__file__)
+
+        PY
+
+
+        # Cobaya''s external CLASS loader expects:
+
+        #   <CLASS-root>/python/build/lib.*/classy*.so
+
+        cd python
+
+        rm -rf build
+
+        python setup.py build
+
+        cd ..
+
+
+        find python/build -maxdepth 3 -type f -name ''classy*.so'' -print
+
+        test -n "$(find python/build -maxdepth 3 -type f -name ''classy*.so'' -print -quit)"
+
+
+        # Optional global/editable install is kept for direct Python diagnostics,
+
+        # but Cobaya uses the source-root path and build/lib.* tree above.
+
+        python -m pip install --no-build-isolation -e ./python
+
+
+        BUILD_LIB="$(find "$PWD/python/build" -maxdepth 1 -type d -name ''lib.*'' -print -quit)"
+
+        test -n "$BUILD_LIB"
+
+
+        export PYTHONPATH="$BUILD_LIB:${PYTHONPATH:-}"
+
+        python - <<''PY''
+
+        import classy
+
+        print("Direct classy import:", classy.__file__)
+
+        print("Direct classy version:", getattr(classy, "__version__", None))
+
+        assert "/external/mAxiCLASS/python/build/lib." in classy.__file__.replace("\\", "/")
+
+        PY
+
+
+        cd ../..
+
+        '
+    - &id007
+      name: Checkout frozen ACT DR6-lite
+      shell: bash
+      run: "set -euxo pipefail\nif [ ! -d external/DR6-ACT-lite/.git ]; then\n  git clone https://github.com/ACTCollaboration/DR6-ACT-lite.git\
+        \ external/DR6-ACT-lite\nfi\ngit -C external/DR6-ACT-lite fetch --all --tags\ngit -C external/DR6-ACT-lite checkout\
+        \ --detach 0e0cd2c703c62a0e980470b572602233b27750e1\ntest \"$(git -C external/DR6-ACT-lite rev-parse HEAD)\" = \"\
+        0e0cd2c703c62a0e980470b572602233b27750e1\"\npython -m pip install -e external/DR6-ACT-lite\n"
+    - &id008
+      name: Install ACT DR6 scientific likelihood data robustly
+      shell: bash
+      run: "set -euo pipefail\nmkdir -p \"$COBAYA_PACKAGES_PATH\"\nTARGET=\"$COBAYA_PACKAGES_PATH/data/ACTDR6CMBonly/v1.0/dr6_data_cmbonly.fits\"\
+        \nmkdir -p \"$(dirname \"$TARGET\")\"\n\ninstall_ok=0\n\necho \"[INFO] Attempt 1: normal Cobaya installer\"\nif cobaya-install\
+        \ act_dr6_cmbonly.ACTDR6CMBonly -p \"$COBAYA_PACKAGES_PATH\"; then\n  if [ -s \"$TARGET\" ]; then\n    echo \"[INFO]\
+        \ Normal ACT installer succeeded and target data file exists\"\n    install_ok=1\n  else\n    echo \"[WARNING] Cobaya\
+        \ installer returned success but target ACT file is missing\"\n  fi\nelse\n  echo \"[WARNING] Normal ACT installer\
+        \ returned non-zero\"\nfi\n\nif [ \"$install_ok\" -ne 1 ]; then\n  echo \"[INFO] Attempt 2: Cobaya installer with\
+        \ --debug\"\n  if cobaya-install act_dr6_cmbonly.ACTDR6CMBonly -p \"$COBAYA_PACKAGES_PATH\" --debug; then\n    if\
+        \ [ -s \"$TARGET\" ]; then\n      echo \"[INFO] Debug ACT installer succeeded and target data file exists\"\n    \
+        \  install_ok=1\n    else\n      echo \"[WARNING] Debug installer returned success but target ACT file is still missing\"\
+        \n    fi\n  else\n    echo \"[WARNING] Debug ACT installer returned non-zero\"\n  fi\nfi\n\nif [ \"$install_ok\" -ne\
+        \ 1 ]; then\n  echo \"[WARNING] Cobaya did not materialize the required scientific ACT file.\"\n  echo \"[INFO] Searching\
+        \ packages path for any downloaded dr6_data_cmbonly.fits before network fallback.\"\n  find \"$COBAYA_PACKAGES_PATH\"\
+        \ -type f -name 'dr6_data_cmbonly.fits' -print || true\n\n  FOUND_EXISTING=\"$(find \"$COBAYA_PACKAGES_PATH\" -type\
+        \ f -name 'dr6_data_cmbonly.fits' -print -quit)\"\n  if [ -n \"$FOUND_EXISTING\" ] && [ -s \"$FOUND_EXISTING\" ];\
+        \ then\n    echo \"[INFO] Found a Cobaya-installed ACT data file at: $FOUND_EXISTING\"\n    mkdir -p \"$(dirname \"\
+        $TARGET\")\"\n    if [ \"$FOUND_EXISTING\" != \"$TARGET\" ]; then\n      cp \"$FOUND_EXISTING\" \"$TARGET\"\n    fi\n\
+        \    install_ok=1\n  fi\nfi\n\nif [ \"$install_ok\" -ne 1 ]; then\n  echo \"[WARNING] Cobaya did not materialize ACT\
+        \ data; using official mirrors\"\n  TMPDIR_ACT=\"$(mktemp -d)\"\n  trap 'rm -rf \"$TMPDIR_ACT\"' EXIT\n  ARCHIVE=\"\
+        $TMPDIR_ACT/dr6_data_cmbonly.tar.gz\"\n  export ARCHIVE\n\n  python - <<'PY'\nimport os, time, urllib.request\nout\
+        \ = os.environ[\"ARCHIVE\"]\nurls = [\n    \"https://lambda.gsfc.nasa.gov/data/act/pspipe/sacc_files/dr6_data_cmbonly.tar.gz\"\
+        ,\n    \"https://portal.nersc.gov/project/act/dr6_data/dr6_data_cmbonly.tar.gz\",\n]\nlast = None\nok = False\nfor\
+        \ url in urls:\n    for attempt in range(1, 4):\n        try:\n            print(f\"[INFO] ACT download attempt {attempt}\
+        \ from {url}\", flush=True)\n            req = urllib.request.Request(\n                url,\n                headers={\"\
+        User-Agent\": \"Bubbleverse-Q005-HPC-V11\"},\n            )\n            with urllib.request.urlopen(req, timeout=180)\
+        \ as r, open(out, \"wb\") as f:\n                while True:\n                    chunk = r.read(1024 * 1024)\n  \
+        \                  if not chunk:\n                        break\n                    f.write(chunk)\n            size\
+        \ = os.path.getsize(out)\n            print(\"[INFO] Downloaded bytes:\", size, flush=True)\n            if size <=\
+        \ 0:\n                raise RuntimeError(\"Downloaded ACT archive is empty\")\n            ok = True\n           \
+        \ break\n        except Exception as e:\n            last = e\n            print(f\"[WARNING] {url} attempt {attempt}\
+        \ failed: {e!r}\", flush=True)\n            if attempt < 3:\n                time.sleep(10 * attempt)\n    if ok:\n\
+        \        break\nif not ok:\n    raise SystemExit(f\"All official ACT mirrors failed: {last!r}\")\nPY\n\n  echo \"\
+        [INFO] Archive listing:\"\n  tar -tzf \"$ARCHIVE\" | head -100\n  tar -xzf \"$ARCHIVE\" -C \"$TMPDIR_ACT\"\n\n  FOUND=\"\
+        $(find \"$TMPDIR_ACT\" -type f -name dr6_data_cmbonly.fits -print -quit)\"\n  if [ -z \"$FOUND\" ]; then\n    echo\
+        \ \"[ERROR] Official ACT archive did not contain dr6_data_cmbonly.fits\" >&2\n    exit 41\n  fi\n  cp \"$FOUND\" \"\
+        $TARGET\"\n  install_ok=1\nfi\n\nif [ \"$install_ok\" -ne 1 ] || [ ! -s \"$TARGET\" ]; then\n  echo \"[ERROR] ACT\
+        \ DR6 scientific data installation failed final validation\" >&2\n  exit 42\nfi\n\ntest -s \"$TARGET\"\nexport TARGET\n\
+        python - <<'PY'\nimport hashlib, os\npath = os.environ[\"TARGET\"]\nh = hashlib.sha256()\nwith open(path, \"rb\")\
+        \ as f:\n    for chunk in iter(lambda: f.read(1024 * 1024), b\"\"):\n        h.update(chunk)\nprint(\"[VALIDATION]\
+        \ ACT_DR6_FILE =\", path)\nprint(\"[VALIDATION] ACT_DR6_BYTES =\", os.path.getsize(path))\nprint(\"[VALIDATION] ACT_DR6_SHA256\
+        \ =\", h.hexdigest())\nwith open(path, \"rb\") as f:\n    head = f.read(80)\nif not head.startswith(b\"SIMPLE\"):\n\
+        \    raise SystemExit(\"ACT DR6 file does not look like a FITS file (missing SIMPLE header)\")\nprint(\"[VALIDATION]\
+        \ ACT_DR6_FITS_HEADER = PASS\")\nPY\n"
+    - &id009
+      name: Install remaining likelihood data
+      shell: bash
+      run: 'set -euxo pipefail
+
+        cobaya-install planck_2018_lowl.EE_sroll2 -p "$COBAYA_PACKAGES_PATH"
+
+        cobaya-install bao.desi_dr2 -p "$COBAYA_PACKAGES_PATH"
+
+        '
+    - &id010
+      name: Preflight
+      shell: bash
+      run: 'set -euxo pipefail
+
+        BUILD_LIB="$(find "$PWD/external/mAxiCLASS/python/build" -maxdepth 1 -type d -name ''lib.*'' -print -quit)"
+
+        test -n "$BUILD_LIB"
+
+        export PYTHONPATH="$BUILD_LIB:$PWD/external/mAxiCLASS:$PWD/external/mAxiCLASS/python:${PYTHONPATH:-}"
+
+        python q005_hpc_v11.py preflight
+
+        '
+    - &id011
+      name: Validate frozen ACT likelihood interface
+      shell: bash
+      run: 'set -euxo pipefail
+
+        grep -q ''class ACTDR6CMBonly'' external/DR6-ACT-lite/act_dr6_cmbonly/act_dr6_cmbonly.py
+
+        grep -q ''A_act'' external/DR6-ACT-lite/yamls/likelihoods/act_lite.yaml
+
+        grep -q ''P_act'' external/DR6-ACT-lite/yamls/likelihoods/act_lite.yaml
+
+        grep -q ''logA'' external/DR6-ACT-lite/yamls/parameters/cosmology.yaml
+
+        '
+    - &id012
+      name: Validate Cobaya can locate frozen mAxiCLASS build
+      shell: bash
+      run: "set -euxo pipefail\nBUILD_LIB=\"$(find \"$PWD/external/mAxiCLASS/python/build\" -maxdepth 1 -type d -name 'lib.*'\
+        \ -print -quit)\"\ntest -n \"$BUILD_LIB\"\ntest -n \"$(find \"$BUILD_LIB\" -maxdepth 1 -type f -name 'classy*.so'\
+        \ -print -quit)\"\nexport PYTHONPATH=\"$BUILD_LIB:${PYTHONPATH:-}\"\n\npython - <<'PY'\nfrom cobaya.component import\
+        \ load_external_module\nfrom cobaya.theories.classy.classy import classy as CobayaClassy\n\nroot = \"external/mAxiCLASS\"\
+        \nmodule = load_external_module(\n    \"classy\",\n    path=root,\n    min_version=None,\n    get_import_path=CobayaClassy.get_import_path_old,\n\
+        )\nprint(\"[VALIDATION] Cobaya loader classy:\", module.__file__)\nprint(\"[VALIDATION] version:\", getattr(module,\
+        \ \"__version__\", None))\nassert \"external/mAxiCLASS/python/build/lib.\" in module.__file__.replace(\"\\\\\", \"\
+        /\")\nprint(\"[VALIDATION] COBAYA_MAXICLASS_LOADER = PASS\")\nPY\n"
+    - name: Smoke test selected model
+      shell: bash
+      run: 'set -euxo pipefail
+
+        BUILD_LIB="$(find "$PWD/external/mAxiCLASS/python/build" -maxdepth 1 -type d -name ''lib.*'' -print -quit)"
+
+        test -n "$BUILD_LIB"
+
+        export PYTHONPATH="$BUILD_LIB:$PWD/external/mAxiCLASS:$PWD/external/mAxiCLASS/python:${PYTHONPATH:-}"
+
+        python q005_hpc_v11.py smoke --model "${{ matrix.model }}" --restart 0
+
+        '
+  production:
+    name: Q005 V11 ${{ matrix.model }} restart ${{ matrix.restart }}
+    needs: smoke
+    strategy:
+      fail-fast: false
+      matrix:
+        model:
+        - lcdm
+        - ede
+        - ede_local
+        restart:
+        - 0
+        - 1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 285
+    env: *id001
+    steps:
+    - *id002
+    - *id003
+    - *id004
+    - *id005
+    - *id006
+    - *id007
+    - *id008
+    - *id009
+    - *id010
+    - *id011
+    - *id012
+    - name: "Production minimization \u2014 one independent restart"
+      shell: bash
+      run: 'set -euxo pipefail
+
+        BUILD_LIB="$(find "$PWD/external/mAxiCLASS/python/build" -maxdepth 1 -type d -name ''lib.*'' -print -quit)"
+
+        test -n "$BUILD_LIB"
+
+        export PYTHONPATH="$BUILD_LIB:$PWD/external/mAxiCLASS:$PWD/external/mAxiCLASS/python:${PYTHONPATH:-}"
+
+        python q005_hpc_v11.py run --model "${{ matrix.model }}" --restart "${{ matrix.restart }}"
+
+        '
+    - name: Collect restart result
+      if: always()
+      shell: bash
+      run: 'set +e
+
+        BUILD_LIB="$(find "$PWD/external/mAxiCLASS/python/build" -maxdepth 1 -type d -name ''lib.*'' -print -quit)"
+
+        export PYTHONPATH="$BUILD_LIB:$PWD/external/mAxiCLASS:$PWD/external/mAxiCLASS/python:${PYTHONPATH:-}"
+
+        python q005_hpc_v11.py collect --model "${{ matrix.model }}" --restart "${{ matrix.restart }}"
+
+        '
+    - name: Upload restart artifact
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: q005-hpc-v11-${{ matrix.model }}-r${{ matrix.restart }}-${{ github.run_id }}
+        path: 'q005_results/
+
+          q005_logs/
+
+          q005_rendered/'
+        if-no-files-found: warn
+        retention-days: 30
+  aggregate:
+    name: Q005 V11 aggregate best valid restarts
+    needs: production
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+    - name: Install aggregation dependency
+      run: python -m pip install PyYAML==6.0.2
+    - uses: actions/download-artifact@v4
+      with:
+        pattern: q005-hpc-v11-*-${{ github.run_id }}
+        path: q005_aggregate
+    - name: Aggregate and validate split restarts
+      shell: bash
+      run: 'set -euxo pipefail
+
+        python q005_validate_v11.py --artifacts-root q005_aggregate --output q005_aggregate/q005_validation_v11.json
+
+        '
+    - name: Upload aggregate result
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: q005-hpc-v11-aggregate-${{ github.run_id }}
+        path: q005_aggregate/
+        if-no-files-found: warn
+        retention-days: 30
