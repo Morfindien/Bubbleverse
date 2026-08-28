@@ -1,0 +1,596 @@
+project:
+  id: Q-005-HPC-V14
+  title: Bubbleverse Q-005 common-backend EDE differential gate
+  q: Q-005
+  scientific_status: "PROGRAM GENERATED \u2014 RESULTS NOT YET COMPUTED"
+  execution_mode: GITHUB_MATRIX_COMMON_BACKEND
+  claim: 'Apples-to-apples common-backend differential test. This is not an exact paper-native reproduction of K-036
+    or K-038 until their executable provenance is separately frozen.
+
+    '
+q_memory:
+  q_id: Q-005
+  original_question: "Hvilke af de resterende systematiske og kosmologiske forklaringsklasser kan kvantitativt reducere\
+    \ den robuste H0-sp\xE6nding, samtidig med at de forbliver forenelige med H0DN, CMB-SPA, DESI DR2 + BBN, den interne\
+    \ late-Universe calibration structure og de fysisk alternative H0-routes?\n"
+  unresolved_core: 'Determine whether the K-036 versus K-038 EDE discrepancy is driven by potential/parameterization,
+    likelihood construction, priors/statistical treatment, or backend implementation.
+
+    '
+sources:
+  K-024:
+    short: H0 Distance Network
+    H0: 73.5
+    sigma_H0: 0.81
+  K-029:
+    short: DESI DR2 Results II
+    arxiv: '2503.14738'
+    benchmark_H0_LCDM_BBN: 68.51
+    benchmark_sigma_H0_LCDM_BBN: 0.58
+  K-030:
+    short: CMB-SPA / SPT-3G D1 provenance
+    arxiv: '2506.20707'
+  K-036:
+    short: Poulin et al. ACT DR6 + DESI DR2 EDE profile likelihood
+    arxiv: '2505.08051'
+    reference:
+      n: 3
+      fEDE: 0.09
+      sigma_fEDE: 0.03
+      H0: 71.0
+      sigma_H0: 1.1
+  K-038:
+    short: Toda & Seto EDE and varying electron mass
+    arxiv: '2508.09025'
+    doi: 10.1088/1475-7516/2026/02/019
+    reference_ede:
+      n: 2
+      H0: 69.17
+      fEDE_upper: 0.014
+    reference_me:
+      me_ratio: 1.0078
+      sigma_me_ratio: 0.0047
+      H0: 69.41
+      sigma_H0: 0.68
+      delta_chi2: -7.32
+      delta_AIC: -5.32
+source_lock_file: q005_hpc_v14_source_lock.json
+frozen_software:
+  python: '3.10'
+  cobaya: 3.5.6
+  pyyaml: 6.0.2
+  numpy: 1.26.4
+  scipy: 1.15.3
+  py_bobyqa: 1.5.0
+  cython: 0.29.37
+  class_ede:
+    repository: https://github.com/mwt5345/class_ede.git
+    commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+    path: external/class_ede
+    cobaya_ignore_obsolete: true
+  act_dr6_lite:
+    repository: https://github.com/ACTCollaboration/DR6-ACT-lite.git
+    commit: 0e0cd2c703c62a0e980470b572602233b27750e1
+    path: external/DR6-ACT-lite
+  act_dr6_data:
+    primary_official_url: https://lambda.gsfc.nasa.gov/data/act/pspipe/sacc_files/dr6_data_cmbonly.tar.gz
+    fallback_official_url: https://portal.nersc.gov/project/act/dr6_data/dr6_data_cmbonly.tar.gz
+    data_folder: ACTDR6CMBonly
+    version: v1.0
+    filename: dr6_data_cmbonly.fits
+packages_path: external/cobaya_packages
+rendered_dir: q005_v14_rendered
+results_dir: q005_v14_results
+logs_dir: q005_v14_logs
+likelihoods:
+  common:
+    planck_2018_lowl.EE_sroll2: null
+    act_dr6_cmbonly.ACTDR6CMBonly:
+      input_file: dr6_data_cmbonly.fits
+      lmax_theory: 9000
+      ell_cuts:
+        TT:
+        - 600
+        - 8500
+        TE:
+        - 600
+        - 8500
+        EE:
+        - 600
+        - 8500
+      stop_at_error: true
+      params:
+        A_act:
+          prior:
+            min: 0.5
+            max: 1.5
+          ref:
+            dist: norm
+            loc: 1.0
+            scale: 0.01
+          proposal: 0.003
+        P_act:
+          prior:
+            min: 0.9
+            max: 1.1
+          ref:
+            dist: norm
+            loc: 1.0
+            scale: 0.01
+          proposal: 0.01
+    bao.desi_dr2: null
+scientific_gaussian_constraints:
+  bbn_omega_b:
+    mean: 0.02196
+    sigma: 0.00063
+  h0dn:
+    mean: 73.5
+    sigma: 0.81
+theory:
+  common_extra_args:
+    N_ur: 2.0328
+    N_ncdm: 1
+    m_ncdm: 0.06
+    T_ncdm: 0.71611
+    output: tCl,pCl,lCl,mPk
+    lensing: 'yes'
+    P_k_max_h/Mpc: 2.0
+parameters:
+  common:
+    omega_b:
+      prior:
+        min: 0.018
+        max: 0.026
+      ref:
+        dist: norm
+        loc: 0.0224
+        scale: 0.0002
+      proposal: 0.0001
+    omega_cdm:
+      prior:
+        min: 0.08
+        max: 0.16
+      ref:
+        dist: norm
+        loc: 0.12
+        scale: 0.002
+      proposal: 0.001
+    H0:
+      prior:
+        min: 55.0
+        max: 85.0
+      ref:
+        dist: norm
+        loc: 68.0
+        scale: 1.0
+      proposal: 0.5
+    tau_reio:
+      prior:
+        min: 0.01
+        max: 0.12
+      ref:
+        dist: norm
+        loc: 0.055
+        scale: 0.008
+      proposal: 0.004
+    n_s:
+      prior:
+        min: 0.88
+        max: 1.08
+      ref:
+        dist: norm
+        loc: 0.965
+        scale: 0.01
+      proposal: 0.005
+    logA:
+      prior:
+        min: 2.7
+        max: 3.4
+      ref:
+        dist: norm
+        loc: 3.045
+        scale: 0.03
+      proposal: 0.01
+      drop: true
+    A_s:
+      value: 'lambda logA: 1e-10*np.exp(logA)'
+      derived: true
+    Omega_m:
+      derived: true
+    sigma8:
+      derived: true
+    rs_drag:
+      derived: true
+    S8:
+      derived: 'lambda sigma8, Omega_m: sigma8*(Omega_m/0.3)**0.5'
+common_ede_priors:
+  fEDE:
+    prior:
+      min: 0.001
+      max: 0.3
+    ref:
+      dist: norm
+      loc: 0.08
+      scale: 0.03
+    proposal: 0.015
+  log10z_c:
+    prior:
+      min: 3.0
+      max: 4.3
+    ref:
+      dist: norm
+      loc: 3.55
+      scale: 0.2
+    proposal: 0.05
+  thetai_scf:
+    prior:
+      min: 0.1
+      max: 3.1
+    ref:
+      dist: norm
+      loc: 2.8
+      scale: 0.2
+    proposal: 0.08
+models:
+  lcdm:
+    description: Common CLASS_EDE backend with scalar-field sector disabled.
+    kind: lcdm
+    local_h0_likelihood: false
+    extra_parameter_count: 0
+  ede_n3:
+    description: 'Common-backend n=3 EDE differential model. Same priors as ede_n2 so the potential-power difference
+      is not contaminated by a prior change.
+
+      '
+    kind: ede
+    n_scf: 3
+    local_h0_likelihood: false
+    extra_parameter_count: 3
+  ede_n2:
+    description: 'Common-backend n=2 EDE differential model. This is K-038-like in potential power only; it is not
+      labelled a native K-038 reproduction.
+
+      '
+    kind: ede
+    n_scf: 2
+    local_h0_likelihood: false
+    extra_parameter_count: 3
+  me_common:
+    description: 'Common CLASS_EDE instantaneous varying-electron-mass control. Not the native K-038 CAMB/RECFAST
+      implementation.
+
+      '
+    kind: varying_me
+    local_h0_likelihood: false
+    extra_parameter_count: 1
+    varying_transition_redshift: 50.0
+    varying_me:
+      prior:
+        min: 0.95
+        max: 1.05
+      ref:
+        dist: norm
+        loc: 1.008
+        scale: 0.005
+      proposal: 0.002
+  lcdm_h0dn:
+    inherit_model: lcdm
+    local_h0_likelihood: true
+  ede_n3_h0dn:
+    inherit_model: ede_n3
+    local_h0_likelihood: true
+  ede_n2_h0dn:
+    inherit_model: ede_n2
+    local_h0_likelihood: true
+  me_common_h0dn:
+    inherit_model: me_common
+    local_h0_likelihood: true
+sampler:
+  minimize:
+    method: bobyqa
+    ignore_prior: true
+    max_evals: 240
+    best_of: 1
+    seed: 1701
+    override_bobyqa:
+      rhoend: 0.02
+      user_params:
+        restarts.use_restarts: false
+        restarts.use_soft_restarts: false
+        restarts.max_unsuccessful_restarts: 3
+        restarts.max_unsuccessful_restarts_total: 6
+        restarts.rhoend_scale: 1.0
+        restarts.auto_detect: false
+        interpolation.precondition: true
+        logging.save_diagnostic_info: true
+runtime_safety:
+  github_hard_limit_minutes: 360
+  safe_job_target_minutes: 240
+  smoke_timeout_minutes: 35
+  nesting_timeout_minutes: 90
+  default_restarts: 2
+  max_restarts: 6
+  enabled_models:
+  - lcdm
+  - ede_n3
+  - ede_n2
+  - me_common
+  enabled_h0dn_models:
+  - lcdm_h0dn
+  - ede_n3_h0dn
+  - ede_n2_h0dn
+  - me_common_h0dn
+  measured_v12_reference:
+    lcdm_fast_minutes: 13
+    ede_success_minutes_low: 108
+    ede_success_minutes_high: 162
+  risk: MODERATE
+  strategy: PARALLEL_MODEL_X_RESTART
+  note: 'A minimizer restart is an atomic independent optimization, not a fake resume. Long stateful MCMC is intentionally
+    not included in this V14 gate.
+
+    '
+  optimizer_restart_architecture:
+    external_matrix_restarts: true
+    pybobyqa_internal_restarts: false
+    reason: Each GitHub matrix restart is already an independent seeded optimization. Nested Py-BOBYQA restarts consumed
+      the same max_evals budget and caused otherwise useful local searches to terminate at MAXFUN.
+  smoke_reference:
+    mode: DETERMINISTIC_FIXED_FINITE_POINT
+    purpose: Smoke tests validate that the frozen backend + likelihood stack can evaluate each model at a known finite
+      point; they must not depend on random draws from ref distributions.
+    provenance:
+      validated_run: 33182457079
+      validated_gate: Q005 V14 nesting gate
+      lcdm_finite: true
+      ede_n3_finite: true
+      ede_n2_finite: true
+      ede_n2_chi2_at_reference: 888.669427
+    common:
+      omega_b: 0.0224
+      omega_cdm: 0.12
+      H0: 68.0
+      tau_reio: 0.055
+      n_s: 0.965
+      logA: 3.045
+    likelihood_nuisance:
+      A_act: 1.0
+      P_act: 1.0
+    ede:
+      fEDE: 0.001
+      log10z_c: 3.55
+      thetai_scf: 2.8
+    varying_me:
+      varying_me: 1.008
+gates:
+  high_h0_without_local_prior:
+    threshold: 71.5
+  nesting:
+    epsilon_fEDE: 0.001
+    mode: BACKEND_FINITE_DOMAIN_VALIDATION
+    backend_reason: Frozen class_ede shooting uses dx/dy = 0.217147/fEDE and an initial guess containing sqrt(fEDE)
+      followed by log10; the former 1e-8 gate is numerically ill-conditioned. Use the production-domain floor fEDE=0.001.
+    exact_nesting_status: BLOCKED_FROZEN_SHOOTING_LIMIT
+    delta_chi2_role: DIAGNOSTIC_ONLY
+    production_gate:
+    - exit_zero_all_models
+    - finite_scientific_components_all_models
+    - identical_fixed_cosmological_reference
+    - identical_fixed_likelihood_nuisance_reference
+  globality:
+    max_restart_delta_chi2: 1.0
+  theory_precision:
+    delta_chi2_floor: 0.1
+  source_claim:
+    common_backend_required: true
+    native_paper_reproduction_required: false
+likelihood_accounting:
+  required_nonlocal:
+  - planck_lowl
+  - act_dr6
+  - desi_dr2
+  - bbn
+  aliases:
+    planck_lowl:
+    - chi2__planck_2018_lowl.EE_sroll2
+    act_dr6:
+    - chi2__act_dr6_cmbonly.ACTDR6CMBonly
+    desi_dr2:
+    - chi2__bao.desi_dr2
+    bbn:
+    - chi2__bbn_omega_b
+    h0dn:
+    - chi2__h0dn
+technical_memory:
+  V14_FIX1:
+    date: '2026-08-28'
+    failure_class: ENVIRONMENT / SOFTWARE COMPATIBILITY
+    observed_error: 'classy.pyx:35:9: ''int_t'' is not a type identifier'
+    cause: legacy class_ede Cython wrapper uses numpy np.int_t; NumPy 2.x removed/incompatibly changed the legacy
+      alias surface
+    fix:
+    - pin NumPy 1.26.4
+    - pin Cython 0.29.37 for legacy wrapper compatibility
+    - build C core targets before controlled Python extension build
+    scientific_effect: "NONE \u2014 build environment only; model, data, priors and likelihood definitions unchanged"
+  V14_FIX3:
+    date: '2026-08-28'
+    failure_class: DEPENDENCY RESOLUTION / NUMPY ABI MUTATION
+    observed_run: 33164445603
+    observed_failure: ACT editable install selected SACC 2.4 and upgraded NumPy 1.26.4 to 2.2.6; classy then failed
+      with numpy.dtype size changed
+    fix:
+    - pin sacc 1.0.2, satisfying ACT requirement sacc>=0.12.0 while remaining on NumPy 1.26.4
+    - install frozen ACT repository editable with --no-deps
+    - verify NumPy 1.26.4 and classy import immediately after ACT install
+    scientific_effect: "NONE \u2014 dependency/ABI control only; science model, priors, data and likelihood definitions\
+      \ unchanged"
+  V14_FIX5:
+    date: '2026-08-28'
+    observed_run: 33165335910
+    failure_class: COBAYA PARAMETER ROUTING / INVALID FINITE-RESULT GATE
+    observed_failure:
+    - Cobaya updated CLASS input_params omitted omega_b because the explicit BBN external likelihood claimed omega_b
+    - logA was passed directly to CLASS even though it is only a transformed parameter used to construct A_s
+    - smoke accepted cobaya exit code 0 even when all scientific chi2 components were Infinity/derived values NaN
+    - nesting therefore reached Infinity results; ede_n3 also returned -11 at the invalid nesting point
+    fix:
+    - mark logA drop=true so CLASS receives A_s but not logA
+    - explicitly declare CLASS input_params for common and model-specific physical parameters
+    - require finite non-overlapping scientific chi2 components for smoke, collect, and nesting
+    - preserve epsilon_fEDE and all science priors/data/likelihoods unchanged
+    scientific_effect: "NONE \u2014 parameter routing and validation only"
+  V14_FIX6:
+    date: '2026-08-28'
+    observed_run: 33165335910
+    failure_class: EDE SHOOTING ILL-CONDITIONING NEAR fEDE -> 0
+    observed_failure:
+    - LCDM finite and valid after FIX5
+    - ede_n3 nesting at fEDE=1e-8 exited -11 (segmentation fault)
+    - ede_n2 nesting at fEDE=1e-8 returned non-finite likelihoods
+    backend_evidence: Frozen class_ede source computes EDE shooting derivative dxdy = 0.217147/fEDE and initial log10
+      guess proportional to sqrt(fEDE).
+    fix:
+    - set common EDE production lower bound fEDE=0.001
+    - run finite-domain continuity/nesting gate at fEDE=0.001
+    - keep identical lower bound for n=3 and n=2 common-backend comparison
+    - retain finite chi2 gates from FIX5
+    scientific_effect: NUMERICAL DOMAIN RESTRICTION. The exact fEDE=0 limit remains represented by the separate LCDM
+      model; common-backend EDE optimization is restricted to fEDE>=0.001 to avoid the frozen shooting singular limit.
+  V14_FIX7:
+    date: '2026-08-28'
+    observed_run: 33166587884
+    failure_class: NESTING GATE USED DIFFERENT ACT NUISANCE DRAWS
+    observed_values:
+      lcdm:
+        A_act: 1.0236578
+        P_act: 0.99090921
+        act_chi2: 499.29157
+      ede_n3:
+        A_act: 0.99303763
+        P_act: 1.0168039
+        act_chi2: 228.86504
+      ede_n2:
+        A_act: 1.018539
+        P_act: 1.0127393
+        act_chi2: 715.43561
+    diagnosis: Cobaya sampler.evaluate drew ACT likelihood-local nuisance parameters from their ref distributions
+      independently for each model. Therefore the former delta-chi2 values were not a same-point nesting/continuity
+      comparison.
+    fix:
+    - freeze likelihood-local nuisance parameters to their documented ref.loc values during fixed_common/nesting only
+    - ACT A_act=1.0 and P_act=1.0 for LCDM, EDE n=3, and EDE n=2 nesting evaluations
+    - leave smoke and production nuisance treatment unchanged
+    scientific_effect: "NONE \u2014 test-control correction only; production likelihood and nuisance priors remain\
+      \ unchanged"
+  V14_FIX8:
+    date: '2026-08-28'
+    observed_run: 33167343061
+    failure_class: INVALID PASS/FAIL SEMANTICS FOR FINITE-DOMAIN EDE GATE
+    observed:
+      lcdm_chi2: 610.692161
+      ede_n3_chi2: 602.5528600000001
+      ede_n2_chi2: 888.669427
+      delta_ede_n3: -8.139300999999932
+      delta_ede_n2: 277.977266
+      all_evaluations_finite: true
+      fixed_ACT_nuisance:
+        A_act: 1.0
+        P_act: 1.0
+    diagnosis: At fEDE=0.001 the EDE n=2 and n=3 models remain genuine EDE cosmologies. Therefore requiring their
+      fixed-point chi2 to agree with LCDM within 0.5 was not a valid nesting criterion. Exact fEDE=0 is not numerically
+      available through the frozen shooting parameterization.
+    fix:
+    - finite-domain gate passes on successful finite evaluations only
+    - delta chi2 retained as diagnostic only
+    - exact LCDM nesting explicitly marked blocked/unasserted
+    - production authorization no longer depends on chi2 closeness at fEDE=0.001
+    scientific_effect: TEST-SEMANTICS CORRECTION ONLY. Production model definitions, data, priors, likelihoods, EDE
+      floor and nuisance priors are unchanged.
+  V14_FIX9:
+    date: '2026-08-28'
+    observed_run: 33182457079
+    failure_class: DUPLICATE RESTART ARCHITECTURE / PYBOBYQA MAXFUN EXHAUSTION
+    observed:
+      lcdm_restart_0:
+        result: MAXFUN
+        objective_best_seen: 274.5952815
+        objective_evaluations: 240
+        internal_pybobyqa_runs: 7
+      lcdm_restart_4:
+        result: SUCCESS
+        chi2_scientific_total: 555.414427
+      me_common_restart_0:
+        result: MAXFUN
+        objective_best_seen: 274.4261048
+        objective_evaluations: 240
+        internal_pybobyqa_runs: 4
+      me_common_restart_3:
+        result: MAXFUN
+        objective_best_seen: 273.6017109
+        objective_evaluations: 240
+        internal_pybobyqa_runs: 6
+    diagnosis: V14 already performs independent seeded globality restarts in the GitHub model x restart matrix. Enabling
+      Py-BOBYQA's own restart layer inside each matrix job duplicates that function and lets repeated internal restarts
+      consume the shared max_evals=240 budget.
+    fix:
+    - set Py-BOBYQA restarts.use_restarts=false
+    - set restarts.use_soft_restarts=false
+    - set restarts.auto_detect=false
+    - retain independent GitHub matrix restarts and seeds
+    - retain max_evals=240 pending evidence from single-local-run jobs
+    - record MAXFUN as technical optimizer non-convergence, never as scientific model failure
+    scientific_effect: "NONE \u2014 optimizer execution architecture only. Model definitions, data, likelihoods, priors,\
+      \ source locks and scientific gates are unchanged."
+  V14_FIX10:
+    date: '2026-08-28'
+    observed_run: 33196037073
+    failure_class: STOCHASTIC SMOKE REFERENCE / FALSE NEGATIVE EDE N2 GATE
+    observed_failure:
+      model: ede_n2
+      cobaya_exit: 0
+      smoke_finite_gate: FAIL
+      random_reference:
+        omega_b: 0.0225687
+        omega_cdm: 0.124001
+        H0: 67.0237
+        tau_reio: 0.05308
+        n_s: 0.954077
+        logA: 3.04251
+        fEDE: 0.0673313
+        log10z_c: 4.02445
+        thetai_scf: 2.79329
+        A_act: 0.99711
+        P_act: 0.987717
+      result: all scientific likelihood components non-finite
+      contrast_same_run:
+        lcdm_smoke: PASS
+        ede_n3_smoke: PASS
+        me_common_smoke: PASS
+    diagnosis: sampler.evaluate drew smoke reference points from ref distributions, making smoke pass/fail depend
+      on a stochastic backend shooting point.
+    validated_finite_reference:
+      run: 33182457079
+      common:
+        omega_b: 0.0224
+        omega_cdm: 0.12
+        H0: 68.0
+        tau_reio: 0.055
+        n_s: 0.965
+        logA: 3.045
+      ACT_nuisance:
+        A_act: 1.0
+        P_act: 1.0
+      EDE:
+        fEDE: 0.001
+        log10z_c: 3.55
+        thetai_scf: 2.8
+      ede_n2_finite_chi2: 888.669427
+    fix:
+    - freeze every smoke run to one deterministic common cosmological point
+    - freeze ACT nuisance parameters A_act and P_act
+    - use the already-validated finite EDE point for both n=3 and n=2
+    - freeze varying_me smoke to ref.loc=1.008
+    - leave production priors, random external restarts and optimizer settings unchanged
+    scientific_effect: "NONE \u2014 smoke/infrastructure validation only. Production model definitions, priors, likelihoods,\
+      \ data, source locks, restart seeds and optimizer budget unchanged."
