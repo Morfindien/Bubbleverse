@@ -1,0 +1,48 @@
+{
+  "project": "Q-005-HPC-V13",
+  "supersedes": "Q-005-HPC-V12",
+  "triggering_run": {
+    "workflow": "Bubbleverse Q005 HPC V12 Split Jobs #1",
+    "job": "Q005 V12 ede_local restart 1",
+    "runtime": "49m18s",
+    "optimizer_evaluations": 59,
+    "objective_value": 304.6382611,
+    "pybobyqa_exit_flag": -3,
+    "message": "Singular matrix in mini-model interpolation (main loop)"
+  },
+  "science_changed": false,
+  "likelihoods_changed": false,
+  "frozen_software_changed": false,
+  "job_split_changed": false,
+  "optimizer_robustness_changed": true,
+  "changes": [
+    "Enable Py-BOBYQA restarts.use_restarts",
+    "Enable soft restarts",
+    "Preserve/interrogate diagnostic information",
+    "Cap each independent restart at 240 objective evaluations",
+    "Keep 285-minute GitHub production job timeout",
+    "Keep two independent seeds 1701 and 1702"
+  ],
+  "files": {
+    "q005_hpc_v13.py": {
+      "bytes": 17495,
+      "sha256": "28e02101fe546023f831c1f5094c04755b69d32637d7f425fd51f172f662f513"
+    },
+    "q005_hpc_v13_config.yml": {
+      "bytes": 11027,
+      "sha256": "8cfcda7517e7424351fde018ab0e6c7d4624881035b324dcd71a3d9c6381f780"
+    },
+    "q005_hpc_v13_requirements.txt": {
+      "bytes": 101,
+      "sha256": "8995c0479cb46a24c4b96ca79c9f366f6557cde777b8e9938a5f8f2cc71e532e"
+    },
+    "q005_validate_v13.py": {
+      "bytes": 5493,
+      "sha256": "e016a18a74c45376c5a54b393a9546840b4df90ea7c400588e20f1c4ce54ceea"
+    },
+    "q005-hpc-v13.yml": {
+      "bytes": 15218,
+      "sha256": "02966b09149709efefbaa6f8e32831eadf26db0f573f6ea88d03ff307986fd04"
+    }
+  }
+}
