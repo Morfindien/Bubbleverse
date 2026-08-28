@@ -1,0 +1,51 @@
+{
+  "q": "Q-005",
+  "project": "Q-005-HPC-V14",
+  "lock_type": "COMMON_BACKEND_DIFFERENTIAL",
+  "claim_boundary": {
+    "allowed": [
+      "common-backend apples-to-apples comparison",
+      "n=3 versus n=2 EDE differential test",
+      "common-backend varying-me control",
+      "H0DN external consistency/re-optimization test"
+    ],
+    "forbidden_until_native_source_is_frozen": [
+      "exact K-036 paper-native reproduction",
+      "exact K-038 EDE paper-native reproduction",
+      "exact K-038 varying-me paper-native reproduction"
+    ]
+  },
+  "common_backend": {
+    "repository": "https://github.com/mwt5345/class_ede.git",
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "status": "FROZEN_FOR_COMMON_BACKEND_TEST",
+    "supports": [
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "n_scf",
+      "varying_me",
+      "varying_transition_redshift"
+    ]
+  },
+  "act_dr6_lite": {
+    "repository": "https://github.com/ACTCollaboration/DR6-ACT-lite.git",
+    "commit": "0e0cd2c703c62a0e980470b572602233b27750e1",
+    "status": "FROZEN"
+  },
+  "native_source_gates": {
+    "K-036": {
+      "status": "BLOCKED_NATIVE_PROVENANCE",
+      "common_backend_surrogate_allowed": true
+    },
+    "K-038-EDE": {
+      "status": "BLOCKED_NATIVE_PROVENANCE",
+      "common_backend_surrogate_allowed": true
+    },
+    "K-038-VARYING-ME": {
+      "status": "BLOCKED_NATIVE_PROVENANCE",
+      "common_backend_surrogate_allowed": true,
+      "note": "The common class_ede varying_me implementation is a pipeline/control model, not the native K-038 CAMB/RECFAST code."
+    }
+  }
+}
