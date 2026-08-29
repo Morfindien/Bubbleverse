@@ -1,0 +1,232 @@
+project:
+  q: Q-005
+  id: Q-005-HPC-V14-GLOBALITY-RECOVERY
+  parent_project: Q-005-HPC-V14
+  purpose: >-
+    Finite deterministic globality recovery for the frozen Q-005 V14 common-backend
+    discovery fits. This is a technical optimizer/globality test, not a new scientific model.
+  scientific_question: >-
+    Hvilke af de resterende systematiske og kosmologiske forklaringsklasser kan
+    kvantitativt reducere den robuste H0-spænding, samtidig med at de forbliver
+    forenelige med H0DN, CMB-SPA, DESI DR2 + BBN, den interne late-Universe
+    calibration structure og de fysisk alternative H0-routes?
+
+parent_result:
+  github_run_id: 33222058407
+  workflow_run_number: 21
+  head_sha: a554a691b182f05ef8b28642c6de8a40ce061efe
+  artifact_id: 9709873270
+  artifact_name: q005-v14-final-result
+  artifact_sha256: 766d0fc326150a8078760b2f770c79a9a0504cbf74c4d7bd9f5069807b34b589
+  status: UNRESOLVED_GLOBALITY
+
+frozen_claim_boundary:
+  allowed:
+    - common-backend apples-to-apples comparison
+    - n=3 versus n=2 EDE differential test
+    - common-backend varying-electron-mass control
+    - optimizer/globality recovery
+  forbidden:
+    - exact K-036 paper-native reproduction
+    - exact K-038 EDE paper-native reproduction
+    - exact K-038 varying-electron-mass paper-native reproduction
+
+base_files:
+  engine: q005_hpc_v14.py
+  config: q005_hpc_v14_config.yml
+  setup: q005_setup_v14.sh
+  requirements: q005_hpc_v14_requirements.txt
+  source_lock: q005_hpc_v14_source_lock.json
+
+optimizer_recovery:
+  method: bobyqa
+  max_evals: 320
+  rhoend: 0.01
+  ede_rhobeg: 0.25
+  internal_restarts: false
+  interpretation: >-
+    Technical refinement only. Scientific model, priors, bounds, datasets,
+    likelihoods, nuisance priors, fEDE floor, and high-H0/globality thresholds
+    are unchanged. max_evals is raised from 240 to 320 and rhoend tightened from
+    0.02 to 0.01 to refine deterministic basin tests while keeping each job below
+    the 240-minute safe target based on prior measured V12/V14 runtimes.
+
+gates:
+  globality_delta_chi2: 1.0
+  high_h0_threshold: 71.5
+  minimum_replicated_best_profiles: 2
+  minimum_valid_profiles_per_model: 2
+  theory_precision_delta_chi2_floor: 0.1
+
+runtime:
+  github_hosted_hard_limit_minutes: 360
+  safe_job_target_minutes: 240
+  job_timeout_minutes: 240
+  aggregate_timeout_minutes: 20
+  strategy: PARALLEL_DETERMINISTIC_BASIN_STARTS
+  h0dn_reoptimization: false
+
+# Every sampled parameter, including ACT likelihood nuisance parameters, receives
+# an exact Cobaya ref value. ref controls only the optimizer starting point; it
+# does not replace or narrow the scientific prior.
+profiles:
+  lcdm:
+    run21_best:
+      role: REPLICATE_PARENT_BEST_BASIN
+      provenance: run21 selected restart 5, seed 1706
+      refs:
+        omega_b: 0.02251604
+        omega_cdm: 0.11729428
+        H0: 68.492134
+        tau_reio: 0.060667073
+        n_s: 0.97722998
+        logA: 3.078919
+        A_act: 1.0152519
+        P_act: 1.0024643
+    standard_reference:
+      role: INDEPENDENT_STANDARD_COSMOLOGY_START
+      provenance: frozen V14 common reference point
+      refs:
+        omega_b: 0.0224
+        omega_cdm: 0.12
+        H0: 68.0
+        tau_reio: 0.055
+        n_s: 0.965
+        logA: 3.045
+        A_act: 1.0
+        P_act: 1.0
+
+  ede_n3:
+    run21_best:
+      role: REPLICATE_PARENT_BEST_BASIN
+      provenance: run21 selected restart 1, seed 1702
+      refs:
+        omega_b: 0.022419641
+        omega_cdm: 0.12439008
+        H0: 69.862474
+        tau_reio: 0.053756965
+        n_s: 0.96356545
+        logA: 3.049446
+        fEDE: 0.064067543
+        log10z_c: 3.2615178
+        thetai_scf: 3.0999708
+        A_act: 1.0019058
+        P_act: 0.99986474
+    k036_high_h0:
+      role: TEST_K036_LIKE_HIGH_H0_BASIN_WITHOUT_NATIVE_REPRODUCTION_CLAIM
+      provenance: K-036 literature target combined with run21 n3 nuisance/cosmology neighborhood
+      refs:
+        omega_b: 0.022419641
+        omega_cdm: 0.12439008
+        H0: 71.0
+        tau_reio: 0.053756965
+        n_s: 0.975
+        logA: 3.049446
+        fEDE: 0.09
+        log10z_c: 3.55
+        thetai_scf: 2.8
+        A_act: 1.0019058
+        P_act: 0.99986474
+    low_fede_control:
+      role: TEST_NEAR_LCDM_EDE_BASIN
+      provenance: run21 LCDM best common parameters plus finite EDE floor neighborhood
+      refs:
+        omega_b: 0.02251604
+        omega_cdm: 0.11729428
+        H0: 68.492134
+        tau_reio: 0.060667073
+        n_s: 0.97722998
+        logA: 3.078919
+        fEDE: 0.002
+        log10z_c: 3.55
+        thetai_scf: 2.8
+        A_act: 1.0152519
+        P_act: 1.0024643
+
+  ede_n2:
+    run21_best:
+      role: REPLICATE_PARENT_REPORTED_BASIN
+      provenance: run21 selected restart 3, seed 1704
+      refs:
+        omega_b: 0.02259654
+        omega_cdm: 0.1236812
+        H0: 67.58024
+        tau_reio: 0.035286563
+        n_s: 0.95724719
+        logA: 3.0302714
+        fEDE: 0.061829347
+        log10z_c: 3.5138771
+        thetai_scf: 2.7688427
+        A_act: 1.0075855
+        P_act: 1.0180998
+    low_fede_lcdm:
+      role: TEST_LOW_FEDE_LCDM_LIKE_BASIN
+      provenance: run21 LCDM best common parameters plus finite EDE floor
+      refs:
+        omega_b: 0.02251604
+        omega_cdm: 0.11729428
+        H0: 68.492134
+        tau_reio: 0.060667073
+        n_s: 0.97722998
+        logA: 3.078919
+        fEDE: 0.001
+        log10z_c: 3.55
+        thetai_scf: 2.8
+        A_act: 1.0152519
+        P_act: 1.0024643
+    k038_like_low_fede:
+      role: TEST_K038_LIKE_LOW_FEDE_REGION_WITHOUT_NATIVE_REPRODUCTION_CLAIM
+      provenance: K-038 H0/low-fEDE literature region with conservative common-backend start
+      refs:
+        omega_b: 0.0224
+        omega_cdm: 0.12
+        H0: 69.17
+        tau_reio: 0.055
+        n_s: 0.965
+        logA: 3.045
+        fEDE: 0.01
+        log10z_c: 3.55
+        thetai_scf: 2.8
+        A_act: 1.0
+        P_act: 1.0
+
+  me_common:
+    run21_best:
+      role: REPLICATE_PARENT_BEST_BASIN
+      provenance: run21 selected restart 1, seed 1702
+      refs:
+        omega_b: 0.02288791
+        omega_cdm: 0.12234247
+        H0: 70.157184
+        tau_reio: 0.055017469
+        n_s: 0.97047979
+        logA: 3.0505111
+        varying_me: 1.0133561
+        A_act: 1.0020769
+        P_act: 1.0014021
+    k038_like:
+      role: TEST_K038_LIKE_VARYING_ME_REGION_WITHOUT_NATIVE_REPRODUCTION_CLAIM
+      provenance: K-038 me/me0 and H0 target with common reference cosmology
+      refs:
+        omega_b: 0.0224
+        omega_cdm: 0.12
+        H0: 69.41
+        tau_reio: 0.055
+        n_s: 0.965
+        logA: 3.045
+        varying_me: 1.0078
+        A_act: 1.0
+        P_act: 1.0
+    me_unity_control:
+      role: TEST_LCDM_LIKE_ME_EQUAL_ONE_BASIN
+      provenance: run21 LCDM best common parameters with varying_me=1
+      refs:
+        omega_b: 0.02251604
+        omega_cdm: 0.11729428
+        H0: 68.492134
+        tau_reio: 0.060667073
+        n_s: 0.97722998
+        logA: 3.078919
+        varying_me: 1.0
+        A_act: 1.0152519
+        P_act: 1.0024643
