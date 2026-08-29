@@ -1,0 +1,97 @@
+project:
+  q: Q-006
+  run_id: Q006-LIKELIHOOD-ATTRIBUTION-V1
+  title: Bubbleverse Q-006 fixed-H0 likelihood-component attribution
+  scientific_question: >-
+    Hvilke konkrete datasæt, likelihood-komponenter og parameterkoblinger i de
+    aktuelle CMB + DESI DR2 + BBN-inferenskæder leverer den dominerende fitstraf,
+    når n=3 EDE og varying electron mass forsøger at flytte H0 fra cirka 68-70
+    til området H0 >= 71.5?
+  execution_mode: MOTOR_PLUS_HPC_TARGETED_PROFILE
+
+parent:
+  q: Q-005
+  repository: Morfindien/Bubbleverse
+  repository_head_observed: 7293c7f5db4d7ab72b1aaad38fe15f2639e11d5e
+  base_project: Q-005-HPC-V14
+  recovery_project: Q-005-HPC-V14-GLOBALITY-RECOVERY
+  base_engine: q005_hpc_v14.py
+  base_config: q005_hpc_v14_config.yml
+  recovery_engine: q005_globality_recovery_v14.py
+  recovery_config: q005_globality_recovery_v14_config.yml
+  setup: q005_setup_v14.sh
+  requirements: q005_hpc_v14_requirements.txt
+  source_lock: q005_hpc_v14_source_lock.json
+
+sources:
+  - K-029
+  - K-030
+  - K-036
+  - K-037
+  - K-038
+  - K-039
+
+claim_boundary:
+  allowed:
+    - common-backend fixed-H0 profile attribution
+    - non-overlapping chi2 component comparison
+    - profiled parameter-coupling inspection
+    - comparison of n=3 EDE versus common-backend varying-m_e barriers
+  forbidden:
+    - exact K-036 paper-native reproduction
+    - exact K-038 paper-native reproduction
+    - changing priors, datasets, likelihoods, bounds or nuisance treatment to reach high H0
+    - interpreting optimizer failure as physical model failure
+
+models:
+  ede_n3:
+    baseline_h0: 70.853292
+    baseline_source_profile: k036_high_h0
+    high_h0_source_profile: k036_high_h0
+    h0_targets: [70.853292, 71.5, 72.5, 73.5]
+  me_common:
+    baseline_h0: 70.157184
+    baseline_source_profile: run21_best
+    high_h0_source_profile: run21_best
+    h0_targets: [70.157184, 71.5, 72.5, 73.5]
+
+optimizer:
+  method: bobyqa
+  max_evals: 320
+  rhoend: 0.01
+  ede_rhobeg: 0.25
+  seed_base: 66000
+  internal_restarts: false
+
+paths:
+  results: q006_v1_results
+  rendered: q006_v1_rendered
+  logs: q006_v1_logs
+  aggregate: q006_v1_aggregate
+
+gates:
+  high_h0_threshold: 71.5
+  theory_precision_delta_chi2_floor: 0.1
+  require_components: [planck_lowl, act_dr6, desi_dr2, bbn]
+  mandatory_tests:
+    - Q_IDENTITY
+    - ENVIRONMENT
+    - SOURCE_AND_BACKEND
+    - FIXED_H0_PROFILE_COMPLETENESS
+    - COMPONENT_COMPLETENESS
+    - PROFILE_FINITE
+    - MERGE_COMPATIBILITY
+    - COMPONENT_ATTRIBUTION
+
+runtime:
+  check_date: 2026-08-30
+  github_hosted_hard_limit_minutes: 360
+  safe_job_target_minutes: 240
+  job_timeout_minutes: 240
+  aggregate_timeout_minutes: 20
+  strategy: PARALLEL_FIXED_H0_PROFILES
+  expected_profile_jobs: 8
+  checkpointing: false
+  reason_no_checkpoint: >-
+    Each profile is an independent atomic deterministic optimization. A killed
+    optimizer is rerun as that profile; it is not falsely called a resume.

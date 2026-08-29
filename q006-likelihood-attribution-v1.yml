@@ -1,0 +1,158 @@
+name: Bubbleverse Q006 Likelihood Attribution V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: q006-likelihood-attribution-v1-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - id: plan
+        shell: bash
+        run: |
+          set -euo pipefail
+          python q006_likelihood_attribution_v1.py preflight
+          MATRIX="$(python q006_likelihood_attribution_v1.py plan --json)"
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+
+  profile:
+    needs: plan
+    name: Q006 ${{ matrix.model }} H0=${{ matrix.target_h0 }}
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - name: Install frozen Q005 V14 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - name: Build frozen common backend
+        id: setup
+        continue-on-error: true
+        run: bash q005_setup_v14.sh
+      - name: Run fixed-H0 profile
+        id: profile_run
+        if: ${{ steps.setup.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          python q006_likelihood_attribution_v1.py run \
+            --model "${{ matrix.model }}" \
+            --target-h0 "${{ matrix.target_h0 }}" \
+            --profile-index "${{ matrix.profile_index }}"
+      - name: Guarantee machine-readable failure record
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import yaml
+          model = "${{ matrix.model }}"
+          h0 = float("${{ matrix.target_h0 }}")
+          cfg = yaml.safe_load(Path("q006_likelihood_attribution_v1_config.yml").read_text())
+          tag = f"q006_attribution_{model}_h0_{h0:.1f}".replace(".", "p")
+          p = Path(cfg["paths"]["results"]) / f"{tag}.json"
+          if not p.exists():
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_text(json.dumps({
+                  "q":"Q-006", "run_id":cfg["project"]["run_id"],
+                  "model":model, "target_h0":h0, "status":"FAIL",
+                  "result_class":"TECHNICAL_PROFILE_FAILURE",
+                  "reason":"UPSTREAM_SETUP_OR_PROFILE_FAILURE",
+                  "scientific_status":"NO_SCIENTIFIC_RESULT"
+              }, indent=2)+"\n")
+          d=json.loads(p.read_text())
+          if d.get("q") != "Q-006": raise SystemExit("Q_IDENTITY_GATE=FAIL")
+          print("PROFILE_RECORD_GATE=PASS", d.get("status"), d.get("reason"))
+          PY
+      - name: Upload profile evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: q006-v1-${{ matrix.model }}-${{ matrix.profile }}
+          path: |
+            q006_v1_results/q006_attribution_${{ matrix.model }}_h0_*.json
+            q006_v1_results/q006_${{ matrix.model }}_h0_*
+            q006_v1_rendered/q006_${{ matrix.model }}_h0_*.yaml
+          if-no-files-found: warn
+          retention-days: 30
+
+  aggregate:
+    if: ${{ always() }}
+    needs: [plan, profile]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - name: Download all Q006 profile artifacts
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q006-v1-*
+          path: q006_v1_aggregate/input
+      - name: Aggregate attribution result
+        id: aggregate_run
+        continue-on-error: true
+        run: |
+          python q006_likelihood_attribution_v1.py aggregate \
+            --artifacts-root q006_v1_aggregate/input \
+            --output q006_v1_aggregate/q006_likelihood_attribution_v1_result.json
+      - name: Guarantee final result record
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("q006_v1_aggregate/q006_likelihood_attribution_v1_result.json")
+          if not p.exists():
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_text(json.dumps({
+                  "q":"Q-006", "run_id":"Q006-LIKELIHOOD-ATTRIBUTION-V1",
+                  "status":"UNRESOLVED", "gates":{"FINAL_RESULT_GATE":"UNRESOLVED"},
+                  "reason":"AGGREGATION_DID_NOT_PRODUCE_FINAL_RECORD",
+                  "scientific_status":"NO_COMPLETE_ATTRIBUTION_RESULT"
+              }, indent=2)+"\n")
+          d=json.loads(p.read_text())
+          if d.get("q") != "Q-006": raise SystemExit("Q_IDENTITY_GATE=FAIL")
+          print("FINAL_Q006_RECORD_GATE=PASS", d.get("status"), d.get("gates"))
+          PY
+      - name: Upload final Q006 result
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: q006-likelihood-attribution-v1-final
+          path: q006_v1_aggregate/q006_likelihood_attribution_v1_result.json
+          retention-days: 90
