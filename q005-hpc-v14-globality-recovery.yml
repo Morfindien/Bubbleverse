@@ -1,0 +1,267 @@
+name: Bubbleverse Q005 V14 Globality Recovery
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: q005-v14-globality-recovery-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    name: Q005 V14 globality recovery plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - name: Install planning dependency
+        run: python -m pip install PyYAML==6.0.2
+      - name: Validate recovery configuration and build matrix
+        id: plan
+        shell: bash
+        run: |
+          set -euo pipefail
+          python q005_globality_recovery_v14.py preflight
+          MATRIX="$(python q005_globality_recovery_v14.py plan --json)"
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+
+  recovery:
+    name: Q005 V14 globality ${{ matrix.model }} / ${{ matrix.profile }}
+    needs: plan
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+
+      - name: Install frozen V14 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+
+      - name: Build frozen V14 common backend and likelihood stack
+        id: setup
+        continue-on-error: true
+        run: bash q005_setup_v14.sh
+
+      - name: Run deterministic basin refinement
+        id: recovery_run
+        if: ${{ steps.setup.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          python q005_globality_recovery_v14.py run \
+            --model "${{ matrix.model }}" \
+            --profile "${{ matrix.profile }}" \
+            --profile-index "${{ matrix.profile_index }}"
+
+      - name: Ensure machine-readable recovery record exists
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          import yaml
+
+          model = "${{ matrix.model }}"
+          profile = "${{ matrix.profile }}"
+          profile_index = int("${{ matrix.profile_index }}")
+          setup_outcome = "${{ steps.setup.outcome }}"
+          run_outcome = "${{ steps.recovery_run.outcome }}"
+
+          results = Path("q005_v14_results")
+          results.mkdir(parents=True, exist_ok=True)
+          p = results / f"q005_globality_result_{model}_{profile}.json"
+
+          rcfg = yaml.safe_load(Path("q005_globality_recovery_v14_config.yml").read_text())
+          entry = rcfg["profiles"][model][profile]
+
+          if not p.exists():
+              setup_failure_path = results / "q005_setup_failure.json"
+              setup_failure = None
+              if setup_failure_path.exists():
+                  try:
+                      setup_failure = json.loads(setup_failure_path.read_text())
+                  except Exception as exc:
+                      setup_failure = {
+                          "status": "SETUP_FAILURE_RECORD_UNREADABLE",
+                          "error": repr(exc),
+                          "path": str(setup_failure_path),
+                      }
+
+              if setup_outcome != "success":
+                  reason = "UPSTREAM_SETUP_FAILURE_NO_SCIENTIFIC_RUN"
+                  technical_status = "SETUP_FAILED"
+              else:
+                  reason = "RECOVERY_EXECUTION_FAILED_NO_RESULT_RECORD"
+                  technical_status = "RECOVERY_EXECUTION_FAILED"
+
+              record = {
+                  "q": "Q-005",
+                  "project": rcfg["project"]["id"],
+                  "parent_project": rcfg["project"]["parent_project"],
+                  "parent_github_run_id": rcfg["parent_result"]["github_run_id"],
+                  "model": model,
+                  "profile": profile,
+                  "profile_index": profile_index,
+                  "profile_role": entry["role"],
+                  "profile_provenance": entry["provenance"],
+                  "start_reference": entry["refs"],
+                  "status": "FAIL",
+                  "result_class": "TECHNICAL_RECOVERY_FAILURE",
+                  "reason": reason,
+                  "technical_status": technical_status,
+                  "scientific_status": "NO_SCIENTIFIC_RESULT",
+                  "setup_step_outcome": setup_outcome,
+                  "recovery_step_outcome": run_outcome,
+                  "setup_failure": setup_failure,
+                  "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+                  "claim_boundary": rcfg["frozen_claim_boundary"],
+              }
+              p.write_text(json.dumps(record, indent=2) + "\n")
+
+          d = json.loads(p.read_text())
+          if d.get("q") != "Q-005":
+              raise SystemExit("Q_IDENTITY_GATE = FAIL")
+          if d.get("project") != "Q-005-HPC-V14-GLOBALITY-RECOVERY":
+              raise SystemExit("RECOVERY_PROJECT_GATE = FAIL")
+          if d.get("model") != model or d.get("profile") != profile:
+              raise SystemExit("MODEL_PROFILE_IDENTITY_GATE = FAIL")
+
+          print("RECOVERY_RECORD_GATE = PASS")
+          print("SCIENTIFIC_STATUS =", d.get("status"))
+          print("REASON =", d.get("reason"))
+          print("CHI2 =", d.get("chi2_scientific_total"))
+          PY
+
+      - name: Upload recovery evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: q005-v14-globality-${{ matrix.model }}-${{ matrix.profile }}
+          path: |
+            q005_v14_results/q005_globality_result_${{ matrix.model }}_${{ matrix.profile }}.json
+            q005_v14_results/q005_setup_failure.json
+            q005_v14_results/globality_${{ matrix.model }}_${{ matrix.profile }}*
+            q005_v14_logs/q005_v14_globality_${{ matrix.model }}_${{ matrix.profile }}.log
+            q005_v14_rendered/q005_v14_globality_${{ matrix.model }}_${{ matrix.profile }}.yaml
+          if-no-files-found: warn
+          retention-days: 30
+
+  aggregate:
+    name: Q005 V14 globality recovery aggregate
+    if: ${{ always() }}
+    needs: [plan, recovery]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install validation dependency
+        run: python -m pip install PyYAML==6.0.2
+
+      - name: Prepare aggregate directory
+        run: mkdir -p q005_v14_globality_aggregate
+
+      - name: Download recovery artifacts
+        id: download
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q005-v14-globality-*
+          path: q005_v14_globality_aggregate
+
+      - name: Aggregate finite targeted recovery
+        id: aggregate_run
+        continue-on-error: true
+        run: |
+          python q005_globality_recovery_v14.py aggregate \
+            --artifacts-root q005_v14_globality_aggregate \
+            --output q005_v14_globality_aggregate/q005_v14_globality_recovery_result.json
+
+      - name: Ensure final recovery record exists
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          import yaml
+
+          p = Path("q005_v14_globality_aggregate/q005_v14_globality_recovery_result.json")
+          rcfg = yaml.safe_load(Path("q005_globality_recovery_v14_config.yml").read_text())
+
+          if not p.exists():
+              p.parent.mkdir(parents=True, exist_ok=True)
+              d = {
+                  "q": "Q-005",
+                  "project": rcfg["project"]["id"],
+                  "parent_project": rcfg["project"]["parent_project"],
+                  "parent_result": rcfg["parent_result"],
+                  "result_class": "DETERMINISTIC_GLOBALITY_RECOVERY",
+                  "status": "UNRESOLVED_AFTER_TARGETED_RECOVERY",
+                  "models": {},
+                  "comparisons": {},
+                  "gates": {
+                      "RECOVERY_EXECUTION_COVERAGE_GATE": "FAIL",
+                      "GLOBALITY_GATE": "UNRESOLVED",
+                      "GLOBALITY_RECOVERY_GATE": "UNRESOLVED",
+                      "FINAL_RECOVERY_RESULT_GATE": "UNRESOLVED",
+                  },
+                  "technical_failure": {
+                      "reason": "AGGREGATION_DID_NOT_PRODUCE_FINAL_RECORD",
+                      "download_outcome": "${{ steps.download.outcome }}",
+                      "aggregate_outcome": "${{ steps.aggregate_run.outcome }}",
+                  },
+                  "scientific_status": "NO_COMPLETE_GLOBALITY_RESULT",
+                  "next_required_action": (
+                      "Return GLOBALITY UNRESOLVED AFTER TARGETED RECOVERY to Result Ingestion. "
+                      "Do not generate additional blind seeds automatically."
+                  ),
+                  "timestamp_utc": datetime.now(timezone.utc).isoformat(),
+                  "claim_boundary": rcfg["frozen_claim_boundary"],
+              }
+              p.write_text(json.dumps(d, indent=2) + "\n")
+
+          d = json.loads(p.read_text())
+          if d.get("q") != "Q-005":
+              raise SystemExit("Q_IDENTITY_GATE = FAIL")
+          print("FINAL_RECOVERY_RECORD_GATE = PASS")
+          print("STATUS =", d.get("status"))
+          print("GATES =", d.get("gates"))
+          PY
+
+      - name: Upload final recovery result
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: q005-v14-globality-recovery-final
+          path: q005_v14_globality_aggregate/q005_v14_globality_recovery_result.json
+          retention-days: 90
