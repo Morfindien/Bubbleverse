@@ -1,0 +1,212 @@
+name: Bubbleverse Q009 ACT Corrected Minima Attribution V3
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q009-act-corrected-minima-v3-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  acquire-parents:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Acquire latest successful Q005 V14 final baseline
+        id: q005
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          RUN_ID="$(gh run list \
+            --workflow q005-hpc-v14.yml \
+            --status completed \
+            --limit 30 \
+            --json databaseId,conclusion \
+            --jq '[.[] | select(.conclusion=="success")] | first | .databaseId')"
+          test -n "$RUN_ID" && test "$RUN_ID" != "null"
+          mkdir -p q009_v3_parent/q005
+          gh run download "$RUN_ID" \
+            --name q005-v14-final-result \
+            --dir q009_v3_parent/q005
+          test -f q009_v3_parent/q005/q005_hpc_v14_final_result.json
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Acquire latest successful Q007 V2 final result
+        id: q007
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          RUN_ID="$(gh run list \
+            --workflow q007-act-observable-attribution-v2.yml \
+            --status completed \
+            --limit 30 \
+            --json databaseId,conclusion \
+            --jq '[.[] | select(.conclusion=="success")] | first | .databaseId')"
+          test -n "$RUN_ID" && test "$RUN_ID" != "null"
+          mkdir -p q009_v3_parent/q007
+          gh run download "$RUN_ID" \
+            --name q007-act-observable-attribution-v1-final \
+            --dir q009_v3_parent/q007
+          test -f q009_v3_parent/q007/q007_act_observable_attribution_v1_result.json
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Acquire latest successful Q008 final result
+        id: q008
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          RUN_ID="$(gh run list \
+            --workflow q008-globality-validation-v1.yml \
+            --status completed \
+            --limit 30 \
+            --json databaseId,conclusion \
+            --jq '[.[] | select(.conclusion=="success")] | first | .databaseId')"
+          test -n "$RUN_ID" && test "$RUN_ID" != "null"
+          mkdir -p q009_v3_parent/q008
+          gh run download "$RUN_ID" \
+            --name q008-globality-validation-v1-final \
+            --dir q009_v3_parent/q008
+          test -f q009_v3_parent/q008/q008_globality_validation_v1_result.json
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Parent identity and schema gates
+        run: |
+          python - <<'PY'
+          import json
+          q5=json.load(open("q009_v3_parent/q005/q005_hpc_v14_final_result.json"))
+          q7=json.load(open("q009_v3_parent/q007/q007_act_observable_attribution_v1_result.json"))
+          q8=json.load(open("q009_v3_parent/q008/q008_globality_validation_v1_result.json"))
+          assert q5.get("q")=="Q-005", "Q005_PARENT_IDENTITY_GATE=FAIL"
+          assert q7.get("q")=="Q-007", "Q007_PARENT_IDENTITY_GATE=FAIL"
+          assert q8.get("q")=="Q-008", "Q008_PARENT_IDENTITY_GATE=FAIL"
+          assert isinstance(q5.get("models",{}).get("ede_n3"), dict), "Q005_SCHEMA_GATE=FAIL"
+          assert isinstance(q7.get("models",{}).get("ede_n3",{}).get("profiles"), dict), "Q007_SCHEMA_GATE=FAIL"
+          assert isinstance(q8.get("profile_targets"), dict), "Q008_SCHEMA_GATE=FAIL"
+          print("Q009_V2_PARENT_GATES=PASS")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q009-v3-parent-results
+          path: q009_v3_parent
+          retention-days: 30
+
+  point:
+    needs: acquire-parents
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {h0: 71.5, tag: 71p5}
+          - {h0: 72.5, tag: 72p5}
+          - {h0: 73.5, tag: 73p5}
+
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+
+      - name: Install frozen Q005 V14 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+
+      - name: Build frozen Q005 V14 common backend
+        run: bash q005_setup_v14.sh
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q009-v3-parent-results
+          path: q009_v3_parent
+
+      - name: Q009 context and source preflight
+        run: |
+          python q009_act_corrected_minima_attribution_v3.py preflight \
+            --q005 q009_v3_parent/q005/q005_hpc_v14_final_result.json \
+            --q008 q009_v3_parent/q008/q008_globality_validation_v1_result.json \
+            --q007 q009_v3_parent/q007/q007_act_observable_attribution_v1_result.json
+
+      - name: Fixed corrected-minimum ACT attribution
+        run: |
+          mkdir -p q009_v3_results
+          python q009_act_corrected_minima_attribution_v3.py run \
+            --q005 q009_v3_parent/q005/q005_hpc_v14_final_result.json \
+            --q008 q009_v3_parent/q008/q008_globality_validation_v1_result.json \
+            --q007 q009_v3_parent/q007/q007_act_observable_attribution_v1_result.json \
+            --target-h0 "${{ matrix.h0 }}" \
+            --output "q009_v3_results/q009_v2_point_${{ matrix.tag }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q009-v3-point-${{ matrix.tag }}
+          path: q009_v3_results/q009_v2_point_${{ matrix.tag }}.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  aggregate:
+    if: ${{ always() }}
+    needs: [acquire-parents, point]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - run: python -m pip install PyYAML==6.0.2 numpy==1.26.4
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q009-v3-point-*
+          path: q009_v3_aggregate/input
+
+      - name: Aggregate Q009
+        run: |
+          python q009_act_corrected_minima_attribution_v3.py aggregate \
+            --input q009_v3_aggregate/input \
+            --output q009_v3_aggregate/q009_act_corrected_minima_attribution_v3_result.json
+
+      - name: Final Q identity gate
+        run: |
+          python - <<'PY'
+          import json
+          p="q009_v3_aggregate/q009_act_corrected_minima_attribution_v3_result.json"
+          d=json.load(open(p))
+          assert d.get("q")=="Q-009", "Q_IDENTITY_GATE=FAIL"
+          print("Q009_FINAL_RECORD_GATE", d.get("gates",{}).get("FINAL_RESULT_GATE"))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q009-act-corrected-minima-attribution-v3-final
+          path: q009_v3_aggregate/q009_act_corrected_minima_attribution_v3_result.json
+          retention-days: 90
