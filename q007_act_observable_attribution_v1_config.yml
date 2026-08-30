@@ -1,0 +1,71 @@
+project:
+  q: Q-007
+  run_id: Q007-ACT-OBSERVABLE-ATTRIBUTION-V1
+  title: Bubbleverse Q-007 ACT DR6 observable and multipole attribution
+  scientific_question: >-
+    Which ACT DR6 TT, TE, and EE observables and multipole bands actually
+    produce Q-006's positive n=3 EDE ACT penalty, and why is the corresponding
+    ACT penalty much smaller for the varying-electron-mass control?
+  execution_mode: MOTOR_PLUS_HPC_TARGETED_ATTRIBUTION
+
+parent:
+  q: Q-006
+  repository: Morfindien/Bubbleverse
+  base_engine: q005_hpc_v14.py
+  base_config: q005_hpc_v14_config.yml
+  setup: q005_setup_v14.sh
+  requirements: q005_hpc_v14_requirements.txt
+  q006_workflow: q006-likelihood-attribution-v1.yml
+  q006_final_artifact: q006-likelihood-attribution-v1-final
+  q006_final_filename: q006_likelihood_attribution_v1_result.json
+  act_dr6_lite_commit: 0e0cd2c703c62a0e980470b572602233b27750e1
+
+sources: [K-029, K-030, K-036, K-037, K-038, K-039, K-045, Q-005, Q-006]
+
+models:
+  ede_n3:
+    baseline_h0: 70.853292
+    h0_targets: [70.853292, 71.5, 72.5, 73.5]
+  me_common:
+    baseline_h0: 70.157184
+    h0_targets: [70.157184, 71.5, 72.5, 73.5]
+
+# Boundaries are intentionally tied to ACT bandpower centers, not interpreted
+# as independent likelihoods. These broad physical regions can be refined after
+# inspecting the emitted ell_eff values without changing the raw per-bin output.
+bands:
+  - {name: ACT_LOW,  ell_min: 600,  ell_max: 1499.999}
+  - {name: ACT_MID,  ell_min: 1500, ell_max: 2999.999}
+  - {name: ACT_HIGH, ell_min: 3000, ell_max: 8500}
+
+derivatives:
+  enabled: true
+  parameters: [fEDE, n_s, omega_cdm, omega_b]
+  steps:
+    fEDE: 0.002
+    n_s: 0.001
+    omega_cdm: 0.0005
+    omega_b: 0.00005
+
+gates:
+  closure_tolerance: 1.0e-7
+  mandatory:
+    - Q_IDENTITY_GATE
+    - Q006_EXACT_POINT_GATE
+    - BACKEND_SOURCE_GATE
+    - ACT_LIKELIHOOD_GATE
+    - QUADRATIC_CLOSURE_GATE
+    - JOB_COMPLETENESS_GATE
+    - COVARIANCE_INTERPRETATION_GATE
+    - FINAL_RESULT_GATE
+
+runtime:
+  check_date: 2026-08-30
+  github_hosted_hard_limit_minutes: 360
+  safe_job_target_minutes: 240
+  strategy: PARALLEL_PROFILE_POINTS
+  expected_point_jobs: 8
+  checkpointing: false
+  reason_no_checkpoint: >-
+    Each Q-006 profile point is a fixed deterministic evaluation plus local
+    finite differences. No optimizer or stateful sampler is resumed.
