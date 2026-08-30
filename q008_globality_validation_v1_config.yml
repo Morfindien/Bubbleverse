@@ -1,0 +1,167 @@
+project:
+  q: Q-008
+  run_id: Q008-EDE-GLOBALITY-VALIDATION-V1
+  title: Bubbleverse Q-008 n=3 EDE fixed-H0 globality validation
+  scientific_question: >-
+    Er den ikke-monotone Q-006 n=3 EDE H0-profil — Delta chi2_total cirka
+    +2.03 ved H0=71.5, +19.88 ved 72.5 og +10.97 ved 73.5 — primært et
+    resultat af optimizer-/basinstruktur eller manglende global minimisering,
+    eller er den en reproducerbar egenskab ved den frosne common-backend likelihood?
+  execution_mode: HPC_PROGRAM_TARGETED_GLOBALITY_VALIDATION
+
+parent:
+  q: Q-006
+  repository: Morfindien/Bubbleverse
+  repository_head_observed_at_design: 6a7b7a2c8409685bb5ebe97a0c65abf17dbdbcea
+  base_q: Q-005
+  base_engine: q005_hpc_v14.py
+  base_config: q005_hpc_v14_config.yml
+  recovery_engine: q005_globality_recovery_v14.py
+  recovery_config: q005_globality_recovery_v14_config.yml
+  q006_engine: q006_likelihood_attribution_v1.py
+  q006_config: q006_likelihood_attribution_v1_config.yml
+  setup: q005_setup_v14.sh
+  requirements: q005_hpc_v14_requirements.txt
+  source_lock: q005_hpc_v14_source_lock.json
+
+sources:
+  - K-029
+  - K-036
+  - K-037
+  - K-038
+  - INTERNAL-Q005
+  - INTERNAL-Q006
+  - INTERNAL-Q007
+
+claim_boundary:
+  frozen_common_backend: true
+  allowed:
+    - fixed-H0 n=3 EDE optimizer-start dependence
+    - finite deterministic basin search
+    - re-refinement from discovered endpoints
+    - likelihood multimodality / nonlinearity diagnosis
+    - boundary diagnostics
+    - comparison against preserved historical Q-006 profile
+  forbidden:
+    - changing priors, bounds, datasets, likelihoods or model definition
+    - paper-native K-036 or K-038 reproduction claims
+    - calling a finite-restart best point a mathematically proven global minimum
+    - deleting historical Q-006 provenance
+    - automatically rerunning Q-007 without materially changed Q-008 minima
+
+profile:
+  model: ede_n3
+  baseline_h0: 70.853292
+  h0_targets: [70.853292, 71.5, 72.5, 73.5]
+
+starts:
+  families:
+    - run21_best
+    - k036_high_h0
+    - low_fede_control
+    - q006_historical_shape
+  interpretation: >-
+    The first three starts are complete frozen EDE references already present in
+    Q-005 globality recovery. q006_historical_shape transplants only the documented
+    Q-006 key best-fit coordinates onto the complete k036_high_h0 reference;
+    missing nuisance/auxiliary coordinates are not invented.
+
+historical_q006:
+  preservation_rule: >-
+    Historical Q-006 values are immutable provenance. If Q-008 finds materially
+    better minima, the old values are marked SUPERSEDED, never deleted.
+  baseline_chi2: 548.978381
+  delta_chi2_total:
+    "70.853292": 0.0
+    "71.5": 2.032064
+    "72.5": 19.877158
+    "73.5": 10.971604
+  bestfit_key_parameters:
+    "70.853292":
+      H0: 70.853292
+      fEDE: 0.084456665
+      omega_b: 0.022628397
+      omega_cdm: 0.12645353
+      n_s: 0.98474781
+    "71.5":
+      H0: 71.5
+      fEDE: 0.088040869
+      omega_b: 0.022678741
+      omega_cdm: 0.12577043
+      n_s: 0.98073730
+    "72.5":
+      H0: 72.5
+      fEDE: 0.095304433
+      omega_b: 0.022765469
+      omega_cdm: 0.12464596
+      n_s: 0.98620962
+    "73.5":
+      H0: 73.5
+      fEDE: 0.1421616
+      omega_b: 0.022922571
+      omega_cdm: 0.13268443
+      n_s: 0.97782391
+
+optimizer:
+  stage1:
+    method: bobyqa
+    max_evals: 320
+    rhoend: 0.01
+    ede_rhobeg: 0.25
+    seed_base: 68000
+    interpretation: >-
+      Same deterministic recovery precision family already used by Q-005/Q-006;
+      only optimizer starting coordinates differ.
+  stage2:
+    method: bobyqa
+    max_evals: 240
+    rhoend: 0.005
+    ede_rhobeg: 0.10
+    seed_base: 69000
+    interpretation: >-
+      Local re-refinement from each exact Stage-1 endpoint. This changes numerical
+      refinement only, not the scientific configuration.
+
+gates:
+  replication_delta_chi2: 0.20
+  refinement_delta_chi2: 0.10
+  material_profile_change_delta_chi2: 1.00
+  minimum_replicated_best_starts: 2
+  boundary_parameters:
+    fEDE: {min: 0.001, max: 0.3, tol: 0.001}
+    log10z_c: {min: 3.0, max: 4.3, tol: 0.02}
+    thetai_scf: {min: 0.1, max: 3.1, tol: 0.02}
+  mandatory_tests:
+    - Q_IDENTITY
+    - FROZEN_BACKEND
+    - ENVIRONMENT
+    - SOURCE_AND_CONFIG
+    - STAGE1_COMPLETENESS
+    - STAGE2_COMPLETENESS
+    - FINITE_PROFILE
+    - START_BASIN_REPLICATION
+    - REFINEMENT_STABILITY
+    - PARAMETER_BOUNDARY
+    - HISTORICAL_PROFILE_COMPARISON
+    - FINAL_RESULT
+
+paths:
+  results: q008_v1_results
+  rendered: q008_v1_rendered
+  aggregate: q008_v1_aggregate
+
+runtime:
+  check_date: 2026-08-30
+  runner: ubuntu-24.04
+  github_hosted_hard_limit_minutes: 360
+  safe_job_target_minutes: 240
+  profile_job_timeout_minutes: 240
+  plan_timeout_minutes: 10
+  aggregate_timeout_minutes: 20
+  stage1_jobs: 16
+  stage2_jobs: 16
+  strategy: TWO_STAGE_PARALLEL_BASIN_SEARCH_AND_LOCAL_REFINEMENT
+  checkpointing: false
+  reason_no_checkpoint: >-
+    Every optimizer run is an independent atomic minimization. Stage 2 is a new
+    documented re-refinement from the Stage-1 endpoint, not a false resume.

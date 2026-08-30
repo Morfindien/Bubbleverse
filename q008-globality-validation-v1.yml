@@ -1,0 +1,243 @@
+name: Bubbleverse Q008 EDE Globality Validation V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: q008-ede-globality-v1-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - id: plan
+        shell: bash
+        run: |
+          set -euo pipefail
+          python q008_globality_validation_v1.py preflight
+          MATRIX="$(python q008_globality_validation_v1.py plan --json)"
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+
+  stage1:
+    needs: plan
+    name: Q008 S1 H0=${{ matrix.target_h0 }} ${{ matrix.start_family }}
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - name: Install frozen Q005 V14 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - name: Build frozen common backend
+        id: setup
+        continue-on-error: true
+        run: bash q005_setup_v14.sh
+      - name: Run Stage-1 independent basin start
+        id: run
+        if: ${{ steps.setup.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          python q008_globality_validation_v1.py stage1 \
+            --target-h0 "${{ matrix.target_h0 }}" \
+            --start-family "${{ matrix.start_family }}" \
+            --profile-index "${{ matrix.profile_index }}"
+      - name: Guarantee Stage-1 record
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          import yaml
+          h=float("${{ matrix.target_h0 }}")
+          s="${{ matrix.start_family }}"
+          tag=(f"{h:.6f}".rstrip("0").rstrip(".").replace(".","p"))
+          p=Path("q008_v1_results")/f"q008_stage1_h0_{tag}_{s}.json"
+          if not p.exists():
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_text(json.dumps({
+                  "q":"Q-008","run_id":"Q008-EDE-GLOBALITY-VALIDATION-V1",
+                  "stage":"stage1","target_h0":h,"start_family":s,
+                  "status":"FAIL","reason":"UPSTREAM_SETUP_OR_OPTIMIZER_FAILURE"
+              }, indent=2)+"\n")
+          d=json.loads(p.read_text())
+          if d.get("q")!="Q-008":
+              raise SystemExit("Q_IDENTITY_GATE=FAIL")
+          print("STAGE1_RECORD_GATE=PASS", d.get("status"), d.get("reason"))
+          PY
+      - name: Upload Stage-1 evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: q008-v1-stage1-${{ matrix.profile_index }}
+          path: |
+            q008_v1_results/q008_stage1_h0_*.json
+            q008_v1_results/q008_stage1_*
+            q008_v1_rendered/q008_stage1_*.yaml
+          if-no-files-found: warn
+          retention-days: 30
+
+  stage2:
+    if: ${{ always() }}
+    needs: [plan, stage1]
+    name: Q008 S2 H0=${{ matrix.target_h0 }} ${{ matrix.start_family }}
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - name: Download Stage-1 evidence
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q008-v1-stage1-*
+          path: q008_v1_stage1_input
+      - name: Build frozen common backend
+        id: setup
+        continue-on-error: true
+        run: bash q005_setup_v14.sh
+      - name: Re-refine Stage-1 endpoint
+        id: run
+        if: ${{ steps.setup.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          python q008_globality_validation_v1.py stage2 \
+            --target-h0 "${{ matrix.target_h0 }}" \
+            --start-family "${{ matrix.start_family }}" \
+            --profile-index "${{ matrix.profile_index }}" \
+            --stage1-root q008_v1_stage1_input
+      - name: Guarantee Stage-2 record
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          h=float("${{ matrix.target_h0 }}")
+          s="${{ matrix.start_family }}"
+          tag=(f"{h:.6f}".rstrip("0").rstrip(".").replace(".","p"))
+          p=Path("q008_v1_results")/f"q008_stage2_h0_{tag}_{s}.json"
+          if not p.exists():
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_text(json.dumps({
+                  "q":"Q-008","run_id":"Q008-EDE-GLOBALITY-VALIDATION-V1",
+                  "stage":"stage2","target_h0":h,"start_family":s,
+                  "status":"FAIL","reason":"UPSTREAM_STAGE2_FAILURE"
+              }, indent=2)+"\n")
+          d=json.loads(p.read_text())
+          if d.get("q")!="Q-008":
+              raise SystemExit("Q_IDENTITY_GATE=FAIL")
+          print("STAGE2_RECORD_GATE=PASS", d.get("status"), d.get("reason"))
+          PY
+      - name: Upload Stage-2 evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: q008-v1-stage2-${{ matrix.profile_index }}
+          path: |
+            q008_v1_results/q008_stage2_h0_*.json
+            q008_v1_results/q008_stage2_*
+            q008_v1_rendered/q008_stage2_*.yaml
+          if-no-files-found: warn
+          retention-days: 30
+
+  aggregate:
+    if: ${{ always() }}
+    needs: [stage1, stage2]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - name: Download all Stage-1 evidence
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q008-v1-stage1-*
+          path: q008_v1_aggregate/stage1
+      - name: Download all Stage-2 evidence
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q008-v1-stage2-*
+          path: q008_v1_aggregate/stage2
+      - name: Aggregate Q-008
+        id: aggregate_run
+        continue-on-error: true
+        run: |
+          python q008_globality_validation_v1.py aggregate \
+            --stage1-root q008_v1_aggregate/stage1 \
+            --stage2-root q008_v1_aggregate/stage2 \
+            --output q008_v1_aggregate/q008_globality_validation_v1_result.json
+      - name: Guarantee final Q-008 record
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("q008_v1_aggregate/q008_globality_validation_v1_result.json")
+          if not p.exists():
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_text(json.dumps({
+                  "q":"Q-008","run_id":"Q008-EDE-GLOBALITY-VALIDATION-V1",
+                  "status":"UNRESOLVED",
+                  "gates":{"FINAL_RESULT_GATE":"UNRESOLVED"},
+                  "reason":"AGGREGATION_DID_NOT_PRODUCE_FINAL_RECORD"
+              }, indent=2)+"\n")
+          d=json.loads(p.read_text())
+          if d.get("q")!="Q-008":
+              raise SystemExit("Q_IDENTITY_GATE=FAIL")
+          print("FINAL_Q008_RECORD_GATE=PASS", d.get("status"), d.get("gates"))
+          PY
+      - name: Upload final Q-008 result
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: q008-globality-validation-v1-final
+          path: q008_v1_aggregate/q008_globality_validation_v1_result.json
+          retention-days: 90
