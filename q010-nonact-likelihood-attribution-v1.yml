@@ -1,0 +1,213 @@
+name: Bubbleverse Q010 Non-ACT Likelihood Attribution V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q010-nonact-likelihood-attribution-v1-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  acquire-parents:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Locate latest successful parent runs
+        id: parents
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          find_run() {
+            local workflow="$1"
+            gh run list --workflow "$workflow" --status completed --limit 50 \
+              --json databaseId,conclusion \
+              --jq '[.[] | select(.conclusion=="success")] | first | .databaseId'
+          }
+          Q007_RUN="$(find_run q007-act-observable-attribution-v2.yml)"
+          Q008_RUN="$(find_run q008-globality-validation-v1.yml)"
+          Q009_RUN="$(find_run q009-act-corrected-minima-attribution-v8.yml)"
+          for x in "$Q007_RUN" "$Q008_RUN" "$Q009_RUN"; do
+            test -n "$x" && test "$x" != "null"
+          done
+          echo "q007=$Q007_RUN" >> "$GITHUB_OUTPUT"
+          echo "q008=$Q008_RUN" >> "$GITHUB_OUTPUT"
+          echo "q009=$Q009_RUN" >> "$GITHUB_OUTPUT"
+
+      - name: Download exact Q005 baseline vector preserved by Q007
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p q010_parent/q007
+          gh run download "${{ steps.parents.outputs.q007 }}" \
+            --name q007-point-ede-baseline \
+            --dir q010_parent/q007
+          test -f q010_parent/q007/q007_point_ede-baseline.json
+
+      - name: Download Q008 corrected best-observed vectors
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p q010_parent/q008
+          gh run download "${{ steps.parents.outputs.q008 }}" \
+            --name q008-globality-validation-v1-final \
+            --dir q010_parent/q008
+          test -f q010_parent/q008/q008_globality_validation_v1_result.json
+
+      - name: Download Q009 corrected ACT attribution
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p q010_parent/q009
+          gh run download "${{ steps.parents.outputs.q009 }}" \
+            --name q009-act-corrected-minima-attribution-v8-final \
+            --dir q010_parent/q009
+          test -f q010_parent/q009/q009_act_corrected_minima_attribution_v8_result.json
+
+      - name: Parent identity gates
+        run: |
+          python - <<'PY'
+          import json
+          q7=json.load(open('q010_parent/q007/q007_point_ede-baseline.json'))
+          q8=json.load(open('q010_parent/q008/q008_globality_validation_v1_result.json'))
+          q9=json.load(open('q010_parent/q009/q009_act_corrected_minima_attribution_v8_result.json'))
+          assert q7.get('q')=='Q-007', 'Q007_PARENT_GATE=FAIL'
+          assert q8.get('q')=='Q-008', 'Q008_PARENT_GATE=FAIL'
+          assert q9.get('q')=='Q-009', 'Q009_PARENT_GATE=FAIL'
+          print('Q010_PARENT_IDENTITY_GATES=PASS')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q010-parent-results
+          path: q010_parent
+          retention-days: 30
+
+  point:
+    needs: acquire-parents
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {point: baseline, tag: baseline}
+          - {point: "71.5", tag: 71p5}
+          - {point: "72.5", tag: 72p5}
+          - {point: "73.5", tag: 73p5}
+
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+
+      - name: Install frozen Q005 V14 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+
+      - name: Build frozen Q005 V14 common backend
+        run: bash q005_setup_v14.sh
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q010-parent-results
+          path: q010_parent
+
+      - name: Q010 preflight
+        run: |
+          python q010_nonact_likelihood_attribution_v1.py preflight \
+            --q007-baseline q010_parent/q007/q007_point_ede-baseline.json \
+            --q008 q010_parent/q008/q008_globality_validation_v1_result.json
+
+      - name: Evaluate fixed vector
+        run: |
+          mkdir -p q010_results
+          python q010_nonact_likelihood_attribution_v1.py run \
+            --q007-baseline q010_parent/q007/q007_point_ede-baseline.json \
+            --q008 q010_parent/q008/q008_globality_validation_v1_result.json \
+            --point "${{ matrix.point }}" \
+            --output "q010_results/q010_point_${{ matrix.tag }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q010-point-${{ matrix.tag }}
+          path: q010_results/q010_point_${{ matrix.tag }}.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  aggregate:
+    if: ${{ always() }}
+    needs: [acquire-parents, point]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - run: python -m pip install PyYAML==6.0.2
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q010-point-*
+          path: q010_aggregate/points
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q010-parent-results
+          path: q010_parent
+
+      - name: Aggregate and run mandatory crosschecks
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t POINTS < <(find q010_aggregate/points -name 'q010_point_*.json' -type f | sort)
+          test "${#POINTS[@]}" -eq 4
+          python q010_nonact_likelihood_attribution_v1.py aggregate \
+            --inputs "${POINTS[@]}" \
+            --q009 q010_parent/q009/q009_act_corrected_minima_attribution_v8_result.json \
+            --output q010_aggregate/q010_nonact_likelihood_attribution_v1_result.json
+
+      - name: Final gate
+        run: |
+          python - <<'PY'
+          import json
+          p='q010_aggregate/q010_nonact_likelihood_attribution_v1_result.json'
+          d=json.load(open(p))
+          assert d.get('q')=='Q-010', 'Q_IDENTITY_GATE=FAIL'
+          assert d.get('globality_gate')=='UNRESOLVED', 'GLOBALITY_PRESERVATION_GATE=FAIL'
+          assert d.get('gates',{}).get('FINAL_RESULT_GATE')=='PASS', 'FINAL_RESULT_GATE=FAIL'
+          print('Q010_FINAL_RESULT_GATE=PASS')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q010-nonact-likelihood-attribution-v1-final
+          path: q010_aggregate/q010_nonact_likelihood_attribution_v1_result.json
+          if-no-files-found: warn
+          retention-days: 90

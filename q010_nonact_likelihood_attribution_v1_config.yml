@@ -1,0 +1,117 @@
+project:
+  q: Q-010
+  run_id: Q010-NONACT-LIKELIHOOD-ATTRIBUTION-V1
+  title: Bubbleverse Q-010 non-ACT likelihood attribution at corrected n=3 EDE basins
+  scientific_question: >-
+    At the corrected Q-008 best-observed n=3 EDE fixed-H0 basins, which non-ACT
+    likelihood components and parameter tradeoffs dominate the change in total
+    scientific chi2 relative to the frozen Q-005 n=3 EDE baseline, and where does
+    the remaining high-H0 cost move when Q-007's former TE/intermediate-ell ACT
+    barrier does not persist?
+  execution_mode: HPC_FIXED_VECTOR_COMPONENT_ATTRIBUTION
+
+parent:
+  repository: Morfindien/Bubbleverse
+  repo_inspection_commit: ee68bb92092d86be81aed9b62ba02e422910af5d
+  base_q: Q-005
+  base_engine: q005_hpc_v14.py
+  base_config: q005_hpc_v14_config.yml
+  setup: q005_setup_v14.sh
+  requirements: q005_hpc_v14_requirements.txt
+  q007_workflow: q007-act-observable-attribution-v2.yml
+  q007_baseline_artifact: q007-point-ede-baseline
+  q007_baseline_filename: q007_point_ede-baseline.json
+  q008_workflow: q008-globality-validation-v1.yml
+  q008_artifact: q008-globality-validation-v1-final
+  q008_filename: q008_globality_validation_v1_result.json
+  q009_workflow: q009-act-corrected-minima-attribution-v8.yml
+  q009_artifact: q009-act-corrected-minima-attribution-v8-final
+  q009_filename: q009_act_corrected_minima_attribution_v8_result.json
+  act_dr6_lite_commit: 0e0cd2c703c62a0e980470b572602233b27750e1
+
+sources:
+  - K-029
+  - K-036
+  - K-037
+  - K-038
+  - K-045
+  - INTERNAL-Q005
+  - INTERNAL-Q006
+  - INTERNAL-Q007
+  - INTERNAL-Q008
+  - INTERNAL-Q009
+
+frozen_baseline:
+  h0: 70.853292
+  chi2_scientific: 548.010401
+  q008_same_h0_chi2_do_not_promote: 548.321909
+
+targets:
+  "71.5":
+    q008_best_observed_chi2: 547.154321
+    q009_delta_chi2_act: -2.5540022704
+  "72.5":
+    q008_best_observed_chi2: 548.854655
+    q009_delta_chi2_act: 0.8767615642
+  "73.5":
+    q008_best_observed_chi2: 549.105584
+    q009_delta_chi2_act: 0.1088267637
+
+component_order:
+  - planck_lowl
+  - act_dr6
+  - desi_dr2
+  - bbn
+
+non_act_components:
+  - planck_lowl
+  - desi_dr2
+  - bbn
+
+execution:
+  reoptimize: false
+  sampler: false
+  derivatives: false
+  fixed_vector_only: true
+  point_parallelism: 4
+  checkpointing: false
+  reason_no_checkpoint: >-
+    Baseline and three corrected targets are deterministic fixed-vector
+    likelihood evaluations. There is no stateful optimizer or sampler to resume.
+
+gates:
+  baseline_h0_tolerance: 1.0e-6
+  baseline_chi2_tolerance: 1.0e-3
+  target_chi2_tolerance: 2.0e-3
+  q009_act_delta_tolerance: 2.0e-3
+  component_closure_tolerance: 2.0e-3
+  mandatory:
+    - Q_IDENTITY_GATE
+    - PARENT_Q_GATE
+    - Q007_BASELINE_VECTOR_GATE
+    - Q008_EXACT_POINT_GATE
+    - BACKEND_Q_GATE
+    - LIKELIHOOD_COMPONENT_GATE
+    - BASELINE_REPRODUCTION_GATE
+    - TARGET_REPRODUCTION_GATE
+    - COMPONENT_CLOSURE_GATE
+    - Q009_ACT_CROSSCHECK_GATE
+    - JOB_COMPLETENESS_GATE
+    - SCIENTIFIC_INTERPRETATION_GATE
+    - FINAL_RESULT_GATE
+
+runtime:
+  check_date: 2026-08-30
+  github_hosted_job_hard_limit_minutes: 360
+  safe_target_minutes: 180
+  point_job_timeout_minutes: 180
+  aggregate_job_timeout_minutes: 20
+  strategy: PARALLEL_FIXED_POINT_EVALUATIONS
+  expected_point_jobs: 4
+  single_job_risk_after_sharding: LOW
+
+claim_boundary: >-
+  Fixed-point component attribution inside the frozen Q-005 V14 common backend.
+  Q-008 targets remain BEST OBSERVED, not proven global minima. Q-010 does not
+  resolve GLOBALITY_GATE and does not establish n=3 EDE as a solution to the
+  H0 tension. Signed component deltas are retained, including negative values.
