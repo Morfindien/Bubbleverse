@@ -1,0 +1,156 @@
+project:
+  q: Q011
+  run_id: Q011-EDE-GLOBALITY-CERTIFICATION-V1
+  result_id: R-Q011-EDE-GLOBALITY-CERTIFICATION-001
+  title: Bubbleverse Q011 n=3 EDE fixed-H0 basin/globality certification
+  scientific_question: >-
+    Do the corrected high-H0 n=3 early-dark-energy basins at fixed H0 =
+    71.5, 72.5, and 73.5 km s^-1 Mpc^-1 represent reproducible global or
+    sufficiently certified near-global minima of the frozen Bubbleverse
+    likelihood surface, or is the shallow high-H0 profile still an
+    optimizer-basin artifact?
+
+parent:
+  repository: Morfindien/Bubbleverse
+  repository_head_observed_at_design: a4b109da219735823c1d2b531c275267d327bdc6
+  base_q: Q-005
+  base_engine: q005_hpc_v14.py
+  base_config: q005_hpc_v14_config.yml
+  recovery_engine: q005_globality_recovery_v14.py
+  recovery_config: q005_globality_recovery_v14_config.yml
+  q008_engine: q008_globality_validation_v1.py
+  q008_config: q008_globality_validation_v1_config.yml
+  q008_workflow: q008-globality-validation-v1.yml
+  q008_final_artifact: q008-globality-validation-v1-final
+  q008_final_filename: q008_globality_validation_v1_result.json
+  setup: q005_setup_v14.sh
+  requirements: q005_hpc_v14_requirements.txt
+  source_lock: q005_hpc_v14_source_lock.json
+
+sources:
+  - K-029
+  - K-036
+  - K-038
+  - INTERNAL-Q005
+  - INTERNAL-Q007
+  - INTERNAL-Q008
+  - INTERNAL-Q009
+  - INTERNAL-Q010-V3
+
+claim_boundary:
+  frozen_q005_v14_surface: true
+  no_primary_science_changes: true
+  forbidden:
+    - changing datasets
+    - changing likelihood definitions
+    - changing priors
+    - changing parameter bounds
+    - changing model physics
+    - changing n=3 EDE parameterization
+    - calling finite multi-start search a mathematically proven global minimum
+    - using serialized attribution baseline as optimizer-native reference
+
+frozen_scientific_configuration:
+  model: n=3 early dark energy / ede_n3
+  backend: Q-005 V14 common backend
+  datasets:
+    - Planck low-ell
+    - ACT DR6
+    - DESI DR2
+    - BBN
+  h0_condition: fixed separately at each profile target
+  priors_bounds: inherited unchanged from q005_hpc_v14_config.yml
+  likelihoods: inherited unchanged from q005_hpc_v14_config.yml
+  external_model_code:
+    repository: mwt5345/class_ede
+    documented_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+  act_dr6_lite:
+    repository: ACTCollaboration/DR6-ACT-lite
+    frozen_commit: 0e0cd2c703c62a0e980470b572602233b27750e1
+
+profile:
+  model: ede_n3
+  h0_targets: [70.853292, 71.5, 72.5, 73.5]
+  authoritative_reference_h0: 70.853292
+  authoritative_reference_chi2: 548.010401
+  q008_best_observed:
+    "71.5": 547.154321
+    "72.5": 548.854655
+    "73.5": 549.105584
+
+historical_q008:
+  historical_pre_q008_key_parameters:
+    "70.853292": {H0: 70.853292, fEDE: 0.084456665, omega_b: 0.022628397, omega_cdm: 0.12645353, n_s: 0.98474781}
+    "71.5":      {H0: 71.5,      fEDE: 0.088040869, omega_b: 0.022678741, omega_cdm: 0.12577043, n_s: 0.98073730}
+    "72.5":      {H0: 72.5,      fEDE: 0.095304433, omega_b: 0.022765469, omega_cdm: 0.12464596, n_s: 0.98620962}
+    "73.5":      {H0: 73.5,      fEDE: 0.1421616,   omega_b: 0.022922571, omega_cdm: 0.13268443, n_s: 0.97782391}
+
+starts:
+  sobol_count: 8
+  sobol_scramble_seed: 11011
+  interior_fraction: 0.03
+  boundary_fraction: 0.02
+  # Total per H0 = q008_best + 3 Q005 recovery + historical + 2 boundary
+  # + anti_q008 + 8 Sobol = 16 starts/target = 64 Stage-1 jobs.
+
+optimizer:
+  stage1:
+    method: bobyqa
+    max_evals: 420
+    rhoend: 0.0075
+    rhobeg: 0.30
+    seed_base: 71100
+  stage2:
+    method: bobyqa
+    max_evals: 320
+    rhoend: 0.0025
+    rhobeg: 0.08
+    seed_base: 72100
+
+gates:
+  replication_delta_chi2: 0.20
+  material_improvement_delta_chi2: 0.50
+  minimum_valid_starts: 12
+  minimum_replicating_families: 4
+  basin_delta_chi2: 0.20
+  basin_parameter_rms_fraction: 0.03
+  boundary_parameters:
+    fEDE: {min: 0.001, max: 0.3, fraction_tol: 0.02}
+    log10z_c: {min: 3.0, max: 4.3, fraction_tol: 0.02}
+    thetai_scf: {min: 0.1, max: 3.1, fraction_tol: 0.02}
+  mandatory:
+    - Q_IDENTITY_GATE
+    - Q008_PARENT_GATE
+    - FROZEN_BACKEND_GATE
+    - ENVIRONMENT_GATE
+    - SOURCE_AND_CONFIG_GATE
+    - STAGE1_COMPLETENESS_GATE
+    - STAGE2_COMPLETENESS_GATE
+    - FINITE_PROFILE_GATE
+    - BASIN_CLUSTERING_GATE
+    - START_FAMILY_REPLICATION_GATE
+    - REFINEMENT_STABILITY_GATE
+    - PARAMETER_BOUNDARY_GATE
+    - Q008_COMPARISON_GATE
+    - FINAL_RESULT_GATE
+
+paths:
+  results: q011_v1_results
+  rendered: q011_v1_rendered
+  aggregate: q011_v1_aggregate
+
+runtime:
+  check_date: 2026-08-30
+  runner: ubuntu-24.04
+  github_hosted_hard_limit_minutes: 360
+  safe_job_target_minutes: 240
+  optimizer_job_timeout_minutes: 240
+  expected_stage1_jobs: 64
+  expected_stage2_jobs: 64
+  expected_total_optimizer_jobs: 128
+  matrix_limit: 256
+  strategy: TWO_STAGE_PARALLEL_EXPANDED_BASIN_SEARCH
+  checkpointing: false
+  reason_no_checkpoint: >-
+    Each optimizer restart is an atomic independent job. Stage 2 is a new
+    refinement from the exact Stage-1 endpoint; it is not represented as resume.
