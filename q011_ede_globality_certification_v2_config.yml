@@ -1,0 +1,60 @@
+# Bubbleverse Q011 V2 orchestration patch.
+# All unspecified scientific content is inherited byte-for-meaning from V1.
+v2_patch:
+  inherits_config: q011_ede_globality_certification_v1_config.yml
+  patch_scope:
+    - fixed-H0 seed extraction
+    - Stage-2 fixed-H0 endpoint extraction
+    - q005_hpc_v14.cobaya_run interface
+    - deterministic pre-matrix technical gate
+    - V2 paths, identities, and workflow provenance
+  scientific_changes: NONE
+
+project:
+  q: Q011
+  run_id: Q011-EDE-GLOBALITY-CERTIFICATION-V2
+  result_id: R-Q011-EDE-GLOBALITY-CERTIFICATION-002
+  title: Bubbleverse Q011 n=3 EDE fixed-H0 basin/globality certification V2
+
+sources:
+  - K-029
+  - K-036
+  - K-038
+  - INTERNAL-Q005
+  - INTERNAL-Q007
+  - INTERNAL-Q008
+  - INTERNAL-Q009
+  - INTERNAL-Q010-V3
+  - INTERNAL-Q011-V1
+
+paths:
+  results: q011_v2_results
+  rendered: q011_v2_rendered
+  aggregate: q011_v2_aggregate
+
+technical_gate:
+  target_h0: 71.5
+  recovery_family: run21_best
+  profile_index: 0
+  max_evals: 24
+  purpose: >-
+    Technical fail-fast only. It must construct one Q008-best seed, construct one
+    Q005 recovery seed, round-trip the rendered YAML, and invoke the frozen Q005
+    V14 Cobaya path through cobaya_run(path, cfg) before any 128-job matrix launch.
+    It is not a scientific Q011 profile result.
+
+runtime:
+  check_date: 2026-08-30
+  runner: ubuntu-24.04
+  github_hosted_hard_limit_minutes: 360
+  safe_job_target_minutes: 240
+  optimizer_job_timeout_minutes: 240
+  expected_stage1_jobs: 64
+  expected_stage2_jobs: 64
+  expected_total_optimizer_jobs: 128
+  matrix_limit: 256
+  strategy: PREMATRIX_TECHNICAL_GATE_THEN_TWO_STAGE_PARALLEL_EXPANDED_BASIN_SEARCH
+  checkpointing: false
+  reason_no_checkpoint: >-
+    Each optimizer restart remains an atomic independent job. Stage 2 remains a
+    new refinement from the exact Stage-1 endpoint and is not represented as a resume.

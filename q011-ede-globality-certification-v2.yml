@@ -1,0 +1,378 @@
+name: Bubbleverse Q011 EDE Globality Certification V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q011-ede-globality-certification-v2-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  acquire-q008:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      q008_run_id: ${{ steps.q008.outputs.run_id }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2 scipy==1.15.3 numpy==1.26.4
+
+      - name: Acquire latest successful Q008 authoritative result
+        id: q008
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          RUN_ID="$(gh run list \
+            --workflow q008-globality-validation-v1.yml \
+            --status completed \
+            --limit 50 \
+            --json databaseId,conclusion \
+            --jq '[.[] | select(.conclusion=="success")] | first | .databaseId')"
+          test -n "$RUN_ID" && test "$RUN_ID" != "null"
+          mkdir -p q011_parent/q008
+          gh run download "$RUN_ID" \
+            --name q008-globality-validation-v1-final \
+            --dir q011_parent/q008
+          test -f q011_parent/q008/q008_globality_validation_v1_result.json
+          echo "run_id=$RUN_ID" >> "$GITHUB_OUTPUT"
+
+      - name: Q011 V2 static and Q008 parent preflight
+        run: |
+          python q011_ede_globality_certification_v2.py preflight \
+            --q008 q011_parent/q008/q008_globality_validation_v1_result.json
+
+      - name: Build unchanged 64-entry Stage-1 matrix
+        id: plan
+        shell: bash
+        run: |
+          set -euo pipefail
+          MATRIX="$(python q011_ede_globality_certification_v2.py plan --json)"
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q011-v2-parent-q008
+          path: q011_parent/q008/q008_globality_validation_v1_result.json
+          retention-days: 30
+
+  technical-gate:
+    needs: acquire-q008
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: q011-v2-parent-q008
+          path: q011_parent/q008
+
+      - name: Build frozen Q005 V14 backend once for fail-fast gate
+        run: bash q005_setup_v14.sh
+
+      - name: Frozen Q005 V14 environment preflight
+        run: |
+          python - <<'PY'
+          import q005_hpc_v14 as core
+          c = core.load_cfg("q005_hpc_v14_config.yml")
+          r = core.preflight(c)
+          print(r)
+          assert r.get("status") == "PASS", "ENVIRONMENT_GATE=FAIL"
+          PY
+
+      - name: Q011 V2 deterministic orchestration execution gate
+        run: |
+          python q011_ede_globality_certification_v2.py technical-gate \
+            --q008 q011_parent/q008/q008_globality_validation_v1_result.json \
+            --output q011_v2_technical_gate.json
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q011-v2-technical-gate
+          path: |
+            q011_v2_technical_gate.json
+            q011_v2_rendered/q011_v2_technical_gate.yaml
+            q011_v2_results/cobaya_q011_v2_technical_gate*
+          if-no-files-found: warn
+          retention-days: 30
+
+  stage1:
+    needs: [acquire-q008, technical-gate]
+    name: Q011 V2 S1 H0=${{ matrix.target_h0 }} ${{ matrix.start_family }}
+    strategy:
+      fail-fast: false
+      max-parallel: 16
+      matrix: ${{ fromJSON(needs.acquire-q008.outputs.matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: q011-v2-parent-q008
+          path: q011_parent/q008
+      - name: Build frozen Q005 V14 backend
+        id: setup
+        continue-on-error: true
+        run: bash q005_setup_v14.sh
+      - name: Frozen backend environment gate
+        if: ${{ steps.setup.outcome == 'success' }}
+        run: |
+          python - <<'PY'
+          import q005_hpc_v14 as core
+          c=core.load_cfg("q005_hpc_v14_config.yml")
+          r=core.preflight(c)
+          print(r)
+          assert r.get("status")=="PASS", "ENVIRONMENT_GATE=FAIL"
+          PY
+      - name: Stage-1 expanded independent basin start
+        if: ${{ steps.setup.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          python q011_ede_globality_certification_v2.py stage1 \
+            --q008 q011_parent/q008/q008_globality_validation_v1_result.json \
+            --target-h0 "${{ matrix.target_h0 }}" \
+            --start-family "${{ matrix.start_family }}" \
+            --profile-index "${{ matrix.profile_index }}" \
+            --recipe-json '${{ toJSON(matrix.recipe) }}'
+      - name: Guarantee Stage-1 failure record
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          h=float("${{ matrix.target_h0 }}")
+          fam="${{ matrix.start_family }}"
+          tag=(f"{h:.6f}".rstrip("0").rstrip(".").replace(".","p"))
+          p=Path("q011_v2_results")/f"q011_stage1_h0_{tag}_{fam}.json"
+          if not p.exists():
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_text(json.dumps({
+                "q":"Q011","run_id":"Q011-EDE-GLOBALITY-CERTIFICATION-V2",
+                "stage":"stage1","target_h0":h,"start_family":fam,
+                "status":"FAIL","reason":"UPSTREAM_SETUP_OR_OPTIMIZER_FAILURE"
+              }, indent=2)+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q011-v2-stage1-${{ matrix.profile_index }}
+          path: |
+            q011_v2_results/q011_stage1_h0_*.json
+            q011_v2_results/cobaya_q011_stage1_*
+            q011_v2_rendered/q011_stage1_*.yaml
+          if-no-files-found: warn
+          retention-days: 30
+
+  stage2:
+    if: ${{ always() && needs.technical-gate.result == 'success' }}
+    needs: [acquire-q008, technical-gate, stage1]
+    name: Q011 V2 S2 H0=${{ matrix.target_h0 }} ${{ matrix.start_family }}
+    strategy:
+      fail-fast: false
+      max-parallel: 16
+      matrix: ${{ fromJSON(needs.acquire-q008.outputs.matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: q011-v2-parent-q008
+          path: q011_parent/q008
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q011-v2-stage1-*
+          path: q011_stage1_input
+      - name: Build frozen Q005 V14 backend
+        id: setup
+        continue-on-error: true
+        run: bash q005_setup_v14.sh
+      - name: Frozen backend environment gate
+        if: ${{ steps.setup.outcome == 'success' }}
+        run: |
+          python - <<'PY'
+          import q005_hpc_v14 as core
+          c=core.load_cfg("q005_hpc_v14_config.yml")
+          r=core.preflight(c)
+          print(r)
+          assert r.get("status")=="PASS", "ENVIRONMENT_GATE=FAIL"
+          PY
+      - name: Stage-2 strict independent refinement
+        if: ${{ steps.setup.outcome == 'success' }}
+        continue-on-error: true
+        run: |
+          python q011_ede_globality_certification_v2.py stage2 \
+            --q008 q011_parent/q008/q008_globality_validation_v1_result.json \
+            --target-h0 "${{ matrix.target_h0 }}" \
+            --start-family "${{ matrix.start_family }}" \
+            --profile-index "${{ matrix.profile_index }}" \
+            --recipe-json '${{ toJSON(matrix.recipe) }}' \
+            --stage1-root q011_stage1_input
+      - name: Guarantee Stage-2 failure record
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          h=float("${{ matrix.target_h0 }}")
+          fam="${{ matrix.start_family }}"
+          tag=(f"{h:.6f}".rstrip("0").rstrip(".").replace(".","p"))
+          p=Path("q011_v2_results")/f"q011_stage2_h0_{tag}_{fam}.json"
+          if not p.exists():
+              p.parent.mkdir(parents=True, exist_ok=True)
+              p.write_text(json.dumps({
+                "q":"Q011","run_id":"Q011-EDE-GLOBALITY-CERTIFICATION-V2",
+                "stage":"stage2","target_h0":h,"start_family":fam,
+                "status":"FAIL","reason":"UPSTREAM_STAGE2_FAILURE"
+              }, indent=2)+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q011-v2-stage2-${{ matrix.profile_index }}
+          path: |
+            q011_v2_results/q011_stage2_h0_*.json
+            q011_v2_results/cobaya_q011_stage2_*
+            q011_v2_rendered/q011_stage2_*.yaml
+          if-no-files-found: warn
+          retention-days: 30
+
+  aggregate:
+    if: ${{ always() && needs.technical-gate.result == 'success' }}
+    needs: [acquire-q008, technical-gate, stage1, stage2]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: q011-v2-parent-q008
+          path: q011_parent/q008
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q011-v2-stage1-*
+          path: q011_v2_aggregate/stage1
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q011-v2-stage2-*
+          path: q011_v2_aggregate/stage2
+
+      - name: Aggregate and classify Q011 V2
+        continue-on-error: true
+        run: |
+          python q011_ede_globality_certification_v2.py aggregate \
+            --q008 q011_parent/q008/q008_globality_validation_v1_result.json \
+            --stage1-root q011_v2_aggregate/stage1 \
+            --stage2-root q011_v2_aggregate/stage2 \
+            --output q011_v2_aggregate/q011_ede_globality_certification_v2_result.json
+
+      - name: Add exact V2 execution provenance and hashes
+        if: ${{ always() }}
+        env:
+          Q008_RUN_ID: ${{ needs.acquire-q008.outputs.q008_run_id }}
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib, json, os, platform
+          from pathlib import Path
+          p=Path("q011_v2_aggregate/q011_ede_globality_certification_v2_result.json")
+          if not p.exists():
+              p.parent.mkdir(parents=True, exist_ok=True)
+              d={
+                "q":"Q011",
+                "run_id":"Q011-EDE-GLOBALITY-CERTIFICATION-V2",
+                "status":"PARTIAL",
+                "gates":{"FINAL_RESULT_GATE":"UNRESOLVED"}
+              }
+          else:
+              d=json.loads(p.read_text())
+          def sha(path):
+              h=hashlib.sha256()
+              with open(path,"rb") as f:
+                  for b in iter(lambda:f.read(1<<20),b""): h.update(b)
+              return h.hexdigest()
+          d["execution_provenance"]={
+              "bubbleverse_repository":"Morfindien/Bubbleverse",
+              "bubbleverse_commit":os.environ.get("GITHUB_SHA"),
+              "workflow":"Bubbleverse Q011 EDE Globality Certification V2",
+              "github_run_id":os.environ.get("GITHUB_RUN_ID"),
+              "q008_parent_run_id":os.environ.get("Q008_RUN_ID"),
+              "python":platform.python_version(),
+              "config_file":"q011_ede_globality_certification_v2_config.yml",
+              "config_sha256":sha("q011_ede_globality_certification_v2_config.yml"),
+              "program_file":"q011_ede_globality_certification_v2.py",
+              "program_sha256":sha("q011_ede_globality_certification_v2.py"),
+              "workflow_file":".github/workflows/q011-ede-globality-certification-v2.yml",
+              "inherits_program":"q011_ede_globality_certification_v1.py",
+              "inherits_config":"q011_ede_globality_certification_v1_config.yml",
+              "v1_failure_run_id":"33325254321",
+              "v1_execution_commit":"2962cd4561bcbc4dbc35799017874e4180d9ed3d"
+          }
+          p.write_text(json.dumps(d,indent=2,sort_keys=True)+"\n")
+          print("FINAL_RESULT_SHA256", sha(p))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q011-ede-globality-certification-v2-final
+          path: q011_v2_aggregate/q011_ede_globality_certification_v2_result.json
+          retention-days: 90
