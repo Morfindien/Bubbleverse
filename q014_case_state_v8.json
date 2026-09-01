@@ -1,0 +1,37 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "original_case_question": "Når den samme n=3 EDE-model anvendes, hvor stor ekstern likelihood-penalty får high-H₀-regionen omkring det aktive Q011-punkt ved H₀=71.5 km s⁻¹ Mpc⁻¹ i Planck NPIPE- og SPT-3G D1-kæderne, når hver kædes egne nuisance-parametre og relevante kosmologiske parametre profileres korrekt og datasetoverlap ikke dobbeltregnes?",
+  "q": "Q014",
+  "q011_status": "BEST-OBSERVED MINIMUM ONLY",
+  "run_id": "Q014-EXTERNAL-VIABILITY-V8",
+  "scientific_state": "Q014 REMAINS UNANSWERED; V6 IS NOT SCIENTIFICALLY USABLE",
+  "status": "COMPUTATION REQUIRED — V7 FAILED PRECOMPUTE BECAUSE q014_setup_v7.sh WAS MISSING; V8 RESTORES REQUIRED FILE AND HARDENS GATES",
+  "technical_memory": {
+    "V7_FAILURE": {
+      "cause": "q014_setup_v7.sh was absent from the V7 repository head, while the prepare gate explicitly required it. The frozen V5 SHA256 checks were correct.",
+      "classification": "MISSING_REQUIRED_REPOSITORY_FILE",
+      "missing_file": "q014_setup_v7.sh",
+      "parent_download_started": false,
+      "scientific_compute_started": false,
+      "secondary_failure": "The aggregate job also ran under always() and then failed because q014-v7-parent-and-plan had never been produced.",
+      "v8_fix": "Deliver q014_setup_v8.sh as a mandatory root file; freeze V5 surface using authoritative Git blob IDs with explicit diagnostics; skip aggregate when prepare fails."
+    }
+  },
+  "v6_outcome": {
+    "github_run": 33483557343,
+    "interpretation": "NUMERICAL/STATISTICAL VALIDATION FAILURE — DO NOT INTERPRET V6 PENALTIES AS Q014 RESULT",
+    "jobs": "27/27 returned and finite",
+    "mandatory_failure": [
+      "MULTISTART_STABILITY_GATE",
+      "FIXED_PROFILE_MONOTONICITY_GATE",
+      "FINAL_VALIDATION_GATE"
+    ]
+  },
+  "v8_repair": {
+    "infrastructure": "Reuse exact V6 MUSE source artifact (ID 9790864493) and re-verify source SHA256; V8 performs no fresh NASA MUSE download.",
+    "numerics": "Deterministic cross-seeded refinement from V6 best free/fixed minima, max_evals=960, rhoend=0.005, preserve exact seed if optimizer returns worse point.",
+    "objective": "Remove mode-dependent normalized flat-prior constants from cross-mode delta; retain Gaussian calibration constraint shapes.",
+    "objective_diagnosis": "V6 used 2*minuslogpost across free-H0 and fixed-H0 modes; fixing H0 removes the normalized flat H0-prior constant, so the cross-mode delta had an additive-constant mismatch.",
+    "scientific_likelihood_change": false
+  }
+}
