@@ -1,0 +1,234 @@
+project:
+  case_id: "NOT DOCUMENTED"
+  case_id_recovery_status: "PRESERVED_FROM_AUTHORITATIVE_HANDOFF"
+  q: "Q014"
+  run_id: "Q014-EXTERNAL-VIABILITY-V1"
+  result_id: "R-Q014-EDE-EXTERNAL-VIABILITY-001"
+  title: "Bubbleverse Q014 n=3 EDE external fixed-H0 viability"
+  generated_at: "2026-09-01T05:56:00+02:00"
+  status: "PROGRAM GENERATED — NOT YET EXECUTED"
+  original_case_question: >-
+    Når den samme n=3 EDE-model anvendes, hvor stor ekstern likelihood-penalty får high-H₀-regionen omkring det aktive Q011-punkt ved H₀=71.5 km s⁻¹ Mpc⁻¹ i Planck NPIPE- og SPT-3G D1-kæderne, når hver kædes egne nuisance-parametre og relevante kosmologiske parametre profileres korrekt og datasetoverlap ikke dobbeltregnes?
+
+parent:
+  repository: "Morfindien/Bubbleverse"
+  q005_engine: "q005_hpc_v14.py"
+  q005_config: "q005_hpc_v14_config.yml"
+  q005_setup: "q005_setup_v14.sh"
+  q005_requirements: "q005_hpc_v14_requirements.txt"
+  q011:
+    run_id: "33363067156"
+    artifact: "q011-ede-globality-certification-v4-final"
+    filename: "q011_ede_globality_certification_v4_result.json"
+    bubbleverse_commit: "e113fb846948f424b865d1303fba8b5988ec9133"
+    result_id: "R-Q011-EDE-GLOBALITY-CERTIFICATION-004"
+    target_h0: 71.5
+    best_chi2_optimizer_native: 546.364260
+    classification: "BEST-OBSERVED MINIMUM ONLY"
+    mathematical_globality_proven: false
+  q012:
+    execution_commit: "02afd47ae12daae89e9c894ae7bee7576724e85b"
+    run_id: "33465056836"
+    result_id: "R-Q012-EDE-LIKELIHOOD-ATTRIBUTION-001"
+    act_delta_chi2_serialized: -3.372038
+    non_act_delta_chi2_serialized: 0.759548
+
+scientific_surface:
+  model: "ede_n3"
+  n_scf: 3
+  target_h0: 71.5
+  optimizer_basis: "PROFILE_OBJECTIVE_WITH_CHAIN_NATIVE_NUISANCE_CONSTRAINTS_AND_FLAT_Q005_SCIENCE_BOUNDS"
+  preserve_q005_v14_bounds: true
+  q011_exact_vector_source: "AUTHORITATIVE_Q011_ARTIFACT_ONLY"
+  q011_rounded_handoff_is_not_an_execution_input: true
+  common_ede_bounds:
+    fEDE: [0.001, 0.3]
+    log10z_c: [3.0, 4.3]
+    thetai_scf: [0.1, 3.1]
+  no_local_h0_prior: true
+  no_act_nuisance_in_external_chains: true
+
+chains:
+  planck_npipe_k039_approx:
+    role: "PRIMARY_EXTERNAL_CHAIN"
+    label: "K039_PUBLIC_NPIPE_COMMON_BACKEND_APPROX"
+    paper_native_reproduction: false
+    approximation_reason: >-
+      K-039 modifies the NPIPE CamSpec construction relative to the public PR4-12.6 likelihood (additional A×A/B×B cross-spectra and TE extension). The public Cobaya NPIPE CamSpec likelihood is therefore used only as a clearly-labelled common-backend approximation.
+    likelihoods:
+      - "planck_2018_lowl.TT"
+      - "planck_2018_lowl.EE"
+      - "planck_NPIPE_highl_CamSpec.TTTEEE"
+      - "planck_2018_lensing.native"
+      - "bao.sdss_dr12_consensus_final"
+      - "bao.sixdf_2011_bao"
+      - "bao.sdss_dr7_mgs"
+      - "sn.pantheonplus"
+    overlap_with_q005:
+      level: "PARTIAL"
+      notes:
+        - "Planck low-l information overlaps with the internal Q005 surface."
+        - "NPIPE high-l is new relative to Q005 ACT high-l."
+        - "BOSS/6dF/MGS/Pantheon+ are not DESI DR2 and are not to be merged with Q005 chi2."
+    start_reference:
+      H0: 68.4
+      fEDE: 0.035
+      log10z_c: 3.85
+      thetai_scf: 3.01
+  spt_d1_only:
+    role: "PRIMARY_EXTERNAL_CHAIN"
+    label: "K040_SPT_D1_LIKELIHOOD_NATIVE_COMMON_BACKEND"
+    paper_native_reproduction: false
+    approximation_reason: >-
+      The official SPT-3G D1 likelihood products are used, but the cosmological backend and optimizer convention are the frozen Bubbleverse Q005 V14 common backend rather than an exact reproduction of the paper's full AxiCLASS analysis environment.
+    include_desi_dr2: false
+    tau_information:
+      mean: 0.051
+      sigma: 0.006
+    primary_likelihood:
+      package: "candl"
+      package_version: "2.0.3"
+      dataset: "spt_candl_data.SPT3G_D1_TnE"
+      variant: "lite"
+    lensing_likelihood:
+      plugin: "muse3glike.cobaya.spt3g_2yr_delensed_ee_optimal_pp_muse"
+      components: ["ϕϕ"]
+      note: "Use lensing-only component so the primary SPT TT/TE/EE information is not double counted."
+    overlap_with_q005:
+      level: "LOWER_THAN_ACT_CHAIN"
+      notes:
+        - "No ACT high-l data."
+        - "No DESI DR2 in the primary SPT-only branch."
+        - "Tau information is an external Gaussian rather than Q005 Planck low-l EE."
+    start_reference:
+      H0: 67.96
+      fEDE: 0.03
+      log10z_c: 3.55
+      thetai_scf: 2.8
+  spt_d1_plus_desi:
+    role: "SECONDARY_OVERLAP_CHAIN"
+    label: "K040_SPT_D1_PLUS_DESI_COMMON_BACKEND"
+    paper_native_reproduction: false
+    include_desi_dr2: true
+    tau_information:
+      mean: 0.051
+      sigma: 0.006
+    primary_likelihood:
+      package: "candl"
+      package_version: "2.0.3"
+      dataset: "spt_candl_data.SPT3G_D1_TnE"
+      variant: "lite"
+    lensing_likelihood:
+      plugin: "muse3glike.cobaya.spt3g_2yr_delensed_ee_optimal_pp_muse"
+      components: ["ϕϕ"]
+    overlap_with_q005:
+      level: "PARTIAL"
+      notes:
+        - "DESI DR2 is reused from Q005 and must be declared explicitly."
+        - "This branch is not fully independent of Q005."
+    start_reference:
+      H0: 70.9
+      fEDE: 0.081
+      log10z_c: 3.55
+      thetai_scf: 2.8
+
+execution:
+  modes:
+    reference_free_h0:
+      description: "n=3 chain-specific free-H0 profile reference"
+      fixes_h0: false
+      fixes_q011_shared_physics: false
+    fixed_h0_71p5:
+      description: "H0=71.5 fixed; reprofile EDE, cosmology and chain-native free parameters"
+      fixes_h0: true
+      fixes_q011_shared_physics: false
+    q011_shared_physics:
+      description: "Exact Q011 physically shared parameters fixed from authoritative artifact; profile only chain-native remaining parameters where present"
+      fixes_h0: true
+      fixes_q011_shared_physics: true
+  standard_start_families:
+    reference_free_h0: ["external", "q011"]
+    fixed_h0_71p5: ["q011", "external"]
+    q011_shared_physics: ["q011"]
+  expanded_extra_start_families:
+    reference_free_h0: ["baseline", "jitter_a"]
+    fixed_h0_71p5: ["baseline", "jitter_b"]
+    q011_shared_physics: []
+  minimizer:
+    method: "bobyqa"
+    ignore_prior: false
+    max_evals: 320
+    best_of: 1
+    override_bobyqa:
+      rhoend: 0.02
+      user_params:
+        restarts.use_restarts: false
+        restarts.use_soft_restarts: false
+        restarts.auto_detect: false
+        interpolation.precondition: true
+        logging.save_diagnostic_info: true
+  runtime:
+    github_hard_limit_minutes: 360
+    job_timeout_minutes: 270
+    internal_soft_cutoff_minutes: 255
+    shutdown_reserve_minutes: 15
+    smoke_timeout_minutes: 90
+    aggregate_timeout_minutes: 20
+    standard_expected_optimizer_jobs: 15
+    expanded_expected_optimizer_jobs: 27
+    runtime_basis: "Q005 V14 EDE historical successful runs ~108–162 minutes; external full chains add substantial uncertainty."
+    expected_single_optimizer_minutes: [120, 255]
+    runtime_uncertainty: "HIGH"
+    strategy: "CHAIN_X_PROFILE_MODE_X_INDEPENDENT_START"
+    checkpointing: false
+    checkpoint_reason: >-
+      Cobaya/Py-BOBYQA state is not reliably serializable in the frozen stack. Each start is an atomic optimizer task. The workflow uses an internal soft cutoff, preserves any finite minimum written before interruption, and reruns only the failed independent task. This is harvest/retry, not fake optimizer resume.
+
+validation:
+  minimum_valid_starts_per_profile: 2
+  max_best_two_delta_chi2: 1.0
+  fixed_vs_free_negative_tolerance: 0.25
+  exact_h0_tolerance: 1.0e-8
+  q011_parent_chi2_tolerance: 1.0e-6
+  required_primary_chains:
+    - "planck_npipe_k039_approx"
+    - "spt_d1_only"
+  required_tests:
+    - "CASE_QUESTION_IDENTITY_GATE"
+    - "Q011_PARENT_IDENTITY_GATE"
+    - "Q011_EXACT_VECTOR_GATE"
+    - "N3_MODEL_GATE"
+    - "NO_H0DN_GATE"
+    - "NO_ACT_NUISANCE_GATE"
+    - "PLANCK_APPROXIMATION_CLAIM_GATE"
+    - "SPT_NO_DESI_PRIMARY_GATE"
+    - "SPT_LENSING_NO_PRIMARY_CMB_DOUBLECOUNT_GATE"
+    - "CHAIN_SEPARATION_GATE"
+    - "JOB_COMPLETENESS_GATE"
+    - "MULTISTART_STABILITY_GATE"
+    - "FIXED_PROFILE_MONOTONICITY_GATE"
+    - "FINITE_RESULT_GATE"
+    - "FINAL_VALIDATION_GATE"
+
+sources:
+  - "K-029"
+  - "K-036"
+  - "K-038"
+  - "K-039"
+  - "K-040"
+  - "INTERNAL-Q005"
+  - "R-Q011-EDE-GLOBALITY-CERTIFICATION-004"
+  - "R-Q012-EDE-LIKELIHOOD-ATTRIBUTION-001"
+
+claim_boundary:
+  q011_reopened: false
+  q012_reopened: false
+  q013_reopened: false
+  q011_globality_status_preserved: "BEST-OBSERVED MINIMUM ONLY"
+  absolute_chi2_cross_package_comparison_forbidden: true
+  report_each_external_chain_separately: true
+  planck_plus_spt_direct_chi2_sum_forbidden: true
+  spt_plus_desi_marked_partially_overlapping: true
+  profile_likelihood_not_marginal_posterior: true
+  no_fake_multidimensional_significance_from_1d_limits: true
+  negative_results_preserved: true
