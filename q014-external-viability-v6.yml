@@ -1,0 +1,300 @@
+name: Bubbleverse Q014 n=3 EDE External Viability V6
+
+on:
+  workflow_dispatch:
+    inputs:
+      depth:
+        description: "standard = 2 independent starts/profile; expanded = add 2 more after instability or technical loss"
+        required: true
+        default: "expanded"
+        type: choice
+        options: [standard, expanded]
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q014-external-viability-v6-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CURRENT_Q: Q014
+  RUN_ID: Q014-EXTERNAL-VIABILITY-V6
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  prepare:
+    name: Q014 V6 frozen V5 science + parent gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      depth: ${{ steps.plan.outputs.depth }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - name: Frozen V5 scientific surface gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(sha256sum q014_external_viability_v5.py | awk '{print $1}')" = "94b32c67abbb8816a4b1f285b59ea54d1de7d028dd5870b4d0cb20cb5045636b"
+          test "$(sha256sum q014_external_viability_v5_config.yml | awk '{print $1}')" = "95bc7aa92843fdacca956fb6f08325545a78287f8ae7b6f9c7b2cb923ebabe90"
+          test "$(sha256sum q014_setup_v5.sh | awk '{print $1}')" = "7c57dd6b3a35fcb5a9302dc833046c57749911fd242c8c47e6d455c2a15dfbe5"
+          for f in q014_external_viability_v6.py q014_setup_v6.sh q014_aggregate_v6.py q014_tests_v6.py q014_external_viability_v6_source_lock.json q014_case_state_v6.json; do test -f "$f"; done
+          echo "Q014_V5_SCIENCE_SURFACE_REUSE_GATE=PASS"
+      - name: Download exact authoritative Q011 V4 target artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p q014_parent/q011
+          gh run download "33363067156" --name q011-ede-globality-certification-v4-final --dir q014_parent/q011
+          test -f q014_parent/q011/q011_ede_globality_certification_v4_result.json
+      - name: V6 static guardrails and parent preflight
+        run: |
+          mkdir -p q014_v6_gates
+          python q014_tests_v6.py static --output q014_v6_gates/q014_static_test_manifest_v6.json
+          python q014_external_viability_v6.py preflight \
+            --q011 q014_parent/q011/q011_ede_globality_certification_v4_result.json \
+            --output q014_v6_gates/q014_parent_preflight_v6.json
+      - name: Build task matrix
+        id: plan
+        env:
+          REQUESTED_DEPTH: ${{ inputs.depth }}
+        run: |
+          DEPTH="${REQUESTED_DEPTH:-expanded}"
+          python q014_external_viability_v6.py plan --depth "$DEPTH" --output q014_v6_gates/q014_task_matrix_v6.json >/tmp/matrix
+          echo "matrix=$(tail -n 1 /tmp/matrix)" >> "$GITHUB_OUTPUT"
+          echo "depth=$DEPTH" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q014-v6-parent-and-plan
+          path: |
+            q014_parent
+            q014_v6_gates
+            q014_case_state_v6.json
+          retention-days: 30
+
+  spt-assets:
+    name: Q014 single-fetch frozen SPT MUSE source
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Fetch exact MUSE archive once
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p q014_v6_spt_assets
+          OUT=q014_v6_spt_assets/muse_3g_like_march_2025.zip
+          EXPECTED=4933ceb993ceb92e48b2191b8ccb1595d182bc4bc3862c1fbad61d5f82136e9b
+          ok=0
+          for url in \
+            https://lambda.gsfc.nasa.gov/data/suborbital/SPT/muse_3g_like_march_2025.zip \
+            https://gs66-vdclambda.ndc.nasa.gov/data/suborbital/SPT/muse_3g_like_march_2025.zip; do
+            for attempt in 1 2 3; do
+              if curl -fL --connect-timeout 20 --max-time 180 "$url" -o "$OUT.tmp"; then
+                ACTUAL=$(sha256sum "$OUT.tmp" | awk '{print $1}')
+                test "$ACTUAL" = "$EXPECTED" || { echo "MUSE SHA mismatch: $ACTUAL" >&2; exit 41; }
+                mv "$OUT.tmp" "$OUT"; ok=1; break 2
+              fi
+              rm -f "$OUT.tmp"; sleep $((attempt*5))
+            done
+          done
+          test "$ok" = 1 || { echo "Q014_MUSE_SINGLE_FETCH_GATE=FAIL" >&2; exit 28; }
+          echo "$EXPECTED  $OUT" > q014_v6_spt_assets/muse_3g_like_march_2025.sha256
+          echo "Q014_MUSE_SINGLE_FETCH_GATE=PASS $EXPECTED"
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q014-v6-spt-muse-source
+          path: q014_v6_spt_assets
+          retention-days: 30
+
+  smoke:
+    name: Q014 smoke ${{ matrix.chain }}
+    needs: [prepare, spt-assets]
+    strategy:
+      fail-fast: false
+      matrix:
+        chain: [planck_npipe_k039_approx, spt_d1_only, spt_d1_plus_desi]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - name: Reuse frozen MUSE bytes for SPT
+        if: ${{ startsWith(matrix.chain, 'spt_') }}
+        uses: actions/download-artifact@v5
+        with:
+          name: q014-v6-spt-muse-source
+          path: external/q014_v6_spt_assets
+      - name: Build chain environment through V6 repair wrapper
+        run: bash q014_setup_v6.sh "${{ matrix.chain }}"
+      - uses: actions/download-artifact@v5
+        with:
+          name: q014-v6-parent-and-plan
+          path: q014_context
+      - name: Runtime environment preflight
+        run: |
+          python q014_external_viability_v6.py preflight --environment --chain "${{ matrix.chain }}" \
+            --q011 q014_context/q014_parent/q011/q011_ede_globality_certification_v4_result.json \
+            --output q014_environment_preflight_${{ matrix.chain }}.json
+      - name: Finite technical smoke
+        run: |
+          python q014_external_viability_v6.py smoke --chain "${{ matrix.chain }}" \
+            --q011 q014_context/q014_parent/q011/q011_ede_globality_certification_v4_result.json \
+            --output q014_smoke_${{ matrix.chain }}.json
+      - uses: actions/upload-artifact@v5
+        if: ${{ always() }}
+        with:
+          name: q014-v6-smoke-${{ matrix.chain }}
+          path: |
+            q014_environment_preflight_${{ matrix.chain }}.json
+            q014_smoke_${{ matrix.chain }}.json
+            q014_v6_source_runtime
+          if-no-files-found: warn
+          retention-days: 30
+
+  profile:
+    name: Q014 ${{ matrix.chain }} / ${{ matrix.mode }} / ${{ matrix.start_family }}
+    needs: [prepare, spt-assets, smoke]
+    strategy:
+      fail-fast: false
+      max-parallel: 15
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 270
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - name: Reuse frozen MUSE bytes for SPT
+        if: ${{ startsWith(matrix.chain, 'spt_') }}
+        uses: actions/download-artifact@v5
+        with:
+          name: q014-v6-spt-muse-source
+          path: external/q014_v6_spt_assets
+      - name: Build chain environment through V6 repair wrapper
+        run: bash q014_setup_v6.sh "${{ matrix.chain }}"
+      - uses: actions/download-artifact@v5
+        with:
+          name: q014-v6-parent-and-plan
+          path: q014_context
+      - name: Run one atomic profile task
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p q014_v6_results
+          OUT="q014_v6_results/q014_${{ matrix.tag }}.json"
+          set +e
+          timeout --signal=INT --kill-after=10m 255m python q014_external_viability_v6.py run \
+            --chain "${{ matrix.chain }}" --mode "${{ matrix.mode }}" \
+            --start-family "${{ matrix.start_family }}" --restart-index "${{ matrix.restart_index }}" \
+            --q011 q014_context/q014_parent/q011/q011_ede_globality_certification_v4_result.json --output "$OUT"
+          RC=$?
+          set -e
+          if [[ ! -f "$OUT" ]]; then
+            python - "$OUT" "$RC" <<'PY'
+          import json,sys
+          out,rc=sys.argv[1],int(sys.argv[2])
+          json.dump({"case_id":"NOT DOCUMENTED","q":"Q014","run_id":"Q014-EXTERNAL-VIABILITY-V6",
+            "chain":"${{ matrix.chain }}","mode":"${{ matrix.mode }}","start_family":"${{ matrix.start_family }}",
+            "restart_index":int("${{ matrix.restart_index }}"),"status":"TECHNICAL_FAILURE",
+            "failure_type":"PROCESS_TERMINATED_BEFORE_RESULT_SERIALIZATION","process_exit":rc},open(out,"w"),indent=2)
+          PY
+          fi
+          python - "$OUT" "$RC" <<'PY'
+          import json,sys
+          p,rc=sys.argv[1],int(sys.argv[2]); d=json.load(open(p)); d['workflow_process_exit']=rc
+          json.dump(d,open(p,'w'),indent=2,sort_keys=True); print('Q014_TASK_STATUS=',d.get('status'),'PROCESS_EXIT=',rc)
+          PY
+          exit 0
+      - uses: actions/upload-artifact@v5
+        if: ${{ always() }}
+        with:
+          name: q014-v6-profile-${{ matrix.tag }}
+          path: |
+            q014_v6_results/q014_${{ matrix.tag }}.json
+            q014_v6_source_runtime
+          if-no-files-found: warn
+          retention-days: 30
+
+  aggregate-and-test:
+    name: Q014 aggregate + mandatory scientific tests
+    if: ${{ always() }}
+    needs: [prepare, spt-assets, smoke, profile]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q014-v6-profile-*
+          path: q014_v6_aggregate/jobs
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q014-v6-smoke-*
+          path: q014_v6_aggregate/smoke
+      - name: Aggregate within chains only
+        env:
+          DEPTH: ${{ needs.prepare.outputs.depth }}
+        run: |
+          mkdir -p q014_v6_aggregate/final
+          python q014_aggregate_v6.py --depth "$DEPTH" --inputs q014_v6_aggregate/jobs \
+            --output q014_v6_aggregate/final/q014_external_viability_v6_result.json \
+            --manifest-output q014_v6_aggregate/final/q014_job_manifest_v6.json
+      - name: Mandatory result validation
+        shell: bash
+        run: |
+          set +e
+          python q014_tests_v6.py result --result q014_v6_aggregate/final/q014_external_viability_v6_result.json \
+            --output q014_v6_aggregate/final/q014_test_manifest_v6.json
+          TEST_RC=$?
+          set -e
+          python - <<'PY'
+          import json
+          p='q014_v6_aggregate/final/q014_external_viability_v6_result.json'; d=json.load(open(p))
+          handoff={"case_id":d["case_id"],"bubbleverse_q":"Q014","original_case_question":d["original_case_question"],
+            "status":"COMPLETE" if d.get("scientifically_usable_result") else "PARTIAL","validation_status":d.get("validation_status"),
+            "primary_results":{k:{"fixed_h0_profile_delta_chi2":v.get("penalties",{}).get("fixed_h0_profile_delta_chi2"),
+            "q011_shared_physics_delta_chi2":v.get("penalties",{}).get("q011_shared_physics_delta_chi2"),"status":v.get("status")} for k,v in d.get("chains",{}).items()},
+            "next_action_required":d.get("next_action_required",True),"claim_boundary":d.get("claim_boundary",{})}
+          json.dump(handoff,open('q014_v6_aggregate/final/q014_result_ingestion_handoff_v6.json','w'),indent=2,sort_keys=True)
+          PY
+          exit "$TEST_RC"
+      - uses: actions/upload-artifact@v5
+        if: ${{ always() }}
+        with:
+          name: q014-external-viability-v6-final
+          path: |
+            q014_v6_aggregate/final
+            q014_v6_aggregate/smoke
+            q014_case_state_v6.json
+            q014_external_viability_v6_source_lock.json
+            q014_external_viability_v5_config.yml
+            q014_external_viability_v5_source_lock.json
+          if-no-files-found: warn
+          retention-days: 90

@@ -1,0 +1,32 @@
+{
+  "q": "Q014",
+  "run_id": "Q014-EXTERNAL-VIABILITY-V6",
+  "result_id": "R-Q014-EDE-EXTERNAL-VIABILITY-003",
+  "scientific_surface": "INHERIT Q014 V5 BYTE-FOR-BYTE",
+  "v5_base": {
+    "program": "q014_external_viability_v5.py",
+    "program_sha256": "94b32c67abbb8816a4b1f285b59ea54d1de7d028dd5870b4d0cb20cb5045636b",
+    "config": "q014_external_viability_v5_config.yml",
+    "config_sha256": "95bc7aa92843fdacca956fb6f08325545a78287f8ae7b6f9c7b2cb923ebabe90",
+    "setup": "q014_setup_v5.sh",
+    "setup_sha256": "7c57dd6b3a35fcb5a9302dc833046c57749911fd242c8c47e6d455c2a15dfbe5"
+  },
+  "v5_failed_execution": {
+    "github_run": 33472696719,
+    "red_cause": "Three SPT profile jobs failed before scientific execution because independent runners timed out downloading the same NASA LAMBDA MUSE source archive.",
+    "secondary_nonred_issue": "Planck q011_shared_physics hit Py-BOBYQA MAXFUN=320."
+  },
+  "muse_source": {
+    "filename": "muse_3g_like_march_2025.zip",
+    "official_url": "https://lambda.gsfc.nasa.gov/data/suborbital/SPT/muse_3g_like_march_2025.zip",
+    "official_fallback_host": "https://gs66-vdclambda.ndc.nasa.gov/data/suborbital/SPT/muse_3g_like_march_2025.zip",
+    "sha256": "4933ceb993ceb92e48b2191b8ccb1595d182bc4bc3862c1fbad61d5f82136e9b",
+    "sha256_provenance": "Measured by successful Q014 V5 SPT smoke job 99745685596 in GitHub run 33472696719.",
+    "v6_policy": "Fetch once, verify SHA256, distribute identical bytes to every SPT runner."
+  },
+  "v6_execution_changes": {
+    "q011_shared_physics_max_evals": 960,
+    "mandatory_result_validation_propagates_exit_code": true,
+    "scientific_likelihood_or_prior_change": false
+  }
+}
