@@ -1,0 +1,322 @@
+name: Bubbleverse Q014 n=3 EDE External Viability V3
+
+on:
+  workflow_dispatch:
+    inputs:
+      depth:
+        description: "standard = 2 independent starts/profile; expanded = add 2 more after instability or technical loss"
+        required: true
+        default: "standard"
+        type: choice
+        options: [standard, expanded]
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q014-external-viability-v3-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CURRENT_Q: Q014
+  RUN_ID: Q014-EXTERNAL-VIABILITY-V3
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  prepare:
+    name: Q014 case/source/parent gate + dynamic plan
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      depth: ${{ steps.plan.outputs.depth }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install lightweight gate dependencies
+        run: python -m pip install PyYAML==6.0.2
+
+      - name: Q014 file and frozen-parent source gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          for f in \
+            q014_external_viability_v3.py \
+            q014_external_viability_v3_config.yml \
+            q014_external_viability_v3_source_lock.json \
+            q014_setup_v3.sh \
+            q014_aggregate_v3.py \
+            q014_tests_v3.py \
+            q014_case_state_v3.json; do test -f "$f"; done
+          test "$(git hash-object q005_hpc_v14.py)" = "2c69d6b57f523f910207683eb67c07548e61bef9"
+          test "$(git hash-object q005_hpc_v14_config.yml)" = "02ab4816fa2f41f3da616d60a4f71a210dd5882e"
+          test "$(git hash-object q005_setup_v14.sh)" = "546101534136ffe2b46233b7daea57b9c22ff18c"
+          test "$(git hash-object q005_hpc_v14_requirements.txt)" = "495270dff0e733309eebfa90aadecfc107dcc6e2"
+          echo "Q014_FROZEN_Q005_SOURCE_GATE=PASS"
+
+      - name: Download exact authoritative Q011 V4 target artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p q014_parent/q011
+          gh run download "33363067156" \
+            --name q011-ede-globality-certification-v4-final \
+            --dir q014_parent/q011
+          test -f q014_parent/q011/q011_ede_globality_certification_v4_result.json
+
+      - name: Static scientific guardrails
+        run: |
+          mkdir -p q014_v3_gates
+          python q014_tests_v3.py static \
+            --output q014_v3_gates/q014_static_test_manifest_v3.json
+          python q014_external_viability_v3.py preflight \
+            --q011 q014_parent/q011/q011_ede_globality_certification_v4_result.json \
+            --output q014_v3_gates/q014_parent_preflight_v3.json
+
+      - name: Build dynamic independent-task matrix
+        id: plan
+        shell: bash
+        env:
+          REQUESTED_DEPTH: ${{ inputs.depth }}
+        run: |
+          set -euo pipefail
+          DEPTH="${REQUESTED_DEPTH:-standard}"
+          python q014_external_viability_v3.py plan \
+            --depth "$DEPTH" --output q014_v3_gates/q014_task_matrix_v3.json >/tmp/q014_matrix.txt
+          MATRIX="$(tail -n 1 /tmp/q014_matrix.txt)"
+          echo "matrix=$MATRIX" >> "$GITHUB_OUTPUT"
+          echo "depth=$DEPTH" >> "$GITHUB_OUTPUT"
+          python - <<'PY'
+          import json
+          d=json.load(open('q014_v3_gates/q014_task_matrix_v3.json'))
+          print('Q014_TASK_COUNT=',len(d['include']))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q014-v3-parent-and-plan
+          path: |
+            q014_parent
+            q014_v3_gates
+            q014_case_state_v3.json
+          retention-days: 30
+
+  smoke:
+    name: Q014 smoke ${{ matrix.chain }}
+    needs: prepare
+    strategy:
+      fail-fast: false
+      matrix:
+        chain: [planck_npipe_k039_approx, spt_d1_only, spt_d1_plus_desi]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - name: Install frozen Q005 V14 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - name: Build only this Q014 chain environment
+        run: bash q014_setup_v3.sh "${{ matrix.chain }}"
+      - uses: actions/download-artifact@v4
+        with:
+          name: q014-v3-parent-and-plan
+          path: q014_context
+      - name: Runtime environment preflight
+        run: |
+          python q014_external_viability_v3.py preflight \
+            --q011 q014_context/q014_parent/q011/q011_ede_globality_certification_v4_result.json \
+            --environment \
+            --chain "${{ matrix.chain }}" \
+            --output q014_environment_preflight_${{ matrix.chain }}.json
+      - name: One finite reference evaluation — technical smoke only
+        run: |
+          python q014_external_viability_v3.py smoke \
+            --chain "${{ matrix.chain }}" \
+            --q011 q014_context/q014_parent/q011/q011_ede_globality_certification_v4_result.json \
+            --output q014_smoke_${{ matrix.chain }}.json
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q014-v3-smoke-${{ matrix.chain }}
+          path: |
+            q014_environment_preflight_${{ matrix.chain }}.json
+            q014_smoke_${{ matrix.chain }}.json
+            q014_v3_source_runtime
+          if-no-files-found: warn
+          retention-days: 30
+
+  profile:
+    name: Q014 ${{ matrix.chain }} / ${{ matrix.mode }} / ${{ matrix.start_family }}
+    needs: [prepare, smoke]
+    strategy:
+      fail-fast: false
+      max-parallel: 15
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 270
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - name: Install frozen Q005 V14 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - name: Build only this Q014 chain environment
+        run: bash q014_setup_v3.sh "${{ matrix.chain }}"
+      - uses: actions/download-artifact@v4
+        with:
+          name: q014-v3-parent-and-plan
+          path: q014_context
+
+      - name: Run one atomic profile task with internal harvest cutoff
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p q014_v3_results
+          OUT="q014_v3_results/q014_${{ matrix.tag }}.json"
+          set +e
+          timeout --signal=INT --kill-after=10m 255m \
+            python q014_external_viability_v3.py run \
+              --chain "${{ matrix.chain }}" \
+              --mode "${{ matrix.mode }}" \
+              --start-family "${{ matrix.start_family }}" \
+              --restart-index "${{ matrix.restart_index }}" \
+              --q011 q014_context/q014_parent/q011/q011_ede_globality_certification_v4_result.json \
+              --output "$OUT"
+          RC=$?
+          set -e
+          if [[ ! -f "$OUT" ]]; then
+            python - "$OUT" "$RC" <<'PY'
+          import json,sys
+          out,rc=sys.argv[1],int(sys.argv[2])
+          json.dump({
+            "case_id":"NOT DOCUMENTED","q":"Q014","run_id":"Q014-EXTERNAL-VIABILITY-V3",
+            "chain":"${{ matrix.chain }}","mode":"${{ matrix.mode }}","start_family":"${{ matrix.start_family }}",
+            "restart_index":int("${{ matrix.restart_index }}"),"status":"TECHNICAL_FAILURE",
+            "failure_type":"PROCESS_TERMINATED_BEFORE_RESULT_SERIALIZATION","process_exit":rc
+          },open(out,"w"),indent=2)
+          PY
+          fi
+          python - "$OUT" "$RC" <<'PY'
+          import json,sys
+          p,rc=sys.argv[1],int(sys.argv[2]); d=json.load(open(p)); d['workflow_process_exit']=rc
+          json.dump(d,open(p,'w'),indent=2,sort_keys=True)
+          print('Q014_TASK_STATUS=',d.get('status'),'PROCESS_EXIT=',rc)
+          PY
+          # Scientific completeness is decided centrally. Preserve every task record.
+          exit 0
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q014-v3-profile-${{ matrix.tag }}
+          path: |
+            q014_v3_results/q014_${{ matrix.tag }}.json
+            q014_v3_source_runtime
+          if-no-files-found: warn
+          retention-days: 30
+
+  aggregate-and-test:
+    name: Q014 aggregate + mandatory scientific tests
+    if: ${{ always() }}
+    needs: [prepare, smoke, profile]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q014-v3-profile-*
+          path: q014_v3_aggregate/jobs
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q014-v3-smoke-*
+          path: q014_v3_aggregate/smoke
+      - uses: actions/download-artifact@v4
+        with:
+          name: q014-v3-parent-and-plan
+          path: q014_v3_aggregate/context
+
+      - name: Aggregate only within each external likelihood chain
+        env:
+          DEPTH: ${{ needs.prepare.outputs.depth }}
+        run: |
+          mkdir -p q014_v3_aggregate/final
+          python q014_aggregate_v3.py \
+            --depth "$DEPTH" \
+            --inputs q014_v3_aggregate/jobs \
+            --output q014_v3_aggregate/final/q014_external_viability_v3_result.json \
+            --manifest-output q014_v3_aggregate/final/q014_job_manifest_v3.json
+
+      - name: Mandatory result validation
+        run: |
+          set +e
+          python q014_tests_v3.py result \
+            --result q014_v3_aggregate/final/q014_external_viability_v3_result.json \
+            --output q014_v3_aggregate/final/q014_test_manifest_v3.json
+          TEST_RC=$?
+          set -e
+          python - <<'PY'
+          import json
+          p='q014_v3_aggregate/final/q014_external_viability_v3_result.json'
+          d=json.load(open(p))
+          handoff={
+            "case_id":d["case_id"],"bubbleverse_q":"Q014",
+            "original_case_question":d["original_case_question"],
+            "status":"COMPLETE" if d.get("scientifically_usable_result") else "PARTIAL",
+            "validation_status":d.get("validation_status"),
+            "scientific_target":"External n=3 EDE likelihood penalty at H0=71.5, by chain",
+            "primary_results":{
+              k:{"fixed_h0_profile_delta_chi2":v.get("penalties",{}).get("fixed_h0_profile_delta_chi2"),
+                 "q011_shared_physics_delta_chi2":v.get("penalties",{}).get("q011_shared_physics_delta_chi2"),
+                 "status":v.get("status")} for k,v in d.get("chains",{}).items()
+            },
+            "tests":"q014_test_manifest_v3.json",
+            "sources":["K-029","K-036","K-038","K-039","K-040","INTERNAL-Q005","R-Q011-EDE-GLOBALITY-CERTIFICATION-004","R-Q012-EDE-LIKELIHOOD-ATTRIBUTION-001"],
+            "next_action_required":d.get("next_action_required",True),
+            "claim_boundary":d.get("claim_boundary",{})
+          }
+          json.dump(handoff,open('q014_v3_aggregate/final/q014_result_ingestion_handoff_v3.json','w'),indent=2,sort_keys=True)
+          PY
+          # Preserve failed/inconclusive test output as scientific evidence; do not hide artifacts.
+          exit 0
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q014-external-viability-v3-final
+          path: |
+            q014_v3_aggregate/final/q014_external_viability_v3_result.json
+            q014_v3_aggregate/final/q014_job_manifest_v3.json
+            q014_v3_aggregate/final/q014_test_manifest_v3.json
+            q014_v3_aggregate/final/q014_result_ingestion_handoff_v3.json
+            q014_v3_aggregate/smoke
+            q014_case_state_v3.json
+            q014_external_viability_v3_source_lock.json
+            q014_external_viability_v3_config.yml
+          if-no-files-found: warn
+          retention-days: 90
