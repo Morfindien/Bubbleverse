@@ -1,0 +1,105 @@
+{
+  "cobaya_v3_5_6_objective_sources": {
+    "params_EE_CamSpec_yaml": {
+      "git_blob": "756add77d30c8c4f7caf7fe69c600159ca929dbd",
+      "path": "cobaya/likelihoods/planck_NPIPE_highl_CamSpec/params_EE_CamSpec.yaml"
+    },
+    "params_TE_CamSpec_yaml": {
+      "git_blob": "3076998d22ea874e4a459bcd58b3f878671e7fcf",
+      "path": "cobaya/likelihoods/planck_NPIPE_highl_CamSpec/params_TE_CamSpec.yaml"
+    },
+    "params_TT_CamSpec_yaml": {
+      "git_blob": "7e7f75757cf28e41f80ef3ec0dd156b2c9736674",
+      "path": "cobaya/likelihoods/planck_NPIPE_highl_CamSpec/params_TT_CamSpec.yaml"
+    },
+    "planck_NPIPE_TTTEEE_yaml": {
+      "git_blob": "e8f62ef807c82dac7f81ca3084dc81a7b64a1342",
+      "path": "cobaya/likelihoods/planck_NPIPE_highl_CamSpec/TTTEEE.yaml"
+    },
+    "planck_calib_yaml": {
+      "git_blob": "334734b7ce8bb1bbf8a65ff8beee07e79b60331f",
+      "path": "cobaya/likelihoods/base_classes/planck_calib.yaml"
+    }
+  },
+  "frozen_scientific_surface": {
+    "q005": "UNCHANGED",
+    "q011": "UNCHANGED",
+    "q014_v5_likelihood_definitions": "REUSED",
+    "q014_v6_environment_transport": "REUSED"
+  },
+  "muse_source": {
+    "sha256": "4933ceb993ceb92e48b2191b8ccb1595d182bc4bc3862c1fbad61d5f82136e9b",
+    "transport": "Exact successful V6 MUSE source artifact reused; no fresh NASA download in V7",
+    "v6_artifact_digest": "sha256:03446830394786015fc512f76c6c298719487816eb93c77554d31c16f1d862ca",
+    "v6_artifact_id": 9790864493,
+    "v6_artifact_name": "q014-v6-spt-muse-source",
+    "v6_head_sha": "3188463e62395333fc8d06ea464a95b7e13f5500",
+    "v6_run": 33483557343
+  },
+  "objective_repair": {
+    "constraint_shapes": {
+      "planck_npipe_k039_approx": {
+        "A_planck": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.0025,
+          "source": "Cobaya v3.5.6 base_classes/planck_calib.yaml"
+        },
+        "calEE": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.01,
+          "source": "Cobaya v3.5.6 planck_NPIPE_highl_CamSpec/params_EE_CamSpec.yaml"
+        },
+        "calTE": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.01,
+          "source": "Cobaya v3.5.6 planck_NPIPE_highl_CamSpec/params_TE_CamSpec.yaml"
+        }
+      },
+      "spt_d1_only": {
+        "Tcal": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.0036,
+          "source": "Pinned official SPT3G_D1_TnE lite Cobaya YAML / existing V5 config"
+        }
+      },
+      "spt_d1_plus_desi": {
+        "Tcal": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.0036,
+          "source": "Pinned official SPT3G_D1_TnE lite Cobaya YAML / existing V5 config"
+        }
+      }
+    },
+    "scalar_chi2_source": "Cobaya minimum row scalar chi2; chi2__ component aliases are diagnostic only and never summed",
+    "v6_invalid_cross_mode_basis": "2*minuslogpost contains mode-dependent normalized prior constants when H0 changes sampled/fixed status",
+    "v7_basis": "SCALAR_TOTAL_LIKELIHOOD_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_CONSTRAINT_SHAPES"
+  },
+  "q": "Q014",
+  "result_id": "R-Q014-EDE-EXTERNAL-VIABILITY-004",
+  "run_id": "Q014-EXTERNAL-VIABILITY-V7",
+  "v6_numerical_parent": {
+    "artifact": "q014-external-viability-v6-final",
+    "artifact_digest": "sha256:efe77e9bd2a4550299b1488f12e5e6eb851d6af906c372f845b226c6f35a0b4c",
+    "artifact_id": 9795008419,
+    "github_run": 33483557343,
+    "head_sha": "3188463e62395333fc8d06ea464a95b7e13f5500",
+    "result_id": "R-Q014-EDE-EXTERNAL-VIABILITY-003",
+    "role": "NUMERICAL_CONTINUATION_PARENT_ONLY \u2014 NOT A SCIENTIFIC Q014 RESULT",
+    "scientifically_usable_result": false,
+    "validation_status": "NUMERICALLY UNRESOLVED"
+  },
+  "v7_execution": {
+    "cross_seed_free_fixed": true,
+    "deterministic_scalar_refs": true,
+    "expected_jobs": 15,
+    "max_evals": 960,
+    "rhoend": 0.005,
+    "seed_best_candidate_preserved": true
+  },
+  "v7_repair_class": "STATISTICAL_OBJECTIVE_COMPARABILITY + NUMERICAL_CONTINUATION"
+}

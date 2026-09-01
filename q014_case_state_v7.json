@@ -1,0 +1,26 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "original_case_question": "N\u00e5r den samme n=3 EDE-model anvendes, hvor stor ekstern likelihood-penalty f\u00e5r high-H\u2080-regionen omkring det aktive Q011-punkt ved H\u2080=71.5 km s\u207b\u00b9 Mpc\u207b\u00b9 i Planck NPIPE- og SPT-3G D1-k\u00e6derne, n\u00e5r hver k\u00e6des egne nuisance-parametre og relevante kosmologiske parametre profileres korrekt og datasetoverlap ikke dobbeltregnes?",
+  "q": "Q014",
+  "q011_status": "BEST-OBSERVED MINIMUM ONLY",
+  "run_id": "Q014-EXTERNAL-VIABILITY-V7",
+  "scientific_state": "Q014 REMAINS UNANSWERED; V6 IS NOT SCIENTIFICALLY USABLE",
+  "status": "COMPUTATION REQUIRED \u2014 V6 MANDATORY VALIDATION FAILURE DIAGNOSED AND REPAIRED IN V7",
+  "v6_outcome": {
+    "github_run": 33483557343,
+    "interpretation": "NUMERICAL/STATISTICAL VALIDATION FAILURE \u2014 DO NOT INTERPRET V6 PENALTIES AS Q014 RESULT",
+    "jobs": "27/27 returned and finite",
+    "mandatory_failure": [
+      "MULTISTART_STABILITY_GATE",
+      "FIXED_PROFILE_MONOTONICITY_GATE",
+      "FINAL_VALIDATION_GATE"
+    ]
+  },
+  "v7_repair": {
+    "infrastructure": "Reuse exact V6 MUSE source artifact (ID 9790864493) and re-verify source SHA256; V7 performs no fresh NASA MUSE download.",
+    "numerics": "Deterministic cross-seeded refinement from V6 best free/fixed minima, max_evals=960, rhoend=0.005, preserve exact seed if optimizer returns worse point.",
+    "objective": "Remove mode-dependent normalized flat-prior constants from cross-mode delta; retain Gaussian calibration constraint shapes.",
+    "objective_diagnosis": "V6 used 2*minuslogpost across free-H0 and fixed-H0 modes; fixing H0 removes the normalized flat H0-prior constant, so the cross-mode delta had an additive-constant mismatch.",
+    "scientific_likelihood_change": false
+  }
+}
