@@ -1,0 +1,37 @@
+BUBBLEVERSE Q012 V1 — EXECUTION NOTE
+
+CURRENT Q
+Q012
+
+PURPOSE
+Recompute only the stale H0=71.5 ACT/non-ACT attribution after Q011 superseded
+Q008's active 71.5 best-observed point.
+
+FILES
+- q012_likelihood_attribution_v1.py
+- q012_likelihood_attribution_v1_config.yml
+- .github/workflows/q012-likelihood-attribution-v1.yml
+
+REUSED, NOT REWRITTEN
+- q005_hpc_v14.py
+- q005_hpc_v14_config.yml
+- q005_setup_v14.sh
+- q005_hpc_v14_requirements.txt
+- q009_act_corrected_minima_attribution_v8.py
+- q010_nonact_likelihood_attribution_v3.py
+
+EXECUTION
+GitHub -> Actions -> "Bubbleverse Q012 ACT + Non-ACT Likelihood Attribution V1"
+-> Run workflow.
+
+The workflow runs two independent fixed-vector jobs in parallel:
+1. Q007-preserved Q005 attribution baseline.
+2. Q011 V4 H0=71.5 best-observed point.
+
+It then merges them and performs the finite mandatory Q012 result tests.
+
+NO OPTIMIZATION.
+NO SAMPLING.
+NO Q011 REOPEN.
+NO CHECKPOINTING REQUIRED.
+NO USER-FACING ARCHIVE.

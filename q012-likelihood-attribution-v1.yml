@@ -1,0 +1,315 @@
+name: Bubbleverse Q012 ACT + Non-ACT Likelihood Attribution V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q012-likelihood-attribution-v1-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CURRENT_Q: Q012
+  RUN_ID: Q012-EDE-LIKELIHOOD-ATTRIBUTION-V1
+
+jobs:
+  acquire-parents:
+    name: Q012 acquire frozen parents
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      q007_run: ${{ steps.parents.outputs.q007 }}
+      q009_run: ${{ steps.parents.outputs.q009 }}
+      q010_run: ${{ steps.parents.outputs.q010 }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Q012 identity and frozen source-code gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f q012_likelihood_attribution_v1.py
+          test -f q012_likelihood_attribution_v1_config.yml
+          test "$(git hash-object q005_hpc_v14.py)" = "2c69d6b57f523f910207683eb67c07548e61bef9"
+          test "$(git hash-object q005_hpc_v14_config.yml)" = "02ab4816fa2f41f3da616d60a4f71a210dd5882e"
+          test "$(git hash-object q005_setup_v14.sh)" = "546101534136ffe2b46233b7daea57b9c22ff18c"
+          test "$(git hash-object q005_hpc_v14_requirements.txt)" = "495270dff0e733309eebfa90aadecfc107dcc6e2"
+          test "$(git hash-object q009_act_corrected_minima_attribution_v8.py)" = "47a4e6e6033a290b7eaf07ce8e246e0707acd924"
+          test "$(git hash-object q010_nonact_likelihood_attribution_v3.py)" = "fbd988d883a189e2eab31d0a5dcdc3b51e033804"
+          echo "Q012_SOURCE_CODE_FREEZE_GATE=PASS"
+
+      - name: Locate latest successful historical attribution parents
+        id: parents
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          find_run() {
+            local workflow="$1"
+            gh run list --workflow "$workflow" --status completed --limit 50 \
+              --json databaseId,conclusion \
+              --jq '[.[] | select(.conclusion=="success")] | first | .databaseId'
+          }
+          Q007_RUN="$(find_run q007-act-observable-attribution-v2.yml)"
+          Q009_RUN="$(find_run q009-act-corrected-minima-attribution-v8.yml)"
+          Q010_RUN="$(find_run q010-nonact-likelihood-attribution-v3.yml)"
+          for x in "$Q007_RUN" "$Q009_RUN" "$Q010_RUN"; do
+            test -n "$x" && test "$x" != "null"
+          done
+          echo "q007=$Q007_RUN" >> "$GITHUB_OUTPUT"
+          echo "q009=$Q009_RUN" >> "$GITHUB_OUTPUT"
+          echo "q010=$Q010_RUN" >> "$GITHUB_OUTPUT"
+
+      - name: Download exact Q005 attribution baseline preserved by Q007
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p q012_parent/q007
+          gh run download "${{ steps.parents.outputs.q007 }}" \
+            --name q007-point-ede-baseline \
+            --dir q012_parent/q007
+          test -f q012_parent/q007/q007_point_ede-baseline.json
+
+      - name: Download historical Q009 V8 result
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p q012_parent/q009
+          gh run download "${{ steps.parents.outputs.q009 }}" \
+            --name q009-act-corrected-minima-attribution-v8-final \
+            --dir q012_parent/q009
+          test -f q012_parent/q009/q009_act_corrected_minima_attribution_v8_result.json
+
+      - name: Download historical Q010 V3 result
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p q012_parent/q010
+          gh run download "${{ steps.parents.outputs.q010 }}" \
+            --name q010-nonact-likelihood-attribution-v3-final \
+            --dir q012_parent/q010
+          test -f q012_parent/q010/q010_nonact_likelihood_attribution_v3_result.json
+
+      - name: Download exact frozen Q011 V4 final result
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p q012_parent/q011
+          gh run download "33363067156" \
+            --name q011-ede-globality-certification-v4-final \
+            --dir q012_parent/q011
+          test -f q012_parent/q011/q011_ede_globality_certification_v4_result.json
+
+      - name: Parent identity and Q011 target gates
+        shell: bash
+        env:
+          Q007_RUN: ${{ steps.parents.outputs.q007 }}
+          Q009_RUN: ${{ steps.parents.outputs.q009 }}
+          Q010_RUN: ${{ steps.parents.outputs.q010 }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, math, os
+          q7=json.load(open("q012_parent/q007/q007_point_ede-baseline.json"))
+          q9=json.load(open("q012_parent/q009/q009_act_corrected_minima_attribution_v8_result.json"))
+          q10=json.load(open("q012_parent/q010/q010_nonact_likelihood_attribution_v3_result.json"))
+          q11=json.load(open("q012_parent/q011/q011_ede_globality_certification_v4_result.json"))
+          assert q7.get("q")=="Q-007", "Q007_PARENT_GATE=FAIL"
+          assert q9.get("q")=="Q-009", "Q009_PARENT_GATE=FAIL"
+          assert q9.get("run_id")=="Q009-ACT-CORRECTED-MINIMA-ATTRIBUTION-V8"
+          assert q9.get("code_version")=="8.0-q007-fixed-vector-consumption-fixed"
+          assert q9.get("gates",{}).get("FINAL_RESULT_GATE")=="PASS"
+          assert q10.get("q")=="Q-010", "Q010_PARENT_GATE=FAIL"
+          assert q10.get("run_id")=="Q010-NONACT-LIKELIHOOD-ATTRIBUTION-V3"
+          assert q10.get("code_version")=="3.0-serialized-vector-attribution-baseline"
+          assert q10.get("gates",{}).get("FINAL_RESULT_GATE")=="PASS"
+          assert q11.get("q")=="Q011", "Q011_PARENT_GATE=FAIL"
+          assert q11.get("run_id")=="Q011-EDE-GLOBALITY-CERTIFICATION-V4"
+          assert q11.get("result_identifier")=="R-Q011-EDE-GLOBALITY-CERTIFICATION-004"
+          assert q11.get("combined_globality_classification")=="BEST-OBSERVED MINIMUM ONLY"
+          assert q11.get("mathematical_globality_proven") is False
+          profiles=q11["profile_targets"]
+          k=next(k for k in profiles if math.isclose(float(k),71.5,rel_tol=0,abs_tol=1e-9))
+          r=profiles[k]
+          assert r.get("classification")=="BEST-OBSERVED MINIMUM ONLY"
+          assert math.isclose(float(r["best_chi2"]),546.364260,rel_tol=0,abs_tol=1e-6)
+          ep=q11.get("execution_provenance",{})
+          assert ep.get("bubbleverse_commit")=="e113fb846948f424b865d1303fba8b5988ec9133"
+          assert str(ep.get("github_run_id"))=="33363067156"
+          assert ep.get("program_sha256")=="53dc99d00d220671fe16d17136ef626a7db454711120f5861a6677b3879c57e6"
+          assert ep.get("config_sha256")=="37baaee48fd4f2bf70807dd2c6baab6e8a138725f8b70987773d4ddad5b8467b"
+          json.dump({
+            "q":"Q012",
+            "q007_run_id":os.environ["Q007_RUN"],
+            "q009_run_id":os.environ["Q009_RUN"],
+            "q010_run_id":os.environ["Q010_RUN"],
+            "q011_run_id":"33363067156",
+            "q011_commit":"e113fb846948f424b865d1303fba8b5988ec9133",
+            "q011_target_h0":71.5,
+            "q011_best_chi2":546.364260,
+            "status":"PASS"
+          },open("q012_parent/parent_runs.json","w"),indent=2)
+          print("Q012_PARENT_IDENTITY_GATES=PASS")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q012-v1-parent-context
+          path: q012_parent
+          retention-days: 30
+
+  point:
+    name: Q012 fixed vector ${{ matrix.tag }}
+    needs: acquire-parents
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {point: baseline, tag: baseline}
+          - {point: q011_71.5, tag: q011-71p5}
+
+    runs-on: ubuntu-24.04
+    timeout-minutes: 240
+    env:
+      OMP_NUM_THREADS: "1"
+      OPENBLAS_NUM_THREADS: "1"
+      MKL_NUM_THREADS: "1"
+      COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify Q012 and reused source code
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f q012_likelihood_attribution_v1.py
+          test -f q012_likelihood_attribution_v1_config.yml
+          test "$(git hash-object q005_hpc_v14.py)" = "2c69d6b57f523f910207683eb67c07548e61bef9"
+          test "$(git hash-object q009_act_corrected_minima_attribution_v8.py)" = "47a4e6e6033a290b7eaf07ce8e246e0707acd924"
+          test "$(git hash-object q010_nonact_likelihood_attribution_v3.py)" = "fbd988d883a189e2eab31d0a5dcdc3b51e033804"
+          echo "Q012_REUSE_GATE=PASS"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+
+      - name: Install frozen Q005 V14 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+
+      - name: Build frozen Q005 V14 common backend
+        run: bash q005_setup_v14.sh
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q012-v1-parent-context
+          path: q012_parent
+
+      - name: Q012 context/vector/backend preflight
+        run: |
+          python q012_likelihood_attribution_v1.py preflight \
+            --q007-baseline q012_parent/q007/q007_point_ede-baseline.json \
+            --q011 q012_parent/q011/q011_ede_globality_certification_v4_result.json
+
+      - name: Evaluate one fixed vector
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p q012_v1_results
+          python q012_likelihood_attribution_v1.py run \
+            --q007-baseline q012_parent/q007/q007_point_ede-baseline.json \
+            --q011 q012_parent/q011/q011_ede_globality_certification_v4_result.json \
+            --point "${{ matrix.point }}" \
+            --output "q012_v1_results/q012_v1_point_${{ matrix.tag }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q012-v1-point-${{ matrix.tag }}
+          path: q012_v1_results/q012_v1_point_${{ matrix.tag }}.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  aggregate-and-test:
+    name: Q012 merge + finite result tests
+    if: ${{ always() }}
+    needs: [acquire-parents, point]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install lightweight aggregate dependency
+        run: python -m pip install PyYAML==6.0.2
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q012-v1-point-*
+          path: q012_v1_aggregate/points
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q012-v1-parent-context
+          path: q012_parent
+
+      - name: Merge and run mandatory Q012 tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p q012_v1_aggregate
+          mapfile -t POINTS < <(find q012_v1_aggregate/points -name 'q012_v1_point_*.json' -type f | sort)
+          python q012_likelihood_attribution_v1.py aggregate \
+            --inputs "${POINTS[@]}" \
+            --q009-old q012_parent/q009/q009_act_corrected_minima_attribution_v8_result.json \
+            --q010-old q012_parent/q010/q010_nonact_likelihood_attribution_v3_result.json \
+            --output q012_v1_aggregate/q012_likelihood_attribution_v1_result.json \
+            --manifest-output q012_v1_aggregate/q012_job_manifest_v1.json \
+            --handoff-output q012_v1_aggregate/q012_result_ingestion_handoff_v1.json
+
+      - name: Absolute final gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          p="q012_v1_aggregate/q012_likelihood_attribution_v1_result.json"
+          d=json.load(open(p))
+          assert d.get("q")=="Q012", "Q_IDENTITY_GATE=FAIL"
+          assert d.get("run_id")=="Q012-EDE-LIKELIHOOD-ATTRIBUTION-V1"
+          assert d.get("q011_globality_status_preserved")=="BEST-OBSERVED MINIMUM ONLY"
+          assert d.get("mathematical_globality_proven") is False
+          assert d.get("ede_physical_viability_tested") is False
+          assert d.get("gates",{}).get("FINAL_RESULT_GATE")=="PASS", "FINAL_RESULT_GATE=FAIL"
+          print("Q012_FINAL_RESULT_GATE=PASS")
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: q012-likelihood-attribution-v1-final
+          path: |
+            q012_v1_aggregate/q012_likelihood_attribution_v1_result.json
+            q012_v1_aggregate/q012_job_manifest_v1.json
+            q012_v1_aggregate/q012_result_ingestion_handoff_v1.json
+          if-no-files-found: warn
+          retention-days: 90

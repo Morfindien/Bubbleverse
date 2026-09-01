@@ -1,0 +1,177 @@
+project:
+  q: Q012
+  run_id: Q012-EDE-LIKELIHOOD-ATTRIBUTION-V1
+  result_id: R-Q012-EDE-LIKELIHOOD-ATTRIBUTION-001
+  title: Bubbleverse Q012 ACT + non-ACT attribution at Q011 H0=71.5 best-observed point
+  scientific_question: >-
+    At the new Q011 best-observed n=3 EDE minimum at fixed H0=71.5 km s^-1 Mpc^-1,
+    how is the change in total chi2 distributed between ACT DR6 and the non-ACT
+    likelihood components, and does Q009/Q010's previous attribution persist or change?
+  execution_mode: MOTOR_PLUS_HPC_FIXED_VECTOR_ATTRIBUTION
+
+parent:
+  repository: Morfindien/Bubbleverse
+  frozen_reference_commit: e113fb846948f424b865d1303fba8b5988ec9133
+  base_q: Q-005
+  base_engine: q005_hpc_v14.py
+  base_config: q005_hpc_v14_config.yml
+  setup: q005_setup_v14.sh
+  requirements: q005_hpc_v14_requirements.txt
+  act_dr6_lite_commit: 0e0cd2c703c62a0e980470b572602233b27750e1
+
+reuse:
+  q009_engine: q009_act_corrected_minima_attribution_v8.py
+  q009_workflow: q009-act-corrected-minima-attribution-v8.yml
+  q009_final_artifact: q009-act-corrected-minima-attribution-v8-final
+  q009_final_filename: q009_act_corrected_minima_attribution_v8_result.json
+  q010_engine: q010_nonact_likelihood_attribution_v3.py
+  q010_workflow: q010-nonact-likelihood-attribution-v3.yml
+  q010_final_artifact: q010-nonact-likelihood-attribution-v3-final
+  q010_final_filename: q010_nonact_likelihood_attribution_v3_result.json
+  q010_journal_source_id: INTERNAL-Q010-V4
+  q010_note: >-
+    INTERNAL-Q010-V4 is preserved as the journal/source ID supplied to Q012.
+    At the frozen Q011 reference commit, the latest actual Q010 implementation
+    present in the repository is V3. Q012 reuses that real V3 implementation and
+    does not invent a Q010 V4 code file.
+
+q007_parent:
+  workflow: q007-act-observable-attribution-v2.yml
+  baseline_artifact: q007-point-ede-baseline
+  baseline_filename: q007_point_ede-baseline.json
+
+q011_parent:
+  q: Q011
+  run_id: Q011-EDE-GLOBALITY-CERTIFICATION-V4
+  result_id: R-Q011-EDE-GLOBALITY-CERTIFICATION-004
+  github_run_id: 33363067156
+  bubbleverse_commit: e113fb846948f424b865d1303fba8b5988ec9133
+  artifact: q011-ede-globality-certification-v4-final
+  filename: q011_ede_globality_certification_v4_result.json
+  artifact_digest_sha256: 72eb1ec17fc6ab8988e2a6d5456e68865c4a926e2f3ea9e581b3b6d07b403a33
+  program: q011_ede_globality_certification_v4.py
+  program_sha256: 53dc99d00d220671fe16d17136ef626a7db454711120f5861a6677b3879c57e6
+  config: q011_ede_globality_certification_v4_config.yml
+  config_sha256: 37baaee48fd4f2bf70807dd2c6baab6e8a138725f8b70987773d4ddad5b8467b
+  target_h0: 71.5
+  chi2: 546.364260
+  status: BEST-OBSERVED MINIMUM ONLY
+  mathematical_globality_proven: false
+
+baseline:
+  h0: 70.853292
+  chi2: 548.010401
+  type: optimizer-native authoritative reference
+  q007_act_chi2_reference: 159.13717199575123
+
+historical_71p5:
+  q008_parent_chi2: 547.154321
+  q009_delta_chi2_act: -2.5540022704
+  nonact_net: 0.8512
+  planck_lowl: 1.1417
+  desi_dr2: -0.6380
+  bbn: null
+  note: >-
+    Rounded handoff values are provenance crosschecks only. The Q009 V8 and Q010 V3
+    final artifacts are downloaded and used for exact historical comparison.
+
+component_order:
+  - planck_lowl
+  - act_dr6
+  - desi_dr2
+  - bbn
+
+non_act_components:
+  - planck_lowl
+  - desi_dr2
+  - bbn
+
+bands:
+  - {name: ACT_LOW, ell_min: 600, ell_max: 1499.999}
+  - {name: ACT_MID, ell_min: 1500, ell_max: 2999.999}
+  - {name: ACT_HIGH, ell_min: 3000, ell_max: 8500}
+
+execution:
+  reoptimize: false
+  sampler: false
+  derivatives: false
+  fixed_vector_only: true
+  point_parallelism: 2
+  checkpointing: false
+  reason_no_checkpoint: >-
+    Baseline and Q011 H0=71.5 are deterministic, independent fixed-vector likelihood
+    evaluations. There is no optimizer, chain, or stateful process to resume.
+  merge: true
+
+gates:
+  h0_tolerance: 1.0e-6
+  parent_chi2_identity_tolerance: 1.0e-6
+  act_quadratic_closure_tolerance: 1.0e-7
+  act_component_crosscheck_tolerance: 0.002
+  component_closure_tolerance: 0.002
+  historical_snapshot_tolerance: 0.005
+  sign_zero_tolerance: 0.002
+  mandatory:
+    - CONTEXT_CONTINUITY_GATE
+    - Q_IDENTITY_GATE
+    - Q011_PARENT_IDENTITY_GATE
+    - Q011_TARGET_CLASSIFICATION_GATE
+    - Q011_EXACT_VECTOR_GATE
+    - FROZEN_BACKEND_GATE
+    - NO_REOPTIMIZATION_GATE
+    - FINITE_SERIALIZED_POINT_GATE
+    - ACT_QUADRATIC_CLOSURE_GATE
+    - ACT_COMPONENT_CROSSCHECK_GATE
+    - COMPONENT_CLOSURE_GATE
+    - HISTORICAL_Q009_Q010_SNAPSHOT_GATE
+    - JOB_COMPLETENESS_GATE
+    - SCIENTIFIC_INTERPRETATION_GATE
+    - FINAL_RESULT_GATE
+  diagnostic_only:
+    - PARENT_TOTAL_ROUNDTRIP_GATE
+    - serialized_roundtrip_delta_chi2
+
+runtime:
+  check_date: 2026-09-01
+  runner: ubuntu-24.04
+  github_hosted_hard_limit_minutes: 360
+  safe_target_minutes: 240
+  point_job_timeout_minutes: 240
+  aggregate_job_timeout_minutes: 20
+  acquire_job_timeout_minutes: 20
+  expected_point_jobs: 2
+  strategy: TWO_PARALLEL_FIXED_VECTOR_EVALUATIONS_THEN_MERGE_AND_TEST
+  single_job_risk_after_sharding: LOW
+  checkpointing: false
+
+source_code_freeze:
+  q005_hpc_v14.py_git_blob: 2c69d6b57f523f910207683eb67c07548e61bef9
+  q005_hpc_v14_config.yml_git_blob: 02ab4816fa2f41f3da616d60a4f71a210dd5882e
+  q005_setup_v14.sh_git_blob: 546101534136ffe2b46233b7daea57b9c22ff18c
+  q005_hpc_v14_requirements.txt_git_blob: 495270dff0e733309eebfa90aadecfc107dcc6e2
+  q009_act_corrected_minima_attribution_v8.py_git_blob: 47a4e6e6033a290b7eaf07ce8e246e0707acd924
+  q010_nonact_likelihood_attribution_v3.py_git_blob: fbd988d883a189e2eab31d0a5dcdc3b51e033804
+
+sources:
+  - INTERNAL-Q005
+  - INTERNAL-Q008
+  - INTERNAL-Q009
+  - INTERNAL-Q010-V4
+  - R-Q011-EDE-GLOBALITY-CERTIFICATION-004
+  - K-029
+  - K-036
+  - K-038
+
+claim_boundary:
+  frozen_q005_v14_surface: true
+  q011_is_best_observed_only: true
+  mathematical_globality_proven: false
+  strong_near_global_certification: false
+  ede_physical_solution_established: false
+  external_viability_tested: false
+  q011_reopened: false
+  attribution_basis: >-
+    Finite-precision serialized fixed-vector re-evaluation on the frozen Q005 V14
+    likelihood surface. Optimizer-native scalar chi2 values are preserved separately.
+  no_roundtrip_offset_redistribution: true
+  no_new_physics_claim: true
