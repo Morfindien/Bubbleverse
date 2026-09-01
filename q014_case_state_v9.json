@@ -1,0 +1,37 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "original_case_question": "Når den samme n=3 EDE-model anvendes, hvor stor ekstern likelihood-penalty får high-H₀-regionen omkring det aktive Q011-punkt ved H₀=71.5 km s⁻¹ Mpc⁻¹ i Planck NPIPE- og SPT-3G D1-kæderne, når hver kædes egne nuisance-parametre og relevante kosmologiske parametre profileres korrekt og datasetoverlap ikke dobbeltregnes?",
+  "q": "Q014",
+  "q011_status": "BEST-OBSERVED MINIMUM ONLY",
+  "run_id": "Q014-EXTERNAL-VIABILITY-V9",
+  "scientific_state": "Q014 REMAINS NUMERICALLY UNRESOLVED; V8 PENALTIES ARE NOT YET SCIENTIFICALLY USABLE",
+  "status": "COMPUTATION REQUIRED — V9 BASIN-REPLICATION CERTIFICATION",
+  "v8_outcome": {
+    "github_run": 33511889414,
+    "interpretation": "NUMERICAL BASIN DISAGREEMENT — DO NOT PROMOTE V8 PENALTIES TO Q014 ANSWER",
+    "jobs": "15/15 returned and finite",
+    "mandatory_failure": [
+      "MULTISTART_STABILITY_GATE",
+      "FINAL_VALIDATION_GATE"
+    ],
+    "primary_profile_spreads": {
+      "planck_fixed": 50.05837467172569,
+      "planck_free": 18.247839332036165,
+      "spt_only_fixed": 0.8673845408313241,
+      "spt_only_free": 1.4248777659943812
+    },
+    "scientifically_usable_result": false,
+    "validation_status": "NUMERICALLY UNRESOLVED"
+  },
+  "v9_repair": {
+    "expected_jobs": 27,
+    "max_evals": 1280,
+    "numerics": "Four starts per free/fixed profile: V8 same-mode exact+jitter and paired-mode exact+jitter; one Q011-shared nuisance profile per chain.",
+    "objective_change": false,
+    "purpose": "Require the winning basin to be independently reproduced rather than relaxing validation.",
+    "rhoend": 0.002,
+    "scientific_likelihood_change": false,
+    "stability_threshold": 1.0,
+    "stability_threshold_change": false
+  }
+}
