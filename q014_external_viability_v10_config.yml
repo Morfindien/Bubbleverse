@@ -1,0 +1,422 @@
+project:
+  case_id: NOT DOCUMENTED
+  case_id_recovery_status: PRESERVED_FROM_AUTHORITATIVE_HANDOFF
+  q: Q014
+  run_id: Q014-EXTERNAL-VIABILITY-V10
+  result_id: R-Q014-EDE-EXTERNAL-VIABILITY-007
+  title: Bubbleverse Q014 n=3 EDE external fixed-H0 viability
+  generated_at: '2026-09-01T16:26:00+02:00'
+  status: PROGRAM GENERATED — V8 MULTISTART BASIN-REPLICATION CONTINUATION; V8 IS NUMERICAL PARENT ONLY
+  original_case_question: Når den samme n=3 EDE-model anvendes, hvor stor ekstern likelihood-penalty får high-H₀-regionen
+    omkring det aktive Q011-punkt ved H₀=71.5 km s⁻¹ Mpc⁻¹ i Planck NPIPE- og SPT-3G D1-kæderne, når hver kædes egne nuisance-parametre
+    og relevante kosmologiske parametre profileres korrekt og datasetoverlap ikke dobbeltregnes?
+parent:
+  repository: Morfindien/Bubbleverse
+  q005_engine: q005_hpc_v14.py
+  q005_config: q005_hpc_v14_config.yml
+  q005_setup: q005_setup_v14.sh
+  q005_requirements: q005_hpc_v14_requirements.txt
+  q011:
+    run_id: '33363067156'
+    artifact: q011-ede-globality-certification-v4-final
+    filename: q011_ede_globality_certification_v4_result.json
+    bubbleverse_commit: e113fb846948f424b865d1303fba8b5988ec9133
+    result_id: R-Q011-EDE-GLOBALITY-CERTIFICATION-004
+    target_h0: 71.5
+    best_chi2_optimizer_native: 546.36426
+    classification: BEST-OBSERVED MINIMUM ONLY
+    mathematical_globality_proven: false
+    fixed_h0_storage_semantics: target_h0 in authoritative profile record; intentionally absent from stored bestfit vector
+    fixed_h0_repair_marker: FIXED_H0_EXCLUDED_FROM_STORED_VECTOR_REQUIREMENT
+  q012:
+    execution_commit: 02afd47ae12daae89e9c894ae7bee7576724e85b
+    run_id: '33465056836'
+    result_id: R-Q012-EDE-LIKELIHOOD-ATTRIBUTION-001
+    act_delta_chi2_serialized: -3.372038
+    non_act_delta_chi2_serialized: 0.759548
+  v6:
+    github_run: 33483557343
+    head_sha: 3188463e62395333fc8d06ea464a95b7e13f5500
+    artifact: q014-external-viability-v6-final
+    artifact_id: 9795008419
+    artifact_digest: sha256:efe77e9bd2a4550299b1488f12e5e6eb851d6af906c372f845b226c6f35a0b4c
+    result_id: R-Q014-EDE-EXTERNAL-VIABILITY-003
+    validation_status: NUMERICALLY UNRESOLVED
+    scientifically_usable_result: false
+    role: NUMERICAL_CONTINUATION_PARENT_ONLY — NOT A SCIENTIFIC Q014 RESULT
+  v8:
+    github_run: 33511889414
+    head_sha: 0876be6fe8d9979c91093b7526a7019cf77a2da0
+    artifact: q014-external-viability-v8-final
+    artifact_id: 9805018716
+    artifact_digest: sha256:3e77e035e0b70780295ff3fced09b70dfa9587d5c00aa5f53369739430010a2e
+    result_id: R-Q014-EDE-EXTERNAL-VIABILITY-005
+    validation_status: NUMERICALLY UNRESOLVED
+    scientifically_usable_result: false
+    role: NUMERICAL_CONTINUATION_PARENT_ONLY — NOT A SCIENTIFIC Q014 RESULT
+    observed_multistart_spreads:
+      planck_npipe_k039_approx:
+        reference_free_h0: 18.247839332036165
+        fixed_h0_71p5: 50.05837467172569
+      spt_d1_only:
+        reference_free_h0: 1.4248777659943812
+        fixed_h0_71p5: 0.8673845408313241
+      spt_d1_plus_desi:
+        reference_free_h0: 1.5300534921000235
+        fixed_h0_71p5: 2.3677862149649513
+scientific_surface:
+  model: ede_n3
+  n_scf: 3
+  target_h0: 71.5
+  optimizer_basis: SCALAR_TOTAL_LIKELIHOOD_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_CONSTRAINT_SHAPES
+  preserve_q005_v14_bounds: true
+  q011_exact_vector_source: AUTHORITATIVE_Q011_ARTIFACT_ONLY
+  q011_rounded_handoff_is_not_an_execution_input: true
+  common_ede_bounds:
+    fEDE:
+    - 0.001
+    - 0.3
+    log10z_c:
+    - 3.0
+    - 4.3
+    thetai_scf:
+    - 0.1
+    - 3.1
+  no_local_h0_prior: true
+  no_act_nuisance_in_external_chains: true
+  objective_comparability_repair:
+    v6_problem: 2*minuslogpost was subtracted across free-H0 and fixed-H0 models even though fixing H0 removes the normalized
+      flat H0-prior constant.
+    v8_basis: Use scalar Cobaya total likelihood chi2 plus only the variable (normalization-free) shape penalties of chain-native
+      Gaussian calibration constraints.
+    flat_prior_constants_in_delta: EXCLUDED
+    optimizer_location: Still found with ignore_prior=false, so Gaussian constraint shapes continue to influence nuisance
+      profiling.
+    cross_mode_comparable: true
+    v9_status: V8 normalization-free objective preserved exactly; V10 changes numerical seeding only.
+  normalization_free_constraints:
+    planck_npipe_k039_approx:
+      A_planck:
+        dist: norm
+        loc: 1.0
+        scale: 0.0025
+        source: Cobaya v3.5.6 base_classes/planck_calib.yaml
+      calTE:
+        dist: norm
+        loc: 1.0
+        scale: 0.01
+        source: Cobaya v3.5.6 planck_NPIPE_highl_CamSpec/params_TE_CamSpec.yaml
+      calEE:
+        dist: norm
+        loc: 1.0
+        scale: 0.01
+        source: Cobaya v3.5.6 planck_NPIPE_highl_CamSpec/params_EE_CamSpec.yaml
+    spt_d1_only:
+      Tcal:
+        dist: norm
+        loc: 1.0
+        scale: 0.0036
+        source: Pinned official SPT3G_D1_TnE lite Cobaya YAML / existing V5 config
+    spt_d1_plus_desi:
+      Tcal:
+        dist: norm
+        loc: 1.0
+        scale: 0.0036
+        source: Pinned official SPT3G_D1_TnE lite Cobaya YAML / existing V5 config
+chains:
+  planck_npipe_k039_approx:
+    role: PRIMARY_EXTERNAL_CHAIN
+    label: K039_PUBLIC_NPIPE_COMMON_BACKEND_APPROX
+    paper_native_reproduction: false
+    approximation_reason: K-039 modifies the NPIPE CamSpec construction relative to the public PR4-12.6 likelihood (additional
+      A×A/B×B cross-spectra and TE extension). The public Cobaya NPIPE CamSpec likelihood is therefore used only as a clearly-labelled
+      common-backend approximation.
+    likelihoods:
+    - planck_2018_lowl.TT
+    - planck_2018_lowl.EE
+    - planck_NPIPE_highl_CamSpec.TTTEEE
+    - planck_2018_lensing.native
+    - bao.sdss_dr12_consensus_final
+    - bao.sixdf_2011_bao
+    - bao.sdss_dr7_mgs
+    - sn.pantheonplus
+    overlap_with_q005:
+      level: PARTIAL
+      notes:
+      - Planck low-l information overlaps with the internal Q005 surface.
+      - NPIPE high-l is new relative to Q005 ACT high-l.
+      - BOSS/6dF/MGS/Pantheon+ are not DESI DR2 and are not to be merged with Q005 chi2.
+    start_reference:
+      H0: 68.4
+      fEDE: 0.035
+      log10z_c: 3.85
+      thetai_scf: 3.01
+  spt_d1_only:
+    role: PRIMARY_EXTERNAL_CHAIN
+    label: K040_SPT_D1_LIKELIHOOD_NATIVE_COMMON_BACKEND
+    paper_native_reproduction: false
+    approximation_reason: The official SPT-3G D1 likelihood products are used, but the cosmological backend and optimizer
+      convention are the frozen Bubbleverse Q005 V14 common backend rather than an exact reproduction of the paper's full
+      AxiCLASS analysis environment.
+    include_desi_dr2: false
+    tau_information:
+      mean: 0.051
+      sigma: 0.006
+    primary_likelihood:
+      package: candl
+      package_version: 2.0.3
+      dataset: spt_candl_data.SPT3G_D1_TnE
+      variant: lite
+      distribution: candl-like
+      import_module: candl
+      nuisance_parameters:
+        Tcal:
+          prior:
+            min: 0.8
+            max: 1.2
+          ref: 1.0
+          proposal: 0.0036
+          gaussian_constraint:
+            mean: 1.0
+            sigma: 0.0036
+          source: official SPT3G_D1_TnE cobaya_ttteee_lite.yaml at pinned spt_candl_data commit
+        Ecal:
+          prior:
+            min: 0.8
+            max: 1.2
+          ref: 1.0
+          proposal: 0.01
+          gaussian_constraint: null
+          source: official SPT3G_D1_TnE cobaya_ttteee_lite.yaml at pinned spt_candl_data commit
+    lensing_likelihood:
+      plugin: muse3glike.cobaya.spt3g_2yr_delensed_ee_optimal_pp_muse
+      components:
+      - ϕϕ
+      note: Use lensing-only component so the primary SPT TT/TE/EE information is not double counted.
+    overlap_with_q005:
+      level: LOWER_THAN_ACT_CHAIN
+      notes:
+      - No ACT high-l data.
+      - No DESI DR2 in the primary SPT-only branch.
+      - Tau information is an external Gaussian rather than Q005 Planck low-l EE.
+    start_reference:
+      H0: 67.96
+      fEDE: 0.03
+      log10z_c: 3.55
+      thetai_scf: 2.8
+      Tcal: 1.0
+      Ecal: 1.0
+  spt_d1_plus_desi:
+    role: SECONDARY_OVERLAP_CHAIN
+    label: K040_SPT_D1_PLUS_DESI_COMMON_BACKEND
+    paper_native_reproduction: false
+    include_desi_dr2: true
+    tau_information:
+      mean: 0.051
+      sigma: 0.006
+    primary_likelihood:
+      package: candl
+      package_version: 2.0.3
+      dataset: spt_candl_data.SPT3G_D1_TnE
+      variant: lite
+      distribution: candl-like
+      import_module: candl
+      nuisance_parameters:
+        Tcal:
+          prior:
+            min: 0.8
+            max: 1.2
+          ref: 1.0
+          proposal: 0.0036
+          gaussian_constraint:
+            mean: 1.0
+            sigma: 0.0036
+          source: official SPT3G_D1_TnE cobaya_ttteee_lite.yaml at pinned spt_candl_data commit
+        Ecal:
+          prior:
+            min: 0.8
+            max: 1.2
+          ref: 1.0
+          proposal: 0.01
+          gaussian_constraint: null
+          source: official SPT3G_D1_TnE cobaya_ttteee_lite.yaml at pinned spt_candl_data commit
+    lensing_likelihood:
+      plugin: muse3glike.cobaya.spt3g_2yr_delensed_ee_optimal_pp_muse
+      components:
+      - ϕϕ
+    overlap_with_q005:
+      level: PARTIAL
+      notes:
+      - DESI DR2 is reused from Q005 and must be declared explicitly.
+      - This branch is not fully independent of Q005.
+    start_reference:
+      H0: 70.9
+      fEDE: 0.081
+      log10z_c: 3.55
+      thetai_scf: 2.8
+      Tcal: 1.0
+      Ecal: 1.0
+execution:
+  modes:
+    reference_free_h0:
+      description: n=3 chain-specific free-H0 profile reference
+      fixes_h0: false
+      fixes_q011_shared_physics: false
+    fixed_h0_71p5:
+      description: H0=71.5 fixed; reprofile EDE, cosmology and chain-native free parameters
+      fixes_h0: true
+      fixes_q011_shared_physics: false
+    q011_shared_physics:
+      description: Exact Q011 physically shared parameters fixed from authoritative artifact; profile only chain-native remaining
+        parameters where present
+      fixes_h0: true
+      fixes_q011_shared_physics: true
+  standard_start_families:
+    reference_free_h0:
+    - v8_free_best
+    - v8_free_jitter
+    - v8_fixed_best
+    - v8_fixed_jitter
+    fixed_h0_71p5:
+    - v8_fixed_best
+    - v8_fixed_jitter
+    - v8_free_best
+    - v8_free_jitter
+    q011_shared_physics:
+    - q011
+  expanded_extra_start_families:
+    reference_free_h0: []
+    fixed_h0_71p5: []
+    q011_shared_physics: []
+  minimizer:
+    method: bobyqa
+    ignore_prior: false
+    max_evals: 1280
+    best_of: 1
+    override_bobyqa:
+      rhoend: 0.002
+      user_params:
+        restarts.use_restarts: false
+        restarts.use_soft_restarts: false
+        restarts.auto_detect: false
+        interpolation.precondition: true
+        logging.save_diagnostic_info: true
+  runtime:
+    github_hard_limit_minutes: 360
+    job_timeout_minutes: 270
+    internal_soft_cutoff_minutes: 255
+    shutdown_reserve_minutes: 15
+    smoke_timeout_minutes: 90
+    aggregate_timeout_minutes: 20
+    standard_expected_optimizer_jobs: 27
+    expanded_expected_optimizer_jobs: 27
+    runtime_basis: Q005 V14 EDE historical successful runs ~108–162 minutes; external full chains add substantial uncertainty.
+    expected_single_optimizer_minutes:
+    - 120
+    - 255
+    runtime_uncertainty: HIGH
+    strategy: V8_TWO_BASIN_EXACT_PLUS_BOUNDED_JITTER_REPLICATION_CERTIFICATION
+    checkpointing: false
+    checkpoint_reason: Cobaya/Py-BOBYQA state is not reliably serializable in the frozen stack. Each start is an atomic optimizer
+      task. The workflow uses an internal soft cutoff, preserves any finite minimum written before interruption, and reruns
+      only the failed independent task. This is harvest/retry, not fake optimizer resume.
+  v10_seed_policy:
+    reference_free_h0:
+    - V8 free best
+    - bounded jitter around V8 free best
+    - V8 fixed best with H0 released
+    - bounded jitter around released V8 fixed best
+    fixed_h0_71p5:
+    - V8 fixed best
+    - bounded jitter around V8 fixed best
+    - V8 free best projected to H0=71.5
+    - bounded jitter around projected V8 free best
+    reference_is_scalar: true
+    best_evaluated_seed_is_preserved: true
+    seed_objective_tolerance: 0.05
+    jitter_semantics: Small deterministic bounded perturbations of start points only; priors, likelihoods, objective and parameter
+      bounds are unchanged.
+    multistart_threshold_unchanged: 1.0
+    legacy_start_family_compatibility_repair: Delegate non-V8 continuation start families unchanged to frozen V5 start_vector;
+      required because inherited V5 smoke uses start_family=external.
+validation:
+  minimum_valid_starts_per_profile: 2
+  max_best_two_delta_chi2: 1.0
+  fixed_vs_free_negative_tolerance: 0.25
+  exact_h0_tolerance: 1.0e-08
+  q011_parent_chi2_tolerance: 1.0e-06
+  required_primary_chains:
+  - planck_npipe_k039_approx
+  - spt_d1_only
+  required_tests:
+  - CASE_QUESTION_IDENTITY_GATE
+  - Q011_PARENT_IDENTITY_GATE
+  - Q011_EXACT_VECTOR_GATE
+  - N3_MODEL_GATE
+  - NO_H0DN_GATE
+  - NO_ACT_NUISANCE_GATE
+  - PLANCK_APPROXIMATION_CLAIM_GATE
+  - SPT_NO_DESI_PRIMARY_GATE
+  - SPT_LENSING_NO_PRIMARY_CMB_DOUBLECOUNT_GATE
+  - SPT_CALIBRATION_PROFILE_GATE
+  - SPT_NATIVE_CALIBRATION_NUISANCE_GATE
+  - CHAIN_SEPARATION_GATE
+  - JOB_COMPLETENESS_GATE
+  - MULTISTART_STABILITY_GATE
+  - FIXED_PROFILE_MONOTONICITY_GATE
+  - FINITE_RESULT_GATE
+  - FINAL_VALIDATION_GATE
+  - V8_NUMERICAL_PARENT_GATE
+  - SCALAR_TOTAL_CHI2_GATE
+  - NORMALIZATION_FREE_OBJECTIVE_GATE
+  - NO_CHI2_COMPONENT_DOUBLECOUNT_GATE
+  - CHAIN_NATIVE_CONSTRAINT_SHAPE_GATE
+  - FOUR_START_BASIN_REPLICATION_GATE
+  - V8_INSTABILITY_PRESERVATION_GATE
+  - STABILITY_THRESHOLD_PRESERVATION_GATE
+  - BOUNDED_JITTER_GATE
+  - SEED_CANDIDATE_PRESERVATION_GATE
+sources:
+- K-029
+- K-036
+- K-038
+- K-039
+- K-040
+- INTERNAL-Q005
+- R-Q011-EDE-GLOBALITY-CERTIFICATION-004
+- R-Q012-EDE-LIKELIHOOD-ATTRIBUTION-001
+claim_boundary:
+  q011_reopened: false
+  q012_reopened: false
+  q013_reopened: false
+  q011_globality_status_preserved: BEST-OBSERVED MINIMUM ONLY
+  absolute_chi2_cross_package_comparison_forbidden: true
+  report_each_external_chain_separately: true
+  planck_plus_spt_direct_chi2_sum_forbidden: true
+  spt_plus_desi_marked_partially_overlapping: true
+  profile_likelihood_not_marginal_posterior: true
+  no_fake_multidimensional_significance_from_1d_limits: true
+  negative_results_preserved: true
+  spt_chain_native_calibration_nuisance_profiled: true
+execution_notes:
+- 'V5: candl 2.0.3 is distributed on PyPI as candl-like; Python import module remains candl.'
+repair_notes:
+- 'V5: V4 reached SPT likelihood initialization but Cobaya rejected the model because SPTlite requires chain-native Ecal (and
+  Tcal). V5 adds official Tcal/Ecal bounds from the pinned SPT3G_D1_TnE lite Cobaya YAML, retains the official Gaussian Tcal
+  constraint N(1,0.0036^2), leaves Ecal without an extra Gaussian constraint, and profiles both calibration parameters in
+  every SPT mode.'
+- 'V8: V6 completed all 27 jobs but mandatory validation correctly failed. Audit showed the cross-mode objective was not comparable:
+  2*minuslogpost contains a normalized flat H0-prior constant in free-H0 mode that disappears when H0 is fixed. V8 reports
+  scalar total likelihood chi2 plus normalization-free Gaussian calibration constraint shapes, and cross-seeds deterministic
+  refinements from the V6 best free/fixed minima.'
+- 'V8: V7 failed before any parent download or scientific compute because q014_setup_v7.sh was absent from the repository
+  root while the prepare gate explicitly required it. The three frozen V5 SHA256 values in the V7 workflow were correct and
+  the V5 scientific surface did not drift. V8 restores the required versioned setup wrapper, upgrades the freeze gate to authoritative
+  Git blob identity (HEAD:path plus worktree git hash-object) with explicit expected/repository/worktree diagnostics, and
+  suppresses the aggregate job when prepare itself fails so one precompute failure does not generate a second artifact-not-found
+  error. V7 objective-comparability and continuation logic is otherwise preserved.'
+- 'V10: V8 completed 15/15 finite profile jobs but mandatory validation correctly failed MULTISTART_STABILITY_GATE. The instability
+  is basin-level, not a technical failure: Planck best-two spreads were 18.247839 (free H0) and 50.058375 (fixed H0=71.5);
+  SPT-only free was 1.424878; SPT+DESI free/fixed were 1.530053/2.367786. V10 preserves the <=1.0 gate and the V8 normalization-free
+  objective, then tests reproducibility with exact V8 same-mode/cross-mode best minima plus bounded deterministic jitter around
+  each basin (4 starts per free/fixed profile, 27 jobs total).'

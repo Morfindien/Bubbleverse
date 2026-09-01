@@ -1,0 +1,185 @@
+{
+  "cobaya_v3_5_6_objective_sources": {
+    "params_EE_CamSpec_yaml": {
+      "git_blob": "756add77d30c8c4f7caf7fe69c600159ca929dbd",
+      "path": "cobaya/likelihoods/planck_NPIPE_highl_CamSpec/params_EE_CamSpec.yaml"
+    },
+    "params_TE_CamSpec_yaml": {
+      "git_blob": "3076998d22ea874e4a459bcd58b3f878671e7fcf",
+      "path": "cobaya/likelihoods/planck_NPIPE_highl_CamSpec/params_TE_CamSpec.yaml"
+    },
+    "params_TT_CamSpec_yaml": {
+      "git_blob": "7e7f75757cf28e41f80ef3ec0dd156b2c9736674",
+      "path": "cobaya/likelihoods/planck_NPIPE_highl_CamSpec/params_TT_CamSpec.yaml"
+    },
+    "planck_NPIPE_TTTEEE_yaml": {
+      "git_blob": "e8f62ef807c82dac7f81ca3084dc81a7b64a1342",
+      "path": "cobaya/likelihoods/planck_NPIPE_highl_CamSpec/TTTEEE.yaml"
+    },
+    "planck_calib_yaml": {
+      "git_blob": "334734b7ce8bb1bbf8a65ff8beee07e79b60331f",
+      "path": "cobaya/likelihoods/base_classes/planck_calib.yaml"
+    }
+  },
+  "frozen_scientific_surface": {
+    "q005": "UNCHANGED",
+    "q011": "UNCHANGED",
+    "q014_v5_likelihood_definitions": "REUSED",
+    "q014_v6_environment_transport": "REUSED"
+  },
+  "generated_at": "2026-09-01T16:26:00+02:00",
+  "muse_source": {
+    "lineage": "V10 <- V8 transport artifact <- exact V6 frozen source bytes",
+    "sha256": "4933ceb993ceb92e48b2191b8ccb1595d182bc4bc3862c1fbad61d5f82136e9b",
+    "transport": "V10 reuses the exact V8 MUSE transport artifact; V8 itself reused the frozen V6 source bytes; no fresh NASA download in V10.",
+    "v6_artifact_digest": "sha256:03446830394786015fc512f76c6c298719487816eb93c77554d31c16f1d862ca",
+    "v6_artifact_id": 9790864493,
+    "v6_artifact_name": "q014-v6-spt-muse-source",
+    "v6_head_sha": "3188463e62395333fc8d06ea464a95b7e13f5500",
+    "v6_run": 33483557343,
+    "v8_artifact_digest": "sha256:1661af87d132efd029ef246fd7e7ad80ab1b9379a676b4da4041a3c37df7a216",
+    "v8_artifact_id": 9801972317,
+    "v8_artifact_name": "q014-v8-spt-muse-source",
+    "v8_head_sha": "0876be6fe8d9979c91093b7526a7019cf77a2da0",
+    "v8_run": 33511889414
+  },
+  "objective_repair": {
+    "constraint_shapes": {
+      "planck_npipe_k039_approx": {
+        "A_planck": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.0025,
+          "source": "Cobaya v3.5.6 base_classes/planck_calib.yaml"
+        },
+        "calEE": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.01,
+          "source": "Cobaya v3.5.6 planck_NPIPE_highl_CamSpec/params_EE_CamSpec.yaml"
+        },
+        "calTE": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.01,
+          "source": "Cobaya v3.5.6 planck_NPIPE_highl_CamSpec/params_TE_CamSpec.yaml"
+        }
+      },
+      "spt_d1_only": {
+        "Tcal": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.0036,
+          "source": "Pinned official SPT3G_D1_TnE lite Cobaya YAML / existing V5 config"
+        }
+      },
+      "spt_d1_plus_desi": {
+        "Tcal": {
+          "dist": "norm",
+          "loc": 1.0,
+          "scale": 0.0036,
+          "source": "Pinned official SPT3G_D1_TnE lite Cobaya YAML / existing V5 config"
+        }
+      }
+    },
+    "scalar_chi2_source": "Cobaya minimum row scalar chi2; chi2__ component aliases are diagnostic only and never summed",
+    "v6_invalid_cross_mode_basis": "2*minuslogpost contains mode-dependent normalized prior constants when H0 changes sampled/fixed status",
+    "v8_basis": "SCALAR_TOTAL_LIKELIHOOD_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_CONSTRAINT_SHAPES"
+  },
+  "q": "Q014",
+  "repair_history": [
+    {
+      "detail": "The V7 prepare gate required q014_setup_v7.sh, but that file was absent from the V7 head tree. The three frozen V5 SHA256 checks were correct. Failure occurred before Q011/V6 parent downloads, smoke, or profile compute; no V7 scientific result exists.",
+      "failure_class": "MISSING_REQUIRED_REPOSITORY_FILE",
+      "missing_file": "q014_setup_v7.sh",
+      "status": "FAILED_PRECOMPUTE",
+      "version": "V7"
+    },
+    {
+      "detail": "15/15 finite jobs; mandatory validation failed because multiple free/fixed profiles, especially Planck, converged to distinct basins. V10 preserves the gate and continues from both V8 basins with exact+jitter replication.",
+      "failure_class": "MULTISTART_BASIN_DISAGREEMENT",
+      "status": "NUMERICALLY_UNRESOLVED",
+      "version": "V8"
+    },
+    {
+      "detail": "Prepare, V8 numerical-parent, frozen MUSE reuse and environment preflight passed. All three smoke jobs failed in inherited V5 smoke -> build_info because V10-predecessor wrapper start_vector rejected legacy family external. Profile matrix was skipped; no V9 scientific profile calculation ran.",
+      "failure_class": "WRAPPER_START_FAMILY_COMPATIBILITY",
+      "github_run": 33522633003,
+      "head_sha": "ea869d87da12ae92f1baee11d5a8c6adbcfa25b0",
+      "status": "FAILED_PRECOMPUTE",
+      "version": "V9"
+    }
+  ],
+  "result_id": "R-Q014-EDE-EXTERNAL-VIABILITY-007",
+  "run_id": "Q014-EXTERNAL-VIABILITY-V10",
+  "v10_repair": {
+    "numerical_parent": "V8 remains the numerical continuation parent because V9 produced zero profile jobs.",
+    "objective_change": false,
+    "optimizer_design_change": false,
+    "repair": "Delegate all start families not owned by the V8 continuation layer to frozen V5 start_vector. Add a dynamic preflight gate that compares wrapper vs frozen V5 outputs for external, q011, baseline, jitter_a, jitter_b on every chain.",
+    "scientific_likelihood_change": false
+  },
+  "v10_repair_class": "MULTISTART_BASIN_REPLICATION_CONTINUATION — SCIENTIFIC SURFACE AND <=1.0 GATE UNCHANGED",
+  "v6_numerical_parent": {
+    "artifact": "q014-external-viability-v6-final",
+    "artifact_digest": "sha256:efe77e9bd2a4550299b1488f12e5e6eb851d6af906c372f845b226c6f35a0b4c",
+    "artifact_id": 9795008419,
+    "github_run": 33483557343,
+    "head_sha": "3188463e62395333fc8d06ea464a95b7e13f5500",
+    "result_id": "R-Q014-EDE-EXTERNAL-VIABILITY-003",
+    "role": "NUMERICAL_CONTINUATION_PARENT_ONLY — NOT A SCIENTIFIC Q014 RESULT",
+    "scientifically_usable_result": false,
+    "validation_status": "NUMERICALLY UNRESOLVED"
+  },
+  "v8_execution": {
+    "cross_seed_free_fixed": true,
+    "deterministic_scalar_refs": true,
+    "expected_jobs": 15,
+    "max_evals": 960,
+    "rhoend": 0.005,
+    "seed_best_candidate_preserved": true
+  },
+  "v8_numerical_parent": {
+    "artifact": "q014-external-viability-v8-final",
+    "artifact_digest": "sha256:3e77e035e0b70780295ff3fced09b70dfa9587d5c00aa5f53369739430010a2e",
+    "artifact_id": 9805018716,
+    "github_run": 33511889414,
+    "head_sha": "0876be6fe8d9979c91093b7526a7019cf77a2da0",
+    "result_id": "R-Q014-EDE-EXTERNAL-VIABILITY-005",
+    "role": "NUMERICAL_CONTINUATION_PARENT_ONLY",
+    "scientifically_usable_result": false,
+    "validation_status": "NUMERICALLY UNRESOLVED"
+  },
+  "v8_repair_class": "PRECOMPUTE_REQUIRED_FILE_DELIVERY + REPOSITORY_BLOB_FREEZE_DIAGNOSTICS + AGGREGATE_FAIL_FAST; V7 STATISTICAL_OBJECTIVE/CONTINUATION DESIGN PRESERVED",
+  "v8_v5_repository_blob_gate": {
+    "q014_external_viability_v5.py": "f5fa9cc237b2fc8a28bf8561b1471d885072dc01",
+    "q014_external_viability_v5_config.yml": "0f2c9caef194bcee3ee8f7895f8ef2ea9ab8b71b",
+    "q014_setup_v5.sh": "e67e713de478e00340fbbc5b3b4e1e00e0406ef1",
+    "semantics": "Git blob identity is authoritative for repository-frozen files; both HEAD:path and working-tree git hash-object must match.",
+    "source_commit": "ec4f99e8b84e3163c2615634b2b09fbf5b13bc7f"
+  },
+  "v9_execution": {
+    "bounded_jitter_replication": true,
+    "expected_jobs": 27,
+    "free_fixed_starts_per_profile": 4,
+    "max_evals": 1280,
+    "rhoend": 0.002,
+    "same_mode_and_cross_mode_exact_seeds": true,
+    "shared_starts_per_profile": 1,
+    "stability_threshold": 1.0
+  },
+  "v9_observed_v8_instability": {
+    "planck_npipe_k039_approx": {
+      "fixed_h0_71p5": 50.05837467172569,
+      "reference_free_h0": 18.247839332036165
+    },
+    "spt_d1_only": {
+      "fixed_h0_71p5": 0.8673845408313241,
+      "reference_free_h0": 1.4248777659943812
+    },
+    "spt_d1_plus_desi": {
+      "fixed_h0_71p5": 2.3677862149649513,
+      "reference_free_h0": 1.5300534921000235
+    }
+  }
+}

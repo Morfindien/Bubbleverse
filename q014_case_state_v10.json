@@ -1,0 +1,58 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "original_case_question": "Når den samme n=3 EDE-model anvendes, hvor stor ekstern likelihood-penalty får high-H₀-regionen omkring det aktive Q011-punkt ved H₀=71.5 km s⁻¹ Mpc⁻¹ i Planck NPIPE- og SPT-3G D1-kæderne, når hver kædes egne nuisance-parametre og relevante kosmologiske parametre profileres korrekt og datasetoverlap ikke dobbeltregnes?",
+  "q": "Q014",
+  "q011_status": "BEST-OBSERVED MINIMUM ONLY",
+  "run_id": "Q014-EXTERNAL-VIABILITY-V10",
+  "scientific_state": "Q014 REMAINS NUMERICALLY UNRESOLVED; V9 FAILED BEFORE PROFILE COMPUTE AND CONTRIBUTES NO SCIENTIFIC RESULT",
+  "status": "COMPUTATION REQUIRED — V10 V9-SMOKE-COMPATIBILITY REPAIR + V8 BASIN-REPLICATION CERTIFICATION",
+  "v10_repair": {
+    "dynamic_preflight_gate": "LEGACY_START_FAMILY_COMPATIBILITY_GATE",
+    "expected_jobs": 27,
+    "legacy_family_delegation": [
+      "external",
+      "q011",
+      "baseline",
+      "jitter_a",
+      "jitter_b"
+    ],
+    "max_evals": 1280,
+    "numerical_parent": "V8",
+    "objective_change": false,
+    "optimizer_design_change": false,
+    "rhoend": 0.002,
+    "scientific_likelihood_change": false,
+    "stability_threshold": 1.0
+  },
+  "v8_outcome": {
+    "github_run": 33511889414,
+    "interpretation": "NUMERICAL BASIN DISAGREEMENT — DO NOT PROMOTE V8 PENALTIES TO Q014 ANSWER",
+    "jobs": "15/15 returned and finite",
+    "mandatory_failure": [
+      "MULTISTART_STABILITY_GATE",
+      "FINAL_VALIDATION_GATE"
+    ],
+    "primary_profile_spreads": {
+      "planck_fixed": 50.05837467172569,
+      "planck_free": 18.247839332036165,
+      "spt_only_fixed": 0.8673845408313241,
+      "spt_only_free": 1.4248777659943812
+    },
+    "scientifically_usable_result": false,
+    "validation_status": "NUMERICALLY UNRESOLVED"
+  },
+  "v9_outcome": {
+    "environment_preflight": "PASS",
+    "failure": "KeyError: Unknown start family external",
+    "github_run": 33522633003,
+    "head_sha": "ea869d87da12ae92f1baee11d5a8c6adbcfa25b0",
+    "interpretation": "TECHNICAL WRAPPER FAILURE ONLY — NO PHYSICS INTERPRETATION",
+    "muse_reuse_gate": "PASS",
+    "prepare_gate": "PASS",
+    "profile_matrix": "SKIPPED",
+    "scientific_profile_jobs": 0,
+    "scientifically_usable_result": false,
+    "smokes": "3/3 FAILED",
+    "status": "FAILED_PRECOMPUTE"
+  }
+}
