@@ -1,0 +1,114 @@
+{
+  "bubbleverse": {
+    "inspected_main_commit": "02afd47ae12daae89e9c894ae7bee7576724e85b",
+    "q005_hpc_v14.py_git_blob": "2c69d6b57f523f910207683eb67c07548e61bef9",
+    "q005_hpc_v14_config.yml_git_blob": "02ab4816fa2f41f3da616d60a4f71a210dd5882e",
+    "q005_hpc_v14_requirements.txt_git_blob": "495270dff0e733309eebfa90aadecfc107dcc6e2",
+    "q005_setup_v14.sh_git_blob": "546101534136ffe2b46233b7daea57b9c22ff18c",
+    "repository": "https://github.com/Morfindien/Bubbleverse"
+  },
+  "case_id": "NOT DOCUMENTED",
+  "cobaya": {
+    "git_commit": "6a48864aa3f541df233435070a3c89d65c2ad936",
+    "git_tag": "v3.5.6",
+    "origin": "Q005 V14 frozen environment",
+    "version": "3.5.6"
+  },
+  "common_backend": {
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "model": "n_scf=3",
+    "origin": "Q005 V14 frozen common backend",
+    "repository": "https://github.com/mwt5345/class_ede.git"
+  },
+  "forbidden_claims": [
+    "Exact paper-native K-039 reproduction",
+    "Exact full K-040 AxiCLASS pipeline reproduction",
+    "Statistical independence of SPT+DESI from Q005",
+    "Direct addition of Planck and SPT absolute chi2 values",
+    "Use of K-038 n=2 as a Q014 n=3 constraint"
+  ],
+  "generated_at": "2026-09-01T06:35:15+02:00",
+  "planck_k039_approx": {
+    "claim_status": "COMMON_BACKEND_APPROXIMATION_ONLY",
+    "known_mismatch": "K-039 additionally used A×A/B×B frequency cross-spectra and extended TE to ell=2500 relative to the referenced public construction.",
+    "lensing": "planck_2018_lensing.native",
+    "low_l": [
+      "planck_2018_lowl.TT",
+      "planck_2018_lowl.EE"
+    ],
+    "low_z": [
+      "bao.sdss_dr12_consensus_final",
+      "bao.sixdf_2011_bao",
+      "bao.sdss_dr7_mgs",
+      "sn.pantheonplus"
+    ],
+    "paper": "arXiv:2311.00524",
+    "paper_native_reproduction": false,
+    "public_highl_likelihood": "planck_NPIPE_highl_CamSpec.TTTEEE",
+    "public_likelihood_identity": "Planck PR4/NPIPE CamSpec PR4-12.6cl as bundled by Cobaya"
+  },
+  "q": "Q014",
+  "q011_parent": {
+    "artifact": "q011-ede-globality-certification-v4-final",
+    "config_sha256": "37baaee48fd4f2bf70807dd2c6baab6e8a138725f8b70987773d4ddad5b8467b",
+    "filename": "q011_ede_globality_certification_v4_result.json",
+    "fixed_h0_repair_marker": "FIXED_H0_EXCLUDED_FROM_STORED_VECTOR_REQUIREMENT",
+    "fixed_h0_storage_semantics": "Q011 V4 fixed H0 is authoritative in profile_targets[target].target_h0; H0 is intentionally absent from best_record.bestfit.",
+    "github_run": "33363067156",
+    "program_sha256": "53dc99d00d220671fe16d17136ef626a7db454711120f5861a6677b3879c57e6",
+    "repository_commit": "e113fb846948f424b865d1303fba8b5988ec9133"
+  },
+  "q014_v4_repair": "V3 built the frozen CLASS_EDE extension successfully but exposed it only through a shell-local PYTHONPATH. GitHub Actions starts later steps in fresh shells, so runtime preflight could not import classy. V4 registers the exact frozen CLASS_EDE build directory through a site-packages .pth file, proves importability with PYTHONPATH unset, and requires classy to resolve from external/class_ede.",
+  "repair_history": [
+    {
+      "cause": "Q014 required fixed H0 to be present inside Q011 best_record.bestfit although Q011 V4 intentionally stores it as profile_targets[71.5].target_h0.",
+      "status": "FAILED_PRECOMPUTE_PARENT_GATE",
+      "version": "V1"
+    },
+    {
+      "cause": "Setup attempted pip distribution candl==2.0.3; the published distribution is candl-like==2.0.3 while the import module is candl.",
+      "status": "FAILED_PRECOMPUTE_SPT_SETUP",
+      "version": "V2"
+    },
+    {
+      "version": "V3",
+      "status": "FAILED_PRECOMPUTE_RUNTIME_ENVIRONMENT_GATE",
+      "cause": "CLASS_EDE built and imported inside q014_setup_v3.sh using shell-local PYTHONPATH, but the following GitHub Actions step started in a fresh shell and could not import classy."
+    },
+    {
+      "version": "V4",
+      "status": "GENERATED_NOT_SCIENTIFICALLY_EXECUTED",
+      "repair": "Persist the frozen CLASS_EDE build path using site-packages/bubbleverse_q014_class_ede.pth, verify import with PYTHONPATH unset, and gate classy provenance to external/class_ede."
+    }
+  ],
+  "run_id": "Q014-EXTERNAL-VIABILITY-V4",
+  "spt_k040": {
+    "candl_distribution": "candl-like",
+    "candl_import_module": "candl",
+    "candl_pypi_release_date": "2025-06-25",
+    "candl_pypi_sdist_sha256": "64b241c05c8ca40d4e682f8cb7c902e08d81694479edfd2dc8dc5cf4b1123276",
+    "candl_pypi_wheel_sha256": "daf3aeb7a1445a24fa935e59de3d4fc4171dd9330678a7dcb29a2df910f803ed",
+    "candl_version": "2.0.3",
+    "claim_status": "OFFICIAL_LIKELIHOOD_PRODUCTS_WITH_COMMON_BUBBLEVERSE_BACKEND",
+    "exact_author_analysis_commit_confirmed": false,
+    "muse_archive_hash_policy": "CAPTURE_AND_RECORD_AT_RUNTIME; do not invent an unpublished hash",
+    "muse_archive_sha256": null,
+    "muse_archive_url": "https://lambda.gsfc.nasa.gov/data/suborbital/SPT/muse_3g_like_march_2025.zip",
+    "muse_cobaya_likelihood": "muse3glike.cobaya.spt3g_2yr_delensed_ee_optimal_pp_muse",
+    "muse_components": [
+      "ϕϕ"
+    ],
+    "paper": "arXiv:2507.23355",
+    "paper_adjacent_commit_date": "2025-07-24T13:24:16Z",
+    "paper_adjacent_commit_note": "bump version number",
+    "paper_adjacent_pinned_commit": "2cec6e762a8c540484dd5acafc529f0035856350",
+    "primary_dataset": "SPT3G_D1_TnE",
+    "primary_variant": "lite",
+    "spt_candl_data_repository": "https://github.com/SouthPoleTelescope/spt_candl_data",
+    "tau_gaussian": {
+      "mean": 0.051,
+      "sigma": 0.006
+    }
+  },
+  "status": "SOURCE_LOCK_WITH_DECLARED_APPROXIMATION_BOUNDARIES"
+}
