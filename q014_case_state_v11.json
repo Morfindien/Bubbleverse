@@ -1,0 +1,40 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "original_case_question": "Når den samme n=3 EDE-model anvendes, hvor stor ekstern likelihood-penalty får high-H₀-regionen omkring det aktive Q011-punkt ved H₀=71.5 km s⁻¹ Mpc⁻¹ i Planck NPIPE- og SPT-3G D1-kæderne, når hver kædes egne nuisance-parametre og relevante kosmologiske parametre profileres korrekt og datasetoverlap ikke dobbeltregnes?",
+  "packaging_repair": "All active V11 manifests, parent-preflight files, task matrices, tests and handoff filenames are V11-versioned; stale V9 output names from V10 are not propagated.",
+  "q": "Q014",
+  "q011_status": "BEST-OBSERVED MINIMUM ONLY",
+  "run_id": "Q014-EXTERNAL-VIABILITY-V11",
+  "scientific_state": "Q014 REMAINS NUMERICALLY UNRESOLVED; V10 IS A NUMERICAL PARENT ONLY AND CONTRIBUTES NO ACCEPTED Q014 PHYSICS RESULT",
+  "status": "COMPUTATION REQUIRED — V11 SAME-RUN CROSS-MODE CERTIFICATION",
+  "v10_outcome": {
+    "finite_result_gate": "PASS",
+    "fixed_profile_monotonicity_gate": "FAIL because SPT-only=-0.3925013080 and SPT+DESI=-0.4189715554",
+    "github_run": 33533089788,
+    "head_sha": "2ab15429daa9b33a35acef8360c41b1c387a3117",
+    "interpretation": "NUMERICAL DIAGNOSTIC ONLY — DO NOT PROMOTE V10 PENALTIES TO Q014 ANSWER",
+    "jobs": "27/27 returned",
+    "multistart_stability_gate": "FAIL only because Planck free-H0 spread=1.8765689284",
+    "normalization_free_objective_gate": "PASS",
+    "scientifically_usable_result": false,
+    "seed_preservation_gate": "PASS",
+    "source_provenance_gate": "PASS",
+    "validation_status": "NUMERICALLY UNRESOLVED"
+  },
+  "v11_repair": {
+    "fixed_vs_free_negative_tolerance": 0.25,
+    "objective_change": false,
+    "phase1": "Refine V10 best free/fixed basins and rerun shared-Q011 profile.",
+    "phase1_jobs": 18,
+    "phase1_max_evals": 1280,
+    "phase1_rhoend": 0.002,
+    "phase2": "Wait for Phase1. Profile free H0 from Phase1 best free and Phase1 best fixed, exact+jitter. The fixed point is embedded at H0=71.5 then H0 is released.",
+    "phase2_jobs": 12,
+    "phase2_max_evals": 1600,
+    "phase2_rhoend": 0.001,
+    "scientific_likelihood_change": false,
+    "stability_threshold": 1.0,
+    "total_jobs": 30,
+    "validation_threshold_change": false
+  }
+}
