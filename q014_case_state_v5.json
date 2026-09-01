@@ -1,0 +1,222 @@
+{
+  "bubbleverse_case_state": {
+    "active_checkpoints": [],
+    "active_hypotheses": [
+      {
+        "id": "MOD-EDE-N3",
+        "status": "ACTIVE BUT MATERIALLY EXTERNALLY WEAKENED — NOT EXTERNALLY CERTIFIED"
+      },
+      {
+        "id": "FC-001",
+        "state": "Q011 basin sensitivity and Q012 ACT_MID EE/TE improvement may reflect an internal compensation/degeneracy structure; not established as physical mechanism.",
+        "status": "CONNECTION CANDIDATE"
+      },
+      {
+        "id": "FC-002",
+        "state": "High-H0 EDE preference may be CMB-dataset/likelihood-specific; must be numerically tested.",
+        "status": "CONNECTION CANDIDATE"
+      }
+    ],
+    "active_sources": [
+      "K-029",
+      "K-036",
+      "K-038",
+      "K-039",
+      "K-040",
+      "INTERNAL-Q005",
+      "R-Q011-EDE-GLOBALITY-CERTIFICATION-004",
+      "R-Q012-EDE-LIKELIHOOD-ATTRIBUTION-001"
+    ],
+    "case_id": "NOT DOCUMENTED",
+    "case_id_recovery_status": "Preserved exactly from authoritative handoff; no CASE-ID invented.",
+    "case_status": "COMPUTATION REQUIRED — V4 TECHNICAL SMOKE FAILURE REPAIRED IN V5; SCIENTIFIC EXECUTION PENDING",
+    "completed_runs": [
+      "Q011 run 33363067156",
+      "Q012 run 33465056836"
+    ],
+    "completed_tasks": [],
+    "completed_tests": [
+      "Q014 V5 static syntax/config/source-boundary tests PASS before execution",
+      "Q014 V4: Planck smoke PASS; SPT environment preflight PASS; CLASS_EDE persistent import PASS."
+    ],
+    "constraints": [
+      "Use n=3; do not substitute K-038 n=2.",
+      "Preserve Q005 V14 EDE hard bounds: 0.001<=fEDE<=0.3, 3.0<=log10(zc)<=4.3, 0.1<=theta_i<=3.1 for the primary common-model comparison.",
+      "No H0DN/SH0ES prior in the primary external viability test.",
+      "ACT-specific A_ACT/P_ACT must not enter Planck or SPT chains.",
+      "Profile likelihood / optimizer-native quantities must not be conflated with marginalized posterior limits.",
+      "Planck/NPIPE and SPT-3G results must be reported separately before interpretation.",
+      "SPT+DESI is secondary and partially overlaps Q005 through DESI DR2.",
+      "Absolute chi2 values from different packages must not be directly compared or summed.",
+      "The exact Q011 execution vector must be acquired from run 33363067156 artifact; rounded handoff values are not an execution source.",
+      "Q014 external profiles retain chain-native nuisance/calibration constraints. Flat Q005 cosmology/EDE priors act only as domain bounds/constants; penalties are computed within each chain from the constrained profile objective and never compared across packages.",
+      "SPTlite chain-native calibration nuisance parameters Tcal and Ecal must both be explicitly sampled/profiled with official bounds 0.8–1.2; Tcal additionally carries N(1,0.0036²), Ecal no extra Gaussian constraint."
+    ],
+    "current_best_answer": "The Q011 H0=71.5 n=3 EDE region is not universally externally excluded, but it is materially externally weakened and lacks clean independent confirmation. Its direct multidimensional external profile-likelihood penalty has not yet been measured.",
+    "datasets": [
+      "Q005 V14 internal: Planck 2018 low-l EE + ACT DR6 TT/TE/EE + DESI DR2 BAO + BBN",
+      "Q014 Planck approximation: Planck 2018 low-l TT/EE + public NPIPE CamSpec PR4-12.6 TTTEEE + Planck 2018 lensing + BOSS DR12 consensus + 6dFGS + SDSS DR7 MGS + Pantheon+",
+      "Q014 primary SPT: SPT-3G D1 TT/TE/EE lite + SPT D1 lensing MUSE phi-phi + tau=0.051+/-0.006",
+      "Q014 secondary SPT+DESI: primary SPT chain + DESI DR2"
+    ],
+    "epistemic_state": [
+      {
+        "id": "H0-TENSION",
+        "label": "FACT",
+        "state": "Robust observational/inference anomaly; not automatically evidence for new physics."
+      },
+      {
+        "id": "R-Q011-EDE-GLOBALITY-CERTIFICATION-004",
+        "label": "COMPUTATIONAL RESULT",
+        "state": "At fixed H0=71.5, Q011 found chi2=546.364260 on the frozen Q005 V14 surface; BEST-OBSERVED MINIMUM ONLY; mathematical globality not proven."
+      },
+      {
+        "id": "R-Q012-EDE-LIKELIHOOD-ATTRIBUTION-001",
+        "label": "COMPUTATIONAL RESULT",
+        "state": "Serialized-vector delta chi2=-2.612490, ACT=-3.372038, non-ACT=+0.759548. Optimizer-native and serialized tracks remain separate."
+      },
+      {
+        "id": "Q013",
+        "label": "DERIVED RESULT",
+        "state": "The Q011 region is materially externally weakened but not universally excluded. K-036 is permissive but overlapping; K-039 is the strongest same-model Planck countertest; K-040 SPT-only is the key more independent high-l CMB control."
+      }
+    ],
+    "failed_runs": [
+      "Q014 V4 GitHub run 33471327198 — SPT smoke model initialization failed; profile matrix skipped; returned profile jobs=0."
+    ],
+    "failed_tests": [
+      "Q014 V4 SPT smoke: official SPTlite likelihood initialized, then Cobaya failed model construction because Ecal was not provided."
+    ],
+    "likelihoods": [
+      "planck_NPIPE_highl_CamSpec.TTTEEE (public approximation to K-039 custom high-l construction)",
+      "candl SPT3G_D1_TnE lite, publication version 2.0.3",
+      "muse3glike SPT-3G D1 lensing with components=[phi-phi]",
+      "bao.desi_dr2 only in the explicitly overlapping secondary SPT+DESI branch"
+    ],
+    "next_required_compute": "Execute q014-external-viability-v5.yml at standard depth. All three smoke jobs must pass, including runtime SPT_CALIBRATION_PROFILE_GATE, before any 15-job profile matrix starts.",
+    "original_case_question": "Når den samme n=3 EDE-model anvendes, hvor stor ekstern likelihood-penalty får high-H₀-regionen omkring det aktive Q011-punkt ved H₀=71.5 km s⁻¹ Mpc⁻¹ i Planck NPIPE- og SPT-3G D1-kæderne, når hver kædes egne nuisance-parametre og relevante kosmologiske parametre profileres korrekt og datasetoverlap ikke dobbeltregnes?",
+    "partial_runs": [],
+    "pending_tasks": [
+      "Run Q014 chain smoke gates.",
+      "Run independent free-H0 and fixed-H0=71.5 profiles for Planck approximation and SPT-only; secondary SPT+DESI stays separate.",
+      "Aggregate within chain only.",
+      "Run multistart stability, source compatibility, fixed-vs-free monotonicity, completeness and claim-boundary tests.",
+      "If standard run is unstable/incomplete, rerun expanded starts or only failed atomic tasks; do not reset the case."
+    ],
+    "program_history": [
+      "Q005 V14 common backend",
+      "Q011 EDE Globality Certification V4",
+      "Q012 Likelihood Attribution V1",
+      "Q014 External Viability V5 — generated, not executed",
+      "Q014 External Viability V4 — smoke-only technical failure on missing SPT Ecal nuisance",
+      "Q014 External Viability V5 — generated, not executed"
+    ],
+    "q": "Q014",
+    "rejected_or_resolved": [
+      {
+        "id": "C-EDE-001",
+        "reason": "K-036 uses n=3 while K-038 uses n=2; K-038 is not a direct MOD-EDE-N3 constraint.",
+        "status": "RESOLVED AS DIRECT CONTRADICTION"
+      }
+    ],
+    "required_tests": [
+      "CASE_QUESTION_IDENTITY_GATE",
+      "Q011_PARENT_IDENTITY_GATE",
+      "Q011_EXACT_VECTOR_GATE",
+      "N3_MODEL_GATE",
+      "NO_H0DN_GATE",
+      "NO_ACT_NUISANCE_GATE",
+      "PLANCK_APPROXIMATION_CLAIM_GATE",
+      "SPT_NO_DESI_PRIMARY_GATE",
+      "SPT_LENSING_NO_PRIMARY_CMB_DOUBLECOUNT_GATE",
+      "SPT_CALIBRATION_PROFILE_GATE",
+      "SPT_NATIVE_CALIBRATION_NUISANCE_GATE",
+      "CHAIN_SEPARATION_GATE",
+      "SOURCE_PROVENANCE_COMPATIBILITY_GATE",
+      "JOB_COMPLETENESS_GATE",
+      "MULTISTART_STABILITY_GATE",
+      "FIXED_PROFILE_MONOTONICITY_GATE",
+      "FINITE_RESULT_GATE",
+      "FINAL_VALIDATION_GATE"
+    ],
+    "software_commits": [
+      "Bubbleverse inspected main: 02afd47ae12daae89e9c894ae7bee7576724e85b",
+      "Q011 parent commit: e113fb846948f424b865d1303fba8b5988ec9133",
+      "class_ede: 5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "Cobaya v3.5.6: 6a48864aa3f541df233435070a3c89d65c2ad936",
+      "SPT candl data paper-adjacent pin: 2cec6e762a8c540484dd5acafc529f0035856350"
+    ],
+    "unresolved_components": [
+      "Planck/NPIPE external fixed-H0=71.5 profile penalty on a same-n=3 basis.",
+      "SPT-3G D1-only external fixed-H0=71.5 profile penalty on a same-n=3 basis.",
+      "Exact-Q011 shared-physics-vector external cost, kept distinct from fixed-H0 reprofiling.",
+      "Whether primary external profile minima are stable across independent optimizer starts."
+    ],
+    "validation_status": "PROGRAM GENERATED — SCIENTIFIC VALIDATION PENDING EXECUTION",
+    "workflow_history": [
+      "q011-ede-globality-certification-v4.yml",
+      "q012-likelihood-attribution-v1.yml",
+      "q014-external-viability-v5.yml — generated, not executed",
+      "q014-external-viability-v4.yml — run 33471327198, SPT smoke failed before profile matrix",
+      "q014-external-viability-v5.yml — generated, not executed"
+    ]
+  },
+  "computational_history": [],
+  "q014_program_version_history": [
+    {
+      "failure": "Q011 parser incorrectly required H0 inside best_record.bestfit even though Q011 V4 intentionally stores fixed H0 only as profile target_h0.",
+      "status": "PREFLIGHT FAILED — NO SCIENTIFIC COMPUTE STARTED",
+      "version": "V1"
+    },
+    {
+      "failure": "SPT smoke environment attempted pip install candl==2.0.3. PyPI distribution is candl-like; import module is candl.",
+      "repair_from_v1": "Use authoritative profile_targets[71.5].target_h0 for H0; use exact best_record.bestfit for remaining shared physics parameters.",
+      "status": "SPT SETUP FAILED — NO Q014 LIKELIHOOD EVALUATION STARTED",
+      "version": "V2"
+    },
+    {
+      "version": "V3",
+      "repair_from_v2": "Install candl-like==2.0.3 with import module candl; record exact distribution identity and hashes; make environment preflight chain-native.",
+      "failure": "CLASS_EDE build succeeded, but its Python extension was exposed only via shell-local PYTHONPATH. The next GitHub Actions step could not import classy.",
+      "status": "RUNTIME ENVIRONMENT PREFLIGHT FAILED — NO Q014 LIKELIHOOD EVALUATION STARTED"
+    },
+    {
+      "version": "V5",
+      "repair_from_v3": "Register the exact frozen CLASS_EDE build directory in the active Python environment using a site-packages .pth file; prove importability with PYTHONPATH unset; require classy provenance under external/class_ede.",
+      "status": "GENERATED — NOT YET SCIENTIFICALLY EXECUTED"
+    },
+    {
+      "version": "V5",
+      "repair_from_v4": "Add official SPTlite Tcal/Ecal nuisance definitions from pinned cobaya_ttteee_lite.yaml; profile both; preserve Gaussian Tcal N(1,0.0036^2); add runtime SPT calibration sampled-parameter gate.",
+      "status": "GENERATED — NOT YET SCIENTIFICALLY EXECUTED"
+    }
+  ],
+  "q014_v5_repair": {
+    "trigger": "GitHub run 33471327198: both SPT smoke jobs failed after successful environment preflight with `Requirement Ecal of spt_d1_primary_lite is not provided by any component, nor sampled directly`.",
+    "root_cause": "Q014 V4 loaded SPTlite with clear_internal_priors=true but did not inject the official SPTlite calibration nuisance parameters Tcal and Ecal into the Cobaya parameter block.",
+    "authoritative_fix_source": "SouthPoleTelescope/spt_candl_data commit 2cec6e762a8c540484dd5acafc529f0035856350, cobaya/SPT3G_D1_TnE/cobaya_ttteee_lite.yaml, git blob f3b3e15ea512931e28e130ef62ef35bb96171719.",
+    "repair": "Profile Tcal and Ecal with [0.8,1.2] bounds in every SPT mode; add official Gaussian prior Tcal~N(1,0.0036^2); no extra Gaussian Ecal prior; verify both are sampled at runtime.",
+    "scientific_state_changed": false,
+    "compute_result_produced": false
+  },
+  "software_execution_history": [
+    {
+      "evidence": "CLASS_EDE_REUSE_GATE passed; pip failed because no distribution candl==2.0.3 exists.",
+      "stage": "Q014 smoke spt_d1_only",
+      "status": "TECHNICAL FAILURE BEFORE LIKELIHOOD INITIALIZATION",
+      "version": "V2"
+    },
+    {
+      "version": "V3",
+      "stage": "Q014 smoke spt_d1_only — runtime environment preflight",
+      "status": "TECHNICAL FAILURE BEFORE LIKELIHOOD INITIALIZATION",
+      "evidence": "q014_setup_v3.sh built CLASS_EDE successfully, candl/spt_candl_data/muse3glike imported, but the following workflow step reported ModuleNotFoundError for classy because PYTHONPATH was shell-local."
+    },
+    {
+      "version": "V4",
+      "stage": "Q014 smoke spt_d1_only and spt_d1_plus_desi — model initialization",
+      "status": "TECHNICAL FAILURE AFTER LIKELIHOOD INITIALIZATION, BEFORE LOG-LIKELIHOOD EVALUATION",
+      "evidence": "Environment preflight PASS, CLASS_EDE persistent import PASS, candl SPTlite initialized; Cobaya error: Requirement Ecal of spt_d1_primary_lite is not provided by any component, nor sampled directly."
+    }
+  ]
+}
