@@ -1,0 +1,162 @@
+project:
+  q: Q016
+  run_id: Q016-MATCHED-CMB-SURFACE-V1
+  result_id: R-Q016-EDE-MATCHED-CMB-SURFACE-001
+  title: Bubbleverse Q016 matched CMB surface
+  status: PROGRAM_GENERATED_NOT_YET_SCIENTIFICALLY_EXECUTED
+  case_id: NOT DOCUMENTED
+scientific_question: 'Når Planck NPIPE, SPT-3G D1 og ACT DR6 undersøges på en bevidst
+  matchet n=3 EDE-overflade med sammenlignelige CMB-observables og overlappende multipolområder,
+  kan forskellen i high-H0-response forklares af experiment-/likelihood-specifik struktur,
+  eller overlever et fælles residualmønster?
+
+  '
+model:
+  name: ede_n3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+  target_h0: 71.5
+  q011_exact_vector_as_external_endpoint: false
+  preserve_q005_v14_bounds: true
+surface:
+  primary:
+    observables:
+    - TT
+    - TE
+    - EE
+    ell_min: 600
+    ell_max: 2000
+    low_z_data: []
+    lensing: false
+  secondary:
+    observables:
+    - TT
+    - TE
+    - EE
+    ell_min: 1000
+    ell_max: 2000
+    purpose: multifrequency_mechanism_test
+  tau:
+    mean: 0.051
+    sigma: 0.006
+    shared_auxiliary_constraint: true
+    never_count_as_independent_cross_experiment_evidence: true
+branches:
+  planck:
+    label: CAMSPEC_NPIPE_LITE_MATCHED
+    source_ids:
+    - K-039
+    - K-044
+    - K-045
+    likelihood_family: CamSpec-NPIPE-lite
+    repository: HTJense/camspec_npipe-lite
+    pin_policy: IMMUTABLE_COMMIT_PINNED
+    likelihood_adapter: planck_lite
+    chain_native_nuisance:
+    - A_planck
+    - calTE
+    - calEE
+    commit: e387852d2ae8863735814449c682b089c3059318
+  spt:
+    label: SPT3G_D1_TNE_LITE_MATCHED
+    source_ids:
+    - K-040
+    - K-041
+    - K-042
+    likelihood_family: candl
+    candl_version: 2.0.3
+    data_repository: SouthPoleTelescope/spt_candl_data
+    data_release: v0
+    dataset_shortcut: spt_candl_data.SPT3G_D1_TnE_lite
+    likelihood_adapter: candl
+    chain_native_nuisance:
+    - Tcal
+    - Ecal
+    Tcal_constraint:
+      mean: 1.0
+      sigma: 0.0036
+  act:
+    label: ACT_DR6_CMBONLY_MATCHED
+    source_ids:
+    - K-036
+    - K-043
+    likelihood_family: ACT DR6 CMB-only
+    repository: ACTCollaboration/DR6-ACT-lite
+    release: v1.0.0
+    likelihood_adapter: act_dr6_cmbonly
+    chain_native_nuisance:
+    - A_act
+    - P_act
+execution:
+  modes:
+  - reference_free_h0
+  - fixed_h0_71p5
+  restart_families:
+  - cold_a
+  - cold_b
+  - jitter_a
+  - jitter_b
+  max_parallel: 6
+  github_job_timeout_minutes: 330
+  soft_stop_minutes: 315
+  optimizer:
+    method: cobaya_minimize_bobyqa
+    max_evals: 200000
+    rhoend: 0.0001
+  multistart_stability_delta_chi2_max: 1.0
+attribution:
+  ell_bands:
+  - - 600
+    - 999
+  - - 1000
+    - 1499
+  - - 1500
+    - 2000
+  definition: signed_covariance_allocation
+  formula: c_i = d_i * (C^-1 d)_i
+  independent_chi2_tests: false
+rules:
+  no_cross_chain_absolute_chi2_comparison: true
+  no_cross_chain_chi2_sum: true
+  no_shared_lowz_doublecount: true
+  no_nuisance_transfer_between_experiments: true
+  residual_shape_coherence_not_combined_significance: true
+  q011_status: BEST-OBSERVED MINIMUM ONLY
+  q015_status: FROZEN INPUT
+parent_provenance:
+  bubbleverse_repository: Morfindien/Bubbleverse
+  inspected_main_tree_sha: 70c447a505acf0193a8604a23dc141faebfa026e
+  reuse:
+  - q005_hpc_v14.py
+  - q005_hpc_v14_config.yml
+  - q005_setup_v14.sh
+  - q005_hpc_v14_requirements.txt
+  reference_only:
+  - q014_external_viability_v12.py
+  - q014_external_viability_v12_config.yml
+  - q014_external_viability_v12_source_lock.json
+  - q014_tests_v12.py
+  - q015_cmb_attribution_v3.py
+  - q015_cmb_attribution_v3_config.yml
+  - q015_cmb_attribution_v3_result.json
+mandatory_gates:
+- Q_IDENTITY_GATE
+- CONTEXT_CONTINUITY_GATE
+- MODEL_IDENTITY_GATE
+- H0_TARGET_GATE
+- ENDPOINT_REPROFILE_GATE
+- Q011_NONPORTABILITY_GATE
+- COMMON_MULTIPOLE_GATE
+- COMMON_OBSERVABLE_GATE
+- COMMON_TAU_GATE
+- CHAIN_NATIVE_NUISANCE_GATE
+- COVARIANCE_GATE
+- NO_CROSS_CHAIN_CHI2_SUM_GATE
+- NO_SHARED_LOWZ_DOUBLECOUNT_GATE
+- FINITE_RESULT_GATE
+- MULTISTART_STABILITY_GATE
+- RESULT_PROVENANCE_GATE
+- RESIDUAL_VECTOR_GATE
+- FULL_VS_LITE_DIAGNOSTIC_GATE
+- COMMON_RESIDUAL_DECISION_GATE

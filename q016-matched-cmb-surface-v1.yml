@@ -1,0 +1,103 @@
+name: Bubbleverse Q016 Matched CMB Surface V1
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+env:
+  CURRENT_Q: Q016
+  RUN_ID: Q016-MATCHED-CMB-SURFACE-V1
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - run: |
+          python -m py_compile q016_branch_runner_v1.py q016_aggregate_v1.py q016_result_tests_v1.py
+          python - <<'PY'
+          import yaml
+          c=yaml.safe_load(open("q016_matched_cmb_surface_v1_config.yml"))
+          assert c["project"]["q"]=="Q016"
+          assert c["model"]["n_scf"]==3
+          assert c["surface"]["primary"]["ell_min"]==600 and c["surface"]["primary"]["ell_max"]==2000
+          assert c["surface"]["primary"]["low_z_data"]==[]
+          print("Q016_STATIC_PREFLIGHT=PASS")
+          PY
+
+  primary:
+    needs: preflight
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        branch: [planck, spt, act]
+        mode: [reference_free_h0, fixed_h0_71p5]
+        restart: [0, 1, 2, 3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.11'}
+      - name: Install frozen Bubbleverse numerical stack
+        run: |
+          bash q005_setup_v14.sh
+          pip install "candl==2.0.3"
+          pip install git+https://github.com/SouthPoleTelescope/spt_candl_data.git
+          pip install git+https://github.com/ACTCollaboration/DR6-ACT-lite.git@v1.0.0
+          git clone https://github.com/HTJense/camspec_npipe-lite.git external/camspec_npipe-lite
+          git -C external/camspec_npipe-lite checkout e387852d2ae8863735814449c682b089c3059318
+          cd external/camspec_npipe-lite
+          PLANCK_SHA=$(git rev-parse HEAD)
+          echo "PLANCK_NPIPE_LITE_SHA=$PLANCK_SHA" >> "$GITHUB_ENV"
+          pip install -e .
+      - name: Execute independent reprofile
+        run: |
+          mkdir -p q016_results
+          python q016_branch_runner_v1.py \
+            --branch "${{ matrix.branch }}" \
+            --mode "${{ matrix.mode }}" \
+            --restart "${{ matrix.restart }}" \
+            --output "q016_results/${{ matrix.branch }}_${{ matrix.mode }}_r${{ matrix.restart }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q016-${{ matrix.branch }}-${{ matrix.mode }}-r${{ matrix.restart }}
+          path: q016_results/*.json
+          if-no-files-found: error
+
+  merge_primary:
+    needs: primary
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {pattern: 'q016-*', path: q016_results, merge-multiple: true}
+      - run: python q016_aggregate_v1.py --input-dir q016_results --output q016_primary_merged_v1.json
+      - uses: actions/upload-artifact@v4
+        with: {name: q016-primary-merged-v1, path: q016_primary_merged_v1.json}
+
+  final_gates:
+    needs: merge_primary
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: {name: q016-primary-merged-v1}
+      - name: Scientific gate placeholder until attribution/secondary files exist
+        run: |
+          set +e
+          python q016_result_tests_v1.py \
+            --config q016_matched_cmb_surface_v1_config.yml \
+            --merged q016_primary_merged_v1.json \
+            --output q016_result_tests_v1.json
+          RC=$?
+          cat q016_result_tests_v1.json
+          exit $RC
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with: {name: q016-final-gates-v1, path: q016_result_tests_v1.json}
