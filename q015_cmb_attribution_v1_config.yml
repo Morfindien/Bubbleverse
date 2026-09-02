@@ -1,0 +1,101 @@
+project:
+  q: Q015
+  run_id: Q015-CMB-ATTRIBUTION-V1
+  result_id: R-Q015-EDE-CMB-ATTRIBUTION-001
+  case_id: NOT DOCUMENTED
+  generated_at: 2026-09-02T11:03:00+02:00
+  question: >-
+    Når den samme n=3 EDE common-backend anvendes ved H0=71.5 km s^-1 Mpc^-1,
+    hvilke konkrete CMB-likelihoodkomponenter, observables, multipolområder og
+    chain-native nuisance-/kalibreringsretninger driver forskellen mellem
+    Planck NPIPE-approksimationens Delta-chi2=+12.873928 og SPT-3G D1-only's
+    Delta-chi2=+0.342067, uden cross-chain chi2-summering eller dobbeltregning?
+
+parent:
+  q014:
+    q: Q014
+    run_id: Q014-EXTERNAL-VIABILITY-V12
+    result_id: R-Q014-EDE-EXTERNAL-VIABILITY-009
+    github_run: 33597153303
+    head_sha: ab42b1937ca935f498a006ead2c034954ce1d81f
+    artifact: q014-external-viability-v12-final
+    artifact_id: 9837116589
+    artifact_digest: sha256:7ac4b9a2ef6f9d64bebaa55cec50fa8cf84cfaba7bc00fe8cd055ee183e65856
+    validation_status: VALIDATED WITH CAVEATS
+    scientifically_usable_result: true
+    expected_penalties:
+      planck_npipe_k039_approx: 12.873928089302353
+      spt_d1_only: 0.34206744242794684
+      spt_d1_plus_desi: 0.1573873566196653
+  q011:
+    q: Q011
+    run_id: Q011-EDE-GLOBALITY-CERTIFICATION-V4
+    result_id: R-Q011-EDE-GLOBALITY-CERTIFICATION-004
+    github_run: 33363067156
+    artifact: q011-ede-globality-certification-v4-final
+    artifact_id: 9783850582
+    artifact_digest: sha256:72eb1ec17fc6ab8988e2a6d5456e68865c4a926e2f3ea9e581b3b6d07b403a33
+    classification: BEST-OBSERVED MINIMUM ONLY
+
+scientific_surface:
+  model: ede_n3
+  n_scf: 3
+  target_h0: 71.5
+  common_backend_repository: https://github.com/mwt5345/class_ede.git
+  common_backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+  no_local_h0_prior: true
+  exact_q011_vector_is_not_primary_endpoint: true
+  primary_chains:
+    - planck_npipe_k039_approx
+    - spt_d1_only
+  secondary_chain:
+    - spt_d1_plus_desi
+
+claim_boundaries:
+  planck_label: K039_PUBLIC_NPIPE_COMMON_BACKEND_APPROX
+  planck_paper_native_reproduction: false
+  spt_label: K040_SPT_D1_LIKELIHOOD_NATIVE_COMMON_BACKEND
+  spt_paper_native_reproduction: false
+  q011_status: BEST-OBSERVED MINIMUM ONLY
+  cross_chain_absolute_chi2_comparison_allowed: false
+  cross_chain_chi2_sum_allowed: false
+  component_attribution_is_covariance_coupled: true
+  local_nuisance_probe_is_causal_attribution: false
+
+primitive_component_exclusions:
+  - chi2__CMB
+  - chi2__BAO
+  - chi2__SN
+
+ell_bands:
+  - {name: ell_lt_30, min: 0, max: 29}
+  - {name: ell_30_499, min: 30, max: 499}
+  - {name: ell_500_999, min: 500, max: 999}
+  - {name: ell_1000_1499, min: 1000, max: 1499}
+  - {name: ell_1500_1999, min: 1500, max: 1999}
+  - {name: ell_2000_2499, min: 2000, max: 2499}
+  - {name: ell_2500_2999, min: 2500, max: 2999}
+  - {name: ell_3000_plus, min: 3000, max: 100000}
+
+likelihood_names:
+  planck_highl: planck_NPIPE_highl_CamSpec.TTTEEE
+  spt_primary: spt_d1_primary_lite
+
+nuisance_probes:
+  planck_npipe_k039_approx:
+    A_planck: {step: 0.0025, constraint_mean: 1.0, constraint_sigma: 0.0025}
+    calTE: {step: 0.01, constraint_mean: 1.0, constraint_sigma: 0.01}
+    calEE: {step: 0.01, constraint_mean: 1.0, constraint_sigma: 0.01}
+  spt_d1_only:
+    Tcal: {step: 0.0036, constraint_mean: 1.0, constraint_sigma: 0.0036}
+    Ecal: {step: 0.01, constraint_mean: null, constraint_sigma: null}
+  offsets: [-1.0, -0.5, 0.0, 0.5, 1.0]
+
+validation:
+  parent_penalty_abs_tol: 1.0e-8
+  component_reconstruction_abs_tol: 2.0e-6
+  covariance_closure_abs_tol: 2.0e-4
+  parent_primary_component_delta_abs_tol: 2.0e-3
+  finite_required: true
+  require_all_primary_chains: true
+  forbid_cross_chain_sum: true

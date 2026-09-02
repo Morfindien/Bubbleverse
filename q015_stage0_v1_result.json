@@ -1,0 +1,140 @@
+{
+  "actual_computed_result": true,
+  "chains": {
+    "planck_npipe_k039_approx": {
+      "constraint_shape_sum": 3.01332672734087,
+      "fixed_h0_profile_delta_chi2": 12.873928089302353,
+      "label": "K039_PUBLIC_NPIPE_COMMON_BACKEND_APPROX",
+      "normalization_free_constraint_shape_deltas": {
+        "A_planck": 3.269696412618594,
+        "calEE": -0.11503301093069492,
+        "calTE": -0.14133667434702918
+      },
+      "nuisance_movements": {
+        "A_planck": {
+          "fixed_h0_71p5_value": 1.0045284666009007,
+          "fixed_minus_free": 0.004795687813768712,
+          "fixed_offset_from_constraint_mean_sigma": 1.8113866403602685,
+          "free_offset_from_constraint_mean_sigma": -0.10688848514721627,
+          "free_value": 0.999732778787132,
+          "movement_in_step_units": 1.9182751255074848,
+          "step_or_reference_scale": 0.0025
+        },
+        "calEE": {
+          "fixed_h0_71p5_value": 1.0010007401048762,
+          "fixed_minus_free": 0.004536950201940115,
+          "fixed_offset_from_constraint_mean_sigma": 0.10007401048761633,
+          "free_offset_from_constraint_mean_sigma": -0.3536210097063952,
+          "free_value": 0.996463789902936,
+          "movement_in_step_units": 0.45369502019401153,
+          "step_or_reference_scale": 0.01
+        },
+        "calTE": {
+          "fixed_h0_71p5_value": 0.9981116534420776,
+          "fixed_minus_free": 0.0023187332080816248,
+          "fixed_offset_from_constraint_mean_sigma": -0.18883465579223602,
+          "free_offset_from_constraint_mean_sigma": -0.4207079766003985,
+          "free_value": 0.995792920233996,
+          "movement_in_step_units": 0.23187332080816248,
+          "step_or_reference_scale": 0.01
+        }
+      },
+      "paper_native_reproduction": false,
+      "primitive_likelihood_component_deltas": {
+        "chi2__bao.sdss_dr12_consensus_final": 0.49119428626133566,
+        "chi2__bao.sdss_dr7_mgs": 1.5066706572653266,
+        "chi2__bao.sixdf_2011_bao": 0.03764419564153913,
+        "chi2__planck_2018_lensing.native": 3.263855441462143,
+        "chi2__planck_2018_lowl.EE": -0.7215661388456169,
+        "chi2__planck_2018_lowl.TT": -2.274725339362817,
+        "chi2__planck_NPIPE_highl_CamSpec.TTTEEE": 4.273455177806682,
+        "chi2__sn.pantheonplus": 3.284073081732913
+      },
+      "primitive_likelihood_sum": 9.860601361961505,
+      "reconstructed_profile_delta_chi2": 12.873928089302375,
+      "reconstruction_gate": true,
+      "role": "PRIMARY_EXTERNAL_CHAIN"
+    },
+    "spt_d1_only": {
+      "constraint_shape_sum": -0.005287385661557755,
+      "fixed_h0_profile_delta_chi2": 0.34206744242794684,
+      "label": "K040_SPT_D1_LIKELIHOOD_NATIVE_COMMON_BACKEND",
+      "normalization_free_constraint_shape_deltas": {
+        "Tcal": -0.005287385661557755
+      },
+      "nuisance_movements": {
+        "Ecal": {
+          "fixed_h0_71p5_value": 1.0160120067685994,
+          "fixed_minus_free": 0.0013619637487713998,
+          "free_value": 1.014650043019828,
+          "movement_in_step_units": 0.13619637487713998,
+          "step_or_reference_scale": 0.01
+        },
+        "Tcal": {
+          "fixed_h0_71p5_value": 0.9994925358693744,
+          "fixed_minus_free": 6.35388133645165e-05,
+          "fixed_offset_from_constraint_mean_sigma": -0.14096225850712069,
+          "free_offset_from_constraint_mean_sigma": -0.15861192888615305,
+          "free_value": 0.9994289970560098,
+          "movement_in_step_units": 0.01764967037903236,
+          "step_or_reference_scale": 0.0036
+        }
+      },
+      "paper_native_reproduction": false,
+      "primitive_likelihood_component_deltas": {
+        "chi2__muse3glike.cobaya.spt3g_2yr_delensed_ee_optimal_pp_muse": -0.35168106165440705,
+        "chi2__q014_tau_information": -0.04464697158422304,
+        "chi2__spt_d1_primary_lite": 0.743682861328125
+      },
+      "primitive_likelihood_sum": 0.3473548280894949,
+      "reconstructed_profile_delta_chi2": 0.3420674424279372,
+      "reconstruction_gate": true,
+      "role": "PRIMARY_EXTERNAL_CHAIN"
+    },
+    "spt_d1_plus_desi": {
+      "constraint_shape_sum": 0.04997629793779137,
+      "fixed_h0_profile_delta_chi2": 0.1573873566196653,
+      "label": "K040_SPT_D1_PLUS_DESI_COMMON_BACKEND",
+      "normalization_free_constraint_shape_deltas": {
+        "Tcal": 0.04997629793779137
+      },
+      "nuisance_movements": {},
+      "paper_native_reproduction": false,
+      "primitive_likelihood_component_deltas": {
+        "chi2__bao.desi_dr2": -0.10252017615525055,
+        "chi2__muse3glike.cobaya.spt3g_2yr_delensed_ee_optimal_pp_muse": 0.4627521978159166,
+        "chi2__q014_tau_information": 0.03953743545870658,
+        "chi2__spt_d1_primary_lite": -0.2923583984375
+      },
+      "primitive_likelihood_sum": 0.10741105868187262,
+      "reconstructed_profile_delta_chi2": 0.157387356619664,
+      "reconstruction_gate": true,
+      "role": "SECONDARY_OVERLAP_CHAIN"
+    }
+  },
+  "cross_chain_absolute_chi2_comparison_performed": false,
+  "execution_kind": "DETERMINISTIC_POSTPROCESSING_OF_FROZEN_Q014_V12_RESULT",
+  "next_required_action": "Run covariance-aware endpoint attribution for Planck high-l TTTEEE and SPT D1 primary TT/TE/EE, then aggregate.",
+  "planck_spt_chi2_sum_performed": false,
+  "q": "Q015",
+  "q014_parent": {
+    "path": "/mnt/data/q014v12final2/q014_v12_aggregate/final/q014_external_viability_v12_result.json",
+    "q": "Q014",
+    "result_id": "R-Q014-EDE-EXTERNAL-VIABILITY-009",
+    "run_id": "Q014-EXTERNAL-VIABILITY-V12",
+    "sha256": "44d08010e5f96bcdb8e653a524a62594dcaa9024343036161ac05cdcbd1f5782"
+  },
+  "result_id": "R-Q015-EDE-CMB-ATTRIBUTION-001",
+  "run_id": "Q015-CMB-ATTRIBUTION-V1",
+  "stage": "STAGE0_PARENT_COMPONENT_ATTRIBUTION",
+  "stage0_interpretive_partition": {
+    "planck_cmb_within_chain_delta": 4.54101914106039,
+    "planck_constraint_shape_delta": 3.01332672734087,
+    "planck_low_z_within_chain_delta": 5.319582220901115,
+    "spt_constraint_shape_delta": -0.005287385661557755,
+    "spt_primary_plus_lensing_within_chain_delta": 0.39200179967371795,
+    "spt_tau_information_delta": -0.04464697158422304,
+    "warning": "These are within-chain partitions. Do not subtract/sum them as a cross-chain chi-square statistic."
+  },
+  "status": "PASS"
+}

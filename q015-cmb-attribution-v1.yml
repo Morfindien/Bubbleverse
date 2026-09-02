@@ -1,0 +1,186 @@
+name: Bubbleverse Q015 CMB Attribution V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q015-cmb-attribution-v1
+  cancel-in-progress: false
+
+jobs:
+  stage0:
+    name: Q015 Stage0 frozen-parent attribution
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install "PyYAML==6.0.2" "numpy==1.26.4"
+      - name: Download frozen Q014 V12 final artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: q014-external-viability-v12-final
+          path: q015_parent_q014
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33597153303
+      - name: Stage0 exact component partition
+        shell: bash
+        run: |
+          set -euo pipefail
+          Q014_RESULT="$(find q015_parent_q014 -type f -name 'q014_external_viability_v12_result.json' -print -quit)"
+          test -n "$Q014_RESULT"
+          mkdir -p q015_results
+          python q015_cmb_attribution_v1.py stage0 \
+            --q014 "$Q014_RESULT" \
+            --output q015_results/q015_stage0_v1_result.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q015-v1-stage0
+          path: q015_results/q015_stage0_v1_result.json
+          if-no-files-found: error
+          retention-days: 90
+
+  endpoint_attribution:
+    name: Q015 endpoint ${{ matrix.chain }}
+    needs: stage0
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix:
+        chain:
+          - planck_npipe_k039_approx
+          - spt_d1_only
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - name: Install frozen Q005 dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - name: Reuse frozen MUSE bytes required by Q014 setup transport
+        if: ${{ startsWith(matrix.chain, 'spt_') }}
+        uses: actions/download-artifact@v5
+        with:
+          name: q014-v11-spt-muse-source
+          path: q015_muse_raw
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33562789479
+      - name: Verify and place frozen MUSE bytes
+        if: ${{ startsWith(matrix.chain, 'spt_') }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          SRC="$(find q015_muse_raw -type f -name 'muse_3g_like_march_2025.zip' -print -quit)"
+          test -n "$SRC"
+          test "$(sha256sum "$SRC" | awk '{print $1}')" = "4933ceb993ceb92e48b2191b8ccb1595d182bc4bc3862c1fbad61d5f82136e9b"
+          mkdir -p external/q014_v6_spt_assets
+          cp "$SRC" external/q014_v6_spt_assets/muse_3g_like_march_2025.zip
+      - name: Reuse validated Q014 V12 environment
+        run: bash q015_setup_v1.sh "${{ matrix.chain }}"
+      - name: Download frozen Q014 V12 final artifact
+        uses: actions/download-artifact@v5
+        with:
+          name: q014-external-viability-v12-final
+          path: q015_parent_q014
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33597153303
+      - name: Download authoritative Q011 V4 parent
+        uses: actions/download-artifact@v5
+        with:
+          name: q011-ede-globality-certification-v4-final
+          path: q015_parent_q011
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33363067156
+      - name: Covariance-aware endpoint attribution
+        shell: bash
+        run: |
+          set -euo pipefail
+          Q014_RESULT="$(find q015_parent_q014 -type f -name 'q014_external_viability_v12_result.json' -print -quit)"
+          Q011_RESULT="$(find q015_parent_q011 -type f -name 'q011_ede_globality_certification_v4_result.json' -print -quit)"
+          test -n "$Q014_RESULT" && test -n "$Q011_RESULT"
+          mkdir -p q015_results
+          python q015_cmb_attribution_v1.py endpoint-attribution \
+            --chain "${{ matrix.chain }}" \
+            --q014 "$Q014_RESULT" \
+            --q011 "$Q011_RESULT" \
+            --output "q015_results/q015_${{ matrix.chain }}_endpoint_attribution_v1.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q015-v1-endpoint-${{ matrix.chain }}
+          path: q015_results/q015_${{ matrix.chain }}_endpoint_attribution_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+  aggregate:
+    name: Q015 merge + mandatory tests
+    needs: [stage0, endpoint_attribution]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install "PyYAML==6.0.2" "numpy==1.26.4"
+      - uses: actions/download-artifact@v5
+        with:
+          name: q015-v1-stage0
+          path: q015_downloads/stage0
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q015-v1-endpoint-*
+          path: q015_downloads/endpoints
+          merge-multiple: true
+      - name: Aggregate without cross-chain chi2 summing
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p q015_results/final
+          python q015_cmb_attribution_v1.py aggregate \
+            --stage0 q015_downloads/stage0/q015_stage0_v1_result.json \
+            --planck q015_downloads/endpoints/q015_planck_npipe_k039_approx_endpoint_attribution_v1.json \
+            --spt q015_downloads/endpoints/q015_spt_d1_only_endpoint_attribution_v1.json \
+            --output q015_results/final/q015_cmb_attribution_v1_result.json
+          python q015_cmb_attribution_v1.py test \
+            --result q015_results/final/q015_cmb_attribution_v1_result.json \
+            --output q015_results/final/q015_result_tests_v1.json
+      - name: Final identity / no-cross-chain-sum gate
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('q015_results/final/q015_cmb_attribution_v1_result.json'))
+          t=json.load(open('q015_results/final/q015_result_tests_v1.json'))
+          assert r['q']=='Q015'
+          assert r['run_id']=='Q015-CMB-ATTRIBUTION-V1'
+          assert r['final_result_gate']=='PASS'
+          assert r['planck_spt_chi2_sum_performed'] is False
+          assert r['cross_chain_absolute_chi2_comparison_performed'] is False
+          assert t['status']=='PASS'
+          print('Q015_FINAL_RESULT_GATE=PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q015-cmb-attribution-v1-final
+          path: |
+            q015_results/final/q015_cmb_attribution_v1_result.json
+            q015_results/final/q015_result_tests_v1.json
+            q015_cmb_attribution_v1_config.yml
+            q015_source_lock_v1.json
+            q015_file_manifest_v1.json
+          if-no-files-found: warn
+          retention-days: 90
