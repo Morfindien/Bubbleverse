@@ -1,0 +1,58 @@
+{
+  "bubbleverse": {
+    "inspected_main_tree_sha": "70c447a505acf0193a8604a23dc141faebfa026e",
+    "repository": "Morfindien/Bubbleverse"
+  },
+  "claim_boundaries": {
+    "absolute_cross_chain_chi2_comparison": false,
+    "cross_chain_chi2_sum": false,
+    "q011": "BEST-OBSERVED MINIMUM ONLY",
+    "q015": "FROZEN INPUT"
+  },
+  "external_software": {
+    "ACTCollaboration/DR6-ACT-lite": {
+      "commit": "0e0cd2c703c62a0e980470b572602233b27750e1",
+      "release": "v1.0.0"
+    },
+    "HTJense/camspec_npipe-lite": {
+      "commit": "e387852d2ae8863735814449c682b089c3059318"
+    },
+    "candl": "2.0.3",
+    "candl-like": "2.0.3",
+    "spt_candl_data": {
+      "commit": "2cec6e762a8c540484dd5acafc529f0035856350",
+      "release": "v0"
+    }
+  },
+  "model": {
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "n_scf": 3,
+    "repository": "mwt5345/class_ede"
+  },
+  "q": "Q016",
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-003",
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V3",
+  "sources": {
+    "K-036": "arXiv:2505.08051",
+    "K-039": "arXiv:2311.00524",
+    "K-040": "arXiv:2507.23355",
+    "K-041": "arXiv:2506.20707",
+    "K-042": "candl/SPT official documentation",
+    "K-043": "arXiv:2503.14452; DOI 10.1088/1475-7516/2025/11/062",
+    "K-044": "DOI 10.1093/mnras/stac2744",
+    "K-045": "DOI 10.1103/ff9j-skyj"
+  },
+  "technical_revision": {
+    "additional_pre_execution_repairs": [
+      "candl-like distribution name corrected",
+      "SPT data repository immutably pinned",
+      "ACT A_act/P_act native nuisance parameters restored",
+      "true distinct multistart references implemented"
+    ],
+    "failure_class": "ENVIRONMENT",
+    "observed_error": "ModuleNotFoundError: No module named 'numpy'",
+    "observed_stage": "BUILD_CLASSY_WRAPPER",
+    "parent": "Q016-MATCHED-CMB-SURFACE-V2",
+    "scientific_surface_changed": false
+  }
+}

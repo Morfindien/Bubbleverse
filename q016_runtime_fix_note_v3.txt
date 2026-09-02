@@ -1,0 +1,29 @@
+Q016 V3 TECHNICAL REPAIR
+
+V2 ACTUAL FAILURE
+Run: 33685631596
+Stage: Install frozen Bubbleverse numerical stack -> BUILD_CLASSY_WRAPPER
+Error: ModuleNotFoundError: No module named 'numpy'
+
+FAILURE CLASS
+ENVIRONMENT
+
+SCIENTIFIC RESULT
+NONE. Execute independent reprofile was skipped in all matrix jobs.
+
+V3 REPAIRS
+1. Install q005_hpc_v14_requirements.txt BEFORE compiling/building the CLASS_EDE Python wrapper.
+2. Use Q016-specific branch setup instead of q005_setup_v14.sh, so primary Q016 does not install irrelevant DESI, Pantheon+, BAO, lensing, or Planck low-l likelihoods.
+3. Use candl-like==2.0.3, matching Bubbleverse Q014's known-good SPT environment.
+4. Freeze spt_candl_data to commit 2cec6e762a8c540484dd5acafc529f0035856350.
+5. Freeze ACT DR6-lite to commit 0e0cd2c703c62a0e980470b572602233b27750e1.
+6. Preserve CamSpec-NPIPE-lite commit e387852d2ae8863735814449c682b089c3059318.
+7. Restore ACT-native nuisance parameters A_act and P_act with official bounds/reference/proposals.
+8. Implement four genuinely different optimizer start references; priors and bounds remain unchanged.
+9. Preserve Q016 machine-readable setup failures.
+10. Artifact upload uses warn when no file exists, so it cannot mask the primary failure.
+
+UNCHANGED SCIENCE
+Q016; n=3 EDE; class_ede commit; H0=71.5 fixed target; TT/TE/EE; ell=600-2000;
+common tau N(0.051,0.006^2); no low-z primary data; no cross-chain chi2 sum;
+no absolute cross-chain chi2 comparison; Q011 non-portability; all scientific gates.
