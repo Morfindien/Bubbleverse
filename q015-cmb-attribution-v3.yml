@@ -1,0 +1,117 @@
+name: Bubbleverse Q015 CMB Attribution V3
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q015-cmb-attribution-v3
+  cancel-in-progress: false
+
+jobs:
+  certify_v2_endpoints:
+    name: Q015 V3 certify completed V2 endpoints
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+      - run: python -m pip install "PyYAML==6.0.2"
+      - name: Static V3 gate
+        run: bash q015_setup_v3.sh
+
+      - name: Download V2 Stage0
+        uses: actions/download-artifact@v5
+        with:
+          name: q015-v2-stage0
+          path: q015_v2/stage0
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33629190153
+
+      - name: Download V2 Planck endpoint
+        uses: actions/download-artifact@v5
+        with:
+          name: q015-v2-endpoint-planck_npipe_k039_approx
+          path: q015_v2/planck
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33629190153
+
+      - name: Download V2 SPT endpoint
+        uses: actions/download-artifact@v5
+        with:
+          name: q015-v2-endpoint-spt_d1_only
+          path: q015_v2/spt
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33629190153
+
+      - name: Certify likelihood-to-covariance bridges
+        shell: bash
+        run: |
+          set -euo pipefail
+          S0="$(find q015_v2/stage0 -type f -name 'q015_stage0_v2_result.json' -print -quit)"
+          P2="$(find q015_v2/planck -type f -name 'q015_planck_npipe_k039_approx_endpoint_attribution_v2.json' -print -quit)"
+          S2="$(find q015_v2/spt -type f -name 'q015_spt_d1_only_endpoint_attribution_v2.json' -print -quit)"
+          test -n "$S0" && test -n "$P2" && test -n "$S2"
+          mkdir -p q015_results/v3
+
+          python q015_cmb_attribution_v3.py diagnostic \
+            --planck "$P2" --spt "$S2" \
+            --output q015_results/v3/q015_v2_failure_bridge_diagnostic.json
+
+          python q015_cmb_attribution_v3.py upgrade-endpoint \
+            --input "$P2" \
+            --output q015_results/v3/q015_planck_endpoint_bridge_certification_v3.json
+
+          python q015_cmb_attribution_v3.py upgrade-endpoint \
+            --input "$S2" \
+            --output q015_results/v3/q015_spt_endpoint_bridge_certification_v3.json
+
+          python q015_cmb_attribution_v3.py aggregate \
+            --stage0 "$S0" \
+            --planck q015_results/v3/q015_planck_endpoint_bridge_certification_v3.json \
+            --spt q015_results/v3/q015_spt_endpoint_bridge_certification_v3.json \
+            --output q015_results/v3/q015_cmb_attribution_v3_result.json
+
+          python q015_cmb_attribution_v3.py test \
+            --result q015_results/v3/q015_cmb_attribution_v3_result.json \
+            --output q015_results/v3/q015_result_tests_v3.json
+
+      - name: Final identity / no-cross-chain-sum gate
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('q015_results/v3/q015_cmb_attribution_v3_result.json'))
+          t=json.load(open('q015_results/v3/q015_result_tests_v3.json'))
+          assert r['q']=='Q015'
+          assert r['run_id']=='Q015-CMB-ATTRIBUTION-V3'
+          assert r['result_id']=='R-Q015-EDE-CMB-ATTRIBUTION-003'
+          assert r['final_result_gate']=='PASS'
+          assert r['scientifically_usable_result'] is True
+          assert r['planck_spt_chi2_sum_performed'] is False
+          assert r['cross_chain_absolute_chi2_comparison_performed'] is False
+          assert t['status']=='PASS'
+          print('Q015_V3_FINAL_RESULT_GATE=PASS')
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q015-cmb-attribution-v3-final
+          path: |
+            q015_results/v3/q015_cmb_attribution_v3_result.json
+            q015_results/v3/q015_result_tests_v3.json
+            q015_results/v3/q015_v2_failure_bridge_diagnostic.json
+            q015_results/v3/q015_planck_endpoint_bridge_certification_v3.json
+            q015_results/v3/q015_spt_endpoint_bridge_certification_v3.json
+            q015_cmb_attribution_v3_config.yml
+            q015_source_lock_v3.json
+            q015_file_manifest_v3.json
+          if-no-files-found: error
+          retention-days: 90

@@ -1,0 +1,86 @@
+project:
+  q: Q015
+  run_id: Q015-CMB-ATTRIBUTION-V3
+  result_id: R-Q015-EDE-CMB-ATTRIBUTION-003
+  case_id: NOT DOCUMENTED
+  generated_at: 2026-09-02T15:16:00+02:00
+  question: >-
+    Når den samme n=3 EDE common-backend anvendes ved H0=71.5 km s^-1 Mpc^-1,
+    hvilke konkrete CMB-likelihoodkomponenter, observables, multipolområder og
+    chain-native nuisance-/kalibreringsretninger driver forskellen mellem
+    Planck NPIPE-approksimationens Delta-chi2=+12.873928 og SPT-3G D1-only's
+    Delta-chi2=+0.342067, uden cross-chain chi2-summering eller dobbeltregning?
+
+parent_q015_v2:
+  run_id: Q015-CMB-ATTRIBUTION-V2
+  result_id: R-Q015-EDE-CMB-ATTRIBUTION-002
+  github_run: 33629190153
+  head_sha: 78a65aae897fca18132a5c0758bccdbbc6a09402
+  workflow_conclusion: failure
+  endpoint_jobs_completed: true
+  stage0_artifact:
+    name: q015-v2-stage0
+    artifact_id: 9846055938
+    digest: sha256:7adb0624a73f8071f2b4dfcac6e65ebfe2d4076277156a87b090c0cab7f99696
+  planck_endpoint_artifact:
+    name: q015-v2-endpoint-planck_npipe_k039_approx
+    artifact_id: 9846143033
+    digest: sha256:ff6439352ae00ad0c87befb07b035342abe5d1fecf5dee09b4eb84f241bad3a6
+  spt_endpoint_artifact:
+    name: q015-v2-endpoint-spt_d1_only
+    artifact_id: 9846127249
+    digest: sha256:b0740d6424b7f1fb85a6adf92a9bbd2205b27479fec2e7d2f6d97ee8c2be0c33
+
+scientific_surface:
+  model: ede_n3
+  n_scf: 3
+  target_h0: 71.5
+  common_backend_repository: https://github.com/mwt5345/class_ede.git
+  common_backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+  primary_chains:
+    - planck_npipe_k039_approx
+    - spt_d1_only
+  no_local_h0_prior: true
+  exact_q011_vector_is_not_primary_endpoint: true
+
+claim_boundaries:
+  planck_label: K039_PUBLIC_NPIPE_COMMON_BACKEND_APPROX
+  planck_paper_native_reproduction: false
+  spt_label: K040_SPT_D1_LIKELIHOOD_NATIVE_COMMON_BACKEND
+  spt_paper_native_reproduction: false
+  q011_status: BEST-OBSERVED MINIMUM ONLY
+  cross_chain_absolute_chi2_comparison_allowed: false
+  cross_chain_chi2_sum_allowed: false
+  component_attribution_is_covariance_coupled: true
+  covariance_allocations_rescaled: false
+  bridge_distributed_across_observables_or_ell: false
+  local_nuisance_probe_is_causal_attribution: false
+
+validation:
+  covariance_internal_abs_tol: 2.0e-4
+  endpoint_bridge_abs_tol: 0.15
+  endpoint_bridge_relative_tol: 1.0e-3
+  delta_bridge_abs_tol: 1.0e-2
+  driver_bridge_ratio_max: 5.0e-2
+  require_all_primary_chains: true
+  forbid_cross_chain_sum: true
+
+technical_repair:
+  parent_version: V2
+  parent_github_run: 33629190153
+  failure_class: INVALID_RAW_COVARIANCE_VS_SERIALIZED_LIKELIHOOD_IDENTITY_GATE
+  observed_planck_delta_bridge_chi2: -0.0028683517939498414
+  observed_spt_delta_bridge_chi2: -0.005677125250059603
+  repair: >-
+    Preserve the completed V2 covariance allocations exactly, remove the invalid
+    requirement that raw covariance quadratic chi2 equal serialized likelihood
+    component chi2, and certify an explicit likelihood-to-covariance bridge.
+    The bridge remains separate from TT/TE/EE and ell allocations and must be too
+    small to alter dominant-driver ranking.
+  scientific_surface_changed: false
+  endpoint_changed: false
+  likelihood_changed: false
+  covariance_changed: false
+  signed_covariance_allocations_changed: false
+  optimizer_rerun: false
+  theory_rerun: false

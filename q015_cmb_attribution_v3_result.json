@@ -1,0 +1,320 @@
+{
+  "claim_boundaries": {
+    "bridge_distributed_across_observables_or_ell": false,
+    "component_attribution_is_covariance_coupled": true,
+    "covariance_allocations_rescaled": false,
+    "cross_chain_absolute_chi2_comparison_allowed": false,
+    "cross_chain_chi2_sum_allowed": false,
+    "local_nuisance_probe_is_causal_attribution": false,
+    "planck_label": "K039_PUBLIC_NPIPE_COMMON_BACKEND_APPROX",
+    "planck_paper_native_reproduction": false,
+    "q011_status": "BEST-OBSERVED MINIMUM ONLY",
+    "spt_label": "K040_SPT_D1_LIKELIHOOD_NATIVE_COMMON_BACKEND",
+    "spt_paper_native_reproduction": false
+  },
+  "cross_chain_absolute_chi2_comparison_performed": false,
+  "execution_kind": "V2_ENDPOINT_ARTIFACT_CERTIFICATION_AND_MERGE_NO_THEORY_RERUN",
+  "execution_status": "COMPLETE",
+  "final_result_gate": "PASS",
+  "gates": {
+    "no_absolute_cross_chain_comparison_planck": true,
+    "no_absolute_cross_chain_comparison_spt": true,
+    "no_cross_chain_sum_planck": true,
+    "no_cross_chain_sum_spt": true,
+    "no_cross_chain_sum_stage0": true,
+    "planck_bridge_certification": true,
+    "q011_status_planck": true,
+    "q011_status_spt": true,
+    "spt_bridge_certification": true,
+    "stage0": true
+  },
+  "planck": {
+    "authoritative_parent_highl_delta_chi2": 4.273455177806682,
+    "bridge_certification": {
+      "delta_bridge": true,
+      "driver_ranking_robust_to_bridge": true,
+      "fixed_h0_71p5_covariance_internal": true,
+      "fixed_h0_71p5_likelihood_to_covariance_bridge": true,
+      "no_absolute_cross_chain_comparison": true,
+      "no_cross_chain_sum": true,
+      "q011_status_preserved": true,
+      "q011_vector_not_endpoint": true,
+      "reference_free_h0_covariance_internal": true,
+      "reference_free_h0_likelihood_to_covariance_bridge": true
+    },
+    "dominant_signed_allocations": [
+      {
+        "delta_chi2_allocation": 2.666679978118964,
+        "group": "TE|ell_500_999"
+      },
+      {
+        "delta_chi2_allocation": 2.078518064700802,
+        "group": "TT|ell_30_499"
+      },
+      {
+        "delta_chi2_allocation": -1.6224193499522244,
+        "group": "TE|ell_30_499"
+      },
+      {
+        "delta_chi2_allocation": 1.0033539158671374,
+        "group": "TT|ell_500_999"
+      },
+      {
+        "delta_chi2_allocation": -0.7242994692952607,
+        "group": "TE|ell_1000_1499"
+      },
+      {
+        "delta_chi2_allocation": 0.6553320234129387,
+        "group": "TT|ell_1500_1999"
+      },
+      {
+        "delta_chi2_allocation": 0.5703816617428856,
+        "group": "TT|ell_1000_1499"
+      },
+      {
+        "delta_chi2_allocation": -0.5513659500512631,
+        "group": "EE|ell_30_499"
+      },
+      {
+        "delta_chi2_allocation": 0.5059387032260929,
+        "group": "TT|ell_2000_2499"
+      },
+      {
+        "delta_chi2_allocation": -0.29363748957325697,
+        "group": "TE|ell_1500_1999"
+      },
+      {
+        "delta_chi2_allocation": 0.2329268361432355,
+        "group": "EE|ell_1000_1499"
+      },
+      {
+        "delta_chi2_allocation": -0.21797455621083373,
+        "group": "EE|ell_500_999"
+      }
+    ],
+    "ell_band_deltas": {
+      "ell_1000_1499": 0.07900902859501002,
+      "ell_1500_1999": 0.31576137491992995,
+      "ell_2000_2499": 0.5012029487022573,
+      "ell_2500_2999": 0.02355807490863171,
+      "ell_30_499": -0.09526723529870651,
+      "ell_500_999": 3.45205933777288
+    },
+    "likelihood_to_covariance_delta_bridge_chi2": -0.0028683517939498415,
+    "nuisance_movement": {
+      "A_planck": {
+        "fixed_h0_71p5_value": 1.0045284666009007,
+        "fixed_minus_free": 0.004795687813768712,
+        "fixed_offset_from_constraint_mean_sigma": 1.8113866403602685,
+        "free_offset_from_constraint_mean_sigma": -0.10688848514721627,
+        "free_value": 0.999732778787132,
+        "movement_in_step_units": 1.9182751255074848,
+        "step_or_reference_scale": 0.0025
+      },
+      "calEE": {
+        "fixed_h0_71p5_value": 1.0010007401048762,
+        "fixed_minus_free": 0.004536950201940115,
+        "fixed_offset_from_constraint_mean_sigma": 0.10007401048761633,
+        "free_offset_from_constraint_mean_sigma": -0.3536210097063952,
+        "free_value": 0.996463789902936,
+        "movement_in_step_units": 0.45369502019401153,
+        "step_or_reference_scale": 0.01
+      },
+      "calTE": {
+        "fixed_h0_71p5_value": 0.9981116534420776,
+        "fixed_minus_free": 0.0023187332080816248,
+        "fixed_offset_from_constraint_mean_sigma": -0.18883465579223602,
+        "free_offset_from_constraint_mean_sigma": -0.4207079766003985,
+        "free_value": 0.995792920233996,
+        "movement_in_step_units": 0.23187332080816248,
+        "step_or_reference_scale": 0.01
+      }
+    },
+    "observable_deltas": {
+      "EE": -0.5823303144843521,
+      "TE": 0.021571400221091608,
+      "TT": 4.837082443867075
+    },
+    "observable_ell_deltas": {
+      "EE|ell_1000_1499": 0.2329268361432355,
+      "EE|ell_1500_1999": -0.04593315892503824,
+      "EE|ell_2000_2499": 1.651455687229353e-05,
+      "EE|ell_30_499": -0.5513659500512631,
+      "EE|ell_500_999": -0.21797455621083373,
+      "TE|ell_1000_1499": -0.7242994692952607,
+      "TE|ell_1500_1999": -0.29363748957325697,
+      "TE|ell_2000_2499": -0.00475226908081125,
+      "TE|ell_30_499": -1.6224193499522244,
+      "TE|ell_500_999": 2.666679978118964,
+      "TT|ell_1000_1499": 0.5703816617428856,
+      "TT|ell_1500_1999": 0.6553320234129387,
+      "TT|ell_2000_2499": 0.5059387032260929,
+      "TT|ell_2500_2999": 0.02355807490863171,
+      "TT|ell_30_499": 2.078518064700802,
+      "TT|ell_500_999": 1.0033539158671374
+    },
+    "raw_covariance_allocation_delta_chi2": 4.2763235296006314,
+    "spectrum_deltas": {
+      "143x143": -12.927554872342625,
+      "143x217": 24.634984787784106,
+      "217x217": -6.87034747157486,
+      "EE": -0.5823303144843521,
+      "TE": 0.021571400221091608
+    }
+  },
+  "planck_spt_chi2_sum_performed": false,
+  "q": "Q015",
+  "q011_globality_status_preserved": "BEST-OBSERVED MINIMUM ONLY",
+  "q014_penalties_preserved": {
+    "planck_npipe_k039_approx": 12.873928089302353,
+    "spt_d1_only": 0.34206744242794684,
+    "spt_d1_plus_desi_secondary": 0.1573873566196653
+  },
+  "result_id": "R-Q015-EDE-CMB-ATTRIBUTION-003",
+  "run_id": "Q015-CMB-ATTRIBUTION-V3",
+  "scientific_interpretation": {
+    "bridge_statement": "The raw covariance allocations are not rescaled. Small non-bandpower-attributable bridge terms are reported separately and pass robustness gates showing they do not control the dominant driver ranking.",
+    "cross_chain_statement": "These are separate within-chain attributions. No Planck-SPT absolute chi2 comparison or chi2 sum was formed.",
+    "planck_highl_driver": "Within the Planck high-l covariance allocation, TT supplies the net penalty while EE partially compensates and TE is nearly neutral in the observable-summed allocation. The largest ell-band allocation is ell=500-999.",
+    "spt_primary_driver": "Within SPT D1 primary, TE supplies the net penalty while TT compensates and EE is smaller positive. The ell dependence is strongly cancelling rather than uniformly penalizing high H0."
+  },
+  "scientifically_usable_result": true,
+  "source_q015_v2_github_run": 33629190153,
+  "spt": {
+    "authoritative_parent_primary_delta_chi2": 0.743682861328125,
+    "bridge_certification": {
+      "delta_bridge": true,
+      "driver_ranking_robust_to_bridge": true,
+      "fixed_h0_71p5_covariance_internal": true,
+      "fixed_h0_71p5_likelihood_to_covariance_bridge": true,
+      "no_absolute_cross_chain_comparison": true,
+      "no_cross_chain_sum": true,
+      "q011_status_preserved": true,
+      "q011_vector_not_endpoint": true,
+      "reference_free_h0_covariance_internal": true,
+      "reference_free_h0_likelihood_to_covariance_bridge": true
+    },
+    "dominant_signed_allocations": [
+      {
+        "delta_chi2_allocation": 0.7244571135381648,
+        "group": "EE|ell_500_999"
+      },
+      {
+        "delta_chi2_allocation": 0.43329675931515865,
+        "group": "TE|ell_3000_plus"
+      },
+      {
+        "delta_chi2_allocation": 0.40786607296456623,
+        "group": "TE|ell_2500_2999"
+      },
+      {
+        "delta_chi2_allocation": -0.37624720705928283,
+        "group": "TT|ell_1500_1999"
+      },
+      {
+        "delta_chi2_allocation": 0.3428375095902494,
+        "group": "TE|ell_2000_2499"
+      },
+      {
+        "delta_chi2_allocation": 0.3366907675615378,
+        "group": "TT|ell_1000_1499"
+      },
+      {
+        "delta_chi2_allocation": -0.3053372304265576,
+        "group": "EE|ell_2000_2499"
+      },
+      {
+        "delta_chi2_allocation": -0.2888139581721205,
+        "group": "EE|ell_1500_1999"
+      },
+      {
+        "delta_chi2_allocation": -0.21164612007412043,
+        "group": "TT|ell_30_499"
+      },
+      {
+        "delta_chi2_allocation": -0.19871306622102303,
+        "group": "TE|ell_1500_1999"
+      },
+      {
+        "delta_chi2_allocation": 0.1397832424355201,
+        "group": "TE|ell_1000_1499"
+      },
+      {
+        "delta_chi2_allocation": -0.12037444324929059,
+        "group": "TT|ell_500_999"
+      }
+    ],
+    "ell_band_deltas": {
+      "ell_1000_1499": 0.4921916873369767,
+      "ell_1500_1999": -0.8637742314524175,
+      "ell_2000_2499": -0.04397090271603332,
+      "ell_2500_2999": 0.24239513050046924,
+      "ell_3000_plus": 0.4633723373480727,
+      "ell_30_499": -0.11993749427983591,
+      "ell_500_999": 0.579083459841037
+    },
+    "likelihood_to_covariance_delta_bridge_chi2": -0.005677125250059589,
+    "nuisance_movement": {
+      "Ecal": {
+        "fixed_h0_71p5_value": 1.0160120067685994,
+        "fixed_minus_free": 0.0013619637487713998,
+        "free_value": 1.014650043019828,
+        "movement_in_step_units": 0.13619637487713998,
+        "step_or_reference_scale": 0.01
+      },
+      "Tcal": {
+        "fixed_h0_71p5_value": 0.9994925358693744,
+        "fixed_minus_free": 6.35388133645165e-05,
+        "fixed_offset_from_constraint_mean_sigma": -0.14096225850712069,
+        "free_offset_from_constraint_mean_sigma": -0.15861192888615305,
+        "free_value": 0.9994289970560098,
+        "movement_in_step_units": 0.01764967037903236,
+        "step_or_reference_scale": 0.0036
+      }
+    },
+    "observable_deltas": {
+      "EE": 0.16844828445710647,
+      "TE": 1.1381904160330478,
+      "TT": -0.5572787139118347
+    },
+    "observable_ell_deltas": {
+      "EE|ell_1000_1499": 0.015717677339917913,
+      "EE|ell_1500_1999": -0.2888139581721205,
+      "EE|ell_2000_2499": -0.3053372304265576,
+      "EE|ell_2500_2999": -0.06124041325311236,
+      "EE|ell_3000_plus": 0.030075578032931816,
+      "EE|ell_30_499": 0.05358951739786599,
+      "EE|ell_500_999": 0.7244571135381648,
+      "TE|ell_1000_1499": 0.1397832424355201,
+      "TE|ell_1500_1999": -0.19871306622102303,
+      "TE|ell_2000_2499": 0.3428375095902494,
+      "TE|ell_2500_2999": 0.40786607296456623,
+      "TE|ell_3000_plus": 0.43329675931515865,
+      "TE|ell_30_499": 0.0381191083964188,
+      "TE|ell_500_999": -0.024999210447834486,
+      "TT|ell_1000_1499": 0.3366907675615378,
+      "TT|ell_1500_1999": -0.37624720705928283,
+      "TT|ell_2000_2499": -0.08147118187971358,
+      "TT|ell_2500_2999": -0.10423052921098908,
+      "TT|ell_30_499": -0.21164612007412043,
+      "TT|ell_500_999": -0.12037444324929059
+    },
+    "raw_covariance_allocation_delta_chi2": 0.7493599865781846,
+    "spectrum_deltas": {
+      "EE lxl": 0.16844828445710647,
+      "TE lxl": 1.1381904160330478,
+      "TT lxl": -0.5572787139118347
+    }
+  },
+  "stage": "FINAL",
+  "stage0_partition": {
+    "planck_cmb_within_chain_delta": 4.54101914106039,
+    "planck_constraint_shape_delta": 3.01332672734087,
+    "planck_low_z_within_chain_delta": 5.319582220901115,
+    "spt_constraint_shape_delta": -0.005287385661557755,
+    "spt_primary_plus_lensing_within_chain_delta": 0.39200179967371795,
+    "spt_tau_information_delta": -0.04464697158422304,
+    "warning": "These are within-chain partitions. Do not subtract/sum them as a cross-chain chi-square statistic."
+  },
+  "tests_status": "COMPLETE"
+}

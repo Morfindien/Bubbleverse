@@ -1,0 +1,54 @@
+{
+  "chains": [
+    {
+      "chain": "planck_npipe_k039_approx",
+      "endpoints": {
+        "fixed_h0_71p5": {
+          "parent_minus_raw_bridge_chi2": -5.420020534074865e-05,
+          "parent_serialized_component_chi2": 10548.497203272542,
+          "raw_covariance_chi2": 10548.497257472747,
+          "raw_minus_signed_sum": 1.8189894035458565e-12
+        },
+        "reference_free_h0": {
+          "parent_minus_raw_bridge_chi2": 0.002814151588609093,
+          "parent_serialized_component_chi2": 10544.223748094735,
+          "raw_covariance_chi2": 10544.220933943147,
+          "raw_minus_signed_sum": -3.637978807091713e-12
+        }
+      },
+      "parent_fixed_minus_free_delta_chi2": 4.273455177806682,
+      "parent_minus_raw_delta_bridge_chi2": -0.0028683517939498415,
+      "raw_covariance_fixed_minus_free_delta_chi2": 4.2763235296006314,
+      "v2_parent_primary_component_delta_gate": false,
+      "v2_status": "FAIL"
+    },
+    {
+      "chain": "spt_d1_only",
+      "endpoints": {
+        "fixed_h0_71p5": {
+          "parent_minus_raw_bridge_chi2": -0.09201602074273296,
+          "parent_serialized_component_chi2": 158.57460021972656,
+          "raw_covariance_chi2": 158.6666162404693,
+          "raw_minus_signed_sum": -5.684341886080802e-14
+        },
+        "reference_free_h0": {
+          "parent_minus_raw_bridge_chi2": -0.08633889549267337,
+          "parent_serialized_component_chi2": 157.83091735839844,
+          "raw_covariance_chi2": 157.9172562538911,
+          "raw_minus_signed_sum": 2.842170943040401e-14
+        }
+      },
+      "parent_fixed_minus_free_delta_chi2": 0.743682861328125,
+      "parent_minus_raw_delta_bridge_chi2": -0.005677125250059589,
+      "raw_covariance_fixed_minus_free_delta_chi2": 0.7493599865781846,
+      "v2_parent_primary_component_delta_gate": false,
+      "v2_status": "FAIL"
+    }
+  ],
+  "diagnostic": "Q015_V2_VALIDATION_DEFINITION_FAILURE",
+  "endpoint_execution_failure": false,
+  "finding": "V2 endpoint computations completed. Failure came from comparing raw covariance quadratic allocations directly against serialized likelihood component chi2. Small bridge terms exist and must remain separate from bandpower attribution.",
+  "physics_failure": false,
+  "q": "Q015",
+  "source_github_run": 33629190153
+}

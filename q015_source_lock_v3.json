@@ -1,0 +1,59 @@
+{
+  "q": "Q015",
+  "run_id": "Q015-CMB-ATTRIBUTION-V3",
+  "result_id": "R-Q015-EDE-CMB-ATTRIBUTION-003",
+  "generated_at": "2026-09-02T15:16:00+02:00",
+  "bubbleverse_repository": "https://github.com/Morfindien/Bubbleverse",
+  "execution_class": "POSTPROCESS_COMPLETED_Q015_V2_ENDPOINT_ARTIFACTS",
+  "q015_v2_parent": {
+    "github_run": 33629190153,
+    "head_sha": "78a65aae897fca18132a5c0758bccdbbc6a09402",
+    "stage0_artifact": {
+      "artifact_id": 9846055938,
+      "digest": "sha256:7adb0624a73f8071f2b4dfcac6e65ebfe2d4076277156a87b090c0cab7f99696"
+    },
+    "planck_endpoint_artifact": {
+      "artifact_id": 9846143033,
+      "digest": "sha256:ff6439352ae00ad0c87befb07b035342abe5d1fecf5dee09b4eb84f241bad3a6"
+    },
+    "spt_endpoint_artifact": {
+      "artifact_id": 9846127249,
+      "digest": "sha256:b0740d6424b7f1fb85a6adf92a9bbd2205b27479fec2e7d2f6d97ee8c2be0c33"
+    }
+  },
+  "frozen_science_parent": {
+    "q014_run_id": "Q014-EXTERNAL-VIABILITY-V12",
+    "q014_result_id": "R-Q014-EDE-EXTERNAL-VIABILITY-009",
+    "q014_github_run": 33597153303,
+    "q014_artifact_digest": "sha256:7ac4b9a2ef6f9d64bebaa55cec50fa8cf84cfaba7bc00fe8cd055ee183e65856",
+    "q011_status": "BEST-OBSERVED MINIMUM ONLY",
+    "class_ede_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97"
+  },
+  "v2_failure_diagnosis": {
+    "physics_failure": false,
+    "endpoint_execution_failure": false,
+    "planck_endpoint_job_success": true,
+    "spt_endpoint_job_success": true,
+    "stage0_job_success": true,
+    "merge_job_failure": true,
+    "failure_class": "INVALID_RAW_COVARIANCE_VS_SERIALIZED_LIKELIHOOD_IDENTITY_GATE",
+    "basis": "candl gaussian_logl can include an add_logdet normalization term; direct covariance allocation represents the bandpower-attributable quadratic form. Small finite-precision/convention bridges are therefore kept explicit rather than assigned to bandpowers."
+  },
+  "method": {
+    "observable_attribution": "V2 signed covariance allocation c_i=d_i(C^-1 d)_i retained byte-for-value through JSON input; no rescaling",
+    "bridge": "parent serialized likelihood component chi2 minus raw covariance quadratic chi2",
+    "bridge_policy": "never distribute bridge across TT/TE/EE, spectra, or ell bins",
+    "dominant_driver_gate": "absolute delta bridge / largest absolute observable+ell allocation <= 0.05"
+  },
+  "forbidden": [
+    "cross-chain absolute chi2 comparison",
+    "Planck+SPT chi2 sum",
+    "rescaling signed covariance allocations to force closure",
+    "distributing normalization/convention bridge over observables or ell bins",
+    "renaming Planck as exact K-039 reproduction",
+    "renaming SPT as exact K-040/AxiCLASS reproduction",
+    "changing Q011 to a global minimum",
+    "introducing H0DN or SH0ES prior",
+    "changing n=3 common backend"
+  ]
+}
