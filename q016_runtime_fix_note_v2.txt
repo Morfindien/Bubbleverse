@@ -1,0 +1,34 @@
+Q016 V2 TECHNICAL REPAIR
+
+V1 observed failure:
+ModuleNotFoundError: No module named 'yaml'
+
+FAILURE CLASS:
+ENVIRONMENT
+
+SCIENTIFIC RESULT:
+NOT PRODUCED BY V1
+
+V2 REPAIR:
+- Explicitly installs PyYAML in preflight.
+- Explicitly installs PyYAML in primary jobs.
+- Explicitly installs PyYAML in final_gates.
+- Aligns workflow, program, config, merge, tests, source lock, RUN_ID and RESULT_ID to V2.
+
+SCIENTIFIC CHANGES:
+NONE
+
+UNCHANGED:
+- Q016
+- n=3 EDE
+- class_ede commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+- H0=71.5 fixed target
+- TT/TE/EE
+- ell=600-2000 primary matched surface
+- common tau treatment
+- no DESI/BAO/Pantheon+/H0DN/SH0ES in primary
+- no cross-chain chi2 sum
+- no absolute cross-chain chi2 comparison
+- Q011 non-portability rule
+- multistart stability threshold
+- all scientific gates
