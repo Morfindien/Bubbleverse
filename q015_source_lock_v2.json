@@ -1,0 +1,121 @@
+{
+  "bubbleverse_repository": "https://github.com/Morfindien/Bubbleverse",
+  "cobaya": {
+    "git_commit": "6a48864aa3f541df233435070a3c89d65c2ad936",
+    "git_tag": "v3.5.6",
+    "version": "3.5.6"
+  },
+  "common_backend": {
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "model": "n_scf=3",
+    "repository": "https://github.com/mwt5345/class_ede.git"
+  },
+  "forbidden": [
+    "cross-chain absolute chi2 comparison",
+    "Planck+SPT chi2 sum",
+    "renaming Planck branch as exact K-039 reproduction",
+    "renaming SPT branch as exact K-040/AxiCLASS reproduction",
+    "changing Q011 to global minimum",
+    "using exact Q011 vector as the Q015 profile endpoint",
+    "introducing H0DN or SH0ES prior",
+    "transferring ACT nuisance parameters to Planck or SPT",
+    "using K-038 n=2 as n=3 evidence"
+  ],
+  "generated_at": "2026-09-02T13:04:00+02:00",
+  "method": {
+    "endpoint_source": "Q014 V12 best free-H0 and fixed-H0=71.5 records; no new optimizer",
+    "interpretation": "groups are covariance-coupled additive allocations, not independent chi-square experiments",
+    "nuisance_probe": "local conditional fixed-theory perturbation; diagnostic, not causal reprofiled attribution",
+    "observable_attribution": "signed covariance allocation c_i = d_i (C^-1 d)_i"
+  },
+  "planck": {
+    "claim": "COMMON_BACKEND_APPROXIMATION_ONLY",
+    "constraints": {
+      "A_planck": "N(1, 0.0025^2)",
+      "calEE": "N(1, 0.01^2)",
+      "calTE": "N(1, 0.01^2)"
+    },
+    "likelihood": "planck_NPIPE_highl_CamSpec.TTTEEE",
+    "paper_arxiv_from_existing_q014_source_lock": "2311.00524",
+    "paper_native_reproduction": false,
+    "public_product": "Planck PR4/NPIPE CamSpec PR4-12.6cl as bundled by Cobaya",
+    "source_id": "K-039"
+  },
+  "q": "Q015",
+  "q011_parent": {
+    "artifact": "q011-ede-globality-certification-v4-final",
+    "artifact_digest": "sha256:72eb1ec17fc6ab8988e2a6d5456e68865c4a926e2f3ea9e581b3b6d07b403a33",
+    "artifact_id": 9783850582,
+    "github_run": 33363067156,
+    "result_id": "R-Q011-EDE-GLOBALITY-CERTIFICATION-004",
+    "run_id": "Q011-EDE-GLOBALITY-CERTIFICATION-V4",
+    "status": "BEST-OBSERVED MINIMUM ONLY"
+  },
+  "q014_parent": {
+    "artifact": "q014-external-viability-v12-final",
+    "artifact_digest": "sha256:7ac4b9a2ef6f9d64bebaa55cec50fa8cf84cfaba7bc00fe8cd055ee183e65856",
+    "artifact_id": 9837116589,
+    "github_run": 33597153303,
+    "head_sha": "ab42b1937ca935f498a006ead2c034954ce1d81f",
+    "result_id": "R-Q014-EDE-EXTERNAL-VIABILITY-009",
+    "role": "FROZEN NUMERICAL PARENT; Q015 MUST NOT REOPEN Q014",
+    "run_id": "Q014-EXTERNAL-VIABILITY-V12"
+  },
+  "reuse_policy": "SEARCH -> REUSE -> PATCH -> BUILD NEW",
+  "reused_bubbleverse_components": {
+    "q005_hpc_v14.py": "TRANSITIVE REUSE - frozen n=3 common backend",
+    "q007_act_observable_attribution_v2.py": "REFERENCE ONLY - signed covariance attribution d_i(C^-1 d)_i",
+    "q012_likelihood_attribution_v1.py": "REFERENCE ONLY - component-attribution pattern",
+    "q014_external_viability_v12.py": "PATCH/IMPORT - chain construction and frozen Q014 surface",
+    "q014_external_viability_v12_config.yml": "REUSE - likelihood/model definitions",
+    "q014_external_viability_v12_source_lock.json": "REFERENCE ONLY - objective/source provenance",
+    "q014_setup_v12.sh": "REUSE - validated environment transport",
+    "q015_cmb_attribution_v1.py": "TECHNICAL PARENT ONLY - V1 failure reproduced/diagnosed; not science"
+  },
+  "run_id": "Q015-CMB-ATTRIBUTION-V2",
+  "spt": {
+    "candl_distribution": "candl-like",
+    "candl_version": "2.0.3",
+    "claim": "OFFICIAL LIKELIHOOD PRODUCTS WITH COMMON BUBBLEVERSE BACKEND",
+    "dataset": "SPT3G_D1_TnE",
+    "nuisance": {
+      "Ecal": "uniform 0.8..1.2; no Gaussian constraint",
+      "Tcal": "uniform 0.8..1.2 + N(1,0.0036^2)"
+    },
+    "paper_adjacent_pinned_commit": "2cec6e762a8c540484dd5acafc529f0035856350",
+    "paper_arxiv_from_existing_q014_source_lock": "2507.23355",
+    "paper_native_reproduction": false,
+    "source_id": "K-040",
+    "spt_candl_data_repository": "https://github.com/SouthPoleTelescope/spt_candl_data",
+    "variant": "lite"
+  },
+  "technical_parent_v1": {
+    "failed_location": "planck_highl_state -> like.get_foregrounds(pars)",
+    "failure_class": "PLANCK_DIRECT_CAMSPEC_PARAMETER_EXPANSION_BUG",
+    "failure_signature": "KeyError: use_fg_residual_model",
+    "program": "q015_cmb_attribution_v1.py",
+    "program_git_blob": "4bc4289a0de156199ca27de28e670c56dd9a458f",
+    "repository_head_at_diagnosis": "f5209801c1804e450c015bc60a2aa2ac23914933",
+    "scientific_result_produced": false,
+    "status": "TECHNICAL_FAILURE_BEFORE_PLANCK_ATTRIBUTION_RESULT",
+    "workflow": ".github/workflows/q015-cmb-attribution-v1.yml",
+    "workflow_git_blob": "852e1196e0e1389f40bce6889bae28af649eb334"
+  },
+  "v2_repair": {
+    "cobaya_api_source": "cobaya.parameterization.Parameterization.constant_params()",
+    "constraints_changed": false,
+    "covariance_changed": false,
+    "endpoint_changed": false,
+    "likelihood_changed": false,
+    "planck_fixed_defaults_expected": [
+      "use_fg_residual_model",
+      "cal0",
+      "cal2",
+      "amp_100",
+      "n_100"
+    ],
+    "repair": "Use Cobaya model.parameterization.constant_params() after get_model() as authoritative expanded fixed likelihood parameter transport, then override with Q014 serialized endpoint and explicit freezes.",
+    "scientific_surface_changed": false,
+    "validation_thresholds_changed": false
+  }
+}
