@@ -1,0 +1,47 @@
+Q016 V6 — TARGETED BASIN REPLICATION
+
+WHY V5 EXITED 2
+V5 repaired all previous technical failures. All six V5 repair/rescue jobs completed.
+The merged continuation contained 27 COMPLETE minima.
+
+The V5 merge failed only because MULTISTART_STABILITY_GATE remained false for:
+- Planck reference_free_h0: best-two Δχ² = 1.4695127937429788
+- SPT fixed_h0_71p5: best-two Δχ² = 2.764080047607422
+- ACT fixed_h0_71p5: best-two Δχ² = 2.6271694950539484
+
+The unchanged threshold is Δχ² <= 1.0.
+
+V6 DOES NOT RELAX THAT GATE.
+
+V6 performs three independent, pointlike, slightly perturbed optimizer starts around
+the current best-observed basin for each of the three unstable profiles.
+
+Target centers:
+Planck free H0: χ²=4197.924526680114, H0=68.19688822112573, source V4 r0.
+SPT fixed H0=71.5: χ²=61.57393264770508, source V4 r3.
+ACT fixed H0=71.5: χ²=79.87784099066869, source V4 r0.
+
+For a previously unstable profile to pass:
+1. at least two distinct COMPLETE restarts must lie within Δχ² <= 1.0 of the best;
+2. at least one of those replicas must be a new V6 targeted-basin run.
+
+If a V6 run discovers a new lower isolated minimum and it is not independently
+reproduced within Δχ² <= 1.0, the profile remains FAIL. This prevents gate-gaming.
+
+NO SCIENTIFIC SURFACE CHANGE
+- same n=3 EDE backend and commit
+- same H0 target 71.5
+- same ell 600-2000
+- same TT/TE/EE
+- same tau information
+- same likelihoods/nuisances/priors/bounds
+- no low-z data
+- no lensing
+- no cross-chain chi2 sum
+- exact Q011 vector remains non-portable
+
+STAGE SEMANTICS
+A successful V6 workflow certifies only PRIMARY ENDPOINTS.
+It reports FINAL_RESULT_GATE=PENDING_LATER_STAGES and exits green for this stage.
+Full Q016 still requires covariance-aware attribution, common residual-vector tests,
+and the secondary ell=1000-2000 full-vs-lite/frequency mechanism analysis.

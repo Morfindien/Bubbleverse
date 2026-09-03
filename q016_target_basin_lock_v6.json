@@ -1,0 +1,176 @@
+{
+  "authoritative_parent": {
+    "v4": {
+      "github_run_id": 33693382859,
+      "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+      "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+    },
+    "v5": {
+      "github_run_id": 33720410690,
+      "head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+      "merged_artifact_digest": "sha256:0ee0ec9d8b7b0f05a83f78d54efd572e702ff98b44d9fdafd9f0c3ec6be3576e",
+      "merged_artifact_id": 9884213098,
+      "run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+    }
+  },
+  "q": "Q016",
+  "restart_perturbations": {
+    "6": {
+      "A_act": -0.0015,
+      "A_planck": 0.0002,
+      "Ecal": -0.0015,
+      "H0": 0.1,
+      "P_act": 0.0008,
+      "Tcal": -0.0002,
+      "calEE": -0.0007,
+      "calTE": 0.0007,
+      "fEDE": 0.004,
+      "log10z_c": -0.025,
+      "logA": -0.0025,
+      "n_s": 0.001,
+      "omega_b": 2e-05,
+      "omega_cdm": -0.00025,
+      "tau_reio": -0.0008,
+      "thetai_scf": -0.04
+    },
+    "7": {
+      "A_act": 0.0016,
+      "A_planck": -0.00018,
+      "Ecal": 0.0017,
+      "H0": -0.12,
+      "P_act": -0.0007,
+      "Tcal": 0.00018,
+      "calEE": 0.0008,
+      "calTE": -0.0008,
+      "fEDE": -0.0035,
+      "log10z_c": 0.03,
+      "logA": 0.0028,
+      "n_s": -0.0011,
+      "omega_b": -1.8e-05,
+      "omega_cdm": 0.00028,
+      "tau_reio": 0.0007,
+      "thetai_scf": 0.045
+    },
+    "8": {
+      "A_act": 0.0007,
+      "A_planck": 8e-05,
+      "Ecal": -0.0007,
+      "H0": 0.04,
+      "P_act": 0.0003,
+      "Tcal": 8e-05,
+      "calEE": 0.0003,
+      "calTE": -0.0003,
+      "fEDE": 0.0015,
+      "log10z_c": 0.012,
+      "logA": 0.001,
+      "n_s": 0.0004,
+      "omega_b": 8e-06,
+      "omega_cdm": 0.0001,
+      "tau_reio": 0.0003,
+      "thetai_scf": -0.018
+    }
+  },
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+  "rules": {
+    "failed_v4_spt_r1_raw_minimum_usable": false,
+    "minimum_replicates_within_delta_chi2": 2,
+    "multistart_delta_chi2_max": 1.0,
+    "no_gate_relaxation": true,
+    "pointlike_start_vectors": true,
+    "same_scientific_surface": true,
+    "targeted_restart_ids": [
+      6,
+      7,
+      8
+    ],
+    "targeted_v6_replica_required_for_previously_unstable_profiles": true
+  },
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+  "targeted_profiles": {
+    "act|fixed_h0_71p5": {
+      "source": {
+        "chi2": 79.87784099066869,
+        "restart": 0,
+        "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+      },
+      "values": {
+        "A_act": 1.0102223810794246,
+        "P_act": 1.0019334841536207,
+        "fEDE": 0.09932262420071834,
+        "log10z_c": 3.418382976454629,
+        "logA": 3.091681922581024,
+        "n_s": 0.9574355801024922,
+        "omega_b": 0.02295710568017845,
+        "omega_cdm": 0.12880435178112198,
+        "tau_reio": 0.05391823405354882,
+        "thetai_scf": 2.8368183913214096
+      }
+    },
+    "planck|reference_free_h0": {
+      "source": {
+        "chi2": 4197.924526680114,
+        "restart": 0,
+        "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+      },
+      "values": {
+        "A_planck": 0.9998538432377321,
+        "H0": 68.19688822112573,
+        "calEE": 0.9970649283790691,
+        "calTE": 0.9993695438575175,
+        "fEDE": 0.03716701254895965,
+        "log10z_c": 3.9768151543564496,
+        "logA": 3.0393868147862633,
+        "n_s": 0.9769637862810009,
+        "omega_b": 0.022368755195641427,
+        "omega_cdm": 0.12288270859183321,
+        "tau_reio": 0.05412157233267272,
+        "thetai_scf": 2.9199610414751476
+      }
+    },
+    "spt|fixed_h0_71p5": {
+      "source": {
+        "chi2": 61.57393264770508,
+        "restart": 3,
+        "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+      },
+      "values": {
+        "Ecal": 1.0141772912600435,
+        "Tcal": 1.0007615441258744,
+        "fEDE": 0.10097399410922664,
+        "log10z_c": 3.7150377578732066,
+        "logA": 3.0506842817227766,
+        "n_s": 0.9850056143531744,
+        "omega_b": 0.022720591178722313,
+        "omega_cdm": 0.12574103811760404,
+        "tau_reio": 0.04973115014942644,
+        "thetai_scf": 2.312388945818027
+      }
+    }
+  },
+  "v5_primary_gate_state": {
+    "act_fixed_h0_71p5": {
+      "best_two_spread": 2.6271694950539484,
+      "stable": false
+    },
+    "act_reference_free_h0": {
+      "best_two_spread": 0.5861424661182753,
+      "stable": true
+    },
+    "planck_fixed_h0_71p5": {
+      "best_two_spread": 0.2650607935656808,
+      "stable": true
+    },
+    "planck_reference_free_h0": {
+      "best_two_spread": 1.4695127937429788,
+      "stable": false
+    },
+    "spt_fixed_h0_71p5": {
+      "best_two_spread": 2.764080047607422,
+      "stable": false
+    },
+    "spt_reference_free_h0": {
+      "best_two_spread": 0.008563995361328125,
+      "stable": true
+    }
+  }
+}
