@@ -1,0 +1,75 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "compute_plan": {
+    "internal_soft_timeout_minutes": 315,
+    "max_parallel": 6,
+    "per_job_github_timeout_minutes": 330,
+    "phase1_expensive_jobs_reused": 12,
+    "phase1_rerun": false,
+    "phase2_expensive_jobs_remaining": 12
+  },
+  "continuation_parent": {
+    "github_run_id": 33749345635,
+    "head_sha": "35fa2038456e8c2e40885b37d5ea27e595eac4b2",
+    "phase1_workers": "12/12 SUCCESS",
+    "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+    "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+    "summary_failure": "NON_RECURSIVE_PATH_DISCOVERY"
+  },
+  "files": [
+    "q016-matched-cmb-surface-v10.yml",
+    "q016_act_asset_v10.sh",
+    "q016_aggregate_v10.py",
+    "q016_compute_architecture_v10.json",
+    "q016_file_manifest_v10.json",
+    "q016_matched_cmb_surface_v10_config.yml",
+    "q016_objective_reprofile_v10.py",
+    "q016_runtime_fix_note_v10.txt",
+    "q016_setup_v10.sh",
+    "q016_source_lock_v10.json",
+    "q016_tests_v10.py",
+    "q016_v6_objective_seed_lock_v10.json",
+    "q016_v9_phase1_parent_lock_v10.json",
+    "q016_v9_phase1_recovered_summary_v10.json"
+  ],
+  "gate_relaxations": false,
+  "q": "Q016",
+  "recovered_v9_phase1": {
+    "act": {
+      "best_objective": 78.24987096226769,
+      "best_restart": 3,
+      "replicates_within_delta_1": 4,
+      "stable": true
+    },
+    "planck": {
+      "best_objective": 4203.595181947479,
+      "best_restart": 2,
+      "replicates_within_delta_1": 2,
+      "stable": true
+    },
+    "spt": {
+      "best_objective": 60.487517785271514,
+      "best_restart": 1,
+      "replicates_within_delta_1": 3,
+      "stable": true
+    }
+  },
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-010",
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V10",
+  "scientific_changes_from_v9": false,
+  "static_validation": {
+    "actual_v9_artifact_recovery": "PASS",
+    "actual_v9_fixed_multistart_all_branches": "PASS",
+    "continuation_architecture": "PASS",
+    "no_phase1_rerun": "PASS",
+    "q016_act_asset_v10.sh": "PASS",
+    "q016_aggregate_v10.py": "PASS",
+    "q016_objective_reprofile_v10.py": "PASS",
+    "q016_setup_v10.sh": "PASS",
+    "q016_tests_v10.py": "PASS",
+    "recursive_artifact_discovery": "PASS",
+    "remaining_job_count_12": "PASS",
+    "yaml": "PASS"
+  },
+  "status": "PROGRAM GENERATED \u2014 NOT YET EXECUTED"
+}

@@ -1,0 +1,88 @@
+Q016 V10 — V9 PHASE-1 ARTIFACT CONTINUATION
+
+V9 GITHUB RUN
+33749345635
+
+V9 HEAD SHA
+35fa2038456e8c2e40885b37d5ea27e595eac4b2
+
+V9 EXECUTION STATUS
+prepare: PASS
+Cobaya exact-objective runtime toy test: PASS
+V6 parent seed lock: PASS
+ACT asset: PASS
+Phase-1 fixed H0=71.5 workers: 12/12 SUCCESS
+phase1_summary: FAIL
+
+ROOT CAUSE
+The V9 worker artifacts preserved their internal directory:
+  q016_v9_phase1/
+
+The V9 aggregator searched only:
+  Path(root).glob("<branch>_fixed_h0_71p5_*.json")
+
+Therefore it searched the artifact download root but did not descend into
+q016_v9_phase1/. It found zero records and wrote complete_count=0 for all
+branches despite all 12 worker jobs being successful.
+
+V10 REPAIR
+1. Replace non-recursive Path.glob with Path.rglob for profile record discovery.
+2. Apply the same recursive discovery to the later Phase-2/free aggregation so
+   the same bug cannot recur at merge_primary.
+3. Authenticate the exact V9 run and all 12 Phase-1 artifacts by:
+   - GitHub run ID
+   - head SHA
+   - exact artifact name
+   - artifact ID
+   - SHA-256 digest
+4. Preserve the V9 run/result identity of every imported fixed-H0 record.
+5. Build a V10 Phase-1 summary from those authenticated V9 records.
+6. DO NOT rerun Phase 1.
+7. Run only the 12 remaining Phase-2 free-H0 jobs.
+
+NO SCIENTIFIC RELAXATION
+No change to:
+- n=3 EDE model
+- backend commit
+- primary CMB datasets
+- TT/TE/EE
+- ell=600..2000
+- H0 fixed target 71.5
+- explicit normalization-free shape likelihoods
+- ignore_prior=True
+- seed preservation tolerance 0.05
+- embedding equivalence tolerance 0.05
+- multistart threshold Delta objective <= 1.0
+- minimum 4 complete starts/profile
+- minimum 2 starts within Delta<=1
+- profile nesting tolerance 0.25
+- cross-chain chi2 prohibition
+
+RECOVERED V9 PHASE-1 VALUES FROM THE ACTUAL ARTIFACTS
+Planck:
+  best objective = 4203.595181947479 (restart 2)
+  restart 0 delta = 0.4792093274800209
+  starts within Delta<=1 = 2
+  fixed multistart = PASS
+
+SPT:
+  best objective = 60.487517785271514 (restart 1)
+  restart 0 delta = 0.11351130864986914
+  restart 2 delta = 0.32163324464449516
+  starts within Delta<=1 = 3
+  fixed multistart = PASS
+
+ACT:
+  best objective = 78.24987096226769 (restart 3)
+  restart 2 delta = 0.4170988397540327
+  restart 1 delta = 0.7246978535662123
+  restart 0 delta = 0.9421645296105936
+  starts within Delta<=1 = 4
+  fixed multistart = PASS
+
+SCIENTIFIC STATUS
+The fixed-H0=71.5 half of the exact-objective endpoint reprofile is now
+recoverable and numerically stable from V9 artifacts.
+
+This is NOT a final Q016 result.
+The free-H0 half and fixed-to-free nesting/embedding gates remain mandatory.

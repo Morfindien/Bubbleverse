@@ -1,0 +1,2657 @@
+{
+  "branches": {
+    "act": {
+      "all": [
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "act",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 5622.498863279,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_act": 1.0171394402881975,
+            "A_s": 2.222474967720356e-09,
+            "Omega_m": 0.30237428144109907,
+            "P_act": 1.0023980503543914,
+            "S8": 0.8471271628200525,
+            "chi2": 78.24987096226769,
+            "chi2__q016_act_dr6_cmbonly": 78.2480718497355,
+            "chi2__q016_shape_tau_reio": 0.0017991125322017831,
+            "fEDE": 0.11083853844958826,
+            "log10z_c": 3.4643174475598775,
+            "logA": 3.101206518218589,
+            "minuslogpost": 26.141732265070786,
+            "minuslogprior": -12.98320321606306,
+            "minuslogprior__0": -12.98320321606306,
+            "n_s": 0.9647875332676936,
+            "omega_b": 0.02291359636426533,
+            "omega_cdm": 0.13102293592687186,
+            "rs_drag": 140.65552076493464,
+            "sigma8": 0.8437947329734778,
+            "tau_reio": 0.05074550431995952,
+            "thetai_scf": 2.730663129225157,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 78.24987096226769,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_act_dr6_cmbonly": 78.2480718497355,
+            "q016_shape_tau_reio": 0.0017991125322017831
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_act": 1.0171394402881975,
+              "A_s": 2.222474967720356e-09,
+              "Omega_m": 0.30237428144109907,
+              "P_act": 1.0023980503543914,
+              "S8": 0.8471271628200525,
+              "chi2": 78.24987096226769,
+              "chi2__q016_act_dr6_cmbonly": 78.2480718497355,
+              "chi2__q016_shape_tau_reio": 0.0017991125322017831,
+              "fEDE": 0.11083853844958826,
+              "log10z_c": 3.4643174475598775,
+              "logA": 3.101206518218589,
+              "minuslogpost": 26.141732265070786,
+              "minuslogprior": -12.98320321606306,
+              "minuslogprior__0": -12.98320321606306,
+              "n_s": 0.9647875332676936,
+              "omega_b": 0.02291359636426533,
+              "omega_cdm": 0.13102293592687186,
+              "rs_drag": 140.65552076493464,
+              "sigma8": 0.8437947329734778,
+              "tau_reio": 0.05074550431995952,
+              "thetai_scf": 2.730663129225157,
+              "weight": 1.0
+            },
+            "objective_chi2": 78.24987096226769,
+            "objective_components": {
+              "q016_act_dr6_cmbonly": 78.2480718497355,
+              "q016_shape_tau_reio": 0.0017991125322017831
+            }
+          },
+          "restart": 3,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_act.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "A_act": 1.0164766933997875,
+              "P_act": 1.0025539321069707,
+              "fEDE": 0.09673209044023609,
+              "log10z_c": 3.425903053111347,
+              "logA": 3.096433517340116,
+              "n_s": 0.9622466552750745,
+              "omega_b": 0.022776173136483197,
+              "omega_cdm": 0.12910097354825742,
+              "tau_reio": 0.0510711170886823,
+              "thetai_scf": 2.798846670243277
+            },
+            "minimum": {
+              "A_act": 1.0164766933997875,
+              "H0": 71.5,
+              "P_act": 1.0025539321069707,
+              "chi2": 99.19215358836716,
+              "chi2__q016_act_dr6_cmbonly": 99.19201309835876,
+              "chi2__q016_shape_tau_reio": 0.00014049000840683713,
+              "fEDE": 0.09673209044023609,
+              "log10z_c": 3.425903053111347,
+              "logA": 3.096433517340116,
+              "minuslogpost": 36.61287357812052,
+              "n_s": 0.9622466552750745,
+              "omega_b": 0.022776173136483197,
+              "omega_cdm": 0.12910097354825742,
+              "tau_reio": 0.0510711170886823,
+              "thetai_scf": 2.798846670243277
+            },
+            "objective_chi2": 99.19215358836716,
+            "objective_components": {
+              "q016_act_dr6_cmbonly": 99.19201309835876,
+              "q016_shape_tau_reio": 0.00014049000840683713
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {},
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FREE_OBJECTIVE_BEST",
+              "objective": 78.87695491584888
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FREE_OBJECTIVE_BEST",
+            "objective": 78.87695491584888
+          },
+          "start_family": "parent_free_projected",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        },
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "act",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 5904.288196911,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_act": 1.0194467416083728,
+            "A_s": 2.219403742131772e-09,
+            "Omega_m": 0.29792081801451725,
+            "P_act": 1.001885956441264,
+            "S8": 0.8366137551991932,
+            "chi2": 78.66696980202173,
+            "chi2__q016_act_dr6_cmbonly": 78.66676998311227,
+            "chi2__q016_shape_tau_reio": 0.00019981890944858934,
+            "fEDE": 0.10284777956655251,
+            "log10z_c": 3.4660344730581767,
+            "logA": 3.0998236681775957,
+            "minuslogpost": 26.350281684947802,
+            "minuslogprior": -12.98320321606306,
+            "minuslogprior__0": -12.98320321606306,
+            "n_s": 0.9651408771361559,
+            "omega_b": 0.022720036006268637,
+            "omega_cdm": 0.12893981776427613,
+            "rs_drag": 141.5614700202496,
+            "sigma8": 0.8395280326759801,
+            "tau_reio": 0.051084814389935604,
+            "thetai_scf": 2.8089736609904743,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 78.66696980202173,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_act_dr6_cmbonly": 78.66676998311227,
+            "q016_shape_tau_reio": 0.00019981890944858934
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_act": 1.0194467416083728,
+              "A_s": 2.219403742131772e-09,
+              "Omega_m": 0.29792081801451725,
+              "P_act": 1.001885956441264,
+              "S8": 0.8366137551991932,
+              "chi2": 78.66696980202173,
+              "chi2__q016_act_dr6_cmbonly": 78.66676998311227,
+              "chi2__q016_shape_tau_reio": 0.00019981890944858934,
+              "fEDE": 0.10284777956655251,
+              "log10z_c": 3.4660344730581767,
+              "logA": 3.0998236681775957,
+              "minuslogpost": 26.350281684947802,
+              "minuslogprior": -12.98320321606306,
+              "minuslogprior__0": -12.98320321606306,
+              "n_s": 0.9651408771361559,
+              "omega_b": 0.022720036006268637,
+              "omega_cdm": 0.12893981776427613,
+              "rs_drag": 141.5614700202496,
+              "sigma8": 0.8395280326759801,
+              "tau_reio": 0.051084814389935604,
+              "thetai_scf": 2.8089736609904743,
+              "weight": 1.0
+            },
+            "objective_chi2": 78.66696980202173,
+            "objective_components": {
+              "q016_act_dr6_cmbonly": 78.66676998311227,
+              "q016_shape_tau_reio": 0.00019981890944858934
+            }
+          },
+          "restart": 2,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_act.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "A_act": 1.009164514858636,
+              "P_act": 1.0006799971270635,
+              "fEDE": 0.09803269306178657,
+              "log10z_c": 3.4176042391639943,
+              "logA": 3.0850393961449694,
+              "n_s": 0.9585873901907208,
+              "omega_b": 0.022841404765685018,
+              "omega_cdm": 0.12863669200187278,
+              "tau_reio": 0.04924148494196006,
+              "thetai_scf": 2.807337091830791
+            },
+            "minimum": {
+              "A_act": 1.009164514858636,
+              "H0": 71.5,
+              "P_act": 1.0006799971270635,
+              "chi2": 86.41676341879602,
+              "chi2__q016_act_dr6_cmbonly": 86.3308641074251,
+              "chi2__q016_shape_tau_reio": 0.08589931137092222,
+              "fEDE": 0.09803269306178657,
+              "log10z_c": 3.4176042391639943,
+              "logA": 3.0850393961449694,
+              "minuslogpost": 30.22517849333495,
+              "n_s": 0.9585873901907208,
+              "omega_b": 0.022841404765685018,
+              "omega_cdm": 0.12863669200187278,
+              "tau_reio": 0.04924148494196006,
+              "thetai_scf": 2.807337091830791
+            },
+            "objective_chi2": 86.41676341879602,
+            "objective_components": {
+              "q016_act_dr6_cmbonly": 86.3308641074251,
+              "q016_shape_tau_reio": 0.08589931137092222
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {},
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+              "objective": 79.22356137761128
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 79.22356137761128
+          },
+          "start_family": "parent_fixed_jitter_minus",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        },
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "act",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 4777.144318044,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_act": 1.0123488620766385,
+            "A_s": 2.2041478043756157e-09,
+            "Omega_m": 0.2994350721745593,
+            "P_act": 1.0019146984733276,
+            "S8": 0.8349316197416177,
+            "chi2": 78.9745688158339,
+            "chi2__q016_act_dr6_cmbonly": 78.89454819223943,
+            "chi2__q016_shape_tau_reio": 0.08002062359448377,
+            "fEDE": 0.1037357919581853,
+            "log10z_c": 3.433299686065666,
+            "logA": 3.09292604391258,
+            "minuslogpost": 26.504081191853892,
+            "minuslogprior": -12.98320321606306,
+            "minuslogprior__0": -12.98320321606306,
+            "n_s": 0.9606293362292231,
+            "omega_b": 0.022878294548753602,
+            "omega_cdm": 0.12955602170322714,
+            "rs_drag": 141.2163941239937,
+            "sigma8": 0.835718858589636,
+            "tau_reio": 0.05269727500700429,
+            "thetai_scf": 2.8212362722524276,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 78.9745688158339,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_act_dr6_cmbonly": 78.89454819223943,
+            "q016_shape_tau_reio": 0.08002062359448377
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_act": 1.0123488620766385,
+              "A_s": 2.2041478043756157e-09,
+              "Omega_m": 0.2994350721745593,
+              "P_act": 1.0019146984733276,
+              "S8": 0.8349316197416177,
+              "chi2": 78.9745688158339,
+              "chi2__q016_act_dr6_cmbonly": 78.89454819223943,
+              "chi2__q016_shape_tau_reio": 0.08002062359448377,
+              "fEDE": 0.1037357919581853,
+              "log10z_c": 3.433299686065666,
+              "logA": 3.09292604391258,
+              "minuslogpost": 26.504081191853892,
+              "minuslogprior": -12.98320321606306,
+              "minuslogprior__0": -12.98320321606306,
+              "n_s": 0.9606293362292231,
+              "omega_b": 0.022878294548753602,
+              "omega_cdm": 0.12955602170322714,
+              "rs_drag": 141.2163941239937,
+              "sigma8": 0.835718858589636,
+              "tau_reio": 0.05269727500700429,
+              "thetai_scf": 2.8212362722524276,
+              "weight": 1.0
+            },
+            "objective_chi2": 78.9745688158339,
+            "objective_components": {
+              "q016_act_dr6_cmbonly": 78.89454819223943,
+              "q016_shape_tau_reio": 0.08002062359448377
+            }
+          },
+          "restart": 1,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_act.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "A_act": 1.013164514858636,
+              "P_act": 1.0026799971270632,
+              "fEDE": 0.10603269306178657,
+              "log10z_c": 3.4576042391639943,
+              "logA": 3.0930393961449694,
+              "n_s": 0.9615873901907207,
+              "omega_b": 0.022921404765685015,
+              "omega_cdm": 0.12983669200187276,
+              "tau_reio": 0.055241484941960066,
+              "thetai_scf": 2.8673370918307906
+            },
+            "minimum": {
+              "A_act": 1.013164514858636,
+              "H0": 71.5,
+              "P_act": 1.0026799971270632,
+              "chi2": 87.23067362357624,
+              "chi2__q016_act_dr6_cmbonly": 86.73094599821863,
+              "chi2__q016_shape_tau_reio": 0.49972762535761134,
+              "fEDE": 0.10603269306178657,
+              "log10z_c": 3.4576042391639943,
+              "logA": 3.0930393961449694,
+              "minuslogpost": 30.63213359572506,
+              "n_s": 0.9615873901907207,
+              "omega_b": 0.022921404765685015,
+              "omega_cdm": 0.12983669200187276,
+              "tau_reio": 0.055241484941960066,
+              "thetai_scf": 2.8673370918307906
+            },
+            "objective_chi2": 87.23067362357624,
+            "objective_components": {
+              "q016_act_dr6_cmbonly": 86.73094599821863,
+              "q016_shape_tau_reio": 0.49972762535761134
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {},
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+              "objective": 79.22356137761128
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 79.22356137761128
+          },
+          "start_family": "parent_fixed_jitter_plus",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        },
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "act",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 3247.621268422,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_act": 1.01120379300631,
+            "A_s": 2.195373108260381e-09,
+            "Omega_m": 0.2988130842615612,
+            "P_act": 1.0017203716632552,
+            "S8": 0.8316553810583953,
+            "chi2": 79.19203549187829,
+            "chi2__q016_act_dr6_cmbonly": 79.14576529397172,
+            "chi2__q016_shape_tau_reio": 0.04627019790657267,
+            "fEDE": 0.10211269077481937,
+            "log10z_c": 3.437745579633004,
+            "logA": 3.088937106060278,
+            "minuslogpost": 26.612814529876083,
+            "minuslogprior": -12.98320321606306,
+            "minuslogprior__0": -12.98320321606306,
+            "n_s": 0.9600758454732232,
+            "omega_b": 0.02288005653030014,
+            "omega_cdm": 0.12923663079860062,
+            "rs_drag": 141.333771942862,
+            "sigma8": 0.8333054536867048,
+            "tau_reio": 0.05229063051437528,
+            "thetai_scf": 2.8351477567515126,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 79.19203549187829,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_act_dr6_cmbonly": 79.14576529397172,
+            "q016_shape_tau_reio": 0.04627019790657267
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_act": 1.01120379300631,
+              "A_s": 2.195373108260381e-09,
+              "Omega_m": 0.2988130842615612,
+              "P_act": 1.0017203716632552,
+              "S8": 0.8316553810583953,
+              "chi2": 79.19203549187829,
+              "chi2__q016_act_dr6_cmbonly": 79.14576529397172,
+              "chi2__q016_shape_tau_reio": 0.04627019790657267,
+              "fEDE": 0.10211269077481937,
+              "log10z_c": 3.437745579633004,
+              "logA": 3.088937106060278,
+              "minuslogpost": 26.612814529876083,
+              "minuslogprior": -12.98320321606306,
+              "minuslogprior__0": -12.98320321606306,
+              "n_s": 0.9600758454732232,
+              "omega_b": 0.02288005653030014,
+              "omega_cdm": 0.12923663079860062,
+              "rs_drag": 141.333771942862,
+              "sigma8": 0.8333054536867048,
+              "tau_reio": 0.05229063051437528,
+              "thetai_scf": 2.8351477567515126,
+              "weight": 1.0
+            },
+            "objective_chi2": 79.19203549187829,
+            "objective_components": {
+              "q016_act_dr6_cmbonly": 79.14576529397172,
+              "q016_shape_tau_reio": 0.04627019790657267
+            }
+          },
+          "restart": 0,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_act.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "A_act": 1.011164514858636,
+              "P_act": 1.0016799971270633,
+              "fEDE": 0.10203269306178657,
+              "log10z_c": 3.4376042391639943,
+              "logA": 3.0890393961449694,
+              "n_s": 0.9600873901907208,
+              "omega_b": 0.022881404765685016,
+              "omega_cdm": 0.12923669200187277,
+              "tau_reio": 0.05224148494196006,
+              "thetai_scf": 2.8373370918307907
+            },
+            "minimum": {
+              "A_act": 1.011164514858636,
+              "H0": 71.5,
+              "P_act": 1.0016799971270633,
+              "chi2": 79.22356137761128,
+              "chi2__q016_act_dr6_cmbonly": 79.180747909247,
+              "chi2__q016_shape_tau_reio": 0.04281346836426638,
+              "fEDE": 0.10203269306178657,
+              "log10z_c": 3.4376042391639943,
+              "logA": 3.0890393961449694,
+              "minuslogpost": 26.628577472742577,
+              "n_s": 0.9600873901907208,
+              "omega_b": 0.022881404765685016,
+              "omega_cdm": 0.12923669200187277,
+              "tau_reio": 0.05224148494196006,
+              "thetai_scf": 2.8373370918307907
+            },
+            "objective_chi2": 79.22356137761128,
+            "objective_components": {
+              "q016_act_dr6_cmbonly": 79.180747909247,
+              "q016_shape_tau_reio": 0.04281346836426638
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {},
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+              "objective": 79.22356137761128
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 79.22356137761128
+          },
+          "start_family": "parent_fixed_best",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        }
+      ],
+      "best_record": {
+        "absolute_cross_chain_chi2_comparison_performed": false,
+        "branch": "act",
+        "case_id": "NOT DOCUMENTED",
+        "cross_chain_chi2_sum_performed": false,
+        "elapsed_seconds": 5622.498863279,
+        "ell_range": [
+          600,
+          2000
+        ],
+        "exact_optimizer_objective": true,
+        "exact_optimizer_objective_gate": true,
+        "exact_q011_vector_used_as_profile_endpoint": false,
+        "ignore_prior": true,
+        "minimum": {
+          "A_act": 1.0171394402881975,
+          "A_s": 2.222474967720356e-09,
+          "Omega_m": 0.30237428144109907,
+          "P_act": 1.0023980503543914,
+          "S8": 0.8471271628200525,
+          "chi2": 78.24987096226769,
+          "chi2__q016_act_dr6_cmbonly": 78.2480718497355,
+          "chi2__q016_shape_tau_reio": 0.0017991125322017831,
+          "fEDE": 0.11083853844958826,
+          "log10z_c": 3.4643174475598775,
+          "logA": 3.101206518218589,
+          "minuslogpost": 26.141732265070786,
+          "minuslogprior": -12.98320321606306,
+          "minuslogprior__0": -12.98320321606306,
+          "n_s": 0.9647875332676936,
+          "omega_b": 0.02291359636426533,
+          "omega_cdm": 0.13102293592687186,
+          "rs_drag": 140.65552076493464,
+          "sigma8": 0.8437947329734778,
+          "tau_reio": 0.05074550431995952,
+          "thetai_scf": 2.730663129225157,
+          "weight": 1.0
+        },
+        "mode": "fixed_h0_71p5",
+        "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+        "objective_chi2": 78.24987096226769,
+        "objective_component_gate": true,
+        "objective_components": {
+          "q016_act_dr6_cmbonly": 78.2480718497355,
+          "q016_shape_tau_reio": 0.0017991125322017831
+        },
+        "objective_self_consistency_gate": true,
+        "observables": [
+          "TT",
+          "TE",
+          "EE"
+        ],
+        "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+        "parent": {
+          "github_run_id": 33732688762,
+          "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+          "role": "NUMERICAL_SEED_PARENT_ONLY",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+        },
+        "phase": "phase1_fixed",
+        "q": "Q016",
+        "raw_optimizer_candidate": {
+          "minimum": {
+            "A_act": 1.0171394402881975,
+            "A_s": 2.222474967720356e-09,
+            "Omega_m": 0.30237428144109907,
+            "P_act": 1.0023980503543914,
+            "S8": 0.8471271628200525,
+            "chi2": 78.24987096226769,
+            "chi2__q016_act_dr6_cmbonly": 78.2480718497355,
+            "chi2__q016_shape_tau_reio": 0.0017991125322017831,
+            "fEDE": 0.11083853844958826,
+            "log10z_c": 3.4643174475598775,
+            "logA": 3.101206518218589,
+            "minuslogpost": 26.141732265070786,
+            "minuslogprior": -12.98320321606306,
+            "minuslogprior__0": -12.98320321606306,
+            "n_s": 0.9647875332676936,
+            "omega_b": 0.02291359636426533,
+            "omega_cdm": 0.13102293592687186,
+            "rs_drag": 140.65552076493464,
+            "sigma8": 0.8437947329734778,
+            "tau_reio": 0.05074550431995952,
+            "thetai_scf": 2.730663129225157,
+            "weight": 1.0
+          },
+          "objective_chi2": 78.24987096226769,
+          "objective_components": {
+            "q016_act_dr6_cmbonly": 78.2480718497355,
+            "q016_shape_tau_reio": 0.0017991125322017831
+          }
+        },
+        "restart": 3,
+        "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+        "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+        "runtime_provenance_file": "q016_v9_source_runtime/setup_act.json",
+        "seed_candidate": {
+          "applied_reference_values": {
+            "A_act": 1.0164766933997875,
+            "P_act": 1.0025539321069707,
+            "fEDE": 0.09673209044023609,
+            "log10z_c": 3.425903053111347,
+            "logA": 3.096433517340116,
+            "n_s": 0.9622466552750745,
+            "omega_b": 0.022776173136483197,
+            "omega_cdm": 0.12910097354825742,
+            "tau_reio": 0.0510711170886823,
+            "thetai_scf": 2.798846670243277
+          },
+          "minimum": {
+            "A_act": 1.0164766933997875,
+            "H0": 71.5,
+            "P_act": 1.0025539321069707,
+            "chi2": 99.19215358836716,
+            "chi2__q016_act_dr6_cmbonly": 99.19201309835876,
+            "chi2__q016_shape_tau_reio": 0.00014049000840683713,
+            "fEDE": 0.09673209044023609,
+            "log10z_c": 3.425903053111347,
+            "logA": 3.096433517340116,
+            "minuslogpost": 36.61287357812052,
+            "n_s": 0.9622466552750745,
+            "omega_b": 0.022776173136483197,
+            "omega_cdm": 0.12910097354825742,
+            "tau_reio": 0.0510711170886823,
+            "thetai_scf": 2.798846670243277
+          },
+          "objective_chi2": 99.19215358836716,
+          "objective_components": {
+            "q016_act_dr6_cmbonly": 99.19201309835876,
+            "q016_shape_tau_reio": 0.00014049000840683713
+          },
+          "prior_structure_gate": {
+            "expected_external_prior_names": [],
+            "expected_nonflat_parameter_priors": [],
+            "external_prior_names": [],
+            "nonflat_parameter_priors": {},
+            "pass": true
+          },
+          "reference_is_pointlike": true,
+          "source": {
+            "kind": "V6_HISTORY_FREE_OBJECTIVE_BEST",
+            "objective": 78.87695491584888
+          }
+        },
+        "seed_candidate_preservation_pass": true,
+        "seed_objective_tolerance": 0.05,
+        "selected_candidate": "OPTIMIZER_MINIMUM",
+        "source_vector_meta": {
+          "kind": "V6_HISTORY_FREE_OBJECTIVE_BEST",
+          "objective": 78.87695491584888
+        },
+        "start_family": "parent_free_projected",
+        "status": "COMPLETE",
+        "target_h0": 71.5
+      },
+      "best_two_spread": 0.4170988397540327,
+      "complete_count": 4,
+      "complete_gate": true,
+      "distinct_restart_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "replicate_count_within_delta_objective": 4,
+      "replicate_restart_ids_within_delta_objective": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "stable": true
+    },
+    "planck": {
+      "all": [
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "planck",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 1440.606372378,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_planck": 1.0000220897940093,
+            "A_s": 2.1524498143549493e-09,
+            "Omega_m": 0.2977603430455736,
+            "S8": 0.8289156799213505,
+            "calEE": 0.9969050014853809,
+            "calTE": 0.997322079906256,
+            "chi2": 4203.595181947479,
+            "chi2__q016_camspec_npipe_lite": 4201.944054150434,
+            "chi2__q016_shape_A_planck": 7.807343989976902e-05,
+            "chi2__q016_shape_calEE": 0.09579015805494687,
+            "chi2__q016_shape_calTE": 0.07171256028477943,
+            "chi2__q016_shape_tau_reio": 1.4835470052654687,
+            "fEDE": 0.10820055211842299,
+            "log10z_c": 3.7768736396890072,
+            "logA": 3.069191734992029,
+            "minuslogpost": 2078.0626267465304,
+            "minuslogprior": -23.734964227209293,
+            "minuslogprior__0": -23.734964227209293,
+            "n_s": 0.9815110264235867,
+            "omega_b": 0.02281948692434092,
+            "omega_cdm": 0.12875907427132183,
+            "rs_drag": 141.65196737148193,
+            "sigma8": 0.8320272575790971,
+            "tau_reio": 0.058308056662995766,
+            "thetai_scf": 3.0129573434869847,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 4203.595181947479,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_camspec_npipe_lite": 4201.944054150434,
+            "q016_shape_A_planck": 7.807343989976902e-05,
+            "q016_shape_calEE": 0.09579015805494687,
+            "q016_shape_calTE": 0.07171256028477943,
+            "q016_shape_tau_reio": 1.4835470052654687
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_planck": 1.0000220897940093,
+              "A_s": 2.1524498143549493e-09,
+              "Omega_m": 0.2977603430455736,
+              "S8": 0.8289156799213505,
+              "calEE": 0.9969050014853809,
+              "calTE": 0.997322079906256,
+              "chi2": 4203.595181947479,
+              "chi2__q016_camspec_npipe_lite": 4201.944054150434,
+              "chi2__q016_shape_A_planck": 7.807343989976902e-05,
+              "chi2__q016_shape_calEE": 0.09579015805494687,
+              "chi2__q016_shape_calTE": 0.07171256028477943,
+              "chi2__q016_shape_tau_reio": 1.4835470052654687,
+              "fEDE": 0.10820055211842299,
+              "log10z_c": 3.7768736396890072,
+              "logA": 3.069191734992029,
+              "minuslogpost": 2078.0626267465304,
+              "minuslogprior": -23.734964227209293,
+              "minuslogprior__0": -23.734964227209293,
+              "n_s": 0.9815110264235867,
+              "omega_b": 0.02281948692434092,
+              "omega_cdm": 0.12875907427132183,
+              "rs_drag": 141.65196737148193,
+              "sigma8": 0.8320272575790971,
+              "tau_reio": 0.058308056662995766,
+              "thetai_scf": 3.0129573434869847,
+              "weight": 1.0
+            },
+            "objective_chi2": 4203.595181947479,
+            "objective_components": {
+              "q016_camspec_npipe_lite": 4201.944054150434,
+              "q016_shape_A_planck": 7.807343989976902e-05,
+              "q016_shape_calEE": 0.09579015805494687,
+              "q016_shape_calTE": 0.07171256028477943,
+              "q016_shape_tau_reio": 1.4835470052654687
+            }
+          },
+          "restart": 2,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_planck.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "A_planck": 1.0001682048907194,
+              "calEE": 0.9977371157928755,
+              "calTE": 0.9973768298893253,
+              "fEDE": 0.10539083960245944,
+              "log10z_c": 3.778822188255783,
+              "logA": 3.069862807935613,
+              "n_s": 0.9770063449769782,
+              "omega_b": 0.022919856829670734,
+              "omega_cdm": 0.1288743811939034,
+              "tau_reio": 0.05272396687802081,
+              "thetai_scf": 3.0111699937832044
+            },
+            "minimum": {
+              "A_planck": 1.0001682048907194,
+              "H0": 71.5,
+              "calEE": 0.9977371157928755,
+              "calTE": 0.9973768298893253,
+              "chi2": 4214.390061608427,
+              "chi2__q016_camspec_npipe_lite": 4214.182960811015,
+              "chi2__q016_shape_A_planck": 0.0045268616419106185,
+              "chi2__q016_shape_calEE": 0.05120644934853499,
+              "chi2__q016_shape_calTE": 0.06881021429537115,
+              "chi2__q016_shape_tau_reio": 0.08255727212535667,
+              "fEDE": 0.10539083960245944,
+              "log10z_c": 3.778822188255783,
+              "logA": 3.069862807935613,
+              "minuslogpost": 2083.438547943757,
+              "n_s": 0.9770063449769782,
+              "omega_b": 0.022919856829670734,
+              "omega_cdm": 0.1288743811939034,
+              "tau_reio": 0.05272396687802081,
+              "thetai_scf": 3.0111699937832044
+            },
+            "objective_chi2": 4214.390061608427,
+            "objective_components": {
+              "q016_camspec_npipe_lite": 4214.182960811015,
+              "q016_shape_A_planck": 0.0045268616419106185,
+              "q016_shape_calEE": 0.05120644934853499,
+              "q016_shape_calTE": 0.06881021429537115,
+              "q016_shape_tau_reio": 0.08255727212535667
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [
+                "A_planck",
+                "calEE",
+                "calTE"
+              ],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {
+                "A_planck": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.0025
+                },
+                "calEE": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.01
+                },
+                "calTE": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.01
+                }
+              },
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+              "objective": 4204.4999662881255
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 4204.4999662881255
+          },
+          "start_family": "parent_fixed_jitter_minus",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        },
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "planck",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 1806.2254141239998,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_planck": 1.0009773899634664,
+            "A_s": 2.162436919145484e-09,
+            "Omega_m": 0.299436069828621,
+            "S8": 0.8335659829369263,
+            "calEE": 0.9978688054469604,
+            "calTE": 0.9995510394529752,
+            "chi2": 4204.074391274959,
+            "chi2__q016_camspec_npipe_lite": 4203.149374669084,
+            "chi2__q016_shape_A_planck": 0.15284658250958016,
+            "chi2__q016_shape_calEE": 0.04541990222905496,
+            "chi2__q016_shape_calTE": 0.0020156557278481896,
+            "chi2__q016_shape_tau_reio": 0.7247344654101459,
+            "fEDE": 0.10956672167333298,
+            "log10z_c": 3.796049460584251,
+            "logA": 3.073820882055132,
+            "minuslogpost": 2078.318582084614,
+            "minuslogprior": -23.718613552865865,
+            "minuslogprior__0": -23.718613552865865,
+            "n_s": 0.9781610855103017,
+            "omega_b": 0.022961352848742348,
+            "omega_cdm": 0.1294738979305344,
+            "rs_drag": 141.3024849080068,
+            "sigma8": 0.8343505442174884,
+            "tau_reio": 0.05610788026041774,
+            "thetai_scf": 3.0373066622697644,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 4204.074391274959,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_camspec_npipe_lite": 4203.149374669084,
+            "q016_shape_A_planck": 0.15284658250958016,
+            "q016_shape_calEE": 0.04541990222905496,
+            "q016_shape_calTE": 0.0020156557278481896,
+            "q016_shape_tau_reio": 0.7247344654101459
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_planck": 1.0009773899634664,
+              "A_s": 2.162436919145484e-09,
+              "Omega_m": 0.299436069828621,
+              "S8": 0.8335659829369263,
+              "calEE": 0.9978688054469604,
+              "calTE": 0.9995510394529752,
+              "chi2": 4204.074391274959,
+              "chi2__q016_camspec_npipe_lite": 4203.149374669084,
+              "chi2__q016_shape_A_planck": 0.15284658250958016,
+              "chi2__q016_shape_calEE": 0.04541990222905496,
+              "chi2__q016_shape_calTE": 0.0020156557278481896,
+              "chi2__q016_shape_tau_reio": 0.7247344654101459,
+              "fEDE": 0.10956672167333298,
+              "log10z_c": 3.796049460584251,
+              "logA": 3.073820882055132,
+              "minuslogpost": 2078.318582084614,
+              "minuslogprior": -23.718613552865865,
+              "minuslogprior__0": -23.718613552865865,
+              "n_s": 0.9781610855103017,
+              "omega_b": 0.022961352848742348,
+              "omega_cdm": 0.1294738979305344,
+              "rs_drag": 141.3024849080068,
+              "sigma8": 0.8343505442174884,
+              "tau_reio": 0.05610788026041774,
+              "thetai_scf": 3.0373066622697644,
+              "weight": 1.0
+            },
+            "objective_chi2": 4204.074391274959,
+            "objective_components": {
+              "q016_camspec_npipe_lite": 4203.149374669084,
+              "q016_shape_A_planck": 0.15284658250958016,
+              "q016_shape_calEE": 0.04541990222905496,
+              "q016_shape_calTE": 0.0020156557278481896,
+              "q016_shape_tau_reio": 0.7247344654101459
+            }
+          },
+          "restart": 0,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_planck.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "A_planck": 1.0009682048907194,
+              "calEE": 0.9997371157928755,
+              "calTE": 0.9993768298893253,
+              "fEDE": 0.10939083960245945,
+              "log10z_c": 3.798822188255783,
+              "logA": 3.073862807935613,
+              "n_s": 0.9785063449769782,
+              "omega_b": 0.022959856829670732,
+              "omega_cdm": 0.1294743811939034,
+              "tau_reio": 0.055723966878020816,
+              "thetai_scf": 3.041169993783204
+            },
+            "minimum": {
+              "A_planck": 1.0009682048907194,
+              "H0": 71.5,
+              "calEE": 0.9997371157928755,
+              "calTE": 0.9993768298893253,
+              "chi2": 4204.499966288123,
+              "chi2__q016_camspec_npipe_lite": 4203.725519398396,
+              "chi2__q016_shape_A_planck": 0.14998731366606194,
+              "chi2__q016_shape_calEE": 0.000691081063554786,
+              "chi2__q016_shape_calTE": 0.003883409868383152,
+              "chi2__q016_shape_tau_reio": 0.6198850851288267,
+              "fEDE": 0.10939083960245945,
+              "log10z_c": 3.798822188255783,
+              "logA": 3.073862807935613,
+              "minuslogpost": 2078.5085094232613,
+              "n_s": 0.9785063449769782,
+              "omega_b": 0.022959856829670732,
+              "omega_cdm": 0.1294743811939034,
+              "tau_reio": 0.055723966878020816,
+              "thetai_scf": 3.041169993783204
+            },
+            "objective_chi2": 4204.499966288123,
+            "objective_components": {
+              "q016_camspec_npipe_lite": 4203.725519398396,
+              "q016_shape_A_planck": 0.14998731366606194,
+              "q016_shape_calEE": 0.000691081063554786,
+              "q016_shape_calTE": 0.003883409868383152,
+              "q016_shape_tau_reio": 0.6198850851288267
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [
+                "A_planck",
+                "calEE",
+                "calTE"
+              ],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {
+                "A_planck": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.0025
+                },
+                "calEE": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.01
+                },
+                "calTE": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.01
+                }
+              },
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+              "objective": 4204.4999662881255
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 4204.4999662881255
+          },
+          "start_family": "parent_fixed_best",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        },
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "planck",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 1888.609872181,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_planck": 1.0017908755027487,
+            "A_s": 2.1772182184445687e-09,
+            "Omega_m": 0.30044051560842877,
+            "S8": 0.8385120229116497,
+            "calEE": 1.0019334461799212,
+            "calTE": 1.0011373724250512,
+            "chi2": 4206.236209176505,
+            "chi2__q016_camspec_npipe_lite": 4203.598818844828,
+            "chi2__q016_shape_A_planck": 0.5131576106152661,
+            "chi2__q016_shape_calEE": 0.037382141306518596,
+            "chi2__q016_shape_calTE": 0.012936160332668164,
+            "chi2__q016_shape_tau_reio": 2.073914419422209,
+            "fEDE": 0.11534374786898073,
+            "log10z_c": 3.8130305339424497,
+            "logA": 3.0806331083692826,
+            "minuslogpost": 2079.581087921281,
+            "minuslogprior": -23.53701666697188,
+            "minuslogprior__0": -23.53701666697188,
+            "n_s": 0.9797310544278055,
+            "omega_b": 0.023004399674497602,
+            "omega_cdm": 0.12994431098003742,
+            "rs_drag": 141.0766733461206,
+            "sigma8": 0.8378970706790689,
+            "tau_reio": 0.05964065501563391,
+            "thetai_scf": 2.9790622470078993,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 4206.236209176505,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_camspec_npipe_lite": 4203.598818844828,
+            "q016_shape_A_planck": 0.5131576106152661,
+            "q016_shape_calEE": 0.037382141306518596,
+            "q016_shape_calTE": 0.012936160332668164,
+            "q016_shape_tau_reio": 2.073914419422209
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_planck": 1.0017908755027487,
+              "A_s": 2.1772182184445687e-09,
+              "Omega_m": 0.30044051560842877,
+              "S8": 0.8385120229116497,
+              "calEE": 1.0019334461799212,
+              "calTE": 1.0011373724250512,
+              "chi2": 4206.236209176505,
+              "chi2__q016_camspec_npipe_lite": 4203.598818844828,
+              "chi2__q016_shape_A_planck": 0.5131576106152661,
+              "chi2__q016_shape_calEE": 0.037382141306518596,
+              "chi2__q016_shape_calTE": 0.012936160332668164,
+              "chi2__q016_shape_tau_reio": 2.073914419422209,
+              "fEDE": 0.11534374786898073,
+              "log10z_c": 3.8130305339424497,
+              "logA": 3.0806331083692826,
+              "minuslogpost": 2079.581087921281,
+              "minuslogprior": -23.53701666697188,
+              "minuslogprior__0": -23.53701666697188,
+              "n_s": 0.9797310544278055,
+              "omega_b": 0.023004399674497602,
+              "omega_cdm": 0.12994431098003742,
+              "rs_drag": 141.0766733461206,
+              "sigma8": 0.8378970706790689,
+              "tau_reio": 0.05964065501563391,
+              "thetai_scf": 2.9790622470078993,
+              "weight": 1.0
+            },
+            "objective_chi2": 4206.236209176505,
+            "objective_components": {
+              "q016_camspec_npipe_lite": 4203.598818844828,
+              "q016_shape_A_planck": 0.5131576106152661,
+              "q016_shape_calEE": 0.037382141306518596,
+              "q016_shape_calTE": 0.012936160332668164,
+              "q016_shape_tau_reio": 2.073914419422209
+            }
+          },
+          "restart": 1,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_planck.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "A_planck": 1.0017682048907193,
+              "calEE": 1.0017371157928754,
+              "calTE": 1.0013768298893253,
+              "fEDE": 0.11339083960245945,
+              "log10z_c": 3.818822188255783,
+              "logA": 3.077862807935613,
+              "n_s": 0.9800063449769781,
+              "omega_b": 0.02299985682967073,
+              "omega_cdm": 0.13007438119390338,
+              "tau_reio": 0.05872396687802082,
+              "thetai_scf": 3.071169993783204
+            },
+            "minimum": {
+              "A_planck": 1.0017682048907193,
+              "H0": 71.5,
+              "calEE": 1.0017371157928754,
+              "calTE": 1.0013768298893253,
+              "chi2": 4221.417512540832,
+              "chi2__q016_camspec_npipe_lite": 4219.21091955879,
+              "chi2__q016_shape_A_planck": 0.5002477656901682,
+              "chi2__q016_shape_calEE": 0.03017571277857087,
+              "chi2__q016_shape_calTE": 0.018956605441395286,
+              "chi2__q016_shape_tau_reio": 1.6572128981322976,
+              "fEDE": 0.11339083960245945,
+              "log10z_c": 3.818822188255783,
+              "logA": 3.077862807935613,
+              "minuslogpost": 2087.164691689272,
+              "n_s": 0.9800063449769781,
+              "omega_b": 0.02299985682967073,
+              "omega_cdm": 0.13007438119390338,
+              "tau_reio": 0.05872396687802082,
+              "thetai_scf": 3.071169993783204
+            },
+            "objective_chi2": 4221.417512540832,
+            "objective_components": {
+              "q016_camspec_npipe_lite": 4219.21091955879,
+              "q016_shape_A_planck": 0.5002477656901682,
+              "q016_shape_calEE": 0.03017571277857087,
+              "q016_shape_calTE": 0.018956605441395286,
+              "q016_shape_tau_reio": 1.6572128981322976
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [
+                "A_planck",
+                "calEE",
+                "calTE"
+              ],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {
+                "A_planck": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.0025
+                },
+                "calEE": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.01
+                },
+                "calTE": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.01
+                }
+              },
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+              "objective": 4204.4999662881255
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 4204.4999662881255
+          },
+          "start_family": "parent_fixed_jitter_plus",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        },
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "planck",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 1986.096917373,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_planck": 0.9998274191443117,
+            "A_s": 2.0755424381486736e-09,
+            "Omega_m": 0.28737252411695374,
+            "S8": 0.7891238765675872,
+            "calEE": 1.001664681253639,
+            "calTE": 0.9984519835871536,
+            "chi2": 4213.653878848038,
+            "chi2__q016_camspec_npipe_lite": 4212.475099758386,
+            "chi2__q016_shape_A_planck": 0.004765464280015594,
+            "chi2__q016_shape_calEE": 0.027711636762169273,
+            "chi2__q016_shape_calTE": 0.02396354814441864,
+            "chi2__q016_shape_tau_reio": 1.1223384404648236,
+            "fEDE": 0.10632379212121003,
+            "log10z_c": 4.032633555283379,
+            "logA": 3.0328076284887695,
+            "minuslogpost": 2083.0364051255133,
+            "minuslogprior": -23.790534298505804,
+            "minuslogprior__0": -23.790534298505804,
+            "n_s": 0.9840762084048043,
+            "omega_b": 0.022444726396552445,
+            "omega_cdm": 0.12382324199225557,
+            "rs_drag": 143.85276446618494,
+            "sigma8": 0.8062749929240517,
+            "tau_reio": 0.05735642854571131,
+            "thetai_scf": 2.8636569142091806,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 4213.653878848038,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_camspec_npipe_lite": 4212.475099758386,
+            "q016_shape_A_planck": 0.004765464280015594,
+            "q016_shape_calEE": 0.027711636762169273,
+            "q016_shape_calTE": 0.02396354814441864,
+            "q016_shape_tau_reio": 1.1223384404648236
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_planck": 0.9998274191443117,
+              "A_s": 2.0755424381486736e-09,
+              "Omega_m": 0.28737252411695374,
+              "S8": 0.7891238765675872,
+              "calEE": 1.001664681253639,
+              "calTE": 0.9984519835871536,
+              "chi2": 4213.653878848038,
+              "chi2__q016_camspec_npipe_lite": 4212.475099758386,
+              "chi2__q016_shape_A_planck": 0.004765464280015594,
+              "chi2__q016_shape_calEE": 0.027711636762169273,
+              "chi2__q016_shape_calTE": 0.02396354814441864,
+              "chi2__q016_shape_tau_reio": 1.1223384404648236,
+              "fEDE": 0.10632379212121003,
+              "log10z_c": 4.032633555283379,
+              "logA": 3.0328076284887695,
+              "minuslogpost": 2083.0364051255133,
+              "minuslogprior": -23.790534298505804,
+              "minuslogprior__0": -23.790534298505804,
+              "n_s": 0.9840762084048043,
+              "omega_b": 0.022444726396552445,
+              "omega_cdm": 0.12382324199225557,
+              "rs_drag": 143.85276446618494,
+              "sigma8": 0.8062749929240517,
+              "tau_reio": 0.05735642854571131,
+              "thetai_scf": 2.8636569142091806,
+              "weight": 1.0
+            },
+            "objective_chi2": 4213.653878848038,
+            "objective_components": {
+              "q016_camspec_npipe_lite": 4212.475099758386,
+              "q016_shape_A_planck": 0.004765464280015594,
+              "q016_shape_calEE": 0.027711636762169273,
+              "q016_shape_calTE": 0.02396354814441864,
+              "q016_shape_tau_reio": 1.1223384404648236
+            }
+          },
+          "restart": 3,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_planck.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "A_planck": 1.0003878962881974,
+              "calEE": 0.997179105430572,
+              "calTE": 0.999817390591574,
+              "fEDE": 0.039331774287361954,
+              "log10z_c": 3.9943403657101806,
+              "logA": 3.039950077612041,
+              "n_s": 0.9775781602015221,
+              "omega_b": 0.02236663520745752,
+              "omega_cdm": 0.1229911155542916,
+              "tau_reio": 0.054473979865991236,
+              "thetai_scf": 2.9081396463846483
+            },
+            "minimum": {
+              "A_planck": 1.0003878962881974,
+              "H0": 71.5,
+              "calEE": 0.997179105430572,
+              "calTE": 0.999817390591574,
+              "chi2": 5553.615411165641,
+              "chi2__q016_camspec_npipe_lite": 5553.176191962952,
+              "chi2__q016_shape_A_planck": 0.0240741648635655,
+              "chi2__q016_shape_calEE": 0.07957446171828511,
+              "chi2__q016_shape_calTE": 0.00033346196045679055,
+              "chi2__q016_shape_tau_reio": 0.3352371141475696,
+              "fEDE": 0.039331774287361954,
+              "log10z_c": 3.9943403657101806,
+              "logA": 3.039950077612041,
+              "minuslogpost": 2753.0409420039923,
+              "n_s": 0.9775781602015221,
+              "omega_b": 0.02236663520745752,
+              "omega_cdm": 0.1229911155542916,
+              "tau_reio": 0.054473979865991236,
+              "thetai_scf": 2.9081396463846483
+            },
+            "objective_chi2": 5553.615411165641,
+            "objective_components": {
+              "q016_camspec_npipe_lite": 5553.176191962952,
+              "q016_shape_A_planck": 0.0240741648635655,
+              "q016_shape_calEE": 0.07957446171828511,
+              "q016_shape_calTE": 0.00033346196045679055,
+              "q016_shape_tau_reio": 0.3352371141475696
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [
+                "A_planck",
+                "calEE",
+                "calTE"
+              ],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {
+                "A_planck": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.0025
+                },
+                "calEE": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.01
+                },
+                "calTE": {
+                  "dist": "norm",
+                  "loc": 1.0,
+                  "scale": 0.01
+                }
+              },
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FREE_OBJECTIVE_BEST",
+              "objective": 4198.257976875996
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FREE_OBJECTIVE_BEST",
+            "objective": 4198.257976875996
+          },
+          "start_family": "parent_free_projected",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        }
+      ],
+      "best_record": {
+        "absolute_cross_chain_chi2_comparison_performed": false,
+        "branch": "planck",
+        "case_id": "NOT DOCUMENTED",
+        "cross_chain_chi2_sum_performed": false,
+        "elapsed_seconds": 1440.606372378,
+        "ell_range": [
+          600,
+          2000
+        ],
+        "exact_optimizer_objective": true,
+        "exact_optimizer_objective_gate": true,
+        "exact_q011_vector_used_as_profile_endpoint": false,
+        "ignore_prior": true,
+        "minimum": {
+          "A_planck": 1.0000220897940093,
+          "A_s": 2.1524498143549493e-09,
+          "Omega_m": 0.2977603430455736,
+          "S8": 0.8289156799213505,
+          "calEE": 0.9969050014853809,
+          "calTE": 0.997322079906256,
+          "chi2": 4203.595181947479,
+          "chi2__q016_camspec_npipe_lite": 4201.944054150434,
+          "chi2__q016_shape_A_planck": 7.807343989976902e-05,
+          "chi2__q016_shape_calEE": 0.09579015805494687,
+          "chi2__q016_shape_calTE": 0.07171256028477943,
+          "chi2__q016_shape_tau_reio": 1.4835470052654687,
+          "fEDE": 0.10820055211842299,
+          "log10z_c": 3.7768736396890072,
+          "logA": 3.069191734992029,
+          "minuslogpost": 2078.0626267465304,
+          "minuslogprior": -23.734964227209293,
+          "minuslogprior__0": -23.734964227209293,
+          "n_s": 0.9815110264235867,
+          "omega_b": 0.02281948692434092,
+          "omega_cdm": 0.12875907427132183,
+          "rs_drag": 141.65196737148193,
+          "sigma8": 0.8320272575790971,
+          "tau_reio": 0.058308056662995766,
+          "thetai_scf": 3.0129573434869847,
+          "weight": 1.0
+        },
+        "mode": "fixed_h0_71p5",
+        "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+        "objective_chi2": 4203.595181947479,
+        "objective_component_gate": true,
+        "objective_components": {
+          "q016_camspec_npipe_lite": 4201.944054150434,
+          "q016_shape_A_planck": 7.807343989976902e-05,
+          "q016_shape_calEE": 0.09579015805494687,
+          "q016_shape_calTE": 0.07171256028477943,
+          "q016_shape_tau_reio": 1.4835470052654687
+        },
+        "objective_self_consistency_gate": true,
+        "observables": [
+          "TT",
+          "TE",
+          "EE"
+        ],
+        "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+        "parent": {
+          "github_run_id": 33732688762,
+          "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+          "role": "NUMERICAL_SEED_PARENT_ONLY",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+        },
+        "phase": "phase1_fixed",
+        "q": "Q016",
+        "raw_optimizer_candidate": {
+          "minimum": {
+            "A_planck": 1.0000220897940093,
+            "A_s": 2.1524498143549493e-09,
+            "Omega_m": 0.2977603430455736,
+            "S8": 0.8289156799213505,
+            "calEE": 0.9969050014853809,
+            "calTE": 0.997322079906256,
+            "chi2": 4203.595181947479,
+            "chi2__q016_camspec_npipe_lite": 4201.944054150434,
+            "chi2__q016_shape_A_planck": 7.807343989976902e-05,
+            "chi2__q016_shape_calEE": 0.09579015805494687,
+            "chi2__q016_shape_calTE": 0.07171256028477943,
+            "chi2__q016_shape_tau_reio": 1.4835470052654687,
+            "fEDE": 0.10820055211842299,
+            "log10z_c": 3.7768736396890072,
+            "logA": 3.069191734992029,
+            "minuslogpost": 2078.0626267465304,
+            "minuslogprior": -23.734964227209293,
+            "minuslogprior__0": -23.734964227209293,
+            "n_s": 0.9815110264235867,
+            "omega_b": 0.02281948692434092,
+            "omega_cdm": 0.12875907427132183,
+            "rs_drag": 141.65196737148193,
+            "sigma8": 0.8320272575790971,
+            "tau_reio": 0.058308056662995766,
+            "thetai_scf": 3.0129573434869847,
+            "weight": 1.0
+          },
+          "objective_chi2": 4203.595181947479,
+          "objective_components": {
+            "q016_camspec_npipe_lite": 4201.944054150434,
+            "q016_shape_A_planck": 7.807343989976902e-05,
+            "q016_shape_calEE": 0.09579015805494687,
+            "q016_shape_calTE": 0.07171256028477943,
+            "q016_shape_tau_reio": 1.4835470052654687
+          }
+        },
+        "restart": 2,
+        "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+        "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+        "runtime_provenance_file": "q016_v9_source_runtime/setup_planck.json",
+        "seed_candidate": {
+          "applied_reference_values": {
+            "A_planck": 1.0001682048907194,
+            "calEE": 0.9977371157928755,
+            "calTE": 0.9973768298893253,
+            "fEDE": 0.10539083960245944,
+            "log10z_c": 3.778822188255783,
+            "logA": 3.069862807935613,
+            "n_s": 0.9770063449769782,
+            "omega_b": 0.022919856829670734,
+            "omega_cdm": 0.1288743811939034,
+            "tau_reio": 0.05272396687802081,
+            "thetai_scf": 3.0111699937832044
+          },
+          "minimum": {
+            "A_planck": 1.0001682048907194,
+            "H0": 71.5,
+            "calEE": 0.9977371157928755,
+            "calTE": 0.9973768298893253,
+            "chi2": 4214.390061608427,
+            "chi2__q016_camspec_npipe_lite": 4214.182960811015,
+            "chi2__q016_shape_A_planck": 0.0045268616419106185,
+            "chi2__q016_shape_calEE": 0.05120644934853499,
+            "chi2__q016_shape_calTE": 0.06881021429537115,
+            "chi2__q016_shape_tau_reio": 0.08255727212535667,
+            "fEDE": 0.10539083960245944,
+            "log10z_c": 3.778822188255783,
+            "logA": 3.069862807935613,
+            "minuslogpost": 2083.438547943757,
+            "n_s": 0.9770063449769782,
+            "omega_b": 0.022919856829670734,
+            "omega_cdm": 0.1288743811939034,
+            "tau_reio": 0.05272396687802081,
+            "thetai_scf": 3.0111699937832044
+          },
+          "objective_chi2": 4214.390061608427,
+          "objective_components": {
+            "q016_camspec_npipe_lite": 4214.182960811015,
+            "q016_shape_A_planck": 0.0045268616419106185,
+            "q016_shape_calEE": 0.05120644934853499,
+            "q016_shape_calTE": 0.06881021429537115,
+            "q016_shape_tau_reio": 0.08255727212535667
+          },
+          "prior_structure_gate": {
+            "expected_external_prior_names": [],
+            "expected_nonflat_parameter_priors": [
+              "A_planck",
+              "calEE",
+              "calTE"
+            ],
+            "external_prior_names": [],
+            "nonflat_parameter_priors": {
+              "A_planck": {
+                "dist": "norm",
+                "loc": 1.0,
+                "scale": 0.0025
+              },
+              "calEE": {
+                "dist": "norm",
+                "loc": 1.0,
+                "scale": 0.01
+              },
+              "calTE": {
+                "dist": "norm",
+                "loc": 1.0,
+                "scale": 0.01
+              }
+            },
+            "pass": true
+          },
+          "reference_is_pointlike": true,
+          "source": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 4204.4999662881255
+          }
+        },
+        "seed_candidate_preservation_pass": true,
+        "seed_objective_tolerance": 0.05,
+        "selected_candidate": "OPTIMIZER_MINIMUM",
+        "source_vector_meta": {
+          "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+          "objective": 4204.4999662881255
+        },
+        "start_family": "parent_fixed_jitter_minus",
+        "status": "COMPLETE",
+        "target_h0": 71.5
+      },
+      "best_two_spread": 0.4792093274800209,
+      "complete_count": 4,
+      "complete_gate": true,
+      "distinct_restart_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "replicate_count_within_delta_objective": 2,
+      "replicate_restart_ids_within_delta_objective": [
+        0,
+        2
+      ],
+      "stable": true
+    },
+    "spt": {
+      "all": [
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "spt",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 2390.495763729,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_s": 2.132600669595976e-09,
+            "Ecal": 1.0156311196951533,
+            "Omega_m": 0.2975458845801884,
+            "S8": 0.8210269904978369,
+            "Tcal": 1.000554452143415,
+            "chi2": 60.487517785271514,
+            "chi2__q016_shape_Tcal": 0.023720461368641546,
+            "chi2__q016_shape_tau_reio": 0.004957907398969358,
+            "chi2__q016_spt_d1_lite": 60.458839416503906,
+            "fEDE": 0.11994954303594449,
+            "log10z_c": 3.7349426488099544,
+            "logA": 3.0599272995769833,
+            "minuslogpost": 17.037412125258484,
+            "minuslogprior": -13.206346767377273,
+            "minuslogprior__0": -13.206346767377273,
+            "n_s": 0.9806966562322111,
+            "omega_b": 0.022845462692666175,
+            "omega_cdm": 0.12862348514046607,
+            "rs_drag": 141.59458779944086,
+            "sigma8": 0.8244058935623082,
+            "tau_reio": 0.05142247445646204,
+            "thetai_scf": 2.0194701316593653,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 60.487517785271514,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_shape_Tcal": 0.023720461368641546,
+            "q016_shape_tau_reio": 0.004957907398969358,
+            "q016_spt_d1_lite": 60.458839416503906
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_s": 2.132600669595976e-09,
+              "Ecal": 1.0156311196951533,
+              "Omega_m": 0.2975458845801884,
+              "S8": 0.8210269904978369,
+              "Tcal": 1.000554452143415,
+              "chi2": 60.487517785271514,
+              "chi2__q016_shape_Tcal": 0.023720461368641546,
+              "chi2__q016_shape_tau_reio": 0.004957907398969358,
+              "chi2__q016_spt_d1_lite": 60.458839416503906,
+              "fEDE": 0.11994954303594449,
+              "log10z_c": 3.7349426488099544,
+              "logA": 3.0599272995769833,
+              "minuslogpost": 17.037412125258484,
+              "minuslogprior": -13.206346767377273,
+              "minuslogprior__0": -13.206346767377273,
+              "n_s": 0.9806966562322111,
+              "omega_b": 0.022845462692666175,
+              "omega_cdm": 0.12862348514046607,
+              "rs_drag": 141.59458779944086,
+              "sigma8": 0.8244058935623082,
+              "tau_reio": 0.05142247445646204,
+              "thetai_scf": 2.0194701316593653,
+              "weight": 1.0
+            },
+            "objective_chi2": 60.487517785271514,
+            "objective_components": {
+              "q016_shape_Tcal": 0.023720461368641546,
+              "q016_shape_tau_reio": 0.004957907398969358,
+              "q016_spt_d1_lite": 60.458839416503906
+            }
+          },
+          "restart": 1,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_spt.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "Ecal": 1.0178375135065145,
+              "Tcal": 1.0015182712227566,
+              "fEDE": 0.11969526029146729,
+              "log10z_c": 3.7581028953771027,
+              "logA": 3.0658176330898943,
+              "n_s": 0.9823118962836174,
+              "omega_b": 0.022865044881740758,
+              "omega_cdm": 0.12857517141924035,
+              "tau_reio": 0.05582374768839066,
+              "thetai_scf": 2.152952572568153
+            },
+            "minimum": {
+              "Ecal": 1.0178375135065145,
+              "H0": 71.5,
+              "Tcal": 1.0015182712227566,
+              "chi2": 62.31143165161585,
+              "chi2__q016_shape_Tcal": 0.1778663198958982,
+              "chi2__q016_shape_tau_reio": 0.6463483822570621,
+              "chi2__q016_spt_d1_lite": 61.48721694946289,
+              "fEDE": 0.11969526029146729,
+              "log10z_c": 3.7581028953771027,
+              "logA": 3.0658176330898943,
+              "minuslogpost": 17.94936905843065,
+              "n_s": 0.9823118962836174,
+              "omega_b": 0.022865044881740758,
+              "omega_cdm": 0.12857517141924035,
+              "tau_reio": 0.05582374768839066,
+              "thetai_scf": 2.152952572568153
+            },
+            "objective_chi2": 62.31143165161585,
+            "objective_components": {
+              "q016_shape_Tcal": 0.1778663198958982,
+              "q016_shape_tau_reio": 0.6463483822570621,
+              "q016_spt_d1_lite": 61.48721694946289
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {},
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+              "objective": 60.664160597403416
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 60.664160597403416
+          },
+          "start_family": "parent_fixed_jitter_plus",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        },
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "spt",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 1992.166100808,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_s": 2.135296921474932e-09,
+            "Ecal": 1.0154836260418802,
+            "Omega_m": 0.296359951398986,
+            "S8": 0.8193506566283508,
+            "Tcal": 1.0004395176293956,
+            "chi2": 60.60102909392138,
+            "chi2__q016_shape_Tcal": 0.01490553599919517,
+            "chi2__q016_shape_tau_reio": 0.07289800250226357,
+            "chi2__q016_spt_d1_lite": 60.51322555541992,
+            "fEDE": 0.11584229575594734,
+            "log10z_c": 3.73013712715712,
+            "logA": 3.061190803295206,
+            "minuslogpost": 17.09416777958342,
+            "minuslogprior": -13.206346767377273,
+            "minuslogprior__0": -13.206346767377273,
+            "n_s": 0.9812562053590953,
+            "omega_b": 0.022823656966123405,
+            "omega_cdm": 0.12803890682658658,
+            "rs_drag": 141.83040420027427,
+            "sigma8": 0.8243671474305293,
+            "tau_reio": 0.05261997780542867,
+            "thetai_scf": 2.1080022927122384,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 60.60102909392138,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_shape_Tcal": 0.01490553599919517,
+            "q016_shape_tau_reio": 0.07289800250226357,
+            "q016_spt_d1_lite": 60.51322555541992
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_s": 2.135296921474932e-09,
+              "Ecal": 1.0154836260418802,
+              "Omega_m": 0.296359951398986,
+              "S8": 0.8193506566283508,
+              "Tcal": 1.0004395176293956,
+              "chi2": 60.60102909392138,
+              "chi2__q016_shape_Tcal": 0.01490553599919517,
+              "chi2__q016_shape_tau_reio": 0.07289800250226357,
+              "chi2__q016_spt_d1_lite": 60.51322555541992,
+              "fEDE": 0.11584229575594734,
+              "log10z_c": 3.73013712715712,
+              "logA": 3.061190803295206,
+              "minuslogpost": 17.09416777958342,
+              "minuslogprior": -13.206346767377273,
+              "minuslogprior__0": -13.206346767377273,
+              "n_s": 0.9812562053590953,
+              "omega_b": 0.022823656966123405,
+              "omega_cdm": 0.12803890682658658,
+              "rs_drag": 141.83040420027427,
+              "sigma8": 0.8243671474305293,
+              "tau_reio": 0.05261997780542867,
+              "thetai_scf": 2.1080022927122384,
+              "weight": 1.0
+            },
+            "objective_chi2": 60.60102909392138,
+            "objective_components": {
+              "q016_shape_Tcal": 0.01490553599919517,
+              "q016_shape_tau_reio": 0.07289800250226357,
+              "q016_spt_d1_lite": 60.51322555541992
+            }
+          },
+          "restart": 0,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_spt.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "Ecal": 1.0158375135065145,
+              "Tcal": 1.0005182712227567,
+              "fEDE": 0.11569526029146729,
+              "log10z_c": 3.7381028953771027,
+              "logA": 3.0618176330898943,
+              "n_s": 0.9808118962836174,
+              "omega_b": 0.02282504488174076,
+              "omega_cdm": 0.12797517141924036,
+              "tau_reio": 0.052823747688390654,
+              "thetai_scf": 2.122952572568153
+            },
+            "minimum": {
+              "Ecal": 1.0158375135065145,
+              "H0": 71.5,
+              "Tcal": 1.0005182712227567,
+              "chi2": 60.664160597403416,
+              "chi2__q016_shape_Tcal": 0.020725699100134425,
+              "chi2__q016_shape_tau_reio": 0.09239043419195184,
+              "chi2__q016_spt_d1_lite": 60.55104446411133,
+              "fEDE": 0.11569526029146729,
+              "log10z_c": 3.7381028953771027,
+              "logA": 3.0618176330898943,
+              "minuslogpost": 17.125733531324435,
+              "n_s": 0.9808118962836174,
+              "omega_b": 0.02282504488174076,
+              "omega_cdm": 0.12797517141924036,
+              "tau_reio": 0.052823747688390654,
+              "thetai_scf": 2.122952572568153
+            },
+            "objective_chi2": 60.664160597403416,
+            "objective_components": {
+              "q016_shape_Tcal": 0.020725699100134425,
+              "q016_shape_tau_reio": 0.09239043419195184,
+              "q016_spt_d1_lite": 60.55104446411133
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {},
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+              "objective": 60.664160597403416
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 60.664160597403416
+          },
+          "start_family": "parent_fixed_best",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        },
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "spt",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 2024.670333762,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_s": 2.1260996280911527e-09,
+            "Ecal": 1.0161492765307634,
+            "Omega_m": 0.29496269819652743,
+            "S8": 0.8128187232459907,
+            "Tcal": 0.9999344064371594,
+            "chi2": 60.80915102991601,
+            "chi2__q016_shape_Tcal": 0.0003319842196086969,
+            "chi2__q016_shape_tau_reio": 0.04705451932921816,
+            "chi2__q016_spt_d1_lite": 60.76176452636719,
+            "fEDE": 0.1118299291739187,
+            "log10z_c": 3.716767765013584,
+            "logA": 3.0568742335708348,
+            "minuslogpost": 17.198228747580732,
+            "minuslogprior": -13.206346767377273,
+            "minuslogprior__0": -13.206346767377273,
+            "n_s": 0.9762547884643578,
+            "omega_b": 0.022781795217270674,
+            "omega_cdm": 0.1273665021339991,
+            "rs_drag": 142.12423598307402,
+            "sigma8": 0.8197299023333495,
+            "tau_reio": 0.04969847677859676,
+            "thetai_scf": 2.0869777383324473,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 60.80915102991601,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_shape_Tcal": 0.0003319842196086969,
+            "q016_shape_tau_reio": 0.04705451932921816,
+            "q016_spt_d1_lite": 60.76176452636719
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_s": 2.1260996280911527e-09,
+              "Ecal": 1.0161492765307634,
+              "Omega_m": 0.29496269819652743,
+              "S8": 0.8128187232459907,
+              "Tcal": 0.9999344064371594,
+              "chi2": 60.80915102991601,
+              "chi2__q016_shape_Tcal": 0.0003319842196086969,
+              "chi2__q016_shape_tau_reio": 0.04705451932921816,
+              "chi2__q016_spt_d1_lite": 60.76176452636719,
+              "fEDE": 0.1118299291739187,
+              "log10z_c": 3.716767765013584,
+              "logA": 3.0568742335708348,
+              "minuslogpost": 17.198228747580732,
+              "minuslogprior": -13.206346767377273,
+              "minuslogprior__0": -13.206346767377273,
+              "n_s": 0.9762547884643578,
+              "omega_b": 0.022781795217270674,
+              "omega_cdm": 0.1273665021339991,
+              "rs_drag": 142.12423598307402,
+              "sigma8": 0.8197299023333495,
+              "tau_reio": 0.04969847677859676,
+              "thetai_scf": 2.0869777383324473,
+              "weight": 1.0
+            },
+            "objective_chi2": 60.80915102991601,
+            "objective_components": {
+              "q016_shape_Tcal": 0.0003319842196086969,
+              "q016_shape_tau_reio": 0.04705451932921816,
+              "q016_spt_d1_lite": 60.76176452636719
+            }
+          },
+          "restart": 2,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_spt.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "Ecal": 1.0138375135065145,
+              "Tcal": 0.9995182712227567,
+              "fEDE": 0.11169526029146729,
+              "log10z_c": 3.7181028953771027,
+              "logA": 3.0578176330898943,
+              "n_s": 0.9793118962836175,
+              "omega_b": 0.02278504488174076,
+              "omega_cdm": 0.12737517141924037,
+              "tau_reio": 0.04982374768839065,
+              "thetai_scf": 2.0929525725681533
+            },
+            "minimum": {
+              "Ecal": 1.0138375135065145,
+              "H0": 71.5,
+              "Tcal": 0.9995182712227567,
+              "chi2": 61.745669606773006,
+              "chi2__q016_shape_Tcal": 0.017906065958665885,
+              "chi2__q016_shape_tau_reio": 0.03843248612684244,
+              "chi2__q016_spt_d1_lite": 61.6893310546875,
+              "fEDE": 0.11169526029146729,
+              "log10z_c": 3.7181028953771027,
+              "logA": 3.0578176330898943,
+              "minuslogpost": 17.66648803600923,
+              "n_s": 0.9793118962836175,
+              "omega_b": 0.02278504488174076,
+              "omega_cdm": 0.12737517141924037,
+              "tau_reio": 0.04982374768839065,
+              "thetai_scf": 2.0929525725681533
+            },
+            "objective_chi2": 61.745669606773006,
+            "objective_components": {
+              "q016_shape_Tcal": 0.017906065958665885,
+              "q016_shape_tau_reio": 0.03843248612684244,
+              "q016_spt_d1_lite": 61.6893310546875
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {},
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+              "objective": 60.664160597403416
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 60.664160597403416
+          },
+          "start_family": "parent_fixed_jitter_minus",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        },
+        {
+          "absolute_cross_chain_chi2_comparison_performed": false,
+          "branch": "spt",
+          "case_id": "NOT DOCUMENTED",
+          "cross_chain_chi2_sum_performed": false,
+          "elapsed_seconds": 2101.284130095,
+          "ell_range": [
+            600,
+            2000
+          ],
+          "exact_optimizer_objective": true,
+          "exact_optimizer_objective_gate": true,
+          "exact_q011_vector_used_as_profile_endpoint": false,
+          "ignore_prior": true,
+          "minimum": {
+            "A_s": 2.1354149019288252e-09,
+            "Ecal": 1.01484257603552,
+            "Omega_m": 0.28388250044232793,
+            "S8": 0.7842498798560913,
+            "Tcal": 1.000165178221008,
+            "chi2": 62.535111668311444,
+            "chi2__q016_shape_Tcal": 0.0021052349301961424,
+            "chi2__q016_shape_tau_reio": 0.004144433869525785,
+            "chi2__q016_spt_d1_lite": 62.52886199951172,
+            "fEDE": 0.07426523790652359,
+            "log10z_c": 3.667751699088977,
+            "logA": 3.0612460542504576,
+            "minuslogpost": 18.06120906677845,
+            "minuslogprior": -13.206346767377273,
+            "minuslogprior__0": -13.206346767377273,
+            "n_s": 0.9615156900322396,
+            "omega_b": 0.02278599405394259,
+            "omega_cdm": 0.12169769566791391,
+            "rs_drag": 144.36388579268865,
+            "sigma8": 0.8062055383411905,
+            "tau_reio": 0.05138626366552256,
+            "thetai_scf": 2.3968326870085184,
+            "weight": 1.0
+          },
+          "mode": "fixed_h0_71p5",
+          "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+          "objective_chi2": 62.535111668311444,
+          "objective_component_gate": true,
+          "objective_components": {
+            "q016_shape_Tcal": 0.0021052349301961424,
+            "q016_shape_tau_reio": 0.004144433869525785,
+            "q016_spt_d1_lite": 62.52886199951172
+          },
+          "objective_self_consistency_gate": true,
+          "observables": [
+            "TT",
+            "TE",
+            "EE"
+          ],
+          "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+          "parent": {
+            "github_run_id": 33732688762,
+            "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+            "role": "NUMERICAL_SEED_PARENT_ONLY",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          "phase": "phase1_fixed",
+          "q": "Q016",
+          "raw_optimizer_candidate": {
+            "minimum": {
+              "A_s": 2.1354149019288252e-09,
+              "Ecal": 1.01484257603552,
+              "Omega_m": 0.28388250044232793,
+              "S8": 0.7842498798560913,
+              "Tcal": 1.000165178221008,
+              "chi2": 62.535111668311444,
+              "chi2__q016_shape_Tcal": 0.0021052349301961424,
+              "chi2__q016_shape_tau_reio": 0.004144433869525785,
+              "chi2__q016_spt_d1_lite": 62.52886199951172,
+              "fEDE": 0.07426523790652359,
+              "log10z_c": 3.667751699088977,
+              "logA": 3.0612460542504576,
+              "minuslogpost": 18.06120906677845,
+              "minuslogprior": -13.206346767377273,
+              "minuslogprior__0": -13.206346767377273,
+              "n_s": 0.9615156900322396,
+              "omega_b": 0.02278599405394259,
+              "omega_cdm": 0.12169769566791391,
+              "rs_drag": 144.36388579268865,
+              "sigma8": 0.8062055383411905,
+              "tau_reio": 0.05138626366552256,
+              "thetai_scf": 2.3968326870085184,
+              "weight": 1.0
+            },
+            "objective_chi2": 62.535111668311444,
+            "objective_components": {
+              "q016_shape_Tcal": 0.0021052349301961424,
+              "q016_shape_tau_reio": 0.004144433869525785,
+              "q016_spt_d1_lite": 62.52886199951172
+            }
+          },
+          "restart": 3,
+          "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+          "runtime_provenance_file": "q016_v9_source_runtime/setup_spt.json",
+          "seed_candidate": {
+            "applied_reference_values": {
+              "Ecal": 1.0115633527778902,
+              "Tcal": 1.0001203525843847,
+              "fEDE": 0.047317473953471134,
+              "log10z_c": 3.704945934056376,
+              "logA": 3.05730612684444,
+              "n_s": 0.9619781808302192,
+              "omega_b": 0.02269188857445893,
+              "omega_cdm": 0.12322633593907767,
+              "tau_reio": 0.05073401971078815,
+              "thetai_scf": 2.412783361650496
+            },
+            "minimum": {
+              "Ecal": 1.0115633527778902,
+              "H0": 71.5,
+              "Tcal": 1.0001203525843847,
+              "chi2": 194.1846471342721,
+              "chi2__q016_shape_Tcal": 0.0011176500438330047,
+              "chi2__q016_shape_tau_reio": 0.0019651531735893958,
+              "chi2__q016_spt_d1_lite": 194.1815643310547,
+              "fEDE": 0.047317473953471134,
+              "log10z_c": 3.704945934056376,
+              "logA": 3.05730612684444,
+              "minuslogpost": 83.88597679975878,
+              "n_s": 0.9619781808302192,
+              "omega_b": 0.02269188857445893,
+              "omega_cdm": 0.12322633593907767,
+              "tau_reio": 0.05073401971078815,
+              "thetai_scf": 2.412783361650496
+            },
+            "objective_chi2": 194.1846471342721,
+            "objective_components": {
+              "q016_shape_Tcal": 0.0011176500438330047,
+              "q016_shape_tau_reio": 0.0019651531735893958,
+              "q016_spt_d1_lite": 194.1815643310547
+            },
+            "prior_structure_gate": {
+              "expected_external_prior_names": [],
+              "expected_nonflat_parameter_priors": [],
+              "external_prior_names": [],
+              "nonflat_parameter_priors": {},
+              "pass": true
+            },
+            "reference_is_pointlike": true,
+            "source": {
+              "kind": "V6_HISTORY_FREE_OBJECTIVE_BEST",
+              "objective": 62.07281546923305
+            }
+          },
+          "seed_candidate_preservation_pass": true,
+          "seed_objective_tolerance": 0.05,
+          "selected_candidate": "OPTIMIZER_MINIMUM",
+          "source_vector_meta": {
+            "kind": "V6_HISTORY_FREE_OBJECTIVE_BEST",
+            "objective": 62.07281546923305
+          },
+          "start_family": "parent_free_projected",
+          "status": "COMPLETE",
+          "target_h0": 71.5
+        }
+      ],
+      "best_record": {
+        "absolute_cross_chain_chi2_comparison_performed": false,
+        "branch": "spt",
+        "case_id": "NOT DOCUMENTED",
+        "cross_chain_chi2_sum_performed": false,
+        "elapsed_seconds": 2390.495763729,
+        "ell_range": [
+          600,
+          2000
+        ],
+        "exact_optimizer_objective": true,
+        "exact_optimizer_objective_gate": true,
+        "exact_q011_vector_used_as_profile_endpoint": false,
+        "ignore_prior": true,
+        "minimum": {
+          "A_s": 2.132600669595976e-09,
+          "Ecal": 1.0156311196951533,
+          "Omega_m": 0.2975458845801884,
+          "S8": 0.8210269904978369,
+          "Tcal": 1.000554452143415,
+          "chi2": 60.487517785271514,
+          "chi2__q016_shape_Tcal": 0.023720461368641546,
+          "chi2__q016_shape_tau_reio": 0.004957907398969358,
+          "chi2__q016_spt_d1_lite": 60.458839416503906,
+          "fEDE": 0.11994954303594449,
+          "log10z_c": 3.7349426488099544,
+          "logA": 3.0599272995769833,
+          "minuslogpost": 17.037412125258484,
+          "minuslogprior": -13.206346767377273,
+          "minuslogprior__0": -13.206346767377273,
+          "n_s": 0.9806966562322111,
+          "omega_b": 0.022845462692666175,
+          "omega_cdm": 0.12862348514046607,
+          "rs_drag": 141.59458779944086,
+          "sigma8": 0.8244058935623082,
+          "tau_reio": 0.05142247445646204,
+          "thetai_scf": 2.0194701316593653,
+          "weight": 1.0
+        },
+        "mode": "fixed_h0_71p5",
+        "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "objective_basis": "SCALAR_PRIMARY_CMB_CHI2_PLUS_NORMALIZATION_FREE_GAUSSIAN_SHAPE_LIKELIHOODS",
+        "objective_chi2": 60.487517785271514,
+        "objective_component_gate": true,
+        "objective_components": {
+          "q016_shape_Tcal": 0.023720461368641546,
+          "q016_shape_tau_reio": 0.004957907398969358,
+          "q016_spt_d1_lite": 60.458839416503906
+        },
+        "objective_self_consistency_gate": true,
+        "observables": [
+          "TT",
+          "TE",
+          "EE"
+        ],
+        "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+        "parent": {
+          "github_run_id": 33732688762,
+          "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+          "role": "NUMERICAL_SEED_PARENT_ONLY",
+          "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+        },
+        "phase": "phase1_fixed",
+        "q": "Q016",
+        "raw_optimizer_candidate": {
+          "minimum": {
+            "A_s": 2.132600669595976e-09,
+            "Ecal": 1.0156311196951533,
+            "Omega_m": 0.2975458845801884,
+            "S8": 0.8210269904978369,
+            "Tcal": 1.000554452143415,
+            "chi2": 60.487517785271514,
+            "chi2__q016_shape_Tcal": 0.023720461368641546,
+            "chi2__q016_shape_tau_reio": 0.004957907398969358,
+            "chi2__q016_spt_d1_lite": 60.458839416503906,
+            "fEDE": 0.11994954303594449,
+            "log10z_c": 3.7349426488099544,
+            "logA": 3.0599272995769833,
+            "minuslogpost": 17.037412125258484,
+            "minuslogprior": -13.206346767377273,
+            "minuslogprior__0": -13.206346767377273,
+            "n_s": 0.9806966562322111,
+            "omega_b": 0.022845462692666175,
+            "omega_cdm": 0.12862348514046607,
+            "rs_drag": 141.59458779944086,
+            "sigma8": 0.8244058935623082,
+            "tau_reio": 0.05142247445646204,
+            "thetai_scf": 2.0194701316593653,
+            "weight": 1.0
+          },
+          "objective_chi2": 60.487517785271514,
+          "objective_components": {
+            "q016_shape_Tcal": 0.023720461368641546,
+            "q016_shape_tau_reio": 0.004957907398969358,
+            "q016_spt_d1_lite": 60.458839416503906
+          }
+        },
+        "restart": 1,
+        "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+        "run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+        "runtime_provenance_file": "q016_v9_source_runtime/setup_spt.json",
+        "seed_candidate": {
+          "applied_reference_values": {
+            "Ecal": 1.0178375135065145,
+            "Tcal": 1.0015182712227566,
+            "fEDE": 0.11969526029146729,
+            "log10z_c": 3.7581028953771027,
+            "logA": 3.0658176330898943,
+            "n_s": 0.9823118962836174,
+            "omega_b": 0.022865044881740758,
+            "omega_cdm": 0.12857517141924035,
+            "tau_reio": 0.05582374768839066,
+            "thetai_scf": 2.152952572568153
+          },
+          "minimum": {
+            "Ecal": 1.0178375135065145,
+            "H0": 71.5,
+            "Tcal": 1.0015182712227566,
+            "chi2": 62.31143165161585,
+            "chi2__q016_shape_Tcal": 0.1778663198958982,
+            "chi2__q016_shape_tau_reio": 0.6463483822570621,
+            "chi2__q016_spt_d1_lite": 61.48721694946289,
+            "fEDE": 0.11969526029146729,
+            "log10z_c": 3.7581028953771027,
+            "logA": 3.0658176330898943,
+            "minuslogpost": 17.94936905843065,
+            "n_s": 0.9823118962836174,
+            "omega_b": 0.022865044881740758,
+            "omega_cdm": 0.12857517141924035,
+            "tau_reio": 0.05582374768839066,
+            "thetai_scf": 2.152952572568153
+          },
+          "objective_chi2": 62.31143165161585,
+          "objective_components": {
+            "q016_shape_Tcal": 0.1778663198958982,
+            "q016_shape_tau_reio": 0.6463483822570621,
+            "q016_spt_d1_lite": 61.48721694946289
+          },
+          "prior_structure_gate": {
+            "expected_external_prior_names": [],
+            "expected_nonflat_parameter_priors": [],
+            "external_prior_names": [],
+            "nonflat_parameter_priors": {},
+            "pass": true
+          },
+          "reference_is_pointlike": true,
+          "source": {
+            "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+            "objective": 60.664160597403416
+          }
+        },
+        "seed_candidate_preservation_pass": true,
+        "seed_objective_tolerance": 0.05,
+        "selected_candidate": "OPTIMIZER_MINIMUM",
+        "source_vector_meta": {
+          "kind": "V6_HISTORY_FIXED_OBJECTIVE_BEST",
+          "objective": 60.664160597403416
+        },
+        "start_family": "parent_fixed_jitter_plus",
+        "status": "COMPLETE",
+        "target_h0": 71.5
+      },
+      "best_two_spread": 0.11351130864986914,
+      "complete_count": 4,
+      "complete_gate": true,
+      "distinct_restart_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "replicate_count_within_delta_objective": 3,
+      "replicate_restart_ids_within_delta_objective": [
+        0,
+        1,
+        2
+      ],
+      "stable": true
+    }
+  },
+  "case_id": "NOT DOCUMENTED",
+  "excluded_records": [],
+  "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+  "parent_phase1_github_run_id": 33749345635,
+  "parent_phase1_head_sha": "35fa2038456e8c2e40885b37d5ea27e595eac4b2",
+  "parent_phase1_result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-009",
+  "parent_phase1_run_id": "Q016-MATCHED-CMB-SURFACE-V9",
+  "q": "Q016",
+  "recovered_from_parent_artifacts": true,
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-010",
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V10",
+  "stage": "PHASE1_FIXED_SUMMARY",
+  "status": "PASS"
+}
