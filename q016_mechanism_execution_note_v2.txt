@@ -1,0 +1,31 @@
+Q016 CMB MECHANISM V2 — TECHNICAL RECOVERY
+
+CURRENT Q: Q016
+CASE ID: NOT DOCUMENTED
+V1 GITHUB RUN: 33794256964
+V1 HEAD: 0f038b210f9ff3a5fbf84b2d85bde5040668357a
+
+CLASSIFICATION:
+TECHNICAL FAILURE — ENVIRONMENT BOOTSTRAP OMISSION.
+
+V1 STATUS:
+prepare = SUCCESS
+ACT-lite asset = SUCCESS
+matched Planck/SPT/ACT = FAILED BEFORE SCIENCE
+secondary Planck/SPT/ACT = FAILED BEFORE SCIENCE
+scientific residual/mechanism result = NOT AVAILABLE
+
+ROOT CAUSE:
+The successful V16 workflow installed q005_hpc_v14_requirements.txt before
+q016_setup_v16.sh. V1 omitted that prerequisite. q016_setup_v16.sh correctly
+failed immediately because cobaya==3.5.6 was not installed.
+
+V2:
+- restores the exact frozen requirements install
+- verifies frozen versions before V16 setup
+- calls unchanged q016_setup_v16.sh <branch>
+- verifies frozen stack again afterward
+- adds same check to prepare
+- reuses V1 successful ACT artifact 9908527497
+- does not rerun V16 primary profiles
+- changes no science, covariance method, endpoint, or threshold

@@ -1,0 +1,24 @@
+{
+  "execution_mode": "MOTOR + HPC PROGRAM",
+  "gate_relaxation": false,
+  "jobs": [
+    "prepare",
+    "import_v1_act_asset",
+    "matched_residual(planck)",
+    "matched_residual(spt)",
+    "matched_residual(act)",
+    "secondary_mechanism(planck)",
+    "secondary_mechanism(spt)",
+    "secondary_mechanism(act)",
+    "merge",
+    "final_tests"
+  ],
+  "parent_scientific_result": "R-Q016-EDE-MATCHED-CMB-SURFACE-016",
+  "primary_profile_rerun": false,
+  "q": "Q016",
+  "recovery_strategy": "NEW VERSION V2; REUSE V1 SUCCESSFUL ACT ASSET; RERUN ONLY THE SIX NEVER-STARTED SCIENTIFIC BRANCH COMPUTATIONS",
+  "repair_only": "restore frozen dependency bootstrap before q016_setup_v16.sh",
+  "result_id": "R-Q016-EDE-CMB-MECHANISM-002",
+  "run_id": "Q016-CMB-MECHANISM-V2",
+  "v1_scientific_compute_started": false
+}
