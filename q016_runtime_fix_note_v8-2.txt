@@ -1,0 +1,87 @@
+Q016 V8 — V7 PREFLIGHT TEST REPAIR
+
+AUTHORITATIVE FAILED PARENT
+GitHub run: 33747984761
+Head SHA: 9beefa6f7c99064e4dffd27c413a6ab0a0a17ee6
+Workflow: Bubbleverse Q016 Matched CMB Surface V7
+
+FIRST FAILURE
+prepare -> Cobaya exact-objective runtime toy test
+
+CLASSIFICATION
+PROGRAM_GUARDRAIL_TEST_FAILURE / PREFLIGHT_ONLY
+
+SCIENTIFIC MINIMIZATION STARTED
+NO.
+
+SCIENTIFIC RESULT
+NOT AVAILABLE.
+
+ROOT CAUSE
+V7's toy test used:
+  parameter prior x ~ N(-5, 1)
+  likelihood optimum x = 2
+
+Cobaya 3.5.6 documents that ignore_prior=true minimizes likelihood SUBJECT TO
+PRIOR BOUNDS. For unbounded distributions the minimizer uses
+confidence_for_unbounded=0.9999995 by default, approximately a 5-sigma box.
+
+Therefore x=2 was approximately 7 sigma from the toy prior center and outside the
+optimization box. Py-BOBYQA correctly reported:
+  x0 above upper bound, adjusting
+
+The test was invalid. This does not refute V7's exact-objective implementation.
+
+V8 REPAIR
+Toy prior becomes:
+  x ~ N(0, 1)
+
+Likelihood optimum remains:
+  x = 2
+
+This is deliberately still different from the MAP optimum, but x=2 is now safely
+inside Cobaya's unchanged default minimizer bounds.
+
+Before minimization, V8 explicitly computes:
+  model.prior.bounds(confidence_for_unbounded=0.9999995)
+and requires:
+  lower_bound < 2 < upper_bound
+
+Only then may the runtime test validate ignore_prior=true semantics.
+
+PRODUCTION SCIENCE
+UNCHANGED FROM V7.
+
+No change to:
+- n=3 EDE model
+- backend commit
+- datasets or likelihoods
+- H0 target 71.5
+- ell=600..2000
+- TT/TE/EE
+- tau shape
+- Planck A_planck/calTE/calEE shapes
+- SPT Tcal shape
+- ACT nuisance treatment
+- exact normalization-free objective
+- ignore_prior=true
+- multistart threshold <=1.0
+- 4 starts/profile
+- same-run fixed->free embedding
+- nesting tolerance
+- seed-preservation tolerance
+
+WORKFLOW CONTROL-FLOW REPAIR
+V7 also used `if: always()` for phase1_summary. Because prepare failed, Phase 1 was
+skipped, yet phase1_summary still ran and failed on an empty input directory; a
+later primary gate job also became red.
+
+V8 behavior:
+- phase1_summary is skipped after an upstream SKIP/CANCEL caused by preflight.
+- phase1_summary still runs after a genuine Phase-1 worker FAILURE, preserving
+  partial-result diagnostics.
+- merge_primary similarly runs after genuine Phase-2 execution (success or failure)
+  but not after an upstream skip.
+- primary_endpoint_gates runs only after merge_primary succeeds.
+
+This prevents technical cascade noise without hiding genuine worker failures.
