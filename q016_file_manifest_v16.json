@@ -1,0 +1,80 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "compute_plan": {
+    "branch": "planck",
+    "families": [
+      "v10_planck_free_best_jitter_plus",
+      "v10_planck_free_best_jitter_minus",
+      "v10_planck_free_best_cross_a",
+      "v10_planck_free_best_cross_b"
+    ],
+    "max_parallel": 4,
+    "mode": "reference_free_h0",
+    "new_expensive_jobs": 4,
+    "restarts": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "reused_completed_expensive_profiles": 24
+  },
+  "files": [
+    "q016-matched-cmb-surface-v16.yml",
+    "q016_objective_reprofile_v16.py",
+    "q016_aggregate_v16.py",
+    "q016_matched_cmb_surface_v16_config.yml",
+    "q016_tests_v16.py",
+    "q016_setup_v16.sh",
+    "q016_v10_primary_parent_lock_v16.json",
+    "q016_v10_parent_audit_local_v16.json",
+    "q016_v6_objective_seed_lock_v16.json",
+    "q016_source_lock_v16.json",
+    "q016_compute_architecture_v16.json",
+    "q016_runtime_fix_note_v16.txt"
+  ],
+  "gate_relaxations": false,
+  "lock_routing": {
+    "seed_lock_file": "q016_v6_objective_seed_lock_v16.json",
+    "v10_planck_extension_requires_v6_seed_lock": false,
+    "v10_planck_extension_seed_source": "authenticated V10 primary merged result",
+    "v10_primary_parent_lock_file": "q016_v10_primary_parent_lock_v16.json"
+  },
+  "objective_changed": false,
+  "q": "Q016",
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-016",
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V16",
+  "scientific_parent": {
+    "github_run_id": 33764943297,
+    "head_sha": "81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8",
+    "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-010",
+    "run_id": "Q016-MATCHED-CMB-SURFACE-V10"
+  },
+  "scientific_surface_changed": false,
+  "status": "PROGRAM GENERATED \u2014 NOT YET EXECUTED",
+  "v15_failure": {
+    "failure": "V6_SEED_LOCK_GATE=FAIL identity",
+    "github_run_id": 33784074430,
+    "head_sha": "a6d32d01e5173dbf13f91e4402dea584aefaf058",
+    "planck_extension_workers_failed_before_optimizer": 4,
+    "prepare": "PASS",
+    "scientific_result": "NOT_AVAILABLE",
+    "v10_parent_import": "PASS"
+  },
+  "validation": {
+    "actual_v10_parent_audit": "PASS",
+    "exact_static_test": "PASS",
+    "four_planck_jobs_unchanged": "PASS",
+    "frozen_dependency_gate": "PASS",
+    "lazy_v6_lock_gate": "PASS",
+    "lock_identity_and_pointer_gate": "PASS",
+    "no_gate_relaxation": "PASS",
+    "q016_aggregate_v16.py": "PASS",
+    "q016_objective_reprofile_v16.py": "PASS",
+    "q016_setup_v16.sh": "PASS",
+    "q016_tests_v16.py": "PASS",
+    "v10_scientific_parent_unchanged": "PASS",
+    "workflow_identity_gate": "PASS",
+    "yaml": "PASS"
+  }
+}

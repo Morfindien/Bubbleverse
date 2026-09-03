@@ -1,0 +1,68 @@
+Q016 V16 — V15 LOCK-ROUTING / EAGER-SEED-LOAD REPAIR
+
+V15 GITHUB RUN
+33784074430
+
+V15 HEAD SHA
+a6d32d01e5173dbf13f91e4402dea584aefaf058
+
+V15 EXECUTION
+prepare: PASS
+static/runtime toy: PASS
+V10 parent artifact verification/import: PASS
+Planck extension: 4/4 workers entered runner and failed before optimizer
+merge_primary: FAIL as downstream consequence
+Scientific minimization from V15 extension: NO
+Scientific result from V15 extension: NOT AVAILABLE
+
+OBSERVED FAILURE
+  RuntimeError: V6_SEED_LOCK_GATE=FAIL identity
+
+ROOT CAUSE 1 — STALE CONFIG POINTER
+V15 config incorrectly retained:
+  seed_lock_file: q016_v6_objective_seed_lock_v11.json
+
+while the runner identity was:
+  Q016-MATCHED-CMB-SURFACE-V15
+  R-Q016-EDE-MATCHED-CMB-SURFACE-015
+
+The V11 seed lock correctly failed that identity check.
+
+ROOT CAUSE 2 — UNNECESSARY DEPENDENCY
+source_vector() loaded the V6 seed lock before checking start_family.
+
+But all four current extension families are:
+  v10_planck_free_best_*
+
+They seed from the authenticated V10 Planck free-H0 best record and do not use
+the V6 history lock at all.
+
+V16 REPAIR
+1. Current lock pointers:
+   q016_v6_objective_seed_lock_v16.json
+   q016_v10_primary_parent_lock_v16.json
+
+2. V6 lock loading is now lazy:
+   - parent_fixed* -> load V6 lock
+   - parent_free_projected / parent_free_best -> load V6 lock
+   - v10_planck_free_best_* -> DO NOT load V6 lock
+
+3. The targeted Planck continuation is therefore anchored only to the
+   authenticated V10 primary merged result for its seed vector.
+
+4. Static tests now reject stale V11/V12/V13/V14/V15 seed-lock pointers and
+   verify the workflow display name is V16.
+
+SCIENTIFIC STATE UNCHANGED
+V10 remains authoritative scientific parent:
+  run 33764943297
+  head 81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8
+
+Still exactly four Planck free-H0 jobs:
+  r20 jitter_plus
+  r21 jitter_minus
+  r22 cross_a
+  r23 cross_b
+
+No model, data, likelihood, prior, objective, multipole, tolerance, threshold,
+replicate-count, embedding, nesting, or cross-chain rule changes.
