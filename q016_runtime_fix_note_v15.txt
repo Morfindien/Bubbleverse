@@ -1,0 +1,61 @@
+Q016 V15 — V14 FROZEN DEPENDENCY VERSIONING REPAIR
+
+V14 #2 GITHUB RUN
+33783314494
+
+V14 HEAD SHA
+2483c8265f1fee9df38ffe1f6b3fd68d5fb61a38
+
+V14 EXECUTION
+prepare: FAIL
+Git-blob reuse gate: FAIL
+Static tests: SKIPPED
+Runtime toy: SKIPPED
+V10 parent import: SKIPPED
+Planck extension jobs: 0/4 started
+Scientific result: NOT AVAILABLE
+
+ROOT CAUSE
+A Q016 version bump accidentally changed the frozen Q014 reference:
+  q014_external_viability_v12.py
+to:
+  q014_external_viability_v14.py
+
+Git correctly failed because that file does not exist.
+
+SECOND LATENT BUG
+The runner also referenced:
+  q014_external_viability_v14_config.yml
+instead of the frozen:
+  q014_external_viability_v12_config.yml
+
+V15 RESTORES AND LOCKS
+  q014_external_viability_v10.py
+  blob 9085bdea8e5732b5e4c7095068d284918157948d
+
+  q014_external_viability_v12.py
+  blob d2c8ba19aed63d8e1b17a0ef4e18e2dd6981a599
+
+  q014_external_viability_v12_config.yml
+
+  q005_hpc_v14_requirements.txt
+
+Those are dependency versions, not the Q016 revision number.
+
+V15 static tests explicitly reject accidental q014 v13/v14/v15 executable/config
+references and reject an invented q005_hpc_v15_requirements.txt.
+
+SCIENTIFIC STATE UNCHANGED
+V10 remains the authoritative scientific parent:
+  run 33764943297
+  head 81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8
+
+V15 still runs exactly four Planck free-H0 extension jobs:
+  r20 v10_planck_free_best_jitter_plus
+  r21 v10_planck_free_best_jitter_minus
+  r22 v10_planck_free_best_cross_a
+  r23 v10_planck_free_best_cross_b
+
+No changes to model, likelihood, data, objective, priors, H0 target, ell cuts,
+Delta-objective multistart threshold, replicate requirement, embedding tolerance,
+nesting tolerance, or no-cross-chain-chi2 rule.

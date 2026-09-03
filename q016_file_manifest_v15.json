@@ -1,0 +1,80 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "compute_plan": {
+    "branch": "planck",
+    "families": [
+      "v10_planck_free_best_jitter_plus",
+      "v10_planck_free_best_jitter_minus",
+      "v10_planck_free_best_cross_a",
+      "v10_planck_free_best_cross_b"
+    ],
+    "max_parallel": 4,
+    "mode": "reference_free_h0",
+    "new_expensive_jobs": 4,
+    "restarts": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "reused_completed_expensive_profiles": 24
+  },
+  "files": [
+    "q016-matched-cmb-surface-v15.yml",
+    "q016_objective_reprofile_v15.py",
+    "q016_aggregate_v15.py",
+    "q016_matched_cmb_surface_v15_config.yml",
+    "q016_tests_v15.py",
+    "q016_setup_v15.sh",
+    "q016_v10_primary_parent_lock_v15.json",
+    "q016_v10_parent_audit_local_v15.json",
+    "q016_v6_objective_seed_lock_v15.json",
+    "q016_source_lock_v15.json",
+    "q016_compute_architecture_v15.json",
+    "q016_runtime_fix_note_v15.txt"
+  ],
+  "frozen_dependencies": {
+    "q005_requirements": "q005_hpc_v14_requirements.txt",
+    "q014_v10_blob": "9085bdea8e5732b5e4c7095068d284918157948d",
+    "q014_v10_code": "q014_external_viability_v10.py",
+    "q014_v12_blob": "d2c8ba19aed63d8e1b17a0ef4e18e2dd6981a599",
+    "q014_v12_code": "q014_external_viability_v12.py",
+    "q014_v12_config": "q014_external_viability_v12_config.yml"
+  },
+  "gate_relaxations": false,
+  "objective_changed": false,
+  "q": "Q016",
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-015",
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V15",
+  "scientific_parent": {
+    "github_run_id": 33764943297,
+    "head_sha": "81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8",
+    "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-010",
+    "run_id": "Q016-MATCHED-CMB-SURFACE-V10"
+  },
+  "scientific_surface_changed": false,
+  "status": "PROGRAM GENERATED \u2014 NOT YET EXECUTED",
+  "v14_failure": {
+    "classification": "FROZEN_Q014_REFERENCE_VERSIONING_REPAIR",
+    "github_run_id": 33783314494,
+    "head_sha": "2483c8265f1fee9df38ffe1f6b3fd68d5fb61a38",
+    "scientific_compute_started": false,
+    "scientific_result": "NOT_AVAILABLE",
+    "stage": "PREPARE_GIT_BLOB_REUSE_GATE"
+  },
+  "validation": {
+    "actual_v10_parent_audit": "PASS",
+    "exact_static_test": "PASS",
+    "four_planck_jobs_unchanged": "PASS",
+    "frozen_dependency_execution_scan": "PASS",
+    "frozen_q014_guardrails": "PASS",
+    "no_gate_relaxation": "PASS",
+    "pYYAML_repairs_preserved": "PASS",
+    "q016_aggregate_v15.py": "PASS",
+    "q016_objective_reprofile_v15.py": "PASS",
+    "q016_setup_v15.sh": "PASS",
+    "q016_tests_v15.py": "PASS",
+    "v10_scientific_parent_unchanged": "PASS",
+    "yaml": "PASS"
+  }
+}

@@ -1,0 +1,251 @@
+name: Bubbleverse Q016 Matched CMB Surface V14
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q016-matched-cmb-surface-v15-${{ github.ref }}
+  cancel-in-progress: false
+
+env:
+  CURRENT_Q: Q016
+  RUN_ID: Q016-MATCHED-CMB-SURFACE-V15
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - name: Git-blob reuse gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD:q014_external_viability_v10.py)" = "9085bdea8e5732b5e4c7095068d284918157948d"
+          test "$(git rev-parse HEAD:q014_external_viability_v12.py)" = "d2c8ba19aed63d8e1b17a0ef4e18e2dd6981a599"
+      - name: Static V14 tests
+        run: |
+          set -euo pipefail
+          bash -n q016_setup_v15.sh
+          python -m py_compile q016_objective_reprofile_v15.py q016_aggregate_v15.py q016_tests_v15.py
+          python q016_tests_v15.py static --output q016_static_tests_v15.json
+      - name: Cobaya exact-objective runtime toy test
+        run: python q016_tests_v15.py runtime --output q016_runtime_objective_test_v15.json
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q016-v15-prepare
+          path: |
+            q016_static_tests_v15.json
+            q016_runtime_objective_test_v15.json
+            q016_v10_primary_parent_lock_v15.json
+          retention-days: 30
+
+  import_v10_parent:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - name: Install lightweight audit dependency
+        run: python -m pip install PyYAML==6.0.2
+      - name: Verify exact V10 artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/33764943297" > /tmp/v10run.json
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/33764943297/artifacts?per_page=100" > /tmp/v10arts.json
+          python - <<'PY'
+          import json
+          lock=json.load(open("q016_v10_primary_parent_lock_v15.json"))
+          run=json.load(open("/tmp/v10run.json"))
+          assert int(run["id"])==33764943297
+          assert run["head_sha"]=="81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8"
+          assert run["name"]=="Bubbleverse Q016 Matched CMB Surface V10"
+          arts={a["name"]:a for a in json.load(open("/tmp/v10arts.json"))["artifacts"]}
+          expected=[lock["phase1_summary"],lock["merged"],*lock["phase2_artifacts"]]
+          assert len(lock["phase2_artifacts"])==12
+          for e in expected:
+              a=arts[e["name"]]
+              assert int(a["id"])==int(e["id"])
+              assert a["digest"]==e["digest"]
+              assert not a["expired"]
+              assert int(a["workflow_run"]["id"])==33764943297
+              assert a["workflow_run"]["head_sha"]=="81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8"
+          print("Q016_V14_V10_PARENT_ARTIFACT_GATE=PASS")
+          PY
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-primary-merged-v10
+          path: q016_parent_v10/merged
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33764943297
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-v10-phase1-fixed-summary
+          path: q016_parent_v10/fixed
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33764943297
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q016-v10-p2-*
+          path: q016_parent_v10/free
+          merge-multiple: true
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33764943297
+      - name: Audit V10 failure identity
+        run: |
+          set -euo pipefail
+          test "$(find q016_parent_v10/free -type f -name '*_reference_free_h0_*.json' | wc -l)" -eq 12
+          python q016_tests_v15.py parent \
+            --result q016_parent_v10/merged/q016_primary_merged_v10.json \
+            --output q016_v10_parent_audit_v14.json
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q016-v15-v10-parent-context
+          path: |
+            q016_parent_v10/
+            q016_v10_parent_audit_v14.json
+            q016_v10_primary_parent_lock_v15.json
+          if-no-files-found: error
+          retention-days: 30
+
+  planck_extension:
+    needs: import_v10_parent
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        include:
+          - {branch: planck, family: v10_planck_free_best_jitter_plus, restart: 20}
+          - {branch: planck, family: v10_planck_free_best_jitter_minus, restart: 21}
+          - {branch: planck, family: v10_planck_free_best_cross_a, restart: 22}
+          - {branch: planck, family: v10_planck_free_best_cross_b, restart: 23}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-v15-v10-parent-context
+          path: q016_parent_context
+      - name: Build Planck environment
+        run: bash q016_setup_v15.sh planck
+      - name: Run targeted Planck free-H0 continuation
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p q016_v15_planck_extension
+          OUT="q016_v15_planck_extension/planck_reference_free_h0_${{ matrix.family }}.json"
+          set +e
+          timeout --signal=INT --kill-after=10m 315m python q016_objective_reprofile_v15.py \
+            --branch planck --mode reference_free_h0 \
+            --start-family "${{ matrix.family }}" --restart "${{ matrix.restart }}" \
+            --phase1-summary q016_parent_context/q016_parent_v10/fixed/q016_phase1_fixed_summary_v10.json \
+            --parent-free-result q016_parent_context/q016_parent_v10/merged/q016_primary_merged_v10.json \
+            --output "$OUT"
+          RC=$?
+          set -e
+          exit "$RC"
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: q016-v15-planck-${{ matrix.family }}
+          path: |
+            q016_v15_planck_extension/*.json
+            q016_v15_source_runtime/*.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  merge_primary:
+    needs: [import_v10_parent, planck_extension]
+    if: ${{ always() && needs.import_v10_parent.result == 'success' && needs.planck_extension.result != 'skipped' && needs.planck_extension.result != 'cancelled' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-v15-v10-parent-context
+          path: q016_parent_context
+      - uses: actions/download-artifact@v5
+        continue-on-error: true
+        with:
+          pattern: q016-v15-planck-*
+          path: q016_v15_extension_all
+          merge-multiple: true
+      - name: Final exact-objective endpoint certification
+        run: |
+          python q016_aggregate_v15.py final \
+            --phase1-summary q016_parent_context/q016_parent_v10/fixed/q016_phase1_fixed_summary_v10.json \
+            --parent-merged q016_parent_context/q016_parent_v10/merged/q016_primary_merged_v10.json \
+            --parent-free-dir q016_parent_context/q016_parent_v10/free \
+            --extension-dir q016_v15_extension_all \
+            --output q016_primary_merged_v14.json
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: q016-primary-merged-v14
+          path: q016_primary_merged_v14.json
+          if-no-files-found: warn
+          retention-days: 30
+
+  primary_endpoint_gates:
+    needs: merge_primary
+    if: ${{ needs.merge_primary.result == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - name: Install lightweight gate dependency
+        run: python -m pip install PyYAML==6.0.2
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-primary-merged-v14
+      - name: Validate V14 primary result
+        run: python q016_tests_v15.py final --result q016_primary_merged_v14.json --output q016_primary_result_tests_v14.json
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: q016-primary-gates-v14
+          path: q016_primary_result_tests_v14.json
+          if-no-files-found: error
+          retention-days: 30
