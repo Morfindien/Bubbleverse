@@ -1,0 +1,70 @@
+Q016 V7 — EXACT OBJECTIVE REPROFILE + SAME-RUN FIXED→FREE EMBEDDING
+
+DATE
+2026-09-03 12:50 CEST
+
+WHY V7 EXISTS
+Q016 V6 successfully reproduced the previously unstable optimizer basins, but the
+V6 aggregator ranked/reported profiles with raw likelihood chi2 while Cobaya's
+minimizer used the posterior by default. The SPT raw fixed-minus-free value
+(-1.5186882019) additionally violated nested-profile ordering.
+
+GITHUB REUSE DECISION
+C — EXISTING COMPONENTS SHOULD BE REUSED / MODIFIED.
+
+Reused scientific/numerical assets:
+- Q016 V6 matched CMB likelihood surface and successful setup/data plumbing.
+- Q016 V6 best known basins as continuation seeds only.
+- Q014 V10 normalization-free objective/candidate-preservation concept.
+- Q014 V12 same-run fixed->free embedding and unconditional H0 restoration.
+
+V7 OBJECTIVE REPAIR
+Gaussian auxiliary/calibration shapes are moved from posterior-prior contributions
+to explicit normalization-free likelihood components:
+  log L_shape = -0.5 * ((x-mu)/sigma)^2
+so -2 log L_shape = ((x-mu)/sigma)^2 exactly.
+
+Cobaya minimize is run with:
+  ignore_prior = true
+  best_of = 1
+
+Therefore the exact optimizer scalar is:
+  primary CMB chi2 + tau shape + chain-native Gaussian shape terms.
+
+Planck adds A_planck, calTE and calEE shapes.
+SPT adds Tcal shape.
+ACT adds no Gaussian A_act/P_act shape; A_act/P_act remain uniform hard bounds.
+
+Parameter priors/bounds are not changed. They are not counted in the V7 objective.
+
+STAGING
+Phase 1:
+  12 fixed-H0 jobs = 3 experiments x 4 deterministic starts.
+  H0 = 71.5 exactly.
+
+Phase 2:
+  12 free-H0 jobs = 3 experiments x 4 deterministic starts.
+  The exact same-run Phase-1 fixed best is embedded into free-H0 space with H0=71.5.
+  Additional starts are bounded jitters and the V6 free objective-best basin.
+
+TOTAL EXPENSIVE JOBS
+24 atomic minimizations, max 6 in parallel.
+No job intentionally relies on GitHub's platform ceiling.
+Per-job workflow timeout: 330 min.
+Internal soft timeout wrapper: 315 min.
+One minimization is one atomic task; interruption preserves the serialized seed/status
+artifact and only that atomic task must be retried.
+
+UNCHANGED VALIDATION
+- 4 COMPLETE V7 starts required per profile.
+- at least 2 must reproduce within Delta objective <= 1.0.
+- seed preservation tolerance = 0.05 (reused Q014 concept).
+- same-run embedding equivalence tolerance = 0.05.
+- fixed-vs-free numerical negative tolerance = 0.25 (reused Q014 V12 gate).
+- no tolerance is increased after seeing V7 output.
+
+ENDPOINT_REPROFILE_GATE IS COMPUTED, NEVER HARDCODED TRUE.
+
+Even if V7 passes, Q016 itself remains open. The next mandatory scientific stage is
+covariance-aware attribution + residual-vector comparison + ell=1000..2000
+full-vs-lite/frequency mechanism diagnostics.
