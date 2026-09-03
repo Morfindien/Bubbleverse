@@ -1,0 +1,60 @@
+Q016 CMB MECHANISM V1 — EXECUTION NOTE
+
+EXECUTION MODE
+MOTOR + HPC PROGRAM
+
+WHY
+Reasoning alone cannot construct covariance-aware bandpower residuals or evaluate
+experiment-specific frequency/nuisance directions. The primary V16 cosmological
+profiles are already certified and MUST NOT be rerun.
+
+SEARCH -> REUSE -> PATCH -> BUILD NEW
+REUSE:
+- Q015 V2 Planck/SPT covariance-residual attribution
+- Q009 V8 ACT SACC/covariance attribution
+- Q016 V16 exact matched-surface setup
+- Q016 V16 known-good environment
+- Q016 V10 ACT data transport
+
+BUILD NEW:
+- Q016 mechanism coordinator
+- endpoint lock
+- branch workflow
+- aggregator
+- mandatory final tests
+
+MANDATORY MATCHED OUTPUT
+Planck/SPT/ACT separately:
+- residual vectors at free and fixed H0 endpoints
+- delta residual = fixed - free
+- signed full-covariance contribution vectors
+- TT/TE/EE attribution
+- bands 600-999, 1000-1499, 1500-2000
+- covariance closure
+
+SECONDARY
+Planck: chain-native frequency/calibration directions from CamSpec matched state.
+SPT: official full 95/150/220 candl likelihood, cosmology frozen, nuisances only.
+ACT: official full-MF package pinned. V1 refuses to invent an uncertified private
+adapter: if an exact evaluator contract is not certified, ACT secondary returns
+TECHNICALLY_UNAVAILABLE while ACT matched-lite residual remains mandatory.
+
+FINAL SCIENTIFIC DECISION
+The program deliberately does NOT hard-code arbitrary residual-correlation thresholds
+to force Q016-A/B/C. After all mandatory diagnostics pass, Result Ingestion chooses
+exactly Q016-A, Q016-B, or Q016-C from the preserved evidence.
+
+ANTI-LOOP
+No more primary endpoint runs. A failed secondary branch is rerun/patched only if its
+missing information could still materially change the Q016 classification.
+
+PRE-EXECUTION RUNTIME-PATH AUDIT
+The initial generated wrapper was caught calling q016_setup_v16.sh without its
+required branch argument. This was repaired before delivery.
+
+V1 now:
+- passes planck/spt/act explicitly to the frozen V16 setup,
+- sets the exact COBAYA_PACKAGES_PATH used by V16,
+- seeds the shared ACT FITS artifact into that path before ACT setup,
+- installs secondary package code with --no-deps,
+- rechecks the exact frozen numerical package versions after setup.

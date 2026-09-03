@@ -1,0 +1,91 @@
+{
+  "actual_machine_computation_required": true,
+  "checkpointing": false,
+  "execution_mode": "MOTOR + HPC PROGRAM",
+  "existing_motor_sufficient_for_reasoning_and_routing": true,
+  "final_route": "RESULT INGESTION & ROUTING ENGINE",
+  "jobs": [
+    {
+      "id": "PREPARE",
+      "purpose": "identity/source/static gates",
+      "timeout_minutes": 30
+    },
+    {
+      "id": "ACT_ASSET",
+      "purpose": "known-good ACT lite data transport",
+      "timeout_minutes": 20
+    },
+    {
+      "id": "MATCHED-PLANCK",
+      "purpose": "fixed endpoint covariance residual",
+      "timeout_minutes": 120
+    },
+    {
+      "id": "MATCHED-SPT",
+      "purpose": "fixed endpoint covariance residual",
+      "timeout_minutes": 120
+    },
+    {
+      "id": "MATCHED-ACT",
+      "purpose": "fixed endpoint covariance residual",
+      "timeout_minutes": 120
+    },
+    {
+      "id": "SECONDARY-PLANCK",
+      "purpose": "Planck frequency/calibration/covariance diagnostic",
+      "timeout_minutes": 180
+    },
+    {
+      "id": "SECONDARY-SPT",
+      "purpose": "SPT full 95/150/220 nuisance-only diagnostic",
+      "timeout_minutes": 180
+    },
+    {
+      "id": "SECONDARY-ACT",
+      "purpose": "ACT official full-MF capability/diagnostic",
+      "timeout_minutes": 180
+    },
+    {
+      "id": "MERGE",
+      "purpose": "completeness/closure/common-shape diagnostic",
+      "timeout_minutes": 20
+    },
+    {
+      "id": "FINAL-TESTS",
+      "purpose": "mandatory result gates",
+      "timeout_minutes": 15
+    }
+  ],
+  "new_generic_motor_required": false,
+  "parallelism": {
+    "matched": 3,
+    "secondary": 3
+  },
+  "pre_execution_runtime_path_audit": {
+    "caught_before_delivery": "q016_setup_v16.sh requires branch argument",
+    "repair": [
+      "pass matrix.branch to q016_mechanism_setup_v1.sh and then q016_setup_v16.sh",
+      "set V16-compatible COBAYA_PACKAGES_PATH",
+      "seed shared ACT asset into exact V16 target",
+      "install optional secondary code with --no-deps",
+      "recheck frozen stack after setup"
+    ],
+    "status": "PASS_AFTER_REPAIR"
+  },
+  "q": "Q016",
+  "q016_outcome_owner": "RESULT INGESTION after FINAL_RESULT_GATE=PASS",
+  "result_id": "R-Q016-EDE-CMB-MECHANISM-001",
+  "run_id": "Q016-CMB-MECHANISM-V1",
+  "runtime_assessment": {
+    "official_standard_github_hosted_hard_limit_hours": 6,
+    "reason": "No cosmological optimization; endpoint evaluations are fixed. Full-MF nuisance diagnostics are bounded to 3h jobs.",
+    "single_job_risk": "LOW_TO_MODERATE",
+    "strategy": "PARALLEL INDEPENDENT BRANCH JOBS"
+  },
+  "search_reuse_patch_build": {
+    "decision": "PATCH/REUSE KNOWN-GOOD ATTRIBUTION MACHINERY + BUILD NEW Q016 MECHANISM COORDINATOR",
+    "new_stage_version": "V1 because no existing Q016 mechanism-attribution stage exists",
+    "repository": "Morfindien/Bubbleverse",
+    "searched_commit": "3a154b44cbef4b2a3d10fdb12435105921bfc962"
+  }
+}

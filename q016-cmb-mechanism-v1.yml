@@ -1,0 +1,192 @@
+name: Bubbleverse Q016 CMB Mechanism V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q016
+  RUN_ID: Q016-CMB-MECHANISM-V1
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - name: Install lightweight validation dependencies
+        run: python -m pip install PyYAML==6.0.2 numpy
+      - name: Frozen Bubbleverse reuse gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD:q015_cmb_attribution_v2.py)" = "b4c0924861328ac724ca386959487b3a1bd22534"
+          test "$(git rev-parse HEAD:q015_cmb_attribution_v3.py)" = "96dbc8f44aa8e52d61dc7ef95d849b39009192e2"
+          test "$(git rev-parse HEAD:q009_act_corrected_minima_attribution_v8.py)" = "47a4e6e6033a290b7eaf07ce8e246e0707acd924"
+          test "$(git rev-parse HEAD:q016_objective_reprofile_v16.py)" = "c57cba7e92e2454b548430e2d45731f8ed50781c"
+          test "$(git rev-parse HEAD:q016_setup_v16.sh)" = "1f492368ec112baf2d3e1f0fd9dbe007967a2002"
+          test "$(git rev-parse HEAD:q014_external_viability_v10.py)" = "9085bdea8e5732b5e4c7095068d284918157948d"
+          test "$(git rev-parse HEAD:q014_external_viability_v12.py)" = "d2c8ba19aed63d8e1b17a0ef4e18e2dd6981a599"
+      - name: Static scientific and workflow gates
+        run: |
+          python q016_mechanism_tests_v1.py static \
+            --config q016_mechanism_v1_config.yml \
+            --output q016_mechanism_static_tests_v1.json
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q016-mechanism-v1-prepare
+          path: q016_mechanism_static_tests_v1.json
+
+  act_asset:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Reuse Q016 known-good ACT lite data transport
+        run: bash q016_act_asset_v10.sh q016_act_data_v1
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q016-mechanism-v1-act-lite-data
+          path: q016_act_data_v1
+
+  matched_residual:
+    needs: [prepare, act_asset]
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        branch: [planck, spt, act]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - uses: actions/download-artifact@v5
+        if: ${{ matrix.branch == 'act' }}
+        with:
+          name: q016-mechanism-v1-act-lite-data
+          path: q016_act_data_v1
+      - name: Build known-good V16 environment
+        run: bash q016_mechanism_setup_v1.sh "${{ matrix.branch }}"
+      - name: Evaluate certified endpoint residuals
+        run: |
+          python q016_mechanism_v1.py \
+            --config q016_mechanism_v1_config.yml \
+            matched --branch "${{ matrix.branch }}" \
+            --output "q016_mechanism_matched_${{ matrix.branch }}_v1.json"
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: q016-mechanism-v1-matched-${{ matrix.branch }}
+          path: q016_mechanism_matched_${{ matrix.branch }}_v1.json
+
+  secondary_mechanism:
+    needs: [prepare, act_asset]
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix:
+        branch: [planck, spt, act]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - uses: actions/download-artifact@v5
+        if: ${{ matrix.branch == 'act' }}
+        with:
+          name: q016-mechanism-v1-act-lite-data
+          path: q016_act_data_v1
+      - name: Build mechanism environment
+        run: bash q016_mechanism_setup_v1.sh "${{ matrix.branch }}"
+      - name: Run experiment-specific mechanism diagnostic
+        run: |
+          python q016_mechanism_v1.py \
+            --config q016_mechanism_v1_config.yml \
+            secondary --branch "${{ matrix.branch }}" \
+            --output "q016_mechanism_secondary_${{ matrix.branch }}_v1.json"
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: q016-mechanism-v1-secondary-${{ matrix.branch }}
+          path: q016_mechanism_secondary_${{ matrix.branch }}_v1.json
+
+  merge:
+    needs: [matched_residual, secondary_mechanism]
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2 numpy
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q016-mechanism-v1-matched-*
+          path: q016_mechanism_matched_artifacts
+          merge-multiple: false
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q016-mechanism-v1-secondary-*
+          path: q016_mechanism_secondary_artifacts
+          merge-multiple: false
+      - name: Merge diagnostics
+        run: |
+          set +e
+          python q016_mechanism_aggregate_v1.py \
+            --config q016_mechanism_v1_config.yml \
+            --matched-dir q016_mechanism_matched_artifacts \
+            --secondary-dir q016_mechanism_secondary_artifacts \
+            --output q016_mechanism_merged_v1.json
+          RC=$?
+          set -e
+          echo "MERGE_RC=$RC"
+          exit $RC
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: q016-mechanism-merged-v1
+          path: q016_mechanism_merged_v1.json
+
+  final_tests:
+    needs: merge
+    if: ${{ needs.merge.result == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-mechanism-merged-v1
+          path: q016_mechanism_final
+      - name: Mandatory final mechanism result tests
+        run: |
+          python q016_mechanism_tests_v1.py final \
+            --config q016_mechanism_v1_config.yml \
+            --result q016_mechanism_final/q016_mechanism_merged_v1.json \
+            --output q016_mechanism_result_tests_v1.json
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q016-mechanism-final-gates-v1
+          path: q016_mechanism_result_tests_v1.json

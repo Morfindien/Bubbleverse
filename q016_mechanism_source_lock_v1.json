@@ -1,0 +1,85 @@
+{
+  "bubbleverse_repository": "Morfindien/Bubbleverse",
+  "case_id": "NOT DOCUMENTED",
+  "external_sources": {
+    "K-024": "H0DN late-Universe H0 inference.",
+    "K-029": "DESI DR2 + BBN H0 reference.",
+    "K-030": "CMB-SPA / SPT reference.",
+    "K-036": "Poulin et al. ACT DR6 + DESI DR2 n=3 EDE context.",
+    "K-038": "Contrasting n=2 EDE analysis; not substitute for active n=3.",
+    "K-039": "Planck NPIPE EDE context.",
+    "K-040": "SPT-3G D1 n=3 AEDE context.",
+    "K-041": "SPT D1 spectra/frequency/calibration/covariance.",
+    "K-042": "Official candl/SPT documentation.",
+    "K-043": "ACT DR6 frequency/covariance/foreground context.",
+    "K-044": "Planck NPIPE/CamSpec ell~500-1000 and TT frequency-null context.",
+    "K-045": "Planck likelihood-choice/nuisance-marginalization context.",
+    "K-046": "Cobaya 3.5.6 minimizer semantics."
+  },
+  "q": "Q016",
+  "repository_state_searched_at_commit": "3a154b44cbef4b2a3d10fdb12435105921bfc962",
+  "result_id": "R-Q016-EDE-CMB-MECHANISM-001",
+  "reuse": {
+    "q009_act_corrected_minima_attribution_v8.py": {
+      "blob": "47a4e6e6033a290b7eaf07ce8e246e0707acd924",
+      "reason": "Known-good ACT DR6 SACC prediction/residual/full-covariance attribution.",
+      "status": "REUSE"
+    },
+    "q014_external_viability_v10.py": {
+      "blob": "9085bdea8e5732b5e4c7095068d284918157948d",
+      "status": "REFERENCE_ONLY"
+    },
+    "q014_external_viability_v12.py": {
+      "blob": "d2c8ba19aed63d8e1b17a0ef4e18e2dd6981a599",
+      "status": "REFERENCE_ONLY"
+    },
+    "q015_cmb_attribution_v2.py": {
+      "blob": "b4c0924861328ac724ca386959487b3a1bd22534",
+      "reason": "Known-good Planck/SPT covariance-aware residual and signed full-covariance attribution machinery.",
+      "status": "REUSE"
+    },
+    "q015_cmb_attribution_v3.py": {
+      "blob": "96dbc8f44aa8e52d61dc7ef95d849b39009192e2",
+      "reason": "Q015 final certification/bridge logic.",
+      "status": "REFERENCE_ONLY"
+    },
+    "q016_objective_reprofile_v16.py": {
+      "blob": "c57cba7e92e2454b548430e2d45731f8ed50781c",
+      "reason": "Authoritative certified matched-surface likelihood/model construction.",
+      "status": "REUSE"
+    },
+    "q016_setup_v16.sh": {
+      "blob": "1f492368ec112baf2d3e1f0fd9dbe007967a2002",
+      "reason": "Known-good Q016 environment construction.",
+      "status": "REUSE"
+    }
+  },
+  "rules": [
+    "V16 certified endpoints are immutable inputs unless a concrete invalidating defect is demonstrated.",
+    "No cross-chain chi2 sums.",
+    "No combined cross-experiment sigma without cross-experiment covariance.",
+    "Signed full-covariance allocations are additive diagnostics, not independent chi2.",
+    "Secondary full-MF diagnostics never replace the primary matched-lite surface."
+  ],
+  "run_id": "Q016-CMB-MECHANISM-V1",
+  "technical_sources": {
+    "ACT_FULL_MF": {
+      "commit": "4220e14efb3a995f47c9f54cb687479e558c6138",
+      "repository": "ACTCollaboration/act_dr6_mflike",
+      "role": "SECONDARY_DIAGNOSTIC_ONLY"
+    },
+    "GITHUB_ACTIONS": {
+      "checked_date": "2026-09-03",
+      "standard_github_hosted_job_limit_hours": 6,
+      "workflow_safe_targets": {
+        "matched_minutes": 120,
+        "secondary_minutes": 180
+      }
+    },
+    "SPT_FULL_MF": {
+      "commit": "2cec6e762a8c540484dd5acafc529f0035856350",
+      "repository": "SouthPoleTelescope/spt_candl_data",
+      "shortcut": "SPT3G_D1_TnE"
+    }
+  }
+}
