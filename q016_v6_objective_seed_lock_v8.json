@@ -1,0 +1,488 @@
+{
+  "legacy_rescore_basis": "CMB_CHI2_PLUS_TAU_SHAPE_PLUS_CHAIN_NATIVE_GAUSSIAN_SHAPES",
+  "parent": {
+    "gate_artifact_digest": "sha256:f2d0e253aa520cc87e173f0d8439795c4ffa668d77b8c6769c03143db8890540",
+    "gate_artifact_id": 9888811792,
+    "github_run_id": 33732688762,
+    "head_sha": "d14880138ebb537173e49417b537a68454d53602",
+    "merged_artifact_digest": "sha256:6fb8ff7693c955516bf3a1a0e0c066876aa39c1f377d720b8b7bf6ed8a0f6aab",
+    "merged_artifact_id": 9888806606,
+    "parent_program_gate": "PRIMARY_ENDPOINT_GATE=PASS",
+    "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+    "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+    "scientific_ingestion_status": "NOT_ACCEPTED_AS_FINAL_PROFILE_CERTIFICATION"
+  },
+  "profiles": {
+    "act": {
+      "fixed_h0_71p5": {
+        "all_rescored": [
+          {
+            "objective": 79.22356137761128,
+            "raw_chi2": 79.180747909247,
+            "restart": 6,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          {
+            "objective": 79.2725174034513,
+            "raw_chi2": 79.05155835001521,
+            "restart": 8,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          {
+            "objective": 80.11439904598235,
+            "raw_chi2": 79.87784099066869,
+            "restart": 0,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 80.12001241233556,
+            "raw_chi2": 79.83068713983833,
+            "restart": 7,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          {
+            "objective": 82.66337539020556,
+            "raw_chi2": 82.50501048572264,
+            "restart": 3,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 84.73100407293386,
+            "raw_chi2": 84.3185239721224,
+            "restart": 1,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+          },
+          {
+            "objective": 85.13722256401651,
+            "raw_chi2": 83.82435621075622,
+            "restart": 4,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+          },
+          {
+            "objective": 86.25640235013721,
+            "raw_chi2": 86.2453981849115,
+            "restart": 2,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          }
+        ],
+        "diagnostic_shape_penalties": {
+          "tau_reio": 0.04281346836426638
+        },
+        "minimum": {
+          "A_act": 1.011164514858636,
+          "A_s": 2.195597684647327e-09,
+          "Omega_m": 0.2988155442834899,
+          "P_act": 1.0016799971270633,
+          "S8": 0.8317248021016892,
+          "chi2": 79.180747909247,
+          "chi2__q016_act_dr6_cmbonly": 79.180747909247,
+          "fEDE": 0.10203269306178657,
+          "log10z_c": 3.4376042391639943,
+          "logA": 3.0890393961449694,
+          "minuslogpost": 22.431520196193166,
+          "minuslogprior": -17.158853758430336,
+          "minuslogprior__0": -12.98320321606306,
+          "minuslogprior__q016_tau_information": -4.175650542367276,
+          "n_s": 0.9600873901907208,
+          "omega_b": 0.022881404765685016,
+          "omega_cdm": 0.12923669200187277,
+          "rs_drag": 141.33382934535055,
+          "sigma8": 0.8333715820480815,
+          "tau_reio": 0.05224148494196006,
+          "thetai_scf": 2.8373370918307907,
+          "weight": 1.0
+        },
+        "objective_best_from_v6_history": 79.22356137761128,
+        "raw_chi2": 79.180747909247,
+        "source_restart": 6,
+        "source_result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+        "source_run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+      },
+      "reference_free_h0": {
+        "all_rescored": [
+          {
+            "objective": 78.87695491584888,
+            "raw_chi2": 78.87681442584048,
+            "restart": 4,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+          },
+          {
+            "objective": 79.62789360049544,
+            "raw_chi2": 79.46295689195875,
+            "restart": 1,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+          },
+          {
+            "objective": 80.06138492970334,
+            "raw_chi2": 79.81940282377293,
+            "restart": 2,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 81.4877436447348,
+            "raw_chi2": 81.31544881171695,
+            "restart": 3,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 81.9933644331166,
+            "raw_chi2": 81.93124663172905,
+            "restart": 0,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          }
+        ],
+        "diagnostic_shape_penalties": {
+          "tau_reio": 0.00014049000840683713
+        },
+        "minimum": {
+          "A_act": 1.0164766933997875,
+          "A_s": 2.2118923682160575e-09,
+          "H0": 71.04338378389991,
+          "Omega_m": 0.30219157975946165,
+          "P_act": 1.0025539321069707,
+          "S8": 0.8413766864274711,
+          "chi2": 78.87681442584048,
+          "chi2__q016_act_dr6_cmbonly": 78.87681442584048,
+          "fEDE": 0.09673209044023609,
+          "log10z_c": 3.425903053111347,
+          "logA": 3.096433517340116,
+          "minuslogpost": 25.65941434697413,
+          "minuslogprior": -13.77899286594611,
+          "minuslogprior__0": -9.582005834400904,
+          "minuslogprior__q016_tau_information": -4.196987031545206,
+          "n_s": 0.9622466552750745,
+          "omega_b": 0.022776173136483197,
+          "omega_cdm": 0.12910097354825742,
+          "rs_drag": 141.64564257651213,
+          "sigma8": 0.8383201825066691,
+          "tau_reio": 0.0510711170886823,
+          "thetai_scf": 2.798846670243277,
+          "weight": 1.0
+        },
+        "objective_best_from_v6_history": 78.87695491584888,
+        "raw_chi2": 78.87681442584048,
+        "source_restart": 4,
+        "source_result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-005",
+        "source_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+      }
+    },
+    "planck": {
+      "fixed_h0_71p5": {
+        "all_rescored": [
+          {
+            "objective": 4204.4999662881255,
+            "raw_chi2": 4203.725519398398,
+            "restart": 2,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 4205.651634483765,
+            "raw_chi2": 4203.990580191964,
+            "restart": 3,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 4207.5237606766805,
+            "raw_chi2": 4207.259214150957,
+            "restart": 0,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 4209.932713444043,
+            "raw_chi2": 4209.864780872381,
+            "restart": 1,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          }
+        ],
+        "diagnostic_shape_penalties": {
+          "A_planck": 0.14998731366606194,
+          "calEE": 0.000691081063554786,
+          "calTE": 0.003883409868383152,
+          "tau_reio": 0.6198850851288267
+        },
+        "minimum": {
+          "A_planck": 1.0009682048907194,
+          "A_s": 2.1625275831178745e-09,
+          "Omega_m": 0.2994343565325632,
+          "S8": 0.8337842521837202,
+          "calEE": 0.9997371157928755,
+          "calTE": 0.9993768298893253,
+          "chi2": 4203.725519398398,
+          "chi2__q016_camspec_npipe_lite": 4203.725519398398,
+          "fEDE": 0.10939083960245945,
+          "log10z_c": 3.798822188255783,
+          "logA": 3.073862807935613,
+          "minuslogpost": 2074.234171244414,
+          "minuslogprior": -27.628588454785103,
+          "minuslogprior__0": -23.74147372080011,
+          "minuslogprior__q016_tau_information": -3.887114733984996,
+          "n_s": 0.9785063449769782,
+          "omega_b": 0.022959856829670732,
+          "omega_cdm": 0.1294743811939034,
+          "rs_drag": 141.3092480826256,
+          "sigma8": 0.834571406506366,
+          "tau_reio": 0.055723966878020816,
+          "thetai_scf": 3.041169993783204,
+          "weight": 1.0
+        },
+        "objective_best_from_v6_history": 4204.4999662881255,
+        "raw_chi2": 4203.725519398398,
+        "source_restart": 2,
+        "source_result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+        "source_run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+      },
+      "reference_free_h0": {
+        "all_rescored": [
+          {
+            "objective": 4198.257976875996,
+            "raw_chi2": 4197.818757673306,
+            "restart": 8,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          {
+            "objective": 4198.288738377991,
+            "raw_chi2": 4197.924526680114,
+            "restart": 0,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 4198.323275387094,
+            "raw_chi2": 4197.797676105029,
+            "restart": 7,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          {
+            "objective": 4198.592075450914,
+            "raw_chi2": 4198.318490040906,
+            "restart": 6,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          {
+            "objective": 4199.741089079721,
+            "raw_chi2": 4199.3940394738565,
+            "restart": 3,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 4200.365692384255,
+            "raw_chi2": 4199.945745420045,
+            "restart": 1,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 4202.636296582591,
+            "raw_chi2": 4201.5713453404105,
+            "restart": 2,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          }
+        ],
+        "diagnostic_shape_penalties": {
+          "A_planck": 0.0240741648635655,
+          "calEE": 0.07957446171828511,
+          "calTE": 0.00033346196045679055,
+          "tau_reio": 0.3352371141475696
+        },
+        "minimum": {
+          "A_planck": 1.0003878962881974,
+          "A_s": 2.0904199621479657e-09,
+          "H0": 68.22577640977339,
+          "Omega_m": 0.3136618435374376,
+          "S8": 0.834622154138195,
+          "calEE": 0.997179105430572,
+          "calTE": 0.999817390591574,
+          "chi2": 4197.818757673306,
+          "chi2__q016_camspec_npipe_lite": 4197.818757673306,
+          "fEDE": 0.039331774287361954,
+          "log10z_c": 3.9943403657101806,
+          "logA": 3.039950077612041,
+          "minuslogpost": 2074.5143739200116,
+          "minuslogprior": -24.39500491664142,
+          "minuslogprior__0": -20.365566197165794,
+          "minuslogprior__q016_tau_information": -4.029438719475625,
+          "n_s": 0.9775781602015221,
+          "omega_b": 0.02236663520745752,
+          "omega_cdm": 0.1229911155542916,
+          "rs_drag": 145.5172300248224,
+          "sigma8": 0.8162434145745121,
+          "tau_reio": 0.054473979865991236,
+          "thetai_scf": 2.9081396463846483,
+          "weight": 1.0
+        },
+        "objective_best_from_v6_history": 4198.257976875996,
+        "raw_chi2": 4197.818757673306,
+        "source_restart": 8,
+        "source_result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+        "source_run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+      }
+    },
+    "spt": {
+      "fixed_h0_71p5": {
+        "all_rescored": [
+          {
+            "objective": 60.664160597403416,
+            "raw_chi2": 60.55104446411133,
+            "restart": 7,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          {
+            "objective": 61.268660971518266,
+            "raw_chi2": 61.254852294921875,
+            "restart": 6,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          {
+            "objective": 61.27519678046533,
+            "raw_chi2": 61.23649597167969,
+            "restart": 8,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+          },
+          {
+            "objective": 61.6634034991898,
+            "raw_chi2": 61.57393264770508,
+            "restart": 3,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 64.34936122186997,
+            "raw_chi2": 64.3380126953125,
+            "restart": 5,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+          },
+          {
+            "objective": 64.79224412465592,
+            "raw_chi2": 64.68103790283203,
+            "restart": 4,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+          },
+          {
+            "objective": 64.87935030446339,
+            "raw_chi2": 64.85151672363281,
+            "restart": 2,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 65.74036715832142,
+            "raw_chi2": 65.71199035644531,
+            "restart": 0,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          }
+        ],
+        "diagnostic_shape_penalties": {
+          "Tcal": 0.020725699100134425,
+          "tau_reio": 0.09239043419195184
+        },
+        "minimum": {
+          "A_s": 2.1366358087892093e-09,
+          "Ecal": 1.0158375135065145,
+          "Omega_m": 0.2962380972076201,
+          "S8": 0.8192400556657579,
+          "Tcal": 1.0005182712227567,
+          "chi2": 60.55104446411133,
+          "chi2__q016_spt_d1_lite": 60.55104446411133,
+          "fEDE": 0.11569526029146729,
+          "log10z_c": 3.7381028953771027,
+          "logA": 3.0618176330898943,
+          "minuslogpost": 8.220793354459623,
+          "minuslogprior": -22.05472887759604,
+          "minuslogprior__0": -13.206346767377273,
+          "minuslogprior__q016_spt_Tcal": -4.697520050765332,
+          "minuslogprior__q016_tau_information": -4.150862059453433,
+          "n_s": 0.9808118962836174,
+          "omega_b": 0.02282504488174076,
+          "omega_cdm": 0.12797517141924036,
+          "rs_drag": 141.8582109458398,
+          "sigma8": 0.8244253760474449,
+          "tau_reio": 0.052823747688390654,
+          "thetai_scf": 2.122952572568153,
+          "weight": 1.0
+        },
+        "objective_best_from_v6_history": 60.664160597403416,
+        "raw_chi2": 60.55104446411133,
+        "source_restart": 7,
+        "source_result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+        "source_run_id": "Q016-MATCHED-CMB-SURFACE-V6"
+      },
+      "reference_free_h0": {
+        "all_rescored": [
+          {
+            "objective": 62.07281546923305,
+            "raw_chi2": 62.069732666015625,
+            "restart": 1,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 62.10359727896171,
+            "raw_chi2": 62.07829666137695,
+            "restart": 3,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 63.89664751181648,
+            "raw_chi2": 63.83597183227539,
+            "restart": 2,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          },
+          {
+            "objective": 64.68124279261954,
+            "raw_chi2": 64.64923858642578,
+            "restart": 0,
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+          }
+        ],
+        "diagnostic_shape_penalties": {
+          "Tcal": 0.0011176500438330047,
+          "tau_reio": 0.0019651531735893958
+        },
+        "minimum": {
+          "A_s": 2.127018074540685e-09,
+          "Ecal": 1.0115633527778902,
+          "H0": 69.0523086081319,
+          "Omega_m": 0.3073730755362855,
+          "S8": 0.8255048585782703,
+          "Tcal": 1.0001203525843847,
+          "chi2": 62.069732666015625,
+          "chi2__q016_spt_d1_lite": 62.069732666015625,
+          "fEDE": 0.047317473953471134,
+          "log10z_c": 3.704945934056376,
+          "logA": 3.05730612684444,
+          "minuslogpost": 12.3263181720366,
+          "minuslogprior": -18.708548160971212,
+          "minuslogprior__0": -9.805149385715115,
+          "minuslogprior__q016_spt_Tcal": -4.707324075293483,
+          "minuslogprior__q016_tau_information": -4.196074699962614,
+          "n_s": 0.9619781808302192,
+          "omega_b": 0.02269188857445893,
+          "omega_cdm": 0.12322633593907767,
+          "rs_drag": 144.78585580879005,
+          "sigma8": 0.8155439113328694,
+          "tau_reio": 0.05073401971078815,
+          "thetai_scf": 2.412783361650496,
+          "weight": 1.0
+        },
+        "objective_best_from_v6_history": 62.07281546923305,
+        "raw_chi2": 62.069732666015625,
+        "source_restart": 1,
+        "source_result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+        "source_run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+      }
+    }
+  },
+  "q": "Q016",
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-008",
+  "role": "V6_NUMERICAL_PARENT_SEED_LOCK_ONLY_NOT_V8_SCIENTIFIC_RESULT",
+  "rules": {
+    "legacy_rescore_is_diagnostic_only": true,
+    "parent_records_are_starting_points_only": true,
+    "q011_exact_vector_not_used": true,
+    "v7_results_must_be_recomputed_on_exact_objective": true
+  },
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V8",
+  "v7_technical_parent": {
+    "github_run_id": 33747984761,
+    "head_sha": "9beefa6f7c99064e4dffd27c413a6ab0a0a17ee6",
+    "reuse_role": "NONE \u2014 provenance only",
+    "scientific_minimization_started": false,
+    "scientific_result": "NOT_AVAILABLE",
+    "status": "TECHNICAL_FAILURE_PREPARE"
+  }
+}
