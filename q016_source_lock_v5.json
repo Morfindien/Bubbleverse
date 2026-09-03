@@ -1,0 +1,66 @@
+{
+  "bubbleverse": {
+    "inspected_main_tree_sha": "70c447a505acf0193a8604a23dc141faebfa026e",
+    "repository": "Morfindien/Bubbleverse"
+  },
+  "claim_boundaries": {
+    "absolute_cross_chain_chi2_comparison": false,
+    "cross_chain_chi2_sum": false,
+    "q011": "BEST-OBSERVED MINIMUM ONLY",
+    "q015": "FROZEN INPUT"
+  },
+  "external_software": {
+    "ACTCollaboration/DR6-ACT-lite": {
+      "commit": "0e0cd2c703c62a0e980470b572602233b27750e1",
+      "release": "v1.0.0"
+    },
+    "HTJense/camspec_npipe-lite": {
+      "commit": "e387852d2ae8863735814449c682b089c3059318"
+    },
+    "candl": "2.0.3",
+    "candl-like": "2.0.3",
+    "spt_candl_data": {
+      "commit": "2cec6e762a8c540484dd5acafc529f0035856350",
+      "release": "v0"
+    }
+  },
+  "model": {
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "n_scf": 3,
+    "repository": "mwt5345/class_ede"
+  },
+  "parent_continuation": {
+    "github_run_id": 33693382859,
+    "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+    "parent_lock_file": "q016_parent_v4_lock_v5.json",
+    "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+    "reuse_mode": "COMPLETE_SHARDS_ONLY",
+    "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+  },
+  "q": "Q016",
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-005",
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V5",
+  "sources": {
+    "K-036": "arXiv:2505.08051",
+    "K-039": "arXiv:2311.00524",
+    "K-040": "arXiv:2507.23355",
+    "K-041": "arXiv:2506.20707",
+    "K-042": "candl/SPT official documentation",
+    "K-043": "arXiv:2503.14452; DOI 10.1088/1475-7516/2025/11/062",
+    "K-044": "DOI 10.1093/mnras/stac2744",
+    "K-045": "DOI 10.1103/ff9j-skyj"
+  },
+  "technical_revision": {
+    "act_data_transport": "single bounded shared fetch with Lambda then NERSC fallback",
+    "classification": "CONTINUATION_REPAIR",
+    "minimum_distinct_complete_restarts_per_branch_mode": 4,
+    "scientific_gate_relaxed": false,
+    "scientific_surface_changed": false,
+    "v4_failures": {
+      "act_restart_1_fixed": "NETWORK_TIMEOUT_ONLY",
+      "act_restart_1_free": "NETWORK_TIMEOUT_ONLY",
+      "spt_restart_1_fixed": "PYBOBYQA_SINGULAR_INTERPOLATION_MATRIX"
+    },
+    "v5_strategy": "reuse 21 complete V4 shards; add only repair/rescue shards"
+  }
+}

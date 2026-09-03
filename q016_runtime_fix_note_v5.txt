@@ -1,0 +1,39 @@
+Q016 V5 CONTINUATION REPAIR
+
+AUTHORITATIVE PARENT
+GitHub run: 33693382859
+Head SHA: 596ee68677784deb4c28d1eb5992faf6dcd2c5b1
+Run ID: Q016-MATCHED-CMB-SURFACE-V4
+
+V4 PRIMARY STATUS
+Planck: 8/8 COMPLETE
+SPT: 7/8 COMPLETE
+ACT: 6/8 COMPLETE
+
+V4 FAILURES
+1. ACT reference_free_h0 restart 1:
+   technical network failure while Cobaya downloaded ACT DR6 data from NERSC.
+2. ACT fixed_h0_71p5 restart 1:
+   same technical network failure.
+3. SPT fixed_h0_71p5 restart 1:
+   Py-BOBYQA singular interpolation matrix after 73 objective evaluations.
+   The raw optimizer point is NOT accepted as a scientific minimum.
+
+V5 STRATEGY
+- Do not rerun the 21 complete V4 shards.
+- Reuse them under exact parent-run/head-SHA/surface gates.
+- Fetch ACT DR6 CMB-only data ONCE with bounded fallback:
+  NASA LAMBDA first, NERSC second.
+- Seed the exact official ACT Cobaya data path in every ACT repair job.
+- Rerun ACT restart 1 in free/fixed modes.
+- Add ACT restart 4 in free/fixed modes as redundant independent rescue.
+- Add SPT fixed-H0 restarts 4 and 5 as independent rescue starts.
+- Require >=4 DISTINCT COMPLETE restarts per branch/mode.
+- Preserve the original SPT r1 numerical failure and ACT network failures as provenance.
+- No scientific gate is relaxed.
+- No likelihood, prior, bound, H0 target, multipole range, observable or tau treatment is changed.
+
+IMPORTANT
+Even a successful V5 primary endpoint merge is not the final scientific Q016 answer.
+Covariance-aware attribution, residual-vector comparison and the secondary 1000-2000
+full-vs-lite/frequency mechanism stage remain mandatory before FINAL_RESULT_GATE can pass.

@@ -1,0 +1,71 @@
+{
+  "known_parent_technical_failures": [
+    {
+      "artifact_digest": "sha256:c07f4e3b37ba905dfa6ded7203e8c83082ddeda8be76a73080133a8e791e0c80",
+      "artifact_id": 9875211309,
+      "failure": "ACT data download timeout at portal.nersc.gov",
+      "scientific_model_failure": false,
+      "shard": "act_reference_free_h0_r1.json"
+    },
+    {
+      "artifact_digest": "sha256:9913db8dc7314c35e51ce54ec6743c0b7a916d33fd0c84fd4e6c9996e65d489d",
+      "artifact_id": 9875826447,
+      "failure": "ACT data download timeout at portal.nersc.gov",
+      "scientific_model_failure": false,
+      "shard": "act_fixed_h0_71p5_r1.json"
+    },
+    {
+      "artifact_digest": "sha256:23cbd76b6b43b2af82ca6c3b129c98cc94d966e11e178a88e9b467dec71824f9",
+      "artifact_id": 9873422433,
+      "failure": "Py-BOBYQA singular interpolation matrix after 73 evaluations",
+      "raw_minimum_usable": false,
+      "scientific_model_failure": false,
+      "shard": "spt_fixed_h0_71p5_r1.json"
+    }
+  ],
+  "parent": {
+    "github_run_id": 33693382859,
+    "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+    "primary_merged_artifact": {
+      "digest": "sha256:739913a517977f1f60bcfed2c4999f2ce5237167e67111c2f2a6aad728cfe305",
+      "id": 9878843407,
+      "scientific_status": "INCOMPLETE_PARENT_ONLY"
+    },
+    "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+    "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+    "workflow_path": ".github/workflows/q016-matched-cmb-surface-v4.yml"
+  },
+  "purpose": "STRICT_CONTINUATION_REUSE_OF_COMPLETED_V4_PRIMARY_SHARDS",
+  "q": "Q016",
+  "required_complete_parent_shards": [
+    "act_fixed_h0_71p5_r0.json",
+    "act_fixed_h0_71p5_r2.json",
+    "act_fixed_h0_71p5_r3.json",
+    "act_reference_free_h0_r0.json",
+    "act_reference_free_h0_r2.json",
+    "act_reference_free_h0_r3.json",
+    "planck_fixed_h0_71p5_r0.json",
+    "planck_fixed_h0_71p5_r1.json",
+    "planck_fixed_h0_71p5_r2.json",
+    "planck_fixed_h0_71p5_r3.json",
+    "planck_reference_free_h0_r0.json",
+    "planck_reference_free_h0_r1.json",
+    "planck_reference_free_h0_r2.json",
+    "planck_reference_free_h0_r3.json",
+    "spt_fixed_h0_71p5_r0.json",
+    "spt_fixed_h0_71p5_r2.json",
+    "spt_fixed_h0_71p5_r3.json",
+    "spt_reference_free_h0_r0.json",
+    "spt_reference_free_h0_r1.json",
+    "spt_reference_free_h0_r2.json",
+    "spt_reference_free_h0_r3.json"
+  ],
+  "reuse_rules": {
+    "absolute_cross_chain_chi2_comparison": false,
+    "failed_parent_shards_are_never_promoted": true,
+    "minimum_distinct_complete_restarts_per_branch_mode": 4,
+    "no_cross_chain_chi2_sum": true,
+    "only_status_COMPLETE_parent_records_are_eligible": true,
+    "surface_identity_must_match_v5": true
+  }
+}
