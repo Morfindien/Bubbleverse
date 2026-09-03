@@ -1,0 +1,82 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "compute_plan": {
+    "branch": "planck",
+    "families": [
+      "v10_planck_free_best_jitter_plus",
+      "v10_planck_free_best_jitter_minus",
+      "v10_planck_free_best_cross_a",
+      "v10_planck_free_best_cross_b"
+    ],
+    "max_parallel": 4,
+    "mode": "reference_free_h0",
+    "new_expensive_jobs": 4,
+    "restarts": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "reused_completed_expensive_profiles": 24
+  },
+  "files": [
+    "q016-matched-cmb-surface-v14.yml",
+    "q016_aggregate_v14.py",
+    "q016_compute_architecture_v14.json",
+    "q016_file_manifest_v14.json",
+    "q016_matched_cmb_surface_v14_config.yml",
+    "q016_objective_reprofile_v14.py",
+    "q016_runtime_fix_note_v14.txt",
+    "q016_setup_v14.sh",
+    "q016_source_lock_v14.json",
+    "q016_tests_v14.py",
+    "q016_v10_parent_audit_local_v14.json",
+    "q016_v10_primary_parent_lock_v14.json",
+    "q016_v6_objective_seed_lock_v14.json"
+  ],
+  "gate_relaxations": false,
+  "objective_changed": false,
+  "q": "Q016",
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-014",
+  "revision": {
+    "compute_plan_changed": false,
+    "from": "V13",
+    "gate_relaxations": false,
+    "objective_changed": false,
+    "scientific_surface_changed": false,
+    "to": "V14",
+    "type": "IDENTITY_AND_FILENAME_BUMP_ONLY"
+  },
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V14",
+  "scientific_parent": {
+    "github_run_id": 33764943297,
+    "head_sha": "81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8",
+    "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-010",
+    "run_id": "Q016-MATCHED-CMB-SURFACE-V10"
+  },
+  "scientific_surface_changed": false,
+  "status": "PROGRAM GENERATED \u2014 NOT YET EXECUTED",
+  "v12_failure": {
+    "failure": "MISSING_PYYAML_IN_IMPORT_V10_PARENT",
+    "github_run_id": 33780830659,
+    "head_sha": "8e389d62a62c6ca1259b2a78744f48eebb4a9265",
+    "latent_same_failure_repaired_in": "primary_endpoint_gates",
+    "planck_extension_started": false,
+    "prepare": "PASS",
+    "scientific_result": "NOT_AVAILABLE",
+    "v10_artifact_verification": "PASS"
+  },
+  "validation": {
+    "exact_static_test": "PASS",
+    "four_planck_jobs_unchanged": "PASS",
+    "no_gate_relaxation": "PASS",
+    "pYYAML_dependency_repairs_preserved": "PASS",
+    "q016_aggregate_v14.py": "PASS",
+    "q016_objective_reprofile_v14.py": "PASS",
+    "q016_setup_v14.sh": "PASS",
+    "q016_tests_v14.py": "PASS",
+    "v10_scientific_parent_unchanged": "PASS",
+    "v14_identity_gate": "PASS",
+    "yaml": "PASS"
+  }
+}

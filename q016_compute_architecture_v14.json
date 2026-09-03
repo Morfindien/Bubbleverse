@@ -1,0 +1,88 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "compute_architecture": {
+    "aggregation_strategy": "phase1 fixed summary followed by final branch-local free/fixed certification; no cross-chain sum",
+    "branches_rerun": {
+      "act_fixed": false,
+      "act_free": false,
+      "planck_fixed": false,
+      "planck_free_existing": false,
+      "planck_free_extension": true,
+      "spt_fixed": false,
+      "spt_free": false
+    },
+    "checkpoint_strategy": "each minimization is atomic; seed/status JSON is written before expensive minimization; only interrupted atom is retried",
+    "continuation_strategy": "V6 minima -> V7 fixed reprofile -> same-run fixed summary -> V7 free embedding/reprofile",
+    "estimated_runtime": "highly likelihood-dependent; 4 waves at max_parallel=6 in the worst full 24-job schedule, each job protected below GitHub ceiling",
+    "expensive_jobs_completed_reused": 24,
+    "expensive_jobs_remaining": 4,
+    "expensive_jobs_total_original": 24,
+    "max_parallel": 6,
+    "method": "staged profile minimization with exact normalization-free likelihood objective",
+    "per_job_timeout_minutes": 330,
+    "phase1_jobs": 12,
+    "phase1_rerun": false,
+    "phase2_jobs": 12,
+    "ram_disk_network": "same branch environments/data footprint as successful V6; ACT data fetched once and shared as artifact",
+    "soft_timeout_minutes": 315,
+    "split_dimension": [
+      "experiment",
+      "profile mode",
+      "deterministic start family"
+    ],
+    "total_expensive_jobs": 24,
+    "v10_change_scope": "Recursive artifact discovery + V9 Phase-1 authenticated continuation only.",
+    "v11_change_scope": "Four non-zero Planck-free starts around the V10 low-H0 best basin.",
+    "v11_scientific_jobs_completed": 0,
+    "v12_change_scope": "Static guardrail assertion only; four Planck free-H0 extension jobs unchanged.",
+    "v12_scientific_jobs_completed": 0,
+    "v14_change_scope": "Pure V13 -> V14 identity/file revision. Four Planck free-H0 extension jobs unchanged.",
+    "v9_change_scope": "Workflow action-resolution repair only: every actions/setup-python reference pinned to @v7. Scientific program, exact objective, job matrix, gates and thresholds unchanged."
+  },
+  "github_search_result": {
+    "decision": "B \u2014 PATCH LIGHTWEIGHT PYTHON DEPENDENCIES ONLY; KEEP V10 PARENT AND FOUR PLANCK EXTENSION JOBS",
+    "inspected_head": "d14880138ebb537173e49417b537a68454d53602",
+    "previous_failures": [
+      "V1 PyYAML preflight",
+      "V2 CLASS wrapper missing NumPy / package defects",
+      "V3 pointlike reference guardrail",
+      "V4 ACT data network and one SPT singular optimizer start",
+      "V5 multistart instability",
+      "V6 raw-chi2 ranking / missing real nesting certification",
+      "V7 prepare runtime toy test invalid: target x=2 lay outside ~5\u03c3 numerical bounds from toy N(-5,1) prior; no Q016 minimization started.",
+      "V8 #3 failed in prepare before code execution: actions/setup-python@v8 does not exist.",
+      "V9: all 12 Phase-1 workers succeeded, but fixed-summary used non-recursive Path.glob and saw zero nested profile JSONs.",
+      "V10: all 12 Phase-2 workers succeeded; final certification failed solely because Planck free-H0 had only 1 restart within Delta objective <=1.",
+      "V11 run 33779734832 failed in prepare/static tests before runtime toy test or any extension compute. False negative: static test required a literal cross_a family string in runner source although family routing is generic.",
+      "V12 run 33780830659: prepare/static/runtime and V10 artifact provenance passed. import_v10_parent failed only because q016_tests_v12.py imports PyYAML but the lightweight job installed no packages."
+    ],
+    "programs_found": [
+      "q016_objective_reprofile lineage through q016_branch_runner_v6.py",
+      "q014_external_viability_v10.py",
+      "q014_external_viability_v12.py"
+    ],
+    "repository": "Morfindien/Bubbleverse",
+    "results_found": [
+      "Q016 V6 GitHub run 33732688762",
+      "q016-primary-merged-v6 artifact 9888806606",
+      "q016-primary-gates-v6 artifact 9888811792"
+    ],
+    "successful_components": [
+      "V6 setup and likelihood initialization for Planck/SPT/ACT",
+      "V6 ACT single-fetch data transport",
+      "V6 deterministic basin continuation",
+      "Q014 V10 normalization-free objective reconstruction and seed preservation",
+      "Q014 V12 same-run fixed-to-free embedding",
+      "V7 Git-blob gates and static scientific guardrails passed before the toy test.",
+      "Official actions/setup-python release inspection confirms v7.0.0 as current major; v8 cannot resolve.",
+      "V9 prepare, Cobaya exact-objective runtime test, V6 seed lock, ACT assets, and all 12 fixed-H0=71.5 workers passed.",
+      "V10 SPT and ACT free profiles, all fixed profiles, same-run embedding and profile nesting passed."
+    ],
+    "workflows_found": [
+      ".github/workflows/q016-matched-cmb-surface-v6.yml",
+      ".github/workflows/q014-external-viability-v12.yml"
+    ]
+  },
+  "original_case_question": "While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately matched n=3 EDE surface with comparable CMB observables and overlapping multipole ranges, can the documented difference in high-H\u2080 response be explained by experiment-/likelihood-specific frequency, foreground, calibration, sky or covariance structure, or does a common residual pattern survive across the experiments?",
+  "q": "Q016"
+}

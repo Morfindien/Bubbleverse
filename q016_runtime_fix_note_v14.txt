@@ -1,0 +1,63 @@
+Q016 V14 — PURE VERSION BUMP FROM V13
+
+V14 changes package identity and filenames only.
+No scientific or numerical behavior changed from V13.
+V10 remains the authoritative scientific parent.
+The planned compute remains exactly four Planck free-H0 extension jobs: r20-r23.
+All thresholds and gates remain unchanged.
+
+Q016 V14 — V12 LIGHTWEIGHT DEPENDENCY REPAIR
+
+V12 GITHUB RUN
+33780830659
+
+V12 HEAD SHA
+8e389d62a62c6ca1259b2a78744f48eebb4a9265
+
+ROOT STATUS
+prepare: PASS
+static tests: PASS
+Cobaya exact-objective runtime toy: PASS
+V10 artifact provenance verification: PASS
+import_v10_parent audit: FAIL
+Planck extension jobs started: 0/4
+scientific result: NOT AVAILABLE
+
+ROOT CAUSE
+q016_tests_v12.py imports yaml at module import time.
+The import_v10_parent job used actions/setup-python@v7 but installed no Python
+packages before calling q016_tests_v12.py parent.
+
+Observed failure:
+  ModuleNotFoundError: No module named 'yaml'
+
+LATENT SAME FAILURE
+primary_endpoint_gates also calls q016_tests_v12.py final without installing
+PyYAML. V12 never reached it, but it would have failed for the same reason.
+
+V14 REPAIR
+Install:
+  python -m pip install PyYAML==6.0.2
+
+in:
+  import_v10_parent
+  primary_endpoint_gates
+
+A static dependency-coverage gate now checks both locations before any heavy
+Planck continuation jobs can start.
+
+SCIENTIFIC STATE UNCHANGED
+The scientific parent remains V10:
+  run 33764943297
+  head 81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8
+
+The V10 Planck free-H0 basin split remains the unresolved numerical issue.
+V14 still runs exactly four Planck free-H0 extension jobs:
+  r20 v10_planck_free_best_jitter_plus
+  r21 v10_planck_free_best_jitter_minus
+  r22 v10_planck_free_best_cross_a
+  r23 v10_planck_free_best_cross_b
+
+No objective, model, likelihood, prior, data, H0 target, multipole cut,
+multistart threshold, replicate requirement, embedding tolerance, nesting
+tolerance or cross-chain rule is changed.
