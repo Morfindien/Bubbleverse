@@ -1,0 +1,80 @@
+Q016 V12 — V11 STATIC-GUARDRAIL FALSE NEGATIVE REPAIR
+
+V11 GITHUB RUN
+33779734832
+
+V11 HEAD SHA
+8fbba7a7dbee10f5d7f66f9b9837554ffdb403c2
+
+V11 EXECUTION
+Git-blob reuse gate: PASS
+Static V11 tests: FAIL
+Cobaya runtime toy test: SKIPPED
+V10 parent import: SKIPPED
+Planck extension jobs: 0/4 started
+Scientific result: NOT AVAILABLE
+
+FAILED STATIC CHECK
+NONZERO_PERTURBATION_GATE
+
+ROOT CAUSE
+The V11 static test required the literal source text:
+  v10_planck_free_best_cross_a
+
+But q016_objective_reprofile_v11.py intentionally routes every extension family
+through the generic prefix:
+  family.startswith("v10_planck_free_best_")
+
+It then derives:
+  plus
+  minus
+  cross_a
+  cross_b
+
+and applies them through:
+  patterned_jitter(...)
+
+with:
+  CROSS_A_SIGNS
+  CROSS_B_SIGNS
+  NONZERO_PERTURBATION_GATE
+
+Therefore the static test was testing a source-code spelling detail, not the
+actual implemented behavior. It produced a false negative.
+
+V12 REPAIR
+The static gate now checks two independent things:
+
+1. Configuration contains exactly the four intended families:
+   - v10_planck_free_best_jitter_plus
+   - v10_planck_free_best_jitter_minus
+   - v10_planck_free_best_cross_a
+   - v10_planck_free_best_cross_b
+
+2. Runner source implements the generic routing machinery:
+   - family.startswith("v10_planck_free_best_")
+   - patterned_jitter
+   - CROSS_A_SIGNS
+   - CROSS_B_SIGNS
+   - NONZERO_PERTURBATION_GATE
+
+NO SCIENTIFIC CHANGE
+V10 remains the authoritative numerical parent.
+V11 contributes no scientific output.
+
+V12 still runs exactly four new Planck free-H0 jobs:
+  restarts 20, 21, 22, 23
+
+No changes to:
+- n=3 EDE model
+- likelihoods/data
+- ell range
+- exact objective
+- ignore_prior=True
+- H0 target
+- multistart threshold Delta objective <= 1.0
+- minimum replicate count = 2
+- nesting tolerance
+- embedding tolerance
+- seed perturbation amplitudes
+- no-cross-chain-chi2 rule

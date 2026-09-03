@@ -1,0 +1,70 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "compute_plan": {
+    "branch": "planck",
+    "families": [
+      "v10_planck_free_best_jitter_plus",
+      "v10_planck_free_best_jitter_minus",
+      "v10_planck_free_best_cross_a",
+      "v10_planck_free_best_cross_b"
+    ],
+    "max_parallel": 4,
+    "mode": "reference_free_h0",
+    "new_expensive_jobs": 4,
+    "restarts": [
+      20,
+      21,
+      22,
+      23
+    ],
+    "reused_completed_expensive_profiles": 24
+  },
+  "files": [
+    "q016-matched-cmb-surface-v12.yml",
+    "q016_objective_reprofile_v12.py",
+    "q016_aggregate_v12.py",
+    "q016_matched_cmb_surface_v12_config.yml",
+    "q016_tests_v12.py",
+    "q016_setup_v12.sh",
+    "q016_v10_primary_parent_lock_v12.json",
+    "q016_v6_objective_seed_lock_v12.json",
+    "q016_source_lock_v12.json",
+    "q016_compute_architecture_v12.json",
+    "q016_runtime_fix_note_v12.txt"
+  ],
+  "gate_relaxations": false,
+  "objective_changed": false,
+  "q": "Q016",
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-012",
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V12",
+  "scientific_parent": {
+    "github_run_id": 33764943297,
+    "head_sha": "81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8",
+    "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-010",
+    "run_id": "Q016-MATCHED-CMB-SURFACE-V10"
+  },
+  "scientific_surface_changed": false,
+  "status": "PROGRAM GENERATED \u2014 NOT YET EXECUTED",
+  "v11_failure": {
+    "classification": "STATIC_GUARDRAIL_FALSE_NEGATIVE",
+    "failed_check": "NONZERO_PERTURBATION_GATE",
+    "github_run_id": 33779734832,
+    "head_sha": "8fbba7a7dbee10f5d7f66f9b9837554ffdb403c2",
+    "scientific_compute_started": false,
+    "scientific_result": "NOT_AVAILABLE",
+    "stage": "PREPARE_STATIC_TESTS"
+  },
+  "validation": {
+    "actual_v10_parent_audit": "PASS",
+    "exact_static_test": "PASS",
+    "no_gate_relaxation": "PASS",
+    "q016_aggregate_v12.py": "PASS",
+    "q016_objective_reprofile_v12.py": "PASS",
+    "q016_setup_v12.sh": "PASS",
+    "q016_tests_v12.py": "PASS",
+    "synthetic_continuation_aggregator": "PASS",
+    "v10_remains_scientific_parent": "PASS",
+    "workflow_planck_only_4_jobs": "PASS",
+    "yaml": "PASS"
+  }
+}
