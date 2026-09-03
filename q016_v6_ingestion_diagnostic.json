@@ -1,0 +1,31 @@
+{
+  "explicit_profile_score": {
+    "act": {
+      "fixed": 79.2725174034513,
+      "fixed_minus_free": 0.39556248760241886,
+      "free": 78.87695491584888
+    },
+    "definition": "CMB likelihood chi2 + position-dependent Gaussian auxiliary/nuisance penalties; prior normalization constants excluded",
+    "planck": {
+      "fixed": 4204.4999662881255,
+      "fixed_minus_free": 6.176690901031179,
+      "free": 4198.323275387094
+    },
+    "spt": {
+      "fixed": 60.664160597403416,
+      "fixed_minus_free": -1.4086548718296257,
+      "free": 62.07281546923304
+    }
+  },
+  "next_required_fix": "Release H0 from the certified SPT fixed-H0 basin and reprofile the exact same explicit objective; add a real PROFILE_NESTING_GATE and never hard-code ENDPOINT_REPROFILE_GATE.",
+  "q": "Q016",
+  "raw_program_gate": "PASS",
+  "reason": "SPT free-H0 endpoint is dominated by the fixed-H0=71.5 point on the same penalized profile objective; ENDPOINT_REPROFILE_GATE was hard-coded True.",
+  "reported_raw_delta_chi2": {
+    "act": 0.1747439241747344,
+    "planck": 5.927843293369733,
+    "spt": -1.5186882019042969
+  },
+  "routing": "NUMERICAL EXECUTION / HPC ENGINE",
+  "scientific_ingestion_gate": "NOT_YET_VALID_FOR_ALL_PRIMARY_PROFILES"
+}

@@ -1,0 +1,4987 @@
+{
+  "absolute_cross_chain_chi2_comparison_performed": false,
+  "actual_computed_result": "AVAILABLE",
+  "branches": {
+    "act": {
+      "fixed_minus_free_delta_chi2": 0.1747439241747344,
+      "profiles": {
+        "fixed_h0_71p5": {
+          "accepted_restart_ids": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "all": [
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 79.05155835001521,
+              "continuation_parent": {
+                "v4_github_run_id": 33693382859,
+                "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+                "v5_github_run_id": 33720410690,
+                "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+                "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 4999.889150085,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.0112065511720276,
+                "A_s": 2.203632431383963e-09,
+                "Omega_m": 0.2982893411392642,
+                "P_act": 1.0017092076422456,
+                "S8": 0.8312968908749419,
+                "chi2": 79.05155835001521,
+                "chi2__q016_act_dr6_cmbonly": 79.05155835001521,
+                "fEDE": 0.10109119916505904,
+                "log10z_c": 3.432723340118257,
+                "logA": 3.092692196957226,
+                "minuslogpost": 22.455998209113183,
+                "minuslogprior": -17.069780965894424,
+                "minuslogprior__0": -12.98320321606306,
+                "minuslogprior__q016_tau_information": -4.086577749831362,
+                "n_s": 0.9582413587637723,
+                "omega_b": 0.0228650457497069,
+                "omega_cdm": 0.12898418115234148,
+                "rs_drag": 141.43734322697205,
+                "sigma8": 0.8336771843885961,
+                "tau_reio": 0.05382037691163777,
+                "thetai_scf": 2.844645320952008,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -23.22360308055904,
+                "pointlike_required": true,
+                "reference_is_pointlike": true,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.02296510568017845,
+                  0.12890435178112197,
+                  0.05421823405354882,
+                  0.9578355801024921,
+                  3.092681922581024,
+                  0.10082262420071834,
+                  3.430382976454629,
+                  2.8188183913214098,
+                  1.0109223810794246,
+                  1.0022334841536207
+                ],
+                "seed": 1602403
+              },
+              "restart": 8,
+              "restart_reference": {
+                "applied_point_reference_values": {
+                  "A_act": 1.0109223810794246,
+                  "P_act": 1.0022334841536207,
+                  "fEDE": 0.10082262420071834,
+                  "log10z_c": 3.430382976454629,
+                  "logA": 3.092681922581024,
+                  "n_s": 0.9578355801024921,
+                  "omega_b": 0.02296510568017845,
+                  "omega_cdm": 0.12890435178112197,
+                  "tau_reio": 0.05421823405354882,
+                  "thetai_scf": 2.8188183913214098
+                },
+                "pointlike_targeted_start": true,
+                "reference_family": "basin_replicate_c",
+                "restart_index": 8,
+                "target_center_source": {
+                  "chi2": 79.87784099066869,
+                  "restart": 0,
+                  "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+                },
+                "target_center_values": {
+                  "A_act": 1.0102223810794246,
+                  "P_act": 1.0019334841536207,
+                  "fEDE": 0.09932262420071834,
+                  "log10z_c": 3.418382976454629,
+                  "logA": 3.091681922581024,
+                  "n_s": 0.9574355801024922,
+                  "omega_b": 0.02295710568017845,
+                  "omega_cdm": 0.12880435178112198,
+                  "tau_reio": 0.05391823405354882,
+                  "thetai_scf": 2.8368183913214096
+                },
+                "target_profile": "act|fixed_h0_71p5"
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+              "runtime_provenance_file": "q016_v6_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 79.180747909247,
+              "continuation_parent": {
+                "v4_github_run_id": 33693382859,
+                "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+                "v5_github_run_id": 33720410690,
+                "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+                "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 5238.257893186,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.011164514858636,
+                "A_s": 2.195597684647327e-09,
+                "Omega_m": 0.2988155442834899,
+                "P_act": 1.0016799971270633,
+                "S8": 0.8317248021016892,
+                "chi2": 79.180747909247,
+                "chi2__q016_act_dr6_cmbonly": 79.180747909247,
+                "fEDE": 0.10203269306178657,
+                "log10z_c": 3.4376042391639943,
+                "logA": 3.0890393961449694,
+                "minuslogpost": 22.431520196193166,
+                "minuslogprior": -17.158853758430336,
+                "minuslogprior__0": -12.98320321606306,
+                "minuslogprior__q016_tau_information": -4.175650542367276,
+                "n_s": 0.9600873901907208,
+                "omega_b": 0.022881404765685016,
+                "omega_cdm": 0.12923669200187277,
+                "rs_drag": 141.33382934535055,
+                "sigma8": 0.8333715820480815,
+                "tau_reio": 0.05224148494196006,
+                "thetai_scf": 2.8373370918307907,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -33.90277156948987,
+                "pointlike_required": true,
+                "reference_is_pointlike": true,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.02297710568017845,
+                  0.12855435178112198,
+                  0.05311823405354882,
+                  0.9584355801024922,
+                  3.089181922581024,
+                  0.10332262420071835,
+                  3.393382976454629,
+                  2.7968183913214095,
+                  1.0087223810794246,
+                  1.0027334841536206
+                ],
+                "seed": 1602203
+              },
+              "restart": 6,
+              "restart_reference": {
+                "applied_point_reference_values": {
+                  "A_act": 1.0087223810794246,
+                  "P_act": 1.0027334841536206,
+                  "fEDE": 0.10332262420071835,
+                  "log10z_c": 3.393382976454629,
+                  "logA": 3.089181922581024,
+                  "n_s": 0.9584355801024922,
+                  "omega_b": 0.02297710568017845,
+                  "omega_cdm": 0.12855435178112198,
+                  "tau_reio": 0.05311823405354882,
+                  "thetai_scf": 2.7968183913214095
+                },
+                "pointlike_targeted_start": true,
+                "reference_family": "basin_replicate_a",
+                "restart_index": 6,
+                "target_center_source": {
+                  "chi2": 79.87784099066869,
+                  "restart": 0,
+                  "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+                },
+                "target_center_values": {
+                  "A_act": 1.0102223810794246,
+                  "P_act": 1.0019334841536207,
+                  "fEDE": 0.09932262420071834,
+                  "log10z_c": 3.418382976454629,
+                  "logA": 3.091681922581024,
+                  "n_s": 0.9574355801024922,
+                  "omega_b": 0.02295710568017845,
+                  "omega_cdm": 0.12880435178112198,
+                  "tau_reio": 0.05391823405354882,
+                  "thetai_scf": 2.8368183913214096
+                },
+                "target_profile": "act|fixed_h0_71p5"
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+              "runtime_provenance_file": "q016_v6_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 79.83068713983833,
+              "continuation_parent": {
+                "v4_github_run_id": 33693382859,
+                "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+                "v5_github_run_id": 33720410690,
+                "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+                "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2682.424731817,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.0121907824966834,
+                "A_s": 2.2071586844581825e-09,
+                "Omega_m": 0.29652205583377556,
+                "P_act": 1.0016825309792403,
+                "S8": 0.8269489042262408,
+                "chi2": 79.83068713983833,
+                "chi2__q016_act_dr6_cmbonly": 79.83068713983833,
+                "fEDE": 0.09582117933154757,
+                "log10z_c": 3.42994009130111,
+                "logA": 3.094291118208703,
+                "minuslogpost": 22.879745713555305,
+                "minuslogprior": -17.03559785636386,
+                "minuslogprior__0": -12.98320321606306,
+                "minuslogprior__q016_tau_information": -4.0523946403008,
+                "n_s": 0.9567901562220085,
+                "omega_b": 0.02292347251098968,
+                "omega_cdm": 0.12802219093130296,
+                "rs_drag": 141.76152030280997,
+                "sigma8": 0.8317844597581464,
+                "tau_reio": 0.05422733788282228,
+                "thetai_scf": 2.8572934299879456,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -28.579061080232275,
+                "pointlike_required": true,
+                "reference_is_pointlike": true,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.02293910568017845,
+                  0.129084351781122,
+                  0.05461823405354882,
+                  0.9563355801024922,
+                  3.094481922581024,
+                  0.09582262420071834,
+                  3.4483829764546288,
+                  2.8818183913214095,
+                  1.0118223810794247,
+                  1.0012334841536208
+                ],
+                "seed": 1602303
+              },
+              "restart": 7,
+              "restart_reference": {
+                "applied_point_reference_values": {
+                  "A_act": 1.0118223810794247,
+                  "P_act": 1.0012334841536208,
+                  "fEDE": 0.09582262420071834,
+                  "log10z_c": 3.4483829764546288,
+                  "logA": 3.094481922581024,
+                  "n_s": 0.9563355801024922,
+                  "omega_b": 0.02293910568017845,
+                  "omega_cdm": 0.129084351781122,
+                  "tau_reio": 0.05461823405354882,
+                  "thetai_scf": 2.8818183913214095
+                },
+                "pointlike_targeted_start": true,
+                "reference_family": "basin_replicate_b",
+                "restart_index": 7,
+                "target_center_source": {
+                  "chi2": 79.87784099066869,
+                  "restart": 0,
+                  "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+                },
+                "target_center_values": {
+                  "A_act": 1.0102223810794246,
+                  "P_act": 1.0019334841536207,
+                  "fEDE": 0.09932262420071834,
+                  "log10z_c": 3.418382976454629,
+                  "logA": 3.091681922581024,
+                  "n_s": 0.9574355801024922,
+                  "omega_b": 0.02295710568017845,
+                  "omega_cdm": 0.12880435178112198,
+                  "tau_reio": 0.05391823405354882,
+                  "thetai_scf": 2.8368183913214096
+                },
+                "target_profile": "act|fixed_h0_71p5"
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+              "runtime_provenance_file": "q016_v6_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 79.87784099066869,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 8332.768558812,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.0102223810794246,
+                "A_s": 2.201407282198829e-09,
+                "Omega_m": 0.29811982164054135,
+                "P_act": 1.0019334841536207,
+                "S8": 0.8296553734250851,
+                "chi2": 79.87784099066869,
+                "chi2__q016_act_dr6_cmbonly": 79.87784099066869,
+                "fEDE": 0.09932262420071834,
+                "log10z_c": 3.418382976454629,
+                "logA": 3.091681922581024,
+                "minuslogpost": 22.876939030378708,
+                "minuslogprior": -17.061981464955636,
+                "minuslogprior__0": -12.98320321606306,
+                "minuslogprior__q016_tau_information": -4.078778248892576,
+                "n_s": 0.9574355801024922,
+                "omega_b": 0.02295710568017845,
+                "omega_cdm": 0.12880435178112198,
+                "rs_drag": 141.442747265347,
+                "sigma8": 0.8322674914420641,
+                "tau_reio": 0.05391823405354882,
+                "thetai_scf": 2.8368183913214096,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -331.19204401475184,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.022540066049787227,
+                  0.12636085046893764,
+                  0.05412045545072237,
+                  0.9865960204155715,
+                  3.0937317833984435,
+                  0.08765239244085278,
+                  3.533228485009732,
+                  2.583852051344591,
+                  0.9862261868862892,
+                  0.9965694615210776
+                ],
+                "seed": 1601603
+              },
+              "restart": 0,
+              "restart_reference": {
+                "reference_family": "base",
+                "reference_values": {
+                  "H0": 70.85,
+                  "fEDE": 0.09,
+                  "log10z_c": 3.56,
+                  "logA": 3.1,
+                  "n_s": 0.99,
+                  "omega_b": 0.02274,
+                  "omega_cdm": 0.127,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 2.65
+                },
+                "restart_index": 0
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 82.50501048572264,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 8858.951569267,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.0001747460236832,
+                "A_s": 2.1275236372105573e-09,
+                "Omega_m": 0.3049764318434974,
+                "P_act": 1.0038177166717908,
+                "S8": 0.8455583039285247,
+                "chi2": 82.50501048572264,
+                "chi2__q016_act_dr6_cmbonly": 82.50501048572264,
+                "fEDE": 0.12720137380819976,
+                "log10z_c": 3.72460740351519,
+                "logA": 3.0575437847199547,
+                "minuslogpost": 24.151427202490307,
+                "minuslogprior": -17.10107804037101,
+                "minuslogprior__0": -12.98320321606306,
+                "minuslogprior__q016_tau_information": -4.1178748243079495,
+                "n_s": 0.9972327111104331,
+                "omega_b": 0.02294590709895972,
+                "omega_cdm": 0.13232148075713637,
+                "rs_drag": 140.19373742019732,
+                "sigma8": 0.8386312602297927,
+                "tau_reio": 0.05338770529198749,
+                "thetai_scf": 2.842287548005397,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -481.94603527948385,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.023028567166984534,
+                  0.12992735741500042,
+                  0.05230639110819641,
+                  0.9958888899920494,
+                  3.1112323791047185,
+                  0.15070540698936843,
+                  3.743777920875638,
+                  2.286870976317682,
+                  1.0032865495924674,
+                  0.9964486809830555
+                ],
+                "seed": 1601903
+              },
+              "restart": 3,
+              "restart_reference": {
+                "reference_family": "ede_alt",
+                "reference_values": {
+                  "H0": 71.35,
+                  "fEDE": 0.15,
+                  "log10z_c": 3.7800000000000002,
+                  "logA": 3.1,
+                  "n_s": 0.996,
+                  "omega_b": 0.02284,
+                  "omega_cdm": 0.13,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 2.25
+                },
+                "restart_index": 3
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 83.82435621075622,
+              "continuation_parent": {
+                "github_run_id": 33693382859,
+                "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 4643.979366231,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 0.9954290019596718,
+                "A_s": 2.1478239646112866e-09,
+                "Omega_m": 0.2974931055598995,
+                "P_act": 1.0044554362885765,
+                "S8": 0.8270632379455576,
+                "chi2": 83.82435621075622,
+                "chi2__q016_act_dr6_cmbonly": 83.82435621075622,
+                "fEDE": 0.09069435450330329,
+                "log10z_c": 3.373571938657609,
+                "logA": 3.067040313121839,
+                "minuslogpost": 25.388350789395787,
+                "minuslogprior": -16.523827315982324,
+                "minuslogprior__0": -12.98320321606306,
+                "minuslogprior__q016_tau_information": -3.540624099919265,
+                "n_s": 0.971540792738101,
+                "omega_b": 0.022792014649138125,
+                "omega_cdm": 0.12865009603813965,
+                "rs_drag": 141.66888968813393,
+                "sigma8": 0.8305406473191732,
+                "tau_reio": 0.057874822813525476,
+                "thetai_scf": 2.323474356287454,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -728.808687915579,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.022667426350966597,
+                  0.12865246729766483,
+                  0.06084477043093622,
+                  0.9988629307986069,
+                  3.1124822216538788,
+                  0.10027138167671389,
+                  3.3750811155228604,
+                  3.031418276706379,
+                  0.9789758707966216,
+                  0.9906999777153724
+                ],
+                "seed": 1602003
+              },
+              "restart": 4,
+              "restart_reference": {
+                "reference_family": "rescue_c",
+                "reference_values": {
+                  "H0": 71.1,
+                  "fEDE": 0.105,
+                  "log10z_c": 3.38,
+                  "logA": 3.1,
+                  "n_s": 0.992,
+                  "omega_b": 0.02268,
+                  "omega_cdm": 0.128,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 3.0
+                },
+                "restart_index": 4
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-005",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V5",
+              "runtime_provenance_file": "q016_v5_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 84.3185239721224,
+              "continuation_parent": {
+                "github_run_id": 33693382859,
+                "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 6639.286505172,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.006743413315452,
+                "A_s": 2.149587919517249e-09,
+                "Omega_m": 0.2973315285688644,
+                "P_act": 1.004765893500542,
+                "S8": 0.8313028333767875,
+                "chi2": 84.3185239721224,
+                "chi2__q016_act_dr6_cmbonly": 84.3185239721224,
+                "fEDE": 0.10716268444004257,
+                "log10z_c": 3.602219215077846,
+                "logA": 3.067861251422654,
+                "minuslogpost": 25.18524154385446,
+                "minuslogprior": -16.974020442206744,
+                "minuslogprior__0": -12.98320321606306,
+                "minuslogprior__q016_tau_information": -3.9908172261436845,
+                "n_s": 0.9963620400329066,
+                "omega_b": 0.022848192868287685,
+                "omega_cdm": 0.12851107235150472,
+                "rs_drag": 141.6743114591343,
+                "sigma8": 0.8350248619508134,
+                "tau_reio": 0.054853476823494875,
+                "thetai_scf": 2.31613986174087,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -183.59295773550662,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.02287283826880625,
+                  0.1302788034055374,
+                  0.06337505423866191,
+                  0.992346644730941,
+                  3.1001857293151995,
+                  0.13424616858764843,
+                  3.601612402517686,
+                  2.5790294573887347,
+                  1.0087364764522908,
+                  0.9880495210193139
+                ],
+                "seed": 1601703
+              },
+              "restart": 1,
+              "restart_reference": {
+                "reference_family": "high_h0",
+                "reference_values": {
+                  "H0": 71.85,
+                  "fEDE": 0.12,
+                  "log10z_c": 3.66,
+                  "logA": 3.1,
+                  "n_s": 0.994,
+                  "omega_b": 0.02274,
+                  "omega_cdm": 0.129,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 2.4499999999999997
+                },
+                "restart_index": 1
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-005",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V5",
+              "runtime_provenance_file": "q016_v5_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 86.2453981849115,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 5887.482576042999,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.0022912101809414,
+                "A_s": 2.1513648174260007e-09,
+                "Omega_m": 0.2939745691439006,
+                "P_act": 1.003620220240111,
+                "S8": 0.8119677886565809,
+                "chi2": 86.2453981849115,
+                "chi2__q016_act_dr6_cmbonly": 86.2453981849115,
+                "fEDE": 0.08611663131869077,
+                "log10z_c": 3.3468826294206067,
+                "logA": 3.0686875325368757,
+                "minuslogpost": 25.947940682456135,
+                "minuslogprior": -17.174758409999612,
+                "minuslogprior__0": -12.98320321606306,
+                "minuslogprior__q016_tau_information": -4.1915551939365505,
+                "n_s": 0.9608973729515756,
+                "omega_b": 0.02295915667438319,
+                "omega_cdm": 0.12668425606823702,
+                "rs_drag": 142.28654747443179,
+                "sigma8": 0.8202468040465998,
+                "tau_reio": 0.051629404439232716,
+                "thetai_scf": 2.755935695691074,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -159.42255844912842,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.022763961324668347,
+                  0.12417779798409855,
+                  0.054240974914649666,
+                  0.9796089109618903,
+                  3.0999871362029983,
+                  0.06506407074288223,
+                  3.4797493688393297,
+                  2.8689470798632652,
+                  1.0068801389231479,
+                  0.9942817610341823
+                ],
+                "seed": 1601803
+              },
+              "restart": 2,
+              "restart_reference": {
+                "reference_family": "low_h0",
+                "reference_values": {
+                  "H0": 69.85,
+                  "fEDE": 0.06999999999999999,
+                  "log10z_c": 3.46,
+                  "logA": 3.1,
+                  "n_s": 0.986,
+                  "omega_b": 0.02274,
+                  "omega_cdm": 0.125,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 2.85
+                },
+                "restart_index": 2
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            }
+          ],
+          "best": {
+            "absolute_cross_chain_chi2_comparison_performed": false,
+            "branch": "act",
+            "chi2": 79.05155835001521,
+            "continuation_parent": {
+              "v4_github_run_id": 33693382859,
+              "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+              "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "v5_github_run_id": 33720410690,
+              "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+              "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+            },
+            "cross_chain_chi2_sum_performed": false,
+            "elapsed_seconds": 4999.889150085,
+            "ell_range": [
+              600,
+              2000
+            ],
+            "exact_q011_vector_used_as_profile_endpoint": false,
+            "minimum": {
+              "A_act": 1.0112065511720276,
+              "A_s": 2.203632431383963e-09,
+              "Omega_m": 0.2982893411392642,
+              "P_act": 1.0017092076422456,
+              "S8": 0.8312968908749419,
+              "chi2": 79.05155835001521,
+              "chi2__q016_act_dr6_cmbonly": 79.05155835001521,
+              "fEDE": 0.10109119916505904,
+              "log10z_c": 3.432723340118257,
+              "logA": 3.092692196957226,
+              "minuslogpost": 22.455998209113183,
+              "minuslogprior": -17.069780965894424,
+              "minuslogprior__0": -12.98320321606306,
+              "minuslogprior__q016_tau_information": -4.086577749831362,
+              "n_s": 0.9582413587637723,
+              "omega_b": 0.0228650457497069,
+              "omega_cdm": 0.12898418115234148,
+              "rs_drag": 141.43734322697205,
+              "sigma8": 0.8336771843885961,
+              "tau_reio": 0.05382037691163777,
+              "thetai_scf": 2.844645320952008,
+              "weight": 1.0
+            },
+            "mode": "fixed_h0_71p5",
+            "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+            "observables": [
+              "TT",
+              "TE",
+              "EE"
+            ],
+            "q": "Q016",
+            "reference_preflight": {
+              "finite_logposterior": true,
+              "logposterior": -23.22360308055904,
+              "pointlike_required": true,
+              "reference_is_pointlike": true,
+              "sampled_parameter_order": [
+                "omega_b",
+                "omega_cdm",
+                "tau_reio",
+                "n_s",
+                "logA",
+                "fEDE",
+                "log10z_c",
+                "thetai_scf",
+                "A_act",
+                "P_act"
+              ],
+              "sampled_reference_vector": [
+                0.02296510568017845,
+                0.12890435178112197,
+                0.05421823405354882,
+                0.9578355801024921,
+                3.092681922581024,
+                0.10082262420071834,
+                3.430382976454629,
+                2.8188183913214098,
+                1.0109223810794246,
+                1.0022334841536207
+              ],
+              "seed": 1602403
+            },
+            "restart": 8,
+            "restart_reference": {
+              "applied_point_reference_values": {
+                "A_act": 1.0109223810794246,
+                "P_act": 1.0022334841536207,
+                "fEDE": 0.10082262420071834,
+                "log10z_c": 3.430382976454629,
+                "logA": 3.092681922581024,
+                "n_s": 0.9578355801024921,
+                "omega_b": 0.02296510568017845,
+                "omega_cdm": 0.12890435178112197,
+                "tau_reio": 0.05421823405354882,
+                "thetai_scf": 2.8188183913214098
+              },
+              "pointlike_targeted_start": true,
+              "reference_family": "basin_replicate_c",
+              "restart_index": 8,
+              "target_center_source": {
+                "chi2": 79.87784099066869,
+                "restart": 0,
+                "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+              },
+              "target_center_values": {
+                "A_act": 1.0102223810794246,
+                "P_act": 1.0019334841536207,
+                "fEDE": 0.09932262420071834,
+                "log10z_c": 3.418382976454629,
+                "logA": 3.091681922581024,
+                "n_s": 0.9574355801024922,
+                "omega_b": 0.02295710568017845,
+                "omega_cdm": 0.12880435178112198,
+                "tau_reio": 0.05391823405354882,
+                "thetai_scf": 2.8368183913214096
+              },
+              "target_profile": "act|fixed_h0_71p5"
+            },
+            "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+            "runtime_provenance_file": "q016_v6_source_runtime/setup_act.json",
+            "status": "COMPLETE",
+            "target_h0": 71.5,
+            "tau_prior": {
+              "mean": 0.051,
+              "never_count_as_independent_cross_experiment_evidence": true,
+              "shared_auxiliary_constraint": true,
+              "sigma": 0.006
+            }
+          },
+          "best_two_spread": 0.12918955923178999,
+          "complete_count": 8,
+          "multistart_stable": true,
+          "replicate_count_within_delta_chi2": 4,
+          "replicate_restart_ids_within_delta_chi2": [
+            0,
+            6,
+            7,
+            8
+          ],
+          "targeted_basin_replication_gate": true
+        },
+        "reference_free_h0": {
+          "accepted_restart_ids": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "all": [
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 78.87681442584048,
+              "continuation_parent": {
+                "github_run_id": 33693382859,
+                "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 7062.203959298,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.0164766933997875,
+                "A_s": 2.2118923682160575e-09,
+                "H0": 71.04338378389991,
+                "Omega_m": 0.30219157975946165,
+                "P_act": 1.0025539321069707,
+                "S8": 0.8413766864274711,
+                "chi2": 78.87681442584048,
+                "chi2__q016_act_dr6_cmbonly": 78.87681442584048,
+                "fEDE": 0.09673209044023609,
+                "log10z_c": 3.425903053111347,
+                "logA": 3.096433517340116,
+                "minuslogpost": 25.65941434697413,
+                "minuslogprior": -13.77899286594611,
+                "minuslogprior__0": -9.582005834400904,
+                "minuslogprior__q016_tau_information": -4.196987031545206,
+                "n_s": 0.9622466552750745,
+                "omega_b": 0.022776173136483197,
+                "omega_cdm": 0.12910097354825742,
+                "rs_drag": 141.64564257651213,
+                "sigma8": 0.8383201825066691,
+                "tau_reio": 0.0510711170886823,
+                "thetai_scf": 2.798846670243277,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -191.27885514477038,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.022667426350966597,
+                  0.12865246729766483,
+                  71.45559630386703,
+                  0.06349034463888555,
+                  0.9982411108269392,
+                  3.096847587784476,
+                  0.10352433465685819,
+                  3.399636422941487,
+                  2.831806966372973,
+                  0.9906999777153724,
+                  1.0005407834188058
+                ],
+                "seed": 1602003
+              },
+              "restart": 4,
+              "restart_reference": {
+                "reference_family": "rescue_c",
+                "reference_values": {
+                  "H0": 71.1,
+                  "fEDE": 0.105,
+                  "log10z_c": 3.38,
+                  "logA": 3.1,
+                  "n_s": 0.992,
+                  "omega_b": 0.02268,
+                  "omega_cdm": 0.128,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 3.0
+                },
+                "restart_index": 4
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-005",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V5",
+              "runtime_provenance_file": "q016_v5_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 79.46295689195875,
+              "continuation_parent": {
+                "github_run_id": 33693382859,
+                "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 8436.569107022,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.0140637366074694,
+                "A_s": 2.2026710086108717e-09,
+                "H0": 71.35865853035644,
+                "Omega_m": 0.3041071151773954,
+                "P_act": 1.0035744078948812,
+                "S8": 0.8532122701782952,
+                "chi2": 79.46295689195875,
+                "chi2__q016_act_dr6_cmbonly": 79.46295689195875,
+                "fEDE": 0.11460246687333842,
+                "log10z_c": 3.5438783369599225,
+                "logA": 3.092255811764313,
+                "minuslogpost": 26.034883689297406,
+                "minuslogprior": -13.696594756681971,
+                "minuslogprior__0": -9.582005834400904,
+                "minuslogprior__q016_tau_information": -4.114588922281067,
+                "n_s": 0.98335046783672,
+                "omega_b": 0.02287669149028105,
+                "omega_cdm": 0.13133250374358538,
+                "rs_drag": 140.63961000442296,
+                "sigma8": 0.8474311603528479,
+                "tau_reio": 0.05343674403812149,
+                "thetai_scf": 2.5014487600967645,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -659.5697744014597,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.02287283826880625,
+                  0.1302788034055374,
+                  72.52188177983274,
+                  0.05667731578475282,
+                  0.9940928646575996,
+                  3.1094974457250992,
+                  0.10248372075530579,
+                  3.7406434108679596,
+                  2.5198918116183266,
+                  0.9880495210193139,
+                  0.9938196464014205
+                ],
+                "seed": 1601703
+              },
+              "restart": 1,
+              "restart_reference": {
+                "reference_family": "high_h0",
+                "reference_values": {
+                  "H0": 71.85,
+                  "fEDE": 0.12,
+                  "log10z_c": 3.66,
+                  "logA": 3.1,
+                  "n_s": 0.994,
+                  "omega_b": 0.02274,
+                  "omega_cdm": 0.129,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 2.4499999999999997
+                },
+                "restart_index": 1
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-005",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V5",
+              "runtime_provenance_file": "q016_v5_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 79.81940282377293,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 7784.654750457,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.0111164058101592,
+                "A_s": 2.172868845331415e-09,
+                "H0": 68.90883292854178,
+                "Omega_m": 0.3124094047914804,
+                "P_act": 1.0026350295817563,
+                "S8": 0.8487796173512251,
+                "chi2": 79.81940282377293,
+                "chi2__q016_act_dr6_cmbonly": 79.81940282377293,
+                "fEDE": 0.04968348349667188,
+                "log10z_c": 3.4854339029466646,
+                "logA": 3.0786334359495338,
+                "minuslogpost": 26.251629353901354,
+                "minuslogprior": -13.658072057985112,
+                "minuslogprior__0": -9.582005834400904,
+                "minuslogprior__q016_tau_information": -4.076066223584208,
+                "n_s": 0.9688602050418853,
+                "omega_b": 0.022628152408188055,
+                "omega_cdm": 0.12507283293029448,
+                "rs_drag": 144.18101558788013,
+                "sigma8": 0.8317513596739936,
+                "tau_reio": 0.0539515006036751,
+                "thetai_scf": 2.6189300015362535,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -537.1762038211282,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.022763961324668347,
+                  0.12417779798409855,
+                  69.3801218643312,
+                  0.052887128769512286,
+                  0.9859935681014991,
+                  3.096709380495255,
+                  0.07592481065179894,
+                  3.471841924914541,
+                  2.9050411113851835,
+                  0.9942817610341823,
+                  0.9956643290817926
+                ],
+                "seed": 1601803
+              },
+              "restart": 2,
+              "restart_reference": {
+                "reference_family": "low_h0",
+                "reference_values": {
+                  "H0": 69.85,
+                  "fEDE": 0.06999999999999999,
+                  "log10z_c": 3.46,
+                  "logA": 3.1,
+                  "n_s": 0.986,
+                  "omega_b": 0.02274,
+                  "omega_cdm": 0.125,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 2.85
+                },
+                "restart_index": 2
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 81.31544881171695,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 9085.846769103,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 1.0157592002468905,
+                "A_s": 2.199160873458643e-09,
+                "H0": 71.37259999588767,
+                "Omega_m": 0.3050985991884072,
+                "P_act": 1.0051968306115562,
+                "S8": 0.8600825000389414,
+                "chi2": 81.31544881171695,
+                "chi2__q016_act_dr6_cmbonly": 81.31544881171695,
+                "fEDE": 0.11944380347232761,
+                "log10z_c": 3.564311243265328,
+                "logA": 3.090660959443603,
+                "minuslogpost": 26.96480871141709,
+                "minuslogprior": -13.692915694441385,
+                "minuslogprior__0": -9.582005834400904,
+                "minuslogprior__q016_tau_information": -4.110909860040482,
+                "n_s": 0.9978043945088156,
+                "omega_b": 0.022838238310020194,
+                "omega_cdm": 0.13193646008749793,
+                "rs_drag": 140.45528171336676,
+                "sigma8": 0.85286566697224,
+                "tau_reio": 0.053490504765834175,
+                "thetai_scf": 2.354522876236431,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -349.15295461546907,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.023028567166984534,
+                  0.12992735741500042,
+                  70.63829888852455,
+                  0.057911111993639526,
+                  1.0016161895523592,
+                  3.1004702713262455,
+                  0.1391333762626914,
+                  3.8030443601985517,
+                  2.27629239673974,
+                  0.9964486809830555,
+                  1.0073990892137272
+                ],
+                "seed": 1601903
+              },
+              "restart": 3,
+              "restart_reference": {
+                "reference_family": "ede_alt",
+                "reference_values": {
+                  "H0": 71.35,
+                  "fEDE": 0.15,
+                  "log10z_c": 3.7800000000000002,
+                  "logA": 3.1,
+                  "n_s": 0.996,
+                  "omega_b": 0.02284,
+                  "omega_cdm": 0.13,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 2.25
+                },
+                "restart_index": 3
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "act",
+              "chi2": 81.93124663172905,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 7714.642726593,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_act": 0.9954257612143516,
+                "A_s": 2.1201027556584036e-09,
+                "H0": 70.5121290562842,
+                "Omega_m": 0.3048900368040002,
+                "P_act": 1.0034791197250288,
+                "S8": 0.831498428920122,
+                "chi2": 81.93124663172905,
+                "chi2__q016_act_dr6_cmbonly": 81.93124663172905,
+                "fEDE": 0.08856819068041279,
+                "log10z_c": 3.676853953811601,
+                "logA": 3.0540496501535417,
+                "minuslogpost": 27.21761910560798,
+                "minuslogprior": -13.748004210256546,
+                "minuslogprior__0": -9.582005834400904,
+                "minuslogprior__q016_tau_information": -4.165998375855641,
+                "n_s": 0.9740313595126179,
+                "omega_b": 0.022797859356456507,
+                "omega_cdm": 0.12814824673153846,
+                "rs_drag": 142.23643202781497,
+                "sigma8": 0.8248034027514338,
+                "tau_reio": 0.052495406583492034,
+                "thetai_scf": 2.9974342943661574,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -262.31228408937807,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_act",
+                  "P_act"
+                ],
+                "sampled_reference_vector": [
+                  0.022540066049787227,
+                  0.12636085046893764,
+                  70.36505693134029,
+                  0.05527681633245717,
+                  0.9868658916992217,
+                  3.098434928293902,
+                  0.0819685455029197,
+                  3.5186575320903697,
+                  2.5398094950903136,
+                  0.9965694615210776,
+                  0.9843689941057042
+                ],
+                "seed": 1601603
+              },
+              "restart": 0,
+              "restart_reference": {
+                "reference_family": "base",
+                "reference_values": {
+                  "H0": 70.85,
+                  "fEDE": 0.09,
+                  "log10z_c": 3.56,
+                  "logA": 3.1,
+                  "n_s": 0.99,
+                  "omega_b": 0.02274,
+                  "omega_cdm": 0.127,
+                  "tau_reio": 0.058,
+                  "thetai_scf": 2.65
+                },
+                "restart_index": 0
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_act.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            }
+          ],
+          "best": {
+            "absolute_cross_chain_chi2_comparison_performed": false,
+            "branch": "act",
+            "chi2": 78.87681442584048,
+            "continuation_parent": {
+              "github_run_id": 33693382859,
+              "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+            },
+            "cross_chain_chi2_sum_performed": false,
+            "elapsed_seconds": 7062.203959298,
+            "ell_range": [
+              600,
+              2000
+            ],
+            "exact_q011_vector_used_as_profile_endpoint": false,
+            "minimum": {
+              "A_act": 1.0164766933997875,
+              "A_s": 2.2118923682160575e-09,
+              "H0": 71.04338378389991,
+              "Omega_m": 0.30219157975946165,
+              "P_act": 1.0025539321069707,
+              "S8": 0.8413766864274711,
+              "chi2": 78.87681442584048,
+              "chi2__q016_act_dr6_cmbonly": 78.87681442584048,
+              "fEDE": 0.09673209044023609,
+              "log10z_c": 3.425903053111347,
+              "logA": 3.096433517340116,
+              "minuslogpost": 25.65941434697413,
+              "minuslogprior": -13.77899286594611,
+              "minuslogprior__0": -9.582005834400904,
+              "minuslogprior__q016_tau_information": -4.196987031545206,
+              "n_s": 0.9622466552750745,
+              "omega_b": 0.022776173136483197,
+              "omega_cdm": 0.12910097354825742,
+              "rs_drag": 141.64564257651213,
+              "sigma8": 0.8383201825066691,
+              "tau_reio": 0.0510711170886823,
+              "thetai_scf": 2.798846670243277,
+              "weight": 1.0
+            },
+            "mode": "reference_free_h0",
+            "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+            "observables": [
+              "TT",
+              "TE",
+              "EE"
+            ],
+            "q": "Q016",
+            "reference_preflight": {
+              "finite_logposterior": true,
+              "logposterior": -191.27885514477038,
+              "pointlike_required": false,
+              "reference_is_pointlike": false,
+              "sampled_parameter_order": [
+                "omega_b",
+                "omega_cdm",
+                "H0",
+                "tau_reio",
+                "n_s",
+                "logA",
+                "fEDE",
+                "log10z_c",
+                "thetai_scf",
+                "A_act",
+                "P_act"
+              ],
+              "sampled_reference_vector": [
+                0.022667426350966597,
+                0.12865246729766483,
+                71.45559630386703,
+                0.06349034463888555,
+                0.9982411108269392,
+                3.096847587784476,
+                0.10352433465685819,
+                3.399636422941487,
+                2.831806966372973,
+                0.9906999777153724,
+                1.0005407834188058
+              ],
+              "seed": 1602003
+            },
+            "restart": 4,
+            "restart_reference": {
+              "reference_family": "rescue_c",
+              "reference_values": {
+                "H0": 71.1,
+                "fEDE": 0.105,
+                "log10z_c": 3.38,
+                "logA": 3.1,
+                "n_s": 0.992,
+                "omega_b": 0.02268,
+                "omega_cdm": 0.128,
+                "tau_reio": 0.058,
+                "thetai_scf": 3.0
+              },
+              "restart_index": 4
+            },
+            "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-005",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V5",
+            "runtime_provenance_file": "q016_v5_source_runtime/setup_act.json",
+            "status": "COMPLETE",
+            "target_h0": null,
+            "tau_prior": {
+              "mean": 0.051,
+              "never_count_as_independent_cross_experiment_evidence": true,
+              "shared_auxiliary_constraint": true,
+              "sigma": 0.006
+            }
+          },
+          "best_two_spread": 0.5861424661182753,
+          "complete_count": 5,
+          "multistart_stable": true,
+          "replicate_count_within_delta_chi2": 3,
+          "replicate_restart_ids_within_delta_chi2": [
+            1,
+            2,
+            4
+          ],
+          "targeted_basin_replication_gate": true
+        }
+      }
+    },
+    "planck": {
+      "fixed_minus_free_delta_chi2": 5.927843293369733,
+      "profiles": {
+        "fixed_h0_71p5": {
+          "accepted_restart_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "all": [
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4203.725519398398,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2155.994236981,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 1.0009682048907194,
+                "A_s": 2.1625275831178745e-09,
+                "Omega_m": 0.2994343565325632,
+                "S8": 0.8337842521837202,
+                "calEE": 0.9997371157928755,
+                "calTE": 0.9993768298893253,
+                "chi2": 4203.725519398398,
+                "chi2__q016_camspec_npipe_lite": 4203.725519398398,
+                "fEDE": 0.10939083960245945,
+                "log10z_c": 3.798822188255783,
+                "logA": 3.073862807935613,
+                "minuslogpost": 2074.234171244414,
+                "minuslogprior": -27.628588454785103,
+                "minuslogprior__0": -23.74147372080011,
+                "minuslogprior__q016_tau_information": -3.887114733984996,
+                "n_s": 0.9785063449769782,
+                "omega_b": 0.022959856829670732,
+                "omega_cdm": 0.1294743811939034,
+                "rs_drag": 141.3092480826256,
+                "sigma8": 0.834571406506366,
+                "tau_reio": 0.055723966878020816,
+                "thetai_scf": 3.041169993783204,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -3018.194265640875,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.02250335912646547,
+                  0.12143412702576734,
+                  0.050078887030223534,
+                  0.9745799765077124,
+                  3.0645175971904393,
+                  0.015009445480913822,
+                  3.774989190705182,
+                  3.0539833795959583,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601801
+              },
+              "restart": 2,
+              "restart_reference": {
+                "reference_family": "low_h0",
+                "reference_values": {
+                  "H0": 67.4,
+                  "fEDE": 0.015000000000000003,
+                  "log10z_c": 3.75,
+                  "logA": 3.06,
+                  "n_s": 0.978,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.122,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 3.21
+                },
+                "restart_index": 2
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4203.990580191964,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2358.079124864,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 0.9996469480071172,
+                "A_s": 2.1189798996081774e-09,
+                "Omega_m": 0.2901096460351702,
+                "S8": 0.8077479803432441,
+                "calEE": 0.9991340285586197,
+                "calTE": 0.9990405226382266,
+                "chi2": 4203.990580191964,
+                "chi2__q016_camspec_npipe_lite": 4203.990580191964,
+                "fEDE": 0.09323566037115746,
+                "log10z_c": 3.785858375187636,
+                "logA": 3.05351988644389,
+                "minuslogpost": 2074.8100053422336,
+                "minuslogprior": -27.18528475374825,
+                "minuslogprior__0": -23.800430449599613,
+                "minuslogprior__q016_tau_information": -3.3848543041486354,
+                "n_s": 0.993466018357321,
+                "omega_b": 0.022670428505495627,
+                "omega_cdm": 0.12499681841483468,
+                "rs_drag": 143.20502255383266,
+                "sigma8": 0.8214013713356634,
+                "tau_reio": 0.05864713109687912,
+                "thetai_scf": 2.94209830653957,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2726.4190994189016,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.022470528584942747,
+                  0.12567605677438512,
+                  0.05649969254808972,
+                  0.988847140504916,
+                  3.0618260203146086,
+                  0.07107471379530098,
+                  4.0850132374167405,
+                  2.670174423088819,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601901
+              },
+              "restart": 3,
+              "restart_reference": {
+                "reference_family": "ede_alt",
+                "reference_values": {
+                  "H0": 68.9,
+                  "fEDE": 0.095,
+                  "log10z_c": 4.07,
+                  "logA": 3.06,
+                  "n_s": 0.988,
+                  "omega_b": 0.02255,
+                  "omega_cdm": 0.127,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.61
+                },
+                "restart_index": 3
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4207.259214150957,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2023.431242755,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 0.9999686021287498,
+                "A_s": 2.12751272813014e-09,
+                "Omega_m": 0.2878630366231224,
+                "S8": 0.7978801865451685,
+                "calEE": 0.9998345091829501,
+                "calTE": 0.9996552461773351,
+                "chi2": 4207.259214150957,
+                "chi2__q016_camspec_npipe_lite": 4207.259214150957,
+                "fEDE": 0.07990992075444417,
+                "log10z_c": 3.768775274837684,
+                "logA": 3.0575386571114076,
+                "minuslogpost": 2075.7460684386915,
+                "minuslogprior": -27.883538636786646,
+                "minuslogprior__0": -23.817944544949732,
+                "minuslogprior__q016_tau_information": -4.065594091836914,
+                "n_s": 0.9738989319557892,
+                "omega_b": 0.022785669619267677,
+                "omega_cdm": 0.12373309778842549,
+                "rs_drag": 143.63165320780183,
+                "sigma8": 0.8145267595508124,
+                "tau_reio": 0.054076580780558124,
+                "thetai_scf": 3.0591777587626767,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2249.837058067236,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.022470252013518054,
+                  0.12396041848982328,
+                  0.046819424282266674,
+                  0.9823950843876379,
+                  3.0466856362231853,
+                  0.06192421740981514,
+                  3.815741962964809,
+                  3.0744526824884497,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601601
+              },
+              "restart": 0,
+              "restart_reference": {
+                "reference_family": "base",
+                "reference_values": {
+                  "H0": 68.4,
+                  "fEDE": 0.035,
+                  "log10z_c": 3.85,
+                  "logA": 3.06,
+                  "n_s": 0.982,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.124,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 3.01
+                },
+                "restart_index": 0
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4209.864780872381,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 1938.4026325549999,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 1.0003911653741242,
+                "A_s": 2.079328352270722e-09,
+                "Omega_m": 0.2871338793671489,
+                "S8": 0.7897879141187344,
+                "calEE": 1.0008589802713739,
+                "calTE": 1.0002612358798997,
+                "chi2": 4209.864780872381,
+                "chi2__q016_camspec_npipe_lite": 4209.864780872381,
+                "fEDE": 0.09326766090723754,
+                "log10z_c": 3.946424364483816,
+                "logA": 3.0346300269992468,
+                "minuslogpost": 2076.9505448223726,
+                "minuslogprior": -27.981845613817683,
+                "minuslogprior__0": -23.802483338648226,
+                "minuslogprior__q016_tau_information": -4.1793622751694555,
+                "n_s": 0.9835901481518973,
+                "omega_b": 0.022587058644889597,
+                "omega_cdm": 0.12355892369412591,
+                "rs_drag": 143.87377130897758,
+                "sigma8": 0.8072887337170354,
+                "tau_reio": 0.05212873384788294,
+                "thetai_scf": 2.9458821640280597,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2799.393397243106,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.022460863606902904,
+                  0.1265191574525794,
+                  0.05374605504354628,
+                  0.9803938068639899,
+                  3.0597424118511327,
+                  0.065041351537713,
+                  3.968767553382763,
+                  2.735064035872101,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601701
+              },
+              "restart": 1,
+              "restart_reference": {
+                "reference_family": "high_h0",
+                "reference_values": {
+                  "H0": 69.4,
+                  "fEDE": 0.065,
+                  "log10z_c": 3.95,
+                  "logA": 3.06,
+                  "n_s": 0.986,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.126,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.8099999999999996
+                },
+                "restart_index": 1
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            }
+          ],
+          "best": {
+            "absolute_cross_chain_chi2_comparison_performed": false,
+            "branch": "planck",
+            "chi2": 4203.725519398398,
+            "cross_chain_chi2_sum_performed": false,
+            "elapsed_seconds": 2155.994236981,
+            "ell_range": [
+              600,
+              2000
+            ],
+            "exact_q011_vector_used_as_profile_endpoint": false,
+            "minimum": {
+              "A_planck": 1.0009682048907194,
+              "A_s": 2.1625275831178745e-09,
+              "Omega_m": 0.2994343565325632,
+              "S8": 0.8337842521837202,
+              "calEE": 0.9997371157928755,
+              "calTE": 0.9993768298893253,
+              "chi2": 4203.725519398398,
+              "chi2__q016_camspec_npipe_lite": 4203.725519398398,
+              "fEDE": 0.10939083960245945,
+              "log10z_c": 3.798822188255783,
+              "logA": 3.073862807935613,
+              "minuslogpost": 2074.234171244414,
+              "minuslogprior": -27.628588454785103,
+              "minuslogprior__0": -23.74147372080011,
+              "minuslogprior__q016_tau_information": -3.887114733984996,
+              "n_s": 0.9785063449769782,
+              "omega_b": 0.022959856829670732,
+              "omega_cdm": 0.1294743811939034,
+              "rs_drag": 141.3092480826256,
+              "sigma8": 0.834571406506366,
+              "tau_reio": 0.055723966878020816,
+              "thetai_scf": 3.041169993783204,
+              "weight": 1.0
+            },
+            "mode": "fixed_h0_71p5",
+            "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+            "observables": [
+              "TT",
+              "TE",
+              "EE"
+            ],
+            "q": "Q016",
+            "reference_preflight": {
+              "finite_logposterior": true,
+              "logposterior": -3018.194265640875,
+              "pointlike_required": false,
+              "reference_is_pointlike": false,
+              "sampled_parameter_order": [
+                "omega_b",
+                "omega_cdm",
+                "tau_reio",
+                "n_s",
+                "logA",
+                "fEDE",
+                "log10z_c",
+                "thetai_scf",
+                "A_planck",
+                "calTE",
+                "calEE"
+              ],
+              "sampled_reference_vector": [
+                0.02250335912646547,
+                0.12143412702576734,
+                0.050078887030223534,
+                0.9745799765077124,
+                3.0645175971904393,
+                0.015009445480913822,
+                3.774989190705182,
+                3.0539833795959583,
+                1.0,
+                1.0,
+                1.0
+              ],
+              "seed": 1601801
+            },
+            "restart": 2,
+            "restart_reference": {
+              "reference_family": "low_h0",
+              "reference_values": {
+                "H0": 67.4,
+                "fEDE": 0.015000000000000003,
+                "log10z_c": 3.75,
+                "logA": 3.06,
+                "n_s": 0.978,
+                "omega_b": 0.02245,
+                "omega_cdm": 0.122,
+                "tau_reio": 0.051,
+                "thetai_scf": 3.21
+              },
+              "restart_index": 2
+            },
+            "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+            "runtime_provenance_file": "q016_v4_source_runtime/setup_planck.json",
+            "status": "COMPLETE",
+            "target_h0": 71.5,
+            "tau_prior": {
+              "mean": 0.051,
+              "never_count_as_independent_cross_experiment_evidence": true,
+              "shared_auxiliary_constraint": true,
+              "sigma": 0.006
+            }
+          },
+          "best_two_spread": 0.2650607935656808,
+          "complete_count": 4,
+          "multistart_stable": true,
+          "replicate_count_within_delta_chi2": 2,
+          "replicate_restart_ids_within_delta_chi2": [
+            2,
+            3
+          ],
+          "targeted_basin_replication_gate": true
+        },
+        "reference_free_h0": {
+          "accepted_restart_ids": [
+            0,
+            1,
+            2,
+            3,
+            6,
+            7,
+            8
+          ],
+          "all": [
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4197.797676105029,
+              "continuation_parent": {
+                "v4_github_run_id": 33693382859,
+                "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+                "v5_github_run_id": 33720410690,
+                "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+                "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 1929.778174448,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 0.9996336875284458,
+                "A_s": 2.094618886342865e-09,
+                "H0": 68.03261945036485,
+                "Omega_m": 0.31570063387408104,
+                "S8": 0.8389879976674535,
+                "calEE": 0.9979209794479528,
+                "calTE": 0.9987515518648583,
+                "chi2": 4197.797676105029,
+                "chi2__q016_camspec_npipe_lite": 4197.797676105029,
+                "fEDE": 0.03514569163630391,
+                "log10z_c": 4.014323670814719,
+                "logA": 3.041956713992661,
+                "minuslogpost": 2074.5470231755608,
+                "minuslogprior": -24.35181487695349,
+                "minuslogprior__0": -20.377417709281794,
+                "minuslogprior__q016_tau_information": -3.9743971676716985,
+                "n_s": 0.9755953312845633,
+                "omega_b": 0.02234360592090932,
+                "omega_cdm": 0.12313229425752693,
+                "rs_drag": 145.57081150658377,
+                "sigma8": 0.8178593977782487,
+                "tau_reio": 0.05500393904039449,
+                "thetai_scf": 3.015886675386922,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2077.044304037452,
+                "pointlike_required": true,
+                "reference_is_pointlike": true,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.022350755195641427,
+                  0.12316270859183322,
+                  68.07688822112573,
+                  0.05482157233267272,
+                  0.9758637862810009,
+                  3.0421868147862634,
+                  0.033667012548959645,
+                  4.00681515435645,
+                  2.9649610414751475,
+                  0.9996738432377321,
+                  0.9985695438575175,
+                  0.9978649283790691
+                ],
+                "seed": 1602301
+              },
+              "restart": 7,
+              "restart_reference": {
+                "applied_point_reference_values": {
+                  "A_planck": 0.9996738432377321,
+                  "H0": 68.07688822112573,
+                  "calEE": 0.9978649283790691,
+                  "calTE": 0.9985695438575175,
+                  "fEDE": 0.033667012548959645,
+                  "log10z_c": 4.00681515435645,
+                  "logA": 3.0421868147862634,
+                  "n_s": 0.9758637862810009,
+                  "omega_b": 0.022350755195641427,
+                  "omega_cdm": 0.12316270859183322,
+                  "tau_reio": 0.05482157233267272,
+                  "thetai_scf": 2.9649610414751475
+                },
+                "pointlike_targeted_start": true,
+                "reference_family": "basin_replicate_b",
+                "restart_index": 7,
+                "target_center_source": {
+                  "chi2": 4197.924526680114,
+                  "restart": 0,
+                  "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+                },
+                "target_center_values": {
+                  "A_planck": 0.9998538432377321,
+                  "H0": 68.19688822112573,
+                  "calEE": 0.9970649283790691,
+                  "calTE": 0.9993695438575175,
+                  "fEDE": 0.03716701254895965,
+                  "log10z_c": 3.9768151543564496,
+                  "logA": 3.0393868147862633,
+                  "n_s": 0.9769637862810009,
+                  "omega_b": 0.022368755195641427,
+                  "omega_cdm": 0.12288270859183321,
+                  "tau_reio": 0.05412157233267272,
+                  "thetai_scf": 2.9199610414751476
+                },
+                "target_profile": "planck|reference_free_h0"
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+              "runtime_provenance_file": "q016_v6_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4197.818757673306,
+              "continuation_parent": {
+                "v4_github_run_id": 33693382859,
+                "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+                "v5_github_run_id": 33720410690,
+                "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+                "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2110.3082862680003,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 1.0003878962881974,
+                "A_s": 2.0904199621479657e-09,
+                "H0": 68.22577640977339,
+                "Omega_m": 0.3136618435374376,
+                "S8": 0.834622154138195,
+                "calEE": 0.997179105430572,
+                "calTE": 0.999817390591574,
+                "chi2": 4197.818757673306,
+                "chi2__q016_camspec_npipe_lite": 4197.818757673306,
+                "fEDE": 0.039331774287361954,
+                "log10z_c": 3.9943403657101806,
+                "logA": 3.039950077612041,
+                "minuslogpost": 2074.5143739200116,
+                "minuslogprior": -24.39500491664142,
+                "minuslogprior__0": -20.365566197165794,
+                "minuslogprior__q016_tau_information": -4.029438719475625,
+                "n_s": 0.9775781602015221,
+                "omega_b": 0.02236663520745752,
+                "omega_cdm": 0.1229911155542916,
+                "rs_drag": 145.5172300248224,
+                "sigma8": 0.8162434145745121,
+                "tau_reio": 0.054473979865991236,
+                "thetai_scf": 2.9081396463846483,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2074.827460022001,
+                "pointlike_required": true,
+                "reference_is_pointlike": true,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.02237675519564143,
+                  0.12298270859183322,
+                  68.23688822112574,
+                  0.054421572332672724,
+                  0.9773637862810008,
+                  3.040386814786263,
+                  0.03866701254895965,
+                  3.9888151543564496,
+                  2.9019610414751478,
+                  0.999933843237732,
+                  0.9990695438575176,
+                  0.9973649283790691
+                ],
+                "seed": 1602401
+              },
+              "restart": 8,
+              "restart_reference": {
+                "applied_point_reference_values": {
+                  "A_planck": 0.999933843237732,
+                  "H0": 68.23688822112574,
+                  "calEE": 0.9973649283790691,
+                  "calTE": 0.9990695438575176,
+                  "fEDE": 0.03866701254895965,
+                  "log10z_c": 3.9888151543564496,
+                  "logA": 3.040386814786263,
+                  "n_s": 0.9773637862810008,
+                  "omega_b": 0.02237675519564143,
+                  "omega_cdm": 0.12298270859183322,
+                  "tau_reio": 0.054421572332672724,
+                  "thetai_scf": 2.9019610414751478
+                },
+                "pointlike_targeted_start": true,
+                "reference_family": "basin_replicate_c",
+                "restart_index": 8,
+                "target_center_source": {
+                  "chi2": 4197.924526680114,
+                  "restart": 0,
+                  "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+                },
+                "target_center_values": {
+                  "A_planck": 0.9998538432377321,
+                  "H0": 68.19688822112573,
+                  "calEE": 0.9970649283790691,
+                  "calTE": 0.9993695438575175,
+                  "fEDE": 0.03716701254895965,
+                  "log10z_c": 3.9768151543564496,
+                  "logA": 3.0393868147862633,
+                  "n_s": 0.9769637862810009,
+                  "omega_b": 0.022368755195641427,
+                  "omega_cdm": 0.12288270859183321,
+                  "tau_reio": 0.05412157233267272,
+                  "thetai_scf": 2.9199610414751476
+                },
+                "target_profile": "planck|reference_free_h0"
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+              "runtime_provenance_file": "q016_v6_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4197.924526680114,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2522.136228842,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 0.9998538432377321,
+                "A_s": 2.0892428378393277e-09,
+                "H0": 68.19688822112573,
+                "Omega_m": 0.3136990711586721,
+                "S8": 0.8342252459485209,
+                "calEE": 0.9970649283790691,
+                "calTE": 0.9993695438575175,
+                "chi2": 4197.924526680114,
+                "chi2__q016_camspec_npipe_lite": 4197.924526680114,
+                "fEDE": 0.03716701254895965,
+                "log10z_c": 3.9768151543564496,
+                "logA": 3.0393868147862633,
+                "minuslogpost": 2074.529754671009,
+                "minuslogprior": -24.432508669047724,
+                "minuslogprior__0": -20.37078769566648,
+                "minuslogprior__q016_tau_information": -4.061720973381245,
+                "n_s": 0.9769637862810009,
+                "omega_b": 0.022368755195641427,
+                "omega_cdm": 0.12288270859183321,
+                "rs_drag": 145.57538473044016,
+                "sigma8": 0.8158068350283111,
+                "tau_reio": 0.05412157233267272,
+                "thetai_scf": 2.9199610414751476,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2144.374116766985,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.02232746169239504,
+                  0.1236974689543137,
+                  67.70813707277088,
+                  0.042717599436245396,
+                  0.9863780035856184,
+                  3.048377899892224,
+                  0.041705600777528024,
+                  3.884861256023643,
+                  3.0295737364012862,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601601
+              },
+              "restart": 0,
+              "restart_reference": {
+                "reference_family": "base",
+                "reference_values": {
+                  "H0": 68.4,
+                  "fEDE": 0.035,
+                  "log10z_c": 3.85,
+                  "logA": 3.06,
+                  "n_s": 0.982,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.124,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 3.01
+                },
+                "restart_index": 0
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4198.318490040906,
+              "continuation_parent": {
+                "v4_github_run_id": 33693382859,
+                "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+                "v5_github_run_id": 33720410690,
+                "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+                "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 1744.29694287,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 1.0000487726579734,
+                "A_s": 2.084504039037773e-09,
+                "H0": 68.3896379766692,
+                "Omega_m": 0.31166629457400746,
+                "S8": 0.8300999840303047,
+                "calEE": 0.9963417648807242,
+                "calTE": 1.0001661803785267,
+                "chi2": 4198.318490040906,
+                "chi2__q016_camspec_npipe_lite": 4198.318490040906,
+                "fEDE": 0.03972274592961497,
+                "log10z_c": 3.9869431321526636,
+                "logA": 3.037116048983928,
+                "minuslogpost": 2074.6814232074707,
+                "minuslogprior": -24.477821812982178,
+                "minuslogprior__0": -20.350315439133137,
+                "minuslogprior__q016_tau_information": -4.12750637384904,
+                "n_s": 0.978263246513069,
+                "omega_b": 0.022383441790642396,
+                "omega_cdm": 0.1227432346314434,
+                "rs_drag": 145.5460503003495,
+                "sigma8": 0.8144156564894053,
+                "tau_reio": 0.0532377812659924,
+                "thetai_scf": 2.9213744614053034,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2077.996261219891,
+                "pointlike_required": true,
+                "reference_is_pointlike": true,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.022388755195641426,
+                  0.12263270859183321,
+                  68.29688822112573,
+                  0.05332157233267272,
+                  0.9779637862810009,
+                  3.0368868147862633,
+                  0.041167012548959644,
+                  3.9518151543564497,
+                  2.8799610414751475,
+                  1.0000538432377322,
+                  1.0000695438575176,
+                  0.9963649283790691
+                ],
+                "seed": 1602201
+              },
+              "restart": 6,
+              "restart_reference": {
+                "applied_point_reference_values": {
+                  "A_planck": 1.0000538432377322,
+                  "H0": 68.29688822112573,
+                  "calEE": 0.9963649283790691,
+                  "calTE": 1.0000695438575176,
+                  "fEDE": 0.041167012548959644,
+                  "log10z_c": 3.9518151543564497,
+                  "logA": 3.0368868147862633,
+                  "n_s": 0.9779637862810009,
+                  "omega_b": 0.022388755195641426,
+                  "omega_cdm": 0.12263270859183321,
+                  "tau_reio": 0.05332157233267272,
+                  "thetai_scf": 2.8799610414751475
+                },
+                "pointlike_targeted_start": true,
+                "reference_family": "basin_replicate_a",
+                "restart_index": 6,
+                "target_center_source": {
+                  "chi2": 4197.924526680114,
+                  "restart": 0,
+                  "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+                },
+                "target_center_values": {
+                  "A_planck": 0.9998538432377321,
+                  "H0": 68.19688822112573,
+                  "calEE": 0.9970649283790691,
+                  "calTE": 0.9993695438575175,
+                  "fEDE": 0.03716701254895965,
+                  "log10z_c": 3.9768151543564496,
+                  "logA": 3.0393868147862633,
+                  "n_s": 0.9769637862810009,
+                  "omega_b": 0.022368755195641427,
+                  "omega_cdm": 0.12288270859183321,
+                  "tau_reio": 0.05412157233267272,
+                  "thetai_scf": 2.9199610414751476
+                },
+                "target_profile": "planck|reference_free_h0"
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+              "runtime_provenance_file": "q016_v6_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4199.3940394738565,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 4446.495326726,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 1.0008171995186683,
+                "A_s": 2.079632765702938e-09,
+                "H0": 68.39952650507597,
+                "Omega_m": 0.3239025880029131,
+                "S8": 0.8570662118738902,
+                "calEE": 0.9975078752790757,
+                "calTE": 0.9981940300013468,
+                "chi2": 4199.3940394738565,
+                "chi2__q016_camspec_npipe_lite": 4199.3940394738565,
+                "fEDE": 0.08700626557480332,
+                "log10z_c": 4.070119110439956,
+                "logA": 3.0347764161691018,
+                "minuslogpost": 2075.255930021874,
+                "minuslogprior": -24.44108971505407,
+                "minuslogprior__0": -20.31677097086862,
+                "minuslogprior__q016_tau_information": -4.12431874418545,
+                "n_s": 0.9840074125487765,
+                "omega_b": 0.02242975019836255,
+                "omega_cdm": 0.1284638470474193,
+                "rs_drag": 143.2136267271688,
+                "sigma8": 0.8248363515220924,
+                "tau_reio": 0.053288487345432574,
+                "thetai_scf": 2.794001682864198,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2107.4094623221954,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.022470528584942747,
+                  0.12567605677438512,
+                  69.58746156851122,
+                  0.051677712403932805,
+                  0.9889130101573043,
+                  3.0440498091968675,
+                  0.09950397122502194,
+                  4.107609014430512,
+                  2.6371040343490955,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601901
+              },
+              "restart": 3,
+              "restart_reference": {
+                "reference_family": "ede_alt",
+                "reference_values": {
+                  "H0": 68.9,
+                  "fEDE": 0.095,
+                  "log10z_c": 4.07,
+                  "logA": 3.06,
+                  "n_s": 0.988,
+                  "omega_b": 0.02255,
+                  "omega_cdm": 0.127,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.61
+                },
+                "restart_index": 3
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4199.945745420045,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 1824.700859901,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 0.9999690194505563,
+                "A_s": 2.0962576406732164e-09,
+                "H0": 68.91439326821057,
+                "Omega_m": 0.30978864653537197,
+                "S8": 0.8296278832325443,
+                "calEE": 0.9998401104853709,
+                "calTE": 0.9999464574802153,
+                "chi2": 4199.945745420045,
+                "chi2__q016_camspec_npipe_lite": 4199.945745420045,
+                "fEDE": 0.058082686597922165,
+                "log10z_c": 3.903249318487959,
+                "logA": 3.042738772067296,
+                "minuslogpost": 2075.5682316741413,
+                "minuslogprior": -24.404641035881177,
+                "minuslogprior__0": -20.417338300589876,
+                "minuslogprior__q016_tau_information": -3.9873027352913013,
+                "n_s": 0.9762351955904541,
+                "omega_b": 0.022422846593191964,
+                "omega_cdm": 0.12405769305843765,
+                "rs_drag": 144.75104867087552,
+                "sigma8": 0.8164154573763376,
+                "tau_reio": 0.05488617124823183,
+                "thetai_scf": 2.7846085986834908,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2206.651785171969,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.022460863606902904,
+                  0.1265191574525794,
+                  69.7432568804433,
+                  0.046515045491191925,
+                  0.9858712059255664,
+                  3.0600275676918085,
+                  0.07063026601482884,
+                  3.903165022420063,
+                  2.758056684892086,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601701
+              },
+              "restart": 1,
+              "restart_reference": {
+                "reference_family": "high_h0",
+                "reference_values": {
+                  "H0": 69.4,
+                  "fEDE": 0.065,
+                  "log10z_c": 3.95,
+                  "logA": 3.06,
+                  "n_s": 0.986,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.126,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.8099999999999996
+                },
+                "restart_index": 1
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "planck",
+              "chi2": 4201.5713453404105,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 1873.824418599,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_planck": 0.9999578339399651,
+                "A_s": 2.11275654723777e-09,
+                "H0": 68.4243419649226,
+                "Omega_m": 0.3062231816728952,
+                "S8": 0.8199362345606864,
+                "calEE": 0.9999754737285412,
+                "calTE": 0.9999888252045623,
+                "chi2": 4201.5713453404105,
+                "chi2__q016_camspec_npipe_lite": 4201.5713453404105,
+                "fEDE": 0.018135162585999412,
+                "log10z_c": 3.6788104798855916,
+                "logA": 3.0505786083491144,
+                "minuslogpost": 2076.703533773309,
+                "minuslogprior": -24.08213889689618,
+                "minuslogprior__0": -20.417411371237215,
+                "minuslogprior__q016_tau_information": -3.6647275256589653,
+                "n_s": 0.9676175864842903,
+                "omega_b": 0.02243316060890989,
+                "omega_cdm": 0.12029308086952399,
+                "rs_drag": 146.4819228215618,
+                "sigma8": 0.8115619448804027,
+                "tau_reio": 0.05719094032147879,
+                "thetai_scf": 3.045811837719147,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -2155.0315034039095,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "A_planck",
+                  "calTE",
+                  "calEE"
+                ],
+                "sampled_reference_vector": [
+                  0.022521143938409437,
+                  0.12201043906575897,
+                  68.07710082204063,
+                  0.04835374076203118,
+                  0.9722383214358432,
+                  3.059492237766292,
+                  0.009328608250939325,
+                  3.7930137020017773,
+                  2.9935383970860014,
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601801
+              },
+              "restart": 2,
+              "restart_reference": {
+                "reference_family": "low_h0",
+                "reference_values": {
+                  "H0": 67.4,
+                  "fEDE": 0.015000000000000003,
+                  "log10z_c": 3.75,
+                  "logA": 3.06,
+                  "n_s": 0.978,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.122,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 3.21
+                },
+                "restart_index": 2
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_planck.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            }
+          ],
+          "best": {
+            "absolute_cross_chain_chi2_comparison_performed": false,
+            "branch": "planck",
+            "chi2": 4197.797676105029,
+            "continuation_parent": {
+              "v4_github_run_id": 33693382859,
+              "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+              "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "v5_github_run_id": 33720410690,
+              "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+              "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+            },
+            "cross_chain_chi2_sum_performed": false,
+            "elapsed_seconds": 1929.778174448,
+            "ell_range": [
+              600,
+              2000
+            ],
+            "exact_q011_vector_used_as_profile_endpoint": false,
+            "minimum": {
+              "A_planck": 0.9996336875284458,
+              "A_s": 2.094618886342865e-09,
+              "H0": 68.03261945036485,
+              "Omega_m": 0.31570063387408104,
+              "S8": 0.8389879976674535,
+              "calEE": 0.9979209794479528,
+              "calTE": 0.9987515518648583,
+              "chi2": 4197.797676105029,
+              "chi2__q016_camspec_npipe_lite": 4197.797676105029,
+              "fEDE": 0.03514569163630391,
+              "log10z_c": 4.014323670814719,
+              "logA": 3.041956713992661,
+              "minuslogpost": 2074.5470231755608,
+              "minuslogprior": -24.35181487695349,
+              "minuslogprior__0": -20.377417709281794,
+              "minuslogprior__q016_tau_information": -3.9743971676716985,
+              "n_s": 0.9755953312845633,
+              "omega_b": 0.02234360592090932,
+              "omega_cdm": 0.12313229425752693,
+              "rs_drag": 145.57081150658377,
+              "sigma8": 0.8178593977782487,
+              "tau_reio": 0.05500393904039449,
+              "thetai_scf": 3.015886675386922,
+              "weight": 1.0
+            },
+            "mode": "reference_free_h0",
+            "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+            "observables": [
+              "TT",
+              "TE",
+              "EE"
+            ],
+            "q": "Q016",
+            "reference_preflight": {
+              "finite_logposterior": true,
+              "logposterior": -2077.044304037452,
+              "pointlike_required": true,
+              "reference_is_pointlike": true,
+              "sampled_parameter_order": [
+                "omega_b",
+                "omega_cdm",
+                "H0",
+                "tau_reio",
+                "n_s",
+                "logA",
+                "fEDE",
+                "log10z_c",
+                "thetai_scf",
+                "A_planck",
+                "calTE",
+                "calEE"
+              ],
+              "sampled_reference_vector": [
+                0.022350755195641427,
+                0.12316270859183322,
+                68.07688822112573,
+                0.05482157233267272,
+                0.9758637862810009,
+                3.0421868147862634,
+                0.033667012548959645,
+                4.00681515435645,
+                2.9649610414751475,
+                0.9996738432377321,
+                0.9985695438575175,
+                0.9978649283790691
+              ],
+              "seed": 1602301
+            },
+            "restart": 7,
+            "restart_reference": {
+              "applied_point_reference_values": {
+                "A_planck": 0.9996738432377321,
+                "H0": 68.07688822112573,
+                "calEE": 0.9978649283790691,
+                "calTE": 0.9985695438575175,
+                "fEDE": 0.033667012548959645,
+                "log10z_c": 4.00681515435645,
+                "logA": 3.0421868147862634,
+                "n_s": 0.9758637862810009,
+                "omega_b": 0.022350755195641427,
+                "omega_cdm": 0.12316270859183322,
+                "tau_reio": 0.05482157233267272,
+                "thetai_scf": 2.9649610414751475
+              },
+              "pointlike_targeted_start": true,
+              "reference_family": "basin_replicate_b",
+              "restart_index": 7,
+              "target_center_source": {
+                "chi2": 4197.924526680114,
+                "restart": 0,
+                "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+              },
+              "target_center_values": {
+                "A_planck": 0.9998538432377321,
+                "H0": 68.19688822112573,
+                "calEE": 0.9970649283790691,
+                "calTE": 0.9993695438575175,
+                "fEDE": 0.03716701254895965,
+                "log10z_c": 3.9768151543564496,
+                "logA": 3.0393868147862633,
+                "n_s": 0.9769637862810009,
+                "omega_b": 0.022368755195641427,
+                "omega_cdm": 0.12288270859183321,
+                "tau_reio": 0.05412157233267272,
+                "thetai_scf": 2.9199610414751476
+              },
+              "target_profile": "planck|reference_free_h0"
+            },
+            "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+            "runtime_provenance_file": "q016_v6_source_runtime/setup_planck.json",
+            "status": "COMPLETE",
+            "target_h0": null,
+            "tau_prior": {
+              "mean": 0.051,
+              "never_count_as_independent_cross_experiment_evidence": true,
+              "shared_auxiliary_constraint": true,
+              "sigma": 0.006
+            }
+          },
+          "best_two_spread": 0.021081568277622864,
+          "complete_count": 7,
+          "multistart_stable": true,
+          "replicate_count_within_delta_chi2": 4,
+          "replicate_restart_ids_within_delta_chi2": [
+            0,
+            6,
+            7,
+            8
+          ],
+          "targeted_basin_replication_gate": true
+        }
+      }
+    },
+    "spt": {
+      "fixed_minus_free_delta_chi2": -1.5186882019042969,
+      "profiles": {
+        "fixed_h0_71p5": {
+          "accepted_restart_ids": [
+            0,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "all": [
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 60.55104446411133,
+              "continuation_parent": {
+                "v4_github_run_id": 33693382859,
+                "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+                "v5_github_run_id": 33720410690,
+                "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+                "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 3336.2307480500003,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.1366358087892093e-09,
+                "Ecal": 1.0158375135065145,
+                "Omega_m": 0.2962380972076201,
+                "S8": 0.8192400556657579,
+                "Tcal": 1.0005182712227567,
+                "chi2": 60.55104446411133,
+                "chi2__q016_spt_d1_lite": 60.55104446411133,
+                "fEDE": 0.11569526029146729,
+                "log10z_c": 3.7381028953771027,
+                "logA": 3.0618176330898943,
+                "minuslogpost": 8.220793354459623,
+                "minuslogprior": -22.05472887759604,
+                "minuslogprior__0": -13.206346767377273,
+                "minuslogprior__q016_spt_Tcal": -4.697520050765332,
+                "minuslogprior__q016_tau_information": -4.150862059453433,
+                "n_s": 0.9808118962836174,
+                "omega_b": 0.02282504488174076,
+                "omega_cdm": 0.12797517141924036,
+                "rs_drag": 141.8582109458398,
+                "sigma8": 0.8244253760474449,
+                "tau_reio": 0.052823747688390654,
+                "thetai_scf": 2.122952572568153,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -10.993029380739557,
+                "pointlike_required": true,
+                "reference_is_pointlike": true,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.022702591178722312,
+                  0.12602103811760404,
+                  0.05043115014942644,
+                  0.9839056143531744,
+                  3.0534842817227767,
+                  0.09747399410922664,
+                  3.7450377578732064,
+                  2.357388945818027,
+                  1.0009415441258744,
+                  1.0158772912600436
+                ],
+                "seed": 1602302
+              },
+              "restart": 7,
+              "restart_reference": {
+                "applied_point_reference_values": {
+                  "Ecal": 1.0158772912600436,
+                  "Tcal": 1.0009415441258744,
+                  "fEDE": 0.09747399410922664,
+                  "log10z_c": 3.7450377578732064,
+                  "logA": 3.0534842817227767,
+                  "n_s": 0.9839056143531744,
+                  "omega_b": 0.022702591178722312,
+                  "omega_cdm": 0.12602103811760404,
+                  "tau_reio": 0.05043115014942644,
+                  "thetai_scf": 2.357388945818027
+                },
+                "pointlike_targeted_start": true,
+                "reference_family": "basin_replicate_b",
+                "restart_index": 7,
+                "target_center_source": {
+                  "chi2": 61.57393264770508,
+                  "restart": 3,
+                  "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+                },
+                "target_center_values": {
+                  "Ecal": 1.0141772912600435,
+                  "Tcal": 1.0007615441258744,
+                  "fEDE": 0.10097399410922664,
+                  "log10z_c": 3.7150377578732066,
+                  "logA": 3.0506842817227766,
+                  "n_s": 0.9850056143531744,
+                  "omega_b": 0.022720591178722313,
+                  "omega_cdm": 0.12574103811760404,
+                  "tau_reio": 0.04973115014942644,
+                  "thetai_scf": 2.312388945818027
+                },
+                "target_profile": "spt|fixed_h0_71p5"
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+              "runtime_provenance_file": "q016_v6_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 61.23649597167969,
+              "continuation_parent": {
+                "v4_github_run_id": 33693382859,
+                "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+                "v5_github_run_id": 33720410690,
+                "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+                "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2226.8521332299997,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.115594147200035e-09,
+                "Ecal": 1.0139954000562845,
+                "Omega_m": 0.2920081458835937,
+                "S8": 0.8072863002323425,
+                "Tcal": 1.000707317933075,
+                "chi2": 61.23649597167969,
+                "chi2__q016_spt_d1_lite": 61.23649597167969,
+                "fEDE": 0.10309298054589151,
+                "log10z_c": 3.720390736468272,
+                "logA": 3.051920786703421,
+                "minuslogpost": 8.526311445990586,
+                "minuslogprior": -22.091936539849257,
+                "minuslogprior__0": -13.206346767377273,
+                "minuslogprior__q016_spt_Tcal": -4.6885812545418855,
+                "minuslogprior__q016_tau_information": -4.197008517930101,
+                "n_s": 0.9860307933764264,
+                "omega_b": 0.02277042998428618,
+                "omega_cdm": 0.1258670366284665,
+                "rs_drag": 142.7084079335785,
+                "sigma8": 0.8182588788574764,
+                "tau_reio": 0.05094074950978933,
+                "thetai_scf": 2.1806688040461135,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -8.709071315288515,
+                "pointlike_required": true,
+                "reference_is_pointlike": true,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.022728591178722314,
+                  0.12584103811760403,
+                  0.05003115014942644,
+                  0.9854056143531743,
+                  3.0516842817227765,
+                  0.10247399410922664,
+                  3.7270377578732066,
+                  2.294388945818027,
+                  1.0008415441258744,
+                  1.0134772912600436
+                ],
+                "seed": 1602402
+              },
+              "restart": 8,
+              "restart_reference": {
+                "applied_point_reference_values": {
+                  "Ecal": 1.0134772912600436,
+                  "Tcal": 1.0008415441258744,
+                  "fEDE": 0.10247399410922664,
+                  "log10z_c": 3.7270377578732066,
+                  "logA": 3.0516842817227765,
+                  "n_s": 0.9854056143531743,
+                  "omega_b": 0.022728591178722314,
+                  "omega_cdm": 0.12584103811760403,
+                  "tau_reio": 0.05003115014942644,
+                  "thetai_scf": 2.294388945818027
+                },
+                "pointlike_targeted_start": true,
+                "reference_family": "basin_replicate_c",
+                "restart_index": 8,
+                "target_center_source": {
+                  "chi2": 61.57393264770508,
+                  "restart": 3,
+                  "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+                },
+                "target_center_values": {
+                  "Ecal": 1.0141772912600435,
+                  "Tcal": 1.0007615441258744,
+                  "fEDE": 0.10097399410922664,
+                  "log10z_c": 3.7150377578732066,
+                  "logA": 3.0506842817227766,
+                  "n_s": 0.9850056143531744,
+                  "omega_b": 0.022720591178722313,
+                  "omega_cdm": 0.12574103811760404,
+                  "tau_reio": 0.04973115014942644,
+                  "thetai_scf": 2.312388945818027
+                },
+                "target_profile": "spt|fixed_h0_71p5"
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+              "runtime_provenance_file": "q016_v6_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 61.254852294921875,
+              "continuation_parent": {
+                "v4_github_run_id": 33693382859,
+                "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+                "v5_github_run_id": 33720410690,
+                "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+                "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2472.670662944,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.117062515613333e-09,
+                "Ecal": 1.0131867254315046,
+                "Omega_m": 0.29529799883099106,
+                "S8": 0.8151428854738727,
+                "Tcal": 1.0000367996056658,
+                "chi2": 61.254852294921875,
+                "chi2__q016_spt_d1_lite": 61.254852294921875,
+                "fEDE": 0.10916496122962376,
+                "log10z_c": 3.731844379196998,
+                "logA": 3.052614614995758,
+                "minuslogpost": 8.523043541517048,
+                "minuslogprior": -22.10438260594389,
+                "minuslogprior__0": -13.206346767377273,
+                "minuslogprior__q016_spt_Tcal": -4.707830654521528,
+                "minuslogprior__q016_tau_information": -4.190205184045087,
+                "n_s": 0.9860737259282841,
+                "omega_b": 0.02293683907706928,
+                "omega_cdm": 0.12738288423964636,
+                "rs_drag": 142.0102721962952,
+                "sigma8": 0.8216069755700443,
+                "tau_reio": 0.05029761074872179,
+                "thetai_scf": 2.2477261498856844,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -10.883649604408,
+                "pointlike_required": true,
+                "reference_is_pointlike": true,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.022740591178722312,
+                  0.12549103811760404,
+                  0.048931150149426436,
+                  0.9860056143531744,
+                  3.0481842817227767,
+                  0.10497399410922664,
+                  3.6900377578732066,
+                  2.272388945818027,
+                  1.0005615441258744,
+                  1.0126772912600435
+                ],
+                "seed": 1602202
+              },
+              "restart": 6,
+              "restart_reference": {
+                "applied_point_reference_values": {
+                  "Ecal": 1.0126772912600435,
+                  "Tcal": 1.0005615441258744,
+                  "fEDE": 0.10497399410922664,
+                  "log10z_c": 3.6900377578732066,
+                  "logA": 3.0481842817227767,
+                  "n_s": 0.9860056143531744,
+                  "omega_b": 0.022740591178722312,
+                  "omega_cdm": 0.12549103811760404,
+                  "tau_reio": 0.048931150149426436,
+                  "thetai_scf": 2.272388945818027
+                },
+                "pointlike_targeted_start": true,
+                "reference_family": "basin_replicate_a",
+                "restart_index": 6,
+                "target_center_source": {
+                  "chi2": 61.57393264770508,
+                  "restart": 3,
+                  "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+                },
+                "target_center_values": {
+                  "Ecal": 1.0141772912600435,
+                  "Tcal": 1.0007615441258744,
+                  "fEDE": 0.10097399410922664,
+                  "log10z_c": 3.7150377578732066,
+                  "logA": 3.0506842817227766,
+                  "n_s": 0.9850056143531744,
+                  "omega_b": 0.022720591178722313,
+                  "omega_cdm": 0.12574103811760404,
+                  "tau_reio": 0.04973115014942644,
+                  "thetai_scf": 2.312388945818027
+                },
+                "target_profile": "spt|fixed_h0_71p5"
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+              "runtime_provenance_file": "q016_v6_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 61.57393264770508,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2065.0016777809997,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.1129798211466894e-09,
+                "Ecal": 1.0141772912600435,
+                "Omega_m": 0.2916635257541761,
+                "S8": 0.8064029152987879,
+                "Tcal": 1.0007615441258744,
+                "chi2": 61.57393264770508,
+                "chi2__q016_spt_d1_lite": 61.57393264770508,
+                "fEDE": 0.10097399410922664,
+                "log10z_c": 3.7150377578732066,
+                "logA": 3.0506842817227766,
+                "minuslogpost": 8.720414805352817,
+                "minuslogprior": -22.066551518499722,
+                "minuslogprior__0": -13.206346767377273,
+                "minuslogprior__q016_spt_Tcal": -4.685508307118881,
+                "minuslogprior__q016_tau_information": -4.174696444003568,
+                "n_s": 0.9850056143531744,
+                "omega_b": 0.022720591178722313,
+                "omega_cdm": 0.12574103811760404,
+                "rs_drag": 142.8087479843499,
+                "sigma8": 0.8178462295089061,
+                "tau_reio": 0.04973115014942644,
+                "thetai_scf": 2.312388945818027,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -34.03533599841059,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.022574308367681838,
+                  0.1250049191757344,
+                  0.04921533597024046,
+                  0.9785745795077777,
+                  3.0421593285996535,
+                  0.08424079581027322,
+                  3.8048855501083643,
+                  2.332360816549492,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601902
+              },
+              "restart": 3,
+              "restart_reference": {
+                "reference_family": "ede_alt",
+                "reference_values": {
+                  "H0": 68.46,
+                  "fEDE": 0.09,
+                  "log10z_c": 3.77,
+                  "logA": 3.05,
+                  "n_s": 0.981,
+                  "omega_b": 0.02255,
+                  "omega_cdm": 0.126,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.4
+                },
+                "restart_index": 3
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 64.3380126953125,
+              "continuation_parent": {
+                "github_run_id": 33693382859,
+                "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2185.3463604139997,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.12427312467152e-09,
+                "Ecal": 1.0155291903109303,
+                "Omega_m": 0.28087269324757824,
+                "S8": 0.77831310231802,
+                "Tcal": 0.9996507852240665,
+                "chi2": 64.3380126953125,
+                "chi2__q016_spt_d1_lite": 64.3380126953125,
+                "fEDE": 0.06652392238707093,
+                "log10z_c": 3.6199249036194088,
+                "logA": 3.056014777876801,
+                "minuslogpost": 10.063393666692903,
+                "minuslogprior": -22.105612680963347,
+                "minuslogprior__0": -13.206346767377273,
+                "minuslogprior__q016_spt_Tcal": -4.703178002177657,
+                "minuslogprior__q016_tau_information": -4.196087911408416,
+                "n_s": 0.9675543139719208,
+                "omega_b": 0.022511274428105646,
+                "omega_cdm": 0.12043382433728234,
+                "rs_drag": 145.0968499212173,
+                "sigma8": 0.8043780473547902,
+                "tau_reio": 0.05126418609000384,
+                "thetai_scf": 2.7278682663130436,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -26.72425371671141,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.022588916599503964,
+                  0.12115399120077872,
+                  0.05297251112728042,
+                  0.9778807151226266,
+                  3.0478876681837272,
+                  0.05506617624553077,
+                  3.708830962689029,
+                  2.952326713967441,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1602102
+              },
+              "restart": 5,
+              "restart_reference": {
+                "reference_family": "rescue_d",
+                "reference_values": {
+                  "H0": 67.61,
+                  "fEDE": 0.075,
+                  "log10z_c": 3.71,
+                  "logA": 3.05,
+                  "n_s": 0.973,
+                  "omega_b": 0.022500000000000003,
+                  "omega_cdm": 0.122,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.92
+                },
+                "restart_index": 5
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-005",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V5",
+              "runtime_provenance_file": "q016_v5_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 64.68103790283203,
+              "continuation_parent": {
+                "github_run_id": 33693382859,
+                "head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+                "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+              },
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 3608.291067832,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.1501423486033904e-09,
+                "Ecal": 1.0129437620678337,
+                "Omega_m": 0.2798822865173559,
+                "S8": 0.7708686149153854,
+                "Tcal": 1.0003326961970145,
+                "chi2": 64.68103790283203,
+                "chi2__q016_spt_d1_lite": 64.68103790283203,
+                "fEDE": 0.05803858658228845,
+                "log10z_c": 3.3739996745542795,
+                "logA": 3.0681191415946607,
+                "minuslogpost": 10.284835118085876,
+                "minuslogprior": -22.05568383333014,
+                "minuslogprior__0": -13.206346767377273,
+                "minuslogprior__q016_spt_Tcal": -4.703612577803521,
+                "minuslogprior__q016_tau_information": -4.145724488149345,
+                "n_s": 0.941183630090593,
+                "omega_b": 0.02258915090012053,
+                "omega_cdm": 0.11984973178589842,
+                "rs_drag": 145.23116915502655,
+                "sigma8": 0.7980926017100984,
+                "tau_reio": 0.05292248817026389,
+                "thetai_scf": 3.0952255706506384,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -135.6521274200957,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.02234358099370279,
+                  0.12314213941941828,
+                  0.042629292771470415,
+                  0.9768579246809338,
+                  3.0510979279615063,
+                  0.036264807159066305,
+                  3.43414617013702,
+                  3.083114435580487,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1602002
+              },
+              "restart": 4,
+              "restart_reference": {
+                "reference_family": "rescue_c",
+                "reference_values": {
+                  "H0": 68.21,
+                  "fEDE": 0.045,
+                  "log10z_c": 3.3699999999999997,
+                  "logA": 3.05,
+                  "n_s": 0.977,
+                  "omega_b": 0.02239,
+                  "omega_cdm": 0.124,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 3.15
+                },
+                "restart_index": 4
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-005",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V5",
+              "runtime_provenance_file": "q016_v5_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 64.85151672363281,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2910.397058809,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.1317216282409766e-09,
+                "Ecal": 1.0134609689021938,
+                "Omega_m": 0.2755478131259216,
+                "S8": 0.7597493658315029,
+                "Tcal": 1.0005508082625323,
+                "chi2": 64.85151672363281,
+                "chi2__q016_spt_d1_lite": 64.85151672363281,
+                "fEDE": 0.0459100350122604,
+                "log10z_c": 3.5039068690192914,
+                "logA": 3.0595150224055807,
+                "minuslogpost": 10.328388207989612,
+                "minuslogprior": -22.097370153826795,
+                "minuslogprior__0": -13.206346767377273,
+                "minuslogprior__q016_spt_Tcal": -4.696178049155144,
+                "minuslogprior__q016_tau_information": -4.194845337294376,
+                "n_s": 0.948372953815129,
+                "omega_b": 0.02267825744318968,
+                "omega_cdm": 0.11754462660618131,
+                "rs_drag": 146.14963527032404,
+                "sigma8": 0.792743134060674,
+                "tau_reio": 0.050600926540142824,
+                "thetai_scf": 2.787821944382121,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -276.14639167276056,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.02249261332937269,
+                  0.12190612004879961,
+                  0.050910901463590376,
+                  0.9673330741851177,
+                  3.0481836039743175,
+                  0.0018593871024130508,
+                  3.510946129096724,
+                  2.830468996241184,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601802
+              },
+              "restart": 2,
+              "restart_reference": {
+                "reference_family": "low_h0",
+                "reference_values": {
+                  "H0": 66.96,
+                  "fEDE": 0.009999999999999998,
+                  "log10z_c": 3.4499999999999997,
+                  "logA": 3.05,
+                  "n_s": 0.971,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.121,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 3.0
+                },
+                "restart_index": 2
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 65.71199035644531,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 1938.2888533170003,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.1175501842514726e-09,
+                "Ecal": 1.0109181654821842,
+                "Omega_m": 0.2768903669841109,
+                "S8": 0.7663572518204836,
+                "Tcal": 1.0001491053630325,
+                "chi2": 65.71199035644531,
+                "chi2__q016_spt_d1_lite": 65.71199035644531,
+                "fEDE": 0.04939918064758929,
+                "log10z_c": 3.5445410449422057,
+                "logA": 3.052844940021851,
+                "minuslogpost": 10.758896634918624,
+                "minuslogprior": -22.097098543304032,
+                "minuslogprior__0": -13.206346767377273,
+                "minuslogprior__q016_spt_Tcal": -4.707025168475699,
+                "minuslogprior__q016_tau_information": -4.18372660745106,
+                "n_s": 0.9682853034946813,
+                "omega_b": 0.022731482283198014,
+                "omega_cdm": 0.11817778517528552,
+                "rs_drag": 145.84090953559593,
+                "sigma8": 0.7976970303479072,
+                "tau_reio": 0.05197969800197875,
+                "thetai_scf": 2.8329814890372806,
+                "weight": 1.0
+              },
+              "mode": "fixed_h0_71p5",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -147.02832474894817,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.022366524449817998,
+                  0.12106200436706421,
+                  0.0550889661833721,
+                  0.9744753472033572,
+                  3.0562392782654038,
+                  0.020106890848155777,
+                  3.5416922878290213,
+                  2.7826561377915637,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601602
+              },
+              "restart": 0,
+              "restart_reference": {
+                "reference_family": "base",
+                "reference_values": {
+                  "H0": 67.96,
+                  "fEDE": 0.03,
+                  "log10z_c": 3.55,
+                  "logA": 3.05,
+                  "n_s": 0.975,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.123,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.8
+                },
+                "restart_index": 0
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": 71.5,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            }
+          ],
+          "best": {
+            "absolute_cross_chain_chi2_comparison_performed": false,
+            "branch": "spt",
+            "chi2": 60.55104446411133,
+            "continuation_parent": {
+              "v4_github_run_id": 33693382859,
+              "v4_head_sha": "596ee68677784deb4c28d1eb5992faf6dcd2c5b1",
+              "v4_run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "v5_github_run_id": 33720410690,
+              "v5_head_sha": "5148b8b3badbbe313d30e6f744d51d6fd42b584e",
+              "v5_run_id": "Q016-MATCHED-CMB-SURFACE-V5"
+            },
+            "cross_chain_chi2_sum_performed": false,
+            "elapsed_seconds": 3336.2307480500003,
+            "ell_range": [
+              600,
+              2000
+            ],
+            "exact_q011_vector_used_as_profile_endpoint": false,
+            "minimum": {
+              "A_s": 2.1366358087892093e-09,
+              "Ecal": 1.0158375135065145,
+              "Omega_m": 0.2962380972076201,
+              "S8": 0.8192400556657579,
+              "Tcal": 1.0005182712227567,
+              "chi2": 60.55104446411133,
+              "chi2__q016_spt_d1_lite": 60.55104446411133,
+              "fEDE": 0.11569526029146729,
+              "log10z_c": 3.7381028953771027,
+              "logA": 3.0618176330898943,
+              "minuslogpost": 8.220793354459623,
+              "minuslogprior": -22.05472887759604,
+              "minuslogprior__0": -13.206346767377273,
+              "minuslogprior__q016_spt_Tcal": -4.697520050765332,
+              "minuslogprior__q016_tau_information": -4.150862059453433,
+              "n_s": 0.9808118962836174,
+              "omega_b": 0.02282504488174076,
+              "omega_cdm": 0.12797517141924036,
+              "rs_drag": 141.8582109458398,
+              "sigma8": 0.8244253760474449,
+              "tau_reio": 0.052823747688390654,
+              "thetai_scf": 2.122952572568153,
+              "weight": 1.0
+            },
+            "mode": "fixed_h0_71p5",
+            "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+            "observables": [
+              "TT",
+              "TE",
+              "EE"
+            ],
+            "q": "Q016",
+            "reference_preflight": {
+              "finite_logposterior": true,
+              "logposterior": -10.993029380739557,
+              "pointlike_required": true,
+              "reference_is_pointlike": true,
+              "sampled_parameter_order": [
+                "omega_b",
+                "omega_cdm",
+                "tau_reio",
+                "n_s",
+                "logA",
+                "fEDE",
+                "log10z_c",
+                "thetai_scf",
+                "Tcal",
+                "Ecal"
+              ],
+              "sampled_reference_vector": [
+                0.022702591178722312,
+                0.12602103811760404,
+                0.05043115014942644,
+                0.9839056143531744,
+                3.0534842817227767,
+                0.09747399410922664,
+                3.7450377578732064,
+                2.357388945818027,
+                1.0009415441258744,
+                1.0158772912600436
+              ],
+              "seed": 1602302
+            },
+            "restart": 7,
+            "restart_reference": {
+              "applied_point_reference_values": {
+                "Ecal": 1.0158772912600436,
+                "Tcal": 1.0009415441258744,
+                "fEDE": 0.09747399410922664,
+                "log10z_c": 3.7450377578732064,
+                "logA": 3.0534842817227767,
+                "n_s": 0.9839056143531744,
+                "omega_b": 0.022702591178722312,
+                "omega_cdm": 0.12602103811760404,
+                "tau_reio": 0.05043115014942644,
+                "thetai_scf": 2.357388945818027
+              },
+              "pointlike_targeted_start": true,
+              "reference_family": "basin_replicate_b",
+              "restart_index": 7,
+              "target_center_source": {
+                "chi2": 61.57393264770508,
+                "restart": 3,
+                "run_id": "Q016-MATCHED-CMB-SURFACE-V4"
+              },
+              "target_center_values": {
+                "Ecal": 1.0141772912600435,
+                "Tcal": 1.0007615441258744,
+                "fEDE": 0.10097399410922664,
+                "log10z_c": 3.7150377578732066,
+                "logA": 3.0506842817227766,
+                "n_s": 0.9850056143531744,
+                "omega_b": 0.022720591178722313,
+                "omega_cdm": 0.12574103811760404,
+                "tau_reio": 0.04973115014942644,
+                "thetai_scf": 2.312388945818027
+              },
+              "target_profile": "spt|fixed_h0_71p5"
+            },
+            "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+            "runtime_provenance_file": "q016_v6_source_runtime/setup_spt.json",
+            "status": "COMPLETE",
+            "target_h0": 71.5,
+            "tau_prior": {
+              "mean": 0.051,
+              "never_count_as_independent_cross_experiment_evidence": true,
+              "shared_auxiliary_constraint": true,
+              "sigma": 0.006
+            }
+          },
+          "best_two_spread": 0.6854515075683594,
+          "complete_count": 8,
+          "multistart_stable": true,
+          "replicate_count_within_delta_chi2": 3,
+          "replicate_restart_ids_within_delta_chi2": [
+            6,
+            7,
+            8
+          ],
+          "targeted_basin_replication_gate": true
+        },
+        "reference_free_h0": {
+          "accepted_restart_ids": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "all": [
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 62.069732666015625,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2972.9219861720003,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.127018074540685e-09,
+                "Ecal": 1.0115633527778902,
+                "H0": 69.0523086081319,
+                "Omega_m": 0.3073730755362855,
+                "S8": 0.8255048585782703,
+                "Tcal": 1.0001203525843847,
+                "chi2": 62.069732666015625,
+                "chi2__q016_spt_d1_lite": 62.069732666015625,
+                "fEDE": 0.047317473953471134,
+                "log10z_c": 3.704945934056376,
+                "logA": 3.05730612684444,
+                "minuslogpost": 12.3263181720366,
+                "minuslogprior": -18.708548160971212,
+                "minuslogprior__0": -9.805149385715115,
+                "minuslogprior__q016_spt_Tcal": -4.707324075293483,
+                "minuslogprior__q016_tau_information": -4.196074699962614,
+                "n_s": 0.9619781808302192,
+                "omega_b": 0.02269188857445893,
+                "omega_cdm": 0.12322633593907767,
+                "rs_drag": 144.78585580879005,
+                "sigma8": 0.8155439113328694,
+                "tau_reio": 0.05073401971078815,
+                "thetai_scf": 2.412783361650496,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -16.052361385395567,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.022381207550342997,
+                  0.12472475348452329,
+                  68.47800072678591,
+                  0.04932442844629689,
+                  0.9816566463021204,
+                  3.0395238820093375,
+                  0.04394487877122932,
+                  3.610175219381204,
+                  2.5628217735056,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601702
+              },
+              "restart": 1,
+              "restart_reference": {
+                "reference_family": "high_h0",
+                "reference_values": {
+                  "H0": 68.96,
+                  "fEDE": 0.06,
+                  "log10z_c": 3.65,
+                  "logA": 3.05,
+                  "n_s": 0.979,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.125,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.5999999999999996
+                },
+                "restart_index": 1
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 62.07829666137695,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2898.266965682,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.1189244767432936e-09,
+                "Ecal": 1.0089983580156394,
+                "H0": 68.51681886582409,
+                "Omega_m": 0.31828539195939415,
+                "S8": 0.849295448947203,
+                "Tcal": 1.000026304204251,
+                "chi2": 62.07829666137695,
+                "chi2__q016_spt_d1_lite": 62.07829666137695,
+                "fEDE": 0.059256474550819116,
+                "log10z_c": 3.762336632526927,
+                "logA": 3.0534937306555734,
+                "minuslogpost": 12.341709076900926,
+                "minuslogprior": -18.69743925378755,
+                "minuslogprior__0": -9.805149385715115,
+                "minuslogprior__q016_spt_Tcal": -4.7078562062119556,
+                "minuslogprior__q016_tau_information": -4.184433661860477,
+                "n_s": 0.976256201641501,
+                "omega_b": 0.022768008207488557,
+                "omega_cdm": 0.1260085205842141,
+                "rs_drag": 143.8246488463154,
+                "sigma8": 0.8245387506454277,
+                "tau_reio": 0.05195336260551959,
+                "thetai_scf": 1.9199162260386848,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -155.7156596514056,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.022574308367681838,
+                  0.1250049191757344,
+                  68.23691699628006,
+                  0.04905966360622222,
+                  0.9770796642998268,
+                  3.046160530540182,
+                  0.10046566503250925,
+                  3.727725510343433,
+                  2.391117383011246,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601902
+              },
+              "restart": 3,
+              "restart_reference": {
+                "reference_family": "ede_alt",
+                "reference_values": {
+                  "H0": 68.46,
+                  "fEDE": 0.09,
+                  "log10z_c": 3.77,
+                  "logA": 3.05,
+                  "n_s": 0.981,
+                  "omega_b": 0.02255,
+                  "omega_cdm": 0.126,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.4
+                },
+                "restart_index": 3
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 63.83597183227539,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 3408.800714432,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.1181929537692137e-09,
+                "Ecal": 1.0080002768210967,
+                "H0": 67.42914741957254,
+                "Omega_m": 0.31838633944242506,
+                "S8": 0.8377096845378059,
+                "Tcal": 0.9991194553817265,
+                "chi2": 63.83597183227539,
+                "chi2__q016_spt_d1_lite": 63.83597183227539,
+                "fEDE": 0.010553422564326552,
+                "log10z_c": 3.3376299209428733,
+                "logA": 3.053148437897775,
+                "minuslogpost": 13.238234193328317,
+                "minuslogprior": -18.679751722809378,
+                "minuslogprior__0": -9.805149385715115,
+                "minuslogprior__q016_spt_Tcal": -4.677969365409135,
+                "minuslogprior__q016_tau_information": -4.196632971685128,
+                "n_s": 0.9534317326257912,
+                "omega_b": 0.022485058842981936,
+                "omega_cdm": 0.12163122071926208,
+                "rs_drag": 146.25048982605685,
+                "sigma8": 0.8131617665841298,
+                "tau_reio": 0.05117478544054995,
+                "thetai_scf": 3.073742538789662,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -16.98722828255724,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.0223792811708601,
+                  0.12181592152961056,
+                  67.12439362144937,
+                  0.04987919615626741,
+                  0.981614397542732,
+                  3.041078214652947,
+                  0.009215184450787053,
+                  3.437207743159847,
+                  3.03409066349815,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601802
+              },
+              "restart": 2,
+              "restart_reference": {
+                "reference_family": "low_h0",
+                "reference_values": {
+                  "H0": 66.96,
+                  "fEDE": 0.009999999999999998,
+                  "log10z_c": 3.4499999999999997,
+                  "logA": 3.05,
+                  "n_s": 0.971,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.121,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 3.0
+                },
+                "restart_index": 2
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            },
+            {
+              "absolute_cross_chain_chi2_comparison_performed": false,
+              "branch": "spt",
+              "chi2": 64.64923858642578,
+              "cross_chain_chi2_sum_performed": false,
+              "elapsed_seconds": 2604.8115530970003,
+              "ell_range": [
+                600,
+                2000
+              ],
+              "exact_q011_vector_used_as_profile_endpoint": false,
+              "minimum": {
+                "A_s": 2.10037099733446e-09,
+                "Ecal": 1.0066273021100267,
+                "H0": 67.59535730373007,
+                "Omega_m": 0.31802595412020024,
+                "S8": 0.839985602784127,
+                "Tcal": 0.999614269351589,
+                "chi2": 64.64923858642578,
+                "chi2__q016_spt_d1_lite": 64.64923858642578,
+                "fEDE": 0.016925639779674657,
+                "log10z_c": 3.6091637871814477,
+                "logA": 3.0446990875172912,
+                "minuslogpost": 13.630531833729847,
+                "minuslogprior": -18.694087459483043,
+                "minuslogprior__0": -9.805149385715115,
+                "minuslogprior__q016_spt_Tcal": -4.702142617401683,
+                "minuslogprior__q016_tau_information": -4.186795456366245,
+                "n_s": 0.9702955920711608,
+                "omega_b": 0.022499730092132658,
+                "omega_cdm": 0.12216642381866147,
+                "rs_drag": 145.95800687244835,
+                "sigma8": 0.8158328484424164,
+                "tau_reio": 0.05014043554448324,
+                "thetai_scf": 2.7137491675696697,
+                "weight": 1.0
+              },
+              "mode": "reference_free_h0",
+              "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+              "observables": [
+                "TT",
+                "TE",
+                "EE"
+              ],
+              "q": "Q016",
+              "reference_preflight": {
+                "finite_logposterior": true,
+                "logposterior": -16.996630421803918,
+                "pointlike_required": false,
+                "reference_is_pointlike": false,
+                "sampled_parameter_order": [
+                  "omega_b",
+                  "omega_cdm",
+                  "H0",
+                  "tau_reio",
+                  "n_s",
+                  "logA",
+                  "fEDE",
+                  "log10z_c",
+                  "thetai_scf",
+                  "Tcal",
+                  "Ecal"
+                ],
+                "sampled_reference_vector": [
+                  0.022366524449817998,
+                  0.12106200436706421,
+                  68.47112077292151,
+                  0.050580277762685734,
+                  0.9781196391327021,
+                  3.0434045938987704,
+                  0.02750768634870642,
+                  3.539160086119727,
+                  2.765686033654439,
+                  1.0,
+                  1.0
+                ],
+                "seed": 1601602
+              },
+              "restart": 0,
+              "restart_reference": {
+                "reference_family": "base",
+                "reference_values": {
+                  "H0": 67.96,
+                  "fEDE": 0.03,
+                  "log10z_c": 3.55,
+                  "logA": 3.05,
+                  "n_s": 0.975,
+                  "omega_b": 0.02245,
+                  "omega_cdm": 0.123,
+                  "tau_reio": 0.051,
+                  "thetai_scf": 2.8
+                },
+                "restart_index": 0
+              },
+              "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+              "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+              "runtime_provenance_file": "q016_v4_source_runtime/setup_spt.json",
+              "status": "COMPLETE",
+              "target_h0": null,
+              "tau_prior": {
+                "mean": 0.051,
+                "never_count_as_independent_cross_experiment_evidence": true,
+                "shared_auxiliary_constraint": true,
+                "sigma": 0.006
+              }
+            }
+          ],
+          "best": {
+            "absolute_cross_chain_chi2_comparison_performed": false,
+            "branch": "spt",
+            "chi2": 62.069732666015625,
+            "cross_chain_chi2_sum_performed": false,
+            "elapsed_seconds": 2972.9219861720003,
+            "ell_range": [
+              600,
+              2000
+            ],
+            "exact_q011_vector_used_as_profile_endpoint": false,
+            "minimum": {
+              "A_s": 2.127018074540685e-09,
+              "Ecal": 1.0115633527778902,
+              "H0": 69.0523086081319,
+              "Omega_m": 0.3073730755362855,
+              "S8": 0.8255048585782703,
+              "Tcal": 1.0001203525843847,
+              "chi2": 62.069732666015625,
+              "chi2__q016_spt_d1_lite": 62.069732666015625,
+              "fEDE": 0.047317473953471134,
+              "log10z_c": 3.704945934056376,
+              "logA": 3.05730612684444,
+              "minuslogpost": 12.3263181720366,
+              "minuslogprior": -18.708548160971212,
+              "minuslogprior__0": -9.805149385715115,
+              "minuslogprior__q016_spt_Tcal": -4.707324075293483,
+              "minuslogprior__q016_tau_information": -4.196074699962614,
+              "n_s": 0.9619781808302192,
+              "omega_b": 0.02269188857445893,
+              "omega_cdm": 0.12322633593907767,
+              "rs_drag": 144.78585580879005,
+              "sigma8": 0.8155439113328694,
+              "tau_reio": 0.05073401971078815,
+              "thetai_scf": 2.412783361650496,
+              "weight": 1.0
+            },
+            "mode": "reference_free_h0",
+            "model_backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+            "observables": [
+              "TT",
+              "TE",
+              "EE"
+            ],
+            "q": "Q016",
+            "reference_preflight": {
+              "finite_logposterior": true,
+              "logposterior": -16.052361385395567,
+              "pointlike_required": false,
+              "reference_is_pointlike": false,
+              "sampled_parameter_order": [
+                "omega_b",
+                "omega_cdm",
+                "H0",
+                "tau_reio",
+                "n_s",
+                "logA",
+                "fEDE",
+                "log10z_c",
+                "thetai_scf",
+                "Tcal",
+                "Ecal"
+              ],
+              "sampled_reference_vector": [
+                0.022381207550342997,
+                0.12472475348452329,
+                68.47800072678591,
+                0.04932442844629689,
+                0.9816566463021204,
+                3.0395238820093375,
+                0.04394487877122932,
+                3.610175219381204,
+                2.5628217735056,
+                1.0,
+                1.0
+              ],
+              "seed": 1601702
+            },
+            "restart": 1,
+            "restart_reference": {
+              "reference_family": "high_h0",
+              "reference_values": {
+                "H0": 68.96,
+                "fEDE": 0.06,
+                "log10z_c": 3.65,
+                "logA": 3.05,
+                "n_s": 0.979,
+                "omega_b": 0.02245,
+                "omega_cdm": 0.125,
+                "tau_reio": 0.051,
+                "thetai_scf": 2.5999999999999996
+              },
+              "restart_index": 1
+            },
+            "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-004",
+            "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+            "runtime_provenance_file": "q016_v4_source_runtime/setup_spt.json",
+            "status": "COMPLETE",
+            "target_h0": null,
+            "tau_prior": {
+              "mean": 0.051,
+              "never_count_as_independent_cross_experiment_evidence": true,
+              "shared_auxiliary_constraint": true,
+              "sigma": 0.006
+            }
+          },
+          "best_two_spread": 0.008563995361328125,
+          "complete_count": 4,
+          "multistart_stable": true,
+          "replicate_count_within_delta_chi2": 2,
+          "replicate_restart_ids_within_delta_chi2": [
+            1,
+            3
+          ],
+          "targeted_basin_replication_gate": true
+        }
+      }
+    }
+  },
+  "cross_chain_chi2_sum_performed": false,
+  "excluded_records": [
+    {
+      "file": "spt_fixed_h0_71p5_r1.json",
+      "reason": "not-complete",
+      "run_id": "Q016-MATCHED-CMB-SURFACE-V4",
+      "status": "TECHNICAL_FAILURE"
+    }
+  ],
+  "final_result_gate": "PENDING_LATER_STAGES",
+  "gates": {
+    "CHAIN_NATIVE_NUISANCE_GATE": true,
+    "COMMON_MULTIPOLE_GATE": true,
+    "COMMON_OBSERVABLE_GATE": true,
+    "COMMON_TAU_GATE": true,
+    "ENDPOINT_REPROFILE_GATE": true,
+    "H0_TARGET_GATE": true,
+    "MODEL_IDENTITY_GATE": true,
+    "NO_CROSS_CHAIN_CHI2_SUM_GATE": true,
+    "NO_SHARED_LOWZ_DOUBLECOUNT_GATE": true,
+    "Q011_NONPORTABILITY_GATE": true,
+    "Q_IDENTITY_GATE": true,
+    "V4_PROVENANCE_GATE": true,
+    "V5_PROVENANCE_GATE": true,
+    "V6_TARGETED_PROVENANCE_GATE": true,
+    "act_fixed_h0_71p5_complete": true,
+    "act_fixed_h0_71p5_multistart": true,
+    "act_fixed_h0_71p5_targeted_basin_replication": true,
+    "act_reference_free_h0_complete": true,
+    "act_reference_free_h0_multistart": true,
+    "planck_fixed_h0_71p5_complete": true,
+    "planck_fixed_h0_71p5_multistart": true,
+    "planck_reference_free_h0_complete": true,
+    "planck_reference_free_h0_multistart": true,
+    "planck_reference_free_h0_targeted_basin_replication": true,
+    "spt_fixed_h0_71p5_complete": true,
+    "spt_fixed_h0_71p5_multistart": true,
+    "spt_fixed_h0_71p5_targeted_basin_replication": true,
+    "spt_reference_free_h0_complete": true,
+    "spt_reference_free_h0_multistart": true
+  },
+  "interpretation_guard": "Primary endpoint certification is not the final Q016 scientific answer.",
+  "primary_endpoint_gate": "PASS",
+  "provenance_counts": {
+    "Q016-MATCHED-CMB-SURFACE-V4": 21,
+    "Q016-MATCHED-CMB-SURFACE-V5": 6,
+    "Q016-MATCHED-CMB-SURFACE-V6": 9
+  },
+  "q": "Q016",
+  "result_id": "R-Q016-EDE-MATCHED-CMB-SURFACE-006",
+  "run_id": "Q016-MATCHED-CMB-SURFACE-V6",
+  "scientifically_usable_primary_endpoint_result": true,
+  "stage": "PRIMARY_ENDPOINT_TARGETED_BASIN_CERTIFICATION"
+}
