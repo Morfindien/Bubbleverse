@@ -1,0 +1,42 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "q": "Q016",
+  "result_id": "R-Q016-EDE-CMB-MECHANISM-003",
+  "run_id": "Q016-CMB-MECHANISM-V3",
+  "scientific_changes": "NONE",
+  "typed_path_contract": {
+    "bad_v2_call": "str(ROOT/'_q016_mechanism_eval')",
+    "consumer": "q016_objective_reprofile_v16.base_info -> q014_external_viability_v5.build_info",
+    "good_v3_call": "ROOT/'_q016_mechanism_eval'",
+    "required_type": "pathlib.Path"
+  },
+  "v16_parent_unchanged": true,
+  "v2_parent": {
+    "act_context": {
+      "artifact_id": 9908907363,
+      "digest": "sha256:0be1c794d184cf44f6ce46ccac2bda8a165c7ed3e95da9eb405f8d4b46e661a2"
+    },
+    "environment_build_all_branches": "SUCCESS",
+    "github_run_id": 33795220733,
+    "head_sha": "5ef47821199679a738ac4154a5a3817c98a997ca",
+    "import_v1_act_asset": "SUCCESS",
+    "matched_act": "FAILED_TYPED_PATH",
+    "matched_planck": "FAILED_TYPED_PATH",
+    "matched_spt": "FAILED_TYPED_PATH",
+    "prepare": "SUCCESS",
+    "secondary_act": {
+      "action": "PRESERVE_AND_BRIDGE_TO_V3",
+      "artifact_id": 9908959458,
+      "cause": "ACT full-MF adapter dependency/API not certified; independent of typed-path bug",
+      "digest": "sha256:c502a4a769c942dddd47e24ed82fd82c17bd08dce8ec8c4156cd38ffe208d870",
+      "job_conclusion": "SUCCESS",
+      "structured_status": "TECHNICALLY_UNAVAILABLE"
+    },
+    "secondary_planck": "FAILED_TYPED_PATH",
+    "secondary_spt": {
+      "cause": "same typed-path bug; MUST RERUN",
+      "job_conclusion": "SUCCESS",
+      "structured_status": "TECHNICALLY_UNAVAILABLE"
+    }
+  }
+}

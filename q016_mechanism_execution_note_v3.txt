@@ -1,0 +1,47 @@
+Q016 CMB MECHANISM V3 — TYPED OUTPUT-PATH REPAIR
+
+V2 RUN:
+33795220733
+HEAD:
+5ef47821199679a738ac4154a5a3817c98a997ca
+
+V2 ENVIRONMENT STATUS:
+PASS.
+The V1 cobaya/bootstrap failure is resolved.
+
+NEW V2 FAILURE:
+q016_mechanism_v2.py passed:
+  str(ROOT/"_q016_mechanism_eval")
+to q016_objective_reprofile_v16.base_info().
+
+That function forwards output_prefix to Q014 build_info(), which calls:
+  output_prefix.resolve()
+
+Therefore the correct contract is pathlib.Path, not str.
+
+V3 CODE CHANGE:
+  BEFORE:
+  q16.base_info(..., str(ROOT/"_q016_mechanism_eval"))
+
+  AFTER:
+  q16.base_info(..., ROOT/"_q016_mechanism_eval")
+
+SCIENTIFIC CHANGES:
+NONE.
+
+PARTIAL RESULT PRESERVATION:
+V2 secondary ACT produced a valid explicit TECHNICALLY_UNAVAILABLE record caused by
+the independent uncertified/missing full-MF ACT adapter dependency. It is authenticated,
+preserved, bridged into V3 identity, and not pointlessly rerun.
+
+V2 secondary SPT also returned TECHNICALLY_UNAVAILABLE, but its reason was the typed-path
+bug fixed here. Therefore SPT secondary MUST be rerun.
+
+V3 RERUNS ONLY:
+- matched Planck
+- matched SPT
+- matched ACT
+- secondary Planck
+- secondary SPT
+
+V16 primary profiles remain frozen.

@@ -1,0 +1,202 @@
+project:
+  q: Q016
+  run_id: Q016-CMB-MECHANISM-V3
+  result_id: R-Q016-EDE-CMB-MECHANISM-003
+  case_id: NOT DOCUMENTED
+  title: Q016 covariance residual and experiment-specific mechanism stage
+  status: PROGRAM GENERATED — V2 TYPED OUTPUT-PATH REPAIR; PARTIAL V2 RESULTS PRESERVED
+  generated_at: '2026-09-03T21:18:00+02:00'
+  question: While Planck NPIPE, SPT-3G D1 and ACT DR6 are examined on a deliberately
+    matched n=3 EDE surface with comparable CMB observables and overlapping multipole
+    ranges, can the documented difference in high-H0 response be explained by experiment-/likelihood-specific
+    frequency, foreground, calibration, sky or covariance structure, or does a common
+    residual pattern survive across the experiments?
+parent_v16:
+  lock_file: q016_v16_endpoint_lock_mechanism_v3.json
+  run_id: Q016-MATCHED-CMB-SURFACE-V16
+  result_id: R-Q016-EDE-MATCHED-CMB-SURFACE-016
+  github_run_id: 33785257733
+  head_sha: 3a154b44cbef4b2a3d10fdb12435105921bfc962
+  primary_profiles_must_not_be_rerun: true
+frozen_surface:
+  model: ede_n3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+  observables:
+  - TT
+  - TE
+  - EE
+  primary_ell:
+  - 600
+  - 2000
+  secondary_ell:
+  - 1000
+  - 2000
+  common_bands:
+  - name: ell_600_999
+    min: 600
+    max: 999
+  - name: ell_1000_1499
+    min: 1000
+    max: 1499
+  - name: ell_1500_2000
+    min: 1500
+    max: 2000
+  planck_context_band:
+    name: ell_500_999_context_only
+    min: 500
+    max: 999
+  target_h0: 71.5
+  tau_shape:
+    mean: 0.051
+    sigma: 0.006
+  low_z_data: []
+  lensing: false
+  cross_chain_chi2_sum_allowed: false
+  cross_experiment_combined_sigma_allowed: false
+  shared_cosmic_variance_warning_required: true
+likelihoods:
+  planck_primary:
+    name: q016_camspec_npipe_lite
+    family: CamSpec-NPIPE-lite
+    source_ids:
+    - K-039
+    - K-044
+    - K-045
+  spt_primary:
+    name: q016_spt_d1_lite
+    family: SPT3G_D1_TnE_lite
+    source_ids:
+    - K-040
+    - K-041
+    - K-042
+    candl_version: 2.0.3
+    data_commit: 2cec6e762a8c540484dd5acafc529f0035856350
+  act_primary:
+    name: q016_act_dr6_cmbonly
+    family: ACT DR6 CMB-only/lite
+    source_ids:
+    - K-036
+    - K-043
+    repo_commit: 0e0cd2c703c62a0e980470b572602233b27750e1
+  spt_full_secondary:
+    mode: OFFICIAL_FULL_MULTIFREQUENCY_DIAGNOSTIC_ONLY
+    shortcut: spt_candl_data.SPT3G_D1_TnE
+    data_commit: 2cec6e762a8c540484dd5acafc529f0035856350
+    cosmology_policy: FREEZE_TO_EACH_CERTIFIED_V16_ENDPOINT
+    nuisance_policy: CHAIN_NATIVE_ONLY
+    failure_policy: TECHNICALLY_UNAVAILABLE_NOT_PHYSICS_FAILURE
+  act_full_secondary:
+    mode: OFFICIAL_FULL_MULTIFREQUENCY_DIAGNOSTIC_ONLY
+    repository: ACTCollaboration/act_dr6_mflike
+    commit: 4220e14efb3a995f47c9f54cb687479e558c6138
+    cosmology_policy: FREEZE_TO_EACH_CERTIFIED_V16_ENDPOINT
+    nuisance_policy: CHAIN_NATIVE_ONLY
+    failure_policy: TECHNICALLY_UNAVAILABLE_NOT_PHYSICS_FAILURE
+execution:
+  matched_residual_branches:
+  - planck
+  - spt
+  - act
+  secondary_branches:
+  - planck
+  - spt
+  - act
+  max_parallel: 3
+  matched_job_timeout_minutes: 120
+  secondary_job_timeout_minutes: 180
+  soft_stop_minutes: 165
+  checkpointing: false
+  reason_no_checkpointing: All tasks are independent fixed-endpoint evaluations or
+    nuisance-only diagnostics; no long stateful chain is required.
+attribution:
+  signed_full_covariance_formula: c_i = r_i * (C^-1 r)_i
+  delta_contribution: c_i(fixed71.5) - c_i(free)
+  component_interpretation: ADDITIVE_COVARIANCE_COUPLED_DIAGNOSTIC_NOT_INDEPENDENT_CHI2
+  residual_definition: r = observed_bandpower - predicted_bandpower
+  delta_residual_definition: r_fixed71.5 - r_free
+  required_groupings:
+  - observable
+  - common_band
+  - observable_x_common_band
+  planck_frequency_grouping_required: true
+  residual_output_required: true
+  diagonal_standardized_residual_output_required: true
+secondary_requirements:
+  planck:
+  - A_planck
+  - calTE
+  - calEE
+  - 143x143
+  - 143x217
+  - 217x217
+  - TT frequency-null directions
+  - covariance
+  spt:
+  - '95'
+  - '150'
+  - '220'
+  - calibration
+  - polarization efficiency
+  - beam
+  - foreground
+  - covariance
+  act:
+  - '98'
+  - '150'
+  - '220'
+  - calibration
+  - polarization efficiency
+  - bandpass
+  - foreground
+  - covariance
+  act_q012_pattern_test: TE/EE improvement with TT penalty at certified matched endpoints
+validation:
+  covariance_closure_abs_tol: 0.0002
+  primary_component_delta_abs_tol: 0.003
+  endpoint_h0_abs_tol: 1.0e-08
+  require_all_matched_residual_branches: true
+  secondary_allowed_status:
+  - PASS
+  - TECHNICALLY_UNAVAILABLE
+  forbid_cross_chain_sum: true
+  forbid_combined_sigma: true
+  decision_owner: RESULT_INGESTION_ENGINE
+  allowed_q016_outcomes:
+  - Q016-A
+  - Q016-B
+  - Q016-C
+technical_repair:
+  parent_run_id: Q016-CMB-MECHANISM-V2
+  parent_result_id: R-Q016-EDE-CMB-MECHANISM-002
+  parent_github_run_id: 33795220733
+  parent_head_sha: 5ef47821199679a738ac4154a5a3817c98a997ca
+  classification: WRAPPER_OUTPUT_PREFIX_TYPE_ERROR
+  v2_environment_repair: PASS
+  failure_signature: 'AttributeError: ''str'' object has no attribute ''resolve'''
+  root_cause: q016_mechanism_v2.build_certified_point_model converted a pathlib.Path
+    output prefix to str before calling q016_objective_reprofile_v16.base_info; the
+    downstream Q014 build_info contract calls output_prefix.resolve().
+  repair: Pass ROOT/'_q016_mechanism_eval' as pathlib.Path without str conversion.
+  affected_v2_jobs:
+  - matched_residual(planck)
+  - matched_residual(spt)
+  - matched_residual(act)
+  - secondary_mechanism(planck)
+  - secondary_mechanism(spt)
+  preserved_v2_result:
+    branch: act
+    stage: SECONDARY_MECHANISM
+    status: TECHNICALLY_UNAVAILABLE
+    artifact_id: 9908959458
+    artifact_digest: sha256:c502a4a769c942dddd47e24ed82fd82c17bd08dce8ec8c4156cd38ffe208d870
+    reason: ACT full-MF adapter/dependency limitation is independent of the typed-path
+      bug.
+  reused_v2_act_context:
+    artifact_id: 9908907363
+    artifact_digest: sha256:0be1c794d184cf44f6ce46ccac2bda8a165c7ed3e95da9eb405f8d4b46e661a2
+  scientific_surface_changed: false
+  v16_endpoints_changed: false
+  covariance_method_changed: false
+  gate_relaxed: false
