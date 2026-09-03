@@ -1,0 +1,104 @@
+Q016 V11 — TARGETED PLANCK FREE-H0 MULTISTART CONTINUATION
+
+V10 GITHUB RUN
+33764943297
+
+V10 HEAD SHA
+81a90d30abf8b5e28d2db2b5f5b22f03b4f998a8
+
+V10 STATUS
+prepare: PASS
+V9 fixed-profile import: PASS
+Phase 2: 12/12 SUCCESS
+merge_primary: FAIL because the computed scientific multistart gate failed.
+
+THIS IS A GENUINE NUMERICAL GATE FAILURE, NOT AN INFRASTRUCTURE FAILURE.
+
+V10 BRANCH RESULTS
+
+PLANCK fixed H0=71.5:
+  best objective = 4203.595181947479
+  multistart = PASS
+
+PLANCK free H0:
+  restart 13 parent_free_best:
+    objective = 4198.257976875995
+    H0 = 68.22577640977339
+  restart 12 fixed-embed-jitter-minus:
+    objective = 4203.003181463886
+    H0 = 71.28658956184356
+  restart 10 fixed-embed:
+    objective = 4203.238456981094
+    H0 = 71.48384567882373
+  restart 11 fixed-embed-jitter-plus:
+    objective = 4203.722647319659
+    H0 = 71.68283357312869
+
+Only one Planck free restart lies within the unchanged Delta-objective <=1.0
+replication criterion. Therefore:
+  planck_free_multistart = FAIL
+  MULTISTART_STABILITY_GATE = FAIL
+  ENDPOINT_REPROFILE_GATE = FAIL
+
+The fixed-to-free embedding itself passes at numerical precision, and Planck
+profile nesting passes:
+  fixed - free = +5.337205071484277
+
+SPT:
+  free best = 60.45402134269433
+  H0 = 71.1720583121856
+  fixed - free = +0.03349644257718154
+  free multistart = PASS
+  nesting = PASS
+  embedding = PASS
+
+ACT:
+  free best = 78.2337424597935
+  H0 = 71.49995312892298
+  fixed - free = +0.016128502474188622
+  free multistart = PASS
+  nesting = PASS
+  embedding = PASS
+
+V11 COMPUTE POLICY
+
+Do NOT rerun:
+- any V9 fixed profile
+- any V10 SPT free profile
+- any V10 ACT free profile
+- any existing V10 Planck free profile
+
+Run exactly FOUR new Planck free-H0 jobs.
+
+Each starts from a NON-ZERO deterministic perturbation of the V10 Planck
+free-H0 best basin. The four perturbation patterns are:
+- all-parameter jitter plus
+- all-parameter jitter minus
+- cross-pattern A
+- cross-pattern B
+
+Restarts: 20, 21, 22, 23.
+
+The original multistart criterion remains unchanged:
+  at least 2 distinct records within Delta objective <= 1.0 of the combined best.
+
+No tolerance is widened.
+No prior is changed.
+No dataset is changed.
+No likelihood is changed.
+No model parameterization is changed.
+No objective is changed.
+No cross-chain chi2 is summed.
+
+V11 also records, as a DIAGNOSTIC ONLY, how many new raw optimizer minima land
+within Delta<=1 of the combined best. This diagnostic does not replace or relax
+the existing selected-candidate multistart gate.
+
+SCIENTIFIC INTERPRETATION BEFORE V11
+V10 has exposed a real Planck free-H0 basin split:
+- low-H0 basin around H0 ~68.23 with objective ~4198.26
+- high-H0 basin around H0 ~71.3-71.7 with objective ~4203-4204
+
+V11 asks only whether the lower Planck basin is reproducible from independent,
+non-zero perturbations. It does not yet answer the final Q016 residual/mechanism
+question.
