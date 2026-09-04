@@ -1,0 +1,204 @@
+name: Bubbleverse Q025 full-MF basin component attribution V2
+
+on:
+  workflow_dispatch:
+    inputs:
+      q022_run_id:
+        description: 'Exact authoritative Q022 V2 run; blank uses frozen resolved run'
+        required: false
+        default: ''
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  CURRENT_Q: Q025
+  RUN_ID: Q025-FULLMF-BASIN-COMPONENT-ATTRIBUTION-V2
+  RESULT_ID: R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-002
+  Q021_RAW_RUN_ID: '33882434170'
+  Q022_RUN_ID: '33902262660'
+  Q023_RUN_ID: '33913077353'
+
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Static gates
+        run: |
+          python -m pip install --disable-pip-version-check PyYAML numpy
+          python -m py_compile q025_fullmf_component_attribution_v2.py q025_tests_v2.py
+          python - <<'PY'
+          import yaml
+          c=yaml.safe_load(open('q025_fullmf_component_attribution_v2_config.yml',encoding='utf-8'))
+          assert c['project']['q']=='Q025'
+          assert c['model']['backend_commit']=='5a131c91d657dd9a7c6364cc45b038710f8d0d97'
+          assert c['selection']['masks']==[3,6,7]
+          assert c['rules']['no_optimization'] is True
+          assert c['rules']['no_q024_permutation_rerun'] is True
+          assert c['execution']['total_expected_likelihood_evaluations']==72
+          assert c['repair_v2']['failure_class']=='Q022_ENDPOINT_SERIALIZATION_MISREAD'
+          print('CONTEXT_CONTINUITY_GATE=PASS')
+          PY
+
+  edges:
+    needs: preflight
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        include:
+          - {mask: 3, a: 0, b: 1}
+          - {mask: 3, a: 0, b: 2}
+          - {mask: 3, a: 1, b: 2}
+          - {mask: 6, a: 0, b: 1}
+          - {mask: 6, a: 0, b: 2}
+          - {mask: 6, a: 1, b: 2}
+          - {mask: 7, a: 0, b: 1}
+          - {mask: 7, a: 0, b: 2}
+          - {mask: 7, a: 1, b: 2}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/cobaya
+            external
+          key: q025-v2-${{ runner.os }}-${{ hashFiles('q019_setup_v3.sh','q019_planck_cosmology_reprofile_v1.py','q017_planck_direction_localization_v1.py','q015_cmb_attribution_v2.py') }}
+
+      - name: Reuse frozen full-MF environment
+        run: bash q019_setup_v3.sh
+
+      - name: Resolve Q022 run
+        id: q022
+        shell: bash
+        env:
+          USER_RUN: ${{ inputs.q022_run_id }}
+        run: |
+          if [ -n "$USER_RUN" ]; then rid="$USER_RUN"; else rid="$Q022_RUN_ID"; fi
+          echo "run_id=$rid" >> "$GITHUB_OUTPUT"
+
+      - name: Download authoritative Q022 stage1
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.q022.outputs.run_id }}
+          pattern: q022-v2-stage1-m${{ matrix.mask }}-s*
+          merge-multiple: true
+          path: q022_inputs/stage1
+
+      - name: Download authoritative Q022 refinement
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.q022.outputs.run_id }}
+          pattern: q022-v2-refine-m${{ matrix.mask }}-s*
+          merge-multiple: true
+          path: q022_inputs/refinement
+
+      - name: Download authoritative Q022 final decision package
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.q022.outputs.run_id }}
+          name: q022-final-v2
+          path: q022_inputs/final
+
+      - name: Download exact Q021 primordial lineage for this mask
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-m${{ matrix.mask }}-r*
+          merge-multiple: true
+          path: q021_inputs
+
+      - name: Eight fixed-vector hybrid evaluations for one basin edge
+        run: |
+          mkdir -p q025_edges
+          python q025_fullmf_component_attribution_v2.py \
+            --config q025_fullmf_component_attribution_v2_config.yml \
+            edge \
+            --q022-dir q022_inputs \
+            --q021-dir q021_inputs \
+            --mask '${{ matrix.mask }}' \
+            --seed-a '${{ matrix.a }}' \
+            --seed-b '${{ matrix.b }}' \
+            --output "q025_edges/m${{ matrix.mask }}_e${{ matrix.a }}${{ matrix.b }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q025-v2-edge-m${{ matrix.mask }}-e${{ matrix.a }}${{ matrix.b }}
+          path: q025_edges/*.json
+          if-no-files-found: warn
+
+  final:
+    needs: edges
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML numpy
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q025-v2-edge-*
+          merge-multiple: true
+          path: q025_edge_inputs
+
+      - name: Aggregate Q025
+        run: |
+          python q025_fullmf_component_attribution_v2.py \
+            --config q025_fullmf_component_attribution_v2_config.yml \
+            aggregate \
+            --input-dir q025_edge_inputs \
+            --output q025_merged_v2.json
+
+      - name: Mandatory Q025 result tests
+        run: |
+          python q025_tests_v2.py \
+            --result q025_merged_v2.json \
+            --output q025_tests_v2.json
+
+      - name: Construct validated final result
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('q025_merged_v2.json',encoding='utf-8'))
+          t=json.load(open('q025_tests_v2.json',encoding='utf-8'))
+          r['tests_status']=t['tests_status']
+          r['mandatory_test_gates']=t['gates']
+          r['FINAL_RESULT_GATE']=t['FINAL_RESULT_GATE']
+          r['status']='PASS' if t['FINAL_RESULT_GATE']=='PASS' else 'FAIL'
+          json.dump(r,open('q025_final_v2.json','w',encoding='utf-8'),indent=2,sort_keys=True)
+          open('q025_final_v2.json','a',encoding='utf-8').write('\n')
+          if t['FINAL_RESULT_GATE']!='PASS':
+              raise SystemExit(2)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q025-final-v2
+          path: |
+            q025_merged_v2.json
+            q025_tests_v2.json
+            q025_final_v2.json
+          if-no-files-found: warn
