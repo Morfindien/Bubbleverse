@@ -1,0 +1,95 @@
+project:
+  q: Q019
+  run_id: Q019-PLANCK-COSMOLOGY-GLOBALITY-V2
+  result_id: R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-002
+  parent_run_id: Q019-PLANCK-COSMOLOGY-REPROFILE-V1
+  parent_github_run_id: 33852944805
+  parent_head_sha: b0b5f42b7aae5ba15d4849b4f4d0f9fc01c4e64f
+execution:
+  max_evals: 200000
+  rhoend: 0.0001
+  soft_stop_minutes: 315
+  github_job_timeout_minutes: 330
+  max_parallel: 6
+  families:
+  - base_basin
+  - plus_basin
+  restarts_per_family: 6
+  local_jitter_scale: 0.25
+validation:
+  multistart_delta_objective_max: 1.0
+  minimum_converged_replicates: 2
+  parent_best_objective: 10541.969616747576
+  parent_best_regression_tolerance: 0.25
+  q016_endpoint_objective_tolerance: 0.05
+  q016_penalty_tolerance: 0.1
+q016_reference:
+  free_objective: 4197.77132517269
+  fixed_objective: 4203.595181947479
+  penalty: 5.823856774789
+parent_v1:
+  lite_free:
+    H0: 67.97266514132325
+    fEDE: 0.04627405135919521
+    objective: 4197.424430920115
+  lite_fixed:
+    H0: 71.5
+    objective: 4202.486466540418
+  full_free:
+    H0: 68.10140745691645
+    fEDE: 0.04441329802649829
+    objective: 10541.969616747576
+  full_fixed:
+    H0: 71.5
+    objective: 10557.368869179762
+  lite_penalty: 5.062035620303504
+  full_mf_penalty: 15.399252432185676
+  cross_cost_target_lite: 0.812
+  cross_cost_target_full_mf: 13.556
+  all_other_v1_mandatory_gates_passed: true
+centers:
+  base_basin:
+    A_planck: 1.0013008750874814
+    H0: 68.10140745691645
+    amp_143: 19.08062003264571
+    amp_143x217: 9.777873648287061
+    amp_217: 12.694220405796838
+    calEE: 0.9993655046587432
+    calTE: 0.9973762552673373
+    fEDE: 0.04441329802649829
+    log10z_c: 3.9159299200215476
+    logA: 3.041632843607193
+    n_143: 0.9242352668069597
+    n_143x217: 1.3459274802956156
+    n_217: 1.2672789596286138
+    n_s: 0.9715353207395939
+    omega_b: 0.022292519629576183
+    omega_cdm: 0.12435089785625782
+    tau_reio: 0.05065090556856271
+    thetai_scf: 2.9778814314069546
+  plus_basin:
+    A_planck: 1.0006846492170631
+    H0: 68.59975031807882
+    amp_143: 20.21614652168673
+    amp_143x217: 10.866541140339637
+    amp_217: 13.769349888508964
+    calEE: 0.9969956884257382
+    calTE: 0.9946588331092131
+    fEDE: 0.05634450919087796
+    log10z_c: 3.861277581761445
+    logA: 3.055318190969118
+    n_143: 0.9025073581085401
+    n_143x217: 1.1459365921530997
+    n_217: 1.0511283253123374
+    n_s: 0.972780817720178
+    omega_b: 0.022381132541251104
+    omega_cdm: 0.12516564910771893
+    tau_reio: 0.05817559501742249
+    thetai_scf: 2.9185960044752117
+rules:
+  no_gate_relaxation: true
+  no_cross_chain_chi2_sum: true
+  q018_architecture_gap_not_physical_component: true
+  q017_classification_preserved: INDETERMINATE
+  causal_systematic_claim_allowed: false
+  new_physics_claim_allowed: false
