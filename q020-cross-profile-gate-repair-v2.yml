@@ -1,0 +1,51 @@
+name: Bubbleverse Q020 cross-profile gate repair V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  CURRENT_Q: Q020
+  RUN_ID: Q020-PLANCK-CROSS-PROFILE-DIRECTION-REPAIR-V2
+  PARENT_RUN_ID: '33876066510'
+
+jobs:
+  repair:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Download completed Q020 V1 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.PARENT_RUN_ID }}
+          path: q020_v1_downloads
+
+      - name: Repair aggregation semantics without rerunning likelihoods
+        run: |
+          python q020_finalize_repair_v2.py \
+            --input-dir q020_v1_downloads \
+            --output q020_merged_v2.json
+
+      - name: Mandatory V2 result tests
+        if: always()
+        run: |
+          python q020_tests_v2.py \
+            --merged q020_merged_v2.json \
+            --output q020_tests_v2.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q020-final-v2
+          path: |
+            q020_merged_v2.json
+            q020_tests_v2.json
+          if-no-files-found: warn
