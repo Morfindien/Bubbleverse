@@ -1,0 +1,81 @@
+project:
+  q: Q022
+  run_id: Q022-FULL-MF-OPTIMIZER-BASIN-DIAGNOSTIC-V1
+  result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-001
+  scientific_question: >-
+    Within the frozen MOD-EDE-N3 full-multifrequency Planck likelihood, what
+    distinguishes the coherent optimizer basins observed in Q021, and are they
+    primarily associated with different cosmological compromises,
+    nuisance/foreground compromises, or numerical optimizer structure?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+parent:
+  q: Q021
+  raw_run_id: Q021-PRIMORDIAL-INTERNAL-STRUCTURE-V1
+  raw_github_run_id: 33882434170
+  raw_result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-001
+  authoritative_repair_run_id: Q021-PRIMORDIAL-INTERNAL-STRUCTURE-REPAIR-V2
+  authoritative_result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-002
+  expected_full_mf_profiles: 24
+  architectures_allowed_for_scientific_classification:
+    - full_mf
+
+parameter_groups:
+  primordial_fixed_coordinates:
+    - n_s
+    - logA
+    - tau_reio
+  cosmology_profiled:
+    - omega_b
+    - omega_cdm
+    - fEDE
+    - log10z_c
+    - thetai_scf
+    - H0
+  shared_nuisance:
+    - A_planck
+    - calTE
+    - calEE
+  foreground_nuisance:
+    - amp_143
+    - amp_217
+    - amp_143x217
+    - n_143
+    - n_217
+    - n_143x217
+
+analysis:
+  # Distances are dimensionless RMS distances after normalising every parameter
+  # by its observed within-vertex restart spread across the 24 reused profiles.
+  # This is an identifiability diagnostic, not a physical metric.
+  scale_floor_fraction: 1.0e-8
+  association_ratio_threshold: 1.50
+  minimum_informative_vertices: 4
+  endpoint_near_identity_rms: 0.10
+  objective_materiality: 0.50
+  ordering_stability_fraction: 0.75
+  bootstrap_samples: 2000
+  bootstrap_seed: 22022
+
+rules:
+  no_new_likelihood_evaluations: true
+  coherent_restart_only: true
+  no_frankenstein_vertex_mixing: true
+  v1_process_hash_not_scientific_identity: true
+  preserve_q021_basin_spread: true
+  matched_and_full_mf_not_independent_observations: true
+  no_cross_chain_chi2_sum: true
+  functional_attribution_not_independent_physical_chi2: true
+  parameter_difference_not_automatically_physical: true
+  higher_objective_not_automatically_artifact: true
+  no_aic_automatic_physical_judgment: true
+
+sources:
+  - K-039
+  - K-044
+  - K-046

@@ -1,0 +1,39 @@
+{
+  "q": "Q022",
+  "run_id": "Q022-FULL-MF-OPTIMIZER-BASIN-DIAGNOSTIC-V1",
+  "result_id": "R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-001",
+  "bubbleverse_repository": "Morfindien/Bubbleverse",
+  "parent_q021_raw_github_run_id": 33882434170,
+  "parent_q021_raw_head_sha": "03b20081220e9a584458c203fc798cfd39dfd692",
+  "model": {
+    "name": "MOD-EDE-N3",
+    "n_scf": 3,
+    "backend_repository": "mwt5345/class_ede",
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97"
+  },
+  "internal_parents": [
+    {"id": "R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-003", "role": "UPSTREAM_PROFILE_CONSTRUCTION"},
+    {"id": "R-Q020-EDE-PLANCK-CROSS-PROFILE-DIRECTION-002", "role": "UPSTREAM_PRIMORDIAL_BLOCK_ATTRIBUTION"},
+    {"id": "R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-002", "role": "AUTHORITATIVE_Q021_PARENT"},
+    {"id": "R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-001", "role": "RAW_48_PROFILE_SOURCE_ONLY"}
+  ],
+  "external_sources": [
+    {"id": "K-039", "reference": "Efstathiou, Rosenberg & Poulin, PRL 132, 221002 (2024), arXiv:2311.00524", "type": "PRIMARY_RESEARCH"},
+    {"id": "K-044", "reference": "Rosenberg, Gratton & Efstathiou, MNRAS 517, 4620 (2022), arXiv:2205.10869", "type": "PRIMARY_RESEARCH"},
+    {"id": "K-046", "reference": "Cobaya 3.5.6 technical/software source", "type": "OFFICIAL_TECHNICAL"}
+  ],
+  "reuse": [
+    "q021_primordial_decomposition_v1.py",
+    "q021_finalize_repair_v2.py",
+    "q021_tests_v2.py",
+    ".github/workflows/q021-coherent-restart-gate-repair-v2.yml"
+  ],
+  "scientific_rules": {
+    "new_likelihood_evaluations_in_v1": false,
+    "coherent_restart_comparisons_only": true,
+    "frankenstein_aggregation_forbidden": true,
+    "v1_process_hash_as_identity_forbidden": true,
+    "cross_likelihood_chi2_sum_forbidden": true,
+    "physical_causality_from_endpoint_distance_forbidden": true
+  }
+}

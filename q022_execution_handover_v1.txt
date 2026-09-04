@@ -1,0 +1,38 @@
+BUBBLEVERSE Q022 EXECUTION HANDOVER V1
+
+CURRENT Q:
+Q022
+
+RUN ID:
+Q022-FULL-MF-OPTIMIZER-BASIN-DIAGNOSTIC-V1
+
+RESULT ID:
+R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-001
+
+SCIENTIFIC QUESTION:
+Within the frozen MOD-EDE-N3 full-multifrequency Planck likelihood, what distinguishes the coherent optimizer basins observed in Q021, and are they primarily associated with different cosmological compromises, nuisance/foreground compromises, or numerical optimizer structure?
+
+EXECUTION DECISION:
+READ-ONLY PROGRAM FIRST. ZERO NEW LIKELIHOOD EVALUATIONS.
+
+PARENT RAW MATERIAL:
+GitHub Actions run 33882434170.
+Use all Q021 V1 raw artifacts, but only the 24 full-MF profile endpoints enter Q022's basin classification.
+
+MANDATORY PARENT SAFETY:
+Re-run q021_finalize_repair_v2.py and q021_tests_v2.py on the downloaded Q021 raw artifacts before Q022 analysis. Q022 stops if Q021 V2 gates do not pass.
+
+FROZEN MODEL:
+MOD-EDE-N3; n_scf=3; mwt5345/class_ede commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97.
+
+METHOD:
+For each of the 8 primordial vertices, preserve all 3 complete coherent restart endpoints. Select the lowest objective only as a local reference for pairwise endpoint-distance diagnostics; never mix vertices into a decomposition. Compare reprofiled cosmology and nuisance/foreground endpoint displacement after within-vertex restart-spread normalization. Report objective spread and restart ordering at every vertex.
+
+INTERPRETATION LIMIT:
+Endpoint association can show whether the observed spread lives mainly in cosmological or nuisance coordinates. It cannot, by itself, prove that a branch is physically distinct or that a higher-objective branch is a numerical artifact. If static endpoints remain non-identifying, Q022 V1 must return IDENTIFIABILITY_LIMITED and recommend a targeted globality/continuation calculation rather than invent a physical explanation.
+
+EXPECTED FINAL OUTPUT:
+q022_final_v1.json
+
+RETURN ROUTE:
+RESULT INGESTION & ROUTING ENGINE with Q022 + journal continuity + K-039/K-044/K-046 + Q019/Q020/Q021 parent provenance + Q022 gates + unresolved issues.
