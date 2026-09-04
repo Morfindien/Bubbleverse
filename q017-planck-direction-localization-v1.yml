@@ -1,0 +1,358 @@
+name: Bubbleverse Q017 Planck Direction Localization V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q017
+  RUN_ID: Q017-PLANCK-DIRECTION-LOCALIZATION-V1
+  RESULT_ID: R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-001
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      baseline_matrix: ${{ steps.matrix.outputs.baseline_matrix }}
+      lock_matrix: ${{ steps.matrix.outputs.lock_matrix }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - run: python -m pip install "PyYAML==6.0.2" "numpy==1.26.4"
+      - name: Static gates
+        run: |
+          python q017_tests_v1.py static \
+            --config q017_planck_direction_localization_v1_config.yml \
+            --source-lock q017_source_lock_v1.json \
+            --workflow .github/workflows/q017-planck-direction-localization-v1.yml \
+            --output q017_static_tests_v1.json
+      - name: Build dynamic matrices
+        id: matrix
+        run: |
+          python q017_planck_direction_localization_v1.py \
+            --config q017_planck_direction_localization_v1_config.yml \
+            plan --output q017_job_plan_v1.json
+          python - <<'PY'
+          import json, os
+          d=json.load(open("q017_job_plan_v1.json"))
+          with open(os.environ["GITHUB_OUTPUT"],"a") as f:
+              f.write("baseline_matrix="+json.dumps(d["baseline_matrix"],separators=(",",":"))+"\n")
+              f.write("lock_matrix="+json.dumps(d["lock_matrix"],separators=(",",":"))+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q017-prepare-v1
+          path: |
+            q017_static_tests_v1.json
+            q017_job_plan_v1.json
+
+  baseline-profiles:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix: ${{ fromJSON(needs.prepare.outputs.baseline_matrix) }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - uses: actions/cache@v4
+        with:
+          path: external/cobaya_packages
+          key: q017-planck-npipe-full-cobaya356-v1
+      - name: Full-MF setup
+        id: setup
+        continue-on-error: true
+        run: bash q017_setup_v1.sh
+      - name: Run nuisance-only baseline profile
+        id: profile
+        if: steps.setup.outcome == 'success'
+        continue-on-error: true
+        run: |
+          mkdir -p q017_results
+          python q017_planck_direction_localization_v1.py \
+            --config q017_planck_direction_localization_v1_config.yml \
+            profile --endpoint "${{ matrix.endpoint }}" --restart "${{ matrix.restart }}" \
+            --output "q017_results/profile_${{ matrix.endpoint }}_r${{ matrix.restart }}.json"
+      - name: Structured setup-unavailable record
+        if: steps.setup.outcome != 'success'
+        run: |
+          mkdir -p q017_results
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          endpoint="${{ matrix.endpoint }}"; restart=int("${{ matrix.restart }}")
+          d={"q":"Q017","run_id":"Q017-PLANCK-DIRECTION-LOCALIZATION-V1","result_id":"R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-001",
+             "stage":"NUISANCE_PROFILE","endpoint":endpoint,"restart":restart,"lock_group":None,
+             "status":"TECHNICALLY_UNAVAILABLE","failure_class":"FULL_MF_SETUP_OR_CAPABILITY",
+             "scientific_model_failure":False,"q016_result_invalidated":False,"q016_globality_reopened":False,
+             "q011_endpoint_used":False,"cross_chain_chi2_sum_performed":False}
+          Path(f"q017_results/profile_{endpoint}_r{restart}.json").write_text(json.dumps(d,indent=2,sort_keys=True)+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q017-baseline-${{ matrix.endpoint }}-r${{ matrix.restart }}
+          path: |
+            q017_results/profile_${{ matrix.endpoint }}_r${{ matrix.restart }}.json
+            q017_results/q017_setup_failure.json
+            q017_source_runtime/setup.json
+          if-no-files-found: warn
+
+  select-baseline:
+    needs: baseline-profiles
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      proceed: ${{ steps.status.outputs.proceed }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - run: python -m pip install "PyYAML==6.0.2" "numpy==1.26.4"
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q017-baseline-*
+          path: q017_baseline_artifacts
+          merge-multiple: true
+      - run: |
+          python q017_planck_direction_localization_v1.py \
+            --config q017_planck_direction_localization_v1_config.yml \
+            select --stage baseline --input-dir q017_baseline_artifacts \
+            --output q017_baseline_selection_v1.json
+      - id: status
+        run: |
+          python - <<'PY'
+          import json, os
+          d=json.load(open("q017_baseline_selection_v1.json"))
+          with open(os.environ["GITHUB_OUTPUT"],"a") as f:
+              f.write("proceed="+("true" if d["status"]=="PASS" else "false")+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q017-baseline-selection-v1
+          path: q017_baseline_selection_v1.json
+
+  lock-profiles:
+    needs: [prepare, select-baseline]
+    if: needs.select-baseline.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      max-parallel: 3
+      matrix: ${{ fromJSON(needs.prepare.outputs.lock_matrix) }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - uses: actions/download-artifact@v5
+        with:
+          name: q017-baseline-selection-v1
+          path: .
+      - uses: actions/cache@v4
+        with:
+          path: external/cobaya_packages
+          key: q017-planck-npipe-full-cobaya356-v1
+      - name: Full-MF setup
+        id: setup
+        continue-on-error: true
+        run: bash q017_setup_v1.sh
+      - name: Run leave-one-group-locked profile
+        id: profile
+        if: steps.setup.outcome == 'success'
+        continue-on-error: true
+        run: |
+          mkdir -p q017_results
+          python q017_planck_direction_localization_v1.py \
+            --config q017_planck_direction_localization_v1_config.yml \
+            profile --endpoint fixed --restart "${{ matrix.restart }}" \
+            --lock-group "${{ matrix.lock_group }}" \
+            --baseline q017_baseline_selection_v1.json \
+            --output "q017_results/lock_${{ matrix.lock_group }}_r${{ matrix.restart }}.json"
+      - name: Structured setup-unavailable record
+        if: steps.setup.outcome != 'success'
+        run: |
+          mkdir -p q017_results
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          group="${{ matrix.lock_group }}"; restart=int("${{ matrix.restart }}")
+          d={"q":"Q017","run_id":"Q017-PLANCK-DIRECTION-LOCALIZATION-V1","result_id":"R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-001",
+             "stage":"NUISANCE_PROFILE","endpoint":"fixed","restart":restart,"lock_group":group,
+             "status":"TECHNICALLY_UNAVAILABLE","failure_class":"FULL_MF_SETUP_OR_CAPABILITY",
+             "scientific_model_failure":False,"q016_result_invalidated":False,"q016_globality_reopened":False,
+             "q011_endpoint_used":False,"cross_chain_chi2_sum_performed":False}
+          Path(f"q017_results/lock_{group}_r{restart}.json").write_text(json.dumps(d,indent=2,sort_keys=True)+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q017-lock-${{ matrix.lock_group }}-r${{ matrix.restart }}
+          path: |
+            q017_results/lock_${{ matrix.lock_group }}_r${{ matrix.restart }}.json
+            q017_results/q017_setup_failure.json
+            q017_source_runtime/setup.json
+          if-no-files-found: warn
+
+  select-locks:
+    needs: [lock-profiles, select-baseline]
+    if: always() && needs.select-baseline.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - run: python -m pip install "PyYAML==6.0.2" "numpy==1.26.4"
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q017-lock-*
+          path: q017_lock_artifacts
+          merge-multiple: true
+      - run: |
+          python q017_planck_direction_localization_v1.py \
+            --config q017_planck_direction_localization_v1_config.yml \
+            select --stage locks --input-dir q017_lock_artifacts \
+            --output q017_lock_selection_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q017-lock-selection-v1
+          path: q017_lock_selection_v1.json
+
+  decompose:
+    needs: select-baseline
+    if: needs.select-baseline.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - uses: actions/download-artifact@v5
+        with:
+          name: q017-baseline-selection-v1
+          path: .
+      - uses: actions/cache@v4
+        with:
+          path: external/cobaya_packages
+          key: q017-planck-npipe-full-cobaya356-v1
+      - name: Full-MF setup
+        id: setup
+        continue-on-error: true
+        run: bash q017_setup_v1.sh
+      - name: Covariance-aware decomposition
+        if: steps.setup.outcome == 'success'
+        continue-on-error: true
+        run: |
+          python q017_planck_direction_localization_v1.py \
+            --config q017_planck_direction_localization_v1_config.yml \
+            decompose --baseline q017_baseline_selection_v1.json \
+            --output q017_decomposition_v1.json
+      - name: Structured decomposition unavailable
+        if: steps.setup.outcome != 'success'
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d={"q":"Q017","run_id":"Q017-PLANCK-DIRECTION-LOCALIZATION-V1","result_id":"R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-001",
+             "stage":"DECOMPOSITION","status":"TECHNICALLY_UNAVAILABLE","failure_class":"FULL_MF_SETUP_OR_CAPABILITY",
+             "scientific_model_failure":False,"q016_result_invalidated":False,"scientific_interpretation":"NONE"}
+          Path("q017_decomposition_v1.json").write_text(json.dumps(d,indent=2,sort_keys=True)+"\n")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q017-decomposition-v1
+          path: |
+            q017_decomposition_v1.json
+            q017_results/q017_setup_failure.json
+            q017_source_runtime/setup.json
+          if-no-files-found: warn
+
+  aggregate:
+    needs: [select-baseline, select-locks, decompose]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - run: python -m pip install "PyYAML==6.0.2" "numpy==1.26.4"
+      - uses: actions/download-artifact@v5
+        continue-on-error: true
+        with:
+          name: q017-baseline-selection-v1
+          path: .
+      - uses: actions/download-artifact@v5
+        continue-on-error: true
+        with:
+          name: q017-lock-selection-v1
+          path: .
+      - uses: actions/download-artifact@v5
+        continue-on-error: true
+        with:
+          name: q017-decomposition-v1
+          path: .
+      - name: Aggregate finite Q017 result
+        id: aggregate
+        continue-on-error: true
+        run: |
+          python q017_planck_direction_localization_v1.py \
+            --config q017_planck_direction_localization_v1_config.yml \
+            aggregate --baseline q017_baseline_selection_v1.json \
+            --locks q017_lock_selection_v1.json \
+            --decomposition q017_decomposition_v1.json \
+            --output q017_final_result_v1.json
+      - name: Mandatory final tests
+        id: tests
+        continue-on-error: true
+        run: |
+          python q017_tests_v1.py final \
+            --result q017_final_result_v1.json \
+            --output q017_final_tests_v1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q017-final-v1
+          path: |
+            q017_final_result_v1.json
+            q017_final_tests_v1.json
+          if-no-files-found: error
+      - name: Enforce final gate
+        run: |
+          python - <<'PY'
+          import json, sys
+          d=json.load(open("q017_final_result_v1.json"))
+          print(json.dumps(d,indent=2,sort_keys=True))
+          if d.get("final_result_gate")!="PASS":
+              sys.exit(2)
+          PY

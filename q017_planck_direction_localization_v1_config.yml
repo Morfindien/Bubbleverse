@@ -1,0 +1,174 @@
+project:
+  q: Q017
+  run_id: Q017-PLANCK-DIRECTION-LOCALIZATION-V1
+  result_id: R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-001
+  case_id: NOT DOCUMENTED
+  generated_at: '2026-09-04T07:15:00+02:00'
+  question: On the certified Q016 n=3 EDE Planck NPIPE/CamSpec surface, is the high-H0
+    penalty at H0=71.5—especially the ell=600–999 contribution—localized to specific
+    Planck TT frequency, calibration, foreground or covariance directions in a full
+    multifrequency likelihood, or does the penalty remain broadly distributed after
+    nuisance-aware reprofiling?
+parent_q016:
+  endpoint_lock: q016_v16_endpoint_lock_mechanism_v4.json
+  run_id: Q016-MATCHED-CMB-SURFACE-V16
+  result_id: R-Q016-EDE-MATCHED-CMB-SURFACE-016
+  github_run_id: 33785257733
+  head_sha: 3a154b44cbef4b2a3d10fdb12435105921bfc962
+  expected_h0:
+    free: 67.98832896715899
+    fixed: 71.5
+  primary_profiles_must_not_be_rerun: true
+  q011_vector_must_not_be_endpoint: true
+frozen_surface:
+  model: ede_n3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+  target_h0: 71.5
+  full_planck_likelihood: planck_NPIPE_highl_CamSpec.TTTEEE
+  full_planck_role: PUBLIC_NPIPE_CAMSPEC_FULL_MULTIFREQUENCY_DIAGNOSTIC_ON_Q016_COSMOLOGICAL_ENDPOINTS
+  paper_native_k039_reproduction: false
+  q016_matched_primary_is_replaced: false
+  no_local_h0_prior: true
+  no_cross_chain_chi2_sum: true
+  no_combined_interexperiment_significance: true
+nuisance:
+  all:
+  - A_planck
+  - amp_143
+  - amp_217
+  - amp_143x217
+  - n_143
+  - n_217
+  - n_143x217
+  - calTE
+  - calEE
+  groups:
+    calibration:
+    - A_planck
+    - calTE
+    - calEE
+    foreground_143:
+    - amp_143
+    - n_143
+    foreground_143x217:
+    - amp_143x217
+    - n_143x217
+    foreground_217:
+    - amp_217
+    - n_217
+    foreground_all:
+    - amp_143
+    - n_143
+    - amp_143x217
+    - n_143x217
+    - amp_217
+    - n_217
+  lock_test_semantics: At fixed H0=71.5, lock the tested nuisance group to the selected
+    free-endpoint full-MF nuisance optimum and reprofile all remaining nuisance parameters.
+    The increase relative to the unrestricted fixed-endpoint nuisance profile is a
+    conditional necessity/absorption diagnostic, not an additive independent chi2.
+decomposition:
+  target_band:
+    name: ell_600_999
+    min: 600
+    max: 999
+  ell_bands:
+  - name: ell_lt_600
+    min: 0
+    max: 599
+  - name: ell_600_999
+    min: 600
+    max: 999
+  - name: ell_1000_1499
+    min: 1000
+    max: 1499
+  - name: ell_1500_2000
+    min: 1500
+    max: 2000
+  - name: ell_2001_plus
+    min: 2001
+    max: 100000
+  signed_full_covariance_formula: c_i = r_i * (C^-1 r)_i
+  covariance_block_pair_definition: diagonal g,g = r_g^T P_gg r_g; off-diagonal g,h
+    = 2 r_g^T P_gh r_h, with P=C^-1. The complete pair sum reconstructs the full quadratic
+    chi2.
+  independent_chi2_interpretation: false
+  causal_systematic_identification: false
+execution:
+  baseline_restarts:
+  - 0
+  - 1
+  - 2
+  lock_restarts:
+  - 0
+  - 1
+  restart_signs:
+  - 0.0
+  - 1.0
+  - -1.0
+  nuisance_jitter:
+    A_planck: 0.0008
+    calTE: 0.002
+    calEE: 0.002
+    amp_143: 0.2
+    amp_143x217: 0.2
+    amp_217: 0.2
+    n_143: 0.04
+    n_143x217: 0.04
+    n_217: 0.04
+  minimizer: bobyqa
+  ignore_prior: false
+  max_evals: 1280
+  rhoend: 0.002
+  seed_base: 170170
+  github_hard_limit_minutes: 360
+  workflow_job_timeout_minutes: 300
+  soft_stop_minutes: 270
+  safe_runtime_target_minutes: 270
+  runtime_risk: MODERATE
+  runtime_basis: Q014 documented 120–255 minute atomic Planck optimizer jobs with
+    cosmology free. Q017 freezes cosmology and profiles only nine full-MF nuisance
+    parameters, but no Q017-specific runtime measurement exists yet; independent restart
+    and lock profiles are therefore split before execution.
+  checkpointing: false
+  checkpoint_reason: Cobaya/Py-BOBYQA optimizer state in the frozen stack is not reliably
+    serializable. Each start is atomic; partial finite minima are preserved but are
+    not called genuine resume checkpoints.
+validation:
+  endpoint_h0_abs_tol: 1.0e-08
+  covariance_closure_abs_tol: 0.0002
+  profile_multistart_spread_max: 1.0
+  negative_lock_cost_tolerance: 0.05
+  require_two_complete_restarts_per_profile_family: true
+  q015_full_mf_reference_closure_required: true
+  full_mf_setup_failure_is_model_failure: false
+classification_thresholds:
+  role: PRE_REGISTERED_CONCENTRATION_RULES_NOT_STATISTICAL_SIGNIFICANCE_THRESHOLDS
+  specific_frequency_abs_share_min: 0.67
+  specific_covariance_pair_abs_share_min: 0.67
+  specific_nuisance_lock_share_min: 0.5
+  specific_nuisance_lock_cost_min: 0.5
+  broad_frequency_abs_share_max: 0.5
+  broad_covariance_pair_abs_share_max: 0.5
+  broad_nuisance_lock_share_max: 0.5
+  broad_frequency_effective_number_min: 2.5
+  fallback: INDETERMINATE
+  atomic_nuisance_groups:
+  - calibration
+  - foreground_143
+  - foreground_143x217
+  - foreground_217
+allowed_terminal_classifications:
+- SPECIFIC PLANCK DIRECTION LOCALIZED
+- BROADLY DISTRIBUTED PLANCK PENALTY
+- INDETERMINATE
+claim_boundaries:
+  planck_systematic_proven: false
+  new_physics_proven: false
+  attribution_equals_causality: false
+  q016_primary_globality_reopened: false
+  q011_historical_vector_used_as_planck_endpoint: false
+  q015_frequency_attribution_is_expected_q017_result: false
+  same_planck_data_counted_as_independent_evidence: false
