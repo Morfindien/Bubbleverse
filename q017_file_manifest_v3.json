@@ -1,0 +1,27 @@
+{
+  "critical_repairs": [
+    "All q005_hpc_v24_requirements.txt references corrected to q005_hpc_v14_requirements.txt.",
+    "prepare has no pip cache dependency, so static gates run before cache-path-sensitive heavy jobs.",
+    "static diagnostic upload uses if-no-files-found: warn.",
+    "static tests explicitly reject future v24 references and require prepare cache independence."
+  ],
+  "files": [
+    "q017_planck_direction_localization_v3.py",
+    "q017_planck_direction_localization_v3_config.yml",
+    "q017_setup_v3.sh",
+    "q017_tests_v3.py",
+    "q017_source_lock_v3.json",
+    ".github/workflows/q017-planck-direction-localization-v3.yml"
+  ],
+  "q": "Q017",
+  "repair_version": "V3",
+  "result_id": "R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-003",
+  "run_id": "Q017-PLANCK-DIRECTION-LOCALIZATION-V3",
+  "scientific_surface_changed": false,
+  "technical_parent": {
+    "failure": "setup-python cache-dependency-path typo q005_hpc_v24_requirements.txt",
+    "head_sha": "db687b0a3f71ee3d0c2288dedeb43949c4dc6a0c",
+    "version": "V2",
+    "workflow_run_id": 33842033361
+  }
+}
