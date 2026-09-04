@@ -1,0 +1,122 @@
+project:
+  q: Q025
+  run_id: Q025-FULLMF-BASIN-COMPONENT-ATTRIBUTION-V1
+  result_id: R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-001
+  generated_at: '2026-09-04T22:35:00+02:00'
+  question: >-
+    Which likelihood components, spectra, frequency combinations, and parameter-group
+    interactions are responsible for the strengthened mask dependence of the stable
+    Q022 full-multifrequency basin geometries across masks 3, 6, and 7?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+selection:
+  masks: [3, 6, 7]
+  seeds: [0, 1, 2]
+  edges: [[0, 1], [0, 2], [1, 2]]
+
+parents:
+  q021_raw_github_run: 33882434170
+  q022_github_run: 33902262660
+  q022_execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+  q023_github_run: 33913077353
+  q023_execution_commit: ea5af9a0b25090eb8472adb3c9574dcb4e1efe5c
+  q024_result_id: R-Q024-EDE-FULLMF-BASIN-MATCHING-001
+  q024_exact_github_run: null
+  q024_exact_execution_commit: null
+  q024_related_repository_commit: b8e16629bbc6592ee11f0d90f78c887a913ac4c1
+
+likelihood:
+  architecture: full_mf
+  full_mf: planck_NPIPE_highl_CamSpec.TTTEEE
+  objective_basis: LIKELIHOOD_CHI2_PLUS_EXPLICIT_NORMALIZATION_FREE_SHARED_GAUSSIAN_SHAPES
+  attribution_basis: SIGNED_FULL_COVARIANCE_ALLOCATION_PLUS_FIXED_VECTOR_FUNCTIONAL_HYBRIDS
+
+parameter_groups:
+  cosmology: [omega_b, omega_cdm, fEDE, log10z_c, thetai_scf, H0]
+  primordial: [n_s, logA, tau_reio]
+  shared_nuisance: [A_planck, calTE, calEE]
+  foreground: [amp_143, amp_217, amp_143x217, n_143, n_217, n_143x217]
+
+primordial_handling:
+  within_mask_role: FIXED_COMMON_Q022_COORDINATES
+  include_in_hybrid_grid: false
+  reason: >-
+    Q022 freezes [n_s, logA, tau_reio] per mask/vertex. Q023 therefore has zero
+    within-mask primordial direction energy. The block is validated for equality
+    and preserved intact; this does not reopen or weaken Q021's distributed
+    primordial-coupling result.
+
+reuse:
+  q019_program: q019_planck_cosmology_reprofile_v1.py
+  q019_config: q019_planck_cosmology_reprofile_v1_config.yml
+  q015_program: q015_cmb_attribution_v2.py
+  q015_config: q015_cmb_attribution_v2_config.yml
+  q017_program: q017_planck_direction_localization_v1.py
+  q020_program: q020_direction_localization_v1.py
+  q023_program: q023_basin_directions_v2.py
+
+decomposition:
+  ell_bands:
+    - {name: ell_lt_600, min: 0, max: 599}
+    - {name: ell_600_999, min: 600, max: 999}
+    - {name: ell_1000_1499, min: 1000, max: 1499}
+    - {name: ell_1500_2000, min: 1500, max: 2000}
+    - {name: ell_2001_plus, min: 2001, max: 100000}
+  signed_covariance_formula: c_i = r_i * (C^-1 r)_i
+  covariance_pair_terms_are_independent_chi2: false
+
+execution:
+  python: '3.11'
+  mode: FIXED_VECTOR_ONLY_NO_OPTIMIZATION
+  evaluations_per_edge: 8
+  edge_jobs: 9
+  total_expected_likelihood_evaluations: 72
+  scratch_prefix: q025_runtime/model
+  github_hard_limit_minutes: 360
+  workflow_timeout_minutes: 300
+  safe_runtime_target_minutes: 270
+  max_parallel: 6
+  checkpointing: false
+  recovery: RERUN_ONLY_FAILED_EDGE_JOB
+
+validation:
+  primordial_identity_abs_tol: 1.0e-12
+  covariance_closure_abs_tol: 2.0e-4
+  require_all_9_edges: true
+  require_exactly_72_fixed_vector_evaluations: true
+
+rules:
+  no_optimization: true
+  no_sampling: true
+  no_new_endpoints: true
+  no_q024_permutation_rerun: true
+  objective_difference_not_basin_identity: true
+  parameter_movement_not_physical_cause: true
+  foreground_movement_not_systematic_proof: true
+  calibration_movement_not_failure_proof: true
+  functional_attribution_not_causality: true
+  signed_negative_contributions_allowed: true
+  preserve_covariance_coupling: true
+  no_cross_likelihood_chi2_sum: true
+  q021_distributed_primordial_result_preserved: true
+  q022_stable_multibasin_preserved: true
+  q023_result_preserved: true
+  q024_result_preserved: true
+
+claim_boundaries:
+  planck_systematic_proven: false
+  foreground_systematic_proven: false
+  calibration_failure_proven: false
+  distinct_physical_cosmologies_proven: false
+  posterior_volume_modes_measured: false
+  physical_causality_claimed: false
+  q022_reopened: false
+  q023_reopened: false
+  q024_reopened: false
+
+sources: [K-039, K-044, K-046, K-047]

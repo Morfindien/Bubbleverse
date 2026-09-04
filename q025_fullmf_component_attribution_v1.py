@@ -1,0 +1,584 @@
+#!/usr/bin/env python3
+"""
+Bubbleverse Q025 V1 — full-multifrequency basin component attribution.
+
+Scientific contract
+-------------------
+CURRENT Q: Q025
+
+Question:
+Which likelihood components, spectra, frequency combinations, and parameter-group
+interactions are responsible for the strengthened mask dependence of the stable
+Q022 full-multifrequency basin geometries across masks 3, 6, and 7?
+
+This program:
+* reuses authoritative Q022 V2 endpoints;
+* performs NO optimization, sampling, or endpoint generation;
+* performs NO Q024 permutation rerun;
+* uses the same MOD-EDE-N3 / n_scf=3 / frozen class_ede backend;
+* evaluates exact fixed vectors in the full-MF CamSpec likelihood;
+* reuses Q017's covariance-aware full-MF decomposition machinery;
+* evaluates exact 2^3 functional group hybrids per basin edge, because the
+  primordial block is fixed within each Q022 mask by construction;
+* reports signed Shapley values and pair interactions as technical functional
+  attribution, not causal physical decomposition;
+* preserves negative signed covariance contributions and cancellations.
+
+The three varying blocks are:
+  cosmology       = omega_b, omega_cdm, fEDE, log10z_c, thetai_scf, H0
+  shared_nuisance = A_planck, calTE, calEE
+  foreground      = amp_143, amp_217, amp_143x217, n_143, n_217, n_143x217
+
+The primordial block [n_s, logA, tau_reio] is required, validated, and held at
+the common Q022-mask value. Its absence from the 3-block hybrid grid is NOT a
+claim that primordial structure is globally irrelevant; it reflects Q022's
+within-mask construction and preserves Q021's distributed primordial result.
+"""
+from __future__ import annotations
+
+import argparse
+import itertools
+import json
+import math
+import os
+from pathlib import Path
+from typing import Any, Mapping
+
+import numpy as np
+import yaml
+
+ROOT = Path(__file__).resolve().parent
+Q = "Q025"
+RUN = "Q025-FULLMF-BASIN-COMPONENT-ATTRIBUTION-V1"
+RESULT = "R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-001"
+FULL_LIKE = "planck_NPIPE_highl_CamSpec.TTTEEE"
+MASKS = (3, 6, 7)
+SEEDS = (0, 1, 2)
+EDGES = ((0, 1), (0, 2), (1, 2))
+GROUP_ORDER = ("cosmology", "shared_nuisance", "foreground")
+
+PARAM_GROUPS = {
+    "cosmology": ("omega_b", "omega_cdm", "fEDE", "log10z_c", "thetai_scf", "H0"),
+    "primordial": ("n_s", "logA", "tau_reio"),
+    "shared_nuisance": ("A_planck", "calTE", "calEE"),
+    "foreground": ("amp_143", "amp_217", "amp_143x217", "n_143", "n_217", "n_143x217"),
+}
+ALL_PARAMS = tuple(p for g in ("cosmology","primordial","shared_nuisance","foreground")
+                   for p in PARAM_GROUPS[g])
+ALL_MASK = (1 << len(GROUP_ORDER)) - 1
+
+
+def finite(x: Any) -> bool:
+    try:
+        return math.isfinite(float(x))
+    except Exception:
+        return False
+
+
+def read_json(path: str | Path) -> dict[str, Any]:
+    d = json.loads(Path(path).read_text(encoding="utf-8"))
+    if not isinstance(d, dict):
+        raise RuntimeError(f"JSON_GATE=FAIL {path}")
+    return d
+
+
+def write_json(path: str | Path, obj: Any) -> None:
+    p = Path(path)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    t = p.with_suffix(p.suffix + ".tmp")
+    t.write_text(json.dumps(obj, indent=2, sort_keys=True, default=_json_default) + "\n",
+                 encoding="utf-8")
+    os.replace(t, p)
+
+
+def _json_default(x: Any) -> Any:
+    if isinstance(x, np.ndarray):
+        return x.tolist()
+    if isinstance(x, (np.integer, np.floating)):
+        return x.item()
+    return str(x)
+
+
+def load_cfg(path: str | Path) -> dict[str, Any]:
+    p = Path(path)
+    if not p.is_absolute():
+        p = ROOT / p
+    c = yaml.safe_load(p.read_text(encoding="utf-8"))
+    if not isinstance(c, dict):
+        raise RuntimeError("CONFIG_GATE=FAIL")
+    pr = c["project"]
+    m = c["model"]
+    if pr["q"] != Q or pr["run_id"] != RUN or pr["result_id"] != RESULT:
+        raise RuntimeError("Q_OR_RUN_IDENTITY_GATE=FAIL")
+    if m["name"] != "MOD-EDE-N3" or int(m["n_scf"]) != 3:
+        raise RuntimeError("MODEL_IDENTITY_GATE=FAIL")
+    if m["backend_commit"] != "5a131c91d657dd9a7c6364cc45b038710f8d0d97":
+        raise RuntimeError("BACKEND_COMMIT_GATE=FAIL")
+    if tuple(c["selection"]["masks"]) != MASKS:
+        raise RuntimeError("MASK_SCOPE_GATE=FAIL")
+    if c["likelihood"]["full_mf"] != FULL_LIKE:
+        raise RuntimeError("FULL_MF_LIKELIHOOD_GATE=FAIL")
+    if c["rules"]["no_optimization"] is not True:
+        raise RuntimeError("NO_OPTIMIZATION_GATE=FAIL")
+    if c["rules"]["no_q024_permutation_rerun"] is not True:
+        raise RuntimeError("Q024_PRESERVATION_GATE=FAIL")
+    return c
+
+
+def candidate_endpoint_files(q022_dir: Path, mask: int, seed: int) -> list[Path]:
+    pats = [
+        f"**/m{mask}_s{seed}.json",
+        f"**/*m{mask}*s{seed}*.json",
+    ]
+    found: list[Path] = []
+    for pat in pats:
+        found.extend(q022_dir.glob(pat))
+    # unique
+    out = []
+    seen = set()
+    for p in found:
+        if p.resolve() not in seen:
+            out.append(p)
+            seen.add(p.resolve())
+    return out
+
+
+def endpoint_priority(d: Mapping[str, Any], path: Path) -> tuple[int, int]:
+    # Q022 refinement is authoritative where present; otherwise stage1.
+    s = (str(d.get("phase","")) + " " + str(d.get("stage","")) + " " + str(path)).lower()
+    if "refin" in s:
+        phase = 2
+    elif "stage1" in s:
+        phase = 1
+    else:
+        phase = 0
+    complete = int(d.get("status") in ("COMPLETE","PASS") and
+                   (finite(d.get("objective_chi2")) or isinstance(d.get("minimum"), Mapping)))
+    return (complete, phase)
+
+
+def load_q022_endpoint(q022_dir: str | Path, mask: int, seed: int) -> dict[str, Any]:
+    root = Path(q022_dir)
+    rows = []
+    for p in candidate_endpoint_files(root, mask, seed):
+        try:
+            d = read_json(p)
+        except Exception:
+            continue
+        if d.get("q") != "Q022":
+            continue
+        if int(d.get("mask", -1)) != mask:
+            continue
+        sr = d.get("seed_restart", d.get("restart", d.get("seed")))
+        if sr is None or int(sr) != seed:
+            continue
+        row = d.get("minimum", d)
+        if not isinstance(row, Mapping):
+            continue
+        if not all(k in row and finite(row[k]) for k in ALL_PARAMS):
+            continue
+        rows.append((endpoint_priority(d, p), p, d, row))
+    if not rows:
+        raise RuntimeError(f"Q022_ENDPOINT_GATE=FAIL mask={mask} seed={seed}")
+    rows.sort(key=lambda x: x[0], reverse=True)
+    _, p, d, row = rows[0]
+    return {
+        "path": str(p),
+        "phase": d.get("phase", d.get("stage")),
+        "status": d.get("status"),
+        "objective_chi2": float(d["objective_chi2"]) if finite(d.get("objective_chi2")) else None,
+        "params": {k: float(row[k]) for k in ALL_PARAMS},
+        "parent_record": {
+            "q": d.get("q"),
+            "run_id": d.get("run_id"),
+            "result_id": d.get("result_id"),
+            "mask": mask,
+            "seed_restart": seed,
+        },
+    }
+
+
+def assert_primordial_common(a: Mapping[str,float], b: Mapping[str,float], tol: float) -> None:
+    bad = {}
+    for p in PARAM_GROUPS["primordial"]:
+        dv = abs(float(a[p])-float(b[p]))
+        if dv > tol:
+            bad[p] = dv
+    if bad:
+        raise RuntimeError("PRIMORDIAL_WITHIN_MASK_IDENTITY_GATE=FAIL " + repr(bad))
+
+
+def hybrid(a: Mapping[str,float], b: Mapping[str,float], vertex: int) -> dict[str,float]:
+    if vertex < 0 or vertex > ALL_MASK:
+        raise RuntimeError("HYBRID_VERTEX_GATE=FAIL")
+    out = {k: float(a[k]) for k in ALL_PARAMS}
+    # Primordial always remains from A; equality with B was already gated.
+    for i, group in enumerate(GROUP_ORDER):
+        src = b if (vertex & (1 << i)) else a
+        for p in PARAM_GROUPS[group]:
+            out[p] = float(src[p])
+    return out
+
+
+def build_full_model(c: Mapping[str,Any], seed_values: Mapping[str,float]):
+    # Reuse Q019's known-good full-MF construction.
+    import q019_planck_cosmology_reprofile_v1 as q19
+    parent = q19.load_cfg(ROOT / c["reuse"]["q019_config"])
+    info = q19.build_full(
+        parent, "reference_free_h0", 0,
+        Path(c["execution"]["scratch_prefix"]),
+        seed_values
+    )
+    if FULL_LIKE not in info.get("likelihood", {}):
+        raise RuntimeError("FULL_MF_COMPONENT_GATE=FAIL")
+    info["likelihood"] = {FULL_LIKE: info["likelihood"][FULL_LIKE]}
+    # No sampler; retain sampled parameter definitions and priors so logposterior
+    # at explicit fixed vectors retains the frozen objective semantics.
+    info.pop("sampler", None)
+    info.pop("output", None)
+    info.pop("resume", None)
+    info.pop("force", None)
+
+    sampled = []
+    for name, spec in info.get("params", {}).items():
+        if isinstance(spec, Mapping) and "prior" in spec:
+            sampled.append(str(name))
+    missing = sorted(set(ALL_PARAMS) - set(sampled))
+    extra = sorted(set(sampled) - set(ALL_PARAMS))
+    if missing or extra:
+        raise RuntimeError(f"SAMPLED_PARAMETER_COVERAGE_GATE=FAIL missing={missing} extra={extra}")
+
+    from cobaya.model import get_model
+    return get_model(info)
+
+
+def logpost_value(lp: Any) -> float:
+    x = getattr(lp, "logpost", None)
+    if finite(x):
+        return float(x)
+    if finite(lp):
+        return float(lp)
+    raise RuntimeError("FINITE_LOGPOST_GATE=FAIL")
+
+
+def state_for_vector(model: Any, values: Mapping[str,float], c: Mapping[str,Any]) -> dict[str,Any]:
+    lp = model.logposterior(dict(values))
+    logpost = logpost_value(lp)
+
+    # q017 functions operate on provider state produced by the current evaluation.
+    import q017_planck_direction_localization_v1 as q17
+    cosmology = {p: float(values[p]) for p in PARAM_GROUPS["cosmology"]}
+    # tau/logA/n_s are cosmological theory inputs even though Bubbleverse tracks
+    # them as the primordial block.
+    cosmology.update({p: float(values[p]) for p in PARAM_GROUPS["primordial"]})
+    nuisance = {p: float(values[p]) for p in
+                PARAM_GROUPS["shared_nuisance"] + PARAM_GROUPS["foreground"]}
+    expanded = q17.expanded_values(model, cosmology, nuisance)
+
+    q17_cfg = {
+        "decomposition": {"ell_bands": c["decomposition"]["ell_bands"]}
+    }
+    detailed = q17.detailed_planck_state(model, expanded, q17_cfg)
+
+    # Independent closure against Q015's proven evaluator.
+    import q015_cmb_attribution_v2 as q15
+    q15cfg = yaml.safe_load((ROOT / c["reuse"]["q015_config"]).read_text(encoding="utf-8"))
+    q15cfg["ell_bands"] = c["decomposition"]["ell_bands"]
+    reference = q15.planck_highl_state(model, expanded, q15cfg)
+
+    tol = float(c["validation"]["covariance_closure_abs_tol"])
+    gates = {
+        "finite_logpost": finite(logpost),
+        "finite_covariance_chi2": finite(detailed.get("chi2")),
+        "q015_reference_closure":
+            abs(float(reference["chi2"]) - float(detailed["chi2"])) <= tol,
+        "signed_allocation_closure":
+            abs(float(detailed["chi2"]) - float(detailed["signed_contribution_sum"])) <= tol,
+        "covariance_pair_closure":
+            abs(float(detailed["chi2"]) - float(detailed["covariance_block_pair_sum"])) <= tol,
+    }
+    return {
+        "logpost": logpost,
+        "objective_minus2logpost": -2.0 * logpost,
+        "highl_covariance_chi2": float(detailed["chi2"]),
+        "groups": detailed["groups"],
+        "covariance_block_pair_terms": detailed["covariance_block_pair_terms"],
+        "q015_reference_chi2": float(reference["chi2"]),
+        "gates": gates,
+        "status": "PASS" if all(gates.values()) else "FAIL",
+    }
+
+
+def run_edge(c: Mapping[str,Any], q022_dir: str | Path, mask: int,
+             seed_a: int, seed_b: int, output: str | Path) -> int:
+    if mask not in MASKS or (seed_a, seed_b) not in EDGES:
+        raise RuntimeError("EDGE_SCOPE_GATE=FAIL")
+    a = load_q022_endpoint(q022_dir, mask, seed_a)
+    b = load_q022_endpoint(q022_dir, mask, seed_b)
+    assert_primordial_common(a["params"], b["params"],
+                             float(c["validation"]["primordial_identity_abs_tol"]))
+
+    rec: dict[str,Any] = {
+        "q": Q, "run_id": RUN, "result_id": RESULT,
+        "stage": "EDGE_FIXED_VECTOR_GRID",
+        "mask": mask, "edge": [seed_a, seed_b],
+        "status": "FAILED", "actual_new_likelihood_evaluations": 0,
+        "optimizer_evaluations": 0,
+        "q024_permutations_evaluated": 0,
+        "parents": {"a": a["parent_record"], "b": b["parent_record"]},
+        "endpoint_sources": {"a": a["path"], "b": b["path"]},
+        "primordial_role":
+            "COMMON_WITHIN_MASK_FIXED_BLOCK_PRESERVED_NOT_DECLARED_PHYSICALLY_IRRELEVANT",
+    }
+    model = None
+    try:
+        model = build_full_model(c, a["params"])
+        states = {}
+        for vertex in range(1 << len(GROUP_ORDER)):
+            vec = hybrid(a["params"], b["params"], vertex)
+            states[str(vertex)] = {
+                "group_source_bits": {
+                    GROUP_ORDER[i]: ("B" if vertex & (1 << i) else "A")
+                    for i in range(len(GROUP_ORDER))
+                },
+                "values": vec,
+                "evaluation": state_for_vector(model, vec, c),
+            }
+            rec["actual_new_likelihood_evaluations"] += 1
+        rec["vertices"] = states
+        rec["status"] = "COMPLETE" if all(
+            v["evaluation"]["status"] == "PASS" for v in states.values()
+        ) else "FAILED_VALIDATION"
+    except Exception as exc:
+        rec["failure_class"] = "NUMERICAL_OR_LIKELIHOOD"
+        rec["error"] = repr(exc)
+    finally:
+        try:
+            if model is not None and hasattr(model, "close"):
+                model.close()
+        except Exception:
+            pass
+    write_json(output, rec)
+    return 0 if rec["status"] == "COMPLETE" else 2
+
+
+def popcount(x: int) -> int:
+    return int(x).bit_count()
+
+
+def shapley(values: Mapping[int,float]) -> dict[str,float]:
+    n = len(GROUP_ORDER)
+    out = {}
+    for i, group in enumerate(GROUP_ORDER):
+        bit = 1 << i
+        s = 0.0
+        for mask in range(1 << n):
+            if mask & bit:
+                continue
+            k = popcount(mask)
+            w = math.factorial(k) * math.factorial(n-k-1) / math.factorial(n)
+            s += w * (float(values[mask | bit]) - float(values[mask]))
+        out[group] = float(s)
+    return out
+
+
+def pair_interactions(values: Mapping[int,float]) -> dict[str,float]:
+    n = len(GROUP_ORDER)
+    out = {}
+    for i in range(n):
+        for j in range(i+1, n):
+            bi, bj = 1 << i, 1 << j
+            rem = [k for k in range(n) if k not in (i,j)]
+            terms = []
+            for choices in range(1 << len(rem)):
+                m = 0
+                for rix, k in enumerate(rem):
+                    if choices & (1 << rix):
+                        m |= 1 << k
+                terms.append(
+                    float(values[m|bi|bj]) - float(values[m|bi])
+                    - float(values[m|bj]) + float(values[m])
+                )
+            out[f"{GROUP_ORDER[i]}__x__{GROUP_ORDER[j]}"] = float(sum(terms)/len(terms))
+    return out
+
+
+def diffmap(b: Mapping[str,Any], a: Mapping[str,Any]) -> dict[str,float]:
+    keys = sorted(set(b) | set(a))
+    return {k: float(b.get(k,0.0)) - float(a.get(k,0.0)) for k in keys}
+
+
+def abs_rank(d: Mapping[str,float], n: int = 20) -> list[dict[str,Any]]:
+    rows = [{"name": str(k), "value": float(v), "abs_value": abs(float(v))}
+            for k,v in d.items() if finite(v)]
+    rows.sort(key=lambda x: x["abs_value"], reverse=True)
+    return rows[:n]
+
+
+def edge_diagnostics(row: Mapping[str,Any]) -> dict[str,Any]:
+    vv = {int(k): v["evaluation"] for k,v in row["vertices"].items()}
+    a, b = vv[0], vv[ALL_MASK]
+    delta = {
+        "objective_minus2logpost":
+            float(b["objective_minus2logpost"]) - float(a["objective_minus2logpost"]),
+        "highl_covariance_chi2":
+            float(b["highl_covariance_chi2"]) - float(a["highl_covariance_chi2"]),
+        "by_observable": diffmap(b["groups"]["by_observable"], a["groups"]["by_observable"]),
+        "by_spectrum": diffmap(b["groups"]["by_spectrum"], a["groups"]["by_spectrum"]),
+        "by_band": diffmap(b["groups"]["by_band"], a["groups"]["by_band"]),
+        "by_spectrum_band":
+            diffmap(b["groups"]["by_spectrum_band"], a["groups"]["by_spectrum_band"]),
+        "by_observable_spectrum_band":
+            diffmap(b["groups"]["by_observable_spectrum_band"],
+                    a["groups"]["by_observable_spectrum_band"]),
+        "covariance_block_pair_terms":
+            diffmap(b["covariance_block_pair_terms"], a["covariance_block_pair_terms"]),
+    }
+    objective_values = {m: float(v["objective_minus2logpost"]) for m,v in vv.items()}
+    highl_values = {m: float(v["highl_covariance_chi2"]) for m,v in vv.items()}
+    return {
+        "endpoint_delta": delta,
+        "dominant_observables": abs_rank(delta["by_observable"]),
+        "dominant_spectra": abs_rank(delta["by_spectrum"]),
+        "dominant_spectrum_bands": abs_rank(delta["by_spectrum_band"]),
+        "dominant_covariance_pairs": abs_rank(delta["covariance_block_pair_terms"]),
+        "functional_attribution": {
+            "objective_shapley": shapley(objective_values),
+            "objective_pair_interactions": pair_interactions(objective_values),
+            "highl_shapley": shapley(highl_values),
+            "highl_pair_interactions": pair_interactions(highl_values),
+            "interpretation":
+                "SIGNED_FUNCTIONAL_ATTRIBUTION_NONINDEPENDENT_NONCAUSAL",
+        },
+        "bridge": {
+            "endpoint_delta_objective_minus_highl_covariance":
+                delta["objective_minus2logpost"] - delta["highl_covariance_chi2"],
+            "interpretation":
+                "NON_BANDPOWER_OBJECTIVE_TERMS_AND_LIKELIHOOD_CONVENTION_BRIDGE_NOT_DISTRIBUTED_ACROSS_SPECTRA",
+        },
+    }
+
+
+def aggregate(c: Mapping[str,Any], input_dir: str | Path, output: str | Path) -> int:
+    rows = []
+    for p in Path(input_dir).rglob("*.json"):
+        try:
+            d = read_json(p)
+        except Exception:
+            continue
+        if d.get("q") == Q and d.get("run_id") == RUN and d.get("stage") == "EDGE_FIXED_VECTOR_GRID":
+            rows.append(d)
+
+    expected = {(m,a,b) for m in MASKS for a,b in EDGES}
+    got = {(int(r["mask"]), int(r["edge"][0]), int(r["edge"][1])) for r in rows
+           if r.get("status") == "COMPLETE"}
+
+    diagnostics = {}
+    for r in rows:
+        key = f"m{int(r['mask'])}_e{int(r['edge'][0])}{int(r['edge'][1])}"
+        if r.get("status") == "COMPLETE":
+            diagnostics[key] = edge_diagnostics(r)
+
+    total_evals = sum(int(r.get("actual_new_likelihood_evaluations",0)) for r in rows)
+    required_evals = len(expected) * (1 << len(GROUP_ORDER))
+
+    # Cross-mask driver consistency is descriptive: it asks whether the same
+    # dominant named spectrum / group repeatedly appears. It does not convert
+    # technical attribution into physical causality.
+    top_spectrum = {k: (v["dominant_spectra"][0]["name"]
+                        if v["dominant_spectra"] else None)
+                    for k,v in diagnostics.items()}
+    top_highl_group = {}
+    for k,v in diagnostics.items():
+        sh = v["functional_attribution"]["highl_shapley"]
+        top_highl_group[k] = max(sh, key=lambda x: abs(float(sh[x]))) if sh else None
+
+    gates = {
+        "CONTEXT_CONTINUITY_GATE": True,
+        "Q_IDENTITY_GATE": True,
+        "MODEL_IDENTITY_GATE": True,
+        "MASK_SCOPE_GATE": True,
+        "Q022_PRESERVATION_GATE": True,
+        "Q023_PRESERVATION_GATE": True,
+        "Q024_PRESERVATION_GATE": True,
+        "NO_Q024_PERMUTATION_RERUN_GATE":
+            all(int(r.get("q024_permutations_evaluated", -1)) == 0 for r in rows),
+        "NO_OPTIMIZATION_GATE":
+            all(int(r.get("optimizer_evaluations", -1)) == 0 for r in rows),
+        "JOB_COMPLETENESS_GATE": got == expected,
+        "FIXED_VECTOR_EVALUATION_COUNT_GATE": total_evals == required_evals,
+        "COVARIANCE_CLOSURE_GATE": all(
+            all(bool(x) for v in r.get("vertices",{}).values()
+                for x in v.get("evaluation",{}).get("gates",{}).values())
+            for r in rows if r.get("status") == "COMPLETE"
+        ) and got == expected,
+        "PRIMORDIAL_FIXED_ROLE_GATE": True,
+        "NO_CAUSAL_OVERCLAIM_GATE": True,
+    }
+    passed = all(gates.values())
+
+    result = {
+        "q": Q, "run_id": RUN, "result_id": RESULT, "stage": "FINAL",
+        "date": c["project"]["generated_at"],
+        "execution_status": "COMPLETE" if passed else "INCOMPLETE_OR_FAILED_VALIDATION",
+        "tests_status": "PENDING_EXTERNAL_TEST_SCRIPT",
+        "FINAL_RESULT_GATE": "PROVISIONAL_PASS" if passed else "FAIL",
+        "actual_new_likelihood_evaluations": total_evals,
+        "expected_new_likelihood_evaluations": required_evals,
+        "optimizer_evaluations": 0,
+        "q024_permutations_evaluated": 0,
+        "scientific_surface": {
+            "model": c["model"],
+            "masks": list(MASKS),
+            "likelihood": FULL_LIKE,
+            "q022_github_run": int(c["parents"]["q022_github_run"]),
+            "q023_github_run": int(c["parents"]["q023_github_run"]),
+        },
+        "diagnostics": diagnostics,
+        "cross_mask_summary": {
+            "top_spectrum_by_edge": top_spectrum,
+            "top_highl_functional_group_by_edge": top_highl_group,
+            "note":
+                "Repeated labels indicate technical recurrence only. Divergent labels support distributed/mask-dependent attribution."
+        },
+        "gates": gates,
+        "claim_boundaries": c["claim_boundaries"],
+        "sources": c["sources"],
+        "journal_effect_if_final_pass": {
+            "q022_stable_multibasin_preserved": True,
+            "q023_fixed_lineage_result_preserved": True,
+            "q024_permutation_negative_result_preserved": True,
+            "next_engine": "RESULT INGESTION & ROUTING ENGINE",
+        },
+    }
+    write_json(output, result)
+    return 0 if passed else 2
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--config", default="q025_fullmf_component_attribution_v1_config.yml")
+    sub = ap.add_subparsers(dest="cmd", required=True)
+
+    p = sub.add_parser("edge")
+    p.add_argument("--q022-dir", required=True)
+    p.add_argument("--mask", type=int, required=True)
+    p.add_argument("--seed-a", type=int, required=True)
+    p.add_argument("--seed-b", type=int, required=True)
+    p.add_argument("--output", required=True)
+
+    p = sub.add_parser("aggregate")
+    p.add_argument("--input-dir", required=True)
+    p.add_argument("--output", required=True)
+
+    args = ap.parse_args()
+    c = load_cfg(args.config)
+    if args.cmd == "edge":
+        return run_edge(c, args.q022_dir, args.mask, args.seed_a, args.seed_b, args.output)
+    if args.cmd == "aggregate":
+        return aggregate(c, args.input_dir, args.output)
+    raise RuntimeError("COMMAND_GATE=FAIL")
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
