@@ -1,0 +1,111 @@
+project:
+  q: Q019
+  run_id: Q019-PLANCK-COSMOLOGY-REPROFILE-V1
+  result_id: R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-001
+  case_id: NOT DOCUMENTED
+  generated_at: '2026-09-04T09:28:00+02:00'
+  title: Bubbleverse Q019 Planck cosmological reprofile
+
+scientific_question: >-
+  When MOD-EDE-N3 is no longer held fixed at Q016's certified cosmological
+  endpoints, but cosmology is reprofiled separately under Q016 matched/CamSpec-lite
+  and Q017 full-multifrequency CamSpec with the same model definition and
+  consistent shared prior/objective semantics, does likelihood choice materially
+  change the preferred EDE and H0 parameters, or mainly the penalty geometry at
+  high H0?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+profile:
+  modes:
+    - reference_free_h0
+    - fixed_h0_71p5
+  target_h0: 71.5
+  architectures:
+    lite:
+      label: Q016_MATCHED_CAMSPEC_LITE
+      likelihood_family: CamSpec-NPIPE-lite
+      repository: HTJense/camspec_npipe-lite
+      commit: e387852d2ae8863735814449c682b089c3059318
+    full_mf:
+      label: Q017_FULL_MULTIFREQUENCY_CAMSPEC
+      likelihood_component: planck_NPIPE_highl_CamSpec.TTTEEE
+      nuisance:
+        - A_planck
+        - calTE
+        - calEE
+        - amp_143
+        - amp_217
+        - amp_143x217
+        - n_143
+        - n_217
+        - n_143x217
+
+objective:
+  basis: LIKELIHOOD_CHI2_PLUS_EXPLICIT_NORMALIZATION_FREE_SHARED_GAUSSIAN_SHAPES
+  cobaya_ignore_prior: true
+  parameter_priors_used_as_density: false
+  parameter_priors_retained_for_hard_support_and_reference_geometry: true
+  normalization_constants_in_objective: false
+  shared_gaussian_shapes:
+    tau_reio: {mean: 0.051, sigma: 0.006}
+    A_planck: {mean: 1.0, sigma: 0.0025}
+    calTE: {mean: 1.0, sigma: 0.01}
+    calEE: {mean: 1.0, sigma: 0.01}
+  architecture_specific_uniform_nuisance_bounds_are_not_physical_parameters: true
+
+execution:
+  python: '3.11'
+  optimizer: cobaya_minimize_bobyqa
+  max_evals: 200000
+  rhoend: 0.0001
+  restart_patterns: 6
+  max_parallel: 6
+  github_job_timeout_minutes: 330
+  soft_stop_minutes: 315
+
+validation:
+  minimum_complete_restarts: 6
+  multistart_delta_objective_max: 1.0
+  q016_free_h0_abs_tolerance: 0.05
+  q016_lite_penalty_abs_tolerance: 0.10
+  negative_cross_cost_tolerance: 0.25
+  cross_objective_materiality_threshold: 1.0
+  note: >-
+    The cross-objective threshold is an operational geometry threshold, not a
+    sigma significance claim or an independent chi-square test.
+
+references:
+  q016_free_h0: 67.988328967159
+  q016_lite_penalty: 5.823856774789
+  q017_full_mf_frozen_penalty: 17.39793487230054
+  q018_architecture_gap: 11.574078097511538
+
+parents:
+  q016:
+    result_id: R-Q016-EDE-MATCHED-CMB-SURFACE-016
+    endpoint_lock: q016_v16_endpoint_lock_mechanism_v4.json
+  q017:
+    result_id: R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-003
+    classification: INDETERMINATE
+  q018:
+    result_id: R-Q018-EDE-PLANCK-LIKELIHOOD-BRIDGE-003
+    classification: COUPLED COMPONENTS / LIKELIHOOD-ARCHITECTURE DEPENDENCE
+
+rules:
+  no_cross_chain_chi2_sum: true
+  q015_q018_not_independent_planck_observations: true
+  q018_architecture_gap_not_physical_chi2_component: true
+  no_causal_systematic_claim: true
+  no_new_physics_claim: true
+  preserve_q017_indeterminate: true
+  preserve_q018_classification: true
+  common_cmb_residual_q016_reopen: false
+  planck_optimizer_artifact_reopen: false
+
+provenance:
+  source_lock: q019_source_lock_v1.json

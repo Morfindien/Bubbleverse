@@ -1,0 +1,69 @@
+{
+  "bubbleverse_repository": "Morfindien/Bubbleverse",
+  "external_sources": [
+    {
+      "id": "K-039",
+      "reference": "arXiv:2311.00524",
+      "type": "PRIMARY_RESEARCH"
+    },
+    {
+      "id": "K-044",
+      "reference": "arXiv:2205.10869",
+      "type": "PRIMARY_RESEARCH"
+    },
+    {
+      "id": "K-045",
+      "reference": "arXiv:2510.09430",
+      "type": "PRIMARY_RESEARCH"
+    },
+    {
+      "id": "K-046",
+      "reference": "Cobaya 3.5.6 minimizer documentation/source",
+      "type": "OFFICIAL_TECHNICAL"
+    }
+  ],
+  "inspected_main_sha": "1883370cab6bc1bf94c48300015f8306ef1dfe47",
+  "internal_parents": [
+    {
+      "github_run_id": 33785257733,
+      "head_sha": "3a154b44cbef4b2a3d10fdb12435105921bfc962",
+      "id": "R-Q016-EDE-MATCHED-CMB-SURFACE-016",
+      "role": "LITE_REFERENCE_AND_ENDPOINT_SEEDS"
+    },
+    {
+      "classification": "INDETERMINATE",
+      "github_run_id": 33842355384,
+      "head_sha": "277bb274e5783831303b542681e8cf87a70d31c2",
+      "id": "R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-003",
+      "role": "FULL_MF_ARCHITECTURE_REFERENCE"
+    },
+    {
+      "classification": "COUPLED COMPONENTS / LIKELIHOOD-ARCHITECTURE DEPENDENCE",
+      "github_run_id": 33846317737,
+      "head_sha": "1883370cab6bc1bf94c48300015f8306ef1dfe47",
+      "id": "R-Q018-EDE-PLANCK-LIKELIHOOD-BRIDGE-003",
+      "role": "LIKELIHOOD_ARCHITECTURE_DEPENDENCE_PARENT"
+    }
+  ],
+  "model": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "n_scf": 3,
+    "name": "MOD-EDE-N3"
+  },
+  "q": "Q019",
+  "result_id": "R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-001",
+  "reused_files": [
+    "q016_objective_reprofile_v16.py",
+    "q016_v16_endpoint_lock_mechanism_v4.json",
+    "q014_external_viability_v12.py",
+    "q017_planck_direction_localization_v1.py",
+    "q017_setup_v3.sh"
+  ],
+  "rules": {
+    "no_cross_chain_chi2_sum": true,
+    "q015_q018_are_not_independent_planck_evidence": true,
+    "q018_architecture_gap_is_not_physical_chi2_component": true
+  },
+  "run_id": "Q019-PLANCK-COSMOLOGY-REPROFILE-V1"
+}

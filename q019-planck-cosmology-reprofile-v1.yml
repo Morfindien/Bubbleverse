@@ -1,0 +1,153 @@
+name: Bubbleverse Q019 Planck cosmological reprofile V1
+
+on:
+  workflow_dispatch:
+
+env:
+  CURRENT_Q: Q019
+  RUN_ID: Q019-PLANCK-COSMOLOGY-REPROFILE-V1
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: pip install PyYAML==6.0.2
+      - run: bash q019_setup_v1.sh
+      - id: plan
+        shell: bash
+        run: |
+          python q019_planck_cosmology_reprofile_v1.py \
+            --config q019_planck_cosmology_reprofile_v1_config.yml \
+            plan --output q019_plan_v1.json
+          echo "matrix=$(python -c 'import json; print(json.dumps(json.load(open("q019_plan_v1.json"))["matrix"]))')" >> "$GITHUB_OUTPUT"
+
+  primary_profiles:
+    needs: prepare
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: bash q019_setup_v1.sh
+      - name: Reprofile cosmology
+        run: |
+          mkdir -p q019_profiles
+          python q019_planck_cosmology_reprofile_v1.py \
+            --config q019_planck_cosmology_reprofile_v1_config.yml \
+            profile \
+            --architecture '${{ matrix.architecture }}' \
+            --mode '${{ matrix.mode }}' \
+            --restart '${{ matrix.restart }}' \
+            --output "q019_profiles/${{ matrix.architecture }}_${{ matrix.mode }}_r${{ matrix.restart }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q019-primary-${{ matrix.architecture }}-${{ matrix.mode }}-r${{ matrix.restart }}
+          path: q019_profiles/*.json
+
+  aggregate_primary:
+    needs: primary_profiles
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: pip install PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          path: q019_primary_downloads
+      - run: |
+          python q019_planck_cosmology_reprofile_v1.py \
+            --config q019_planck_cosmology_reprofile_v1_config.yml \
+            aggregate-primary \
+            --input-dir q019_primary_downloads \
+            --output q019_primary_v1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q019-primary-aggregate-v1
+          path: q019_primary_v1.json
+
+  cross_profiles:
+    needs: aggregate_primary
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        target_architecture: [lite, full_mf]
+    runs-on: ubuntu-latest
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: bash q019_setup_v1.sh
+      - uses: actions/download-artifact@v4
+        with:
+          name: q019-primary-aggregate-v1
+          path: q019_primary_input
+      - run: |
+          mkdir -p q019_cross
+          python q019_planck_cosmology_reprofile_v1.py \
+            --config q019_planck_cosmology_reprofile_v1_config.yml \
+            cross-profile \
+            --target-architecture '${{ matrix.target_architecture }}' \
+            --primary q019_primary_input/q019_primary_v1.json \
+            --output "q019_cross/${{ matrix.target_architecture }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q019-cross-${{ matrix.target_architecture }}
+          path: q019_cross/*.json
+
+  final:
+    needs: cross_profiles
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: pip install PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          path: q019_all_downloads
+      - run: |
+          PRIMARY="$(find q019_all_downloads -name q019_primary_v1.json -print -quit)"
+          test -n "$PRIMARY"
+          python q019_planck_cosmology_reprofile_v1.py \
+            --config q019_planck_cosmology_reprofile_v1_config.yml \
+            aggregate-final \
+            --input-dir q019_all_downloads \
+            --primary "$PRIMARY" \
+            --output q019_merged_v1.json
+          python q019_tests_v1.py \
+            --config q019_planck_cosmology_reprofile_v1_config.yml \
+            --merged q019_merged_v1.json \
+            --output q019_tests_v1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q019-final-v1
+          path: |
+            q019_merged_v1.json
+            q019_tests_v1.json
