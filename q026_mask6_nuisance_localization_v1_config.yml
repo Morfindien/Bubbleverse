@@ -1,0 +1,74 @@
+project:
+  q: Q026
+  run_id: Q026-MASK6-NUISANCE-COUPLING-LOCALIZATION-V1
+  result_id: R-Q026-EDE-FULLMF-MASK6-COUPLING-001
+  generated_at: '2026-09-04T23:23:00+02:00'
+  question: >-
+    Why does mask 6 transition to shared-nuisance-dominated basin attribution while
+    masks 3 and 7 remain cosmology-dominated, and can this difference be localized
+    to specific nuisance coordinates, cosmology–nuisance couplings, or mask-sensitive
+    CamSpec covariance/data-model structure without assuming an instrumental or
+    foreground systematic?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+likelihood:
+  architecture: full_mf
+  full_mf: planck_NPIPE_highl_CamSpec.TTTEEE
+
+parents:
+  q022_result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+  q022_github_run: 33902262660
+  q022_execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+  q023_result_id: R-Q023-EDE-FULLMF-BASIN-DIRECTIONS-002
+  q023_github_run: 33913077353
+  q023_execution_commit: ea5af9a0b25090eb8472adb3c9574dcb4e1efe5c
+  q024_result_id: R-Q024-EDE-FULLMF-BASIN-MATCHING-001
+  q024_github_run: 33915600167
+  q024_execution_commit: b8e16629bbc6592ee11f0d90f78c887a913ac4c1
+  q025_result_id: R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-002
+  q025_github_run: 33918779905
+  q025_execution_commit: b2db6827b1caf5405e6a34bff221b6ae4813c1d0
+
+parent_q025_config: q025_fullmf_component_attribution_v2_config.yml
+
+coordinates:
+  cosmology: [omega_b, omega_cdm, fEDE, log10z_c, thetai_scf, H0]
+  shared_nuisance: [A_planck, calTE, calEE]
+
+execution:
+  mode: FIXED_VECTOR_COORDINATE_SWITCH_ONLY
+  masks: [3,6,7]
+  edges: [[0,1],[0,2],[1,2]]
+  evaluations_per_edge: 28
+  total_expected_likelihood_evaluations: 252
+  optimizer_evaluations: 0
+  q024_permutation_evaluations: 0
+  workflow_timeout_minutes: 120
+  safe_runtime_target_minutes: 90
+  checkpointing: false
+
+rules:
+  no_optimization: true
+  no_sampling: true
+  no_new_endpoints: true
+  no_q024_permutation_rerun: true
+  preserve_q025_covariance_decomposition: true
+  objective_coordinate_switch_not_physical_cause: true
+  pair_interaction_not_physical_causality: true
+  nuisance_movement_not_calibration_failure: true
+  frequency_movement_not_instrument_failure: true
+  foreground_movement_not_foreground_systematic: true
+  signed_covariance_terms_preserved: true
+  cancellations_preserved: true
+  q021_result_preserved: true
+  q022_result_preserved: true
+  q023_result_preserved: true
+  q024_result_preserved: true
+  q025_result_preserved: true
+
+sources: [K-039, K-044, K-046, K-047, K-048]
