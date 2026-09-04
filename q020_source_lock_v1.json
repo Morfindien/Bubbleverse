@@ -1,0 +1,74 @@
+{
+  "bubbleverse_repository": "Morfindien/Bubbleverse",
+  "external_sources": [
+    {
+      "id": "K-039",
+      "reference": "arXiv:2311.00524",
+      "type": "PRIMARY_RESEARCH"
+    },
+    {
+      "id": "K-044",
+      "reference": "arXiv:2205.10869",
+      "type": "PRIMARY_RESEARCH"
+    },
+    {
+      "id": "K-045",
+      "reference": "arXiv:2510.09430",
+      "type": "PRIMARY_RESEARCH"
+    },
+    {
+      "id": "K-046",
+      "reference": "Cobaya 3.5.6 minimizer documentation/source",
+      "type": "OFFICIAL_TECHNICAL"
+    }
+  ],
+  "internal_parents": [
+    {
+      "id": "R-Q016-EDE-MATCHED-CMB-SURFACE-016",
+      "role": "LITE_REFERENCE"
+    },
+    {
+      "classification": "INDETERMINATE",
+      "github_run_id": 33842355384,
+      "head_sha": "277bb274e5783831303b542681e8cf87a70d31c2",
+      "id": "R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-003",
+      "role": "NUISANCE_PROFILE_CODE_PATH"
+    },
+    {
+      "classification": "COUPLED COMPONENTS / LIKELIHOOD-ARCHITECTURE DEPENDENCE",
+      "id": "R-Q018-EDE-PLANCK-LIKELIHOOD-BRIDGE-003",
+      "role": "ARCHITECTURE_SAFETY_CONSTRAINT"
+    },
+    {
+      "github_run_id": 33852944805,
+      "head_sha": "b0b5f42b7aae5ba15d4849b4f4d0f9fc01c4e64f",
+      "id": "R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-001",
+      "role": "PRESERVED_CROSS_PROFILE_ENDPOINTS_AND_COSTS"
+    },
+    {
+      "id": "R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-003",
+      "role": "AUTHORITATIVE_Q019_FINAL_STATUS",
+      "status": "PASS"
+    }
+  ],
+  "model": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "n_scf": 3,
+    "name": "MOD-EDE-N3"
+  },
+  "q": "Q020",
+  "result_id": "R-Q020-EDE-PLANCK-CROSS-PROFILE-DIRECTION-001",
+  "reused_files": [
+    "q019_planck_cosmology_reprofile_v1.py",
+    "q019_planck_cosmology_reprofile_v1_config.yml",
+    "q019_setup_v3.sh",
+    "q017_planck_direction_localization_v1.py"
+  ],
+  "rules": {
+    "functional_attributions_are_not_independent_physical_chi2": true,
+    "no_cross_chain_chi2_sum": true,
+    "q018_architecture_gap_is_not_physical_chi2_component": true
+  },
+  "run_id": "Q020-PLANCK-CROSS-PROFILE-DIRECTION-V1"
+}

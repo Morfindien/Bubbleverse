@@ -1,0 +1,159 @@
+project:
+  q: Q020
+  run_id: Q020-PLANCK-CROSS-PROFILE-DIRECTION-V1
+  result_id: R-Q020-EDE-PLANCK-CROSS-PROFILE-DIRECTION-001
+  generated_at: '2026-09-04T14:54:00+02:00'
+  title: Bubbleverse Q020 multidimensional Planck cross-profile direction localization
+
+scientific_question: >-
+  Which multidimensional parameter direction or coupled combination of cosmological
+  and nuisance parameters drives the strongly asymmetric Q019 cross-profile response,
+  and can it be localized without treating correlated likelihood contributions as
+  independent physical chi-square components?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+parents:
+  q019_v1:
+    run_id: Q019-PLANCK-COSMOLOGY-REPROFILE-V1
+    result_id: R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-001
+    github_run_id: 33852944805
+    head_sha: b0b5f42b7aae5ba15d4849b4f4d0f9fc01c4e64f
+    config: q019_planck_cosmology_reprofile_v1_config.yml
+    role: EXACT_CROSS_PROFILE_ENDPOINT_GEOMETRY
+    final_status: SUPERSEDED
+    numerical_cross_profile_outputs_preserved: true
+  q019_v3:
+    run_id: Q019-PLANCK-COSMOLOGY-GLOBALITY-V3
+    result_id: R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-003
+    role: AUTHORITATIVE_Q019_FINAL_STATUS
+    final_status: PASS
+    classification: LIKELIHOOD CHOICE SHIFTS PREFERRED MOD-EDE-N3 REGION
+  q017:
+    result_id: R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-003
+    github_run_id: 33842355384
+    head_sha: 277bb274e5783831303b542681e8cf87a70d31c2
+    classification: INDETERMINATE
+  q018:
+    result_id: R-Q018-EDE-PLANCK-LIKELIHOOD-BRIDGE-003
+    classification: COUPLED COMPONENTS / LIKELIHOOD-ARCHITECTURE DEPENDENCE
+
+references:
+  q019_cross_full_mf: 13.55640578042403
+  q019_cross_lite: 0.8120365008717272
+  q018_architecture_gap: 11.574078097511538
+
+endpoints:
+  lite_v1:
+    cosmology:
+      omega_b: 0.022307801978031044
+      omega_cdm: 0.12478263764711393
+      tau_reio: 0.05161823110533015
+      n_s: 0.9795910437636864
+      logA: 3.0370303923863573
+      fEDE: 0.04627405135919521
+      log10z_c: 3.9592747707254943
+      thetai_scf: 2.9354407798788227
+      H0: 67.97266514132325
+    nuisance:
+      A_planck: 1.0009839042042874
+      calEE: 0.995528454737923
+      calTE: 0.9997631658727365
+
+  full_mf_v1:
+    cosmology:
+      omega_b: 0.022292519629576183
+      omega_cdm: 0.12435089785625782
+      tau_reio: 0.05065090556856271
+      n_s: 0.9715353207395939
+      logA: 3.041632843607193
+      fEDE: 0.04441329802649829
+      log10z_c: 3.9159299200215476
+      thetai_scf: 2.9778814314069546
+      H0: 68.10140745691645
+    nuisance:
+      A_planck: 1.0013008750874814
+      calEE: 0.9993655046587432
+      calTE: 0.9973762552673373
+      amp_143: 19.08062003264571
+      amp_143x217: 9.777873648287061
+      amp_217: 12.694220405796838
+      n_143: 0.9242352668069597
+      n_143x217: 1.3459274802956156
+      n_217: 1.2672789596286138
+
+  full_mf_v3:
+    cosmology:
+      omega_b: 0.022304467334115913
+      omega_cdm: 0.12434514439619
+      tau_reio: 0.05069885949605299
+      n_s: 0.9710545566525722
+      logA: 3.041764772238998
+      fEDE: 0.043941142637934465
+      log10z_c: 3.903152341942491
+      thetai_scf: 2.97546371901506
+      H0: 68.10612071090412
+
+direction:
+  sampled_cosmology:
+    - omega_b
+    - omega_cdm
+    - tau_reio
+    - n_s
+    - logA
+    - fEDE
+    - log10z_c
+    - thetai_scf
+    - H0
+
+  groups:
+    ede_timing: [fEDE, log10z_c, thetai_scf]
+    primordial: [n_s, logA, tau_reio]
+    matter: [omega_b, omega_cdm]
+    h0: [H0]
+
+  screening_scales:
+    omega_b: 0.00004
+    omega_cdm: 0.0006
+    tau_reio: 0.003
+    n_s: 0.0015
+    logA: 0.004
+    fEDE: 0.004
+    log10z_c: 0.020
+    thetai_scf: 0.030
+    H0: 0.20
+
+execution:
+  python: '3.11'
+  optimizer: cobaya_minimize_bobyqa
+  max_evals: 200000
+  rhoend: 0.0001
+  nuisance_restarts: 2
+  nuisance_restart_scale: 0.25
+  github_job_timeout_minutes: 330
+  max_parallel: 6
+  expected_profile_jobs: 64
+
+validation:
+  cross_cost_abs_tolerance: 0.25
+  restart_delta_objective_max: 0.50
+  dominant_abs_fraction_threshold: 0.50
+
+rules:
+  no_cross_chain_chi2_sum: true
+  q016_q019_are_not_independent_planck_observations: true
+  q018_architecture_gap_not_physical_component: true
+  shapley_not_independent_physical_chi2: true
+  pair_interactions_not_independent_physical_chi2: true
+  q017_causal_status_preserved: INDETERMINATE
+  causal_systematic_claim_allowed: false
+  new_physics_claim_allowed: false
+  q019_materiality_threshold_unchanged: 1.0
+  q019_materiality_threshold_is_sigma: false
+
+provenance:
+  source_lock: q020_source_lock_v1.json
