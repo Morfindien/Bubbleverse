@@ -1,0 +1,112 @@
+name: Bubbleverse Q019 Planck globality repair V3
+
+on:
+  workflow_dispatch:
+
+env:
+  CURRENT_Q: Q019
+  RUN_ID: Q019-PLANCK-COSMOLOGY-GLOBALITY-V3
+
+jobs:
+  continuation:
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        family: [base_basin, plus_basin]
+        restart: [0, 1, 2, 3, 4, 5]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: bash q019_setup_v3.sh
+      - name: Local continuation
+        run: |
+          mkdir -p q019_v3_continuation
+          python q019_globality_v3.py \
+            --config q019_globality_v3_config.yml \
+            continuation \
+            --family '${{ matrix.family }}' \
+            --restart '${{ matrix.restart }}' \
+            --output "q019_v3_continuation/${{ matrix.family }}_r${{ matrix.restart }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q019-v3-${{ matrix.family }}-r${{ matrix.restart }}
+          path: q019_v3_continuation/*.json
+          if-no-files-found: warn
+
+  q016_endpoint_reference:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: bash q019_setup_v3.sh
+      - name: Re-evaluate frozen Q016 endpoints on exact Q016 objective
+        run: |
+          mkdir -p q019_v3_reference
+          python q019_globality_v3.py \
+            --config q019_globality_v3_config.yml \
+            q016-endpoint-check \
+            --output q019_v3_reference/q019_q016_endpoint_reference_v2.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q019-v3-q016-endpoint-reference
+          path: q019_v3_reference/*.json
+          if-no-files-found: error
+
+  final:
+    needs: [continuation, q016_endpoint_reference]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Install final-stage Python dependency
+        run: |
+          python -m pip install PyYAML
+          python - <<'PY'
+          import yaml
+          print("FINAL_PYYAML_IMPORT_GATE=PASS", yaml.__version__)
+          PY
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: q019_v3_downloads
+
+      - name: Aggregate V3
+        run: |
+          REF="$(find q019_v3_downloads -name q019_q016_endpoint_reference_v2.json -print -quit)"
+          test -n "$REF"
+          python q019_globality_v3.py \
+            --config q019_globality_v3_config.yml \
+            aggregate \
+            --input-dir q019_v3_downloads \
+            --endpoint-json "$REF" \
+            --output q019_merged_v3.json
+
+      - name: Mandatory V3 result tests
+        if: always()
+        run: |
+          python q019_tests_v3.py \
+            --merged q019_merged_v3.json \
+            --output q019_tests_v3.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q019-final-v3
+          path: |
+            q019_merged_v3.json
+            q019_tests_v3.json
+          if-no-files-found: warn
