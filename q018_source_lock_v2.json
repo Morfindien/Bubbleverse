@@ -1,0 +1,52 @@
+{
+  "q": "Q018",
+  "run_id": "Q018-PLANCK-LIKELIHOOD-BRIDGE-V2",
+  "sources": {
+    "K-039": {
+      "arxiv": "2311.00524",
+      "type": "PRIMARY_RESEARCH"
+    },
+    "K-044": {
+      "arxiv": "2205.10869",
+      "type": "PRIMARY_RESEARCH"
+    },
+    "K-045": {
+      "arxiv": "2510.09430",
+      "type": "PRIMARY_RESEARCH"
+    },
+    "K-046": {
+      "reference": "Cobaya 3.5.6 minimizer documentation/source",
+      "url": null,
+      "note": "SOURCE URL MISSING IN AUTHORITATIVE INPUT; DO NOT INVENT"
+    }
+  },
+  "internal_results": [
+    "R-Q015-EDE-CMB-ATTRIBUTION-003",
+    "R-Q016-EDE-MATCHED-CMB-SURFACE-016",
+    "R-Q016-EDE-CMB-MECHANISM-004",
+    "R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-003"
+  ],
+  "external_backend": {
+    "repository": "mwt5345/class_ede",
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97"
+  },
+  "bubbleverse_reuse": [
+    "q017_planck_direction_localization_v1.py",
+    "q017_planck_direction_localization_v3_config.yml",
+    "q017_setup_v3.sh",
+    "q016_v16_endpoint_lock_mechanism_v4.json",
+    "q016_objective_reprofile_v16.py",
+    "q016_matched_cmb_surface_v16_config.yml",
+    "q014_external_viability_v12.py"
+  ],
+  "technical_revision": {
+    "classification": "Q016_ENDPOINT_LOCK_SCHEMA_IDENTITY_REPAIR",
+    "v1_failure_stage": "PREPARE_PLAN",
+    "v1_scientific_compute_started": false,
+    "v1_root_cause": "V1 incorrectly required synthetic top-level q/run_id/result_id fields absent from the authoritative Q016 V16 endpoint lock.",
+    "scientific_surface_changed": false,
+    "endpoints_changed": false,
+    "likelihood_changed": false,
+    "thresholds_changed": false
+  }
+}
