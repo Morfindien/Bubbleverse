@@ -1,0 +1,99 @@
+project:
+  q: Q027
+  run_id: Q027-FULLMF-RESIDUAL-COVARIANCE-BRIDGE-V1
+  result_id: R-Q027-EDE-FULLMF-RESIDUAL-COVARIANCE-BRIDGE-001
+  generated_at: '2026-09-05T00:06:00+02:00'
+  question: >-
+    Can the mask-6 A_planck–omega_cdm compensation identified in Q026 be traced,
+    within the same frozen CamSpec construction, to specific changes in the
+    residual vector and inverse-covariance weighting of the TT 143×143,
+    143×217, and 217×217 ell=600–999 blocks, or does the effect remain a
+    distributed consequence of broader mask-sensitive data-model geometry?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+likelihood:
+  architecture: full_mf
+  full_mf: planck_NPIPE_highl_CamSpec.TTTEEE
+
+parents:
+  q022_result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+  q022_github_run: 33902262660
+  q022_execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+  q023_result_id: R-Q023-EDE-FULLMF-BASIN-DIRECTIONS-002
+  q023_github_run: 33913077353
+  q023_execution_commit: ea5af9a0b25090eb8472adb3c9574dcb4e1efe5c
+  q024_result_id: R-Q024-EDE-FULLMF-BASIN-MATCHING-001
+  q024_github_run: 33915600167
+  q024_execution_commit: b8e16629bbc6592ee11f0d90f78c887a913ac4c1
+  q025_result_id: R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-002
+  q025_github_run: 33918779905
+  q025_execution_commit: b2db6827b1caf5405e6a34bff221b6ae4813c1d0
+  q026_result_id: R-Q026-EDE-FULLMF-MASK6-COUPLING-001
+  q026_github_run: 33921255497
+  q026_execution_commit: 7cb4d98c01196c22b407b6f4fd4118179afea3de
+  q026_artifact_id: 9955684272
+  q026_artifact_sha256: fc1970c0e531a5a9157e2054aea91d54cbca9297a0599634710f2ceaa854cc87
+
+parent_q025_config: q025_fullmf_component_attribution_v2_config.yml
+
+execution:
+  mode: FOUR_STATE_FIXED_VECTOR_RESIDUAL_COVARIANCE_BRIDGE
+  masks: [3, 6, 7]
+  edges: [[0, 1], [0, 2], [1, 2]]
+  states_per_edge: 4
+  total_expected_likelihood_evaluations: 36
+  optimizer_evaluations: 0
+  sampling_evaluations: 0
+  q024_permutation_evaluations: 0
+  workflow_timeout_minutes: 120
+  safe_runtime_target_minutes: 90
+  checkpointing: false
+
+target:
+  observable: TT
+  spectra: ['143x143', '143x217', '217x217']
+  ell_min: 600
+  ell_max: 999
+
+decomposition:
+  ell_bands:
+    - {name: ell_30_599, min: 30, max: 599}
+    - {name: ell_600_999, min: 600, max: 999}
+    - {name: ell_1000_1499, min: 1000, max: 1499}
+    - {name: ell_1500_plus, min: 1500, max: 10000}
+
+classification:
+  target_absolute_share_threshold: 0.50
+  mask6_control_margin: 0.15
+
+validation:
+  q026_pair_reproduction_abs_tol: 1.0e-6
+  covariance_pair_closure_abs_tol: 1.0e-6
+
+output:
+  store_all_pointwise_rows: false
+
+rules:
+  no_optimization: true
+  no_sampling: true
+  no_new_endpoints: true
+  no_q024_permutation_rerun: true
+  preserve_signed_covariance_terms: true
+  preserve_cancellations: true
+  preserve_q025_covariance_decomposition: true
+  preserve_q026_A_planck_localization: true
+  preserve_q026_omega_cdm_x_A_planck_primary_pair: true
+  coordinate_switch_not_physical_cause: true
+  pair_interaction_not_physical_causality: true
+  nuisance_movement_not_calibration_failure: true
+  frequency_movement_not_instrument_failure: true
+  foreground_movement_not_foreground_systematic: true
+  no_independent_observation_claim: true
+  counterfactual_precision_swap_not_required_for_primary_run: true
+
+sources: [K-039, K-044, K-046, K-047, K-048, K-049]
