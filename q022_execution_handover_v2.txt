@@ -1,0 +1,60 @@
+BUBBLEVERSE — Q022 V2 EXECUTION HANDOVER
+
+CURRENT Q:
+Q022
+
+CASE ID:
+NOT DOCUMENTED
+
+SCIENTIFIC QUESTION:
+Within the frozen MOD-EDE-N3 full-multifrequency Planck likelihood, what distinguishes the coherent optimizer basins observed in Q021, and are they primarily associated with different cosmological compromises, nuisance/foreground compromises, or numerical optimizer structure?
+
+EXECUTION DECISION:
+TARGETED HPC / NUMERICAL PROGRAM.
+
+PURPOSE:
+Resolve the one remaining Q022 material uncertainty after V1:
+stable multi-basin likelihood geometry versus start-dependent/incomplete optimizer structure.
+
+PRESERVED RESULT:
+R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-001
+= MIXED COSMOLOGY + NUISANCE BASIN SEPARATION.
+
+TARGET VERTICES:
+mask 6 — Q022 V1 objective spread 7.72361862370235
+mask 7 — Q022 V1 objective spread 5.654971548681715
+mask 3 — Q022 V1 objective spread 4.099199520131151
+
+STAGE 1:
+9 jobs = 3 masks × 3 exact harvested Q021 endpoint starts.
+Use exact Q021 minimizer settings:
+max_evals=200000
+rhoend=1e-4
+best_of=1
+
+CONDITIONAL REFINEMENT:
+Only a vertex that does not collapse in stage 1 is rerun from the same 3 exact starts with:
+max_evals=300000
+rhoend=1e-5
+best_of=1
+
+UNCHANGED:
+MOD-EDE-N3
+n_scf=3
+mwt5345/class_ede
+backend commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+full-MF likelihood
+objective
+priors/bounds
+fixed primordial coordinates per vertex
+all sampled cosmology/nuisance degrees of freedom
+
+CLASSIFICATION:
+1. CROSS_START_COLLAPSE
+2. STABLE_MULTIBASIN
+3. IDENTIFIABILITY_LIMIT_MIXED_VERTEX_BEHAVIOUR / IDENTIFIABILITY_LIMIT
+
+STOP:
+A validated one of these outcomes closes Q022.
+Return q022_final_v2.json to RESULT INGESTION & ROUTING ENGINE.
+If FINAL_RESULT_GATE=PASS, no additional Q022 seeds/scans/localizations are required.

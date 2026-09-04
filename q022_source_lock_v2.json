@@ -1,0 +1,78 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "external_sources": [
+    {
+      "id": "K-039",
+      "reference": "arXiv:2311.00524",
+      "type": "PRIMARY_RESEARCH"
+    },
+    {
+      "id": "K-044",
+      "reference": "arXiv:2205.10869",
+      "type": "PRIMARY_RESEARCH_METHODOLOGY"
+    },
+    {
+      "id": "K-046",
+      "reference": "Cobaya 3.5.6 technical/software source",
+      "type": "OFFICIAL_TECHNICAL"
+    },
+    {
+      "id": "K-047",
+      "reference": "Cobaya minimizer documentation and official changelog/release history",
+      "type": "OFFICIAL_TECHNICAL_METHODOLOGY"
+    }
+  ],
+  "internal_parents": [
+    {
+      "id": "R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-003",
+      "role": "FROZEN_FULL_MF_PROFILE_CONSTRUCTION"
+    },
+    {
+      "id": "R-Q020-EDE-PLANCK-CROSS-PROFILE-DIRECTION-002",
+      "role": "UPSTREAM_PRIMORDIAL_BLOCK_RESULT"
+    },
+    {
+      "id": "R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-002",
+      "role": "AUTHORITATIVE_DISTRIBUTED_STRUCTURE_AND_COHERENT_RESTART_SEMANTICS"
+    },
+    {
+      "id": "R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-001",
+      "role": "V1_MIXED_ENDPOINT_ASSOCIATION_AND_VERTEX_SELECTION"
+    }
+  ],
+  "model": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "n_scf": 3,
+    "name": "MOD-EDE-N3"
+  },
+  "q": "Q022",
+  "raw_parent": {
+    "github_actions_run_id": 33882434170,
+    "result_id": "R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-001",
+    "run_id": "Q021-PRIMORDIAL-INTERNAL-STRUCTURE-V1",
+    "use": "RAW_FULL_MF_ENDPOINTS_ONLY; V1_FINAL_AGGREGATION_REMAINS_SUPERSEDED"
+  },
+  "repository": {
+    "bubbleverse_commit": "CAPTURE_GITHUB_SHA_AT_RUNTIME",
+    "name": "Morfindien/Bubbleverse",
+    "observed_main_tree_sha": "aaa53ad6eb8ac606093e928e845b2c2dd8b7d09f"
+  },
+  "result_id": "R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002",
+  "reused_files": [
+    "q019_planck_cosmology_reprofile_v1.py",
+    "q019_setup_v3.sh",
+    "q021_primordial_decomposition_v1.py",
+    "q021_primordial_decomposition_v1_config.yml",
+    "q022_basin_diagnostic_v1.py",
+    "q022_basin_diagnostic_v1_config.yml"
+  ],
+  "rules": {
+    "higher_objective_not_automatically_artifact": true,
+    "no_cross_likelihood_chi2_sum": true,
+    "no_frankenstein_vertex_mixing": true,
+    "no_model_likelihood_prior_bound_changes": true,
+    "q021_distributed_classification_not_reopened": true
+  },
+  "run_id": "Q022-FULL-MF-OPTIMIZER-BASIN-CONTINUATION-V2"
+}

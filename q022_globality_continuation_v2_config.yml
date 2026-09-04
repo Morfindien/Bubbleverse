@@ -1,0 +1,87 @@
+project:
+  q: Q022
+  run_id: Q022-FULL-MF-OPTIMIZER-BASIN-CONTINUATION-V2
+  result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+  generated_at: '2026-09-04T19:37:00+02:00'
+  scientific_question: >-
+    Within the frozen MOD-EDE-N3 full-multifrequency Planck likelihood, what
+    distinguishes the coherent optimizer basins observed in Q021, and are they
+    primarily associated with different cosmological compromises,
+    nuisance/foreground compromises, or numerical optimizer structure?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+parents:
+  q021_config: q021_primordial_decomposition_v1_config.yml
+  q021_raw_run_id: Q021-PRIMORDIAL-INTERNAL-STRUCTURE-V1
+  q021_raw_github_run_id: 33882434170
+  q021_raw_result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-001
+  q021_authoritative_result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-002
+  q022_v1_result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-001
+
+selection:
+  # Smallest decisive set from Q022 V1 objective spread ranking.
+  masks: [3, 6, 7]
+  q022_v1_objective_spreads:
+    3: 4.099199520131151
+    6: 7.72361862370235
+    7: 5.654971548681715
+
+likelihood:
+  architecture: full_mf
+  identity: Q017_FULL_MULTIFREQUENCY_CAMSPEC_VIA_Q019_Q021_BUILDERS
+  objective_basis: LIKELIHOOD_CHI2_PLUS_EXPLICIT_NORMALIZATION_FREE_SHARED_GAUSSIAN_SHAPES
+
+parameter_groups:
+  primordial_fixed_coordinates: [n_s, logA, tau_reio]
+  cosmology_profiled: [omega_b, omega_cdm, fEDE, log10z_c, thetai_scf, H0]
+  shared_nuisance: [A_planck, calTE, calEE]
+  foreground_nuisance: [amp_143, amp_217, amp_143x217, n_143, n_217, n_143x217]
+
+execution:
+  python: '3.11'
+  optimizer: cobaya_minimize_bobyqa
+  soft_stop_minutes: 300
+
+  # Exact Q021 settings: first material-reversal stage.
+  stage1:
+    max_evals: 200000
+    rhoend: 0.0001
+
+  # Applied ONLY to vertices that do not collapse in stage 1.
+  # Same objective/model/priors/bounds and all three endpoint starts are treated symmetrically.
+  refinement:
+    max_evals: 300000
+    rhoend: 0.00001
+
+  github_job_timeout_minutes: 330
+  max_parallel: 6
+
+validation:
+  # Q022 V1 used 0.50 as objective materiality and 0.10 as near-identity RMS.
+  # Reuse those frozen operational scales rather than moving the goalposts.
+  collapse_objective_tolerance: 0.50
+  collapse_endpoint_joint_rms: 0.10
+  scale_floor_fraction: 1.0e-8
+
+rules:
+  same_model: true
+  same_full_mf_likelihood: true
+  same_priors_bounds: true
+  same_objective_basis: true
+  freeze_primordial_per_vertex: true
+  exact_q021_endpoint_start: true
+  no_cross_likelihood_chi2_sum: true
+  no_frankenstein_vertex_mixing: true
+  higher_objective_not_automatically_artifact: true
+  parameter_difference_not_automatically_physical: true
+  no_aic_automatic_physical_judgment: true
+  no_broad_scan: true
+  q021_distributed_classification_not_reopened: true
+  technical_failure_not_model_failure: true
+
+sources: [K-039, K-044, K-046, K-047]

@@ -1,0 +1,282 @@
+name: Bubbleverse Q022 optimizer-basin continuation V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  CURRENT_Q: Q022
+  RUN_ID: Q022-FULL-MF-OPTIMIZER-BASIN-CONTINUATION-V2
+  RESULT_ID: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+  PARENT_Q021_RAW_RUN_ID: '33882434170'
+
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Static validation
+        run: |
+          python -m pip install --disable-pip-version-check PyYAML numpy
+          python -m py_compile q022_globality_continuation_v2.py q022_tests_v2.py
+          python - <<'PY'
+          import yaml, json
+          c=yaml.safe_load(open('q022_globality_continuation_v2_config.yml',encoding='utf-8'))
+          assert c['project']['q']=='Q022'
+          assert c['model']['backend_commit']=='5a131c91d657dd9a7c6364cc45b038710f8d0d97'
+          assert sorted(c['selection']['masks'])==[3,6,7]
+          print('CONTEXT_CONTINUITY_GATE=PASS')
+          PY
+
+  stage1:
+    needs: preflight
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        mask: [3, 6, 7]
+        seed_restart: [0, 1, 2]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/cobaya
+            external
+          key: q022-v2-${{ runner.os }}-${{ hashFiles('q019_setup_v3.sh', 'q019_planck_cosmology_reprofile_v1.py', 'q021_primordial_decomposition_v1.py') }}
+      - name: Reuse frozen Q019/Q021 scientific environment
+        run: bash q019_setup_v3.sh
+
+      - name: Download all three Q021 full-MF endpoint artifacts for this vertex
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.PARENT_Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-m${{ matrix.mask }}-r*
+          merge-multiple: true
+          path: q021_parent_vertex
+
+      - name: Deliberate exact-endpoint continuation at original Q021 precision
+        run: |
+          mkdir -p q022_stage1
+          python q022_globality_continuation_v2.py \
+            --config q022_globality_continuation_v2_config.yml \
+            run \
+            --phase stage1 \
+            --mask '${{ matrix.mask }}' \
+            --seed-restart '${{ matrix.seed_restart }}' \
+            --input-dir q021_parent_vertex \
+            --output "q022_stage1/m${{ matrix.mask }}_s${{ matrix.seed_restart }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q022-v2-stage1-m${{ matrix.mask }}-s${{ matrix.seed_restart }}
+          path: q022_stage1/*.json
+          if-no-files-found: warn
+
+  stage1_assess:
+    needs: stage1
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      needs_refinement: ${{ steps.assess.outputs.needs_refinement }}
+      refine_matrix: ${{ steps.assess.outputs.refine_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML numpy
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q022-v2-stage1-*
+          merge-multiple: true
+          path: q022_stage1_downloads
+
+      - name: Download all Q021 raw artifacts for frozen Q022 V1 normalization
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.PARENT_Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-*
+          merge-multiple: true
+          path: q021_fullmf_parent
+
+      - id: assess
+        name: Assess collapse and generate only scientifically required refinement jobs
+        shell: bash
+        run: |
+          set +e
+          python q022_globality_continuation_v2.py \
+            --config q022_globality_continuation_v2_config.yml \
+            assess-stage1 \
+            --stage1-dir q022_stage1_downloads \
+            --parent-dir q021_fullmf_parent \
+            --output q022_stage1_assessment_v2.json \
+            --matrix-output q022_refine_matrix_v2.json | tee assess.log
+          rc=${PIPESTATUS[0]}
+          needs=$(grep '^NEEDS_REFINEMENT=' assess.log | tail -1 | cut -d= -f2-)
+          matrix=$(grep '^REFINE_MATRIX=' assess.log | tail -1 | cut -d= -f2-)
+          echo "needs_refinement=${needs}" >> "$GITHUB_OUTPUT"
+          echo "refine_matrix=${matrix}" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q022-v2-stage1-assessment
+          path: |
+            q022_stage1_assessment_v2.json
+            q022_refine_matrix_v2.json
+          if-no-files-found: warn
+
+  refine:
+    needs: stage1_assess
+    if: needs.stage1_assess.result == 'success' && needs.stage1_assess.outputs.needs_refinement == 'true'
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJSON(needs.stage1_assess.outputs.refine_matrix) }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/cobaya
+            external
+          key: q022-v2-${{ runner.os }}-${{ hashFiles('q019_setup_v3.sh', 'q019_planck_cosmology_reprofile_v1.py', 'q021_primordial_decomposition_v1.py') }}
+      - name: Reuse frozen Q019/Q021 scientific environment
+        run: bash q019_setup_v3.sh
+
+      - name: Download all three Q021 endpoint artifacts for this refinement vertex
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.PARENT_Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-m${{ matrix.mask }}-r*
+          merge-multiple: true
+          path: q021_parent_vertex
+
+      - name: Symmetric tighter continuation
+        run: |
+          mkdir -p q022_refinement
+          python q022_globality_continuation_v2.py \
+            --config q022_globality_continuation_v2_config.yml \
+            run \
+            --phase refinement \
+            --mask '${{ matrix.mask }}' \
+            --seed-restart '${{ matrix.seed_restart }}' \
+            --input-dir q021_parent_vertex \
+            --output "q022_refinement/m${{ matrix.mask }}_s${{ matrix.seed_restart }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q022-v2-refine-m${{ matrix.mask }}-s${{ matrix.seed_restart }}
+          path: q022_refinement/*.json
+          if-no-files-found: warn
+
+  final:
+    needs: [stage1_assess, refine]
+    if: always() && needs.stage1_assess.result == 'success' && (needs.refine.result == 'success' || needs.refine.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML numpy
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q022-v2-stage1-*
+          merge-multiple: true
+          path: q022_stage1_downloads
+
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q022-v2-refine-*
+          merge-multiple: true
+          path: q022_refinement_downloads
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q022-v2-stage1-assessment
+          path: q022_stage1_assessment
+
+      - name: Download Q021 full-MF raw parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.PARENT_Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-*
+          merge-multiple: true
+          path: q021_fullmf_parent
+
+      - name: Aggregate finite Q022 V2 decision
+        run: |
+          python q022_globality_continuation_v2.py \
+            --config q022_globality_continuation_v2_config.yml \
+            aggregate \
+            --stage1-dir q022_stage1_downloads \
+            --refinement-dir q022_refinement_downloads \
+            --parent-dir q021_fullmf_parent \
+            --stage1-assessment q022_stage1_assessment/q022_stage1_assessment_v2.json \
+            --output q022_merged_v2.json
+
+      - name: Mandatory Q022 V2 tests
+        run: |
+          python q022_tests_v2.py \
+            --result q022_merged_v2.json \
+            --output q022_tests_v2.json
+
+      - name: Produce validated final result
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('q022_merged_v2.json',encoding='utf-8'))
+          t=json.load(open('q022_tests_v2.json',encoding='utf-8'))
+          r['tests_status']=t['tests_status']
+          r['mandatory_test_gates']=t['gates']
+          r['FINAL_RESULT_GATE']=t['FINAL_RESULT_GATE']
+          r['status']='PASS' if t['FINAL_RESULT_GATE']=='PASS' else 'FAIL'
+          json.dump(r,open('q022_final_v2.json','w',encoding='utf-8'),indent=2,sort_keys=True)
+          open('q022_final_v2.json','a',encoding='utf-8').write('\n')
+          if t['FINAL_RESULT_GATE']!='PASS':
+              raise SystemExit(2)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q022-final-v2
+          path: |
+            q022_merged_v2.json
+            q022_tests_v2.json
+            q022_final_v2.json
+            q022_stage1_assessment/q022_stage1_assessment_v2.json
+          if-no-files-found: warn
