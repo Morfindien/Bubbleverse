@@ -1,0 +1,53 @@
+BUBBLEVERSE — Q021 V2 REPAIR HANDOVER
+
+CURRENT Q:
+Q021
+
+PARENT EXECUTION:
+Q021 V1 GitHub Actions run 33882434170
+
+NEW LIKELIHOOD EXECUTION:
+NONE
+
+WHY V1 FAILED:
+1. Likelihood identity hash serialized live Python external-function repr values,
+   which include process-specific memory addresses.
+2. V1 constructed its displayed best decomposition by selecting the best restart
+   independently at each vertex, mixing optimizer basins.
+
+PRESERVED NUMERICAL FACTS:
+All 48 Q021 profiles were complete and finite.
+Q020 parent reproduction passed.
+All exact decomposition closures passed.
+
+COHERENT RESTART FINDING:
+FULL-MF:
+3/3 complete restart decompositions classify DISTRIBUTED.
+n_s is the largest individual Möbius term in 3/3, but its absolute fraction is
+below the 0.50 single-dominance threshold in every restart.
+
+MATCHED CAMSPEC-LITE:
+3/3 complete restart decompositions classify DISTRIBUTED.
+The exact top term changes across restarts, so no localized single/pair/triple
+identity is defensible.
+
+OPTIMIZER BASIN STATUS:
+Material basin spread exists and is preserved as an explicit warning.
+It is not hidden and is not interpreted as convergence.
+
+V2 SCIENTIFIC DECISION RULE:
+A DISTRIBUTED classification is accepted only if every complete coherent restart
+independently remains DISTRIBUTED. Exact dominant-term agreement is required only
+when claiming a localized SINGLE / PAIR / THREE-WAY direction.
+
+LIKELIHOOD-CONSTRUCTION DIFFERENCE:
+Compare full-MF and lite functional compositions across all 3x3 coherent restart
+pairings. Claim LIKELIHOOD-CONSTRUCTION-DEPENDENT PRIMORDIAL GEOMETRY only if the
+predefined materiality threshold survives every pairing.
+
+NO CROSS-LIKELIHOOD CHI2 SUM.
+NO CAUSAL SYSTEMATIC CLAIM.
+NO NEW PHYSICS CLAIM.
+
+RETURN ROUTE:
+RESULT INGESTION & ROUTING ENGINE

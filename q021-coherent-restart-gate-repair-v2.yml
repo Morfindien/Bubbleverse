@@ -1,0 +1,55 @@
+name: Bubbleverse Q021 coherent-restart gate repair V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  CURRENT_Q: Q021
+  RUN_ID: Q021-PRIMORDIAL-INTERNAL-STRUCTURE-REPAIR-V2
+  PARENT_Q021_RUN_ID: '33882434170'
+
+jobs:
+  repair:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Static syntax check
+        run: |
+          python -m py_compile q021_finalize_repair_v2.py q021_tests_v2.py
+
+      - name: Download all completed Q021 V1 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.PARENT_Q021_RUN_ID }}
+          path: q021_v1_downloads
+
+      - name: Re-aggregate using coherent restart semantics
+        run: |
+          python q021_finalize_repair_v2.py \
+            --input-dir q021_v1_downloads \
+            --output q021_merged_v2.json
+
+      - name: Mandatory V2 result tests
+        if: always()
+        run: |
+          python q021_tests_v2.py \
+            --merged q021_merged_v2.json \
+            --output q021_tests_v2.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q021-final-v2
+          path: |
+            q021_merged_v2.json
+            q021_tests_v2.json
+          if-no-files-found: warn
