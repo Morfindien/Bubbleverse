@@ -1,0 +1,57 @@
+project:
+  q: Q023
+  run_id: Q023-FULLMF-BASIN-DIRECTIONS-V1
+  result_id: R-Q023-EDE-FULLMF-BASIN-DIRECTIONS-001
+  generated_at: '2026-09-04T21:36:00+02:00'
+  scientific_question: >-
+    Which specific cosmological and nuisance/foreground parameter combinations
+    distinguish the stable full-multifrequency basin families identified in Q022,
+    and are the distinguishing directions reproducibly shared across masks 3, 6, and 7?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+parents:
+  q021_raw_run_id: Q021-PRIMORDIAL-INTERNAL-STRUCTURE-V1
+  q021_github_run_id: 33882434170
+  q021_raw_result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-001
+  q021_authoritative_result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-002
+  q022_run_id: Q022-FULL-MF-OPTIMIZER-BASIN-CONTINUATION-V2
+  q022_result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+  q022_execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+
+selection:
+  masks: [3, 6, 7]
+  seed_families: [0, 1, 2]
+
+parameter_groups:
+  primordial_fixed_coordinates: [n_s, logA, tau_reio]
+  cosmology_profiled: [omega_b, omega_cdm, fEDE, log10z_c, thetai_scf, H0]
+  shared_nuisance: [A_planck, calTE, calEE]
+  foreground_nuisance: [amp_143, amp_217, amp_143x217, n_143, n_217, n_143x217]
+
+normalization:
+  method: Q022_V1_WITHIN_VERTEX_RESTART_SPREAD
+  scale_floor_fraction: 1.0e-8
+
+analysis:
+  top_components: 8
+  median_abs_cosine_threshold: 0.70
+  pairwise_abs_cosine_floor: 0.60
+  minimum_pairwise_passes: 2
+
+rules:
+  read_only_existing_endpoints: true
+  no_new_likelihood_evaluations: true
+  objective_not_basin_identity_alone: true
+  no_cross_likelihood_chi2_sum: true
+  no_frankenstein_vertex_mixing: true
+  q021_distributed_classification_not_reopened: true
+  q022_stability_not_reopened: true
+  nuisance_movement_not_automatic_systematic: true
+  parameter_difference_not_automatic_physics: true
+
+sources: [K-039, K-044, K-046, K-047]
