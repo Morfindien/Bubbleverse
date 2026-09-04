@@ -1,0 +1,155 @@
+name: Bubbleverse Q024 permutation/sign-invariant basin matching V1
+
+on:
+  workflow_dispatch:
+    inputs:
+      q022_run_id:
+        description: 'Optional exact Q022 GitHub Actions run ID; blank = latest successful Q022 V2 run at frozen execution commit'
+        required: false
+        default: ''
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  CURRENT_Q: Q024
+  RUN_ID: Q024-FULLMF-PERMUTATION-SIGN-INVARIANT-MATCHING-V1
+  RESULT_ID: R-Q024-EDE-FULLMF-BASIN-MATCHING-001
+  Q021_RAW_GITHUB_RUN_ID: '33882434170'
+  Q022_EXECUTION_COMMIT: '16a7902c3be7d1967adaae9ee380baf0d17e903a'
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Install read-only analysis dependencies
+        run: python -m pip install --disable-pip-version-check numpy PyYAML
+
+      - name: Static continuity and syntax gates
+        run: |
+          python -m py_compile \
+            q023_basin_directions_v2.py \
+            q024_basin_matching_v1.py \
+            q024_tests_v1.py
+          python - <<'PY'
+          import yaml
+          c=yaml.safe_load(open('q024_basin_matching_v1_config.yml',encoding='utf-8'))
+          assert c['project']['q']=='Q024'
+          assert c['model']['name']=='MOD-EDE-N3'
+          assert c['model']['n_scf']==3
+          assert c['model']['backend_commit']=='5a131c91d657dd9a7c6364cc45b038710f8d0d97'
+          assert c['selection']['masks']==[3,6,7]
+          assert c['selection']['seed_families']==[0,1,2]
+          assert c['matching']['exhaustive_permutations'] is True
+          assert c['matching']['direction_sign_invariant'] is True
+          assert c['rules']['no_new_likelihood_evaluations'] is True
+          assert c['rules']['q023_closed'] is True
+          print('CONTEXT_CONTINUITY_GATE=PASS')
+          print('MATCHING_RULE_PREDECLARED_GATE=PASS')
+          PY
+
+      - name: Resolve authoritative Q022 V2 run
+        id: q022
+        env:
+          GH_TOKEN: ${{ github.token }}
+          USER_RUN: ${{ inputs.q022_run_id }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ -n "$USER_RUN" ]; then
+            rid="$USER_RUN"
+          else
+            rid="$(gh run list \
+              --workflow q022-optimizer-basin-continuation-v2.yml \
+              --commit "$Q022_EXECUTION_COMMIT" \
+              --status success \
+              --limit 20 \
+              --json databaseId,headSha,conclusion,createdAt \
+              --jq 'sort_by(.createdAt) | reverse | .[0].databaseId')"
+          fi
+          test -n "$rid"
+          echo "run_id=$rid" >> "$GITHUB_OUTPUT"
+          echo "Resolved Q022 run: $rid"
+
+      - name: Download preserved Q021 raw full-MF endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q021_RAW_GITHUB_RUN_ID }}
+          pattern: q021-full_mf-*
+          merge-multiple: true
+          path: q021_raw
+
+      - name: Download authoritative Q022 final package
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.q022.outputs.run_id }}
+          name: q022-final-v2
+          path: q022_inputs/final
+
+      - name: Download Q022 stage1 endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.q022.outputs.run_id }}
+          pattern: q022-v2-stage1-m*-s*
+          merge-multiple: true
+          path: q022_inputs/stage1
+
+      - name: Download Q022 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.q022.outputs.run_id }}
+          pattern: q022-v2-refine-m*-s*
+          merge-multiple: true
+          path: q022_inputs/refinement
+
+      - name: Run read-only Q024 matching
+        run: |
+          python q024_basin_matching_v1.py \
+            --config q024_basin_matching_v1_config.yml \
+            --q021-dir q021_raw \
+            --q022-dir q022_inputs \
+            --output q024_result_v1.json
+
+      - name: Mandatory Q024 tests
+        run: |
+          python q024_tests_v1.py \
+            --result q024_result_v1.json \
+            --output q024_tests_v1.json
+
+      - name: Produce validated Q024 final result
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('q024_result_v1.json',encoding='utf-8'))
+          t=json.load(open('q024_tests_v1.json',encoding='utf-8'))
+          r['mandatory_test_gates']=t['gates']
+          r['FINAL_RESULT_GATE']=t['FINAL_RESULT_GATE']
+          r['status']='PASS' if t['FINAL_RESULT_GATE']=='PASS' else 'FAIL'
+          json.dump(r,open('q024_final_v1.json','w',encoding='utf-8'),indent=2,sort_keys=True)
+          open('q024_final_v1.json','a',encoding='utf-8').write('\n')
+          if t['FINAL_RESULT_GATE']!='PASS':
+              raise SystemExit(2)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q024-final-v1
+          path: |
+            q024_result_v1.json
+            q024_tests_v1.json
+            q024_final_v1.json
+          if-no-files-found: warn
