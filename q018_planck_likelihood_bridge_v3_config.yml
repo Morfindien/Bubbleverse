@@ -1,0 +1,52 @@
+project:
+  q: Q018
+  run_id: Q018-PLANCK-LIKELIHOOD-BRIDGE-V3
+  result_id: R-Q018-EDE-PLANCK-LIKELIHOOD-BRIDGE-003
+  case_id: NOT DOCUMENTED
+  generated_at: '2026-09-04T08:26:00+02:00'
+model:
+  name: ede_n3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+endpoints:
+  free_h0: 67.988328967159
+  fixed_h0: 71.5
+parent_q016:
+  endpoint_lock: q016_v16_endpoint_lock_mechanism_v4.json
+  run_id: Q016-MATCHED-CMB-SURFACE-V16
+  result_id: R-Q016-EDE-MATCHED-CMB-SURFACE-016
+  github_run_id: 33785257733
+  head_sha: 3a154b44cbef4b2a3d10fdb12435105921bfc962
+parent_q017:
+  run_id: Q017-PLANCK-DIRECTION-LOCALIZATION-V3
+  result_id: R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-003
+  github_run_id: 33842355384
+  head_sha: 277bb274e5783831303b542681e8cf87a70d31c2
+planck:
+  q016_family: CamSpec-NPIPE-lite
+  q016_commit: e387852d2ae8863735814449c682b089c3059318
+  q016_ell: [600, 2000]
+  q016_observables: [TT, TE, EE]
+  q017_full_likelihood: planck_NPIPE_highl_CamSpec.TTTEEE
+references:
+  q016_lite_penalty: 5.823856774789
+  q017_full_mf_penalty: 17.39793487230054
+  q017_raw_highl_penalty: 17.243316626287196
+execution:
+  restarts: 3
+  max_evals: 1280
+  rhoend: 0.002
+  seed_base: 180180
+  github_job_timeout_minutes: 300
+  soft_stop_minutes: 270
+  max_parallel: 6
+rules:
+  q016_globality_reopen: false
+  q017_reopen: false
+  no_cross_chain_chi2_sum: true
+  no_combined_interexperiment_significance: true
+  lock_costs_additive: false
+  frequency_pieces_independent_tests: false
+  covariance_pieces_independent_tests: false
+  causal_systematic_claim_from_attribution: false
