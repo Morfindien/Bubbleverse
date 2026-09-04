@@ -1,0 +1,65 @@
+{
+  "bubbleverse_base_commit": "b0c0a8fd89408bac91502e15d42c69820e913ab6",
+  "bubbleverse_repository": "Morfindien/Bubbleverse",
+  "external_sources": [
+    {
+      "id": "K-039",
+      "reference": "arXiv:2311.00524",
+      "type": "PRIMARY_RESEARCH"
+    },
+    {
+      "id": "K-044",
+      "reference": "arXiv:2205.10869",
+      "type": "PRIMARY_RESEARCH"
+    },
+    {
+      "id": "K-046",
+      "reference": "Cobaya 3.5.6 minimizer documentation/source",
+      "type": "OFFICIAL_TECHNICAL"
+    }
+  ],
+  "internal_parents": [
+    {
+      "id": "R-Q019-EDE-PLANCK-COSMOLOGY-REPROFILE-003",
+      "role": "AUTHORITATIVE_Q019_STATUS"
+    },
+    {
+      "id": "R-Q020-EDE-PLANCK-CROSS-PROFILE-DIRECTION-002",
+      "role": "AUTHORITATIVE_Q020_PARENT"
+    },
+    {
+      "id": "R-Q017-EDE-PLANCK-DIRECTION-LOCALIZATION-003",
+      "role": "FULL_MF_LIKELIHOOD_PATH"
+    },
+    {
+      "id": "R-Q016-EDE-MATCHED-CMB-SURFACE-016",
+      "role": "MATCHED_LITE_LIKELIHOOD_PATH"
+    },
+    {
+      "id": "R-Q018-EDE-PLANCK-LIKELIHOOD-BRIDGE-003",
+      "role": "ARCHITECTURE_SAFETY_CONSTRAINT"
+    }
+  ],
+  "model": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "n_scf": 3,
+    "name": "MOD-EDE-N3"
+  },
+  "q": "Q021",
+  "result_id": "R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-001",
+  "reused_files": [
+    "q019_planck_cosmology_reprofile_v1.py",
+    "q019_planck_cosmology_reprofile_v1_config.yml",
+    "q019_setup_v3.sh",
+    "q020_direction_localization_v1_config.yml",
+    "q020_finalize_repair_v2.py"
+  ],
+  "rules": {
+    "causal_systematic_claim_forbidden": true,
+    "functional_attribution_is_not_independent_physical_chi2": true,
+    "matched_and_full_mf_are_not_independent_observations": true,
+    "no_cross_chain_chi2_sum": true
+  },
+  "run_id": "Q021-PRIMORDIAL-INTERNAL-STRUCTURE-V1"
+}

@@ -1,0 +1,90 @@
+project:
+  q: Q021
+  run_id: Q021-PRIMORDIAL-INTERNAL-STRUCTURE-V1
+  result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-001
+  generated_at: '2026-09-04T16:01:00+02:00'
+  title: Bubbleverse Q021 primordial internal-structure decomposition
+
+scientific_question: >-
+  Within the frozen n=3 early-dark-energy model, what internal structure of the
+  primordial block (n_s, logA, tau_reio) produces the dominant full-multifrequency
+  Planck cross-profile response identified in Q020, and does that structure remain
+  materially different on the matched CamSpec-lite likelihood?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+parents:
+  q020:
+    config: q020_direction_localization_v1_config.yml
+    v1_github_run_id: 33876066510
+    v2_github_run_id: 33878880397
+    v2_artifact: q020-final-v2
+    result_id: R-Q020-EDE-PLANCK-CROSS-PROFILE-DIRECTION-002
+    head_sha: b0c0a8fd89408bac91502e15d42c69820e913ab6
+    expected_full_mf_primordial_abs_fraction: 0.7157833
+    expected_full_mf_primordial_signed: 10.5344
+    role: AUTHORITATIVE_PARENT_PRIMORDIAL_LOCALIZATION
+  q019:
+    builder: q019_planck_cosmology_reprofile_v1.py
+    config: q019_planck_cosmology_reprofile_v1_config.yml
+    setup: q019_setup_v3.sh
+    role: FROZEN_LIKELIHOOD_CONSTRUCTORS_AND_REPROFILE_PATH
+
+decomposition:
+  coordinates: [n_s, logA, tau_reio]
+  vertex_semantics: >-
+    For each architecture, every primordial coordinate is fixed to either that
+    architecture's native Q019/Q020 endpoint value or the opposite architecture's
+    foreign endpoint value. All other parameters that the frozen Q019 constructor
+    leaves sampled are reprofiled.
+  full_mf_direction: FULL_MF_NATIVE_TO_LITE_FOREIGN
+  lite_direction: LITE_NATIVE_TO_FULL_MF_FOREIGN
+  also_report_canonical_direction: FULL_MF_TO_LITE
+
+likelihoods:
+  lite:
+    identity: Q016_MATCHED_CAMSPEC_LITE_VIA_Q019_BUILDER
+    objective_basis: LIKELIHOOD_CHI2_PLUS_EXPLICIT_NORMALIZATION_FREE_SHARED_GAUSSIAN_SHAPES
+    observational_independence_from_full_mf: false
+  full_mf:
+    identity: Q017_FULL_MULTIFREQUENCY_CAMSPEC_VIA_Q019_BUILDER
+    objective_basis: LIKELIHOOD_CHI2_PLUS_EXPLICIT_NORMALIZATION_FREE_SHARED_GAUSSIAN_SHAPES
+    observational_independence_from_lite: false
+
+execution:
+  python: '3.11'
+  optimizer: cobaya_minimize_bobyqa
+  max_evals: 200000
+  rhoend: 0.0001
+  multistarts: 3
+  restart_reference_scale: 0.25
+  github_job_timeout_minutes: 330
+  max_parallel: 6
+  expected_new_profile_jobs: 48
+
+validation:
+  parent_aggregate_abs_tolerance: 1.0e-9
+  parent_reference_fraction_tolerance: 5.0e-6
+  parent_reference_signed_tolerance: 0.02
+  restart_delta_objective_max: 0.50
+  closure_abs_tolerance: 1.0e-8
+  dominant_abs_mobius_fraction_threshold: 0.50
+  construction_abs_fraction_tv_threshold: 0.25
+
+rules:
+  no_cross_chain_chi2_sum: true
+  functional_attribution_not_independent_physical_chi2: true
+  causal_systematic_claim_forbidden: true
+  new_physics_claim_forbidden: true
+  matched_and_full_mf_not_independent_observations: true
+  preserve_q019_q020_directional_asymmetry: true
+  fail_closed_if_parent_reproduction_fails: true
+
+provenance:
+  bubbleverse_repository: Morfindien/Bubbleverse
+  bubbleverse_base_commit: b0c0a8fd89408bac91502e15d42c69820e913ab6
+  source_lock: q021_source_lock_v1.json

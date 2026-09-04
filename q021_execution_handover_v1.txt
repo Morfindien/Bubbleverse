@@ -1,0 +1,53 @@
+BUBBLEVERSE — Q021 EXECUTION HANDOVER
+
+CURRENT Q:
+Q021
+
+EXECUTION MODE:
+HPC PROGRAM
+
+SCIENTIFIC QUESTION:
+Within frozen MOD-EDE-N3, resolve the Q020 primordial block
+(n_s, logA, tau_reio) into single-coordinate, pairwise, and three-way
+functional structure on full-MF CamSpec and matched CamSpec-lite.
+
+PARENT GATE:
+Recompute Q020 V2 from Q020 V1 raw artifacts. No new likelihood calls.
+Fail closed if the recomputed Q020 primordial allocation does not match the
+authoritative Q020 V2 result.
+
+Q021 PROFILE SEMANTICS:
+For each likelihood architecture, evaluate all 8 primordial native/foreign
+vertices. n_s, logA and tau_reio are fixed at the selected vertex values.
+Every other parameter left sampled by the frozen Q019 constructor is
+reprofiled. Use 3 deterministic optimizer starts per vertex.
+
+NEW PROFILE JOBS:
+48 = 2 architectures × 8 vertices × 3 multistarts.
+
+MANDATORY OUTPUTS:
+single-coordinate effects
+pairwise Möbius interactions
+three-way Möbius interaction
+Shapley allocations
+exact closure
+multistart ranking stability
+matched-vs-full-MF composition comparison
+classification
+Q020 pattern effect
+provenance and all gates
+
+ALLOWED FINAL CLASSIFICATIONS:
+PRIMORDIAL SINGLE-DIRECTION LOCALIZED
+PRIMORDIAL PAIR-COUPLING LOCALIZED
+PRIMORDIAL THREE-WAY / DISTRIBUTED COUPLING
+LIKELIHOOD-CONSTRUCTION-DEPENDENT PRIMORDIAL GEOMETRY
+INDETERMINATE — NUMERICAL OR IDENTIFIABILITY LIMIT
+
+INTERPRETATION RULE:
+All decomposition quantities are functional likelihood-geometry diagnostics.
+They are not independent physical chi-square components and are not causal
+instrumental-systematic detections.
+
+RETURN ROUTE:
+RESULT INGESTION & ROUTING ENGINE

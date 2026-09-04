@@ -1,0 +1,155 @@
+name: Bubbleverse Q021 primordial internal structure V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  CURRENT_Q: Q021
+  RUN_ID: Q021-PRIMORDIAL-INTERNAL-STRUCTURE-V1
+  Q020_V1_RUN_ID: '33876066510'
+  Q020_V2_RUN_ID: '33878880397'
+
+jobs:
+  parent:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install PyYAML
+
+      - name: Static validation and Q021 plan
+        run: |
+          python -m py_compile q021_primordial_decomposition_v1.py q021_tests_v1.py
+          python q021_primordial_decomposition_v1.py \
+            --config q021_primordial_decomposition_v1_config.yml \
+            plan --output q021_plan_v1.json
+
+      - name: Download original Q020 V1 vertex artifacts
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q020_V1_RUN_ID }}
+          path: q020_v1_downloads
+
+      - name: Recompute Q020 V2 aggregation from V1 raw artifacts
+        run: |
+          python q020_finalize_repair_v2.py \
+            --input-dir q020_v1_downloads \
+            --output q021_parent_q020_recomputed.json
+
+      - name: Download authoritative Q020 V2 final result
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q020_V2_RUN_ID }}
+          name: q020-final-v2
+          path: q020_v2_authoritative
+
+      - name: Fail-closed Q020 parent reproduction gate
+        run: |
+          python q021_primordial_decomposition_v1.py \
+            --config q021_primordial_decomposition_v1_config.yml \
+            parent-check \
+            --recomputed q021_parent_q020_recomputed.json \
+            --authoritative q020_v2_authoritative \
+            --output q021_parent_check_v1.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q021-parent-v1
+          path: |
+            q021_plan_v1.json
+            q021_parent_q020_recomputed.json
+            q021_parent_check_v1.json
+          if-no-files-found: warn
+
+  vertices:
+    needs: parent
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        architecture: [lite, full_mf]
+        mask: [0, 1, 2, 3, 4, 5, 6, 7]
+        restart: [0, 1, 2]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/cobaya
+            external
+          key: q021-${{ runner.os }}-${{ hashFiles('q019_setup_v3.sh', 'q019_planck_cosmology_reprofile_v1.py') }}
+
+      - name: Reuse frozen Q019/Q020 scientific environment
+        run: bash q019_setup_v3.sh
+
+      - name: Reprofile one Q021 primordial vertex
+        run: |
+          mkdir -p q021_vertices
+          python q021_primordial_decomposition_v1.py \
+            --config q021_primordial_decomposition_v1_config.yml \
+            profile \
+            --architecture '${{ matrix.architecture }}' \
+            --mask '${{ matrix.mask }}' \
+            --restart '${{ matrix.restart }}' \
+            --output "q021_vertices/${{ matrix.architecture }}_m${{ matrix.mask }}_r${{ matrix.restart }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q021-${{ matrix.architecture }}-m${{ matrix.mask }}-r${{ matrix.restart }}
+          path: q021_vertices/*.json
+          if-no-files-found: warn
+
+  final:
+    needs: [parent, vertices]
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install PyYAML
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: q021_downloads
+
+      - name: Aggregate Q021 geometry
+        run: |
+          python q021_primordial_decomposition_v1.py \
+            --config q021_primordial_decomposition_v1_config.yml \
+            aggregate \
+            --input-dir q021_downloads \
+            --output q021_merged_v1.json
+
+      - name: Mandatory scientific result tests
+        if: always()
+        run: |
+          python q021_tests_v1.py \
+            --merged q021_merged_v1.json \
+            --output q021_tests_v1.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q021-final-v1
+          path: |
+            q021_merged_v1.json
+            q021_tests_v1.json
+          if-no-files-found: warn
