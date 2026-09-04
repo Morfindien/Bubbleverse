@@ -1,0 +1,46 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "official_planck_lite": {
+    "api": {
+      "covariance": "covmat",
+      "data": "data_vec",
+      "inverse_covariance": "inv_cov",
+      "metadata": "spec_meta"
+    },
+    "calibration": {
+      "EE": "calEE*A_planck**2",
+      "TE": "calTE*A_planck**2",
+      "TT": "A_planck**2"
+    },
+    "class": "planck_Camspec_NPIPE_lite",
+    "commit": "e387852",
+    "repository": "HTJense/camspec_npipe-lite",
+    "source_blob": "833842951bb5658f86a01087c7ded53c2586881e"
+  },
+  "q": "Q016",
+  "q009_act_tuple_contract": {
+    "blob": "47a4e6e6033a290b7eaf07ce8e246e0707acd924",
+    "prediction_and_meta_row": "(index, pol.upper(), ell, data, prediction)"
+  },
+  "result_id": "R-Q016-EDE-CMB-MECHANISM-004",
+  "run_id": "Q016-CMB-MECHANISM-V4",
+  "scientific_changes": "NONE",
+  "v16_endpoints_changed": false,
+  "v3_parent": {
+    "github_run_id": 33796477350,
+    "head_sha": "17a33c69a3eef6f2273b4dfdbfe95e555afba1cb",
+    "imported_context": {
+      "artifact_id": 9909377634,
+      "digest": "sha256:71daa726168d0c975ff87b5a67e897ec8eaaf9ce3b062c190608874515dc848d"
+    },
+    "matched_act": "FAILED_Q009_TUPLE_METADATA_MISMATCH",
+    "matched_planck": "FAILED_PLANCK_GET_CALS_API_MISMATCH",
+    "matched_spt": {
+      "artifact_id": 9909479632,
+      "digest": "sha256:cae3ed78632e1885534dbd60bb2b0b997f2dfa4a7dd0003a0da57402ab0eed49",
+      "status": "PASS"
+    },
+    "secondary_planck": "FAILED_PLANCK_GET_CALS_API_MISMATCH",
+    "secondary_spt": "TECHNICALLY_UNAVAILABLE_SPT_DL_KEY_CASE_MISMATCH"
+  }
+}

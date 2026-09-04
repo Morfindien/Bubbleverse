@@ -1,0 +1,25 @@
+Q016 CMB MECHANISM V4 — V3 PARTIAL RESULT RECOVERY
+
+V3 RUN: 33796477350
+HEAD: 17a33c69a3eef6f2273b4dfdbfe95e555afba1cb
+
+PRESERVED:
+- matched SPT PASS, artifact 9909479632
+- ACT secondary explicit TECHNICALLY_UNAVAILABLE from V3 imported context
+
+V4 REPAIRS:
+1. ACT matched consumes Q009 tuple metadata exactly:
+   (index, pol, ell, data, prediction)
+
+2. Planck matched/secondary uses the native camspec_npipe_lite interface:
+   spec_meta, data_vec, covmat, inv_cov.
+   No get_cals() call exists.
+   Calibration is the official lite formula:
+   TT=A_planck^2, TE=calTE*A_planck^2, EE=calEE*A_planck^2.
+
+3. SPT full-MF receives TT/TE/EE uppercase aliases of the unchanged CLASS spectra.
+
+NO SCIENTIFIC SURFACE CHANGE.
+NO V16 ENDPOINT CHANGE.
+NO PRIMARY PROFILE RERUN.
+NO GATE RELAXATION.

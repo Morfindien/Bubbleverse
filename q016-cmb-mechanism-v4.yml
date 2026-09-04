@@ -1,0 +1,297 @@
+name: Bubbleverse Q016 CMB Mechanism V4
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q016
+  RUN_ID: Q016-CMB-MECHANISM-V4
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+  OMP_NUM_THREADS: "1"
+  OPENBLAS_NUM_THREADS: "1"
+  MKL_NUM_THREADS: "1"
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - name: Install lightweight validation dependencies
+        run: python -m pip install PyYAML==6.0.2 numpy
+      - name: Frozen Bubbleverse reuse gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(git rev-parse HEAD:q015_cmb_attribution_v2.py)" = "b4c0924861328ac724ca386959487b3a1bd22534"
+          test "$(git rev-parse HEAD:q009_act_corrected_minima_attribution_v8.py)" = "47a4e6e6033a290b7eaf07ce8e246e0707acd924"
+          test "$(git rev-parse HEAD:q016_objective_reprofile_v16.py)" = "c57cba7e92e2454b548430e2d45731f8ed50781c"
+          test "$(git rev-parse HEAD:q016_setup_v16.sh)" = "1f492368ec112baf2d3e1f0fd9dbe007967a2002"
+      - name: Static scientific and adapter gates
+        run: |
+          python q016_mechanism_tests_v4.py static \
+            --config q016_mechanism_v4_config.yml \
+            --output q016_mechanism_static_tests_v4.json
+      - name: Frozen dependency bootstrap preflight
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r q005_hpc_v14_requirements.txt
+          python - <<'PY'
+          import importlib.metadata as m
+          expected={"cobaya":"3.5.6","PyYAML":"6.0.2","numpy":"1.26.4","scipy":"1.15.3",
+                    "Py-BOBYQA":"1.5.0","getdist":"1.6.1","Cython":"0.29.37","sacc":"1.0.2"}
+          for p,v in expected.items():
+              a=m.version(p); assert a==v,(p,a,v)
+          print("Q016_MECHANISM_V4_FROZEN_DEPENDENCY_BOOTSTRAP_PREFLIGHT=PASS")
+          PY
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q016-mechanism-v4-prepare
+          path: q016_mechanism_static_tests_v4.json
+
+  import_v3_partial_context:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - name: Authenticate V3 partial-result artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/33796477350" > /tmp/v3run.json
+          gh api "repos/${GITHUB_REPOSITORY}/actions/runs/33796477350/artifacts?per_page=100" > /tmp/v3arts.json
+          python - <<'PY'
+          import json
+          run=json.load(open("/tmp/v3run.json"))
+          assert int(run["id"])==33796477350
+          assert run["head_sha"]=="17a33c69a3eef6f2273b4dfdbfe95e555afba1cb"
+          assert run["name"]=="Bubbleverse Q016 CMB Mechanism V3"
+          arts={a["name"]:a for a in json.load(open("/tmp/v3arts.json"))["artifacts"]}
+          expected={
+            "q016-mechanism-v3-matched-spt":(9909479632,"sha256:cae3ed78632e1885534dbd60bb2b0b997f2dfa4a7dd0003a0da57402ab0eed49"),
+            "q016-mechanism-v3-imported-context":(9909377634,"sha256:71daa726168d0c975ff87b5a67e897ec8eaaf9ce3b062c190608874515dc848d"),
+          }
+          for name,(aid,digest) in expected.items():
+              a=arts[name]
+              assert int(a["id"])==aid
+              assert a["digest"]==digest
+              assert not a["expired"]
+          print("Q016_MECHANISM_V4_V3_PARTIAL_PROVENANCE_GATE=PASS")
+          PY
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-mechanism-v3-matched-spt
+          path: q016_v3_matched_spt
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33796477350
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-mechanism-v3-imported-context
+          path: q016_v3_context
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 33796477350
+      - name: Bridge V3 partial results into V4 identity
+        run: |
+          python - <<'PY'
+          import json, math, shutil
+          from pathlib import Path
+          p=Path("q016_v3_matched_spt/q016_mechanism_matched_spt_v3.json")
+          s=json.loads(p.read_text())
+          assert s["q"]=="Q016" and s["run_id"]=="Q016-CMB-MECHANISM-V3"
+          assert s["result_id"]=="R-Q016-EDE-CMB-MECHANISM-003"
+          assert s["stage"]=="MATCHED_RESIDUAL" and s["branch"]=="spt" and s["status"]=="PASS"
+          assert math.isclose(float(s["free"]["endpoint_h0"]),71.1720583121856,abs_tol=1e-10)
+          assert math.isclose(float(s["fixed"]["endpoint_h0"]),71.5,abs_tol=1e-12)
+          assert math.isclose(float(s["delta"]["primary_chi2_fixed_minus_free"]),0.0146484375,abs_tol=1e-12)
+          assert math.isclose(float(s["delta"]["reconstructed_chi2_fixed_minus_free"]),0.01464811219344142,abs_tol=1e-10)
+          s["run_id"]="Q016-CMB-MECHANISM-V4"
+          s["result_id"]="R-Q016-EDE-CMB-MECHANISM-004"
+          s["inherited_from_v3"]={
+            "github_run_id":33796477350,
+            "artifact_id":9909479632,
+            "artifact_digest":"sha256:cae3ed78632e1885534dbd60bb2b0b997f2dfa4a7dd0003a0da57402ab0eed49"
+          }
+          Path("q016_mechanism_matched_spt_v4.json").write_text(json.dumps(s,indent=2,sort_keys=True)+"\n")
+
+          a=Path("q016_v3_context/q016_mechanism_secondary_act_v3.json")
+          d=json.loads(a.read_text())
+          assert d["q"]=="Q016" and d["run_id"]=="Q016-CMB-MECHANISM-V3"
+          assert d["result_id"]=="R-Q016-EDE-CMB-MECHANISM-003"
+          assert d["stage"]=="SECONDARY_MECHANISM" and d["branch"]=="act"
+          assert d["status"]=="TECHNICALLY_UNAVAILABLE"
+          d["run_id"]="Q016-CMB-MECHANISM-V4"
+          d["result_id"]="R-Q016-EDE-CMB-MECHANISM-004"
+          d["inherited_from_v3"]={
+            "github_run_id":33796477350,
+            "context_artifact_id":9909377634,
+            "context_artifact_digest":"sha256:71daa726168d0c975ff87b5a67e897ec8eaaf9ce3b062c190608874515dc848d"
+          }
+          Path("q016_mechanism_secondary_act_v4.json").write_text(json.dumps(d,indent=2,sort_keys=True)+"\n")
+          shutil.copytree("q016_v3_context/q016_act_data_v1","q016_act_data_v1",dirs_exist_ok=True)
+          print("Q016_MECHANISM_V4_V3_PARTIAL_BRIDGE_GATE=PASS")
+          PY
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q016-mechanism-v4-imported-context
+          path: |
+            q016_act_data_v1/
+            q016_mechanism_matched_spt_v4.json
+            q016_mechanism_secondary_act_v4.json
+          if-no-files-found: error
+
+  matched_residual:
+    needs: [prepare, import_v3_partial_context]
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        branch: [planck, act]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - uses: actions/download-artifact@v5
+        if: ${{ matrix.branch == 'act' }}
+        with:
+          name: q016-mechanism-v4-imported-context
+          path: q016_v4_imported
+      - name: Seed ACT reused data
+        if: ${{ matrix.branch == 'act' }}
+        run: cp -a q016_v4_imported/q016_act_data_v1 ./q016_act_data_v1
+      - name: Build known-good V16 environment
+        run: bash q016_mechanism_setup_v4.sh "${{ matrix.branch }}"
+      - name: Evaluate certified endpoint residuals
+        run: |
+          python q016_mechanism_v4.py \
+            --config q016_mechanism_v4_config.yml \
+            matched --branch "${{ matrix.branch }}" \
+            --output "q016_mechanism_matched_${{ matrix.branch }}_v4.json"
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: q016-mechanism-v4-matched-${{ matrix.branch }}
+          path: q016_mechanism_matched_${{ matrix.branch }}_v4.json
+
+  secondary_mechanism:
+    needs: [prepare, import_v3_partial_context]
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        branch: [planck, spt]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+          cache: pip
+          cache-dependency-path: q005_hpc_v14_requirements.txt
+      - name: Build mechanism environment
+        run: bash q016_mechanism_setup_v4.sh "${{ matrix.branch }}"
+      - name: Run experiment-specific mechanism diagnostic
+        run: |
+          python q016_mechanism_v4.py \
+            --config q016_mechanism_v4_config.yml \
+            secondary --branch "${{ matrix.branch }}" \
+            --output "q016_mechanism_secondary_${{ matrix.branch }}_v4.json"
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: q016-mechanism-v4-secondary-${{ matrix.branch }}
+          path: q016_mechanism_secondary_${{ matrix.branch }}_v4.json
+
+  merge:
+    needs: [import_v3_partial_context, matched_residual, secondary_mechanism]
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2 numpy
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q016-mechanism-v4-matched-*
+          path: q016_mechanism_matched_artifacts
+          merge-multiple: false
+      - uses: actions/download-artifact@v5
+        with:
+          pattern: q016-mechanism-v4-secondary-*
+          path: q016_mechanism_secondary_artifacts
+          merge-multiple: false
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-mechanism-v4-imported-context
+          path: q016_mechanism_imported
+      - name: Add preserved partial results to merge inputs
+        run: |
+          mkdir -p q016_mechanism_matched_artifacts/imported_spt
+          mkdir -p q016_mechanism_secondary_artifacts/imported_act
+          cp q016_mechanism_imported/q016_mechanism_matched_spt_v4.json q016_mechanism_matched_artifacts/imported_spt/
+          cp q016_mechanism_imported/q016_mechanism_secondary_act_v4.json q016_mechanism_secondary_artifacts/imported_act/
+      - name: Merge diagnostics
+        run: |
+          set +e
+          python q016_mechanism_aggregate_v4.py \
+            --config q016_mechanism_v4_config.yml \
+            --matched-dir q016_mechanism_matched_artifacts \
+            --secondary-dir q016_mechanism_secondary_artifacts \
+            --output q016_mechanism_merged_v4.json
+          RC=$?
+          set -e
+          echo "MERGE_RC=$RC"
+          exit $RC
+      - uses: actions/upload-artifact@v5
+        if: always()
+        with:
+          name: q016-mechanism-merged-v4
+          path: q016_mechanism_merged_v4.json
+
+  final_tests:
+    needs: merge
+    if: ${{ needs.merge.result == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.10"
+      - run: python -m pip install PyYAML==6.0.2
+      - uses: actions/download-artifact@v5
+        with:
+          name: q016-mechanism-merged-v4
+          path: q016_mechanism_final
+      - name: Mandatory final mechanism result tests
+        run: |
+          python q016_mechanism_tests_v4.py final \
+            --config q016_mechanism_v4_config.yml \
+            --result q016_mechanism_final/q016_mechanism_merged_v4.json \
+            --output q016_mechanism_result_tests_v4.json
+      - uses: actions/upload-artifact@v5
+        with:
+          name: q016-mechanism-final-gates-v4
+          path: q016_mechanism_result_tests_v4.json
