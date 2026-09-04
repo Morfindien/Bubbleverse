@@ -1,0 +1,78 @@
+name: Bubbleverse Q018 Planck likelihood bridge V1
+on:
+  workflow_dispatch:
+env:
+  CURRENT_Q: Q018
+  RUN_ID: Q018-PLANCK-LIKELIHOOD-BRIDGE-V1
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with: {python-version: '3.11'}
+      - run: pip install PyYAML==6.0.2
+      - run: bash q018_setup_v1.sh
+      - id: plan
+        shell: bash
+        run: |
+          python q018_planck_likelihood_bridge_v1.py \
+            --config q018_planck_likelihood_bridge_v1_config.yml \
+            plan --output q018_plan.json
+          echo "matrix=$(python -c 'import json; print(json.dumps(json.load(open("q018_plan.json"))["matrix"]))')" >> "$GITHUB_OUTPUT"
+  profiles:
+    needs: prepare
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with: {python-version: '3.11'}
+      - run: bash q018_setup_v1.sh
+      - name: Profile frozen endpoint
+        run: |
+          mkdir -p q018_profiles
+          python q018_planck_likelihood_bridge_v1.py \
+            --config q018_planck_likelihood_bridge_v1_config.yml profile \
+            --bridge '${{ matrix.bridge }}' \
+            --endpoint '${{ matrix.endpoint }}' \
+            --restart '${{ matrix.restart }}' \
+            --output "q018_profiles/${{ matrix.bridge }}_${{ matrix.endpoint }}_r${{ matrix.restart }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q018-${{ matrix.bridge }}-${{ matrix.endpoint }}-r${{ matrix.restart }}
+          path: q018_profiles/*.json
+  aggregate:
+    needs: profiles
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with: {python-version: '3.11'}
+      - run: pip install PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with: {path: q018_downloads}
+      - run: |
+          python q018_planck_likelihood_bridge_v1.py \
+            --config q018_planck_likelihood_bridge_v1_config.yml aggregate \
+            --input-dir q018_downloads --output q018_merged_v1.json
+          python q018_tests_v1.py \
+            --config q018_planck_likelihood_bridge_v1_config.yml \
+            --merged q018_merged_v1.json --output q018_tests_v1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q018-final-v1
+          path: |
+            q018_merged_v1.json
+            q018_tests_v1.json
