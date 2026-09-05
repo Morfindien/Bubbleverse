@@ -1,0 +1,38 @@
+project:
+  q: Q030
+  question: >-
+    Using the exact 9915-row common support and frozen Q022 endpoints, can the
+    Q029 interaction-preserving identity be reconstructed numerically for all
+    nine mask x edge diagnostics, and what are the signed magnitudes and
+    spectrum/multipole distributions of the exact data-model factorial coupling
+    and model-quadratic functional terms without imposing causal allocation?
+
+repair:
+  version: V3
+  mode: MERGE_VALIDATION_ONLY
+  parent_v2_github_run_id: 33961469874
+  parent_v2_head_sha: c0d01b8cd9ecc533b37cf82e89710595ff9a34a2
+  parent_v2_run_id: Q030-EDE-INTERACTION-PRESERVING-DECOMPOSITION-V2
+  parent_v2_result_id: R-Q030-EDE-INTERACTION-PRESERVING-DECOMPOSITION-002
+  reason: FLOAT64_CANCELLATION_TOLERANCE_CALIBRATION
+  scientific_values_changed: false
+  rerun_mask_jobs: false
+  new_likelihood_evaluations: 0
+  new_optimizer_evaluations: 0
+  new_sampling_evaluations: 0
+
+common_support:
+  dimension: 9915
+  sha256: 6088165823b7fae224ce51aaef33fdef5a400aefafd1675e454e00c6c1a25a63
+
+validation:
+  # V2 observed maxima:
+  # Q029 identity closure = 1.4405506121306644e-08
+  # spectrum/ell pair closure = 7.190558903857891e-08
+  # Both are float64 cancellation residuals, not parent/result disagreement.
+  # 1e-7 remains 2000x tighter than the frozen Q028 parent tolerance 2e-4.
+  float64_factorial_closure_abs_tol: 1.0e-7
+  q029_identity_closure_abs_tol: 1.0e-7
+  aggregation_closure_abs_tol: 1.0e-7
+  delta_m_identity_abs_tol: 1.0e-11
+  q028_parent_interaction_abs_tol: 2.0e-4

@@ -1,0 +1,98 @@
+name: Bubbleverse Q030 validation-only repair V3
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  validate:
+    name: Q030 V3 reuse V2 masks and validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Install validator dependency
+        run: python -m pip install --disable-pip-version-check PyYAML
+
+      - name: Download successful V2 mask 3 artifact
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: Morfindien/Bubbleverse
+          run-id: 33961469874
+          name: q030-v2-mask-m3
+          path: v2_masks
+
+      - name: Download successful V2 mask 6 artifact
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: Morfindien/Bubbleverse
+          run-id: 33961469874
+          name: q030-v2-mask-m6
+          path: v2_masks
+
+      - name: Download successful V2 mask 7 artifact
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: Morfindien/Bubbleverse
+          run-id: 33961469874
+          name: q030-v2-mask-m7
+          path: v2_masks
+
+      - name: Download authoritative Q028 V8 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: Morfindien/Bubbleverse
+          run-id: 33957937309
+          name: q028-final-v8
+          path: q028_parent
+
+      - name: Merge V2 numerical shards without recomputation
+        run: |
+          python q030_validation_repair_v3.py \
+            --config q030_validation_repair_v3_config.yml \
+            --mask-dir v2_masks \
+            --q028-final q028_parent/q028_final_v8.json \
+            --output q030_merged_v3.json
+
+      - name: Mandatory Q030 V3 tests
+        run: |
+          python q030_tests_v3.py \
+            --config q030_validation_repair_v3_config.yml \
+            --result q030_merged_v3.json \
+            --output q030_tests_v3.json
+
+      - name: Construct validated final result
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('q030_merged_v3.json'))
+          t=json.load(open('q030_tests_v3.json'))
+          if t['FINAL_RESULT_GATE'] != 'PASS':
+              raise SystemExit('FINAL_RESULT_GATE=FAIL')
+          r['FINAL_RESULT_GATE']='PASS'
+          r['validation_tests']=t
+          with open('q030_final_v3.json','w') as f:
+              json.dump(r,f,indent=2,sort_keys=True); f.write('\n')
+          print('Q030_FINAL_RESULT_GATE=PASS')
+          PY
+
+      - name: Upload validated Q030 V3 result
+        uses: actions/upload-artifact@v4
+        with:
+          name: q030-final-v3
+          path: |
+            q030_final_v3.json
+            q030_tests_v3.json
+          if-no-files-found: error
