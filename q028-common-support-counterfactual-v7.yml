@@ -1,0 +1,376 @@
+name: Bubbleverse Q028 Criterion B+ split checkpointed counterfactual V7
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q028
+  RUN_ID: Q028-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-V7
+  RESULT_ID: R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-007
+  Q021_RAW_RUN_ID: '33882434170'
+  Q022_RUN_ID: '33902262660'
+  Q025_RUN_ID: '33918779905'
+  Q026_RUN_ID: '33921255497'
+  Q027_RUN_ID: '33924573651'
+  Q028_V2_RUN_ID: '33948947918'
+
+jobs:
+  family:
+    name: family m${{ matrix.mask }} ${{ matrix.edge }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {mask: 3, sa: 0, sb: 1, edge: e01}
+          - {mask: 3, sa: 0, sb: 2, edge: e02}
+          - {mask: 3, sa: 1, sb: 2, edge: e12}
+          - {mask: 6, sa: 0, sb: 1, edge: e01}
+          - {mask: 6, sa: 0, sb: 2, edge: e02}
+          - {mask: 6, sa: 1, sb: 2, edge: e12}
+          - {mask: 7, sa: 0, sb: 1, edge: e01}
+          - {mask: 7, sa: 0, sb: 2, edge: e02}
+          - {mask: 7, sa: 1, sb: 2, edge: e12}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Static V5 gates
+        run: |
+          python -m pip install --disable-pip-version-check PyYAML numpy
+          python -m py_compile q028_common_support_counterfactual_v2.py q028_common_support_counterfactual_v7.py q028_tests_v7.py
+          python - <<'PY'
+          import yaml
+          c=yaml.safe_load(open('q028_common_support_counterfactual_v7_config.yml',encoding='utf-8'))
+          assert c['project']['q']=='Q028'
+          assert c['project']['run_id']=='Q028-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-V7'
+          assert c['execution']['family_jobs']==9
+          assert c['execution']['likelihood_evaluations_per_family_job']==4
+          assert c['execution']['total_expected_likelihood_evaluations']==36
+          assert c['execution']['precision_jobs']==9
+          assert c['validation']['precision_edge_pair_interaction_abs_tol']==2.0e-4
+          assert c['rules']['no_dense_precision_checkpoint_artifacts'] is True
+          assert c['rules']['no_materialized_full_common_precision_in_v5'] is True
+          assert c['rules']['q017_ell_band_schema_must_use_named_min_max_objects'] is True
+          assert c['rules']['checkpoint_filename_contract_must_match_version'] is True
+          bands=c['decomposition']['ell_bands']
+          assert bands and all(isinstance(b,dict) and {'name','min','max'} <= set(b) for b in bands)
+          print('Q028_V7_STATIC_GATE=PASS')
+          PY
+
+      - name: Reuse frozen full-MF environment
+        run: bash q019_setup_v3.sh
+
+      - name: Download authoritative Q022 stage1
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-stage1-m*-s*
+          merge-multiple: true
+          path: q022_inputs/stage1
+
+      - name: Download authoritative Q022 refinement
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-refine-m*-s*
+          merge-multiple: true
+          path: q022_inputs/refinement
+
+      - name: Download authoritative Q022 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          name: q022-final-v2
+          path: q022_inputs/final
+
+      - name: Download exact Q021 primordial lineages
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-m*-r*
+          merge-multiple: true
+          path: q021_inputs
+
+      - name: Build four-state family checkpoint
+        run: |
+          mkdir -p out
+          python q028_common_support_counterfactual_v7.py \
+            --config q028_common_support_counterfactual_v7_config.yml \
+            family \
+            --mask "${{ matrix.mask }}" \
+            --sa "${{ matrix.sa }}" \
+            --sb "${{ matrix.sb }}" \
+            --q021-dir q021_inputs \
+            --q022-dir q022_inputs \
+            --output "out/q028_v7_family_m${{ matrix.mask }}_${{ matrix.edge }}.json"
+
+      - name: Upload family checkpoint
+        uses: actions/upload-artifact@v4
+        with:
+          name: q028-v7-family-m${{ matrix.mask }}-${{ matrix.edge }}
+          path: out/q028_v7_family_m${{ matrix.mask }}_${{ matrix.edge }}.json
+          if-no-files-found: error
+          retention-days: 14
+
+  support:
+    name: exact common support
+    needs: family
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML numpy
+
+      - name: Download all family checkpoints
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q028-v7-family-*
+          merge-multiple: true
+          path: family_inputs
+
+      - name: Construct exact labelled common support
+        run: |
+          python q028_common_support_counterfactual_v7.py \
+            --config q028_common_support_counterfactual_v7_config.yml \
+            support \
+            --family-dir family_inputs \
+            --output q028_v7_support.json
+
+      - name: Upload common support
+        uses: actions/upload-artifact@v4
+        with:
+          name: q028-v7-common-support
+          path: q028_v7_support.json
+          if-no-files-found: error
+          retention-days: 14
+
+  precision:
+    name: precision m${{ matrix.mask }} ${{ matrix.edge }}
+    needs: [family, support]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {mask: 3, sa: 0, sb: 1, edge: e01}
+          - {mask: 3, sa: 0, sb: 2, edge: e02}
+          - {mask: 3, sa: 1, sb: 2, edge: e12}
+          - {mask: 6, sa: 0, sb: 1, edge: e01}
+          - {mask: 6, sa: 0, sb: 2, edge: e02}
+          - {mask: 6, sa: 1, sb: 2, edge: e12}
+          - {mask: 7, sa: 0, sb: 1, edge: e01}
+          - {mask: 7, sa: 0, sb: 2, edge: e02}
+          - {mask: 7, sa: 1, sb: 2, edge: e12}
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: |
+          python -m pip install --disable-pip-version-check PyYAML numpy
+          python -m py_compile q028_common_support_counterfactual_v7.py
+
+      - name: Reuse frozen full-MF environment
+        run: bash q019_setup_v3.sh
+
+      - name: Download authoritative Q022 stage1
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-stage1-m*-s*
+          merge-multiple: true
+          path: q022_inputs/stage1
+
+      - name: Download authoritative Q022 refinement
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-refine-m*-s*
+          merge-multiple: true
+          path: q022_inputs/refinement
+
+      - name: Download authoritative Q022 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          name: q022-final-v2
+          path: q022_inputs/final
+
+      - name: Download exact Q021 primordial lineages
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-m*-r*
+          merge-multiple: true
+          path: q021_inputs
+
+      - name: Download all family checkpoints
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q028-v7-family-*
+          merge-multiple: true
+          path: family_inputs
+
+      - name: Download common support
+        uses: actions/download-artifact@v4
+        with:
+          name: q028-v7-common-support
+          path: support_input
+
+      - name: Evaluate complete cross-donor functional domain
+        run: |
+          mkdir -p out
+          python q028_common_support_counterfactual_v7.py \
+            --config q028_common_support_counterfactual_v7_config.yml \
+            precision \
+            --mask "${{ matrix.mask }}" \
+            --sa "${{ matrix.sa }}" \
+            --sb "${{ matrix.sb }}" \
+            --q021-dir q021_inputs \
+            --q022-dir q022_inputs \
+            --family-dir family_inputs \
+            --support-result support_input/q028_v7_support.json \
+            --output "out/q028_v7_precision_m${{ matrix.mask }}_${{ matrix.edge }}.json"
+
+      - name: Upload precision-functional checkpoint
+        uses: actions/upload-artifact@v4
+        with:
+          name: q028-v7-precision-m${{ matrix.mask }}-${{ matrix.edge }}
+          path: out/q028_v7_precision_m${{ matrix.mask }}_${{ matrix.edge }}.json
+          if-no-files-found: error
+          retention-days: 14
+
+  final:
+    name: deterministic Criterion B+ merge
+    needs: [family, support, precision]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: |
+          python -m pip install --disable-pip-version-check PyYAML numpy
+          python -m py_compile q028_common_support_counterfactual_v7.py q028_tests_v7.py
+
+      - name: Download family checkpoints
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q028-v7-family-*
+          merge-multiple: true
+          path: family_inputs
+
+      - name: Download precision-functional checkpoints
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q028-v7-precision-*
+          merge-multiple: true
+          path: precision_inputs
+
+      - name: Download common support
+        uses: actions/download-artifact@v4
+        with:
+          name: q028-v7-common-support
+          path: support_input
+
+      - name: Download Q025 V2 parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q025_RUN_ID }}
+          name: q025-final-v2
+          path: q025_parent
+
+      - name: Download Q026 parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q026_RUN_ID }}
+          name: q026-final-v1
+          path: q026_parent
+
+      - name: Download frozen Q027 validated parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q027_RUN_ID }}
+          name: q027-final-v1
+          path: q027_parent
+
+      - name: Download Q028 V2 validated parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q028_V2_RUN_ID }}
+          name: q028-final-v2
+          path: q028_v2_parent
+
+      - name: Merge Criterion B+ and resolve Q028
+        run: |
+          python q028_common_support_counterfactual_v7.py \
+            --config q028_common_support_counterfactual_v7_config.yml \
+            merge \
+            --family-dir family_inputs \
+            --precision-dir precision_inputs \
+            --support-result support_input/q028_v7_support.json \
+            --q025-result q025_parent/q025_final_v2.json \
+            --q026-result q026_parent/q026_final_v1.json \
+            --q027-result q027_parent/q027_final_v1.json \
+            --q028-v2-result q028_v2_parent/q028_final_v2.json \
+            --output q028_merged_v7.json
+
+      - name: Mandatory Q028 V5 result tests
+        run: |
+          python q028_tests_v7.py \
+            --result q028_merged_v7.json \
+            --output q028_tests_v7.json
+
+      - name: Construct validated Q028 V5 final result
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('q028_merged_v7.json',encoding='utf-8'))
+          t=json.load(open('q028_tests_v7.json',encoding='utf-8'))
+          assert t['FINAL_RESULT_GATE']=='PASS'
+          r['FINAL_RESULT_GATE']='PASS'
+          r['tests_status']='COMPLETE'
+          r['tests_file']='q028_tests_v7.json'
+          json.dump(r,open('q028_final_v7.json','w',encoding='utf-8'),indent=2,sort_keys=True)
+          open('q028_final_v7.json','a',encoding='utf-8').write('\n')
+          print('FINAL_RESULT_GATE=PASS')
+          PY
+
+      - name: Upload final V5 result
+        uses: actions/upload-artifact@v4
+        with:
+          name: q028-final-v7
+          path: |
+            q028_merged_v7.json
+            q028_tests_v7.json
+            q028_final_v7.json
+          if-no-files-found: error
+          retention-days: 30

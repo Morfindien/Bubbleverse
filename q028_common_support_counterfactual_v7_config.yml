@@ -1,0 +1,156 @@
+project:
+  q: Q028
+  run_id: Q028-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-V7
+  result_id: R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-007
+  generated_at: '2026-09-05T11:09:00+02:00'
+  purpose: SPLIT_CHECKPOINTED_CRITERION_B_PLUS_WITH_SELF_CONSISTENT_V7_CHECKPOINT_FILENAMES
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+likelihood:
+  full_mf: planck_NPIPE_highl_CamSpec.TTTEEE
+  masks:
+  - 3
+  - 6
+  - 7
+execution:
+  masks:
+  - 3
+  - 6
+  - 7
+  edges:
+  - - 0
+    - 1
+  - - 0
+    - 2
+  - - 1
+    - 2
+  family_jobs: 9
+  likelihood_evaluations_per_family_job: 4
+  total_expected_likelihood_evaluations: 36
+  precision_jobs: 9
+  precision_model_constructions_without_likelihood_evaluation: 9
+  optimizer_evaluations: 0
+  sampling_evaluations: 0
+  q024_permutations: 0
+  family_job_timeout_minutes: 30
+  precision_job_timeout_minutes: 30
+  merge_job_timeout_minutes: 15
+  architecture: V5_SPLIT_CHECKPOINTED_TWO_STAGE_FUNCTIONAL_EVALUATION
+parents:
+  q021_run_id: 33882434170
+  q022_run_id: 33902262660
+  q025_run_id: 33918779905
+  q026_run_id: 33921255497
+  q027_run_id: 33924573651
+  q028_v2_run_id: 33948947918
+  q025_result_id: R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-002
+  q026_result_id: R-Q026-EDE-FULLMF-MASK6-COUPLING-001
+  q027_result_id: R-Q027-EDE-FULLMF-RESIDUAL-COVARIANCE-BRIDGE-001
+  q028_v2_result_id: R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-002
+  q028_v3_status: TECHNICAL_FAILURE_BEFORE_CRITERION_B_PLUS
+  q028_v4_status: INFRASTRUCTURE_LIMITED_NO_SCIENTIFIC_RESULT
+  q028_v4_run_1: 33955179647
+  q028_v4_run_2: 33955681259
+  q028_v4_repeated_shutdown_signature: RUNNER_SHUTDOWN_AFTER_NINE_FAMILY_CONSTRUCTIONS
+  q028_v5_status: TECHNICAL_FAILURE_Q017_ELL_BAND_SCHEMA
+  q028_v5_failure_class: ELL_BANDS_LIST_INSTEAD_OF_NAMED_MIN_MAX_OBJECTS
+  q028_v5_scientific_result: NOT_COMPUTED
+  q028_v6_status: TECHNICAL_FAILURE_CHECKPOINT_FILENAME_CONTRACT
+  q028_v6_failure_class: SUPPORT_PHASE_EXPECTED_Q028_V5_FAMILY_FILENAMES
+  q028_v6_scientific_result: NOT_COMPUTED
+reuse:
+  q025_config: q025_fullmf_component_attribution_v2_config.yml
+decomposition:
+  ell_bands:
+  - name: ell_lt_500
+    min: 0
+    max: 499
+  - name: ell_500_999
+    min: 500
+    max: 999
+  - name: ell_1000_1499
+    min: 1000
+    max: 1499
+  - name: ell_1500_2000
+    min: 1500
+    max: 2000
+  - name: ell_2001_2500
+    min: 2001
+    max: 2500
+  - name: ell_2501_plus
+    min: 2501
+    max: 100000
+  criterion_b_plus: COMMON_SUPPORT_CROSS_DONOR_TARGET_FUNCTIONAL_INVARIANCE
+  functional: F(R,P)=q11-q10-q01+q00
+  precision_symmetrization: P_sym_action=0.5*(P_raw@X+P_raw.T@X)
+  schur_quadratic: rT_Pss_r_minus_bT_solve_Ptt_b
+  state_level_q_values: DIAGNOSTIC_ONLY
+  target_band:
+    name: ell_600_999
+    min: 600
+    max: 999
+validation:
+  q017_chi2_closure_abs_tol: 1.0e-06
+  precision_symmetry_rel_tol: 1.0e-10
+  precision_edge_pair_interaction_abs_tol: 0.0002
+  shapley_closure_abs_tol: 1.0e-08
+  minimum_common_support_fraction: 0.9
+  dominance_fraction: 0.6
+rules:
+  no_optimization: true
+  no_sampling: true
+  no_new_endpoints: true
+  no_q024_permutation_rerun: true
+  preserve_signed_accounting: true
+  common_support_must_be_validated: true
+  do_not_use_precision_principal_submatrix_as_marginal: true
+  use_schur_complement_for_marginal_precision: true
+  criterion_b_plus_required: true
+  state_level_invariance_not_required: true
+  cross_donor_target_functional_invariance_required: true
+  schur_before_functional_gate: true
+  no_tolerance_change_from_v2: true
+  precision_symmetrization_required: true
+  raw_precision_asymmetry_is_technical_provenance_not_scientific_gate: true
+  no_dense_precision_checkpoint_artifacts: true
+  no_materialized_full_common_precision_in_v5: true
+  reuse_v2_full_precision_spd_provenance: true
+  if_schur_excluded_block_nonempty_revalidate_Ptt_spd: true
+  rerun_only_failed_matrix_shard_if_infrastructure_failure: true
+  q017_ell_band_schema_must_use_named_min_max_objects: true
+  checkpoint_filename_contract_must_match_version: true
+claim_boundaries:
+  physical_causality: false
+  omega_cdm_A_planck_physical_causality: false
+  new_physics: false
+  instrumental_systematic: false
+  calibration_failure: false
+  foreground_systematic: false
+  NPIPE_maps_incorrect: false
+  covariance_construction_incorrect: false
+  independent_observational_evidence: false
+  independent_physical_posterior_modes: false
+journal_preservation:
+  q019_preserved: true
+  q020_preserved: true
+  q021_corrected_lineage_preserved: true
+  q022_authoritative_endpoints_preserved: true
+  q023_preserved: true
+  q024_preserved_no_rerun: true
+  q025_v2_preserved: true
+  q025_v1_superseded: true
+  q026_preserved: true
+  q027_preserved: true
+  q028_v1_exact_bitwise_failure_preserved_as_technical_anomaly: true
+  q028_v2_final_negative_interpretation_superseded: true
+  q028_v3_technical_failure_preserved: true
+  q028_v3_has_no_scientific_result: true
+  q028_v4_infrastructure_failure_preserved: true
+  q028_v4_has_no_scientific_result: true
+  q028_v5_technical_failure_preserved: true
+  q028_v5_has_no_scientific_result: true
+  q028_v6_technical_failure_preserved: true
+  q028_v6_has_no_scientific_result: true
