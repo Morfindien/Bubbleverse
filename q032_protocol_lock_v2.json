@@ -1,0 +1,115 @@
+{
+  "basin": {
+    "collapse_common_endpoint_rms": 0.1,
+    "collapse_objective_tolerance": 0.5,
+    "refine_unless_single_cluster_covers_all_starts": true,
+    "scale_floor_fraction": 1e-08,
+    "stable_basin_minimum_supporting_starts": 2
+  },
+  "case031_status": "CLOSED_AUTHORITATIVE_NOT_REOPENED",
+  "decision_rules": {
+    "A": "CamSpec stable + HiLLiPoP non-stable => removed 100TT/TE/EE/support bundle insufficient.",
+    "B": "CamSpec loses stable basins => removed information materially required; CamSpec-only nested add-back next.",
+    "C": "HiLLiPoP gains stable basins => removed HiLLiPoP sectors materially suppress/restructure; bounded add-back 100TT vs TE vs EE.",
+    "D": "Both classifications converge => frequency/mode/support architecture is a strong methodological localization candidate, not a causal physical/systematic claim."
+  },
+  "forbidden": [
+    "NEW_CASE031_SEEDS",
+    "BASIN_THRESHOLD_RETUNING",
+    "FORCED_NUISANCE_EQUIVALENCE",
+    "CROSS_LIKELIHOOD_ABSOLUTE_OBJECTIVE_SUBTRACTION",
+    "CROSS_LIKELIHOOD_CHI2_SUM",
+    "FOREGROUND_MODEL_SWAP_PHASE_A",
+    "COVARIANCE_SWAP",
+    "MASK_RECONSTRUCTION_PHASE_A",
+    "Q024_RERUN",
+    "Q030_RERUN",
+    "CAUSAL_A_PLANCK_OR_NUISANCE_INTERPRETATION"
+  ],
+  "hillipop": {
+    "commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "component": "planck_2020_hillipop.TT",
+    "parent_case031_component": "planck_2020_hillipop.TTTEEE",
+    "phase_a_covariance_product": "invfll_PR4_v4.2_TT.fits",
+    "release": "v4.3"
+  },
+  "intervention": {
+    "calibration": "NATIVE_PER_IMPLEMENTATION_A_PLANCK_COMMON_NO_FORCED_EQUIVALENCE",
+    "covariance": "HILLIPOP_TT_NATIVE_PRECISION: C=P^-1 THEN SELECT C_SS FOR 3 PAIRS THEN INVERT C_SS; CAMSPEC SELECTS RAW COVARIANCE COORDINATES BEFORE INVERSION",
+    "excluded": [
+      "100GHz_TT",
+      "TE",
+      "EE",
+      "low_l",
+      "lensing",
+      "ACT",
+      "SPT",
+      "BAO",
+      "SN"
+    ],
+    "foregrounds": "NATIVE_PER_IMPLEMENTATION_NO_SWAP",
+    "hillipop_mode_removal": "OFFICIAL_NATIVE_TT_COMPONENT_AT_SAME_V4_3_COMMIT",
+    "modes": [
+      "TT"
+    ],
+    "name": "TT-3PAIR COMMON-SUPPORT PORTABILITY BRIDGE",
+    "pairs": [
+      "143x143",
+      "143x217",
+      "217x217"
+    ],
+    "phase": "A",
+    "support": "EXACT_RUNTIME_INTERSECTION_HASHED_BEFORE_OPTIMIZATION"
+  },
+  "mandatory_preflight_gates": [
+    "BACKEND_IDENTITY_GATE",
+    "CAMSPEC_IMPLEMENTATION_IDENTITY_GATE",
+    "HILLIPOP_IMPLEMENTATION_IDENTITY_GATE",
+    "DATA_PRODUCT_HASH_GATE",
+    "THREE_TT_PAIR_GATE",
+    "COMMON_MULTIPOLE_SUPPORT_GATE",
+    "SUPPORT_ORDERING_GATE",
+    "SUPPORT_SHA256_GATE",
+    "COVARIANCE_RESTRICTION_SEMANTICS_GATE",
+    "COVARIANCE_SYMMETRY_GATE",
+    "COVARIANCE_POSITIVE_DEFINITE_GATE",
+    "FULL_TO_RESTRICTED_VECTOR_INDEX_GATE",
+    "NATIVE_NUISANCE_SEPARATION_GATE",
+    "NO_FORCED_NUISANCE_MAPPING_GATE",
+    "START_PROVENANCE_GATE",
+    "NO_EXTRA_DATASET_GATE",
+    "FINITE_REAL_LIKELIHOOD_EVALUATION_GATE"
+  ],
+  "optimizer": {
+    "refinement": {
+      "max_evals": 300000,
+      "rhoend": 1e-05
+    },
+    "stage1": {
+      "max_evals": 200000,
+      "rhoend": 0.0001
+    }
+  },
+  "physics": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "model": "MOD-EDE-N3",
+    "n_scf": 3
+  },
+  "protocol_sha256": "19770170bb2e43973053eb4a734cd2c91ad5504822171b2f6672e9e562efd817",
+  "q": "Q-032",
+  "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+  "run_id": "Q032-PLANCK-TT3PAIR-COMMON-SUPPORT-BRIDGE-V2",
+  "starts": [
+    "M3-S0",
+    "M3-S1",
+    "M3-S2",
+    "M6-S0",
+    "M6-S1",
+    "M6-S2",
+    "M7-S0",
+    "M7-S1",
+    "M7-S2"
+  ],
+  "stop_condition": "After validated Phase A, route only to the bounded preregistered next intervention. Do not launch an indefinite map-level reconstruction campaign."
+}

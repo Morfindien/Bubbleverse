@@ -1,0 +1,426 @@
+name: Bubbleverse Q032 Planck TT3PAIR bridge V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-032
+  RUN_ID: Q032-PLANCK-TT3PAIR-COMMON-SUPPORT-BRIDGE-V2
+  RESULT_ID: R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002
+  Q021_RAW_RUN_ID: '33882434170'
+  Q022_RUN_ID: '33902262660'
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Static dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - name: Compile and validate frozen Q032 protocol
+        run: |
+          python -m py_compile q032_planck_tt3pair_bridge_v2.py q032_tests_v2.py
+          python q032_tests_v2.py static --output q032_static_validation_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q032-static-v2
+          path: |
+            q032_static_validation_v2.json
+            q032_static_synthetic_covariance_v2.json
+          if-no-files-found: error
+
+  preflight:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Restore Q032 scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+
+      - name: Download authoritative Q021 full-MF raw endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-*
+          merge-multiple: true
+          path: q021_parent
+
+      - name: Download authoritative Q022 V2 stage1 endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-stage1-m*
+          merge-multiple: true
+          path: q022_parent/stage1
+
+      - name: Download authoritative Q022 V2 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-refine-*
+          merge-multiple: true
+          path: q022_parent/refinement
+
+      - name: Download authoritative Q022 V2 final decision
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          name: q022-final-v2
+          path: q022_parent/final
+
+      - name: Build frozen CamSpec plus HiLLiPoP environments
+        run: bash q032_setup_v2.sh both
+
+      - name: Derive and freeze exact TT3PAIR common support
+        run: |
+          python q032_planck_tt3pair_bridge_v2.py preflight \
+            --q021-dir q021_parent \
+            --q022-dir q022_parent \
+            --output q032_preflight_part1_v2.json \
+            --support-output q032_support_lock_v2.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-preflight-part1-v2
+          path: |
+            q032_preflight_part1_v2.json
+            q032_support_lock_v2.json
+            q032_runtime/q032_hillipop_tt_runtime_v2.json
+          if-no-files-found: warn
+
+  hillipop_covariance:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore Q032 scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-preflight-part1-v2
+          path: q032_preflight_part1
+      - name: Recreate frozen HiLLiPoP runtime
+        run: bash q032_setup_v2.sh hillipop
+      - name: Construct mathematically marginal HiLLiPoP TT3PAIR precision
+        run: |
+          python q032_planck_tt3pair_bridge_v2.py build-hlp-covariance \
+            --preflight q032_preflight_part1/q032_preflight_part1_v2.json \
+            --matrix-output q032_hillipop_tt3pair_precision_v2.npy \
+            --meta-output q032_hillipop_tt3pair_precision_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q032-hillipop-covariance-v2
+          path: |
+            q032_hillipop_tt3pair_precision_v2.npy
+            q032_hillipop_tt3pair_precision_v2.json
+          if-no-files-found: error
+
+  seal_preflight:
+    needs: [preflight, hillipop_covariance]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore Q032 scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-preflight-part1-v2
+          path: q032_preflight_part1
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen HiLLiPoP runtime
+        run: bash q032_setup_v2.sh hillipop
+      - name: Real restricted HiLLiPoP evaluation and final preflight seal
+        run: |
+          python q032_planck_tt3pair_bridge_v2.py seal-preflight \
+            --preflight q032_preflight_part1/q032_preflight_part1_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --output q032_preflight_sealed_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q032-preflight-sealed-v2
+          path: q032_preflight_sealed_v2.json
+          if-no-files-found: error
+
+  stage1:
+    needs: seal_preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore Q032 scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - name: Download HiLLiPoP restricted covariance when required
+        if: matrix.implementation == 'hillipop'
+        uses: actions/download-artifact@v4
+        with:
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate implementation-specific frozen runtime
+        run: bash q032_setup_v2.sh '${{ matrix.implementation }}'
+      - name: Q032 Stage-1 frozen mapped start
+        shell: bash
+        run: |
+          mkdir -p q032_stage1
+          args=(
+            --preflight q032_preflight/q032_preflight_sealed_v2.json
+            --implementation '${{ matrix.implementation }}'
+            --phase stage1
+            --mask '${{ matrix.mask }}'
+            --seed '${{ matrix.seed }}'
+            --output "q032_stage1/${{ matrix.implementation }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+          )
+          if [[ '${{ matrix.implementation }}' == 'hillipop' ]]; then
+            args+=(
+              --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy
+              --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json
+            )
+          fi
+          python q032_planck_tt3pair_bridge_v2.py profile "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-stage1-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_stage1/*.json
+          if-no-files-found: warn
+
+  assess_primary:
+    needs: stage1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      needs_refinement: ${{ steps.assess.outputs.needs_refinement }}
+      refine_matrix: ${{ steps.assess.outputs.refine_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-stage1-*
+          merge-multiple: true
+          path: q032_stage1_all
+      - id: assess
+        shell: bash
+        run: |
+          set +e
+          python q032_planck_tt3pair_bridge_v2.py assess-primary \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --stage1-dir q032_stage1_all \
+            --output q032_stage1_assessment_v2.json \
+            --matrix-output q032_refine_matrix_v2.json | tee q032_assess.log
+          rc=${PIPESTATUS[0]}
+          needs=$(grep '^NEEDS_REFINEMENT=' q032_assess.log | tail -1 | cut -d= -f2-)
+          matrix=$(grep '^REFINE_MATRIX=' q032_assess.log | tail -1 | cut -d= -f2-)
+          echo "needs_refinement=${needs}" >> "$GITHUB_OUTPUT"
+          echo "refine_matrix=${matrix}" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-stage1-assessment-v2
+          path: |
+            q032_stage1_assessment_v2.json
+            q032_refine_matrix_v2.json
+            q032_assess.log
+          if-no-files-found: warn
+
+  refinement:
+    needs: assess_primary
+    if: needs.assess_primary.outputs.needs_refinement == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJson(needs.assess_primary.outputs.refine_matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore Q032 scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-stage1-*
+          merge-multiple: true
+          path: q032_stage1_all
+      - name: Download HiLLiPoP restricted covariance when required
+        if: matrix.implementation == 'hillipop'
+        uses: actions/download-artifact@v4
+        with:
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate implementation-specific frozen runtime
+        run: bash q032_setup_v2.sh '${{ matrix.implementation }}'
+      - name: Q032 tighter continuation from exact Stage-1 minimum
+        shell: bash
+        run: |
+          mkdir -p q032_refinement
+          args=(
+            --preflight q032_preflight/q032_preflight_sealed_v2.json
+            --implementation '${{ matrix.implementation }}'
+            --phase refinement
+            --mask '${{ matrix.mask }}'
+            --seed '${{ matrix.seed }}'
+            --stage1-dir q032_stage1_all
+            --output "q032_refinement/${{ matrix.implementation }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+          )
+          if [[ '${{ matrix.implementation }}' == 'hillipop' ]]; then
+            args+=(
+              --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy
+              --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json
+            )
+          fi
+          python q032_planck_tt3pair_bridge_v2.py profile "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-refine-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_refinement/*.json
+          if-no-files-found: warn
+
+  final:
+    needs: [assess_primary, refinement]
+    if: >-
+      always() &&
+      needs.assess_primary.result == 'success' &&
+      (needs.refinement.result == 'success' || needs.refinement.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-stage1-assessment-v2
+          path: q032_assessment
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-stage1-*
+          merge-multiple: true
+          path: q032_stage1_all
+      - name: Download refinements when required
+        if: needs.assess_primary.outputs.needs_refinement == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_refinement_all
+      - name: Apply frozen Phase-A decision rules
+        shell: bash
+        run: |
+          args=(
+            --preflight q032_preflight/q032_preflight_sealed_v2.json
+            --assessment q032_assessment/q032_stage1_assessment_v2.json
+            --stage1-dir q032_stage1_all
+            --output q032_final_v2.json
+          )
+          if [[ '${{ needs.assess_primary.outputs.needs_refinement }}' == 'true' ]]; then
+            args+=(--refinement-dir q032_refinement_all)
+          fi
+          python q032_planck_tt3pair_bridge_v2.py aggregate "${args[@]}" | tee q032_final.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q032-final-v2
+          path: |
+            q032_final_v2.json
+            q032_final.log
+          if-no-files-found: error
