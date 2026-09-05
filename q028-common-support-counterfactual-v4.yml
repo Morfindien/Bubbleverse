@@ -1,0 +1,215 @@
+name: Bubbleverse Q028 Criterion B+ common-support counterfactual V4
+
+on:
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  CURRENT_Q: Q028
+  RUN_ID: Q028-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-V4
+  RESULT_ID: R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-004
+  Q021_RAW_RUN_ID: '33882434170'
+  Q022_RUN_ID: '33902262660'
+  Q025_RUN_ID: '33918779905'
+  Q026_RUN_ID: '33921255497'
+  Q027_RUN_ID: '33924573651'
+  Q028_V2_RUN_ID: '33948947918'
+
+jobs:
+  q028:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            ~/.cache/cobaya
+            external
+          key: q028-v4-${{ runner.os }}-${{ hashFiles('q019_setup_v3.sh','q025_fullmf_component_attribution_v2.py','q017_planck_direction_localization_v1.py','q028_common_support_counterfactual_v2.py','q028_common_support_counterfactual_v4.py') }}
+
+      - name: Static continuity and syntax gates
+        run: |
+          python -m pip install --disable-pip-version-check PyYAML numpy
+          python -m py_compile \
+            q028_common_support_counterfactual_v2.py \
+            q028_common_support_counterfactual_v4.py \
+            q028_tests_v4.py
+          python - <<'PY'
+          import yaml
+          c=yaml.safe_load(open('q028_common_support_counterfactual_v4_config.yml',encoding='utf-8'))
+          assert c['project']['q']=='Q028'
+          assert c['project']['run_id']=='Q028-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-V4'
+          assert c['model']['backend_commit']=='5a131c91d657dd9a7c6364cc45b038710f8d0d97'
+          assert c['likelihood']['full_mf']=='planck_NPIPE_highl_CamSpec.TTTEEE'
+          assert c['execution']['total_expected_likelihood_evaluations']==36
+          assert c['validation']['precision_edge_pair_interaction_abs_tol']==2.0e-4
+          assert c['rules']['criterion_b_plus_required'] is True
+          assert c['rules']['state_level_invariance_not_required'] is True
+          assert c['rules']['cross_donor_target_functional_invariance_required'] is True
+          assert c['rules']['schur_before_functional_gate'] is True
+          assert c['rules']['symmetrize_precision_before_spd_and_schur'] is True
+          assert c['rules']['raw_precision_symmetry_failure_not_scientific_gate'] is True
+          assert c['rules']['preserve_raw_precision_asymmetry_diagnostics'] is True
+          assert c['rules']['no_tolerance_change_from_v2'] is True
+          assert c['rules']['no_optimization'] is True
+          assert c['rules']['no_sampling'] is True
+          assert c['rules']['no_q024_permutation_rerun'] is True
+          print('CONTEXT_CONTINUITY_GATE=PASS')
+          print('Q_IDENTITY_GATE=PASS')
+          print('CRITERION_B_PLUS_SPECIFICATION_GATE=PASS')
+          PY
+
+      - name: Reuse frozen full-MF environment
+        run: bash q019_setup_v3.sh
+
+      - name: Download authoritative Q022 stage1
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-stage1-m*-s*
+          merge-multiple: true
+          path: q022_inputs/stage1
+
+      - name: Download authoritative Q022 refinement
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-refine-m*-s*
+          merge-multiple: true
+          path: q022_inputs/refinement
+
+      - name: Download authoritative Q022 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          name: q022-final-v2
+          path: q022_inputs/final
+
+      - name: Download exact Q021 primordial lineages
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-m*-r*
+          merge-multiple: true
+          path: q021_inputs
+
+      - name: Download Q025 V2 parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q025_RUN_ID }}
+          name: q025-final-v2
+          path: q025_parent
+
+      - name: Download Q026 parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q026_RUN_ID }}
+          name: q026-final-v1
+          path: q026_parent
+
+      - name: Download frozen Q027 validated parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q027_RUN_ID }}
+          name: q027-final-v1
+          path: q027_parent
+
+      - name: Download Q028 V2 validated parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q028_V2_RUN_ID }}
+          name: q028-final-v2
+          path: q028_v2_parent
+
+      - name: Parent continuity gates
+        run: |
+          python - <<'PY'
+          import json
+          p25=json.load(open('q025_parent/q025_final_v2.json',encoding='utf-8'))
+          p26=json.load(open('q026_parent/q026_final_v1.json',encoding='utf-8'))
+          p27=json.load(open('q027_parent/q027_final_v1.json',encoding='utf-8'))
+          p28=json.load(open('q028_v2_parent/q028_final_v2.json',encoding='utf-8'))
+          assert p25['result_id']=='R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-002'
+          assert p25['FINAL_RESULT_GATE']=='PASS'
+          assert p26['result_id']=='R-Q026-EDE-FULLMF-MASK6-COUPLING-001'
+          assert p26['FINAL_RESULT_GATE']=='PASS'
+          assert p27['result_id']=='R-Q027-EDE-FULLMF-RESIDUAL-COVARIANCE-BRIDGE-001'
+          assert p27['FINAL_RESULT_GATE']=='PASS'
+          assert p27['cross_mask_summary']['spatial_localization']=='DISTRIBUTED_BEYOND_TT600_999_TRIAD'
+          assert p27['cross_mask_summary']['within_mask_mechanism']=='RESIDUAL_CHANGE_UNDER_FIXED_INVERSE_COVARIANCE'
+          assert p28['result_id']=='R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-002'
+          assert p28['FINAL_RESULT_GATE']=='PASS'
+          assert p28['actual_new_likelihood_evaluations']==36
+          print('PARENT_CHAIN_GATE=PASS')
+          print('Q028_V2_PROVENANCE_GATE=PASS')
+          PY
+
+      - name: Q028 V4 Criterion B+ minimal continuation
+        run: |
+          python q028_common_support_counterfactual_v4.py \
+            --config q028_common_support_counterfactual_v4_config.yml \
+            --q021-dir q021_inputs \
+            --q022-dir q022_inputs \
+            --q025-result q025_parent/q025_final_v2.json \
+            --q026-result q026_parent/q026_final_v1.json \
+            --q027-result q027_parent/q027_final_v1.json \
+            --q028-v2-result q028_v2_parent/q028_final_v2.json \
+            --output q028_merged_v4.json
+
+      - name: Mandatory Q028 V4 result tests
+        run: |
+          python q028_tests_v4.py \
+            --result q028_merged_v4.json \
+            --output q028_tests_v4.json
+
+      - name: Construct validated Q028 V4 final result
+        run: |
+          python - <<'PY'
+          import json, os
+          r=json.load(open('q028_merged_v4.json',encoding='utf-8'))
+          t=json.load(open('q028_tests_v4.json',encoding='utf-8'))
+          r['tests_status']=t['tests_status']
+          r['mandatory_test_gates']=t['gates']
+          r['FINAL_RESULT_GATE']=t['FINAL_RESULT_GATE']
+          r['github_q027_parent_run_id']=os.environ.get('Q027_RUN_ID')
+          r['github_q028_v2_parent_run_id']=os.environ.get('Q028_V2_RUN_ID')
+          r['bubbleverse_execution_commit']=os.environ.get('GITHUB_SHA')
+          r['github_actions_run_id']=os.environ.get('GITHUB_RUN_ID')
+          r['github_runner_os']=os.environ.get('RUNNER_OS')
+          r['github_runner_arch']=os.environ.get('RUNNER_ARCH')
+          r['status']='PASS' if t['FINAL_RESULT_GATE']=='PASS' else 'FAIL'
+          json.dump(r,open('q028_final_v4.json','w',encoding='utf-8'),indent=2,sort_keys=True)
+          open('q028_final_v4.json','a',encoding='utf-8').write('\n')
+          if t['FINAL_RESULT_GATE']!='PASS':
+              raise SystemExit(2)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q028-final-v4
+          path: |
+            q028_merged_v4.json
+            q028_tests_v4.json
+            q028_final_v4.json
+          if-no-files-found: warn

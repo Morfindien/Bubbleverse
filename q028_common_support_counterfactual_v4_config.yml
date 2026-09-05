@@ -1,0 +1,167 @@
+project:
+  q: Q028
+  run_id: Q028-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-V4
+  result_id: R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-004
+  generated_at: '2026-09-05T10:20:00+02:00'
+  question: >-
+    Can the established cross-mask non-universality of the frozen MOD-EDE-N3
+    full-MF CamSpec likelihood be separated into residual/data-vector effects
+    versus mask-specific inverse-covariance/precision effects using a
+    mathematically valid common-support counterfactual construction, without
+    changing the underlying physical model or reoptimizing the authoritative
+    Q022 basin endpoints?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+likelihood:
+  full_mf: planck_NPIPE_highl_CamSpec.TTTEEE
+  construction: FROZEN_CAMSPEC_FULL_MF
+  counterfactual_scope: COMMON_LABELLED_DATA_SUPPORT_ONLY
+
+parents:
+  q022_result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+  q022_run_id: '33902262660'
+  q022_execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+  q025_result_id: R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-002
+  q025_run_id: '33918779905'
+  q025_execution_commit: b2db6827b1caf5405e6a34bff221b6ae4813c1d0
+  q026_result_id: R-Q026-EDE-FULLMF-MASK6-COUPLING-001
+  q026_run_id: '33921255497'
+  q026_execution_commit: 7cb4d98c01196c22b407b6f4fd4118179afea3de
+  q027_result_id: R-Q027-EDE-FULLMF-RESIDUAL-COVARIANCE-BRIDGE-001
+  q027_run_id: '33924573651'
+  q027_required_spatial_classification: DISTRIBUTED_BEYOND_TT600_999_TRIAD
+  q027_required_within_mask_mechanism: RESIDUAL_CHANGE_UNDER_FIXED_INVERSE_COVARIANCE
+  q028_v2_result_id: R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-002
+  q028_v2_run_id: '33948947918'
+  q028_v2_execution_commit: a3644cadc559a1c858bd9f6c58d78803d6ae1bf4
+  q028_v3_status: TECHNICAL_FAILURE_BEFORE_CRITERION_B_PLUS
+  q028_v3_failure_class: PRE_SCHUR_RAW_PRECISION_SYMMETRY_GATE
+  q028_v3_observed_mask3_e01_raw_relative_asymmetry: 1.1523998313125379e-07
+  q028_v3_scientific_result: NOT_COMPUTED
+
+reuse:
+  q017_program: q017_planck_direction_localization_v1.py
+  q019_setup: q019_setup_v3.sh
+  q025_program: q025_fullmf_component_attribution_v2.py
+  q025_config: q025_fullmf_component_attribution_v2_config.yml
+  q028_v2_program: q028_common_support_counterfactual_v2.py
+  q028_v2_config: q028_common_support_counterfactual_v2_config.yml
+  q028_v2_tests: q028_tests_v2.py
+
+decomposition:
+  ell_bands:
+    - {name: ell_lt_600, min: 0, max: 599}
+    - {name: ell_600_999, min: 600, max: 999}
+    - {name: ell_1000_1499, min: 1000, max: 1499}
+    - {name: ell_1500_2000, min: 1500, max: 2000}
+    - {name: ell_2001_plus, min: 2001, max: 100000}
+  common_support_key: [observable, spectrum, ell]
+  marginal_precision_formula: P_SS - P_ST @ solve(P_TT, P_TS)
+  signed_quadratic_form: r.T @ P @ r
+  finite_switch_pair_interaction: q11 - q10 - q01 + q00
+  target_functional_trace_form: Tr(P K_R)
+  criterion_b_plus: COMMON_SUPPORT_CROSS_DONOR_TARGET_FUNCTIONAL_INVARIANCE
+  precision_symmetrization_formula: 0.5 * (P_raw + P_raw.T)
+  raw_antisymmetric_part_quadratic_contribution: ZERO
+  raw_precision_asymmetry_role: TECHNICAL_PROVENANCE_NOT_SCIENTIFIC_REJECTION_GATE
+  two_factor_attribution: SYMMETRIC_SHAPLEY
+
+execution:
+  python: '3.11'
+  masks: [3, 6, 7]
+  edges: [[0, 1], [0, 2], [1, 2]]
+  switch_parameters: [omega_cdm, A_planck]
+  evaluations_per_edge: 4
+  edge_count: 9
+  total_expected_likelihood_evaluations: 36
+  optimizer_evaluations: 0
+  sampling_evaluations: 0
+  q024_permutation_evaluations: 0
+  github_hard_limit_minutes: 360
+  workflow_timeout_minutes: 180
+  safe_runtime_target_minutes: 150
+  execution_strategy: SINGLE_FIXED_VECTOR_JOB_PLUS_DETERMINISTIC_LINEAR_ALGEBRA
+  checkpointing: false
+  recovery: RERUN_WHOLE_Q028_V4_JOB_IF_TECHNICAL_FAILURE
+  mode: FIXED_VECTOR_ONLY_NO_OPTIMIZATION_V4_CRITERION_B_PLUS_SYMMETRIZED_PRECISION
+
+validation:
+  q017_chi2_closure_abs_tol: 0.0002
+  precision_symmetry_rel_tol: 1.0e-10
+  shapley_closure_abs_tol: 1.0e-08
+  factorial_zero_abs_tol: 1.0e-10
+  minimum_common_support_fraction: 0.9
+
+  # Frozen V2 diagnostics retained unchanged. They are not all final
+  # identifiability gates under the Mathematics Engine's Criterion B+ ruling.
+  precision_edge_relative_frobenius_tol: 1.0e-10
+  precision_edge_relative_max_tol: 1.0e-10
+  precision_edge_relative_spectral_tol: 1.0e-10
+  precision_edge_state_quadratic_abs_tol: 0.0002
+  precision_edge_pair_interaction_abs_tol: 0.0002
+
+rules:
+  no_optimization: true
+  no_sampling: true
+  no_new_endpoints: true
+  no_q024_permutation_rerun: true
+  preserve_signed_accounting: true
+  common_support_must_be_validated: true
+  do_not_use_precision_principal_submatrix_as_marginal: true
+  use_schur_complement_for_marginal_precision: true
+  q022_endpoints_authoritative: true
+  q025_v1_forbidden: true
+  q027_distributed_result_preserved: true
+  q027_within_mask_result_preserved: true
+  functional_attribution_not_physical_causality: true
+  residual_side_not_equal_raw_data_only: true
+  negative_result_is_valid: true
+  sha256_is_provenance_not_scientific_equivalence: true
+
+  # Mathematics Engine ruling.
+  criterion_b_plus_required: true
+  state_level_invariance_not_required: true
+  cross_donor_target_functional_invariance_required: true
+  schur_before_functional_gate: true
+  symmetrize_precision_before_spd_and_schur: true
+  raw_precision_symmetry_failure_not_scientific_gate: true
+  preserve_raw_precision_asymmetry_diagnostics: true
+  no_tolerance_change_from_v2: true
+
+claim_boundaries:
+  physical_causality_claimed: false
+  calibration_failure_proven: false
+  instrumental_systematic_proven: false
+  foreground_systematic_proven: false
+  npipe_maps_incorrect_proven: false
+  covariance_construction_incorrect_proven: false
+  omega_cdm_A_planck_physical_causality_proven: false
+  independent_physical_posterior_modes_proven: false
+  new_physics_proven: false
+  independent_observational_evidence_claimed: false
+
+journal_preservation:
+  q019_preserved: true
+  q020_preserved: true
+  q021_corrected_lineage_preserved: true
+  q022_authoritative_endpoints_preserved: true
+  q023_preserved: true
+  q024_preserved_without_rerun: true
+  q025_v2_preserved: true
+  q025_v1_remains_superseded: true
+  q026_preserved: true
+  q027_preserved: true
+  q028_v1_hash_only_gate_remains_superseded: true
+  q028_v2_quantified_precision_difference_preserved: true
+  q028_v2_final_negative_interpretation_superseded_pending_v4: true
+  q028_v3_technical_failure_preserved: true
+  q028_v3_has_no_scientific_result: true
+  q028_v3_superseded_by_v4: true
+  mathematics_engine_criterion_b_plus_preserved: true
+
+sources: [K-039, K-044, K-048, K-049, K-046, K-047]
