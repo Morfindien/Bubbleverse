@@ -1,0 +1,622 @@
+name: Bubbleverse CASE-031 Planck likelihood portability V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: CASE-031
+  RUN_ID: CASE031-PLANCK-LIKELIHOOD-PORTABILITY-V1
+  RESULT_ID: R-CASE031-EDE-PLANCK-PORTABILITY-001
+  TECHNICAL_WORKFLOW_VERSION: V2
+  Q021_RAW_RUN_ID: '33882434170'
+  Q022_RUN_ID: '33902262660'
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Static dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2
+
+      - name: Compile and validate frozen protocol
+        run: |
+          python -m py_compile q031_planck_portability_v1.py q031_tests_v1.py
+          python q031_tests_v1.py static --output q031_static_validation_v1.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q031-static-v1
+          path: q031_static_validation_v1.json
+
+  preflight:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Restore CASE-031 scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q031-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+
+      - name: Download authoritative Q021 full-MF raw endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q021_RAW_RUN_ID }}
+          pattern: q021-full_mf-*
+          merge-multiple: true
+          path: q021_parent
+
+      - name: Download authoritative Q022 V2 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-*
+          merge-multiple: true
+          path: q022_parent
+
+      - name: Build frozen class_ede plus independent HiLLiPoP environment
+        run: bash q031_setup_v2.sh
+
+      - name: Pre-register mapped starts, scales and perform one real capability evaluation
+        run: |
+          python q031_planck_portability_v1.py preflight \
+            --q021-dir q021_parent \
+            --q022-dir q022_parent \
+            --output q031_preflight_v1.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q031-preflight-v1
+          path: |
+            q031_preflight_v1.json
+            q031_runtime/q031_runtime_provenance_v1.json
+            q031_runtime/q031_setup_failure_v1.json
+          if-no-files-found: warn
+
+  stage1:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Restore CASE-031 scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q031-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-preflight-v1
+          path: q031_preflight_artifact
+
+      - name: Recreate exact frozen runtime
+        run: bash q031_setup_v2.sh
+
+      - name: HiLLiPoP mapped multistart stage 1
+        run: |
+          mkdir -p q031_stage1
+          python q031_planck_portability_v1.py profile \
+            --preflight q031_preflight_artifact/q031_preflight_v1.json \
+            --phase stage1 \
+            --mask '${{ matrix.mask }}' \
+            --seed '${{ matrix.seed }}' \
+            --output "q031_stage1/m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q031-stage1-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q031_stage1/*.json
+          if-no-files-found: warn
+
+  assess_primary:
+    needs: stage1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      needs_refinement: ${{ steps.assess.outputs.needs_refinement }}
+      refine_matrix: ${{ steps.assess.outputs.refine_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-preflight-v1
+          path: q031_preflight_artifact
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q031-stage1-*
+          merge-multiple: true
+          path: q031_stage1_all
+
+      - id: assess
+        name: Apply frozen collapse criterion and build refinement matrix
+        shell: bash
+        run: |
+          set +e
+          python q031_planck_portability_v1.py assess-primary \
+            --preflight q031_preflight_artifact/q031_preflight_v1.json \
+            --stage1-dir q031_stage1_all \
+            --output q031_stage1_assessment_v1.json \
+            --matrix-output q031_refine_matrix_v1.json | tee q031_assess.log
+          rc=${PIPESTATUS[0]}
+          needs=$(grep '^NEEDS_REFINEMENT=' q031_assess.log | tail -1 | cut -d= -f2-)
+          matrix=$(grep '^REFINE_MATRIX=' q031_assess.log | tail -1 | cut -d= -f2-)
+          echo "needs_refinement=${needs}" >> "$GITHUB_OUTPUT"
+          echo "refine_matrix=${matrix}" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q031-stage1-assessment-v1
+          path: |
+            q031_stage1_assessment_v1.json
+            q031_refine_matrix_v1.json
+            q031_assess.log
+
+  refinement:
+    needs: assess_primary
+    if: needs.assess_primary.outputs.needs_refinement == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJson(needs.assess_primary.outputs.refine_matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Restore CASE-031 scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q031-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-preflight-v1
+          path: q031_preflight_artifact
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q031-stage1-*
+          merge-multiple: true
+          path: q031_stage1_all
+
+      - run: bash q031_setup_v2.sh
+
+      - name: Tighter continuation from the exact stage-1 HiLLiPoP minimum
+        run: |
+          mkdir -p q031_refinement
+          python q031_planck_portability_v1.py profile \
+            --preflight q031_preflight_artifact/q031_preflight_v1.json \
+            --phase refinement \
+            --mask '${{ matrix.mask }}' \
+            --seed '${{ matrix.seed }}' \
+            --stage1-dir q031_stage1_all \
+            --output "q031_refinement/m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q031-refine-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q031_refinement/*.json
+          if-no-files-found: warn
+
+  primary_final:
+    needs: [assess_primary, refinement]
+    if: >-
+      always() &&
+      needs.assess_primary.result == 'success' &&
+      (needs.refinement.result == 'success' || needs.refinement.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      has_multibasin: ${{ steps.primary.outputs.has_multibasin }}
+      direction_status: ${{ steps.primary.outputs.direction_status }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-preflight-v1
+          path: q031_preflight_artifact
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-stage1-assessment-v1
+          path: q031_assessment_artifact
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q031-stage1-*
+          merge-multiple: true
+          path: q031_stage1_all
+
+      - name: Download refinement results when required
+        if: needs.assess_primary.outputs.needs_refinement == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q031-refine-*
+          merge-multiple: true
+          path: q031_refinement_all
+
+      - id: primary
+        shell: bash
+        run: |
+          set -o pipefail
+          args=(
+            --preflight q031_preflight_artifact/q031_preflight_v1.json
+            --stage1-dir q031_stage1_all
+            --assessment q031_assessment_artifact/q031_stage1_assessment_v1.json
+            --output q031_primary_final_v1.json
+          )
+          if [[ '${{ needs.assess_primary.outputs.needs_refinement }}' == 'true' ]]; then
+            args+=(--refinement-dir q031_refinement_all)
+          fi
+          python q031_planck_portability_v1.py aggregate-primary "${args[@]}" | tee q031_primary.log
+          echo "has_multibasin=$(grep '^HAS_MULTIBASIN=' q031_primary.log | tail -1 | cut -d= -f2-)" >> "$GITHUB_OUTPUT"
+          echo "direction_status=$(grep '^DIRECTION_STATUS=' q031_primary.log | tail -1 | cut -d= -f2-)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q031-primary-final-v1
+          path: |
+            q031_primary_final_v1.json
+            q031_primary.log
+
+  primordial:
+    needs: primary_final
+    if: needs.primary_final.outputs.has_multibasin == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        mask: [0, 1, 2, 3, 4, 5, 6, 7]
+        restart: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q031-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-primary-final-v1
+          path: q031_primary_artifact
+
+      - run: bash q031_setup_v2.sh
+
+      - name: Independent 2^3 primordial compensated profile
+        run: |
+          mkdir -p q031_primordial
+          python q031_planck_portability_v1.py hybrid-profile \
+            --primary q031_primary_artifact/q031_primary_final_v1.json \
+            --kind primordial \
+            --mask '${{ matrix.mask }}' \
+            --restart '${{ matrix.restart }}' \
+            --output "q031_primordial/m${{ matrix.mask }}_r${{ matrix.restart }}.json"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q031-primordial-m${{ matrix.mask }}-r${{ matrix.restart }}
+          path: q031_primordial/*.json
+          if-no-files-found: warn
+
+  primordial_aggregate:
+    needs: [primary_final, primordial]
+    if: needs.primary_final.outputs.has_multibasin == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q031-primordial-*
+          merge-multiple: true
+          path: q031_primordial_all
+      - run: |
+          python q031_planck_portability_v1.py aggregate-hybrid \
+            --kind primordial \
+            --input-dir q031_primordial_all \
+            --output q031_primordial_final_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q031-primordial-final-v1
+          path: q031_primordial_final_v1.json
+
+  coupling:
+    needs: primary_final
+    if: needs.primary_final.outputs.has_multibasin == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        mask: [0, 1, 2, 3]
+        restart: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q031-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-primary-final-v1
+          path: q031_primary_artifact
+      - run: bash q031_setup_v2.sh
+      - run: |
+          mkdir -p q031_coupling
+          python q031_planck_portability_v1.py hybrid-profile \
+            --primary q031_primary_artifact/q031_primary_final_v1.json \
+            --kind coupling \
+            --mask '${{ matrix.mask }}' \
+            --restart '${{ matrix.restart }}' \
+            --output "q031_coupling/m${{ matrix.mask }}_r${{ matrix.restart }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q031-coupling-m${{ matrix.mask }}-r${{ matrix.restart }}
+          path: q031_coupling/*.json
+          if-no-files-found: warn
+
+  coupling_aggregate:
+    needs: [primary_final, coupling]
+    if: needs.primary_final.outputs.has_multibasin == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q031-coupling-*
+          merge-multiple: true
+          path: q031_coupling_all
+      - run: |
+          python q031_planck_portability_v1.py aggregate-hybrid \
+            --kind coupling \
+            --input-dir q031_coupling_all \
+            --output q031_coupling_final_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q031-coupling-final-v1
+          path: q031_coupling_final_v1.json
+
+  support_audit:
+    needs: primary_final
+    if: needs.primary_final.outputs.has_multibasin == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q031-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-primary-final-v1
+          path: q031_primary_artifact
+      - run: bash q031_setup_v2.sh
+      - name: Exact pair-preserving residual/covariance support audit
+        run: |
+          python q031_planck_portability_v1.py support-audit \
+            --primary q031_primary_artifact/q031_primary_final_v1.json \
+            --output q031_support_audit_v1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q031-support-audit-v1
+          path: q031_support_audit_v1.json
+          if-no-files-found: warn
+
+  final:
+    needs:
+      [preflight, primary_final, primordial_aggregate, coupling_aggregate, support_audit]
+    if: >-
+      always() &&
+      needs.preflight.result == 'success' &&
+      needs.primary_final.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Use frozen Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-preflight-v1
+          path: q031_preflight_artifact
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: q031-primary-final-v1
+          path: q031_primary_artifact
+
+      - name: Download primordial aggregate if produced
+        if: needs.primordial_aggregate.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: q031-primordial-final-v1
+          path: q031_primordial_artifact
+
+      - name: Download coupling aggregate if produced
+        if: needs.coupling_aggregate.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: q031-coupling-final-v1
+          path: q031_coupling_artifact
+
+      - name: Download residual/covariance support audit if produced
+        if: needs.support_audit.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: q031-support-audit-v1
+          path: q031_support_artifact
+
+      - name: Produce provisional scientific verdict
+        shell: bash
+        run: |
+          args=(
+            --preflight q031_preflight_artifact/q031_preflight_v1.json
+            --primary q031_primary_artifact/q031_primary_final_v1.json
+            --output q031_final_provisional_v1.json
+          )
+          [[ -f q031_primordial_artifact/q031_primordial_final_v1.json ]] &&
+            args+=(--primordial q031_primordial_artifact/q031_primordial_final_v1.json)
+          [[ -f q031_coupling_artifact/q031_coupling_final_v1.json ]] &&
+            args+=(--coupling q031_coupling_artifact/q031_coupling_final_v1.json)
+          [[ -f q031_support_artifact/q031_support_audit_v1.json ]] &&
+            args+=(--support q031_support_artifact/q031_support_audit_v1.json)
+          python q031_planck_portability_v1.py finalize "${args[@]}"
+
+      - name: Mandatory result tests
+        run: |
+          python q031_tests_v1.py validate \
+            --result q031_final_provisional_v1.json \
+            --output q031_validation_v1.json
+          python q031_tests_v1.py certify \
+            --result q031_final_provisional_v1.json \
+            --validation q031_validation_v1.json \
+            --output q031_final_validated_v1.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q031-final-v1
+          path: |
+            q031_final_provisional_v1.json
+            q031_validation_v1.json
+            q031_final_validated_v1.json
+          if-no-files-found: warn
