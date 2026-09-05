@@ -1,0 +1,80 @@
+{
+  "bubbleverse": {
+    "backend": {
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "repository": "mwt5345/class_ede"
+    },
+    "parents": {
+      "Q022": {
+        "execution_commit": "16a7902c3be7d1967adaae9ee380baf0d17e903a",
+        "github_run_id": 33902262660,
+        "result_id": "R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002"
+      },
+      "Q024": {
+        "execution_commit": "b8e16629bbc6592ee11f0d90f78c887a913ac4c1",
+        "result_id": "R-Q024-EDE-FULLMF-BASIN-MATCHING-001"
+      },
+      "Q026": {
+        "execution_commit": "7cb4d98c01196c22b407b6f4fd4118179afea3de",
+        "result_id": "R-Q026-EDE-FULLMF-MASK6-COUPLING-001"
+      },
+      "Q028": {
+        "common_dimension": 9915,
+        "support_sha256": "6088165823b7fae224ce51aaef33fdef5a400aefafd1675e454e00c6c1a25a63"
+      },
+      "Q030": {
+        "final_commit": "4cbe1585d2603b507679c654a8ff8b0d7e2e522e",
+        "inherited_precision_floor": 0.0002
+      }
+    },
+    "repository": "Morfindien/Bubbleverse"
+  },
+  "claim_boundaries": {
+    "cross_likelihood_absolute_chi2_comparison_allowed": false,
+    "independent_likelihood_is_independent_observation": false,
+    "new_physics_claim_allowed": false,
+    "nuisance_equivalence_forced": false,
+    "systematic_claim_allowed": false
+  },
+  "created_at": "2026-09-05T16:07:00+02:00",
+  "independent_likelihood": {
+    "commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "component": "planck_2020_hillipop.TTTEEE",
+    "data_products": {
+      "covariance_matrix_file": "data/invfll_PR4_v4.2_TTTEEE.fits",
+      "data_folder": "planck_2020/hillipop",
+      "multipoles_range_file": "data/binning_v4.2.fits",
+      "xspectra_basename": "data/dl_PR4_v4.2"
+    },
+    "data_source": "https://portal.nersc.gov/cfs/cmb/planck2020/likelihoods",
+    "name": "HiLLiPoP",
+    "package_name": "planck_2020_hillipop",
+    "planck_release": "PR4/NPIPE",
+    "release": "v4.3",
+    "repository": "https://github.com/planck-npipe/hillipop",
+    "runtime_sha256_policy": "HASH_DOWNLOADED_DATA_FILES_AND_RECORD_IN_q031_runtime_provenance_v1.json",
+    "source_id": "EXT-Q031-HILLIPOP-001"
+  },
+  "q": "CASE-031",
+  "result_id": "R-CASE031-EDE-PLANCK-PORTABILITY-001",
+  "run_id": "CASE031-PLANCK-LIKELIHOOD-PORTABILITY-V1",
+  "software": {
+    "Cython": "0.29.37",
+    "Py-BOBYQA": "1.5.0",
+    "PyYAML": "6.0.2",
+    "astropy": "7.2.2",
+    "cobaya": "3.5.6",
+    "getdist": "1.6.1",
+    "numpy": "1.26.4",
+    "python": "3.11",
+    "sacc": "1.0.2",
+    "scipy": "1.15.3"
+  },
+  "source_ids_preserved": [
+    "K-039",
+    "K-044",
+    "K-046",
+    "K-047",
+    "K-048"
+  ]
+}

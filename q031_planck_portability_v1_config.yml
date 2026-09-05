@@ -1,0 +1,283 @@
+project:
+  q: CASE-031
+  case: CASE-031
+  run_id: CASE031-PLANCK-LIKELIHOOD-PORTABILITY-V1
+  result_id: R-CASE031-EDE-PLANCK-PORTABILITY-001
+  generated_at: '2026-09-05T16:07:00+02:00'
+  title: Independent Planck-likelihood portability of the Q021-Q030 n=3 EDE geometry
+  scientific_question: >-
+    Does the distributed, multibasin, mask-dependent, covariance-coupled n=3 EDE
+    geometry identified in the frozen Bubbleverse Planck NPIPE/CamSpec chain
+    survive materially under a genuinely independent Planck PR4/NPIPE likelihood?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+independent_likelihood:
+  family: HiLLiPoP
+  component: planck_2020_hillipop.TTTEEE
+  repository: planck-npipe/hillipop
+  release: v4.3
+  commit: a09ddde3e7ce11df99f74685feb1f1764cafb251
+  planck_release: PR4/NPIPE
+  architecture: MULTIFREQUENCY_CROSS_SPECTRUM_GAUSSIAN
+  frequencies_ghz: [100, 143, 217]
+  exact_data_products:
+    data_folder: planck_2020/hillipop
+    multipoles_range_file: data/binning_v4.2.fits
+    xspectra_basename: data/dl_PR4_v4.2
+    covariance_matrix_file: data/invfll_PR4_v4.2_TTTEEE.fits
+  core_modes: [TT, EE, TE]
+  core_only_high_l: true
+  add_low_l: false
+  add_lensing: false
+  add_ACT: false
+  add_SPT: false
+  add_BAO: false
+  add_SN: false
+
+paper_native_extension:
+  status: NOT_CORE_V1
+  reason: >-
+    Efstathiou-Rosenberg-Poulin is retained as a later confirmatory target.
+    V1 uses HiLLiPoP because it is a separately versioned, public, reconstructable
+    PR4/NPIPE multifrequency likelihood with exact repository provenance.
+
+parents:
+  q021:
+    raw_github_run_id: 33882434170
+    raw_result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-001
+    authoritative_result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-002
+  q022:
+    github_run_id: 33902262660
+    result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+    execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+  q024:
+    result_id: R-Q024-EDE-FULLMF-BASIN-MATCHING-001
+    execution_commit: b8e16629bbc6592ee11f0d90f78c887a913ac4c1
+  q025:
+    config: q025_fullmf_component_attribution_v2_config.yml
+    result_id: R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-002
+  q026:
+    result_id: R-Q026-EDE-FULLMF-MASK6-COUPLING-001
+  q028:
+    common_dimension: 9915
+    support_sha256: 6088165823b7fae224ce51aaef33fdef5a400aefafd1675e454e00c6c1a25a63
+  q030:
+    identity_closure: 2.0940194023211234e-13
+    aggregation_closure: 5.479297571220343e-14
+    max_delta2m_plus_delta2r: 4.547473508864641e-13
+    parent_functional_closure: 1.6143639203214377e-10
+    inherited_precision_floor: 2.0e-4
+
+common_parameter_mapping:
+  omega_b: omega_b
+  omega_cdm: omega_cdm
+  tau_reio: tau_reio
+  n_s: n_s
+  logA: logA
+  fEDE: fEDE
+  log10z_c: log10z_c
+  thetai_scf: thetai_scf
+  H0: H0
+  A_planck: A_planck
+
+non_mapping:
+  CamSpec_calTE: NO_FORCED_EQUIVALENT
+  CamSpec_calEE: NO_FORCED_EQUIVALENT
+  CamSpec_amp_143: NO_FORCED_EQUIVALENT
+  CamSpec_amp_217: NO_FORCED_EQUIVALENT
+  CamSpec_amp_143x217: NO_FORCED_EQUIVALENT
+  CamSpec_n_143: NO_FORCED_EQUIVALENT
+  CamSpec_n_217: NO_FORCED_EQUIVALENT
+  CamSpec_n_143x217: NO_FORCED_EQUIVALENT
+  note: >-
+    HiLLiPoP-native calibration and foreground parameters remain native.
+    They are never populated from CamSpec nuisance values.
+
+cosmology:
+  sampled:
+    [omega_b, omega_cdm, tau_reio, n_s, logA, fEDE, log10z_c, thetai_scf, H0]
+  primordial: [n_s, logA, tau_reio]
+  q022_profiled_common:
+    [omega_b, omega_cdm, fEDE, log10z_c, thetai_scf, H0]
+  direction_common:
+    [omega_b, omega_cdm, tau_reio, n_s, logA, fEDE, log10z_c, thetai_scf, H0, A_planck]
+
+native_nuisance:
+  sampled:
+    [A_planck, cal100A, cal100B, cal143B, cal217A, cal217B,
+     Aradio, Adusty, AdustT, beta_dustT, Acib, beta_cib,
+     Atsz, Aksz, xi, AdustP, beta_dustP]
+  proposal_scales:
+    A_planck: 0.0005
+    cal100A: 0.005
+    cal100B: 0.005
+    cal143B: 0.005
+    cal217A: 0.005
+    cal217B: 0.005
+    Aradio: 1.0
+    Adusty: 1.0
+    AdustT: 0.02
+    beta_dustT: 0.01
+    Acib: 1.0
+    beta_cib: 0.05
+    Atsz: 1.0
+    Aksz: 1.0
+    xi: 0.1
+    AdustP: 0.02
+    beta_dustP: 0.01
+
+normalization_free_gaussian_shapes:
+  tau_reio: {mean: 0.051, sigma: 0.006, provenance: BUBBLEVERSE_SHARED_TAU}
+  A_planck: {mean: 1.0, sigma: 0.0025, provenance: HILLIPOP_NATIVE}
+  AdustT: {mean: 1.0, sigma: 0.1, provenance: HILLIPOP_NATIVE}
+  beta_dustT: {mean: 1.51, sigma: 0.01, provenance: HILLIPOP_NATIVE}
+  beta_cib: {mean: 1.75, sigma: 0.06, provenance: HILLIPOP_NATIVE}
+  AdustP: {mean: 1.0, sigma: 0.1, provenance: HILLIPOP_NATIVE}
+  beta_dustP: {mean: 1.59, sigma: 0.02, provenance: HILLIPOP_NATIVE}
+
+objective:
+  basis: HILLIPOP_HIGH_L_CHI2_PLUS_EXPLICIT_NORMALIZATION_FREE_NATIVE_GAUSSIAN_SHAPES
+  cobaya_ignore_prior: true
+  flat_prior_constants_in_objective: false
+  gaussian_normalization_constants_in_objective: false
+  priors_retained_for_hard_support: true
+  no_cross_likelihood_absolute_objective_comparison: true
+
+primary_multistart:
+  source_start_labels:
+    masks: [3, 6, 7]
+    seed_restarts: [0, 1, 2]
+  source_semantics: >-
+    Q022 mask/restart labels are provenance labels for mapped starts only.
+    They are NOT asserted to be HiLLiPoP mask equivalents.
+  mapped_start_parameters:
+    [omega_b, omega_cdm, tau_reio, n_s, logA, fEDE, log10z_c, thetai_scf, H0, A_planck]
+  unmapped_native_nuisance_start: HILLIPOP_NATIVE_REFERENCE
+  stage1:
+    max_evals: 200000
+    rhoend: 1.0e-4
+  refinement:
+    max_evals: 300000
+    rhoend: 1.0e-5
+
+pre_registered_geometry:
+  scale_lock_source: Q022_AUTHORITATIVE_ENDPOINTS_ONLY_PRE_DECISIVE
+  q022_style_scale_floor_fraction: 1.0e-8
+  collapse_objective_tolerance: 0.50
+  collapse_common_endpoint_rms: 0.10
+  stable_basin_minimum_supporting_starts: 2
+  refine_unless_single_cluster_covers_all_starts: true
+  representative_pair_rule: >-
+    Among stable basin representatives, choose the pair with maximum locked
+    common-parameter normalized RMS; break ties by lower summed objective,
+    then lexicographic source labels.
+  near_degenerate_objective_tolerance: 0.50
+  compensation_common_rms_threshold: 0.10
+  compensation_native_nuisance_rms_threshold: 0.10
+
+primordial_test:
+  coordinates: [n_s, logA, tau_reio]
+  vertices: 8
+  restarts_per_vertex: 3
+  restart_semantics: [REPRESENTATIVE_A, REPRESENTATIVE_B, MIDPOINT]
+  max_evals: 200000
+  rhoend: 1.0e-4
+  restart_objective_spread_max: 0.50
+  dominant_abs_mobius_fraction_threshold: 0.50
+  closure_abs_tolerance: 1.0e-8
+  required_structure_for_portability: DISTRIBUTED
+  n_s_single_localization_forbidden: true
+
+direction_test:
+  minimum_stable_basins_for_test: 3
+  sign_invariant: true
+  pairwise_abs_cosine_floor: 0.60
+  minimum_pairwise_passes: 2
+  median_abs_cosine_threshold: 0.70
+  universal_direction_required_for_failure: true
+  interpretation: >-
+    If fewer than three stable independent basins exist, this criterion is
+    NOT_TESTABLE rather than automatically passed or failed.
+
+coupling_test:
+  coordinates: [omega_cdm, A_planck]
+  vertices: 4
+  restarts_per_vertex: 3
+  restart_objective_spread_max: 0.50
+  closure_abs_tolerance: 1.0e-8
+  inherited_numerical_resolution_floor: 2.0e-4
+  gate_role: SUPPORTING_NOT_CORE
+  causal_interpretation_forbidden: true
+
+residual_covariance_support_test:
+  component: planck_2020_hillipop.TTTEEE
+  exact_pair_target: [143x217, 217x217]
+  multipole_target: [1500, 2000]
+  legacy_lowell_check_band: [600, 999]
+  exact_pair_preserving_algebra: true
+  causal_partition_forbidden: true
+  gate_role: SUPPORTING_NOT_CORE
+
+execution:
+  python: '3.11'
+  optimizer: cobaya_minimize_bobyqa
+  github_runner: ubuntu-24.04
+  github_job_timeout_minutes: 330
+  soft_stop_minutes: 300
+  max_parallel: 6
+  checkpointing: false
+  reason_no_checkpointing: >-
+    Each optimizer restart is an atomic independent work unit. Failed work units
+    are rerun individually; no stateful chain is split mid-optimizer.
+  merge_required: true
+
+software:
+  cobaya: 3.5.6
+  PyYAML: 6.0.2
+  numpy: 1.26.4
+  scipy: 1.15.3
+  Py-BOBYQA: 1.5.0
+  getdist: 1.6.1
+  Cython: 0.29.37
+  sacc: 1.0.2
+  astropy: 7.2.2
+
+success:
+  mandatory_principal_structure:
+    - DISTRIBUTED_PRIMORDIAL_RESPONSE
+    - MATERIAL_STABLE_MULTIBASIN_STRUCTURE
+    - NO_SINGLE_UNIVERSAL_BASIN_DIRECTION
+    - COMPARABLE_CONSTRUCTION_DEPENDENT_COMPENSATION
+  exact_numerical_equality_required: false
+  physical_causality_claim_allowed: false
+
+rules:
+  independent_provenance_mandatory: true
+  same_physics_backend: true
+  no_ACT_or_SPT_in_core: true
+  no_low_l_in_core: true
+  no_lensing_in_core: true
+  no_cross_likelihood_chi2_sum: true
+  no_cross_likelihood_absolute_objective_subtraction: true
+  no_forced_nuisance_mapping: true
+  source_masks_are_start_labels_only: true
+  nuisance_motion_not_systematic_error: true
+  basins_not_physical_universes: true
+  Shapley_not_causal: true
+  no_q020_q030_rerun: true
+  no_q024_permutation_rerun: true
+  no_q030_tolerance_relaxation: true
+  implementation_failure_separate_from_scientific_nonportability: true
+  technical_failure_not_scientific_falsification: true
+
+sources:
+  existing_bubbleverse_ids: [K-039, K-044, K-046, K-047, K-048]
+  new_external_lock_ids:
+    - EXT-Q031-HILLIPOP-001
+    - EXT-Q031-HILLIPOP-DATA-001
+    - EXT-Q031-GITHUB-ACTIONS-001

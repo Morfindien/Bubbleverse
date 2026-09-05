@@ -1,0 +1,62 @@
+{
+  "core_gates": {
+    "compensation": {
+      "common_cosmology_rms_threshold": 0.1,
+      "native_nuisance_rms_threshold": 0.1,
+      "native_nuisance_scale_basis": "HILLIPOP_UPSTREAM_PROPOSAL_SCALES"
+    },
+    "direction": {
+      "if_not_testable": "QUALIFY_NOT_FAIL",
+      "median_abs_cosine_threshold": 0.7,
+      "minimum_pairwise_passes": 2,
+      "minimum_stable_basins": 3,
+      "pairwise_abs_cosine_floor": 0.6
+    },
+    "primordial": {
+      "dominant_abs_mobius_fraction_threshold": 0.5,
+      "required_structure": "DISTRIBUTED",
+      "restart_objective_spread_max": 0.5
+    },
+    "stable_multibasin": {
+      "endpoint_rms_threshold": 0.1,
+      "minimum_supporting_starts_per_basin": 2,
+      "within_basin_objective_threshold": 0.5
+    }
+  },
+  "decisive_results_seen_before_freeze": false,
+  "frozen_at": "2026-09-05T16:07:00+02:00",
+  "independent_likelihood": {
+    "commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "component": "planck_2020_hillipop.TTTEEE"
+  },
+  "protocol_sha256": "673f0625cb535f302d7439a5b7720c7a14fd8bc8e4fada68c3cf09198c6f16ad",
+  "protocol_version": "1.0",
+  "q": "CASE-031",
+  "run_id": "CASE031-PLANCK-LIKELIHOOD-PORTABILITY-V1",
+  "supporting_not_core": {
+    "frequency_covariance": {
+      "pair_interaction_preserved": true,
+      "target": [
+        "143x217",
+        "217x217"
+      ]
+    },
+    "multipole": {
+      "pair_interaction_preserved": true,
+      "target": [
+        1500,
+        2000
+      ]
+    },
+    "omega_cdm_x_A_planck": {
+      "causal_interpretation": false,
+      "numerical_resolution_floor": 0.0002
+    }
+  },
+  "verdict_logic": {
+    "all_core_gates_pass": "PORTABILITY_SURVIVES",
+    "implementation_failure": "UNRESOLVED_NOT_FALSIFIED",
+    "mixed_or_not_testable_core_gate": "PORTABILITY_QUALIFIED",
+    "valid_implementation_and_stable_multibasin_absent": "PORTABILITY_FAILS"
+  }
+}
