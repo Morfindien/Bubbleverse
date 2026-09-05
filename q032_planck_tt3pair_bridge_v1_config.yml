@@ -1,0 +1,215 @@
+project:
+  q: Q-032
+  run_id: Q032-PLANCK-TT3PAIR-COMMON-SUPPORT-BRIDGE-V1
+  result_id: R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-001
+  generated_at: '2026-09-05T22:39:00+02:00'
+  title: TT-3PAIR common-support Planck likelihood portability bridge
+  scientific_question: >-
+    Can the CASE-031 portability failure be localized by restricting both frozen
+    Planck likelihood implementations to TT-only 143x143, 143x217 and 217x217
+    on their exact common multipole support, while preserving native foreground,
+    calibration and covariance semantics?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+parents:
+  case031:
+    result_id: R-CASE031-EDE-PLANCK-PORTABILITY-001
+    run_id: CASE031-PLANCK-LIKELIHOOD-PORTABILITY-V1
+    github_run_id: 33975028436
+    head_commit: ff621d6e0a425a976bb7a55f9194a0de8a87f18f
+    program: q031_planck_portability_v1.py
+    workflow: .github/workflows/q031-planck-portability-v4.yml
+    frozen: true
+  q022:
+    result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+    github_run_id: 33902262660
+    execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+  q021:
+    raw_github_run_id: 33882434170
+    raw_result_id: R-Q021-EDE-PRIMORDIAL-INTERNAL-STRUCTURE-001
+  q018:
+    result_id: R-Q018-EDE-PLANCK-LIKELIHOOD-BRIDGE-003
+  q028:
+    result_id: R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-008
+    common_dimension: 9915
+    support_sha256: 6088165823b7fae224ce51aaef33fdef5a400aefafd1675e454e00c6c1a25a63
+
+implementations:
+  camspec:
+    component: planck_NPIPE_highl_CamSpec.TTTEEE
+    cobaya_version: 3.5.6
+    planck_release: PR4/NPIPE
+    parent_builder: q019_planck_cosmology_reprofile_v1.build_full
+    restriction_method: DATASET_PARAMS_USE_CL_AND_EXACT_USE_RANGE
+    native_tt_foregrounds_preserved: true
+    removed_tt100: true
+    removed_te: true
+    removed_ee: true
+    fixed_nonparticipating_parameters:
+      calTE: 1.0
+      calEE: 1.0
+  hillipop:
+    parent_case031_component: planck_2020_hillipop.TTTEEE
+    component: planck_2020_hillipop.TT
+    repository: planck-npipe/hillipop
+    release: v4.3
+    commit: a09ddde3e7ce11df99f74685feb1f1764cafb251
+    planck_release: PR4/NPIPE
+    exact_data_products:
+      multipoles_range_file: binning_v4.2.fits
+      covariance_matrix_file: invfll_PR4_v4.2_TT.fits
+      cross_spectra_glob: dl_PR4_v4.2_*.fits
+    restriction_method: >-
+      OFFICIAL_NATIVE_TT_COMPONENT_REMOVES_TE_EE; THEN TT_PRECISION_TO_SELECTED
+      COVARIANCE_BLOCK_TO_RESTRICTED_PRECISION FOR 143x143_143x217_217x217
+    mode_removal_semantics: OFFICIAL_HILLIPOP_TT_LIKELIHOOD_SAME_V4_3_COMMIT
+    fixed_nonparticipating_parameters:
+      AdustP: 1.0
+      beta_dustP: 1.59
+
+phase_a:
+  modes: [TT]
+  pairs: [143x143, 143x217, 217x217]
+  excluded:
+    - 100GHz_TT
+    - TE
+    - EE
+    - low_l
+    - lensing
+    - ACT
+    - SPT
+    - BAO
+    - SN
+  common_support:
+    derive_at_runtime: true
+    exact_ell_only: true
+    hash_before_optimization: true
+    hardcoded_dimension_forbidden: true
+
+common_parameter_mapping:
+  omega_b: omega_b
+  omega_cdm: omega_cdm
+  tau_reio: tau_reio
+  n_s: n_s
+  logA: logA
+  fEDE: fEDE
+  log10z_c: log10z_c
+  thetai_scf: thetai_scf
+  H0: H0
+  A_planck: A_planck
+
+cosmology:
+  sampled: [omega_b, omega_cdm, tau_reio, n_s, logA, fEDE, log10z_c, thetai_scf, H0]
+  direction_common: [omega_b, omega_cdm, tau_reio, n_s, logA, fEDE, log10z_c, thetai_scf, H0, A_planck]
+
+starts:
+  masks: [3, 6, 7]
+  seed_restarts: [0, 1, 2]
+  labels: [M3-S0, M3-S1, M3-S2, M6-S0, M6-S1, M6-S2, M7-S0, M7-S1, M7-S2]
+  source_semantics: Q022_START_PROVENANCE_ONLY_NOT_HILLIPOP_MASK
+  new_seed_family_forbidden: true
+
+optimizer:
+  method: bobyqa
+  ignore_prior_density: true
+  best_of: 1
+  stage1:
+    max_evals: 200000
+    rhoend: 1.0e-4
+  refinement:
+    max_evals: 300000
+    rhoend: 1.0e-5
+
+basin:
+  scale_lock_source: Q022_AUTHORITATIVE_ENDPOINTS_ONLY_PRE_DECISIVE
+  scale_floor_fraction: 1.0e-8
+  collapse_objective_tolerance: 0.50
+  collapse_common_endpoint_rms: 0.10
+  stable_basin_minimum_supporting_starts: 2
+  refine_unless_single_cluster_covers_all_starts: true
+
+covariance:
+  principal_precision_submatrix_as_marginal_forbidden: true
+  semantics: C_EQUALS_P_INVERSE_THEN_SELECT_CSS_THEN_INVERT_CSS
+  selected_covariance_block_solver: CHOLESKY_BLOCK_SOLVES_OF_P_X_EQUALS_E_S
+  rhs_block_size: 32
+  symmetry_relative_tolerance: 1.0e-10
+  inverse_identity_relative_tolerance: 5.0e-8
+  minimum_cholesky_diagonal: 0.0
+
+execution:
+  python: '3.11'
+  github_runner: ubuntu-24.04
+  github_hosted_job_limit_minutes_checked_2026_09_05: 360
+  github_job_timeout_minutes: 330
+  soft_stop_minutes: 300
+  max_parallel: 6
+  stage1_jobs: 18
+  stage1_job_formula: 2_IMPLEMENTATIONS_X_9_FROZEN_STARTS
+  checkpointing: false
+  checkpoint_reason: >-
+    One optimizer restart is an atomic work unit. Cobaya/Py-BOBYQA state is not
+    represented as resumable state; failed shards are rerun individually.
+  merge_required: true
+
+software:
+  cobaya: 3.5.6
+  PyYAML: 6.0.2
+  numpy: 1.26.4
+  scipy: 1.15.3
+  Py-BOBYQA: 1.5.0
+  getdist: 1.6.1
+  Cython: 0.29.37
+  sacc: 1.0.2
+  astropy: 7.2.2
+
+mandatory_preflight_gates:
+  - BACKEND_IDENTITY_GATE
+  - CAMSPEC_IMPLEMENTATION_IDENTITY_GATE
+  - HILLIPOP_IMPLEMENTATION_IDENTITY_GATE
+  - DATA_PRODUCT_HASH_GATE
+  - THREE_TT_PAIR_GATE
+  - COMMON_MULTIPOLE_SUPPORT_GATE
+  - SUPPORT_ORDERING_GATE
+  - SUPPORT_SHA256_GATE
+  - COVARIANCE_RESTRICTION_SEMANTICS_GATE
+  - COVARIANCE_SYMMETRY_GATE
+  - COVARIANCE_POSITIVE_DEFINITE_GATE
+  - FULL_TO_RESTRICTED_VECTOR_INDEX_GATE
+  - NATIVE_NUISANCE_SEPARATION_GATE
+  - NO_FORCED_NUISANCE_MAPPING_GATE
+  - START_PROVENANCE_GATE
+  - NO_EXTRA_DATASET_GATE
+  - FINITE_REAL_LIKELIHOOD_EVALUATION_GATE
+
+rules:
+  case031_closed: true
+  no_new_case031_seeds: true
+  no_basin_threshold_change: true
+  no_forced_nuisance_mapping: true
+  no_cross_likelihood_absolute_objective_subtraction: true
+  no_cross_likelihood_chi2_sum: true
+  shared_planck_sky_not_independent_observations: true
+  A_planck_not_causal: true
+  nuisance_motion_not_systematic_error: true
+  no_foreground_swap_phase_a: true
+  no_covariance_swap: true
+  no_mask_reconstruction_phase_a: true
+  no_q024_rerun: true
+  no_q030_rerun: true
+  technical_failure_no_scientific_result: true
+
+phase_a_decision_rules:
+  A: CAMSPEC_STABLE_HILLIPOP_NONSTABLE_REMOVED_MODE_SUPPORT_BUNDLE_INSUFFICIENT
+  B: CAMSPEC_LOSES_STABLE_BASINS_REMOVED_INFORMATION_MATERIALLY_REQUIRED
+  C: HILLIPOP_GAINS_STABLE_BASINS_REMOVED_HILLIPOP_SECTORS_MATERIALLY_SUPPRESS_OR_RESTRUCTURE
+  D: BOTH_CLASSIFICATIONS_CONVERGE_FREQUENCY_MODE_SUPPORT_ARCHITECTURE_STRONG_LOCALIZATION_CANDIDATE
+
+stop_condition: >-
+  Phase A returns a validated localization outcome or a bounded Phase-B routing
+  requirement. It never launches unbounded map-level reconstruction automatically.
