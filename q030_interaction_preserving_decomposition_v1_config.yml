@@ -1,0 +1,135 @@
+project:
+  q: Q030
+  run_id: Q030-EDE-INTERACTION-PRESERVING-DECOMPOSITION-V1
+  result_id: R-Q030-EDE-INTERACTION-PRESERVING-DECOMPOSITION-001
+  generated_at: '2026-09-05T12:22:00+02:00'
+  question: >-
+    Using the exact 9915-row common support and frozen Q022 endpoints, can the
+    Q029 interaction-preserving identity F = -2 d^T P Delta2(m) +
+    Delta2(m^T P m) be reconstructed numerically for all nine mask x edge
+    diagnostics, preferentially from the existing Q028 V8 checkpoints, and what
+    are the signed magnitudes and spectrum/multipole distributions of the exact
+    data-model coupling term and model-quadratic term without imposing any
+    data/model, cosmology/calibration, or causal allocation convention?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+likelihood:
+  full_mf: planck_NPIPE_highl_CamSpec.TTTEEE
+  construction_scope: FROZEN_FULL_MF_CAMSPEC
+
+parents:
+  q021:
+    github_run_id: 33882434170
+  q022:
+    github_run_id: 33902262660
+    result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+    execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+    endpoints: AUTHORITATIVE_Q022_V2
+  q027:
+    result_id: R-Q027-EDE-FULLMF-RESIDUAL-COVARIANCE-BRIDGE-001
+    github_run_id: 33924573651
+    commit: df03e30712690e61ff799558598405a22c0bacbb
+  q028_v8:
+    github_run_id: 33957937309
+    result_id: R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-008
+    head_sha: 7f5d35c0725530039162adfa4d71be288e8b4462
+    misrecorded_sha_rejected: 7f5d35efeb54b4a62d6dfb8f7074014b4fabc190
+    final_artifact: q028-final-v8
+    final_artifact_id: 9967068363
+    final_artifact_sha256: 7dfbd1f27251ff311dd1de6118539dd691ab03d9afdb08539b3b13586c50d5af
+    common_dimension: 9915
+    common_support_sha256: 054220c018e58e902eab98b879eec4a823fb3238a1774ddbacc649bddca8b666
+    frozen_epsilon_F: 2.0e-4
+
+reuse:
+  q025_program: q025_fullmf_component_attribution_v2.py
+  q025_config: q025_fullmf_component_attribution_v2_config.yml
+  q028_v8_program: q028_common_support_counterfactual_v8.py
+  q028_v2_helper: q028_common_support_counterfactual_v2.py
+  q017_program: q017_planck_direction_localization_v1.py
+
+execution:
+  python: '3.11'
+  masks: [3, 6, 7]
+  edges: [[0, 1], [0, 2], [1, 2]]
+  mask_jobs: 3
+  edges_per_mask_job: 3
+  new_likelihood_evaluations: 0
+  optimizer_evaluations: 0
+  sampling_evaluations: 0
+  q024_permutations: 0
+  checkpointing: false
+  merge_required: true
+  mask_job_timeout_minutes: 30
+  final_job_timeout_minutes: 15
+  recovery: RERUN_ONLY_FAILED_MASK_JOB
+
+decomposition:
+  identity: F=T_DM+T_MM
+  T_DM: -2*d^T*P*Delta2(m)
+  T_DM_name: DATA_MODEL_FACTORIAL_COUPLING
+  T_MM: Delta2(m^T*P*m)
+  T_MM_name: MODEL_QUADRATIC_FUNCTIONAL_TERM
+  delta_identity: Delta2(m)=-Delta2(r)
+  precision_symmetrization: P_sym_action=0.5*(P_raw@X+P_raw.T@X)
+  marginal_precision: SCHUR_COMPLEMENT_ACTION
+  distribution_modes: [spectrum, ell_band]
+  distribution_rule: >-
+    Retain exact unordered within-group and cross-group covariance terms.
+    Do not assign cross-group terms to one group.
+  ell_bands:
+    - {name: ell_lt_500, min: 0, max: 499}
+    - {name: ell_500_999, min: 500, max: 999}
+    - {name: ell_1000_1499, min: 1000, max: 1499}
+    - {name: ell_1500_2000, min: 1500, max: 2000}
+    - {name: ell_2001_2500, min: 2001, max: 2500}
+    - {name: ell_2501_plus, min: 2501, max: 100000}
+
+validation:
+  delta_m_identity_abs_tol: 1.0e-11
+  q029_identity_closure_abs_tol: 1.0e-8
+  q028_parent_interaction_abs_tol: 2.0e-4
+  aggregation_closure_abs_tol: 1.0e-8
+  term_tie_abs_tol: 1.0e-10
+  require_nine_diagnostics: true
+  require_zero_new_likelihood_evaluations: true
+
+rules:
+  no_optimization: true
+  no_sampling: true
+  no_q024_rerun: true
+  no_new_likelihood_evaluations: true
+  reuse_q028_family_residuals: true
+  extract_data_vector_without_logposterior: true
+  reuse_q028_schur_semantics: true
+  preserve_signed_accounting: true
+  preserve_covariance_cross_terms: true
+  no_data_only_contribution: true
+  no_causal_allocation: true
+  no_cosmology_calibration_allocation: true
+  group_pair_terms_are_not_independent_likelihoods: true
+  no_shapley_as_identification: true
+  no_new_physics_claim: true
+  do_not_reopen_q028_precision_identifiability: true
+  state_level_q_invariance_not_required: true
+  do_not_change_q028_tolerance: true
+
+claim_boundaries:
+  raw_data_wrong: false
+  calibration_failure: false
+  foreground_failure: false
+  covariance_irrelevant: false
+  instrumental_systematic: false
+  new_physics: false
+  unique_data_model_attribution: false
+  unique_cosmology_calibration_attribution: false
+  physical_causality: false
+
+sources: [K-039, K-044, K-046, K-048, K-049]
+unresolved_sources:
+  K-047: BIBLIOGRAPHIC_DETAILS_NOT_INVENTED

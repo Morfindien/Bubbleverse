@@ -1,0 +1,213 @@
+name: Bubbleverse Q030 exact interaction-preserving decomposition V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q030
+  RUN_ID: Q030-EDE-INTERACTION-PRESERVING-DECOMPOSITION-V1
+  RESULT_ID: R-Q030-EDE-INTERACTION-PRESERVING-DECOMPOSITION-001
+  Q021_RUN_ID: '33882434170'
+  Q022_RUN_ID: '33902262660'
+  Q028_RUN_ID: '33957937309'
+  Q028_HEAD_SHA: '7f5d35c0725530039162adfa4d71be288e8b4462'
+
+jobs:
+  mask:
+    name: Q030 mask ${{ matrix.mask }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        mask: [3, 6, 7]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Static Q030 gates
+        run: |
+          python -m pip install --disable-pip-version-check PyYAML numpy
+          python -m py_compile \
+            q030_interaction_preserving_decomposition_v1.py \
+            q030_tests_v1.py \
+            q028_common_support_counterfactual_v8.py \
+            q028_common_support_counterfactual_v2.py \
+            q025_fullmf_component_attribution_v2.py
+          python - <<'PY'
+          import yaml
+          c=yaml.safe_load(open('q030_interaction_preserving_decomposition_v1_config.yml',encoding='utf-8'))
+          assert c['project']['q']=='Q030'
+          assert c['model']['name']=='MOD-EDE-N3'
+          assert c['model']['n_scf']==3
+          assert c['model']['backend_commit']=='5a131c91d657dd9a7c6364cc45b038710f8d0d97'
+          assert c['likelihood']['full_mf']=='planck_NPIPE_highl_CamSpec.TTTEEE'
+          assert c['parents']['q028_v8']['head_sha']=='7f5d35c0725530039162adfa4d71be288e8b4462'
+          assert c['parents']['q028_v8']['common_dimension']==9915
+          assert c['parents']['q028_v8']['common_support_sha256']=='054220c018e58e902eab98b879eec4a823fb3238a1774ddbacc649bddca8b666'
+          assert c['execution']['new_likelihood_evaluations']==0
+          assert c['rules']['no_new_likelihood_evaluations'] is True
+          assert c['rules']['extract_data_vector_without_logposterior'] is True
+          print('Q030_STATIC_GATE=PASS')
+          PY
+
+      - name: Reuse frozen full-MF environment
+        run: bash q019_setup_v3.sh
+
+      - name: Download authoritative Q022 stage1
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-stage1-m*-s*
+          merge-multiple: true
+          path: q022_inputs/stage1
+
+      - name: Download authoritative Q022 refinement
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-refine-m*-s*
+          merge-multiple: true
+          path: q022_inputs/refinement
+
+      - name: Download authoritative Q022 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          name: q022-final-v2
+          path: q022_inputs/final
+
+      - name: Download exact Q021 primordial lineages
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q021_RUN_ID }}
+          pattern: q021-full_mf-m*-r*
+          merge-multiple: true
+          path: q021_inputs
+
+      - name: Download Q028 V8 family checkpoints for this mask
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q028_RUN_ID }}
+          pattern: q028-v8-family-m${{ matrix.mask }}-*
+          merge-multiple: true
+          path: q028_family_inputs
+
+      - name: Download exact Q028 V8 common support
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q028_RUN_ID }}
+          name: q028-v8-common-support
+          path: q028_support
+
+      - name: Reconstruct exact Q029 terms with zero new likelihood evaluations
+        run: |
+          mkdir -p out
+          python q030_interaction_preserving_decomposition_v1.py \
+            --config q030_interaction_preserving_decomposition_v1_config.yml \
+            mask \
+            --mask "${{ matrix.mask }}" \
+            --q021-dir q021_inputs \
+            --q022-dir q022_inputs \
+            --family-dir q028_family_inputs \
+            --support-result q028_support/q028_v8_support.json \
+            --output "out/q030_v1_mask_m${{ matrix.mask }}.json"
+
+      - name: Upload Q030 mask result
+        uses: actions/upload-artifact@v4
+        with:
+          name: q030-v1-mask-m${{ matrix.mask }}
+          path: out/q030_v1_mask_m${{ matrix.mask }}.json
+          if-no-files-found: error
+          retention-days: 30
+
+  final:
+    name: Q030 deterministic merge and validation
+    needs: mask
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - run: |
+          python -m pip install --disable-pip-version-check PyYAML numpy
+          python -m py_compile \
+            q030_interaction_preserving_decomposition_v1.py \
+            q030_tests_v1.py
+
+      - name: Download all Q030 mask results
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q030-v1-mask-*
+          merge-multiple: true
+          path: mask_inputs
+
+      - name: Download authoritative Q028 V8 final parent
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q028_RUN_ID }}
+          name: q028-final-v8
+          path: q028_parent
+
+      - name: Merge nine diagnostics
+        run: |
+          python q030_interaction_preserving_decomposition_v1.py \
+            --config q030_interaction_preserving_decomposition_v1_config.yml \
+            merge \
+            --mask-dir mask_inputs \
+            --q028-final q028_parent/q028_final_v8.json \
+            --output q030_merged_v1.json
+
+      - name: Mandatory Q030 result tests
+        run: |
+          python q030_tests_v1.py \
+            --config q030_interaction_preserving_decomposition_v1_config.yml \
+            --result q030_merged_v1.json \
+            --output q030_tests_v1.json
+
+      - name: Construct validated Q030 final result
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('q030_merged_v1.json',encoding='utf-8'))
+          t=json.load(open('q030_tests_v1.json',encoding='utf-8'))
+          assert t['FINAL_RESULT_GATE']=='PASS'
+          r['FINAL_RESULT_GATE']='PASS'
+          r['tests_status']='COMPLETE'
+          r['tests_file']='q030_tests_v1.json'
+          with open('q030_final_v1.json','w',encoding='utf-8') as f:
+              json.dump(r,f,indent=2,sort_keys=True)
+              f.write('\n')
+          print('FINAL_RESULT_GATE=PASS')
+          PY
+
+      - name: Upload final Q030 result
+        uses: actions/upload-artifact@v4
+        with:
+          name: q030-final-v1
+          path: |
+            q030_merged_v1.json
+            q030_tests_v1.json
+            q030_final_v1.json
+          if-no-files-found: error
+          retention-days: 30
