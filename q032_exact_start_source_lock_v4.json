@@ -1,0 +1,163 @@
+{
+  "claim_mapping": {
+    "CASE031_nonportability": [
+      "CASE031"
+    ],
+    "CamSpec_PR4_architecture": [
+      "K-044",
+      "Efstathiou_Gratton_2021",
+      "K-046"
+    ],
+    "Q032_V2_removed_information_required": [
+      "Q032_V2"
+    ],
+    "V3_technical_failure_and_start_provenance_discovery": [
+      "Q032_V3",
+      "COBAYA_3_5_6_SCALAR_REF"
+    ],
+    "common_support_covariance_semantics": [
+      "Q028"
+    ],
+    "exact_start_semantics": [
+      "COBAYA_3_5_6_SCALAR_REF"
+    ],
+    "full_native_stable_geometry": [
+      "Q022"
+    ],
+    "likelihood_choice_dependence": [
+      "K-045/K-052"
+    ]
+  },
+  "created_at": "2026-09-06T07:51:00+02:00",
+  "internal_results": {
+    "CASE031": {
+      "github_run_id": 33975028436,
+      "head_commit": "ff621d6e0a425a976bb7a55f9194a0de8a87f18f",
+      "result_id": "R-CASE031-EDE-PLANCK-PORTABILITY-001",
+      "role": "CLOSED_PORTABILITY_FAILURE"
+    },
+    "Q022": {
+      "commit": "16a7902c3be7d1967adaae9ee380baf0d17e903a",
+      "github_run_id": 33902262660,
+      "result_id": "R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002",
+      "role": "OUTPUT_ENDPOINT_VECTOR_AND_HISTORICAL_GEOMETRY_REFERENCE_EXACT_START_WORDING_NONLITERAL",
+      "run_id": "Q022-FULL-MF-OPTIMIZER-BASIN-CONTINUATION-V2"
+    },
+    "Q024": {
+      "result_id": "R-Q024-EDE-FULLMF-BASIN-MATCHING-001",
+      "role": "FROZEN_BASIN_MATCHING"
+    },
+    "Q025": {
+      "result_id": "R-Q025-EDE-FULLMF-BASIN-COMPONENT-ATTRIBUTION-002",
+      "role": "START_LINEAGE"
+    },
+    "Q026": {
+      "result_id": "R-Q026-EDE-FULLMF-MASK6-COUPLING-001",
+      "role": "FROZEN_COUPLING_CONTEXT"
+    },
+    "Q028": {
+      "result_id": "R-Q028-EDE-FULLMF-COMMON-SUPPORT-COUNTERFACTUAL-008",
+      "role": "COVARIANCE_RESTRICTION_SEMANTICS"
+    },
+    "Q030": {
+      "result_id": "R-Q030-ORIGINAL-GATE-PRECISION-AUDIT-001",
+      "role": "FROZEN_PRECISION_AUDIT"
+    },
+    "Q032_V2": {
+      "commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+      "github_run_id": 33994305721,
+      "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+      "role": "HISTORICAL_TT3PAIR_RESULT_PENDING_EXACT_START_CAMSPEC_BASELINE_REVALIDATION_FOR_RULE_B",
+      "run_id": "Q032-PLANCK-TT3PAIR-COMMON-SUPPORT-BRIDGE-V2",
+      "support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b"
+    },
+    "Q032_V3": {
+      "execution_commit": "487ba2a736b92b18c366829495847f218d73679e",
+      "failure": "PYBOBYQA_EXIT_MINUS3_SINGULAR_INTERPOLATION_SUPPORT_M7_S0",
+      "failure_job_id": 101423869914,
+      "github_run_id": 34009693922,
+      "provenance_discovery": "NONSCALAR_REF_DISTRIBUTIONS_PRODUCED_RANDOM_INITIAL_POINTS_DESPITE_EXACT_START_LABEL",
+      "result_id": "R-Q032-EDE-CAMSPEC-ADDBACK-003",
+      "role": "SUPERSEDED_TECHNICAL_PROVENANCE_ONLY_NO_SCIENTIFIC_RESULT",
+      "run_id": "Q032-CAMSPEC-NESTED-ADDBACK-V3"
+    }
+  },
+  "q": "Q-032",
+  "result_id": "R-Q032-EDE-CAMSPEC-ADDBACK-004",
+  "run_id": "Q032-EXACT-START-CONFORMANCE-ADDBACK-V4",
+  "software_provenance": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "bubbleverse_repository": "Morfindien/Bubbleverse",
+    "camspec_component": "planck_NPIPE_highl_CamSpec.TTTEEE",
+    "cobaya_version": "3.5.6",
+    "parent_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032"
+  },
+  "source_registry": {
+    "COBAYA_3_5_6_SCALAR_REF": {
+      "file": "cobaya/prior.py",
+      "repository": "CobayaSampler/cobaya",
+      "role": "EXACT_START_SEMANTICS",
+      "source_type": "OFFICIAL_SOFTWARE_DOCUMENTATION_SOURCE",
+      "supported_claim": "For a sampled parameter, assigning a single scalar value to ref makes samplers start from that value; a ref distribution is sampled.",
+      "version": "3.5.6"
+    },
+    "Efstathiou_Gratton_2021": {
+      "arxiv": "1910.00483",
+      "doi": "10.21105/astro.1910.00483",
+      "historical_k_id": "NOT_SAFELY_RECOVERED",
+      "journal": "Open Journal of Astrophysics 4",
+      "role": "CAMSPEC_METHOD",
+      "title": "Detailed CamSpec methodology",
+      "year": 2021
+    },
+    "K-039/K-051": {
+      "alias_status": "SAME_SOURCE_COUNT_ONCE",
+      "arxiv": "2311.00524",
+      "authors": "Efstathiou, Rosenberg & Poulin",
+      "doi": "10.1103/PhysRevLett.132.221002",
+      "journal": "Physical Review Letters 132, 221002",
+      "role": "EDE_PLANCK_CONTEXT",
+      "title": "EDE / Planck likelihood context",
+      "year": 2024
+    },
+    "K-044": {
+      "arxiv": "2205.10869",
+      "authors": "Rosenberg, Gratton & Efstathiou",
+      "doi": "10.1093/mnras/stac2744",
+      "journal": "MNRAS 517, 4620\u20134636",
+      "role": "PRIMARY_CAMSPEC_PR4_ARCHITECTURE",
+      "title": "CMB Power Spectra and Cosmological Parameters from Planck PR4 with CamSpec",
+      "year": 2022
+    },
+    "K-045/K-052": {
+      "alias_status": "SAME_SOURCE_COUNT_ONCE",
+      "arxiv": "2510.09430",
+      "authors": "Jense et al.",
+      "doi": "10.1103/ff9j-skyj",
+      "journal": "Physical Review D 113, 043551",
+      "role": "LIKELIHOOD_CHOICE_DEPENDENCE",
+      "title": "Choice of Planck CMB likelihood in cosmological analyses",
+      "year": 2026
+    },
+    "K-046": {
+      "repository": "CobayaSampler/cobaya",
+      "role": "CAMSPEC_DATASET_PARAMS_AND_COVARIANCE_SELECTION",
+      "source_type": "OFFICIAL_SOFTWARE",
+      "title": "Cobaya 3.5.6 native Planck NPIPE CamSpec implementation",
+      "version": "3.5.6"
+    },
+    "K-047": {
+      "bibliographic_status": "BIBLIOGRAPHIC_DETAILS_NOT_INVENTED",
+      "role": "UNRESOLVED_HISTORICAL_SOURCE_ID"
+    },
+    "K-049": {
+      "authors": "Tristram et al.",
+      "doi": "10.1051/0004-6361/202348015",
+      "journal": "A&A 682 A37",
+      "role": "PLANCK_PR4_CONTEXT",
+      "title": "Cosmological parameters derived from the final Planck data release (PR4)",
+      "year": 2024
+    }
+  }
+}

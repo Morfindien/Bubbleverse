@@ -1,0 +1,216 @@
+project:
+  q: Q-032
+  run_id: Q032-EXACT-START-CONFORMANCE-ADDBACK-V4
+  result_id: R-Q032-EDE-CAMSPEC-ADDBACK-004
+  generated_at: '2026-09-06T07:51:00+02:00'
+  title: Q032 exact-start conformance recovery and bounded CamSpec add-back
+  scientific_question: Can the CASE-031 portability failure be localized after first revalidating the Q032 CamSpec TT3PAIR/common-support baseline under the preregistered literal exact-start semantics?
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+parents:
+  q032_v2:
+    run_id: Q032-PLANCK-TT3PAIR-COMMON-SUPPORT-BRIDGE-V2
+    result_id: R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002
+    github_run_id: 33994305721
+    execution_commit: 4dc873a5e880d40858d831a3b421456728f0c032
+    final_artifact: q032-final-v2
+    preflight_artifact: q032-preflight-sealed-v2
+    support_sha256: f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b
+    common_dimension: 5953
+    camspec_stable_basin_count: 0
+    frozen_baseline: false
+    v4_status: HISTORICAL_VALID_RUN_BUT_RULE_B_REQUIRES_EXACT_START_CAMSPEC_BASELINE_REVALIDATION
+  q022:
+    run_id: Q022-FULL-MF-OPTIMIZER-BASIN-CONTINUATION-V2
+    result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+    github_run_id: 33902262660
+    execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+    final_artifact: q022-final-v2
+    classification: STABLE_MIXED_COSMOLOGY_NUISANCE_MULTIBASIN_STRUCTURE
+    role: OUTPUT_ENDPOINT_VECTOR_AND_HISTORICAL_GEOMETRY_REFERENCE; EXACT_START_WORDING_WAS_NONLITERAL
+  case031:
+    result_id: R-CASE031-EDE-PLANCK-PORTABILITY-001
+    github_run_id: 33975028436
+    head_commit: ff621d6e0a425a976bb7a55f9194a0de8a87f18f
+    frozen_closed: true
+  q032_v3:
+    run_id: Q032-CAMSPEC-NESTED-ADDBACK-V3
+    result_id: R-Q032-EDE-CAMSPEC-ADDBACK-003
+    github_run_id: 34009693922
+    execution_commit: 487ba2a736b92b18c366829495847f218d73679e
+    status: SUPERSEDED_TECHNICAL_PROVENANCE_ONLY_NO_SCIENTIFIC_RESULT
+    observed_failure: support M7-S0 Py-BOBYQA exit -3 singular interpolation matrix after 86 evaluations
+    deeper_issue: START_PROVENANCE_GATE declared exact starts while non-scalar ref distributions caused Cobaya to draw random initial points
+camspec:
+  component: planck_NPIPE_highl_CamSpec.TTTEEE
+  cobaya_version: 3.5.6
+  planck_release: PR4/NPIPE
+  parent_builder: q019_planck_cosmology_reprofile_v1.build_full
+  baseline_tt_pairs:
+  - 143x143
+  - 143x217
+  - 217x217
+  support_sector_definition: Runtime-derived CamSpec-native TT coordinates that are absent from the authoritative Q032 V2 common-support lock. No removed ell count or range is used as an input assumption.
+  te_sector_definition: NATIVE_CAMSPEC_TE_WITH_NATIVE_calTE_AND_EXISTING_Q019_GAUSSIAN_SHAPE
+  ee_sector_definition: NATIVE_CAMSPEC_EE_WITH_NATIVE_calEE_AND_EXISTING_Q019_GAUSSIAN_SHAPE
+  fixed_nonparticipating_calibration:
+    calTE: 1.0
+    calEE: 1.0
+  covariance_semantics: Every add-back surface is selected through CamSpec dataset_params before covariance inversion; the selected covariance must equal the corresponding principal block of the same full native CamSpec covariance.
+hierarchy:
+  tier1_single_surfaces:
+  - support
+  - te
+  - ee
+  tier2_pair_surfaces:
+  - support_te
+  - support_ee
+  - te_ee
+  tier3_control_surfaces:
+  - full_native
+  tier2_condition: ONLY_IF_NO_TIER1_SURFACE_RESTORES_STABLE_MULTIBASIN
+  tier3_condition: ONLY_IF_NO_TIER2_SURFACE_RESTORES_STABLE_MULTIBASIN
+  full_native_control_role: Same-V4-semantics positive control if no one- or two-sector surface restores. It is not used when an earlier tier already answers the minimum-sector question.
+  open_ended_combinatorial_search_forbidden: true
+  baseline_surfaces:
+  - baseline_tt3
+  baseline_condition: UNCONDITIONAL_EXACT_START_REVALIDATION_BEFORE_ANY_ADDBACK
+  tier1_condition: ONLY_IF_BASELINE_REMAINS_NONSTABLE_UNDER_EXACT_SCALAR_STARTS
+starts:
+  masks:
+  - 3
+  - 6
+  - 7
+  seed_restarts:
+  - 0
+  - 1
+  - 2
+  labels:
+  - M3-S0
+  - M3-S1
+  - M3-S2
+  - M6-S0
+  - M6-S1
+  - M6-S2
+  - M7-S0
+  - M7-S1
+  - M7-S2
+  source: Q032_V2_SEALED_PREFLIGHT_Q022_MAPPED_STARTS
+  source_semantics: Q022_OUTPUT_ENDPOINT_VECTORS_USED_AS_LITERAL_V4_SCALAR_REFS; NOT_A_CLAIM_THAT_Q022_ITSELF_LAUNCHED_EXACTLY
+  new_seed_family_forbidden: true
+  exact_start_implementation: SET_EVERY_SAMPLED_COBAYA_PARAM_REF_TO_SCALAR_AND_AUDIT_ALL_SAMPLED_COVERED
+  non_scalar_ref_distributions_forbidden: true
+optimizer:
+  method: bobyqa
+  ignore_prior_density: true
+  best_of: 1
+  stage1:
+    max_evals: 200000
+    rhoend: 0.0001
+  refinement:
+    max_evals: 300000
+    rhoend: 1.0e-05
+basin:
+  scale_lock_source: Q032_V2_SEALED_PREFLIGHT_LOCKED_COMMON_SCALES
+  scale_floor_fraction: 1.0e-08
+  collapse_objective_tolerance: 0.5
+  collapse_common_endpoint_rms: 0.1
+  stable_basin_minimum_supporting_starts: 2
+  refine_unless_single_cluster_covers_all_starts: true
+execution:
+  python: '3.11'
+  github_runner: ubuntu-24.04
+  github_limits_checked: '2026-09-06'
+  github_hosted_job_hard_limit_minutes: 360
+  github_workflow_hard_limit_days: 35
+  github_matrix_limit_per_matrix: 256
+  github_job_timeout_minutes: 330
+  soft_stop_minutes: 300
+  max_parallel: 6
+  checkpointing: false
+  checkpoint_reason: One optimizer restart is the atomic unit; Py-BOBYQA/Cobaya state is not represented as a portable true-resume checkpoint. Failed independent shards are rerun individually.
+  maximum_stage1_optimizer_jobs_if_all_tiers_needed: 72
+  maximum_refinement_optimizer_jobs_if_all_tiers_needed: 72
+  tier1_stage1_jobs: 27
+  tier2_stage1_jobs_if_needed: 27
+  control_stage1_jobs_if_needed: 9
+  merge_required: true
+  baseline_stage1_jobs: 9
+software:
+  cobaya: 3.5.6
+  PyYAML: 6.0.2
+  numpy: 1.26.4
+  scipy: 1.15.3
+  Py-BOBYQA: 1.5.0
+  getdist: 1.6.1
+  Cython: 0.29.37
+  sacc: 1.0.2
+  astropy: 7.2.2
+mandatory_preflight_gates:
+- CONTEXT_CONTINUITY_GATE
+- Q_IDENTITY_GATE
+- PARENT_V2_FINAL_GATE
+- PARENT_V2_EXACT_START_REVALIDATION_REQUIRED_GATE
+- Q022_STABLE_FULL_NATIVE_REFERENCE_GATE
+- BACKEND_IDENTITY_GATE
+- CAMSPEC_IMPLEMENTATION_IDENTITY_GATE
+- SURFACE_HIERARCHY_LOCK_GATE
+- SURFACE_DEFINITION_HASH_GATE
+- REMOVED_SUPPORT_RUNTIME_DERIVATION_GATE
+- SURFACE_TO_FULL_VECTOR_INDEX_GATE
+- SURFACE_COVARIANCE_BLOCK_GATE
+- SURFACE_COVARIANCE_POSITIVE_DEFINITE_GATE
+- NATIVE_CALIBRATION_MODE_COACTIVATION_GATE
+- FINITE_REAL_LIKELIHOOD_EVALUATION_GATE
+- START_PROVENANCE_GATE
+- NO_EXTRA_DATASET_GATE
+- EXACT_SCALAR_REFERENCE_GATE
+result_test_plan:
+  T001: PARENT_Q032_V2_IDENTITY_AND_HISTORICAL_FINAL_PASS
+  T002: COBAYA_3_5_6_SCALAR_REF_EXACT_START_SEMANTICS
+  T003: NINE_EXACT_SCALAR_TT3_BASELINE_STARTS_AND_COMPLETENESS
+  T004: PARENT_V2_CAMSPEC_NONSTABLE_CLASSIFICATION_REVALIDATION
+  T005: PREREGISTERED_SURFACE_HIERARCHY_AND_HASH
+  T006: CAMSPEC_SELECTED_COVARIANCE_EQUALS_FULL_SELECTED_BLOCK
+  T007: TE_EE_NATIVE_CALIBRATION_COACTIVATION
+  T008: FINITE_REAL_LIKELIHOOD_EVALUATION_FOR_EVERY_LOCKED_SURFACE
+  T009: FROZEN_STAGE1_REFINEMENT_AND_BASIN_CLASSIFICATION
+  T010: BOUNDED_HIERARCHICAL_STOP_LOGIC
+  T011: FINAL_NONCAUSAL_INFORMATION_ARCHITECTURE_INTERPRETATION
+  mandatory_for_final_pass:
+  - T001
+  - T002
+  - T003
+  - T004
+  - T005
+  - T006
+  - T007
+  - T008
+  - T009
+  - T010
+  - T011
+rules:
+  case031_closed: true
+  hillipop_not_rerun: true
+  no_new_seed_family: true
+  no_threshold_change: true
+  no_cross_surface_absolute_objective_subtraction: true
+  no_calibration_foreground_decomposition: true
+  no_a_planck_causal_interpretation: true
+  no_q024_rerun: true
+  no_q030_rerun: true
+  surface_hierarchy_preregistered: true
+  technical_failure_no_scientific_result: true
+  exact_scalar_ref_required: true
+  parent_v2_rule_b_requires_exact_start_revalidation: true
+  v3_scientific_result_forbidden: true
+scientific_decisions:
+  single_restoration: One or more one-sector surfaces restore stable multibasin geometry; minimum restoring cardinality is one and no pairwise/control tier is scientifically required.
+  pair_restoration: No single sector restores, but one or more preregistered two-sector surfaces restore; minimum restoring cardinality is two.
+  triple_restoration: No single or pair surface restores, but full_native under identical V4 exact-start optimization semantics restores; all three tested sectors are jointly required under this decomposition.
+  no_clean_localization: No single, pair, or same-V4 exact-start full_native control restores stable multibasin geometry. Close Q032 with no clean localization at this sector resolution; do not open arbitrary calibration/foreground/mask/covariance searches.
+  baseline_restoration: If exact-start TT3 baseline is stable, stop before add-back and return PARENT_V2_RULE_B_NOT_REPRODUCED_UNDER_EXACT_START_PROTOCOL.
+stop_condition: First execute exact-start TT3 baseline. If it becomes stable, stop and return for Q032 parent-protocol reassessment. If it remains non-stable, proceed through the bounded one-sector, two-sector, and full-native hierarchy and stop at the first restoring tier or after the control.
