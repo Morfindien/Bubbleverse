@@ -1,0 +1,187 @@
+project:
+  q: Q-033
+  run_id: Q033-CAMSPEC-LAUNCH-SEMANTICS-MATCHED-AB-V1
+  result_id: R-Q033-EDE-CAMSPEC-LAUNCH-SEMANTICS-001
+  generated_at: '2026-09-06T21:05:00+02:00'
+  title: Q033 matched CamSpec launch/reference-semantics A/B test
+  scientific_question: >-
+    Under the frozen CamSpec full-multifrequency MOD-EDE-N3 likelihood, can the
+    difference between the historical Q022 stable-multibasin classification and
+    Q032 V4's non-stable full-native classification be explained by
+    launch-point/reference-distribution semantics alone, when all other
+    scientific and numerical components are matched?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+parents:
+  q022:
+    q: Q022
+    run_id: Q022-FULL-MF-OPTIMIZER-BASIN-CONTINUATION-V2
+    result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+    github_run_id: 33902262660
+    execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+    final_artifact: q022-final-v2
+    role: HISTORICAL_STABLE_RESULT_AND_ACTUAL_REF_SEMANTICS_PROVENANCE
+  q032_v4:
+    q: Q-032
+    run_id: Q032-EXACT-START-CONFORMANCE-ADDBACK-V4
+    result_id: R-Q032-EDE-CAMSPEC-ADDBACK-004
+    github_run_id: 34015845246
+    source_commit: f57a5dc0345f326b23e89f1f110637063a895452
+    execution_commit: fbde93aee01ec3bed183207518ff315c96a45c3c
+    preflight_artifact: q032-exact-preflight-v4
+    control_artifact: q032-exact-control-final-v4
+    scalar_full_native_stable_basin_count: 0
+    scalar_full_native_stable_multibasin: false
+    role: AUTHORITATIVE_MATCHED_FULL_NATIVE_SURFACE_AND_SCALAR_REF_REFERENCE
+
+camspec:
+  component: planck_NPIPE_highl_CamSpec.TTTEEE
+  release: Planck PR4/NPIPE
+  surface: full_native
+  surface_definition_source: Q032_V4_SEALED_PREFLIGHT
+  surface_reconstruction: REUSE_Q032_V4_BUILD_CAMSPEC_SURFACE_INFO
+  cobaya_version: 3.5.6
+
+arms:
+  names:
+    - historical_dist
+    - scalar
+  historical_dist:
+    scientific_surface: Q032_V4_FULL_NATIVE
+    center_source: SAME_Q022_PROVENANCE_VECTOR_AS_SCALAR_ARM
+    reference_semantics: >-
+      Reconstruct q021.set_ref behavior from the actual historical Q021/Q022
+      chain: retain the original ref-distribution structure and scale and move
+      loc/mean to the matched center, but only for parameters Q022 actually
+      sampled outside the frozen primordial block.
+  scalar:
+    scientific_surface: Q032_V4_FULL_NATIVE
+    center_source: SAME_Q022_PROVENANCE_VECTOR_AS_HISTORICAL_ARM
+    reference_semantics: Q032_V4_GENUINE_SCALAR_REF_LITERAL_START
+
+starts:
+  masks: [3, 6, 7]
+  seed_restarts: [0, 1, 2]
+  labels:
+    - M3-S0
+    - M3-S1
+    - M3-S2
+    - M6-S0
+    - M6-S1
+    - M6-S2
+    - M7-S0
+    - M7-S1
+    - M7-S2
+  vector_source: Q032_V4_PREFLIGHT_Q022_SOURCE_STARTS
+  new_seed_family_forbidden: true
+
+historical_semantics:
+  q021_primordial_coordinates:
+    - n_s
+    - logA
+    - tau_reio
+  q021_constructor_restart: 1
+  q021_constructor_role: REF_TEMPLATE_RECOVERY_ONLY
+  q022_set_ref_role: ACTUAL_HISTORICAL_SEMANTICS
+  common_cobaya_seed: 140000
+  seed_rationale: >-
+    Q022 run 33902262660 logged Cobaya seed 140000 for the historical
+    continuation constructor. Q033 uses the same seed in both arms, so RNG
+    handling is matched while the ref representation differs.
+
+optimizer:
+  method: bobyqa
+  ignore_prior_density: true
+  best_of: 1
+  cobaya_seed: 140000
+  stage1:
+    max_evals: 200000
+    rhoend: 0.0001
+  refinement:
+    max_evals: 300000
+    rhoend: 1.0e-05
+
+basin:
+  scale_lock_source: Q032_V4_PREFLIGHT_LOCKED_COMMON_SCALES
+  scale_floor_fraction: 1.0e-08
+  collapse_objective_tolerance: 0.50
+  collapse_common_endpoint_rms: 0.10
+  stable_basin_minimum_supporting_starts: 2
+  refine_unless_single_cluster_covers_all_starts: true
+  classifier: q032_planck_tt3pair_bridge_v2.bridge_cluster
+
+execution:
+  python: '3.11'
+  github_runner: ubuntu-24.04
+  github_hosted_job_hard_limit_minutes: 360
+  github_job_timeout_minutes: 330
+  soft_stop_minutes: 300
+  max_parallel: 6
+  stage1_optimizer_jobs: 18
+  maximum_refinement_optimizer_jobs: 18
+  checkpointing: false
+  checkpoint_reason: >-
+    One optimizer restart is the atomic unit. No portable true-resume
+    Py-BOBYQA/Cobaya minimizer checkpoint is available in the frozen lineage;
+    failed independent shards are rerun individually.
+  merge_required: true
+
+software:
+  cobaya: 3.5.6
+  PyYAML: 6.0.2
+  numpy: 1.26.4
+  scipy: 1.15.3
+  Py-BOBYQA: 1.5.0
+  getdist: 1.6.1
+  Cython: 0.29.37
+  sacc: 1.0.2
+  astropy: 7.2.2
+
+rules:
+  same_full_native_surface_both_arms: true
+  only_launch_reference_semantics_differs: true
+  historical_ref_semantics_from_actual_q021_q022_chain: true
+  scalar_ref_semantics_from_q032_v4: true
+  same_cobaya_seed_both_arms: true
+  no_new_seed_family: true
+  no_threshold_change: true
+  no_te_ee_support_addback: true
+  hillipop_not_rerun: true
+  q032_v3_science_forbidden: true
+  q022_raw_result_preserved: true
+  q023_q030_fixed_vector_results_preserved: true
+  technical_failure_no_scientific_result: true
+  stop_if_semantics_sufficient: true
+  no_open_ended_search_if_semantics_insufficient: true
+
+result_test_plan:
+  T001: Q022_HISTORICAL_RESULT_IDENTITY_AND_FINAL_PASS
+  T002: Q032_V4_FULL_NATIVE_SCALAR_PARENT_IDENTITY_AND_NONSTABILITY
+  T003: Q019_BUILDER_AND_CONFIG_LINEAGE_IDENTITY
+  T004: ACTUAL_Q021_Q022_HISTORICAL_REF_TEMPLATE_RECOVERY
+  T005: MATCHED_NON_REF_MODEL_HASH_EQUAL_BETWEEN_ARMS
+  T006: COMMON_COBAYA_SEED_AND_ACTUAL_LAUNCH_CAPTURE
+  T007: ALL_18_STAGE1_SHARDS_COMPLETE
+  T008: FROZEN_DYNAMIC_REFINEMENT_RULE
+  T009: FROZEN_Q032_BASIN_CLASSIFIER_AND_THRESHOLDS
+  T010: SCALAR_ARM_REPRODUCES_Q032_V4_FULL_NATIVE_NONSTABILITY
+  T011: HISTORICAL_ARM_STABLE_OR_NONSTABLE_CLASSIFICATION
+  T012: FINITE_STOP_CLASSIFICATION_AND_JOURNAL_EFFECT
+  mandatory:
+    - T001
+    - T002
+    - T003
+    - T004
+    - T005
+    - T006
+    - T007
+    - T008
+    - T009
+    - T010
+    - T011
+    - T012

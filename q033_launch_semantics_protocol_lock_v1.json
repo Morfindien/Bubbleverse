@@ -1,0 +1,60 @@
+{
+  "arms": {
+    "historical_dist": "Q021_Q022_NONSCALAR_REF_DISTRIBUTION_SEMANTICS",
+    "scalar": "Q032_V4_SCALAR_REF_LITERAL_START"
+  },
+  "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "basin": {
+    "common_endpoint_rms": 0.1,
+    "minimum_supporting_starts": 2,
+    "objective_tolerance": 0.5,
+    "scale_floor_fraction": 1e-08
+  },
+  "common_cobaya_seed": 140000,
+  "forbidden": [
+    "Q032_TE_EE_SUPPORT_ADDBACK_RERUN",
+    "HILLIPOP_RERUN",
+    "NEW_SEED_FAMILY",
+    "BASIN_THRESHOLD_CHANGE",
+    "Q032_V3_AS_SCIENCE",
+    "OPEN_ENDED_BRUTE_FORCE",
+    "PHYSICAL_CAUSALITY_CLAIM",
+    "NEW_PHYSICS_CLAIM"
+  ],
+  "generated_at": "2026-09-06T21:05:00+02:00",
+  "matched_surface": "Q032_V4_CAMSPEC_FULL_NATIVE",
+  "optimizer": {
+    "best_of": 1,
+    "ignore_prior": true,
+    "method": "bobyqa",
+    "refinement": {
+      "max_evals": 300000,
+      "rhoend": 1e-05
+    },
+    "stage1": {
+      "max_evals": 200000,
+      "rhoend": 0.0001
+    }
+  },
+  "primary_variable": "COBAYA_REFERENCE_REPRESENTATION_FOR_HISTORICALLY_SAMPLED_Q022_PARAMETERS",
+  "protocol_sha256": "207ed1b044ac8cd331f4971249e0dd2880bc3f63a35973f91e64c389354a27c7",
+  "q": "Q-033",
+  "result_id": "R-Q033-EDE-CAMSPEC-LAUNCH-SEMANTICS-001",
+  "run_id": "Q033-CAMSPEC-LAUNCH-SEMANTICS-MATCHED-AB-V1",
+  "starts": [
+    "M3-S0",
+    "M3-S1",
+    "M3-S2",
+    "M6-S0",
+    "M6-S1",
+    "M6-S2",
+    "M7-S0",
+    "M7-S1",
+    "M7-S2"
+  ],
+  "stop_rule": {
+    "if_both_nonstable": "STOP_SEMANTICS_INSUFFICIENT_AND_REGISTER_SMALLEST_REMAINING_IMPLEMENTATION_DELTA",
+    "if_historical_stable_and_scalar_nonstable": "STOP_SEMANTICS_SUFFICIENT",
+    "if_scalar_parent_not_reproduced": "UNRESOLVED_DEBUG_IMPLEMENTATION"
+  }
+}

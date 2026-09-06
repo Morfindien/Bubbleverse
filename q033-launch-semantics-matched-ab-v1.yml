@@ -1,0 +1,288 @@
+name: Bubbleverse Q033 matched CamSpec launch semantics A-B V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-033
+  RUN_ID: Q033-CAMSPEC-LAUNCH-SEMANTICS-MATCHED-AB-V1
+  RESULT_ID: R-Q033-EDE-CAMSPEC-LAUNCH-SEMANTICS-001
+  Q022_RUN_ID: '33902262660'
+  Q032_V4_RUN_ID: '34015845246'
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Static dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Compile and validate Q033 protocol
+        run: |
+          python -m py_compile q033_launch_semantics_ab_v1.py q033_launch_semantics_tests_v1.py
+          python q033_launch_semantics_tests_v1.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q033-launch-static-v1
+          path: q033_launch_semantics_static_validation_v1.json
+          if-no-files-found: error
+
+  preflight:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore frozen CamSpec runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q033-launch-v1-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - name: Download authoritative Q032 V4 preflight
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_V4_RUN_ID }}
+          name: q032-exact-preflight-v4
+          path: parent_q032/preflight
+      - name: Download authoritative Q032 V4 full-native control
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_V4_RUN_ID }}
+          name: q032-exact-control-final-v4
+          path: parent_q032/control
+      - name: Download authoritative Q022 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          name: q022-final-v2
+          path: parent_q022/final
+      - name: Recreate frozen CamSpec runtime
+        run: bash q032_setup_v4.sh
+      - name: Seal matched Q033 A-B preflight
+        run: |
+          python q033_launch_semantics_ab_v1.py preflight \
+            --q032-preflight parent_q032/preflight/q032_exact_start_preflight_v4.json \
+            --q032-control parent_q032/control/q032_exact_control_final_v4.json \
+            --q022-final parent_q022/final/q022_final_v2.json \
+            --output q033_launch_semantics_preflight_v1.json \
+            --manifest-output q033_launch_semantics_job_manifest_initial_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q033-launch-preflight-v1
+          path: |
+            q033_launch_semantics_preflight_v1.json
+            q033_launch_semantics_job_manifest_initial_v1.json
+          if-no-files-found: error
+
+  stage1:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        arm: [historical_dist, scalar]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore frozen CamSpec runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q033-launch-v1-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q033-launch-preflight-v1
+          path: q033_preflight
+      - run: bash q032_setup_v4.sh
+      - name: Matched Q033 Stage-1 optimizer shard
+        run: |
+          mkdir -p q033_stage1
+          python q033_launch_semantics_ab_v1.py profile \
+            --preflight q033_preflight/q033_launch_semantics_preflight_v1.json \
+            --arm '${{ matrix.arm }}' --phase stage1 \
+            --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --output "q033_stage1/${{ matrix.arm }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q033-stage1-${{ matrix.arm }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q033_stage1/*.json
+          if-no-files-found: warn
+
+  assess:
+    needs: stage1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      needs_refinement: ${{ steps.assess.outputs.needs_refinement }}
+      refine_matrix: ${{ steps.assess.outputs.refine_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q033-launch-preflight-v1
+          path: q033_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q033-stage1-*
+          merge-multiple: true
+          path: q033_stage1_all
+      - id: assess
+        shell: bash
+        run: |
+          set +e
+          python q033_launch_semantics_ab_v1.py assess \
+            --preflight q033_preflight/q033_launch_semantics_preflight_v1.json \
+            --stage1-dir q033_stage1_all \
+            --output q033_launch_semantics_assessment_v1.json \
+            --matrix-output q033_launch_semantics_refine_matrix_v1.json | tee q033_assess.log
+          rc=${PIPESTATUS[0]}
+          needs=$(grep '^NEEDS_REFINEMENT=' q033_assess.log | tail -1 | cut -d= -f2-)
+          matrix=$(grep '^REFINE_MATRIX=' q033_assess.log | tail -1 | cut -d= -f2-)
+          echo "needs_refinement=${needs}" >> "$GITHUB_OUTPUT"
+          echo "refine_matrix=${matrix}" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q033-launch-assessment-v1
+          path: |
+            q033_launch_semantics_assessment_v1.json
+            q033_launch_semantics_refine_matrix_v1.json
+            q033_assess.log
+          if-no-files-found: error
+
+  refinement:
+    needs: assess
+    if: needs.assess.outputs.needs_refinement == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJson(needs.assess.outputs.refine_matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore frozen CamSpec runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q033-launch-v1-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q033-launch-preflight-v1
+          path: q033_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q033-stage1-*
+          merge-multiple: true
+          path: q033_stage1_all
+      - run: bash q032_setup_v4.sh
+      - name: Matched Q033 refinement shard
+        run: |
+          mkdir -p q033_refinement
+          python q033_launch_semantics_ab_v1.py profile \
+            --preflight q033_preflight/q033_launch_semantics_preflight_v1.json \
+            --arm '${{ matrix.arm }}' --phase refinement \
+            --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --stage1-dir q033_stage1_all \
+            --output "q033_refinement/${{ matrix.arm }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q033-refine-${{ matrix.arm }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q033_refinement/*.json
+          if-no-files-found: warn
+
+  final:
+    needs: [assess, refinement]
+    if: >-
+      always() && needs.assess.result == 'success' &&
+      (needs.refinement.result == 'success' || needs.refinement.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q033-launch-preflight-v1
+          path: q033_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          name: q033-launch-assessment-v1
+          path: q033_assessment
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q033-stage1-*
+          merge-multiple: true
+          path: q033_stage1_all
+      - name: Download refinements when required
+        if: needs.refinement.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q033-refine-*
+          merge-multiple: true
+          path: q033_refinement_all
+      - name: Merge, validate, classify, and stop Q033
+        shell: bash
+        run: |
+          args=(
+            --preflight q033_preflight/q033_launch_semantics_preflight_v1.json
+            --assessment q033_assessment/q033_launch_semantics_assessment_v1.json
+            --stage1-dir q033_stage1_all
+            --output q033_launch_semantics_final_v1.json
+            --manifest-output q033_launch_semantics_job_manifest_final_v1.json
+          )
+          if [[ '${{ needs.refinement.result }}' == 'success' ]]; then
+            args+=(--refinement-dir q033_refinement_all)
+          fi
+          python q033_launch_semantics_ab_v1.py finalize "${args[@]}" | tee q033_final.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q033-launch-final-v1
+          path: |
+            q033_launch_semantics_final_v1.json
+            q033_launch_semantics_job_manifest_final_v1.json
+            q033_final.log
+          if-no-files-found: warn
