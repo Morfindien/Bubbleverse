@@ -1,0 +1,116 @@
+project:
+  q: Q-033
+  run_id: Q033-CAMSPEC-LAUNCH-SEMANTICS-PROTOCOL-AUDIT-V2
+  result_id: R-Q033-EDE-LAUNCH-SEMANTICS-AUDIT-002
+  generated_at: '2026-09-06T21:35:00+02:00'
+  title: Q033 historical launch-semantics protocol audit V2
+  scientific_question: >-
+    Under the frozen CamSpec full-multifrequency MOD-EDE-N3 likelihood, can the
+    difference between the historical Q022 stable-multibasin classification and
+    Q032 V4's non-stable full-native classification be explained by
+    launch-point/reference-distribution semantics alone, when all other
+    scientific and numerical components are matched?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+parents:
+  q022:
+    run_id: Q022-FULL-MF-OPTIMIZER-BASIN-CONTINUATION-V2
+    result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+    github_run_id: 33902262660
+    execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+    final_artifact: q022-final-v2
+  q032_v4:
+    run_id: Q032-EXACT-START-CONFORMANCE-ADDBACK-V4
+    result_id: R-Q032-EDE-CAMSPEC-ADDBACK-004
+    github_run_id: 34015845246
+    execution_commit: fbde93aee01ec3bed183207518ff315c96a45c3c
+    preflight_artifact: q032-exact-preflight-v4
+    final_artifact: q032-exact-final-v4
+  q033_v1:
+    run_id: Q033-CAMSPEC-LAUNCH-SEMANTICS-MATCHED-AB-V1
+    result_id: R-Q033-EDE-CAMSPEC-LAUNCH-SEMANTICS-001
+    status: FAILED_PREFLIGHT_NO_SCIENTIFIC_RESULT
+    failure: NONSCALAR_HISTORICAL_REFERENCE_GATE=FAIL
+
+starts:
+  masks: [3, 6, 7]
+  seed_restarts: [0, 1, 2]
+  labels:
+    - M3-S0
+    - M3-S1
+    - M3-S2
+    - M6-S0
+    - M6-S1
+    - M6-S2
+    - M7-S0
+    - M7-S1
+    - M7-S2
+  provenance: Q032_V4_PREFLIGHT_Q022_SOURCE_STARTS
+
+q022_parameterization:
+  constructor: q021_primordial_decomposition_v1.build_info
+  architecture: full_mf
+  zero_phase_restart: 1
+  frozen_primordial:
+    - n_s
+    - logA
+    - tau_reio
+  endpoint_recenter_function: q021_primordial_decomposition_v1.set_ref
+
+q032_v4_parameterization:
+  constructor: q032_exact_start_addback_v4.build_camspec_surface_info
+  surface: full_native
+  exact_ref_function: q032_exact_start_addback_v4.apply_exact_refs
+
+decision:
+  if_q022_refs_scalar_and_q032_refs_scalar: >-
+    Q033=NO; LAUNCH_REFERENCE_SEMANTICS_ALREADY_IDENTICAL_NOT_CAUSAL;
+    identify D-Q033-REMAINING-001 and stop.
+  if_genuine_q022_non_scalar_refs_found: >-
+    V2 premise correction fails; do not claim Q033 resolved and return for
+    redesigned matched A/B execution.
+  new_likelihood_optimization_required_when_scalar_identity_confirmed: false
+
+rules:
+  v1_failed_no_scientific_result: true
+  audit_actual_runtime_lineage: true
+  no_new_likelihood_optimization: true
+  no_q032_sector_rerun: true
+  hillipop_not_rerun: true
+  no_new_seed_family: true
+  no_threshold_change: true
+  q022_raw_result_preserved: true
+  q023_q030_fixed_vector_results_preserved: true
+  q032_v4_raw_computation_preserved: true
+  q032_v4_non_scalar_recovery_interpretation_revisable: true
+  technical_failure_no_scientific_result: true
+  stop_after_premise_resolution: true
+  no_open_ended_search: true
+
+result_test_plan:
+  T001: HISTORICAL_SOURCE_BLOB_IDENTITY
+  T002: Q022_HISTORICAL_FINAL_RESULT_IDENTITY
+  T003: Q032_V4_FINAL_RESULT_AND_FULL_NATIVE_NONSTABILITY_IDENTITY
+  T004: ALL_NINE_Q022_PROVENANCE_LABELS_PRESENT
+  T005: ACTUAL_Q019_Q021_Q022_RUNTIME_REF_RECONSTRUCTION_FOR_MASKS_3_6_7
+  T006: ALL_Q022_SAMPLED_NONPRIMORDIAL_REFS_SCALAR_AFTER_ENDPOINT_RECENTER
+  T007: Q032_V4_FULL_NATIVE_ALL_SAMPLED_REFS_SCALAR
+  T008: PARAMETERIZATION_SET_DIFFERENCE_EQUALS_N_S_LOGA_TAU_REIO
+  T009: NO_NEW_LIKELIHOOD_OPTIMIZATION
+  T010: FINITE_Q033_STOP_CLASSIFICATION_AND_JOURNAL_EFFECT
+  mandatory:
+    - T001
+    - T002
+    - T003
+    - T004
+    - T005
+    - T006
+    - T007
+    - T008
+    - T009
+    - T010

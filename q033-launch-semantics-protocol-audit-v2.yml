@@ -1,0 +1,97 @@
+name: Bubbleverse Q033 launch semantics protocol audit V2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-033
+  RUN_ID: Q033-CAMSPEC-LAUNCH-SEMANTICS-PROTOCOL-AUDIT-V2
+  RESULT_ID: R-Q033-EDE-LAUNCH-SEMANTICS-AUDIT-002
+  Q022_RUN_ID: '33902262660'
+  Q032_V4_RUN_ID: '34015845246'
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Static dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Compile and validate Q033 V2 protocol
+        run: |
+          python -m py_compile \
+            q033_launch_semantics_protocol_audit_v2.py \
+            q033_launch_semantics_tests_v2.py
+          python q033_launch_semantics_tests_v2.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q033-launch-static-v2
+          path: q033_launch_semantics_static_validation_v2.json
+          if-no-files-found: error
+
+  audit:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore frozen CamSpec runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q033-launch-audit-v2-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - name: Download authoritative Q032 V4 preflight
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_V4_RUN_ID }}
+          name: q032-exact-preflight-v4
+          path: parent_q032/preflight
+      - name: Download authoritative Q032 V4 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_V4_RUN_ID }}
+          name: q032-exact-final-v4
+          path: parent_q032/final
+      - name: Download authoritative Q022 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          name: q022-final-v2
+          path: parent_q022/final
+      - name: Recreate frozen runtime for constructor audit
+        run: bash q032_setup_v4.sh
+      - name: Resolve Q033 premise and stop
+        run: |
+          python q033_launch_semantics_protocol_audit_v2.py audit \
+            --q032-preflight parent_q032/preflight/q032_exact_start_preflight_v4.json \
+            --q032-final parent_q032/final/q032_exact_final_v4.json \
+            --q022-final parent_q022/final/q022_final_v2.json \
+            --output q033_launch_semantics_final_v2.json \
+            --manifest-output q033_launch_semantics_job_manifest_final_v2.json | tee q033_v2_final.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q033-launch-final-v2
+          path: |
+            q033_launch_semantics_final_v2.json
+            q033_launch_semantics_job_manifest_final_v2.json
+            q033_v2_final.log
+          if-no-files-found: warn
