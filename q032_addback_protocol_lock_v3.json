@@ -1,0 +1,114 @@
+{
+  "created_at": "2026-09-06T05:20:00+02:00",
+  "decision_logic": {
+    "full_native_only_restoration": "MINIMUM_CARDINALITY_3",
+    "no_full_native_restoration": "NO_CLEAN_LOCALIZATION_WITHIN_TESTED_CAMSPEC_INFORMATION_SECTORS",
+    "pair_restoration": "MINIMUM_CARDINALITY_2",
+    "single_restoration": "MINIMUM_CARDINALITY_1",
+    "stop_at_first_restoring_tier": true
+  },
+  "forbidden": [
+    "RERUN_HILLIPOP",
+    "REOPEN_CASE031",
+    "NEW_SEED_FAMILY",
+    "CHANGE_BASIN_THRESHOLDS",
+    "CROSS_SURFACE_ABSOLUTE_OBJECTIVE_SUBTRACTION",
+    "CALIBRATION_VS_FOREGROUND_DECOMPOSITION",
+    "A_PLANCK_CAUSAL_INTERPRETATION",
+    "Q024_RERUN",
+    "Q030_RERUN",
+    "OPEN_ENDED_COMBINATORIAL_SEARCH"
+  ],
+  "frozen": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "basin": {
+      "collapse_common_endpoint_rms": 0.1,
+      "collapse_objective_tolerance": 0.5,
+      "scale_floor_fraction": 1e-08,
+      "stable_basin_minimum_supporting_starts": 2
+    },
+    "model": "MOD-EDE-N3",
+    "n_scf": 3,
+    "parent_q032_v2_result": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "parent_q032_v2_run": "Q032-PLANCK-TT3PAIR-COMMON-SUPPORT-BRIDGE-V2",
+    "parent_q032_v2_support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "refinement": {
+      "best_of": 1,
+      "ignore_prior": true,
+      "max_evals": 300000,
+      "method": "bobyqa",
+      "rhoend": 1e-05
+    },
+    "stage1": {
+      "best_of": 1,
+      "ignore_prior": true,
+      "max_evals": 200000,
+      "method": "bobyqa",
+      "rhoend": 0.0001
+    },
+    "starts": [
+      "M3-S0",
+      "M3-S1",
+      "M3-S2",
+      "M6-S0",
+      "M6-S1",
+      "M6-S2",
+      "M7-S0",
+      "M7-S1",
+      "M7-S2"
+    ]
+  },
+  "protocol_sha256": "5556c68468ecd3d84ccf91473b9f285022bea603d135504b0db06c4625dc7a01",
+  "q": "Q-032",
+  "result_id": "R-Q032-EDE-CAMSPEC-ADDBACK-003",
+  "return_route": "BUBBLEVERSE_RESULT_INGESTION_AND_ROUTING_ENGINE",
+  "run_id": "Q032-CAMSPEC-NESTED-ADDBACK-V3",
+  "scientific_question": "Can the CASE-031 portability failure be localized to one or a small preregistered set of CamSpec information sectors removed by Q032 V2, or does the loss of stable multibasin structure remain coupled across those sectors?",
+  "surface_hierarchy": {
+    "ee_definition": "NATIVE_CAMSPEC_EE_PLUS_NATIVE_calEE_AND_EXISTING_Q019_GAUSSIAN_SHAPE",
+    "support_definition": "RUNTIME_DERIVED_NATIVE_CAMSPEC_TT_COORDINATES_ABSENT_FROM_FROZEN_Q032_V2_COMMON_SUPPORT",
+    "surface_sectors": {
+      "ee": [
+        "EE"
+      ],
+      "full_native": [
+        "SUPPORT",
+        "TE",
+        "EE"
+      ],
+      "support": [
+        "SUPPORT"
+      ],
+      "support_ee": [
+        "SUPPORT",
+        "EE"
+      ],
+      "support_te": [
+        "SUPPORT",
+        "TE"
+      ],
+      "te": [
+        "TE"
+      ],
+      "te_ee": [
+        "TE",
+        "EE"
+      ]
+    },
+    "te_definition": "NATIVE_CAMSPEC_TE_PLUS_NATIVE_calTE_AND_EXISTING_Q019_GAUSSIAN_SHAPE",
+    "tier1": [
+      "support",
+      "te",
+      "ee"
+    ],
+    "tier2_if_no_tier1_restoration": [
+      "support_te",
+      "support_ee",
+      "te_ee"
+    ],
+    "tier3_if_no_tier2_restoration": [
+      "full_native"
+    ]
+  },
+  "technical_failure_semantics": "TECHNICAL_FAILURE_NO_SCIENTIFIC_RESULT"
+}

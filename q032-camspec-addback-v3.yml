@@ -1,0 +1,750 @@
+name: Bubbleverse Q032 CamSpec nested addback V3
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-032
+  RUN_ID: Q032-CAMSPEC-NESTED-ADDBACK-V3
+  RESULT_ID: R-Q032-EDE-CAMSPEC-ADDBACK-003
+  Q032_V2_RUN_ID: '33994305721'
+  Q022_RUN_ID: '33902262660'
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Static dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - name: Compile and validate V3 protocol
+        run: |
+          python -m py_compile q032_camspec_addback_v3.py q032_addback_tests_v3.py
+          python q032_addback_tests_v3.py static --output q032_addback_static_validation_v3.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q032-addback-static-v3
+          path: |
+            q032_addback_static_validation_v3.json
+            q032_addback_self_test_v3.json
+          if-no-files-found: error
+
+  preflight:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore frozen CamSpec runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-addback-v3-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - name: Download authoritative Q032 V2 sealed preflight
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_V2_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: parent_q032_v2/preflight
+      - name: Download authoritative Q032 V2 final result
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_V2_RUN_ID }}
+          name: q032-final-v2
+          path: parent_q032_v2/final
+      - name: Download authoritative Q022 full-native final reference
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          name: q022-final-v2
+          path: parent_q022/final
+      - name: Recreate frozen CamSpec runtime only
+        run: bash q032_setup_v3.sh
+      - name: Derive and seal all preregistered add-back surfaces before optimization
+        run: |
+          python q032_camspec_addback_v3.py preflight \
+            --parent-preflight parent_q032_v2/preflight/q032_preflight_sealed_v2.json \
+            --parent-final parent_q032_v2/final/q032_final_v2.json \
+            --q022-final parent_q022/final/q022_final_v2.json \
+            --output q032_addback_preflight_v3.json \
+            --surface-output q032_addback_surface_lock_v3.json \
+            --manifest-output q032_addback_job_manifest_initial_v3.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-preflight-v3
+          path: |
+            q032_addback_preflight_v3.json
+            q032_addback_surface_lock_v3.json
+            q032_addback_job_manifest_initial_v3.json
+            q032_runtime/q032_camspec_addback_runtime_v3.json
+          if-no-files-found: warn
+
+  tier1_stage1:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        surface: [support, te, ee]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore frozen CamSpec runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-addback-v3-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - name: Recreate frozen CamSpec runtime
+        run: bash q032_setup_v3.sh
+      - name: Tier-1 single-sector Stage-1 optimizer shard
+        run: |
+          mkdir -p q032_addback_tier1_stage1
+          python q032_camspec_addback_v3.py profile \
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json \
+            --surface '${{ matrix.surface }}' --phase stage1 \
+            --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --output "q032_addback_tier1_stage1/${{ matrix.surface }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-t1-stage1-${{ matrix.surface }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_addback_tier1_stage1/*.json
+          if-no-files-found: warn
+
+  tier1_assess:
+    needs: tier1_stage1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      needs_refinement: ${{ steps.assess.outputs.needs_refinement }}
+      refine_matrix: ${{ steps.assess.outputs.refine_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-t1-stage1-*
+          merge-multiple: true
+          path: q032_addback_tier1_stage1_all
+      - id: assess
+        shell: bash
+        run: |
+          set +e
+          python q032_camspec_addback_v3.py assess-tier \
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json \
+            --stage1-dir q032_addback_tier1_stage1_all \
+            --surfaces support,te,ee --tier tier1 \
+            --output q032_addback_tier1_assessment_v3.json \
+            --matrix-output q032_addback_tier1_refine_matrix_v3.json | tee q032_addback_tier1_assess.log
+          rc=${PIPESTATUS[0]}
+          needs=$(grep '^NEEDS_REFINEMENT=' q032_addback_tier1_assess.log | tail -1 | cut -d= -f2-)
+          matrix=$(grep '^REFINE_MATRIX=' q032_addback_tier1_assess.log | tail -1 | cut -d= -f2-)
+          echo "needs_refinement=${needs}" >> "$GITHUB_OUTPUT"
+          echo "refine_matrix=${matrix}" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-t1-assessment-v3
+          path: |
+            q032_addback_tier1_assessment_v3.json
+            q032_addback_tier1_refine_matrix_v3.json
+            q032_addback_tier1_assess.log
+          if-no-files-found: warn
+
+  tier1_refinement:
+    needs: tier1_assess
+    if: needs.tier1_assess.outputs.needs_refinement == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJson(needs.tier1_assess.outputs.refine_matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore frozen CamSpec runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-addback-v3-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-t1-stage1-*
+          merge-multiple: true
+          path: q032_addback_tier1_stage1_all
+      - name: Recreate frozen CamSpec runtime
+        run: bash q032_setup_v3.sh
+      - name: Tier-1 tighter continuation
+        run: |
+          mkdir -p q032_addback_tier1_refinement
+          python q032_camspec_addback_v3.py profile \
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json \
+            --surface '${{ matrix.surface }}' --phase refinement \
+            --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --stage1-dir q032_addback_tier1_stage1_all \
+            --output "q032_addback_tier1_refinement/${{ matrix.surface }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-t1-refine-${{ matrix.surface }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_addback_tier1_refinement/*.json
+          if-no-files-found: warn
+
+  tier1_finalize:
+    needs: [tier1_assess, tier1_refinement]
+    if: >-
+      always() && needs.tier1_assess.result == 'success' &&
+      (needs.tier1_refinement.result == 'success' || needs.tier1_refinement.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      continue_next: ${{ steps.finalize.outputs.continue_next }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-t1-assessment-v3
+          path: q032_addback_tier1_assessment
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-t1-stage1-*
+          merge-multiple: true
+          path: q032_addback_tier1_stage1_all
+      - name: Download Tier-1 refinements if required
+        if: needs.tier1_assess.outputs.needs_refinement == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-t1-refine-*
+          merge-multiple: true
+          path: q032_addback_tier1_refinement_all
+      - id: finalize
+        shell: bash
+        run: |
+          args=(
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json
+            --assessment q032_addback_tier1_assessment/q032_addback_tier1_assessment_v3.json
+            --stage1-dir q032_addback_tier1_stage1_all
+            --surfaces support,te,ee --tier tier1
+            --output q032_addback_tier1_final_v3.json
+          )
+          if [[ '${{ needs.tier1_assess.outputs.needs_refinement }}' == 'true' ]]; then
+            args+=(--refinement-dir q032_addback_tier1_refinement_all)
+          fi
+          python q032_camspec_addback_v3.py finalize-tier "${args[@]}" | tee q032_addback_tier1_final.log
+          next=$(grep '^CONTINUE_NEXT=' q032_addback_tier1_final.log | tail -1 | cut -d= -f2-)
+          echo "continue_next=${next}" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q032-addback-t1-final-v3
+          path: |
+            q032_addback_tier1_final_v3.json
+            q032_addback_tier1_final.log
+          if-no-files-found: error
+
+  tier2_stage1:
+    needs: tier1_finalize
+    if: needs.tier1_finalize.outputs.continue_next == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        surface: [support_te, support_ee, te_ee]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-addback-v3-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - run: bash q032_setup_v3.sh
+      - name: Tier-2 pair-sector Stage-1 optimizer shard
+        run: |
+          mkdir -p q032_addback_tier2_stage1
+          python q032_camspec_addback_v3.py profile \
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json \
+            --surface '${{ matrix.surface }}' --phase stage1 \
+            --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --output "q032_addback_tier2_stage1/${{ matrix.surface }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-t2-stage1-${{ matrix.surface }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_addback_tier2_stage1/*.json
+          if-no-files-found: warn
+
+  tier2_assess:
+    needs: tier2_stage1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      needs_refinement: ${{ steps.assess.outputs.needs_refinement }}
+      refine_matrix: ${{ steps.assess.outputs.refine_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-t2-stage1-*
+          merge-multiple: true
+          path: q032_addback_tier2_stage1_all
+      - id: assess
+        shell: bash
+        run: |
+          set +e
+          python q032_camspec_addback_v3.py assess-tier \
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json \
+            --stage1-dir q032_addback_tier2_stage1_all \
+            --surfaces support_te,support_ee,te_ee --tier tier2 \
+            --output q032_addback_tier2_assessment_v3.json \
+            --matrix-output q032_addback_tier2_refine_matrix_v3.json | tee q032_addback_tier2_assess.log
+          rc=${PIPESTATUS[0]}
+          needs=$(grep '^NEEDS_REFINEMENT=' q032_addback_tier2_assess.log | tail -1 | cut -d= -f2-)
+          matrix=$(grep '^REFINE_MATRIX=' q032_addback_tier2_assess.log | tail -1 | cut -d= -f2-)
+          echo "needs_refinement=${needs}" >> "$GITHUB_OUTPUT"
+          echo "refine_matrix=${matrix}" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-t2-assessment-v3
+          path: |
+            q032_addback_tier2_assessment_v3.json
+            q032_addback_tier2_refine_matrix_v3.json
+            q032_addback_tier2_assess.log
+          if-no-files-found: warn
+
+  tier2_refinement:
+    needs: tier2_assess
+    if: needs.tier2_assess.outputs.needs_refinement == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJson(needs.tier2_assess.outputs.refine_matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-addback-v3-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-t2-stage1-*
+          merge-multiple: true
+          path: q032_addback_tier2_stage1_all
+      - run: bash q032_setup_v3.sh
+      - name: Tier-2 tighter continuation
+        run: |
+          mkdir -p q032_addback_tier2_refinement
+          python q032_camspec_addback_v3.py profile \
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json \
+            --surface '${{ matrix.surface }}' --phase refinement \
+            --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --stage1-dir q032_addback_tier2_stage1_all \
+            --output "q032_addback_tier2_refinement/${{ matrix.surface }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-t2-refine-${{ matrix.surface }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_addback_tier2_refinement/*.json
+          if-no-files-found: warn
+
+  tier2_finalize:
+    needs: [tier2_assess, tier2_refinement]
+    if: >-
+      always() && needs.tier2_assess.result == 'success' &&
+      (needs.tier2_refinement.result == 'success' || needs.tier2_refinement.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      continue_next: ${{ steps.finalize.outputs.continue_next }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-t2-assessment-v3
+          path: q032_addback_tier2_assessment
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-t2-stage1-*
+          merge-multiple: true
+          path: q032_addback_tier2_stage1_all
+      - name: Download Tier-2 refinements if required
+        if: needs.tier2_assess.outputs.needs_refinement == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-t2-refine-*
+          merge-multiple: true
+          path: q032_addback_tier2_refinement_all
+      - id: finalize
+        shell: bash
+        run: |
+          args=(
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json
+            --assessment q032_addback_tier2_assessment/q032_addback_tier2_assessment_v3.json
+            --stage1-dir q032_addback_tier2_stage1_all
+            --surfaces support_te,support_ee,te_ee --tier tier2
+            --output q032_addback_tier2_final_v3.json
+          )
+          if [[ '${{ needs.tier2_assess.outputs.needs_refinement }}' == 'true' ]]; then
+            args+=(--refinement-dir q032_addback_tier2_refinement_all)
+          fi
+          python q032_camspec_addback_v3.py finalize-tier "${args[@]}" | tee q032_addback_tier2_final.log
+          next=$(grep '^CONTINUE_NEXT=' q032_addback_tier2_final.log | tail -1 | cut -d= -f2-)
+          echo "continue_next=${next}" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q032-addback-t2-final-v3
+          path: |
+            q032_addback_tier2_final_v3.json
+            q032_addback_tier2_final.log
+          if-no-files-found: error
+
+  control_stage1:
+    needs: tier2_finalize
+    if: needs.tier2_finalize.outputs.continue_next == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        surface: [full_native]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-addback-v3-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - run: bash q032_setup_v3.sh
+      - name: Same-V3-semantics full-native positive-control Stage-1 shard
+        run: |
+          mkdir -p q032_addback_control_stage1
+          python q032_camspec_addback_v3.py profile \
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json \
+            --surface full_native --phase stage1 \
+            --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --output "q032_addback_control_stage1/full_native_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-control-stage1-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_addback_control_stage1/*.json
+          if-no-files-found: warn
+
+  control_assess:
+    needs: control_stage1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      needs_refinement: ${{ steps.assess.outputs.needs_refinement }}
+      refine_matrix: ${{ steps.assess.outputs.refine_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-control-stage1-*
+          merge-multiple: true
+          path: q032_addback_control_stage1_all
+      - id: assess
+        shell: bash
+        run: |
+          set +e
+          python q032_camspec_addback_v3.py assess-tier \
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json \
+            --stage1-dir q032_addback_control_stage1_all \
+            --surfaces full_native --tier control \
+            --output q032_addback_control_assessment_v3.json \
+            --matrix-output q032_addback_control_refine_matrix_v3.json | tee q032_addback_control_assess.log
+          rc=${PIPESTATUS[0]}
+          needs=$(grep '^NEEDS_REFINEMENT=' q032_addback_control_assess.log | tail -1 | cut -d= -f2-)
+          matrix=$(grep '^REFINE_MATRIX=' q032_addback_control_assess.log | tail -1 | cut -d= -f2-)
+          echo "needs_refinement=${needs}" >> "$GITHUB_OUTPUT"
+          echo "refine_matrix=${matrix}" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-control-assessment-v3
+          path: |
+            q032_addback_control_assessment_v3.json
+            q032_addback_control_refine_matrix_v3.json
+            q032_addback_control_assess.log
+          if-no-files-found: warn
+
+  control_refinement:
+    needs: control_assess
+    if: needs.control_assess.outputs.needs_refinement == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJson(needs.control_assess.outputs.refine_matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-addback-v3-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-control-stage1-*
+          merge-multiple: true
+          path: q032_addback_control_stage1_all
+      - run: bash q032_setup_v3.sh
+      - name: Full-native control tighter continuation
+        run: |
+          mkdir -p q032_addback_control_refinement
+          python q032_camspec_addback_v3.py profile \
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json \
+            --surface full_native --phase refinement \
+            --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --stage1-dir q032_addback_control_stage1_all \
+            --output "q032_addback_control_refinement/full_native_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q032-addback-control-refine-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_addback_control_refinement/*.json
+          if-no-files-found: warn
+
+  control_finalize:
+    needs: [control_assess, control_refinement]
+    if: >-
+      always() && needs.control_assess.result == 'success' &&
+      (needs.control_refinement.result == 'success' || needs.control_refinement.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-control-assessment-v3
+          path: q032_addback_control_assessment
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-control-stage1-*
+          merge-multiple: true
+          path: q032_addback_control_stage1_all
+      - name: Download control refinements if required
+        if: needs.control_assess.outputs.needs_refinement == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q032-addback-control-refine-*
+          merge-multiple: true
+          path: q032_addback_control_refinement_all
+      - shell: bash
+        run: |
+          args=(
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json
+            --assessment q032_addback_control_assessment/q032_addback_control_assessment_v3.json
+            --stage1-dir q032_addback_control_stage1_all
+            --surfaces full_native --tier control
+            --output q032_addback_control_final_v3.json
+          )
+          if [[ '${{ needs.control_assess.outputs.needs_refinement }}' == 'true' ]]; then
+            args+=(--refinement-dir q032_addback_control_refinement_all)
+          fi
+          python q032_camspec_addback_v3.py finalize-tier "${args[@]}" | tee q032_addback_control_final.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q032-addback-control-final-v3
+          path: |
+            q032_addback_control_final_v3.json
+            q032_addback_control_final.log
+          if-no-files-found: error
+
+  final:
+    needs: [tier1_finalize, tier2_finalize, control_finalize]
+    if: >-
+      always() && needs.tier1_finalize.result == 'success' &&
+      (needs.tier2_finalize.result == 'success' || needs.tier2_finalize.result == 'skipped') &&
+      (needs.control_finalize.result == 'success' || needs.control_finalize.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-preflight-v3
+          path: q032_addback_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-t1-final-v3
+          path: q032_addback_t1_final
+      - name: Download Tier-2 final when it ran
+        if: needs.tier2_finalize.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-t2-final-v3
+          path: q032_addback_t2_final
+      - name: Download full-native control final when it ran
+        if: needs.control_finalize.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: q032-addback-control-final-v3
+          path: q032_addback_control_final
+      - name: Apply bounded Q032 add-back closure logic
+        shell: bash
+        run: |
+          args=(
+            --preflight q032_addback_preflight/q032_addback_preflight_v3.json
+            --tier1 q032_addback_t1_final/q032_addback_tier1_final_v3.json
+            --output q032_addback_final_v3.json
+            --manifest-output q032_addback_job_manifest_final_v3.json
+          )
+          if [[ '${{ needs.tier2_finalize.result }}' == 'success' ]]; then
+            args+=(--tier2 q032_addback_t2_final/q032_addback_tier2_final_v3.json)
+          fi
+          if [[ '${{ needs.control_finalize.result }}' == 'success' ]]; then
+            args+=(--control q032_addback_control_final/q032_addback_control_final_v3.json)
+          fi
+          python q032_camspec_addback_v3.py aggregate-final "${args[@]}" | tee q032_addback_final.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q032-addback-final-v3
+          path: |
+            q032_addback_final_v3.json
+            q032_addback_job_manifest_final_v3.json
+            q032_addback_final.log
+          if-no-files-found: error
