@@ -1,0 +1,46 @@
+{
+  "q": "Q-034",
+  "run_id": "Q034-PRIMORDIAL-FREEZE-ISOLATION-V1",
+  "result_id": "R-Q034-EDE-PRIMORDIAL-FREEZE-ISOLATION-001",
+  "q022_execution_commit": "16a7902c3be7d1967adaae9ee380baf0d17e903a",
+  "q032_v4_execution_commit": "fbde93aee01ec3bed183207518ff315c96a45c3c",
+  "q033_v2_workflow_placement_commit": "614b227c8de5ea2096f75bf8b97155f340cb1a44",
+  "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "cobaya_version": "3.5.6",
+  "bubbleverse_files": {
+    "q019_planck_cosmology_reprofile_v1.py": "b36d890a17bc2165b1a08052bcfae6589198c488",
+    "q019_planck_cosmology_reprofile_v1_config.yml": "2e07b36bbcb607d618ef6f60320a7259882b3fb2",
+    "q021_primordial_decomposition_v1.py": "adf992ef1563d5e3d486badb46b8dcad45e924fa",
+    "q022_globality_continuation_v2.py": "e8519f48869dd98a34e2a3280b9f872f97a237bc",
+    "q031_planck_portability_v1.py": "5d903e76105b7dcaf41ce0c68cbbeeaee4cda835",
+    "q031_planck_portability_v1_config.yml": "aa8a0e466904a684fd9957d2df212f3a910e3d9a",
+    "q032_planck_tt3pair_bridge_v2.py": "2199011cc44d6cadab3f62265ea6c77ecb187027",
+    "q032_exact_start_addback_v4.py": "cf64d1cb64e9a156bf4ecf09e526bfc4203f4366",
+    "q032_exact_start_addback_v4_config.yml": "42f792d705df2aa949467dea3f2792f8d2cdfcbe",
+    "q032_setup_v4.sh": "948b93fdd7b1257fedc98025b6adf0eae3b8bb4a",
+    "q033_launch_semantics_protocol_audit_v2.py": "c4a3cf64f9669f5729664f0daacb71c3146b6873",
+    "q033_launch_semantics_source_lock_v2.json": "9f5bf2a24d324566b5cc971e0cf67a0816ba71b8"
+  },
+  "scientific_lock": {
+    "surface": "full_native",
+    "primordial_block": [
+      "n_s",
+      "logA",
+      "tau_reio"
+    ],
+    "starts": [
+      "M3-S0",
+      "M3-S1",
+      "M3-S2",
+      "M6-S0",
+      "M6-S1",
+      "M6-S2",
+      "M7-S0",
+      "M7-S1",
+      "M7-S2"
+    ],
+    "sampled_control_reuse_required_if_identity_passes": true,
+    "non_scalar_reference_arm_forbidden": true,
+    "basin_classifier_lineage": "q032_exact_start_addback_v4.cluster_rows -> q032_planck_tt3pair_bridge_v2.bridge_cluster -> q031_planck_portability_v1.cluster_rows"
+  }
+}

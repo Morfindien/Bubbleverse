@@ -1,0 +1,202 @@
+project:
+  q: Q-034
+  run_id: Q034-PRIMORDIAL-FREEZE-ISOLATION-V1
+  result_id: R-Q034-EDE-PRIMORDIAL-FREEZE-ISOLATION-001
+  generated_at: '2026-09-06T22:39:00+02:00'
+  title: Q034 matched primordial freeze versus sampling isolation
+  scientific_question: >-
+    Under the frozen CamSpec full-multifrequency MOD-EDE-N3 likelihood, with scalar endpoint references,
+    the same nine Q022 provenance vectors, identical numerical settings and unchanged basin criteria,
+    does freezing versus sampling the primordial block (n_s, logA, tau_reio) reproduce the Q022
+    stable-multibasin versus Q032 V4 non-stable FULL_NATIVE classification difference?
+
+model:
+  name: MOD-EDE-N3
+  n_scf: 3
+  backend_repository: mwt5345/class_ede
+  backend_commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+parents:
+  q022:
+    run_id: Q022-FULL-MF-OPTIMIZER-BASIN-CONTINUATION-V2
+    result_id: R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002
+    github_run_id: 33902262660
+    execution_commit: 16a7902c3be7d1967adaae9ee380baf0d17e903a
+    historical_classification: STABLE_MIXED_COSMOLOGY_NUISANCE_MULTIBASIN_STRUCTURE
+    role: HISTORICAL_TARGET_CLASSIFICATION_AND_PROVENANCE_VECTOR_LINEAGE
+  q032_v4:
+    run_id: Q032-EXACT-START-CONFORMANCE-ADDBACK-V4
+    result_id: R-Q032-EDE-CAMSPEC-ADDBACK-004
+    github_run_id: 34015845246
+    execution_commit: fbde93aee01ec3bed183207518ff315c96a45c3c
+    preflight_artifact: q032-exact-preflight-v4
+    final_artifact: q032-exact-final-v4
+    control_final_artifact: q032-exact-control-final-v4
+    full_native_stable_basin_count: 0
+    full_native_stable_multibasin: false
+    role: AUTHORITATIVE_SAMPLED_PRIMORDIAL_CONTROL
+  q033_v2:
+    run_id: Q033-CAMSPEC-LAUNCH-SEMANTICS-PROTOCOL-AUDIT-V2
+    result_id: R-Q033-EDE-LAUNCH-SEMANTICS-AUDIT-002
+    status: CLOSED_FINAL_RESULT_GATE_PASS
+    classification: LAUNCH_REFERENCE_SEMANTICS_ALREADY_IDENTICAL_NOT_CAUSAL
+    remaining_difference_id: D-Q033-REMAINING-001
+    role: DIRECT_PROVENANCE_FOR_PRIMORDIAL_PARAMETERIZATION_DELTA
+
+likelihood:
+  family: CamSpec
+  component: planck_NPIPE_highl_CamSpec.TTTEEE
+  surface: full_native
+  planck_release: PR4/NPIPE
+  parent_builder: q032_exact_start_addback_v4.build_camspec_surface_info
+  q019_parent_builder: q019_planck_cosmology_reprofile_v1.build_full
+  additional_datasets_forbidden: true
+
+primordial_block:
+  coordinates:
+    - n_s
+    - logA
+    - tau_reio
+  control_status: SAMPLED_WITH_SCALAR_REFS
+  test_status: FIXED_TO_EACH_AUTHORITATIVE_Q022_PROVENANCE_VECTOR
+  value_source: Q032_V4_PREFLIGHT_Q022_SOURCE_STARTS
+  rounding_forbidden: true
+  prior_mean_substitution_forbidden: true
+
+starts:
+  masks: [3, 6, 7]
+  seed_restarts: [0, 1, 2]
+  labels:
+    - M3-S0
+    - M3-S1
+    - M3-S2
+    - M6-S0
+    - M6-S1
+    - M6-S2
+    - M7-S0
+    - M7-S1
+    - M7-S2
+  extra_seed_families_forbidden: true
+
+optimizer:
+  method: bobyqa
+  ignore_prior_density: true
+  best_of: 1
+  stage1:
+    max_evals: 200000
+    rhoend: 0.0001
+  refinement:
+    max_evals: 300000
+    rhoend: 0.00001
+
+basin:
+  scale_lock_source: Q032_V4_PREFLIGHT_LOCKED_COMMON_SCALES
+  collapse_objective_tolerance: 0.50
+  collapse_common_endpoint_rms: 0.10
+  stable_basin_minimum_supporting_starts: 2
+  scale_floor_fraction: 1.0e-8
+  refine_unless_single_cluster_covers_all_starts: true
+  classifier: q032_exact_start_addback_v4.cluster_rows
+
+execution:
+  python: '3.11'
+  github_runner: ubuntu-24.04
+  github_limits_checked: '2026-09-06'
+  github_hosted_job_hard_limit_minutes: 360
+  github_workflow_hard_limit_days: 35
+  github_job_timeout_minutes: 330
+  soft_stop_minutes: 300
+  max_parallel: 6
+  checkpointing: false
+  checkpoint_reason: >-
+    One optimizer restart is the atomic unit. Existing Q022/Q032 runtime evidence puts these shards
+    far below the six-hour GitHub-hosted job limit, and Py-BOBYQA/Cobaya is not represented here as
+    a portable true-resume state. Failed independent shards must be rerun individually.
+  sampled_control_new_jobs: 0
+  frozen_stage1_jobs: 9
+  frozen_refinement_jobs_if_required: 9
+  merge_required: true
+  final_validation_job_required: true
+
+software:
+  cobaya: 3.5.6
+  PyYAML: 6.0.2
+  numpy: 1.26.4
+  scipy: 1.15.3
+  Py-BOBYQA: 1.5.0
+  getdist: 1.6.1
+  Cython: 0.29.37
+  sacc: 1.0.2
+  astropy: 7.2.2
+  setup_script: q032_setup_v4.sh
+
+sources:
+  K-044:
+    type: PRIMARY_RESEARCH
+    citation: Rosenberg, Gratton & Efstathiou (2022), CMB Power Spectra and Cosmological Parameters from Planck PR4 with CamSpec, MNRAS 517, 4620-4636
+    arxiv: '2205.10869'
+    doi: 10.1093/mnras/stac2744
+    role: CAMSPEC_PR4_NPIPE_CONTEXT
+  K-045:
+    type: PRIMARY_METHODOLOGICAL_RESEARCH
+    citation: Jense, Viña, Calabrese & Hill (2026), The Choice of Planck CMB Likelihood in Cosmological Analyses, Physical Review D 113, 043551
+    arxiv: '2510.09430'
+    doi: 10.1103/ff9j-skyj
+    role: PLANCK_LIKELIHOOD_CHOICE_CONTEXT
+  K-046:
+    type: OFFICIAL_SOFTWARE_DOCUMENTATION
+    citation: Cobaya 3.5.6 official technical documentation and source implementation
+    url_status: REFERENCE_URL_TO_BE_VERIFIED
+    role: SCALAR_REFERENCE_AND_START_SEMANTICS
+
+result_test_plan:
+  T001: Q032_SOURCE_AND_CONTROL_IDENTITY
+  T002: FULL_NATIVE_SURFACE_IDENTITY
+  T003: NINE_PROVENANCE_VECTOR_IDENTITY
+  T004: SCALAR_REFERENCE_IDENTITY
+  T005: ONLY_PRIMORDIAL_SAMPLED_TO_FROZEN_DELTA
+  T006: MODEL_LIKELIHOOD_NUMERICAL_AND_BASIN_FREEZE
+  T007: FROZEN_STAGE1_COMPLETENESS
+  T008: CONDITIONAL_REFINEMENT_PROTOCOL
+  T009: GLOBALITY_CLASSIFIER_REUSE
+  T010: Q034_DECISION_RULE
+  T011: NONPHYSICAL_INTERPRETATION_BOUNDARY
+  mandatory_for_final_pass: [T001, T002, T003, T004, T005, T006, T007, T008, T009, T010, T011]
+
+scientific_decisions:
+  sufficient:
+    condition: SAMPLED_CONTROL_NONSTABLE_AND_FROZEN_ARM_STABLE
+    classification: PRIMORDIAL_FREEZE_SUFFICIENT_WITHIN_MATCHED_Q034
+    interpretation: >-
+      Frozen versus sampled status of n_s/logA/tau_reio is sufficient to reproduce the central
+      stable-versus-non-stable classification difference within the matched Q034 protocol. This does
+      not require identical endpoint coordinates or identical full internal basin geometry to Q022.
+  not_sufficient:
+    condition: SAMPLED_CONTROL_NONSTABLE_AND_FROZEN_ARM_NONSTABLE
+    classification: PRIMORDIAL_FREEZE_ALONE_NOT_SUFFICIENT
+    interpretation: >-
+      D-Q033-REMAINING-001 is falsified as a full explanation. The next Motor 14 may register only the
+      next smallest documented implementation difference; no open-ended implementation sweep is allowed.
+
+rules:
+  reuse_q032_sampled_control_if_identity_passes: true
+  full_native_only: true
+  scalar_refs_only: true
+  freeze_only_primordial_block: true
+  no_new_seed_family: true
+  no_threshold_change: true
+  no_q032_sector_rerun: true
+  no_q023_q030_rerun: true
+  case031_closed: true
+  hillipop_not_rerun: true
+  no_new_likelihood: true
+  no_new_physics_inference: true
+  technical_failure_no_scientific_result: true
+  stop_after_q034_classification: true
+
+stop_condition: >-
+  Stop Q034 when the Q032 sampled control has passed identity reuse gates, all required frozen-arm jobs
+  are complete, the unchanged basin classifier has been applied, the result is classified as either
+  PRIMORDIAL_FREEZE_SUFFICIENT_WITHIN_MATCHED_Q034 or PRIMORDIAL_FREEZE_ALONE_NOT_SUFFICIENT, final
+  validation passes, and the journal effect is documented. Do not add seeds, sectors, parameter blocks,
+  likelihoods or physics inference after this point.

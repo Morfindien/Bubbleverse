@@ -1,0 +1,320 @@
+name: Bubbleverse Q034 primordial freeze isolation V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-034
+  RUN_ID: Q034-PRIMORDIAL-FREEZE-ISOLATION-V1
+  RESULT_ID: R-Q034-EDE-PRIMORDIAL-FREEZE-ISOLATION-001
+  Q032_V4_RUN_ID: '34015845246'
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Static dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - name: Compile and run Q034 static gates
+        run: |
+          python -m py_compile q034_primordial_freeze_isolation_v1.py q034_primordial_freeze_tests_v1.py
+          python q034_primordial_freeze_tests_v1.py static --output q034_static_tests_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q034-static-v1
+          path: q034_static_tests_v1.json
+          if-no-files-found: error
+
+  preflight:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore frozen CamSpec runtime cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-exact-v4-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - name: Download authoritative Q032 V4 preflight
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_V4_RUN_ID }}
+          name: q032-exact-preflight-v4
+          path: parent_q032/preflight
+      - name: Download authoritative Q032 V4 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_V4_RUN_ID }}
+          name: q032-exact-final-v4
+          path: parent_q032/final
+      - name: Download authoritative Q032 V4 FULL_NATIVE control final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_V4_RUN_ID }}
+          name: q032-exact-control-final-v4
+          path: parent_q032/control
+      - name: Recreate frozen Q032 CamSpec environment without changing it
+        run: bash q032_setup_v4.sh
+      - name: Prove sampled-control reuse identity and seal Q034 matched protocol
+        run: |
+          python q034_primordial_freeze_isolation_v1.py preflight \
+            --q032-preflight parent_q032/preflight/q032_exact_start_preflight_v4.json \
+            --q032-final parent_q032/final/q032_exact_final_v4.json \
+            --q032-control parent_q032/control/q032_exact_control_final_v4.json \
+            --output q034_preflight_v1.json \
+            --manifest-output q034_job_manifest_initial_v1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q034-preflight-v1
+          path: |
+            q034_preflight_v1.json
+            q034_job_manifest_initial_v1.json
+          if-no-files-found: warn
+
+  frozen_stage1:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-exact-v4-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q034-preflight-v1
+          path: q034_preflight
+      - name: Recreate frozen Q032 CamSpec runtime
+        run: bash q032_setup_v4.sh
+      - name: Q034 frozen-primordial Stage-1 shard
+        run: |
+          mkdir -p q034_frozen_stage1
+          python q034_primordial_freeze_isolation_v1.py profile \
+            --preflight q034_preflight/q034_preflight_v1.json \
+            --phase stage1 --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --output "q034_frozen_stage1/full_native_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q034-frozen-stage1-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q034_frozen_stage1/**
+          if-no-files-found: warn
+
+  assess:
+    needs: frozen_stage1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      needs_refinement: ${{ steps.assess.outputs.needs_refinement }}
+      refine_matrix: ${{ steps.assess.outputs.refine_matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q034-preflight-v1
+          path: q034_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q034-frozen-stage1-*
+          merge-multiple: true
+          path: q034_stage1_all
+      - id: assess
+        shell: bash
+        run: |
+          set +e
+          python q034_primordial_freeze_isolation_v1.py assess-stage1 \
+            --preflight q034_preflight/q034_preflight_v1.json \
+            --stage1-dir q034_stage1_all \
+            --output q034_stage1_assessment_v1.json \
+            --matrix-output q034_refine_matrix_v1.json | tee q034_assess.log
+          rc=${PIPESTATUS[0]}
+          needs=$(grep '^NEEDS_REFINEMENT=' q034_assess.log | tail -1 | cut -d= -f2-)
+          matrix=$(grep '^REFINE_MATRIX=' q034_assess.log | tail -1 | cut -d= -f2-)
+          echo "needs_refinement=${needs}" >> "$GITHUB_OUTPUT"
+          echo "refine_matrix=${matrix}" >> "$GITHUB_OUTPUT"
+          exit "$rc"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q034-stage1-assessment-v1
+          path: |
+            q034_stage1_assessment_v1.json
+            q034_refine_matrix_v1.json
+            q034_assess.log
+          if-no-files-found: warn
+
+  frozen_refinement:
+    needs: assess
+    if: needs.assess.outputs.needs_refinement == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix: ${{ fromJson(needs.assess.outputs.refine_matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+          key: q032-exact-v4-${{ runner.os }}-py311-classede-5a131c91-camspec356
+      - uses: actions/download-artifact@v4
+        with:
+          name: q034-preflight-v1
+          path: q034_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q034-frozen-stage1-*
+          merge-multiple: true
+          path: q034_stage1_all
+      - run: bash q032_setup_v4.sh
+      - name: Q034 frozen-primordial tighter continuation
+        run: |
+          mkdir -p q034_frozen_refinement
+          python q034_primordial_freeze_isolation_v1.py profile \
+            --preflight q034_preflight/q034_preflight_v1.json \
+            --phase refinement --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --stage1-dir q034_stage1_all \
+            --output "q034_frozen_refinement/full_native_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q034-frozen-refine-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q034_frozen_refinement/**
+          if-no-files-found: warn
+
+  merge:
+    needs: [assess, frozen_refinement]
+    if: >-
+      always() && needs.assess.result == 'success' &&
+      (needs.frozen_refinement.result == 'success' || needs.frozen_refinement.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q034-preflight-v1
+          path: q034_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          name: q034-stage1-assessment-v1
+          path: q034_assessment
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q034-frozen-stage1-*
+          merge-multiple: true
+          path: q034_stage1_all
+      - name: Download refinements only when required
+        if: needs.assess.outputs.needs_refinement == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q034-frozen-refine-*
+          merge-multiple: true
+          path: q034_refinement_all
+      - name: Merge decisive frozen arm and apply preregistered Q034 rule provisionally
+        shell: bash
+        run: |
+          args=(
+            --preflight q034_preflight/q034_preflight_v1.json
+            --assessment q034_assessment/q034_stage1_assessment_v1.json
+            --stage1-dir q034_stage1_all
+            --output q034_merged_v1.json
+            --manifest-output q034_job_manifest_merged_v1.json
+          )
+          if [[ '${{ needs.assess.outputs.needs_refinement }}' == 'true' ]]; then
+            args+=(--refinement-dir q034_refinement_all)
+          fi
+          python q034_primordial_freeze_isolation_v1.py merge-result "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q034-merged-v1
+          path: |
+            q034_merged_v1.json
+            q034_job_manifest_merged_v1.json
+          if-no-files-found: error
+
+  validate_final:
+    needs: merge
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q034-preflight-v1
+          path: q034_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          name: q034-merged-v1
+          path: q034_merged
+      - name: Mandatory final scientific validation and final result gate
+        run: |
+          python q034_primordial_freeze_isolation_v1.py validate-final \
+            --preflight q034_preflight/q034_preflight_v1.json \
+            --merged q034_merged/q034_merged_v1.json \
+            --output q034_final_v1.json
+          python q034_primordial_freeze_tests_v1.py final \
+            --preflight q034_preflight/q034_preflight_v1.json \
+            --merged q034_merged/q034_merged_v1.json \
+            --validated q034_final_v1.json \
+            --output q034_post_final_tests_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q034-final-v1
+          path: |
+            q034_final_v1.json
+            q034_post_final_tests_v1.json
+          if-no-files-found: error
