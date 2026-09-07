@@ -1,0 +1,112 @@
+{
+  "project": {
+    "q": "Q-036",
+    "program_id": "Q036-GEOMETRY-V1",
+    "run_id": "Q036-ENDPOINT-GEOMETRY-PORTABILITY-V1",
+    "result_id": "R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001",
+    "preregistered_at": "2026-09-07T09:44:00+02:00",
+    "scientific_question": "When the Q022 CamSpec and CASE-031 HiLLiPoP endpoint results are compared in the same Q031 common-geometry coordinates with the same locked scales, and stable/non-stable is not used as the sole discriminator, is there a material reproducible difference in endpoint geometry that still supports implementation-specific non-portability?"
+  },
+  "parents": {
+    "Q022": {
+      "result_id": "R-Q022-EDE-FULLMF-OPTIMIZER-BASIN-002",
+      "github_run_id": 33902262660,
+      "execution_commit": "16a7902c3be7d1967adaae9ee380baf0d17e903a"
+    },
+    "CASE031": {
+      "result_id": "R-CASE031-EDE-PLANCK-PORTABILITY-001",
+      "github_run_id": 33975028436,
+      "execution_commit": "ff621d6e0a425a976bb7a55f9194a0de8a87f18f",
+      "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251"
+    },
+    "Q035": {
+      "result_id": "R-Q035-EDE-CLASSIFIER-HARMONIZATION-001",
+      "program_commit": "b1166e80d5d4c602569da7e32ba02c628dec1975",
+      "status": "AUTHORITATIVE_CLOSED_CLASSIFIER_BASELINE"
+    }
+  },
+  "model": {
+    "name": "MOD-EDE-N3",
+    "n_scf": 3,
+    "backend_repository": "mwt5345/class_ede",
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97"
+  },
+  "artifact_only": true,
+  "new_likelihood_evaluations": false,
+  "new_optimizer_execution": false,
+  "new_sampler_execution": false,
+  "common_geometry": {
+    "coordinates": [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "H0",
+      "A_planck"
+    ],
+    "scale_source": "EXACT_Q031_LOCKED_SCALES_DERIVED_FROM_Q022_BEFORE_HILLIPOP_RESULTS",
+    "metric": "sqrt(mean(((a_i-b_i)/scale_i)^2))",
+    "collapse_scale": 0.1,
+    "collapse_scale_provenance": "Q031 pre_registered_geometry.collapse_common_endpoint_rms",
+    "objective_values_used_in_q036_decision": false
+  },
+  "endpoint_identity": {
+    "labels": [
+      "M3-S0", "M3-S1", "M3-S2",
+      "M6-S0", "M6-S1", "M6-S2",
+      "M7-S0", "M7-S1", "M7-S2"
+    ],
+    "semantics": "Q022 mask/restart labels are provenance-linked mapped-start identities only; they are not HiLLiPoP masks. Q031 endpoint with label L is matched only to Q022 source endpoint with the same label L."
+  },
+  "descriptors": {
+    "D1_matched_endpoint_rms": "For each of the 9 labels, Q031 common RMS between Q022 source endpoint and Q031 HiLLiPoP refined endpoint.",
+    "D2_location_median": "Median of the 9 D1 matched endpoint RMS values.",
+    "D3_location_exceedance_count": "Count of D1 values strictly greater than 0.10.",
+    "D4_normalized_centroid_shift": "Q031 common RMS between the normalized-coordinate centroids of the 9 Q022 and 9 Q031 endpoint sets.",
+    "D5_pairwise_distance_drift": "For each of the 36 unordered label pairs, absolute difference between the Q031 common RMS within Q031 and the Q031 common RMS within Q022.",
+    "D6_shape_median_drift": "Median of the 36 D5 pairwise distance drifts.",
+    "D7_shape_max_drift": "Maximum of the 36 D5 pairwise distance drifts.",
+    "D8_geometry_only_edge_xor": "Symmetric difference of geometry-only edges defined by common_rms <= 0.10 in each endpoint set; objective values are not part of this descriptor."
+  },
+  "materiality_rule": {
+    "location_material": "D2_location_median > 0.10",
+    "shape_material": "D6_shape_median_drift > 0.10",
+    "localized_only": "Neither median gate is material, but one or more individual D1 or D5 values exceed 0.10; this is reported but does not rehabilitate a global non-portability claim.",
+    "threshold_tuning_after_output": false,
+    "why_0_10": "The threshold is inherited unchanged from the Q031 preregistered common-endpoint collapse RMS and is fixed before Q036 endpoint output is inspected."
+  },
+  "decision_rule": {
+    "A": "If mandatory gates pass and location_material OR shape_material is true: MATERIAL_REPRODUCIBLE_COMMON_GEOMETRY_DIFFERENCE. Q031 implementation-specific non-portability is rehabilitated only in this narrowed common-geometry sense; no physical Planck systematic is inferred.",
+    "B": "If mandatory gates pass and both location_material and shape_material are false: NO_MATERIAL_GLOBAL_COMMON_GEOMETRY_DIFFERENCE_ESTABLISHED. Q031 PORTABILITY_FAILS / implementation-specific geometry inference must be further downgraded or replaced. Localized differences, if any, are retained descriptively.",
+    "C": "If authoritative endpoints, exact Q031 locked scales, identity mapping, or mandatory validation cannot be reconstructed: INCONCLUSIVE with the missing information named explicitly."
+  },
+  "mandatory_gates": [
+    "Q_IDENTITY_GATE",
+    "PARENT_PROVENANCE_GATE",
+    "Q035_BASELINE_PRESERVATION_GATE",
+    "NINE_BY_NINE_LABEL_IDENTITY_GATE",
+    "COMMON_COORDINATE_GATE",
+    "Q031_LOCKED_SCALE_GATE",
+    "NO_CROSS_LIKELIHOOD_OBJECTIVE_GATE",
+    "FINITE_RESULT_GATE",
+    "PERMUTATION_INVARIANCE_GATE",
+    "REFERENCE_REPLAY_GATE",
+    "DECISION_REPLAY_GATE"
+  ],
+  "rules": {
+    "q035_closed": true,
+    "no_stable_label_only_decision": true,
+    "no_cross_likelihood_absolute_chi2_subtraction": true,
+    "no_cross_likelihood_objective_sum": true,
+    "no_forced_camspec_nuisance_into_hillipop": true,
+    "q022_masks_are_provenance_labels_only": true,
+    "overlapping_planck_sky_not_independent_observations": true,
+    "reuse_authoritative_endpoints": true,
+    "no_q022_q031_science_rerun": true,
+    "no_q023_q030_rerun": true,
+    "no_q032_q035_science_rerun": true,
+    "no_threshold_tuning": true,
+    "no_physical_systematic_inference": true
+  }
+}

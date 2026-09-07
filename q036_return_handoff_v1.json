@@ -1,0 +1,76 @@
+{
+  "claim_boundaries": {
+    "camspec_hillipop_are_independent_observations": false,
+    "cross_likelihood_absolute_chi2_compared": false,
+    "cross_likelihood_objectives_summed": false,
+    "ede_favored_or_falsified_by_q036": false,
+    "physical_planck_systematic_established": false,
+    "q035_classifier_harmonization_remains_authoritative": true,
+    "stable_nonstable_label_is_not_decision_basis": true
+  },
+  "github_ci_status": "NOT_RUN_FOR_Q036_IN_THIS_SESSION; local deterministic artifact replay validated. Repo write attempt returned 403 from integration.",
+  "journal_effect": {
+    "ADD": [
+      "Q036 continuous matched-location and pairwise-shape comparison under exact Q031 locked common geometry."
+    ],
+    "KEEP": [
+      "Q035 classifier-harmonization result and removal of the old stable-vs-non-stable discrepancy.",
+      "Q022 and Q031 raw endpoint results and provenance.",
+      "MOD-EDE-N3 status remains active/constrained/not established new physics."
+    ],
+    "UNRESOLVED": [
+      "Which implementation-level likelihood ingredients cause the common-geometry displacement.",
+      "Whether the displacement maps to a physical Planck systematic or changes external cosmological viability."
+    ],
+    "UPDATE": [
+      "CASE-031 negative portability cannot be justified by stable-basin labels alone.",
+      "CASE-031 is rehabilitated only in a narrowed sense if Q036 continuous common-geometry materiality gates pass."
+    ]
+  },
+  "new_result": {
+    "classification": "MATERIAL_REPRODUCIBLE_COMMON_GEOMETRY_DIFFERENCE",
+    "final_result_gate": "PASS",
+    "location_exceedance_count_gt_0_10": 9,
+    "location_median_common_rms": 2.36234451439878,
+    "normalized_centroid_shift": 1.5370691720837435,
+    "q031_interpretation_effect": "NARROWED_IMPLEMENTATION_SPECIFIC_NON_PORTABILITY_REHABILITATED",
+    "shape_exceedance_count_gt_0_10": 36,
+    "shape_median_pairwise_drift": 2.259014899693926,
+    "stop_case": "A"
+  },
+  "next_required_action": "RESULT INGESTION & ROUTING ENGINE: update CASE-031 to narrowed implementation-specific common-geometry non-portability; preserve Q035 as authoritative classifier harmonization; do not reopen the stable/non-stable discrepancy.",
+  "program_id": "Q036-GEOMETRY-V1",
+  "q": "Q-036",
+  "result_id": "R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001",
+  "scientific_question": "N\u00e5r Q022 CamSpec og CASE-031 HiLLiPoP endpointresultater sammenlignes under samme Q031 common-geometry koordinater, samme locked scales og uden stable/non-stable som eneste diskriminator, findes der en materiel reproducerbar forskel i endpointgeometrien, som fortsat st\u00f8tter implementation-specific non-portability?",
+  "sources_and_provenance": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "preregister_sha256": "0dfcb0565add60e7113420745b12a6e88aceebd7c541a428e6190b596df6699e",
+    "q022_commit": "16a7902c3be7d1967adaae9ee380baf0d17e903a",
+    "q022_run_id": 33902262660,
+    "q031_commit": "ff621d6e0a425a976bb7a55f9194a0de8a87f18f",
+    "q031_run_id": 33975028436,
+    "source_lock_sha256": "f8b49269317b8b08d138933b4d2f41866f165c5698adac86052fa24f7a54b9c4"
+  },
+  "test_status": {
+    "gates": {
+      "COMMON_COORDINATE_GATE": true,
+      "DECISION_REPLAY_GATE": true,
+      "FINITE_RESULT_GATE": true,
+      "NINE_BY_NINE_LABEL_IDENTITY_GATE": true,
+      "NO_CROSS_LIKELIHOOD_OBJECTIVE_GATE": true,
+      "PARENT_PROVENANCE_GATE": true,
+      "PERMUTATION_INVARIANCE_GATE": true,
+      "Q031_LOCKED_SCALE_GATE": true,
+      "Q035_BASELINE_PRESERVATION_GATE": true,
+      "Q_IDENTITY_GATE": true,
+      "REFERENCE_REPLAY_GATE": true
+    },
+    "status": "COMPLETE"
+  },
+  "unresolved_issues": [
+    "Which implementation-level likelihood ingredients cause the common-geometry displacement.",
+    "Whether the displacement maps to a physical Planck systematic or changes external cosmological viability."
+  ]
+}
