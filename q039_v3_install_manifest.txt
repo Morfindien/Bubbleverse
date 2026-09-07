@@ -1,0 +1,47 @@
+BUBBLEVERSE Q039 V3 — TECHNICAL RECOVERY INSTALL MANIFEST
+
+NEW PROGRAM_ID
+Q039-IMPLBLOCK-V3
+
+SCIENTIFIC PROTOCOL
+UNCHANGED. Keep the original V1 preregistration and source lock exactly as they are:
+- q039_implementation_block_intervention_preregister_v1.json
+- q039_implementation_block_intervention_source_lock_v1.json
+Result ID remains R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001.
+
+V2 ROOT CAUSES
+1. Q039 passed q032_parent/q032_planck_tt3pair_bridge_v2_config.yml as a relative path into Q032.load_cfg. The frozen Q032 loader prefixes its own ROOT to relative paths, producing q032_parent/q032_parent/... and FileNotFoundError.
+2. V2 used a fresh empty Q039 cache key. HiLLiPoP shards independently attempted the ~846 MB NERSC TT data download; failed shards waited through four long connection timeouts.
+
+V3 FIXES
+- Q032 config is resolved to one absolute path before entering the frozen Q032 loader.
+- Static regression test explicitly forbids the old double-parent expression.
+- V3 restores the exact successful Q032 environment cache using the exact Q032 paths and key.
+- Cache miss is fatal before matrix fan-out; V3 never falls back to 36 simultaneous NERSC downloads.
+- Frozen cache is symlinked into the detached Q032 worktree, then Q032's own setup/identity gates are rerun.
+- Four no-optimizer runtime preflights must pass (CamSpec calibration, CamSpec precision, HiLLiPoP calibration, HiLLiPoP precision) before the 36 single-block optimizer jobs.
+- Frozen Q032 commit, class_ede commit, HiLLiPoP commit, exact TT support, scales, interventions, optimizer settings and terminal classification rules are unchanged.
+
+UPLOAD ORDER
+1. Root: q039_implementation_block_intervention_v3.py
+2. Root: q039_implementation_block_intervention_tests_v3.py
+3. Root: q039_prepare_frozen_env_v3.sh
+4. EXACT: .github/workflows/q039-implementation-block-intervention-v3.yml
+5. Replace root bubbleverse_program_registry.json with bubbleverse_program_registry_q039_v3.json
+6. Start ONLY: Q039-IMPLBLOCK-V3
+
+DO NOT START Q039-IMPLBLOCK-V1 OR Q039-IMPLBLOCK-V2.
+
+LOCAL BUILD GATES
+- Python compile: PASS
+- Static scientific/identity gates: PASS
+- Double-parent path regression gate: PASS
+- Workflow YAML syntax parse: PASS
+- Registry exact resolution: PASS
+
+FILES / SHA256
+q039_implementation_block_intervention_v3.py  12c29ed06db96fc33d68cc4f179e8a900184f7d1b7a6934fa6ea6e3517e43883
+q039_implementation_block_intervention_tests_v3.py  347b65739a3b0d64ec7f6475a39facf57b55bb2d7bda3205890d32bb2be345a3
+q039_prepare_frozen_env_v3.sh  d6141ec69f4cbfd5f4efeefc681b324f276ee574b166fceb8eee09503523ccef
+q039-implementation-block-intervention-v3.yml  86687614c4f06a97d547506888050947d2e39b911c3d3cbba477ca8a3faf9ee6
+bubbleverse_program_registry_q039_v3.json  184c477079be7bb0917e4b95ff74594d12a978eb4ba1a665b5056e2125fed8e8
