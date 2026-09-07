@@ -1,0 +1,54 @@
+{
+  "schema_version": 3,
+  "registry_name": "Bubbleverse Program Registry — Q039 V5 add-only",
+  "programs": {
+    "Q039-IMPLBLOCK-V5": {
+      "q": "Q-039",
+      "scientific_task": "Preregistered native implementation-block interventions on Q032 exact TT common support to test whether relative-calibration semantics or quadratic precision coupling singly remove the Q037/Q038 distributed common geometry difference, with a conditional calibration-plus-precision coupled arm and explicit NOT-COMPARABLE gates for foreground/core construction.",
+      "status": "ACTIVE",
+      "version": "v5-install-safe-runtime-bootstrap",
+      "created_date": "2026-09-07",
+      "workflow_id": "q039-implementation-block-intervention-v5.yml",
+      "workflow_path": ".github/workflows/q039-implementation-block-intervention-v5.yml",
+      "target_ref": "main",
+      "scientific_program": "RUNTIME_PROMOTION_FROM_INSTALLED_Q039_V4_SOURCE",
+      "scientific_program_id": "Q039-IMPLBLOCK-V5",
+      "tests": "RUNTIME_PROMOTION_FROM_INSTALLED_Q039_V4_TESTS",
+      "preregister": "q039_implementation_block_intervention_preregister_v1.json",
+      "source_lock": "q039_implementation_block_intervention_source_lock_v1.json",
+      "result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+      "parent_result_id": "R-Q038-EDE-COORDINATE-LOCALIZATION-001",
+      "result_artifacts": [
+        "q039-static-v5",
+        "q039-parent-input-gate-v5",
+        "q039-runtime-preflight-v5",
+        "q039-single-assessment-v5",
+        "q039-final-v5"
+      ],
+      "supersedes": "Q039-IMPLBLOCK-V4",
+      "scientific_preregister_program_id": "Q039-IMPLBLOCK-V1",
+      "technical_recovery_from_runs": [
+        34127882243,
+        34130274459,
+        34140566884,
+        34141873450
+      ],
+      "technical_fixes": [
+        "Q032_ABSOLUTE_CONFIG_PATH",
+        "AUTHORITATIVE_Q032_CACHE_REUSE",
+        "CAMSPEC_COMPONENT_DEFAULT_SCHEMA_RESOLUTION",
+        "EXPLICIT_PINNED_CAMSPEC_CAL0_CAL2_NOOP_OVERRIDES",
+        "COBAYA_MODEL_INITIALIZATION_PREFLIGHT",
+        "PRECISION_HOOK_APPLIED_RUNTIME_GATE_BEFORE_MATRIX",
+        "INSTALL_SAFE_RUNTIME_BOOTSTRAP",
+        "WORKFLOW_REGISTRY_FILE_PLACEMENT_GATE",
+        "V4_SOURCE_LOCATION_AUTODISCOVERY",
+        "MINIMAL_ADD_ONLY_REGISTRY",
+        "TWO_FILE_INSTALL"
+      ],
+      "failed_v4_launcher_run_id": 34141873450,
+      "failed_v4_launcher_job_id": 101805432562,
+      "v4_failure_class": "WORKFLOW_NOT_INSTALLED_HTTP_404_NO_CHILD_RUN_NO_SCIENTIFIC_RESULT"
+    }
+  }
+}
