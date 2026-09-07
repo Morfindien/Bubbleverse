@@ -1,0 +1,50 @@
+Q039 V4 INSTALL MANIFEST
+PROGRAM_ID: Q039-IMPLBLOCK-V4
+Q: Q-039
+RESULT_ID: R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001
+SCIENTIFIC_PREREGISTRATION: Q039-IMPLBLOCK-V1 (UNCHANGED)
+V3_FAILED_RUN: 34140566884
+V3_FAILED_JOB: 101801510456
+V3_FAILURE_CLASS: TECHNICAL_PREFLIGHT_SCHEMA_RESOLUTION_FAILURE_NO_SCIENTIFIC_RESULT
+
+UPLOAD TO REPO ROOT:
+- q039_implementation_block_intervention_v4.py  sha256=e1b9372787822cfcc2a28f59996b0f697d2809e054a1e8912e1f511d755669d7
+- q039_implementation_block_intervention_tests_v4.py  sha256=56480d6be53f41073d5886821122d446df8dd60c1f7ec4f73a5ebf8c0364580e
+- q039_prepare_frozen_env_v4.sh  sha256=8733fc7bb66eacbba7aadd93566d94dd009c401f7767e3d1258ca2f68c4c8691
+
+UPLOAD WORKFLOW AS:
+- .github/workflows/q039-implementation-block-intervention-v4.yml  sha256=48fd62433e3f3f97387768eacad39523a503d1532af8f78c41a4ac13f52019d9
+
+REPLACE ROOT REGISTRY WITH:
+- bubbleverse_program_registry.json  source=bubbleverse_program_registry_q039_v4.json  sha256=82854539e2a3cf1dfcf94c0ea5f6f441e9b0bddb088f135d1f85d21a1855d271
+
+OPTIONAL TECHNICAL JOURNAL / PROVENANCE NOTE:
+- q039_v4_technical_recovery_note.json  sha256=6ed821aaf6133f951980ffb4d78dface24e1fe383f35e691cdc2925ba55522c3
+
+KEEP UNCHANGED:
+- q039_implementation_block_intervention_preregister_v1.json
+- q039_implementation_block_intervention_source_lock_v1.json
+
+LOCAL VALIDATION:
+- Python compile: PASS
+- V4 static regression gates: PASS
+- CamSpec pinned-native-default schema gate: PASS
+- CamSpec raw-info explicit-native-noop override gate: PASS
+- Non-neutral CamSpec default rejection gate: PASS
+- Q032 absolute config path regression gate: PASS
+- Workflow YAML parse: PASS
+- Registry exact resolution: PASS
+- Synthetic assess -> provisional -> mandatory tests -> seal: PASS
+- Synthetic result is NOT scientific evidence
+
+V4 RUNTIME PREFLIGHT REQUIREMENTS BEFORE MATRIX:
+- exact authoritative Q032 cache hit
+- frozen Q032 runtime recreation
+- actual Cobaya model initialization for CamSpec calibration path
+- actual Cobaya model initialization for CamSpec precision path
+- actual Cobaya model initialization for HiLLiPoP calibration path
+- actual Cobaya model initialization for HiLLiPoP precision path
+- precision intervention must report applied=True and dimension>0
+- no optimizer and no logposterior evaluation in runtime preflight
+
+START THIS: Q039-IMPLBLOCK-V4

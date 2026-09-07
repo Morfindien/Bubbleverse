@@ -1,0 +1,34 @@
+{
+  "schema": "Q039_TECHNICAL_RECOVERY_NOTE_V4",
+  "q": "Q-039",
+  "program_id": "Q039-IMPLBLOCK-V4",
+  "scientific_preregister_program_id": "Q039-IMPLBLOCK-V1",
+  "result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+  "status": "TECHNICAL_RECOVERY_ONLY_NO_SCIENTIFIC_RESULT",
+  "v3_failure": {
+    "github_run_id": 34140566884,
+    "job_id": 101801510456,
+    "job": "environment_gate",
+    "failed_step": "Four path runtime preflight without optimizer",
+    "exception": "RuntimeError: CALIBRATION_BLOCK_GATE=FAIL missing_cal0",
+    "root_cause": "Q032 raw CamSpec info is constructed before Cobaya expands likelihood !defaults; cal0/cal2 are pinned native TT defaults and therefore were absent from raw info despite existing in the component schema."
+  },
+  "v4_repair": {
+    "camspec_schema_source": "Cobaya 3.5.6 planck_NPIPE_highl_CamSpec/params_TT_CamSpec.yaml",
+    "validated_native_defaults": {
+      "cal0": 1.0,
+      "cal2": 1.0
+    },
+    "semantics": "Explicit overrides reproduce already-fixed native unity defaults; CamSpec calibration intervention remains a documented no-op.",
+    "preflight_upgrade": "Instantiate actual Cobaya model for each of four representative paths and require precision hook applied for precision arms before optimizer matrix release."
+  },
+  "unchanged_science": [
+    "Q032 exact TT common support",
+    "Q031 coordinates/scales/hash",
+    "Q039 V1 preregistration",
+    "Q039 V1 source lock",
+    "terminal classification rule",
+    "no forced nuisance mapping",
+    "no cross-likelihood objective subtraction/sum"
+  ]
+}
