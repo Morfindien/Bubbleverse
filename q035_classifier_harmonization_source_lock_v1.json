@@ -1,0 +1,52 @@
+{
+  "q": "Q-035",
+  "run_id": "Q035-CLASSIFIER-HARMONIZATION-V1",
+  "result_id": "R-Q035-EDE-CLASSIFIER-HARMONIZATION-001",
+  "repository": "Morfindien/Bubbleverse",
+  "classifier_sources": {
+    "q022_historical": {
+      "file": "q022_globality_continuation_v2.py",
+      "execution_commit": "16a7902c3be7d1967adaae9ee380baf0d17e903a",
+      "git_blob": "e8519f48869dd98a34e2a3280b9f872f97a237bc"
+    },
+    "q031_common_graph": {
+      "file": "q031_planck_portability_v1.py",
+      "execution_commit": "ff621d6e0a425a976bb7a55f9194a0de8a87f18f",
+      "git_blob": "5d903e76105b7dcaf41ce0c68cbbeeaee4cda835"
+    },
+    "q032_bridge": {
+      "file": "q032_planck_tt3pair_bridge_v2.py",
+      "git_blob": "2199011cc44d6cadab3f62265ea6c77ecb187027"
+    },
+    "q032_v4": {
+      "file": "q032_exact_start_addback_v4.py",
+      "execution_commit": "fbde93aee01ec3bed183207518ff315c96a45c3c",
+      "git_blob": "cf64d1cb64e9a156bf4ecf09e526bfc4203f4366"
+    },
+    "q034": {
+      "file": "q034_primordial_freeze_isolation_v1.py",
+      "execution_commit": "8b8035795a9e6064583379afb8663cdc28961764"
+    }
+  },
+  "artifacts": {
+    "q022_final": {"run_id": 33902262660, "artifact_id": 9951243838, "name": "q022-final-v2", "digest": "sha256:73b2b864b4cb26bc2e3edb08b28b03de43819e37a3f74a0d6232361bbe524386"},
+    "q032_preflight": {"run_id": 34015845246, "artifact_id": 9983929152, "name": "q032-exact-preflight-v4", "digest": "sha256:2ae25c9ce3feefa697daa6eb9c44fcd7803d9b6f2ceee70730a91e49fee74ac6"},
+    "q032_control_final": {"run_id": 34015845246, "artifact_id": 9994233056, "name": "q032-exact-control-final-v4", "digest": "sha256:8cd19e7922f57eefbbbc29635c636c7ff4efbbd789a99f31115947dc9bab78a2"},
+    "q034_final": {"run_id": 34059649759, "artifact_id": 9998302123, "name": "q034-final-v1", "digest": "sha256:0df519645906dfaaf3b270d9791a74c0f33f25e9fdcfa8ca344ad2add70f8a87"},
+    "q022_refinement": {
+      "run_id": 33902262660,
+      "artifacts": {
+        "M3-S0": [9950437252, "sha256:0bf2fb12235ba74bd6791814c22e312193e39b23dd65f14ccb919f10cdb303d6"],
+        "M3-S1": [9950352191, "sha256:8f5c80f3ed0dfa27e5d7f1a060e24a8a99c0b0e717196e5ceb975da8ef16d23a"],
+        "M3-S2": [9950509201, "sha256:4fd6b4a094f31ce0a06d2a97534be0aeb0a66c380bf4ee1674c908831d4becff"],
+        "M6-S0": [9950278730, "sha256:5e55b8c97a4ecd7b96dca245388743f64eb57027bb0897788b2d3096d8cec8f0"],
+        "M6-S1": [9950251719, "sha256:d11f3ca8b5b177292fc251324b8c3b4b3d943332eba2937f11aa3ba95751ca20"],
+        "M6-S2": [9950323074, "sha256:8a09d3ec460c8935c31bee626cccbf4de6a31367645273ae06437cdb1f16d702"],
+        "M7-S0": [9951132898, "sha256:b0ab607716dd1e45fe9a4eb47eddc5873d34edc9a19d69ff9aea8d184c2335ac"],
+        "M7-S1": [9950969471, "sha256:5b0857b2ddcc3d7425c0f26188baecd37bcfefa7249cbe25ff842e77b633f643"],
+        "M7-S2": [9951235267, "sha256:efd1d3235e9232296073a9aa8558ebc18d520c3dfb03648bb554a8eb436e3c73"]
+      }
+    }
+  },
+  "forbidden": ["LIKELIHOOD_EVALUATION", "CLASS", "COBAYA_OPTIMIZATION", "SAMPLING", "NEW_SEEDS", "ENDPOINT_ROUNDING", "THRESHOLD_TUNING"]
+}

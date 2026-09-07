@@ -1,0 +1,106 @@
+name: Bubbleverse Q035 classifier harmonization V1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-035
+  RUN_ID: Q035-CLASSIFIER-HARMONIZATION-V1
+  RESULT_ID: R-Q035-EDE-CLASSIFIER-HARMONIZATION-001
+  Q022_RUN_ID: '33902262660'
+  Q032_RUN_ID: '34015845246'
+  Q034_RUN_ID: '34059649759'
+
+jobs:
+  artifact_crosswalk:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Static Q035 identity and no-likelihood code gate
+        run: |
+          python -m py_compile q035_classifier_harmonization_v1.py q035_classifier_harmonization_tests_v1.py
+          python - <<'PY'
+          import json
+          c=json.load(open('q035_classifier_harmonization_v1_config.json',encoding='utf-8'))
+          assert c['project']['q']=='Q-035'
+          assert c['rules']['artifact_only'] is True
+          assert c['rules']['no_likelihood_evaluation'] is True
+          assert c['rules']['no_optimizer'] is True
+          print('CONTEXT_CONTINUITY_GATE=PASS')
+          print('Q_IDENTITY_GATE=PASS')
+          PY
+
+      - name: Download authoritative Q022 final and decisive refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-final-v2
+          path: q022_final
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q022_RUN_ID }}
+          pattern: q022-v2-refine-*
+          merge-multiple: true
+          path: q022_refinement
+
+      - name: Download Q032 locked scales and authoritative FULL_NATIVE final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_RUN_ID }}
+          name: q032-exact-preflight-v4
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_RUN_ID }}
+          name: q032-exact-control-final-v4
+          path: q032_control_final
+
+      - name: Download authoritative Q034 final
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q034_RUN_ID }}
+          name: q034-final-v1
+          path: q034_final
+
+      - name: Apply both source-locked classifiers to all three endpoint sets
+        run: |
+          python q035_classifier_harmonization_v1.py \
+            --config q035_classifier_harmonization_v1_config.json \
+            --source-lock q035_classifier_harmonization_source_lock_v1.json \
+            --q022-final q022_final/q022_final_v2.json \
+            --q022-refinement-dir q022_refinement \
+            --q032-preflight q032_preflight/q032_exact_start_preflight_v4.json \
+            --q032-control-final q032_control_final/q032_exact_control_final_v4.json \
+            --q034-final q034_final/q034_final_v1.json \
+            --output q035_classifier_crosswalk_v1.json \
+            --csv-output q035_classifier_crosswalk_v1.csv
+
+      - name: Mandatory reference replay and decision tests
+        run: |
+          python q035_classifier_harmonization_tests_v1.py \
+            --result q035_classifier_crosswalk_v1.json \
+            --output q035_tests_v1.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q035-final-v1
+          path: |
+            q035_classifier_crosswalk_v1.json
+            q035_classifier_crosswalk_v1.csv
+            q035_tests_v1.json
+            q035_classifier_harmonization_source_lock_v1.json
+          if-no-files-found: error

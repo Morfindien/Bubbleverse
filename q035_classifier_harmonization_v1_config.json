@@ -1,0 +1,54 @@
+{
+  "project": {
+    "q": "Q-035",
+    "run_id": "Q035-CLASSIFIER-HARMONIZATION-V1",
+    "result_id": "R-Q035-EDE-CLASSIFIER-HARMONIZATION-001",
+    "generated_at": "2026-09-07T07:59:00+02:00",
+    "scientific_question": "When the same decisive Q022, Q032 V4 FULL_NATIVE, and Q034 frozen-primordial endpoint sets are evaluated under both the historical Q022 mixed cosmology+nuisance per-mask collapse classifier and the later Q031/Q032 common-geometry graph classifier, does the reported stable-versus-non-stable discrepancy survive classifier harmonization?"
+  },
+  "model": {
+    "name": "MOD-EDE-N3",
+    "n_scf": 3,
+    "backend_repository": "mwt5345/class_ede",
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97"
+  },
+  "historical_q022_classifier": {
+    "cosmology_profiled": ["omega_b", "omega_cdm", "fEDE", "log10z_c", "thetai_scf", "H0"],
+    "shared_nuisance": ["A_planck", "calTE", "calEE"],
+    "foreground_nuisance": ["amp_143", "amp_217", "amp_143x217", "n_143", "n_217", "n_143x217"],
+    "collapse_objective_tolerance": 0.50,
+    "collapse_endpoint_joint_rms": 0.10,
+    "scale_floor_fraction": 1e-8,
+    "grouping": "PER_MASK_THREE_STARTS",
+    "decision_semantics": "DECISIVE_REFINEMENT_NON_COLLAPSE_IS_STABLE_MULTIBASIN"
+  },
+  "later_common_graph_classifier": {
+    "common_geometry": ["omega_b", "omega_cdm", "fEDE", "log10z_c", "thetai_scf", "H0", "A_planck"],
+    "collapse_objective_tolerance": 0.50,
+    "collapse_common_endpoint_rms": 0.10,
+    "stable_cluster_minimum_supporting_starts": 2,
+    "stable_multibasin_minimum_stable_clusters": 2,
+    "grouping": "ALL_NINE_CONNECTED_COMPONENT_GRAPH"
+  },
+  "endpoint_sets": {
+    "Q022": {"run_id": 33902262660, "phase": "refinement", "expected_rows": 9},
+    "Q032": {"run_id": 34015845246, "surface": "full_native", "phase": "refinement", "expected_rows": 9},
+    "Q034": {"run_id": 34059649759, "surface": "full_native", "phase": "refinement", "expected_rows": 9}
+  },
+  "rules": {
+    "artifact_only": true,
+    "no_likelihood_evaluation": true,
+    "no_optimizer": true,
+    "no_sampler": true,
+    "no_class_execution": true,
+    "no_rounding_before_classifier": true,
+    "no_endpoint_replacement": true,
+    "no_cross_set_absolute_objective_interpretation": true,
+    "q033_closed": true,
+    "q034_closed": true,
+    "q023_q030_not_rerun": true,
+    "case031_not_rerun": true,
+    "physical_inference_forbidden": true
+  },
+  "sources": ["K-044", "K-045", "K-046"]
+}
