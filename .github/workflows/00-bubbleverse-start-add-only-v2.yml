@@ -1,0 +1,127 @@
+name: "000 🚀 BUBBLEVERSE START — ADD ONLY"
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Paste PROGRAM_ID here
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: write
+
+jobs:
+  resolve-and-dispatch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout registries
+        uses: actions/checkout@v4
+
+      - name: Resolve exact PROGRAM_ID across all registries
+        id: resolve
+        shell: bash
+        env:
+          RAW_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          import json
+          import os
+          import re
+          from pathlib import Path
+
+          program_id = os.environ["RAW_PROGRAM_ID"].strip()
+
+          if not re.fullmatch(r"[A-Z0-9][A-Z0-9-]{2,63}", program_id):
+              raise SystemExit("PROGRAM_ID_GATE=FAIL invalid identifier syntax")
+
+          files = []
+
+          root = Path("bubbleverse_program_registry.json")
+          if root.is_file():
+              files.append(root)
+
+          files.extend(sorted(Path(".").glob("bubbleverse_program_registry_*.json")))
+
+          if not files:
+              raise SystemExit("REGISTRY_GATE=FAIL no registry files found")
+
+          matches = []
+
+          for path in files:
+              data = json.loads(path.read_text(encoding="utf-8"))
+              programs = data.get("programs", {})
+
+              if program_id in programs:
+                  matches.append((path, programs[program_id]))
+
+          if not matches:
+              raise SystemExit(
+                  f"PROGRAM_ID_GATE=FAIL exact registry match not found id={program_id}"
+              )
+
+          if len(matches) != 1:
+              where = ",".join(str(p) for p, _ in matches)
+              raise SystemExit(
+                  f"PROGRAM_ID_GATE=FAIL duplicate registry definitions id={program_id} files={where}"
+              )
+
+          source_file, entry = matches[0]
+
+          if entry.get("status") != "ACTIVE":
+              raise SystemExit(
+                  f"PROGRAM_ID_GATE=FAIL status={entry.get('status')}"
+              )
+
+          q = entry.get("q", "")
+          workflow_id = entry.get("workflow_id", "")
+          target_ref = entry.get("target_ref", "main")
+
+          if not re.fullmatch(r"Q-[0-9]{3,}", q):
+              raise SystemExit("Q_IDENTITY_GATE=FAIL registry q invalid")
+
+          if (
+              not re.fullmatch(r"[A-Za-z0-9._-]+\.ya?ml", workflow_id)
+              or "/" in workflow_id
+              or "\\" in workflow_id
+          ):
+              raise SystemExit("LAUNCHER_GATE=FAIL unsafe workflow id")
+
+          if not re.fullmatch(r"[A-Za-z0-9._/-]+", target_ref) or ".." in target_ref:
+              raise SystemExit("LAUNCHER_GATE=FAIL unsafe target ref")
+
+          out = os.environ["GITHUB_OUTPUT"]
+
+          with open(out, "a", encoding="utf-8") as f:
+              f.write(f"program_id={program_id}\n")
+              f.write(f"q={q}\n")
+              f.write(f"workflow_id={workflow_id}\n")
+              f.write(f"target_ref={target_ref}\n")
+
+          print(f"PROGRAM_ID_GATE=PASS program_id={program_id}")
+          print(f"REGISTRY_SOURCE={source_file}")
+          print(f"Q_IDENTITY_GATE=PASS q={q}")
+          print(f"LAUNCHER_GATE=PASS workflow_id={workflow_id}")
+          PY
+
+      - name: Dispatch approved target workflow
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROGRAM_ID: ${{ steps.resolve.outputs.program_id }}
+          WORKFLOW_ID: ${{ steps.resolve.outputs.workflow_id }}
+          TARGET_REF: ${{ steps.resolve.outputs.target_ref }}
+        run: |
+          set -euo pipefail
+
+          gh workflow run "$WORKFLOW_ID" \
+            --repo "$GITHUB_REPOSITORY" \
+            --ref "$TARGET_REF" \
+            -f program_id="$PROGRAM_ID"
+
+          echo "DISPATCH_GATE=PASS program_id=$PROGRAM_ID workflow=$WORKFLOW_ID ref=$TARGET_REF"
