@@ -1,0 +1,85 @@
+{
+  "schema": "Q037_COMMON_SUPPORT_ENDPOINT_GEOMETRY_PREREGISTER_V1",
+  "status": "PREREGISTERED_BEFORE_Q032_ENDPOINT_OUTPUT_INSPECTION",
+  "project": {
+    "q": "Q-037",
+    "program_id": "Q037-TTGEOM-V1",
+    "run_id": "Q037-TT-COMMON-SUPPORT-ENDPOINT-GEOMETRY-V1",
+    "result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001"
+  },
+  "scientific_question": "Når de allerede validerede CamSpec- og HiLLiPoP-refinement endpoints fra Q032's exact TT common-support bridge analyseres med Q036's continuous common-geometry metric, samme syv coordinates, samme Q031 locked scales og samme 0.10 materiality threshold, består den materielle matched-location og pairwise-shape forskel da?",
+  "parent": {
+    "q032_run_id": 33994305721,
+    "q032_result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q036_result_id": "R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001",
+    "q035_result_id": "R-Q035-EDE-CLASSIFIER-HARMONIZATION-001"
+  },
+  "endpoint_identity": {
+    "implementations": ["camspec", "hillipop"],
+    "labels": ["M3-S0", "M3-S1", "M3-S2", "M6-S0", "M6-S1", "M6-S2", "M7-S0", "M7-S1", "M7-S2"],
+    "label_semantics": "Q022_START_PROVENANCE_ONLY_NOT_HILLIPOP_MASK",
+    "required_phase": "refinement",
+    "required_count_per_implementation": 9
+  },
+  "exact_common_support": {
+    "143x143": [50, 2000],
+    "143x217": [500, 2500],
+    "217x217": [500, 2500],
+    "modes": ["TT"],
+    "require_identical_q032_support_sha256_across_all_endpoints": true
+  },
+  "common_geometry": {
+    "coordinates": ["omega_b", "omega_cdm", "fEDE", "log10z_c", "thetai_scf", "H0", "A_planck"],
+    "locked_scales": {
+      "omega_b": 0.00003644915744246274,
+      "omega_cdm": 0.00029761589951235456,
+      "fEDE": 0.0010851930861718734,
+      "log10z_c": 0.03666125981785351,
+      "thetai_scf": 0.012826810796868315,
+      "H0": 0.2253286448991929,
+      "A_planck": 0.00037111561222435974
+    },
+    "locked_scales_hash": "732aeeb127d9083c0924552aa276117310ca32b5bfda854f51bfd3240638b2f6",
+    "metric": "sqrt(mean(((a_i-b_i)/scale_i)^2))",
+    "materiality_threshold": 0.1,
+    "threshold_tuning_after_output": false
+  },
+  "mandatory_outputs": [
+    "nine_matched_camspec_hillipop_endpoint_rms",
+    "matched_median_displacement",
+    "matched_exceedance_count",
+    "normalized_centroid_displacement",
+    "36_camspec_internal_pairwise_distances",
+    "36_hillipop_internal_pairwise_distances",
+    "36_absolute_pairwise_distance_drifts",
+    "pairwise_median_drift",
+    "pairwise_max_drift"
+  ],
+  "decision_rule": {
+    "location_material": "matched_median_displacement > 0.10 OR normalized_centroid_displacement > 0.10",
+    "shape_material": "pairwise_median_drift > 0.10",
+    "case_A_if": "location_material OR shape_material",
+    "case_A_result": "COMMON_SUPPORT_DOES_NOT_REMOVE_IMPLEMENTATION_GEOMETRY_DIFFERENCE",
+    "case_B_if": "NOT location_material AND NOT shape_material",
+    "case_B_result": "INFORMATION_SUPPORT_RESTRICTION_MATERIALLY_EXPLAINS_OR_LOCALIZES_Q036_DIFFERENCE",
+    "case_C_if": "required artifacts, identity mapping, common support, or locked scales cannot be validated",
+    "case_C_result": "INCONCLUSIVE_TECHNICAL"
+  },
+  "rules": {
+    "q035_remains_authoritative_closed": true,
+    "q036_remains_closed": true,
+    "stable_label_not_sole_discriminator": true,
+    "q022_mask_labels_are_provenance_only": true,
+    "no_cross_likelihood_absolute_objective_subtraction": true,
+    "no_cross_likelihood_objective_sum": true,
+    "no_forced_native_nuisance_mapping": true,
+    "shared_planck_sky_not_independent_observations": true,
+    "no_q032_likelihood_rerun": true,
+    "no_threshold_tuning": true,
+    "no_scale_tuning": true,
+    "preserve_unexpected_raw_output": true,
+    "no_physical_systematic_claim_from_q037_alone": true,
+    "stop_after_a_b_c_decision": true
+  }
+}

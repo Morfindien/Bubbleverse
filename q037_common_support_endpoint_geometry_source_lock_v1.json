@@ -1,0 +1,185 @@
+{
+  "analysis_lock": {
+    "coordinates": [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "H0",
+      "A_planck"
+    ],
+    "locked_scales": {
+      "A_planck": 0.00037111561222435974,
+      "H0": 0.2253286448991929,
+      "fEDE": 0.0010851930861718734,
+      "log10z_c": 0.03666125981785351,
+      "omega_b": 3.644915744246274e-05,
+      "omega_cdm": 0.00029761589951235456,
+      "thetai_scf": 0.012826810796868315
+    },
+    "locked_scales_hash": "732aeeb127d9083c0924552aa276117310ca32b5bfda854f51bfd3240638b2f6",
+    "materiality_threshold": 0.1,
+    "metric": "sqrt(mean(((a_i-b_i)/scale_i)^2))"
+  },
+  "external_context": [
+    {
+      "arxiv": "2205.10869",
+      "doi": "10.1093/mnras/stac2744",
+      "source_id": null,
+      "title": "CMB Power Spectra and Cosmological Parameters from Planck PR4 with CamSpec"
+    },
+    {
+      "arxiv": "1910.00483",
+      "source_id": null,
+      "title": "A Detailed Description of the CamSpec Likelihood Pipeline and a Reanalysis of the Planck High Frequency Maps"
+    },
+    {
+      "arxiv": "2510.09430",
+      "source_id": null,
+      "title": "The Choice of Planck CMB Likelihood in Cosmological Analyses"
+    },
+    {
+      "bibliography": null,
+      "source_id": "K-044"
+    },
+    {
+      "bibliography": null,
+      "source_id": "K-045"
+    },
+    {
+      "bibliography": null,
+      "source_id": "K-046"
+    }
+  ],
+  "model": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "n_scf": 3,
+    "name": "MOD-EDE-N3"
+  },
+  "program_id": "Q037-TTGEOM-V1",
+  "q": "Q-037",
+  "q032": {
+    "artifacts": {
+      "camspec:M3-S0": {
+        "digest": "sha256:4eaa6e17d5db41212c328da1790323d952c9d1cc7b380c9a59108547c2844602",
+        "id": 9979930449,
+        "name": "q032-refine-camspec-m3-s0"
+      },
+      "camspec:M3-S1": {
+        "digest": "sha256:c6d81549dff3aa67937abdf7fb9c6769249a06bc6cac81191facba3d55b7d8dd",
+        "id": 9979952885,
+        "name": "q032-refine-camspec-m3-s1"
+      },
+      "camspec:M3-S2": {
+        "digest": "sha256:fc0aa75bfbe31c7e41af1600c771b243a23ab46e41fe03d0870270cef3b4b680",
+        "id": 9979983144,
+        "name": "q032-refine-camspec-m3-s2"
+      },
+      "camspec:M6-S0": {
+        "digest": "sha256:7eec9904b792e7af5ba19bf08e74984d68d1066758f1c9c5b0f0e43f999a0b30",
+        "id": 9979970880,
+        "name": "q032-refine-camspec-m6-s0"
+      },
+      "camspec:M6-S1": {
+        "digest": "sha256:8f70f3dd41990ea5326140acd1de9148b50d0ebc97cbd47180dd5110167aa915",
+        "id": 9980018247,
+        "name": "q032-refine-camspec-m6-s1"
+      },
+      "camspec:M6-S2": {
+        "digest": "sha256:8a7708a2a0f491792468b573b2a1926a86f01fb5fdfb7eaedb41805e9a215a50",
+        "id": 9979858388,
+        "name": "q032-refine-camspec-m6-s2"
+      },
+      "camspec:M7-S0": {
+        "digest": "sha256:7dbc0a56d9d1477ff130aef1eb6c7642c93c71533aa2d4ad4ab20bab345faa05",
+        "id": 9980211119,
+        "name": "q032-refine-camspec-m7-s0"
+      },
+      "camspec:M7-S1": {
+        "digest": "sha256:127e35dec6e5d36e48b10932db9c6955a35057864c524366ef861d1217420018",
+        "id": 9980213971,
+        "name": "q032-refine-camspec-m7-s1"
+      },
+      "camspec:M7-S2": {
+        "digest": "sha256:53af22f9f0b14902e958b1eb21b3b2c632fb56f1c71f197d25dc1a9109209c66",
+        "id": 9980213843,
+        "name": "q032-refine-camspec-m7-s2"
+      },
+      "hillipop:M3-S0": {
+        "digest": "sha256:84fb104ef11e2adc09d98a221acf8ce8f4dee8e460c0d29617343ec2ab113646",
+        "id": 9980340154,
+        "name": "q032-refine-hillipop-m3-s0"
+      },
+      "hillipop:M3-S1": {
+        "digest": "sha256:5f87a35fe89f9a3a80b34e05a96a6a05370a8c51d62a034fc0f964d5190cc815",
+        "id": 9980482578,
+        "name": "q032-refine-hillipop-m3-s1"
+      },
+      "hillipop:M3-S2": {
+        "digest": "sha256:a2807075322853fb106757a215e60a9536695169d42f83cd4bc410f2807dc6eb",
+        "id": 9980309895,
+        "name": "q032-refine-hillipop-m3-s2"
+      },
+      "hillipop:M6-S0": {
+        "digest": "sha256:dea0c71bb570522a43c2dae6efff07f9074fa81ae1f8beef43cdca5f4c368b15",
+        "id": 9980572575,
+        "name": "q032-refine-hillipop-m6-s0"
+      },
+      "hillipop:M6-S1": {
+        "digest": "sha256:17fbf2eb0015bc9ea2cff815d98017a1a614a64b0e57b0378c05bd1bf84f380d",
+        "id": 9980471207,
+        "name": "q032-refine-hillipop-m6-s1"
+      },
+      "hillipop:M6-S2": {
+        "digest": "sha256:1bdd80b0cb543946a3c93e81859fa4b97c24c029ed1ea02c54cd30868109325e",
+        "id": 9980692657,
+        "name": "q032-refine-hillipop-m6-s2"
+      },
+      "hillipop:M7-S0": {
+        "digest": "sha256:8dfc786175993d530e2e56c1c03194f50195120743c0d11b19c956eaebf71df0",
+        "id": 9980715593,
+        "name": "q032-refine-hillipop-m7-s0"
+      },
+      "hillipop:M7-S1": {
+        "digest": "sha256:555b56a92cdca2fdad8b620380bfb24ca976db8ba17107a4c5c850f175ccd2cc",
+        "id": 9980780581,
+        "name": "q032-refine-hillipop-m7-s1"
+      },
+      "hillipop:M7-S2": {
+        "digest": "sha256:1220ca2e2bfb6724322354bef6dd62824f5cd3cfd8121cdc2f35a064295241c3",
+        "id": 9980766379,
+        "name": "q032-refine-hillipop-m7-s2"
+      }
+    },
+    "execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "final_artifact": {
+      "digest": "sha256:dd7b069337aeee660d1c46158f78d9a81d6a0115309f6b333e8555899308d692",
+      "id": 9980784387,
+      "name": "q032-final-v2"
+    },
+    "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "run_id": 33994305721,
+    "scientific_program": "q032_planck_tt3pair_bridge_v2.py",
+    "source_lock_file": {
+      "blob_sha": "e3ea1b8ae06d34e9a813387588a0d16adef8bb55",
+      "frozen_at_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+      "path": "q032_source_lock_v2.json"
+    }
+  },
+  "q035": {
+    "program_commit": "b1166e80d5d4c602569da7e32ba02c628dec1975",
+    "result_id": "R-Q035-EDE-CLASSIFIER-HARMONIZATION-001",
+    "status": "AUTHORITATIVE_CLOSED"
+  },
+  "q036": {
+    "head_sha": "095f90565cf694a7c3383d1fbe736707ab187751",
+    "result_id": "R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001",
+    "status": "CLOSED",
+    "success_run_id": 34105942065,
+    "workflow": ".github/workflows/q036-endpoint-geometry-portability-v5.yml"
+  },
+  "repository": "Morfindien/Bubbleverse",
+  "schema": "Q037_COMMON_SUPPORT_ENDPOINT_GEOMETRY_SOURCE_LOCK_V1"
+}

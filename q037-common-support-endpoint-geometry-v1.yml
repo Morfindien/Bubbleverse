@@ -1,0 +1,347 @@
+name: Q037 Common-Support Endpoint Geometry V1
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Internal PROGRAM_ID propagated by BUBBLEVERSE START
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CANONICAL_LAUNCH_ID: Q037-TTGEOM-V1
+  CURRENT_Q: Q-037
+  Q032_RUN_ID: "33994305721"
+
+jobs:
+  q037:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: PROGRAM_ID gate
+        shell: bash
+        env:
+          PROVIDED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          if [[ "$PROVIDED_PROGRAM_ID" != "$CANONICAL_LAUNCH_ID" ]]; then
+            echo "PROGRAM_ID_GATE=FAIL expected=$CANONICAL_LAUNCH_ID got=$PROVIDED_PROGRAM_ID"
+            exit 2
+          fi
+          echo "PROGRAM_ID_GATE=PASS launch_id=$PROVIDED_PROGRAM_ID"
+
+      - name: Static gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f q037_common_support_endpoint_geometry_v1.py
+          test -f q037_common_support_endpoint_geometry_tests_v1.py
+          test -f q037_common_support_endpoint_geometry_preregister_v1.json
+          test -f q037_common_support_endpoint_geometry_source_lock_v1.json
+          python -m py_compile \
+            q037_common_support_endpoint_geometry_v1.py \
+            q037_common_support_endpoint_geometry_tests_v1.py
+          python -m json.tool q037_common_support_endpoint_geometry_preregister_v1.json >/dev/null
+          python -m json.tool q037_common_support_endpoint_geometry_source_lock_v1.json >/dev/null
+          echo "STATIC_GATE=PASS"
+
+      - name: Verify locked Q032 artifact digests
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p results/q037
+          python - <<'PY'
+          import json
+          import os
+          import subprocess
+          from pathlib import Path
+
+          lock = json.loads(Path("q037_common_support_endpoint_geometry_source_lock_v1.json").read_text())
+          expected = list(lock["q032"]["artifacts"].values()) + [
+              lock["q032"]["final_artifact"],
+          ]
+          rows = []
+          failures = []
+          for item in expected:
+              aid = str(item["id"])
+              proc = subprocess.run(
+                  ["gh", "api", f"repos/{os.environ['GITHUB_REPOSITORY']}/actions/artifacts/{aid}"],
+                  check=True, text=True, capture_output=True,
+              )
+              actual = json.loads(proc.stdout)
+              row = {
+                  "artifact_id": int(aid),
+                  "expected_name": item["name"],
+                  "actual_name": actual.get("name"),
+                  "expected_digest": str(item["digest"]).lower(),
+                  "actual_digest": str(actual.get("digest", "")).lower(),
+                  "expired": bool(actual.get("expired")),
+              }
+              row["match"] = (
+                  row["expected_name"] == row["actual_name"]
+                  and row["expected_digest"] == row["actual_digest"]
+                  and not row["expired"]
+              )
+              rows.append(row)
+              if not row["match"]:
+                  failures.append(row)
+
+          out = {
+              "schema": "Q037_SOURCE_ARTIFACT_GATE_V1",
+              "q": "Q-037",
+              "program_id": "Q037-TTGEOM-V1",
+              "q032_run_id": 33994305721,
+              "status": "PASS" if not failures else "FAIL",
+              "checks": rows,
+          }
+          Path("results/q037/q037_source_gate_v1.json").write_text(
+              json.dumps(out, indent=2, sort_keys=True) + "\n"
+          )
+          print("SOURCE_ARTIFACT_DIGEST_GATE=" + out["status"])
+          if failures:
+              raise SystemExit(2)
+          PY
+
+      - name: Artifact — source gate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q037-source-gate-v1
+          path: results/q037/q037_source_gate_v1.json
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Artifact — preregistration
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q037-preregister-v1
+          path: q037_common_support_endpoint_geometry_preregister_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — source lock
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q037-source-lock-v1
+          path: q037_common_support_endpoint_geometry_source_lock_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Download authoritative Q032 refinement endpoints only
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p inputs/q032_refinement
+          for artifact in \
+            q032-refine-camspec-m3-s0 q032-refine-camspec-m3-s1 q032-refine-camspec-m3-s2 \
+            q032-refine-camspec-m6-s0 q032-refine-camspec-m6-s1 q032-refine-camspec-m6-s2 \
+            q032-refine-camspec-m7-s0 q032-refine-camspec-m7-s1 q032-refine-camspec-m7-s2 \
+            q032-refine-hillipop-m3-s0 q032-refine-hillipop-m3-s1 q032-refine-hillipop-m3-s2 \
+            q032-refine-hillipop-m6-s0 q032-refine-hillipop-m6-s1 q032-refine-hillipop-m6-s2 \
+            q032-refine-hillipop-m7-s0 q032-refine-hillipop-m7-s1 q032-refine-hillipop-m7-s2
+          do
+            gh run download "$Q032_RUN_ID" \
+              --repo "$GITHUB_REPOSITORY" \
+              --name "$artifact" \
+              --dir inputs/q032_refinement
+          done
+          count=$(find inputs/q032_refinement -type f -name '*.json' | wc -l)
+          test "$count" -eq 18
+          echo "Q032_REFINEMENT_ARTIFACT_COUNT_GATE=PASS count=$count"
+
+      - name: Download authoritative Q032 final
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p inputs/q032_final
+          gh run download "$Q032_RUN_ID" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name q032-final-v2 \
+            --dir inputs/q032_final
+          test -s inputs/q032_final/q032_final_v2.json
+          echo "Q032_FINAL_ARTIFACT_GATE=PASS"
+
+      - name: Run Q037 deterministic analysis
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p results/q037
+          python q037_common_support_endpoint_geometry_v1.py \
+            --q032-dir inputs/q032_refinement \
+            --q032-final inputs/q032_final/q032_final_v2.json \
+            --preregister q037_common_support_endpoint_geometry_preregister_v1.json \
+            --source-lock q037_common_support_endpoint_geometry_source_lock_v1.json \
+            --source-gate results/q037/q037_source_gate_v1.json \
+            --raw-output results/q037/q037_raw_endpoints_v1.json \
+            --output results/q037/q037_final_v1.json
+          test -s results/q037/q037_final_v1.json
+          test -s results/q037/q037_raw_endpoints_v1.json
+          echo "Q037_PROGRAM_GATE=PASS"
+
+      - name: Run mandatory result tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python q037_common_support_endpoint_geometry_tests_v1.py \
+            results/q037/q037_final_v1.json \
+            --output results/q037/q037_tests_v1.json
+          test -s results/q037/q037_tests_v1.json
+          echo "Q037_TEST_GATE=PASS"
+
+      - name: Final result gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          r = json.load(open("results/q037/q037_final_v1.json"))
+          t = json.load(open("results/q037/q037_tests_v1.json"))
+          assert r["q"] == "Q-037"
+          assert r["program_id"] == "Q037-TTGEOM-V1"
+          assert r["FINAL_RESULT_GATE"] == "PASS"
+          assert r["q037_stop_case"] in ("A", "B")
+          assert t["status"] == "PASS"
+          print("FINAL_RESULT_GATE=PASS")
+          print("Q037_STOP_CASE=" + r["q037_stop_case"])
+          print("FINAL_CLASSIFICATION=" + r["final_classification"])
+          PY
+
+      - name: Build return handoff
+        shell: bash
+        env:
+          BV_RUN_ID: ${{ github.run_id }}
+          BV_RUN_ATTEMPT: ${{ github.run_attempt }}
+          BV_SHA: ${{ github.sha }}
+          BV_REF: ${{ github.ref }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          r = json.loads(Path("results/q037/q037_final_v1.json").read_text())
+          t = json.loads(Path("results/q037/q037_tests_v1.json").read_text())
+          handoff = {
+              "schema": "BUBBLEVERSE_RETURN_HANDOFF_V1",
+              "q": "Q-037",
+              "program_id": "Q037-TTGEOM-V1",
+              "scientific_question": r["scientific_question"],
+              "result_id": r["result_id"],
+              "status": "CLOSED" if r["FINAL_RESULT_GATE"] == "PASS" else "INCONCLUSIVE_TECHNICAL",
+              "FINAL_RESULT_GATE": r["FINAL_RESULT_GATE"],
+              "q037_stop_case": r["q037_stop_case"],
+              "final_classification": r["final_classification"],
+              "journal_effect": r.get("journal_effect"),
+              "tests_status": t["status"],
+              "authoritative_result_artifact": "q037-final-v1",
+              "validation_artifact": "q037-tests-v1",
+              "parent_q032_run_id": 33994305721,
+              "github": {
+                  "repository": os.environ["GITHUB_REPOSITORY"],
+                  "run_id": os.environ["BV_RUN_ID"],
+                  "run_attempt": os.environ["BV_RUN_ATTEMPT"],
+                  "sha": os.environ["BV_SHA"],
+                  "ref": os.environ["BV_REF"],
+              },
+              "unresolved_issues": ["CAUSE_NOT_ATTRIBUTED_BY_Q037"],
+              "next_required_action": "RETURN_TO_RESULT_INGESTION_AND_ROUTING_ENGINE"
+          }
+          Path("results/q037/q037_return_handoff_v1.json").write_text(
+              json.dumps(handoff, indent=2, sort_keys=True) + "\n"
+          )
+          print("HANDOFF_GATE=PASS")
+          PY
+
+      - name: Build run manifest
+        shell: bash
+        env:
+          BV_RUN_ID: ${{ github.run_id }}
+          BV_RUN_ATTEMPT: ${{ github.run_attempt }}
+          BV_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+          files = [
+              Path("results/q037/q037_source_gate_v1.json"),
+              Path("results/q037/q037_raw_endpoints_v1.json"),
+              Path("results/q037/q037_final_v1.json"),
+              Path("results/q037/q037_tests_v1.json"),
+              Path("results/q037/q037_return_handoff_v1.json"),
+              Path("q037_common_support_endpoint_geometry_preregister_v1.json"),
+              Path("q037_common_support_endpoint_geometry_source_lock_v1.json"),
+          ]
+          rows = []
+          for p in files:
+              raw = p.read_bytes()
+              rows.append({"file": p.name, "sha256": hashlib.sha256(raw).hexdigest(), "bytes": len(raw)})
+          out = {
+              "schema": "BUBBLEVERSE_RUN_MANIFEST_V1",
+              "q": "Q-037",
+              "program_id": "Q037-TTGEOM-V1",
+              "github_run_id": os.environ["BV_RUN_ID"],
+              "github_run_attempt": os.environ["BV_RUN_ATTEMPT"],
+              "github_sha": os.environ["BV_SHA"],
+              "files": rows,
+          }
+          Path("results/q037/q037_run_manifest_v1.json").write_text(
+              json.dumps(out, indent=2, sort_keys=True) + "\n"
+          )
+          print("RUN_MANIFEST_GATE=PASS")
+          PY
+
+      - name: Artifact — raw endpoints
+        uses: actions/upload-artifact@v4
+        with:
+          name: q037-raw-endpoints-v1
+          path: results/q037/q037_raw_endpoints_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — final result
+        uses: actions/upload-artifact@v4
+        with:
+          name: q037-final-v1
+          path: results/q037/q037_final_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — tests
+        uses: actions/upload-artifact@v4
+        with:
+          name: q037-tests-v1
+          path: results/q037/q037_tests_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — return handoff
+        uses: actions/upload-artifact@v4
+        with:
+          name: q037-return-handoff-v1
+          path: results/q037/q037_return_handoff_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — run manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: q037-run-manifest-v1
+          path: results/q037/q037_run_manifest_v1.json
+          if-no-files-found: error
+          retention-days: 90
