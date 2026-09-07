@@ -1,0 +1,519 @@
+name: "000 🚀 BUBBLEVERSE START — SEGMENTED V5"
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Paste PROGRAM_ID here
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: bubbleverse-segmented-start-${{ inputs.program_id }}
+  cancel-in-progress: false
+
+jobs:
+  launch:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    outputs:
+      program_id: ${{ steps.resolve.outputs.program_id }}
+      q: ${{ steps.resolve.outputs.q }}
+      workflow_id: ${{ steps.resolve.outputs.workflow_id }}
+      target_ref: ${{ steps.resolve.outputs.target_ref }}
+      expected_artifacts_json: ${{ steps.resolve.outputs.expected_artifacts_json }}
+      child_run_id: ${{ steps.child.outputs.child_run_id }}
+      child_url: ${{ steps.child.outputs.child_url }}
+
+    steps:
+      - name: Checkout registries
+        uses: actions/checkout@v4
+
+      - name: Resolve exact PROGRAM_ID
+        id: resolve
+        shell: bash
+        env:
+          RAW_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          import json
+          import os
+          import re
+          from pathlib import Path
+
+          program_id = os.environ["RAW_PROGRAM_ID"].strip()
+
+          if not re.fullmatch(r"[A-Z0-9][A-Z0-9-]{2,63}", program_id):
+              raise SystemExit("PROGRAM_ID_GATE=FAIL invalid identifier syntax")
+
+          registry_files = []
+
+          master = Path("bubbleverse_program_registry.json")
+          if master.is_file():
+              registry_files.append(master)
+
+          registry_files.extend(
+              p for p in sorted(Path(".").glob("bubbleverse_program_registry_*.json"))
+              if p != master
+          )
+
+          if not registry_files:
+              raise SystemExit("REGISTRY_GATE=FAIL no registry files found")
+
+          matches = []
+
+          for path in registry_files:
+              data = json.loads(path.read_text(encoding="utf-8"))
+              programs = data.get("programs", {})
+
+              if program_id in programs:
+                  matches.append((path, programs[program_id]))
+
+          if not matches:
+              raise SystemExit(
+                  f"PROGRAM_ID_GATE=FAIL exact registry match not found id={program_id}"
+              )
+
+          if len(matches) != 1:
+              locations = ",".join(str(path) for path, _ in matches)
+              raise SystemExit(
+                  f"PROGRAM_ID_GATE=FAIL duplicate definitions id={program_id} files={locations}"
+              )
+
+          source_file, entry = matches[0]
+
+          if entry.get("status") != "ACTIVE":
+              raise SystemExit(
+                  f"PROGRAM_ID_GATE=FAIL status={entry.get('status')}"
+              )
+
+          q = str(entry.get("q", ""))
+          workflow_id = str(entry.get("workflow_id", ""))
+          target_ref = str(entry.get("target_ref", "main"))
+
+          if not re.fullmatch(r"Q-[0-9]{3,}", q):
+              raise SystemExit("Q_IDENTITY_GATE=FAIL registry q invalid")
+
+          if (
+              not re.fullmatch(r"[A-Za-z0-9._-]+\.ya?ml", workflow_id)
+              or "/" in workflow_id
+              or "\\" in workflow_id
+          ):
+              raise SystemExit("LAUNCHER_GATE=FAIL unsafe workflow id")
+
+          if not re.fullmatch(r"[A-Za-z0-9._/-]+", target_ref) or ".." in target_ref:
+              raise SystemExit("LAUNCHER_GATE=FAIL unsafe target ref")
+
+          expected = entry.get("result_artifacts")
+
+          if expected is None:
+              one = entry.get("result_artifact")
+              expected = [one] if isinstance(one, str) and one else []
+
+          if not isinstance(expected, list) or not all(
+              isinstance(x, str) and x for x in expected
+          ):
+              raise SystemExit("ARTIFACT_CONTRACT_GATE=FAIL invalid result_artifacts")
+
+          out = os.environ["GITHUB_OUTPUT"]
+
+          with open(out, "a", encoding="utf-8") as f:
+              f.write(f"program_id={program_id}\n")
+              f.write(f"q={q}\n")
+              f.write(f"workflow_id={workflow_id}\n")
+              f.write(f"target_ref={target_ref}\n")
+              f.write(
+                  "expected_artifacts_json="
+                  + json.dumps(expected, separators=(",", ":"))
+                  + "\n"
+              )
+
+          print(f"PROGRAM_ID_GATE=PASS program_id={program_id}")
+          print(f"REGISTRY_SOURCE={source_file}")
+          print(f"Q_IDENTITY_GATE=PASS q={q}")
+          print(f"LAUNCHER_GATE=PASS workflow_id={workflow_id}")
+          print(f"ARTIFACT_CONTRACT={expected}")
+          PY
+
+      - name: Snapshot existing child runs
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WORKFLOW_ID: ${{ steps.resolve.outputs.workflow_id }}
+        run: |
+          set -euo pipefail
+
+          gh api             "repos/${GITHUB_REPOSITORY}/actions/workflows/${WORKFLOW_ID}/runs?event=workflow_dispatch&per_page=100"             --jq '.workflow_runs[].id'             | sort -n             > /tmp/bubbleverse_before_child_runs.txt
+
+          echo "PRE_DISPATCH_SNAPSHOT_GATE=PASS"
+
+      - name: Dispatch target workflow
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROGRAM_ID: ${{ steps.resolve.outputs.program_id }}
+          WORKFLOW_ID: ${{ steps.resolve.outputs.workflow_id }}
+          TARGET_REF: ${{ steps.resolve.outputs.target_ref }}
+        run: |
+          set -euo pipefail
+
+          gh workflow run "$WORKFLOW_ID"             --repo "$GITHUB_REPOSITORY"             --ref "$TARGET_REF"             -f program_id="$PROGRAM_ID"
+
+          echo "DISPATCH_GATE=PASS program_id=$PROGRAM_ID workflow=$WORKFLOW_ID ref=$TARGET_REF"
+
+      - name: Discover exact child run
+        id: child
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WORKFLOW_ID: ${{ steps.resolve.outputs.workflow_id }}
+        run: |
+          set -euo pipefail
+
+          child_id=""
+
+          for attempt in $(seq 1 90); do
+            gh api               "repos/${GITHUB_REPOSITORY}/actions/workflows/${WORKFLOW_ID}/runs?event=workflow_dispatch&per_page=100"               --jq '.workflow_runs[].id'               | sort -n               > /tmp/bubbleverse_after_child_runs.txt
+
+            child_id="$(
+              comm -13                 /tmp/bubbleverse_before_child_runs.txt                 /tmp/bubbleverse_after_child_runs.txt               | tail -n 1
+            )"
+
+            if [[ -n "$child_id" ]]; then
+              break
+            fi
+
+            sleep 2
+          done
+
+          if [[ -z "$child_id" ]]; then
+            echo "CHILD_DISCOVERY_GATE=FAIL no new child workflow run found"
+            exit 4
+          fi
+
+          child_url="https://github.com/${GITHUB_REPOSITORY}/actions/runs/${child_id}"
+
+          echo "child_run_id=$child_id" >> "$GITHUB_OUTPUT"
+          echo "child_url=$child_url" >> "$GITHUB_OUTPUT"
+
+          echo "CHILD_DISCOVERY_GATE=PASS child_run_id=$child_id"
+          echo "CHILD_URL=$child_url"
+
+  segmented-watch:
+    needs: launch
+    if: ${{ needs.launch.result == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+
+    strategy:
+      fail-fast: false
+      max-parallel: 1
+      matrix:
+        segment: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+    steps:
+      - name: Watch child — segment ${{ matrix.segment }}/12
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHILD_RUN_ID: ${{ needs.launch.outputs.child_run_id }}
+          CHILD_URL: ${{ needs.launch.outputs.child_url }}
+          SEGMENT: ${{ matrix.segment }}
+        run: |
+          set -euo pipefail
+
+          if [[ -z "$CHILD_RUN_ID" ]]; then
+            echo "WATCH_GATE=FAIL missing child run id"
+            exit 2
+          fi
+
+          check_child() {
+            gh api               "repos/${GITHUB_REPOSITORY}/actions/runs/${CHILD_RUN_ID}"               --jq '[.status, (.conclusion // "")] | @tsv'
+          }
+
+          state="$(check_child)"
+          status="${state%%$'\t'*}"
+          conclusion="${state#*$'\t'}"
+
+          echo "WATCH_SEGMENT=$SEGMENT initial_status=$status conclusion=$conclusion"
+          echo "CHILD_URL=$CHILD_URL"
+
+          if [[ "$status" == "completed" ]]; then
+            echo "WATCH_SEGMENT=$SEGMENT CHILD_ALREADY_COMPLETED conclusion=$conclusion"
+            exit 0
+          fi
+
+          # About 5 hours per segment. Job timeout is 5h30m,
+          # leaving margin below GitHub's 6-hour hosted-job ceiling.
+          for poll in $(seq 1 300); do
+            sleep 60
+
+            state="$(check_child)"
+            status="${state%%$'\t'*}"
+            conclusion="${state#*$'\t'}"
+
+            if (( poll % 10 == 0 )); then
+              echo "WATCH_SEGMENT=$SEGMENT poll=$poll status=$status"
+            fi
+
+            if [[ "$status" == "completed" ]]; then
+              echo "WATCH_SEGMENT=$SEGMENT CHILD_COMPLETED conclusion=$conclusion"
+              exit 0
+            fi
+          done
+
+          echo "WATCH_SEGMENT=$SEGMENT COMPLETE child_still_running status=$status"
+          exit 0
+
+  collect-child:
+    needs:
+      - launch
+      - segmented-watch
+    if: ${{ always() && needs.launch.result == 'success' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+
+    outputs:
+      child_conclusion: ${{ steps.collect.outputs.child_conclusion }}
+      child_status: ${{ steps.collect.outputs.child_status }}
+      contract_ok: ${{ steps.collect.outputs.contract_ok }}
+      mirror_matrix_json: ${{ steps.collect.outputs.mirror_matrix_json }}
+      actual_artifacts_json: ${{ steps.collect.outputs.actual_artifacts_json }}
+      missing_artifacts_json: ${{ steps.collect.outputs.missing_artifacts_json }}
+
+    steps:
+      - name: Collect child status and artifacts
+        id: collect
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROGRAM_ID: ${{ needs.launch.outputs.program_id }}
+          Q_ID: ${{ needs.launch.outputs.q }}
+          CHILD_RUN_ID: ${{ needs.launch.outputs.child_run_id }}
+          CHILD_URL: ${{ needs.launch.outputs.child_url }}
+          EXPECTED_ARTIFACTS_JSON: ${{ needs.launch.outputs.expected_artifacts_json }}
+        run: |
+          set -euo pipefail
+          mkdir -p bubbleverse_start_report
+
+          run_json="$(
+            gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${CHILD_RUN_ID}"
+          )"
+
+          artifacts_pages="$(
+            gh api --paginate --slurp               "repos/${GITHUB_REPOSITORY}/actions/runs/${CHILD_RUN_ID}/artifacts?per_page=100"
+          )"
+
+          export RUN_JSON="$run_json"
+          export ARTIFACTS_PAGES="$artifacts_pages"
+
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          run = json.loads(os.environ["RUN_JSON"])
+          pages = json.loads(os.environ["ARTIFACTS_PAGES"])
+          expected = json.loads(os.environ["EXPECTED_ARTIFACTS_JSON"])
+
+          artifacts = []
+          for page in pages:
+              artifacts.extend(page.get("artifacts", []))
+
+          actual = sorted(
+              {
+                  str(a.get("name"))
+                  for a in artifacts
+                  if not a.get("expired", False)
+              }
+          )
+
+          missing = sorted(set(expected) - set(actual))
+
+          child_status = str(run.get("status") or "")
+          child_conclusion = str(run.get("conclusion") or "")
+
+          contract_ok = (
+              child_status == "completed"
+              and child_conclusion == "success"
+              and not missing
+          )
+
+          mirror_names = actual if actual else ["__NO_CHILD_ARTIFACTS__"]
+
+          report = {
+              "schema": "BUBBLEVERSE_SEGMENTED_START_REPORT_V1",
+              "program_id": os.environ["PROGRAM_ID"],
+              "q": os.environ["Q_ID"],
+              "repository": os.environ["GITHUB_REPOSITORY"],
+              "launcher_run_id": os.environ["GITHUB_RUN_ID"],
+              "child_run_id": int(os.environ["CHILD_RUN_ID"]),
+              "child_url": os.environ["CHILD_URL"],
+              "child_status": child_status,
+              "child_conclusion": child_conclusion,
+              "expected_artifacts": expected,
+              "actual_artifacts": actual,
+              "missing_artifacts": missing,
+              "artifact_contract_ok": contract_ok,
+              "watch_segments": 12,
+              "watch_segment_minutes": 300,
+              "watch_horizon_hours": 60,
+              "monitor_horizon_exceeded": child_status != "completed",
+          }
+
+          Path("bubbleverse_start_report/bubbleverse_segmented_start_report.json").write_text(
+              json.dumps(report, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8",
+          )
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"child_status={child_status}\n")
+              f.write(f"child_conclusion={child_conclusion}\n")
+              f.write(f"contract_ok={'true' if contract_ok else 'false'}\n")
+              f.write(
+                  "actual_artifacts_json="
+                  + json.dumps(actual, separators=(",", ":"))
+                  + "\n"
+              )
+              f.write(
+                  "missing_artifacts_json="
+                  + json.dumps(missing, separators=(",", ":"))
+                  + "\n"
+              )
+              f.write(
+                  "mirror_matrix_json="
+                  + json.dumps(mirror_names, separators=(",", ":"))
+                  + "\n"
+              )
+
+          print(json.dumps(report, indent=2))
+          PY
+
+      - name: Publish segmented START report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bubbleverse-segmented-start-report
+          path: bubbleverse_start_report/bubbleverse_segmented_start_report.json
+          if-no-files-found: warn
+          retention-days: 90
+
+  mirror-child-artifacts:
+    needs:
+      - launch
+      - collect-child
+    if: ${{ always() && needs.collect-child.result == 'success' }}
+    runs-on: ubuntu-24.04
+
+    strategy:
+      fail-fast: false
+      matrix:
+        artifact: ${{ fromJSON(needs.collect-child.outputs.mirror_matrix_json) }}
+
+    steps:
+      - name: No child artifacts to mirror
+        if: matrix.artifact == '__NO_CHILD_ARTIFACTS__'
+        run: |
+          echo "CHILD_ARTIFACT_MIRROR=NONE"
+
+      - name: Download child artifact
+        if: matrix.artifact != '__NO_CHILD_ARTIFACTS__'
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: ${{ needs.launch.outputs.child_run_id }}
+          name: ${{ matrix.artifact }}
+          path: mirrored/${{ matrix.artifact }}
+
+      - name: Re-upload child artifact onto START run
+        if: matrix.artifact != '__NO_CHILD_ARTIFACTS__'
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.artifact }}
+          path: mirrored/${{ matrix.artifact }}
+          if-no-files-found: error
+          retention-days: 90
+
+  final-gate:
+    needs:
+      - launch
+      - segmented-watch
+      - collect-child
+      - mirror-child-artifacts
+    if: ${{ always() }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Write START summary
+        shell: bash
+        env:
+          PROGRAM_ID: ${{ needs.launch.outputs.program_id }}
+          CHILD_URL: ${{ needs.launch.outputs.child_url }}
+          CHILD_STATUS: ${{ needs.collect-child.outputs.child_status }}
+          CHILD_CONCLUSION: ${{ needs.collect-child.outputs.child_conclusion }}
+          CONTRACT_OK: ${{ needs.collect-child.outputs.contract_ok }}
+          MISSING: ${{ needs.collect-child.outputs.missing_artifacts_json }}
+          MIRROR_RESULT: ${{ needs.mirror-child-artifacts.result }}
+        run: |
+          {
+            echo "## Bubbleverse segmented verified launch"
+            echo
+            echo "- PROGRAM_ID: \`$PROGRAM_ID\`"
+            echo "- Child run: $CHILD_URL"
+            echo "- Child status: \`$CHILD_STATUS\`"
+            echo "- Child conclusion: \`$CHILD_CONCLUSION\`"
+            echo "- Artifact contract: \`$CONTRACT_OK\`"
+            echo "- Missing artifacts: \`$MISSING\`"
+            echo "- Artifact mirror: \`$MIRROR_RESULT\`"
+            echo "- Watch capacity: \`12 × ~5 h = ~60 h\`"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Mirror child result into START status
+        shell: bash
+        env:
+          CHILD_STATUS: ${{ needs.collect-child.outputs.child_status }}
+          CHILD_CONCLUSION: ${{ needs.collect-child.outputs.child_conclusion }}
+          CONTRACT_OK: ${{ needs.collect-child.outputs.contract_ok }}
+          MIRROR_RESULT: ${{ needs.mirror-child-artifacts.result }}
+          CHILD_URL: ${{ needs.launch.outputs.child_url }}
+          MISSING: ${{ needs.collect-child.outputs.missing_artifacts_json }}
+        run: |
+          set -euo pipefail
+
+          if [[ "$CHILD_STATUS" != "completed" ]]; then
+            echo "BUBBLEVERSE_START_FINAL_GATE=FAIL monitor_horizon_exceeded child_status=$CHILD_STATUS"
+            echo "child_url=$CHILD_URL"
+            exit 1
+          fi
+
+          if [[ "$CHILD_CONCLUSION" != "success" ]]; then
+            echo "BUBBLEVERSE_START_FINAL_GATE=FAIL child_conclusion=$CHILD_CONCLUSION"
+            echo "child_url=$CHILD_URL"
+            exit 1
+          fi
+
+          if [[ "$CONTRACT_OK" != "true" ]]; then
+            echo "BUBBLEVERSE_START_FINAL_GATE=FAIL artifact_contract=$CONTRACT_OK"
+            echo "missing_artifacts=$MISSING"
+            echo "child_url=$CHILD_URL"
+            exit 1
+          fi
+
+          if [[ "$MIRROR_RESULT" != "success" ]]; then
+            echo "BUBBLEVERSE_START_FINAL_GATE=FAIL artifact_mirror=$MIRROR_RESULT"
+            echo "child_url=$CHILD_URL"
+            exit 1
+          fi
+
+          echo "BUBBLEVERSE_START_FINAL_GATE=PASS"
+          echo "CHILD_ARTIFACTS_MIRRORED_TO_START=PASS"
+          echo "child_url=$CHILD_URL"
