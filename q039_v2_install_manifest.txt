@@ -1,0 +1,50 @@
+BUBBLEVERSE Q039 V2 — INSTALL MANIFEST
+
+NEW PROGRAM_ID
+Q039-IMPLBLOCK-V2
+
+CAUSE OF SECOND FAILURE
+The corrected workflow exists on main as:
+  .github/workflows/q039-implementation-block-intervention-v1-fixed.yml
+
+but the live registry still points to:
+  .github/workflows/q039-implementation-block-intervention-v1.yml
+
+That stale path no longer exists on main, so the launcher received:
+  HTTP 422: Workflow does not have 'workflow_dispatch' trigger
+
+INSTALL ORDER
+1. Upload:
+   q039-implementation-block-intervention-v2.yml
+   to EXACT repo path:
+   .github/workflows/q039-implementation-block-intervention-v2.yml
+
+2. Replace root:
+   bubbleverse_program_registry.json
+   with:
+   bubbleverse_program_registry_q039_v2.json
+
+3. Start:
+   Q039-IMPLBLOCK-V2
+
+DO NOT START
+Q039-IMPLBLOCK-V1
+
+V2 TECHNICAL GATES
+- Exact workflow filename and registry workflow_id match.
+- workflow_dispatch explicitly present.
+- New PROGRAM_ID: Q039-IMPLBLOCK-V2.
+- New workflow RUN_ID: Q039-IMPLEMENTATION-BLOCK-INTERVENTION-V2.
+- NumPy 1.26.4 dependency gate retained in all 6 Python jobs.
+- V1 registry entry marked SUPERSEDED.
+- V2 registry entry ACTIVE.
+
+SCIENTIFIC CHANGES
+NONE.
+The scientific Python program, tests, preregistration, source lock, frozen Q032
+execution commit, class_ede backend commit, HiLLiPoP commit, TT common support,
+intervention definitions, optimizer settings and terminal classification rules
+remain unchanged.
+
+WORKFLOW_SHA256=e7904534065460099841f0ab42bea81852d21e18cc755ec53e41224c3a35dc38
+REGISTRY_SHA256=d62c30cdf096a0e42188b603a9cd8dc8741e2aee5875e105bbe0ee0c6defcfb5
