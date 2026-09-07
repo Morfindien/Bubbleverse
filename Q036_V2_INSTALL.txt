@@ -1,0 +1,32 @@
+BUBBLEVERSE Q036 V2 — INSTALLATION
+
+1. Add:
+   .github/workflows/q036-endpoint-geometry-portability-v2.yml
+
+2. Replace the contents of:
+   bubbleverse_program_registry.json
+
+   with the contents of:
+   bubbleverse_program_registry_V2.json
+
+3. DO NOT change:
+   .github/workflows/00-bubbleverse-start.yml
+
+4. Run:
+   🚀 BUBBLEVERSE START
+
+5. Enter:
+   Q036-GEOMETRY-V1
+
+The START workflow resolves the same PROGRAM_ID to the new Q036 V2 workflow.
+
+A successful Q036 V2 run produces six separate artifact rows:
+- q036-final-v1
+- q036-tests-v1
+- q036-return-handoff-v1
+- q036-preregister-v1
+- q036-source-lock-v1
+- q036-run-manifest-v1
+
+No ZIP/TAR is supplied as a Bubbleverse deliverable. GitHub internally packages
+Actions artifacts for download, as usual.
