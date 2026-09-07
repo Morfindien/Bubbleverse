@@ -1,0 +1,29 @@
+BUBBLEVERSE START — SEGMENTED V5
+
+ADD ONLY:
+.github/workflows/00-bubbleverse-start-segmented-v5.yml
+
+Do not replace or delete V4.
+
+Use:
+000 🚀 BUBBLEVERSE START — SEGMENTED V5
+
+Architecture:
+START launch job
+→ dispatch child
+→ 12 sequential matrix watcher jobs, max-parallel=1
+→ each watcher polls for about 5 hours and exits normally before the 6-hour hosted-job limit
+→ total watch capacity about 60 hours
+→ collect child conclusion + artifacts
+→ mirror every non-expired child artifact onto START run
+→ verify registry artifact contract
+→ START is green only if child succeeded, expected artifacts exist, and mirroring succeeded
+
+If child is still running after ~60 hours:
+START becomes red with monitor_horizon_exceeded instead of silently claiming success.
+
+No registry change is needed for the START workflow itself.
+Existing PROGRAM_ID registry fragments continue to work.
+
+For current Q036 V5:
+Q036-GEOMETRY-V5
