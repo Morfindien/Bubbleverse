@@ -1,0 +1,36 @@
+{
+  "schema": "Q039_IMPLEMENTATION_BLOCK_INTERVENTION_SOURCE_LOCK_V1",
+  "q": "Q-039",
+  "program_id": "Q039-IMPLBLOCK-V1",
+  "repository": "Morfindien/Bubbleverse",
+  "model": {"name": "MOD-EDE-N3", "n_scf": 3, "backend_repository": "mwt5345/class_ede", "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97"},
+  "q032": {
+    "github_run_id": 33994305721,
+    "execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "program": "q032_planck_tt3pair_bridge_v2.py",
+    "config": "q032_planck_tt3pair_bridge_v2_config.yml",
+    "setup": "q032_setup_v2.sh",
+    "parent_artifact_lock": "q037_common_support_endpoint_geometry_source_lock_v1.json",
+    "failed_addback_003_run": {"github_run_id": 34009693922, "status": "FAILED_NOT_SCIENTIFIC_EVIDENCE"}
+  },
+  "q037": {"github_run_id": 34115280043, "head": "c49d9885a5bf1e290f4b42f15c59d228c7c036cf", "result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001"},
+  "q038": {"github_run_id": 34121000822, "head": "02ddda7c13a53cd7ad20880bf527a86e17ac4d79", "result_id": "R-Q038-EDE-COORDINATE-LOCALIZATION-001"},
+  "implementations": {
+    "camspec": {"repository": "CobayaSampler/cobaya", "version": "3.5.6", "component": "planck_NPIPE_highl_CamSpec.TTTEEE", "planck_release": "PR4/NPIPE"},
+    "hillipop": {"repository": "planck-npipe/hillipop", "release": "v4.3", "commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251", "component": "planck_2020_hillipop.TT", "planck_release": "PR4/NPIPE"}
+  },
+  "sources": {
+    "K-044": {"title": "CMB Power Spectra and Cosmological Parameters from Planck PR4 with CamSpec", "doi": "10.1093/mnras/stac2744", "arxiv": "2205.10869"},
+    "K-045/K-052": {"title": "The choice of Planck CMB likelihood in cosmological analyses", "arxiv": "2510.09430", "alias_rule": "ONE_EXTERNAL_SOURCE_COUNT_ONCE"},
+    "K-046": {"title": "Cobaya 3.5.6 technical/minimizer source", "version": "3.5.6", "source_type": "TECHNICAL_SOFTWARE_PROVENANCE"},
+    "K-049": {"title": "Cosmological parameters derived from the final Planck data release (PR4)", "doi": "10.1051/0004-6361/202348015", "arxiv": "2309.10034"},
+    "CAMSPEC_2021_ID_UNRESOLVED": {"title": "A Detailed Description of the CamSpec Likelihood Pipeline and a Reanalysis of the Planck High Frequency Maps", "arxiv": "1910.00483", "bubbleverse_k_id": "NOT_DOCUMENTED_DO_NOT_INVENT"}
+  },
+  "evidence_dependencies": [
+    "CamSpec and HiLLiPoP share the broad Planck PR4/NPIPE observational family and are not independent observations.",
+    "Q039 is a controlled Bubbleverse methodological computation, not a new independent sky measurement.",
+    "Q038 is a decomposition of the Q037/Q032 endpoint family, not an independent confirmation."
+  ]
+}

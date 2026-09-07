@@ -1,0 +1,380 @@
+name: Bubbleverse Q039 Implementation Block Intervention V1
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: false
+        default: Q039-IMPLBLOCK-V1
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-039
+  PROGRAM_ID: Q039-IMPLBLOCK-V1
+  RUN_ID: Q039-IMPLEMENTATION-BLOCK-INTERVENTION-V1
+  RESULT_ID: R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: PROGRAM_ID and context gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ inputs.program_id || 'Q039-IMPLBLOCK-V1' }}" = "$PROGRAM_ID"
+          test "$CURRENT_Q" = 'Q-039'
+          echo 'Q_IDENTITY_GATE=PASS'
+          echo 'PROGRAM_ID_GATE=PASS'
+      - name: Static Q039 preregistration tests
+        run: |
+          python -m py_compile q039_implementation_block_intervention_v1.py q039_implementation_block_intervention_tests_v1.py
+          python q039_implementation_block_intervention_tests_v1.py static \
+            --program q039_implementation_block_intervention_v1.py \
+            --preregister q039_implementation_block_intervention_preregister_v1.json \
+            --source-lock q039_implementation_block_intervention_source_lock_v1.json \
+            --output q039_static_tests_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-static-v1
+          path: |
+            q039_static_tests_v1.json
+            q039_implementation_block_intervention_preregister_v1.json
+            q039_implementation_block_intervention_source_lock_v1.json
+          if-no-files-found: error
+
+  parent_input_gate:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Download all authoritative Q032 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Reproduce locked Q037 geometry from Q032 parents
+        run: |
+          python q039_implementation_block_intervention_v1.py validate-parent \
+            --parent-dir q032_parent_profiles \
+            --output q039_parent_input_gate_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-parent-input-gate-v1
+          path: q039_parent_input_gate_v1.json
+          if-no-files-found: error
+
+  singles:
+    needs: [static, parent_input_gate]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        arm: [RELATIVE_CALIBRATION_NEUTRAL, OFFDIAGONAL_PRECISION_COUPLING_OFF]
+        implementation: [camspec, hillipop]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 execution worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore frozen scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            q032_parent/external/cobaya_packages
+            q032_parent/external/class_ede
+            q032_parent/external/hillipop
+          key: q039-v1-${{ runner.os }}-py311-q032-4dc873a5-classede-5a131c91-hillipop-a09ddde3
+      - name: Download Q032 sealed exact-support preflight
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - name: Download exact Q032 parent endpoint for this label
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-refine-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_parent_profile
+      - name: Download Q032 restricted HiLLiPoP precision
+        if: matrix.implementation == 'hillipop'
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 implementation environment
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: bash q032_parent/q032_setup_v2.sh '${{ matrix.implementation }}'
+      - name: Run preregistered Q039 single-block intervention shard
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q039_single
+          args=(
+            --q032-parent-root q032_parent
+            --preflight q032_preflight/q032_preflight_sealed_v2.json
+            --parent-profile-dir q032_parent_profile
+            --implementation '${{ matrix.implementation }}'
+            --arm '${{ matrix.arm }}'
+            --mask '${{ matrix.mask }}'
+            --seed '${{ matrix.seed }}'
+            --soft-stop-minutes 300
+            --output "q039_single/${{ matrix.arm }}_${{ matrix.implementation }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+          )
+          if [[ '${{ matrix.implementation }}' == 'hillipop' ]]; then
+            args+=(
+              --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy
+              --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json
+            )
+          fi
+          python q039_implementation_block_intervention_v1.py profile "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q039-single-${{ matrix.arm }}-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q039_single/*.json
+          if-no-files-found: warn
+
+  assess_singles:
+    needs: singles
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      run_coupled: ${{ steps.assess.outputs.run_coupled }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q039-single-*
+          merge-multiple: true
+          path: q039_single_all
+      - id: assess
+        shell: bash
+        run: |
+          set -euo pipefail
+          python q039_implementation_block_intervention_v1.py assess-singles \
+            --input-dir q039_single_all \
+            --output q039_single_block_assessment_v1.json | tee q039_assess.log
+          coupled=$(grep '^RUN_COUPLED=' q039_assess.log | tail -1 | cut -d= -f2-)
+          test "$coupled" = 'true' -o "$coupled" = 'false'
+          echo "run_coupled=$coupled" >> "$GITHUB_OUTPUT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-single-assessment-v1
+          path: |
+            q039_single_block_assessment_v1.json
+            q039_assess.log
+          if-no-files-found: error
+
+  coupled:
+    needs: assess_singles
+    if: needs.assess_singles.outputs.run_coupled == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 execution worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore frozen scientific environment cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            q032_parent/external/cobaya_packages
+            q032_parent/external/class_ede
+            q032_parent/external/hillipop
+          key: q039-v1-${{ runner.os }}-py311-q032-4dc873a5-classede-5a131c91-hillipop-a09ddde3
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-refine-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_parent_profile
+      - name: Download Q032 restricted HiLLiPoP precision
+        if: matrix.implementation == 'hillipop'
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 implementation environment
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: bash q032_parent/q032_setup_v2.sh '${{ matrix.implementation }}'
+      - name: Run conditional coupled Q039 shard
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q039_coupled
+          args=(
+            --q032-parent-root q032_parent
+            --preflight q032_preflight/q032_preflight_sealed_v2.json
+            --parent-profile-dir q032_parent_profile
+            --implementation '${{ matrix.implementation }}'
+            --arm CALIBRATION_PLUS_PRECISION
+            --mask '${{ matrix.mask }}'
+            --seed '${{ matrix.seed }}'
+            --soft-stop-minutes 300
+            --output "q039_coupled/CALIBRATION_PLUS_PRECISION_${{ matrix.implementation }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+          )
+          if [[ '${{ matrix.implementation }}' == 'hillipop' ]]; then
+            args+=(
+              --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy
+              --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json
+            )
+          fi
+          python q039_implementation_block_intervention_v1.py profile "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q039-coupled-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q039_coupled/*.json
+          if-no-files-found: warn
+
+  final:
+    needs: [assess_singles, coupled]
+    if: >-
+      always() &&
+      needs.assess_singles.result == 'success' &&
+      (needs.coupled.result == 'success' || needs.coupled.result == 'skipped')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q039-single-assessment-v1
+          path: q039_assessment
+      - name: Download coupled shards if they were required
+        if: needs.coupled.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q039-coupled-*
+          merge-multiple: true
+          path: q039_coupled_all
+      - name: Build provisional terminal classification
+        shell: bash
+        run: |
+          set -euo pipefail
+          args=(
+            --single-assessment q039_assessment/q039_single_block_assessment_v1.json
+            --output q039_provisional_final_v1.json
+          )
+          if [[ -d q039_coupled_all ]]; then args+=(--coupled-dir q039_coupled_all); fi
+          python q039_implementation_block_intervention_v1.py final "${args[@]}"
+      - name: Mandatory result tests
+        run: |
+          python q039_implementation_block_intervention_tests_v1.py result \
+            --final q039_provisional_final_v1.json \
+            --output q039_result_tests_v1.json
+      - name: Seal final result only after result tests pass
+        run: |
+          python q039_implementation_block_intervention_v1.py seal \
+            --provisional q039_provisional_final_v1.json \
+            --tests q039_result_tests_v1.json \
+            --output q039_final_v1.json \
+            --handoff q039_return_handoff_v1.json
+      - name: Write run manifest
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          d={
+            'q':'Q-039','program_id':'Q039-IMPLBLOCK-V1',
+            'run_id':'Q039-IMPLEMENTATION-BLOCK-INTERVENTION-V1',
+            'github_run_id':os.environ.get('GITHUB_RUN_ID'),
+            'github_run_attempt':os.environ.get('GITHUB_RUN_ATTEMPT'),
+            'github_sha':os.environ.get('GITHUB_SHA'),
+            'q032_parent_run':33994305721,
+            'q032_parent_commit':'4dc873a5e880d40858d831a3b421456728f0c032',
+            'single_optimizer_jobs':36,
+            'coupled_optimizer_jobs_executed': 18 if '${{ needs.coupled.result }}'=='success' else 0,
+            'status':'COMPLETE'
+          }
+          open('q039_run_manifest_v1.json','w').write(json.dumps(d,indent=2,sort_keys=True)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-final-v1
+          path: |
+            q039_provisional_final_v1.json
+            q039_result_tests_v1.json
+            q039_final_v1.json
+            q039_return_handoff_v1.json
+            q039_run_manifest_v1.json
+          if-no-files-found: error

@@ -16,14 +16,7 @@
       "preregister": "q036_endpoint_geometry_preregister_v1.json",
       "source_lock": "q036_endpoint_geometry_source_lock_v1.json",
       "result_id": "R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001",
-      "result_artifacts": [
-        "q036-final-v1",
-        "q036-tests-v1",
-        "q036-return-handoff-v1",
-        "q036-preregister-v1",
-        "q036-source-lock-v1",
-        "q036-run-manifest-v1"
-      ],
+      "result_artifacts": ["q036-final-v1", "q036-tests-v1", "q036-return-handoff-v1", "q036-preregister-v1", "q036-source-lock-v1", "q036-run-manifest-v1"],
       "supersedes": "Q036-GEOMETRY-V2"
     },
     "Q036-GEOMETRY-V2": {
@@ -40,14 +33,7 @@
       "preregister": "q036_endpoint_geometry_preregister_v1.json",
       "source_lock": "q036_endpoint_geometry_source_lock_v1.json",
       "result_id": "R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001",
-      "result_artifacts": [
-        "q036-final-v1",
-        "q036-tests-v1",
-        "q036-return-handoff-v1",
-        "q036-preregister-v1",
-        "q036-source-lock-v1",
-        "q036-run-manifest-v1"
-      ],
+      "result_artifacts": ["q036-final-v1", "q036-tests-v1", "q036-return-handoff-v1", "q036-preregister-v1", "q036-source-lock-v1", "q036-run-manifest-v1"],
       "alias_of": "Q036-GEOMETRY-V3"
     },
     "Q036-GEOMETRY-V1": {
@@ -64,14 +50,7 @@
       "preregister": "q036_endpoint_geometry_preregister_v1.json",
       "source_lock": "q036_endpoint_geometry_source_lock_v1.json",
       "result_id": "R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001",
-      "result_artifacts": [
-        "q036-final-v1",
-        "q036-tests-v1",
-        "q036-return-handoff-v1",
-        "q036-preregister-v1",
-        "q036-source-lock-v1",
-        "q036-run-manifest-v1"
-      ],
+      "result_artifacts": ["q036-final-v1", "q036-tests-v1", "q036-return-handoff-v1", "q036-preregister-v1", "q036-source-lock-v1", "q036-run-manifest-v1"],
       "alias_of": "Q036-GEOMETRY-V3"
     },
     "Q038-COORDLOC-V1": {
@@ -90,16 +69,25 @@
       "source_lock": "q038_coordinate_localization_source_lock_v1.json",
       "result_id": "R-Q038-EDE-COORDINATE-LOCALIZATION-001",
       "parent_result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001",
-      "result_artifacts": [
-        "q038-q037-input-gate-v1",
-        "q038-preregister-v1",
-        "q038-source-lock-v1",
-        "q038-raw-decomposition-v1",
-        "q038-final-v1",
-        "q038-tests-v1",
-        "q038-return-handoff-v1",
-        "q038-run-manifest-v1"
-      ]
+      "result_artifacts": ["q038-q037-input-gate-v1", "q038-preregister-v1", "q038-source-lock-v1", "q038-raw-decomposition-v1", "q038-final-v1", "q038-tests-v1", "q038-return-handoff-v1", "q038-run-manifest-v1"]
+    },
+    "Q039-IMPLBLOCK-V1": {
+      "q": "Q-039",
+      "scientific_task": "Preregistered native implementation-block interventions on Q032 exact TT common support to test whether relative-calibration semantics or quadratic precision coupling singly remove the Q037/Q038 distributed common geometry difference, with a conditional calibration-plus-precision coupled arm and explicit NOT-COMPARABLE gates for foreground/core construction.",
+      "status": "ACTIVE",
+      "version": "v1",
+      "created_date": "2026-09-07",
+      "workflow_id": "q039-implementation-block-intervention-v1.yml",
+      "workflow_path": ".github/workflows/q039-implementation-block-intervention-v1.yml",
+      "target_ref": "main",
+      "scientific_program": "q039_implementation_block_intervention_v1.py",
+      "scientific_program_id": "Q039-IMPLBLOCK-V1",
+      "tests": "q039_implementation_block_intervention_tests_v1.py",
+      "preregister": "q039_implementation_block_intervention_preregister_v1.json",
+      "source_lock": "q039_implementation_block_intervention_source_lock_v1.json",
+      "result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+      "parent_result_id": "R-Q038-EDE-COORDINATE-LOCALIZATION-001",
+      "result_artifacts": ["q039-static-v1", "q039-parent-input-gate-v1", "q039-single-assessment-v1", "q039-final-v1"]
     }
   }
 }
