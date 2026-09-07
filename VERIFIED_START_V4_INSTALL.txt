@@ -1,0 +1,37 @@
+BUBBLEVERSE VERIFIED START V4 — CHILD ARTIFACT MIRROR
+
+ADD ONLY:
+.github/workflows/00-bubbleverse-start-verified-v4.yml
+
+Do not replace older START workflows.
+
+Use:
+000 🚀 BUBBLEVERSE START — VERIFIED V4
+
+What V4 does:
+- resolves PROGRAM_ID
+- dispatches child workflow
+- discovers exact child run
+- waits for child
+- reads child conclusion
+- lists child artifacts
+- validates expected result_artifacts from registry
+- downloads EVERY non-expired child artifact
+- re-uploads each artifact onto the START run using the SAME artifact name
+- START is green only when:
+  1) child == success
+  2) expected artifact contract passes
+  3) artifact mirror job succeeds
+
+Result:
+You can open the START run itself and download:
+q036-final-v1
+q036-tests-v1
+q036-return-handoff-v1
+etc.
+
+The START run also contains:
+bubbleverse-verified-start-report
+
+For Q036 V4:
+PROGRAM_ID = Q036-GEOMETRY-V4
