@@ -1,0 +1,47 @@
+BUBBLEVERSE Q036 V4 — ADD-ONLY INSTALLATION
+
+NO EXISTING FILES NEED TO BE REPLACED.
+
+ADD THESE 3 FILES:
+
+1)
+.github/workflows/q036-endpoint-geometry-portability-v4.yml
+
+2)
+bubbleverse_program_registry_q036_v4.json
+(repo root)
+
+3)
+.github/workflows/00-bubbleverse-start-add-only-v2.yml
+
+Then use the new Actions workflow:
+
+000 🚀 BUBBLEVERSE START — ADD ONLY
+
+PROGRAM_ID:
+Q036-GEOMETRY-V4
+
+WHY THIS CHANGES THE ARCHITECTURE:
+
+The new START workflow reads:
+- bubbleverse_program_registry.json
+- every bubbleverse_program_registry_*.json fragment
+
+So future Bubbleverse programs/versions can be ADD-ONLY:
+- add a new workflow
+- add a new registry fragment
+- never overwrite an old workflow
+- never overwrite the master registry
+
+Q036 V4 uploads separate GitHub Actions artifact rows.
+
+Even if the source digest gate fails, V4 still preserves:
+- q036-source-gate-v4
+- q036-preregister-v1
+- q036-source-lock-v1
+
+If the scientific run succeeds it additionally preserves:
+- q036-final-v1
+- q036-tests-v1
+- q036-return-handoff-v1
+- q036-run-manifest-v1
