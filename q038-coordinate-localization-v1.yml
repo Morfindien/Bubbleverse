@@ -1,0 +1,543 @@
+name: Q038 Coordinate Localization V1
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Internal PROGRAM_ID propagated by BUBBLEVERSE START
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CANONICAL_LAUNCH_ID: Q038-COORDLOC-V1
+  CURRENT_Q: Q-038
+  Q032_RUN_ID: "33994305721"
+  Q037_RAW_ARTIFACT_NAME: q037-raw-endpoints-v1
+
+jobs:
+  q038:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: PROGRAM_ID gate
+        shell: bash
+        env:
+          PROVIDED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          if [[ "$PROVIDED_PROGRAM_ID" != "$CANONICAL_LAUNCH_ID" ]]; then
+            echo "PROGRAM_ID_GATE=FAIL expected=$CANONICAL_LAUNCH_ID got=$PROVIDED_PROGRAM_ID"
+            exit 2
+          fi
+          echo "PROGRAM_ID_GATE=PASS launch_id=$PROVIDED_PROGRAM_ID"
+          echo "Q_IDENTITY_GATE=PASS q=$CURRENT_Q"
+
+      - name: Static and preregistration gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f q038_coordinate_localization_v1.py
+          test -f q038_coordinate_localization_tests_v1.py
+          test -f q038_coordinate_localization_preregister_v1.json
+          test -f q038_coordinate_localization_source_lock_v1.json
+          test -f q037_common_support_endpoint_geometry_v1.py
+          test -f q037_common_support_endpoint_geometry_preregister_v1.json
+          test -f q037_common_support_endpoint_geometry_source_lock_v1.json
+          python -m py_compile \
+            q038_coordinate_localization_v1.py \
+            q038_coordinate_localization_tests_v1.py \
+            q037_common_support_endpoint_geometry_v1.py
+          python -m json.tool q038_coordinate_localization_preregister_v1.json >/dev/null
+          python -m json.tool q038_coordinate_localization_source_lock_v1.json >/dev/null
+          echo "STATIC_GATE=PASS"
+          echo "PREREGISTRATION_GATE=PASS"
+
+      - name: Prefer existing Q037 raw endpoint artifact
+        id: q037_existing
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p inputs/q037 candidates results/q038
+
+          mapfile -t rows < <(
+            gh api --paginate \
+              "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" \
+              --jq '.artifacts[] | select(.name == "q037-raw-endpoints-v1" and .expired == false) | [.id, .workflow_run.id, (.digest // ""), (.created_at // "")] | @tsv'
+          )
+
+          if [[ "${#rows[@]}" -eq 0 ]]; then
+            echo "Q037_RAW_ARTIFACT_DISCOVERY=NONE"
+            echo "mode=replay" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          printf '%s\n' "${rows[@]}" > results/q038/q038_q037_artifact_candidates_v1.tsv
+
+          first_sha=""
+          differing=0
+          selected_id=""
+          selected_run=""
+          selected_digest=""
+          selected_created=""
+          selected_sha=""
+          selected_path=""
+
+          for row in "${rows[@]}"; do
+            IFS=$'\t' read -r aid runid digest created <<< "$row"
+            dir="candidates/$aid"
+            mkdir -p "$dir"
+            gh run download "$runid" \
+              --repo "$GITHUB_REPOSITORY" \
+              --name "$Q037_RAW_ARTIFACT_NAME" \
+              --dir "$dir"
+
+            file=$(find "$dir" -type f -name 'q037_raw_endpoints_v1.json' -print -quit)
+            test -n "$file"
+            test -s "$file"
+            sha=$(sha256sum "$file" | awk '{print $1}')
+
+            if [[ -z "$first_sha" ]]; then
+              first_sha="$sha"
+            elif [[ "$sha" != "$first_sha" ]]; then
+              differing=1
+            fi
+
+            # Deterministic selection among content-identical candidates:
+            # lexicographically latest created_at, then highest artifact id.
+            if [[ -z "$selected_created" || "$created" > "$selected_created" || ( "$created" == "$selected_created" && "$aid" -gt "$selected_id" ) ]]; then
+              selected_id="$aid"
+              selected_run="$runid"
+              selected_digest="$digest"
+              selected_created="$created"
+              selected_sha="$sha"
+              selected_path="$file"
+            fi
+          done
+
+          if [[ "$differing" -ne 0 ]]; then
+            echo "Q037_RAW_ARTIFACT_IDENTITY_GATE=FAIL multiple active artifacts differ"
+            exit 2
+          fi
+
+          cp "$selected_path" inputs/q037/q037_raw_endpoints_v1.json
+          export SELECTED_ID="$selected_id"
+          export SELECTED_RUN="$selected_run"
+          export SELECTED_DIGEST="$selected_digest"
+          export SELECTED_CREATED="$selected_created"
+
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+
+          raw = Path("inputs/q037/q037_raw_endpoints_v1.json")
+          sha = hashlib.sha256(raw.read_bytes()).hexdigest()
+          rows = []
+          p = Path("results/q038/q038_q037_artifact_candidates_v1.tsv")
+          for line in p.read_text().splitlines():
+              aid, runid, digest, created = line.split("\t")
+              rows.append({
+                  "artifact_id": int(aid),
+                  "workflow_run_id": int(runid),
+                  "digest": digest,
+                  "created_at": created,
+              })
+
+          selected = {
+              "artifact_id": int(os.environ["SELECTED_ID"]),
+              "workflow_run_id": int(os.environ["SELECTED_RUN"]),
+              "digest": os.environ["SELECTED_DIGEST"],
+              "created_at": os.environ["SELECTED_CREATED"],
+          }
+          out = {
+              "schema": "Q038_Q037_RAW_INPUT_GATE_V1",
+              "q": "Q-038",
+              "program_id": "Q038-COORDLOC-V1",
+              "status": "PASS",
+              "input_method": "EXISTING_Q037_RAW_ARTIFACT",
+              "q037_raw_sha256": sha,
+              "q037_artifact": selected,
+              "active_same_name_candidates": rows,
+              "all_candidate_file_contents_identical": True,
+          }
+          Path("results/q038/q038_q037_input_gate_v1.json").write_text(
+              json.dumps(out, indent=2, sort_keys=True) + "\n"
+          )
+          print("Q037_RAW_ARTIFACT_IDENTITY_GATE=PASS")
+          PY
+          echo "mode=existing" >> "$GITHUB_OUTPUT"
+
+      - name: Export selected artifact metadata
+        if: steps.q037_existing.outputs.mode == 'existing'
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Reconstruct selected metadata deterministically from candidate table.
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          rows = []
+          for line in Path("results/q038/q038_q037_artifact_candidates_v1.tsv").read_text().splitlines():
+              aid, runid, digest, created = line.split("\t")
+              rows.append((created, int(aid), int(runid), digest))
+          rows.sort()
+          created, aid, runid, digest = rows[-1]
+
+          p = Path("results/q038/q038_q037_input_gate_v1.json")
+          # If the previous step already wrote the gate, keep it. This step exists only
+          # to make selected metadata auditable in logs.
+          if p.exists():
+              d = json.loads(p.read_text())
+              print("SELECTED_Q037_ARTIFACT_ID=" + str(d["q037_artifact"]["artifact_id"]))
+              print("SELECTED_Q037_RUN_ID=" + str(d["q037_artifact"]["workflow_run_id"]))
+          else:
+              raise SystemExit("Q037_RAW_INPUT_GATE=FAIL missing gate")
+          PY
+
+      - name: Verify frozen Q032 artifact digests for fallback
+        if: steps.q037_existing.outputs.mode == 'replay'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p results/q038 inputs/q032_refinement inputs/q032_final
+          python - <<'PY'
+          import json, os, subprocess
+          from pathlib import Path
+
+          lock = json.loads(Path("q037_common_support_endpoint_geometry_source_lock_v1.json").read_text())
+          expected = list(lock["q032"]["artifacts"].values()) + [lock["q032"]["final_artifact"]]
+          checks = []
+          failures = []
+          for item in expected:
+              aid = str(item["id"])
+              proc = subprocess.run(
+                  ["gh", "api", f"repos/{os.environ['GITHUB_REPOSITORY']}/actions/artifacts/{aid}"],
+                  check=True, text=True, capture_output=True,
+              )
+              actual = json.loads(proc.stdout)
+              row = {
+                  "artifact_id": int(aid),
+                  "expected_name": item["name"],
+                  "actual_name": actual.get("name"),
+                  "expected_digest": str(item["digest"]).lower(),
+                  "actual_digest": str(actual.get("digest", "")).lower(),
+                  "expired": bool(actual.get("expired")),
+              }
+              row["match"] = (
+                  row["expected_name"] == row["actual_name"]
+                  and row["expected_digest"] == row["actual_digest"]
+                  and not row["expired"]
+              )
+              checks.append(row)
+              if not row["match"]:
+                  failures.append(row)
+
+          out = {
+              "schema": "Q037_SOURCE_ARTIFACT_GATE_V1",
+              "q": "Q-037",
+              "program_id": "Q037-TTGEOM-V1",
+              "q032_run_id": 33994305721,
+              "status": "PASS" if not failures else "FAIL",
+              "checks": checks,
+          }
+          Path("results/q038/q037_source_gate_for_q038_fallback_v1.json").write_text(
+              json.dumps(out, indent=2, sort_keys=True) + "\n"
+          )
+          print("Q032_FROZEN_ARTIFACT_DIGEST_GATE=" + out["status"])
+          if failures:
+              raise SystemExit(2)
+          PY
+
+      - name: Download frozen Q032 endpoint artifacts for deterministic Q037 replay
+        if: steps.q037_existing.outputs.mode == 'replay'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          for artifact in \
+            q032-refine-camspec-m3-s0 q032-refine-camspec-m3-s1 q032-refine-camspec-m3-s2 \
+            q032-refine-camspec-m6-s0 q032-refine-camspec-m6-s1 q032-refine-camspec-m6-s2 \
+            q032-refine-camspec-m7-s0 q032-refine-camspec-m7-s1 q032-refine-camspec-m7-s2 \
+            q032-refine-hillipop-m3-s0 q032-refine-hillipop-m3-s1 q032-refine-hillipop-m3-s2 \
+            q032-refine-hillipop-m6-s0 q032-refine-hillipop-m6-s1 q032-refine-hillipop-m6-s2 \
+            q032-refine-hillipop-m7-s0 q032-refine-hillipop-m7-s1 q032-refine-hillipop-m7-s2
+          do
+            gh run download "$Q032_RUN_ID" \
+              --repo "$GITHUB_REPOSITORY" \
+              --name "$artifact" \
+              --dir inputs/q032_refinement
+          done
+
+          gh run download "$Q032_RUN_ID" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name q032-final-v2 \
+            --dir inputs/q032_final
+
+          count=$(find inputs/q032_refinement -type f -name '*.json' | wc -l)
+          test "$count" -eq 18
+          test -s inputs/q032_final/q032_final_v2.json
+          echo "Q032_REFINEMENT_ARTIFACT_COUNT_GATE=PASS count=$count"
+
+      - name: Deterministically replay Q037 raw endpoints only
+        if: steps.q037_existing.outputs.mode == 'replay'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p inputs/q037 results/q038
+          python q037_common_support_endpoint_geometry_v1.py \
+            --q032-dir inputs/q032_refinement \
+            --q032-final inputs/q032_final/q032_final_v2.json \
+            --preregister q037_common_support_endpoint_geometry_preregister_v1.json \
+            --source-lock q037_common_support_endpoint_geometry_source_lock_v1.json \
+            --source-gate results/q038/q037_source_gate_for_q038_fallback_v1.json \
+            --raw-output inputs/q037/q037_raw_endpoints_v1.json \
+            --output results/q038/q037_fallback_replay_final_v1.json
+
+          test -s inputs/q037/q037_raw_endpoints_v1.json
+          test -s results/q038/q037_fallback_replay_final_v1.json
+
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          raw = Path("inputs/q037/q037_raw_endpoints_v1.json")
+          out = {
+              "schema": "Q038_Q037_RAW_INPUT_GATE_V1",
+              "q": "Q-038",
+              "program_id": "Q038-COORDLOC-V1",
+              "status": "PASS",
+              "input_method": "DETERMINISTIC_Q037_RAW_REPLAY_FROM_Q032",
+              "q037_raw_sha256": hashlib.sha256(raw.read_bytes()).hexdigest(),
+              "q037_artifact": None,
+              "fallback_q032_run_id": 33994305721,
+              "likelihood_execution_performed": False,
+          }
+          Path("results/q038/q038_q037_input_gate_v1.json").write_text(
+              json.dumps(out, indent=2, sort_keys=True) + "\n"
+          )
+          print("Q037_RAW_REPLAY_GATE=PASS")
+          PY
+
+      - name: Run Q038 coordinate localization
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s inputs/q037/q037_raw_endpoints_v1.json
+          test -s results/q038/q038_q037_input_gate_v1.json
+          python q038_coordinate_localization_v1.py \
+            --q037-raw inputs/q037/q037_raw_endpoints_v1.json \
+            --preregister q038_coordinate_localization_preregister_v1.json \
+            --source-lock q038_coordinate_localization_source_lock_v1.json \
+            --input-gate results/q038/q038_q037_input_gate_v1.json \
+            --raw-output results/q038/q038_raw_decomposition_v1.json \
+            --output results/q038/q038_final_v1.json
+
+          test -s results/q038/q038_raw_decomposition_v1.json
+          test -s results/q038/q038_final_v1.json
+          echo "Q038_PROGRAM_GATE=PASS"
+
+      - name: Run mandatory result tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          python q038_coordinate_localization_tests_v1.py \
+            results/q038/q038_final_v1.json \
+            --raw results/q038/q038_raw_decomposition_v1.json \
+            --output results/q038/q038_tests_v1.json
+          test -s results/q038/q038_tests_v1.json
+          echo "Q038_TEST_GATE=PASS"
+
+      - name: Final result gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          r = json.load(open("results/q038/q038_final_v1.json"))
+          t = json.load(open("results/q038/q038_tests_v1.json"))
+          assert r["q"] == "Q-038"
+          assert r["program_id"] == "Q038-COORDLOC-V1"
+          assert r["FINAL_RESULT_GATE"] == "PASS"
+          assert r["q038_stop_case"] in ("CONCENTRATED", "DISTRIBUTED")
+          assert t["status"] == "PASS"
+          print("FINAL_RESULT_GATE=PASS")
+          print("Q038_STOP_CASE=" + r["q038_stop_case"])
+          print("MINIMAL_SUBSET_SIZE=" + str(r["minimal_qualifying_subset_size"]))
+          print("MINIMAL_SUBSETS=" + json.dumps(r["minimal_qualifying_subsets"]))
+          PY
+
+      - name: Build return handoff
+        shell: bash
+        env:
+          BV_RUN_ID: ${{ github.run_id }}
+          BV_RUN_ATTEMPT: ${{ github.run_attempt }}
+          BV_SHA: ${{ github.sha }}
+          BV_REF: ${{ github.ref }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+
+          r = json.loads(Path("results/q038/q038_final_v1.json").read_text())
+          t = json.loads(Path("results/q038/q038_tests_v1.json").read_text())
+          handoff = {
+              "schema": "BUBBLEVERSE_RETURN_HANDOFF_V1",
+              "q": "Q-038",
+              "program_id": "Q038-COORDLOC-V1",
+              "scientific_question": r["scientific_question"],
+              "result_id": r["result_id"],
+              "status": "CLOSED" if r["FINAL_RESULT_GATE"] == "PASS" else "INCONCLUSIVE_TECHNICAL",
+              "FINAL_RESULT_GATE": r["FINAL_RESULT_GATE"],
+              "q038_stop_case": r["q038_stop_case"],
+              "final_classification": r["final_classification"],
+              "minimal_qualifying_subset_size": r["minimal_qualifying_subset_size"],
+              "minimal_qualifying_subsets": r["minimal_qualifying_subsets"],
+              "coordinate_shares": r["coordinate_shares"],
+              "journal_effect": r["journal_effect"],
+              "tests_status": t["status"],
+              "authoritative_result_artifact": "q038-final-v1",
+              "validation_artifact": "q038-tests-v1",
+              "raw_decomposition_artifact": "q038-raw-decomposition-v1",
+              "parent_q037_result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001",
+              "parent_q032_run_id": 33994305721,
+              "github": {
+                  "repository": os.environ["GITHUB_REPOSITORY"],
+                  "run_id": os.environ["BV_RUN_ID"],
+                  "run_attempt": os.environ["BV_RUN_ATTEMPT"],
+                  "sha": os.environ["BV_SHA"],
+                  "ref": os.environ["BV_REF"],
+              },
+              "claim_boundary": "Coordinate localization is not causal implementation attribution.",
+              "unresolved_issues": ["CAUSE_NOT_ATTRIBUTED_BY_Q038"],
+              "next_required_action": "RETURN_TO_RESULT_INGESTION_AND_ROUTING_ENGINE",
+          }
+          Path("results/q038/q038_return_handoff_v1.json").write_text(
+              json.dumps(handoff, indent=2, sort_keys=True) + "\n"
+          )
+          print("HANDOFF_GATE=PASS")
+          PY
+
+      - name: Build run manifest
+        shell: bash
+        env:
+          BV_RUN_ID: ${{ github.run_id }}
+          BV_RUN_ATTEMPT: ${{ github.run_attempt }}
+          BV_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib, json, os
+          from pathlib import Path
+
+          files = [
+              Path("results/q038/q038_q037_input_gate_v1.json"),
+              Path("results/q038/q038_raw_decomposition_v1.json"),
+              Path("results/q038/q038_final_v1.json"),
+              Path("results/q038/q038_tests_v1.json"),
+              Path("results/q038/q038_return_handoff_v1.json"),
+              Path("q038_coordinate_localization_preregister_v1.json"),
+              Path("q038_coordinate_localization_source_lock_v1.json"),
+          ]
+          rows = []
+          for p in files:
+              raw = p.read_bytes()
+              rows.append({
+                  "file": p.name,
+                  "sha256": hashlib.sha256(raw).hexdigest(),
+                  "bytes": len(raw),
+              })
+          out = {
+              "schema": "BUBBLEVERSE_RUN_MANIFEST_V1",
+              "q": "Q-038",
+              "program_id": "Q038-COORDLOC-V1",
+              "github_run_id": os.environ["BV_RUN_ID"],
+              "github_run_attempt": os.environ["BV_RUN_ATTEMPT"],
+              "github_sha": os.environ["BV_SHA"],
+              "files": rows,
+          }
+          Path("results/q038/q038_run_manifest_v1.json").write_text(
+              json.dumps(out, indent=2, sort_keys=True) + "\n"
+          )
+          print("RUN_MANIFEST_GATE=PASS")
+          PY
+
+      - name: Artifact — Q037 input gate
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q038-q037-input-gate-v1
+          path: results/q038/q038_q037_input_gate_v1.json
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Artifact — preregistration
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q038-preregister-v1
+          path: q038_coordinate_localization_preregister_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — source lock
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q038-source-lock-v1
+          path: q038_coordinate_localization_source_lock_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — raw decomposition
+        uses: actions/upload-artifact@v4
+        with:
+          name: q038-raw-decomposition-v1
+          path: results/q038/q038_raw_decomposition_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — final result
+        uses: actions/upload-artifact@v4
+        with:
+          name: q038-final-v1
+          path: results/q038/q038_final_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — tests
+        uses: actions/upload-artifact@v4
+        with:
+          name: q038-tests-v1
+          path: results/q038/q038_tests_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — return handoff
+        uses: actions/upload-artifact@v4
+        with:
+          name: q038-return-handoff-v1
+          path: results/q038/q038_return_handoff_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — run manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: q038-run-manifest-v1
+          path: results/q038/q038_run_manifest_v1.json
+          if-no-files-found: error
+          retention-days: 90

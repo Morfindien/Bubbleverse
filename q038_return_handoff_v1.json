@@ -1,0 +1,96 @@
+{
+  "FINAL_RESULT_GATE": "PASS",
+  "claim_boundaries": {
+    "calibration_defect_established": false,
+    "camspec_hillipop_are_independent_observations": false,
+    "coordinate_localization_is_causal_attribution": false,
+    "covariance_defect_established": false,
+    "cross_likelihood_objectives_used": false,
+    "ede_falsification_established": false,
+    "ede_preference_established": false,
+    "foreground_defect_established": false,
+    "h0_changed": false,
+    "instrument_failure_established": false,
+    "new_physics_established": false,
+    "nuisance_defect_established": false,
+    "physical_planck_systematic_established": false,
+    "q035_remains_authoritative_closed": true,
+    "q036_remains_closed": true,
+    "q037_remains_closed": true,
+    "stable_nonstable_labels_used_as_discriminator": false
+  },
+  "coordinate_shares": {
+    "centroid": {
+      "A_planck": 0.0048516407179073125,
+      "H0": 0.10177574104954673,
+      "fEDE": 0.005344272575432822,
+      "log10z_c": 0.008582663204722897,
+      "omega_b": 0.11700896736913763,
+      "omega_cdm": 0.38095541805793864,
+      "thetai_scf": 0.3814812970253141
+    },
+    "matched_location": {
+      "A_planck": 0.024821164392216304,
+      "H0": 0.018029077170357823,
+      "fEDE": 0.33920043430627805,
+      "log10z_c": 0.04829134698930479,
+      "omega_b": 0.1674102065485772,
+      "omega_cdm": 0.105931993102557,
+      "thetai_scf": 0.29631577749070886
+    },
+    "pairwise_shape": {
+      "A_planck": 0.04635808404339308,
+      "H0": 0.021830613560851215,
+      "fEDE": 0.42121429335666694,
+      "log10z_c": 0.05976293579273623,
+      "omega_b": 0.1615954370767763,
+      "omega_cdm": 0.10367457806066083,
+      "thetai_scf": 0.18556405810891544
+    }
+  },
+  "execution_provenance": {
+    "class_optimizer_sampler_executed": false,
+    "execution_mode": "LOCAL_ARTIFACT_ONLY_DETERMINISTIC_REPLAY_AND_ANALYSIS",
+    "github_installation_status": "NOT_INSTALLED_WRITE_403",
+    "likelihood_execution_performed": false,
+    "q032_archive_digest_gate": "PASS_19_OF_19",
+    "q032_run_id": 33994305721,
+    "q037_github_run_id": "NOT_DOCUMENTED",
+    "q037_numerical_replay": {
+      "matched_exceedance_count_gt_0_10": 9,
+      "matched_max_displacement": 5.229543793539735,
+      "matched_median_displacement": 2.9317906965863507,
+      "normalized_centroid_displacement": 0.8311487237190059,
+      "pairwise_exceedance_count_gt_0_10": 36,
+      "pairwise_max_drift": 4.755572606658088,
+      "pairwise_median_drift": 1.6367910228418985
+    },
+    "q037_raw_input_method": "DETERMINISTIC_Q037_RAW_REPLAY_FROM_Q032",
+    "repository_head_observed": "c49d9885a5bf1e290f4b42f15c59d228c7c036cf"
+  },
+  "final_classification": "DISTRIBUTED",
+  "journal_effect": "STRENGTHEN_MULTIVARIATE_DISTRIBUTED_IMPLEMENTATION_GEOMETRY_INTERPRETATION",
+  "minimal_qualifying_subset_size": 4,
+  "minimal_qualifying_subsets": [
+    [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "thetai_scf"
+    ]
+  ],
+  "next_required_action": "RETURN_TO_RESULT_INGESTION_AND_ROUTING_ENGINE; IF_GITHUB_RERUN_DESIRED_INSTALL_FILES_AND_CENTRAL_REGISTRY_ENTRY",
+  "program_id": "Q038-COORDLOC-V1",
+  "q": "Q-038",
+  "q038_stop_case": "DISTRIBUTED",
+  "qualifying_subset_count": 9,
+  "result_id": "R-Q038-EDE-COORDINATE-LOCALIZATION-001",
+  "schema": "BUBBLEVERSE_RETURN_HANDOFF_V1",
+  "scientific_question": "N\u00e5r Q037's paired CamSpec- og HiLLiPoP exact-common-support endpoints analyseres coordinate-by-coordinate under de samme syv Q031 locked scales, er den overlevende implementation geometry difference koncentreret i en reproducerbar minimal subset af common coordinates, eller er den distribueret over flere coordinates?",
+  "status": "CLOSED",
+  "tests_status": "PASS",
+  "unresolved_issues": [
+    "CAUSAL_IMPLEMENTATION_COMPONENT_NOT_ATTRIBUTED_BY_Q038",
+    "Q038_FILES_NOT_INSTALLED_IN_GITHUB_REPOSITORY_BECAUSE_CONTENTS_WRITE_RETURNED_403"
+  ]
+}

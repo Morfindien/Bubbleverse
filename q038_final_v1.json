@@ -1,0 +1,164 @@
+{
+  "FINAL_RESULT_GATE": "PASS",
+  "actual_computed_result": true,
+  "claim_boundaries": {
+    "calibration_defect_established": false,
+    "camspec_hillipop_are_independent_observations": false,
+    "coordinate_localization_is_causal_attribution": false,
+    "covariance_defect_established": false,
+    "cross_likelihood_objectives_used": false,
+    "ede_falsification_established": false,
+    "ede_preference_established": false,
+    "foreground_defect_established": false,
+    "h0_changed": false,
+    "instrument_failure_established": false,
+    "new_physics_established": false,
+    "nuisance_defect_established": false,
+    "physical_planck_systematic_established": false,
+    "q035_remains_authoritative_closed": true,
+    "q036_remains_closed": true,
+    "q037_remains_closed": true,
+    "stable_nonstable_labels_used_as_discriminator": false
+  },
+  "common_geometry": {
+    "coordinates": [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "H0",
+      "A_planck"
+    ],
+    "locked_scales": {
+      "A_planck": 0.00037111561222435974,
+      "H0": 0.2253286448991929,
+      "fEDE": 0.0010851930861718734,
+      "log10z_c": 0.03666125981785351,
+      "omega_b": 3.644915744246274e-05,
+      "omega_cdm": 0.00029761589951235456,
+      "thetai_scf": 0.012826810796868315
+    },
+    "locked_scales_hash": "732aeeb127d9083c0924552aa276117310ca32b5bfda854f51bfd3240638b2f6",
+    "materiality_threshold": 0.1,
+    "objective_values_used": false
+  },
+  "coordinate_shares": {
+    "centroid": {
+      "A_planck": 0.0048516407179073125,
+      "H0": 0.10177574104954673,
+      "fEDE": 0.005344272575432822,
+      "log10z_c": 0.008582663204722897,
+      "omega_b": 0.11700896736913763,
+      "omega_cdm": 0.38095541805793864,
+      "thetai_scf": 0.3814812970253141
+    },
+    "matched_location": {
+      "A_planck": 0.024821164392216304,
+      "H0": 0.018029077170357823,
+      "fEDE": 0.33920043430627805,
+      "log10z_c": 0.04829134698930479,
+      "omega_b": 0.1674102065485772,
+      "omega_cdm": 0.105931993102557,
+      "thetai_scf": 0.29631577749070886
+    },
+    "pairwise_shape": {
+      "A_planck": 0.04635808404339308,
+      "H0": 0.021830613560851215,
+      "fEDE": 0.42121429335666694,
+      "log10z_c": 0.05976293579273623,
+      "omega_b": 0.1615954370767763,
+      "omega_cdm": 0.10367457806066083,
+      "thetai_scf": 0.18556405810891544
+    }
+  },
+  "execution_mode": "ARTIFACT_ONLY_DETERMINISTIC_PROGRAM",
+  "execution_status": "COMPLETE",
+  "final_classification": "DISTRIBUTED",
+  "gates": {
+    "CLASSIFICATION_GATE": true,
+    "COMMON_COORDINATE_GATE": true,
+    "CONCENTRATION_PREREGISTRATION_GATE": true,
+    "EXACT_COMMON_SUPPORT_IDENTITY_GATE": true,
+    "FINITE_RESULT_GATE": true,
+    "JOURNAL_CONTINUITY_GATE": true,
+    "MATERIALITY_THRESHOLD_GATE": true,
+    "NINE_BY_NINE_LABEL_IDENTITY_GATE": true,
+    "NO_CAUSAL_ATTRIBUTION_GATE": true,
+    "NO_CROSS_LIKELIHOOD_OBJECTIVE_GATE": true,
+    "PAIRWISE_EXACT_DECOMPOSITION_GATE": true,
+    "PARENT_Q032_PROVENANCE_GATE": true,
+    "PARENT_Q037_PROVENANCE_GATE": true,
+    "Q031_LOCKED_SCALE_GATE": true,
+    "Q035_CLOSED_PRESERVATION_GATE": true,
+    "Q036_CLOSED_PRESERVATION_GATE": true,
+    "Q037_CLOSED_PRESERVATION_GATE": true,
+    "Q037_NUMERICAL_REPLAY_GATE": true,
+    "Q037_RAW_INPUT_GATE": true,
+    "Q_IDENTITY_GATE": true,
+    "SYMMETRIC_SUBSET_GATE": true
+  },
+  "input_gate_sha256": "db72fad2e6556266731c496f7dda2845f3941c9f1a9f6505468627468421c3a3",
+  "journal_effect": "STRENGTHEN_MULTIVARIATE_DISTRIBUTED_IMPLEMENTATION_GEOMETRY_INTERPRETATION",
+  "localization_definition": {
+    "centroid": "squared normalized centroid-displacement share",
+    "concentrated_max_subset_size": 2,
+    "full_capture_threshold": 0.8,
+    "leave_one_label_out_capture_threshold": 0.7,
+    "leave_one_label_out_required_passes": 8,
+    "matched_location": "pooled squared normalized coordinate displacement share",
+    "pairwise_shape": "absolute mass of exact signed coordinate decomposition of each Q037 scalar pairwise distance change: (u_H^2-u_C^2)/(7*(d_H+d_C))",
+    "subset_universe": "all 127 non-empty subsets"
+  },
+  "minimal_qualifying_subset_size": 4,
+  "minimal_qualifying_subsets": [
+    [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "thetai_scf"
+    ]
+  ],
+  "parent_q032": {
+    "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "run_id": 33994305721
+  },
+  "parent_q037": {
+    "discovered_q037_artifact": null,
+    "program_id": "Q037-TTGEOM-V1",
+    "raw_input_method": "DETERMINISTIC_Q037_RAW_REPLAY_FROM_Q032",
+    "raw_input_sha256": "d74676b140e8754ec50d3199e318ebbe6866ec82630c9fee94ea9689409fa8b0",
+    "result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001"
+  },
+  "preregister_sha256": "254953da52bbd7b3022bb385fb8a65e7fb175bee0621b5dc02e57e4012d19cc8",
+  "program_id": "Q038-COORDLOC-V1",
+  "q": "Q-038",
+  "q037_replay": {
+    "actual": {
+      "matched_exceedance_count_gt_0_10": 9,
+      "matched_max_displacement": 5.229543793539735,
+      "matched_median_displacement": 2.9317906965863507,
+      "normalized_centroid_displacement": 0.8311487237190059,
+      "pairwise_exceedance_count_gt_0_10": 36,
+      "pairwise_max_drift": 4.755572606658088,
+      "pairwise_median_drift": 1.6367910228418985
+    },
+    "benchmarks": {
+      "matched_exceedance_count_gt_0_10": 9,
+      "matched_max_displacement": 5.229543793539735,
+      "matched_median_displacement": 2.9317906965863507,
+      "normalized_centroid_displacement": 0.8311487237190059,
+      "pairwise_exceedance_count_gt_0_10": 36,
+      "pairwise_max_drift": 4.755572606658088,
+      "pairwise_median_drift": 1.6367910228418985
+    },
+    "max_absolute_difference": 0.0
+  },
+  "q038_stop_case": "DISTRIBUTED",
+  "qualifying_subset_count": 9,
+  "raw_decomposition_file": "q038_raw_coordinate_decomposition_v1.json",
+  "result_id": "R-Q038-EDE-COORDINATE-LOCALIZATION-001",
+  "run_id": "Q038-EXACT-TT-COMMON-SUPPORT-COORD-LOCALIZATION-V1",
+  "scientific_question": "N\u00e5r Q037's paired CamSpec- og HiLLiPoP exact-common-support endpoints analyseres coordinate-by-coordinate under de samme syv Q031 locked scales, er den overlevende implementation geometry difference koncentreret i en reproducerbar minimal subset af common coordinates, eller er den distribueret over flere coordinates?",
+  "source_lock_sha256": "95afbfe7a9e7599dc334bde951244983721c8e1d836a16a5c844e38fe94b79a9"
+}

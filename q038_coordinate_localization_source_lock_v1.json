@@ -1,0 +1,133 @@
+{
+  "analysis_lock": {
+    "concentration": {
+      "concentrated_max_subset_size": 2,
+      "full_capture_threshold": 0.8,
+      "leave_one_label_out_capture_threshold": 0.7,
+      "leave_one_label_out_required_passes": 8
+    },
+    "coordinates": [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "H0",
+      "A_planck"
+    ],
+    "locked_scales": {
+      "A_planck": 0.00037111561222435974,
+      "H0": 0.2253286448991929,
+      "fEDE": 0.0010851930861718734,
+      "log10z_c": 0.03666125981785351,
+      "omega_b": 3.644915744246274e-05,
+      "omega_cdm": 0.00029761589951235456,
+      "thetai_scf": 0.012826810796868315
+    },
+    "locked_scales_hash": "732aeeb127d9083c0924552aa276117310ca32b5bfda854f51bfd3240638b2f6",
+    "materiality_threshold": 0.1,
+    "metric": "sqrt(mean(((a_i-b_i)/scale_i)^2))"
+  },
+  "external_context": [
+    {
+      "arxiv": "2205.10869",
+      "authors": "Rosenberg, Gratton & Efstathiou",
+      "doi": "10.1093/mnras/stac2744",
+      "role": "CamSpec PR4 methodology; contextual, not independent Q038 evidence",
+      "source_id": "K-044",
+      "title": "CMB Power Spectra and Cosmological Parameters from Planck PR4 with CamSpec"
+    },
+    {
+      "arxiv": "2510.09430",
+      "authors": "Jense, Vi\u00f1a, Calabrese & Hill",
+      "doi": "10.1103/ff9j-skyj",
+      "role": "Cross-likelihood methodological context; not independent observational evidence",
+      "source_id": "K-045/K-052",
+      "title": "The choice of Planck CMB likelihood in cosmological analyses"
+    },
+    {
+      "role": "Technical software provenance only",
+      "source_id": "K-046",
+      "title": "Cobaya 3.5.6 technical/minimizer source"
+    },
+    {
+      "arxiv": "2309.10034",
+      "authors": "Tristram et al.",
+      "doi": "10.1051/0004-6361/202348015",
+      "role": "HiLLiPoP PR4 methodology; contextual, not independent Q038 evidence",
+      "source_id": "K-049",
+      "title": "Cosmological parameters derived from the final Planck data release (PR4)"
+    },
+    {
+      "arxiv": "1910.00483",
+      "authors": "Efstathiou & Gratton",
+      "doi": "10.21105/astro.1910.00483",
+      "role": "CamSpec construction methodology; historical Bubbleverse K-ID unresolved",
+      "source_id": "CAMSPEC_2021_ID_UNRESOLVED",
+      "title": "A Detailed Description of the CamSpec Likelihood Pipeline and a Reanalysis of the Planck High Frequency Maps"
+    }
+  ],
+  "model": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "n_scf": 3,
+    "name": "MOD-EDE-N3",
+    "status": "ACTIVE_CONSTRAINED_NOT_ESTABLISHED_NEW_PHYSICS"
+  },
+  "program_id": "Q038-COORDLOC-V1",
+  "q": "Q-038",
+  "q032": {
+    "execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "fallback_policy": "Only if no existing Q037 raw artifact can be retrieved, deterministically replay Q037 raw endpoint extraction from the frozen Q032 artifacts; no likelihood execution is permitted.",
+    "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "run_id": 33994305721,
+    "source_lock_path": "q032_source_lock_v2.json",
+    "support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b"
+  },
+  "q035": {
+    "result_id": "R-Q035-EDE-CLASSIFIER-HARMONIZATION-001",
+    "status": "AUTHORITATIVE_CLOSED"
+  },
+  "q036": {
+    "head_sha": "095f90565cf694a7c3383d1fbe736707ab187751",
+    "result_id": "R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001",
+    "status": "CLOSED",
+    "success_run_id": 34105942065
+  },
+  "q037": {
+    "authoritative_benchmarks": {
+      "matched_exceedance_count_gt_0_10": 9,
+      "matched_max_displacement": 5.229543793539735,
+      "matched_median_displacement": 2.9317906965863507,
+      "normalized_centroid_displacement": 0.8311487237190059,
+      "pairwise_exceedance_count_gt_0_10": 36,
+      "pairwise_max_drift": 4.755572606658088,
+      "pairwise_median_drift": 1.6367910228418985
+    },
+    "classification": "COMMON_SUPPORT_DOES_NOT_REMOVE_IMPLEMENTATION_GEOMETRY_DIFFERENCE",
+    "final_artifact_name": "q037-final-v1",
+    "final_result_gate": "PASS",
+    "github_run_id": null,
+    "program": {
+      "blob_sha": "0062a7570ff8d40c6b10a089b2d19816511d643d",
+      "path": "q037_common_support_endpoint_geometry_v1.py"
+    },
+    "program_id": "Q037-TTGEOM-V1",
+    "raw_artifact_name": "q037-raw-endpoints-v1",
+    "repository_head": "c49d9885a5bf1e290f4b42f15c59d228c7c036cf",
+    "result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001",
+    "source_lock": {
+      "blob_sha": "1858b9d7d6c8ff133108a826e0eed9d320778592",
+      "path": "q037_common_support_endpoint_geometry_source_lock_v1.json"
+    },
+    "tests": {
+      "blob_sha": "ace12d82656c5ff1b4324dc093a8df4e1b4cb717",
+      "path": "q037_common_support_endpoint_geometry_tests_v1.py"
+    },
+    "tests_artifact_name": "q037-tests-v1",
+    "workflow": ".github/workflows/q037-common-support-endpoint-geometry-v1.yml"
+  },
+  "repository": "Morfindien/Bubbleverse",
+  "repository_head_observed_before_build": "c49d9885a5bf1e290f4b42f15c59d228c7c036cf",
+  "schema": "Q038_COORDINATE_LOCALIZATION_SOURCE_LOCK_V1"
+}
