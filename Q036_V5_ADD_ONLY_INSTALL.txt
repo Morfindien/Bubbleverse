@@ -1,0 +1,33 @@
+BUBBLEVERSE Q036 V5 — ADD ONLY
+
+DO NOT REPLACE ANY EXISTING FILE.
+
+ADD:
+
+1. .github/workflows/q036-endpoint-geometry-portability-v5.yml
+2. q036_endpoint_geometry_source_lock_v5.json
+3. bubbleverse_program_registry_q036_v5.json
+
+KEEP:
+000 🚀 BUBBLEVERSE START — VERIFIED V4
+
+RUN WITH:
+Q036-GEOMETRY-V5
+
+WHY V5 EXISTS:
+Q036 V4 correctly failed its provenance gate because the old source lock
+contains a one-character typo for Q022 M3-S1 artifact 9950352191.
+
+Old/incorrect:
+sha256:8f5c80f3ed0dfa27e5f7f1a060e24a8a99c0b0e717196e5ceb975da8ef16d23a
+
+GitHub-authoritative:
+sha256:8f5c80f3ed0dfa27e5d7f1a060e24a8a99c0b0e717196e5ceb975da8ef16d23a
+
+All other locked artifact digests matched in run 34104895126.
+
+VERIFIED START V4 remains responsible for:
+- waiting for the child
+- turning red if child fails
+- validating expected artifacts
+- mirroring child artifacts onto the START run
