@@ -1,0 +1,352 @@
+name: Q036 Endpoint Geometry Portability V2
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Internal PROGRAM_ID propagated by BUBBLEVERSE START
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  EXPECTED_PROGRAM_ID: Q036-GEOMETRY-V1
+  Q022_RUN_ID: "33902262660"
+  Q031_RUN_ID: "33975028436"
+
+jobs:
+  q036:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: PROGRAM_ID gate
+        shell: bash
+        env:
+          PROVIDED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          if [[ "$PROVIDED_PROGRAM_ID" != "$EXPECTED_PROGRAM_ID" ]]; then
+            echo "PROGRAM_ID_GATE=FAIL expected=$EXPECTED_PROGRAM_ID got=$PROVIDED_PROGRAM_ID"
+            exit 2
+          fi
+          echo "PROGRAM_ID_GATE=PASS"
+
+      - name: Static gates
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f q036_endpoint_geometry_portability_v1.py
+          test -f q036_endpoint_geometry_tests_v1.py
+          test -f q036_endpoint_geometry_preregister_v1.json
+          test -f q036_endpoint_geometry_source_lock_v1.json
+
+          python -m py_compile \
+            q036_endpoint_geometry_portability_v1.py \
+            q036_endpoint_geometry_tests_v1.py
+
+          python -m json.tool q036_endpoint_geometry_preregister_v1.json >/dev/null
+          python -m json.tool q036_endpoint_geometry_source_lock_v1.json >/dev/null
+
+          echo "STATIC_GATE=PASS"
+
+      - name: Verify locked parent artifact digests
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+
+          python - <<'PY' > /tmp/q036_artifacts.tsv
+          import json
+          d = json.load(open("q036_endpoint_geometry_source_lock_v1.json"))
+
+          for x in d["q022"]["artifacts"].values():
+              print(x["id"], x["digest"], sep="\t")
+
+          for key in ("final_artifact", "preflight_artifact"):
+              x = d["q031"][key]
+              print(x["id"], x["digest"], sep="\t")
+          PY
+
+          while IFS=$'\t' read -r artifact_id expected_digest; do
+            actual_digest="$(gh api \
+              "repos/${GITHUB_REPOSITORY}/actions/artifacts/${artifact_id}" \
+              --jq '.digest')"
+
+            if [[ "$actual_digest" != "$expected_digest" ]]; then
+              echo "SOURCE_GATE=FAIL artifact_id=$artifact_id"
+              echo "expected=$expected_digest"
+              echo "actual=$actual_digest"
+              exit 3
+            fi
+          done < /tmp/q036_artifacts.tsv
+
+          echo "SOURCE_GATE=PASS"
+
+      - name: Download authoritative Q022 refinement endpoints
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p inputs/q022
+
+          for artifact in \
+            q022-v2-refine-m3-s0 \
+            q022-v2-refine-m3-s1 \
+            q022-v2-refine-m3-s2 \
+            q022-v2-refine-m6-s0 \
+            q022-v2-refine-m6-s1 \
+            q022-v2-refine-m6-s2 \
+            q022-v2-refine-m7-s0 \
+            q022-v2-refine-m7-s1 \
+            q022-v2-refine-m7-s2
+          do
+            gh run download "$Q022_RUN_ID" \
+              --repo "$GITHUB_REPOSITORY" \
+              --name "$artifact" \
+              --dir inputs/q022
+          done
+
+      - name: Download authoritative Q031 final
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p inputs/q031
+
+          gh run download "$Q031_RUN_ID" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name q031-final-v1 \
+            --dir inputs/q031
+
+      - name: Download authoritative Q031 preflight
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p inputs/q031_preflight
+
+          gh run download "$Q031_RUN_ID" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name q031-preflight-v1 \
+            --dir inputs/q031_preflight
+
+      - name: Run Q036
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p results/q036
+
+          python q036_endpoint_geometry_portability_v1.py \
+            --q022-dir inputs/q022 \
+            --q031-final inputs/q031/q031_final_validated_v1.json \
+            --q031-preflight inputs/q031_preflight/q031_preflight_v1.json \
+            --preregister q036_endpoint_geometry_preregister_v1.json \
+            --source-lock q036_endpoint_geometry_source_lock_v1.json \
+            --output results/q036/q036_final_v1.json
+
+          test -s results/q036/q036_final_v1.json
+          echo "Q036_PROGRAM_GATE=PASS"
+
+      - name: Run mandatory tests
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python q036_endpoint_geometry_tests_v1.py \
+            results/q036/q036_final_v1.json \
+            --output results/q036/q036_tests_v1.json
+
+          test -s results/q036/q036_tests_v1.json
+          echo "Q036_TEST_GATE=PASS"
+
+      - name: Final result gate
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          import json
+
+          r = json.load(open("results/q036/q036_final_v1.json"))
+          t = json.load(open("results/q036/q036_tests_v1.json"))
+
+          assert r["q"] == "Q-036"
+          assert r["program_id"] == "Q036-GEOMETRY-V1"
+          assert r["FINAL_RESULT_GATE"] == "PASS"
+          assert t["status"] == "PASS"
+
+          print("FINAL_RESULT_GATE=PASS")
+          print("Q036_STOP_CASE=" + r["q036_stop_case"])
+          print("FINAL_CLASSIFICATION=" + r["final_classification"])
+          PY
+
+      - name: Build motor handoff
+        shell: bash
+        env:
+          BV_RUN_ID: ${{ github.run_id }}
+          BV_RUN_ATTEMPT: ${{ github.run_attempt }}
+          BV_SHA: ${{ github.sha }}
+          BV_REF: ${{ github.ref }}
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          result = json.loads(
+              Path("results/q036/q036_final_v1.json").read_text(encoding="utf-8")
+          )
+          tests = json.loads(
+              Path("results/q036/q036_tests_v1.json").read_text(encoding="utf-8")
+          )
+
+          handoff = {
+              "schema": "BUBBLEVERSE_RETURN_HANDOFF_V1",
+              "q": "Q-036",
+              "program_id": "Q036-GEOMETRY-V1",
+              "result_id": result.get("result_id"),
+              "status": "CLOSED",
+              "FINAL_RESULT_GATE": result.get("FINAL_RESULT_GATE"),
+              "q036_stop_case": result.get("q036_stop_case"),
+              "final_classification": result.get("final_classification"),
+              "q031_interpretation_effect":
+                  result.get("q031_interpretation_effect"),
+              "tests_status": tests.get("status"),
+              "authoritative_result_artifact": "q036-final-v1",
+              "validation_artifact": "q036-tests-v1",
+              "github": {
+                  "repository": os.environ["GITHUB_REPOSITORY"],
+                  "run_id": os.environ["BV_RUN_ID"],
+                  "run_attempt": os.environ["BV_RUN_ATTEMPT"],
+                  "sha": os.environ["BV_SHA"],
+                  "ref": os.environ["BV_REF"],
+              },
+              "next_motor_instruction":
+                  "Treat Q036 as CLOSED and authoritative. Preserve Q035. "
+                  "Do not restore stable/non-stable label as sole discriminator."
+          }
+
+          Path("results/q036/q036_return_handoff_v1.json").write_text(
+              json.dumps(handoff, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8"
+          )
+
+          print("HANDOFF_GATE=PASS")
+          PY
+
+      - name: Build run manifest
+        shell: bash
+        env:
+          BV_RUN_ID: ${{ github.run_id }}
+          BV_RUN_ATTEMPT: ${{ github.run_attempt }}
+          BV_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+
+          files = [
+              Path("results/q036/q036_final_v1.json"),
+              Path("results/q036/q036_tests_v1.json"),
+              Path("results/q036/q036_return_handoff_v1.json"),
+              Path("q036_endpoint_geometry_preregister_v1.json"),
+              Path("q036_endpoint_geometry_source_lock_v1.json"),
+          ]
+
+          rows = []
+          for p in files:
+              raw = p.read_bytes()
+              rows.append({
+                  "file": p.name,
+                  "sha256": hashlib.sha256(raw).hexdigest(),
+                  "bytes": len(raw),
+              })
+
+          manifest = {
+              "schema": "BUBBLEVERSE_RUN_MANIFEST_V1",
+              "q": "Q-036",
+              "program_id": "Q036-GEOMETRY-V1",
+              "github_run_id": os.environ["BV_RUN_ID"],
+              "github_run_attempt": os.environ["BV_RUN_ATTEMPT"],
+              "github_sha": os.environ["BV_SHA"],
+              "files": rows,
+          }
+
+          Path("results/q036/q036_run_manifest_v1.json").write_text(
+              json.dumps(manifest, indent=2, sort_keys=True) + "\n",
+              encoding="utf-8"
+          )
+
+          print("RUN_MANIFEST_GATE=PASS")
+          PY
+
+      # ----------------------------------------------------------
+      # SEPARATE ARTIFACT UPLOADS
+      # Each step below becomes its own downloadable artifact row
+      # on the completed GitHub workflow run, like the Q031 runs.
+      # ----------------------------------------------------------
+
+      - name: Artifact — final result
+        uses: actions/upload-artifact@v4
+        with:
+          name: q036-final-v1
+          path: results/q036/q036_final_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — tests
+        uses: actions/upload-artifact@v4
+        with:
+          name: q036-tests-v1
+          path: results/q036/q036_tests_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — return handoff
+        uses: actions/upload-artifact@v4
+        with:
+          name: q036-return-handoff-v1
+          path: results/q036/q036_return_handoff_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — preregistration
+        uses: actions/upload-artifact@v4
+        with:
+          name: q036-preregister-v1
+          path: q036_endpoint_geometry_preregister_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — source lock
+        uses: actions/upload-artifact@v4
+        with:
+          name: q036-source-lock-v1
+          path: q036_endpoint_geometry_source_lock_v1.json
+          if-no-files-found: error
+          retention-days: 90
+
+      - name: Artifact — run manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: q036-run-manifest-v1
+          path: results/q036/q036_run_manifest_v1.json
+          if-no-files-found: error
+          retention-days: 90
