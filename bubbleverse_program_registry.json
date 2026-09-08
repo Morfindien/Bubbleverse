@@ -154,7 +154,7 @@
     "Q040-CMBSPACE-V1": {
       "q": "Q-040",
       "scientific_task": "Preregistered native-nuisance-marginalized identity-multipole CMB-space coupled structural bridge on frozen Q032 exact TT common support, with implementation-native foreground/calibration priors, Schur-propagated CMB covariance, separate compression validation, frozen nine-label endpoint geometry and 9/9 leave-one-label-out sufficiency testing.",
-      "status": "ACTIVE",
+      "status": "BROKEN",
       "version": "v1",
       "created_date": "2026-09-08",
       "workflow_id": "q040-cmbspace-coupled-bridge-v1.yml",
@@ -182,6 +182,44 @@
         "q040-endpoint-*",
         "q040-provisional-v1",
         "q040-final-v1"
+      ],
+      "superseded_by": "Q040-CMBSPACE-V2",
+      "failed_run_id": 34199777865,
+      "failure_class": "NUMERICAL_FIXED_POINT_NONCONVERGENCE_ALL_SIX_COMPRESSION_MAP_STARTS"
+    },
+    "Q040-CMBSPACE-V2": {
+      "q": "Q-040",
+      "scientific_task": "Preregistered native-nuisance-marginalized identity-multipole CMB-space coupled structural bridge on frozen Q032 exact TT common support, with implementation-native foreground/calibration priors, Schur-propagated CMB covariance, separate compression validation, frozen nine-label endpoint geometry and 9/9 leave-one-label-out sufficiency testing. Technical V2 replaces the non-convergent plain fixed-point iteration with bounded Anderson acceleration while preserving scientific locks and acceptance thresholds.",
+      "status": "ACTIVE",
+      "version": "v2",
+      "created_date": "2026-09-08",
+      "workflow_id": "q040-cmbspace-coupled-bridge-v2.yml",
+      "workflow_path": ".github/workflows/q040-cmbspace-coupled-bridge-v2.yml",
+      "target_ref": "main",
+      "scientific_program": "q040_cmbspace_coupled_bridge_v2.py",
+      "scientific_program_id": "Q040-CMBSPACE-V2",
+      "tests": "q040_cmbspace_coupled_bridge_tests_v2.py",
+      "preregister": "q040_cmbspace_coupled_bridge_preregister_v2.json",
+      "source_lock": "q040_cmbspace_coupled_bridge_source_lock_v2.json",
+      "result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-002",
+      "parent_result_id": "R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001",
+      "parent_q032_run": 33994305721,
+      "design_parent_commit": "4f144ec145753930ad1dab061ea4d95e71047581",
+      "launcher": ".github/workflows/00-bubbleverse-start.yml",
+      "supersedes": "Q040-CMBSPACE-V1",
+      "v1_failed_run_id": 34199777865,
+      "result_artifacts": [
+        "q040-static-v2",
+        "q040-parent-input-v2",
+        "q040-environment-gate-v2",
+        "q040-map-*",
+        "q040-compression-camspec-v2",
+        "q040-compression-hillipop-v2",
+        "q040-compression-validation-camspec-v2",
+        "q040-compression-validation-hillipop-v2",
+        "q040-endpoint-*",
+        "q040-provisional-v2",
+        "q040-final-v2"
       ]
     }
   }

@@ -1,0 +1,685 @@
+name: Bubbleverse Q040 CMB-space Coupled Bridge V2
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: false
+        default: Q040-CMBSPACE-V2
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-040
+  PROGRAM_ID: Q040-CMBSPACE-V2
+  RUN_ID: Q040-CMBSPACE-COUPLED-BRIDGE-V2
+  RESULT_ID: R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-002
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  Q032_SUPPORT_HASH: f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Identity, registry and file placement gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ inputs.program_id || 'Q040-CMBSPACE-V2' }}" = "$PROGRAM_ID"
+          test "$CURRENT_Q" = 'Q-040'
+          test -f q040_cmbspace_coupled_bridge_v2.py
+          test -f q040_cmbspace_coupled_bridge_tests_v2.py
+          test -f q040_cmbspace_coupled_bridge_preregister_v2.json
+          test -f q040_cmbspace_coupled_bridge_source_lock_v2.json
+          test -f q039_prepare_frozen_env_v4.sh
+          test -f .github/workflows/q040-cmbspace-coupled-bridge-v2.yml
+          test -f .github/workflows/00-bubbleverse-start.yml
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('bubbleverse_program_registry.json').read_text())
+          e=d.get('programs',{}).get('Q040-CMBSPACE-V2')
+          assert e and e.get('status')=='ACTIVE',e
+          assert e.get('q')=='Q-040',e
+          assert e.get('workflow_id')=='q040-cmbspace-coupled-bridge-v2.yml',e
+          assert e.get('workflow_path')=='.github/workflows/q040-cmbspace-coupled-bridge-v2.yml',e
+          launcher=Path('.github/workflows/00-bubbleverse-start.yml').read_text()
+          assert 'exact registry match not found' in launcher
+          assert 'gh workflow run "$WORKFLOW_ID"' in launcher
+          assert 'eval' not in launcher.lower()
+          print('Q040_REGISTRY_LAUNCHER_GATE=PASS')
+          PY
+      - name: Install static-test dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - name: Static scientific, numerical and provenance gates
+        run: |
+          python -m py_compile q040_cmbspace_coupled_bridge_v2.py q040_cmbspace_coupled_bridge_tests_v2.py
+          python q040_cmbspace_coupled_bridge_tests_v2.py static \
+            --program q040_cmbspace_coupled_bridge_v2.py \
+            --preregister q040_cmbspace_coupled_bridge_preregister_v2.json \
+            --source-lock q040_cmbspace_coupled_bridge_source_lock_v2.json \
+            --output q040_static_tests_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-static-v2
+          path: |
+            q040_static_tests_v2.json
+            q040_cmbspace_coupled_bridge_preregister_v2.json
+            q040_cmbspace_coupled_bridge_source_lock_v2.json
+          if-no-files-found: error
+
+  parent_input_gate:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3
+      - name: Download authoritative Q032 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Reproduce frozen Q037 geometry before Q040 work
+        run: |
+          python q040_cmbspace_coupled_bridge_v2.py validate-parent \
+            --parent-dir q032_parent_profiles \
+            --output q040_parent_input_gate_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-parent-input-v2
+          path: q040_parent_input_gate_v2.json
+          if-no-files-found: error
+
+  environment_gate:
+    needs: [static, parent_input_gate]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - name: Download sealed Q032 support and covariance products
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh both
+      - name: Verify source/data hashes and initialize both native Q032 paths without optimization
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          test -f q032_preflight/q032_preflight_sealed_v2.json
+          test -f q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy
+          test -f q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json
+          python - <<'PY'
+          import json
+          p=json.load(open('q032_preflight/q032_preflight_sealed_v2.json'))
+          assert p['q']=='Q-032' and p['status']=='PASS'
+          assert p['support_sha256']=='f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b'
+          assert p['camspec_runtime']['dataset_file_sha256']
+          assert p['camspec_runtime']['data_vector_sha256']
+          assert p['camspec_runtime']['covariance_sha256']
+          h=p['hillipop_data_runtime']
+          assert h['data_hashes'] and h['cross_spectrum_hashes']
+          m=json.load(open('q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json'))
+          assert m['status']=='PASS' and m['restricted_precision_sha256']
+          print('Q040_SOURCE_DATA_HASH_GATE=PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-environment-gate-v2
+          path: |
+            q032_preflight/q032_preflight_sealed_v2.json
+            q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json
+          if-no-files-found: error
+
+  compression_maps:
+    needs: environment_gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        start_family:
+          - NATIVE_REFERENCE
+          - Q032_LOWEST_OBJECTIVE_WITHIN_IMPLEMENTATION
+          - Q032_FARTHEST_COMPLETE_ENDPOINT_WITHIN_IMPLEMENTATION
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        run: |
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate implementation runtime
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - name: Run one atomic preregistered compression MAP start
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_map
+          python q040_cmbspace_coupled_bridge_v2.py map-start \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_cmbspace_coupled_bridge_preregister_v2.json \
+            --source-lock q040_cmbspace_coupled_bridge_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --implementation '${{ matrix.implementation }}' \
+            --start-family '${{ matrix.start_family }}' \
+            --soft-stop-minutes 300 \
+            --scratch q040_v2_runtime \
+            --output 'q040_map/${{ matrix.implementation }}_${{ matrix.start_family }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-map-${{ matrix.implementation }}-${{ matrix.start_family }}
+          path: q040_map/*.json
+          if-no-files-found: warn
+
+  compression_build:
+    needs: compression_maps
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        implementation: [camspec, hillipop]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: |
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-map-${{ matrix.implementation }}-*
+          merge-multiple: true
+          path: q040_maps
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - name: Build Schur-marginalized identity-multipole CMB likelihood
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_compression
+          python q040_cmbspace_coupled_bridge_v2.py build-compression \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_cmbspace_coupled_bridge_preregister_v2.json \
+            --source-lock q040_cmbspace_coupled_bridge_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --implementation '${{ matrix.implementation }}' \
+            --map-dir q040_maps \
+            --scratch q040_v2_runtime \
+            --output-dir q040_compression \
+            --metadata-output 'q040_compression/q040_cmbspace_${{ matrix.implementation }}_v2_metadata.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-compression-${{ matrix.implementation }}-v2
+          path: q040_compression/*
+          if-no-files-found: warn
+
+  compression_validate:
+    needs: compression_build
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        implementation: [camspec, hillipop]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: |
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-compression-${{ matrix.implementation }}-v2
+          path: q040_compression
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - name: Validate Gaussian compression against native conditional Laplace scores
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_validation
+          python q040_cmbspace_coupled_bridge_v2.py validate-compression \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_cmbspace_coupled_bridge_preregister_v2.json \
+            --source-lock q040_cmbspace_coupled_bridge_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --implementation '${{ matrix.implementation }}' \
+            --compression-meta 'q040_compression/q040_cmbspace_${{ matrix.implementation }}_v2_metadata.json' \
+            --compression-dir q040_compression \
+            --soft-stop-minutes 300 \
+            --scratch q040_v2_runtime \
+            --output 'q040_validation/${{ matrix.implementation }}_validation_v2.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-compression-validation-${{ matrix.implementation }}-v2
+          path: q040_validation/*.json
+          if-no-files-found: warn
+
+  compression_gate:
+    if: always()
+    needs: compression_validate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      proceed: ${{ steps.gate.outputs.proceed }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download CamSpec validation if available
+        id: dlcam
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-compression-validation-camspec-v2
+          path: q040_validation_camspec
+      - name: Download HiLLiPoP validation if available
+        id: dlhlp
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-compression-validation-hillipop-v2
+          path: q040_validation_hillipop
+      - name: Decide whether science endpoints are permitted
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json, pathlib, os
+          files={
+            'camspec': pathlib.Path('q040_validation_camspec/camspec_validation_v2.json'),
+            'hillipop': pathlib.Path('q040_validation_hillipop/hillipop_validation_v2.json'),
+          }
+          records={}; proceed=True; reasons=[]
+          for impl,p in files.items():
+              if not p.exists():
+                  proceed=False; reasons.append(f'{impl}:validation_artifact_missing'); continue
+              try: d=json.loads(p.read_text())
+              except Exception as e:
+                  proceed=False; reasons.append(f'{impl}:validation_json_unreadable:{e!r}'); continue
+              records[impl]=d
+              ok=(d.get('q')=='Q-040' and d.get('program_id')=='Q040-CMBSPACE-V2' and d.get('implementation')==impl and d.get('stage')=='COMPRESSION_VALIDATION' and d.get('status')=='PASS' and d.get('gates',{}).get('FINAL_COMPRESSION_VALIDATION_GATE')=='PASS')
+              if not ok:
+                  proceed=False; reasons.append(f'{impl}:compression_validation_fail')
+          out={'q':'Q-040','program_id':'Q040-CMBSPACE-V2','run_id':'Q040-CMBSPACE-COUPLED-BRIDGE-V2','result_id':'R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-002','stage':'Q040_COMPRESSION_GATE','proceed_to_endpoints':proceed,'status':'PASS' if proceed else 'STOP','reasons':reasons,'validation_records':records}
+          pathlib.Path('q040_compression_gate_v2.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write('proceed='+('true' if proceed else 'false')+'\n')
+          print('Q040_COMPRESSION_GATE=' + ('PASS' if proceed else 'STOP'))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-compression-gate-v2
+          path: q040_compression_gate_v2.json
+          if-no-files-found: error
+
+  compression_failure_seal:
+    needs: compression_gate
+    if: ${{ always() && needs.compression_gate.outputs.proceed != 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-compression-gate-v2
+          path: q040_gate
+      - name: Seal methodological failure without a C-036 science conclusion
+        run: |
+          python q040_cmbspace_coupled_bridge_v2.py seal-compression-failure \
+            --gate q040_gate/q040_compression_gate_v2.json \
+            --preregister q040_cmbspace_coupled_bridge_preregister_v2.json \
+            --source-lock q040_cmbspace_coupled_bridge_source_lock_v2.json \
+            --output q040_final_v2.json \
+            --handoff q040_return_handoff_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-final-v2
+          path: |
+            q040_final_v2.json
+            q040_return_handoff_v2.json
+            q040_gate/q040_compression_gate_v2.json
+            q040_cmbspace_coupled_bridge_preregister_v2.json
+            q040_cmbspace_coupled_bridge_source_lock_v2.json
+          if-no-files-found: error
+
+  endpoints:
+    needs: compression_gate
+    if: ${{ always() && needs.compression_gate.outputs.proceed == 'true' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: |
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - name: Download exact authoritative Q032 parent endpoint
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-refine-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_parent_profile
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-compression-${{ matrix.implementation }}-v2
+          path: q040_compression
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-compression-validation-${{ matrix.implementation }}-v2
+          path: q040_validation
+      - run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - name: Run frozen-label Q040 CMB-space endpoint
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_endpoint
+          python q040_cmbspace_coupled_bridge_v2.py profile \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profile \
+            --implementation '${{ matrix.implementation }}' \
+            --mask '${{ matrix.mask }}' \
+            --seed '${{ matrix.seed }}' \
+            --compression-meta 'q040_compression/q040_cmbspace_${{ matrix.implementation }}_v2_metadata.json' \
+            --compression-dir q040_compression \
+            --validation 'q040_validation/${{ matrix.implementation }}_validation_v2.json' \
+            --soft-stop-minutes 300 \
+            --output 'q040_endpoint/${{ matrix.implementation }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-endpoint-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q040_endpoint/*.json
+          if-no-files-found: warn
+
+  assess_and_test:
+    needs: endpoints
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-endpoint-*
+          merge-multiple: true
+          path: q040_endpoints
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-compression-validation-camspec-v2
+          path: q040_validation_camspec
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-compression-validation-hillipop-v2
+          path: q040_validation_hillipop
+      - name: Compute frozen full and 9/9 leave-one-label-out geometry
+        run: |
+          python q040_cmbspace_coupled_bridge_v2.py assess \
+            --endpoint-dir q040_endpoints \
+            --output q040_provisional_v2.json
+      - name: Mandatory final-result tests
+        run: |
+          python q040_cmbspace_coupled_bridge_tests_v2.py result \
+            --final q040_provisional_v2.json \
+            --camspec-validation q040_validation_camspec/camspec_validation_v2.json \
+            --hillipop-validation q040_validation_hillipop/hillipop_validation_v2.json \
+            --output q040_result_tests_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-provisional-v2
+          path: |
+            q040_provisional_v2.json
+            q040_result_tests_v2.json
+          if-no-files-found: error
+
+  seal:
+    needs: assess_and_test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-provisional-v2
+          path: q040_provisional
+      - name: Seal only after all mandatory result gates pass
+        run: |
+          python q040_cmbspace_coupled_bridge_v2.py seal \
+            --provisional q040_provisional/q040_provisional_v2.json \
+            --tests q040_provisional/q040_result_tests_v2.json \
+            --preregister q040_cmbspace_coupled_bridge_preregister_v2.json \
+            --source-lock q040_cmbspace_coupled_bridge_source_lock_v2.json \
+            --output q040_final_v2.json \
+            --handoff q040_return_handoff_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-final-v2
+          path: |
+            q040_final_v2.json
+            q040_return_handoff_v2.json
+            q040_provisional/q040_result_tests_v2.json
+            q040_cmbspace_coupled_bridge_preregister_v2.json
+            q040_cmbspace_coupled_bridge_source_lock_v2.json
+          if-no-files-found: error
