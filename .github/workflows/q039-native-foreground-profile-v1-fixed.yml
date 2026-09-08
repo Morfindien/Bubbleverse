@@ -1,0 +1,397 @@
+name: Bubbleverse Q039 Native Foreground Profile Freedom V1
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: false
+        default: Q039-FGPROFILE-V1
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-039
+  PROGRAM_ID: Q039-FGPROFILE-V1
+  RUN_ID: Q039-NATIVE-FOREGROUND-PROFILE-V1
+  RESULT_ID: R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  Q039_PARENT_SUCCESSFUL_RUN: '34161368438'
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Identity, registry and file placement gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ inputs.program_id || 'Q039-FGPROFILE-V1' }}" = "$PROGRAM_ID"
+          test "$CURRENT_Q" = 'Q-039'
+          test -f q039_native_foreground_profile_v1.py
+          test -f q039_native_foreground_profile_tests_v1.py
+          test -f q039_native_foreground_profile_preregister_v1.json
+          test -f q039_native_foreground_profile_source_lock_v1.json
+          test -f q039_prepare_frozen_env_v4.sh
+          test -f .github/workflows/q039-native-foreground-profile-v1.yml
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('bubbleverse_program_registry.json').read_text())
+          e=d.get('programs',{}).get('Q039-FGPROFILE-V1')
+          assert e and e.get('status')=='ACTIVE',e
+          assert e.get('q')=='Q-039',e
+          assert e.get('workflow_id')=='q039-native-foreground-profile-v1.yml',e
+          assert e.get('workflow_path')=='.github/workflows/q039-native-foreground-profile-v1.yml',e
+          print('Q039_FGPROFILE_REGISTRY_GATE=PASS')
+          PY
+      - name: Install static test dependency
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4
+      - name: Static scientific and software gates
+        run: |
+          python -m py_compile q039_native_foreground_profile_v1.py q039_native_foreground_profile_tests_v1.py
+          python q039_native_foreground_profile_tests_v1.py static \
+            --program q039_native_foreground_profile_v1.py \
+            --preregister q039_native_foreground_profile_preregister_v1.json \
+            --source-lock q039_native_foreground_profile_source_lock_v1.json \
+            --output q039_fgprofile_static_tests_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-fgprofile-static-v1
+          path: |
+            q039_fgprofile_static_tests_v1.json
+            q039_native_foreground_profile_preregister_v1.json
+            q039_native_foreground_profile_source_lock_v1.json
+          if-no-files-found: error
+
+  parent_input_gate:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4
+      - name: Download all authoritative Q032 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Reproduce frozen Q037 baseline exactly
+        run: |
+          python q039_native_foreground_profile_v1.py validate-parent \
+            --parent-dir q032_parent_profiles \
+            --output q039_fgprofile_parent_input_gate_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-fgprofile-parent-input-v1
+          path: q039_fgprofile_parent_input_gate_v1.json
+          if-no-files-found: error
+
+  environment_gate:
+    needs: [static, parent_input_gate]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - name: Download all authoritative Q032 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Download Q032 sealed exact-support preflight
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - name: Download Q032 restricted HiLLiPoP precision
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime from authoritative cache
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh both
+      - name: Derive native foreground schemas and choose within-implementation references
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          python q039_native_foreground_profile_v1.py prepare-reference \
+            --parent-dir q032_parent_profiles \
+            --output q039_fgprofile_reference_v1.json
+      - name: Two-path model initialization preflight without optimizer
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q039_fgprofile_runtime_preflight_v1
+          python q039_native_foreground_profile_v1.py runtime-preflight \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --reference q039_fgprofile_reference_v1.json \
+            --implementation camspec --mask 3 --seed 0 \
+            --output q039_fgprofile_runtime_preflight_v1/camspec.json
+          python q039_native_foreground_profile_v1.py runtime-preflight \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --reference q039_fgprofile_reference_v1.json \
+            --implementation hillipop --mask 3 --seed 0 \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --output q039_fgprofile_runtime_preflight_v1/hillipop.json
+          python - <<'PY'
+          import json, pathlib
+          fs=sorted(pathlib.Path('q039_fgprofile_runtime_preflight_v1').glob('*.json'))
+          assert len(fs)==2,fs
+          for p in fs:
+              d=json.loads(p.read_text()); assert d['status']=='PASS',(p,d)
+              assert d['optimizer_started'] is False and d['actual_computed_result'] is False
+          print('Q039_FGPROFILE_RUNTIME_PREFLIGHT_GATE=PASS count=2')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-fgprofile-reference-v1
+          path: q039_fgprofile_reference_v1.json
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-fgprofile-runtime-preflight-v1
+          path: q039_fgprofile_runtime_preflight_v1/*.json
+          if-no-files-found: error
+
+  profiles:
+    needs: [static, parent_input_gate, environment_gate]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - name: Download exact Q032 parent endpoint
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-refine-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q032_parent_profile
+      - name: Download Q032 sealed exact-support preflight
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - name: Download Q032 restricted HiLLiPoP precision
+        if: matrix.implementation == 'hillipop'
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Download frozen foreground reference
+        uses: actions/download-artifact@v4
+        with:
+          name: q039-fgprofile-reference-v1
+          path: q039_reference
+      - name: Recreate implementation runtime from authoritative cache
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - name: Run Q039 foreground-profile shard
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q039_fgprofile_shard
+          args=(
+            --q032-parent-root q032_parent
+            --preflight q032_preflight/q032_preflight_sealed_v2.json
+            --parent-dir q032_parent_profile
+            --reference q039_reference/q039_fgprofile_reference_v1.json
+            --implementation '${{ matrix.implementation }}'
+            --mask '${{ matrix.mask }}'
+            --seed '${{ matrix.seed }}'
+            --output "q039_fgprofile_shard/${{ matrix.implementation }}_m${{ matrix.mask }}_s${{ matrix.seed }}.json"
+          )
+          if [[ '${{ matrix.implementation }}' == 'hillipop' ]]; then
+            args+=(
+              --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy
+              --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json
+            )
+          fi
+          python q039_native_foreground_profile_v1.py profile "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q039-fgprofile-profile-${{ matrix.implementation }}-m${{ matrix.mask }}-s${{ matrix.seed }}
+          path: q039_fgprofile_shard/*.json
+          if-no-files-found: warn
+
+  assess_and_test:
+    needs: profiles
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q039-fgprofile-profile-*
+          merge-multiple: true
+          path: q039_fgprofile_all
+      - uses: actions/download-artifact@v4
+        with:
+          name: q039-fgprofile-reference-v1
+          path: q039_reference
+      - name: Assess frozen Q039 geometry and 9/9 leave-one-label-out
+        run: |
+          python q039_native_foreground_profile_v1.py assess \
+            --profile-dir q039_fgprofile_all \
+            --reference q039_reference/q039_fgprofile_reference_v1.json \
+            --output q039_fgprofile_provisional_v1.json
+      - name: Mandatory result tests
+        run: |
+          python q039_native_foreground_profile_tests_v1.py result \
+            --final q039_fgprofile_provisional_v1.json \
+            --output q039_fgprofile_result_tests_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-fgprofile-provisional-v1
+          path: |
+            q039_fgprofile_provisional_v1.json
+            q039_fgprofile_result_tests_v1.json
+          if-no-files-found: error
+
+  seal:
+    needs: assess_and_test
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4
+      - uses: actions/download-artifact@v4
+        with:
+          name: q039-fgprofile-provisional-v1
+          path: q039_provisional
+      - name: Seal only after mandatory tests pass
+        run: |
+          python q039_native_foreground_profile_v1.py seal \
+            --provisional q039_provisional/q039_fgprofile_provisional_v1.json \
+            --tests q039_provisional/q039_fgprofile_result_tests_v1.json \
+            --output q039_fgprofile_final_v1.json \
+            --handoff q039_fgprofile_return_handoff_v1.json
+      - name: Write run manifest
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, os
+          d={
+            'q':'Q-039','program_id':'Q039-FGPROFILE-V1','run_id':'Q039-NATIVE-FOREGROUND-PROFILE-V1',
+            'result_id':'R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001',
+            'parent_q039_result_id':'R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001',
+            'parent_q039_successful_run':34161368438,
+            'github_run_id':os.environ.get('GITHUB_RUN_ID'),'github_run_attempt':os.environ.get('GITHUB_RUN_ATTEMPT'),
+            'github_sha':os.environ.get('GITHUB_SHA'),'q032_parent_run':33994305721,
+            'q032_parent_commit':'4dc873a5e880d40858d831a3b421456728f0c032',
+            'q032_cache_key':'q032-v2-Linux-py311-classede-5a131c91-hillipop-a09ddde3',
+            'intervention':'NATIVE_FOREGROUND_PROFILE_FREEDOM_OFF','optimizer_jobs':18,'status':'COMPLETE'
+          }
+          open('q039_fgprofile_run_manifest_v1.json','w').write(json.dumps(d,indent=2,sort_keys=True)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q039-fgprofile-final-v1
+          path: |
+            q039_fgprofile_final_v1.json
+            q039_fgprofile_return_handoff_v1.json
+            q039_fgprofile_run_manifest_v1.json
+            q039_native_foreground_profile_preregister_v1.json
+            q039_native_foreground_profile_source_lock_v1.json
+          if-no-files-found: error
