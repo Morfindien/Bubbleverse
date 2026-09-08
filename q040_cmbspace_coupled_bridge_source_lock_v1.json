@@ -1,0 +1,94 @@
+{
+  "q": "Q-040",
+  "program_id": "Q040-CMBSPACE-V1",
+  "run_id": "Q040-CMBSPACE-COUPLED-BRIDGE-V1",
+  "result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-001",
+  "bubbleverse_parent": {
+    "repository": "Morfindien/Bubbleverse",
+    "design_parent_commit": "449fe096e49a793446c0c859cf8caf0fcdaf4c8f",
+    "q032_program": "q032_planck_tt3pair_bridge_v2.py",
+    "q032_run_id": 33994305721,
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q032_support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "q037_result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001",
+    "q039_result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+    "q039_fgprofile_result_id": "R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001"
+  },
+  "software": {
+    "python": "3.11",
+    "cobaya": "3.5.6",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "PyYAML": "6.0.2",
+    "Py-BOBYQA": "1.5.0",
+    "backend_repository": "mwt5345/class_ede",
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "hillipop_repository": "planck-npipe/hillipop",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "camspec_interface_repository": "CobayaSampler/cobaya",
+    "camspec_interface_version": "3.5.6",
+    "camspec_npipe_lite_reference_repository": "HTJense/camspec_npipe-lite",
+    "camspec_npipe_lite_reference_commit": "e387852d2ae8863735814449c682b089c3059318",
+    "camspec_npipe_lite_role": "METHODOLOGICAL_REFERENCE_AND_VALIDATION_PRECEDENT_ONLY_NOT_Q040_DATA_PRODUCT"
+  },
+  "data_hash_policy": {
+    "authoritative_source": "Q032 sealed preflight plus Q032 HiLLiPoP restricted-precision metadata",
+    "require_camspec_dataset_file_sha256": true,
+    "require_camspec_data_vector_sha256": true,
+    "require_camspec_covariance_sha256": true,
+    "require_hillipop_binning_hash": true,
+    "require_hillipop_native_inverse_covariance_hash": true,
+    "require_hillipop_cross_spectrum_hashes": true,
+    "require_q032_restricted_hillipop_precision_sha256": true,
+    "resolved_hashes_must_be_written_into_q040_compression_metadata": true,
+    "silent_data_substitution": false
+  },
+  "sources": {
+    "K-044": {
+      "type": "PRIMARY_METHODOLOGY",
+      "title": "CMB power spectra and cosmological parameters from Planck PR4 with CamSpec",
+      "authors": "Erik Rosenberg; Steven Gratton; George Efstathiou",
+      "year": 2022,
+      "doi": "10.1093/mnras/stac2744",
+      "arxiv": "2205.10869",
+      "supported_claim": "CamSpec PR4/NPIPE spectral, cleaning and covariance construction."
+    },
+    "K-045/K-052": {
+      "status": "SAME_SOURCE_COUNT_ONCE",
+      "type": "PEER_REVIEWED_METHODOLOGICAL_PRECEDENT",
+      "title": "Choice of Planck CMB likelihood in cosmological analyses",
+      "authors": "Hidde T. Jense; Marc Viña; Erminia Calabrese; J. Colin Hill",
+      "year": 2026,
+      "doi": "10.1103/ff9j-skyj",
+      "arxiv": "2510.09430v2",
+      "supported_claim": "A nuisance-marginalized CMB-only Gaussian likelihood is a scientifically meaningful likelihood-construction class; Q040 does not copy its widened amplitude priors."
+    },
+    "K-049": {
+      "type": "PRIMARY_METHODOLOGY",
+      "title": "Cosmological parameters derived from the final Planck data release (PR4)",
+      "authors": "M. Tristram et al.",
+      "year": 2024,
+      "doi": "10.1051/0004-6361/202348015",
+      "arxiv": "2309.10034",
+      "supported_claim": "HiLLiPoP PR4 multifrequency likelihood and physical foreground modelling."
+    },
+    "K-053": {
+      "type": "EXECUTABLE_METHODOLOGY",
+      "repository": "planck-npipe/hillipop",
+      "commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251"
+    },
+    "K-054": {
+      "type": "EXECUTABLE_METHODOLOGY",
+      "repository": "CobayaSampler/cobaya",
+      "version": "3.5.6"
+    },
+    "CAMSPEC_2021_ID_UNRESOLVED": {
+      "type": "PRIMARY_METHODOLOGY",
+      "title": "A Detailed Description of the CamSpec Likelihood Pipeline and a Reanalysis of the Planck High Frequency Maps",
+      "authors": "George Efstathiou; Steven Gratton",
+      "arxiv": "1910.00483",
+      "bubbleverse_k_id": "NOT_DOCUMENTED_DO_NOT_INVENT"
+    }
+  },
+  "evidence_dependency": "All Q032-Q040 Planck likelihood products share overlapping Planck PR4/NPIPE sky information. Any validated Q040 result is methodological evidence about likelihood portability, not independent observational confirmation."
+}

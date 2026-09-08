@@ -1,0 +1,159 @@
+{
+  "project": {
+    "q": "Q-040",
+    "program_id": "Q040-CMBSPACE-V1",
+    "run_id": "Q040-CMBSPACE-COUPLED-BRIDGE-V1",
+    "result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-001",
+    "created_at": "2026-09-08T08:59:10+02:00",
+    "scientific_question": "Can a finite, preregistered and scientifically defensible coupled structural intervention involving documented CamSpec-versus-HiLLiPoP differences in foreground-model form, data-vector construction/weighting and covariance/likelihood construction materially reduce C-036-IMPL on the Q032 matched-support architecture without constructing a scientifically meaningless synthetic likelihood?"
+  },
+  "intervention": {
+    "name": "NATIVE_NUISANCE_MARGINALIZED_CMB_SPACE_LAPLACE_SCHUR_V1",
+    "class": "COUPLED_STRUCTURAL_INTERVENTION",
+    "description": "Each Q032-restricted implementation is projected separately to an identity-multipole CMB TT Gaussian likelihood using its own data vector, covariance/precision, foreground model, relative-calibration semantics and native nuisance priors. A_planck is not marginalized and remains an explicit runtime geometry coordinate.",
+    "cross_family_objective_arithmetic": false,
+    "cross_family_covariance_transfer": false,
+    "cross_family_foreground_mapping": false
+  },
+  "parent_lock": {
+    "q032_run_id": 33994305721,
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q032_result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "q032_support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "q037_result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001",
+    "q037_run_id": 34115280043,
+    "q037_commit": "c49d9885a5bf1e290f4b42f15c59d228c7c036cf",
+    "q039_result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+    "q039_run_id": 34161368438,
+    "q039_commit": "365217d4a4ca21e0af3b296c0e6b23df7e07ba60",
+    "q039_fgprofile_result_id": "R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001",
+    "q039_fgprofile_run_id": 34184346582,
+    "q039_fgprofile_commit": "449fe096e49a793446c0c859cf8caf0fcdaf4c8f"
+  },
+  "model_lock": {
+    "model": "MOD-EDE-N3",
+    "n_scf": 3,
+    "backend_repository": "mwt5345/class_ede",
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "cobaya_version": "3.5.6",
+    "hillipop_repository": "planck-npipe/hillipop",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251"
+  },
+  "observational_support": {
+    "parent_support_semantics": "Q032_EXACT_TT_COMMON_SUPPORT",
+    "frequency_pairs": ["143x143", "143x217", "217x217"],
+    "allow_100ghz": false,
+    "allow_TE": false,
+    "allow_EE": false,
+    "allow_external_cmb": false,
+    "parent_support_hash_reused_as_representation_hash": false
+  },
+  "cmb_representation": {
+    "primary": "IDENTITY_UNIQUE_MULTIPOLE_TT",
+    "definition": "One latent CMB TT D_ell value for every unique ell represented by at least one frozen Q032 support coordinate.",
+    "new_binning_allowed": false,
+    "if_identity_conditioning_fails": "STOP_AND_REQUIRE_NEW_PREREGISTRATION",
+    "representation_hash_rule": "SHA256_CANONICAL_JSON(parent_support_sha256, representation_name, ordered_unique_ells)"
+  },
+  "nuisance_semantics": {
+    "A_planck": "PRESERVE_AS_EXPLICIT_RUNTIME_PARAMETER_NOT_MARGINALIZED",
+    "native_sampled_tt_nuisance_only": true,
+    "support_null_nuisance": "May be analytically factorized only after an exact zero-response gate on frozen Q032 support.",
+    "prior_widening": false,
+    "negative_amplitude_override": false,
+    "foreground_zeroing": false,
+    "forced_cross_implementation_mapping": false
+  },
+  "compression_method": {
+    "method": "CONSTRAINED_LAPLACE_SCHUR_MARGINALIZATION",
+    "latent_cmb_step": "Exact generalized least-squares solve at fixed native nuisance values.",
+    "nuisance_step": "Bound-aware conditional minimization of native restricted likelihood plus native nuisance prior shape at fixed latent CMB spectrum.",
+    "outer_iteration_max": 12,
+    "outer_relative_objective_tolerance": 1e-6,
+    "outer_scaled_nuisance_tolerance": 1e-3,
+    "nuisance_primary_optimizer": "SCIPY_L_BFGS_B",
+    "nuisance_fallback_optimizer": "SCIPY_POWELL_ONLY_IF_PRIMARY_FAILS",
+    "nuisance_max_iterations": 5000,
+    "start_families": ["NATIVE_REFERENCE", "Q032_LOWEST_OBJECTIVE_WITHIN_IMPLEMENTATION", "Q032_FARTHEST_COMPLETE_ENDPOINT_WITHIN_IMPLEMENTATION"],
+    "multistart_objective_spread_max": 0.50,
+    "multistart_cmb_normalized_rms_max": 0.10,
+    "hessian": "Finite-difference nuisance and cross blocks plus exact CMB-CMB block at the selected joint mode.",
+    "marginal_cmb_precision": "H_ss - H_s_eta H_eta_eta^-1 H_eta_s",
+    "boundary_sigma_min": 2.5
+  },
+  "compression_validation": {
+    "finite_data_vector": true,
+    "positive_definite_covariance": true,
+    "positive_definite_precision": true,
+    "independent_initialization_required": true,
+    "A_planck_semantics_required": true,
+    "no_lost_parent_multipoles": true,
+    "cosmology_independent_construction_required": true,
+    "native_laplace_probe_directions": ["CONSTANT", "LOG_TILT", "HIGH_ELL_RAMP"],
+    "probe_target_delta_chi2": 1.0,
+    "probe_signs": [-1, 1],
+    "A_planck_probe_offsets": [-0.0025, 0.0025],
+    "max_abs_native_vs_compressed_delta_chi2_error": 0.35,
+    "conditional_nuisance_multistart": 2,
+    "on_failure": "COMPRESSION_VALIDATION_FAIL_AND_NO_Q040_SCIENCE_ENDPOINTS"
+  },
+  "endpoint_execution": {
+    "labels": ["M3-S0", "M3-S1", "M3-S2", "M6-S0", "M6-S1", "M6-S2", "M7-S0", "M7-S1", "M7-S2"],
+    "geometry_coordinates": ["omega_b", "omega_cdm", "fEDE", "log10z_c", "thetai_scf", "H0", "A_planck"],
+    "locked_scales_sha256": "732aeeb127d9083c0924552aa276117310ca32b5bfda854f51bfd3240638b2f6",
+    "optimizer": "COBAYA_MINIMIZE_BOBYQA",
+    "max_evals": 300000,
+    "rhoend": 1e-5,
+    "ignore_prior_density_in_optimizer_scalar": true,
+    "preserve_explicit_native_gaussian_shapes": true,
+    "soft_stop_minutes": 300
+  },
+  "geometry": {
+    "baseline": {
+      "matched_median": 2.9317906965863507,
+      "centroid": 0.8311487237190059,
+      "pairwise_median_drift": 1.6367910228418985
+    },
+    "sufficiency_threshold": 0.10,
+    "sufficiency_rule": "matched_median<=0.10 AND centroid<=0.10 AND pairwise_median_drift<=0.10 for the full nine-label result AND each of all nine leave-one-label-out analyses",
+    "partial_material_reduction_terminal_label_registered": false,
+    "report_continuous_reduction_fractions_even_when_sufficiency_fails": true
+  },
+  "mandatory_gates": [
+    "CONTEXT_CONTINUITY_GATE",
+    "Q_IDENTITY_GATE",
+    "PARENT_LOCK_GATE",
+    "SOURCE_GATE",
+    "DATA_GATE",
+    "OBSERVATIONAL_SUPPORT_GATE",
+    "NO_HIDDEN_BINNING_GATE",
+    "NATIVE_NUISANCE_SEMANTICS_GATE",
+    "A_PLANCK_PRESERVATION_GATE",
+    "NO_FOREGROUND_ZEROING_GATE",
+    "NO_COVARIANCE_SWAP_GATE",
+    "NO_OBJECTIVE_MIXING_GATE",
+    "COMPRESSION_MULTISTART_GATE",
+    "COMPRESSION_COVARIANCE_GATE",
+    "COMPRESSION_GAUSSIAN_APPROXIMATION_GATE",
+    "A_PLANCK_SEMANTICS_GATE",
+    "JOB_COMPLETENESS_GATE",
+    "MERGE_COMPATIBILITY_GATE",
+    "FROZEN_GEOMETRY_GATE",
+    "NINE_LOO_GATE",
+    "SCIENTIFIC_INTERPRETATION_GATE",
+    "FINAL_RESULT_GATE"
+  ],
+  "rules": {
+    "q035_remains_closed": true,
+    "q037_remains_closed": true,
+    "q038_descriptive_only": true,
+    "q039_remains_closed": true,
+    "do_not_rerun_q039_single_blocks": true,
+    "no_cross_likelihood_absolute_objective_subtraction": true,
+    "no_cross_likelihood_chi2_sum": true,
+    "shared_planck_sky_not_independent_observations": true,
+    "negative_result_is_valid": true,
+    "unexpected_larger_discrepancy_is_valid": true,
+    "technical_compression_failure_is_not_scientific_absence_of_coupled_mechanism": true
+  }
+}
