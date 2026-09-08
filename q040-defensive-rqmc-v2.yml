@@ -1,0 +1,2063 @@
+name: Bubbleverse Q040 Defensive RQMC CMB Marginal V2
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: false
+        default: Q040-RQMC-V2
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-040
+  PROGRAM_ID: Q040-RQMC-V2
+  RUN_ID: Q040-DEFENSIVE-RQMC-CMB-MARGINAL-V2
+  RESULT_ID: R-Q040-EDE-DEFENSIVE-RQMC-CMB-MARGINAL-002
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  Q032_SUPPORT_HASH: f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b
+  V4_GITHUB_RUN_ID: '34211073134'
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Identity, registry and launcher gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ inputs.program_id || 'Q040-RQMC-V2' }}" = "$PROGRAM_ID"
+          test "$CURRENT_Q" = 'Q-040'
+          test -f q040_defensive_rqmc_v2.py
+          test -f q040_defensive_rqmc_tests_v2.py
+          test -f q040_defensive_rqmc_preregister_v2.json
+          test -f q040_defensive_rqmc_source_lock_v2.json
+          test -f q040_cmbspace_coupled_bridge_v2.py
+          test -f q039_prepare_frozen_env_v4.sh
+          test -f .github/workflows/q040-defensive-rqmc-v2.yml
+          test -f .github/workflows/00-bubbleverse-start.yml
+          python - <<'PY2'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('bubbleverse_program_registry.json').read_text())
+          e=d.get('programs',{}).get('Q040-RQMC-V2')
+          assert e and e.get('status')=='ACTIVE',e
+          assert e.get('q')=='Q-040',e
+          assert e.get('workflow_id')=='q040-defensive-rqmc-v2.yml',e
+          assert e.get('workflow_path')=='.github/workflows/q040-defensive-rqmc-v2.yml',e
+          launcher=Path('.github/workflows/00-bubbleverse-start.yml').read_text()
+          assert 'exact registry match not found' in launcher
+          assert 'gh workflow run "$WORKFLOW_ID"' in launcher
+          assert 'eval' not in launcher.lower()
+          print('Q040_RQMC_REGISTRY_LAUNCHER_GATE=PASS')
+          PY2
+      - name: Install static dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - name: Static scientific and numerical tests
+        run: |
+          python -m py_compile q040_defensive_rqmc_v2.py q040_defensive_rqmc_tests_v2.py
+          python q040_defensive_rqmc_tests_v2.py static \
+            --program q040_defensive_rqmc_v2.py \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --workflow .github/workflows/q040-defensive-rqmc-v2.yml \
+            --output q040_rqmc_static_tests_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-static-v2
+          path: |
+            q040_rqmc_static_tests_v2.json
+            q040_defensive_rqmc_preregister_v2.json
+            q040_defensive_rqmc_source_lock_v2.json
+          if-no-files-found: error
+
+  parent_input_gate:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Reproduce frozen Q037 baseline
+        run: python q040_defensive_rqmc_v2.py validate-parent --parent-dir q032_parent_profiles --output q040_rqmc_parent_gate_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-parent-v2
+          path: q040_rqmc_parent_gate_v2.json
+          if-no-files-found: error
+
+  environment_gate:
+    needs: [static, parent_input_gate]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh 'both'
+      - name: Verify authoritative frozen Q032 artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f q032_preflight/q032_preflight_sealed_v2.json
+          test -f q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy
+          test -f q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json
+          python - <<'PY2'
+          import json
+          p=json.load(open('q032_preflight/q032_preflight_sealed_v2.json'))
+          assert p['q']=='Q-032' and p['status']=='PASS'
+          assert p['support_sha256']=='f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b'
+          m=json.load(open('q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json'))
+          assert m['status']=='PASS' and m['restricted_precision_sha256']
+          print('Q040_RQMC_ENVIRONMENT_GATE=PASS')
+          PY2
+
+  prepare:
+    needs: environment_gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh 'both'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.V4_GITHUB_RUN_ID }}
+          pattern: q040-map-*
+          merge-multiple: true
+          path: q040_v4_maps
+      - name: Build frozen probes, V4 proposal centers and calibration basis
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_prepare
+          python q040_defensive_rqmc_v2.py prepare \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --v4-map-dir q040_v4_maps \
+            --scratch q040_rqmc_runtime \
+            --output-dir q040_prepare \
+            --output q040_prepare/q040_rqmc_prepare_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+          if-no-files-found: error
+
+  plan_m9:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v2.py plan-level --m 9 --output q040_rqmc_plan_m9_v2.json
+
+  rqmc_m9:
+    needs: plan_m9
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m9.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - name: Run atomic RQMC shell shard m=9
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v2.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 9 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m9_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m9-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m9:
+    needs: rqmc_m9
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m9-*
+          merge-multiple: true
+          path: q040_shards
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - id: merge
+        name: Merge cumulative RQMC state m=9
+        run: >-
+          python q040_defensive_rqmc_v2.py merge-level --m 9 --shard-dir q040_shards
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m9_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m9-v2
+          path: q040_rqmc_state_m9_v2.json
+          if-no-files-found: error
+
+  plan_m10:
+    needs: merge_m9
+    if: needs.merge_m9.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v2.py plan-level --m 10 --output q040_rqmc_plan_m10_v2.json
+
+  rqmc_m10:
+    needs: plan_m10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m10.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - name: Run atomic RQMC shell shard m=10
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v2.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 10 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m10_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m10-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m10:
+    needs: rqmc_m10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m10-*
+          merge-multiple: true
+          path: q040_shards
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m9-v2
+          path: q040_previous
+      - id: merge
+        name: Merge cumulative RQMC state m=10
+        run: >-
+          python q040_defensive_rqmc_v2.py merge-level --m 10 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m9_v2.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m10_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m10-v2
+          path: q040_rqmc_state_m10_v2.json
+          if-no-files-found: error
+
+  plan_m11:
+    needs: merge_m10
+    if: needs.merge_m10.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v2.py plan-level --m 11 --output q040_rqmc_plan_m11_v2.json
+
+  rqmc_m11:
+    needs: plan_m11
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m11.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - name: Run atomic RQMC shell shard m=11
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v2.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 11 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m11_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m11-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m11:
+    needs: rqmc_m11
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m11-*
+          merge-multiple: true
+          path: q040_shards
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m10-v2
+          path: q040_previous
+      - id: merge
+        name: Merge cumulative RQMC state m=11
+        run: >-
+          python q040_defensive_rqmc_v2.py merge-level --m 11 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m10_v2.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m11_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m11-v2
+          path: q040_rqmc_state_m11_v2.json
+          if-no-files-found: error
+
+  plan_m12:
+    needs: merge_m11
+    if: needs.merge_m11.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v2.py plan-level --m 12 --output q040_rqmc_plan_m12_v2.json
+
+  rqmc_m12:
+    needs: plan_m12
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m12.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - name: Run atomic RQMC shell shard m=12
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v2.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 12 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m12_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m12-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m12:
+    needs: rqmc_m12
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m12-*
+          merge-multiple: true
+          path: q040_shards
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m11-v2
+          path: q040_previous
+      - id: merge
+        name: Merge cumulative RQMC state m=12
+        run: >-
+          python q040_defensive_rqmc_v2.py merge-level --m 12 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m11_v2.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m12_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m12-v2
+          path: q040_rqmc_state_m12_v2.json
+          if-no-files-found: error
+
+  plan_m13:
+    needs: merge_m12
+    if: needs.merge_m12.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v2.py plan-level --m 13 --output q040_rqmc_plan_m13_v2.json
+
+  rqmc_m13:
+    needs: plan_m13
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m13.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - name: Run atomic RQMC shell shard m=13
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v2.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 13 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m13_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m13-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m13:
+    needs: rqmc_m13
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m13-*
+          merge-multiple: true
+          path: q040_shards
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m12-v2
+          path: q040_previous
+      - id: merge
+        name: Merge cumulative RQMC state m=13
+        run: >-
+          python q040_defensive_rqmc_v2.py merge-level --m 13 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m12_v2.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m13_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m13-v2
+          path: q040_rqmc_state_m13_v2.json
+          if-no-files-found: error
+
+  plan_m14:
+    needs: merge_m13
+    if: needs.merge_m13.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v2.py plan-level --m 14 --output q040_rqmc_plan_m14_v2.json
+
+  rqmc_m14:
+    needs: plan_m14
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m14.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - name: Run atomic RQMC shell shard m=14
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v2.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 14 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m14_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m14-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m14:
+    needs: rqmc_m14
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m14-*
+          merge-multiple: true
+          path: q040_shards
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m13-v2
+          path: q040_previous
+      - id: merge
+        name: Merge cumulative RQMC state m=14
+        run: >-
+          python q040_defensive_rqmc_v2.py merge-level --m 14 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m13_v2.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m14_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m14-v2
+          path: q040_rqmc_state_m14_v2.json
+          if-no-files-found: error
+
+  plan_m15:
+    needs: merge_m14
+    if: needs.merge_m14.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v2.py plan-level --m 15 --output q040_rqmc_plan_m15_v2.json
+
+  rqmc_m15:
+    needs: plan_m15
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m15.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - name: Run atomic RQMC shell shard m=15
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v2.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 15 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m15_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m15-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m15:
+    needs: rqmc_m15
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m15-*
+          merge-multiple: true
+          path: q040_shards
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m14-v2
+          path: q040_previous
+      - id: merge
+        name: Merge cumulative RQMC state m=15
+        run: >-
+          python q040_defensive_rqmc_v2.py merge-level --m 15 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m14_v2.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m15_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m15-v2
+          path: q040_rqmc_state_m15_v2.json
+          if-no-files-found: error
+
+  plan_m16:
+    needs: merge_m15
+    if: needs.merge_m15.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v2.py plan-level --m 16 --output q040_rqmc_plan_m16_v2.json
+
+  rqmc_m16:
+    needs: plan_m16
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m16.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - name: Run atomic RQMC shell shard m=16
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v2.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 16 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m16_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m16-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m16:
+    needs: rqmc_m16
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m16-*
+          merge-multiple: true
+          path: q040_shards
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m15-v2
+          path: q040_previous
+      - id: merge
+        name: Merge cumulative RQMC state m=16
+        run: >-
+          python q040_defensive_rqmc_v2.py merge-level --m 16 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m15_v2.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m16_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m16-v2
+          path: q040_rqmc_state_m16_v2.json
+          if-no-files-found: error
+
+  integration_gate:
+    needs: [merge_m9, merge_m10, merge_m11, merge_m12, merge_m13, merge_m14, merge_m15, merge_m16]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      proceed: ${{ steps.gate.outputs.proceed }}
+      selected_m: ${{ steps.gate.outputs.selected_m }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q040-rqmc-state-m*-v2
+          merge-multiple: true
+          path: q040_states
+      - id: gate
+        run: |
+          python q040_defensive_rqmc_v2.py integration-gate \
+            --state-dir q040_states \
+            --output q040_rqmc_integration_gate_v2.json \
+            --selected-output q040_rqmc_integration_selected_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v2
+          path: |
+            q040_rqmc_integration_gate_v2.json
+            q040_rqmc_integration_selected_v2.json
+          if-no-files-found: error
+
+  integration_failure_seal:
+    needs: integration_gate
+    if: always() && needs.integration_gate.outputs.proceed != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v2
+          path: q040_gate
+      - run: |
+          python q040_defensive_rqmc_v2.py seal-failure \
+            --gate q040_gate/q040_rqmc_integration_gate_v2.json \
+            --preregister q040_defensive_rqmc_preregister_v2.json --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --output q040_final_v2.json --handoff q040_return_handoff_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v2
+          path: |
+            q040_final_v2.json
+            q040_return_handoff_v2.json
+          if-no-files-found: error
+
+  coreset_summary:
+    needs: integration_gate
+    if: needs.integration_gate.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        implementation: [camspec, hillipop]
+        shard: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - name: Build exact conditional summaries at preregistered coreset representatives
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          mkdir -p q040_summary
+          python q040_defensive_rqmc_v2.py coreset-shard \
+            --q032-parent-root q032_parent --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' --shard '${{ matrix.shard }}' --shard-count 6 \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output-npz 'q040_summary/${{ matrix.implementation }}_${{ matrix.shard }}.npz' \
+            --output-meta 'q040_summary/${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-coreset-summary-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_summary/*
+          if-no-files-found: warn
+
+  coreset_merge:
+    needs: coreset_summary
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        implementation: [camspec, hillipop]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v2
+          path: q040_prepare
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v2
+          path: q040_integration
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-coreset-summary-${{ matrix.implementation }}-*
+          merge-multiple: true
+          path: q040_summary
+      - name: Validate non-Gaussian coreset against full converged RQMC probes
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          mkdir -p q040_coreset
+          python q040_defensive_rqmc_v2.py coreset-merge \
+            --q032-parent-root q032_parent --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles --preregister q040_defensive_rqmc_preregister_v2.json \
+            --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v2.json --prepare-dir q040_prepare \
+            --integration-state q040_integration/q040_rqmc_integration_selected_v2.json \
+            --shard-dir q040_summary --expected-shards 6 --implementation '${{ matrix.implementation }}' \
+            --scratch q040_rqmc_runtime \
+            --output-npz 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v2.npz' \
+            --output-meta 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v2.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v2
+          path: q040_coreset/*
+          if-no-files-found: warn
+
+  coreset_gate:
+    needs: [integration_gate, coreset_merge]
+    if: always() && needs.integration_gate.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      proceed: ${{ steps.gate.outputs.proceed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q040-rqmc-coreset-*-v2
+          merge-multiple: true
+          path: q040_coresets
+      - id: gate
+        run: python q040_defensive_rqmc_v2.py coreset-gate --meta-dir q040_coresets --output q040_rqmc_coreset_gate_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v2
+          path: q040_rqmc_coreset_gate_v2.json
+
+  coreset_failure_seal:
+    needs: coreset_gate
+    if: always() && needs.coreset_gate.result != 'skipped' && needs.coreset_gate.outputs.proceed != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v2
+          path: q040_gate
+      - run: |
+          python q040_defensive_rqmc_v2.py seal-failure --gate q040_gate/q040_rqmc_coreset_gate_v2.json \
+            --preregister q040_defensive_rqmc_preregister_v2.json --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --output q040_final_v2.json --handoff q040_return_handoff_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v2
+          path: |
+            q040_final_v2.json
+            q040_return_handoff_v2.json
+
+  bank_endpoints:
+    needs: coreset_gate
+    if: needs.coreset_gate.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        bank: [A, B]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v2
+          path: q040_coreset
+      - name: Optimize frozen endpoint against independent RQMC bank
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          mkdir -p q040_endpoint
+          python q040_defensive_rqmc_v2.py profile \
+            --q032-parent-root q032_parent --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles --preregister q040_defensive_rqmc_preregister_v2.json --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --implementation '${{ matrix.implementation }}' --bank '${{ matrix.bank }}' --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --coreset-meta 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v2.json' \
+            --coreset-npz 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v2.npz' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_endpoint/${{ matrix.bank }}_${{ matrix.implementation }}_M${{ matrix.mask }}_S${{ matrix.seed }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-bank-${{ matrix.bank }}-${{ matrix.implementation }}-M${{ matrix.mask }}-S${{ matrix.seed }}
+          path: q040_endpoint/*.json
+          if-no-files-found: warn
+
+  bank_stability:
+    needs: [coreset_gate, bank_endpoints]
+    if: always() && needs.coreset_gate.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      proceed: ${{ steps.gate.outputs.proceed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q040-rqmc-bank-*
+          merge-multiple: true
+          path: q040_bank_endpoints
+      - id: gate
+        run: python q040_defensive_rqmc_v2.py bank-stability --endpoint-dir q040_bank_endpoints --output q040_rqmc_bank_stability_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v2
+          path: q040_rqmc_bank_stability_v2.json
+
+  bank_failure_seal:
+    needs: bank_stability
+    if: always() && needs.bank_stability.result != 'skipped' && needs.bank_stability.outputs.proceed != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v2
+          path: q040_gate
+      - run: |
+          python q040_defensive_rqmc_v2.py seal-failure --gate q040_gate/q040_rqmc_bank_stability_v2.json \
+            --preregister q040_defensive_rqmc_preregister_v2.json --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --output q040_final_v2.json --handoff q040_return_handoff_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v2
+          path: |
+            q040_final_v2.json
+            q040_return_handoff_v2.json
+
+  production_endpoints:
+    needs: bank_stability
+    if: needs.bank_stability.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v2
+          path: q040_coreset
+      - name: Optimize final pooled defensive marginal endpoint
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          mkdir -p q040_endpoint
+          python q040_defensive_rqmc_v2.py profile \
+            --q032-parent-root q032_parent --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles --preregister q040_defensive_rqmc_preregister_v2.json --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --implementation '${{ matrix.implementation }}' --bank ALL --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --coreset-meta 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v2.json' \
+            --coreset-npz 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v2.npz' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_endpoint/ALL_${{ matrix.implementation }}_M${{ matrix.mask }}_S${{ matrix.seed }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-production-${{ matrix.implementation }}-M${{ matrix.mask }}-S${{ matrix.seed }}
+          path: q040_endpoint/*.json
+          if-no-files-found: warn
+
+  production_gate:
+    needs: [bank_stability, production_endpoints]
+    if: always() && needs.bank_stability.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      proceed: ${{ steps.gate.outputs.proceed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q040-rqmc-production-*
+          merge-multiple: true
+          path: q040_production
+      - id: gate
+        run: python q040_defensive_rqmc_v2.py production-gate --endpoint-dir q040_production --output q040_rqmc_production_gate_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-production-gate-v2
+          path: q040_rqmc_production_gate_v2.json
+
+  production_failure_seal:
+    needs: production_gate
+    if: always() && needs.production_gate.result != 'skipped' && needs.production_gate.outputs.proceed != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-production-gate-v2
+          path: q040_gate
+      - run: |
+          python q040_defensive_rqmc_v2.py seal-failure --gate q040_gate/q040_rqmc_production_gate_v2.json \
+            --preregister q040_defensive_rqmc_preregister_v2.json --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --output q040_final_v2.json --handoff q040_return_handoff_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v2
+          path: |
+            q040_final_v2.json
+            q040_return_handoff_v2.json
+
+  assess:
+    needs: production_gate
+    if: needs.production_gate.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-production-*
+          merge-multiple: true
+          path: q040_production
+      - run: python q040_defensive_rqmc_v2.py assess --endpoint-dir q040_production --output q040_rqmc_provisional_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v2
+          path: q040_rqmc_provisional_v2.json
+
+  result_tests:
+    needs: assess
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v2
+          path: q040_result
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v2
+          path: q040_bank
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v2
+          path: q040_integration
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v2
+          path: q040_coreset_gate
+      - name: Mandatory final result tests
+        run: |
+          python q040_defensive_rqmc_tests_v2.py result \
+            --provisional q040_result/q040_rqmc_provisional_v2.json \
+            --bank-stability q040_bank/q040_rqmc_bank_stability_v2.json \
+            --integration-state q040_integration/q040_rqmc_integration_selected_v2.json \
+            --coreset-gate q040_coreset_gate/q040_rqmc_coreset_gate_v2.json \
+            --preregister q040_defensive_rqmc_preregister_v2.json --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --output q040_rqmc_result_tests_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-tests-v2
+          path: q040_rqmc_result_tests_v2.json
+
+  seal:
+    needs: result_tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v2
+          path: q040_result
+      - uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-tests-v2
+          path: q040_tests
+      - run: |
+          python q040_defensive_rqmc_v2.py seal \
+            --provisional q040_result/q040_rqmc_provisional_v2.json --tests q040_tests/q040_rqmc_result_tests_v2.json \
+            --preregister q040_defensive_rqmc_preregister_v2.json --source-lock q040_defensive_rqmc_source_lock_v2.json \
+            --output q040_final_v2.json --handoff q040_return_handoff_v2.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v2
+          path: |
+            q040_final_v2.json
+            q040_return_handoff_v2.json
+            q040_defensive_rqmc_preregister_v2.json
+            q040_defensive_rqmc_source_lock_v2.json
+          if-no-files-found: error

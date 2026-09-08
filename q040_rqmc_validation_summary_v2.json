@@ -1,0 +1,44 @@
+{
+  "actual_scientific_result": false,
+  "notes": [
+    "Synthetic result test validates the result-test engine only; it is not Q040 scientific evidence.",
+    "V1 run produced no Q040 scientific result; numerical loop reached normal shard serialization path before failure."
+  ],
+  "program_id": "Q040-RQMC-V2",
+  "q": "Q-040",
+  "repair": {
+    "decode_before_merge": "null -> -inf",
+    "finite_cumulative_likelihood_required_before_delta_chi2": true,
+    "internal_empty_logsum_sentinel": "-inf",
+    "json_encoding_for_empty_logsum": "null",
+    "nan_or_positive_inf_policy": "HARD_FAIL",
+    "scientific_or_numerical_settings_changed": false,
+    "seed_namespace": "Q040-RQMC-V1",
+    "v1_sobol_seed_namespace_preserved": true
+  },
+  "result_id": "R-Q040-EDE-DEFENSIVE-RQMC-CMB-MARGINAL-002",
+  "run_id": "Q040-DEFENSIVE-RQMC-CMB-MARGINAL-V2",
+  "status": "PASS",
+  "technical_parent": {
+    "failure_class": "RQMC_SHARD_JSON_SERIALIZATION_REJECTED_NEGATIVE_INFINITY_EMPTY_ACCUMULATOR_SENTINEL",
+    "github_run_id": 34244197767,
+    "head_sha": "177e79778a286b5138858fba1f0716d75faf4e0b",
+    "program_id": "Q040-RQMC-V1"
+  },
+  "validation": {
+    "launcher_live_semantics_checked": "EXACT_ROOT_REGISTRY_LOOKUP_ACTIVE_ONLY_APPROVED_WORKFLOW_DISPATCH",
+    "launcher_schema_compatibility": "PASS",
+    "live_repo_write": "NOT_ATTEMPTED_IN_THIS_VALIDATION_SUMMARY",
+    "python_compile": "PASS",
+    "registry_exact_match": "PASS",
+    "registry_v1_marked_broken": true,
+    "registry_v2_active": true,
+    "static_gate": "PASS",
+    "static_gate_count": 43,
+    "synthetic_result_gate_count": 22,
+    "synthetic_result_test": "PASS_NON_SCIENCE_VALIDATION",
+    "workflow_jobs": 43,
+    "workflow_max_explicit_timeout_minutes": 330,
+    "workflow_yaml_parse": "PASS"
+  }
+}

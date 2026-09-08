@@ -1,0 +1,164 @@
+{
+  "bubbleverse_parent": {
+    "math_result_id": "R-Q040-MATH-DEFENSIVE-MARGINAL-001",
+    "q032_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q032_run_id": 33994305721,
+    "q032_support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "q040_rqmc_v1_failed_head_sha": "177e79778a286b5138858fba1f0716d75faf4e0b",
+    "q040_rqmc_v1_failed_run_id": 34244197767,
+    "q040_v4_run_id": 34211073134,
+    "q040_v5_run_id": 34236057202,
+    "repository": "Morfindien/Bubbleverse"
+  },
+  "bubbleverse_technical_evidence": {
+    "Q040-RQMC-V1-RUN-34244197767": {
+      "failure": "JSON serialization rejected internal -inf empty-accumulator sentinels in partial shard logsum matrices",
+      "repair": "JSON null sentinel with exact decode to -inf; NaN/+inf remain forbidden; V1 RQMC seed namespace preserved",
+      "scientific_result": false,
+      "status": "FAILED_BEFORE_SHARD_ARTIFACT_SERIALIZATION",
+      "type": "BUBBLEVERSE_TECHNICAL_EVIDENCE"
+    }
+  },
+  "claim_mapping": {
+    "CamSpec native hard boundary requires exact native support": [
+      "K-054",
+      "K-055"
+    ],
+    "HiLLiPoP native likelihood/priors/calibration semantics": [
+      "K-049",
+      "K-053"
+    ],
+    "defensive importance mixture construction": [
+      "K-057"
+    ],
+    "mixed/multimodal marginal structure need not reduce to one Gaussian": [
+      "K-056"
+    ],
+    "nuisance-marginalized CMB likelihood is meaningful in principle": [
+      "K-045/K-052"
+    ],
+    "scrambled Sobol RQMC construction": [
+      "K-058"
+    ]
+  },
+  "created_at": "2026-09-08T16:55:00+02:00",
+  "program_id": "Q040-RQMC-V2",
+  "q": "Q-040",
+  "result_id": "R-Q040-EDE-DEFENSIVE-RQMC-CMB-MARGINAL-002",
+  "run_id": "Q040-DEFENSIVE-RQMC-CMB-MARGINAL-V2",
+  "software": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "cobaya": "3.5.6",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "numpy": "1.26.4",
+    "python": "3.11",
+    "scipy": "1.15.3"
+  },
+  "sources": {
+    "CAMSPEC_2021_ID_UNRESOLVED": {
+      "arxiv": "1910.00483",
+      "authors": "George Efstathiou; Steven Gratton",
+      "bubbleverse_k_id": "NOT_DOCUMENTED_DO_NOT_INVENT",
+      "supports": [
+        "CamSpec pipeline background"
+      ],
+      "title": "A Detailed Description of the CamSpec Likelihood Pipeline and a Reanalysis of the Planck High Frequency Maps",
+      "type": "preprint_methodology",
+      "year": 2019
+    },
+    "K-044": {
+      "arxiv": "2205.10869",
+      "authors": "Erik Rosenberg; Steven Gratton; George Efstathiou",
+      "doi": "10.1093/mnras/stac2744",
+      "supports": [
+        "CamSpec PR4/NPIPE spectral construction",
+        "foreground cleaning/model form",
+        "covariance construction"
+      ],
+      "title": "CMB power spectra and cosmological parameters from Planck PR4 with CamSpec",
+      "type": "peer_reviewed_primary_methodology",
+      "year": 2022
+    },
+    "K-045/K-052": {
+      "arxiv": "2510.09430",
+      "authors": "Hidde T. Jense; Marc Vi\u00f1a; Erminia Calabrese; J. Colin Hill",
+      "doi": "10.1103/ff9j-skyj",
+      "supports": [
+        "nuisance-marginalized CamSpec-NPIPE-lite precedent",
+        "CMB-space marginal likelihood scientific legitimacy"
+      ],
+      "title": "Choice of Planck CMB likelihood in cosmological analyses",
+      "type": "peer_reviewed_primary_methodology",
+      "year": 2026
+    },
+    "K-049": {
+      "arxiv": "2309.10034",
+      "authors": "M. Tristram et al.",
+      "doi": "10.1051/0004-6361/202348015",
+      "supports": [
+        "HiLLiPoP PR4 multifrequency likelihood",
+        "foreground/covariance methodology"
+      ],
+      "title": "Cosmological parameters derived from the final Planck data release (PR4)",
+      "type": "peer_reviewed_primary_methodology",
+      "year": 2024
+    },
+    "K-053": {
+      "commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+      "repository": "planck-npipe/hillipop",
+      "supports": [
+        "pinned native HiLLiPoP TT nuisance/calibration/likelihood implementation"
+      ],
+      "type": "official_repository"
+    },
+    "K-054": {
+      "repository": "CobayaSampler/cobaya",
+      "supports": [
+        "CamSpec native nuisance definitions and bounds",
+        "amp_143 Uniform(0,50)"
+      ],
+      "type": "official_software",
+      "version": "3.5.6"
+    },
+    "K-055": {
+      "authors": "Steven G. Self; Kung-Yee Liang",
+      "doi": "10.1080/01621459.1987.10478472",
+      "supports": [
+        "non-standard likelihood behavior at parameter-space boundaries"
+      ],
+      "title": "Asymptotic Properties of Maximum Likelihood Estimators and Likelihood Ratio Tests under Nonstandard Conditions",
+      "type": "peer_reviewed_primary_statistics",
+      "year": 1987
+    },
+    "K-056": {
+      "arxiv": "2305.09336",
+      "authors": "Vladimir Spokoiny",
+      "supports": [
+        "mixed/multimodal marginal posterior representation can be required"
+      ],
+      "title": "Mixed Laplace approximation for marginal posterior and Bayesian inference in error-in-operator model",
+      "type": "scientific_preprint_methodology",
+      "year": 2023
+    },
+    "K-057": {
+      "authors": "Tim Hesterberg",
+      "doi": "10.1080/00401706.1995.10484303",
+      "supports": [
+        "defensive mixture importance sampling and bounded target/proposal weight ratio"
+      ],
+      "title": "Weighted Average Importance Sampling and Defensive Mixture Distributions",
+      "type": "peer_reviewed_primary_statistics",
+      "year": 1995
+    },
+    "K-058": {
+      "authors": "Art B. Owen",
+      "doi": "10.1006/jcom.1998.0487",
+      "supports": [
+        "randomized scrambled digital nets and replicate error assessment"
+      ],
+      "title": "Scrambling Sobol' and Niederreiter-Xing Points",
+      "type": "peer_reviewed_primary_numerical_methodology",
+      "year": 1998
+    }
+  }
+}
