@@ -190,7 +190,7 @@
     "Q040-CMBSPACE-V2": {
       "q": "Q-040",
       "scientific_task": "Preregistered native-nuisance-marginalized identity-multipole CMB-space coupled structural bridge on frozen Q032 exact TT common support, with implementation-native foreground/calibration priors, Schur-propagated CMB covariance, separate compression validation, frozen nine-label endpoint geometry and 9/9 leave-one-label-out sufficiency testing. Technical V2 replaces the non-convergent plain fixed-point iteration with bounded Anderson acceleration while preserving scientific locks and acceptance thresholds.",
-      "status": "ACTIVE",
+      "status": "BROKEN",
       "version": "v2",
       "created_date": "2026-09-08",
       "workflow_id": "q040-cmbspace-coupled-bridge-v2.yml",
@@ -220,7 +220,49 @@
         "q040-endpoint-*",
         "q040-provisional-v2",
         "q040-final-v2"
-      ]
+      ],
+      "superseded_by": "Q040-CMBSPACE-V3",
+      "failed_run_id": 34203696897,
+      "failure_class": "HILLIPOP_BOUNDED_ANDERSON_NONCONVERGENCE_ALL_THREE_MAP_STARTS_CAMSPEC_THREE_OF_THREE_PASSED"
+    },
+    "Q040-CMBSPACE-V3": {
+      "q": "Q-040",
+      "scientific_task": "Preregistered native-nuisance-marginalized identity-multipole CMB-space coupled structural bridge using exact-GLS variable projection for nuisance MAP construction, separate native validation, frozen nine-label endpoint geometry and 9/9 leave-one-label-out sufficiency testing.",
+      "status": "ACTIVE",
+      "version": "v3",
+      "created_date": "2026-09-08",
+      "workflow_id": "q040-cmbspace-coupled-bridge-v3.yml",
+      "workflow_path": ".github/workflows/q040-cmbspace-coupled-bridge-v3.yml",
+      "scientific_program": "q040_cmbspace_coupled_bridge_v3.py",
+      "scientific_program_id": "Q040-CMBSPACE-V3",
+      "tests": "q040_cmbspace_coupled_bridge_tests_v3.py",
+      "preregister": "q040_cmbspace_coupled_bridge_preregister_v3.json",
+      "source_lock": "q040_cmbspace_coupled_bridge_source_lock_v3.json",
+      "result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-003",
+      "supersedes": "Q040-CMBSPACE-V2",
+      "design_parent_commit": "ff92802d873b3e0a7c640d80485a27d444d4db35",
+      "result_artifacts": [
+        "q040-static-v3",
+        "q040-parent-input-v3",
+        "q040-environment-gate-v3",
+        "q040-map-*",
+        "q040-compression-camspec-v3",
+        "q040-compression-hillipop-v3",
+        "q040-compression-validation-camspec-v3",
+        "q040-compression-validation-hillipop-v3",
+        "q040-endpoint-*",
+        "q040-provisional-v3",
+        "q040-final-v3"
+      ],
+      "v2_failed_run_id": 34203696897,
+      "target_ref": "main",
+      "parent_result_id": "R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001",
+      "parent_q032_run": 33994305721,
+      "launcher": ".github/workflows/00-bubbleverse-start.yml",
+      "failure_repaired": "V2_HILLIPOP_ALL_THREE_MAP_STARTS_NOT_CONVERGED_UNDER_BOUNDED_ANDERSON; V3_REMOVES_OUTER_BLOCK_FIXED_POINT_AND_USES_EXACT_GLS_VARIABLE_PROJECTION",
+      "technical_parent_program": "q040_cmbspace_coupled_bridge_v2.py",
+      "technical_parent_program_id": "Q040-CMBSPACE-V2",
+      "reuse_classification": "PATCH: reuse V2 validated native context/compression/validation/endpoints; replace failed MAP solver only"
     }
   }
 }
