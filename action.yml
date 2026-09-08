@@ -1,0 +1,75 @@
+name: Q040 same-run artifact download retry V3
+description: Retry same-run actions/download-artifact transport failures without changing scientific state.
+inputs:
+  name:
+    description: Exact artifact name; leave empty when pattern is used.
+    required: false
+    default: ''
+  pattern:
+    description: Artifact pattern; leave empty when name is used.
+    required: false
+    default: ''
+  path:
+    description: Destination path.
+    required: true
+  merge-multiple:
+    description: Pass-through merge-multiple setting.
+    required: false
+    default: 'false'
+runs:
+  using: composite
+  steps:
+    - id: attempt1
+      continue-on-error: true
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.name }}
+        pattern: ${{ inputs.pattern }}
+        path: ${{ inputs.path }}
+        merge-multiple: ${{ inputs.merge-multiple }}
+    - if: steps.attempt1.outcome != 'success'
+      shell: bash
+      run: |
+        rm -rf "${{ inputs.path }}"
+        sleep 5
+    - id: attempt2
+      if: steps.attempt1.outcome != 'success'
+      continue-on-error: true
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.name }}
+        pattern: ${{ inputs.pattern }}
+        path: ${{ inputs.path }}
+        merge-multiple: ${{ inputs.merge-multiple }}
+    - if: steps.attempt1.outcome != 'success' && steps.attempt2.outcome != 'success'
+      shell: bash
+      run: |
+        rm -rf "${{ inputs.path }}"
+        sleep 15
+    - id: attempt3
+      if: steps.attempt1.outcome != 'success' && steps.attempt2.outcome != 'success'
+      continue-on-error: true
+      uses: actions/download-artifact@v4
+      with:
+        name: ${{ inputs.name }}
+        pattern: ${{ inputs.pattern }}
+        path: ${{ inputs.path }}
+        merge-multiple: ${{ inputs.merge-multiple }}
+    - name: Artifact transport gate
+      shell: bash
+      env:
+        A1: ${{ steps.attempt1.outcome }}
+        A2: ${{ steps.attempt2.outcome }}
+        A3: ${{ steps.attempt3.outcome }}
+      run: |
+        set -euo pipefail
+        if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL name=${{ inputs.name }} pattern=${{ inputs.pattern }}" >&2
+          exit 1
+        fi
+        test -d "${{ inputs.path }}"
+        if ! find "${{ inputs.path }}" -mindepth 1 -print -quit | grep -q .; then
+          echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=${{ inputs.path }}" >&2
+          exit 1
+        fi
+        echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS name=${{ inputs.name }} pattern=${{ inputs.pattern }}"

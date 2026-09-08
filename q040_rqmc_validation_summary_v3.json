@@ -1,0 +1,41 @@
+{
+  "interpretation": "V2 terminal numerical-validation-fail artifact is technical evidence only because its execution chain was incomplete due GitHub transport 403; it is not a Q040 scientific or methodological negative result.",
+  "program_id": "Q040-RQMC-V3",
+  "q": "Q-040",
+  "scientific_locks_unchanged_from_v2": true,
+  "seed_namespace": "Q040-RQMC-V1",
+  "status": "VALIDATED_FOR_UPLOAD_NOT_EXECUTED_ON_GITHUB",
+  "technical_parent": {
+    "failure": "SAME_RUN_ARTIFACT_LIST_HTTP_403_FROM_GITHUB_INTERMEDIARY_BEFORE_SHARD_EXECUTION",
+    "failure_job": "rqmc_m12 (hillipop, 0, 6)",
+    "github_run_id": 34247581888,
+    "head_sha": "f7a1484692140c4b37e9c77d4c59fb4b6cd6779e",
+    "program_id": "Q040-RQMC-V2",
+    "scientific_result_from_failed_run": false
+  },
+  "technical_repairs": [
+    "same-run artifact download retry x3 with backoff",
+    "same-run artifact content gate",
+    "upstream failed/cancelled dependency hard gate",
+    "failure seals require successful validation gate execution"
+  ],
+  "v2_live_progress": {
+    "m10": "COMPLETE",
+    "m11": "COMPLETE",
+    "m12": "INCOMPLETE_DUE_TRANSPORT_403",
+    "m9": "COMPLETE"
+  },
+  "validation": {
+    "composite_action_yaml": "PASS",
+    "cross_run_downloads_explicit_run_and_token": true,
+    "cross_run_locked_download_steps": 44,
+    "max_job_timeout_minutes": 330,
+    "python_compile": "PASS",
+    "same_run_retry_download_steps": 52,
+    "same_run_retry_steps_fail_closed": true,
+    "static_tests": "PASS 47/47",
+    "synthetic_result_tests": "PASS 22/22",
+    "workflow_jobs": 43,
+    "workflow_yaml": "PASS"
+  }
+}

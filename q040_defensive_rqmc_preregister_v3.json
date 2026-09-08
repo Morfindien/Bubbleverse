@@ -1,0 +1,269 @@
+{
+  "cmb_representation": {
+    "definition": "One latent CMB TT D_ell value for every unique ell represented on frozen Q032 support.",
+    "new_binning_allowed": false,
+    "primary": "IDENTITY_UNIQUE_MULTIPOLE_TT",
+    "representation_hash_parent": "f96e2b9cdc27501eb0f2a6aabbf6c79c8d681f1af2d55c54b495b513c1da1f48"
+  },
+  "endpoint_execution": {
+    "bank_endpoint_count": 36,
+    "bank_endpoint_scaled_distance_max": 0.05,
+    "geometry_coordinates": [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "H0",
+      "A_planck"
+    ],
+    "ignore_prior_density_in_optimizer_scalar": true,
+    "implementations": [
+      "camspec",
+      "hillipop"
+    ],
+    "labels": [
+      "M3-S0",
+      "M3-S1",
+      "M3-S2",
+      "M6-S0",
+      "M6-S1",
+      "M6-S2",
+      "M7-S0",
+      "M7-S1",
+      "M7-S2"
+    ],
+    "locked_scales_sha256": "732aeeb127d9083c0924552aa276117310ca32b5bfda854f51bfd3240638b2f6",
+    "max_evals": 300000,
+    "optimizer": "COBAYA_MINIMIZE_BOBYQA",
+    "production_endpoint_count": 18,
+    "rhoend": 1e-05,
+    "soft_stop_minutes": 300
+  },
+  "forbidden_posthoc_rescues": [
+    "increase m beyond 16",
+    "relax 0.05 integration gate",
+    "relax 0.05 endpoint bank gate",
+    "relax 0.10 science gate",
+    "choose one HiLLiPoP mode",
+    "unweighted mode averaging",
+    "Hessian jitter",
+    "eigenvalue clipping",
+    "pseudoinverse as PD substitute",
+    "freeze boundary nuisance and call it marginalization",
+    "cross-family covariance/data/foreground/objective mixing",
+    "moment-matched Gaussian as science likelihood",
+    "redesign proposals after seeing failure in the same campaign"
+  ],
+  "geometry": {
+    "baseline": {
+      "centroid": 0.8311487237190059,
+      "matched_median": 2.9317906965863507,
+      "pairwise_median_drift": 1.6367910228418985
+    },
+    "partial_material_reduction_terminal_label_registered": false,
+    "report_continuous_reduction_fractions_even_when_sufficiency_fails": true,
+    "sufficiency_rule": "matched_median<=0.10 AND centroid<=0.10 AND pairwise_median_drift<=0.10 for full nine-label result AND each of all nine leave-one-label-out analyses",
+    "sufficiency_threshold": 0.1
+  },
+  "intervention": {
+    "class": "COUPLED_STRUCTURAL_INTERVENTION_COMMON_LATENT_MARGINALIZATION",
+    "cross_family_covariance_transfer": false,
+    "cross_family_foreground_mapping": false,
+    "cross_family_objective_arithmetic": false,
+    "definition": "Each implementation is marginalized independently over its own native sampled TT nuisance parameters into the same identity-multipole latent CMB TT space. No CamSpec/HiLLiPoP data, covariance, foreground parameters, objective values or nuisance samples are mixed.",
+    "name": "DEFENSIVE_NATIVE_PRIOR_RQMC_CMB_MARGINALIZATION_V1",
+    "not_a_laplace_rescue": true,
+    "single_gaussian_science_likelihood": false
+  },
+  "mandatory_gates": [
+    "CONTEXT_CONTINUITY_GATE",
+    "Q_IDENTITY_GATE",
+    "PROGRAM_ID_GATE",
+    "PARENT_LOCK_GATE",
+    "SOURCE_GATE",
+    "DATA_GATE",
+    "Q037_BASELINE_REPRODUCTION_GATE",
+    "OBSERVATIONAL_SUPPORT_GATE",
+    "PROPER_NATIVE_PRIOR_GATE",
+    "NATIVE_SUPPORT_GATE",
+    "DEFENSIVE_WEIGHT_GATE",
+    "CONDITIONAL_QUADRATIC_EQUIVALENCE_GATE",
+    "A_PLANCK_PRESERVATION_GATE",
+    "NO_CROSS_FAMILY_MIXING_GATE",
+    "NO_HIDDEN_BINNING_GATE",
+    "MARGINAL_INTEGRATION_CONVERGENCE_GATE",
+    "BANK_A_B_PROBE_STABILITY_GATE",
+    "CORESET_NON_GAUSSIAN_GATE",
+    "CORESET_PROBE_VALIDATION_GATE",
+    "MARGINAL_ENDPOINT_NUMERICAL_STABILITY_GATE",
+    "JOB_COMPLETENESS_GATE",
+    "MERGE_COMPATIBILITY_GATE",
+    "FROZEN_GEOMETRY_GATE",
+    "NINE_LOO_GATE",
+    "SCIENTIFIC_INTERPRETATION_GATE",
+    "FINAL_RESULT_GATE"
+  ],
+  "marginal_likelihood": {
+    "arbitrary_mode_weights": false,
+    "boundary_gaussian_continuation": false,
+    "definition": "L_i^CMB(s,A_planck)=integral L_i(d_i|s,A_planck,eta_i) pi_i(eta_i) d eta_i over exact native prior support.",
+    "implementations": [
+      "camspec",
+      "hillipop"
+    ],
+    "mode_selection": false,
+    "normalized_native_prior_required": true
+  },
+  "model_lock": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "cobaya_version": "3.5.6",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "hillipop_repository": "planck-npipe/hillipop",
+    "model": "MOD-EDE-N3",
+    "n_scf": 3,
+    "python": "3.11"
+  },
+  "nuisance_semantics": {
+    "A_planck": "PRESERVE_AS_EXPLICIT_RUNTIME_PARAMETER_NOT_MARGINALIZED",
+    "forced_cross_implementation_mapping": false,
+    "foreground_zeroing": false,
+    "native_sampled_tt_nuisance_only": true,
+    "negative_amplitude_override": false,
+    "prior_widening": false,
+    "support_null_nuisance": "May be analytically factorized only after the inherited exact-zero-response Q032 gate."
+  },
+  "observational_support": {
+    "allow_100ghz": false,
+    "allow_EE": false,
+    "allow_TE": false,
+    "allow_external_cmb": false,
+    "frequency_pairs": [
+      "143x143",
+      "143x217",
+      "217x217"
+    ],
+    "parent_support_semantics": "Q032_EXACT_TT_COMMON_SUPPORT"
+  },
+  "parent_lock": {
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q032_result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "q032_run_id": 33994305721,
+    "q032_support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "q037_commit": "c49d9885a5bf1e290f4b42f15c59d228c7c036cf",
+    "q037_result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001",
+    "q037_run_id": 34115280043,
+    "q039_fgprofile_result_id": "R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001",
+    "q039_fgprofile_run_id": 34184346582,
+    "q039_result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+    "q039_run_id": 34161368438,
+    "q040_v4_result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-004",
+    "q040_v4_run_id": 34211073134,
+    "q040_v5_result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-005",
+    "q040_v5_run_id": 34236057202
+  },
+  "probe_set": {
+    "definition": [
+      "all 18 existing Q032 endpoint theory TT vectors",
+      "all six V4 free-CMB MAP spectra with their registered A_planck semantics"
+    ],
+    "expected_count": 24,
+    "frozen_before_execution": true,
+    "posthoc_probe_addition_for_acceptance": false
+  },
+  "project": {
+    "created_at": "2026-09-08T18:53:00+02:00",
+    "math_result_id": "R-Q040-MATH-DEFENSIVE-MARGINAL-001",
+    "program_id": "Q040-RQMC-V3",
+    "q": "Q-040",
+    "result_id": "R-Q040-EDE-DEFENSIVE-RQMC-CMB-MARGINAL-003",
+    "run_id": "Q040-DEFENSIVE-RQMC-CMB-MARGINAL-V3",
+    "scientific_question": "Can a finite, preregistered and scientifically defensible coupled structural intervention involving documented CamSpec-versus-HiLLiPoP differences in foreground-model form, data-vector construction/weighting and covariance/likelihood construction materially reduce C-036-IMPL on the Q032 matched-support architecture without constructing a scientifically meaningless synthetic likelihood?"
+  },
+  "rqmc": {
+    "adaptive_stop": "stop at first level where both implementations pass two successive transition gates and A/B probe stability",
+    "bank_A_B_delta_chi2_tolerance": 0.05,
+    "bank_A_replicates": [
+      1,
+      2
+    ],
+    "bank_B_replicates": [
+      3,
+      4
+    ],
+    "coreset_failure": "DEFENSIVE_MARGINALIZATION_NUMERICAL_VALIDATION_FAIL",
+    "coreset_k": [
+      96,
+      192,
+      384,
+      768,
+      1536
+    ],
+    "coreset_probe_max_abs_delta_chi2_error": 0.01,
+    "coreset_role": "predeclared non-Gaussian computational acceleration of the already validated finite RQMC mixture; never a Gaussian science likelihood",
+    "hard_bound_handling": "exact truncated Student-t normalization; never clip draws",
+    "hard_cap_nodes_per_replicate": 393216,
+    "integration_delta_chi2_tolerance": 0.05,
+    "local_centers": [
+      "NATIVE_REFERENCE",
+      "Q032_LOWEST_OBJECTIVE_WITHIN_IMPLEMENTATION",
+      "Q032_FARTHEST_COMPLETE_ENDPOINT_WITHIN_IMPLEMENTATION"
+    ],
+    "local_proposal": "product Student-t",
+    "local_scale": "native proposal scale from frozen likelihood configuration",
+    "m_max": 16,
+    "m_min": 9,
+    "method": "DEFENSIVE_DETERMINISTIC_MIXTURE_IMPORTANCE_SAMPLING_WITH_OWEN_SCRAMBLED_SOBOL",
+    "no_automatic_sampling_beyond_hard_cap": true,
+    "nodes_per_replicate_rule": "N_m=6*2^m",
+    "prior_component_realization": "three identical prior strata of weight 1/6 each",
+    "proposal": "q=0.5*pi + (q1+q2+q3)/6",
+    "replicates": 4,
+    "scramble": "independent Owen-scrambled Sobol",
+    "scramble_seed_namespace": "Q040-RQMC-V1",
+    "student_t_df": 5.0,
+    "two_successive_levels_required": true,
+    "weight_ratio_max": 2.0
+  },
+  "rules": {
+    "failed_numerical_validation_is_not_physical_absence_of_coupled_mechanism": true,
+    "negative_result_is_valid": true,
+    "no_cross_likelihood_absolute_objective_subtraction": true,
+    "no_cross_likelihood_chi2_sum": true,
+    "q035_remains_closed": true,
+    "q037_remains_closed": true,
+    "q038_descriptive_only": true,
+    "q039_remains_closed": true,
+    "q040_v5_method_failure_preserved": true,
+    "shared_planck_sky_not_independent_observations": true,
+    "unexpected_larger_discrepancy_is_valid": true
+  },
+  "serialization": {
+    "decode_rule": "JSON null -> internal -inf before logaddexp merge",
+    "json_representation": "null",
+    "nan_allowed": false,
+    "partial_shard_empty_logsum_internal_value": "-inf",
+    "positive_infinity_allowed": false,
+    "scientific_semantics": "EMPTY_ACCUMULATOR_SENTINEL_ONLY; DOES_NOT_CHANGE LIKELIHOOD OR IMPORTANCE WEIGHTS"
+  },
+  "technical_supersession": {
+    "failed_github_run_id": 34247581888,
+    "failed_head_sha": "f7a1484692140c4b37e9c77d4c59fb4b6cd6779e",
+    "failure_class": "SAME_RUN_ARTIFACT_DOWNLOAD_HTTP_403_INTERMEDIARY_M12_HILLIPOP_SHARD_ABORT",
+    "observed_scope": "Q040-RQMC-V2 completed static, parent, environment, prepare, and cumulative RQMC m=9, m=10, m=11. At m=12 the hillipop shard 0/6 failed before scientific execution because actions/download-artifact@v4 could not list the same-run q040-rqmc-prepare-v2 artifact: HTTP 403 Forbidden from intermediary. Other m=12 shards continued and produced artifacts.",
+    "rqmc_method_or_proposal_changed": false,
+    "scientific_model_data_priors_bounds_support_geometry_thresholds_changed": false,
+    "scientific_result_from_failed_run": false,
+    "seed_namespace_preserved": "Q040-RQMC-V1",
+    "sobol_scramble_sequences_changed": false,
+    "supersedes_program_id": "Q040-RQMC-V2",
+    "technical_change": "Retry same-run artifact downloads up to three attempts with cleanup/backoff, and hard-separate workflow/transport failures from preregistered numerical validation failures so an incomplete execution chain cannot be sealed as science.",
+    "v2_terminal_artifact_not_science": "The V2 q040_final_v2.json reported DEFENSIVE_MARGINALIZATION_NUMERICAL_VALIDATION_FAIL with actual_computed_result=false and failure_reason EXECUTION_CHAIN_INCOMPLETE_BEFORE_HARD_CAP. Because the chain was incomplete due the documented artifact-transport 403, V3 treats that terminal artifact as technical evidence only, not a scientific or methodological negative result."
+  },
+  "terminal_outcomes": [
+    "DEFENSIVE_CMB_MARGINAL_BRIDGE_SUFFICIENT",
+    "DEFENSIVE_CMB_MARGINAL_BRIDGE_INSUFFICIENT",
+    "DEFENSIVE_MARGINALIZATION_NUMERICAL_VALIDATION_FAIL"
+  ]
+}
