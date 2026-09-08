@@ -1,0 +1,60 @@
+{
+  "decision_rules": {
+    "camspec_active_bound_tolerance_proposal_units": 0.001,
+    "camspec_amp143_native_upper_bound": 50.0,
+    "camspec_amp143_proposal": 1.0,
+    "final_result_gate_on_controlled_compression_failure": "UNRESOLVED",
+    "hillipop_multistart_cmb_normalized_rms_max": 0.1,
+    "if_cam_boundary_or_hessian_pd_or_hillipop_multistart_fails": "COMPRESSION_VALIDATION_FAIL_AND_NO_Q040_SCIENCE_ENDPOINTS",
+    "required_start_families": [
+      "NATIVE_REFERENCE",
+      "Q032_LOWEST_OBJECTIVE_WITHIN_IMPLEMENTATION",
+      "Q032_FARTHEST_COMPLETE_ENDPOINT_WITHIN_IMPLEMENTATION"
+    ],
+    "required_v4_map_count": 6,
+    "v4_objective_spread_max": 0.5
+  },
+  "forbidden_rescues": [
+    "DIAGONAL_HESSIAN_JITTER",
+    "EIGENVALUE_CLIPPING",
+    "PSEUDOINVERSE_AS_PD_SUBSTITUTE",
+    "FREEZE_BOUNDARY_NUISANCE_AND_CALL_IT_MARGINALIZATION",
+    "RELAX_0P10_MULTISTART_GATE",
+    "SELECT_ONE_HILLIPOP_MODE_BECAUSE_IT_IS_CONVENIENT",
+    "AVERAGE_MODES_WITHOUT_PREREGISTERED_STATISTICAL_WEIGHTS",
+    "RUN_Q040_SCIENCE_ENDPOINTS_AFTER_FAILED_COMPRESSION_VALIDATION"
+  ],
+  "known_input_status": "V4 results were already observed before V5 preregistration. V5 therefore makes no claim of blinded confirmation; it formalizes the preregistered Outcome-D handling that V4 should have performed.",
+  "outcome_D": {
+    "classification": "COMPRESSION_VALIDATION_FAIL",
+    "meaning": "The tested single-Gaussian Laplace/Schur bridge is not validated for Q040 science. This does not imply that no coupled mechanism or no non-Gaussian/bound-aware bridge exists.",
+    "next_motor": "BUBBLEVERSE \u2014 MATHEMATICS ENGINE"
+  },
+  "project": {
+    "created_at": "2026-09-08T15:45:00+02:00",
+    "program_id": "Q040-CMBSPACE-V5",
+    "q": "Q-040",
+    "result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-005",
+    "run_id": "Q040-CMBSPACE-COUPLED-BRIDGE-V5",
+    "scientific_question": "Can a finite, preregistered and scientifically defensible coupled structural intervention involving documented CamSpec-versus-HiLLiPoP differences in foreground-model form, data-vector construction/weighting and covariance/likelihood construction materially reduce C-036-IMPL on the Q032 matched-support architecture without constructing a scientifically meaningless synthetic likelihood?"
+  },
+  "purpose": "Artifact-only controlled validation and sealing of the already-observed V4 pre-endpoint compression failures. V5 does not introduce a replacement compression method and does not rerun expensive MAP jobs.",
+  "scientific_locks": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "cmb_representation_sha256": "f96e2b9cdc27501eb0f2a6aabbf6c79c8d681f1af2d55c54b495b513c1da1f48",
+    "model": "MOD-EDE-N3",
+    "n_scf": 3,
+    "q032_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q032_run_id": 33994305721,
+    "q032_support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "q039_geometry_sufficiency_threshold": 0.1,
+    "science_endpoints_forbidden_on_compression_failure": true
+  },
+  "v4_parent": {
+    "github_run_id": 34211073134,
+    "head_sha": "8790262f02a26e4e9b764790ddf2a693532c599b",
+    "program_id": "Q040-CMBSPACE-V4",
+    "result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-004",
+    "run_id": "Q040-CMBSPACE-COUPLED-BRIDGE-V4"
+  }
+}

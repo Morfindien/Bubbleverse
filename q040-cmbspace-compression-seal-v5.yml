@@ -1,0 +1,104 @@
+name: Bubbleverse Q040 CMB-space Compression Seal V5
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  seal_v4_compression_validation:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      CURRENT_Q: Q-040
+      PROGRAM_ID: Q040-CMBSPACE-V5
+      V4_GITHUB_RUN_ID: '34211073134'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Identity and registry gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          r=json.load(open('bubbleverse_program_registry.json'))['programs']['Q040-CMBSPACE-V5']
+          assert r['q']=='Q-040'
+          assert r['status']=='ACTIVE'
+          assert r['workflow_path']=='.github/workflows/q040-cmbspace-compression-seal-v5.yml'
+          assert r['scientific_program']=='q040_cmbspace_coupled_bridge_v5.py'
+          print('Q040_V5_PROGRAM_ID_GATE=PASS')
+          PY
+
+      - name: Static gates before artifact download
+        run: |
+          python q040_cmbspace_coupled_bridge_tests_v5.py \
+            --output q040_static_tests_v5.json
+
+      - name: Download all six successful V4 MAP artifacts
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: Morfindien/Bubbleverse
+          run-id: 34211073134
+          pattern: q040-map-*
+          merge-multiple: true
+          path: v4_maps
+
+      - name: Download both V4 compression failure records
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          repository: Morfindien/Bubbleverse
+          run-id: 34211073134
+          pattern: q040-compression-*-v4
+          merge-multiple: true
+          path: v4_failures
+
+      - name: Artifact provenance and controlled Outcome-D seal
+        run: |
+          python q040_cmbspace_coupled_bridge_v5.py seal-v4 \
+            --map-dir v4_maps \
+            --failure-dir v4_failures \
+            --preregister q040_cmbspace_coupled_bridge_preregister_v5.json \
+            --source-lock q040_cmbspace_coupled_bridge_source_lock_v5.json \
+            --final-output q040_final_v5.json \
+            --handoff-output q040_return_handoff_v5.json
+
+      - name: Mandatory result tests
+        run: |
+          python q040_cmbspace_coupled_bridge_tests_v5.py \
+            --map-dir v4_maps \
+            --failure-dir v4_failures \
+            --final q040_final_v5.json \
+            --output q040_tests_v5.json
+
+      - name: Upload V5 controlled final
+        uses: actions/upload-artifact@v4
+        with:
+          name: q040-final-v5
+          path: q040_final_v5.json
+          if-no-files-found: error
+
+      - name: Upload V5 handoff
+        uses: actions/upload-artifact@v4
+        with:
+          name: q040-return-handoff-v5
+          path: q040_return_handoff_v5.json
+          if-no-files-found: error
+
+      - name: Upload V5 tests and locks
+        uses: actions/upload-artifact@v4
+        with:
+          name: q040-validation-seal-v5
+          path: |
+            q040_static_tests_v5.json
+            q040_tests_v5.json
+            q040_cmbspace_coupled_bridge_preregister_v5.json
+            q040_cmbspace_coupled_bridge_source_lock_v5.json
+          if-no-files-found: error

@@ -271,7 +271,7 @@
     "Q040-CMBSPACE-V4": {
       "q": "Q-040",
       "scientific_task": "Q040 CMB-space coupled bridge V4. Preserves V3 exact-GLS variable-projection solver and all frozen scientific locks; repairs only immutable Q032 V2 artifact references and adds a static parent-artifact provenance gate.",
-      "status": "ACTIVE",
+      "status": "SUPERSEDED",
       "version": "v4",
       "created_date": "2026-09-08",
       "workflow_id": "q040-cmbspace-coupled-bridge-v4.yml",
@@ -306,7 +306,36 @@
       "technical_parent_program": "q040_cmbspace_coupled_bridge_v2.py",
       "technical_parent_program_id": "Q040-CMBSPACE-V2",
       "reuse_classification": "PATCH: reuse V2 validated native context/compression/validation/endpoints; replace failed MAP solver only",
-      "v3_failed_run_id": 34209404762
+      "v3_failed_run_id": 34209404762,
+      "superseded_by": "Q040-CMBSPACE-V5",
+      "failed_run_id": 34211073134,
+      "failure_class": "CONTROLLED_COMPRESSION_VALIDATION_FAILURE_MISHANDLED_AS_JOB_ERROR__CAMSPEC_HESSIAN_PD_AND_HILLIPOP_MULTISTART"
+    },
+    "Q040-CMBSPACE-V5": {
+      "q": "Q-040",
+      "scientific_task": "Artifact-only controlled sealing of Q040 V4 compression validation failure. Reuses six successful V4 variable-projection MAP artifacts; validates CamSpec hard-bound/symmetric-Laplace incompatibility and HiLLiPoP frozen multistart CMB instability; blocks science endpoints and returns COMPRESSION_VALIDATION_FAIL / UNRESOLVED without changing any scientific threshold.",
+      "status": "ACTIVE",
+      "version": "v5",
+      "created_date": "2026-09-08",
+      "workflow_id": "q040-cmbspace-compression-seal-v5.yml",
+      "workflow_path": ".github/workflows/q040-cmbspace-compression-seal-v5.yml",
+      "target_ref": "main",
+      "scientific_program": "q040_cmbspace_coupled_bridge_v5.py",
+      "scientific_program_id": "Q040-CMBSPACE-V5",
+      "tests": "q040_cmbspace_coupled_bridge_tests_v5.py",
+      "preregister": "q040_cmbspace_coupled_bridge_preregister_v5.json",
+      "source_lock": "q040_cmbspace_coupled_bridge_source_lock_v5.json",
+      "result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-005",
+      "parent_result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-004",
+      "v4_github_run_id": 34211073134,
+      "v4_head_sha": "8790262f02a26e4e9b764790ddf2a693532c599b",
+      "launcher": ".github/workflows/00-bubbleverse-start.yml",
+      "supersedes": "Q040-CMBSPACE-V4",
+      "result_artifacts": [
+        "q040-final-v5",
+        "q040-return-handoff-v5",
+        "q040-validation-seal-v5"
+      ]
     }
   }
 }
