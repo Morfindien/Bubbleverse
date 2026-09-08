@@ -1,0 +1,95 @@
+{
+  "project": {
+    "q": "Q-039",
+    "program_id": "Q039-FGPROFILE-V1",
+    "run_id": "Q039-NATIVE-FOREGROUND-PROFILE-V1",
+    "result_id": "R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001",
+    "parent_q039_result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+    "parent_q039_successful_run": 34161368438,
+    "created_at": "2026-09-08T05:09:27+02:00"
+  },
+  "scientific_question": "Does eliminating native foreground-cosmology profiling freedom cause the CamSpec-versus-HiLLiPoP Q037 exact-common-support geometry discrepancy to fall below the preregistered Q039 materiality threshold?",
+  "intervention": {
+    "name": "NATIVE_FOREGROUND_PROFILE_FREEDOM_OFF",
+    "scope": "sampled native TT foreground nuisance profiling freedom only",
+    "reference_selection": "For each implementation separately, select the lowest-objective authoritative Q032 refinement endpoint among its own nine labels. Never compare absolute objectives across CamSpec and HiLLiPoP.",
+    "application": "Freeze the complete implementation-native sampled TT foreground nuisance vector from the selected within-implementation reference endpoint and apply that same vector to all nine labels of that implementation, then re-optimize the remaining parameters from each label's own authoritative Q032 refinement endpoint.",
+    "camspec_expected_sampled_native_tt_foreground": [
+      "amp_143", "amp_217", "amp_143x217", "n_143", "n_217", "n_143x217"
+    ],
+    "hillipop_expected_sampled_native_tt_foreground": [
+      "Aradio", "Adusty", "AdustT", "beta_dustT", "Acib", "beta_cib", "Atsz", "Aksz", "xi"
+    ],
+    "runtime_schema_derivation_required": true,
+    "missing_reference_coordinate_policy": "TECHNICAL_STOP_NO_IMPUTATION"
+  },
+  "frozen": {
+    "model": "MOD-EDE-N3",
+    "n_scf": 3,
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "q032_run": 33994305721,
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "cobaya_version": "3.5.6",
+    "support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "scale_sha256": "732aeeb127d9083c0924552aa276117310ca32b5bfda854f51bfd3240638b2f6",
+    "optimizer": {
+      "method": "bobyqa",
+      "ignore_prior": true,
+      "best_of": 1,
+      "max_evals": 300000,
+      "rhoend": 1e-05,
+      "job_timeout_minutes": 330,
+      "soft_stop_minutes": 300
+    }
+  },
+  "baseline_q037": {
+    "matched_median": 2.9317906965863507,
+    "centroid": 0.8311487237190059,
+    "pairwise_median_drift": 1.6367910228418985
+  },
+  "geometry_gate": {
+    "threshold": 0.1,
+    "full_sample_required": {
+      "matched_median_lte": 0.1,
+      "centroid_lte": 0.1,
+      "pairwise_median_drift_lte": 0.1
+    },
+    "leave_one_label_out": "All 9 leave-one-label-out analyses must independently satisfy all three <=0.10 conditions."
+  },
+  "prohibited_changes": [
+    "change CamSpec foreground cleaning",
+    "change HiLLiPoP foreground templates or model form",
+    "set foreground emission to zero",
+    "map foreground parameters across likelihoods",
+    "alter Q032 exact TT common support",
+    "alter covariance or Q032 restricted precision",
+    "disable off-diagonal precision coupling",
+    "neutralize calibration",
+    "fix A_planck",
+    "alter Q031 geometry scales",
+    "use Q038 coordinate ranking to modify the intervention",
+    "subtract absolute CamSpec and HiLLiPoP objectives",
+    "sum CamSpec and HiLLiPoP chi2",
+    "rerun Q039 V5 calibration/precision arms",
+    "construct a synthetic core-likelihood hybrid"
+  ],
+  "success_condition": {
+    "classification": "SINGLE-BLOCK_NATIVE_FOREGROUND_PROFILE_FREEDOM_SUFFICIENT",
+    "meaning": "Native foreground nuisance profiling freedom is sufficient under this intervention. This does not establish physical foreground contamination or a Planck systematic."
+  },
+  "failure_condition": {
+    "classification": "NATIVE_FOREGROUND_PROFILE_FREEDOM_REJECTED_AS_SUFFICIENT",
+    "meaning": "Native foreground nuisance profiling freedom is insufficient under this intervention. This does not establish that foregrounds have no role in the broader structural likelihood difference."
+  },
+  "stop_condition": {
+    "optimizer_jobs": 18,
+    "no_permutation_expansion": true,
+    "no_new_seed_family": true,
+    "no_new_priors": true,
+    "return_after_sealed_result": "BUBBLEVERSE_RESULT_INGESTION_AND_ROUTING_ENGINE"
+  },
+  "source_ids": [
+    "K-044", "K-045/K-052", "K-046", "K-049", "K-053", "K-054", "CAMSPEC_2021_ID_UNRESOLVED"
+  ]
+}

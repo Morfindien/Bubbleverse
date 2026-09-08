@@ -1,0 +1,101 @@
+{
+  "q": "Q-039",
+  "program_id": "Q039-FGPROFILE-V1",
+  "run_id": "Q039-NATIVE-FOREGROUND-PROFILE-V1",
+  "result_id": "R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001",
+  "internal_parents": {
+    "q032": {
+      "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+      "github_run": 33994305721,
+      "execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+      "support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b"
+    },
+    "q037": {
+      "result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001",
+      "baseline": {
+        "matched_median": 2.9317906965863507,
+        "centroid": 0.8311487237190059,
+        "pairwise_median_drift": 1.6367910228418985
+      },
+      "scale_sha256": "732aeeb127d9083c0924552aa276117310ca32b5bfda854f51bfd3240638b2f6"
+    },
+    "q038": {
+      "result_id": "R-Q038-EDE-COORDINATE-LOCALIZATION-001",
+      "status": "CLOSED_REFERENCE_ONLY_NOT_CAUSAL_SELECTION"
+    },
+    "q039_v5": {
+      "result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+      "github_run": 34161368438,
+      "status": "AUTHORITATIVE_SEALED",
+      "preserved_results": {
+        "RELATIVE_CALIBRATION_NEUTRAL": "REJECTED_AS_SUFFICIENT",
+        "OFFDIAGONAL_PRECISION_COUPLING_OFF": "REJECTED_AS_SUFFICIENT",
+        "CALIBRATION_PLUS_PRECISION": "REJECTED_AS_SUFFICIENT"
+      }
+    }
+  },
+  "software": {
+    "bubbleverse_repository": "Morfindien/Bubbleverse",
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "class_ede_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "hillipop_repository": "planck-npipe/hillipop",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "cobaya_repository": "CobayaSampler/cobaya",
+    "cobaya_version": "3.5.6"
+  },
+  "source_registry": {
+    "K-044": {
+      "type": "primary_peer_reviewed_methodology",
+      "title": "CMB power spectra and cosmological parameters from Planck PR4 with CamSpec",
+      "authors": "Rosenberg, Gratton & Efstathiou",
+      "year": 2022,
+      "doi": "10.1093/mnras/stac2744",
+      "arxiv": "2205.10869",
+      "supports": "CamSpec PR4/NPIPE cleaning, spectra and likelihood methodology"
+    },
+    "K-045/K-052": {
+      "type": "scientific_preprint_methodology",
+      "title": "The choice of Planck CMB likelihood in cosmological analyses",
+      "authors": "Jense, Viña, Calabrese & Hill",
+      "year": 2025,
+      "arxiv": "2510.09430",
+      "alias_rule": "COUNT_ONCE",
+      "supports": "CamSpec NPIPE foreground nuisance treatment and relevance under truncated-scale analyses"
+    },
+    "K-046": {
+      "type": "software_provenance",
+      "software": "Cobaya",
+      "version": "3.5.6",
+      "supports": "minimizer and likelihood runtime provenance only"
+    },
+    "K-049": {
+      "type": "primary_peer_reviewed_methodology",
+      "title": "Cosmological parameters derived from the final Planck data release (PR4)",
+      "authors": "Tristram et al.",
+      "year": 2024,
+      "doi": "10.1051/0004-6361/202348015",
+      "arxiv": "2309.10034",
+      "supports": "HiLLiPoP PR4/NPIPE multifrequency foreground and covariance methodology"
+    },
+    "CAMSPEC_2021_ID_UNRESOLVED": {
+      "type": "primary_methodology",
+      "title": "A Detailed Description of the CamSpec Likelihood Pipeline and a Reanalysis of the Planck High Frequency Maps",
+      "authors": "Efstathiou & Gratton",
+      "arxiv": "1910.00483",
+      "bubbleverse_k_id": "NOT_DOCUMENTED_DO_NOT_INVENT"
+    },
+    "K-053": {
+      "type": "official_software_repository",
+      "repository": "planck-npipe/hillipop",
+      "commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+      "supports": "Exact native HiLLiPoP TT foreground parameter and residual construction semantics"
+    },
+    "K-054": {
+      "type": "official_software_repository",
+      "repository": "CobayaSampler/cobaya",
+      "version": "3.5.6",
+      "supports": "Exact native CamSpec NPIPE TT residual foreground parameter semantics"
+    }
+  },
+  "evidence_dependency_note": "K-044, K-049 and K-045/K-052 analyze the same broad Planck PR4/NPIPE observational family and are not independent sky measurements. K-053 and K-054 are executable methodology provenance, not independent observational evidence."
+}

@@ -1,0 +1,40 @@
+BUBBLEVERSE Q039 NATIVE FOREGROUND PROFILE V1 — INSTALL MANIFEST
+DATE: 2026-09-08 05:09 CEST
+PROGRAM_ID: Q039-FGPROFILE-V1
+CURRENT_Q: Q-039
+RESULT_ID: R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001
+INTERVENTION: NATIVE_FOREGROUND_PROFILE_FREEDOM_OFF
+
+EXECUTION: 2 implementations x 9 labels = 18 atomic optimizer jobs; max-parallel 6; timeout 330 min; soft stop 300 min.
+NO CHECKPOINTING: each BOBYQA optimizer shard is atomic and independently rerunnable.
+Q032 authoritative cache key reused: q032-v2-${runner.os}-py311-classede-5a131c91-hillipop-a09ddde3
+
+LOCAL GATES:
+- Python compile: PASS
+- Static scientific/software gates: PASS (26/26)
+- Workflow YAML parse: PASS (6 jobs)
+- Registry exact resolution simulation: PASS
+- Synthetic 18-shard assessment -> result test -> seal: PASS
+- Synthetic result is SOFTWARE-ONLY and NOT scientific evidence
+
+GITHUB WRITE STATUS: FAIL — create_file returned HTTP 403 Resource not accessible by integration. No live repository files were changed.
+LIVE LAUNCHER_GATE: FAIL / NOT INSTALLED YET
+
+UPLOAD ORDER:
+1. repo root: q039_native_foreground_profile_v1.py
+2. repo root: q039_native_foreground_profile_tests_v1.py
+3. repo root: q039_native_foreground_profile_preregister_v1.json
+4. repo root: q039_native_foreground_profile_source_lock_v1.json
+5. exact path: .github/workflows/q039-native-foreground-profile-v1.yml
+6. replace repo root bubbleverse_program_registry.json with bubbleverse_program_registry_q039_fgprofile_v1.json
+
+DO NOT START until all six files are committed on main.
+START THIS: Q039-FGPROFILE-V1
+
+SHA256:
+e7f7f1d4405cd759742cc14bea89cc24306aaa3f391cf66b43319d0a86295998  q039_native_foreground_profile_v1.py
+0fd80af00d5f9e4b53a93a7a086010c6af941d5eb77399bc8ced4bd6d2e1ac36  q039_native_foreground_profile_tests_v1.py
+534b9097e4a78adb6151034474e048b71f7395d217f0b68aa1e64d6273982bcc  q039_native_foreground_profile_preregister_v1.json
+148bd533798629398b3e9452f4a0a15410fef9e31ac71d167c7773ad5cf4fed9  q039_native_foreground_profile_source_lock_v1.json
+c22869fc56ed8ee3c19ae44c8471d30a5cf909bf65d0394267df8eb35c80a904  q039-native-foreground-profile-v1.yml
+2865d629d816759702bde9f3b5c663b5fadf1c22bbc570151eb8072bb543805e  bubbleverse_program_registry_q039_fgprofile_v1.json
