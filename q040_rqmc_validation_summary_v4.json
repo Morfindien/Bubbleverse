@@ -1,0 +1,48 @@
+{
+  "interpretation": "V3 failure is deployment/packaging technical evidence only. No RQMC m9 shard command ran, so no Q040 science or numerical-validation conclusion follows from V3.",
+  "program_id": "Q040-RQMC-V4",
+  "q": "Q-040",
+  "scientific_lock_comparison": {
+    "cmb_representation": true,
+    "endpoint_execution": true,
+    "geometry": true,
+    "model_lock": true,
+    "nuisance_semantics": true,
+    "parent_lock": true,
+    "rqmc": true,
+    "terminal_outcomes": true
+  },
+  "scientific_locks_unchanged_from_v3": true,
+  "seed_namespace": "Q040-RQMC-V1",
+  "status": "VALIDATED_FOR_UPLOAD_NOT_EXECUTED_ON_GITHUB",
+  "technical_parent": {
+    "failure": "LOCAL_COMPOSITE_ACTION_MISSING_BEFORE_RQMC_M9_SHARD_EXECUTION",
+    "github_run_id": 34256042442,
+    "head_sha": "289d1b3aca238b58e797b03978d15258c465d52c",
+    "program_id": "Q040-RQMC-V3",
+    "scientific_result_from_failed_run": false
+  },
+  "technical_repairs": [
+    "remove separately packaged local composite action",
+    "inline three-attempt same-run actions/download-artifact retries with cleanup/backoff",
+    "explicit fail-closed transport/content gate after every same-run dependency",
+    "align V4 coreset artifact and file suffixes",
+    "use exact terminal q040-rqmc-final-v4 artifact contract compatible with segmented launcher"
+  ],
+  "validation": {
+    "coreset_version_alignment": "PASS",
+    "cross_run_locked_download_steps": 44,
+    "local_composite_action_dependency_present": false,
+    "max_job_timeout_minutes": 330,
+    "python_compile": "PASS",
+    "same_run_dependencies": 52,
+    "same_run_retry_attempt_steps": 156,
+    "segmented_launcher_artifact_contract": [
+      "q040-rqmc-final-v4"
+    ],
+    "static_tests": "PASS 53/53",
+    "synthetic_result_tests": "PASS 22/22",
+    "workflow_jobs": 43,
+    "workflow_yaml": "PASS"
+  }
+}

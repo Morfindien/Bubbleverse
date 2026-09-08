@@ -1,0 +1,4446 @@
+name: Bubbleverse Q040 Defensive RQMC CMB Marginal V4
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: false
+        default: Q040-RQMC-V4
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-040
+  PROGRAM_ID: Q040-RQMC-V4
+  RUN_ID: Q040-DEFENSIVE-RQMC-CMB-MARGINAL-V4
+  RESULT_ID: R-Q040-EDE-DEFENSIVE-RQMC-CMB-MARGINAL-004
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  Q032_SUPPORT_HASH: f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b
+  V4_GITHUB_RUN_ID: '34211073134'
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Identity, registry and launcher gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "${{ inputs.program_id || 'Q040-RQMC-V4' }}" = "$PROGRAM_ID"
+          test "$CURRENT_Q" = 'Q-040'
+          test -f q040_defensive_rqmc_v4.py
+          test -f q040_defensive_rqmc_tests_v4.py
+          test -f q040_defensive_rqmc_preregister_v4.json
+          test -f q040_defensive_rqmc_source_lock_v4.json
+          test -f q040_cmbspace_coupled_bridge_v2.py
+          test -f q039_prepare_frozen_env_v4.sh
+          test -f .github/workflows/q040-defensive-rqmc-v4.yml
+          test -f .github/workflows/00-bubbleverse-start.yml
+          test -f .github/workflows/00-bubbleverse-start-segmented-v5.yml
+          python - <<'PY2'
+          import json
+          from pathlib import Path
+          d=json.loads(Path('bubbleverse_program_registry.json').read_text())
+          e=d.get('programs',{}).get('Q040-RQMC-V4')
+          assert e and e.get('status')=='ACTIVE',e
+          assert e.get('q')=='Q-040',e
+          assert e.get('workflow_id')=='q040-defensive-rqmc-v4.yml',e
+          assert e.get('workflow_path')=='.github/workflows/q040-defensive-rqmc-v4.yml',e
+          launcher=Path('.github/workflows/00-bubbleverse-start.yml').read_text()
+          segmented=Path('.github/workflows/00-bubbleverse-start-segmented-v5.yml').read_text()
+          assert 'exact registry match not found' in launcher
+          assert 'gh workflow run "$WORKFLOW_ID"' in launcher
+          assert 'eval' not in launcher.lower()
+          assert 'exact registry match not found' in segmented
+          assert 'expected_artifacts_json' in segmented
+          assert 'gh workflow run "$WORKFLOW_ID"' in segmented
+          assert e.get('result_artifacts') == ['q040-rqmc-final-v4'], e
+          print('Q040_RQMC_REGISTRY_LAUNCHER_GATE=PASS')
+          PY2
+      - name: Install static dependencies
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - name: Static scientific and numerical tests
+        run: |
+          python -m py_compile q040_defensive_rqmc_v4.py q040_defensive_rqmc_tests_v4.py
+          python q040_defensive_rqmc_tests_v4.py static \
+            --program q040_defensive_rqmc_v4.py \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --workflow .github/workflows/q040-defensive-rqmc-v4.yml \
+            --output q040_rqmc_static_tests_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-static-v4
+          path: |
+            q040_rqmc_static_tests_v4.json
+            q040_defensive_rqmc_preregister_v4.json
+            q040_defensive_rqmc_source_lock_v4.json
+          if-no-files-found: error
+
+  parent_input_gate:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Reproduce frozen Q037 baseline
+        run: python q040_defensive_rqmc_v4.py validate-parent --parent-dir q032_parent_profiles --output q040_rqmc_parent_gate_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-parent-v4
+          path: q040_rqmc_parent_gate_v4.json
+          if-no-files-found: error
+
+  environment_gate:
+    needs: [static, parent_input_gate]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh 'both'
+      - name: Verify authoritative frozen Q032 artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f q032_preflight/q032_preflight_sealed_v2.json
+          test -f q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy
+          test -f q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json
+          python - <<'PY2'
+          import json
+          p=json.load(open('q032_preflight/q032_preflight_sealed_v2.json'))
+          assert p['q']=='Q-032' and p['status']=='PASS'
+          assert p['support_sha256']=='f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b'
+          m=json.load(open('q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json'))
+          assert m['status']=='PASS' and m['restricted_precision_sha256']
+          print('Q040_RQMC_ENVIRONMENT_GATE=PASS')
+          PY2
+
+  prepare:
+    needs: environment_gate
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh 'both'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.V4_GITHUB_RUN_ID }}
+          pattern: q040-map-*
+          merge-multiple: true
+          path: q040_v4_maps
+      - name: Build frozen probes, V4 proposal centers and calibration basis
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_prepare
+          python q040_defensive_rqmc_v4.py prepare \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --v4-map-dir q040_v4_maps \
+            --scratch q040_rqmc_runtime \
+            --output-dir q040_prepare \
+            --output q040_prepare/q040_rqmc_prepare_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+          if-no-files-found: error
+
+  plan_m9:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v4.py plan-level --m 9 --output q040_rqmc_plan_m9_v4.json
+
+  rqmc_m9:
+    needs: plan_m9
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m9.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl001_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl001_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl001_a2
+        if: steps.q040dl001_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl001_a1.outcome != 'success' && steps.q040dl001_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl001_a3
+        if: steps.q040dl001_a1.outcome != 'success' && steps.q040dl001_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl001
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl001_a1.outcome }}
+          A2: ${{ steps.q040dl001_a2.outcome }}
+          A3: ${{ steps.q040dl001_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl001" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl001"
+      - name: Run atomic RQMC shell shard m=9
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v4.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 9 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m9_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m9-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m9:
+    needs: rqmc_m9
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl002_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m9-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl002_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 5
+      - id: q040dl002_a2
+        if: steps.q040dl002_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m9-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl002_a1.outcome != 'success' && steps.q040dl002_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 15
+      - id: q040dl002_a3
+        if: steps.q040dl002_a1.outcome != 'success' && steps.q040dl002_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m9-*
+          merge-multiple: true
+          path: q040_shards
+      - name: Same-run artifact transport gate q040dl002
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl002_a1.outcome }}
+          A2: ${{ steps.q040dl002_a2.outcome }}
+          A3: ${{ steps.q040dl002_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl002" >&2
+            exit 1
+          fi
+          test -d "q040_shards"
+          if ! find "q040_shards" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_shards" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl002"
+      - id: q040dl003_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl003_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl003_a2
+        if: steps.q040dl003_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl003_a1.outcome != 'success' && steps.q040dl003_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl003_a3
+        if: steps.q040dl003_a1.outcome != 'success' && steps.q040dl003_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl003
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl003_a1.outcome }}
+          A2: ${{ steps.q040dl003_a2.outcome }}
+          A3: ${{ steps.q040dl003_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl003" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl003"
+      - id: merge
+        name: Merge cumulative RQMC state m=9
+        run: >-
+          python q040_defensive_rqmc_v4.py merge-level --m 9 --shard-dir q040_shards
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m9_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m9-v4
+          path: q040_rqmc_state_m9_v4.json
+          if-no-files-found: error
+
+  plan_m10:
+    needs: merge_m9
+    if: needs.merge_m9.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v4.py plan-level --m 10 --output q040_rqmc_plan_m10_v4.json
+
+  rqmc_m10:
+    needs: plan_m10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m10.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl004_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl004_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl004_a2
+        if: steps.q040dl004_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl004_a1.outcome != 'success' && steps.q040dl004_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl004_a3
+        if: steps.q040dl004_a1.outcome != 'success' && steps.q040dl004_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl004
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl004_a1.outcome }}
+          A2: ${{ steps.q040dl004_a2.outcome }}
+          A3: ${{ steps.q040dl004_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl004" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl004"
+      - name: Run atomic RQMC shell shard m=10
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v4.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 10 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m10_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m10-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m10:
+    needs: rqmc_m10
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl005_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m10-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl005_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 5
+      - id: q040dl005_a2
+        if: steps.q040dl005_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m10-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl005_a1.outcome != 'success' && steps.q040dl005_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 15
+      - id: q040dl005_a3
+        if: steps.q040dl005_a1.outcome != 'success' && steps.q040dl005_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m10-*
+          merge-multiple: true
+          path: q040_shards
+      - name: Same-run artifact transport gate q040dl005
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl005_a1.outcome }}
+          A2: ${{ steps.q040dl005_a2.outcome }}
+          A3: ${{ steps.q040dl005_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl005" >&2
+            exit 1
+          fi
+          test -d "q040_shards"
+          if ! find "q040_shards" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_shards" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl005"
+      - id: q040dl006_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl006_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl006_a2
+        if: steps.q040dl006_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl006_a1.outcome != 'success' && steps.q040dl006_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl006_a3
+        if: steps.q040dl006_a1.outcome != 'success' && steps.q040dl006_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl006
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl006_a1.outcome }}
+          A2: ${{ steps.q040dl006_a2.outcome }}
+          A3: ${{ steps.q040dl006_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl006" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl006"
+      - id: q040dl007_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m9-v4
+          path: q040_previous
+      - if: steps.q040dl007_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 5
+      - id: q040dl007_a2
+        if: steps.q040dl007_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m9-v4
+          path: q040_previous
+      - if: steps.q040dl007_a1.outcome != 'success' && steps.q040dl007_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 15
+      - id: q040dl007_a3
+        if: steps.q040dl007_a1.outcome != 'success' && steps.q040dl007_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m9-v4
+          path: q040_previous
+      - name: Same-run artifact transport gate q040dl007
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl007_a1.outcome }}
+          A2: ${{ steps.q040dl007_a2.outcome }}
+          A3: ${{ steps.q040dl007_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl007" >&2
+            exit 1
+          fi
+          test -d "q040_previous"
+          if ! find "q040_previous" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_previous" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl007"
+      - id: merge
+        name: Merge cumulative RQMC state m=10
+        run: >-
+          python q040_defensive_rqmc_v4.py merge-level --m 10 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m9_v4.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m10_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m10-v4
+          path: q040_rqmc_state_m10_v4.json
+          if-no-files-found: error
+
+  plan_m11:
+    needs: merge_m10
+    if: needs.merge_m10.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v4.py plan-level --m 11 --output q040_rqmc_plan_m11_v4.json
+
+  rqmc_m11:
+    needs: plan_m11
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m11.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl008_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl008_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl008_a2
+        if: steps.q040dl008_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl008_a1.outcome != 'success' && steps.q040dl008_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl008_a3
+        if: steps.q040dl008_a1.outcome != 'success' && steps.q040dl008_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl008
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl008_a1.outcome }}
+          A2: ${{ steps.q040dl008_a2.outcome }}
+          A3: ${{ steps.q040dl008_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl008" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl008"
+      - name: Run atomic RQMC shell shard m=11
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v4.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 11 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m11_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m11-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m11:
+    needs: rqmc_m11
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl009_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m11-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl009_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 5
+      - id: q040dl009_a2
+        if: steps.q040dl009_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m11-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl009_a1.outcome != 'success' && steps.q040dl009_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 15
+      - id: q040dl009_a3
+        if: steps.q040dl009_a1.outcome != 'success' && steps.q040dl009_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m11-*
+          merge-multiple: true
+          path: q040_shards
+      - name: Same-run artifact transport gate q040dl009
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl009_a1.outcome }}
+          A2: ${{ steps.q040dl009_a2.outcome }}
+          A3: ${{ steps.q040dl009_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl009" >&2
+            exit 1
+          fi
+          test -d "q040_shards"
+          if ! find "q040_shards" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_shards" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl009"
+      - id: q040dl010_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl010_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl010_a2
+        if: steps.q040dl010_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl010_a1.outcome != 'success' && steps.q040dl010_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl010_a3
+        if: steps.q040dl010_a1.outcome != 'success' && steps.q040dl010_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl010
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl010_a1.outcome }}
+          A2: ${{ steps.q040dl010_a2.outcome }}
+          A3: ${{ steps.q040dl010_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl010" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl010"
+      - id: q040dl011_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m10-v4
+          path: q040_previous
+      - if: steps.q040dl011_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 5
+      - id: q040dl011_a2
+        if: steps.q040dl011_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m10-v4
+          path: q040_previous
+      - if: steps.q040dl011_a1.outcome != 'success' && steps.q040dl011_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 15
+      - id: q040dl011_a3
+        if: steps.q040dl011_a1.outcome != 'success' && steps.q040dl011_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m10-v4
+          path: q040_previous
+      - name: Same-run artifact transport gate q040dl011
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl011_a1.outcome }}
+          A2: ${{ steps.q040dl011_a2.outcome }}
+          A3: ${{ steps.q040dl011_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl011" >&2
+            exit 1
+          fi
+          test -d "q040_previous"
+          if ! find "q040_previous" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_previous" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl011"
+      - id: merge
+        name: Merge cumulative RQMC state m=11
+        run: >-
+          python q040_defensive_rqmc_v4.py merge-level --m 11 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m10_v4.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m11_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m11-v4
+          path: q040_rqmc_state_m11_v4.json
+          if-no-files-found: error
+
+  plan_m12:
+    needs: merge_m11
+    if: needs.merge_m11.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v4.py plan-level --m 12 --output q040_rqmc_plan_m12_v4.json
+
+  rqmc_m12:
+    needs: plan_m12
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m12.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl012_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl012_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl012_a2
+        if: steps.q040dl012_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl012_a1.outcome != 'success' && steps.q040dl012_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl012_a3
+        if: steps.q040dl012_a1.outcome != 'success' && steps.q040dl012_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl012
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl012_a1.outcome }}
+          A2: ${{ steps.q040dl012_a2.outcome }}
+          A3: ${{ steps.q040dl012_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl012" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl012"
+      - name: Run atomic RQMC shell shard m=12
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v4.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 12 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m12_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m12-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m12:
+    needs: rqmc_m12
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl013_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m12-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl013_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 5
+      - id: q040dl013_a2
+        if: steps.q040dl013_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m12-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl013_a1.outcome != 'success' && steps.q040dl013_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 15
+      - id: q040dl013_a3
+        if: steps.q040dl013_a1.outcome != 'success' && steps.q040dl013_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m12-*
+          merge-multiple: true
+          path: q040_shards
+      - name: Same-run artifact transport gate q040dl013
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl013_a1.outcome }}
+          A2: ${{ steps.q040dl013_a2.outcome }}
+          A3: ${{ steps.q040dl013_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl013" >&2
+            exit 1
+          fi
+          test -d "q040_shards"
+          if ! find "q040_shards" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_shards" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl013"
+      - id: q040dl014_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl014_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl014_a2
+        if: steps.q040dl014_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl014_a1.outcome != 'success' && steps.q040dl014_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl014_a3
+        if: steps.q040dl014_a1.outcome != 'success' && steps.q040dl014_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl014
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl014_a1.outcome }}
+          A2: ${{ steps.q040dl014_a2.outcome }}
+          A3: ${{ steps.q040dl014_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl014" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl014"
+      - id: q040dl015_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m11-v4
+          path: q040_previous
+      - if: steps.q040dl015_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 5
+      - id: q040dl015_a2
+        if: steps.q040dl015_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m11-v4
+          path: q040_previous
+      - if: steps.q040dl015_a1.outcome != 'success' && steps.q040dl015_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 15
+      - id: q040dl015_a3
+        if: steps.q040dl015_a1.outcome != 'success' && steps.q040dl015_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m11-v4
+          path: q040_previous
+      - name: Same-run artifact transport gate q040dl015
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl015_a1.outcome }}
+          A2: ${{ steps.q040dl015_a2.outcome }}
+          A3: ${{ steps.q040dl015_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl015" >&2
+            exit 1
+          fi
+          test -d "q040_previous"
+          if ! find "q040_previous" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_previous" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl015"
+      - id: merge
+        name: Merge cumulative RQMC state m=12
+        run: >-
+          python q040_defensive_rqmc_v4.py merge-level --m 12 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m11_v4.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m12_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m12-v4
+          path: q040_rqmc_state_m12_v4.json
+          if-no-files-found: error
+
+  plan_m13:
+    needs: merge_m12
+    if: needs.merge_m12.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v4.py plan-level --m 13 --output q040_rqmc_plan_m13_v4.json
+
+  rqmc_m13:
+    needs: plan_m13
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m13.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl016_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl016_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl016_a2
+        if: steps.q040dl016_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl016_a1.outcome != 'success' && steps.q040dl016_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl016_a3
+        if: steps.q040dl016_a1.outcome != 'success' && steps.q040dl016_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl016
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl016_a1.outcome }}
+          A2: ${{ steps.q040dl016_a2.outcome }}
+          A3: ${{ steps.q040dl016_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl016" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl016"
+      - name: Run atomic RQMC shell shard m=13
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v4.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 13 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m13_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m13-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m13:
+    needs: rqmc_m13
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl017_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m13-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl017_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 5
+      - id: q040dl017_a2
+        if: steps.q040dl017_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m13-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl017_a1.outcome != 'success' && steps.q040dl017_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 15
+      - id: q040dl017_a3
+        if: steps.q040dl017_a1.outcome != 'success' && steps.q040dl017_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m13-*
+          merge-multiple: true
+          path: q040_shards
+      - name: Same-run artifact transport gate q040dl017
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl017_a1.outcome }}
+          A2: ${{ steps.q040dl017_a2.outcome }}
+          A3: ${{ steps.q040dl017_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl017" >&2
+            exit 1
+          fi
+          test -d "q040_shards"
+          if ! find "q040_shards" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_shards" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl017"
+      - id: q040dl018_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl018_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl018_a2
+        if: steps.q040dl018_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl018_a1.outcome != 'success' && steps.q040dl018_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl018_a3
+        if: steps.q040dl018_a1.outcome != 'success' && steps.q040dl018_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl018
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl018_a1.outcome }}
+          A2: ${{ steps.q040dl018_a2.outcome }}
+          A3: ${{ steps.q040dl018_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl018" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl018"
+      - id: q040dl019_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m12-v4
+          path: q040_previous
+      - if: steps.q040dl019_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 5
+      - id: q040dl019_a2
+        if: steps.q040dl019_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m12-v4
+          path: q040_previous
+      - if: steps.q040dl019_a1.outcome != 'success' && steps.q040dl019_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 15
+      - id: q040dl019_a3
+        if: steps.q040dl019_a1.outcome != 'success' && steps.q040dl019_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m12-v4
+          path: q040_previous
+      - name: Same-run artifact transport gate q040dl019
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl019_a1.outcome }}
+          A2: ${{ steps.q040dl019_a2.outcome }}
+          A3: ${{ steps.q040dl019_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl019" >&2
+            exit 1
+          fi
+          test -d "q040_previous"
+          if ! find "q040_previous" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_previous" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl019"
+      - id: merge
+        name: Merge cumulative RQMC state m=13
+        run: >-
+          python q040_defensive_rqmc_v4.py merge-level --m 13 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m12_v4.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m13_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m13-v4
+          path: q040_rqmc_state_m13_v4.json
+          if-no-files-found: error
+
+  plan_m14:
+    needs: merge_m13
+    if: needs.merge_m13.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v4.py plan-level --m 14 --output q040_rqmc_plan_m14_v4.json
+
+  rqmc_m14:
+    needs: plan_m14
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m14.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl020_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl020_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl020_a2
+        if: steps.q040dl020_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl020_a1.outcome != 'success' && steps.q040dl020_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl020_a3
+        if: steps.q040dl020_a1.outcome != 'success' && steps.q040dl020_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl020
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl020_a1.outcome }}
+          A2: ${{ steps.q040dl020_a2.outcome }}
+          A3: ${{ steps.q040dl020_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl020" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl020"
+      - name: Run atomic RQMC shell shard m=14
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v4.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 14 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m14_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m14-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m14:
+    needs: rqmc_m14
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl021_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m14-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl021_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 5
+      - id: q040dl021_a2
+        if: steps.q040dl021_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m14-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl021_a1.outcome != 'success' && steps.q040dl021_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 15
+      - id: q040dl021_a3
+        if: steps.q040dl021_a1.outcome != 'success' && steps.q040dl021_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m14-*
+          merge-multiple: true
+          path: q040_shards
+      - name: Same-run artifact transport gate q040dl021
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl021_a1.outcome }}
+          A2: ${{ steps.q040dl021_a2.outcome }}
+          A3: ${{ steps.q040dl021_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl021" >&2
+            exit 1
+          fi
+          test -d "q040_shards"
+          if ! find "q040_shards" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_shards" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl021"
+      - id: q040dl022_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl022_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl022_a2
+        if: steps.q040dl022_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl022_a1.outcome != 'success' && steps.q040dl022_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl022_a3
+        if: steps.q040dl022_a1.outcome != 'success' && steps.q040dl022_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl022
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl022_a1.outcome }}
+          A2: ${{ steps.q040dl022_a2.outcome }}
+          A3: ${{ steps.q040dl022_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl022" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl022"
+      - id: q040dl023_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m13-v4
+          path: q040_previous
+      - if: steps.q040dl023_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 5
+      - id: q040dl023_a2
+        if: steps.q040dl023_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m13-v4
+          path: q040_previous
+      - if: steps.q040dl023_a1.outcome != 'success' && steps.q040dl023_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 15
+      - id: q040dl023_a3
+        if: steps.q040dl023_a1.outcome != 'success' && steps.q040dl023_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m13-v4
+          path: q040_previous
+      - name: Same-run artifact transport gate q040dl023
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl023_a1.outcome }}
+          A2: ${{ steps.q040dl023_a2.outcome }}
+          A3: ${{ steps.q040dl023_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl023" >&2
+            exit 1
+          fi
+          test -d "q040_previous"
+          if ! find "q040_previous" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_previous" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl023"
+      - id: merge
+        name: Merge cumulative RQMC state m=14
+        run: >-
+          python q040_defensive_rqmc_v4.py merge-level --m 14 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m13_v4.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m14_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m14-v4
+          path: q040_rqmc_state_m14_v4.json
+          if-no-files-found: error
+
+  plan_m15:
+    needs: merge_m14
+    if: needs.merge_m14.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v4.py plan-level --m 15 --output q040_rqmc_plan_m15_v4.json
+
+  rqmc_m15:
+    needs: plan_m15
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m15.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl024_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl024_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl024_a2
+        if: steps.q040dl024_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl024_a1.outcome != 'success' && steps.q040dl024_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl024_a3
+        if: steps.q040dl024_a1.outcome != 'success' && steps.q040dl024_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl024
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl024_a1.outcome }}
+          A2: ${{ steps.q040dl024_a2.outcome }}
+          A3: ${{ steps.q040dl024_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl024" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl024"
+      - name: Run atomic RQMC shell shard m=15
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v4.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 15 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m15_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m15-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m15:
+    needs: rqmc_m15
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl025_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m15-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl025_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 5
+      - id: q040dl025_a2
+        if: steps.q040dl025_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m15-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl025_a1.outcome != 'success' && steps.q040dl025_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 15
+      - id: q040dl025_a3
+        if: steps.q040dl025_a1.outcome != 'success' && steps.q040dl025_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m15-*
+          merge-multiple: true
+          path: q040_shards
+      - name: Same-run artifact transport gate q040dl025
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl025_a1.outcome }}
+          A2: ${{ steps.q040dl025_a2.outcome }}
+          A3: ${{ steps.q040dl025_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl025" >&2
+            exit 1
+          fi
+          test -d "q040_shards"
+          if ! find "q040_shards" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_shards" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl025"
+      - id: q040dl026_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl026_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl026_a2
+        if: steps.q040dl026_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl026_a1.outcome != 'success' && steps.q040dl026_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl026_a3
+        if: steps.q040dl026_a1.outcome != 'success' && steps.q040dl026_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl026
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl026_a1.outcome }}
+          A2: ${{ steps.q040dl026_a2.outcome }}
+          A3: ${{ steps.q040dl026_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl026" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl026"
+      - id: q040dl027_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m14-v4
+          path: q040_previous
+      - if: steps.q040dl027_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 5
+      - id: q040dl027_a2
+        if: steps.q040dl027_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m14-v4
+          path: q040_previous
+      - if: steps.q040dl027_a1.outcome != 'success' && steps.q040dl027_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 15
+      - id: q040dl027_a3
+        if: steps.q040dl027_a1.outcome != 'success' && steps.q040dl027_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m14-v4
+          path: q040_previous
+      - name: Same-run artifact transport gate q040dl027
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl027_a1.outcome }}
+          A2: ${{ steps.q040dl027_a2.outcome }}
+          A3: ${{ steps.q040dl027_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl027" >&2
+            exit 1
+          fi
+          test -d "q040_previous"
+          if ! find "q040_previous" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_previous" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl027"
+      - id: merge
+        name: Merge cumulative RQMC state m=15
+        run: >-
+          python q040_defensive_rqmc_v4.py merge-level --m 15 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m14_v4.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m15_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m15-v4
+          path: q040_rqmc_state_m15_v4.json
+          if-no-files-found: error
+
+  plan_m16:
+    needs: merge_m15
+    if: needs.merge_m15.outputs.converged != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: plan
+        run: python q040_defensive_rqmc_v4.py plan-level --m 16 --output q040_rqmc_plan_m16_v4.json
+
+  rqmc_m16:
+    needs: plan_m16
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan_m16.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl028_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl028_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl028_a2
+        if: steps.q040dl028_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl028_a1.outcome != 'success' && steps.q040dl028_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl028_a3
+        if: steps.q040dl028_a1.outcome != 'success' && steps.q040dl028_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl028
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl028_a1.outcome }}
+          A2: ${{ steps.q040dl028_a2.outcome }}
+          A3: ${{ steps.q040dl028_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl028" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl028"
+      - name: Run atomic RQMC shell shard m=16
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          set -euo pipefail
+          mkdir -p q040_shard
+          python q040_defensive_rqmc_v4.py rqmc-shard \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json \
+            --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' \
+            --m 16 --shard '${{ matrix.shard }}' --shard-count '${{ matrix.shard_count }}' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_shard/rqmc_m16_${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-m16-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_shard/*.json
+          if-no-files-found: warn
+
+  merge_m16:
+    needs: rqmc_m16
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    outputs:
+      converged: ${{ steps.merge.outputs.converged }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl029_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m16-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl029_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 5
+      - id: q040dl029_a2
+        if: steps.q040dl029_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m16-*
+          merge-multiple: true
+          path: q040_shards
+      - if: steps.q040dl029_a1.outcome != 'success' && steps.q040dl029_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_shards"
+          sleep 15
+      - id: q040dl029_a3
+        if: steps.q040dl029_a1.outcome != 'success' && steps.q040dl029_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-m16-*
+          merge-multiple: true
+          path: q040_shards
+      - name: Same-run artifact transport gate q040dl029
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl029_a1.outcome }}
+          A2: ${{ steps.q040dl029_a2.outcome }}
+          A3: ${{ steps.q040dl029_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl029" >&2
+            exit 1
+          fi
+          test -d "q040_shards"
+          if ! find "q040_shards" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_shards" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl029"
+      - id: q040dl030_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl030_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl030_a2
+        if: steps.q040dl030_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl030_a1.outcome != 'success' && steps.q040dl030_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl030_a3
+        if: steps.q040dl030_a1.outcome != 'success' && steps.q040dl030_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl030
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl030_a1.outcome }}
+          A2: ${{ steps.q040dl030_a2.outcome }}
+          A3: ${{ steps.q040dl030_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl030" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl030"
+      - id: q040dl031_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m15-v4
+          path: q040_previous
+      - if: steps.q040dl031_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 5
+      - id: q040dl031_a2
+        if: steps.q040dl031_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m15-v4
+          path: q040_previous
+      - if: steps.q040dl031_a1.outcome != 'success' && steps.q040dl031_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_previous"
+          sleep 15
+      - id: q040dl031_a3
+        if: steps.q040dl031_a1.outcome != 'success' && steps.q040dl031_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-state-m15-v4
+          path: q040_previous
+      - name: Same-run artifact transport gate q040dl031
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl031_a1.outcome }}
+          A2: ${{ steps.q040dl031_a2.outcome }}
+          A3: ${{ steps.q040dl031_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl031" >&2
+            exit 1
+          fi
+          test -d "q040_previous"
+          if ! find "q040_previous" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_previous" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl031"
+      - id: merge
+        name: Merge cumulative RQMC state m=16
+        run: >-
+          python q040_defensive_rqmc_v4.py merge-level --m 16 --shard-dir q040_shards --previous-state q040_previous/q040_rqmc_state_m15_v4.json
+          --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare
+          --output q040_rqmc_state_m16_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-state-m16-v4
+          path: q040_rqmc_state_m16_v4.json
+          if-no-files-found: error
+
+  integration_gate:
+    needs: [plan_m9, rqmc_m9, merge_m9, plan_m10, rqmc_m10, merge_m10, plan_m11, rqmc_m11, merge_m11, plan_m12, rqmc_m12, merge_m12, plan_m13, rqmc_m13, merge_m13, plan_m14, rqmc_m14, merge_m14, plan_m15, rqmc_m15, merge_m15, plan_m16, rqmc_m16, merge_m16]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      proceed: ${{ steps.gate.outputs.proceed }}
+      selected_m: ${{ steps.gate.outputs.selected_m }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - name: Reject incomplete execution chain as technical, never numerical science failure
+        shell: bash
+        env:
+          NEEDS_JSON: ${{ toJSON(needs) }}
+        run: |
+          python - <<'PY3'
+          import json, os
+          d=json.loads(os.environ['NEEDS_JSON'])
+          bad={k:v.get('result') for k,v in d.items() if v.get('result') in ('failure','cancelled')}
+          if bad:
+              raise SystemExit('RQMC_UPSTREAM_EXECUTION_GATE=FAIL '+json.dumps(bad,sort_keys=True))
+          print('RQMC_UPSTREAM_EXECUTION_GATE=PASS')
+          PY3
+      - id: q040dl032_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-state-m*-v4
+          merge-multiple: true
+          path: q040_states
+      - if: steps.q040dl032_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_states"
+          sleep 5
+      - id: q040dl032_a2
+        if: steps.q040dl032_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-state-m*-v4
+          merge-multiple: true
+          path: q040_states
+      - if: steps.q040dl032_a1.outcome != 'success' && steps.q040dl032_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_states"
+          sleep 15
+      - id: q040dl032_a3
+        if: steps.q040dl032_a1.outcome != 'success' && steps.q040dl032_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-state-m*-v4
+          merge-multiple: true
+          path: q040_states
+      - name: Same-run artifact transport gate q040dl032
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl032_a1.outcome }}
+          A2: ${{ steps.q040dl032_a2.outcome }}
+          A3: ${{ steps.q040dl032_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl032" >&2
+            exit 1
+          fi
+          test -d "q040_states"
+          if ! find "q040_states" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_states" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl032"
+      - id: gate
+        run: |
+          python q040_defensive_rqmc_v4.py integration-gate \
+            --state-dir q040_states \
+            --output q040_rqmc_integration_gate_v4.json \
+            --selected-output q040_rqmc_integration_selected_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: |
+            q040_rqmc_integration_gate_v4.json
+            q040_rqmc_integration_selected_v4.json
+          if-no-files-found: error
+
+  integration_failure_seal:
+    needs: integration_gate
+    if: needs.integration_gate.result == 'success' && needs.integration_gate.outputs.proceed != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl033_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: q040_gate
+      - if: steps.q040dl033_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_gate"
+          sleep 5
+      - id: q040dl033_a2
+        if: steps.q040dl033_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: q040_gate
+      - if: steps.q040dl033_a1.outcome != 'success' && steps.q040dl033_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_gate"
+          sleep 15
+      - id: q040dl033_a3
+        if: steps.q040dl033_a1.outcome != 'success' && steps.q040dl033_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: q040_gate
+      - name: Same-run artifact transport gate q040dl033
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl033_a1.outcome }}
+          A2: ${{ steps.q040dl033_a2.outcome }}
+          A3: ${{ steps.q040dl033_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl033" >&2
+            exit 1
+          fi
+          test -d "q040_gate"
+          if ! find "q040_gate" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_gate" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl033"
+      - run: |
+          python q040_defensive_rqmc_v4.py seal-failure \
+            --gate q040_gate/q040_rqmc_integration_gate_v4.json \
+            --preregister q040_defensive_rqmc_preregister_v4.json --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --output q040_final_v4.json --handoff q040_return_handoff_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v4
+          path: |
+            q040_final_v4.json
+            q040_return_handoff_v4.json
+          if-no-files-found: error
+
+  coreset_summary:
+    needs: integration_gate
+    if: needs.integration_gate.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        implementation: [camspec, hillipop]
+        shard: [0, 1, 2, 3, 4, 5]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl034_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl034_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl034_a2
+        if: steps.q040dl034_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl034_a1.outcome != 'success' && steps.q040dl034_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl034_a3
+        if: steps.q040dl034_a1.outcome != 'success' && steps.q040dl034_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl034
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl034_a1.outcome }}
+          A2: ${{ steps.q040dl034_a2.outcome }}
+          A3: ${{ steps.q040dl034_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl034" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl034"
+      - name: Build exact conditional summaries at preregistered coreset representatives
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          mkdir -p q040_summary
+          python q040_defensive_rqmc_v4.py coreset-shard \
+            --q032-parent-root q032_parent --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare \
+            --implementation '${{ matrix.implementation }}' --shard '${{ matrix.shard }}' --shard-count 6 \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output-npz 'q040_summary/${{ matrix.implementation }}_${{ matrix.shard }}.npz' \
+            --output-meta 'q040_summary/${{ matrix.implementation }}_${{ matrix.shard }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-coreset-summary-${{ matrix.implementation }}-${{ matrix.shard }}
+          path: q040_summary/*
+          if-no-files-found: warn
+
+  coreset_merge:
+    needs: coreset_summary
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        implementation: [camspec, hillipop]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl035_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl035_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 5
+      - id: q040dl035_a2
+        if: steps.q040dl035_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - if: steps.q040dl035_a1.outcome != 'success' && steps.q040dl035_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_prepare"
+          sleep 15
+      - id: q040dl035_a3
+        if: steps.q040dl035_a1.outcome != 'success' && steps.q040dl035_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-prepare-v4
+          path: q040_prepare
+      - name: Same-run artifact transport gate q040dl035
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl035_a1.outcome }}
+          A2: ${{ steps.q040dl035_a2.outcome }}
+          A3: ${{ steps.q040dl035_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl035" >&2
+            exit 1
+          fi
+          test -d "q040_prepare"
+          if ! find "q040_prepare" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_prepare" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl035"
+      - id: q040dl036_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: q040_integration
+      - if: steps.q040dl036_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_integration"
+          sleep 5
+      - id: q040dl036_a2
+        if: steps.q040dl036_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: q040_integration
+      - if: steps.q040dl036_a1.outcome != 'success' && steps.q040dl036_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_integration"
+          sleep 15
+      - id: q040dl036_a3
+        if: steps.q040dl036_a1.outcome != 'success' && steps.q040dl036_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: q040_integration
+      - name: Same-run artifact transport gate q040dl036
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl036_a1.outcome }}
+          A2: ${{ steps.q040dl036_a2.outcome }}
+          A3: ${{ steps.q040dl036_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl036" >&2
+            exit 1
+          fi
+          test -d "q040_integration"
+          if ! find "q040_integration" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_integration" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl036"
+      - id: q040dl037_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-coreset-summary-${{ matrix.implementation }}-*
+          merge-multiple: true
+          path: q040_summary
+      - if: steps.q040dl037_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_summary"
+          sleep 5
+      - id: q040dl037_a2
+        if: steps.q040dl037_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-coreset-summary-${{ matrix.implementation }}-*
+          merge-multiple: true
+          path: q040_summary
+      - if: steps.q040dl037_a1.outcome != 'success' && steps.q040dl037_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_summary"
+          sleep 15
+      - id: q040dl037_a3
+        if: steps.q040dl037_a1.outcome != 'success' && steps.q040dl037_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-coreset-summary-${{ matrix.implementation }}-*
+          merge-multiple: true
+          path: q040_summary
+      - name: Same-run artifact transport gate q040dl037
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl037_a1.outcome }}
+          A2: ${{ steps.q040dl037_a2.outcome }}
+          A3: ${{ steps.q040dl037_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl037" >&2
+            exit 1
+          fi
+          test -d "q040_summary"
+          if ! find "q040_summary" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_summary" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl037"
+      - name: Validate non-Gaussian coreset against full converged RQMC probes
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          mkdir -p q040_coreset
+          python q040_defensive_rqmc_v4.py coreset-merge \
+            --q032-parent-root q032_parent --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles --preregister q040_defensive_rqmc_preregister_v4.json \
+            --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --prepare-meta q040_prepare/q040_rqmc_prepare_v4.json --prepare-dir q040_prepare \
+            --integration-state q040_integration/q040_rqmc_integration_selected_v4.json \
+            --shard-dir q040_summary --expected-shards 6 --implementation '${{ matrix.implementation }}' \
+            --scratch q040_rqmc_runtime \
+            --output-npz 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v4.npz' \
+            --output-meta 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v4.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v4
+          path: q040_coreset/*
+          if-no-files-found: warn
+
+  coreset_gate:
+    needs: [integration_gate, coreset_merge]
+    if: needs.integration_gate.outputs.proceed == 'true' && needs.coreset_merge.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    outputs:
+      proceed: ${{ steps.gate.outputs.proceed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl038_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-coreset-*-v4
+          merge-multiple: true
+          path: q040_coresets
+      - if: steps.q040dl038_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_coresets"
+          sleep 5
+      - id: q040dl038_a2
+        if: steps.q040dl038_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-coreset-*-v4
+          merge-multiple: true
+          path: q040_coresets
+      - if: steps.q040dl038_a1.outcome != 'success' && steps.q040dl038_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_coresets"
+          sleep 15
+      - id: q040dl038_a3
+        if: steps.q040dl038_a1.outcome != 'success' && steps.q040dl038_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-coreset-*-v4
+          merge-multiple: true
+          path: q040_coresets
+      - name: Same-run artifact transport gate q040dl038
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl038_a1.outcome }}
+          A2: ${{ steps.q040dl038_a2.outcome }}
+          A3: ${{ steps.q040dl038_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl038" >&2
+            exit 1
+          fi
+          test -d "q040_coresets"
+          if ! find "q040_coresets" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_coresets" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl038"
+      - id: gate
+        run: python q040_defensive_rqmc_v4.py coreset-gate --meta-dir q040_coresets --output q040_rqmc_coreset_gate_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v4
+          path: q040_rqmc_coreset_gate_v4.json
+
+  coreset_failure_seal:
+    needs: coreset_gate
+    if: needs.coreset_gate.result == 'success' && needs.coreset_gate.outputs.proceed != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl039_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v4
+          path: q040_gate
+      - if: steps.q040dl039_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_gate"
+          sleep 5
+      - id: q040dl039_a2
+        if: steps.q040dl039_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v4
+          path: q040_gate
+      - if: steps.q040dl039_a1.outcome != 'success' && steps.q040dl039_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_gate"
+          sleep 15
+      - id: q040dl039_a3
+        if: steps.q040dl039_a1.outcome != 'success' && steps.q040dl039_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v4
+          path: q040_gate
+      - name: Same-run artifact transport gate q040dl039
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl039_a1.outcome }}
+          A2: ${{ steps.q040dl039_a2.outcome }}
+          A3: ${{ steps.q040dl039_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl039" >&2
+            exit 1
+          fi
+          test -d "q040_gate"
+          if ! find "q040_gate" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_gate" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl039"
+      - run: |
+          python q040_defensive_rqmc_v4.py seal-failure --gate q040_gate/q040_rqmc_coreset_gate_v4.json \
+            --preregister q040_defensive_rqmc_preregister_v4.json --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --output q040_final_v4.json --handoff q040_return_handoff_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v4
+          path: |
+            q040_final_v4.json
+            q040_return_handoff_v4.json
+
+  bank_endpoints:
+    needs: coreset_gate
+    if: needs.coreset_gate.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        bank: [A, B]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl040_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v4
+          path: q040_coreset
+      - if: steps.q040dl040_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_coreset"
+          sleep 5
+      - id: q040dl040_a2
+        if: steps.q040dl040_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v4
+          path: q040_coreset
+      - if: steps.q040dl040_a1.outcome != 'success' && steps.q040dl040_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_coreset"
+          sleep 15
+      - id: q040dl040_a3
+        if: steps.q040dl040_a1.outcome != 'success' && steps.q040dl040_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v4
+          path: q040_coreset
+      - name: Same-run artifact transport gate q040dl040
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl040_a1.outcome }}
+          A2: ${{ steps.q040dl040_a2.outcome }}
+          A3: ${{ steps.q040dl040_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl040" >&2
+            exit 1
+          fi
+          test -d "q040_coreset"
+          if ! find "q040_coreset" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_coreset" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl040"
+      - name: Optimize frozen endpoint against independent RQMC bank
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          mkdir -p q040_endpoint
+          python q040_defensive_rqmc_v4.py profile \
+            --q032-parent-root q032_parent --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles --preregister q040_defensive_rqmc_preregister_v4.json --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --implementation '${{ matrix.implementation }}' --bank '${{ matrix.bank }}' --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --coreset-meta 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v4.json' \
+            --coreset-npz 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v4.npz' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_endpoint/${{ matrix.bank }}_${{ matrix.implementation }}_M${{ matrix.mask }}_S${{ matrix.seed }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-bank-${{ matrix.bank }}-${{ matrix.implementation }}-M${{ matrix.mask }}-S${{ matrix.seed }}
+          path: q040_endpoint/*.json
+          if-no-files-found: warn
+
+  bank_stability:
+    needs: [coreset_gate, bank_endpoints]
+    if: needs.coreset_gate.outputs.proceed == 'true' && needs.bank_endpoints.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      proceed: ${{ steps.gate.outputs.proceed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl041_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-bank-*
+          merge-multiple: true
+          path: q040_bank_endpoints
+      - if: steps.q040dl041_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_bank_endpoints"
+          sleep 5
+      - id: q040dl041_a2
+        if: steps.q040dl041_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-bank-*
+          merge-multiple: true
+          path: q040_bank_endpoints
+      - if: steps.q040dl041_a1.outcome != 'success' && steps.q040dl041_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_bank_endpoints"
+          sleep 15
+      - id: q040dl041_a3
+        if: steps.q040dl041_a1.outcome != 'success' && steps.q040dl041_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-bank-*
+          merge-multiple: true
+          path: q040_bank_endpoints
+      - name: Same-run artifact transport gate q040dl041
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl041_a1.outcome }}
+          A2: ${{ steps.q040dl041_a2.outcome }}
+          A3: ${{ steps.q040dl041_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl041" >&2
+            exit 1
+          fi
+          test -d "q040_bank_endpoints"
+          if ! find "q040_bank_endpoints" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_bank_endpoints" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl041"
+      - id: gate
+        run: python q040_defensive_rqmc_v4.py bank-stability --endpoint-dir q040_bank_endpoints --output q040_rqmc_bank_stability_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v4
+          path: q040_rqmc_bank_stability_v4.json
+
+  bank_failure_seal:
+    needs: bank_stability
+    if: needs.bank_stability.result == 'success' && needs.bank_stability.outputs.proceed != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl042_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v4
+          path: q040_gate
+      - if: steps.q040dl042_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_gate"
+          sleep 5
+      - id: q040dl042_a2
+        if: steps.q040dl042_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v4
+          path: q040_gate
+      - if: steps.q040dl042_a1.outcome != 'success' && steps.q040dl042_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_gate"
+          sleep 15
+      - id: q040dl042_a3
+        if: steps.q040dl042_a1.outcome != 'success' && steps.q040dl042_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v4
+          path: q040_gate
+      - name: Same-run artifact transport gate q040dl042
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl042_a1.outcome }}
+          A2: ${{ steps.q040dl042_a2.outcome }}
+          A3: ${{ steps.q040dl042_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl042" >&2
+            exit 1
+          fi
+          test -d "q040_gate"
+          if ! find "q040_gate" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_gate" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl042"
+      - run: |
+          python q040_defensive_rqmc_v4.py seal-failure --gate q040_gate/q040_rqmc_bank_stability_v4.json \
+            --preregister q040_defensive_rqmc_preregister_v4.json --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --output q040_final_v4.json --handoff q040_return_handoff_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v4
+          path: |
+            q040_final_v4.json
+            q040_return_handoff_v4.json
+
+  production_endpoints:
+    needs: bank_stability
+    if: needs.bank_stability.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        mask: [3, 6, 7]
+        seed: [0, 1, 2]
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Create detached frozen Q032 worktree
+        shell: bash
+        run: |
+          set -euo pipefail
+          git cat-file -e "$Q032_EXECUTION_COMMIT^{commit}"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Restore exact authoritative Q032 cache
+        id: q032cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+          fail-on-cache-miss: true
+      - name: Require exact cache hit
+        run: test '${{ steps.q032cache.outputs.cache-hit }}' = 'true'
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime
+        shell: bash
+        run: bash q039_prepare_frozen_env_v4.sh '${{ matrix.implementation }}'
+      - id: q040dl043_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v4
+          path: q040_coreset
+      - if: steps.q040dl043_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_coreset"
+          sleep 5
+      - id: q040dl043_a2
+        if: steps.q040dl043_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v4
+          path: q040_coreset
+      - if: steps.q040dl043_a1.outcome != 'success' && steps.q040dl043_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_coreset"
+          sleep 15
+      - id: q040dl043_a3
+        if: steps.q040dl043_a1.outcome != 'success' && steps.q040dl043_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-${{ matrix.implementation }}-v4
+          path: q040_coreset
+      - name: Same-run artifact transport gate q040dl043
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl043_a1.outcome }}
+          A2: ${{ steps.q040dl043_a2.outcome }}
+          A3: ${{ steps.q040dl043_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl043" >&2
+            exit 1
+          fi
+          test -d "q040_coreset"
+          if ! find "q040_coreset" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_coreset" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl043"
+      - name: Optimize final pooled defensive marginal endpoint
+        shell: bash
+        env:
+          COBAYA_PACKAGES_PATH: ${{ github.workspace }}/q032_parent/external/cobaya_packages
+        run: |
+          mkdir -p q040_endpoint
+          python q040_defensive_rqmc_v4.py profile \
+            --q032-parent-root q032_parent --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles --preregister q040_defensive_rqmc_preregister_v4.json --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --implementation '${{ matrix.implementation }}' --bank ALL --mask '${{ matrix.mask }}' --seed '${{ matrix.seed }}' \
+            --coreset-meta 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v4.json' \
+            --coreset-npz 'q040_coreset/q040_rqmc_${{ matrix.implementation }}_coreset_v4.npz' \
+            --soft-stop-minutes 300 --scratch q040_rqmc_runtime \
+            --output 'q040_endpoint/ALL_${{ matrix.implementation }}_M${{ matrix.mask }}_S${{ matrix.seed }}.json'
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q040-rqmc-production-${{ matrix.implementation }}-M${{ matrix.mask }}-S${{ matrix.seed }}
+          path: q040_endpoint/*.json
+          if-no-files-found: warn
+
+  production_gate:
+    needs: [bank_stability, production_endpoints]
+    if: needs.bank_stability.outputs.proceed == 'true' && needs.production_endpoints.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      proceed: ${{ steps.gate.outputs.proceed }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl044_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-production-*
+          merge-multiple: true
+          path: q040_production
+      - if: steps.q040dl044_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_production"
+          sleep 5
+      - id: q040dl044_a2
+        if: steps.q040dl044_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-production-*
+          merge-multiple: true
+          path: q040_production
+      - if: steps.q040dl044_a1.outcome != 'success' && steps.q040dl044_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_production"
+          sleep 15
+      - id: q040dl044_a3
+        if: steps.q040dl044_a1.outcome != 'success' && steps.q040dl044_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-production-*
+          merge-multiple: true
+          path: q040_production
+      - name: Same-run artifact transport gate q040dl044
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl044_a1.outcome }}
+          A2: ${{ steps.q040dl044_a2.outcome }}
+          A3: ${{ steps.q040dl044_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl044" >&2
+            exit 1
+          fi
+          test -d "q040_production"
+          if ! find "q040_production" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_production" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl044"
+      - id: gate
+        run: python q040_defensive_rqmc_v4.py production-gate --endpoint-dir q040_production --output q040_rqmc_production_gate_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-production-gate-v4
+          path: q040_rqmc_production_gate_v4.json
+
+  production_failure_seal:
+    needs: production_gate
+    if: needs.production_gate.result == 'success' && needs.production_gate.outputs.proceed != 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl045_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-production-gate-v4
+          path: q040_gate
+      - if: steps.q040dl045_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_gate"
+          sleep 5
+      - id: q040dl045_a2
+        if: steps.q040dl045_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-production-gate-v4
+          path: q040_gate
+      - if: steps.q040dl045_a1.outcome != 'success' && steps.q040dl045_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_gate"
+          sleep 15
+      - id: q040dl045_a3
+        if: steps.q040dl045_a1.outcome != 'success' && steps.q040dl045_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-production-gate-v4
+          path: q040_gate
+      - name: Same-run artifact transport gate q040dl045
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl045_a1.outcome }}
+          A2: ${{ steps.q040dl045_a2.outcome }}
+          A3: ${{ steps.q040dl045_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl045" >&2
+            exit 1
+          fi
+          test -d "q040_gate"
+          if ! find "q040_gate" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_gate" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl045"
+      - run: |
+          python q040_defensive_rqmc_v4.py seal-failure --gate q040_gate/q040_rqmc_production_gate_v4.json \
+            --preregister q040_defensive_rqmc_preregister_v4.json --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --output q040_final_v4.json --handoff q040_return_handoff_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v4
+          path: |
+            q040_final_v4.json
+            q040_return_handoff_v4.json
+
+  assess:
+    needs: production_gate
+    if: needs.production_gate.outputs.proceed == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl046_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-production-*
+          merge-multiple: true
+          path: q040_production
+      - if: steps.q040dl046_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_production"
+          sleep 5
+      - id: q040dl046_a2
+        if: steps.q040dl046_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-production-*
+          merge-multiple: true
+          path: q040_production
+      - if: steps.q040dl046_a1.outcome != 'success' && steps.q040dl046_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_production"
+          sleep 15
+      - id: q040dl046_a3
+        if: steps.q040dl046_a1.outcome != 'success' && steps.q040dl046_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q040-rqmc-production-*
+          merge-multiple: true
+          path: q040_production
+      - name: Same-run artifact transport gate q040dl046
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl046_a1.outcome }}
+          A2: ${{ steps.q040dl046_a2.outcome }}
+          A3: ${{ steps.q040dl046_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl046" >&2
+            exit 1
+          fi
+          test -d "q040_production"
+          if ! find "q040_production" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_production" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl046"
+      - run: python q040_defensive_rqmc_v4.py assess --endpoint-dir q040_production --output q040_rqmc_provisional_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v4
+          path: q040_rqmc_provisional_v4.json
+
+  result_tests:
+    needs: assess
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl047_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v4
+          path: q040_result
+      - if: steps.q040dl047_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_result"
+          sleep 5
+      - id: q040dl047_a2
+        if: steps.q040dl047_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v4
+          path: q040_result
+      - if: steps.q040dl047_a1.outcome != 'success' && steps.q040dl047_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_result"
+          sleep 15
+      - id: q040dl047_a3
+        if: steps.q040dl047_a1.outcome != 'success' && steps.q040dl047_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v4
+          path: q040_result
+      - name: Same-run artifact transport gate q040dl047
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl047_a1.outcome }}
+          A2: ${{ steps.q040dl047_a2.outcome }}
+          A3: ${{ steps.q040dl047_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl047" >&2
+            exit 1
+          fi
+          test -d "q040_result"
+          if ! find "q040_result" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_result" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl047"
+      - id: q040dl048_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v4
+          path: q040_bank
+      - if: steps.q040dl048_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_bank"
+          sleep 5
+      - id: q040dl048_a2
+        if: steps.q040dl048_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v4
+          path: q040_bank
+      - if: steps.q040dl048_a1.outcome != 'success' && steps.q040dl048_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_bank"
+          sleep 15
+      - id: q040dl048_a3
+        if: steps.q040dl048_a1.outcome != 'success' && steps.q040dl048_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-bank-stability-v4
+          path: q040_bank
+      - name: Same-run artifact transport gate q040dl048
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl048_a1.outcome }}
+          A2: ${{ steps.q040dl048_a2.outcome }}
+          A3: ${{ steps.q040dl048_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl048" >&2
+            exit 1
+          fi
+          test -d "q040_bank"
+          if ! find "q040_bank" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_bank" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl048"
+      - id: q040dl049_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: q040_integration
+      - if: steps.q040dl049_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_integration"
+          sleep 5
+      - id: q040dl049_a2
+        if: steps.q040dl049_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: q040_integration
+      - if: steps.q040dl049_a1.outcome != 'success' && steps.q040dl049_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_integration"
+          sleep 15
+      - id: q040dl049_a3
+        if: steps.q040dl049_a1.outcome != 'success' && steps.q040dl049_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-integration-final-v4
+          path: q040_integration
+      - name: Same-run artifact transport gate q040dl049
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl049_a1.outcome }}
+          A2: ${{ steps.q040dl049_a2.outcome }}
+          A3: ${{ steps.q040dl049_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl049" >&2
+            exit 1
+          fi
+          test -d "q040_integration"
+          if ! find "q040_integration" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_integration" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl049"
+      - id: q040dl050_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v4
+          path: q040_coreset_gate
+      - if: steps.q040dl050_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_coreset_gate"
+          sleep 5
+      - id: q040dl050_a2
+        if: steps.q040dl050_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v4
+          path: q040_coreset_gate
+      - if: steps.q040dl050_a1.outcome != 'success' && steps.q040dl050_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_coreset_gate"
+          sleep 15
+      - id: q040dl050_a3
+        if: steps.q040dl050_a1.outcome != 'success' && steps.q040dl050_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-coreset-gate-v4
+          path: q040_coreset_gate
+      - name: Same-run artifact transport gate q040dl050
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl050_a1.outcome }}
+          A2: ${{ steps.q040dl050_a2.outcome }}
+          A3: ${{ steps.q040dl050_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl050" >&2
+            exit 1
+          fi
+          test -d "q040_coreset_gate"
+          if ! find "q040_coreset_gate" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_coreset_gate" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl050"
+      - name: Mandatory final result tests
+        run: |
+          python q040_defensive_rqmc_tests_v4.py result \
+            --provisional q040_result/q040_rqmc_provisional_v4.json \
+            --bank-stability q040_bank/q040_rqmc_bank_stability_v4.json \
+            --integration-state q040_integration/q040_rqmc_integration_selected_v4.json \
+            --coreset-gate q040_coreset_gate/q040_rqmc_coreset_gate_v4.json \
+            --preregister q040_defensive_rqmc_preregister_v4.json --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --output q040_rqmc_result_tests_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-tests-v4
+          path: q040_rqmc_result_tests_v4.json
+
+  seal:
+    needs: result_tests
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 PyYAML==6.0.2
+      - id: q040dl051_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v4
+          path: q040_result
+      - if: steps.q040dl051_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_result"
+          sleep 5
+      - id: q040dl051_a2
+        if: steps.q040dl051_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v4
+          path: q040_result
+      - if: steps.q040dl051_a1.outcome != 'success' && steps.q040dl051_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_result"
+          sleep 15
+      - id: q040dl051_a3
+        if: steps.q040dl051_a1.outcome != 'success' && steps.q040dl051_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-provisional-v4
+          path: q040_result
+      - name: Same-run artifact transport gate q040dl051
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl051_a1.outcome }}
+          A2: ${{ steps.q040dl051_a2.outcome }}
+          A3: ${{ steps.q040dl051_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl051" >&2
+            exit 1
+          fi
+          test -d "q040_result"
+          if ! find "q040_result" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_result" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl051"
+      - id: q040dl052_a1
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-tests-v4
+          path: q040_tests
+      - if: steps.q040dl052_a1.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_tests"
+          sleep 5
+      - id: q040dl052_a2
+        if: steps.q040dl052_a1.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-tests-v4
+          path: q040_tests
+      - if: steps.q040dl052_a1.outcome != 'success' && steps.q040dl052_a2.outcome != 'success'
+        shell: bash
+        run: |
+          rm -rf "q040_tests"
+          sleep 15
+      - id: q040dl052_a3
+        if: steps.q040dl052_a1.outcome != 'success' && steps.q040dl052_a2.outcome != 'success'
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: q040-rqmc-tests-v4
+          path: q040_tests
+      - name: Same-run artifact transport gate q040dl052
+        if: always()
+        shell: bash
+        env:
+          A1: ${{ steps.q040dl052_a1.outcome }}
+          A2: ${{ steps.q040dl052_a2.outcome }}
+          A3: ${{ steps.q040dl052_a3.outcome }}
+        run: |
+          set -euo pipefail
+          if [[ "$A1" != success && "$A2" != success && "$A3" != success ]]; then
+            echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=FAIL dependency=q040dl052" >&2
+            exit 1
+          fi
+          test -d "q040_tests"
+          if ! find "q040_tests" -mindepth 1 -print -quit | grep -q .; then
+            echo "Q040_SAME_RUN_ARTIFACT_CONTENT_GATE=FAIL path=q040_tests" >&2
+            exit 1
+          fi
+          echo "Q040_SAME_RUN_ARTIFACT_TRANSPORT_GATE=PASS dependency=q040dl052"
+      - run: |
+          python q040_defensive_rqmc_v4.py seal \
+            --provisional q040_result/q040_rqmc_provisional_v4.json --tests q040_tests/q040_rqmc_result_tests_v4.json \
+            --preregister q040_defensive_rqmc_preregister_v4.json --source-lock q040_defensive_rqmc_source_lock_v4.json \
+            --output q040_final_v4.json --handoff q040_return_handoff_v4.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q040-rqmc-final-v4
+          path: |
+            q040_final_v4.json
+            q040_return_handoff_v4.json
+            q040_defensive_rqmc_preregister_v4.json
+            q040_defensive_rqmc_source_lock_v4.json
+          if-no-files-found: error
