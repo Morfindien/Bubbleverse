@@ -1,0 +1,144 @@
+{
+  "bubbleverse_parent": {
+    "design_parent_commit": "1790e8570debeade2f87ff3bb2a1a582c311c32c",
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q032_program": "q032_planck_tt3pair_bridge_v2.py",
+    "q032_run_id": 33994305721,
+    "q032_support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "q037_result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001",
+    "q039_fgprofile_result_id": "R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001",
+    "q039_result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+    "repository": "Morfindien/Bubbleverse"
+  },
+  "data_hash_policy": {
+    "authoritative_source": "Q032 sealed preflight plus Q032 HiLLiPoP restricted-precision metadata",
+    "require_camspec_covariance_sha256": true,
+    "require_camspec_data_vector_sha256": true,
+    "require_camspec_dataset_file_sha256": true,
+    "require_hillipop_binning_hash": true,
+    "require_hillipop_cross_spectrum_hashes": true,
+    "require_hillipop_native_inverse_covariance_hash": true,
+    "require_q032_restricted_hillipop_precision_sha256": true,
+    "resolved_hashes_must_be_written_into_q040_compression_metadata": true,
+    "silent_data_substitution": false
+  },
+  "evidence_dependency": "All Q032-Q040 Planck likelihood products share overlapping Planck PR4/NPIPE sky information. Any validated Q040 result is methodological evidence about likelihood portability, not independent observational confirmation.",
+  "program_id": "Q040-CMBSPACE-V4",
+  "q": "Q-040",
+  "result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-004",
+  "run_id": "Q040-CMBSPACE-COUPLED-BRIDGE-V4",
+  "software": {
+    "Py-BOBYQA": "1.5.0",
+    "PyYAML": "6.0.2",
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "camspec_interface_repository": "CobayaSampler/cobaya",
+    "camspec_interface_version": "3.5.6",
+    "camspec_npipe_lite_reference_commit": "e387852d2ae8863735814449c682b089c3059318",
+    "camspec_npipe_lite_reference_repository": "HTJense/camspec_npipe-lite",
+    "camspec_npipe_lite_role": "METHODOLOGICAL_REFERENCE_AND_VALIDATION_PRECEDENT_ONLY_NOT_Q040_DATA_PRODUCT",
+    "cobaya": "3.5.6",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "hillipop_repository": "planck-npipe/hillipop",
+    "numpy": "1.26.4",
+    "python": "3.11",
+    "scipy": "1.15.3"
+  },
+  "sources": {
+    "CAMSPEC_2021_ID_UNRESOLVED": {
+      "arxiv": "1910.00483",
+      "authors": "George Efstathiou; Steven Gratton",
+      "bubbleverse_k_id": "NOT_DOCUMENTED_DO_NOT_INVENT",
+      "title": "A Detailed Description of the CamSpec Likelihood Pipeline and a Reanalysis of the Planck High Frequency Maps",
+      "type": "PRIMARY_METHODOLOGY"
+    },
+    "K-044": {
+      "arxiv": "2205.10869",
+      "authors": "Erik Rosenberg; Steven Gratton; George Efstathiou",
+      "doi": "10.1093/mnras/stac2744",
+      "supported_claim": "CamSpec PR4/NPIPE spectral, cleaning and covariance construction.",
+      "title": "CMB power spectra and cosmological parameters from Planck PR4 with CamSpec",
+      "type": "PRIMARY_METHODOLOGY",
+      "year": 2022
+    },
+    "K-045/K-052": {
+      "arxiv": "2510.09430v2",
+      "authors": "Hidde T. Jense; Marc Vi\u00f1a; Erminia Calabrese; J. Colin Hill",
+      "doi": "10.1103/ff9j-skyj",
+      "status": "SAME_SOURCE_COUNT_ONCE",
+      "supported_claim": "A nuisance-marginalized CMB-only Gaussian likelihood is a scientifically meaningful likelihood-construction class; Q040 does not copy its widened amplitude priors.",
+      "title": "Choice of Planck CMB likelihood in cosmological analyses",
+      "type": "PEER_REVIEWED_METHODOLOGICAL_PRECEDENT",
+      "year": 2026
+    },
+    "K-049": {
+      "arxiv": "2309.10034",
+      "authors": "M. Tristram et al.",
+      "doi": "10.1051/0004-6361/202348015",
+      "supported_claim": "HiLLiPoP PR4 multifrequency likelihood and physical foreground modelling.",
+      "title": "Cosmological parameters derived from the final Planck data release (PR4)",
+      "type": "PRIMARY_METHODOLOGY",
+      "year": 2024
+    },
+    "K-053": {
+      "commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+      "repository": "planck-npipe/hillipop",
+      "type": "EXECUTABLE_METHODOLOGY"
+    },
+    "K-054": {
+      "repository": "CobayaSampler/cobaya",
+      "type": "EXECUTABLE_METHODOLOGY",
+      "version": "3.5.6"
+    }
+  },
+  "technical_evidence_v1_failure": {
+    "compression_map_starts": "6_OF_6_NOT_CONVERGED",
+    "environment_gate": "PASS",
+    "github_run_id": 34199777865,
+    "head_commit": "4f144ec145753930ad1dab061ea4d95e71047581",
+    "parent_input_gate": "PASS",
+    "program_id": "Q040-CMBSPACE-V1",
+    "scientific_result_from_v1": false,
+    "source_type": "BUBBLEVERSE_TECHNICAL_EVIDENCE",
+    "static_gate": "PASS"
+  },
+  "technical_evidence_v2_failure": {
+    "camspec_compression_map_starts": "3_OF_3_COMPLETE",
+    "environment_gate": "PASS",
+    "github_run_id": 34203696897,
+    "head_commit": "ff92802d873b3e0a7c640d80485a27d444d4db35",
+    "hillipop_compression_map_starts": "3_OF_3_NOT_CONVERGED",
+    "parent_input_gate": "PASS",
+    "program_id": "Q040-CMBSPACE-V2",
+    "scientific_result_from_v2": false,
+    "source_type": "BUBBLEVERSE_TECHNICAL_EVIDENCE",
+    "static_gate": "PASS"
+  },
+  "technical_evidence_v3_failure": {
+    "authoritative_artifacts": [
+      "q032-preflight-sealed-v2",
+      "q032-hillipop-covariance-v2"
+    ],
+    "environment_gate": "FAIL",
+    "failed_step": "DOWNLOAD_SEALED_Q032_SUPPORT_AND_COVARIANCE_PRODUCTS",
+    "failure_class": "Q032_ARTIFACT_NAME_MISMATCH",
+    "github_run_id": 34209404762,
+    "head_commit": "1790e8570debeade2f87ff3bb2a1a582c311c32c",
+    "parent_input_gate": "PASS",
+    "program_id": "Q040-CMBSPACE-V3",
+    "requested_nonexistent_artifacts": [
+      "q032-preflight-sealed-v3",
+      "q032-hillipop-covariance-v3"
+    ],
+    "scientific_result_from_v3": false,
+    "source_type": "BUBBLEVERSE_TECHNICAL_EVIDENCE",
+    "static_gate": "PASS"
+  },
+  "technical_parent": {
+    "failed_run_id": 34209404762,
+    "failure_scope": "ENVIRONMENT_WORKFLOW_ARTIFACT_PROVENANCE_ONLY; SOLVER_NOT_EXECUTED; NOT_SCIENTIFIC_RESULT",
+    "program": "q040_cmbspace_coupled_bridge_v3.py",
+    "program_id": "Q040-CMBSPACE-V3",
+    "role": "REUSE_V3_EXACT_GLS_VARIABLE_PROJECTION_SOLVER_AND_ALL_SCIENTIFIC_LOCKS; PATCH_WORKFLOW_Q032_ARTIFACT_REFERENCES_ONLY"
+  }
+}

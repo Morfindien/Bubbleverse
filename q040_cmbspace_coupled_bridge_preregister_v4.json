@@ -1,0 +1,215 @@
+{
+  "cmb_representation": {
+    "definition": "One latent CMB TT D_ell value for every unique ell represented by at least one frozen Q032 support coordinate.",
+    "if_identity_conditioning_fails": "STOP_AND_REQUIRE_NEW_PREREGISTRATION",
+    "new_binning_allowed": false,
+    "primary": "IDENTITY_UNIQUE_MULTIPOLE_TT",
+    "representation_hash_rule": "SHA256_CANONICAL_JSON(parent_support_sha256, representation_name, ordered_unique_ells)"
+  },
+  "compression_method": {
+    "boundary_sigma_min": 2.5,
+    "fixed_point_relative_objective_tolerance": 1e-06,
+    "fixed_point_scaled_nuisance_tolerance": 0.001,
+    "fixed_point_verification": "After direct profile minimization, perform one independent conditional nuisance minimization at the exact GLS CMB solution and then re-solve GLS.",
+    "hessian": "Finite-difference nuisance and cross blocks plus exact CMB-CMB block at the selected joint mode.",
+    "latent_cmb_step": "Exact generalized least-squares elimination at every nuisance-profile objective evaluation.",
+    "marginal_cmb_precision": "H_ss - H_s_eta H_eta_eta^-1 H_eta_s",
+    "method": "CONSTRAINED_LAPLACE_SCHUR_MARGINALIZATION",
+    "multistart_cmb_normalized_rms_max": 0.1,
+    "multistart_objective_spread_max": 0.5,
+    "outer_relative_objective_tolerance": 1e-06,
+    "outer_scaled_nuisance_tolerance": 0.001,
+    "profile_max_iterations": 5000,
+    "profile_parameterization": "Native nuisance parameters transformed only numerically to proposal-scaled coordinates; native priors and hard bounds remain unchanged.",
+    "profile_primary_optimizer": "SCIPY_L_BFGS_B_IN_PROPOSAL_SCALED_COORDINATES",
+    "profile_secondary_optimizer": "SCIPY_POWELL_IN_PROPOSAL_SCALED_COORDINATES_FOLLOWED_BY_L_BFGS_B_POLISH",
+    "scientific_acceptance_thresholds_inherited_unchanged_from_v1_v2": true,
+    "solver": "EXACT_GLS_VARIABLE_PROJECTION_PROFILED_NUISANCE_MAP_V4",
+    "start_families": [
+      "NATIVE_REFERENCE",
+      "Q032_LOWEST_OBJECTIVE_WITHIN_IMPLEMENTATION",
+      "Q032_FARTHEST_COMPLETE_ENDPOINT_WITHIN_IMPLEMENTATION"
+    ],
+    "verification_triggered_profile_polish_max": 1
+  },
+  "compression_validation": {
+    "A_planck_probe_offsets": [
+      -0.0025,
+      0.0025
+    ],
+    "A_planck_semantics_required": true,
+    "conditional_nuisance_multistart": 2,
+    "cosmology_independent_construction_required": true,
+    "finite_data_vector": true,
+    "independent_initialization_required": true,
+    "max_abs_native_vs_compressed_delta_chi2_error": 0.35,
+    "native_laplace_probe_directions": [
+      "CONSTANT",
+      "LOG_TILT",
+      "HIGH_ELL_RAMP"
+    ],
+    "no_lost_parent_multipoles": true,
+    "on_failure": "COMPRESSION_VALIDATION_FAIL_AND_NO_Q040_SCIENCE_ENDPOINTS",
+    "positive_definite_covariance": true,
+    "positive_definite_precision": true,
+    "probe_signs": [
+      -1,
+      1
+    ],
+    "probe_target_delta_chi2": 1.0
+  },
+  "endpoint_execution": {
+    "geometry_coordinates": [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "H0",
+      "A_planck"
+    ],
+    "ignore_prior_density_in_optimizer_scalar": true,
+    "labels": [
+      "M3-S0",
+      "M3-S1",
+      "M3-S2",
+      "M6-S0",
+      "M6-S1",
+      "M6-S2",
+      "M7-S0",
+      "M7-S1",
+      "M7-S2"
+    ],
+    "locked_scales_sha256": "732aeeb127d9083c0924552aa276117310ca32b5bfda854f51bfd3240638b2f6",
+    "max_evals": 300000,
+    "optimizer": "COBAYA_MINIMIZE_BOBYQA",
+    "preserve_explicit_native_gaussian_shapes": true,
+    "rhoend": 1e-05,
+    "soft_stop_minutes": 300
+  },
+  "geometry": {
+    "baseline": {
+      "centroid": 0.8311487237190059,
+      "matched_median": 2.9317906965863507,
+      "pairwise_median_drift": 1.6367910228418985
+    },
+    "partial_material_reduction_terminal_label_registered": false,
+    "report_continuous_reduction_fractions_even_when_sufficiency_fails": true,
+    "sufficiency_rule": "matched_median<=0.10 AND centroid<=0.10 AND pairwise_median_drift<=0.10 for the full nine-label result AND each of all nine leave-one-label-out analyses",
+    "sufficiency_threshold": 0.1
+  },
+  "intervention": {
+    "class": "COUPLED_STRUCTURAL_INTERVENTION",
+    "cross_family_covariance_transfer": false,
+    "cross_family_foreground_mapping": false,
+    "cross_family_objective_arithmetic": false,
+    "description": "Each Q032-restricted implementation is projected separately to an identity-multipole CMB TT Gaussian likelihood using its own data vector, covariance/precision, foreground model, relative-calibration semantics and native nuisance priors. A_planck is not marginalized and remains an explicit runtime geometry coordinate.",
+    "name": "NATIVE_NUISANCE_MARGINALIZED_CMB_SPACE_LAPLACE_SCHUR_V4"
+  },
+  "mandatory_gates": [
+    "CONTEXT_CONTINUITY_GATE",
+    "Q_IDENTITY_GATE",
+    "PARENT_LOCK_GATE",
+    "SOURCE_GATE",
+    "DATA_GATE",
+    "OBSERVATIONAL_SUPPORT_GATE",
+    "NO_HIDDEN_BINNING_GATE",
+    "NATIVE_NUISANCE_SEMANTICS_GATE",
+    "A_PLANCK_PRESERVATION_GATE",
+    "NO_FOREGROUND_ZEROING_GATE",
+    "NO_COVARIANCE_SWAP_GATE",
+    "NO_OBJECTIVE_MIXING_GATE",
+    "COMPRESSION_MULTISTART_GATE",
+    "COMPRESSION_COVARIANCE_GATE",
+    "COMPRESSION_GAUSSIAN_APPROXIMATION_GATE",
+    "A_PLANCK_SEMANTICS_GATE",
+    "JOB_COMPLETENESS_GATE",
+    "MERGE_COMPATIBILITY_GATE",
+    "FROZEN_GEOMETRY_GATE",
+    "NINE_LOO_GATE",
+    "SCIENTIFIC_INTERPRETATION_GATE",
+    "FINAL_RESULT_GATE"
+  ],
+  "model_lock": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "backend_repository": "mwt5345/class_ede",
+    "cobaya_version": "3.5.6",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "hillipop_repository": "planck-npipe/hillipop",
+    "model": "MOD-EDE-N3",
+    "n_scf": 3
+  },
+  "nuisance_semantics": {
+    "A_planck": "PRESERVE_AS_EXPLICIT_RUNTIME_PARAMETER_NOT_MARGINALIZED",
+    "forced_cross_implementation_mapping": false,
+    "foreground_zeroing": false,
+    "native_sampled_tt_nuisance_only": true,
+    "negative_amplitude_override": false,
+    "prior_widening": false,
+    "support_null_nuisance": "May be analytically factorized only after an exact zero-response gate on frozen Q032 support."
+  },
+  "observational_support": {
+    "allow_100ghz": false,
+    "allow_EE": false,
+    "allow_TE": false,
+    "allow_external_cmb": false,
+    "frequency_pairs": [
+      "143x143",
+      "143x217",
+      "217x217"
+    ],
+    "parent_support_hash_reused_as_representation_hash": false,
+    "parent_support_semantics": "Q032_EXACT_TT_COMMON_SUPPORT"
+  },
+  "parent_lock": {
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q032_result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "q032_run_id": 33994305721,
+    "q032_support_sha256": "f6d7b3195789e7149942c63543bdd8e9a44490ea3f3645fb964e936ec69cca2b",
+    "q037_commit": "c49d9885a5bf1e290f4b42f15c59d228c7c036cf",
+    "q037_result_id": "R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001",
+    "q037_run_id": 34115280043,
+    "q039_commit": "365217d4a4ca21e0af3b296c0e6b23df7e07ba60",
+    "q039_fgprofile_commit": "449fe096e49a793446c0c859cf8caf0fcdaf4c8f",
+    "q039_fgprofile_result_id": "R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001",
+    "q039_fgprofile_run_id": 34184346582,
+    "q039_result_id": "R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001",
+    "q039_run_id": 34161368438
+  },
+  "project": {
+    "created_at": "2026-09-08T10:54:00+02:00",
+    "program_id": "Q040-CMBSPACE-V4",
+    "q": "Q-040",
+    "result_id": "R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-004",
+    "run_id": "Q040-CMBSPACE-COUPLED-BRIDGE-V4",
+    "scientific_question": "Can a finite, preregistered and scientifically defensible coupled structural intervention involving documented CamSpec-versus-HiLLiPoP differences in foreground-model form, data-vector construction/weighting and covariance/likelihood construction materially reduce C-036-IMPL on the Q032 matched-support architecture without constructing a scientifically meaningless synthetic likelihood?"
+  },
+  "rules": {
+    "do_not_rerun_q039_single_blocks": true,
+    "negative_result_is_valid": true,
+    "no_cross_likelihood_absolute_objective_subtraction": true,
+    "no_cross_likelihood_chi2_sum": true,
+    "q035_remains_closed": true,
+    "q037_remains_closed": true,
+    "q038_descriptive_only": true,
+    "q039_remains_closed": true,
+    "shared_planck_sky_not_independent_observations": true,
+    "technical_compression_failure_is_not_scientific_absence_of_coupled_mechanism": true,
+    "unexpected_larger_discrepancy_is_valid": true
+  },
+  "technical_supersession": {
+    "failed_run_id": 34209404762,
+    "failure_class": "ENVIRONMENT_GATE_Q032_ARTIFACT_NAME_MISMATCH",
+    "observed_v3_failure": "Workflow requested q032-preflight-sealed-v3 and q032-hillipop-covariance-v3 from authoritative Q032 run 33994305721. That Q032 campaign is V2 and publishes q032-preflight-sealed-v2 and q032-hillipop-covariance-v2. Compression never started.",
+    "reason": "Technical workflow provenance repair only. V3 produced no compression MAP, no compression build, no CMB-only validation and no Q040 science endpoints.",
+    "scientific_model_data_priors_bounds_support_geometry_and_acceptance_thresholds_changed": false,
+    "solver_changed_from_v3": false,
+    "supersedes_program_id": "Q040-CMBSPACE-V3",
+    "technical_change": "Correct all frozen Q032 artifact references in the Q040 workflow back to the authoritative V2 artifact names; add a static workflow provenance gate preventing Q032 artifact version drift. Preserve V3 exact-GLS variable-projection solver byte-for-byte apart from Q040 V4 identity/provenance strings.",
+    "v3_failed_stage": "ENVIRONMENT_GATE_DOWNLOAD_SEALED_Q032_SUPPORT_AND_COVARIANCE_PRODUCTS",
+    "v3_successful_gates": [
+      "STATIC",
+      "PARENT_INPUT"
+    ]
+  }
+}
