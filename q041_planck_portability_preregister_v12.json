@@ -1,0 +1,87 @@
+{
+  "q": "Q-041",
+  "program_id": "Q041-PLANCKPORT-V12",
+  "run_id": "Q041-DOWNSTREAM-SCIENTIFIC-CONSEQUENCE-PORTABILITY-V12",
+  "result_id": "R-Q041-EDE-DOWNSTREAM-PORTABILITY-012",
+  "status": "PREREGISTERED",
+  "scientific_question": "Does the validated CamSpec-HiLLiPoP fitted-geometry difference in n=3 EDE produce materially different cosmological inference after combining each native Planck arm with the same external CMB and late-time information?",
+  "baseline_parent": {
+    "q": "Q-032",
+    "github_run_id": 33994305721,
+    "execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "interpretation": "Q037 validated that the CamSpec-HiLLiPoP difference survives exact common TT support; Q041 starts from that harmonized support rather than reopening Q040."
+  },
+  "arms": [
+    "camspec",
+    "hillipop"
+  ],
+  "model": {
+    "name": "MOD-EDE-N3",
+    "n_scf": 3,
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97"
+  },
+  "external_data": {
+    "A6": "ACT DR6 foreground-marginalized primary CMB, official DR6-ACT-lite v1.0.1",
+    "L6": "ACT DR6 ACT-only baseline lensing likelihood v1.2.1",
+    "D2": "DESI DR2 all-tracer BAO through the Cobaya desi_dr2 definition and bao_data v2.6"
+  },
+  "overlap_policy": {
+    "name": "CONSERVATIVE_PRIMARY_CMB_NONOVERLAP",
+    "when_A6_present": "Planck exact-common TT support is further marginalized to ell <= 599; ACT primary TT/TE/EE starts at ell = 600.",
+    "when_A6_absent": "Use the full authoritative Q032 exact-common TT support.",
+    "planckactcut_claim": false,
+    "cross_likelihood_covariance_assumed_zero_only_after_disjoint_primary_multipole_support": true
+  },
+  "baseline_combinations": [
+    "P",
+    "P_A6",
+    "P_L6",
+    "P_D2",
+    "P_A6_L6_D2"
+  ],
+  "leave_one_out_combinations": [
+    "P_L6_D2",
+    "P_A6_D2",
+    "P_A6_L6"
+  ],
+  "inference": {
+    "sampler": "Cobaya MCMC",
+    "independent_chains_per_arm_combination": 2,
+    "Rminus1_stop": 0.02,
+    "Rminus1_cl_stop": 0.2,
+    "max_samples_per_chain": 20000,
+    "hard_science_rhat_gate": 1.05,
+    "common_report_coordinates": [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "H0"
+    ]
+  },
+  "classification": {
+    "material_if": "For P_A6_L6_D2, max standardized two-arm mean shift >= 1.0 OR six-dimensional Gaussian Bhattacharyya coefficient <= 0.50, and at least two of three leave-one-out combinations preserve max standardized shift >= 0.75.",
+    "equivalent_if": "For P_A6_L6_D2, all standardized coordinate shifts <= 0.50 AND six-dimensional Gaussian Bhattacharyya coefficient >= 0.80, with all three leave-one-out max shifts <= 0.75.",
+    "otherwise": "CONSTRAINED_MIXED",
+    "technical_gate_failure": "NO_SCIENTIFIC_RESULT"
+  },
+  "hard_rules": {
+    "same_external_data_both_arms": true,
+    "same_model_backend_both_arms": true,
+    "no_hybrid_planck_likelihood": true,
+    "no_cross_arm_chi2_sum": true,
+    "no_cross_arm_absolute_objective_subtraction": true,
+    "q040_scientific_dependency_forbidden": true,
+    "failed_or_unconverged_chain_is_not_scientific_evidence": true,
+    "classification_only_after_all_required_gates_pass": true
+  },
+  "technical_revision": {
+    "version": "v12",
+    "supersedes_program_id": "Q041-PLANCKPORT-V11",
+    "reason": "V11 passed DESI version validation but frozen Cobaya 3.5.6 rejected pandas StringDtype at BAO.has_type. V12 backports only StringDtype recognition from pinned Cobaya commit b76b6fed2a6c8c5594c6f92d5058bef10079746a. No likelihood equations, data, priors, sampler settings or thresholds change.",
+    "scientific_and_numerical_settings_changed_from_v11": false,
+    "scientific_result_from_v11_failure": false
+  }
+}
