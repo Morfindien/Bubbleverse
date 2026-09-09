@@ -1,0 +1,346 @@
+name: Bubbleverse Q041 downstream Planck portability V8
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-041
+  PROGRAM_ID: Q041-PLANCKPORT-V8
+  RUN_ID: Q041-DOWNSTREAM-SCIENTIFIC-CONSEQUENCE-PORTABILITY-V8
+  RESULT_ID: R-Q041-EDE-DOWNSTREAM-PORTABILITY-008
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Exact launcher identity gate
+        shell: bash
+        env:
+          INPUT_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          test "$INPUT_PROGRAM_ID" = "$PROGRAM_ID"
+          echo Q041_PROGRAM_ID_GATE=PASS
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Compile and validate preregistered Q041 surface
+        run: |
+          python -m py_compile q041_planck_portability_v8.py q041_planck_portability_tests_v8.py
+          python q041_planck_portability_v8.py static \
+            --preregister q041_planck_portability_preregister_v8.json \
+            --source-lock q041_planck_portability_source_lock_v8.json \
+            --output q041_static_program_v8.json
+          python q041_planck_portability_tests_v8.py static \
+            --preregister q041_planck_portability_preregister_v8.json \
+            --source-lock q041_planck_portability_source_lock_v8.json \
+            --registry bubbleverse_program_registry.json \
+            --workflow .github/workflows/q041-planck-portability-v8.yml \
+            --program q041_planck_portability_v8.py \
+            --output q041_static_tests_v8.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-static-v8
+          path: |
+            q041_static_program_v8.json
+            q041_static_tests_v8.json
+            q041_planck_portability_preregister_v8.json
+            q041_planck_portability_source_lock_v8.json
+          if-no-files-found: error
+
+  environment:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore complete frozen Q041 environment cache
+        id: q041_full_cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v8-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+
+      - name: Restore frozen Q032 core cache when full cache is absent
+        id: q041_core_cache
+        if: steps.q041_full_cache.outputs.cache-hit != 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q041-v8-q032core-${{ runner.os }}-py311-4dc873a-classede-5a131c91-hillipop-a09ddde3
+          restore-keys: |
+            q032-v2-${{ runner.os }}-py311-classede-5a131c91-hillipop-a09ddde3
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Download authoritative Q032 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Download authoritative Q032 sealed support
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - name: Download authoritative Q032 HiLLiPoP common-support precision
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 CamSpec and HiLLiPoP runtime
+        run: bash q041_prepare_frozen_core_v8.sh both
+
+      - name: Save frozen Q032 core immediately after successful bootstrap
+        if: steps.q041_full_cache.outputs.cache-hit != 'true' && steps.q041_core_cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+          key: q041-v8-q032core-${{ runner.os }}-py311-4dc873a-classede-5a131c91-hillipop-a09ddde3
+
+      - name: Install exact Q041 external likelihoods without upgrading Cobaya
+        run: bash q041_setup_v8.sh
+
+      - name: Save complete frozen Q041 environment immediately
+        if: steps.q041_full_cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v8-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+      - name: Marginalize Planck common TT support to ell <= 599 for ACT-primary combinations
+        run: |
+          mkdir -p q041_environment
+          python q041_planck_portability_v8.py prepare-nonoverlap \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --support-output q041_environment/q041_primary_nonoverlap_support_v8.json \
+            --matrix-output q041_environment/q041_hillipop_nonoverlap_precision_v8.npy \
+            --meta-output q041_environment/q041_hillipop_nonoverlap_precision_v8.json
+      - name: Real full-combination finite-likelihood preflight in both native Planck arms
+        run: |
+          python q041_planck_portability_v8.py runtime-preflight \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment/q041_primary_nonoverlap_support_v8.json \
+            --reduced-hlp-matrix q041_environment/q041_hillipop_nonoverlap_precision_v8.npy \
+            --reduced-hlp-meta q041_environment/q041_hillipop_nonoverlap_precision_v8.json \
+            --preregister q041_planck_portability_preregister_v8.json \
+            --source-lock q041_planck_portability_source_lock_v8.json \
+            --external-runtime q041_runtime/q041_external_runtime_provenance_v8.json \
+            --output q041_environment/q041_runtime_preflight_v8.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-environment-v8
+          path: |
+            q041_environment/*
+            q041_runtime/q041_external_runtime_provenance_v8.json
+          if-no-files-found: error
+
+  sample:
+    needs: environment
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete Q041 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v8-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-v8
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v8.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v8.sh
+      - name: Run one independent posterior chain
+        shell: bash
+        run: |
+          mkdir -p q041_chain
+          python q041_planck_portability_v8.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v8.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v8.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v8.json \
+            --preregister q041_planck_portability_preregister_v8.json \
+            --source-lock q041_planck_portability_source_lock_v8.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --output-dir q041_chain
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-v8
+          path: q041_chain/**
+          if-no-files-found: warn
+
+  aggregate:
+    needs: sample
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 getdist==1.6.1
+      - name: Download every successful/partial Q041 chain artifact without merging names
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q041-chain-*-v8
+          path: q041_all_chains
+      - name: Aggregate with hard completeness and convergence gates
+        id: science
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          python q041_planck_portability_v8.py aggregate \
+            --input-dir q041_all_chains \
+            --preregister q041_planck_portability_preregister_v8.json \
+            --source-lock q041_planck_portability_source_lock_v8.json \
+            --output q041_final_v8.json 2>&1 | tee q041_aggregate.log
+      - name: Seal technical failure as no scientific result
+        if: steps.science.outcome != 'success'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          text=pathlib.Path('q041_aggregate.log').read_text(encoding='utf-8',errors='replace') if pathlib.Path('q041_aggregate.log').exists() else 'aggregate step did not produce a log'
+          d={'q':'Q-041','program_id':'Q041-PLANCKPORT-V8','run_id':'Q041-DOWNSTREAM-SCIENTIFIC-CONSEQUENCE-PORTABILITY-V8',
+             'result_id':'R-Q041-EDE-DOWNSTREAM-PORTABILITY-008','stage':'FINAL','status':'FAILED',
+             'actual_computed_result':False,'scientific_classification':None,'failure_class':'TECHNICAL_OR_CONVERGENCE_GATE',
+             'scientific_result_from_failed_run':False,'aggregate_log_tail':text[-8000:]}
+          pathlib.Path('q041_final_v8.json').write_text(json.dumps(d,indent=2,sort_keys=True)+'\n')
+          PY
+      - name: Validate scientific final only when all gates passed
+        if: steps.science.outcome == 'success'
+        run: |
+          python q041_planck_portability_tests_v8.py final --final q041_final_v8.json --output q041_final_tests_v8.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q041-final-v8
+          path: |
+            q041_final_v8.json
+            q041_final_tests_v8.json
+            q041_aggregate.log
+          if-no-files-found: warn
+      - name: Enforce workflow-level science gate
+        if: steps.science.outcome != 'success'
+        run: |
+          echo 'Q041_FINAL_GATE=FAIL — sealed as NO_SCIENTIFIC_RESULT' >&2
+          exit 2
