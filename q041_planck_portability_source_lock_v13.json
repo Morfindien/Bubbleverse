@@ -1,0 +1,74 @@
+{
+  "q": "Q-041",
+  "program_id": "Q041-PLANCKPORT-V13",
+  "run_id": "Q041-DOWNSTREAM-SCIENTIFIC-CONSEQUENCE-PORTABILITY-V13",
+  "result_id": "R-Q041-EDE-DOWNSTREAM-PORTABILITY-013",
+  "bubbleverse": {
+    "q032_github_run_id": 33994305721,
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q032_result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002",
+    "class_ede_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "cobaya_version": "3.5.6"
+  },
+  "external": {
+    "act_dr6_cmbonly": {
+      "repository": "ACTCollaboration/DR6-ACT-lite",
+      "tag": "v1.0.1",
+      "commit": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+      "component": "act_dr6_cmbonly.ACTDR6CMBonly",
+      "ell_cuts": {
+        "TT": [
+          600,
+          8500
+        ],
+        "TE": [
+          600,
+          8500
+        ],
+        "EE": [
+          600,
+          8500
+        ]
+      }
+    },
+    "act_dr6_lensing": {
+      "repository": "ACTCollaboration/act_dr6_lenslike",
+      "tag": "v1.2.1",
+      "commit": "b386ddbb5821c1216c709f051c9289292f174d30",
+      "component": "act_dr6_lenslike.ACTDR6LensLike",
+      "variant": "act_baseline",
+      "lens_only": false,
+      "lmax": 4000
+    },
+    "desi_dr2": {
+      "component": "bao.desi_dr2",
+      "cobaya_definition_commit": "b76b6fed2a6c8c5594c6f92d5058bef10079746a",
+      "bao_data_repository": "CobayaSampler/bao_data",
+      "bao_data_tag": "v2.6",
+      "bao_data_commit": "b7b8a36e9bccb063081f811f323cada21ab5fbdd",
+      "all_tracer_mean_blob": "8aff444fdb42c0946342aa0011ab287eda097c4c",
+      "all_tracer_cov_blob": "fd8e5697ab61379b07b52efb781ea6713417a4d9"
+    }
+  },
+  "forbidden_scientific_inputs": [
+    "Q040-CMBSPACE-*",
+    "Q040-RQMC-*"
+  ],
+  "notes": [
+    "Q041 may reuse Q032/Q037 validated exact-common-TT execution machinery but may not use Q040 scientific products.",
+    "The DESI DR2 definition is backported into frozen Cobaya 3.5.6; the base Cobaya installation is not upgraded.",
+    "Runtime setup records hashes of installed external data products before any scientific chain starts."
+  ],
+  "technical_revision": {
+    "version": "v13",
+    "supersedes_program_id": "Q041-PLANCKPORT-V12",
+    "scientific_and_numerical_settings_changed_from_v12": false,
+    "frozen_cobaya_version": "3.5.6",
+    "bao_dtype_compatibility_source_commit": "b76b6fed2a6c8c5594c6f92d5058bef10079746a",
+    "bao_dtype_patch_method": "semantic regex + source compile + runtime import verification",
+    "desi_bao_data_release": "v2.6",
+    "chain_metadata_filename": "q041_chain_metadata_v13.json",
+    "immutable_q032_parent_version": "v2"
+  }
+}
