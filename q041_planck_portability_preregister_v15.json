@@ -1,0 +1,94 @@
+{
+  "arms": [
+    "camspec",
+    "hillipop"
+  ],
+  "baseline_combinations": [
+    "P",
+    "P_A6",
+    "P_L6",
+    "P_D2",
+    "P_A6_L6_D2"
+  ],
+  "baseline_parent": {
+    "execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "github_run_id": 33994305721,
+    "interpretation": "Q037 validated that the CamSpec-HiLLiPoP difference survives exact common TT support; Q041 starts from that harmonized support rather than reopening Q040.",
+    "q": "Q-032",
+    "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002"
+  },
+  "classification": {
+    "equivalent_if": "For P_A6_L6_D2, all standardized coordinate shifts <= 0.50 AND six-dimensional Gaussian Bhattacharyya coefficient >= 0.80, with all three leave-one-out max shifts <= 0.75.",
+    "material_if": "For P_A6_L6_D2, max standardized two-arm mean shift >= 1.0 OR six-dimensional Gaussian Bhattacharyya coefficient <= 0.50, and at least two of three leave-one-out combinations preserve max standardized shift >= 0.75.",
+    "otherwise": "CONSTRAINED_MIXED",
+    "technical_gate_failure": "NO_SCIENTIFIC_RESULT"
+  },
+  "external_data": {
+    "A6": "ACT DR6 foreground-marginalized primary CMB, official DR6-ACT-lite v1.0.1",
+    "D2": "DESI DR2 all-tracer BAO through the Cobaya desi_dr2 definition and bao_data v2.6",
+    "L6": "ACT DR6 ACT-only baseline lensing likelihood v1.2.1"
+  },
+  "hard_rules": {
+    "classification_only_after_all_required_gates_pass": true,
+    "failed_or_unconverged_chain_is_not_scientific_evidence": true,
+    "no_cross_arm_absolute_objective_subtraction": true,
+    "no_cross_arm_chi2_sum": true,
+    "no_hybrid_planck_likelihood": true,
+    "q040_scientific_dependency_forbidden": true,
+    "same_external_data_both_arms": true,
+    "same_model_backend_both_arms": true
+  },
+  "inference": {
+    "Rminus1_cl_stop": 0.2,
+    "Rminus1_stop": 0.02,
+    "common_report_coordinates": [
+      "omega_b",
+      "omega_cdm",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "H0"
+    ],
+    "hard_science_rhat_gate": 1.05,
+    "independent_chains_per_arm_combination": 2,
+    "max_samples_per_chain": 20000,
+    "sampler": "Cobaya MCMC"
+  },
+  "leave_one_out_combinations": [
+    "P_L6_D2",
+    "P_A6_D2",
+    "P_A6_L6"
+  ],
+  "model": {
+    "backend_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "n_scf": 3,
+    "name": "MOD-EDE-N3"
+  },
+  "overlap_policy": {
+    "cross_likelihood_covariance_assumed_zero_only_after_disjoint_primary_multipole_support": true,
+    "name": "CONSERVATIVE_PRIMARY_CMB_NONOVERLAP",
+    "planckactcut_claim": false,
+    "when_A6_absent": "Use the full authoritative Q032 exact-common TT support.",
+    "when_A6_present": "Planck exact-common TT support is further marginalized to ell <= 599; ACT primary TT/TE/EE starts at ell = 600."
+  },
+  "program_id": "Q041-PLANCKPORT-V15",
+  "q": "Q-041",
+  "result_id": "R-Q041-EDE-DOWNSTREAM-PORTABILITY-015",
+  "run_id": "Q041-DOWNSTREAM-SCIENTIFIC-CONSEQUENCE-PORTABILITY-V15",
+  "scientific_question": "Does the validated CamSpec-HiLLiPoP fitted-geometry difference in n=3 EDE produce materially different cosmological inference after combining each native Planck arm with the same external CMB and late-time information?",
+  "status": "PREREGISTERED",
+  "technical_revision": {
+    "controlled_no_science_is_green_final": true,
+    "github_job_timeout_minutes": 330,
+    "max_segments": 8,
+    "outcome_semantics_only": true,
+    "reason": "V15 preserves V14 segmented exact-resume execution and every scientific/numerical lock. It changes only final outcome semantics: controlled preregistered numerical non-completion (max_samples exhaustion, final Rhat gate failure, or exhaustion of the eight-segment technical budget) is sealed as a validated green FINAL NO_SCIENTIFIC_RESULT. Technical/infrastructure/code/state failures remain red. V15 may adopt V14 resumable state from cache without resampling completed chains.",
+    "scientific_and_numerical_settings_changed_from_v14": false,
+    "scientific_result_from_v14_failure": false,
+    "segment_soft_stop_minutes": 300,
+    "supersedes_program_id": "Q041-PLANCKPORT-V14",
+    "technical_failure_remains_red": true,
+    "v14_state_adoption_allowed": true,
+    "version": "v15"
+  }
+}
