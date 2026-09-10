@@ -1,0 +1,499 @@
+name: Bubbleverse Q041 downstream Planck portability V16
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: true
+        type: string
+      segment:
+        description: Internal MCMC continuation segment
+        required: false
+        default: '1'
+        type: string
+      series_id:
+        description: Internal V16 continuation lineage; leave blank on segment 1
+        required: false
+        default: ''
+        type: string
+
+permissions:
+  contents: read
+  actions: write
+
+env:
+  CURRENT_Q: Q-041
+  PROGRAM_ID: Q041-PLANCKPORT-V16
+  RUN_ID: Q041-DOWNSTREAM-SCIENTIFIC-CONSEQUENCE-PORTABILITY-V16
+  RESULT_ID: R-Q041-EDE-DOWNSTREAM-PORTABILITY-016
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  V13_PARENT_RUN_ID: '34379785115'
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+  SEGMENT_SOFT_STOP_MINUTES: '300'
+  MAX_SEGMENTS: '8'
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Exact launcher and segment identity gate
+        shell: bash
+        env:
+          INPUT_PROGRAM_ID: ${{ inputs.program_id }}
+          INPUT_SEGMENT: ${{ inputs.segment }}
+          INPUT_SERIES_ID: ${{ inputs.series_id }}
+        run: |
+          set -euo pipefail
+          test "$INPUT_PROGRAM_ID" = "$PROGRAM_ID"
+          case "$INPUT_SEGMENT" in ''|*[!0-9]*) echo Q041_SEGMENT_IDENTITY_GATE=FAIL >&2; exit 2;; esac
+          test "$INPUT_SEGMENT" -ge 1
+          test "$INPUT_SEGMENT" -le "$MAX_SEGMENTS"
+          if [[ "$INPUT_SEGMENT" -gt 1 && -z "$INPUT_SERIES_ID" ]]; then echo Q041_V16_SERIES_ID_GATE=FAIL >&2; exit 2; fi
+          echo Q041_PROGRAM_ID_GATE=PASS
+          echo "Q041_SEGMENT_IDENTITY_GATE=PASS segment=$INPUT_SEGMENT"
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Compile and validate preregistered V16 surface
+        run: |
+          python -m py_compile q041_planck_portability_v13.py q041_planck_portability_v16.py q041_planck_portability_tests_v16.py
+          python q041_planck_portability_v16.py static \
+            --preregister q041_planck_portability_preregister_v16.json \
+            --source-lock q041_planck_portability_source_lock_v16.json \
+            --output q041_static_program_v16.json
+          python q041_planck_portability_tests_v16.py static \
+            --preregister q041_planck_portability_preregister_v16.json \
+            --source-lock q041_planck_portability_source_lock_v16.json \
+            --registry bubbleverse_program_registry.json \
+            --workflow .github/workflows/q041-planck-portability-v16.yml \
+            --program q041_planck_portability_v16.py \
+            --output q041_static_tests_v16.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-static-seg${{ inputs.segment }}-v16
+          path: |
+            q041_static_program_v16.json
+            q041_static_tests_v16.json
+            q041_planck_portability_preregister_v16.json
+            q041_planck_portability_source_lock_v16.json
+          if-no-files-found: error
+
+  environment:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore V16 frozen environment cache
+        id: q041_v16_env
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v16-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          restore-keys: |
+            q041-v15-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+            q041-v14-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+            q041-v13-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Download authoritative Q032 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Download authoritative Q032 sealed support
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - name: Download authoritative Q032 HiLLiPoP common-support precision
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime through proven V13 helper
+        run: bash q041_prepare_frozen_core_v16.sh both
+      - name: Install/reassert proven V13 external runtime and seal V16 identity
+        run: bash q041_setup_v16.sh
+      - name: Save exact V16 frozen environment
+        if: steps.q041_v16_env.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v16-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+      - name: Construct V16 Planck nonoverlap support
+        run: |
+          mkdir -p q041_environment
+          python q041_planck_portability_v16.py prepare-nonoverlap \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --support-output q041_environment/q041_primary_nonoverlap_support_v16.json \
+            --matrix-output q041_environment/q041_hillipop_nonoverlap_precision_v16.npy \
+            --meta-output q041_environment/q041_hillipop_nonoverlap_precision_v16.json
+      - name: Real finite-likelihood preflight in both Planck arms
+        run: |
+          python q041_planck_portability_v16.py runtime-preflight \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment/q041_primary_nonoverlap_support_v16.json \
+            --reduced-hlp-matrix q041_environment/q041_hillipop_nonoverlap_precision_v16.npy \
+            --reduced-hlp-meta q041_environment/q041_hillipop_nonoverlap_precision_v16.json \
+            --preregister q041_planck_portability_preregister_v16.json \
+            --source-lock q041_planck_portability_source_lock_v16.json \
+            --external-runtime q041_runtime/q041_external_runtime_provenance_v16.json \
+            --output q041_environment/q041_runtime_preflight_v16.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-environment-seg${{ inputs.segment }}-v16
+          path: |
+            q041_environment/*
+            q041_runtime/q041_external_runtime_provenance_v16.json
+          if-no-files-found: error
+
+  sample:
+    name: COMPUTE SEGMENT ${{ inputs.segment }} — NOT FINAL — ${{ matrix.implementation }} / ${{ matrix.combo }} / c${{ matrix.chain }}
+    needs: environment
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V16 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v16-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Restore same-series V16 chain state for continuation
+        if: inputs.segment != '1'
+        id: chain_state
+        uses: actions/cache/restore@v4
+        with:
+          path: q041_chain
+          key: q041-state-v16-${{ inputs.series_id }}-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg${{ inputs.segment }}-run${{ github.run_id }}-attempt${{ github.run_attempt }}
+          restore-keys: |
+            q041-state-v16-${{ inputs.series_id }}-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-
+      - name: Require isolated V16 continuation state
+        if: inputs.segment != '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s q041_chain/chain.1.txt
+          test -s q041_chain/chain.checkpoint
+          test -s q041_chain/chain.covmat
+          test -s q041_chain/chain.updated.yaml
+          test -s q041_chain/q041_chain_metadata_v16.json
+          echo Q041_V16_CONTINUATION_STATE_GATE=PASS
+      - name: Enforce fresh V16 state at segment 1
+        if: inputs.segment == '1'
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf q041_chain
+          mkdir -p q041_chain
+          echo Q041_V16_FRESH_SEGMENT1_STATE_GATE=PASS
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-seg${{ inputs.segment }}-v16
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v16.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v16.sh
+      - name: Run/resume one independent posterior chain for bounded segment
+        shell: bash
+        run: |
+          mkdir -p q041_chain
+          python q041_planck_portability_v16.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v16.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v16.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v16.json \
+            --preregister q041_planck_portability_preregister_v16.json \
+            --source-lock q041_planck_portability_source_lock_v16.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '${{ inputs.segment }}' \
+            --series-id '${{ inputs.series_id || github.run_id }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Save resumable V16 chain state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: q041_chain
+          key: q041-state-v16-${{ inputs.series_id || github.run_id }}-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg${{ inputs.segment }}-run${{ github.run_id }}-attempt${{ github.run_attempt }}
+      - name: Upload V16 chain segment
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg${{ inputs.segment }}-v16
+          path: q041_chain/**
+          if-no-files-found: warn
+
+  decision:
+    name: DECISION — CONTINUE / FINAL
+    needs: sample
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      all_complete: ${{ steps.decide.outputs.all_complete }}
+      next_segment: ${{ steps.decide.outputs.next_segment }}
+      fatal: ${{ steps.decide.outputs.fatal }}
+      controlled_no_science: ${{ steps.decide.outputs.controlled_no_science }}
+      no_science_reason: ${{ steps.decide.outputs.no_science_reason }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q041-chain-*-seg${{ inputs.segment }}-v16
+          path: q041_segment_artifacts
+      - name: Decide completion, continuation, controlled no-science, or technical failure
+        id: decide
+        shell: bash
+        env:
+          SEGMENT: ${{ inputs.segment }}
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          arms=("camspec","hillipop")
+          combos=("P","P_A6","P_L6","P_D2","P_A6_L6_D2","P_L6_D2","P_A6_D2","P_A6_L6")
+          expected={(a,c,k) for a in arms for c in combos for k in (0,1)}; rows={}
+          for p in pathlib.Path("q041_segment_artifacts").rglob("q041_chain_metadata_v16.json"):
+              try: d=json.loads(p.read_text(encoding="utf-8"))
+              except Exception: continue
+              if d.get("q")!="Q-041" or d.get("program_id")!="Q041-PLANCKPORT-V16": continue
+              rows[(d.get("implementation"),d.get("combo"),int(d.get("chain",-1)))]=d
+          missing=sorted(expected-set(rows)); failed=sorted(k for k,d in rows.items() if d.get("status")=="FAILED")
+          complete=sorted(k for k,d in rows.items() if d.get("status")=="COMPLETE" and d.get("actual_computed_result") is True)
+          partial=sorted(k for k,d in rows.items() if d.get("status")=="PARTIAL_SOFT_STOP")
+          no_science=sorted(k for k,d in rows.items() if d.get("status")=="NO_SCIENTIFIC_RESULT")
+          known={"COMPLETE","PARTIAL_SOFT_STOP","NO_SCIENTIFIC_RESULT","FAILED"}
+          unknown=sorted(k for k,d in rows.items() if d.get("status") not in known)
+          seg=int(os.environ["SEGMENT"]); maxseg=int(os.environ.get("MAX_SEGMENTS","8")); reason=None
+          if no_science:
+              reasons={rows[k].get("no_science_reason") for k in no_science}
+              if reasons!={"MAX_SAMPLES_WITHOUT_CONVERGENCE"}: raise SystemExit(f"Q041_CONTROLLED_REASON_GATE=FAIL reasons={sorted(map(str,reasons))}")
+              reason="MAX_SAMPLES_WITHOUT_CONVERGENCE"
+          elif partial and seg>=maxseg:
+              reason="SEGMENT_BUDGET_EXHAUSTED_WITH_UNCONVERGED_CHAINS"
+          technical=bool(missing or failed or unknown)
+          summary={"q":"Q-041","program_id":"Q041-PLANCKPORT-V16","stage":"SEGMENT_DECISION","segment":seg,
+                   "expected":len(expected),"complete":len(complete),"partial":len(partial),"no_science":len(no_science),
+                   "failed":len(failed),"missing":len(missing),"unknown":len(unknown),"failed_keys":failed,"missing_keys":missing,
+                   "unknown_keys":unknown,"no_science_keys":no_science,"partial_keys":partial,
+                   "controlled_no_science":bool(reason),"no_science_reason":reason,"technical_failure":technical}
+          pathlib.Path("q041_segment_decision_v16.json").write_text(json.dumps(summary,indent=2,sort_keys=True)+"\n",encoding="utf-8")
+          out=pathlib.Path(os.environ["GITHUB_OUTPUT"])
+          if technical:
+              with out.open("a") as f: f.write("all_complete=false\nfatal=true\ncontrolled_no_science=false\nnext_segment=0\nno_science_reason=\n")
+              raise SystemExit(f"Q041_SEGMENT_DECISION_TECHNICAL_GATE=FAIL missing={len(missing)} failed={len(failed)} unknown={len(unknown)}")
+          if reason:
+              with out.open("a") as f: f.write(f"all_complete=false\nfatal=false\ncontrolled_no_science=true\nnext_segment=0\nno_science_reason={reason}\n")
+              print(f"Q041_SEGMENT_DECISION_GATE=CONTROLLED_NO_SCIENCE reason={reason}")
+          elif len(complete)==len(expected):
+              with out.open("a") as f: f.write("all_complete=true\nfatal=false\ncontrolled_no_science=false\nnext_segment=0\nno_science_reason=\n")
+              print("Q041_SEGMENT_DECISION_GATE=ALL_COMPLETE")
+          else:
+              nxt=seg+1
+              with out.open("a") as f: f.write(f"all_complete=false\nfatal=false\ncontrolled_no_science=false\nnext_segment={nxt}\nno_science_reason=\n")
+              print(f"Q041_SEGMENT_DECISION_GATE=CONTINUE segment={seg} next={nxt} complete={len(complete)} partial={len(partial)}")
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q041-segment-decision-seg${{ inputs.segment }}-v16
+          path: q041_segment_decision_v16.json
+          if-no-files-found: warn
+      - name: Dispatch next V16 segment
+        if: steps.decide.outputs.all_complete != 'true' && steps.decide.outputs.fatal != 'true' && steps.decide.outputs.controlled_no_science != 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NEXT_SEGMENT: ${{ steps.decide.outputs.next_segment }}
+          SERIES_ID: ${{ inputs.series_id || github.run_id }}
+        run: |
+          set -euo pipefail
+          payload="$(python - <<'PY'
+          import json, os
+          print(json.dumps({"ref":"main","inputs":{"program_id":"Q041-PLANCKPORT-V16","segment":os.environ["NEXT_SEGMENT"],"series_id":os.environ["SERIES_ID"]}}))
+          PY
+          )"
+          curl -fsSL -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/q041-planck-portability-v16.yml/dispatches" \
+            -d "$payload"
+          echo "Q041_NEXT_SEGMENT_DISPATCH_GATE=PASS next=$NEXT_SEGMENT"
+
+  final_no_science:
+    name: FINAL VALID OUTCOME — NO SCIENTIFIC RESULT
+    needs: decision
+    if: needs.decision.outputs.controlled_no_science == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 getdist==1.6.1 PyYAML==6.0.2
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-segment-decision-seg${{ inputs.segment }}-v16
+          path: q041_decision
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q041-chain-*-seg${{ inputs.segment }}-v16
+          path: q041_all_chains
+      - name: Seal controlled no-science as a valid green final outcome
+        run: |
+          python q041_planck_portability_v16.py finalize-no-science \
+            --decision q041_decision/q041_segment_decision_v16.json \
+            --input-dir q041_all_chains \
+            --preregister q041_planck_portability_preregister_v16.json \
+            --source-lock q041_planck_portability_source_lock_v16.json \
+            --output q041_final_v16.json
+      - name: Validate final controlled outcome
+        run: |
+          python q041_planck_portability_tests_v16.py final \
+            --final q041_final_v16.json \
+            --output q041_final_tests_v16.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-final-v16
+          path: |
+            q041_final_v16.json
+            q041_final_tests_v16.json
+          if-no-files-found: error
+
+  aggregate:
+    name: FINAL SCIENTIFIC RESULT — Q041
+    needs: decision
+    if: needs.decision.outputs.all_complete == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 getdist==1.6.1 PyYAML==6.0.2
+      - name: Download all complete current-segment chain artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q041-chain-*-seg${{ inputs.segment }}-v16
+          path: q041_all_chains
+      - name: Aggregate with unchanged hard completeness and convergence gates
+        run: |
+          python q041_planck_portability_v16.py aggregate \
+            --input-dir q041_all_chains \
+            --preregister q041_planck_portability_preregister_v16.json \
+            --source-lock q041_planck_portability_source_lock_v16.json \
+            --output q041_final_v16.json
+      - name: Validate final scientific result
+        run: |
+          python q041_planck_portability_tests_v16.py final \
+            --final q041_final_v16.json \
+            --output q041_final_tests_v16.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-final-v16
+          path: |
+            q041_final_v16.json
+            q041_final_tests_v16.json
+          if-no-files-found: error

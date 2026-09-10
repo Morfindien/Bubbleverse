@@ -1,0 +1,90 @@
+{
+  "bubbleverse": {
+    "class_ede_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "cobaya_version": "3.5.6",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "q032_execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "q032_github_run_id": 33994305721,
+    "q032_result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002"
+  },
+  "external": {
+    "act_dr6_cmbonly": {
+      "commit": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+      "component": "act_dr6_cmbonly.ACTDR6CMBonly",
+      "ell_cuts": {
+        "EE": [
+          600,
+          8500
+        ],
+        "TE": [
+          600,
+          8500
+        ],
+        "TT": [
+          600,
+          8500
+        ]
+      },
+      "repository": "ACTCollaboration/DR6-ACT-lite",
+      "tag": "v1.0.1"
+    },
+    "act_dr6_lensing": {
+      "commit": "b386ddbb5821c1216c709f051c9289292f174d30",
+      "component": "act_dr6_lenslike.ACTDR6LensLike",
+      "lens_only": false,
+      "lmax": 4000,
+      "repository": "ACTCollaboration/act_dr6_lenslike",
+      "tag": "v1.2.1",
+      "variant": "act_baseline"
+    },
+    "desi_dr2": {
+      "all_tracer_cov_blob": "fd8e5697ab61379b07b52efb781ea6713417a4d9",
+      "all_tracer_mean_blob": "8aff444fdb42c0946342aa0011ab287eda097c4c",
+      "bao_data_commit": "b7b8a36e9bccb063081f811f323cada21ab5fbdd",
+      "bao_data_repository": "CobayaSampler/bao_data",
+      "bao_data_tag": "v2.6",
+      "cobaya_definition_commit": "b76b6fed2a6c8c5594c6f92d5058bef10079746a",
+      "component": "bao.desi_dr2"
+    }
+  },
+  "forbidden_scientific_inputs": [
+    "Q040-CMBSPACE-*",
+    "Q040-RQMC-*"
+  ],
+  "notes": [
+    "Q041 may reuse Q032/Q037 validated exact-common-TT execution machinery but may not use Q040 scientific products.",
+    "The DESI DR2 definition is backported into frozen Cobaya 3.5.6; the base Cobaya installation is not upgraded.",
+    "Runtime setup records hashes of installed external data products before any scientific chain starts."
+  ],
+  "program_id": "Q041-PLANCKPORT-V16",
+  "q": "Q-041",
+  "result_id": "R-Q041-EDE-DOWNSTREAM-PORTABILITY-016",
+  "run_id": "Q041-DOWNSTREAM-SCIENTIFIC-CONSEQUENCE-PORTABILITY-V16",
+  "technical_revision": {
+    "chain_metadata_filename": "q041_chain_metadata_v16.json",
+    "cobaya_allow_changes_used": false,
+    "controlled_no_science_classification": "NO_SCIENTIFIC_RESULT",
+    "controlled_no_science_final_status": "PASS",
+    "cross_version_chain_state_reuse_forbidden": true,
+    "environment_helper_parent": "q041_prepare_frozen_core_v15.sh",
+    "execution_change": "same-V16-series checkpoint isolation only; no cross-version chain checkpoint adoption; V15 green-final semantics preserved",
+    "github_job_timeout_minutes": 330,
+    "immutable_q032_parent_version": "v2",
+    "max_segments": 8,
+    "resume_required_files": [
+      "chain.1.txt",
+      "chain.checkpoint",
+      "chain.covmat",
+      "chain.updated.yaml"
+    ],
+    "same_series_resume_only": true,
+    "scientific_and_numerical_settings_changed_from_v15": false,
+    "segment_soft_stop_minutes": 300,
+    "series_id_isolation": true,
+    "setup_parent": "q041_setup_v15.sh",
+    "supersedes_program_id": "Q041-PLANCKPORT-V15",
+    "technical_failures_must_raise": true,
+    "v15_failure_signature": "Old and new run information not compatible; different content of [likelihood:planck_2020_hillipop.TT]",
+    "version": "v16"
+  }
+}
