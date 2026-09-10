@@ -1,0 +1,459 @@
+name: Bubbleverse Q041 downstream Planck portability V14
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: true
+        type: string
+      segment:
+        description: Internal MCMC continuation segment
+        required: false
+        default: '1'
+        type: string
+
+permissions:
+  contents: read
+  actions: write
+
+env:
+  CURRENT_Q: Q-041
+  PROGRAM_ID: Q041-PLANCKPORT-V14
+  RUN_ID: Q041-DOWNSTREAM-SCIENTIFIC-CONSEQUENCE-PORTABILITY-V14
+  RESULT_ID: R-Q041-EDE-DOWNSTREAM-PORTABILITY-014
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  V13_PARENT_RUN_ID: '34379785115'
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+  SEGMENT_SOFT_STOP_MINUTES: '300'
+  MAX_SEGMENTS: '8'
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Exact launcher and segment identity gate
+        shell: bash
+        env:
+          INPUT_PROGRAM_ID: ${{ inputs.program_id }}
+          INPUT_SEGMENT: ${{ inputs.segment }}
+        run: |
+          set -euo pipefail
+          test "$INPUT_PROGRAM_ID" = "$PROGRAM_ID"
+          case "$INPUT_SEGMENT" in ''|*[!0-9]*) echo Q041_SEGMENT_IDENTITY_GATE=FAIL >&2; exit 2;; esac
+          test "$INPUT_SEGMENT" -ge 1
+          test "$INPUT_SEGMENT" -le "$MAX_SEGMENTS"
+          echo Q041_PROGRAM_ID_GATE=PASS
+          echo "Q041_SEGMENT_IDENTITY_GATE=PASS segment=$INPUT_SEGMENT"
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Compile and validate preregistered V14 surface
+        run: |
+          python -m py_compile q041_planck_portability_v13.py q041_planck_portability_v14.py q041_planck_portability_tests_v14.py
+          python q041_planck_portability_v14.py static \
+            --preregister q041_planck_portability_preregister_v14.json \
+            --source-lock q041_planck_portability_source_lock_v14.json \
+            --output q041_static_program_v14.json
+          python q041_planck_portability_tests_v14.py static \
+            --preregister q041_planck_portability_preregister_v14.json \
+            --source-lock q041_planck_portability_source_lock_v14.json \
+            --registry bubbleverse_program_registry.json \
+            --workflow .github/workflows/q041-planck-portability-v14.yml \
+            --program q041_planck_portability_v14.py \
+            --output q041_static_tests_v14.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-static-seg${{ inputs.segment }}-v14
+          path: |
+            q041_static_program_v14.json
+            q041_static_tests_v14.json
+            q041_planck_portability_preregister_v14.json
+            q041_planck_portability_source_lock_v14.json
+          if-no-files-found: error
+
+  environment:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore V14 frozen environment cache
+        id: q041_v14_env
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v14-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          restore-keys: |
+            q041-v13-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Download authoritative Q032 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Download authoritative Q032 sealed support
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - name: Download authoritative Q032 HiLLiPoP common-support precision
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime through proven V13 helper
+        run: bash q041_prepare_frozen_core_v14.sh both
+      - name: Install/reassert proven V13 external runtime and seal V14 identity
+        run: bash q041_setup_v14.sh
+      - name: Save exact V14 frozen environment
+        if: steps.q041_v14_env.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v14-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+      - name: Construct V14 Planck nonoverlap support
+        run: |
+          mkdir -p q041_environment
+          python q041_planck_portability_v14.py prepare-nonoverlap \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --support-output q041_environment/q041_primary_nonoverlap_support_v14.json \
+            --matrix-output q041_environment/q041_hillipop_nonoverlap_precision_v14.npy \
+            --meta-output q041_environment/q041_hillipop_nonoverlap_precision_v14.json
+      - name: Real finite-likelihood preflight in both Planck arms
+        run: |
+          python q041_planck_portability_v14.py runtime-preflight \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment/q041_primary_nonoverlap_support_v14.json \
+            --reduced-hlp-matrix q041_environment/q041_hillipop_nonoverlap_precision_v14.npy \
+            --reduced-hlp-meta q041_environment/q041_hillipop_nonoverlap_precision_v14.json \
+            --preregister q041_planck_portability_preregister_v14.json \
+            --source-lock q041_planck_portability_source_lock_v14.json \
+            --external-runtime q041_runtime/q041_external_runtime_provenance_v14.json \
+            --output q041_environment/q041_runtime_preflight_v14.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-environment-seg${{ inputs.segment }}-v14
+          path: |
+            q041_environment/*
+            q041_runtime/q041_external_runtime_provenance_v14.json
+          if-no-files-found: error
+
+  sample:
+    needs: environment
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V14 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v14-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Restore latest V14 chain state
+        id: chain_state
+        uses: actions/cache/restore@v4
+        with:
+          path: q041_chain
+          key: q041-state-v14-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-run${{ github.run_id }}-attempt${{ github.run_attempt }}
+          restore-keys: |
+            q041-state-v14-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-
+      - name: Probe restored V14 state
+        id: state_probe
+        shell: bash
+        run: |
+          if [[ -s q041_chain/chain.checkpoint || -s q041_chain/q041_chain_metadata_v14.json ]]; then
+            echo ready=true >> "$GITHUB_OUTPUT"
+          else
+            echo ready=false >> "$GITHUB_OUTPUT"
+          fi
+      - name: Restore V13 partial chain when V14 state is absent
+        if: steps.state_probe.outputs.ready != 'true'
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.V13_PARENT_RUN_ID }}
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-v13
+          path: q041_chain
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-seg${{ inputs.segment }}-v14
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v14.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v14.sh
+      - name: Run/resume one independent posterior chain for bounded segment
+        shell: bash
+        run: |
+          mkdir -p q041_chain
+          python q041_planck_portability_v14.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v14.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v14.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v14.json \
+            --preregister q041_planck_portability_preregister_v14.json \
+            --source-lock q041_planck_portability_source_lock_v14.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '${{ inputs.segment }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Save resumable V14 chain state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: q041_chain
+          key: q041-state-v14-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-run${{ github.run_id }}-attempt${{ github.run_attempt }}
+      - name: Upload V14 chain segment
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg${{ inputs.segment }}-v14
+          path: q041_chain/**
+          if-no-files-found: warn
+
+  decision:
+    needs: sample
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      all_complete: ${{ steps.decide.outputs.all_complete }}
+      next_segment: ${{ steps.decide.outputs.next_segment }}
+      fatal: ${{ steps.decide.outputs.fatal }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q041-chain-*-seg${{ inputs.segment }}-v14
+          path: q041_segment_artifacts
+      - name: Decide completion or continuation
+        id: decide
+        shell: bash
+        env:
+          SEGMENT: ${{ inputs.segment }}
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          arms=("camspec","hillipop")
+          combos=("P","P_A6","P_L6","P_D2","P_A6_L6_D2","P_L6_D2","P_A6_D2","P_A6_L6")
+          expected={(a,c,k) for a in arms for c in combos for k in (0,1)}
+          rows={}
+          for p in pathlib.Path("q041_segment_artifacts").rglob("q041_chain_metadata_v14.json"):
+              try:
+                  d=json.loads(p.read_text(encoding="utf-8"))
+              except Exception:
+                  continue
+              if d.get("q")!="Q-041" or d.get("program_id")!="Q041-PLANCKPORT-V14":
+                  continue
+              key=(d.get("implementation"),d.get("combo"),int(d.get("chain",-1)))
+              rows[key]=d
+          missing=sorted(expected-set(rows))
+          failed=sorted(k for k,d in rows.items() if d.get("status")=="FAILED")
+          complete=sorted(k for k,d in rows.items() if d.get("status")=="COMPLETE" and d.get("actual_computed_result") is True)
+          partial=sorted(k for k,d in rows.items() if d.get("status")=="PARTIAL_SOFT_STOP")
+          unknown=sorted(k for k,d in rows.items() if d.get("status") not in ("COMPLETE","PARTIAL_SOFT_STOP","FAILED"))
+          seg=int(os.environ["SEGMENT"])
+          maxseg=int(os.environ.get("MAX_SEGMENTS","8"))
+          summary={
+              "q":"Q-041","program_id":"Q041-PLANCKPORT-V14","stage":"SEGMENT_DECISION",
+              "segment":seg,"expected":len(expected),"complete":len(complete),"partial":len(partial),
+              "failed":len(failed),"missing":len(missing),"unknown":len(unknown),
+              "failed_keys":failed,"missing_keys":missing,"unknown_keys":unknown,
+          }
+          pathlib.Path("q041_segment_decision_v14.json").write_text(
+              json.dumps(summary,indent=2,sort_keys=True)+"\n",encoding="utf-8"
+          )
+          out=pathlib.Path(os.environ["GITHUB_OUTPUT"])
+          if missing or failed or unknown:
+              with out.open("a") as f:
+                  f.write("all_complete=false\nfatal=true\nnext_segment=0\n")
+              raise SystemExit(
+                  "Q041_SEGMENT_DECISION_GATE=FAIL "
+                  f"missing={len(missing)} failed={len(failed)} unknown={len(unknown)}"
+              )
+          if len(complete)==len(expected):
+              with out.open("a") as f:
+                  f.write("all_complete=true\nfatal=false\nnext_segment=0\n")
+              print("Q041_SEGMENT_DECISION_GATE=ALL_COMPLETE")
+          elif seg >= maxseg:
+              with out.open("a") as f:
+                  f.write("all_complete=false\nfatal=true\nnext_segment=0\n")
+              raise SystemExit(
+                  f"Q041_SEGMENT_BUDGET_GATE=FAIL segment={seg} partial={len(partial)}"
+              )
+          else:
+              nxt=seg+1
+              with out.open("a") as f:
+                  f.write(f"all_complete=false\nfatal=false\nnext_segment={nxt}\n")
+              print(
+                  f"Q041_SEGMENT_DECISION_GATE=CONTINUE segment={seg} "
+                  f"next={nxt} complete={len(complete)} partial={len(partial)}"
+              )
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q041-segment-decision-seg${{ inputs.segment }}-v14
+          path: q041_segment_decision_v14.json
+          if-no-files-found: warn
+      - name: Dispatch next V14 segment
+        if: steps.decide.outputs.all_complete != 'true' && steps.decide.outputs.fatal != 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NEXT_SEGMENT: ${{ steps.decide.outputs.next_segment }}
+        run: |
+          set -euo pipefail
+          payload="$(python - <<'PY'
+          import json, os
+          print(json.dumps({
+            "ref":"main",
+            "inputs":{
+              "program_id":"Q041-PLANCKPORT-V14",
+              "segment":os.environ["NEXT_SEGMENT"]
+            }
+          }))
+          PY
+          )"
+          curl -fsSL -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/q041-planck-portability-v14.yml/dispatches" \
+            -d "$payload"
+          echo "Q041_NEXT_SEGMENT_DISPATCH_GATE=PASS next=$NEXT_SEGMENT"
+
+  aggregate:
+    needs: decision
+    if: needs.decision.outputs.all_complete == 'true'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 getdist==1.6.1 PyYAML==6.0.2
+      - name: Download all complete current-segment chain artifacts
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q041-chain-*-seg${{ inputs.segment }}-v14
+          path: q041_all_chains
+      - name: Aggregate with unchanged hard completeness and convergence gates
+        run: |
+          python q041_planck_portability_v14.py aggregate \
+            --input-dir q041_all_chains \
+            --preregister q041_planck_portability_preregister_v14.json \
+            --source-lock q041_planck_portability_source_lock_v14.json \
+            --output q041_final_v14.json
+      - name: Validate final scientific result
+        run: |
+          python q041_planck_portability_tests_v14.py final \
+            --final q041_final_v14.json \
+            --output q041_final_tests_v14.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-final-v14
+          path: |
+            q041_final_v14.json
+            q041_final_tests_v14.json
+          if-no-files-found: error
