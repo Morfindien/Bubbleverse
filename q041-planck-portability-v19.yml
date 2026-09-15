@@ -1,0 +1,1052 @@
+name: Bubbleverse Q041 downstream Planck portability V19 — linear 8-stage constant repair
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-041
+  PROGRAM_ID: Q041-PLANCKPORT-V19
+  RUN_ID: Q041-DOWNSTREAM-SCIENTIFIC-CONSEQUENCE-PORTABILITY-V19
+  RESULT_ID: R-Q041-EDE-DOWNSTREAM-PORTABILITY-019
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+  SEGMENT_SOFT_STOP_MINUTES: '300'
+  MAX_SEGMENTS: '8'
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Exact launcher identity gate
+        shell: bash
+        env:
+          INPUT_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          test "$INPUT_PROGRAM_ID" = "$PROGRAM_ID"
+          echo Q041_PROGRAM_ID_GATE=PASS
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Compile and validate preregistered V19 surface
+        run: |
+          python -m py_compile q041_planck_portability_v13.py q041_planck_portability_v19.py q041_planck_portability_tests_v19.py
+          python q041_planck_portability_v19.py static             --preregister q041_planck_portability_preregister_v19.json             --source-lock q041_planck_portability_source_lock_v19.json             --output q041_static_program_v19.json
+          python q041_planck_portability_tests_v19.py static             --preregister q041_planck_portability_preregister_v19.json             --source-lock q041_planck_portability_source_lock_v19.json             --registry bubbleverse_program_registry.json             --workflow .github/workflows/q041-planck-portability-v19.yml             --program q041_planck_portability_v19.py             --output q041_static_tests_v19.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-static-v19
+          path: |
+            q041_static_program_v19.json
+            q041_static_tests_v19.json
+            q041_planck_portability_preregister_v19.json
+            q041_planck_portability_source_lock_v19.json
+          if-no-files-found: error
+
+  environment:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore V19 frozen environment cache
+        id: q041_v19_env
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          restore-keys: |
+            q041-v18-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+            q041-v17-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+            q041-v16-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+            q041-v15-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+            q041-v14-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+            q041-v13-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Download authoritative Q032 refinement endpoints
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - name: Download authoritative Q032 sealed support
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - name: Download authoritative Q032 HiLLiPoP common-support precision
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032 runtime through proven helper
+        run: bash q041_prepare_frozen_core_v19.sh both
+      - name: Install/reassert proven external runtime and seal V19 identity
+        run: bash q041_setup_v19.sh
+      - name: Save exact V19 frozen environment
+        if: steps.q041_v19_env.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+      - name: Construct V19 Planck nonoverlap support
+        run: |
+          mkdir -p q041_environment
+          python q041_planck_portability_v19.py prepare-nonoverlap             --q032-parent-root q032_parent             --preflight q032_preflight/q032_preflight_sealed_v2.json             --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy             --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json             --support-output q041_environment/q041_primary_nonoverlap_support_v19.json             --matrix-output q041_environment/q041_hillipop_nonoverlap_precision_v19.npy             --meta-output q041_environment/q041_hillipop_nonoverlap_precision_v19.json
+      - name: Real finite-likelihood preflight in both Planck arms
+        run: |
+          python q041_planck_portability_v19.py runtime-preflight             --q032-parent-root q032_parent             --preflight q032_preflight/q032_preflight_sealed_v2.json             --parent-dir q032_parent_profiles             --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy             --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json             --reduced-support q041_environment/q041_primary_nonoverlap_support_v19.json             --reduced-hlp-matrix q041_environment/q041_hillipop_nonoverlap_precision_v19.npy             --reduced-hlp-meta q041_environment/q041_hillipop_nonoverlap_precision_v19.json             --preregister q041_planck_portability_preregister_v19.json             --source-lock q041_planck_portability_source_lock_v19.json             --external-runtime q041_runtime/q041_external_runtime_provenance_v19.json             --output q041_environment/q041_runtime_preflight_v19.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-environment-v19
+          path: |
+            q041_environment/**
+            q041_runtime/q041_external_runtime_provenance_v19.json
+          if-no-files-found: error
+
+  segment1:
+    name: COMPUTE SEGMENT 1/8 — NOT FINAL — ${{ matrix.implementation }} / ${{ matrix.combo }} / c${{ matrix.chain }}
+    needs: environment
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V19 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Enforce fresh segment 1 chain directory
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf q041_chain
+          mkdir -p q041_chain
+          echo Q041_V19_FRESH_SEGMENT1_ARTIFACT_GATE=PASS
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-v19
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v19.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v19.sh
+      - name: Run or resume one independent posterior chain — segment 1
+        shell: bash
+        run: |
+          python q041_planck_portability_v19.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v19.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.json \
+            --preregister q041_planck_portability_preregister_v19.json \
+            --source-lock q041_planck_portability_source_lock_v19.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '1' \
+            --series-id '${{ github.run_id }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Upload exact segment 1 chain state
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg1-v19
+          path: q041_chain/
+          if-no-files-found: warn
+
+  segment2:
+    name: COMPUTE SEGMENT 2/8 — NOT FINAL — ${{ matrix.implementation }} / ${{ matrix.combo }} / c${{ matrix.chain }}
+    needs: segment1
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V19 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Download exact segment 1 predecessor for this logical chain
+        uses: actions/download-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg1-v19
+          path: q041_chain
+      - name: Require exact predecessor state
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s q041_chain/chain.1.txt
+          test -s q041_chain/chain.checkpoint
+          test -s q041_chain/chain.covmat
+          test -s q041_chain/chain.updated.yaml
+          test -s q041_chain/q041_chain_metadata_v19.json
+          echo Q041_V19_SEGMENT_2_PREDECESSOR_ARTIFACT_GATE=PASS
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-v19
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v19.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v19.sh
+      - name: Run or resume one independent posterior chain — segment 2
+        shell: bash
+        run: |
+          python q041_planck_portability_v19.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v19.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.json \
+            --preregister q041_planck_portability_preregister_v19.json \
+            --source-lock q041_planck_portability_source_lock_v19.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '2' \
+            --series-id '${{ github.run_id }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Upload exact segment 2 chain state
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg2-v19
+          path: q041_chain/
+          if-no-files-found: warn
+
+  segment3:
+    name: COMPUTE SEGMENT 3/8 — NOT FINAL — ${{ matrix.implementation }} / ${{ matrix.combo }} / c${{ matrix.chain }}
+    needs: segment2
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V19 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Download exact segment 2 predecessor for this logical chain
+        uses: actions/download-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg2-v19
+          path: q041_chain
+      - name: Require exact predecessor state
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s q041_chain/chain.1.txt
+          test -s q041_chain/chain.checkpoint
+          test -s q041_chain/chain.covmat
+          test -s q041_chain/chain.updated.yaml
+          test -s q041_chain/q041_chain_metadata_v19.json
+          echo Q041_V19_SEGMENT_3_PREDECESSOR_ARTIFACT_GATE=PASS
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-v19
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v19.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v19.sh
+      - name: Run or resume one independent posterior chain — segment 3
+        shell: bash
+        run: |
+          python q041_planck_portability_v19.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v19.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.json \
+            --preregister q041_planck_portability_preregister_v19.json \
+            --source-lock q041_planck_portability_source_lock_v19.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '3' \
+            --series-id '${{ github.run_id }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Upload exact segment 3 chain state
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg3-v19
+          path: q041_chain/
+          if-no-files-found: warn
+
+  segment4:
+    name: COMPUTE SEGMENT 4/8 — NOT FINAL — ${{ matrix.implementation }} / ${{ matrix.combo }} / c${{ matrix.chain }}
+    needs: segment3
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V19 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Download exact segment 3 predecessor for this logical chain
+        uses: actions/download-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg3-v19
+          path: q041_chain
+      - name: Require exact predecessor state
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s q041_chain/chain.1.txt
+          test -s q041_chain/chain.checkpoint
+          test -s q041_chain/chain.covmat
+          test -s q041_chain/chain.updated.yaml
+          test -s q041_chain/q041_chain_metadata_v19.json
+          echo Q041_V19_SEGMENT_4_PREDECESSOR_ARTIFACT_GATE=PASS
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-v19
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v19.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v19.sh
+      - name: Run or resume one independent posterior chain — segment 4
+        shell: bash
+        run: |
+          python q041_planck_portability_v19.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v19.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.json \
+            --preregister q041_planck_portability_preregister_v19.json \
+            --source-lock q041_planck_portability_source_lock_v19.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '4' \
+            --series-id '${{ github.run_id }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Upload exact segment 4 chain state
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg4-v19
+          path: q041_chain/
+          if-no-files-found: warn
+
+  segment5:
+    name: COMPUTE SEGMENT 5/8 — NOT FINAL — ${{ matrix.implementation }} / ${{ matrix.combo }} / c${{ matrix.chain }}
+    needs: segment4
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V19 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Download exact segment 4 predecessor for this logical chain
+        uses: actions/download-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg4-v19
+          path: q041_chain
+      - name: Require exact predecessor state
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s q041_chain/chain.1.txt
+          test -s q041_chain/chain.checkpoint
+          test -s q041_chain/chain.covmat
+          test -s q041_chain/chain.updated.yaml
+          test -s q041_chain/q041_chain_metadata_v19.json
+          echo Q041_V19_SEGMENT_5_PREDECESSOR_ARTIFACT_GATE=PASS
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-v19
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v19.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v19.sh
+      - name: Run or resume one independent posterior chain — segment 5
+        shell: bash
+        run: |
+          python q041_planck_portability_v19.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v19.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.json \
+            --preregister q041_planck_portability_preregister_v19.json \
+            --source-lock q041_planck_portability_source_lock_v19.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '5' \
+            --series-id '${{ github.run_id }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Upload exact segment 5 chain state
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg5-v19
+          path: q041_chain/
+          if-no-files-found: warn
+
+  segment6:
+    name: COMPUTE SEGMENT 6/8 — NOT FINAL — ${{ matrix.implementation }} / ${{ matrix.combo }} / c${{ matrix.chain }}
+    needs: segment5
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V19 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Download exact segment 5 predecessor for this logical chain
+        uses: actions/download-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg5-v19
+          path: q041_chain
+      - name: Require exact predecessor state
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s q041_chain/chain.1.txt
+          test -s q041_chain/chain.checkpoint
+          test -s q041_chain/chain.covmat
+          test -s q041_chain/chain.updated.yaml
+          test -s q041_chain/q041_chain_metadata_v19.json
+          echo Q041_V19_SEGMENT_6_PREDECESSOR_ARTIFACT_GATE=PASS
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-v19
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v19.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v19.sh
+      - name: Run or resume one independent posterior chain — segment 6
+        shell: bash
+        run: |
+          python q041_planck_portability_v19.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v19.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.json \
+            --preregister q041_planck_portability_preregister_v19.json \
+            --source-lock q041_planck_portability_source_lock_v19.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '6' \
+            --series-id '${{ github.run_id }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Upload exact segment 6 chain state
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg6-v19
+          path: q041_chain/
+          if-no-files-found: warn
+
+  segment7:
+    name: COMPUTE SEGMENT 7/8 — NOT FINAL — ${{ matrix.implementation }} / ${{ matrix.combo }} / c${{ matrix.chain }}
+    needs: segment6
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V19 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Download exact segment 6 predecessor for this logical chain
+        uses: actions/download-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg6-v19
+          path: q041_chain
+      - name: Require exact predecessor state
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s q041_chain/chain.1.txt
+          test -s q041_chain/chain.checkpoint
+          test -s q041_chain/chain.covmat
+          test -s q041_chain/chain.updated.yaml
+          test -s q041_chain/q041_chain_metadata_v19.json
+          echo Q041_V19_SEGMENT_7_PREDECESSOR_ARTIFACT_GATE=PASS
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-v19
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v19.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v19.sh
+      - name: Run or resume one independent posterior chain — segment 7
+        shell: bash
+        run: |
+          python q041_planck_portability_v19.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v19.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.json \
+            --preregister q041_planck_portability_preregister_v19.json \
+            --source-lock q041_planck_portability_source_lock_v19.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '7' \
+            --series-id '${{ github.run_id }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Upload exact segment 7 chain state
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg7-v19
+          path: q041_chain/
+          if-no-files-found: warn
+
+  segment8:
+    name: COMPUTE SEGMENT 8/8 — NOT FINAL — ${{ matrix.implementation }} / ${{ matrix.combo }} / c${{ matrix.chain }}
+    needs: segment7
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    strategy:
+      fail-fast: false
+      max-parallel: 6
+      matrix:
+        implementation: [camspec, hillipop]
+        combo: [P, P_A6, P_L6, P_D2, P_A6_L6_D2, P_L6_D2, P_A6_D2, P_A6_L6]
+        chain: [0, 1]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore exact complete V19 frozen environment
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+          fail-on-cache-miss: true
+      - name: Download exact segment 7 predecessor for this logical chain
+        uses: actions/download-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg7-v19
+          path: q041_chain
+      - name: Require exact predecessor state
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s q041_chain/chain.1.txt
+          test -s q041_chain/chain.checkpoint
+          test -s q041_chain/chain.covmat
+          test -s q041_chain/chain.updated.yaml
+          test -s q041_chain/q041_chain_metadata_v19.json
+          echo Q041_V19_SEGMENT_8_PREDECESSOR_ARTIFACT_GATE=PASS
+      - name: Materialize exact Q032 execution commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q041-environment-v19
+          path: q041_environment_artifact
+      - name: Recreate exact implementation runtime
+        run: bash q041_prepare_frozen_core_v19.sh '${{ matrix.implementation }}'
+      - name: Restore/install locked external Q041 components
+        run: bash q041_setup_v19.sh
+      - name: Run or resume one independent posterior chain — segment 8
+        shell: bash
+        run: |
+          python q041_planck_portability_v19.py sample \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q041_environment_artifact/q041_environment/q041_primary_nonoverlap_support_v19.json \
+            --reduced-hlp-matrix q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.npy \
+            --reduced-hlp-meta q041_environment_artifact/q041_environment/q041_hillipop_nonoverlap_precision_v19.json \
+            --preregister q041_planck_portability_preregister_v19.json \
+            --source-lock q041_planck_portability_source_lock_v19.json \
+            --implementation '${{ matrix.implementation }}' \
+            --combo '${{ matrix.combo }}' \
+            --chain '${{ matrix.chain }}' \
+            --segment '8' \
+            --series-id '${{ github.run_id }}' \
+            --soft-stop-minutes "$SEGMENT_SOFT_STOP_MINUTES" \
+            --max-segments "$MAX_SEGMENTS" \
+            --output-dir q041_chain
+      - name: Upload exact segment 8 chain state
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q041-chain-${{ matrix.implementation }}-${{ matrix.combo }}-c${{ matrix.chain }}-seg8-v19
+          path: q041_chain/
+          if-no-files-found: warn
+
+  final:
+    name: FINAL — Q041 VALID OUTCOME
+    needs: segment8
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check numpy==1.26.4 scipy==1.15.3 getdist==1.6.1 PyYAML==6.0.2
+      - name: Download all segment 8 chain states
+        uses: actions/download-artifact@v4
+        with:
+          pattern: q041-chain-*-seg8-v19
+          path: q041_all_chains
+      - name: Seal scientific result or controlled no-science outcome
+        run: |
+          python q041_planck_portability_v19.py finalize-linear             --input-dir q041_all_chains             --preregister q041_planck_portability_preregister_v19.json             --source-lock q041_planck_portability_source_lock_v19.json             --output q041_final_v19.json
+      - name: Validate final outcome
+        run: |
+          python q041_planck_portability_tests_v19.py final             --final q041_final_v19.json             --output q041_final_tests_v19.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q041-final-v19
+          path: |
+            q041_final_v19.json
+            q041_final_tests_v19.json
+          if-no-files-found: error
