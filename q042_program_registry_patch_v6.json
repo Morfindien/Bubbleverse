@@ -1,0 +1,36 @@
+{
+  "entry": {
+    "Q042-PREFLIGHT-V6": {
+      "case_id": "NOT DOCUMENTED",
+      "created_date": "2026-09-24",
+      "execution_scope": "PREFLIGHT_ONLY_NO_SCIENTIFIC_CLASSIFICATION",
+      "frozen_core_helper": "q042_prepare_frozen_core_v5.sh",
+      "launcher": ".github/workflows/00-bubbleverse-start.yml",
+      "q": "Q-042",
+      "result_artifacts": [
+        "q042-static-v6",
+        "q042-environment-v6",
+        "q042-pilot-*-v6",
+        "q042-preflight-final-v6"
+      ],
+      "result_id": "R-Q042-POLYCHORD-BOBYQA-PREFLIGHT-006",
+      "scientific_and_numerical_settings_changed_from_v5": false,
+      "scientific_program": "q042_planck_portability_v6.py",
+      "scientific_task": "Technical V6 version-integrity repair of Q042-PREFLIGHT-V5. Preserve the exact Q042 pre-science contract, V5 external-data identity repair, V4 frozen-core helper, and all frozen PolyChord/BOBYQA settings. No cosmological classification.",
+      "setup": "q042_setup_v6.sh",
+      "source_lock": "q042_planck_portability_source_lock_v6.json",
+      "spec": "q042_planck_portability_spec_v6.json",
+      "status": "ACTIVE",
+      "supersedes": "Q042-PREFLIGHT-V5",
+      "supersession_reason": "V5 static program gate passed but its static validator was accidentally pointed at the V4 workflow; pre-execution audit also found V4 pilot-result and registry-artifact suffixes. V6 repairs only these version-integrity references.",
+      "target_ref": "main",
+      "technical_parent_failure_class": "STATIC_TEST_WORKFLOW_VERSION_MISMATCH_BEFORE_ENVIRONMENT",
+      "technical_parent_program_id": "Q042-PREFLIGHT-V5",
+      "tests": "q042_planck_portability_tests_v6.py",
+      "version": "v6",
+      "workflow_id": "q042-planck-portability-v6.yml",
+      "workflow_path": ".github/workflows/q042-planck-portability-v6.yml"
+    }
+  },
+  "instructions": "ADD ONLY. Do not overwrite the permanent launcher. Mark Q042-PREFLIGHT-V5 superseded manually if your registry policy requires it."
+}
