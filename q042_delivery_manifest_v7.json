@@ -1,0 +1,107 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "change_scope": {
+    "pilot_polychord_budget_changed": true,
+    "production_bobyqa_settings_changed": false,
+    "production_polychord_settings_changed": false,
+    "registry_metadata_helper_reference_corrected": true,
+    "scientific_contract_changed": false
+  },
+  "delivery_mode": "INDIVIDUAL_FILES_NO_ARCHIVE_MANUAL_GITHUB_UPLOAD",
+  "files": [
+    {
+      "bytes": 15571,
+      "filename": "q042-planck-portability-v7.yml",
+      "sha256": "f59305a7345fe6340b074e46978d434e2169b85293613a87548ecf6c060821c0"
+    },
+    {
+      "bytes": 714,
+      "filename": "q042_apply_registry_patch_v7.py",
+      "sha256": "62358974bb389c6ca85ca9a9d723c163e3d057a8a2240c571a0b48670302b5e3"
+    },
+    {
+      "bytes": 1464,
+      "filename": "q042_install_instructions_v7.md",
+      "sha256": "a6aa49e0ccef11f96bc7df02a2eff87b5b0a42f7c7dafcda44ee47ca65b9ff61"
+    },
+    {
+      "bytes": 7972,
+      "filename": "q042_planck_portability_source_lock_v7.json",
+      "sha256": "ddbaba09457e497951b7051dde3431e78297a16abec5cfb2983923bec7c4cd98"
+    },
+    {
+      "bytes": 10696,
+      "filename": "q042_planck_portability_spec_v7.json",
+      "sha256": "a8765caa688f9e1f4d2939e231cdc72a75dcedfe251105aff1896c78441b43ea"
+    },
+    {
+      "bytes": 5915,
+      "filename": "q042_planck_portability_tests_v7.py",
+      "sha256": "19ff75aa7e2cdad69c5ffae6a6925f4fa7c953ed75faf40819f82c3a56a9bd27"
+    },
+    {
+      "bytes": 25932,
+      "filename": "q042_planck_portability_v7.py",
+      "sha256": "f094f884d8db3cdd4f6c2e919429f984950899dd681f67910aa078d5282949d8"
+    },
+    {
+      "bytes": 3870,
+      "filename": "q042_prepare_frozen_core_v4.sh",
+      "sha256": "9762f6a31f62e4147f29d10a0a8517c59842437301aa4b027b3ef29c3d6edc7b"
+    },
+    {
+      "bytes": 2180,
+      "filename": "q042_program_registry_patch_v7.json",
+      "sha256": "cb4952af97a8fbd9c4177986662e3a167bfa94a3b2e1b8d44a5ed726863f3e2b"
+    },
+    {
+      "bytes": 4630,
+      "filename": "q042_setup_v7.sh",
+      "sha256": "2fe605eb9ce429bd22432c5c6a598eee721be62234ae7ceb747e43862b5715ac"
+    }
+  ],
+  "github_access": "READ_ONLY_BY_ASSISTANT_NO_WRITES_NO_COMMITS_NO_DISPATCH",
+  "launcher_changed": false,
+  "pilot_polychord_v7": {
+    "do_clustering": true,
+    "max_ndead": 2,
+    "nfail": "nlive",
+    "nlive": "1d",
+    "nprior": "nlive",
+    "num_repeats": 4,
+    "precision_criterion": 0.5,
+    "technical_only": true
+  },
+  "production_polychord_unchanged": {
+    "max_ndead": "infinity",
+    "nfail": "nlive",
+    "nlive": "25d",
+    "nprior": "10nlive",
+    "num_repeats": "5d",
+    "precision_criterion": 0.001
+  },
+  "program_id": "Q042-PREFLIGHT-V7",
+  "program_registered": false,
+  "q": "Q-042",
+  "registration_state": "PENDING_MANUAL_REGISTRY_MERGE",
+  "result_id": "R-Q042-POLYCHORD-BOBYQA-PREFLIGHT-007",
+  "run_dispatched": false,
+  "run_id": "Q042-POLYCHORD-BOBYQA-PREFLIGHT-V7",
+  "technical_parent": {
+    "failure_class": "POLYCHORD_TECHNICAL_PILOT_EXCEEDED_330_MINUTE_WORKFLOW_TIMEOUT",
+    "program_id": "Q042-PREFLIGHT-V6",
+    "scientific_result": "NONE"
+  },
+  "validation": {
+    "active_current_surface_stale_v6_refs": "NONE",
+    "json_parse": "PASS",
+    "program_static_gate": "PASS",
+    "python_compile": "PASS",
+    "runtime_science_preflight": "NOT_RUN_LOCALLY_REQUIRES_GITHUB_RUNTIME",
+    "shell_syntax": "PASS",
+    "static_gate_count": 27,
+    "static_gates_all_pass": true,
+    "static_test_gate": "PASS",
+    "workflow_yaml_parse": "PASS"
+  }
+}
