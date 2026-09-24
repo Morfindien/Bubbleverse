@@ -1,0 +1,40 @@
+{
+  "entry": {
+    "Q042-PREFLIGHT-V4": {
+      "case_id": "NOT DOCUMENTED",
+      "created_date": "2026-09-24",
+      "execution_scope": "PREFLIGHT_ONLY_NO_SCIENTIFIC_CLASSIFICATION",
+      "frozen_core_helper": "q042_prepare_frozen_core_v4.sh",
+      "launcher": ".github/workflows/00-bubbleverse-start.yml",
+      "q": "Q-042",
+      "result_artifacts": [
+        "q042-static-v4",
+        "q042-environment-v4",
+        "q042-pilot-*-v4",
+        "q042-preflight-final-v4"
+      ],
+      "result_id": "R-Q042-POLYCHORD-BOBYQA-PREFLIGHT-004",
+      "scientific_and_numerical_settings_changed_from_v3": false,
+      "scientific_program": "q042_planck_portability_v4.py",
+      "scientific_task": "Technical V4 transport repair of Q042-PREFLIGHT-V3: preserve the exact 20-cell pre-science contract and all frozen PolyChord/BOBYQA settings; try the exact Q041 V19 base cache first, then on cold cache use the same official HiLLiPoP TT v4.2 source through bounded real cobaya-install attempts instead of the inherited short availability probe. No cosmological classification.",
+      "setup": "q042_setup_v4.sh",
+      "source_lock": "q042_planck_portability_source_lock_v4.json",
+      "spec": "q042_planck_portability_spec_v4.json",
+      "status": "ACTIVE",
+      "target_ref": "main",
+      "technical_parent_failure_class": "Q041_NERSC_TT_AVAILABILITY_PROBE_TIMEOUT_ON_COLD_CACHE",
+      "technical_parent_program_id": "Q042-PREFLIGHT-V3",
+      "tests": "q042_planck_portability_tests_v4.py",
+      "version": "v4",
+      "workflow_id": "q042-planck-portability-v4.yml",
+      "workflow_path": ".github/workflows/q042-planck-portability-v4.yml"
+    }
+  },
+  "must_not_modify": [
+    "Q041-PLANCKPORT-V19",
+    ".github/workflows/00-bubbleverse-start.yml"
+  ],
+  "note": "Manual merge required. ChatGPT did not mutate GitHub. If Q042-PREFLIGHT-V3 is present, mark it BROKEN/SUPERSEDED manually; this ADD_ONLY patch does not edit existing entries.",
+  "operation": "ADD_ONLY",
+  "required_registry": "bubbleverse_program_registry.json"
+}
