@@ -1,0 +1,97 @@
+name: "Bubbleverse Q042 — execution mechanism diagnostic V1"
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-042
+  PROGRAM_ID: Q042-EXECMECH-V1
+  V19_RUN_ID: '34979609004'
+
+jobs:
+  diagnose-v19:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+
+      - name: Exact launcher identity gate
+        shell: bash
+        env:
+          INPUT_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          test "$INPUT_PROGRAM_ID" = "$PROGRAM_ID"
+          echo "PROGRAM_ID_GATE=PASS program_id=$PROGRAM_ID"
+          echo "Q_IDENTITY_GATE=PASS q=$CURRENT_Q"
+
+      - name: Install diagnostic runtime
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4
+
+      - name: Static compile
+        run: |
+          python -m py_compile q042_execution_mechanism_v1.py q042_execution_mechanism_tests_v1.py
+          python - <<'PY'
+          import json,hashlib
+          p='q042_execution_mechanism_preregister_v1.json'
+          l=json.load(open('q042_execution_mechanism_source_lock_v1.json'))
+          h=hashlib.sha256(open(p,'rb').read()).hexdigest()
+          assert l['preregister_sha256']==h
+          assert l['github_mutation'].startswith('FORBIDDEN')
+          assert l['external']['supernova']['component']=='sn.pantheonplus'
+          print('Q042_STATIC_GATE=PASS')
+          PY
+
+      - name: Download immutable V19 final-segment chain artifacts
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          rm -rf q041_v19_seg8
+          mkdir -p q041_v19_seg8
+          gh run download "$V19_RUN_ID" \
+            --repo "$GITHUB_REPOSITORY" \
+            --pattern 'q041-chain-*-seg8-v19' \
+            --dir q041_v19_seg8
+          test "$(find q041_v19_seg8 -name q041_chain_metadata_v19.json -type f | wc -l)" -eq 32
+          echo 'Q042_V19_ARTIFACT_DOWNLOAD_GATE=PASS count=32'
+
+      - name: Diagnose V19 and select execution mechanism
+        run: |
+          python q042_execution_mechanism_v1.py diagnose \
+            --artifacts-dir q041_v19_seg8 \
+            --preregister q042_execution_mechanism_preregister_v1.json \
+            --source-lock q042_execution_mechanism_source_lock_v1.json \
+            --output q042_execution_mechanism_result_v1.json
+
+      - name: Validate diagnostic result
+        run: |
+          python q042_execution_mechanism_tests_v1.py \
+            --result q042_execution_mechanism_result_v1.json \
+            --reference q042_v19_diagnostic_reference_v1.json \
+            --output q042_execution_mechanism_tests_result_v1.json
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q042-execmech-v1
+          path: |
+            q042_execution_mechanism_result_v1.json
+            q042_execution_mechanism_tests_result_v1.json
+            q042_execution_mechanism_preregister_v1.json
+            q042_execution_mechanism_source_lock_v1.json
+            q042_v19_diagnostic_reference_v1.json
+          if-no-files-found: error

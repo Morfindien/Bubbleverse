@@ -1,0 +1,154 @@
+{
+  "authoritative_science_contract": {
+    "classification_only_after_all_mandatory_gates": true,
+    "combinations": {
+      "FULL": [
+        "P",
+        "A6",
+        "L6",
+        "D2",
+        "SN"
+      ],
+      "NO_ACT_LENSING": [
+        "P",
+        "A6",
+        "D2",
+        "SN"
+      ],
+      "NO_ACT_PRIMARY": [
+        "P",
+        "L6",
+        "D2",
+        "SN"
+      ],
+      "NO_DESI_DR2": [
+        "P",
+        "A6",
+        "L6",
+        "SN"
+      ],
+      "NO_SN": [
+        "P",
+        "A6",
+        "L6",
+        "D2"
+      ]
+    },
+    "models": [
+      "lcdm",
+      "ede_n3"
+    ],
+    "no_cross_arm_absolute_chi2_evidence": true,
+    "no_hybrid_planck_likelihood": true,
+    "planck_arms": [
+      "camspec",
+      "hillipop"
+    ],
+    "q040_scientific_endpoints_forbidden": true,
+    "required_cell_count": 20,
+    "required_data_blocks": [
+      "ACT_DR6_PRIMARY",
+      "ACT_DR6_LENSING",
+      "DESI_DR2",
+      "PANTHEONPLUS_SN"
+    ],
+    "same_external_data_both_planck_arms": true
+  },
+  "created_at": "2026-09-24T12:27:00+02:00",
+  "diagnostic_thresholds": {
+    "full_chain_standardized_separation_threshold": 1.0,
+    "high_acceptance_fraction_threshold": 0.25,
+    "high_acceptance_threshold": 0.95,
+    "poor_transport_rminus1_threshold": 2.0,
+    "science_rhat_gate": 1.05,
+    "theta_i_boundary_mass_threshold": 0.1,
+    "theta_i_boundary_window": 0.05,
+    "theta_i_upper_prior": 3.1
+  },
+  "historical_parent": {
+    "attempt": 4,
+    "execution_commit": "a962ba70077422f8b69642dea4e8272e1d00e5ff",
+    "final_artifact": "q041-final-v19",
+    "final_artifact_id": 10754769330,
+    "final_artifact_sha256": "2284518ecbaaf1ff0d0093977827d5162ec29549ba2b81880f266c250311ca2b",
+    "github_run_id": 34979609004,
+    "program_id": "Q041-PLANCKPORT-V19",
+    "result_id": "R-Q041-EDE-DOWNSTREAM-PORTABILITY-019",
+    "role": "DIAGNOSTIC_INPUT_ONLY; V19 remains historically unchanged and is not a scientific endpoint."
+  },
+  "mandatory_output_gates": [
+    "Q_IDENTITY",
+    "V19_ARTIFACT_COUNT",
+    "V19_PROVENANCE",
+    "Q040_FIREWALL",
+    "NONCONVERGENCE_REPRODUCED",
+    "TRANSPORT_DIAGNOSIS",
+    "MODE_OR_RIDGE_DIAGNOSIS",
+    "BOUNDARY_DIAGNOSIS",
+    "ORIGINAL_DECISION_RULE_LOCK",
+    "SUPERNOVA_SOURCE_LOCK",
+    "EXECUTION_MECHANISM_DECISION",
+    "NO_SCIENCE_CLASSIFICATION"
+  ],
+  "original_decision_rule": {
+    "combination_materiality": "material if model-preference portability is material OR both parameter-location and contour geometry are material",
+    "contour_overlap": {
+      "coordinates": [
+        "H0",
+        "fEDE"
+      ],
+      "material_if": "overlap_coefficient<0.50",
+      "method": "empirical weighted two-dimensional posterior/profile overlap; no Gaussian compression",
+      "substantial_if": "overlap_coefficient>=0.50"
+    },
+    "final_classification": {
+      "MATERIAL_SCIENTIFIC_PORTABILITY_DIFFERENCE": "FULL material AND materiality survives every required valid leave-one-out test",
+      "MIXED_DATASET_CONDITIONAL": "at least one valid required combination is material and at least one valid required combination is non-material",
+      "SCIENTIFIC_DIFFERENCE_COLLAPSES": "FULL and every valid leave-one-out are non-material in parameter location, have substantial contour overlap, and have portable EDE/LCDM conclusions"
+    },
+    "model_preference": {
+      "categories": {
+        "modest": "2<DeltaChi2<6",
+        "negligible": "DeltaChi2<=2",
+        "substantive": "DeltaChi2>=6"
+      },
+      "formula": "DeltaChi2_EDE_arm=Chi2_LCDM_best_arm-Chi2_EDE_best_arm",
+      "portability_material_if": "arms occupy different categories AND abs(DeltaChi2_A-DeltaChi2_B)>=2",
+      "within_arm_only": true
+    },
+    "parameter_location": {
+      "formula": "D_x=abs(x_A-x_B)/sqrt(sigma_A^2+sigma_B^2)",
+      "material_if": "D_H0>=1 OR D_fEDE>=1 OR at least two eligible primary cosmological coordinates have D>=1",
+      "weak_identification_rule": "log10z_c and thetai_scf cannot by themselves make parameter-location material when fEDE is weakly identified/prior dominated."
+    },
+    "reporting_coordinates": [
+      "H0",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "omega_b",
+      "omega_cdm"
+    ]
+  },
+  "program_id": "Q042-EXECMECH-V1",
+  "prospective_execution_strategy": {
+    "best_fit_method": "Cobaya minimize with Py-BOBYQA, multiple preregistered starts per within-arm model/data cell",
+    "best_fit_role": "within-arm LCDM-versus-EDE DeltaChi2 only; never cross-arm absolute objective subtraction",
+    "cross_version_v19_chain_state_reuse": "FORBIDDEN_AS_SAMPLER_STATE; V19 samples may be diagnostic/reference only.",
+    "full_campaign_generated_by_this_program": false,
+    "posterior_sampler": "Cobaya PolyChord / PolyChord nested sampling",
+    "preflight_required_before_full_campaign": true,
+    "profile_or_overlap": "Use weighted nested posterior samples and/or preregistered profile construction for empirical (H0,fEDE) overlap; no single-Gaussian compression.",
+    "reason": "V19 shows non-converged separated ridges/modes/boundary structure and high-acceptance local transport; a sampler designed for multimodality and non-Gaussian contours is required instead of simply extending the same MCMC.",
+    "same_posterior_sampler_for": [
+      "lcdm",
+      "ede_n3"
+    ]
+  },
+  "q": "Q-042",
+  "result_id": "R-Q042-EXECUTION-MECHANISM-DIAGNOSTIC-001",
+  "run_id": "Q042-EXECUTION-MECHANISM-DIAGNOSTIC-V1",
+  "scientific_question": "Can the original Q041 downstream-portability test be executed with a new preregistered convergence-robust inference strategy that exactly preserves the original scientific contract?",
+  "scope": "Artifact-only V19 convergence/transport diagnosis plus prospective execution-mechanism selection. No Q041 cosmological classification is allowed.",
+  "status": "PREREGISTERED_EXECUTION_DIAGNOSTIC"
+}
