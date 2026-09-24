@@ -1,0 +1,37 @@
+{
+  "entry": {
+    "Q042-PREFLIGHT-V2": {
+      "case_id": "NOT DOCUMENTED",
+      "created_date": "2026-09-24",
+      "execution_scope": "PREFLIGHT_ONLY_NO_SCIENTIFIC_CLASSIFICATION",
+      "launcher": ".github/workflows/00-bubbleverse-start.yml",
+      "q": "Q-042",
+      "result_artifacts": [
+        "q042-static-v2",
+        "q042-environment-v2",
+        "q042-pilot-*-v2",
+        "q042-preflight-final-v2"
+      ],
+      "result_id": "R-Q042-POLYCHORD-BOBYQA-PREFLIGHT-002",
+      "scientific_program": "q042_planck_portability_v2.py",
+      "scientific_task": "Pre-science hard validation of the authoritative Q042 20-cell surface plus bounded real-stack PolyChord and external-start Py-BOBYQA FULL pilots. No cosmological classification.",
+      "setup": "q042_setup_v2.sh",
+      "source_lock": "q042_planck_portability_source_lock_v2.json",
+      "spec": "q042_planck_portability_spec_v2.json",
+      "status": "ACTIVE",
+      "target_ref": "main",
+      "technical_parent_program_id": "Q042-EXECMECH-V1",
+      "tests": "q042_planck_portability_tests_v2.py",
+      "version": "v2",
+      "workflow_id": "q042-planck-portability-v2.yml",
+      "workflow_path": ".github/workflows/q042-planck-portability-v2.yml"
+    }
+  },
+  "must_not_modify": [
+    "Q041-PLANCKPORT-V19",
+    ".github/workflows/00-bubbleverse-start.yml"
+  ],
+  "note": "Manual merge required. ChatGPT did not mutate GitHub.",
+  "operation": "ADD_ONLY",
+  "required_registry": "bubbleverse_program_registry.json"
+}
