@@ -1,0 +1,393 @@
+name: "Bubbleverse Q042 V11 — PolyChord + BOBYQA hard preflight"
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  CURRENT_Q: Q-042
+  PROGRAM_ID: Q042-PREFLIGHT-V11
+  RUN_ID: Q042-POLYCHORD-BOBYQA-PREFLIGHT-V11
+  RESULT_ID: R-Q042-POLYCHORD-BOBYQA-PREFLIGHT-011
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Exact launcher identity gate
+        shell: bash
+        env:
+          INPUT_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          test "$INPUT_PROGRAM_ID" = "$PROGRAM_ID"
+          echo "PROGRAM_ID_GATE=PASS program_id=$PROGRAM_ID"
+          echo "Q_IDENTITY_GATE=PASS q=$CURRENT_Q"
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Static preregistration gates
+        run: |
+          python -m py_compile q042_planck_portability_v11.py q042_planck_portability_tests_v11.py
+          python q042_planck_portability_v11.py static \
+            --spec q042_planck_portability_spec_v11.json \
+            --source-lock q042_planck_portability_source_lock_v11.json \
+            --output q042_static_program_v11.json
+          python q042_planck_portability_tests_v11.py static \
+            --spec q042_planck_portability_spec_v11.json \
+            --source-lock q042_planck_portability_source_lock_v11.json \
+            --program q042_planck_portability_v11.py \
+            --workflow .github/workflows/q042-planck-portability-v11.yml \
+            --registry-patch q042_program_registry_patch_v11.json \
+            --core-helper q042_prepare_frozen_core_v4.sh \
+            --output q042_static_tests_v11.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q042-static-v11
+          path: |
+            q042_static_program_v11.json
+            q042_static_tests_v11.json
+            q042_planck_portability_spec_v11.json
+            q042_planck_portability_source_lock_v11.json
+          if-no-files-found: error
+
+  environment:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore prior Q042 V9 full runtime cache
+        id: q042_v9_full
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-v9-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+      - name: Restore prior Q042 V7 full runtime cache
+        if: steps.q042_v9_full.outputs.cache-hit != 'true'
+        id: q042_v7_full
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-v7-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+      - name: Restore exact known-good Q041 V19 base cache
+        if: steps.q042_v9_full.outputs.cache-hit != 'true' && steps.q042_v7_full.outputs.cache-hit != 'true'
+        id: q041_v19_base
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+          key: q041-v19-${{ runner.os }}-py311-q032-4dc873a-actcmb-880eacb-lens-b386ddb-desi-b7b8a36
+      - name: Report V19 base-cache state
+        shell: bash
+        run: |
+          echo "Q042_V11_V9_FULL_CACHE_EXACT_HIT=${{ steps.q042_v9_full.outputs.cache-hit }}"
+          echo "Q042_V11_V7_FULL_CACHE_EXACT_HIT=${{ steps.q042_v7_full.outputs.cache-hit }}"
+          echo "Q042_V11_V19_BASE_CACHE_EXACT_HIT=${{ steps.q041_v19_base.outputs.cache-hit }}"
+      - name: Restore previous Q042 PolyChord source/build cache
+        if: steps.q042_v9_full.outputs.cache-hit != 'true' && steps.q042_v7_full.outputs.cache-hit != 'true'
+        id: q042_prev_poly
+        uses: actions/cache/restore@v4
+        with:
+          path: external/PolyChordLite
+          key: q042-v11-polychord-${{ runner.os }}-py311-pc1222
+          restore-keys: |
+            q042-v7-polychord-${{ runner.os }}-py311-pc1222
+            q042-v6-polychord-${{ runner.os }}-py311-pc1222
+            q042-v5-polychord-${{ runner.os }}-py311-pc1222
+            q042-v4-polychord-${{ runner.os }}-py311-pc1222
+      - name: Toolchain
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y gfortran gcc g++ make openmpi-bin libopenmpi-dev pkg-config
+          command -v mpicc
+          command -v mpifort
+          mpirun --version | head -1
+      - name: Materialize exact Q032 execution commit
+        run: |
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Download authoritative Q032 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen Q032/Q041 core with cache-first bounded official cold path
+        run: bash q042_prepare_frozen_core_v4.sh both
+      - name: Install locked Q042 sampler/runtime
+        run: bash q042_setup_v11.sh
+      - name: Save reusable Q042 V11 environment cache
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-v11-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+      - name: Save Q042 V11 PolyChord source/build cache
+        uses: actions/cache/save@v4
+        with:
+          path: external/PolyChordLite
+          key: q042-v11-polychord-${{ runner.os }}-py311-pc1222
+      - name: Construct exact Planck/ACT non-overlap support
+        run: |
+          mkdir -p q042_environment
+          python q042_planck_portability_v11.py prepare-nonoverlap \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --support-output q042_environment/q042_primary_nonoverlap_support_v11.json \
+            --matrix-output q042_environment/q042_hillipop_nonoverlap_precision_v11.npy \
+            --meta-output q042_environment/q042_hillipop_nonoverlap_precision_v11.json
+      - name: Build all 20 cells and evaluate all four FULL cells once
+        run: |
+          python q042_planck_portability_v11.py runtime-preflight \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q042_environment/q042_primary_nonoverlap_support_v11.json \
+            --reduced-hlp-matrix q042_environment/q042_hillipop_nonoverlap_precision_v11.npy \
+            --reduced-hlp-meta q042_environment/q042_hillipop_nonoverlap_precision_v11.json \
+            --spec q042_planck_portability_spec_v11.json \
+            --source-lock q042_planck_portability_source_lock_v11.json \
+            --external-runtime q042_runtime/q042_external_runtime_provenance_v11.json \
+            --output q042_environment/q042_runtime_preflight_v11.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q042-environment-v11
+          path: |
+            q042_environment/**
+            q042_runtime/q042_external_runtime_provenance_v11.json
+            q042_planck_portability_spec_v11.json
+            q042_planck_portability_source_lock_v11.json
+          if-no-files-found: error
+
+  full-pilots:
+    needs: environment
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        include:
+          - id: camspec-lcdm
+            arm: camspec
+            model: lcdm
+          - id: camspec-ede
+            arm: camspec
+            model: ede_n3
+          - id: hillipop-lcdm
+            arm: hillipop
+            model: lcdm
+          - id: hillipop-ede
+            arm: hillipop
+            model: ede_n3
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-v11-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          restore-keys: |
+            q042-v7-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+            q042-v6-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+            q042-v5-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+            q042-v4-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - name: Toolchain
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y gfortran gcc g++ make openmpi-bin libopenmpi-dev pkg-config
+          command -v mpicc
+          command -v mpifort
+          mpirun --version | head -1
+      - name: Materialize exact Q032 execution commit
+        run: |
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - name: Download authoritative Q032 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - uses: actions/download-artifact@v4
+        with:
+          name: q042-environment-v11
+          path: q042_environment_artifact
+      - name: Recreate frozen core and assert Q042 runtime
+        run: |
+          bash q042_prepare_frozen_core_v4.sh both
+          bash q042_setup_v11.sh
+      - name: Cross-job source identity gate
+        run: |
+          python - <<'PY'
+          import json
+          a=json.load(open('q042_runtime/q042_external_runtime_provenance_v11.json'))
+          b=json.load(open('q042_environment_artifact/q042_runtime/q042_external_runtime_provenance_v11.json'))
+          assert a['polychord_commit']==b['polychord_commit'], 'POLYCHORD_CROSS_JOB_COMMIT_GATE=FAIL'
+          assert a['pantheonplus_manifest_sha256']==b['pantheonplus_manifest_sha256'], 'PANTHEONPLUS_CROSS_JOB_HASH_GATE=FAIL'
+          assert a['cobaya_version']==b['cobaya_version']=='3.5.6'
+          assert a['pybobyqa_version']==b['pybobyqa_version']=='1.5.0'
+          print('Q042_CROSS_JOB_SOURCE_IDENTITY_GATE=PASS')
+          PY
+      - name: Run process-isolated bounded FULL PolyChord + external BOBYQA pilot
+        run: |
+          python q042_planck_portability_v11.py pilot-cell \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q042_environment_artifact/q042_environment/q042_primary_nonoverlap_support_v11.json \
+            --reduced-hlp-matrix q042_environment_artifact/q042_environment/q042_hillipop_nonoverlap_precision_v11.npy \
+            --reduced-hlp-meta q042_environment_artifact/q042_environment/q042_hillipop_nonoverlap_precision_v11.json \
+            --spec q042_planck_portability_spec_v11.json \
+            --source-lock q042_planck_portability_source_lock_v11.json \
+            --external-runtime q042_runtime/q042_external_runtime_provenance_v11.json \
+            --arm ${{ matrix.arm }} \
+            --model ${{ matrix.model }} \
+            --output-dir q042_pilot_${{ matrix.id }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q042-pilot-${{ matrix.id }}-v11
+          path: q042_pilot_${{ matrix.id }}/**
+          if-no-files-found: error
+
+  merge-preflight:
+    needs: full-pilots
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Bootstrap merge Python dependencies
+        run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q042-pilot-*-v11
+          merge-multiple: false
+          path: q042_pilots
+      - uses: actions/download-artifact@v4
+        with:
+          name: q042-environment-v11
+          path: q042_environment_artifact
+      - name: Merge pilot gates only
+        run: |
+          python q042_planck_portability_v11.py merge-pilots \
+            --input-dir q042_pilots \
+            --environment-preflight q042_environment_artifact/q042_environment/q042_runtime_preflight_v11.json \
+            --spec q042_planck_portability_spec_v11.json \
+            --source-lock q042_planck_portability_source_lock_v11.json \
+            --output q042_preflight_final_v11.json
+          python q042_planck_portability_tests_v11.py final \
+            --result q042_preflight_final_v11.json \
+            --spec q042_planck_portability_spec_v11.json \
+            --output q042_preflight_tests_v11.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q042-preflight-final-v11
+          path: |
+            q042_preflight_final_v11.json
+            q042_preflight_tests_v11.json
+            q042_planck_portability_spec_v11.json
+            q042_planck_portability_source_lock_v11.json
+          if-no-files-found: error
