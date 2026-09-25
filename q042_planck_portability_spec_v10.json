@@ -1,0 +1,239 @@
+{
+  "authoritative_contract": {
+    "arms": [
+      "camspec",
+      "hillipop"
+    ],
+    "data_combinations": {
+      "FULL": [
+        "P",
+        "A6",
+        "L6",
+        "D2",
+        "SN"
+      ],
+      "NO_ACT_LENSING": [
+        "P",
+        "A6",
+        "D2",
+        "SN"
+      ],
+      "NO_ACT_PRIMARY": [
+        "P",
+        "L6",
+        "D2",
+        "SN"
+      ],
+      "NO_DESI_DR2": [
+        "P",
+        "A6",
+        "L6",
+        "SN"
+      ],
+      "NO_SN": [
+        "P",
+        "A6",
+        "L6",
+        "D2"
+      ]
+    },
+    "models": [
+      "lcdm",
+      "ede_n3"
+    ],
+    "no_cross_arm_absolute_chi2_evidence": true,
+    "no_hybrid_planck_likelihood": true,
+    "q040_scientific_endpoints_forbidden": true,
+    "reporting_coordinates": [
+      "H0",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "omega_b",
+      "omega_cdm"
+    ],
+    "required_cell_count": 20,
+    "same_external_data_both_planck_arms": true
+  },
+  "bobyqa": {
+    "known_bubbleverse_failure_avoided": "Do not combine external matrix restarts with Cobaya/Py-BOBYQA best_of>1. Earlier Bubbleverse Q005/Q032 runs documented duplicate-restart/maxfun and singular-interpolation failure modes.",
+    "pilot": {
+      "acceptable_exit": "finite objective and non-negative Py-BOBYQA flag; EXIT_MAXFUN_WARNING is acceptable for bounded pilot, negative input/linear-algebra failures are not",
+      "cobaya_best_of": 1,
+      "external_starts_per_full_cell": 2,
+      "ignore_prior": true,
+      "max_evals": 60,
+      "rhoend": 0.1
+    },
+    "production_frozen": {
+      "cobaya_best_of": 1,
+      "external_starts_per_cell": 4,
+      "globality_gate": "within each arm/model/data cell, retain the best finite likelihood minimum only after all four external starts complete; negative Py-BOBYQA linear-algebra/input flags fail that start and must be preserved",
+      "ignore_prior": true,
+      "max_evals": "120d",
+      "rhoend": 0.05,
+      "start_rule": "start 0 = frozen Q032 parent reference; starts 1-3 = deterministic bounded signed perturbations of sampled coordinates using 0.08, 0.14 and 0.20 of each finite prior span, clipped 5 percent inside hard bounds; EDE sector remains n=3; no internal multi-start layer"
+    },
+    "version": "Py-BOBYQA 1.5.0"
+  },
+  "case_id": "NOT DOCUMENTED",
+  "created_at": "2026-09-25T00:52:00+02:00",
+  "mandatory_preflight_gates": [
+    "Q_IDENTITY",
+    "CONTEXT_CONTINUITY",
+    "SPEC_HASH",
+    "SOURCE_LOCK",
+    "Q040_FIREWALL",
+    "FROZEN_SOFTWARE",
+    "PANTHEONPLUS_FILE_HASHES",
+    "POLYCHORD_RUNTIME_COMMIT",
+    "AUTHORITATIVE_20_CELL_BUILD",
+    "PLANCK_NATIVE_IDENTITY",
+    "EXTERNAL_DATA_IDENTITY",
+    "OVERLAP_POLICY",
+    "LCDM_BASELINE",
+    "EDE_N3_IDENTITY",
+    "FULL_FINITE_EVALUATIONS",
+    "POLYCHORD_4_FULL_PILOTS",
+    "POLYCHORD_RESUME_READ_WRITE",
+    "BOBYQA_4_FULL_MULTISTART_PILOTS",
+    "NO_SCIENCE_CLASSIFICATION"
+  ],
+  "on_fail": "Return the preserved technical failure. Do not infer failed physics. Do not silently tune science thresholds or production settings.",
+  "on_pass": "Return to Result Ingestion & Routing Engine. Production campaign may then be generated without changing the frozen production numerical settings unless this preflight itself exposes a technical incompatibility.",
+  "original_decision_rule": {
+    "combination_materiality": "material if model-preference portability is material OR both parameter-location and contour geometry are material",
+    "contour_overlap": {
+      "coordinates": [
+        "H0",
+        "fEDE"
+      ],
+      "material_if": "overlap_coefficient<0.50",
+      "method": "empirical weighted two-dimensional posterior/profile overlap; no Gaussian compression",
+      "substantial_if": "overlap_coefficient>=0.50"
+    },
+    "final_classification": {
+      "MATERIAL_SCIENTIFIC_PORTABILITY_DIFFERENCE": "FULL material AND materiality survives every required valid leave-one-out test",
+      "MIXED_DATASET_CONDITIONAL": "at least one valid required combination is material and at least one valid required combination is non-material",
+      "SCIENTIFIC_DIFFERENCE_COLLAPSES": "FULL and every valid leave-one-out are non-material in parameter location, have substantial contour overlap, and have portable EDE/LCDM conclusions"
+    },
+    "model_preference": {
+      "categories": {
+        "modest": "2<DeltaChi2<6",
+        "negligible": "DeltaChi2<=2",
+        "substantive": "DeltaChi2>=6"
+      },
+      "formula": "DeltaChi2_EDE_arm=Chi2_LCDM_best_arm-Chi2_EDE_best_arm",
+      "portability_material_if": "arms occupy different categories AND abs(DeltaChi2_A-DeltaChi2_B)>=2",
+      "within_arm_only": true
+    },
+    "parameter_location": {
+      "formula": "D_x=abs(x_A-x_B)/sqrt(sigma_A^2+sigma_B^2)",
+      "material_if": "D_H0>=1 OR D_fEDE>=1 OR at least two eligible primary cosmological coordinates have D>=1",
+      "weak_identification_rule": "log10z_c and thetai_scf cannot by themselves make parameter-location material when fEDE is weakly identified/prior dominated."
+    }
+  },
+  "pilot_full_cells": [
+    {
+      "arm": "camspec",
+      "id": "camspec-lcdm",
+      "model": "lcdm"
+    },
+    {
+      "arm": "camspec",
+      "id": "camspec-ede",
+      "model": "ede_n3"
+    },
+    {
+      "arm": "hillipop",
+      "id": "hillipop-lcdm",
+      "model": "lcdm"
+    },
+    {
+      "arm": "hillipop",
+      "id": "hillipop-ede",
+      "model": "ede_n3"
+    }
+  ],
+  "polychord": {
+    "pilot": {
+      "boost_posterior": 0,
+      "confidence_for_unbounded": 0.9999995,
+      "do_clustering": true,
+      "max_ndead": 2,
+      "measure_speeds": false,
+      "nfail": "nlive",
+      "nlive": "1d",
+      "nprior": "nlive",
+      "num_repeats": 4,
+      "precision_criterion": 0.5,
+      "read_resume": true,
+      "synchronous": true,
+      "write_dead": true,
+      "write_live": true,
+      "write_prior": true,
+      "write_resume": true,
+      "write_stats": true
+    },
+    "pilot_seed_map": {
+      "camspec:ede_n3": 420202,
+      "camspec:lcdm": 420201,
+      "hillipop:ede_n3": 420204,
+      "hillipop:lcdm": 420203
+    },
+    "production_frozen": {
+      "boost_posterior": 0,
+      "confidence_for_unbounded": 0.9999995,
+      "do_clustering": true,
+      "max_ndead": "infinity",
+      "measure_speeds": true,
+      "nfail": "nlive",
+      "nlive": "25d",
+      "nprior": "10nlive",
+      "num_repeats": "5d",
+      "oversample_power": 0.4,
+      "precision_criterion": 0.001,
+      "read_resume": true,
+      "seed_policy": "deterministic unique seed per arm/model/combination; exact seeds generated and frozen in the production program before any production result is inspected",
+      "synchronous": true,
+      "write_dead": true,
+      "write_live": true,
+      "write_prior": true,
+      "write_resume": true,
+      "write_stats": true
+    },
+    "resume_policy": "Pilot must write a non-empty PolyChord resume object and a second Cobaya invocation with resume=True and identical statistical settings must accept it. Production may only use genuine continuation from transferred PolyChord/Cobaya state.",
+    "source_release": "PolyChordLite 1.22.2"
+  },
+  "program_id": "Q042-PREFLIGHT-V10",
+  "q": "Q-042",
+  "result_id": "R-Q042-POLYCHORD-BOBYQA-PREFLIGHT-010",
+  "run_id": "Q042-POLYCHORD-BOBYQA-PREFLIGHT-V10",
+  "runtime_limits": {
+    "github_hosted_job_hard_limit_minutes": 360,
+    "pilot_matrix_max_parallel": 2,
+    "pilot_smoke_budget": "PolyChord pilot is a transport/resume smoke test only: nlive=1d, num_repeats=4, nprior=nlive, max_ndead=2. It is explicitly forbidden as evidence or a production-quality posterior.",
+    "production_rule": "Production workflow must use safe sub-6-hour resumable segments or independent shards; it must not be emitted as a single oversized job.",
+    "v19_base_cache_policy": "EXACT_CACHE_REQUIRED; cold NERSC bootstrap forbidden in Q042-PREFLIGHT-V4",
+    "v4_environment_cache_reuse": "PREFERRED; restore exact Q042 V4 environment cache before any cold rebuild because V4 demonstrated successful real-stack initialization before its local identity-gate failure.",
+    "v7_environment_cache_reuse": "PREFERRED; V7 environment and initial bounded PolyChord smoke executed successfully before the same-process resume MPI lifecycle failure. V7 pilot outputs are technical only and are not reused as science.",
+    "workflow_job_timeout_minutes": 330
+  },
+  "scientific_question": "Kan den oprindelige Q041 downstream-portabilitetstest udf\u00f8res med en ny pr\u00e6registreret, konvergensrobust inference-strategi, der n\u00f8jagtigt bevarer den oprindelige scientific contract \u2014 begge native Planck-arme, \u039bCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, \u00e9n identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpr\u00e6ferenceregler \u2014 uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at \u00e6ndre kriterier efter resultaterne?",
+  "scope": "PRE_SCIENCE_PREFLIGHT_ONLY. No cosmological classification is permitted. This program validates the exact 20-cell surface, frozen runtime, bounded PolyChord transport pilots, external-start Py-BOBYQA pilots, and checkpoint/resume readability before a production campaign may be generated.",
+  "technical_revision": {
+    "failure_class": "COBAYA_MINIMIZER_WRAPPER_REJECTS_PREREGISTERED_ACCEPTABLE_PYBOBYQA_MAXFUN_WARNING",
+    "observational_data_changed": false,
+    "observed_failure": "V9 completed the bounded PolyChord fresh and stored-info resume probes for camspec EDE. Both external Py-BOBYQA pilot starts then reached the preregistered max_evals=60 with finite objective values and Py-BOBYQA Exit flag = 1 (MAXFUN warning). Cobaya 3.5.6 defines only EXIT_SUCCESS as success and raised LoggedError before returning the sampler, causing V9 to misclassify the preregistered acceptable bounded warning as a technical failure. No scientific classification was produced.",
+    "observed_failure_source_program_id": "Q042-PREFLIGHT-V9",
+    "parent_program_id": "Q042-PREFLIGHT-V9",
+    "parent_status": "TECHNICAL_GATE_FALSE_NEGATIVE_AFTER_SUCCESSFUL_POLYCHORD_RESUME_NO_SCIENCE",
+    "pilot_bobyqa_settings_changed": false,
+    "pilot_outputs_scientifically_usable": false,
+    "pilot_polychord_settings_changed": false,
+    "production_bobyqa_settings_changed": false,
+    "production_polychord_settings_changed": false,
+    "repair": "BOBYQA result-harvest/gate repair only. Preserve Py-BOBYQA max_evals=60, rhoend=0.1, best_of=1 and both external starts. If Cobaya raises its wrapper LoggedError after Py-BOBYQA returns a raw result, parse and preserve the raw finite objective and exit flag. Accept the result only when the raw Py-BOBYQA flag is non-negative, including Exit flag 1 / MAXFUN exactly as preregistered; negative flags, missing flags, missing finite objectives, or unrelated exceptions remain failures. No science or production settings change.",
+    "scientific_contract_changed": false
+  }
+}
