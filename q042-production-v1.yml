@@ -1,0 +1,744 @@
+name: "Bubbleverse Q042 Production V1 — 20-cell PolyChord + BOBYQA"
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered Bubbleverse PROGRAM_ID
+        required: true
+        type: string
+      mode:
+        description: Internal orchestration mode
+        required: false
+        default: bootstrap
+        type: string
+      arm:
+        required: false
+        default: ""
+        type: string
+      model:
+        required: false
+        default: ""
+        type: string
+      combination:
+        required: false
+        default: ""
+        type: string
+      segment:
+        required: false
+        default: "0"
+        type: string
+      previous_run_id:
+        required: false
+        default: ""
+        type: string
+      root_run_id:
+        required: false
+        default: ""
+        type: string
+      collector_round:
+        required: false
+        default: "0"
+        type: string
+
+permissions:
+  contents: read
+  actions: write
+
+env:
+  CURRENT_Q: Q-042
+  PROGRAM_ID: Q042-PROD-V1
+  RUN_ID: Q042-PRODUCTION-PORTABILITY-V1
+  RESULT_ID: R-Q042-PRODUCTION-PORTABILITY-001
+  Q032_GITHUB_RUN_ID: '33994305721'
+  Q032_EXECUTION_COMMIT: 4dc873a5e880d40858d831a3b421456728f0c032
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+
+jobs:
+  static:
+    if: ${{ inputs.mode == 'bootstrap' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Exact launcher identity gate
+        env:
+          INPUT_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          test "$INPUT_PROGRAM_ID" = "$PROGRAM_ID"
+          echo "PROGRAM_ID_GATE=PASS program_id=$PROGRAM_ID"
+          echo "Q_IDENTITY_GATE=PASS q=$CURRENT_Q"
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Production static gates
+        run: |
+          python -m py_compile q042_production_v1.py q042_production_tests_v1.py
+          python q042_production_v1.py static \
+            --spec q042_production_spec_v1.json \
+            --source-lock q042_production_source_lock_v1.json \
+            --output q042_prod_static_v1.json
+          python q042_production_tests_v1.py static \
+            --spec q042_production_spec_v1.json \
+            --source-lock q042_production_source_lock_v1.json \
+            --program q042_production_v1.py \
+            --workflow .github/workflows/q042-production-v1.yml \
+            --setup q042_setup_prod_v1.sh \
+            --registry-patch q042_program_registry_patch_prod_v1.json \
+            --output q042_prod_static_tests_v1.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q042-prod-${{ github.run_id }}-static
+          path: |
+            q042_prod_static_v1.json
+            q042_prod_static_tests_v1.json
+            q042_production_spec_v1.json
+            q042_production_source_lock_v1.json
+          if-no-files-found: error
+
+  environment:
+    if: ${{ inputs.mode == 'bootstrap' }}
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Restore validated V11 / production runtime cache
+        id: runtime_cache
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          restore-keys: |
+            q042-v11-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+            q042-v9-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+      - name: Toolchain
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y gfortran gcc g++ make openmpi-bin libopenmpi-dev pkg-config
+      - name: Materialize exact Q032 execution commit
+        run: |
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          rm -rf q032_parent
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+          test "$(git -C q032_parent rev-parse HEAD)" = "$Q032_EXECUTION_COMMIT"
+      - name: Download authoritative Q032 artifacts
+        uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          pattern: q032-refine-*
+          merge-multiple: true
+          path: q032_parent_profiles
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-preflight-sealed-v2
+          path: q032_preflight
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ env.Q032_GITHUB_RUN_ID }}
+          name: q032-hillipop-covariance-v2
+          path: q032_hlp_cov
+      - name: Recreate frozen core and validated runtime
+        run: |
+          bash q042_prepare_frozen_core_v4.sh both
+          bash q042_setup_prod_v1.sh
+      - name: Save production runtime cache
+        if: steps.runtime_cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+      - name: Construct exact Planck/ACT non-overlap support
+        run: |
+          mkdir -p q042_environment
+          python q042_production_v1.py prepare-nonoverlap \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --support-output q042_environment/q042_primary_nonoverlap_support_prod_v1.json \
+            --matrix-output q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.npy \
+            --meta-output q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.json
+      - name: Reassert all 20 production cells before dispatch
+        run: |
+          python q042_production_v1.py runtime-preflight \
+            --q032-parent-root q032_parent \
+            --preflight q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir q032_parent_profiles \
+            --hlp-matrix q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support q042_environment/q042_primary_nonoverlap_support_prod_v1.json \
+            --reduced-hlp-matrix q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.npy \
+            --reduced-hlp-meta q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.json \
+            --spec q042_production_spec_v1.json \
+            --source-lock q042_production_source_lock_v1.json \
+            --external-runtime q042_runtime/q042_external_runtime_provenance_prod_v1.json \
+            --output q042_environment/q042_production_runtime_preflight_v1.json
+      - name: Prepare portable environment bundle
+        run: |
+          mkdir -p q042_prod_env_bundle
+          cp -a q042_environment q042_prod_env_bundle/
+          cp -a q042_runtime q042_prod_env_bundle/
+          cp -a q032_preflight q042_prod_env_bundle/
+          cp -a q032_hlp_cov q042_prod_env_bundle/
+          cp -a q032_parent_profiles q042_prod_env_bundle/
+          cp q042_production_spec_v1.json q042_production_source_lock_v1.json q042_prod_env_bundle/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q042-prod-${{ github.run_id }}-environment
+          path: q042_prod_env_bundle/**
+          if-no-files-found: error
+          retention-days: 30
+
+  bobyqa-production:
+    if: ${{ inputs.mode == 'bootstrap' }}
+    needs: environment
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        arm: [camspec, hillipop]
+        model: [lcdm, ede_n3]
+        combination: [FULL, NO_ACT_PRIMARY, NO_ACT_LENSING, NO_DESI_DR2, NO_SN]
+        start_index: [0, 1, 2, 3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - run: |
+          sudo apt-get update -y
+          sudo apt-get install -y gfortran gcc g++ make openmpi-bin libopenmpi-dev pkg-config
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ github.run_id }}
+          name: q042-prod-${{ github.run_id }}-environment
+          path: env_bundle
+      - name: Reassert runtime
+        run: |
+          bash q042_prepare_frozen_core_v4.sh both
+          bash q042_setup_prod_v1.sh
+      - name: Verify local runtime matches frozen campaign environment
+        run: |
+          python - <<'PY'
+          import json
+          local=json.load(open('q042_runtime/q042_external_runtime_provenance_prod_v1.json'))
+          frozen=json.load(open('env_bundle/q042_runtime/q042_external_runtime_provenance_prod_v1.json'))
+          for k in ('pantheonplus_manifest_sha256','polychord_commit','cobaya_version','pybobyqa_version'):
+              assert local.get(k)==frozen.get(k), f'CAMPAIGN_RUNTIME_IDENTITY_GATE=FAIL key={k} local={local.get(k)} frozen={frozen.get(k)}'
+          assert local.get('polychord_commit')=='3ade6445bb3719a6db6f6e81f178765545ffc833', 'POLYCHORD_EXACT_COMMIT_GATE=FAIL'
+          print('Q042_PROD_CAMPAIGN_RUNTIME_IDENTITY_GATE=PASS')
+          PY
+      - name: Run one frozen external BOBYQA production start
+        run: |
+          mkdir -p bobyqa_out
+          set +e
+          timeout --signal=INT --kill-after=120s 300m python q042_production_v1.py bobyqa-stage \
+            --q032-parent-root q032_parent \
+            --preflight env_bundle/q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir env_bundle/q032_parent_profiles \
+            --hlp-matrix env_bundle/q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta env_bundle/q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support env_bundle/q042_environment/q042_primary_nonoverlap_support_prod_v1.json \
+            --reduced-hlp-matrix env_bundle/q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.npy \
+            --reduced-hlp-meta env_bundle/q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.json \
+            --spec q042_production_spec_v1.json \
+            --source-lock q042_production_source_lock_v1.json \
+            --external-runtime q042_runtime/q042_external_runtime_provenance_prod_v1.json \
+            --arm '${{ matrix.arm }}' --model '${{ matrix.model }}' --combination '${{ matrix.combination }}' \
+            --start-index '${{ matrix.start_index }}' \
+            --output-dir bobyqa_out \
+            --result-json q042_production_bobyqa_start_v1.json
+          RC=$?
+          set -e
+          if [ ! -s q042_production_bobyqa_start_v1.json ]; then
+            export RC
+            python - <<'PY'
+          import json,os
+          json.dump({'q':'Q-042','program_id':'Q042-PROD-V1','stage':'BOBYQA_PRODUCTION_START','status':'RECORDED_FAILURE','technical_ok':False,'failure_class':'ATOMIC_BOBYQA_JOB_BUDGET_EXHAUSTED_OR_UNHANDLED_EXCEPTION','shell_returncode':int(os.environ.get('RC','-1')),'arm':os.environ['ARM'],'model':os.environ['MODEL'],'combination':os.environ['COMBO'],'start_index':int(os.environ['START'])},open('q042_production_bobyqa_start_v1.json','w'),indent=2)
+          PY
+          fi
+        env:
+          ARM: ${{ matrix.arm }}
+          MODEL: ${{ matrix.model }}
+          COMBO: ${{ matrix.combination }}
+          START: ${{ matrix.start_index }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q042-prod-${{ github.run_id }}-bobyqa-${{ matrix.arm }}-${{ matrix.model }}-${{ matrix.combination }}-s${{ matrix.start_index }}
+          path: q042_production_bobyqa_start_v1.json
+          if-no-files-found: error
+          retention-days: 30
+
+  polychord-segment0:
+    if: ${{ inputs.mode == 'bootstrap' }}
+    needs: environment
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        arm: [camspec, hillipop]
+        model: [lcdm, ede_n3]
+        combination: [FULL, NO_ACT_PRIMARY, NO_ACT_LENSING, NO_DESI_DR2, NO_SN]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - run: |
+          sudo apt-get update -y
+          sudo apt-get install -y gfortran gcc g++ make openmpi-bin libopenmpi-dev pkg-config
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ github.run_id }}
+          name: q042-prod-${{ github.run_id }}-environment
+          path: env_bundle
+      - run: |
+          bash q042_prepare_frozen_core_v4.sh both
+          bash q042_setup_prod_v1.sh
+      - name: Verify local runtime matches frozen campaign environment
+        run: |
+          python - <<'PY'
+          import json
+          local=json.load(open('q042_runtime/q042_external_runtime_provenance_prod_v1.json'))
+          frozen=json.load(open('env_bundle/q042_runtime/q042_external_runtime_provenance_prod_v1.json'))
+          for k in ('pantheonplus_manifest_sha256','polychord_commit','cobaya_version','pybobyqa_version'):
+              assert local.get(k)==frozen.get(k), f'CAMPAIGN_RUNTIME_IDENTITY_GATE=FAIL key={k} local={local.get(k)} frozen={frozen.get(k)}'
+          assert local.get('polychord_commit')=='3ade6445bb3719a6db6f6e81f178765545ffc833', 'POLYCHORD_EXACT_COMMIT_GATE=FAIL'
+          print('Q042_PROD_CAMPAIGN_RUNTIME_IDENTITY_GATE=PASS')
+          PY
+      - name: Run first production segment
+        run: |
+          mkdir -p cell_state
+          python q042_production_v1.py polychord-segment \
+            --q032-parent-root q032_parent \
+            --preflight env_bundle/q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir env_bundle/q032_parent_profiles \
+            --hlp-matrix env_bundle/q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta env_bundle/q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support env_bundle/q042_environment/q042_primary_nonoverlap_support_prod_v1.json \
+            --reduced-hlp-matrix env_bundle/q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.npy \
+            --reduced-hlp-meta env_bundle/q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.json \
+            --spec q042_production_spec_v1.json \
+            --source-lock q042_production_source_lock_v1.json \
+            --external-runtime q042_runtime/q042_external_runtime_provenance_prod_v1.json \
+            --arm '${{ matrix.arm }}' --model '${{ matrix.model }}' --combination '${{ matrix.combination }}' \
+            --segment 0 --soft-minutes 240 --output-dir cell_state \
+            --segment-json q042_production_segment_v1.json || true
+      - name: Finalize or mark checkpoint
+        id: seg0decide
+        run: |
+          set -euo pipefail
+          STATUS=$(python -c "import json;print(json.load(open('q042_production_segment_v1.json'))['status'])")
+          if [ "$STATUS" = COMPLETE ]; then
+            echo 'final=yes' >> "$GITHUB_OUTPUT"
+            echo 'checkpoint=no' >> "$GITHUB_OUTPUT"
+            python - <<'PY'
+          import json
+          d=json.load(open('q042_production_segment_v1.json'));d['stage']='POLYCHORD_PRODUCTION_FINAL';d['status']='COMPLETE';json.dump(d,open('q042_production_polychord_final_v1.json','w'),indent=2,sort_keys=True)
+          PY
+          elif [ "$STATUS" = SEGMENT_CHECKPOINTED ]; then
+            echo 'final=no' >> "$GITHUB_OUTPUT"
+            echo 'checkpoint=yes' >> "$GITHUB_OUTPUT"
+            echo 'next=1' >> "$GITHUB_OUTPUT"
+          else
+            echo 'final=yes' >> "$GITHUB_OUTPUT"
+            echo 'checkpoint=no' >> "$GITHUB_OUTPUT"
+            python - <<'PY'
+          import json
+          d=json.load(open('q042_production_segment_v1.json'));d['stage']='POLYCHORD_PRODUCTION_FINAL';d['status']='CONTROLLED_TECHNICAL_FAILURE';json.dump(d,open('q042_production_polychord_final_v1.json','w'),indent=2,sort_keys=True)
+          PY
+          fi
+      - uses: actions/upload-artifact@v4
+        if: ${{ steps.seg0decide.outputs.checkpoint == 'yes' }}
+        with:
+          name: q042-prod-${{ github.run_id }}-checkpoint-${{ matrix.arm }}-${{ matrix.model }}-${{ matrix.combination }}-s0
+          path: |
+            cell_state/**
+            q042_production_segment_v1.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Dispatch continuation after checkpoint upload
+        if: ${{ steps.seg0decide.outputs.checkpoint == 'yes' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARM: ${{ matrix.arm }}
+          MODEL: ${{ matrix.model }}
+          COMBO: ${{ matrix.combination }}
+          ROOT: ${{ github.run_id }}
+          NEXT: ${{ steps.seg0decide.outputs.next }}
+        run: |
+          set -euo pipefail
+          gh workflow run q042-production-v1.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" \
+            -f program_id="$PROGRAM_ID" -f mode=segment -f arm="$ARM" -f model="$MODEL" -f combination="$COMBO" \
+            -f segment="$NEXT" -f previous_run_id="$GITHUB_RUN_ID" -f root_run_id="$ROOT"
+      - uses: actions/upload-artifact@v4
+        if: ${{ steps.seg0decide.outputs.final == 'yes' }}
+        with:
+          name: q042-prod-${{ github.run_id }}-polychord-final-${{ matrix.arm }}-${{ matrix.model }}-${{ matrix.combination }}
+          path: |
+            cell_state/**
+            q042_production_polychord_final_v1.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Start collector if sentinel completed immediately
+        if: ${{ steps.seg0decide.outputs.final == 'yes' && matrix.arm == 'hillipop' && matrix.model == 'ede_n3' && matrix.combination == 'NO_SN' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run q042-production-v1.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" -f program_id="$PROGRAM_ID" -f mode=collect -f root_run_id="$GITHUB_RUN_ID" -f collector_round=0
+
+  polychord-continuation:
+    if: ${{ inputs.mode == 'segment' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Validate internal continuation identity
+        run: |
+          test '${{ inputs.program_id }}' = "$PROGRAM_ID"
+          test -n '${{ inputs.root_run_id }}'
+          test -n '${{ inputs.previous_run_id }}'
+      - uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - run: |
+          sudo apt-get update -y
+          sudo apt-get install -y gfortran gcc g++ make openmpi-bin libopenmpi-dev pkg-config
+          git fetch --depth 1 origin "$Q032_EXECUTION_COMMIT"
+          git worktree add --detach q032_parent "$Q032_EXECUTION_COMMIT"
+      - uses: actions/download-artifact@v4
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.root_run_id }}
+          name: q042-prod-${{ inputs.root_run_id }}-environment
+          path: env_bundle
+      - name: Download previous cell checkpoint
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREV_RUN: ${{ inputs.previous_run_id }}
+          PREV_SEG: ${{ inputs.segment }}
+          ROOT: ${{ inputs.root_run_id }}
+          ARM: ${{ inputs.arm }}
+          MODEL: ${{ inputs.model }}
+          COMBO: ${{ inputs.combination }}
+        run: |
+          set -euo pipefail
+          P=$((PREV_SEG-1))
+          gh run download "$PREV_RUN" --repo "$GITHUB_REPOSITORY" --name "q042-prod-${ROOT}-checkpoint-${ARM}-${MODEL}-${COMBO}-s${P}" --dir previous
+          cp -a previous/cell_state ./cell_state
+          python - <<'PY'
+          import json,os
+          p=json.load(open('previous/q042_production_segment_v1.json'))
+          assert p['q']=='Q-042' and p['program_id']=='Q042-PROD-V1', 'CHECKPOINT_Q_PROGRAM_GATE=FAIL'
+          assert p['arm']==os.environ['ARM'] and p['model']==os.environ['MODEL'] and p['combination']==os.environ['COMBO'], 'CHECKPOINT_CELL_GATE=FAIL'
+          assert int(p['segment'])==int(os.environ['PREV_SEG'])-1, 'CHECKPOINT_SEGMENT_LINEAGE_GATE=FAIL'
+          assert p['status']=='SEGMENT_CHECKPOINTED', 'CHECKPOINT_STATUS_GATE=FAIL'
+          print('CHECKPOINT_VALIDATION_GATE=PASS')
+          PY
+      - run: |
+          bash q042_prepare_frozen_core_v4.sh both
+          bash q042_setup_prod_v1.sh
+      - name: Verify local runtime matches frozen campaign environment
+        run: |
+          python - <<'PY'
+          import json
+          local=json.load(open('q042_runtime/q042_external_runtime_provenance_prod_v1.json'))
+          frozen=json.load(open('env_bundle/q042_runtime/q042_external_runtime_provenance_prod_v1.json'))
+          for k in ('pantheonplus_manifest_sha256','polychord_commit','cobaya_version','pybobyqa_version'):
+              assert local.get(k)==frozen.get(k), f'CAMPAIGN_RUNTIME_IDENTITY_GATE=FAIL key={k} local={local.get(k)} frozen={frozen.get(k)}'
+          assert local.get('polychord_commit')=='3ade6445bb3719a6db6f6e81f178765545ffc833', 'POLYCHORD_EXACT_COMMIT_GATE=FAIL'
+          print('Q042_PROD_CAMPAIGN_RUNTIME_IDENTITY_GATE=PASS')
+          PY
+      - name: Resume one production segment
+        run: |
+          python q042_production_v1.py polychord-segment \
+            --q032-parent-root q032_parent \
+            --preflight env_bundle/q032_preflight/q032_preflight_sealed_v2.json \
+            --parent-dir env_bundle/q032_parent_profiles \
+            --hlp-matrix env_bundle/q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.npy \
+            --hlp-meta env_bundle/q032_hlp_cov/q032_hillipop_tt3pair_precision_v2.json \
+            --reduced-support env_bundle/q042_environment/q042_primary_nonoverlap_support_prod_v1.json \
+            --reduced-hlp-matrix env_bundle/q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.npy \
+            --reduced-hlp-meta env_bundle/q042_environment/q042_hillipop_nonoverlap_precision_prod_v1.json \
+            --spec q042_production_spec_v1.json \
+            --source-lock q042_production_source_lock_v1.json \
+            --external-runtime q042_runtime/q042_external_runtime_provenance_prod_v1.json \
+            --arm '${{ inputs.arm }}' --model '${{ inputs.model }}' --combination '${{ inputs.combination }}' \
+            --segment '${{ inputs.segment }}' --soft-minutes 240 --parent-run-id '${{ inputs.previous_run_id }}' \
+            --output-dir cell_state --segment-json q042_production_segment_v1.json || true
+      - name: Decide continuation / controlled stop
+        id: decide
+        env:
+          SEG: ${{ inputs.segment }}
+        run: |
+          set -euo pipefail
+          STATUS=$(python -c "import json;print(json.load(open('q042_production_segment_v1.json'))['status'])")
+          MAXSEG=$(python -c "import json;print(json.load(open('q042_production_spec_v1.json'))['orchestration']['max_polychord_segments_per_cell'])")
+          if [ "$STATUS" = COMPLETE ]; then
+            echo 'final=yes' >> "$GITHUB_OUTPUT"
+            echo 'checkpoint=no' >> "$GITHUB_OUTPUT"
+            python - <<'PY'
+          import json
+          d=json.load(open('q042_production_segment_v1.json'));d['stage']='POLYCHORD_PRODUCTION_FINAL';d['status']='COMPLETE';json.dump(d,open('q042_production_polychord_final_v1.json','w'),indent=2,sort_keys=True)
+          PY
+          elif [ "$STATUS" = SEGMENT_CHECKPOINTED ] && [ "$SEG" -lt $((MAXSEG-1)) ]; then
+            NEXT=$((SEG+1))
+            echo 'final=no' >> "$GITHUB_OUTPUT"
+            echo 'checkpoint=yes' >> "$GITHUB_OUTPUT"
+            echo "next=$NEXT" >> "$GITHUB_OUTPUT"
+          else
+            echo 'final=yes' >> "$GITHUB_OUTPUT"
+            echo 'checkpoint=no' >> "$GITHUB_OUTPUT"
+            python - <<'PY'
+          import json
+          d=json.load(open('q042_production_segment_v1.json'));d['stage']='POLYCHORD_PRODUCTION_FINAL';d['status']='CONTROLLED_MAX_SEGMENTS_WITHOUT_CONVERGENCE' if d['status']=='SEGMENT_CHECKPOINTED' else 'CONTROLLED_TECHNICAL_FAILURE';json.dump(d,open('q042_production_polychord_final_v1.json','w'),indent=2,sort_keys=True)
+          PY
+          fi
+      - uses: actions/upload-artifact@v4
+        if: ${{ steps.decide.outputs.final == 'no' }}
+        with:
+          name: q042-prod-${{ inputs.root_run_id }}-checkpoint-${{ inputs.arm }}-${{ inputs.model }}-${{ inputs.combination }}-s${{ inputs.segment }}
+          path: |
+            cell_state/**
+            q042_production_segment_v1.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Dispatch continuation after checkpoint upload
+        if: ${{ steps.decide.outputs.checkpoint == 'yes' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ROOT: ${{ inputs.root_run_id }}
+          ARM: ${{ inputs.arm }}
+          MODEL: ${{ inputs.model }}
+          COMBO: ${{ inputs.combination }}
+          NEXT: ${{ steps.decide.outputs.next }}
+        run: |
+          set -euo pipefail
+          gh workflow run q042-production-v1.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" \
+            -f program_id="$PROGRAM_ID" -f mode=segment -f arm="$ARM" -f model="$MODEL" -f combination="$COMBO" \
+            -f segment="$NEXT" -f previous_run_id="$GITHUB_RUN_ID" -f root_run_id="$ROOT"
+      - uses: actions/upload-artifact@v4
+        if: ${{ steps.decide.outputs.final == 'yes' }}
+        with:
+          name: q042-prod-${{ inputs.root_run_id }}-polychord-final-${{ inputs.arm }}-${{ inputs.model }}-${{ inputs.combination }}
+          path: |
+            cell_state/**
+            q042_production_polychord_final_v1.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Start collector from sentinel final cell
+        if: ${{ steps.decide.outputs.final == 'yes' && inputs.arm == 'hillipop' && inputs.model == 'ede_n3' && inputs.combination == 'NO_SN' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run q042-production-v1.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" -f program_id="$PROGRAM_ID" -f mode=collect -f root_run_id='${{ inputs.root_run_id }}' -f collector_round=0
+
+  collector:
+    if: ${{ inputs.mode == 'collect' }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    concurrency:
+      group: q042-prod-collector-${{ inputs.root_run_id }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Wait for all 20 PolyChord finals and 80 BOBYQA starts
+        id: readiness
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ROOT: ${{ inputs.root_run_id }}
+          ROUND: ${{ inputs.collector_round }}
+        run: |
+          set -euo pipefail
+          READY=no
+          for ATTEMPT in 1 2 3 4 5; do
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" --paginate --jq '.artifacts[] | [.id,.name,.expired] | @tsv' > artifacts.tsv
+            python - <<'PY' > readiness.txt
+          import os
+          root=os.environ['ROOT'];rows={}
+          for line in open('artifacts.tsv'):
+            i,n,e=line.rstrip().split('\t');
+            if e!='true': rows[n]=max(int(i),rows.get(n,0))
+          arms=['camspec','hillipop'];mods=['lcdm','ede_n3'];cs=['FULL','NO_ACT_PRIMARY','NO_ACT_LENSING','NO_DESI_DR2','NO_SN']
+          exp=[]
+          for a in arms:
+            for m in mods:
+              for c in cs:
+                exp.append(f'q042-prod-{root}-polychord-final-{a}-{m}-{c}')
+                for s in range(4):exp.append(f'q042-prod-{root}-bobyqa-{a}-{m}-{c}-s{s}')
+          miss=[x for x in exp if x not in rows]
+          print('READY=yes' if not miss else 'READY=no')
+          print('FOUND='+str(len(exp)-len(miss)));print('EXPECTED='+str(len(exp)))
+          if miss: print('MISSING='+';'.join(miss[:20]))
+          PY
+            cat readiness.txt
+            if grep -q '^READY=yes$' readiness.txt; then READY=yes; break; fi
+            if [ "$ATTEMPT" -lt 5 ]; then sleep 2700; fi
+          done
+          echo "ready=$READY" >> "$GITHUB_OUTPUT"
+      - name: Re-dispatch collector if campaign is still running
+        if: ${{ steps.readiness.outputs.ready != 'yes' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          R='${{ inputs.collector_round }}'; MAX=$(python -c "import json;print(json.load(open('q042_production_spec_v1.json'))['orchestration']['max_collector_rounds'])")
+          if [ "$R" -ge $((MAX-1)) ]; then
+            python - <<'PY'
+          import json
+          r=open('readiness.txt').read().splitlines()
+          out={'q':'Q-042','case_id':'NOT DOCUMENTED','program_id':'Q042-PROD-V1','run_id':'Q042-PRODUCTION-PORTABILITY-V1','result_id':'R-Q042-PRODUCTION-PORTABILITY-001','stage':'PRODUCTION_FINAL','execution_status':'CONTROLLED_INCOMPLETE','tests_status':'INCOMPLETE','final_result_gate':'UNRESOLVED','q042_feasibility_classification':'PRODUCTION_INCOMPLETE_OR_NUMERICALLY_UNRESOLVED','downstream_portability_classification':'NOT_AVAILABLE','actual_computed_scientific_result':False,'failure_class':'COLLECTOR_MAX_ROUNDS_WITH_MISSING_ARTIFACTS','readiness':r}
+          json.dump(out,open('q042_production_final_v1.json','w'),indent=2,sort_keys=True)
+          PY
+            echo 'collector_terminal=yes' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          N=$((R+1))
+          gh workflow run q042-production-v1.yml --repo "$GITHUB_REPOSITORY" --ref "$GITHUB_REF_NAME" -f program_id="$PROGRAM_ID" -f mode=collect -f root_run_id='${{ inputs.root_run_id }}' -f collector_round="$N"
+      - uses: actions/upload-artifact@v4
+        if: ${{ steps.readiness.outputs.ready != 'yes' && hashFiles('q042_production_final_v1.json') != '' }}
+        with:
+          name: q042-production-final-v1
+          path: |
+            q042_production_final_v1.json
+            q042_production_spec_v1.json
+            q042_production_source_lock_v1.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Download all final production artifacts
+        if: ${{ steps.readiness.outputs.ready == 'yes' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ROOT: ${{ inputs.root_run_id }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" --paginate --jq '.artifacts[] | [.id,.name,.expired] | @tsv' > artifacts.tsv
+          python - <<'PY' > needed.tsv
+          import os
+          root=os.environ['ROOT'];rows={}
+          for line in open('artifacts.tsv'):
+            i,n,e=line.rstrip().split('\t')
+            if e!='true':rows[n]=max(int(i),rows.get(n,0))
+          arms=['camspec','hillipop'];mods=['lcdm','ede_n3'];cs=['FULL','NO_ACT_PRIMARY','NO_ACT_LENSING','NO_DESI_DR2','NO_SN']
+          exp=[]
+          for a in arms:
+            for m in mods:
+              for c in cs:
+                exp.append(f'q042-prod-{root}-polychord-final-{a}-{m}-{c}')
+                exp += [f'q042-prod-{root}-bobyqa-{a}-{m}-{c}-s{s}' for s in range(4)]
+          for n in exp: print(rows[n],n,sep='\t')
+          PY
+          mkdir -p collected
+          while IFS=$'\t' read -r ID NAME; do
+            mkdir -p "collected/$NAME"
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > /tmp/a.zip
+            unzip -q /tmp/a.zip -d "collected/$NAME"
+          done < needed.tsv
+      - name: Merge and apply frozen scientific rules
+        if: ${{ steps.readiness.outputs.ready == 'yes' }}
+        run: |
+          python q042_production_v1.py merge-final \
+            --input-dir collected \
+            --spec q042_production_spec_v1.json \
+            --source-lock q042_production_source_lock_v1.json \
+            --output q042_production_final_v1.json
+          python - <<'PY'
+          import hashlib,json,pathlib
+          p=pathlib.Path('q042_production_final_v1.json');d=json.loads(p.read_text());
+          idx={'q':'Q-042','program_id':'Q042-PROD-V1','root_run_id':'${{ inputs.root_run_id }}','collector_run_id':'${{ github.run_id }}','final_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'final_result_gate':d['final_result_gate'],'downstream_portability_classification':d['downstream_portability_classification']}
+          pathlib.Path('q042_production_artifact_index_v1.json').write_text(json.dumps(idx,indent=2,sort_keys=True)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: ${{ steps.readiness.outputs.ready == 'yes' }}
+        with:
+          name: q042-production-final-v1
+          path: |
+            q042_production_final_v1.json
+            q042_production_artifact_index_v1.json
+            q042_production_spec_v1.json
+            q042_production_source_lock_v1.json
+          if-no-files-found: error
+          retention-days: 30

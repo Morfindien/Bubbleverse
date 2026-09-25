@@ -1,0 +1,223 @@
+{
+  "analysis_preregister": {
+    "bobyqa_chi2": "best_chi2 = 2 * minimum finite Py-BOBYQA objective because Cobaya minimize(ignore_prior=True) minimizes -log(likelihood)",
+    "globality": "all four external starts must be present; negative/missing results are preserved; at least one finite non-negative result per cell is required for a usable best fit",
+    "material_count_coordinates": [
+      "H0",
+      "fEDE",
+      "omega_b",
+      "omega_cdm"
+    ],
+    "no_cross_arm_absolute_objective": true,
+    "no_pilot_science": true,
+    "no_q040_endpoints": true,
+    "overlap_method": "weighted 2D histogram overlap coefficient sum(min(Pij,Qij)) on common frozen-prior bounds in (H0,fEDE)",
+    "overlap_primary_bins": [
+      80,
+      80
+    ],
+    "overlap_stability_bins": [
+      [
+        64,
+        64
+      ],
+      [
+        96,
+        96
+      ]
+    ],
+    "overlap_stability_rule": "if primary and either stability grid fall on different sides of 0.50, contour geometry is UNRESOLVED_NUMERICAL_BINNING and no final scientific class may be emitted",
+    "parameter_location_coordinates": [
+      "H0",
+      "fEDE",
+      "omega_b",
+      "omega_cdm",
+      "log10z_c",
+      "thetai_scf"
+    ],
+    "posterior_summary": "weighted mean and weighted population standard deviation from final nested-sampling weighted samples",
+    "primary_geometry_model": "ede_n3",
+    "weak_identification_guard": "log10z_c and thetai_scf are reported but never allowed by themselves to trigger parameter-location materiality; conservative implementation of the frozen weak-identification rule."
+  },
+  "authoritative_contract": {
+    "arms": [
+      "camspec",
+      "hillipop"
+    ],
+    "data_combinations": {
+      "FULL": [
+        "P",
+        "A6",
+        "L6",
+        "D2",
+        "SN"
+      ],
+      "NO_ACT_LENSING": [
+        "P",
+        "A6",
+        "D2",
+        "SN"
+      ],
+      "NO_ACT_PRIMARY": [
+        "P",
+        "L6",
+        "D2",
+        "SN"
+      ],
+      "NO_DESI_DR2": [
+        "P",
+        "A6",
+        "L6",
+        "SN"
+      ],
+      "NO_SN": [
+        "P",
+        "A6",
+        "L6",
+        "D2"
+      ]
+    },
+    "models": [
+      "lcdm",
+      "ede_n3"
+    ],
+    "no_cross_arm_absolute_chi2_evidence": true,
+    "no_hybrid_planck_likelihood": true,
+    "q040_scientific_endpoints_forbidden": true,
+    "reporting_coordinates": [
+      "H0",
+      "fEDE",
+      "log10z_c",
+      "thetai_scf",
+      "omega_b",
+      "omega_cdm"
+    ],
+    "required_cell_count": 20,
+    "same_external_data_both_planck_arms": true
+  },
+  "bobyqa_production": {
+    "cobaya_best_of": 1,
+    "external_starts_per_cell": 4,
+    "globality_gate": "within each arm/model/data cell, retain the best finite likelihood minimum only after all four external starts complete; negative Py-BOBYQA linear-algebra/input flags fail that start and must be preserved",
+    "ignore_prior": true,
+    "max_evals": "120d",
+    "rhoend": 0.05,
+    "start_rule": "start 0 = frozen Q032 parent reference; starts 1-3 = deterministic bounded signed perturbations of sampled coordinates using 0.08, 0.14 and 0.20 of each finite prior span, clipped 5 percent inside hard bounds; EDE sector remains n=3; no internal multi-start layer"
+  },
+  "case_id": "NOT DOCUMENTED",
+  "controlled_nonresult_classes": [
+    "CONTROLLED_NO_SCIENTIFIC_RESULT",
+    "PRODUCTION_INCOMPLETE_OR_NUMERICALLY_UNRESOLVED"
+  ],
+  "created_date": "2026-09-25",
+  "final_classes": [
+    "MATERIAL_SCIENTIFIC_PORTABILITY_DIFFERENCE",
+    "SCIENTIFIC_DIFFERENCE_COLLAPSES",
+    "MIXED_DATASET_CONDITIONAL"
+  ],
+  "orchestration": {
+    "artifact_campaign_namespace": "root GitHub run id",
+    "bobyqa_atomicity": "one external start per job; optimizer settings are not split or altered",
+    "collector_checks_per_run": 5,
+    "collector_sleep_minutes": 45,
+    "github_hosted_job_hard_limit_minutes": 360,
+    "github_job_limit_source": "https://docs.github.com/en/actions/reference/limits",
+    "github_limits_verified_date": "2026-09-25",
+    "github_workflow_run_limit_days": 35,
+    "job_timeout_minutes": 330,
+    "max_collector_rounds": 80,
+    "max_polychord_segments_per_cell": 48,
+    "segment_behavior": "fresh segment 0; later segments resume exact transferred Cobaya/PolyChord state in a fresh interpreter/MPI lifecycle",
+    "soft_polychord_segment_minutes": 240
+  },
+  "original_decision_rule": {
+    "combination_materiality": "material if model-preference portability is material OR both parameter-location and contour geometry are material",
+    "contour_overlap": {
+      "coordinates": [
+        "H0",
+        "fEDE"
+      ],
+      "material_if": "overlap_coefficient<0.50",
+      "method": "empirical weighted two-dimensional posterior/profile overlap; no Gaussian compression",
+      "substantial_if": "overlap_coefficient>=0.50"
+    },
+    "final_classification": {
+      "MATERIAL_SCIENTIFIC_PORTABILITY_DIFFERENCE": "FULL material AND materiality survives every required valid leave-one-out test",
+      "MIXED_DATASET_CONDITIONAL": "at least one valid required combination is material and at least one valid required combination is non-material",
+      "SCIENTIFIC_DIFFERENCE_COLLAPSES": "FULL and every valid leave-one-out are non-material in parameter location, have substantial contour overlap, and have portable EDE/LCDM conclusions"
+    },
+    "model_preference": {
+      "categories": {
+        "modest": "2<DeltaChi2<6",
+        "negligible": "DeltaChi2<=2",
+        "substantive": "DeltaChi2>=6"
+      },
+      "formula": "DeltaChi2_EDE_arm=Chi2_LCDM_best_arm-Chi2_EDE_best_arm",
+      "portability_material_if": "arms occupy different categories AND abs(DeltaChi2_A-DeltaChi2_B)>=2",
+      "within_arm_only": true
+    },
+    "parameter_location": {
+      "formula": "D_x=abs(x_A-x_B)/sqrt(sigma_A^2+sigma_B^2)",
+      "material_if": "D_H0>=1 OR D_fEDE>=1 OR at least two eligible primary cosmological coordinates have D>=1",
+      "weak_identification_rule": "log10z_c and thetai_scf cannot by themselves make parameter-location material when fEDE is weakly identified/prior dominated."
+    }
+  },
+  "polychord_production": {
+    "boost_posterior": 0,
+    "confidence_for_unbounded": 0.9999995,
+    "do_clustering": true,
+    "max_ndead": "infinity",
+    "max_ndead_runtime_encoding": "Python float(\"inf\") passed to Cobaya 3.5.6; preserves frozen semantic max_ndead=infinity without changing the numerical stopping contract",
+    "measure_speeds": true,
+    "nfail": "nlive",
+    "nlive": "25d",
+    "nprior": "10nlive",
+    "num_repeats": "5d",
+    "oversample_power": 0.4,
+    "precision_criterion": 0.001,
+    "read_resume": true,
+    "seed_policy": "deterministic unique seed per arm/model/combination; exact seeds generated and frozen in the production program before any production result is inspected",
+    "synchronous": true,
+    "write_dead": true,
+    "write_live": true,
+    "write_prior": true,
+    "write_resume": true,
+    "write_stats": true
+  },
+  "polychord_seed_map": {
+    "camspec:ede_n3:FULL": 421100,
+    "camspec:ede_n3:NO_ACT_LENSING": 421102,
+    "camspec:ede_n3:NO_ACT_PRIMARY": 421101,
+    "camspec:ede_n3:NO_DESI_DR2": 421103,
+    "camspec:ede_n3:NO_SN": 421104,
+    "camspec:lcdm:FULL": 421000,
+    "camspec:lcdm:NO_ACT_LENSING": 421002,
+    "camspec:lcdm:NO_ACT_PRIMARY": 421001,
+    "camspec:lcdm:NO_DESI_DR2": 421003,
+    "camspec:lcdm:NO_SN": 421004,
+    "hillipop:ede_n3:FULL": 422100,
+    "hillipop:ede_n3:NO_ACT_LENSING": 422102,
+    "hillipop:ede_n3:NO_ACT_PRIMARY": 422101,
+    "hillipop:ede_n3:NO_DESI_DR2": 422103,
+    "hillipop:ede_n3:NO_SN": 422104,
+    "hillipop:lcdm:FULL": 422000,
+    "hillipop:lcdm:NO_ACT_LENSING": 422002,
+    "hillipop:lcdm:NO_ACT_PRIMARY": 422001,
+    "hillipop:lcdm:NO_DESI_DR2": 422003,
+    "hillipop:lcdm:NO_SN": 422004
+  },
+  "preflight_authority": {
+    "artifact": "q042-preflight-final-v11",
+    "final_result_gate": "PREFLIGHT_PASS",
+    "program_id": "Q042-PREFLIGHT-V11",
+    "program_sha256": "3dd736334f355d9f5e2232c2900c563587e8330413185fd9f897193c66f46f32",
+    "result_id": "R-Q042-POLYCHORD-BOBYQA-PREFLIGHT-011",
+    "spec_sha256": "183139bf7bab9dcf1bf0e591762dbb1ddb4160244065a400709e2522d3241ebe"
+  },
+  "program_id": "Q042-PROD-V1",
+  "q": "Q-042",
+  "result_id": "R-Q042-PRODUCTION-PORTABILITY-001",
+  "run_id": "Q042-PRODUCTION-PORTABILITY-V1",
+  "scientific_question": "Kan den oprindelige Q041 downstream-portabilitetstest udf\u00f8res med en ny pr\u00e6registreret, konvergensrobust inference-strategi, der n\u00f8jagtigt bevarer den oprindelige scientific contract \u2014 begge native Planck-arme, \u039bCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, \u00e9n identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpr\u00e6ferenceregler \u2014 uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at \u00e6ndre kriterier efter resultaterne?",
+  "status": "PREREGISTERED_PRODUCTION"
+}

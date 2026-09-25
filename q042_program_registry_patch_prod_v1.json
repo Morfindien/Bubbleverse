@@ -1,0 +1,33 @@
+{
+  "required_existing_registry": "bubbleverse_program_registry.json",
+  "patch": {
+    "Q042-PROD-V1": {
+      "q": "Q-042",
+      "case_id": "NOT DOCUMENTED",
+      "status": "ACTIVE",
+      "launcher": ".github/workflows/00-bubbleverse-start.yml",
+      "workflow_id": "q042-production-v1.yml",
+      "workflow_path": ".github/workflows/q042-production-v1.yml",
+      "version": "v1-production",
+      "target_ref": "main",
+      "scientific_program": "q042_production_v1.py",
+      "scientific_program_id": "Q042-PROD-V1",
+      "tests": "q042_production_tests_v1.py",
+      "setup": "q042_setup_prod_v1.sh",
+      "preregister": "q042_production_spec_v1.json",
+      "source_lock": "q042_production_source_lock_v1.json",
+      "parent_program": "Q042-PREFLIGHT-V11",
+      "result_id": "R-Q042-PRODUCTION-PORTABILITY-001",
+      "scientific_task": "Authoritative segmented/resumable 20-cell Q042 production campaign: native CamSpec/HiLLiPoP x LCDM/EDE x FULL/4xLOO with frozen ACT DR6 primary+lensing, DESI DR2, Pantheon+, PolyChord production posterior inference, four external Py-BOBYQA starts per cell, preregistered D_x/empirical H0-fEDE overlap/within-arm DeltaChi2 rules, and strict Q040/no-cross-arm-objective firewalls.",
+      "execution_scope": "PRODUCTION_SCIENTIFIC_CAMPAIGN",
+      "result_location": "artifact:q042-production-final-v1",
+      "result_artifacts": [
+        "q042-prod-<root_run_id>-environment",
+        "q042-prod-<root_run_id>-polychord-final-*",
+        "q042-prod-<root_run_id>-bobyqa-*",
+        "q042-production-final-v1"
+      ],
+      "return_route": "BUBBLEVERSE RESULT INGESTION & ROUTING ENGINE"
+    }
+  }
+}
