@@ -1,0 +1,41 @@
+{
+  "entry": {
+    "Q042-PREFLIGHT-V11": {
+      "bobyqa_settings_changed_from_v10": false,
+      "case_id": "NOT DOCUMENTED",
+      "created_date": "2026-09-25",
+      "execution_scope": "PREFLIGHT_ONLY_NO_SCIENTIFIC_CLASSIFICATION",
+      "frozen_core_helper": "q042_prepare_frozen_core_v4.sh",
+      "launcher": ".github/workflows/00-bubbleverse-start.yml",
+      "polychord_pilot_settings_changed_from_v10": false,
+      "production_numerical_settings_changed_from_v10": false,
+      "program_id": "Q042-PREFLIGHT-V11",
+      "q": "Q-042",
+      "result_artifacts": [
+        "q042-static-v11",
+        "q042-environment-v11",
+        "q042-pilot-*-v11",
+        "q042-preflight-final-v11"
+      ],
+      "result_id": "R-Q042-POLYCHORD-BOBYQA-PREFLIGHT-011",
+      "run_id": "Q042-POLYCHORD-BOBYQA-PREFLIGHT-V11",
+      "scientific_contract_changed_from_v10": false,
+      "scientific_program": "q042_planck_portability_v11.py",
+      "scientific_task": "Technical V11 merge-runner bootstrap repair. Preserve the exact Q042 scientific contract, PolyChord smoke/resume path, bounded Py-BOBYQA MAXFUN policy, and all production numerical settings; install the locked Python merge dependencies explicitly in the fresh merge-preflight runner.",
+      "setup": "q042_setup_v11.sh",
+      "source_lock": "q042_planck_portability_source_lock_v11.json",
+      "spec": "q042_planck_portability_spec_v11.json",
+      "status": "ACTIVE",
+      "supersedes": "Q042-PREFLIGHT-V10",
+      "supersession_reason": "V10 completed upstream preflight/pilot work but merge-preflight ran on a fresh Python runner without NumPy and failed at import before merge logic. V11 adds only the missing merge-job dependency bootstrap and a static regression gate.",
+      "target_ref": "main",
+      "technical_parent_failure_class": "MERGE_PREFLIGHT_FRESH_RUNNER_MISSING_NUMPY_DEPENDENCY_NO_SCIENCE",
+      "technical_parent_program_id": "Q042-PREFLIGHT-V10",
+      "tests": "q042_planck_portability_tests_v11.py",
+      "version": "v11",
+      "workflow_id": "q042-planck-portability-v11.yml",
+      "workflow_path": ".github/workflows/q042-planck-portability-v11.yml"
+    }
+  },
+  "instructions": "ADD ONLY. Do not overwrite the permanent launcher. Mark Q042-PREFLIGHT-V9 superseded manually if your registry policy requires it."
+}
