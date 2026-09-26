@@ -1,0 +1,77 @@
+{
+  "delivery_type": "INDIVIDUAL_FILES_NO_ARCHIVE",
+  "deployment_fix": "Install pinned numpy/PyYAML in import-bobyqa before production module import.",
+  "files": [
+    {
+      "file": ".github/workflows/q042-production-v3.yml",
+      "sha256": "6ee0f40bed0c812e6a8be731e1caa32fd79877ad87b8f2b5dae4e5bb329b9309",
+      "size_bytes": 32604
+    },
+    {
+      "file": "__pycache__/q042_apply_registry_patch_prod_v3.cpython-313.pyc",
+      "sha256": "a0a09b1cd8fc7acee10b3e8217a7ff1d6b24721bad3f2c96917d96e0709f21ce",
+      "size_bytes": 1781
+    },
+    {
+      "file": "__pycache__/q042_production_tests_v3.cpython-313.pyc",
+      "sha256": "ba75811457039ed88b52ca8f2b866134e4e02382fa7e70231755aa03e0fa5b43",
+      "size_bytes": 10950
+    },
+    {
+      "file": "__pycache__/q042_production_v3.cpython-313.pyc",
+      "sha256": "496551d8101165f5d6e5435c719d3af3032a5aad58654a5836831c144ebff3c1",
+      "size_bytes": 42214
+    },
+    {
+      "file": "q042_apply_registry_patch_prod_v3.py",
+      "sha256": "4d856a23ef9aba58c004e204ddc07cfed8a816311fe181026943abcf05a86779",
+      "size_bytes": 920
+    },
+    {
+      "file": "q042_install_instructions_prod_v3.md",
+      "sha256": "665dce5d6b61014c429ce0933adaa842979df2dab311ae094115561437c58309",
+      "size_bytes": 1301
+    },
+    {
+      "file": "q042_production_recovery_v3.json",
+      "sha256": "e7079f23f4006d91514a1897fc8548b604cc0a179a8958541c6da6f8e7660a35",
+      "size_bytes": 3442
+    },
+    {
+      "file": "q042_production_source_lock_v3.json",
+      "sha256": "92084163af63108b288cd2045d194e0553705ecee5f0d3f50528868adb15f192",
+      "size_bytes": 3175
+    },
+    {
+      "file": "q042_production_tests_v3.py",
+      "sha256": "3b9b4fe69d805539eb981cf27799b66fb05e7560b7ba53eb8a69513e7aab5876",
+      "size_bytes": 6905
+    },
+    {
+      "file": "q042_production_v3.py",
+      "sha256": "e6070c1f504dc8f7352d3644e1445fef4d44fe763ec7c1ee2073d5636a8c5a2e",
+      "size_bytes": 32133
+    },
+    {
+      "file": "q042_program_registry_patch_prod_v3.json",
+      "sha256": "a47b51a3a7dd57bb191627c008ebd3f6449258d6b8b345155e1e9d223ea6c81f",
+      "size_bytes": 4018
+    },
+    {
+      "file": "q042_setup_recovery_v3.sh",
+      "sha256": "fdaefa7598b3178a1aadc103ee8bffbda4760066315c616c1a20ac540be8e56d",
+      "size_bytes": 1107
+    }
+  ],
+  "program_id": "Q042-PROD-V3",
+  "q": "Q-042",
+  "scientific_contract_changed": false,
+  "v2_failure_preserved": true,
+  "validation": {
+    "dependency_precedes_production_import": "PASS",
+    "import_bobyqa_dependency_present": "PASS",
+    "json_parse": "PASS",
+    "python_compile": "PASS",
+    "workflow_yaml_parse": "PASS"
+  }
+}
