@@ -1,0 +1,83 @@
+{
+  "adapter_repair": {
+    "cobaya_validation_interface": "cobaya.input.update_info under pinned Cobaya 3.5.6",
+    "max_ndead_runtime_value": "Python float('inf')",
+    "max_ndead_scientific_value": "infinity",
+    "metadata_excluded_from_executable_sampler": [
+      "seed_policy",
+      "max_ndead_runtime_encoding"
+    ],
+    "metadata_retained_in_scientific_spec": [
+      "seed_policy",
+      "max_ndead_runtime_encoding"
+    ],
+    "regression_requirement": "V1 production dictionary must be rejected and V2 executable dictionary must be accepted before 20-cell dispatch"
+  },
+  "authoritative_scientific_spec": {
+    "file": "q042_production_spec_v1.json",
+    "program_id": "Q042-PROD-V1",
+    "sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c"
+  },
+  "bobyqa_reuse": {
+    "artifact_digest_verification_required": true,
+    "expected_eligible_count": 78,
+    "expected_preserved_failure_count": 2,
+    "expected_record_count": 80,
+    "recompute_in_recovery": 0,
+    "record_identity_and_seed_verification_required": true,
+    "source_execution_commit": "6c44a4117449145afd0a3ae6eb238490686a8c6d",
+    "source_root_run_id": 36133813540
+  },
+  "case_id": "NOT DOCUMENTED",
+  "created_date": "2026-09-26",
+  "deployment_parent": {
+    "failure_class": "STATIC_TEST_STALE_VERSION_EXPECTATION",
+    "failure_scope": "V3 static production gate passed; q042_production_tests_v3.py failed because WORKFLOW_COLLECTOR still expected q042-production-final-v2. Scan also found later execution-significant V2 filename expectations that could have broken merge.",
+    "program_id": "Q042-PROD-V3"
+  },
+  "finalization": {
+    "fail_closed": true,
+    "no_cross_arm_absolute_objective": true,
+    "q040_endpoints_forbidden": true,
+    "required_final_classes": [
+      "MATERIAL_SCIENTIFIC_PORTABILITY_DIFFERENCE",
+      "SCIENTIFIC_DIFFERENCE_COLLAPSES",
+      "MIXED_DATASET_CONDITIONAL"
+    ],
+    "reuse_frozen_v1_scientific_merge_and_classification_logic": true,
+    "unresolved_if_required_evidence_missing": true
+  },
+  "posterior_recovery": {
+    "fresh_cell_count": 20,
+    "job_timeout_minutes": 330,
+    "max_segments_per_cell": 48,
+    "resume_method": "separate interpreter lifecycle using stored Cobaya updated-info and exact PolyChord checkpoint state",
+    "reuse_v1_failed_polychord_finals_as_science": false,
+    "reuse_v1_polychord_checkpoint_count": 0,
+    "soft_segment_minutes": 240
+  },
+  "program_id": "Q042-PROD-V4",
+  "q": "Q-042",
+  "recovery_class": "BOUNDED_TECHNICAL_PRODUCTION_RECOVERY",
+  "result_id": "R-Q042-PRODUCTION-PORTABILITY-004",
+  "run_id": "Q042-PRODUCTION-PORTABILITY-V4",
+  "scientific_contract_changed": false,
+  "supersedes": "Q042-PROD-V3",
+  "technical_change_v4": {
+    "bobyqa_recomputed": false,
+    "change": "Version-integrity repair: make recovery-owned tests, artifacts, stage labels and merge file expectations consistently V4 while preserving historical/frozen V1/Q032/V2/V3 provenance references.",
+    "classification_rules_changed": false,
+    "numpy_import_bobyqa_fix_from_v3_preserved": true,
+    "polychord_settings_changed": false,
+    "scientific_contract_changed": false,
+    "seed_map_changed": false
+  },
+  "technical_parent": {
+    "execution_commit": "6c44a4117449145afd0a3ae6eb238490686a8c6d",
+    "failure": "ALL_20_POLYCHORD_CELLS_REJECTED_UNSUPPORTED_METADATA_OPTIONS_BEFORE_SAMPLING",
+    "program_id": "Q042-PROD-V1",
+    "result_id": "R-Q042-PRODUCTION-PORTABILITY-001",
+    "root_github_run_id": 36133813540,
+    "run_id": "Q042-PRODUCTION-PORTABILITY-V1"
+  }
+}
