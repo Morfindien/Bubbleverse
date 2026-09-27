@@ -1,0 +1,80 @@
+{
+  "delivery_type": "INDIVIDUAL_FILES_NO_ARCHIVE",
+  "files": [
+    {
+      "file": ".github/workflows/q042-production-v7.yml",
+      "sha256": "80d0b3fcb233af37b8fd6dddfe5f5e6c63f2a4d589f7787102901c1f927d28a2",
+      "size_bytes": 44275
+    },
+    {
+      "file": "q042_apply_readme_patch_v7.py",
+      "sha256": "bbac06e33b7ce68b478ff1efebe3b443c1e6f1b92b89e7334cc310965df591b9",
+      "size_bytes": 871
+    },
+    {
+      "file": "q042_apply_registry_patch_prod_v7.py",
+      "sha256": "658306865b3953ec5ff970f45855880d41f89d6bf67c5519bd628bab6a249508",
+      "size_bytes": 1085
+    },
+    {
+      "file": "q042_install_instructions_prod_v7.md",
+      "sha256": "ad3acf0d72e0aefeebba85ceb0a1b7b0f175b2419feabac98d7c8644633bc919",
+      "size_bytes": 1010
+    },
+    {
+      "file": "q042_production_recovery_v7.json",
+      "sha256": "09eaaecd91a4679119e44523e24072f06dfe19373cc3089cee77ec768acea4d9",
+      "size_bytes": 4822
+    },
+    {
+      "file": "q042_production_source_lock_v7.json",
+      "sha256": "3664e3160c7c293f23a107c85e83e56c28f6b8b04f1e5426a0eb867bf806b7e4",
+      "size_bytes": 4883
+    },
+    {
+      "file": "q042_production_tests_v7.py",
+      "sha256": "a51093af1d56842442daefdca9b7d2ce7ec99c40c0b2a5b5c1102ce9ba461e67",
+      "size_bytes": 10860
+    },
+    {
+      "file": "q042_production_v7.py",
+      "sha256": "f5d7ccc8ec1d33f1e46af9e95ca3c822506451e989824c833dbae49b4f22529f",
+      "size_bytes": 41603
+    },
+    {
+      "file": "q042_program_registry_patch_prod_v7.json",
+      "sha256": "36173dd051c0939f648d211b1124f8cafa5273e3309d2565da7613be9d074d86",
+      "size_bytes": 12593
+    },
+    {
+      "file": "q042_setup_recovery_v7.sh",
+      "sha256": "dd63d7f347056b1f8f689b43f3a5ee534f15b8b1fe3ad31c763dd8d181f5437c",
+      "size_bytes": 1107
+    }
+  ],
+  "program_id": "Q042-PROD-V7",
+  "q": "Q-042",
+  "scientific_contract_changed": false,
+  "technical_parent": {
+    "execution_commit": "0e2eac6f4359cfedbc46141e9dfff5a331965410",
+    "program_id": "Q042-PROD-V6",
+    "run_id": 36297490607
+  },
+  "v6_failure_preserved": true,
+  "validation": {
+    "canary_before_fanout": "PASS",
+    "canary_initial_window_330_minutes": "PASS",
+    "disposable_separate_process_resume_probe": "PASS",
+    "exact_workflow_static_program_gate": "PASS",
+    "exact_workflow_static_test_gate": "PASS",
+    "initial_job_budget_355_minutes": "PASS",
+    "initial_matrix_fail_fast": "PASS",
+    "json_parse": "PASS",
+    "production_checkpoint_hash_advancement_gate": "PASS",
+    "python_compile": "PASS",
+    "remaining_19_depend_on_canary_resume_gate": "PASS",
+    "resume_worker_lifecycle_proof": "PASS",
+    "static_gate_count": 66,
+    "workflow_yaml_parse": "PASS"
+  }
+}
