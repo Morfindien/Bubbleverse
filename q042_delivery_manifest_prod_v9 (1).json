@@ -1,0 +1,84 @@
+{
+  "delivery_type": "INDIVIDUAL_FILES_NO_ARCHIVE",
+  "execution_requirement": "ephemeral self-hosted q042-hpc >=16 logical CPUs >=24 GiB RAM",
+  "files": [
+    {
+      "file": ".github/workflows/q042-production-v9.yml",
+      "sha256": "ac2035c8bb2da8692519132ee9550a2aea733a7777af9a9fd39f09e9d721dd85",
+      "size_bytes": 46575
+    },
+    {
+      "file": "q042_apply_readme_patch_v9.py",
+      "sha256": "bbac06e33b7ce68b478ff1efebe3b443c1e6f1b92b89e7334cc310965df591b9",
+      "size_bytes": 871
+    },
+    {
+      "file": "q042_apply_registry_patch_prod_v9.py",
+      "sha256": "bb032460e139eb20030beb6bb2b33cf0cbfe3762d282b8cf3f972167afadb63c",
+      "size_bytes": 1085
+    },
+    {
+      "file": "q042_install_instructions_prod_v9.md",
+      "sha256": "e7bdc59b3d35bd3aad85331caac96b0a75762a462f75a36051f6c5839c64552c",
+      "size_bytes": 1086
+    },
+    {
+      "file": "q042_production_recovery_v9.json",
+      "sha256": "26295a69b08d14e4bbf11aec59781015875034e54a84939fc51dbd06b2f5e54e",
+      "size_bytes": 5663
+    },
+    {
+      "file": "q042_production_source_lock_v9.json",
+      "sha256": "92b17a7073de8514d9386053247fd3d6d69d2b3b5b27cf636c95d0e8cc33f114",
+      "size_bytes": 5335
+    },
+    {
+      "file": "q042_production_tests_v9.py",
+      "sha256": "4c0e10d680dab32920498ceb9d017ffdfbc42a8ae6909dfb44d33a8eccdbee3a",
+      "size_bytes": 11131
+    },
+    {
+      "file": "q042_production_v9.py",
+      "sha256": "69b58efd41ba5476e87b3d538506c663991b771241a2c935af9a1aa04892e8b8",
+      "size_bytes": 44117
+    },
+    {
+      "file": "q042_program_registry_patch_prod_v9.json",
+      "sha256": "a10eb504796e8c796702aa721d0e332c5fceaea36ba53da47f0d9160e462465c",
+      "size_bytes": 16438
+    },
+    {
+      "file": "q042_selfhosted_hpc_requirements_v9.md",
+      "sha256": "1a52255c2f9d8698fd5b7c7683aaeb4196b04786e6748d5eb04d605e6ebe37c0",
+      "size_bytes": 2117
+    },
+    {
+      "file": "q042_setup_recovery_v9.sh",
+      "sha256": "1081edde3b556ad801cd250da2fb756f43571ee77bae528a65b3e7ba59bb4f57",
+      "size_bytes": 1107
+    }
+  ],
+  "program_id": "Q042-PROD-V9",
+  "q": "Q-042",
+  "scientific_contract_changed": false,
+  "validation": {
+    "byte_identical_v1_matrix": "PASS",
+    "canary_before_fanout": "PASS",
+    "capacity_cpu_gate": "PASS",
+    "capacity_memory_gate": "PASS",
+    "exact_static_program_gate": "PASS",
+    "exact_static_test_gate": "PASS",
+    "frozen_240_min_segment": "PASS",
+    "heavy_jobs_self_hosted_only": "PASS",
+    "json_parse": "PASS",
+    "measured_v8_throughput_gate": "PASS",
+    "mpi_launcher_in_program": "PASS",
+    "mpi_ranks_fixed_16": "PASS",
+    "mpi_root_only_writes": "PASS",
+    "mpi_smoke_gate": "PASS",
+    "one_thread_per_rank": "PASS",
+    "python_compile": "PASS",
+    "static_gate_count": 71,
+    "workflow_yaml_parse": "PASS"
+  }
+}
