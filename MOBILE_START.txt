@@ -1,11 +1,35 @@
-Q042-PROD-V13 — MOBILE START
+Q042-PROD-V15 — GITHUB RELAY START
 
-1. Upload the V13 files to the repository root.
-2. Put q042-production-v13.yml in .github/workflows/
-3. GitHub > Actions > Bubbleverse Q042 Production V13 — bounded technical recovery
-4. Run workflow
-5. program_id: Q042-PROD-V13
-6. mode: bootstrap
-7. Leave the remaining fields at defaults.
+Upload these V15 files into the existing Bubbleverse repo.
+The repo must already contain the V13 runtime files because V15 deliberately reuses the proven V13 patch/relink/self-test layer.
 
-V13 fixes only the V12 build/relink defect. The V1 scientific contract is unchanged.
+Workflow file:
+  .github/workflows/q042-production-v15.yml
+
+All other V15 files: repo root.
+
+DO NOT modify q042_production_spec_v1.json.
+
+Start in GitHub Actions:
+  workflow: Bubbleverse Q042 Production V15 — bounded technical recovery
+  program_id: Q042-PROD-V15
+  mode: bootstrap
+  everything else: default/blank
+
+Relay behavior:
+  - serial PolyChord, 1 rank
+  - partial-init checkpoint every 25 accepted points
+  - each real segment soft-stops after 240 minutes
+  - checkpoint artifact uploads before next workflow dispatch
+  - partial-init resume requires accepted_after > accepted_before
+  - transition to stock .resume is accepted as forward progress
+  - stock resume must change before another continuation is dispatched
+  - maximum 48 segments per cell remains frozen from V1
+
+Expected early gates:
+  Q042_POLYCHORD_PATCHED_BINARY_SYMBOL_GATE=PASS
+  Q042_POLYCHORD_PARTIAL_INIT_REPRODUCIBILITY_GATE=PASS
+  Q042_PROD_V15_PARTIAL_INIT_ADOPTION_GATE=PASS
+  Q042_PROD_V15_RUNTIME_ADAPTER_TEST_GATE=PASS
+
+Do not start V13 again.
