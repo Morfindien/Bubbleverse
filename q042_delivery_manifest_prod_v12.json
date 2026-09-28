@@ -1,0 +1,106 @@
+{
+  "delivery_type": "MOBILE_UPLOAD_FILES",
+  "files": [
+    {
+      "file": "MOBILE_START.txt",
+      "sha256": "476231d6b2d0db81e854f1bc767418414529b0a1df887062c9ca47926e5a548e",
+      "size_bytes": 535
+    },
+    {
+      "file": "q042-production-v12.txt",
+      "sha256": "d061c15882409d32d27b3e9271eedbe96ba9f8fe002fab3f755ce27845efa5c5",
+      "size_bytes": 44534
+    },
+    {
+      "file": "q042-production-v12.yml",
+      "sha256": "d061c15882409d32d27b3e9271eedbe96ba9f8fe002fab3f755ce27845efa5c5",
+      "size_bytes": 44534
+    },
+    {
+      "file": "q042_apply_readme_patch_v12.py",
+      "sha256": "bbac06e33b7ce68b478ff1efebe3b443c1e6f1b92b89e7334cc310965df591b9",
+      "size_bytes": 871
+    },
+    {
+      "file": "q042_apply_registry_patch_prod_v12.py",
+      "sha256": "873d96e80689f7f288e804feb787a12b16ab1703cd21ea47796f0506cdc3b19d",
+      "size_bytes": 1088
+    },
+    {
+      "file": "q042_install_instructions_prod_v12.md",
+      "sha256": "aa08a5d3c028079d94e812ea95ee6896cad15f410750d36910a69eecb466a46d",
+      "size_bytes": 1042
+    },
+    {
+      "file": "q042_patch_polychord_partial_init_v12.py",
+      "sha256": "6c4bd61fb535ab05281011ec701d0444942424f3d09b34661c7659616140ae6d",
+      "size_bytes": 14177
+    },
+    {
+      "file": "q042_polychord_partial_init_selftest_v12.py",
+      "sha256": "d11a05d9571b98edbe39c679112c527d6d50b23999dbb49e370168c0a2f4a076",
+      "size_bytes": 4851
+    },
+    {
+      "file": "q042_production_recovery_v12.json",
+      "sha256": "2ff18e022849a9c729e96d6c22882139f89ce7439796e1b62be49686e591063f",
+      "size_bytes": 7125
+    },
+    {
+      "file": "q042_production_source_lock_v12.json",
+      "sha256": "5826601d45bbe2c20e629338c721e9ff36eae263c489b60b11397b683a767620",
+      "size_bytes": 6879
+    },
+    {
+      "file": "q042_production_tests_v12.py",
+      "sha256": "b8b2dfa09b326500adb1154395a2dc02fe5c4ca4ed105ab9da4e3b85ad4dd262",
+      "size_bytes": 7530
+    },
+    {
+      "file": "q042_production_v12.py",
+      "sha256": "8e86acd71fc3868f82a16dbf6efb99039783972caa01126a7414b2e88c457cf6",
+      "size_bytes": 46266
+    },
+    {
+      "file": "q042_program_registry_patch_prod_v12.json",
+      "sha256": "7bebf1d6d207fbd1f468840d117d153e0590c3f893d02c498da1f1ef3b83d00f",
+      "size_bytes": 5249
+    },
+    {
+      "file": "q042_setup_recovery_v12.sh",
+      "sha256": "337d4a10a441d402c892a65bbb1e94ea3bdae21128d085de27a27915bc5456b4",
+      "size_bytes": 2667
+    },
+    {
+      "file": "q042_v12_validation_report.json",
+      "sha256": "04ab7d594fa38c6419870b6efd481fc8e48e6d6177e4ceabfbf07d22cdc16ca7",
+      "size_bytes": 961
+    }
+  ],
+  "local_pc_required": false,
+  "paid_hpc_required": false,
+  "program_id": "Q042-PROD-V12",
+  "q": "Q-042",
+  "scientific_contract_changed": false,
+  "validation": {
+    "execution_target": "GitHub-hosted ubuntu-24.04",
+    "failed_parent": "Q042-PROD-V11",
+    "failed_parent_gate": "NESTED_IMPORT_GATE=FAIL expected_one_anchor got=0",
+    "local_pc_required": false,
+    "note": "Full compiled runtime self-test and real canary still execute on GitHub before fan-out.",
+    "paid_hpc_required": false,
+    "patcher_sha256": "6c4bd61fb535ab05281011ec701d0444942424f3d09b34661c7659616140ae6d",
+    "program_id": "Q042-PROD-V12",
+    "q": "Q-042",
+    "real_upstream_import_anchor_test": "PASS",
+    "repair": "Unique whitespace-tolerant regex anchors with cardinality exactly 1",
+    "root_cause": "Exact-whitespace source anchor mismatch in pinned PolyChordLite nested_sampling.F90",
+    "scientific_contract_changed": false,
+    "selftest_sha256": "d11a05d9571b98edbe39c679112c527d6d50b23999dbb49e370168c0a2f4a076",
+    "serial_polychord": true,
+    "static_gate_count": 52,
+    "static_tests": "PASS",
+    "status": "PASS",
+    "workflow_yaml_parse": "PASS"
+  }
+}

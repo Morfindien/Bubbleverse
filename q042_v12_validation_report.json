@@ -1,0 +1,21 @@
+{
+  "execution_target": "GitHub-hosted ubuntu-24.04",
+  "failed_parent": "Q042-PROD-V11",
+  "failed_parent_gate": "NESTED_IMPORT_GATE=FAIL expected_one_anchor got=0",
+  "local_pc_required": false,
+  "note": "Full compiled runtime self-test and real canary still execute on GitHub before fan-out.",
+  "paid_hpc_required": false,
+  "patcher_sha256": "6c4bd61fb535ab05281011ec701d0444942424f3d09b34661c7659616140ae6d",
+  "program_id": "Q042-PROD-V12",
+  "q": "Q-042",
+  "real_upstream_import_anchor_test": "PASS",
+  "repair": "Unique whitespace-tolerant regex anchors with cardinality exactly 1",
+  "root_cause": "Exact-whitespace source anchor mismatch in pinned PolyChordLite nested_sampling.F90",
+  "scientific_contract_changed": false,
+  "selftest_sha256": "d11a05d9571b98edbe39c679112c527d6d50b23999dbb49e370168c0a2f4a076",
+  "serial_polychord": true,
+  "static_gate_count": 52,
+  "static_tests": "PASS",
+  "status": "PASS",
+  "workflow_yaml_parse": "PASS"
+}

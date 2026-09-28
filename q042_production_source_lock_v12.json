@@ -1,0 +1,149 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "created_date": "2026-09-28",
+  "deployment_parent": {
+    "failure_class": "POLYCHORD_NESTED_IMPORT_WHITESPACE_ANCHOR_MISMATCH",
+    "failure_scope": "V11 successfully rebuilt the pinned PolyChordLite 1.22.2 runtime but its fail-closed source patch required an exact-space nested_sampling.F90 import anchor. The pinned commit contains 'use generate_module,   only:' rather than the four-space spelling encoded by V11, so the patch stopped before runtime self-test. V12 changes only anchor matching to whitespace-tolerant unique regex matching.",
+    "program_id": "Q042-PROD-V11"
+  },
+  "external": {
+    "act_dr6_lensing_commit": "b386ddbb5821c1216c709f051c9289292f174d30",
+    "act_dr6_primary_commit": "880eacb40d66722eb1c32d7b5621e91662b4d808",
+    "desi_dr2_bao_data_commit": "b7b8a36e9bccb063081f811f323cada21ab5fbdd",
+    "desi_dr2_cobaya_definition_commit": "b76b6fed2a6c8c5594c6f92d5058bef10079746a",
+    "supernova_component": "sn.pantheonplus",
+    "supernova_runtime_file_hash_manifest_required": true
+  },
+  "hard_rules": {
+    "github_mutation_by_assistant_forbidden": true,
+    "no_cross_arm_absolute_objective_evidence": true,
+    "no_retroactive_threshold_changes": true,
+    "pilot_outputs_forbidden_as_science": true,
+    "q040_scientific_endpoints_forbidden": true
+  },
+  "parent_source_lock_file": "q042_production_source_lock_v1.json",
+  "parent_source_lock_sha256": "0f973de56cc232e67b37839babadbe192bab4a4c58e0102bee98c48a2106df56",
+  "program_id": "Q042-PROD-V12",
+  "q": "Q-042",
+  "q032": {
+    "execution_commit": "4dc873a5e880d40858d831a3b421456728f0c032",
+    "github_run_id": 33994305721,
+    "result_id": "R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002"
+  },
+  "result_id": "R-Q042-PRODUCTION-PORTABILITY-012",
+  "run_id": "Q042-PRODUCTION-PORTABILITY-V12",
+  "scientific_spec_file": "q042_production_spec_v1.json",
+  "scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+  "software": {
+    "class_ede_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "cobaya_version": "3.5.6",
+    "hillipop_commit": "a09ddde3e7ce11df99f74685feb1f1764cafb251",
+    "numpy_version": "1.26.4",
+    "polychordlite_exact_commit": "3ade6445bb3719a6db6f6e81f178765545ffc833",
+    "polychordlite_release_tag": "1.22.2",
+    "pybobyqa_version": "1.5.0",
+    "python_version": "3.11"
+  },
+  "technical_parent": {
+    "execution_commit": "6c44a4117449145afd0a3ae6eb238490686a8c6d",
+    "production_program_sha256": "889232bf9b1cd0a098cb42b2974774a343648c73f0ef9bf55c215a9ac0b90642",
+    "program_id": "Q042-PROD-V1",
+    "result_id": "R-Q042-PRODUCTION-PORTABILITY-001",
+    "root_github_run_id": 36133813540,
+    "run_id": "Q042-PRODUCTION-PORTABILITY-V1",
+    "runtime_artifact_digest": "sha256:162b99026d025d1021fa8a83dbf4290b7bd0c2c53917ea56cbf04f8b169bff4a",
+    "runtime_artifact_id": 10862038917,
+    "runtime_artifact_name": "q042-prod-36133813540-environment"
+  },
+  "technical_repair": {
+    "bobyqa_recomputed": false,
+    "removed_from_executable_polychord_options_only": [
+      "seed_policy",
+      "max_ndead_runtime_encoding"
+    ],
+    "retained_in_authoritative_scientific_spec": [
+      "seed_policy",
+      "max_ndead_runtime_encoding"
+    ],
+    "scientific_setting_changed": false,
+    "v11_runtime_adapter_test_harness_repair": {
+      "change": "Add the runtime-adapter subcommand required by the workflow and validate its PASS output before production dispatch.",
+      "classification_rules_changed": false,
+      "execution_patch_changed": false,
+      "polychord_scientific_settings_changed": false,
+      "scientific_setting_changed": false,
+      "seed_map_changed": false
+    },
+    "v12_nested_anchor_repair": {
+      "anchor_match_cardinality_required": 1,
+      "base_polychord_commit": "3ade6445bb3719a6db6f6e81f178765545ffc833",
+      "change": "Replace two nested_sampling.F90 exact-whitespace anchors with constrained unique regex anchors.",
+      "checkpoint_format_changed": false,
+      "classification_rules_changed": false,
+      "execution_semantics_changed": false,
+      "expected_upstream_import": "use generate_module,   only: GenerateSeed,GenerateLivePoints",
+      "failed_v11_gate": "NESTED_IMPORT_GATE expected_one_anchor got=0",
+      "polychord_scientific_settings_changed": false,
+      "scientific_setting_changed": false,
+      "seed_map_changed": false
+    },
+    "v12_partial_initialization_checkpoint": {
+      "base_polychord_commit": "3ade6445bb3719a6db6f6e81f178765545ffc833",
+      "checkpoint_interval_accepted_points": 25,
+      "inherited_byte_for_byte_from": "Q042-PROD-V11 execution semantics; anchor matcher repaired only",
+      "paid_hpc_required": false,
+      "patcher_file": "q042_patch_polychord_partial_init_v12.py",
+      "patcher_sha256": "6c4bd61fb535ab05281011ec701d0444942424f3d09b34661c7659616140ae6d",
+      "requires_exact_resume_byte_identity_selftest": true,
+      "scientific_setting_changed": false,
+      "selftest_file": "q042_polychord_partial_init_selftest_v12.py",
+      "selftest_sha256": "d11a05d9571b98edbe39c679112c527d6d50b23999dbb49e370168c0a2f4a076",
+      "serial_only": true
+    },
+    "v1_bobyqa_source_artifacts_reused": 80,
+    "v3_dependency_repair": {
+      "job": "import-bobyqa",
+      "packages": [
+        "PyYAML==6.0.2",
+        "numpy==1.26.4"
+      ],
+      "scientific_setting_changed": false
+    },
+    "v4_version_integrity_repair": {
+      "preserves_v3_import_bobyqa_dependency_fix": true,
+      "scientific_setting_changed": false,
+      "scope": "recovery-owned version labels/file expectations/tests/workflow artifacts only"
+    },
+    "v5_registry_parent_test_repair": {
+      "preserves_v3_import_bobyqa_dependency_fix": true,
+      "preserves_v4_version_integrity_repair": true,
+      "scientific_setting_changed": false,
+      "scope": "static test lineage assertion only"
+    },
+    "v6_reduced_environment_regeneration": {
+      "direct_v1_reduced_meta_reuse": false,
+      "required_equivalence_fields": [
+        "support_sha256",
+        "parent_q032_support_sha256",
+        "restricted_precision_sha256",
+        "parent_q032_precision_sha256",
+        "final_semantics",
+        "scientific_semantics",
+        "canonical_common_keys",
+        "selected_keys_native_order"
+      ],
+      "scientific_setting_changed": false,
+      "source": "same frozen Q032 commit/artifacts used by V1"
+    },
+    "v8_parent_matrix_adoption_and_canary": {
+      "canary_cell": "hillipop:ede_n3:FULL",
+      "fanout_requires_resume_probe": true,
+      "fresh_checkpoint_window_minutes": 315,
+      "matrix_recomputed": false,
+      "parent_program_id": "Q042-PROD-V1",
+      "required_parent_restricted_precision_sha256": "ad0328d766380f89e2bd39eef607056b587de3ae828ebd86632a05a9bffb0424",
+      "resume_probe_minutes": 10,
+      "scientific_setting_changed": false
+    }
+  }
+}
