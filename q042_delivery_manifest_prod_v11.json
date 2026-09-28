@@ -1,0 +1,103 @@
+{
+  "delivery_type": "MOBILE_UPLOAD_PACKAGE",
+  "files": [
+    {
+      "file": ".github/workflows/q042-production-v11.yml",
+      "sha256": "8a598e35963c8f5c43421fdc04150fa4dfe3b4113522d6dc1cc903aa64f22701",
+      "size_bytes": 44534
+    },
+    {
+      "file": "q042_apply_readme_patch_v11.py",
+      "sha256": "bbac06e33b7ce68b478ff1efebe3b443c1e6f1b92b89e7334cc310965df591b9",
+      "size_bytes": 871
+    },
+    {
+      "file": "q042_apply_registry_patch_prod_v11.py",
+      "sha256": "f681b21c71d39897e1a8a1dbe7aeedc8456e2bd3ababa20aafc1226dbe0c8cd7",
+      "size_bytes": 1088
+    },
+    {
+      "file": "q042_install_instructions_prod_v11.md",
+      "sha256": "fe4d1c3dce9403fef568f8f0562d5addfd1e7ddc151069c8a19c141095e45884",
+      "size_bytes": 2062
+    },
+    {
+      "file": "q042_patch_polychord_partial_init_v11.py",
+      "sha256": "b8dc1fe134f69068fb5a1c97044b4bb5910b93320156acae009b76135a3f9136",
+      "size_bytes": 13870
+    },
+    {
+      "file": "q042_polychord_partial_init_selftest_v11.py",
+      "sha256": "7f103dd2fd7a6f5575af4de43e8102d3b99893abaf16ee2ea1973a8780de7a69",
+      "size_bytes": 4851
+    },
+    {
+      "file": "q042_prod_static_tests_v11.local.json",
+      "sha256": "eb61c3084768cf103f3472f71e1b221d0c556eb38f984a6648c7bd1937a31175",
+      "size_bytes": 1967
+    },
+    {
+      "file": "q042_production_recovery_v11.json",
+      "sha256": "0099961926146799936d74d5c7f6b4939b58a87e5acde8f300006fd6a7346eb4",
+      "size_bytes": 6261
+    },
+    {
+      "file": "q042_production_source_lock_v11.json",
+      "sha256": "16f73fb1b69b5d43b150f9c19db3549ea380a42bb5bd1040869aa3c25d5bce26",
+      "size_bytes": 5950
+    },
+    {
+      "file": "q042_production_tests_v11.py",
+      "sha256": "5c2816328f7424c2cc6a54aaccf0e1fb93a0124b71b32e5595e796b3923c6b8c",
+      "size_bytes": 7175
+    },
+    {
+      "file": "q042_production_v11.py",
+      "sha256": "91669260281faff7b7bc3525f54a973ad92151cc7ec200ad671aa878af60dafe",
+      "size_bytes": 46266
+    },
+    {
+      "file": "q042_program_registry_patch_prod_v11.json",
+      "sha256": "5911818c33dadfb7ed27ec9ce0d450a39a5f9f83d82b2a5a0ce69d0f1b0ccc15",
+      "size_bytes": 3364
+    },
+    {
+      "file": "q042_setup_recovery_v11.sh",
+      "sha256": "2aa4a1ac71e21d60beda6bca23ffc396f8af446bce66c227499b1b2d71154918",
+      "size_bytes": 2667
+    },
+    {
+      "file": "q042_v11_validation_report.json",
+      "sha256": "43a895be78a6f9aaf7040ce098dd7d3cfb2a4f531a3a31da64bdace8ad7129ce",
+      "size_bytes": 790
+    },
+    {
+      "file": "MOBILE_START.txt",
+      "sha256": "78bb4a59c8d3db6fda11972a4c24bb0070499eaf764ce7774f5b634c9f42ebba",
+      "size_bytes": 843
+    }
+  ],
+  "local_pc_required": false,
+  "paid_hpc_required": false,
+  "program_id": "Q042-PROD-V11",
+  "q": "Q-042",
+  "scientific_contract_changed": false,
+  "validation": {
+    "execution_target": "GitHub-hosted ubuntu-24.04",
+    "known_v10_deployment_defect_repaired": "MISSING_RUNTIME_ADAPTER_TEST_SUBCOMMAND",
+    "local_pc_required": false,
+    "no_q042_hpc_runner": "PASS",
+    "note": "Full Fortran rebuild, runtime adapter regression against Cobaya 3.5.6, partial-init reproducibility self-test, real canary and resume probe execute on GitHub with the frozen external runtime before fan-out.",
+    "paid_hpc_required": false,
+    "program_id": "Q042-PROD-V11",
+    "q": "Q-042",
+    "runtime_adapter_parser": "PASS",
+    "scientific_contract_changed": false,
+    "serial_polychord": true,
+    "static_gate_count": 49,
+    "status": "PASS",
+    "v10_partial_init_patcher_byte_identity": "PASS",
+    "v10_partial_init_selftest_byte_identity": "PASS",
+    "workflow_yaml_parse": "PASS"
+  }
+}
