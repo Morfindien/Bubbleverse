@@ -1,0 +1,17 @@
+Q042-PROD-V11 — START FRA MOBIL, UDEN HPC/PC
+
+1) Upload filerne til Bubbleverse-repoet. Bevar stien:
+   .github/workflows/q042-production-v11.yml
+2) V1 science-filen q042_production_spec_v1.json må IKKE ændres.
+3) Commit filerne.
+4) GitHub -> Actions -> "Bubbleverse Q042 Production V11 — bounded technical recovery".
+5) Run workflow:
+   program_id = Q042-PROD-V11
+   mode       = bootstrap
+   resten     = default
+6) Telefonen behøver ikke være åben bagefter. GitHub Actions kører beregningen.
+
+V11 bruger standard GitHub ubuntu-24.04 og mpi-ranks=1. Den bruger IKKE q042-hpc.
+Canary + resume-probe skal passere, før de resterende 19 PolyChord-celler frigives.
+
+V10 må ikke startes: den leverede V10 workflow kalder runtime-adapter, men V10 testparseren mangler den subcommand. V11 retter dette uden at ændre science-kontrakten.
