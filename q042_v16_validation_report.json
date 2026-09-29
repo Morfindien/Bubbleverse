@@ -1,0 +1,21 @@
+{
+  "canary_segment0_soft_minutes": 240,
+  "canary_segment1_soft_minutes": 240,
+  "checkpoint_interval_accepted_points": 25,
+  "max_segments_per_cell": 48,
+  "normal_relay_soft_minutes": 240,
+  "note": "Full compiled runtime/canary execution remains to be proven on GitHub Actions.",
+  "program_id": "Q042-PROD-V16",
+  "python_compile": "PASS",
+  "q": "Q-042",
+  "relay_no_progress_fail_closed_test": "PASS PARTIAL_ACCEPTED_1600_TO_1600 -> RESUME_NO_CHECKPOINT_PROGRESS",
+  "relay_semantic_unit_test": "PASS PARTIAL_ACCEPTED_1600_TO_1625 -> SEGMENT_CHECKPOINTED",
+  "repair": "Use segment 1 as a real 240-minute production relay; release fan-out only after COMPLETE or SEGMENT_CHECKPOINTED with semantic progress.",
+  "root_cause_v15": "10-minute disposable canary resume probe timed out while resumed process was active inside CLASS computation; checkpoint persistence occurs every 25 accepted points, so the short probe could end before semantic checkpoint progress was persisted.",
+  "scientific_contract_changed": false,
+  "shell_syntax": "PASS",
+  "static_gate_count": 45,
+  "static_tests": "PASS",
+  "status": "PASS",
+  "workflow_yaml_parse": "PASS"
+}

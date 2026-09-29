@@ -1,35 +1,18 @@
-Q042-PROD-V15 — GITHUB RELAY START
+Q042-PROD-V16 — GitHub relay start
 
-Upload these V15 files into the existing Bubbleverse repo.
-The repo must already contain the V13 runtime files because V15 deliberately reuses the proven V13 patch/relink/self-test layer.
+1. Upload the V16 files to the existing Bubbleverse repository.
+2. Put q042-production-v16.yml in .github/workflows/q042-production-v16.yml.
+3. Keep the existing V13 and V15 files; V16 deliberately inherits their validated checkpoint/runtime setup.
+4. Do not modify q042_production_spec_v1.json.
+5. GitHub > Actions > Bubbleverse Q042 Production V16 — bounded technical recovery.
+6. Run workflow with:
+   program_id = Q042-PROD-V16
+   mode = bootstrap
+   everything else = default
 
-Workflow file:
-  .github/workflows/q042-production-v15.yml
-
-All other V15 files: repo root.
-
-DO NOT modify q042_production_spec_v1.json.
-
-Start in GitHub Actions:
-  workflow: Bubbleverse Q042 Production V15 — bounded technical recovery
-  program_id: Q042-PROD-V15
-  mode: bootstrap
-  everything else: default/blank
-
-Relay behavior:
-  - serial PolyChord, 1 rank
-  - partial-init checkpoint every 25 accepted points
-  - each real segment soft-stops after 240 minutes
-  - checkpoint artifact uploads before next workflow dispatch
-  - partial-init resume requires accepted_after > accepted_before
-  - transition to stock .resume is accepted as forward progress
-  - stock resume must change before another continuation is dispatched
-  - maximum 48 segments per cell remains frozen from V1
-
-Expected early gates:
-  Q042_POLYCHORD_PATCHED_BINARY_SYMBOL_GATE=PASS
-  Q042_POLYCHORD_PARTIAL_INIT_REPRODUCIBILITY_GATE=PASS
-  Q042_PROD_V15_PARTIAL_INIT_ADOPTION_GATE=PASS
-  Q042_PROD_V15_RUNTIME_ADAPTER_TEST_GATE=PASS
-
-Do not start V13 again.
+V16 policy:
+- canary segment 0: 240 min
+- real canary relay segment 1: 240 min (not a disposable 10-minute probe)
+- fan-out only after segment 1 COMPLETE or SEGMENT_CHECKPOINTED with semantic progress
+- later relay segments: 240 min, upload checkpoint before dispatching the next job
+- max 48 segments per cell
