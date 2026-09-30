@@ -1,18 +1,22 @@
-Q042-PROD-V16 — GitHub relay start
+Q042-PROD-V17 — GitHub relay start
 
-1. Upload the V16 files to the existing Bubbleverse repository.
-2. Put q042-production-v16.yml in .github/workflows/q042-production-v16.yml.
-3. Keep the existing V13 and V15 files; V16 deliberately inherits their validated checkpoint/runtime setup.
-4. Do not modify q042_production_spec_v1.json.
-5. GitHub > Actions > Bubbleverse Q042 Production V16 — bounded technical recovery.
-6. Run workflow with:
-   program_id = Q042-PROD-V16
+1. Upload the V17 files to the existing Bubbleverse repository.
+2. Put q042-production-v17.yml in .github/workflows/q042-production-v17.yml.
+3. Keep the existing frozen V1/V8 files and q042_patch_polychord_partial_init_v13.py; V17 deliberately reuses the unchanged V13 production checkpoint patch.
+4. Upload q042_polychord_partial_init_selftest_v17.py in the repository root.
+5. Do not modify q042_production_spec_v1.json.
+6. GitHub > Actions > Bubbleverse Q042 Production V17 — bounded technical recovery.
+7. Run workflow with:
+   program_id = Q042-PROD-V17
    mode = bootstrap
    everything else = default
 
-V16 policy:
+V17 policy:
+- science/priors/seeds/PolyChord production settings: unchanged from V1
+- partial checkpoint interval: 25 accepted points (unchanged V13 patch)
 - canary segment 0: 240 min
-- real canary relay segment 1: 240 min (not a disposable 10-minute probe)
-- fan-out only after segment 1 COMPLETE or SEGMENT_CHECKPOINTED with semantic progress
-- later relay segments: 240 min, upload checkpoint before dispatching the next job
+- real canary relay segment 1: 240 min
+- later relay segments: 240 min
 - max 48 segments per cell
+- synthetic self-test capture: slowed worker + atomic meta/binary detection + SIGSTOP freeze + up to 3 capture attempts
+- initial 19-cell fan-out: fail-fast = false, so one isolated setup failure does not cancel sibling cells
