@@ -1,22 +1,22 @@
-Q042-PROD-V17 — GitHub relay start
+Q042-PROD-V18 — GitHub relay start
 
-1. Upload the V17 files to the existing Bubbleverse repository.
-2. Put q042-production-v17.yml in .github/workflows/q042-production-v17.yml.
-3. Keep the existing frozen V1/V8 files and q042_patch_polychord_partial_init_v13.py; V17 deliberately reuses the unchanged V13 production checkpoint patch.
-4. Upload q042_polychord_partial_init_selftest_v17.py in the repository root.
+1. Upload the V18 files to the existing Bubbleverse repository.
+2. Put q042-production-v18.yml in .github/workflows/q042-production-v18.yml.
+3. Upload q042_cobaya_partial_resume_adapter_v18.py in the repository root.
+4. KEEP the existing q042_patch_polychord_partial_init_v13.py and q042_polychord_partial_init_selftest_v17.py. V18 deliberately reuses them byte-for-byte.
 5. Do not modify q042_production_spec_v1.json.
-6. GitHub > Actions > Bubbleverse Q042 Production V17 — bounded technical recovery.
+6. GitHub > Actions > Bubbleverse Q042 Production V18 — bounded technical recovery.
 7. Run workflow with:
-   program_id = Q042-PROD-V17
+   program_id = Q042-PROD-V18
    mode = bootstrap
    everything else = default
 
-V17 policy:
-- science/priors/seeds/PolyChord production settings: unchanged from V1
-- partial checkpoint interval: 25 accepted points (unchanged V13 patch)
+V18 policy:
+- V1 science/priors/likelihoods/seeds/PolyChord production settings: unchanged
+- V17/V13 partial checkpoint bytes and cadence: unchanged (25 accepted points)
+- fix: Cobaya 3.5.6 now recognizes .partial_init as a resume marker instead of deleting it
 - canary segment 0: 240 min
 - real canary relay segment 1: 240 min
 - later relay segments: 240 min
 - max 48 segments per cell
-- synthetic self-test capture: slowed worker + atomic meta/binary detection + SIGSTOP freeze + up to 3 capture attempts
-- initial 19-cell fan-out: fail-fast = false, so one isolated setup failure does not cancel sibling cells
+- fan-out fail-fast: false

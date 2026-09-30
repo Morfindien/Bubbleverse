@@ -1,0 +1,160 @@
+{
+  "created_date": "2026-09-30",
+  "files": [
+    {
+      "bytes": 1059,
+      "file": "MOBILE_START.txt",
+      "sha256": "97a7a96839fd0727dfb4933d859a60f70968c4cc415355f1d70a4360d71e3864"
+    },
+    {
+      "bytes": 45908,
+      "file": "q042-production-v18.yml",
+      "sha256": "95ecae46549732f6fc1263a5d0116590ca784104bc11894a279a8cce4a175a5c"
+    },
+    {
+      "bytes": 871,
+      "file": "q042_apply_readme_patch_v18.py",
+      "sha256": "bbac06e33b7ce68b478ff1efebe3b443c1e6f1b92b89e7334cc310965df591b9"
+    },
+    {
+      "bytes": 1088,
+      "file": "q042_apply_registry_patch_prod_v18.py",
+      "sha256": "7c39997684e7c13433cd0728a61a9b11c2117ef0ce76ddeb3f663c2132a6dc13"
+    },
+    {
+      "bytes": 5649,
+      "file": "q042_cobaya_partial_resume_adapter_v18.py",
+      "sha256": "b547b2dfd75f29015e7b0e08dfe4214d8889fb911a32060e48d30283e419a567"
+    },
+    {
+      "bytes": 1305,
+      "file": "q042_install_instructions_prod_v18.md",
+      "sha256": "608cfb126c1fdf14b237ea5fd88ac40e937df374732986197e0f18717a940bc6"
+    },
+    {
+      "bytes": 12704,
+      "file": "q042_production_recovery_v18.json",
+      "sha256": "57c0e979f592c4092d50ea89a0cc63fbf2b604492a2937ad876084c16959b822"
+    },
+    {
+      "bytes": 12997,
+      "file": "q042_production_source_lock_v18.json",
+      "sha256": "6d79b78592438c082f1bd6dc472931d18b00a4a7525cf67bd1633ba1c77e4dde"
+    },
+    {
+      "bytes": 8771,
+      "file": "q042_production_tests_v18.py",
+      "sha256": "6d0c1fc8147511d292e1d2394e4d8feea97ed579910a7bfc214fd601645401fe"
+    },
+    {
+      "bytes": 49387,
+      "file": "q042_production_v18.py",
+      "sha256": "19d27facbb92e1e030460883c4d9155cb16e97d04d2c4816723e622716e42962"
+    },
+    {
+      "bytes": 15190,
+      "file": "q042_program_registry_patch_prod_v18.json",
+      "sha256": "8006e6a865af59d8511c78d5a783cc0281383541530bc451650b90d3d42a89d7"
+    },
+    {
+      "bytes": 2525,
+      "file": "q042_setup_recovery_v18.sh",
+      "sha256": "df94da9d6fc366006ce8aa9780ba9dd762b71f54a6d95bbc7e5ddca0cfd523e4"
+    }
+  ],
+  "frozen_identity": {
+    "scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+    "v13_patcher_sha256": "22ca8d786e2061e99454d1940a6f1fe12b9bcef0632a9524f3a0bb79c9facce6",
+    "v17_selftest_sha256": "1208f10b703e85511882c1f5251e8facf62179cc6e5f5194ef633ac6fd7975f9",
+    "v1_source_lock_sha256": "0f973de56cc232e67b37839babadbe192bab4a4c58e0102bee98c48a2106df56"
+  },
+  "local_validation": {
+    "exact_cobaya_runtime_selftest": "NOT_RUN_LOCALLY_COBAYA_NOT_INSTALLED",
+    "github_requirement": "q042_setup_recovery_v18.sh runs the adapter selftest under pinned Cobaya 3.5.6 before production dispatch.",
+    "json_parse": "PASS",
+    "program_static": "PASS",
+    "python_compile": "PASS",
+    "shell_syntax": "PASS",
+    "static_gate_count": 54,
+    "static_gates": {
+      "20_CELLS": "PASS",
+      "ADAPTER_ADDS_ONLY_MINIMAL_PARTIAL_PATTERN": "PASS",
+      "ADAPTER_DELEGATES_STOCK_PATTERNS": "PASS",
+      "ADAPTER_SELFTEST_PROVES_PRESERVATION": "PASS",
+      "ADAPTER_SELFTEST_REPRODUCES_CLEANUP": "PASS",
+      "BOBYQA_80_REUSED": "PASS",
+      "INHERITED_V13_PATCHER_HASH": "PASS",
+      "INHERITED_V17_SELFTEST_HASH": "PASS",
+      "PATCH_INTERVAL_25_UNCHANGED": "PASS",
+      "PATCH_SAVES_FULL_LIVE": "PASS",
+      "PATCH_SAVES_RNG": "PASS",
+      "PROGRAM_EXPECTS_ADAPTER_RUNTIME": "PASS",
+      "PROGRAM_EXPECTS_V17_PARTIAL_RUNTIME": "PASS",
+      "PROGRAM_INSTALLS_ADAPTER_ON_PARTIAL_RESUME": "PASS",
+      "PROGRAM_NO_PROGRESS_FAILS": "PASS",
+      "PROGRAM_PARTIAL_DISCOVERY": "PASS",
+      "PROGRAM_PARTIAL_TO_STOCK_PROGRESS": "PASS",
+      "PROGRAM_RECORDS_ADAPTER_LIFECYCLE": "PASS",
+      "PROGRAM_REQUIRES_ADAPTER_FOR_PARTIAL_LIFECYCLE": "PASS",
+      "PROGRAM_SEMANTIC_PARTIAL_PROGRESS": "PASS",
+      "PROGRAM_SERIAL_ONLY": "PASS",
+      "PROGRAM_STOCK_PROGRESS": "PASS",
+      "Q_IDENTITY": "PASS",
+      "RECOVERY_CADENCE_UNCHANGED": "PASS",
+      "RECOVERY_CHECKPOINT_FORMAT_UNCHANGED": "PASS",
+      "RECOVERY_ROOT_CAUSE_EVIDENCE": "PASS",
+      "REGISTRY_ACTIVE": "PASS",
+      "REGISTRY_PARENT": "PASS",
+      "REGISTRY_WORKFLOW": "PASS",
+      "SCIENCE_UNCHANGED": "PASS",
+      "SELFTEST_EXACT_BYTE_IDENTITY": "PASS",
+      "SETUP_ADAPTER_RUNTIME_MANIFEST": "PASS",
+      "SETUP_EXACT_HASH_ASSERTIONS": "PASS",
+      "SETUP_INHERITS_EXACT_V17_RUNTIME": "PASS",
+      "SETUP_RUNS_ADAPTER_SELFTEST": "PASS",
+      "V17_FAILURE_CLASS": "PASS",
+      "V17_MARKED_BLOCKED": "PASS",
+      "V18_ADAPTER_HASH": "PASS",
+      "V18_LOCK_IDENTITY": "PASS",
+      "V18_RECOVERY_IDENTITY": "PASS",
+      "V1_SOURCE_LOCK_BYTE_IDENTITY": "PASS",
+      "V1_SPEC_BYTE_IDENTITY": "PASS",
+      "WORKFLOW_240M_SEGMENTS": "PASS",
+      "WORKFLOW_48_SEGMENTS": "PASS",
+      "WORKFLOW_ADAPTER_COMPILED_AND_BUNDLED": "PASS",
+      "WORKFLOW_CANARY_BEFORE_FANOUT": "PASS",
+      "WORKFLOW_CANARY_REAL_RELAY": "PASS",
+      "WORKFLOW_MATRIX_FAIL_FAST_DISABLED": "PASS",
+      "WORKFLOW_RELAY_PROGRESS_LOG": "PASS",
+      "WORKFLOW_SERIAL": "PASS",
+      "WORKFLOW_STANDARD_RUNNER": "PASS",
+      "WORKFLOW_USES_V18_REDUCED_ENV_FILENAMES": "PASS",
+      "WORKFLOW_USES_V18_TESTS": "PASS",
+      "WORKFLOW_YAML_PARSE": "PASS"
+    },
+    "workflow_yaml_parse": "PASS"
+  },
+  "program_id": "Q042-PROD-V18",
+  "q": "Q-042",
+  "root_cause": "Cobaya 3.5.6 stock PolyChord minimal resume detection recognizes <prefix>.resume but not Q042 <prefix>.partial_init. V17 relay therefore logged cleanup/restart and deleted the partial state before patched PolyChord could consume it.",
+  "status": "PASS_LOCAL_STATIC_VALIDATION",
+  "v17_evidence": {
+    "relay_job_id": 109827789054,
+    "relay_log_message": "Did not find an old sample. Cleaning up and starting anew.",
+    "relay_status": "RESUME_NO_CHECKPOINT_PROGRESS",
+    "root_run_id": 36673568849,
+    "s0_partial_init_accepted": 900,
+    "s0_partial_init_nprior": 6500
+  },
+  "v18_repair": {
+    "adapter": "q042_cobaya_partial_resume_adapter_v18.py",
+    "adapter_sha256": "b547b2dfd75f29015e7b0e08dfe4214d8889fb911a32060e48d30283e419a567",
+    "behavior": "adds <prefix>.partial_init only to Cobaya PolyChord minimal resume detection; delegates stock non-minimal output deletion patterns unchanged",
+    "checkpoint_format_changed": false,
+    "checkpoint_interval_accepted_points": 25,
+    "matrix_fail_fast": false,
+    "scientific_contract_changed": false,
+    "scope": "deployment/runtime adapter only",
+    "soft_segment_minutes": 240
+  }
+}
