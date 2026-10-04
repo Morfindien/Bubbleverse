@@ -1380,6 +1380,23 @@
       "version": "v9",
       "workflow_id": "q041-planck-portability-v9.yml",
       "workflow_path": ".github/workflows/q041-planck-portability-v9.yml"
+    },
+    "Q042-STOCKDIAG-V20": {
+      "q": "Q-042",
+      "status": "ACTIVE",
+      "workflow_id": "q042-stock-diagnostic-v20.yml",
+      "target_ref": "main",
+      "program_version": "20",
+      "workflow_version": "20",
+      "scientific_task": "One stock-resume diagnostic and one exact CLASS failure-point replay; no production restart",
+      "config": "q042_stock_diagnostic_contract_v20.json",
+      "scientific_spec": "q042_production_spec_v1.json",
+      "source_execution_commit": "d0f92c7f2ce53da32818244f8847f8e745e20c4f",
+      "result_artifacts": [
+        "q042-v20-<RUN_ID>-diagnostic-final"
+      ],
+      "science_status": "UNRESOLVED",
+      "supersedes": null
     }
   },
   "registry_name": "Bubbleverse Program Registry",

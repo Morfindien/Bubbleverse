@@ -72,22 +72,22 @@ The repository includes a central launcher for registered programs.
 From GitHub:
 
 1. Open **Actions**
-2. Select **000 🚀 BUBBLEVERSE START — SEGMENTED V5**
+2. Select **🚀 BUBBLEVERSE START**
 3. Press **Run workflow**
 4. Enter the exact `PROGRAM_ID`
 5. Start the run
 
 The launcher checks the registry before dispatching the scientific workflow.
 
-It verifies, among other things:
+It verifies the exact `PROGRAM_ID`, active status, Q identity and allowed workflow/ref syntax against `bubbleverse_program_registry.json`.
 
-- the `PROGRAM_ID` exists
-- the program is active
-- the Q identity is valid
-- the target workflow is valid
-- the expected result-artifact contract is defined
+The permanent launcher is `.github/workflows/00-bubbleverse-start.yml`. It dispatches the registered target; that target validates its inputs and publishes its own results. Open the child run to inspect its outcome.
 
-The launcher then dispatches the registered workflow and tracks the child execution.
+### Q-042 bounded execution diagnosis
+
+`Q042-STOCKDIAG-V20` runs one isolated CamSpec/EDE/FULL stock resume (at most 240 minutes) and one exact CLASS error-point replay (at most 15 minutes). It preserves the V18 state, records in-memory versus durable progress and stops after the diagnostic. It does not restart the 20-cell production matrix, recompute BOBYQA, or provide a validated cosmological result.
+
+After installation: **🚀 BUBBLEVERSE START → Q042-STOCKDIAG-V20 → Run workflow**. Return the diagnostic-final JSON, both diagnostic artifacts and `q042_execution_handoff_v20.md` to the Result Ingestion & Routing Engine. Q-042 remains `UNRESOLVED` until its frozen scientific gates pass.
 
 The registry is the authoritative mapping between a program identifier and the workflow that is allowed to execute it.
 
