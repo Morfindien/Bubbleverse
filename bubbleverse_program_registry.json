@@ -1400,7 +1400,7 @@
     },
     "Q042-STOCKDIAG-V21": {
       "q": "Q-042",
-      "status": "ACTIVE",
+      "status": "SUPERSEDED",
       "workflow_id": "q042-stock-diagnostic-v21.yml",
       "target_ref": "main",
       "program_version": "21",
@@ -1415,7 +1415,28 @@
       "science_status": "UNRESOLVED",
       "supersedes": "Q042-STOCKDIAG-V20",
       "reused_class_run_id": 37195728280,
-      "reused_class_artifact_id": 11300612265
+      "reused_class_artifact_id": 11300612265,
+      "superseded_by": "Q042-DURABLE-V22"
+    },
+    "Q042-DURABLE-V22": {
+      "q": "Q-042",
+      "status": "ACTIVE",
+      "workflow_id": "q042-durable-v22.yml",
+      "target_ref": "main",
+      "program_version": "22",
+      "workflow_version": "22",
+      "scientific_task": "Complete serial state checkpoint, compiled interruption reference and at most one bounded diagnostic pilot",
+      "config": "q042_durable_contract_v22.json",
+      "scientific_spec": "q042_production_spec_v1.json",
+      "source_execution_commit": "d0f92c7f2ce53da32818244f8847f8e745e20c4f",
+      "result_artifacts": [
+        "q042-v22-<RUN_ID>-diagnostic-final",
+        "q042-v22-<RUN_ID>-durability-diagnostic"
+      ],
+      "science_status": "UNRESOLVED",
+      "supersedes": "Q042-STOCKDIAG-V21",
+      "new_bobyqa_starts": 0,
+      "production_restart_authorized": false
     }
   },
   "registry_name": "Bubbleverse Program Registry",

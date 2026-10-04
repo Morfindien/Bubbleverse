@@ -83,13 +83,13 @@ It verifies the exact `PROGRAM_ID`, active status, Q identity and allowed workfl
 
 The permanent launcher is `.github/workflows/00-bubbleverse-start.yml`. It dispatches the registered target; that target validates its inputs and publishes its own results. Open the child run to inspect its outcome.
 
-### Q-042 bounded execution diagnosis
+### Q-042 bounded durability diagnosis
 
-`Q042-STOCKDIAG-V21` repairs the V20 artifact-download directory error. It runs only the missing isolated CamSpec/EDE/FULL stock resume (at most 240 minutes), and imports the completed CLASS replay from V20 run 37195728280 after checking its exact artifact and record hashes. No CLASS replay is recomputed. V20 is retained as a historical broken execution target.
+`Q042-DURABLE-V22` saves complete serial PolyChord state after a whole iteration, without changing compression, covariance, clustering or posterior-update cadence. It first requires a compiled interrupted/resumed reference with identical likelihood trajectories, evidence and posterior weights. It then runs at most one isolated CamSpec/EDE/FULL diagnostic branch: one new state publication and one genuine resume, sharing a single 240-minute compute budget in a 330-minute job.
 
-The diagnostic preserves the V18 state, records in-memory versus durable progress and stops. It does not restart the 20-cell production matrix, recompute BOBYQA, or provide a validated cosmological result.
+The old V18 stock checkpoint has no recoverable historical RNG or pending posterior stack. Its import is explicitly diagnostic; V22 does not claim to restore that lost trajectory. The preserved CLASS failure remains an independent production blocker. All 80 BOBYQA records, including two flag −3 failures, remain unchanged. No optimizer starts, CLASS replay, production fan-out or automatic continuation are performed.
 
-After installation: **🚀 BUBBLEVERSE START → Q042-STOCKDIAG-V21 → Run workflow**. Return the diagnostic-final JSON, both diagnostic artifacts and `q042_execution_handoff_v21.md` to the Result Ingestion & Routing Engine. Q-042 remains `UNRESOLVED` until its frozen scientific gates pass.
+After installation: **🚀 BUBBLEVERSE START → Q042-DURABLE-V22 → Run workflow**. Return the V22 diagnostic-final artifact, durability-diagnostic artifact and `q042_execution_handoff_v22.md` to the Result Ingestion & Routing Engine. Q-042 remains `UNRESOLVED`. V21 remains historical evidence for the durability failure.
 
 The registry is the authoritative mapping between a program identifier and the workflow that is allowed to execute it.
 
