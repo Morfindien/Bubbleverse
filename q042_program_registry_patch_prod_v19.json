@@ -1,0 +1,43 @@
+{
+  "patch": {
+    "Q042-PROD-V18": {
+      "case_id": "NOT DOCUMENTED",
+      "failure_class": "FINAL_MERGE_STALE_V13_POLYCHORD_FILENAME_EXPECTATION",
+      "failure_scope": "Collector run 37151674348 reached READY=yes FOUND=21 EXPECTED=21, then q042_production_v18.py merge-final failed V13_POLYCHORD_FINAL_COUNT_GATE because it searched q042_production_polychord_final_v13.json while V18 artifacts contain q042_production_polychord_final_v18.json.",
+      "q": "Q-042",
+      "result_id": "R-Q042-PRODUCTION-PORTABILITY-018",
+      "scientific_contract_changed_from_v1": false,
+      "scientific_program_id": "Q042-PROD-V18",
+      "status": "BLOCKED",
+      "superseded_by": "Q042-PROD-V19",
+      "target_ref": "main",
+      "workflow_id": "q042-production-v18.yml",
+      "workflow_path": ".github/workflows/q042-production-v18.yml"
+    },
+    "Q042-PROD-V19": {
+      "case_id": "NOT DOCUMENTED",
+      "execution_scope": "MERGE_ONLY_RECOVERY_OF_EXISTING_V18_ARTIFACT_SET",
+      "preregister": "q042_production_spec_v1.json",
+      "q": "Q-042",
+      "result_artifacts": [
+        "q042-production-final-v19"
+      ],
+      "result_id": "R-Q042-PRODUCTION-PORTABILITY-019",
+      "result_location": "artifact:q042-production-final-v19",
+      "scientific_contract_changed_from_v1": false,
+      "scientific_program": "q042_production_v19.py",
+      "scientific_program_id": "Q042-PROD-V19",
+      "scientific_task": "Reuse the complete existing V18 artifact namespace from root run 36731879692; adapt only recovery-owned filenames and invoke the frozen V1 merge/classification logic without any new PolyChord or BOBYQA computation.",
+      "source_lock": "q042_production_source_lock_v19.json",
+      "status": "ACTIVE",
+      "supersedes": "Q042-PROD-V18",
+      "target_ref": "main",
+      "technical_parent_program_id": "Q042-PROD-V18",
+      "technical_recovery_spec": "q042_production_recovery_v19.json",
+      "tests": "q042_production_tests_v19.py",
+      "version": "v19-merge-only-finalization-repair",
+      "workflow_id": "q042-production-v19.yml",
+      "workflow_path": ".github/workflows/q042-production-v19.yml"
+    }
+  }
+}

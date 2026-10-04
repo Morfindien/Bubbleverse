@@ -1,0 +1,57 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "created_date": "2026-10-04",
+  "hard_rules": {
+    "github_mutation_by_assistant_forbidden": true,
+    "no_cross_arm_absolute_objective_evidence": true,
+    "no_retroactive_threshold_changes": true,
+    "pilot_outputs_forbidden_as_science": true,
+    "q040_scientific_endpoints_forbidden": true
+  },
+  "program_id": "Q042-PROD-V19",
+  "q": "Q-042",
+  "result_id": "R-Q042-PRODUCTION-PORTABILITY-019",
+  "run_id": "Q042-PRODUCTION-PORTABILITY-V19",
+  "scientific_parent_source_lock_file": "q042_production_source_lock_v1.json",
+  "scientific_parent_source_lock_sha256": "0f973de56cc232e67b37839babadbe192bab4a4c58e0102bee98c48a2106df56",
+  "scientific_spec_file": "q042_production_spec_v1.json",
+  "scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+  "technical_parent": {
+    "execution_commit": "d0f92c7f2ce53da32818244f8847f8e745e20c4f",
+    "failed_collector_job_id": 111286678009,
+    "failed_collector_run_id": 37151674348,
+    "failed_gate": "V13_POLYCHORD_FINAL_COUNT_GATE=FAIL",
+    "production_program_sha256": "19d27facbb92e1e030460883c4d9155cb16e97d04d2c4816723e622716e42962",
+    "program_id": "Q042-PROD-V18",
+    "result_id": "R-Q042-PRODUCTION-PORTABILITY-018",
+    "root_github_run_id": 36731879692,
+    "run_id": "Q042-PRODUCTION-PORTABILITY-V18",
+    "workflow_sha256": "95ecae46549732f6fc1263a5d0116590ca784104bc11894a279a8cce4a175a5c"
+  },
+  "technical_parent_source_lock_file": "q042_production_source_lock_v18.json",
+  "technical_parent_source_lock_sha256": "6d79b78592438c082f1bd6dc472931d18b00a4a7525cf67bd1633ba1c77e4dde",
+  "technical_repair": {
+    "bobyqa_recomputed": false,
+    "bobyqa_source_filename": "q042_production_bobyqa_start_v13.json",
+    "classification_rules_changed": false,
+    "compatibility_shadow_filename_bobyqa": "q042_production_bobyqa_start_v1.json",
+    "compatibility_shadow_filename_polychord": "q042_production_polychord_final_v1.json",
+    "polychord_recomputed": false,
+    "recovery_class": "MERGE_ONLY_EXISTING_V18_ARTIFACTS",
+    "scientific_contract_changed": false,
+    "scientific_merge_implementation": "q042_production_v1.merge_final",
+    "scientific_setting_changed": false,
+    "source_artifact_count": 21,
+    "source_bobyqa_record_count": 80,
+    "source_collector_evidence": {
+      "expected": 21,
+      "found": 21,
+      "job_id": 111286678009,
+      "ready": "yes",
+      "run_id": 37151674348
+    },
+    "source_polychord_filename": "q042_production_polychord_final_v18.json",
+    "source_polychord_final_count": 20,
+    "stale_v18_merge_expected_filename": "q042_production_polychord_final_v13.json"
+  }
+}

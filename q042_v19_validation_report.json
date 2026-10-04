@@ -1,0 +1,38 @@
+{
+  "files": {
+    "MOBILE_START.txt": "5f58aa01a40b0fae47001ac8bb492dbdf8bb13d22e6d2af4d421260369b9a55d",
+    "q042-production-v19.yml": "04ca84e10e7f593835958fa9e3f5cee25a9d68035725b3aecb027f0c36bf4448",
+    "q042_apply_registry_patch_prod_v19.py": "c325f2c5e0618b3bd0f377a9d8a44b3f865d90d65a1c206fc8c1313fb6458107",
+    "q042_install_instructions_prod_v19.md": "f0c25ff68e8a3d6c0bb9961b25925a902e976c12de37ae45fc0497953a8d2b94",
+    "q042_production_recovery_v19.json": "d9d82270f44b26b0e46ea0a181704ebf97629c1f213c4def2b9893ac97a84d4b",
+    "q042_production_source_lock_v19.json": "b5367385fd96ccd07db17dcd74f6bbd5a14e1f4c4cc7783abea4554eee02fa3b",
+    "q042_production_tests_v19.py": "b52d42b412687f100dd16caaae5c8bc192affddb20c2583f34c7fdbf18e71bd5",
+    "q042_production_v19.py": "8f8d5688169bb7f27b6f4d0a88ea2d1c53d927a8c008145d8eeeaea1bc89080b",
+    "q042_program_registry_patch_prod_v19.json": "86ac93342ca827a212ab3ae8c4858b06b54b4085c29ffaa44b0cfbd932bc21d2"
+  },
+  "program_id": "Q042-PROD-V19",
+  "q": "Q-042",
+  "scientific_contract_changed": false,
+  "scientific_result": false,
+  "scope": "Merge-only recovery. No real V18 artifacts were recomputed locally; the GitHub workflow is responsible for selecting/digest-verifying the existing 21 V18 artifacts and running the real frozen V1 merge/classifier.",
+  "source_evidence": {
+    "collector_ready_expected": 21,
+    "collector_ready_found": 21,
+    "failed_collector_job_id": 111286678009,
+    "failed_collector_run_id": 37151674348,
+    "failed_gate": "V13_POLYCHORD_FINAL_COUNT_GATE=FAIL",
+    "v18_execution_commit": "d0f92c7f2ce53da32818244f8847f8e745e20c4f",
+    "v18_root_run_id": 36731879692
+  },
+  "stage": "LOCAL_VALIDATION_V19",
+  "status": "PASS",
+  "validation": {
+    "program_static_gate": "PASS",
+    "python_compile": "PASS",
+    "static_test_gate": "PASS_29",
+    "synthetic_expected_final_gate": "UNRESOLVED",
+    "synthetic_merge_adapter_gate": "PASS",
+    "synthetic_v1_compatibility_shadows_removed": "PASS",
+    "yaml_json_parse": "PASS"
+  }
+}

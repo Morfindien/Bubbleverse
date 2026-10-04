@@ -1,22 +1,39 @@
-Q042-PROD-V18 — GitHub relay start
+Q042-PROD-V19 — MOBILE START
 
-1. Upload the V18 files to the existing Bubbleverse repository.
-2. Put q042-production-v18.yml in .github/workflows/q042-production-v18.yml.
-3. Upload q042_cobaya_partial_resume_adapter_v18.py in the repository root.
-4. KEEP the existing q042_patch_polychord_partial_init_v13.py and q042_polychord_partial_init_selftest_v17.py. V18 deliberately reuses them byte-for-byte.
-5. Do not modify q042_production_spec_v1.json.
-6. GitHub > Actions > Bubbleverse Q042 Production V18 — bounded technical recovery.
-7. Run workflow with:
-   program_id = Q042-PROD-V18
-   mode = bootstrap
-   everything else = default
+PURPOSE
+Merge-only recovery. V19 does NOT rerun PolyChord or BOBYQA. It downloads the completed V18 artifact set from root run 36731879692, verifies artifact ZIP digests, fixes only the stale merge filename expectation, and calls the frozen V1 scientific merge/classifier.
 
-V18 policy:
-- V1 science/priors/likelihoods/seeds/PolyChord production settings: unchanged
-- V17/V13 partial checkpoint bytes and cadence: unchanged (25 accepted points)
-- fix: Cobaya 3.5.6 now recognizes .partial_init as a resume marker instead of deleting it
-- canary segment 0: 240 min
-- real canary relay segment 1: 240 min
-- later relay segments: 240 min
-- max 48 segments per cell
-- fan-out fail-fast: false
+UPLOAD TO REPOSITORY ROOT
+- q042_production_v19.py
+- q042_production_tests_v19.py
+- q042_production_source_lock_v19.json
+- q042_production_recovery_v19.json
+- q042_program_registry_patch_prod_v19.json (optional for direct workflow launch)
+- q042_apply_registry_patch_prod_v19.py (optional)
+
+UPLOAD WORKFLOW
+- q042-production-v19.yml -> .github/workflows/q042-production-v19.yml
+
+KEEP EXISTING FILES
+- q042_production_v1.py
+- q042_planck_portability_v11.py and its existing dependencies
+- q042_production_spec_v1.json
+- q042_production_source_lock_v1.json
+- q042_production_source_lock_v18.json
+
+RUN
+GitHub -> Actions -> Bubbleverse Q042 Production V19 — merge-only recovery -> Run workflow
+program_id = Q042-PROD-V19
+v18_root_run_id = 36731879692
+
+DO NOT start bootstrap, segment, collector, or any new compute. V19 has no such modes.
+
+EXPECTED MILESTONES
+Q042_PROD_V19_IDENTITY_GATE=PASS
+Q042_PROD_V19_STATIC_GATE=PASS
+Q042_PROD_V19_STATIC_TEST_GATE=PASS_*
+Q042_PROD_V19_V18_ARTIFACT_DISCOVERY_GATE=PASS count=21
+Q042_PROD_V19_ARTIFACT_ZIP_DIGEST_GATE=PASS
+Q042_PROD_V19_FINAL_GATE=<PASS or UNRESOLVED>
+
+The final PASS/UNRESOLVED value comes from the frozen V1 classifier; V19 must not strengthen it.

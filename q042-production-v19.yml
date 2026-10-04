@@ -1,0 +1,139 @@
+name: "Bubbleverse Q042 Production V19 — merge-only recovery"
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Exact recovery PROGRAM_ID
+        required: true
+        default: Q042-PROD-V19
+        type: string
+      v18_root_run_id:
+        description: Frozen V18 root run containing the completed artifact namespace
+        required: true
+        default: "36731879692"
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  merge-only:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11'
+      - name: Exact merge-only identity gate
+        env:
+          INPUT_PROGRAM_ID: ${{ inputs.program_id }}
+          INPUT_ROOT: ${{ inputs.v18_root_run_id }}
+        run: |
+          set -euo pipefail
+          test "$INPUT_PROGRAM_ID" = "Q042-PROD-V19"
+          test "$INPUT_ROOT" = "36731879692"
+          echo "Q042_PROD_V19_IDENTITY_GATE=PASS"
+      - run: python -m pip install --disable-pip-version-check PyYAML==6.0.2 numpy==1.26.4
+      - name: Static merge-only recovery gates
+        run: |
+          python -m py_compile q042_production_v19.py q042_production_tests_v19.py q042_production_v1.py
+          python q042_production_v19.py static \
+            --spec q042_production_spec_v1.json \
+            --source-lock q042_production_source_lock_v19.json \
+            --output q042_prod_static_v19.json
+          python q042_production_tests_v19.py static \
+            --spec q042_production_spec_v1.json \
+            --parent-v1-lock q042_production_source_lock_v1.json \
+            --parent-v18-lock q042_production_source_lock_v18.json \
+            --source-lock q042_production_source_lock_v19.json \
+            --recovery-spec q042_production_recovery_v19.json \
+            --program q042_production_v19.py \
+            --workflow .github/workflows/q042-production-v19.yml \
+            --output q042_prod_static_tests_v19.json
+      - name: Discover exact 21 existing V18 artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ROOT: ${{ inputs.v18_root_run_id }}
+          V18_HEAD_SHA: d0f92c7f2ce53da32818244f8847f8e745e20c4f
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/actions/artifacts?per_page=100" --paginate \
+            --jq '.artifacts[] | [.id,.name,.digest,.expired,.workflow_run.id,.workflow_run.head_sha] | @tsv' > artifacts.tsv
+          python - <<'PY'
+          import json, os
+          root=os.environ['ROOT']; head=os.environ['V18_HEAD_SHA']
+          arms=['camspec','hillipop']; mods=['lcdm','ede_n3']; cs=['FULL','NO_ACT_PRIMARY','NO_ACT_LENSING','NO_DESI_DR2','NO_SN']
+          expected=[f'q042-v18-{root}-bobyqa-import-v1-root-36133813540']
+          expected += [f'q042-v18-{root}-polychord-final-{a}-{m}-{c}' for a in arms for m in mods for c in cs]
+          rows={n:[] for n in expected}
+          for line in open('artifacts.tsv'):
+              parts=line.rstrip('\n').split('\t')
+              if len(parts)!=6: continue
+              i,n,d,e,r,h=parts
+              if n in rows and e!='true' and h==head:
+                  rows[n].append({'id':int(i),'name':n,'digest':d,'workflow_run_id':int(r),'head_sha':h})
+          missing=[n for n in expected if not rows[n]]
+          if missing:
+              raise SystemExit('V19_V18_ARTIFACT_COMPLETENESS_GATE=FAIL missing='+';'.join(missing))
+          selected=[]
+          for n in expected:
+              candidates=sorted(rows[n],key=lambda x:x['id'])
+              x=candidates[-1]
+              x['candidate_count']=len(candidates)
+              if not str(x['digest']).startswith('sha256:'):
+                  raise SystemExit('V19_ARTIFACT_DIGEST_METADATA_GATE=FAIL name='+n)
+              selected.append(x)
+          out={'q':'Q-042','program_id':'Q042-PROD-V19','source_program_id':'Q042-PROD-V18','source_root_run_id':int(root),'source_execution_commit':head,'selection_policy':'latest_nonexpired_artifact_id_with_exact_name_and_exact_v18_head_sha','selected_artifact_count':len(selected),'artifacts':selected}
+          json.dump(out,open('q042_v18_artifact_selection_v19.json','w'),indent=2,sort_keys=True)
+          with open('needed.tsv','w') as f:
+              for x in selected: f.write(f"{x['id']}\t{x['name']}\t{x['digest']}\n")
+          print('Q042_PROD_V19_V18_ARTIFACT_DISCOVERY_GATE=PASS count=21')
+          PY
+      - name: Download and cryptographically verify selected V18 artifact bytes
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p collected
+          while IFS=$'\t' read -r ID NAME DIGEST; do
+            ZIP="/tmp/q042_v19_${ID}.zip"
+            gh api "repos/$GITHUB_REPOSITORY/actions/artifacts/$ID/zip" > "$ZIP"
+            ACTUAL="sha256:$(sha256sum "$ZIP" | awk '{print $1}')"
+            test "$ACTUAL" = "$DIGEST" || { echo "V19_ARTIFACT_ZIP_DIGEST_GATE=FAIL name=$NAME expected=$DIGEST actual=$ACTUAL"; exit 1; }
+            mkdir -p "collected/$NAME"
+            unzip -q "$ZIP" -d "collected/$NAME"
+          done < needed.tsv
+          echo "Q042_PROD_V19_ARTIFACT_ZIP_DIGEST_GATE=PASS"
+      - name: Merge existing V18 outputs with frozen V1 scientific classifier
+        run: |
+          python q042_production_v19.py merge-final \
+            --input-dir collected \
+            --spec q042_production_spec_v1.json \
+            --source-lock q042_production_source_lock_v19.json \
+            --artifact-manifest q042_v18_artifact_selection_v19.json \
+            --output q042_production_final_v19.json
+          python - <<'PY'
+          import hashlib,json,pathlib
+          p=pathlib.Path('q042_production_final_v19.json'); d=json.loads(p.read_text())
+          if d.get('program_id')!='Q042-PROD-V19': raise SystemExit('V19_FINAL_IDENTITY_GATE=FAIL')
+          idx={'q':'Q-042','program_id':'Q042-PROD-V19','source_program_id':'Q042-PROD-V18','source_root_run_id':36731879692,'merge_run_id':int('${{ github.run_id }}'),'final_sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'artifact_selection_sha256':hashlib.sha256(pathlib.Path('q042_v18_artifact_selection_v19.json').read_bytes()).hexdigest(),'final_result_gate':d.get('final_result_gate'),'downstream_portability_classification':d.get('downstream_portability_classification'),'actual_computed_scientific_result':d.get('actual_computed_scientific_result')}
+          pathlib.Path('q042_production_artifact_index_v19.json').write_text(json.dumps(idx,indent=2,sort_keys=True)+'\n')
+          print('Q042_PROD_V19_MERGE_GATE='+str(d.get('final_result_gate')))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q042-production-final-v19
+          path: |
+            q042_production_final_v19.json
+            q042_production_artifact_index_v19.json
+            q042_v18_artifact_selection_v19.json
+            q042_prod_static_v19.json
+            q042_prod_static_tests_v19.json
+            q042_production_spec_v1.json
+            q042_production_recovery_v19.json
+            q042_production_source_lock_v19.json
+          if-no-files-found: error
+          retention-days: 30

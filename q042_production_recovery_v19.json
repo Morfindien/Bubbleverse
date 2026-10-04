@@ -1,0 +1,56 @@
+{
+  "authoritative_scientific_spec": {
+    "file": "q042_production_spec_v1.json",
+    "program_id": "Q042-PROD-V1",
+    "sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c"
+  },
+  "case_id": "NOT DOCUMENTED",
+  "created_date": "2026-10-04",
+  "finalization": {
+    "fail_closed": true,
+    "required_source_bobyqa_records": 80,
+    "required_source_polychord_finals": 20,
+    "result_artifact": "q042-production-final-v19",
+    "reuse_frozen_v1_scientific_merge_and_classification_logic": true
+  },
+  "observed_v18_failure": {
+    "collector_job_id": 111286678009,
+    "collector_readiness": {
+      "expected": 21,
+      "found": 21,
+      "ready": true
+    },
+    "collector_run_id": 37151674348,
+    "failed_gate": "V13_POLYCHORD_FINAL_COUNT_GATE=FAIL",
+    "root_cause": "V18 merge_final still searches q042_production_polychord_final_v13.json even though V18 production artifacts contain q042_production_polychord_final_v18.json.",
+    "root_run_id": 36731879692
+  },
+  "program_id": "Q042-PROD-V19",
+  "q": "Q-042",
+  "recovery_class": "MERGE_ONLY_EXISTING_V18_ARTIFACTS",
+  "result_id": "R-Q042-PRODUCTION-PORTABILITY-019",
+  "run_id": "Q042-PRODUCTION-PORTABILITY-V19",
+  "scientific_contract_changed": false,
+  "source_artifacts": {
+    "bobyqa_import_artifact_count": 1,
+    "bobyqa_record_count": 80,
+    "expected_count": 21,
+    "polychord_final_count": 20,
+    "required_execution_commit": "d0f92c7f2ce53da32818244f8847f8e745e20c4f",
+    "root_namespace": 36731879692,
+    "selection_policy": "latest nonexpired exact-name artifact with exact V18 head SHA; ZIP digest verified before extraction"
+  },
+  "supersedes": "Q042-PROD-V18",
+  "technical_change_v19": {
+    "change": "Finalization-only filename adapter. Discover and digest-verify the completed V18 artifact set, create temporary V1 compatibility filenames for V18 PolyChord finals and inherited V13-named BOBYQA records, call q042_production_v1.merge_final unchanged, delete shadows, then relabel only the final technical envelope as V19.",
+    "classification_rules_changed": false,
+    "cross_arm_absolute_objective_added": false,
+    "new_bobyqa_compute": false,
+    "new_polychord_compute": false,
+    "polychord_settings_changed": false,
+    "q040_endpoints_reused": false,
+    "scientific_contract_changed": false,
+    "seed_map_changed": false,
+    "thresholds_changed": false
+  }
+}
