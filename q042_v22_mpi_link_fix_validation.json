@@ -1,0 +1,395 @@
+{
+  "q": "Q-042",
+  "case_id": "NOT DOCUMENTED",
+  "program_id": "Q042-DURABLE-V22",
+  "date_time_utc": "2026-10-04T17:32:57.857204+00:00",
+  "exact_question": "Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?",
+  "classification": "BUBBLEVERSE TECHNICAL EVIDENCE",
+  "scientific_status": "UNRESOLVED",
+  "scientific_result": false,
+  "production_restart_authorized": false,
+  "execution_profile": {
+    "recommended": "GPT-6.1 Sol / focused agentic debugging",
+    "reasoning_level": "High",
+    "reason": "Contained build/link defect; existing Numerical Execution/HPC engine is sufficient. No new engine or scientific synthesis required."
+  },
+  "github_evidence": {
+    "repository": "Morfindien/Bubbleverse",
+    "run_id": 37219779675,
+    "workflow_run_number": 2,
+    "execution_commit": "1ece2215814711ff6879a632ae95246c4bcee7a5",
+    "bounded_pilot_job_id": 111487622290,
+    "static_job_status": "SUCCESS",
+    "bounded_pilot_job_status": "FAILURE",
+    "pilot_execution_step_status": "SKIPPED",
+    "collector_job_status": "FAILURE",
+    "root_failure_step": "Complete-state patch and compiled interruption/reference gates",
+    "root_cause": "Standalone Fortran synthetic reference linked MPI-built libchord without the installed MPI C++ link flags.",
+    "undefined_symbols": [
+      "ompi_mpi_cxx_op_intercept",
+      "MPI::Datatype::Free()",
+      "MPI::Comm::Comm()",
+      "MPI::Win::Free()"
+    ],
+    "failure_artifact": {
+      "id": 11309672856,
+      "name": "q042-v22-37219779675-durability-diagnostic",
+      "sha256": "cc57b25fde446c81fe86a7e5f42683172ab4d20852a8f3e8fdc5d89ba7886b0f"
+    },
+    "collector_interpretation": "Completeness rejection is secondary and remains fail-closed. The diagnostic did not establish a scientific conclusion."
+  },
+  "change": {
+    "scope": "Synthetic reference test harness link only",
+    "same_program_id_reason": "Scientific contract, production executable, workflow and sampler patch are unchanged; only standalone regression-test linking is repaired.",
+    "old_selftest_sha256": "f0eb9518f7402027bcc4c40e65d9a523a29ccf7bb49eea4ecd72b2103af6b309",
+    "new_selftest_sha256": "2ff6cbb67fea7ab173fd0ab08dfc225814a647b27bfe65652d90a8620324276a",
+    "manifest_sha256": "360e104a30a3ad2b307e7dcbdc39c4c99ff055c865e3afc704684d5d2b4dff41",
+    "mpi_mode_detection": "nm -D --undefined-only libchord.so",
+    "mpi_flags": "Installed mpifort --showme:link and mpicxx --showme:link, parsed as argument lists, appended after -lchord.",
+    "link_provenance_output": "reference_link_v22.json",
+    "serial_behavior": "No MPI wrapper flags for a library without MPI symbols."
+  },
+  "tests": {
+    "python_compilation": "PASS",
+    "old_driver_actual_mpi_link_failure_reproduced": "PASS",
+    "corrected_driver_actual_mpi_link": "PASS",
+    "offline_regression_tests": {
+      "passed": 5,
+      "failed": 0
+    },
+    "installation_check": "PACKAGE_GATE=PASS LAUNCHER_GATE=PASS README_GATE=PASS REPOSITORY_CONSISTENCY_GATE=PASS\nNO_COMMIT_NO_DISPATCH",
+    "mpi_enabled_single_process_reference_suite": {
+      "compiler": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "fail_closed_tests": [
+        {
+          "name": "wrong_context",
+          "returncode": 1,
+          "status": "PASS"
+        },
+        {
+          "name": "truncated_checkpoint",
+          "returncode": 2,
+          "status": "PASS"
+        },
+        {
+          "name": "legacy_without_permission",
+          "returncode": 1,
+          "status": "PASS"
+        }
+      ],
+      "limitations": [
+        "Deterministic synthetic Fortran likelihood; frozen full Cobaya/CLASS runtime must be validated separately",
+        "No historical RNG reconstruction from legacy stock resume",
+        "No MPI multi-process continuation",
+        "Atomic process-interruption safety; no power-loss/fsync durability guarantee"
+      ],
+      "production_restart_authorized": false,
+      "program_id": "Q042-DURABLE-V22",
+      "q": "Q-042",
+      "scenarios": [
+        {
+          "captured": {
+            "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+            "ncluster": 1,
+            "ndead": 45,
+            "nlike_total": 1014,
+            "rng_seed_size": 8,
+            "sha256": "387d3c2d4ebef3716447d31381cadf902797a7fb84e148496e13bec17516f85f",
+            "size_bytes": 34388
+          },
+          "final_scientific_output_hashes": {
+            "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+            "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+            "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+            "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+            "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+          },
+          "likelihood_trajectory_exact_identity": true,
+          "name": "safe_after_update",
+          "status": "PASS"
+        },
+        {
+          "captured": {
+            "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+            "ncluster": 1,
+            "ndead": 23,
+            "nlike_total": 93,
+            "rng_seed_size": 8,
+            "sha256": "554876514ff95b8121eaa0f90ca41b5e913b379064611f08eae83d1340957d6b",
+            "size_bytes": 13876
+          },
+          "final_scientific_output_hashes": {
+            "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+            "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+            "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+            "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+            "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+          },
+          "likelihood_trajectory_exact_identity": true,
+          "name": "interrupted_before_publication",
+          "status": "PASS"
+        },
+        {
+          "captured": {
+            "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+            "ncluster": 1,
+            "ndead": 47,
+            "nlike_total": 1097,
+            "rng_seed_size": 8,
+            "sha256": "d78b5be2dad2d98392e161386ccf8dcfe1ec1ee3db6957402b92a3c0c07f5369",
+            "size_bytes": 34388
+          },
+          "final_scientific_output_hashes": {
+            "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+            "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+            "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+            "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+            "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+          },
+          "likelihood_trajectory_exact_identity": true,
+          "name": "interrupted_at_update",
+          "status": "PASS"
+        }
+      ],
+      "scientific_result": false,
+      "serial_only": true,
+      "status": "PASS",
+      "uninterrupted_stock_vs_patched_byte_identity": true,
+      "uninterrupted_trajectory_exact_identity": true
+    },
+    "non_mpi_reference_suite": {
+      "compiler": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "fail_closed_tests": [
+        {
+          "name": "wrong_context",
+          "returncode": 1,
+          "status": "PASS"
+        },
+        {
+          "name": "truncated_checkpoint",
+          "returncode": 2,
+          "status": "PASS"
+        },
+        {
+          "name": "legacy_without_permission",
+          "returncode": 1,
+          "status": "PASS"
+        }
+      ],
+      "limitations": [
+        "Deterministic synthetic Fortran likelihood; frozen full Cobaya/CLASS runtime must be validated separately",
+        "No historical RNG reconstruction from legacy stock resume",
+        "No MPI multi-process continuation",
+        "Atomic process-interruption safety; no power-loss/fsync durability guarantee"
+      ],
+      "production_restart_authorized": false,
+      "program_id": "Q042-DURABLE-V22",
+      "q": "Q-042",
+      "scenarios": [
+        {
+          "captured": {
+            "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+            "ncluster": 1,
+            "ndead": 45,
+            "nlike_total": 1014,
+            "rng_seed_size": 8,
+            "sha256": "d9be69909cd17cb1f630aaedf4f3dc56039ba3c234096b1389ea414bfa6228a9",
+            "size_bytes": 34388
+          },
+          "final_scientific_output_hashes": {
+            "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+            "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+            "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+            "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+            "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+          },
+          "likelihood_trajectory_exact_identity": true,
+          "name": "safe_after_update",
+          "status": "PASS"
+        },
+        {
+          "captured": {
+            "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+            "ncluster": 1,
+            "ndead": 23,
+            "nlike_total": 93,
+            "rng_seed_size": 8,
+            "sha256": "7653bc93bb3fcebd87393f3ccf2e3a77d155f893eaf661a241a80d61810bce0c",
+            "size_bytes": 13876
+          },
+          "final_scientific_output_hashes": {
+            "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+            "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+            "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+            "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+            "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+          },
+          "likelihood_trajectory_exact_identity": true,
+          "name": "interrupted_before_publication",
+          "status": "PASS"
+        },
+        {
+          "captured": {
+            "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+            "ncluster": 1,
+            "ndead": 47,
+            "nlike_total": 1097,
+            "rng_seed_size": 8,
+            "sha256": "7916a2639b5bb98d4df119f252ca64ef511bbd4a70cd4c13575d5bed39046c50",
+            "size_bytes": 34388
+          },
+          "final_scientific_output_hashes": {
+            "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+            "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+            "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+            "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+            "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+          },
+          "likelihood_trajectory_exact_identity": true,
+          "name": "interrupted_at_update",
+          "status": "PASS"
+        }
+      ],
+      "scientific_result": false,
+      "serial_only": true,
+      "status": "PASS",
+      "uninterrupted_stock_vs_patched_byte_identity": true,
+      "uninterrupted_trajectory_exact_identity": true
+    },
+    "mpi_reference_link": {
+      "command": [
+        "gfortran",
+        "-ffree-line-length-none",
+        "-I/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/reference_mpi/src/polychord",
+        "/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_selftest/reference_build/reference.f90",
+        "-L/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/reference_mpi/lib",
+        "-lchord",
+        "-I/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_complete/usr/lib/x86_64-linux-gnu/openmpi/lib",
+        "-L/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_complete/usr/lib/x86_64-linux-gnu/openmpi/lib/fortran/gfortran",
+        "-lmpi_usempif08",
+        "-lmpi_usempi_ignore_tkr",
+        "-lmpi_mpifh",
+        "-lmpi",
+        "-lopen-rte",
+        "-lopen-pal",
+        "-lhwloc",
+        "-levent_core",
+        "-levent_pthreads",
+        "-lm",
+        "-lz",
+        "-L/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_complete/usr/lib/x86_64-linux-gnu/openmpi/lib",
+        "-lmpi_cxx",
+        "-lmpi",
+        "-Wl,-rpath,/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/reference_mpi/lib",
+        "-o",
+        "/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_selftest/reference_build/reference"
+      ],
+      "libchord_sha256": "fdcac45482e62ab6e290b5bbe625163102bb656a09399d526c5b4463a922b79a",
+      "mpi_library": true,
+      "program_id": "Q042-DURABLE-V22",
+      "q": "Q-042"
+    },
+    "mpi_patched_link": {
+      "command": [
+        "gfortran",
+        "-ffree-line-length-none",
+        "-I/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/patched_mpi/src/polychord",
+        "/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_selftest/patched_build/reference.f90",
+        "-L/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/patched_mpi/lib",
+        "-lchord",
+        "-I/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_complete/usr/lib/x86_64-linux-gnu/openmpi/lib",
+        "-L/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_complete/usr/lib/x86_64-linux-gnu/openmpi/lib/fortran/gfortran",
+        "-lmpi_usempif08",
+        "-lmpi_usempi_ignore_tkr",
+        "-lmpi_mpifh",
+        "-lmpi",
+        "-lopen-rte",
+        "-lopen-pal",
+        "-lhwloc",
+        "-levent_core",
+        "-levent_pthreads",
+        "-lm",
+        "-lz",
+        "-L/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_complete/usr/lib/x86_64-linux-gnu/openmpi/lib",
+        "-lmpi_cxx",
+        "-lmpi",
+        "-Wl,-rpath,/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/patched_mpi/lib",
+        "-o",
+        "/workspace/scratch/d80c762a97e8/evidence/v22_mpi_link_fix/mpi_selftest/patched_build/reference"
+      ],
+      "libchord_sha256": "c175d86c1a03de1d7bac3cbac07c4818849c7007c69b4b84f263ec0adb4f10c5",
+      "mpi_library": true,
+      "program_id": "Q042-DURABLE-V22",
+      "q": "Q-042"
+    },
+    "test_environment": {
+      "openmpi_version": "4.1.6",
+      "compiler": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+      "rank_count": 1,
+      "actual_mpi_enabled_library": true,
+      "compiler_and_mpi_packages": "Unpacked into local workspace; no system installation."
+    }
+  },
+  "preserved": {
+    "new_bobyqa_starts": 0,
+    "bobyqa_records": 80,
+    "failed_bobyqa_records": 2,
+    "scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+    "source_sampler_commit": "3ade6445bb3719a6db6f6e81f178765545ffc833",
+    "full_journal_handoff_file": "q042_execution_handoff_v22.md",
+    "full_journal_handoff_sha256": "e96d8cc76ef20615b239a81989559ed288f33161ba38d3ad3ac25fb824c72837",
+    "full_journal_handoff_bytes": 977597,
+    "class_failure": "Preserved independent production blocker; no CLASS replay.",
+    "contract_sha256": "9f6a065a49a51fe06e39f31d2fa7e28db6af09c7c73b86049ce75c7b80c4694a",
+    "sampler_patch_sha256": "b8276047a1a01dca009eb4eb16a24fbef68c83323fe801a42f228caa060fa130",
+    "diagnostic_driver_sha256": "3f3f0db5f4a33e5a57b1f0c95a26b9bc21ff0478ef2ac8b2f95589c8b3a537f4",
+    "workflow_sha256": "a82288c74e1ea033ae93cbfe2b27f5608ac368a6ac7516a840845771f49addf4",
+    "shared_pilot_compute_seconds": 14400,
+    "job_timeout_minutes": 330,
+    "maximum_pilots": 1,
+    "automatic_retry": false
+  },
+  "journal_delta": {
+    "KEEP": [
+      "Full existing journal, external sources and claim mappings in the unchanged handoff",
+      "All previous failures and the preserved CLASS failure",
+      "Scientific priors, datasets, criteria, and model definitions"
+    ],
+    "ADD": [
+      "Run 37219779675 did not reach its bounded pilot because its synthetic Fortran reference lacked MPI C++ link flags.",
+      "The exact link failure is reproduced locally and repaired in the regression test only.",
+      "Both MPI-enabled single-process and non-MPI reference suites pass all three interruption/resume and three incompatibility-rejection scenarios."
+    ],
+    "scientific_interpretation": "No physical inference or model falsification follows from this build failure.",
+    "missing_context": "Independent CASE ID and full external source metadata are not present in this patch task; the unchanged complete parent handoff remains authoritative."
+  },
+  "sources": [
+    {
+      "id": "V22-RUN2-JOB111487622290",
+      "type": "BUBBLEVERSE TECHNICAL EVIDENCE",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37219779675/job/111487622290",
+      "supports": "Missing MPI C++ linkage before the pilot."
+    },
+    {
+      "id": "V22-MPI-LINK-RED-GREEN",
+      "type": "BUBBLEVERSE TECHNICAL EVIDENCE",
+      "supports": "Actual local reproduction and corrected compiled reference/interruption tests."
+    },
+    {
+      "id": "OPENMPI-WRAPPER-FLAGS",
+      "type": "OFFICIAL TECHNICAL DOCUMENTATION",
+      "url": "https://docs.open-mpi.org/en/v5.0.x/building-apps/extracting-wrapper-flags.html",
+      "supports": "Extract flags from the installed wrappers instead of hardcoding library lists."
+    }
+  ],
+  "limitations": [
+    "Actual Cobaya/CLASS diagnostic pilot has not run locally.",
+    "MPI reference suite uses one process; it does not validate multi-rank checkpoint continuation.",
+    "Local MPI optional transport/help-file warnings were present but the test workers completed with exit code 0.",
+    "Local tests establish the specific linker repair; new GitHub execution is still required to establish the bounded runtime diagnostic."
+  ],
+  "github_write_actions": [],
+  "next_action": "Replace the two named files at repository root, then launch a new run from main via the permanent launcher. Preserve the failed run as historical evidence.",
+  "return_route": "Bubbleverse Result Ingestion & Routing Engine with V22 final artifact, diagnostic artifact and unchanged complete handoff.",
+  "start_this": "Q042-DURABLE-V22"
+}
