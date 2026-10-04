@@ -1,0 +1,205 @@
+{
+  "q": "Q-042",
+  "program_id": "Q042-DURABLE-V22",
+  "date_time": "2026-10-04T18:49:13+02:00",
+  "status": "LOCAL_DELIVERY_PASS",
+  "scientific_status": "UNRESOLVED",
+  "production_restart_authorized": false,
+  "github_written": false,
+  "hpc_started": false,
+  "new_bobyqa_starts": 0,
+  "exact_question_sha256": "b8c5a2855ced318d7c4a0be60f5f3ae556d0e96af468c50c248c35a06d70a5ef",
+  "checks": {
+    "python_compilation": "PASS",
+    "json_parsing": "PASS",
+    "workflow_yaml": "PASS",
+    "offline_regression_tests": "5/5 PASS",
+    "compiled_uninterrupted_identity": "PASS",
+    "compiled_interruption_resume_scenarios": "3/3 PASS",
+    "compiled_fail_closed_scenarios": "3/3 PASS",
+    "independent_binary_44_field_reader": "PASS",
+    "actual_repository_install_fixture": "PASS",
+    "installer_idempotence": "PASS",
+    "unrelated_registry_and_readme_preservation": "PASS",
+    "permanent_launcher_unchanged": "PASS",
+    "complete_received_parent_suffix_byte_identity": "PASS",
+    "no_production_dispatch_or_matrix": "PASS"
+  },
+  "source_patch": {
+    "q": "Q-042",
+    "program_id": "Q042-DURABLE-V22",
+    "status": "SOURCE_PATCHED",
+    "base_commit": "3ade6445bb3719a6db6f6e81f178765545ffc833",
+    "before_sha256": "87a007b72d4088714a4bcedd2eae9f86cd9d2b9c6264cb12bed5cfe7a65968ab",
+    "after_sha256": "7ef67580f3a7b86d80dfa98e117e518d6cee3989747341b50d11a07e15e3718e",
+    "rti_type_blob": "a2a3dec74de9aa0cf1a1e97aab2bb58205742eb9",
+    "rti_fields": [
+      "ndead",
+      "ncluster",
+      "ncluster_dead",
+      "nlike",
+      "num_repeats",
+      "nlive",
+      "nphantom",
+      "nposterior",
+      "nequals",
+      "nposterior_dead",
+      "nposterior_global",
+      "nequals_dead",
+      "nequals_global",
+      "live",
+      "phantom",
+      "posterior_stack",
+      "nposterior_stack",
+      "posterior",
+      "posterior_dead",
+      "posterior_global",
+      "equals",
+      "equals_dead",
+      "equals_global",
+      "dead",
+      "logweights",
+      "covmat",
+      "cholesky",
+      "logZ",
+      "logZ2",
+      "logXp",
+      "logX_last_update",
+      "logZXp",
+      "logZp",
+      "logZp_dead",
+      "logZp2",
+      "logZp2_dead",
+      "logZpXp",
+      "logXpXq",
+      "logLp",
+      "i",
+      "maxlogweight",
+      "maxlogweight_dead",
+      "maxlogweight_global",
+      "thin_posterior"
+    ],
+    "serial_only": true,
+    "changes": [
+      "Complete binary state publication after original whole iteration",
+      "Fortran RNG, nlikesum and failures restore before next iteration"
+    ],
+    "compression_factor_changed": false,
+    "covariance_or_clustering_cadence_changed": false,
+    "legacy_historical_rng_reconstructed": false,
+    "scientific_result": false,
+    "production_restart_authorized": false
+  },
+  "compiled_reference": {
+    "compiler": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "fail_closed_tests": [
+      {
+        "name": "wrong_context",
+        "returncode": 1,
+        "status": "PASS"
+      },
+      {
+        "name": "truncated_checkpoint",
+        "returncode": 2,
+        "status": "PASS"
+      },
+      {
+        "name": "legacy_without_permission",
+        "returncode": 1,
+        "status": "PASS"
+      }
+    ],
+    "limitations": [
+      "Deterministic synthetic Fortran likelihood; frozen full Cobaya/CLASS runtime must be validated separately",
+      "No historical RNG reconstruction from legacy stock resume",
+      "No MPI multi-process continuation",
+      "Atomic process-interruption safety; no power-loss/fsync durability guarantee"
+    ],
+    "production_restart_authorized": false,
+    "program_id": "Q042-DURABLE-V22",
+    "q": "Q-042",
+    "scenarios": [
+      {
+        "captured": {
+          "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+          "ncluster": 1,
+          "ndead": 45,
+          "nlike_total": 1014,
+          "rng_seed_size": 8,
+          "sha256": "e0da8b6e07e5a1b0d1ea7e34e4ebdef15f30137afd84bbb1a14cea80403667e8",
+          "size_bytes": 34388
+        },
+        "final_scientific_output_hashes": {
+          "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+          "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+          "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+          "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+          "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+        },
+        "likelihood_trajectory_exact_identity": true,
+        "name": "safe_after_update",
+        "status": "PASS"
+      },
+      {
+        "captured": {
+          "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+          "ncluster": 1,
+          "ndead": 23,
+          "nlike_total": 93,
+          "rng_seed_size": 8,
+          "sha256": "7653bc93bb3fcebd87393f3ccf2e3a77d155f893eaf661a241a80d61810bce0c",
+          "size_bytes": 13876
+        },
+        "final_scientific_output_hashes": {
+          "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+          "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+          "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+          "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+          "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+        },
+        "likelihood_trajectory_exact_identity": true,
+        "name": "interrupted_before_publication",
+        "status": "PASS"
+      },
+      {
+        "captured": {
+          "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+          "ncluster": 1,
+          "ndead": 47,
+          "nlike_total": 1097,
+          "rng_seed_size": 8,
+          "sha256": "4ec637463be49ec1f719d47b9bac20a25219a8fc22d0fff9f1050806b1631ce7",
+          "size_bytes": 34388
+        },
+        "final_scientific_output_hashes": {
+          "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+          "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+          "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+          "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+          "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+        },
+        "likelihood_trajectory_exact_identity": true,
+        "name": "interrupted_at_update",
+        "status": "PASS"
+      }
+    ],
+    "scientific_result": false,
+    "serial_only": true,
+    "status": "PASS",
+    "uninterrupted_stock_vs_patched_byte_identity": true,
+    "uninterrupted_trajectory_exact_identity": true
+  },
+  "local_environment": {
+    "python": "3.12.14",
+    "compiler": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+    "mpi": 0,
+    "cobaya_runtime_tested": false
+  },
+  "runtime_pending": [
+    "Actual GitHub Python 3.11/Cobaya 3.5.6 environment",
+    "MPI-compiled single-rank linkage and same reference gates",
+    "One representative diagnostic first publication and second-process genuine continuation",
+    "Independent preserved CLASS production blocker"
+  ],
+  "scope": "Technical checkpoint diagnosis only. No validated cosmological result or exact historical RNG reconstruction."
+}

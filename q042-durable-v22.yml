@@ -1,0 +1,131 @@
+name: Bubbleverse Q042 V22 — complete-state durability; one bounded pilot
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q042-durable-v22
+  cancel-in-progress: false
+env:
+  CURRENT_Q: Q-042
+  PROGRAM_ID: Q042-DURABLE-V22
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v7
+      with:
+        python-version: '3.11'
+    - name: Exact package, registry, README and frozen context gate
+      env:
+        REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+      run: |
+        test "$REQUESTED_PROGRAM_ID" = "$PROGRAM_ID"
+        python q042_install_durable_v22.py --check
+        python -m unittest discover -s . -p 'q042_durable_tests_v22.py'
+  bounded-pilot:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 330
+    steps:
+    - name: Record total job budget
+      run: echo "DIAG_JOB_START_UNIX=$(date +%s)" >> "$GITHUB_ENV"
+    - uses: actions/checkout@v4
+      with:
+        ref: d0f92c7f2ce53da32818244f8847f8e745e20c4f
+    - uses: actions/checkout@v4
+      with:
+        ref: ${{ github.sha }}
+        path: diagnostic_delivery
+    - uses: actions/setup-python@v7
+      with:
+        python-version: '3.11'
+    - uses: actions/cache/restore@v4
+      with:
+        path: |
+          ~/.cache/pip
+          external/cobaya_packages
+          external/class_ede
+          external/hillipop
+          external/act_dr6_cmbonly
+          external/act_dr6_lenslike
+          external/cobaya_desi_dr2_source
+          external/bao_data_v2_6
+          external/PolyChordLite
+        key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+        fail-on-cache-miss: true
+    - name: Recover unchanged V18 environment and Q032 parent
+      timeout-minutes: 60
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install -y gfortran gcc g++ make openmpi-bin libopenmpi-dev pkg-config
+        git fetch --depth 1 origin 4dc873a5e880d40858d831a3b421456728f0c032
+        git worktree add --detach q032_parent 4dc873a5e880d40858d831a3b421456728f0c032
+        bash q042_setup_recovery_v18.sh
+    - name: Import exact state and environment with cryptographic provenance
+      timeout-minutes: 25
+      env:
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        python diagnostic_delivery/q042_durable_diagnostic_v22.py fetch --key ede --out diag_inputs/ede
+        python diagnostic_delivery/q042_durable_diagnostic_v22.py fetch --key environment --out env_bundle
+    - name: Validate baseline before modifying the sampler library
+      run: python diagnostic_delivery/q042_durable_diagnostic_v22.py verify-runtime --out diag_results
+    - name: Complete-state patch and compiled interruption/reference gates
+      timeout-minutes: 10
+      run: python diagnostic_delivery/q042_durable_diagnostic_v22.py build --out diag_results
+    - name: One diagnostic branch; first publication and one genuine resume
+      run: python diagnostic_delivery/q042_durable_diagnostic_v22.py pilot --out diag_results
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: q042-v22-${{ github.run_id }}-durability-diagnostic
+        path: |
+          diag_results/*.json
+          diag_results/*.log
+          diag_results/*.durable_v22
+          diag_results/isolated_cell/**
+          diag_results/compiled_reference/**
+          q042_runtime/*.json
+          diagnostic_delivery/q042_durable_contract_v22.json
+          diag_inputs/ede/diagnostic_import.json
+          env_bundle/diagnostic_import.json
+        if-no-files-found: error
+        retention-days: 30
+  collect:
+    if: always()
+    needs:
+    - static
+    - bounded-pilot
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v7
+      with:
+        python-version: '3.11'
+    - uses: actions/download-artifact@v4
+      continue-on-error: true
+      with:
+        pattern: q042-v22-${{ github.run_id }}-durability-diagnostic
+        path: collected
+    - name: Finite diagnostic completeness; science remains UNRESOLVED
+      run: python q042_durable_diagnostic_v22.py collect --out q042_durable_final_v22.json
+    - uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: q042-v22-${{ github.run_id }}-diagnostic-final
+        path: |
+          q042_durable_final_v22.json
+          q042_durable_contract_v22.json
+          q042_execution_handoff_v22.md
+        if-no-files-found: error
+        retention-days: 30

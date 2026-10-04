@@ -1,0 +1,99 @@
+{
+  "compiler": "GNU Fortran (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+  "fail_closed_tests": [
+    {
+      "name": "wrong_context",
+      "returncode": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "truncated_checkpoint",
+      "returncode": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "legacy_without_permission",
+      "returncode": 1,
+      "status": "PASS"
+    }
+  ],
+  "limitations": [
+    "Deterministic synthetic Fortran likelihood; frozen full Cobaya/CLASS runtime must be validated separately",
+    "No historical RNG reconstruction from legacy stock resume",
+    "No MPI multi-process continuation",
+    "Atomic process-interruption safety; no power-loss/fsync durability guarantee"
+  ],
+  "production_restart_authorized": false,
+  "program_id": "Q042-DURABLE-V22",
+  "q": "Q-042",
+  "scenarios": [
+    {
+      "captured": {
+        "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+        "ncluster": 1,
+        "ndead": 45,
+        "nlike_total": 1014,
+        "rng_seed_size": 8,
+        "sha256": "e0da8b6e07e5a1b0d1ea7e34e4ebdef15f30137afd84bbb1a14cea80403667e8",
+        "size_bytes": 34388
+      },
+      "final_scientific_output_hashes": {
+        "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+        "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+        "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+        "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+        "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+      },
+      "likelihood_trajectory_exact_identity": true,
+      "name": "safe_after_update",
+      "status": "PASS"
+    },
+    {
+      "captured": {
+        "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+        "ncluster": 1,
+        "ndead": 23,
+        "nlike_total": 93,
+        "rng_seed_size": 8,
+        "sha256": "7653bc93bb3fcebd87393f3ccf2e3a77d155f893eaf661a241a80d61810bce0c",
+        "size_bytes": 13876
+      },
+      "final_scientific_output_hashes": {
+        "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+        "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+        "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+        "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+        "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+      },
+      "likelihood_trajectory_exact_identity": true,
+      "name": "interrupted_before_publication",
+      "status": "PASS"
+    },
+    {
+      "captured": {
+        "context": "30569199785cb560c077fc8ebc0c9c0702d5ab551e0c8866763fc6ce35b6e591",
+        "ncluster": 1,
+        "ndead": 47,
+        "nlike_total": 1097,
+        "rng_seed_size": 8,
+        "sha256": "4ec637463be49ec1f719d47b9bac20a25219a8fc22d0fff9f1050806b1631ce7",
+        "size_bytes": 34388
+      },
+      "final_scientific_output_hashes": {
+        "chain.resume": "84027aeaa5d805483cfca707b9ae5c1739de4f5fb521c59c4d9e3416751e5277",
+        "chain.txt": "163e35a6d4177d89c4647cec7d0173d933c007375ecfc58a82d3d1cc59b26b05",
+        "chain_dead-birth.txt": "999a858588152c61f643f951967050e9b145b8543165099d16e6105f366aab95",
+        "chain_dead.txt": "aea84767465e78f3276fb680fccac3f17b038979dc98269f0ec2ebd417f8f1ba",
+        "chain_equal_weights.txt": "9d3da197b62610ab8d6dd9de010a7b94bf84a8d8d2887f59a8a925cf4f70799f"
+      },
+      "likelihood_trajectory_exact_identity": true,
+      "name": "interrupted_at_update",
+      "status": "PASS"
+    }
+  ],
+  "scientific_result": false,
+  "serial_only": true,
+  "status": "PASS",
+  "uninterrupted_stock_vs_patched_byte_identity": true,
+  "uninterrupted_trajectory_exact_identity": true
+}
