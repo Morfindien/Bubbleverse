@@ -1,0 +1,64 @@
+{
+  "q": "Q-042",
+  "case_id": "NOT DOCUMENTED",
+  "program_id": "Q042-STOCKDIAG-V20",
+  "repository": "Morfindien/Bubbleverse",
+  "source_commit": "d0f92c7f2ce53da32818244f8847f8e745e20c4f",
+  "polychord_commit": "3ade6445bb3719a6db6f6e81f178765545ffc833",
+  "class_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "probe_seconds": 14400,
+  "class_seconds": 900,
+  "maximum_probe_count": 1,
+  "maximum_class_point_count": 1,
+  "scientific_contract_changed": false,
+  "production_restart_authorized": false,
+  "q042_science_gate": "UNRESOLVED",
+  "artifacts": {
+    "ede": {
+      "id": 11224420078,
+      "name": "q042-v18-36731879692-polychord-final-camspec-ede_n3-FULL",
+      "sha256": "01ac6da88043fbf84fde35713d717cf0b4ea0b53bf5b4d6d13527ada6f563bf6",
+      "run_id": 36979159417
+    },
+    "lcdm": {
+      "id": 11170053204,
+      "name": "q042-v18-36731879692-polychord-final-camspec-lcdm-FULL",
+      "sha256": "a1862aa50f99c445dcdb5ed1c4342ba8cfb52ccc7809d2ac4fda0cab8ee5350e",
+      "run_id": 36854623733
+    },
+    "environment": {
+      "id": 11104699558,
+      "name": "q042-v18-36731879692-environment",
+      "sha256": "cc9d05fd514f50e64e4e1f56a6ecb1a9046ba43373491a9023f465a015e7d905",
+      "run_id": 36731879692
+    }
+  },
+  "frozen_files": {
+    "q042_production_spec_v1.json": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+    "q042_production_v18.py": "19d27facbb92e1e030460883c4d9155cb16e97d04d2c4816723e622716e42962",
+    "q042_production_v1.py": "889232bf9b1cd0a098cb42b2974774a343648c73f0ef9bf55c215a9ac0b90642",
+    "q042_production_source_lock_v18.json": "6d79b78592438c082f1bd6dc472931d18b00a4a7525cf67bd1633ba1c77e4dde",
+    "q042_cobaya_partial_resume_adapter_v18.py": "b547b2dfd75f29015e7b0e08dfe4214d8889fb911a32060e48d30283e419a567",
+    "q042_setup_recovery_v18.sh": "df94da9d6fc366006ce8aa9780ba9dd762b71f54a6d95bbc7e5ddca0cfd523e4",
+    "q042_patch_polychord_partial_init_v13.py": "22ca8d786e2061e99454d1940a6f1fe12b9bcef0632a9524f3a0bb79c9facce6"
+  },
+  "class_failure_point": {
+    "omega_b": 0.020721894362238032,
+    "omega_cdm": 0.10267093582571502,
+    "H0": 73.1518764249673,
+    "tau_reio": 0.022146719553358576,
+    "n_s": 1.0712271414025623,
+    "A_s": 1.6612992056613594e-09,
+    "N_ur": 2.0328,
+    "N_ncdm": 1,
+    "m_ncdm": 0.06,
+    "T_ncdm": 0.71611,
+    "output": "lCl tCl tCl,pCl,lCl,mPk mPk pCl",
+    "lensing": "yes",
+    "non_linear": "hmcode",
+    "l_max_scalars": 9001,
+    "P_k_max_1/Mpc": 2.0
+  },
+  "scientific_question": "Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?",
+  "inherited_handoff_sha256": "b3b3e7cb9bdd9b686d0df6713a84bdf337e03c5d8e28fd822caa103f10db99bd"
+}

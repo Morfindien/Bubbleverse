@@ -1,0 +1,462 @@
+{
+  "actual_likelihood_replay": false,
+  "case_id": "NOT DOCUMENTED",
+  "execution_commit": "NOT DOCUMENTED",
+  "github_run_id": "NOT DOCUMENTED",
+  "production_restart_authorized": false,
+  "program_id": "Q042-STOCKDIAG-V20",
+  "q": "Q-042",
+  "rows": [
+    {
+      "key": "ede",
+      "sampler": {
+        "blocking": [
+          [
+            1,
+            [
+              "tau_reio"
+            ]
+          ],
+          [
+            1,
+            [
+              "omega_b",
+              "omega_cdm",
+              "H0",
+              "n_s",
+              "logA",
+              "fEDE",
+              "log10z_c",
+              "thetai_scf"
+            ]
+          ],
+          [
+            32,
+            [
+              "A_act",
+              "P_act"
+            ]
+          ],
+          [
+            46,
+            [
+              "A_planck"
+            ]
+          ],
+          [
+            51,
+            [
+              "amp_143",
+              "amp_217",
+              "amp_143x217",
+              "n_143",
+              "n_217",
+              "n_143x217"
+            ]
+          ]
+        ],
+        "boost_posterior": 0,
+        "callback_function": null,
+        "cluster_posteriors": true,
+        "compression_factor": 0.36787944117144233,
+        "confidence_for_unbounded": 0.9999995,
+        "do_clustering": true,
+        "equals": true,
+        "feedback": null,
+        "logzero": -1e+30,
+        "max_ndead": "infinity",
+        "maximise": false,
+        "measure_speeds": true,
+        "nfail": "nlive",
+        "nlive": "25d",
+        "nlives": null,
+        "nprior": "10nlive",
+        "num_repeats": "5d",
+        "oversample_power": 0.4,
+        "path": "/home/runner/work/Bubbleverse/Bubbleverse/external/PolyChordLite",
+        "posteriors": true,
+        "precision_criterion": 0.001,
+        "read_resume": true,
+        "seed": 421100,
+        "synchronous": true,
+        "version": null,
+        "write_dead": true,
+        "write_live": true,
+        "write_prior": true,
+        "write_resume": true,
+        "write_stats": true
+      },
+      "source_record": {
+        "action": "resume",
+        "arm": "camspec",
+        "case_id": "NOT DOCUMENTED",
+        "checkpoint_after": {
+          "checkpoint_kind": "STOCK_RESUME",
+          "lifecycle": {
+            "action": "resume",
+            "arm": "camspec",
+            "cobaya_partial_resume_adapter_installed": false,
+            "combination": "FULL",
+            "model": "ede_n3",
+            "program_id": "Q042-PROD-V18",
+            "q": "Q-042",
+            "result_id": "R-Q042-PRODUCTION-PORTABILITY-018",
+            "resume_input_source": "COBAYA_STORED_UPDATED_INFO",
+            "run_id": "Q042-PRODUCTION-PORTABILITY-V18",
+            "sampler_contract_sha256": "5339d64c41b721982d7ab9bbb75cbb057dc0b10b8ed2fe837950ef3849a7bc6a",
+            "seed": 421100,
+            "stage": "POLYCHORD_WORKER_LIFECYCLE_V8",
+            "started_unix": 1790926575.0320973,
+            "status": "STARTED"
+          },
+          "nonempty_resume_files": [
+            "polychord/chain_polychord_raw/chain.resume"
+          ],
+          "partial_init_accepted": null,
+          "partial_init_files": [],
+          "partial_init_meta": {},
+          "partial_init_meta_files": [],
+          "partial_init_nprior": null,
+          "primary_resume_mtime_ns": 1790926495085738072,
+          "primary_resume_sha256": "c30e41c032d805d1b987fa362b77db5ad303a382c33d3a96ece13c86a57ed054",
+          "resumable": true,
+          "resume_files": [
+            "polychord/chain_polychord_raw/chain.resume"
+          ],
+          "updated_error": null,
+          "updated_seed_ok": true,
+          "updated_yaml": "polychord/chain.updated.yaml",
+          "updated_yaml_nonempty": true
+        },
+        "checkpoint_before": {
+          "checkpoint_kind": "STOCK_RESUME",
+          "lifecycle": {
+            "action": "resume",
+            "arm": "camspec",
+            "cobaya_partial_resume_adapter_installed": true,
+            "combination": "FULL",
+            "model": "ede_n3",
+            "program_id": "Q042-PROD-V18",
+            "q": "Q-042",
+            "result_id": "R-Q042-PRODUCTION-PORTABILITY-018",
+            "resume_input_source": "COBAYA_STORED_UPDATED_INFO",
+            "run_id": "Q042-PRODUCTION-PORTABILITY-V18",
+            "sampler_contract_sha256": "5339d64c41b721982d7ab9bbb75cbb057dc0b10b8ed2fe837950ef3849a7bc6a",
+            "seed": 421100,
+            "stage": "POLYCHORD_WORKER_LIFECYCLE_V8",
+            "started_unix": 1790911984.9910758,
+            "status": "STARTED"
+          },
+          "nonempty_resume_files": [
+            "polychord/chain_polychord_raw/chain.resume"
+          ],
+          "partial_init_accepted": null,
+          "partial_init_files": [],
+          "partial_init_meta": {},
+          "partial_init_meta_files": [],
+          "partial_init_nprior": null,
+          "primary_resume_mtime_ns": 1790926495085738072,
+          "primary_resume_sha256": "c30e41c032d805d1b987fa362b77db5ad303a382c33d3a96ece13c86a57ed054",
+          "resumable": true,
+          "resume_files": [
+            "polychord/chain_polychord_raw/chain.resume"
+          ],
+          "updated_error": null,
+          "updated_seed_ok": true,
+          "updated_yaml": "polychord/chain.updated.yaml",
+          "updated_yaml_nonempty": true
+        },
+        "checkpoint_parent_run_id": "36960394429",
+        "checkpoint_progress": false,
+        "checkpoint_progress_reason": "STOCK_RESUME_UNCHANGED",
+        "combination": "FULL",
+        "config_hash": "7a2fe29c622ea5adcb948e58c7b72cdab5b6436da20b2d360bd661c28ff66593",
+        "elapsed_seconds": 14406.108242034912,
+        "execution_mode": "SERIAL_PARTIAL_INIT_CHECKPOINT_V18",
+        "failure_class": "POLYCHORD_RESUME_SEGMENT_NO_CHECKPOINT_PROGRESS",
+        "model": "ede_n3",
+        "mpi_ranks": 1,
+        "program_id": "Q042-PROD-V18",
+        "q": "Q-042",
+        "result_id": "R-Q042-PRODUCTION-PORTABILITY-018",
+        "resume_lifecycle_ok": true,
+        "resume_probe": false,
+        "run_id": "Q042-PRODUCTION-PORTABILITY-V18",
+        "scientific_spec_origin_program_id": "Q042-PROD-V1",
+        "scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+        "seed": 421100,
+        "segment": 7,
+        "soft_minutes": 240,
+        "stage": "POLYCHORD_PRODUCTION_FINAL_V18",
+        "status": "CONTROLLED_TECHNICAL_FAILURE",
+        "technical_parent_execution_commit": "6c44a4117449145afd0a3ae6eb238490686a8c6d",
+        "timed_out": true,
+        "worker": null,
+        "worker_returncode": -2
+      },
+      "state": {
+        "grade_dims": [
+          1,
+          8,
+          2,
+          1,
+          6
+        ],
+        "logx": [
+          -2.30280729052857
+        ],
+        "logx_last_update": [
+          -2.30280729052857
+        ],
+        "ncluster": 1,
+        "ndead": 4051,
+        "nderived": 17,
+        "ndim": 18,
+        "nlike": [
+          4509,
+          59,
+          499,
+          299,
+          1910
+        ],
+        "nlive": [
+          450
+        ],
+        "repeats": [
+          5,
+          40,
+          320,
+          230,
+          1530
+        ],
+        "sha256": "c30e41c032d805d1b987fa362b77db5ad303a382c33d3a96ece13c86a57ed054",
+        "size": 16460521
+      }
+    },
+    {
+      "key": "lcdm",
+      "sampler": {
+        "blocking": [
+          [
+            1,
+            [
+              "tau_reio"
+            ]
+          ],
+          [
+            1,
+            [
+              "omega_b",
+              "omega_cdm",
+              "H0",
+              "n_s",
+              "logA"
+            ]
+          ],
+          [
+            26,
+            [
+              "A_act",
+              "P_act"
+            ]
+          ],
+          [
+            36,
+            [
+              "A_planck"
+            ]
+          ],
+          [
+            41,
+            [
+              "amp_143",
+              "amp_217",
+              "amp_143x217",
+              "n_143",
+              "n_217",
+              "n_143x217"
+            ]
+          ]
+        ],
+        "boost_posterior": 0,
+        "callback_function": null,
+        "cluster_posteriors": true,
+        "compression_factor": 0.36787944117144233,
+        "confidence_for_unbounded": 0.9999995,
+        "do_clustering": true,
+        "equals": true,
+        "feedback": null,
+        "logzero": -1e+30,
+        "max_ndead": "infinity",
+        "maximise": false,
+        "measure_speeds": true,
+        "nfail": "nlive",
+        "nlive": "25d",
+        "nlives": null,
+        "nprior": "10nlive",
+        "num_repeats": "5d",
+        "oversample_power": 0.4,
+        "path": "/home/runner/work/Bubbleverse/Bubbleverse/external/PolyChordLite",
+        "posteriors": true,
+        "precision_criterion": 0.001,
+        "read_resume": true,
+        "seed": 421000,
+        "synchronous": true,
+        "version": null,
+        "write_dead": true,
+        "write_live": true,
+        "write_prior": true,
+        "write_resume": true,
+        "write_stats": true
+      },
+      "source_record": {
+        "action": "resume",
+        "arm": "camspec",
+        "case_id": "NOT DOCUMENTED",
+        "checkpoint_after": {
+          "checkpoint_kind": "STOCK_RESUME",
+          "lifecycle": {
+            "action": "resume",
+            "arm": "camspec",
+            "cobaya_partial_resume_adapter_installed": false,
+            "combination": "FULL",
+            "model": "lcdm",
+            "program_id": "Q042-PROD-V18",
+            "q": "Q-042",
+            "result_id": "R-Q042-PRODUCTION-PORTABILITY-018",
+            "resume_input_source": "COBAYA_STORED_UPDATED_INFO",
+            "run_id": "Q042-PRODUCTION-PORTABILITY-V18",
+            "sampler_contract_sha256": "b75ddddab4046459aa88fe45b3a56d3b24fa23d3838047fe8d595f3914a6b54e",
+            "seed": 421000,
+            "stage": "POLYCHORD_WORKER_LIFECYCLE_V8",
+            "started_unix": 1790853721.6915994,
+            "status": "STARTED"
+          },
+          "nonempty_resume_files": [
+            "polychord/chain_polychord_raw/chain.resume"
+          ],
+          "partial_init_accepted": null,
+          "partial_init_files": [],
+          "partial_init_meta": {},
+          "partial_init_meta_files": [],
+          "partial_init_nprior": null,
+          "primary_resume_mtime_ns": 1790853630238028698,
+          "primary_resume_sha256": "00d26623c43d2807409ac1d0ce1001088b461e6d3298e33561e439d6ce5688fa",
+          "resumable": true,
+          "resume_files": [
+            "polychord/chain_polychord_raw/chain.resume"
+          ],
+          "updated_error": null,
+          "updated_seed_ok": true,
+          "updated_yaml": "polychord/chain.updated.yaml",
+          "updated_yaml_nonempty": true
+        },
+        "checkpoint_before": {
+          "checkpoint_kind": "STOCK_RESUME",
+          "lifecycle": {
+            "action": "resume",
+            "arm": "camspec",
+            "cobaya_partial_resume_adapter_installed": true,
+            "combination": "FULL",
+            "model": "lcdm",
+            "program_id": "Q042-PROD-V18",
+            "q": "Q-042",
+            "result_id": "R-Q042-PRODUCTION-PORTABILITY-018",
+            "resume_input_source": "COBAYA_STORED_UPDATED_INFO",
+            "run_id": "Q042-PRODUCTION-PORTABILITY-V18",
+            "sampler_contract_sha256": "b75ddddab4046459aa88fe45b3a56d3b24fa23d3838047fe8d595f3914a6b54e",
+            "seed": 421000,
+            "stage": "POLYCHORD_WORKER_LIFECYCLE_V8",
+            "started_unix": 1790839145.5915728,
+            "status": "STARTED"
+          },
+          "nonempty_resume_files": [
+            "polychord/chain_polychord_raw/chain.resume"
+          ],
+          "partial_init_accepted": null,
+          "partial_init_files": [],
+          "partial_init_meta": {},
+          "partial_init_meta_files": [],
+          "partial_init_nprior": null,
+          "primary_resume_mtime_ns": 1790853630238028698,
+          "primary_resume_sha256": "00d26623c43d2807409ac1d0ce1001088b461e6d3298e33561e439d6ce5688fa",
+          "resumable": true,
+          "resume_files": [
+            "polychord/chain_polychord_raw/chain.resume"
+          ],
+          "updated_error": null,
+          "updated_seed_ok": true,
+          "updated_yaml": "polychord/chain.updated.yaml",
+          "updated_yaml_nonempty": true
+        },
+        "checkpoint_parent_run_id": "36829393843",
+        "checkpoint_progress": false,
+        "checkpoint_progress_reason": "STOCK_RESUME_UNCHANGED",
+        "combination": "FULL",
+        "config_hash": "2548689967a5be19c7c883db132efb5560a4ac5feb5f8559985cf5685239cc0a",
+        "elapsed_seconds": 11852.813889980316,
+        "execution_mode": "SERIAL_PARTIAL_INIT_CHECKPOINT_V18",
+        "failure_class": "HOSTED_RUNNER_OR_NUMERICAL_SEGMENT_FAILURE",
+        "model": "lcdm",
+        "mpi_ranks": 1,
+        "program_id": "Q042-PROD-V18",
+        "q": "Q-042",
+        "result_id": "R-Q042-PRODUCTION-PORTABILITY-018",
+        "resume_lifecycle_ok": true,
+        "resume_probe": false,
+        "run_id": "Q042-PRODUCTION-PORTABILITY-V18",
+        "scientific_spec_origin_program_id": "Q042-PROD-V1",
+        "scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+        "seed": 421000,
+        "segment": 3,
+        "soft_minutes": 240,
+        "stage": "POLYCHORD_PRODUCTION_FINAL_V18",
+        "status": "CONTROLLED_TECHNICAL_FAILURE",
+        "technical_parent_execution_commit": "6c44a4117449145afd0a3ae6eb238490686a8c6d",
+        "timed_out": false,
+        "worker": null,
+        "worker_returncode": 1
+      },
+      "state": {
+        "grade_dims": [
+          1,
+          5,
+          2,
+          1,
+          6
+        ],
+        "logx": [
+          -2.30285172411148
+        ],
+        "logx_last_update": [
+          -2.30285172411148
+        ],
+        "ncluster": 1,
+        "ndead": 3376,
+        "nderived": 17,
+        "ndim": 15,
+        "nlike": [
+          3755,
+          35,
+          442,
+          238,
+          1599
+        ],
+        "nlive": [
+          375
+        ],
+        "repeats": [
+          5,
+          25,
+          260,
+          180,
+          1230
+        ],
+        "sha256": "00d26623c43d2807409ac1d0ce1001088b461e6d3298e33561e439d6ce5688fa",
+        "size": 12352984
+      }
+    }
+  ],
+  "scientific_result": false,
+  "status": "PASS"
+}
