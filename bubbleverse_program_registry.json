@@ -1383,7 +1383,7 @@
     },
     "Q042-STOCKDIAG-V20": {
       "q": "Q-042",
-      "status": "ACTIVE",
+      "status": "BROKEN",
       "workflow_id": "q042-stock-diagnostic-v20.yml",
       "target_ref": "main",
       "program_version": "20",
@@ -1397,6 +1397,25 @@
       ],
       "science_status": "UNRESOLVED",
       "supersedes": null
+    },
+    "Q042-STOCKDIAG-V21": {
+      "q": "Q-042",
+      "status": "ACTIVE",
+      "workflow_id": "q042-stock-diagnostic-v21.yml",
+      "target_ref": "main",
+      "program_version": "21",
+      "workflow_version": "21",
+      "scientific_task": "Recover missing stock-resume diagnostic; import completed V20 CLASS replay without recomputation",
+      "config": "q042_stock_diagnostic_contract_v21.json",
+      "scientific_spec": "q042_production_spec_v1.json",
+      "source_execution_commit": "d0f92c7f2ce53da32818244f8847f8e745e20c4f",
+      "result_artifacts": [
+        "q042-v21-<RUN_ID>-diagnostic-final"
+      ],
+      "science_status": "UNRESOLVED",
+      "supersedes": "Q042-STOCKDIAG-V20",
+      "reused_class_run_id": 37195728280,
+      "reused_class_artifact_id": 11300612265
     }
   },
   "registry_name": "Bubbleverse Program Registry",

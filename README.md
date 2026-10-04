@@ -85,9 +85,11 @@ The permanent launcher is `.github/workflows/00-bubbleverse-start.yml`. It dispa
 
 ### Q-042 bounded execution diagnosis
 
-`Q042-STOCKDIAG-V20` runs one isolated CamSpec/EDE/FULL stock resume (at most 240 minutes) and one exact CLASS error-point replay (at most 15 minutes). It preserves the V18 state, records in-memory versus durable progress and stops after the diagnostic. It does not restart the 20-cell production matrix, recompute BOBYQA, or provide a validated cosmological result.
+`Q042-STOCKDIAG-V21` repairs the V20 artifact-download directory error. It runs only the missing isolated CamSpec/EDE/FULL stock resume (at most 240 minutes), and imports the completed CLASS replay from V20 run 37195728280 after checking its exact artifact and record hashes. No CLASS replay is recomputed. V20 is retained as a historical broken execution target.
 
-After installation: **🚀 BUBBLEVERSE START → Q042-STOCKDIAG-V20 → Run workflow**. Return the diagnostic-final JSON, both diagnostic artifacts and `q042_execution_handoff_v20.md` to the Result Ingestion & Routing Engine. Q-042 remains `UNRESOLVED` until its frozen scientific gates pass.
+The diagnostic preserves the V18 state, records in-memory versus durable progress and stops. It does not restart the 20-cell production matrix, recompute BOBYQA, or provide a validated cosmological result.
+
+After installation: **🚀 BUBBLEVERSE START → Q042-STOCKDIAG-V21 → Run workflow**. Return the diagnostic-final JSON, both diagnostic artifacts and `q042_execution_handoff_v21.md` to the Result Ingestion & Routing Engine. Q-042 remains `UNRESOLVED` until its frozen scientific gates pass.
 
 The registry is the authoritative mapping between a program identifier and the workflow that is allowed to execute it.
 

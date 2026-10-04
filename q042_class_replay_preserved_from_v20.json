@@ -1,0 +1,62 @@
+{
+  "case_id": "NOT DOCUMENTED",
+  "diagnosis": "CLASS_EXCEPTION",
+  "execution_commit": "85518349123e012cce3f21f11800bd988ea5da42",
+  "final_result_gate": "UNRESOLVED",
+  "github_run_id": "37195728280",
+  "precision_changed": false,
+  "production_restart_authorized": false,
+  "program_id": "Q042-STOCKDIAG-V20",
+  "q": "Q-042",
+  "raw_result": {
+    "case_id": "NOT DOCUMENTED",
+    "class_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+    "classy_file": "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so",
+    "classy_version": "v3.2.2",
+    "elapsed_seconds": 7.412857328000001,
+    "exception": "\n\nError in Class: perturbations_init(L:1007) :error in perturbations_solve(ppr, pba, pth, ppt, index_md, index_ic, index_k, pppw[thread]);\n=>perturbations_solve(L:3245) :error in perturbations_find_approximation_switches(ppr, pba, pth, ppt, index_md, k, ppw, tau, ppt->tau_sampling[tau_actual_size-1], ppr->tol_tau_approx, interval_number, interval_number_of, interval_limit, interval_approx);\n=>perturbations_find_approximation_switches(L:3713) :error in perturbations_approximations(ppr, pba, pth, ppt, index_md, k, mid, ppw);\n=>perturbations_approximations(L:6217) :condition (tau_c < 0.) is true; tau_c = 1/kappa' should always be positive unless there is something wrong in the thermodynamics module. However you have here tau_c=-2.403414e+09 at z=5.663014e-02, conformal time=1.449787e+04 x_e=-1.174788e-03. (This could come from the interpolation of a too poorly sampled reionisation history?).\n",
+    "exception_type": "CosmoComputationError",
+    "execution_commit": "85518349123e012cce3f21f11800bd988ea5da42",
+    "github_run_id": "37195728280",
+    "parameters": {
+      "A_s": 1.6612992056613594e-09,
+      "H0": 73.1518764249673,
+      "N_ncdm": 1,
+      "N_ur": 2.0328,
+      "P_k_max_1/Mpc": 2.0,
+      "T_ncdm": 0.71611,
+      "l_max_scalars": 9001,
+      "lensing": "yes",
+      "m_ncdm": 0.06,
+      "n_s": 1.0712271414025623,
+      "non_linear": "hmcode",
+      "omega_b": 0.020721894362238032,
+      "omega_cdm": 0.10267093582571502,
+      "output": "lCl tCl tCl,pCl,lCl,mPk mPk pCl",
+      "tau_reio": 0.022146719553358576
+    },
+    "point_result": "CLASS_EXCEPTION",
+    "production_restart_authorized": false,
+    "program_id": "Q042-STOCKDIAG-V20",
+    "q": "Q-042",
+    "scientific_result": false
+  },
+  "runtime_entry_gate": "PASS",
+  "scientific_result": false,
+  "stop_at_error_policy_changed": false,
+  "worker": {
+    "command": [
+      "/opt/hostedtoolcache/Python/3.11.16/x64/bin/python",
+      "/home/runner/work/Bubbleverse/Bubbleverse/diagnostic_delivery/q042_stock_diagnostic_v20.py",
+      "class-worker",
+      "--config",
+      "/home/runner/work/Bubbleverse/Bubbleverse/diagnostic_delivery/q042_stock_diagnostic_contract_v20.json",
+      "--out",
+      "/home/runner/work/Bubbleverse/Bubbleverse/diag_results"
+    ],
+    "elapsed_seconds": 8.242184385000002,
+    "returncode": 0,
+    "soft_seconds": 900,
+    "timed_out": false
+  }
+}
