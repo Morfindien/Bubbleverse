@@ -1,0 +1,105 @@
+name: Bubbleverse Q042 V26 — bounded raw reference acquisition
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q042-reference-acquisition-v26
+  cancel-in-progress: false
+env:
+  CURRENT_Q: Q-042
+  PROGRAM_ID: Q042-REFACQ-V26
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Exact ID, immutable package and semantic documentation gates
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          test "$REQUESTED_PROGRAM_ID" = "$PROGRAM_ID"
+          python q042_reference_acquisition_v26.py static
+          python -m unittest discover -s . -p 'q042_reference_tests_v26.py' -v
+  acquisition:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Initialize finite failure accounting before cache access
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+          import q042_reference_acquisition_v26 as m
+          c=m.read(m.HERE/m.CONTRACT);run=os.environ['GITHUB_RUN_ID']
+          m.write('reference_acquisition/preflight_pending.json',dict(**m.identity(c,run),expected_branches=m.EXPECTED,status='CACHE_AND_NATIVE_PREFLIGHT_PENDING'))
+          PY
+      - name: Restore original cache only; never rebuild or overwrite it
+        timeout-minutes: 10
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - name: One preregistered campaign; preserve failures; no inference
+        timeout-minutes: 35
+        run: python q042_reference_acquisition_v26.py run --out reference_acquisition
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q042-v26-${{ github.run_id }}-raw-acquisition
+          path: reference_acquisition/**
+          if-no-files-found: error
+          retention-days: 30
+  collect:
+    needs: [static, acquisition]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: q042-v26-${{ github.run_id }}-raw-acquisition
+          path: collected
+      - name: Exact twelve-branch collection or explicit partial failure
+        run: python q042_reference_acquisition_v26.py collect --directory collected --out q042_reference_final_v26.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q042-v26-${{ github.run_id }}-diagnostic-final
+          path: |
+            q042_reference_final_v26.json
+            q042_reference_contract_v26.json
+            q042_reference_package_manifest_v26.json
+            q042_execution_handoff_reference_v26.md
+          if-no-files-found: error
+          retention-days: 30

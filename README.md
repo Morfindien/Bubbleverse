@@ -455,3 +455,15 @@ A fork or third-party modification is not an official Bubbleverse result unless 
 
 **Change the model when reality demands it.**
 
+
+## Q-042 V26 bounded raw reference acquisition
+
+`Q042-REFACQ-V26` is one isolated diagnostic target. Open **🚀 BUBBLEVERSE START**, enter that PROGRAM_ID and press **Run workflow**. The canonical launcher is `.github/workflows/00-bubbleverse-start.yml`; exact target resolution uses `bubbleverse_program_registry.json`. The internal target is `.github/workflows/q042-reference-acquisition-v26.yml`.
+
+The frozen `q042_reference_contract_v26.json` and byte-exact `q042_reference_point_v26.ini` define two fixed trials, RK4 and implicit midpoint, levels1/2/4:12 branches attempted once. The original cached CLASS source and binary must match their pinned identities; the binary is never rebuilt. A common original background/recombination prefix supplies conditional initial state. Isolated child processes implement the new stepping and preserve failures. No root search, spectra, optimizer, posterior, production restart, automatic retries or resume is authorized.
+
+Results are **RAW_NOT_QUALIFIED**, even when all twelve branches complete. Observed differences, point-sampled defects and same-spline optical depths do not establish an independent true history or downstream likelihood accuracy. Reporting completeness, numerical branch completeness and scientific qualification are separate gates.
+
+The worker has bounded call/time/storage budgets and a60-minute job limit. This finite target uses one worker; no long stateful chain, checkpoint or merge across different configurations is needed. Collection checks all twelve identities and artifact hashes. Raw nodes, defects, accepted entry/grid, logs and `q042_reference_worker_result_v26.json` are in `q042-v26-<run_id>-raw-acquisition`; the collected result is `q042-v26-<run_id>-diagnostic-final`. The complete received journal is retained verbatim in `q042_execution_handoff_reference_v26.md`; the contract carries source IDs and claim mappings. Return actual artifacts to Result Ingestion & Routing.
+
+V25, its hash failure and earlier scientific/technical history remain historical. V26 validates this mutable README semantically rather than against a prior campaign's README hash.
