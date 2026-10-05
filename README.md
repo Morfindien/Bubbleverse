@@ -83,15 +83,17 @@ It verifies the exact `PROGRAM_ID`, active status, Q identity and allowed workfl
 
 The permanent launcher is `.github/workflows/00-bubbleverse-start.yml`. It dispatches the registered target; that target validates its inputs and publishes its own results. Open the child run to inspect its outcome.
 
-### Q-042 bounded CLASS cause diagnosis
+### Q-042 bounded CLASS table-origin trace
 
-V22 run `37221166634` completed the single-rank durability diagnosis: complete state advanced 4051 → 4052, a new process restored 4052 and advanced to 4053. Its demonstrated finite task is complete; `Q042-DURABLE-V22` is marked `COMPLETED` in the launcher registry. The legacy import remains diagnostic and does not recover the historical RNG or posterior stack.
+V22 run `37221166634` completed its one-branch durability task (4051 → 4052 → 4053). V23 run `37264477494` completed original-binary table attribution: positive native nodes yield negative spline interpolation. Both finite diagnostic targets are `COMPLETED`; Q-042 remains `UNRESOLVED`.
 
-`Q042-CLASSCAUSE-V23` performs one frozen-point attribution of the preserved CLASS failure. It verifies the original CLASS commit and shared-object SHA-256, compiles a read-only native probe against that shared object, and records the actual precision, table nodes, stored derivatives and original interpolation. It initializes background and thermodynamics only; it does not replay the entire CMB calculation, change precision, run PolyChord or recompute BOBYQA. A matching original cache is required; a miss or hash mismatch stops the job.
+One local **source-equivalent** V24 observation found a NaN upper optical-depth reference, successful return and zero bisection iterations, leaving the lower history with z_reio=0. Its four table/probe products match V23 byte for byte. This local observation has not yet been corroborated inside the original shared object. The first origin of the upper trial's NaN is still unresolved; finer sampling is not an accepted repair.
 
-A local build from the frozen source already shows positive bracketing nodes and negative spline interpolation. This is separate from the pending original-binary verification and does not establish an accepted precision repair. Reference points and prediction/likelihood tolerances must be preregistered before any such candidate test. Q-042 remains `UNRESOLVED`; all 80 optimizer records, including two flag −3 failures, are preserved.
+`Q042-CLASSORIGIN-V24` performs exactly one frozen-point read-only boundary trace against the original CLASS commit and shared-object SHA-256. It restores the same original cache, checks the original binary, and records tau trials and low-redshift source rows without changing their inputs or return values. Inactive interposition, a cache miss, binary mismatch, incomplete trace or changed table products fails closed. No CLASS rebuild, precision/algorithm repair, full perturbation replay, PolyChord or BOBYQA starts are included. All 80 optimizer records, including two flag −3 failures, remain preserved.
 
-After installing the individual files and the supplied registry/README: **🚀 BUBBLEVERSE START → Q042-CLASSCAUSE-V23 → Run workflow**. Return both V23 artifacts and `q042_execution_handoff_v23.md` to the Result Ingestion & Routing Engine. No automatic continuation or production restart follows.
+Install the individually supplied V24 Python, C, JSON and handoff files at the repository root; put the workflow at `.github/workflows/q042-class-origin-v24.yml`; replace the registry and README together. Retain the existing V23 controller and tests unchanged. The permanent launcher remains `.github/workflows/00-bubbleverse-start.yml`; no installation helper is required.
+
+**🚀 BUBBLEVERSE START → Q042-CLASSORIGIN-V24 → Run workflow**. Return both V24 artifacts and `q042_execution_handoff_v24.md` to the Result Ingestion & Routing Engine. This trace does not authorize production restart or a scientific result.
 
 The registry is the authoritative mapping between a program identifier and the workflow that is allowed to execute it.
 

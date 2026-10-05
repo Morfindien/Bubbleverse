@@ -1,0 +1,308 @@
+{
+  "q": "Q-042",
+  "program_id": "Q042-CLASSORIGIN-V24",
+  "result_id": "R-Q042-V24-LOCAL-001",
+  "scope": "LOCAL_SOURCE_EQUIVALENT_NOT_ORIGINAL_CLASSY_BINARY",
+  "original_binary_corroborated": false,
+  "provenance": {
+    "scope": "LOCAL_SOURCE_EQUIVALENT_SHARED_LIBRARY_NOT_ORIGINAL_CLASSY_BINARY",
+    "returncode": 0,
+    "elapsed_seconds": 0.11418571600006544,
+    "observer_sha256": "00012c670d67ee399ca5e9834dc885670d4ee13f313898e5c770ef49fdd640a7",
+    "observational_library_sha256": "1c7eeb43605fde586908a6736df492e7ca91f0b861a032cf1acaa235b3da8812",
+    "distinct_cosmologies": 1,
+    "algorithm_or_precision_changed": false
+  },
+  "preregistered_observation": {
+    "compiled_core_algorithm_changed": false,
+    "events": [
+      "input reio_z_or_tau, requested tau, initial z_reio",
+      "tau-shooting entry/exit and return value",
+      "each original get_tau entry/exit, internal reio redshift/start and computed optical depth",
+      "first five low-redshift original source-row writes per trial",
+      "final th tau/z values and unchanged full table/probe CSVs"
+    ],
+    "instrumentation": "Native exported-function interposition; original functions called exactly once with unchanged arguments; read-only boundary observations. Local shared library built from existing pinned unmodified archive is explicitly source equivalent only.",
+    "maximum_distinct_cosmologies": 1,
+    "maximum_local_observational_executions": 1,
+    "maximum_original_binary_observational_executions": 1,
+    "maximum_trace_events": 256,
+    "new_bobyqa_starts": 0,
+    "nonfinite_policy": "Record NaN/Inf explicitly as strings with finite=false; never clip, replace or infer acceptance from them.",
+    "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+    "parameters": {
+      "A_s": 1.6612992056613594e-09,
+      "H0": 73.1518764249673,
+      "N_ncdm": 1,
+      "N_ur": 2.0328,
+      "P_k_max_1/Mpc": 2.0,
+      "T_ncdm": 0.71611,
+      "l_max_scalars": 9001,
+      "lensing": "yes",
+      "m_ncdm": 0.06,
+      "n_s": 1.0712271414025623,
+      "non_linear": "hmcode",
+      "omega_b": 0.020721894362238032,
+      "omega_cdm": 0.10267093582571502,
+      "output": "lCl tCl tCl,pCl,lCl,mPk mPk pCl",
+      "tau_reio": 0.022146719553358576
+    },
+    "parent_ingestion_sha256": "f813c5ba21262577b1986ffc65d73f52ab4d384bbde20bb57ac3a0775a59f4f2",
+    "precision_changed": false,
+    "production_restart_authorized": false,
+    "q": "Q-042",
+    "registered_utc": "2026-10-05T05:03:28.809562+00:00",
+    "runtime_seconds": 900,
+    "scientific_result": false,
+    "scope": "Background and thermodynamics only; no full perturbations or candidate repair.",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "stage": "FROZEN_TABLE_ORIGIN_OBSERVATION",
+    "stop_condition": "One bounded path trace, preserve unexpected outcomes, compare raw table/probe with V23, then stop. Exact-original-binary corroboration may be prepared, not automatically dispatched."
+  },
+  "summary": {
+    "trace_gate": "PASS",
+    "tau_bracket": [
+      "NaN",
+      9.168784610769948e-06
+    ],
+    "bracket_finite": false,
+    "bisection_iterations": 0,
+    "mechanism": "NONFINITE_BRACKET_WITH_ZERO_BISECTION_ITERATIONS",
+    "requested_tau": 0.022146719553358576,
+    "last_computed_tau": 9.168784610769948e-06,
+    "tau_exit": {
+      "event": "tau_exit",
+      "status": 0,
+      "fitted_z_reio": 0,
+      "last_computed_tau": 9.168784610769948e-06
+    },
+    "scientific_result": false,
+    "production_restart_authorized": false,
+    "class_blocker_resolved": false
+  },
+  "events": [
+    {
+      "event": "input",
+      "reio_z_or_tau": 1,
+      "tau_reio": 0.022146719553358576,
+      "initial_z_reio": 7.6711
+    },
+    {
+      "event": "tau_enter",
+      "requested_tau": 0.022146719553358576,
+      "optical_depth_tolerance": 0.0001,
+      "mz_ini": -50,
+      "mz_end": 0
+    },
+    {
+      "event": "source_row",
+      "trial": 1,
+      "status": 0,
+      "row": 4,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0.060006000600060005,
+      "xe": "NaN",
+      "x_noreio": "NaN",
+      "reio_start": 50
+    },
+    {
+      "event": "source_row",
+      "trial": 1,
+      "status": 0,
+      "row": 3,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0.045004500450045004,
+      "xe": "NaN",
+      "x_noreio": "NaN",
+      "reio_start": 50
+    },
+    {
+      "event": "source_row",
+      "trial": 1,
+      "status": 0,
+      "row": 2,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0.030003000300030003,
+      "xe": "NaN",
+      "x_noreio": "NaN",
+      "reio_start": 50
+    },
+    {
+      "event": "source_row",
+      "trial": 1,
+      "status": 0,
+      "row": 1,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0.015001500150015001,
+      "xe": "NaN",
+      "x_noreio": "NaN",
+      "reio_start": 50
+    },
+    {
+      "event": "source_row",
+      "trial": 1,
+      "status": 0,
+      "row": 0,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0,
+      "xe": "NaN",
+      "x_noreio": "NaN",
+      "reio_start": 50
+    },
+    {
+      "event": "get_tau",
+      "call": 1,
+      "status": 0,
+      "computed_tau": "NaN",
+      "reio_redshift": 46,
+      "reio_start": 50,
+      "first_conformal_times": [
+        14727.628681260345,
+        14666.310395228269,
+        14605.317403542786,
+        14544.654041920816
+      ],
+      "first_xe": [
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN"
+      ],
+      "first_dkappa": [
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN"
+      ],
+      "first_d3kappa": [
+        "NaN",
+        "NaN",
+        "NaN",
+        "NaN"
+      ]
+    },
+    {
+      "event": "source_row",
+      "trial": 2,
+      "status": 0,
+      "row": 4,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0.060006000600060005,
+      "xe": 0.0001801458046598678,
+      "x_noreio": 0.0001801458046598678,
+      "reio_start": 0
+    },
+    {
+      "event": "source_row",
+      "trial": 2,
+      "status": 0,
+      "row": 3,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0.045004500450045004,
+      "xe": 0.00018009787079076688,
+      "x_noreio": 0.00018009787079076688,
+      "reio_start": 0
+    },
+    {
+      "event": "source_row",
+      "trial": 2,
+      "status": 0,
+      "row": 2,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0.030003000300030003,
+      "xe": 0.00018005022490668433,
+      "x_noreio": 0.00018005022490668433,
+      "reio_start": 0
+    },
+    {
+      "event": "source_row",
+      "trial": 2,
+      "status": 0,
+      "row": 1,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0.015001500150015001,
+      "xe": 0.00018000287750818516,
+      "x_noreio": 0.00018000287750818516,
+      "reio_start": 0
+    },
+    {
+      "event": "source_row",
+      "trial": 2,
+      "status": 0,
+      "row": 0,
+      "ap_current": 6,
+      "index_ap_reio": 6,
+      "z": 0,
+      "xe": 0.6224239983258271,
+      "x_noreio": 0.00017995584140293954,
+      "reio_start": 0
+    },
+    {
+      "event": "get_tau",
+      "call": 2,
+      "status": 0,
+      "computed_tau": 9.168784610769948e-06,
+      "reio_redshift": 0,
+      "reio_start": 0,
+      "first_conformal_times": [
+        14727.628681260345,
+        14666.310395228269,
+        14605.317403542786,
+        14544.654041920816
+      ],
+      "first_xe": [
+        0.6224239983258271,
+        0.00018000287750818516,
+        0.00018005022490668433,
+        0.00018009787079076688
+      ],
+      "first_dkappa": [
+        2.244524050906386e-07,
+        6.687299133669835e-11,
+        6.888244943167676e-11,
+        7.092230376466335e-11
+      ],
+      "first_d3kappa": [
+        5.983733552987661e-11,
+        5.983733552987661e-11,
+        5.983733552987661e-11,
+        "NaN"
+      ]
+    },
+    {
+      "event": "tau_exit",
+      "status": 0,
+      "fitted_z_reio": 0,
+      "last_computed_tau": 9.168784610769948e-06
+    },
+    {
+      "event": "final",
+      "tau_calls": 1,
+      "get_tau_calls": 2,
+      "source_calls": 31668,
+      "trace_overflow": false
+    }
+  ],
+  "unchanged_v23_raw_hashes": {
+    "native_nodes.csv": "608828a202bf8a38032bd8d8019679b0929df6f05014ff7341e942fc4b333d63",
+    "native_extrema.csv": "e5dd3da47814a0c87d17a69bd0ed6ef655659c68c2930726b3d0adf19e86ad29",
+    "native_probe.json": "89937413c3660004f23d9a95ce368ca1cf1f418c85fcd67f1b3c0d81feb79151",
+    "native_meta.json": "489fcc2955cb2377486ad5c1c91cef5bb18d2aa4b604c5de87b021a62b032d50"
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "scientific_result": false,
+  "production_restart_authorized": false,
+  "new_bobyqa_starts": 0,
+  "precision_changed": false,
+  "final_result_gate": "UNRESOLVED",
+  "initial_cause_of_upper_trial_nan": "NOT ESTABLISHED"
+}

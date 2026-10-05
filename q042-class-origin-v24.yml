@@ -1,0 +1,94 @@
+name: Bubbleverse Q042 V24 — one frozen CLASS table-origin trace
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q042-class-origin-v24
+  cancel-in-progress: false
+env:
+  CURRENT_Q: Q-042
+  PROGRAM_ID: Q042-CLASSORIGIN-V24
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Exact ID, package, launcher and scientific context
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          test "$REQUESTED_PROGRAM_ID" = "$PROGRAM_ID"
+          python q042_class_origin_v24.py static
+          python -m unittest discover -s . -p 'q042_class_origin_tests_v24.py'
+          python -m unittest discover -s . -p 'q042_class_tests_v23.py'
+  class-origin:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Restore the original cache; use CLASS only and never rebuild its binary
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - name: One fixed point; read-only original tau-shooting and source-row boundaries
+        timeout-minutes: 18
+        run: python q042_class_origin_v24.py observe --out diag_results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q042-v24-${{ github.run_id }}-class-origin
+          path: diag_results/**
+          if-no-files-found: error
+          retention-days: 30
+  collect:
+    needs: [static, class-origin]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: q042-v24-${{ github.run_id }}-class-origin
+          path: collected
+      - name: Preserve exact completeness outcome; no science upgrade
+        run: python q042_class_origin_v24.py collect --out q042_class_origin_final_v24.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q042-v24-${{ github.run_id }}-diagnostic-final
+          path: |
+            q042_class_origin_final_v24.json
+            q042_class_origin_contract_v24.json
+            q042_execution_handoff_v24.md
+          if-no-files-found: error
+          retention-days: 30

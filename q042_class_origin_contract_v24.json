@@ -1,0 +1,345 @@
+{
+  "compiled_core_algorithm_changed": false,
+  "events": [
+    "input reio_z_or_tau, requested tau, initial z_reio",
+    "tau-shooting entry/exit and return value",
+    "each original get_tau entry/exit, internal reio redshift/start and computed optical depth",
+    "first five low-redshift original source-row writes per trial",
+    "final th tau/z values and unchanged full table/probe CSVs"
+  ],
+  "instrumentation": "Native exported-function interposition; original functions called exactly once with unchanged arguments; read-only boundary observations. Local shared library built from existing pinned unmodified archive is explicitly source equivalent only.",
+  "maximum_distinct_cosmologies": 1,
+  "maximum_local_observational_executions": 1,
+  "maximum_original_binary_observational_executions": 1,
+  "maximum_trace_events": 256,
+  "new_bobyqa_starts": 0,
+  "nonfinite_policy": "Record NaN/Inf explicitly as strings with finite=false; never clip, replace or infer acceptance from them.",
+  "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+  "parameters": {
+    "A_s": 1.6612992056613594e-09,
+    "H0": 73.1518764249673,
+    "N_ncdm": 1,
+    "N_ur": 2.0328,
+    "P_k_max_1/Mpc": 2.0,
+    "T_ncdm": 0.71611,
+    "l_max_scalars": 9001,
+    "lensing": "yes",
+    "m_ncdm": 0.06,
+    "n_s": 1.0712271414025623,
+    "non_linear": "hmcode",
+    "omega_b": 0.020721894362238032,
+    "omega_cdm": 0.10267093582571502,
+    "output": "lCl tCl tCl,pCl,lCl,mPk mPk pCl",
+    "tau_reio": 0.022146719553358576
+  },
+  "parent_ingestion_sha256": "f813c5ba21262577b1986ffc65d73f52ab4d384bbde20bb57ac3a0775a59f4f2",
+  "precision_changed": false,
+  "production_restart_authorized": false,
+  "q": "Q-042",
+  "registered_utc": "2026-10-05T05:03:28.809562+00:00",
+  "runtime_seconds": 900,
+  "scientific_result": false,
+  "scope": "Background and thermodynamics only; no full perturbations or candidate repair.",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "stage": "FROZEN_TABLE_ORIGIN_OBSERVATION",
+  "stop_condition": "One bounded path trace, preserve unexpected outcomes, compare raw table/probe with V23, then stop. Exact-original-binary corroboration may be prepared, not automatically dispatched.",
+  "program_id": "Q042-CLASSORIGIN-V24",
+  "case_id": "NOT DOCUMENTED",
+  "scientific_question": "Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?",
+  "original_scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+  "preserved_v23_result": {
+    "class_blocker_resolved": false,
+    "execution_commit": "89f7097a3fc0569a8e5664072f443baa799c22f9",
+    "execution_status": "DIAGNOSTIC_COMPLETE",
+    "final_result_gate": "UNRESOLVED",
+    "github_run_id": "37264477494",
+    "job_completeness_gate": "PASS",
+    "new_bobyqa_starts": 0,
+    "production_restart_authorized": false,
+    "program_id": "Q042-CLASSCAUSE-V23",
+    "q": "Q-042",
+    "read_errors": [],
+    "records": [
+      {
+        "binary_route": "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so",
+        "bracket": [
+          {
+            "d2dkappa_dz2": 9.967107188641577e-05,
+            "d2xe_dz2": 276.39527050586526,
+            "dkappa": 7.092230376466335e-11,
+            "xe": 0.00018009787079076688,
+            "z": 0.045004500450045004
+          },
+          {
+            "d2dkappa_dz2": -2.6706611672419924e-05,
+            "d2xe_dz2": -74.05988795236402,
+            "dkappa": 7.29925833323991e-11,
+            "xe": 0.0001801458046598678,
+            "z": 0.060006000600060005
+          }
+        ],
+        "causal_gate": "PASS",
+        "causal_statement": "Positive bracketing table nodes become negative in the original spline interpolation.",
+        "class_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+        "class_blocker_resolved": false,
+        "class_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "compiler_version": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "details": {
+          "dkappa": {
+            "diagnosis": "INTERPOLATION_OVERSHOOT",
+            "left_node": 7.092230376466335e-11,
+            "native_value": -4.1607461239669715e-10,
+            "reconstructed_value": -4.1607461239669715e-10,
+            "right_node": 7.29925833323991e-11,
+            "roundoff_bound": 9.46044138792552e-23
+          },
+          "xe": {
+            "diagnosis": "INTERPOLATION_OVERSHOOT",
+            "left_node": 0.00018009787079076688,
+            "native_value": -0.0011747871294220807,
+            "reconstructed_value": -0.0011747871294220807,
+            "right_node": 0.0001801458046598678,
+            "roundoff_bound": 2.6711566748010244e-16
+          }
+        },
+        "diagnostic_gate": "PASS",
+        "elapsed_seconds": 2.3302749659999904,
+        "execution_commit": "89f7097a3fc0569a8e5664072f443baa799c22f9",
+        "extrema_count": 20,
+        "files": {
+          "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "native.log": "86a89938096f62cfdd7c8378320bea08569d4ba9c78a4eee1df8e9929bd22f7c",
+          "native_extrema.csv": "e5dd3da47814a0c87d17a69bd0ed6ef655659c68c2930726b3d0adf19e86ad29",
+          "native_meta.json": "489fcc2955cb2377486ad5c1c91cef5bb18d2aa4b604c5de87b021a62b032d50",
+          "native_nodes.csv": "608828a202bf8a38032bd8d8019679b0929df6f05014ff7341e942fc4b333d63",
+          "native_probe.json": "89937413c3660004f23d9a95ce368ca1cf1f418c85fcd67f1b3c0d81feb79151",
+          "point.ini": "eabf2d50864f5cf8d4d0d6cca3ee11faba666ad1eb72eeea8742d180ced5afeb",
+          "q042_native_probe_v23": "14c9e5fa62175215ee1d48dfd17a5ae3b6852bdd38aa50986bbfa785a9bebaa3"
+        },
+        "final_result_gate": "UNRESOLVED",
+        "github_run_id": "37264477494",
+        "metadata": {
+          "active_spacing_override": false,
+          "precision_changed": false,
+          "reio_parametrization_enum": 1,
+          "reionization_sampling": 0.015,
+          "reionization_z_start_max": 50,
+          "schema": 1,
+          "th_size": 14,
+          "tt_size": 28333,
+          "z_reio": 0
+        },
+        "minimum_node_dkappa": 6.687299133669835e-11,
+        "minimum_node_xe": 0.00018000287750818516,
+        "native_compile_command": [
+          "gcc",
+          "-O2",
+          "-fopenmp",
+          "-I",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/include",
+          "-I",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/HyRec2020",
+          "-I",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/RecfastCLASS",
+          "-I",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/heating",
+          "/home/runner/work/Bubbleverse/Bubbleverse/q042_class_probe_v23.c",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so",
+          "-L/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+          "-lpython3.11",
+          "-Wl,-rpath,/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311",
+          "-Wl,-rpath,/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+          "-lm",
+          "-o",
+          "/home/runner/work/Bubbleverse/Bubbleverse/diag_results/q042_native_probe_v23"
+        ],
+        "native_executable_sha256": "14c9e5fa62175215ee1d48dfd17a5ae3b6852bdd38aa50986bbfa785a9bebaa3",
+        "new_bobyqa_starts": 0,
+        "original_perturbation_replayed": false,
+        "parameters": {
+          "A_s": 1.6612992056613594e-09,
+          "H0": 73.1518764249673,
+          "N_ncdm": 1,
+          "N_ur": 2.0328,
+          "P_k_max_1/Mpc": 2.0,
+          "T_ncdm": 0.71611,
+          "l_max_scalars": 9001,
+          "lensing": "yes",
+          "m_ncdm": 0.06,
+          "n_s": 1.0712271414025623,
+          "non_linear": "hmcode",
+          "omega_b": 0.020721894362238032,
+          "omega_cdm": 0.10267093582571502,
+          "output": "lCl tCl tCl,pCl,lCl,mPk mPk pCl",
+          "tau_reio": 0.022146719553358576
+        },
+        "precision_candidate_gate": "BLOCKED_MISSING_PREREGISTERED_REFERENCE_AND_PREDICTION_LIKELIHOOD_TOLERANCES",
+        "precision_changed": false,
+        "probe": {
+          "dkappa": -4.1607461239669715e-10,
+          "last_index": 3,
+          "method": "spline",
+          "reported_z_is_rounded": true,
+          "tau_c": -2403415085.1928744,
+          "xe": -0.0011747871294220807,
+          "z": 0.05663014
+        },
+        "production_restart_authorized": false,
+        "program_id": "Q042-CLASSCAUSE-V23",
+        "python_version": "3.11.16",
+        "q": "Q-042",
+        "reionization_range_minima": {
+          "dkappa": {
+            "value": -1.5269613608470832e-08,
+            "z": 0.020708287445616966
+          },
+          "xe": {
+            "value": -0.04235136072374732,
+            "z": 0.020708471926684516
+          }
+        },
+        "reported_redshift_precision": "Rounded original exception; not the exact unrounded perturbation query",
+        "scientific_result": false,
+        "source_tree_gate": "PASS",
+        "table_rows": 28333,
+        "thread_environment": {
+          "MKL_NUM_THREADS": "NOT DOCUMENTED",
+          "OMP_NUM_THREADS": "NOT DOCUMENTED",
+          "OPENBLAS_NUM_THREADS": "NOT DOCUMENTED"
+        }
+      }
+    ],
+    "scientific_result": false,
+    "technical_gate": "PASS"
+  },
+  "unchanged_v23_raw_hashes": {
+    "native_nodes.csv": "608828a202bf8a38032bd8d8019679b0929df6f05014ff7341e942fc4b333d63",
+    "native_extrema.csv": "e5dd3da47814a0c87d17a69bd0ed6ef655659c68c2930726b3d0adf19e86ad29",
+    "native_probe.json": "89937413c3660004f23d9a95ce368ca1cf1f418c85fcd67f1b3c0d81feb79151",
+    "native_meta.json": "489fcc2955cb2377486ad5c1c91cef5bb18d2aa4b604c5de87b021a62b032d50"
+  },
+  "preregistered_before_local_execution": {
+    "compiled_core_algorithm_changed": false,
+    "events": [
+      "input reio_z_or_tau, requested tau, initial z_reio",
+      "tau-shooting entry/exit and return value",
+      "each original get_tau entry/exit, internal reio redshift/start and computed optical depth",
+      "first five low-redshift original source-row writes per trial",
+      "final th tau/z values and unchanged full table/probe CSVs"
+    ],
+    "instrumentation": "Native exported-function interposition; original functions called exactly once with unchanged arguments; read-only boundary observations. Local shared library built from existing pinned unmodified archive is explicitly source equivalent only.",
+    "maximum_distinct_cosmologies": 1,
+    "maximum_local_observational_executions": 1,
+    "maximum_original_binary_observational_executions": 1,
+    "maximum_trace_events": 256,
+    "new_bobyqa_starts": 0,
+    "nonfinite_policy": "Record NaN/Inf explicitly as strings with finite=false; never clip, replace or infer acceptance from them.",
+    "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+    "parameters": {
+      "A_s": 1.6612992056613594e-09,
+      "H0": 73.1518764249673,
+      "N_ncdm": 1,
+      "N_ur": 2.0328,
+      "P_k_max_1/Mpc": 2.0,
+      "T_ncdm": 0.71611,
+      "l_max_scalars": 9001,
+      "lensing": "yes",
+      "m_ncdm": 0.06,
+      "n_s": 1.0712271414025623,
+      "non_linear": "hmcode",
+      "omega_b": 0.020721894362238032,
+      "omega_cdm": 0.10267093582571502,
+      "output": "lCl tCl tCl,pCl,lCl,mPk mPk pCl",
+      "tau_reio": 0.022146719553358576
+    },
+    "parent_ingestion_sha256": "f813c5ba21262577b1986ffc65d73f52ab4d384bbde20bb57ac3a0775a59f4f2",
+    "precision_changed": false,
+    "production_restart_authorized": false,
+    "q": "Q-042",
+    "registered_utc": "2026-10-05T05:03:28.809562+00:00",
+    "runtime_seconds": 900,
+    "scientific_result": false,
+    "scope": "Background and thermodynamics only; no full perturbations or candidate repair.",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "stage": "FROZEN_TABLE_ORIGIN_OBSERVATION",
+    "stop_condition": "One bounded path trace, preserve unexpected outcomes, compare raw table/probe with V23, then stop. Exact-original-binary corroboration may be prepared, not automatically dispatched."
+  },
+  "local_result_sha256": "c8c2be63d81ed712cb9131aeedb7ba8217bf5ea992197a1751dca64a7ef1142a",
+  "repository_inspected_commit": "89f7097a3fc0569a8e5664072f443baa799c22f9",
+  "sources": [
+    {
+      "artifact_id": 11311416350,
+      "id": "I-Q042-V22-001",
+      "retrieval": "User attachment; digest matched GitHub artifact metadata",
+      "sha256": "ad8a3a512ffb91585f18abe51325fc9b846b3fc44961d52bb268706edd84ba6d",
+      "title": "Actual V22 final result, contract and complete parent handoff",
+      "type": "BUBBLEVERSE TECHNICAL EVIDENCE",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37221166634"
+    },
+    {
+      "artifact_id": 11311052262,
+      "id": "I-Q042-V22-002",
+      "retrieval": "Read-only GitHub; archive verified before extraction",
+      "sha256": "7052ca92b727e3276a9233465096dc18bfc8d0949fff4f1e142a9e8a5f636210",
+      "title": "Actual raw V22 durability and compiled reference artifact",
+      "type": "BUBBLEVERSE TECHNICAL EVIDENCE",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37221166634/artifacts/11311052262"
+    },
+    {
+      "commit": "b5cf6998d76a12c6d4bd45464008bde5e85af8a4",
+      "id": "I-Q042-V22-003",
+      "retrieval": "Read-only GitHub run/job metadata and bounded-pilot log",
+      "title": "Actual V22 run and three successful jobs",
+      "type": "BUBBLEVERSE TECHNICAL EVIDENCE",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37221166634"
+    },
+    {
+      "bytes": 977597,
+      "id": "I-Q042-V22-004",
+      "retrieval": "Final artifact; V20 and V21 parent bytes independently matched",
+      "sha256": "e96d8cc76ef20615b239a81989559ed288f33161ba38d3ad3ac25fb824c72837",
+      "title": "Complete V22 execution handoff, including V21/V20/V19 history",
+      "type": "BUBBLEVERSE TECHNICAL EVIDENCE"
+    },
+    {
+      "file": "q042_ingestion_audit_v22.json",
+      "id": "I-Q042-V22-005",
+      "retrieval": "Local analysis of existing bytes",
+      "title": "This deterministic ingestion audit",
+      "type": "BUBBLEVERSE TECHNICAL EVIDENCE"
+    },
+    {
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "id": "K-Q042-V22-002",
+      "repository": "mwt5345/class_ede",
+      "retrieval": "Read-only GitHub at frozen commit",
+      "supported_claim": "Normal spline interpolation and reionization sampling table construction; candidate mechanism, not diagnosed cause",
+      "title": "Pinned CLASS thermodynamics.c",
+      "type": "OFFICIAL PRIMARY CODE",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/thermodynamics.c"
+    },
+    {
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "id": "K-Q042-V22-003",
+      "repository": "mwt5345/class_ede",
+      "retrieval": "Read-only GitHub at frozen commit",
+      "supported_claim": "Negative tau_c check and explicit poorly sampled interpolation hypothesis",
+      "title": "Pinned CLASS perturbations.c",
+      "type": "OFFICIAL PRIMARY CODE",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/perturbations.c"
+    },
+    {
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "id": "K-Q042-V22-005",
+      "repository": "mwt5345/class_ede",
+      "retrieval": "Read-only GitHub at frozen commit",
+      "supported_claim": "Source default reionization_sampling=0.015; actual runtime override must be recovered before choosing a numerical candidate",
+      "title": "Pinned CLASS include/precisions.h",
+      "type": "OFFICIAL PRIMARY CODE",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/include/precisions.h"
+    }
+  ],
+  "frozen_bobyqa_records": 80,
+  "original_binary_observation_status": "NOT YET EXECUTED",
+  "source_core_modifications_authorized": false
+}
