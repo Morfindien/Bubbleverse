@@ -2823,5 +2823,82 @@
         "I-Q042-EVENT28-DESIGN"
       ]
     }
+  },
+  "v28_fixture_maintenance": {
+    "revision": "fixture-runid-r1",
+    "date": "2026-10-05T19:07:48.852911+02:00",
+    "failed_run_evidence": {
+      "q": "Q-042",
+      "case_id": "NOT DOCUMENTED",
+      "scientific_question": "Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?",
+      "result_class": "RUN_FAILURE",
+      "scientific_result": false,
+      "result_status": "TECHNICAL_PREFLIGHT_FAILURE",
+      "program_id": "Q042-EVENTCELL-V28",
+      "run_id": "37344813050",
+      "execution_commit": "81eb5335ea5f4cbf5b61f5f2d28068ac96706676",
+      "job": "probes",
+      "artifact_id": 11359857587,
+      "archive_sha256": "ef9e8eeeba92e41094a303dcf51a34ddc38be0ea36084d188e8f90c9bedf1dfd",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37344813050",
+      "raw_members_sha256": {
+        "preflight_pending.json": "d63fe00f1cd9f7a531c1ee943eb49b852e132239021523f460f11acfdab56e72",
+        "adapter_fixture.log": "f3dc8eb85c266d990f2e8517614cc09c6a908a505769372c867b1cca561133ab",
+        "execution_failure.json": "29da0114c15ce302a96d9bb61f13d3705eed709fc73bb31b9634b8681f5d98c1",
+        "native_fixture.log": "ead2d69d2ab6dfd5c4aec6bb500b22a84e8e71e46ebe3bc9434f40b2fcf4ff34"
+      },
+      "raw_text": {
+        "preflight_pending.json": "{\n  \"q\": \"Q-042\",\n  \"case_id\": \"NOT DOCUMENTED\",\n  \"scientific_question\": \"Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?\",\n  \"program_id\": \"Q042-EVENTCELL-V28\",\n  \"run_id\": \"37344813050\",\n  \"config_sha256\": \"a4d3c5c4e6399b46cf8f9f448300ce435913815750db68c33f965ce3477cf094\",\n  \"original_scientific_spec_sha256\": \"41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c\",\n  \"result_status\": \"RAW_NOT_QUALIFIED\",\n  \"scientific_result\": false,\n  \"history_accuracy_qualified\": false,\n  \"prediction_likelihood_qualified\": false,\n  \"reference_truth_gate\": \"BLOCKED\",\n  \"final_result_gate\": \"UNRESOLVED\",\n  \"production_restart_authorized\": false,\n  \"expected_trials\": [\n    \"UPPER\",\n    \"LOWER\"\n  ],\n  \"status\": \"CACHE_AND_ORIGINAL_BINARY_PENDING\"\n}\n",
+        "adapter_fixture.log": "Q042_FROZEN_BODY_ADAPTER_FIXTURE=PASS controlled boundaries; no physical accuracy claim\n",
+        "execution_failure.json": "{\n  \"q\": \"Q-042\",\n  \"case_id\": \"NOT DOCUMENTED\",\n  \"scientific_question\": \"Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?\",\n  \"program_id\": \"Q042-EVENTCELL-V28\",\n  \"run_id\": \"37344813050\",\n  \"config_sha256\": \"a4d3c5c4e6399b46cf8f9f448300ce435913815750db68c33f965ce3477cf094\",\n  \"original_scientific_spec_sha256\": \"41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c\",\n  \"result_status\": \"RAW_NOT_QUALIFIED\",\n  \"scientific_result\": false,\n  \"history_accuracy_qualified\": false,\n  \"prediction_likelihood_qualified\": false,\n  \"reference_truth_gate\": \"BLOCKED\",\n  \"final_result_gate\": \"UNRESOLVED\",\n  \"production_restart_authorized\": false,\n  \"error\": \"CalledProcessError: Command '['/opt/hostedtoolcache/Python/3.11.16/x64/bin/python', '/home/runner/work/Bubbleverse/Bubbleverse/q042_event_tests_v28.py', 'native-fixture', '/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede']' returned non-zero exit status 1.\"\n}\n",
+        "native_fixture.log": "PACKAGE_GATE=PASS REGISTRY_GATE=PASS README_GATE=PASS LAUNCHER_GATE=PASS\nTraceback (most recent call last):\n  File \"/home/runner/work/Bubbleverse/Bubbleverse/q042_event_tests_v28.py\", line 97, in <module>\n    if len(sys.argv)>1 and sys.argv[1]=='native-fixture':native_fixture(sys.argv[2])\n                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/Bubbleverse/Bubbleverse/q042_event_tests_v28.py\", line 76, in native_fixture\n    target=tmp/'collected.json';assert m.collect(out,target)==0;result=m.read(target)\n                                       ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+      },
+      "root_cause": "The controlled C fixture and Python base hard-coded LOCAL; production collector correctly used inherited GITHUB_RUN_ID=37344813050 and rejected mismatched identities.",
+      "failure_site": "native_fixture -> assert m.collect(out,target)==0 -> RESULT_IDENTITY_GATE=FAIL",
+      "physical_interpretation": "No original-binary V28 cell result was produced. No model/physics falsification. Static and original-source derivative adapter fixture passed; failure occurred in the controlled test before scientific native compilation/execution."
+    },
+    "original_test_sha256": "61aae9d801cb50115dbf4d2868e608b3f35ef849f02ab499393620a97d4be8e3",
+    "new_test_sha256": "c241fdd7071eda998d311cb2199f47ba62452bd3f4c2bb63723fd61342eb738f",
+    "frozen_numerical_contract_sha256": "a4d3c5c4e6399b46cf8f9f448300ce435913815750db68c33f965ce3477cf094",
+    "original_physical_program_unchanged": true,
+    "new_sources": [
+      {
+        "id": "I-Q042-EVENT28-FIX-001",
+        "type": "BUBBLEVERSE INTERNAL TECHNICAL EXECUTION EVIDENCE",
+        "run_id": "37344813050",
+        "commit": "81eb5335ea5f4cbf5b61f5f2d28068ac96706676",
+        "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37344813050",
+        "artifact_id": 11359857587,
+        "archive_sha256": "ef9e8eeeba92e41094a303dcf51a34ddc38be0ea36084d188e8f90c9bedf1dfd",
+        "raw_members_sha256": {
+          "preflight_pending.json": "d63fe00f1cd9f7a531c1ee943eb49b852e132239021523f460f11acfdab56e72",
+          "adapter_fixture.log": "f3dc8eb85c266d990f2e8517614cc09c6a908a505769372c867b1cca561133ab",
+          "execution_failure.json": "29da0114c15ce302a96d9bb61f13d3705eed709fc73bb31b9634b8681f5d98c1",
+          "native_fixture.log": "ead2d69d2ab6dfd5c4aec6bb500b22a84e8e71e46ebe3bc9434f40b2fcf4ff34"
+        }
+      },
+      {
+        "id": "I-Q042-EVENT28-FIX-002",
+        "type": "BUBBLEVERSE INTERNAL IMPLEMENTATION / REGRESSION EVIDENCE",
+        "file": "q042_event_tests_v28.py",
+        "sha256": "c241fdd7071eda998d311cb2199f47ba62452bd3f4c2bb63723fd61342eb738f",
+        "validation_file": "q042_event_fixture_fix_validation_v28.json",
+        "scope": "Controlled local/CI identity regression only; actual scientific execution pending"
+      }
+    ],
+    "claim_to_source_map": {
+      "C-Q042-EVENT28-FIX-001": {
+        "claim": "Run37344813050 failed at controlled fixture collection because LOCAL differed from inherited GitHub run-id; real original-binary V28 endpoints were not generated.",
+        "sources": [
+          "I-Q042-EVENT28-FIX-001"
+        ]
+      },
+      "C-Q042-EVENT28-FIX-002": {
+        "claim": "Controlled fixture now uses the same environment-derived run-id as the unchanged strict collector. Local and GitHub-context regressions pass; unrelated identity remains rejected.",
+        "sources": [
+          "I-Q042-EVENT28-FIX-002"
+        ]
+      }
+    }
   }
 }

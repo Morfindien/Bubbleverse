@@ -19,7 +19,7 @@ static int controlled_derivs(double s,double*y,double*dy,void*workspace,ErrorMsg
  a->ptw->ptdw->x_noreio=y[2];a->ptw->ptdw->x_reio=y[2];return _SUCCESS_;
 }
 int main(int argc,char**argv){
- assert(argc==4);q042_dir=argv[1];q042_run="LOCAL";q042_config=argv[2];extra=atoi(argv[3]);q042_started=q042_now();q042_original_derivs=controlled_derivs;
+ assert(argc==4);q042_dir=argv[1];q042_run=getenv("GITHUB_RUN_ID");if(!q042_run)q042_run="LOCAL";q042_config=argv[2];extra=atoi(argv[3]);q042_started=q042_now();q042_original_derivs=controlled_derivs;
  struct thermodynamics th={0};struct precision pr={0};struct thermo_workspace w={0};struct thermo_diffeq_workspace d={0};struct thermo_vector v={0};struct thermohyrec hy={0};HYREC_DATA data={0};REC_COSMOPARAMS cosmo={0};struct thermo_reionization_parameters rp={0};double re[2]={0};
  pr.reionization_z_start_max=50;pr.reionization_start_factor=8;th.reionization_width=.5;th.helium_fullreio_redshift=3.5;th.helium_fullreio_width=.5;w.Tcmb=2.7255;w.ptdw=&d;w.ptrp=&rp;d.ptv=&v;d.phyrec=&hy;d.index_ap_reio=d.ap_current=7;v.ti_size=3;v.index_ti_D_Tmat=0;v.index_ti_x_He=1;v.index_ti_x_H=2;hy.data=&data;data.cosmo=&cosmo;rp.reionization_parameters=re;rp.index_re_reio_redshift=0;rp.index_re_reio_start=1;
  struct thermodynamics_parameters_and_workspace a={0};a.ppr=&pr;a.pth=&th;a.ptw=&w;
@@ -35,7 +35,7 @@ double rec_TLA_dxHIIdlna(REC_COSMOPARAMS*d,double xe,double xH,double nH,double 
 double rec_dxHIIdlna(HYREC_DATA*d,int m,double xe,double xH,double nH,double H,double TM,double TR,unsigned iz,double z){(void)iz;(void)z;d->error=0;return m==PEEBLES?rec_TLA_dxHIIdlna(d->cosmo,xe,xH,nH,H,TM,TR,1):rec_HMLA_dxHIIdlna(d,xe,xH,nH,H,TM,TR);}
 '''
 def native_fixture(root):
- root=Path(root).resolve();c=m.read(HERE/m.CONTRACT);base=m.identity(c,'LOCAL')
+ root=Path(root).resolve();c=m.read(HERE/m.CONTRACT);base=m.identity(c,os.environ.get('GITHUB_RUN_ID','LOCAL'))
  with tempfile.TemporaryDirectory() as tmp:
   tmp=Path(tmp);(tmp/'fixture.c').write_text(FIXTURE);(tmp/'original.c').write_text(ORIGINAL)
   flags=['gcc','-std=c99','-O2','-Wall','-Wextra','-Werror','-Wno-unused-function','-Wno-unused-parameter','-fno-fast-math','-ffp-contract=off','-I'+str(HERE)]
@@ -76,9 +76,22 @@ def native_fixture(root):
     target=tmp/'collected.json';assert m.collect(out,target)==0;result=m.read(target)
     assert len(result['stages'])==112 and len(result['nodes'])==28 and len(result['endpoints'])==6 and not result['scientific_result'] and not result['history_accuracy_qualified']
     assert result['provenance']['controlled_fixture_only'] and result['final_result_gate']=='UNRESOLVED'
+    assert result['run_id']==base['run_id']
+    manifest=m.read(out/'native_trial_manifest.json');bad=copy.deepcopy(manifest);bad['run_id']='UNRELATED-RUN'
+    m.write(out/'native_trial_manifest.json',bad);assert m.collect(out,target)==1
+    assert 'RESULT_IDENTITY_GATE=FAIL' in m.read(target)['error']
+    m.write(out/'native_trial_manifest.json',manifest)
     (out/'LOWER-RK4-L4_nodes.jsonl').unlink();assert m.collect(out,target)==1
     assert m.read(target)['technical_event_gate']=='FAIL'
  print('NATIVE_EVENT_FIXTURE_GATE=PASS six branches,112 stages, same-state restart, extra active event rejection and six corruption classes; controlled dependency only')
+def identity_regression(root):
+ for run_id in [None,'37344813050']:
+  env=os.environ.copy()
+  if run_id is None:env.pop('GITHUB_RUN_ID',None)
+  else:env['GITHUB_RUN_ID']=run_id
+  p=subprocess.run([sys.executable,str(HERE/'q042_event_tests_v28.py'),'native-fixture',str(Path(root).resolve())],env=env,capture_output=True,text=True,timeout=120)
+  if p.returncode:raise AssertionError('Native fixture run identity '+str(run_id)+': '+p.stdout+p.stderr)
+ print('RUN_IDENTITY_REGRESSION=PASS local and GitHub run-id; unrelated identity still rejected')
 class FiniteTests(unittest.TestCase):
  def test_endpoint_contamination_and_failed_rhs_are_caught_by_real_C_kernel(self):
   with tempfile.TemporaryDirectory() as tmp:
@@ -95,4 +108,5 @@ class FiniteTests(unittest.TestCase):
   self.assertFalse(a['LOWER']['end_y']['D_Tmat']['error_bound'])
 if __name__=='__main__':
  if len(sys.argv)>1 and sys.argv[1]=='native-fixture':native_fixture(sys.argv[2])
+ elif len(sys.argv)>1 and sys.argv[1]=='identity-regression':identity_regression(sys.argv[2])
  else:unittest.main()

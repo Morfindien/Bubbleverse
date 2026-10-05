@@ -489,3 +489,10 @@ Three jobs perform static/numerical tests, one bounded worker, and failure-aware
 Raw stages, accepted nodes and endpoints are in `q042-v28-<run_id>-raw-event-cell`; the final diagnostic is in `q042-v28-<run_id>-diagnostic-final`. `q042_event_final_v28.json` reports finite refinement and heuristic roundoff diagnostics. RAW_NOT_QUALIFIED, REFERENCE_TRUTH_GATE=BLOCKED and FINAL_RESULT_GATE=UNRESOLVED remain explicit. A local technical PASS does not qualify a history, prefix, tau root, predictions, likelihood or cosmological inference.
 
 `q042_event_contract_v28.json` preregisters the scope/tests/interpretation. `q042_execution_handoff_event_v28.md` preserves the complete received journal verbatim, and `q042_event_source_evidence_v28.json` carries the source register, claim map and V27 raw/provenance evidence. Return the raw and final diagnostic to Result Ingestion & Routing after this one pass, including unresolved or failed outcomes. Do not repeat V27, add L8/L16, or restart production.
+
+
+### V28 fixture identity correction (fixture-runid-r1)
+
+Run37344813050 stopped in the controlled test before any actual original-binary cell computation: the fixture used `LOCAL` while the strict collector expected GitHub's run-id. The fixture now inherits `GITHUB_RUN_ID`, falling back to `LOCAL` only outside Actions; unrelated identities remain rejected. Numerical physics,contract,program,workflow,registry and launcher are unchanged. The complete failure/provenance and journal update are in the current V28 handoff/source evidence.
+
+Install the corrected test,manifest,source evidence,full handoff and README together,then start a **new** `Q042-EVENTCELL-V28` run through **🚀 BUBBLEVERSE START**. `Re-run jobs` increments the attempt and is deliberately rejected by the unchanged no-retry controller. After one scientific pass,return raw and final artifacts to ingestion. Local implementation tests do not qualify physical/history accuracy.

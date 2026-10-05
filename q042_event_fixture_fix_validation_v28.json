@@ -1,0 +1,99 @@
+{
+  "q": "Q-042",
+  "case_id": "NOT DOCUMENTED",
+  "scientific_question": "Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?",
+  "date": "2026-10-05T17:09:10.817044+00:00",
+  "program_id": "Q042-EVENTCELL-V28",
+  "maintenance_revision": "fixture-runid-r1",
+  "failed_run_id": "37344813050",
+  "failed_execution_commit": "81eb5335ea5f4cbf5b61f5f2d28068ac96706676",
+  "result_class": "TECHNICAL_FIXTURE_FIX",
+  "checks_passed": 17,
+  "checks_failed": 0,
+  "checks": [
+    "Only controlled test/journal/evidence immutable hashes changed",
+    "All unchanged physical/native/controller/kernel/anchor/point/contract/workflow bytes preserve exact hashes",
+    "All current immutable hashes match",
+    "Numerical contract exactly preserves failed-run config",
+    "Unchanged canonical launcher",
+    "Unchanged registry43entries",
+    "Manifest registry entry unchanged",
+    "Complete existing V28 handoff remains verbatim once",
+    "All inherited57sources and full historical claim-map survive",
+    "Prior V28 internal source/claim records preserved",
+    "Actual failed raw log hashes match preserved text",
+    "README is differential append to deployed current README",
+    "Fresh verification q042_event_cell_v28.py static",
+    "Fresh verification -m unittest",
+    "Fresh verification q042_event_tests_v28.py identity-regression",
+    "Fresh verification q042_event_adapter_selftest_v28.py /workspace/scratch/b4bac693dba6/v25_class_headers",
+    "Changed launcher remains rejected"
+  ],
+  "red_phase": "Original fixture passed LOCAL but failed GITHUB_RUN_ID=37344813050 with strict RESULT_IDENTITY_GATE=FAIL. Verified against actual artifact11359857587 log.",
+  "green_phase": "Both real compiled fixture contexts pass; unrelated-run identity and missing node remain rejected.",
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/b4bac693dba6/fixture_fix_v28/work/q042_event_cell_v28.py",
+        "static"
+      ],
+      "exit_code": 0,
+      "stdout": "PACKAGE_GATE=PASS REGISTRY_GATE=PASS README_GATE=PASS LAUNCHER_GATE=PASS\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "/workspace/scratch/b4bac693dba6/fixture_fix_v28/work",
+        "-p",
+        "q042_event_tests_v28.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "PACKAGE_GATE=PASS REGISTRY_GATE=PASS README_GATE=PASS LAUNCHER_GATE=PASS\n",
+      "stderr": "test_endpoint_contamination_and_failed_rhs_are_caught_by_real_C_kernel (q042_event_tests_v28.FiniteTests.test_endpoint_contamination_and_failed_rhs_are_caught_by_real_C_kernel) ... ok\ntest_missing_artifact_writes_explicit_failure_and_never_scientific_success (q042_event_tests_v28.FiniteTests.test_missing_artifact_writes_explicit_failure_and_never_scientific_success) ... ok\ntest_no_forced_order_when_differences_below_roundoff_diagnostic (q042_event_tests_v28.FiniteTests.test_no_forced_order_when_differences_below_roundoff_diagnostic) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.094s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/b4bac693dba6/fixture_fix_v28/work/q042_event_tests_v28.py",
+        "identity-regression",
+        "/workspace/scratch/b4bac693dba6/v25_class_headers"
+      ],
+      "exit_code": 0,
+      "stdout": "RUN_IDENTITY_REGRESSION=PASS local and GitHub run-id; unrelated identity still rejected\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/b4bac693dba6/fixture_fix_v28/work/q042_event_adapter_selftest_v28.py",
+        "/workspace/scratch/b4bac693dba6/v25_class_headers"
+      ],
+      "exit_code": 0,
+      "stdout": "Q042_FROZEN_BODY_ADAPTER_FIXTURE=PASS controlled boundaries; no physical accuracy claim\n",
+      "stderr": ""
+    }
+  ],
+  "package_hashes": {
+    "q042_event_source_evidence_v28.json": "a2bdbda9e6a129f846af853dc8c200c7af2af4fde2007b6492bd4e6b2b3d5522",
+    "q042_event_manifest_v28.json": "61bbcd8dd96bbf4775cc9cc4d6e44ee4236e1ade292a2c029d1e12f16c846310",
+    "README.md": "b600285259ea35230f33dab688dca063fca5b5e5e867487f3209e26dfc4dcf86",
+    "q042_event_tests_v28.py": "c241fdd7071eda998d311cb2199f47ba62452bd3f4c2bb63723fd61342eb738f",
+    "q042_execution_handoff_event_v28.md": "09edf11ed4d82ac8415fc5f5b1681f1002af522ce2dab84a263ad1835dace8e2",
+    "MOBILE_FIX_V28.txt": "383116f7175638a130d45dcc2fc2e1b7cae235d2c807c17761b95637fe0c4779"
+  },
+  "scientific_contract_sha256": "a4d3c5c4e6399b46cf8f9f448300ce435913815750db68c33f965ce3477cf094",
+  "actual_original_binary_cell_result": "NOT YET COMPUTED",
+  "scientific_result": false,
+  "history_accuracy_qualified": false,
+  "final_result_gate": "UNRESOLVED",
+  "production_restart_authorized": false,
+  "github_files_changed": false,
+  "workflow_dispatched": false
+}
