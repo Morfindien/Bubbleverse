@@ -83,13 +83,15 @@ It verifies the exact `PROGRAM_ID`, active status, Q identity and allowed workfl
 
 The permanent launcher is `.github/workflows/00-bubbleverse-start.yml`. It dispatches the registered target; that target validates its inputs and publishes its own results. Open the child run to inspect its outcome.
 
-### Q-042 bounded durability diagnosis
+### Q-042 bounded CLASS cause diagnosis
 
-`Q042-DURABLE-V22` saves complete serial PolyChord state after a whole iteration, without changing compression, covariance, clustering or posterior-update cadence. It first requires a compiled interrupted/resumed reference with identical likelihood trajectories, evidence and posterior weights. It then runs at most one isolated CamSpec/EDE/FULL diagnostic branch: one new state publication and one genuine resume, sharing a single 240-minute compute budget in a 330-minute job.
+V22 run `37221166634` completed the single-rank durability diagnosis: complete state advanced 4051 → 4052, a new process restored 4052 and advanced to 4053. Its demonstrated finite task is complete; `Q042-DURABLE-V22` is marked `COMPLETED` in the launcher registry. The legacy import remains diagnostic and does not recover the historical RNG or posterior stack.
 
-The old V18 stock checkpoint has no recoverable historical RNG or pending posterior stack. Its import is explicitly diagnostic; V22 does not claim to restore that lost trajectory. The preserved CLASS failure remains an independent production blocker. All 80 BOBYQA records, including two flag −3 failures, remain unchanged. No optimizer starts, CLASS replay, production fan-out or automatic continuation are performed.
+`Q042-CLASSCAUSE-V23` performs one frozen-point attribution of the preserved CLASS failure. It verifies the original CLASS commit and shared-object SHA-256, compiles a read-only native probe against that shared object, and records the actual precision, table nodes, stored derivatives and original interpolation. It initializes background and thermodynamics only; it does not replay the entire CMB calculation, change precision, run PolyChord or recompute BOBYQA. A matching original cache is required; a miss or hash mismatch stops the job.
 
-After installation: **🚀 BUBBLEVERSE START → Q042-DURABLE-V22 → Run workflow**. Return the V22 diagnostic-final artifact, durability-diagnostic artifact and `q042_execution_handoff_v22.md` to the Result Ingestion & Routing Engine. Q-042 remains `UNRESOLVED`. V21 remains historical evidence for the durability failure.
+A local build from the frozen source already shows positive bracketing nodes and negative spline interpolation. This is separate from the pending original-binary verification and does not establish an accepted precision repair. Reference points and prediction/likelihood tolerances must be preregistered before any such candidate test. Q-042 remains `UNRESOLVED`; all 80 optimizer records, including two flag −3 failures, are preserved.
+
+After installing the individual files and the supplied registry/README: **🚀 BUBBLEVERSE START → Q042-CLASSCAUSE-V23 → Run workflow**. Return both V23 artifacts and `q042_execution_handoff_v23.md` to the Result Ingestion & Routing Engine. No automatic continuation or production restart follows.
 
 The registry is the authoritative mapping between a program identifier and the workflow that is allowed to execute it.
 
@@ -452,3 +454,4 @@ A fork or third-party modification is not an official Bubbleverse result unless 
 **Preserve the failures.**
 
 **Change the model when reality demands it.**
+

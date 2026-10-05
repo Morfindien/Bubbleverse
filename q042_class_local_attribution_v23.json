@@ -1,0 +1,132 @@
+{
+  "bracket": [
+    {
+      "d2dkappa_dz2": 9.967107188641577e-05,
+      "d2xe_dz2": 276.39527050586526,
+      "dkappa": 7.092230376466335e-11,
+      "xe": 0.00018009787079076688,
+      "z": 0.045004500450045004
+    },
+    {
+      "d2dkappa_dz2": -2.6706611672419924e-05,
+      "d2xe_dz2": -74.05988795236402,
+      "dkappa": 7.29925833323991e-11,
+      "xe": 0.0001801458046598678,
+      "z": 0.060006000600060005
+    }
+  ],
+  "causal_gate": "PASS",
+  "causal_statement": "Positive bracketing table nodes become negative in the original spline interpolation.",
+  "class_blocker_resolved": false,
+  "class_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "compile_command": [
+    "gcc",
+    "-O2",
+    "-fopenmp",
+    "-I",
+    "class_src/include",
+    "-I",
+    "class_src/external/HyRec2020",
+    "-I",
+    "class_src/external/RecfastCLASS",
+    "-I",
+    "class_src/external/heating",
+    "q042_class_probe_v23.c",
+    "class_src/libclass.a",
+    "-lm",
+    "-o",
+    "native_probe"
+  ],
+  "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "core_archive_sha256": "b22ccbb3d9b0314da13752f6e8cc83d1e0e3bf754a3833c13328ce339e4dfbdc",
+  "core_build_command": [
+    "make",
+    "-j2",
+    "libclass.a"
+  ],
+  "details": {
+    "dkappa": {
+      "diagnosis": "INTERPOLATION_OVERSHOOT",
+      "left_node": 7.092230376466335e-11,
+      "native_value": -4.1607461239669715e-10,
+      "reconstructed_value": -4.1607461239669715e-10,
+      "right_node": 7.29925833323991e-11,
+      "roundoff_bound": 9.46044138792552e-23
+    },
+    "xe": {
+      "diagnosis": "INTERPOLATION_OVERSHOOT",
+      "left_node": 0.00018009787079076688,
+      "native_value": -0.0011747871294220807,
+      "reconstructed_value": -0.0011747871294220807,
+      "right_node": 0.0001801458046598678,
+      "roundoff_bound": 2.6711566748010244e-16
+    }
+  },
+  "elapsed_seconds": "NOT DOCUMENTED",
+  "extrema_count": 20,
+  "files": {
+    "native.log": "86a89938096f62cfdd7c8378320bea08569d4ba9c78a4eee1df8e9929bd22f7c",
+    "native_extrema.csv": "e5dd3da47814a0c87d17a69bd0ed6ef655659c68c2930726b3d0adf19e86ad29",
+    "native_meta.json": "489fcc2955cb2377486ad5c1c91cef5bb18d2aa4b604c5de87b021a62b032d50",
+    "native_nodes.csv": "608828a202bf8a38032bd8d8019679b0929df6f05014ff7341e942fc4b333d63",
+    "native_probe.json": "89937413c3660004f23d9a95ce368ca1cf1f418c85fcd67f1b3c0d81feb79151",
+    "point.ini": "eabf2d50864f5cf8d4d0d6cca3ee11faba666ad1eb72eeea8742d180ced5afeb"
+  },
+  "interpretation_limits": [
+    "Immediate negative value is spline overshoot of positive bracketing nodes in a newly built pinned source implementation.",
+    "Origin of the sharp near-zero-redshift table change is not established.",
+    "No claim that finer spacing alone fixes the whole history.",
+    "Original shared-object SHA verification and native linkage remain unexecuted in GitHub.",
+    "No precision candidate or prediction/likelihood stability test was executed."
+  ],
+  "metadata": {
+    "active_spacing_override": false,
+    "precision_changed": false,
+    "reio_parametrization_enum": 1,
+    "reionization_sampling": 0.015,
+    "reionization_z_start_max": 50,
+    "schema": 1,
+    "th_size": 14,
+    "tt_size": 28333,
+    "z_reio": 0
+  },
+  "minimum_node_dkappa": 6.687299133669835e-11,
+  "minimum_node_xe": 0.00018000287750818516,
+  "native_executable_sha256": "414833da2355a7d34ba88e954b99bd2c8f1c7b3884a11ef837dbffb81f6c5787",
+  "new_bobyqa_starts": 0,
+  "original_perturbation_replayed": false,
+  "precision_candidate_gate": "BLOCKED_MISSING_PREREGISTERED_REFERENCE_AND_PREDICTION_LIKELIHOOD_TOLERANCES",
+  "precision_changed": false,
+  "probe": {
+    "dkappa": -4.1607461239669715e-10,
+    "last_index": 3,
+    "method": "spline",
+    "reported_z_is_rounded": true,
+    "tau_c": -2403415085.1928744,
+    "xe": -0.0011747871294220807,
+    "z": 0.05663014
+  },
+  "production_restart_authorized": false,
+  "program_id": "Q042-CLASSCAUSE-V23",
+  "q": "Q-042",
+  "reionization_range_minima": {
+    "dkappa": {
+      "value": -1.5269613608470832e-08,
+      "z": 0.020708287445616966
+    },
+    "xe": {
+      "value": -0.04235136072374732,
+      "z": 0.020708471926684516
+    }
+  },
+  "reported_redshift_precision": "Rounded original exception; not the exact unrounded perturbation query",
+  "science_status": "UNRESOLVED",
+  "scientific_result": false,
+  "scope": "LOCAL_SOURCE_EQUIVALENT_BUILD_NOT_ORIGINAL_CLASSY_BINARY",
+  "table_rows": 28333,
+  "thread_environment": {
+    "MKL_NUM_THREADS": "NOT DOCUMENTED",
+    "OMP_NUM_THREADS": "NOT DOCUMENTED",
+    "OPENBLAS_NUM_THREADS": "NOT DOCUMENTED"
+  }
+}

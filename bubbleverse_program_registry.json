@@ -1420,7 +1420,7 @@
     },
     "Q042-DURABLE-V22": {
       "q": "Q-042",
-      "status": "ACTIVE",
+      "status": "COMPLETED",
       "workflow_id": "q042-durable-v22.yml",
       "target_ref": "main",
       "program_version": "22",
@@ -1436,7 +1436,29 @@
       "science_status": "UNRESOLVED",
       "supersedes": "Q042-STOCKDIAG-V21",
       "new_bobyqa_starts": 0,
-      "production_restart_authorized": false
+      "production_restart_authorized": false,
+      "completion_run_id": 37221166634,
+      "completion_scope": "Single-rank complete-state durability diagnosis; science remains UNRESOLVED"
+    },
+    "Q042-CLASSCAUSE-V23": {
+      "q": "Q-042",
+      "status": "ACTIVE",
+      "workflow_id": "q042-class-cause-v23.yml",
+      "target_ref": "main",
+      "program_version": "23",
+      "workflow_version": "23",
+      "scientific_task": "One frozen-point original-binary thermodynamic table/interpolation attribution; no precision repair",
+      "config": "q042_class_contract_v23.json",
+      "created_date": "2026-10-05",
+      "technical_parent": "Q042-DURABLE-V22",
+      "source_execution_commit": "b5cf6998d76a12c6d4bd45464008bde5e85af8a4",
+      "science_status": "UNRESOLVED",
+      "production_restart_authorized": false,
+      "new_bobyqa_starts": 0,
+      "result_artifacts": [
+        "q042-v23-<RUN_ID>-class-cause",
+        "q042-v23-<RUN_ID>-diagnostic-final"
+      ]
     }
   },
   "registry_name": "Bubbleverse Program Registry",
