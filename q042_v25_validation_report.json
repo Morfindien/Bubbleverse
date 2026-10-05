@@ -1,0 +1,551 @@
+{
+  "q": "Q-042",
+  "program_id": "Q042-CLASSNAN-V25",
+  "date_time": "2026-10-05T11:02:12.114170+02:00",
+  "local_package_gate": "PASS",
+  "readme_gate": "PASS",
+  "launcher_gate": "PASS",
+  "repository_consistency_gate": "PASS",
+  "checks_passed": 85,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "name": "contract frozen before implementation and unchanged",
+      "status": "PASS",
+      "details": "2026-10-05T08:23:33.360617+00:00"
+    },
+    {
+      "name": "parent identity q042_result_ingestion_handoff_v24.md",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "parent identity q042_ingestion_decision_v24.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "parent identity q042_ingestion_audit_v24.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "complete received handoff retained byte-identically once",
+      "status": "PASS",
+      "details": {
+        "parent_bytes": 4479504,
+        "new_bytes": 4521787
+      }
+    },
+    {
+      "name": "exact scientific question and Q retained",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "science unchanged, one point, one observation",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen four-product baseline preserved",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_nan_v25.py",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_nan_probe_v25.c",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_nan_observers_v25.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_nan_contract_v25.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_nan_tests_v25.py",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_nan_native_selftest_v25.py",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_execution_handoff_v25.md",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest README.md",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest bubbleverse_program_registry.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_origin_v24.py",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_origin_contract_v24.json",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_diagnostic_v23.py",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_tests_v23.py",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042_class_origin_tests_v24.py",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "manifest q042-class-nan-v25.yml",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "permanent launcher unchanged",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "reused V24 controller unchanged",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "reused V23 controller unchanged",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "only V24 registry completion changed",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "exactly one new unique target",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "README differential only",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "real launcher resolver Q042-CLASSNAN-V25",
+      "status": "PASS",
+      "details": "PROGRAM_ID_GATE=PASS program_id=Q042-CLASSNAN-V25\nQ_IDENTITY_GATE=PASS q=Q-042\nLAUNCHER_GATE=PASS workflow_id=q042-class-nan-v25.yml\n"
+    },
+    {
+      "name": "launcher exact target output",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "real launcher resolver Q042-CLASSORIGIN-V24",
+      "status": "PASS",
+      "details": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "name": "real launcher resolver Q042-NONEXISTENT-V999",
+      "status": "PASS",
+      "details": "PROGRAM_ID_GATE=FAIL exact registry match not found\n"
+    },
+    {
+      "name": "real launcher resolver $(touch INJECTION_SHOULD_NOT_EXIST)",
+      "status": "PASS",
+      "details": "PROGRAM_ID_GATE=FAIL invalid identifier syntax\n"
+    },
+    {
+      "name": "real launcher resolver Q042-CLASSNAN-V25;echo bad",
+      "status": "PASS",
+      "details": "PROGRAM_ID_GATE=FAIL invalid identifier syntax\n"
+    },
+    {
+      "name": "launcher injection not executed",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "workflow input, versions, scope",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "finite sequential job structure",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "job and test bounds below hosted hard limit",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "no new core build or science dispatch",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "full repository search, no V25 duplicate",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/evolver_ndf15.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/growTable.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/background.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/perturbations.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/svnversion.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/trigonometric_integrals.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/precisions.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/evolver_rkck.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/transfer.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/fourier.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/hyperspherical.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/quadrature.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/hermite4_interpolation_csource.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/hermite6_interpolation_csource.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/arrays.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/common.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/class.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/macros_precision.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/primordial.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/parser.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/distortions.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/hermite3_interpolation_csource.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/harmonic.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/sparse.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/output.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/input.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/thermodynamics.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/dei_rkck.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header include/lensing.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header external/heating/injection.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header external/heating/noninjection.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header external/RecfastCLASS/wrap_recfast.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header external/HyRec2020/helium.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header external/HyRec2020/hyrectools.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header external/HyRec2020/wrap_hyrec.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header external/HyRec2020/hydrogen.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header external/HyRec2020/history.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "frozen header external/HyRec2020/energy_injection.h",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "38 frozen headers verified",
+      "status": "PASS",
+      "details": null
+    },
+    {
+      "name": "local command -m",
+      "status": "PASS",
+      "details": {
+        "stdout": "",
+        "stderr": "..........................\n----------------------------------------------------------------------\nRan 26 tests in 0.010s\n\nOK\n"
+      }
+    },
+    {
+      "name": "local command q042_class_nan_native_selftest_v25.py",
+      "status": "PASS",
+      "details": {
+        "stdout": "NATIVE_OBSERVER_SELFTEST=PASS (controlled dependency; no cosmology executed)\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "local command -fsyntax-only",
+      "status": "PASS",
+      "details": {
+        "stdout": "",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "local command q042_class_nan_v25.py",
+      "status": "PASS",
+      "details": {
+        "stdout": "PACKAGE_GATE=PASS LAUNCHER_GATE=PASS README_GATE=PASS REPOSITORY_CONSISTENCY_GATE=PASS\n",
+        "stderr": ""
+      }
+    },
+    {
+      "name": "missing artifact collector preserves technical failure",
+      "status": "PASS",
+      "details": {
+        "case_id": "NOT DOCUMENTED",
+        "class_blocker_resolved": false,
+        "compiled_core_algorithm_changed": false,
+        "contract_sha256": "a01acf539e0654505327ae2ace5aae6ef3001e886f576aa24469630d37944511",
+        "execution_commit": "NOT DOCUMENTED",
+        "execution_status": "DIAGNOSTIC_INCOMPLETE",
+        "final_result_gate": "UNRESOLVED",
+        "github_run_id": "LOCAL",
+        "job_completeness_gate": "FAIL",
+        "new_bobyqa_starts": 0,
+        "original_scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+        "precision_changed": false,
+        "production_restart_authorized": false,
+        "program_id": "Q042-CLASSNAN-V25",
+        "q": "Q-042",
+        "read_errors": [],
+        "records": [],
+        "scientific_question": "Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?",
+        "scientific_result": false,
+        "technical_gate": "FAIL"
+      }
+    }
+  ],
+  "command_evidence": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        ".",
+        "-p",
+        "*tests_v*.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "..........................\n----------------------------------------------------------------------\nRan 26 tests in 0.010s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python",
+        "q042_class_nan_native_selftest_v25.py",
+        "/workspace/scratch/b4bac693dba6/v25_class_headers"
+      ],
+      "returncode": 0,
+      "stdout": "NATIVE_OBSERVER_SELFTEST=PASS (controlled dependency; no cosmology executed)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "gcc",
+        "-fsyntax-only",
+        "-Wall",
+        "-Wextra",
+        "-Wno-unused-parameter",
+        "-I",
+        "/workspace/scratch/b4bac693dba6/v25_class_headers/include",
+        "-I",
+        "/workspace/scratch/b4bac693dba6/v25_class_headers/external/HyRec2020",
+        "-I",
+        "/workspace/scratch/b4bac693dba6/v25_class_headers/external/RecfastCLASS",
+        "-I",
+        "/workspace/scratch/b4bac693dba6/v25_class_headers/external/heating",
+        "q042_class_nan_probe_v25.c"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "q042_class_nan_v25.py",
+        "static",
+        "--root",
+        "."
+      ],
+      "returncode": 0,
+      "stdout": "PACKAGE_GATE=PASS LAUNCHER_GATE=PASS README_GATE=PASS REPOSITORY_CONSISTENCY_GATE=PASS\n",
+      "stderr": ""
+    }
+  ],
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "compiler_version": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "frozen_contract_sha256": "a01acf539e0654505327ae2ace5aae6ef3001e886f576aa24469630d37944511",
+  "manifest_sha256": "be26e6e715ff54a0f192650f7f8d5ea5f48bc05e41f454fa20f7589c1a514c22",
+  "handoff_sha256": "3e2dc2c5686b24f2f1d22af9ebd4f3a1323eedc59c627e5ad606328a110d4a13",
+  "repository_inspected_commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+  "live_repository_changed": false,
+  "live_workflow_dispatched": false,
+  "actual_computed_v25_result": "NOT YET COMPUTED",
+  "live_v25_tests_status": "NOT YET EXECUTED",
+  "scientific_result": false,
+  "final_result_gate": "UNRESOLVED",
+  "production_restart_authorized": false,
+  "class_blocker_resolved": false,
+  "new_bobyqa_starts": 0,
+  "source_header_count": 38,
+  "scope": "Local new/retained question-specific behavior tests, actual controlled native wrapper, exact launcher resolver, static source/manifest/registry/README identity. Not the full historical repository test suite and not a CLASS cosmology run."
+}

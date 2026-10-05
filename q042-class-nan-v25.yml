@@ -1,0 +1,101 @@
+name: Bubbleverse Q042 V25 — one bounded upstream CLASS nonfinite trace
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q042-class-nan-v25
+  cancel-in-progress: false
+env:
+  CURRENT_Q: Q-042
+  PROGRAM_ID: Q042-CLASSNAN-V25
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Exact ID, package, launcher and scientific context
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          test "$REQUESTED_PROGRAM_ID" = "$PROGRAM_ID"
+          python q042_class_nan_v25.py static
+          python -m unittest discover -s . -p 'q042_class_nan_tests_v25.py'
+          python -m unittest discover -s . -p 'q042_class_tests_v23.py'
+  class-nan:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Restore the original cache; use CLASS only and never rebuild its binary
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - name: Finite observer self-test; controlled boundary dependency, no cosmology
+        timeout-minutes: 2
+        run: |
+          set -o pipefail
+          python q042_class_nan_native_selftest_v25.py external/class_ede 2>&1 | tee observer_selftest_v25.log
+      - name: One fixed point; original upstream boundary observation
+        timeout-minutes: 18
+        run: python q042_class_nan_v25.py observe --out diag_results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q042-v25-${{ github.run_id }}-class-nan
+          path: |
+            diag_results/**
+            observer_selftest_v25.log
+          if-no-files-found: error
+          retention-days: 30
+  collect:
+    needs: [static, class-nan]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: q042-v25-${{ github.run_id }}-class-nan
+          path: collected
+      - name: Preserve exact completeness outcome; no science upgrade
+        run: python q042_class_nan_v25.py collect --out q042_class_nan_final_v25.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q042-v25-${{ github.run_id }}-diagnostic-final
+          path: |
+            q042_class_nan_final_v25.json
+            q042_class_nan_contract_v25.json
+            q042_execution_handoff_v25.md
+          if-no-files-found: error
+          retention-days: 30

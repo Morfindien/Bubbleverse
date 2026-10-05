@@ -1465,7 +1465,7 @@
     },
     "Q042-CLASSORIGIN-V24": {
       "q": "Q-042",
-      "status": "ACTIVE",
+      "status": "COMPLETED",
       "workflow_id": "q042-class-origin-v24.yml",
       "target_ref": "main",
       "program_version": 24,
@@ -1481,6 +1481,29 @@
       "result_artifacts": [
         "q042-v24-<RUN_ID>-class-origin",
         "q042-v24-<RUN_ID>-diagnostic-final"
+      ],
+      "completion_run_id": 37275520455,
+      "completion_commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+      "completion_scope": "Original-binary NaN bracket / zero bisection table-origin observation complete; scientific Q unresolved"
+    },
+    "Q042-CLASSNAN-V25": {
+      "q": "Q-042",
+      "status": "ACTIVE",
+      "workflow_id": "q042-class-nan-v25.yml",
+      "target_ref": "main",
+      "program_version": 25,
+      "workflow_version": 25,
+      "scientific_task": "One frozen-point original-binary upstream nonfinite boundary observation; no repair or production restart",
+      "config": "q042_class_nan_contract_v25.json",
+      "created_date": "2026-10-05",
+      "technical_parent": "Q042-CLASSORIGIN-V24",
+      "source_execution_commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+      "science_status": "UNRESOLVED",
+      "production_restart_authorized": false,
+      "new_bobyqa_starts": 0,
+      "result_artifacts": [
+        "q042-v25-<RUN_ID>-class-nan",
+        "q042-v25-<RUN_ID>-diagnostic-final"
       ]
     }
   },

@@ -1,0 +1,541 @@
+{
+  "q": "Q-042",
+  "case_id": "NOT DOCUMENTED",
+  "scientific_question": "Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?",
+  "program_id": "Q042-CLASSNAN-V25",
+  "stage": "FIRST_OBSERVED_UPSTREAM_NONFINITE_BOUNDARY",
+  "registered_utc": "2026-10-05T08:23:33.360617+00:00",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+  "original_scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+  "parameters": {
+    "A_s": 1.6612992056613594e-09,
+    "H0": 73.1518764249673,
+    "N_ncdm": 1,
+    "N_ur": 2.0328,
+    "P_k_max_1/Mpc": 2.0,
+    "T_ncdm": 0.71611,
+    "l_max_scalars": 9001,
+    "lensing": "yes",
+    "m_ncdm": 0.06,
+    "n_s": 1.0712271414025623,
+    "non_linear": "hmcode",
+    "omega_b": 0.020721894362238032,
+    "omega_cdm": 0.10267093582571502,
+    "output": "lCl tCl tCl,pCl,lCl,mPk mPk pCl",
+    "tau_reio": 0.022146719553358576
+  },
+  "runtime_seconds": 900,
+  "compile_seconds": 120,
+  "maximum_distinct_cosmologies": 1,
+  "maximum_original_binary_observational_executions": 1,
+  "maximum_trace_events": 256,
+  "precision_changed": false,
+  "compiled_core_algorithm_changed": false,
+  "production_restart_authorized": false,
+  "scientific_result": false,
+  "new_bobyqa_starts": 0,
+  "repair_execution_authorized": false,
+  "scope": "Read-only original-binary background/thermodynamics at the V24 point. No perturbations, likelihood, samplers, optimizers or candidate repair.",
+  "instrumentation": "Retain V24 interposition and table export. Add read-only derivative/ionization/reionization/HyRec function boundary snapshots. Preserve arguments, call count and returns.",
+  "observed_boundaries": [
+    "thermodynamics_derivs",
+    "thermodynamics_ionization_fractions",
+    "thermodynamics_reionization_function",
+    "hyrec_dx_H_dz",
+    "hyrec_dx_He_dz"
+  ],
+  "causal_policy": "First OBSERVED nonfinite boundary is not asserted to be the globally first arithmetic NaN. A finite-in/nonfinite-out observation localizes a boundary, not its internal operation.",
+  "nonfinite_policy": "Explicit NaN/Infinity strings with per-snapshot inputs_finite and outputs_finite. Do not clip, replace or reject a trace because its observed outcome is unexpected.",
+  "initial_and_first_nonfinite_snapshots": true,
+  "previous_finite_same_boundary_and_phase": true,
+  "baseline_product_policy": "Require all four V23/V24 table/probe product hashes to match; mismatch invalidates observational equivalence but raw mismatched products remain preserved.",
+  "unchanged_v23_raw_hashes": {
+    "native_nodes.csv": "608828a202bf8a38032bd8d8019679b0929df6f05014ff7341e942fc4b333d63",
+    "native_extrema.csv": "e5dd3da47814a0c87d17a69bd0ed6ef655659c68c2930726b3d0adf19e86ad29",
+    "native_probe.json": "89937413c3660004f23d9a95ce368ca1cf1f418c85fcd67f1b3c0d81feb79151",
+    "native_meta.json": "489fcc2955cb2377486ad5c1c91cef5bb18d2aa4b604c5de87b021a62b032d50"
+  },
+  "preserved_v24_result": {
+    "class_blocker_resolved": false,
+    "execution_commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+    "execution_status": "DIAGNOSTIC_COMPLETE",
+    "final_result_gate": "UNRESOLVED",
+    "github_run_id": "37275520455",
+    "job_completeness_gate": "PASS",
+    "new_bobyqa_starts": 0,
+    "precision_changed": false,
+    "production_restart_authorized": false,
+    "program_id": "Q042-CLASSORIGIN-V24",
+    "q": "Q-042",
+    "read_errors": [],
+    "records": [
+      {
+        "binary_route": "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so",
+        "bisection_iterations": 0,
+        "bracket_finite": false,
+        "class_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+        "class_blocker_resolved": false,
+        "class_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "compile_command": [
+          "gcc",
+          "-O2",
+          "-fopenmp",
+          "-rdynamic",
+          "-I",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/include",
+          "-I",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/HyRec2020",
+          "-I",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/RecfastCLASS",
+          "-I",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/heating",
+          "/home/runner/work/Bubbleverse/Bubbleverse/q042_class_origin_probe_v24.c",
+          "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so",
+          "-L/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+          "-lpython3.11",
+          "-Wl,-rpath,/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311",
+          "-Wl,-rpath,/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+          "-ldl",
+          "-lm",
+          "-o",
+          "/home/runner/work/Bubbleverse/Bubbleverse/diag_results/q042_native_origin_probe_v24"
+        ],
+        "compiler_version": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+        "elapsed_seconds": 0.978830421000005,
+        "events": [
+          {
+            "event": "input",
+            "initial_z_reio": 7.6711,
+            "reio_z_or_tau": 1,
+            "tau_reio": 0.022146719553358576
+          },
+          {
+            "event": "tau_enter",
+            "mz_end": 0,
+            "mz_ini": -50,
+            "optical_depth_tolerance": 0.0001,
+            "requested_tau": 0.022146719553358576
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 50,
+            "row": 4,
+            "status": 0,
+            "trial": 1,
+            "x_noreio": "NaN",
+            "xe": "NaN",
+            "z": 0.060006000600060005
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 50,
+            "row": 3,
+            "status": 0,
+            "trial": 1,
+            "x_noreio": "NaN",
+            "xe": "NaN",
+            "z": 0.045004500450045004
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 50,
+            "row": 2,
+            "status": 0,
+            "trial": 1,
+            "x_noreio": "NaN",
+            "xe": "NaN",
+            "z": 0.030003000300030003
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 50,
+            "row": 1,
+            "status": 0,
+            "trial": 1,
+            "x_noreio": "NaN",
+            "xe": "NaN",
+            "z": 0.015001500150015001
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 50,
+            "row": 0,
+            "status": 0,
+            "trial": 1,
+            "x_noreio": "NaN",
+            "xe": "NaN",
+            "z": 0
+          },
+          {
+            "call": 1,
+            "computed_tau": "NaN",
+            "event": "get_tau",
+            "first_conformal_times": [
+              14727.628681260345,
+              14666.310395228269,
+              14605.317403542786,
+              14544.654041920816
+            ],
+            "first_d3kappa": [
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN"
+            ],
+            "first_dkappa": [
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN"
+            ],
+            "first_xe": [
+              "NaN",
+              "NaN",
+              "NaN",
+              "NaN"
+            ],
+            "reio_redshift": 46,
+            "reio_start": 50,
+            "status": 0
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 0,
+            "row": 4,
+            "status": 0,
+            "trial": 2,
+            "x_noreio": 0.0001801458046598678,
+            "xe": 0.0001801458046598678,
+            "z": 0.060006000600060005
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 0,
+            "row": 3,
+            "status": 0,
+            "trial": 2,
+            "x_noreio": 0.00018009787079076688,
+            "xe": 0.00018009787079076688,
+            "z": 0.045004500450045004
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 0,
+            "row": 2,
+            "status": 0,
+            "trial": 2,
+            "x_noreio": 0.00018005022490668433,
+            "xe": 0.00018005022490668433,
+            "z": 0.030003000300030003
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 0,
+            "row": 1,
+            "status": 0,
+            "trial": 2,
+            "x_noreio": 0.00018000287750818516,
+            "xe": 0.00018000287750818516,
+            "z": 0.015001500150015001
+          },
+          {
+            "ap_current": 6,
+            "event": "source_row",
+            "index_ap_reio": 6,
+            "reio_start": 0,
+            "row": 0,
+            "status": 0,
+            "trial": 2,
+            "x_noreio": 0.00017995584140293954,
+            "xe": 0.6224239983258271,
+            "z": 0
+          },
+          {
+            "call": 2,
+            "computed_tau": 9.168784610769948e-06,
+            "event": "get_tau",
+            "first_conformal_times": [
+              14727.628681260345,
+              14666.310395228269,
+              14605.317403542786,
+              14544.654041920816
+            ],
+            "first_d3kappa": [
+              5.983733552987661e-11,
+              5.983733552987661e-11,
+              5.983733552987661e-11,
+              "NaN"
+            ],
+            "first_dkappa": [
+              2.244524050906386e-07,
+              6.687299133669835e-11,
+              6.888244943167676e-11,
+              7.092230376466335e-11
+            ],
+            "first_xe": [
+              0.6224239983258271,
+              0.00018000287750818516,
+              0.00018005022490668433,
+              0.00018009787079076688
+            ],
+            "reio_redshift": 0,
+            "reio_start": 0,
+            "status": 0
+          },
+          {
+            "event": "tau_exit",
+            "fitted_z_reio": 0,
+            "last_computed_tau": 9.168784610769948e-06,
+            "status": 0
+          },
+          {
+            "event": "final",
+            "get_tau_calls": 2,
+            "source_calls": 31668,
+            "tau_calls": 1,
+            "trace_overflow": false
+          }
+        ],
+        "execution_commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+        "files": {
+          "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "native.log": "86a89938096f62cfdd7c8378320bea08569d4ba9c78a4eee1df8e9929bd22f7c",
+          "native_extrema.csv": "e5dd3da47814a0c87d17a69bd0ed6ef655659c68c2930726b3d0adf19e86ad29",
+          "native_meta.json": "489fcc2955cb2377486ad5c1c91cef5bb18d2aa4b604c5de87b021a62b032d50",
+          "native_nodes.csv": "608828a202bf8a38032bd8d8019679b0929df6f05014ff7341e942fc4b333d63",
+          "native_probe.json": "89937413c3660004f23d9a95ce368ca1cf1f418c85fcd67f1b3c0d81feb79151",
+          "native_trace.jsonl": "31a3f4ae2b0f285d9c5ddccb44420746efd394d91f626564ad35725276a3e945",
+          "point.ini": "eabf2d50864f5cf8d4d0d6cca3ee11faba666ad1eb72eeea8742d180ced5afeb",
+          "q042_native_origin_probe_v24": "ac50798134b481771cce83c02cbfc623d0a12f7534c4ca9b76c281848d34369e"
+        },
+        "final_result_gate": "UNRESOLVED",
+        "github_run_id": "37275520455",
+        "last_computed_tau": 9.168784610769948e-06,
+        "mechanism": "NONFINITE_BRACKET_WITH_ZERO_BISECTION_ITERATIONS",
+        "native_executable_sha256": "ac50798134b481771cce83c02cbfc623d0a12f7534c4ca9b76c281848d34369e",
+        "native_inspection": {
+          "bracket": [
+            {
+              "d2dkappa_dz2": 9.967107188641577e-05,
+              "d2xe_dz2": 276.39527050586526,
+              "dkappa": 7.092230376466335e-11,
+              "xe": 0.00018009787079076688,
+              "z": 0.045004500450045004
+            },
+            {
+              "d2dkappa_dz2": -2.6706611672419924e-05,
+              "d2xe_dz2": -74.05988795236402,
+              "dkappa": 7.29925833323991e-11,
+              "xe": 0.0001801458046598678,
+              "z": 0.060006000600060005
+            }
+          ],
+          "causal_gate": "PASS",
+          "causal_statement": "Positive bracketing table nodes become negative in the original spline interpolation.",
+          "class_blocker_resolved": false,
+          "details": {
+            "dkappa": {
+              "diagnosis": "INTERPOLATION_OVERSHOOT",
+              "left_node": 7.092230376466335e-11,
+              "native_value": -4.1607461239669715e-10,
+              "reconstructed_value": -4.1607461239669715e-10,
+              "right_node": 7.29925833323991e-11,
+              "roundoff_bound": 9.46044138792552e-23
+            },
+            "xe": {
+              "diagnosis": "INTERPOLATION_OVERSHOOT",
+              "left_node": 0.00018009787079076688,
+              "native_value": -0.0011747871294220807,
+              "reconstructed_value": -0.0011747871294220807,
+              "right_node": 0.0001801458046598678,
+              "roundoff_bound": 2.6711566748010244e-16
+            }
+          },
+          "extrema_count": 20,
+          "metadata": {
+            "active_spacing_override": false,
+            "precision_changed": false,
+            "reio_parametrization_enum": 1,
+            "reionization_sampling": 0.015,
+            "reionization_z_start_max": 50,
+            "schema": 1,
+            "th_size": 14,
+            "tt_size": 28333,
+            "z_reio": 0
+          },
+          "minimum_node_dkappa": 6.687299133669835e-11,
+          "minimum_node_xe": 0.00018000287750818516,
+          "original_perturbation_replayed": false,
+          "precision_candidate_gate": "BLOCKED_MISSING_PREREGISTERED_REFERENCE_AND_PREDICTION_LIKELIHOOD_TOLERANCES",
+          "probe": {
+            "dkappa": -4.1607461239669715e-10,
+            "last_index": 3,
+            "method": "spline",
+            "reported_z_is_rounded": true,
+            "tau_c": -2403415085.1928744,
+            "xe": -0.0011747871294220807,
+            "z": 0.05663014
+          },
+          "reionization_range_minima": {
+            "dkappa": {
+              "value": -1.5269613608470832e-08,
+              "z": 0.020708287445616966
+            },
+            "xe": {
+              "value": -0.04235136072374732,
+              "z": 0.020708471926684516
+            }
+          },
+          "reported_redshift_precision": "Rounded original exception; not the exact unrounded perturbation query",
+          "table_rows": 28333
+        },
+        "new_bobyqa_starts": 0,
+        "parameters": {
+          "A_s": 1.6612992056613594e-09,
+          "H0": 73.1518764249673,
+          "N_ncdm": 1,
+          "N_ur": 2.0328,
+          "P_k_max_1/Mpc": 2.0,
+          "T_ncdm": 0.71611,
+          "l_max_scalars": 9001,
+          "lensing": "yes",
+          "m_ncdm": 0.06,
+          "n_s": 1.0712271414025623,
+          "non_linear": "hmcode",
+          "omega_b": 0.020721894362238032,
+          "omega_cdm": 0.10267093582571502,
+          "output": "lCl tCl tCl,pCl,lCl,mPk mPk pCl",
+          "tau_reio": 0.022146719553358576
+        },
+        "precision_changed": false,
+        "production_restart_authorized": false,
+        "program_id": "Q042-CLASSORIGIN-V24",
+        "python_version": "3.11.16",
+        "q": "Q-042",
+        "requested_tau": 0.022146719553358576,
+        "scientific_result": false,
+        "source_tree_gate": "PASS",
+        "tau_bracket": [
+          "NaN",
+          9.168784610769948e-06
+        ],
+        "tau_exit": {
+          "event": "tau_exit",
+          "fitted_z_reio": 0,
+          "last_computed_tau": 9.168784610769948e-06,
+          "status": 0
+        },
+        "trace_gate": "PASS",
+        "unchanged_v23_raw_products": {
+          "native_extrema.csv": true,
+          "native_meta.json": true,
+          "native_nodes.csv": true,
+          "native_probe.json": true
+        }
+      }
+    ],
+    "scientific_result": false,
+    "technical_gate": "PASS"
+  },
+  "parent_handoff_sha256": "445fbf92e0b350eb187610ac5acf372d932261242526760c2de7021ac53fccf4",
+  "parent_decision_sha256": "c7c09fbc34216c16cce2cdee16a99aa99d4bc3b6d414b47d5ef15e05a70fce10",
+  "parent_audit_sha256": "e5309d47b9fa883ebabc57d477f65f24a7b066a205917661641737127c7c4f02",
+  "sources": [
+    {
+      "id": "I-Q042-V24-001",
+      "title": "Actual V24 final diagnostic, frozen contract and received handoff",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "artifact_id": 11329942371,
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37275520455/artifacts/11329942371",
+      "sha256": "737ee53134157582b2bf04a7c5a50c972aa421161a05845568d8f2d789a2fb81",
+      "retrieval": "User attachment; independently matches GitHub archive digest"
+    },
+    {
+      "id": "I-Q042-V24-002",
+      "title": "Actual original-binary native worker artifact",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL / NUMERICAL EVIDENCE",
+      "artifact_id": 11328889897,
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37275520455/artifacts/11328889897",
+      "sha256": "b7cfd3766447225ebe35bdb8ed77cf27d212d0693b2ff0f6ee1f4c82a8b0c311",
+      "retrieval": "Read-only GitHub download; archive and every reported raw member verified"
+    },
+    {
+      "id": "I-Q042-V24-003",
+      "title": "V24 run, jobs, artifacts and original-cache worker log",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37275520455",
+      "execution_commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+      "retrieval": "Read-only GitHub metadata and worker log; snapshots included"
+    },
+    {
+      "id": "I-Q042-V24-004",
+      "title": "Complete received V24 execution handoff and inherited journal",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "file": "q042_execution_handoff_v24.md",
+      "sha256": "c16c6880e50ac79363c69d13edcc09cbe6641e830dd985d6808aeeb60cc7028c",
+      "size_bytes": 1146361,
+      "retrieval": "Supplied standalone attachment equals final artifact member byte for byte"
+    },
+    {
+      "id": "I-Q042-V24-005",
+      "title": "Independent V24 ingestion audit",
+      "type": "BUBBLEVERSE INTERNAL ANALYSIS",
+      "file": "q042_ingestion_audit_v24.json",
+      "sha256": "e5309d47b9fa883ebabc57d477f65f24a7b066a205917661641737127c7c4f02",
+      "checks_passed": 48,
+      "checks_failed": 0,
+      "retrieval": "Analysis of archived bytes only; audit source included"
+    },
+    {
+      "id": "K-Q042-V24-001",
+      "title": "Pinned class_ede source/thermodynamics.c",
+      "type": "PRIMARY TECHNICAL REPOSITORY SOURCE",
+      "authors": "Repository contributors; individual authors NOT DOCUMENTED in this ingestion",
+      "repository": "mwt5345/class_ede",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/thermodynamics.c",
+      "sha256": "d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6",
+      "retrieval": "Read-only GitHub full file at frozen commit; source snapshot included",
+      "supported_claims": [
+        "upper/lower optical-depth guards and bisection condition",
+        "missing lower reio_camb break",
+        "piecewise reionization formula",
+        "get_tau scratch-column writes",
+        "x_noreio depends on evolved hydrogen/helium state"
+      ]
+    },
+    {
+      "id": "I-Q042-V24-006",
+      "title": "Executed V24 native observer and controller",
+      "type": "BUBBLEVERSE INTERNAL IMPLEMENTATION EVIDENCE",
+      "commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+      "observer_url": "https://github.com/Morfindien/Bubbleverse/blob/716a7b870f5d4470338c825ad87ae09bb8f04096/q042_class_origin_probe_v24.c",
+      "controller_url": "https://github.com/Morfindien/Bubbleverse/blob/716a7b870f5d4470338c825ad87ae09bb8f04096/q042_class_origin_v24.py",
+      "observer_sha256": "a9b43a671f1290587bf91a0780e86c9038b7e16c9de7c7e9e3df3461c37b893a",
+      "controller_sha256": "b6dc50a3a2828996f437626f9b7472cf806f8eaae67ff050a3f189b736fff3db",
+      "retrieval": "Read-only GitHub pinned source; snapshots included"
+    }
+  ],
+  "repair_readiness_gate": "BLOCKED_UNTIL_LOCATED_CAUSE_AND_PREREGISTERED_VALID_REFERENCE_PREDICTION_LIKELIHOOD_TOLERANCES_AND_PRODUCTION_LINEAGE",
+  "stop_condition": "One bounded original-binary upstream boundary trace. Preserve all finite/unexpected/failure outcomes; return to Result Ingestion; no automatic retry, patch or production dispatch.",
+  "repository_inspected_commit": "716a7b870f5d4470338c825ad87ae09bb8f04096"
+}
