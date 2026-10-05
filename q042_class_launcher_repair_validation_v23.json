@@ -1,0 +1,40 @@
+{
+  "corrected_expected_sha256": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
+  "corrected_package_static": {
+    "returncode": 0,
+    "stderr": "",
+    "stdout": "PACKAGE_GATE=PASS LAUNCHER_GATE=PASS README_GATE=PASS REPOSITORY_CONSISTENCY_GATE=PASS\n"
+  },
+  "created_utc": "2026-10-05T04:37:13.119440+00:00",
+  "earlier_validation_limitation": "Previous launcher installation fixture used the extra-LF local copy. This report supersedes that launcher-fixture claim only.",
+  "exact_live_launcher_bytes": 3169,
+  "github_dispatches": 0,
+  "github_mutations": 0,
+  "live_launcher_source": "https://github.com/Morfindien/Bubbleverse/blob/main/.github/workflows/00-bubbleverse-start.yml",
+  "manifest_sha256": "7eaf5afb5479bfa4f93107269fba78fc108ee8d7089355facbfd649404db424c",
+  "new_bobyqa_starts": 0,
+  "offline_tests": {
+    "count": 9,
+    "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.009s\n\nOK\n",
+    "returncode": 0
+  },
+  "old_copy_bytes": 3170,
+  "old_expected_sha256": "e0c11fccd3300710acb1f02ea1bc2b2c327ae2f42584a05e7f7906ea0a5864cd",
+  "one_byte_launcher_mutation_rejected": {
+    "returncode": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/d80c762a97e8/evidence/class_diagnosis_v23/launcher_repair_fixture/q042_class_diagnostic_v23.py\", line 169, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/workspace/scratch/d80c762a97e8/evidence/class_diagnosis_v23/launcher_repair_fixture/q042_class_diagnostic_v23.py\", line 165, in main\n    if a.command=='static':load_contract();validate_package(a.root)\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/d80c762a97e8/evidence/class_diagnosis_v23/launcher_repair_fixture/q042_class_diagnostic_v23.py\", line 54, in validate_package\n    raise ValueError('PERMANENT_LAUNCHER_GATE=FAIL')\nValueError: PERMANENT_LAUNCHER_GATE=FAIL\n",
+    "stdout": ""
+  },
+  "only_changed_manifest_field": "permanent_launcher_sha256",
+  "original_binary_hpc_test": "NOT RUN",
+  "prior_failure_reproduced": {
+    "returncode": 1,
+    "stderr": "Traceback (most recent call last):\n  File \"/workspace/scratch/d80c762a97e8/evidence/class_diagnosis_v23/launcher_repair_fixture/q042_class_diagnostic_v23.py\", line 169, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/workspace/scratch/d80c762a97e8/evidence/class_diagnosis_v23/launcher_repair_fixture/q042_class_diagnostic_v23.py\", line 165, in main\n    if a.command=='static':load_contract();validate_package(a.root)\n                                           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/workspace/scratch/d80c762a97e8/evidence/class_diagnosis_v23/launcher_repair_fixture/q042_class_diagnostic_v23.py\", line 54, in validate_package\n    raise ValueError('PERMANENT_LAUNCHER_GATE=FAIL')\nValueError: PERMANENT_LAUNCHER_GATE=FAIL\n",
+    "stdout": ""
+  },
+  "program_id": "Q042-CLASSCAUSE-V23",
+  "q": "Q-042",
+  "q_status": "UNRESOLVED",
+  "root_cause": "Original manifest hashed a local launcher copy with one additional trailing LF.",
+  "scientific_specification_changed": false
+}
