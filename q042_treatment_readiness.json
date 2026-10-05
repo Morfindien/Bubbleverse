@@ -1,0 +1,589 @@
+{
+  "date_time": "2026-10-05T09:53:45.373533+00:00",
+  "q": "Q-042",
+  "case_id": "NOT DOCUMENTED",
+  "scientific_question": "Kan den oprindelige Q041 downstream-portabilitetstest udføres med en ny præregistreret, konvergensrobust inference-strategi, der nøjagtigt bevarer den oprindelige scientific contract — begge native Planck-arme, ΛCDM og n=3 EDE, ACT DR6 primary, ACT DR6 lensing, DESI DR2, én identisk frozen supernova-likelihood, FULL + fire leave-one-out-tests og de oprindelige materialitets-/modelpræferenceregler — uden at genbruge Q040's invaliderede science-endpoints, uden cross-arm absolute objective arithmetic og uden retroaktivt at ændre kriterier efter resultaterne?",
+  "stage_id": "Q042-TREATMENT-READINESS-01",
+  "status": "BLOCKED_REQUIRED_TREATMENT_PREREGISTRATION",
+  "execution_mode": "EXISTING MOTOR + READ-ONLY SOURCE CAPABILITIES; NO NUMERICAL EXECUTION",
+  "execution_decision_complete": true,
+  "scientific_status": "UNRESOLVED",
+  "q_completion_gate": "NOT YET SATISFIED",
+  "selected_next_engine": "BUBBLEVERSE — RESULT INGESTION & ROUTING ENGINE",
+  "exactly_one_next_engine": true,
+  "motor14_routing": false,
+  "recommended_profile": {
+    "model_mode": "GPT-6.1 Sol / Work Mode",
+    "reasoning": "High",
+    "why": "Bounded source and contract assessment; no extended autonomous calculation needed",
+    "model_switch_claimed": false
+  },
+  "available_configurations_considered": [
+    "GPT-6.1 Sol",
+    "GPT-6 Astra",
+    "GPT-6 Sol",
+    "GPT-6 Luna",
+    "GPT-5.6 Sol"
+  ],
+  "received_inputs": [
+    {
+      "file": "q042_result_ingestion_handoff_v25.md",
+      "size_bytes": 7913394,
+      "sha256": "b3841f0b67d324d5a83ed2ed267d5e479458cfe598c98c702c11de606f7f456a"
+    },
+    {
+      "file": "q042_ingestion_decision_v25.json",
+      "size_bytes": 21489,
+      "sha256": "1e0c217fdc88cc816068faf981009bd697835e0b5946ef8ebd97f5eec1a914c9"
+    },
+    {
+      "file": "q042_ingestion_audit_v25.json",
+      "size_bytes": 9181,
+      "sha256": "47c60384174cbf7422590ca0f9742818281ad3ec66b69359021c549c9233d7cc"
+    }
+  ],
+  "received_journal_status": "PRESERVED BYTE FOR BYTE; inherited wider historical gaps remain PARTIALLY RECOVERED",
+  "frozen_scientific_spec_sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+  "repository_read_commit": "3d15a3a7a627de2f29533cac7fe9e43dd022226f",
+  "repository_write_performed": false,
+  "workflow_dispatch_performed": false,
+  "upstream_comparison_commit": "814ce59c380a5cccd0bed1747a384ff7bfc1f9cf",
+  "original_class_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+  "control_program_id": "Q042-CLASSNAN-V25",
+  "control_run_id": 37288546095,
+  "new_program_id": null,
+  "new_program_registered": false,
+  "candidate_run_count": 0,
+  "new_bobyqa_starts": 0,
+  "precision_changed": false,
+  "compiled_core_algorithm_changed": false,
+  "repair_execution_authorized": false,
+  "production_restart_authorized": false,
+  "scientific_result": false,
+  "missing_prerequisites": [
+    "One justified helium phase/cutoff treatment with exact event handling, including accepted versus rejected steps and Jacobian perturbations; current evidence suggests a mechanism but does not prove the candidate equivalent.",
+    "A small complete, independently valid matched reference set: full parameters, nuisance parameters when applicable, source/binary/config hashes and reference prediction/likelihood products. Neither synthetic durability nor unconverged-chain means qualify.",
+    "Numerical acceptance metrics and tolerances for independent requested-tau verification, histories/interpolation, prediction vectors and relevant within-arm likelihoods, justified and frozen before candidate outputs.",
+    "Exact candidate patch/content hash, resulting build identity and configuration hash. No candidate was built, so these are NOT DOCUMENTED."
+  ],
+  "proposed_treatment": "One coupled candidate: source-referenced lower-branch correction, explicit nonfinite bracket rejection, and a justified accepted-state helium cutoff/phase treatment. The third component is a proposal requiring proof; no patch or validated repaired history is claimed.",
+  "checkpoint_policy": {
+    "original_checkpoint": "Preserve read-only",
+    "changed_binary_resume": "FORBIDDEN by default",
+    "reason": "Old likelihood evaluations and numerical state belong to the original binary/config identity; no compatibility evidence is available",
+    "future_lineage": "New context hash including exact executable/source patch/config/data/likelihood and numerical criterion identities; explicit initialization only after separate authorization; no production restart now"
+  },
+  "finite_future_test_plan": [
+    {
+      "id": "TREATMENT-T001",
+      "mandatory": true,
+      "test": "Identity/source/reference gate",
+      "criterion": "Exact Q, science-spec hash, frozen failing point, original control hashes, matched reference provenance and immutable candidate identities must match; missing fields block execution."
+    },
+    {
+      "id": "TREATMENT-T002",
+      "mandatory": true,
+      "test": "Helium cutoff event/derivative semantics",
+      "criterion": "Demonstrate accepted-step phase logic cannot be changed by trial/rejected steps or finite-difference perturbations; retain original 1e-6 cutoff and residual state unless a separately justified change is preregistered. Acceptance proof NOT YET ESTABLISHED."
+    },
+    {
+      "id": "TREATMENT-T003",
+      "mandatory": true,
+      "test": "Bracket and branch handling",
+      "criterion": "Reject nonfinite/invalid bounds explicitly; preserve raw failure; both lower reio_camb and half_tanh branches retain their own intended starting-redshift rule; no NaN-success/zero-loop acceptance."
+    },
+    {
+      "id": "TREATMENT-T004",
+      "mandatory": true,
+      "test": "Frozen failing-point thermodynamics",
+      "criterion": "Independently measure realized optical depth, check finite usable history and interpolation without clipping. Independent accuracy tolerance NOT DOCUMENTED. Original solver bracket width setting 1e-4 is retained but is not an independent accuracy certificate."
+    },
+    {
+      "id": "TREATMENT-T005",
+      "mandatory": true,
+      "test": "Matched valid references and downstream predictions/likelihoods",
+      "criterion": "Compare against preregistered complete matched reference products using justified frozen metrics/tolerances. Reference set and tolerances NOT DOCUMENTED; no production gate can pass without them."
+    },
+    {
+      "id": "TREATMENT-T006",
+      "mandatory": true,
+      "test": "Lineage and raw-output preservation",
+      "criterion": "New binary/config identity implies a new numerical lineage; never resume old sampler/checkpoint state containing old likelihood evaluations; preserve all 80 optimizer records as historical evidence; no production dispatch."
+    }
+  ],
+  "sources": [
+    {
+      "id": "I-Q042-V24-001",
+      "title": "Actual V24 final diagnostic, frozen contract and received handoff",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "artifact_id": 11329942371,
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37275520455/artifacts/11329942371",
+      "sha256": "737ee53134157582b2bf04a7c5a50c972aa421161a05845568d8f2d789a2fb81",
+      "retrieval": "User attachment; independently matches GitHub archive digest"
+    },
+    {
+      "id": "I-Q042-V24-002",
+      "title": "Actual original-binary native worker artifact",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL / NUMERICAL EVIDENCE",
+      "artifact_id": 11328889897,
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37275520455/artifacts/11328889897",
+      "sha256": "b7cfd3766447225ebe35bdb8ed77cf27d212d0693b2ff0f6ee1f4c82a8b0c311",
+      "retrieval": "Read-only GitHub download; archive and every reported raw member verified"
+    },
+    {
+      "id": "I-Q042-V24-003",
+      "title": "V24 run, jobs, artifacts and original-cache worker log",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37275520455",
+      "execution_commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+      "retrieval": "Read-only GitHub metadata and worker log; snapshots included"
+    },
+    {
+      "id": "I-Q042-V24-004",
+      "title": "Complete received V24 execution handoff and inherited journal",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "file": "q042_execution_handoff_v24.md",
+      "sha256": "c16c6880e50ac79363c69d13edcc09cbe6641e830dd985d6808aeeb60cc7028c",
+      "size_bytes": 1146361,
+      "retrieval": "Supplied standalone attachment equals final artifact member byte for byte"
+    },
+    {
+      "id": "I-Q042-V24-005",
+      "title": "Independent V24 ingestion audit",
+      "type": "BUBBLEVERSE INTERNAL ANALYSIS",
+      "file": "q042_ingestion_audit_v24.json",
+      "sha256": "e5309d47b9fa883ebabc57d477f65f24a7b066a205917661641737127c7c4f02",
+      "checks_passed": 48,
+      "checks_failed": 0,
+      "retrieval": "Analysis of archived bytes only; audit source included"
+    },
+    {
+      "id": "K-Q042-V24-001",
+      "title": "Pinned class_ede source/thermodynamics.c",
+      "type": "PRIMARY TECHNICAL REPOSITORY SOURCE",
+      "authors": "Repository contributors; individual authors NOT DOCUMENTED in this ingestion",
+      "repository": "mwt5345/class_ede",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/thermodynamics.c",
+      "sha256": "d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6",
+      "retrieval": "Read-only GitHub full file at frozen commit; source snapshot included",
+      "supported_claims": [
+        "upper/lower optical-depth guards and bisection condition",
+        "missing lower reio_camb break",
+        "piecewise reionization formula",
+        "get_tau scratch-column writes",
+        "x_noreio depends on evolved hydrogen/helium state"
+      ]
+    },
+    {
+      "id": "I-Q042-V24-006",
+      "title": "Executed V24 native observer and controller",
+      "type": "BUBBLEVERSE INTERNAL IMPLEMENTATION EVIDENCE",
+      "commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+      "observer_url": "https://github.com/Morfindien/Bubbleverse/blob/716a7b870f5d4470338c825ad87ae09bb8f04096/q042_class_origin_probe_v24.c",
+      "controller_url": "https://github.com/Morfindien/Bubbleverse/blob/716a7b870f5d4470338c825ad87ae09bb8f04096/q042_class_origin_v24.py",
+      "observer_sha256": "a9b43a671f1290587bf91a0780e86c9038b7e16c9de7c7e9e3df3461c37b893a",
+      "controller_sha256": "b6dc50a3a2828996f437626f9b7472cf806f8eaae67ff050a3f189b736fff3db",
+      "retrieval": "Read-only GitHub pinned source; snapshots included"
+    },
+    {
+      "id": "K-Q042-V25-001",
+      "title": "Frozen CLASS headers and upstream source path",
+      "type": "PRIMARY TECHNICAL REPOSITORY SOURCE",
+      "repository": "mwt5345/class_ede",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "url": "https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "retrieval": "Read-only GitHub; original V25 source/header register retained in inherited handoff"
+    },
+    {
+      "id": "I-Q042-V25-001",
+      "title": "Pre-execution V25 repository/launcher/registry/README inspection",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "commit": "716a7b870f5d4470338c825ad87ae09bb8f04096",
+      "retrieval": "Preserved original V25 execution handoff"
+    },
+    {
+      "id": "K-Q042-V25-002",
+      "title": "Actions limits",
+      "authors": "GitHub",
+      "type": "OFFICIAL TECHNICAL DOCUMENTATION",
+      "url": "https://docs.github.com/en/actions/reference/limits",
+      "retrieval": "Official web documentation during V25 construction; historical runtime context retained"
+    },
+    {
+      "id": "I-Q042-V25-002",
+      "title": "Pre-execution local V25 implementation validation",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "file": "q042_v25_validation_report.json",
+      "retrieval": "Preserved received handoff; historical local package tests, not live cosmology evidence"
+    },
+    {
+      "id": "K-Q042-V25-003",
+      "title": "Frozen HyRec wrapper, helium cutoff and initialization",
+      "authors": "Nils Schoeneberg (source header)",
+      "year": 2019,
+      "type": "PRIMARY TECHNICAL REPOSITORY SOURCE",
+      "repository": "mwt5345/class_ede",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/wrap_hyrec.c",
+      "sha256": "4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd",
+      "retrieval": "Read-only GitHub at frozen commit; exact source bytes and Git blob identity verified",
+      "doi": "NOT APPLICABLE",
+      "arxiv": "NOT APPLICABLE"
+    },
+    {
+      "id": "K-Q042-V25-004",
+      "title": "Frozen helium recombination equation",
+      "authors": "Yacine Ali-Haimoud and Chris Hirata; contributions Nanoom Lee (source header)",
+      "year": "2010–2020 source development; publication year NOT DOCUMENTED",
+      "type": "PRIMARY TECHNICAL REPOSITORY SOURCE",
+      "repository": "mwt5345/class_ede",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/helium.c",
+      "sha256": "cc113cdc4b2d4ffa0762ab82d5485816bbbb3bbf63cd3441be5206c4c3bf6587",
+      "retrieval": "Read-only GitHub at frozen commit; exact source bytes and Git blob identity verified",
+      "doi": "NOT APPLICABLE",
+      "arxiv": "NOT APPLICABLE"
+    },
+    {
+      "id": "K-Q042-V25-006",
+      "title": "Frozen NDF15 numerical Jacobian logic",
+      "authors": "Thomas Tram (source header)",
+      "year": 2010,
+      "type": "PRIMARY TECHNICAL REPOSITORY SOURCE",
+      "repository": "mwt5345/class_ede",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/tools/evolver_ndf15.c",
+      "sha256": "49d26ddf369c08baea9cb297825f52a734df52e568687ed1f0be12ac68417856",
+      "retrieval": "Read-only GitHub at frozen commit; exact source bytes and Git blob identity verified",
+      "doi": "NOT APPLICABLE",
+      "arxiv": "NOT APPLICABLE"
+    },
+    {
+      "id": "K-Q042-V25-005",
+      "title": "Frozen history.h helium cutoff XHEII_MIN",
+      "authors": "HyRec source contributors; individual file authors NOT DOCUMENTED here",
+      "type": "PRIMARY TECHNICAL REPOSITORY SOURCE",
+      "repository": "mwt5345/class_ede",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/history.h",
+      "sha256": "b1331aed246610d2b1d598f8bedfa951974da0d2845b5c8f3d672bf33bf316f1",
+      "relevant_section": "XHEII_MIN definition = 1e-6",
+      "retrieval": "Pinned header recovered for prior V25 validation, Git identity preserved"
+    },
+    {
+      "id": "I-Q042-V25-003",
+      "title": "Actual V25 final diagnostic and frozen contract",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL / NUMERICAL EVIDENCE",
+      "artifact_id": 11335352228,
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37288546095/artifacts/11335352228",
+      "sha256": "05aa961e375a3a8ad523bb8f1b2387a1f5bb0de6f23ec61f9fc212dfd8ded02e",
+      "execution_commit": "3d15a3a7a627de2f29533cac7fe9e43dd022226f",
+      "retrieval": "User attachment equals GitHub final archive digest"
+    },
+    {
+      "id": "I-Q042-V25-004",
+      "title": "Actual V25 original-binary worker raw artifact",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL / NUMERICAL EVIDENCE",
+      "artifact_id": 11334874529,
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37288546095/artifacts/11334874529",
+      "sha256": "f7011ec77e6f41c5377b1d3a1b04f02e49bf9746706b8cfbc8060e51f431e016",
+      "execution_commit": "3d15a3a7a627de2f29533cac7fe9e43dd022226f",
+      "retrieval": "Read-only GitHub worker download; archive digest and all raw hashes verified"
+    },
+    {
+      "id": "I-Q042-V25-005",
+      "title": "V25 run, jobs and original-cache worker log",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37288546095",
+      "execution_commit": "3d15a3a7a627de2f29533cac7fe9e43dd022226f",
+      "sha256": "f5ff4b14cf8b2f247ecf453d350b6566402a24382e0fc83d11e8b6a922091666",
+      "retrieval": "Read-only GitHub metadata and job log; snapshots preserved"
+    },
+    {
+      "id": "I-Q042-V25-006",
+      "title": "Archived scalar helium-boundary source replay",
+      "type": "BUBBLEVERSE INTERNAL COMPUTATIONAL VERIFICATION",
+      "file": "helium_boundary_replay.json",
+      "sha256": "b800fc30153e73897ad781f1325b4c09a468ed683cbd55420dd4aa5c87c3b977",
+      "provenance": {
+        "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "source_sha256": "cc113cdc4b2d4ffa0762ab82d5485816bbbb3bbf63cd3441be5206c4c3bf6587",
+        "fixture_sha256": "db0436a5e7ab9d523c5c3af2a42a031e0e631ef93232b995a0380ef8c9b77be1",
+        "executable_sha256": "34c167884adf32e8cc2cc65a88ffd0219acf4c594e51b576f8b09fabca5c2f9d",
+        "output_sha256": "b800fc30153e73897ad781f1325b4c09a468ed683cbd55420dd4aa5c87c3b977",
+        "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+        "command": [
+          "gcc",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-I",
+          "v25_class_headers/external/HyRec2020",
+          "ingest_v25/helium_boundary_replay.c",
+          "ingest_v25/helium_pinned.c",
+          "-lm",
+          "-o",
+          "ingest_v25/helium_boundary_replay"
+        ],
+        "density_reconstruction": "nH0 = archived nH_SI * 1e-6 / (1+z)^3; no new cosmology",
+        "initialization": "T0=2.7255; fHe=0.08155605881418283; fsR=meR=1; data.error=0; pinned wrapper initialization mappings"
+      },
+      "retrieval": "Local unchanged pinned helium.c evaluation at two archived scalar inputs; not a cosmology rerun or a repair"
+    },
+    {
+      "id": "I-Q042-V25-007",
+      "title": "Independent V25 ingestion audit",
+      "type": "BUBBLEVERSE INTERNAL ANALYSIS",
+      "file": "q042_ingestion_audit_v25.json",
+      "sha256": "47c60384174cbf7422590ca0f9742818281ad3ec66b69359021c549c9233d7cc",
+      "checks_passed": 54,
+      "checks_failed": 0,
+      "retrieval": "Archived file/hash/trace/table/source audit; audit program preserved"
+    },
+    {
+      "id": "K-Q042-TREATMENT-001",
+      "title": "Frozen HyRec phase-transition implementation",
+      "type": "PRIMARY TECHNICAL SOURCE",
+      "repository": "mwt5345/class_ede",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "path": "external/HyRec2020/history.c",
+      "url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/history.c",
+      "git_blob_sha": "9710fb166de45ab392ee7984801d8dbdf610319a",
+      "sha256": "14d11b3663fcebd5a4072969237f4041549adb4449ddef875f3ca4caff948fe4",
+      "size_bytes": 46089,
+      "retrieval": "Read-only GitHub fetch_file; local bytes independently verified against Git blob SHA",
+      "role": "Reference for intended standalone helium stopping semantics; not a matched CLASS prediction benchmark"
+    },
+    {
+      "id": "K-Q042-TREATMENT-002",
+      "title": "Current official CLASS helium wrapper",
+      "type": "PRIMARY TECHNICAL SOURCE",
+      "repository": "lesgourg/class_public",
+      "commit": "814ce59c380a5cccd0bed1747a384ff7bfc1f9cf",
+      "path": "external/HyRec2020/wrap_hyrec.c",
+      "url": "https://github.com/lesgourg/class_public/blob/814ce59c380a5cccd0bed1747a384ff7bfc1f9cf/external/HyRec2020/wrap_hyrec.c",
+      "git_blob_sha": "2877b2da64b0254cea612e1b444bcea71d76ce82",
+      "sha256": "e4785eb62b51835839e20da53944a5a170a715966b46b6f4745d9bef047c0ecb",
+      "size_bytes": 7640,
+      "retrieval": "Read-only GitHub fetch_file; local bytes independently verified against Git blob SHA",
+      "role": "Same strict helium cutoff remains; unrelated path setup differs; not an endorsed repair"
+    },
+    {
+      "id": "K-Q042-TREATMENT-003",
+      "title": "Current official CLASS thermodynamics",
+      "type": "PRIMARY TECHNICAL SOURCE",
+      "repository": "lesgourg/class_public",
+      "commit": "814ce59c380a5cccd0bed1747a384ff7bfc1f9cf",
+      "path": "source/thermodynamics.c",
+      "url": "https://github.com/lesgourg/class_public/blob/814ce59c380a5cccd0bed1747a384ff7bfc1f9cf/source/thermodynamics.c",
+      "git_blob_sha": "12e537259d8efd08234ff0b7984b1ce924b88226",
+      "sha256": "fadf38eaa89aa46b77736a700a82b0a2842bd552533077556e8803d202a06d11",
+      "size_bytes": 209535,
+      "retrieval": "Read-only GitHub fetch_file; local bytes independently verified against Git blob SHA",
+      "role": "Lower reio_camb branch has an explicit break; source reference for a minimal branch correction only"
+    },
+    {
+      "id": "I-Q042-TREATMENT-001",
+      "title": "Frozen Q042 compiled interruption reference",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "repository": "Morfindien/Bubbleverse",
+      "commit": "3d15a3a7a627de2f29533cac7fe9e43dd022226f",
+      "path": "q042_compiled_reference_v22.json",
+      "url": "https://github.com/Morfindien/Bubbleverse/blob/3d15a3a7a627de2f29533cac7fe9e43dd022226f/q042_compiled_reference_v22.json",
+      "git_blob_sha": "50e082a0994e10a653e3173b537e6fcc767be585",
+      "sha256": "51a02ebc9b9dc78d43363f2bfeb885ff636860708a91c41ee453a97a5c400146",
+      "size_bytes": 3972,
+      "retrieval": "Read-only GitHub fetch_file; local bytes independently verified against Git blob SHA",
+      "role": "Synthetic likelihood checkpoint validation; explicitly excludes validation of the full Cobaya/CLASS runtime"
+    },
+    {
+      "id": "I-Q042-TREATMENT-002",
+      "title": "Historical unconverged-chain diagnostic reference",
+      "type": "BUBBLEVERSE INTERNAL TECHNICAL EVIDENCE",
+      "repository": "Morfindien/Bubbleverse",
+      "commit": "3d15a3a7a627de2f29533cac7fe9e43dd022226f",
+      "path": "q042_v19_diagnostic_reference_v1.json",
+      "url": "https://github.com/Morfindien/Bubbleverse/blob/3d15a3a7a627de2f29533cac7fe9e43dd022226f/q042_v19_diagnostic_reference_v1.json",
+      "git_blob_sha": "ba1d4156728a6069f3b85f3db5faa934563dcb9b",
+      "sha256": "79f1bb793550ee9a924f5db9197886837e5f2d0e60f44718a43011f0199567c1",
+      "size_bytes": 2538,
+      "retrieval": "Read-only GitHub fetch_file; local bytes independently verified against Git blob SHA",
+      "role": "Unconverged chains; forbidden cosmological endpoints; not a matched CLASS prediction benchmark"
+    },
+    {
+      "id": "I-Q042-TREATMENT-003",
+      "title": "Exact frozen production scientific specification",
+      "type": "BUBBLEVERSE INTERNAL SCIENTIFIC CONTRACT",
+      "repository": "Morfindien/Bubbleverse",
+      "commit": "3d15a3a7a627de2f29533cac7fe9e43dd022226f",
+      "path": "q042_production_spec_v1.json",
+      "url": "https://github.com/Morfindien/Bubbleverse/blob/3d15a3a7a627de2f29533cac7fe9e43dd022226f/q042_production_spec_v1.json",
+      "git_blob_sha": "9b70e5c9d62adcf43f8f48f85b7ffb628c1dd84b",
+      "sha256": "41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c",
+      "size_bytes": 9024,
+      "retrieval": "Read-only GitHub fetch_file; local bytes independently verified against Git blob SHA",
+      "role": "Scientific criteria recovered without numerical treatment tolerances; SHA256 matches authoritative science freeze"
+    },
+    {
+      "id": "K-Q042-TREATMENT-004",
+      "title": "HYREC-2: a highly accurate sub-millisecond recombination code",
+      "authors": [
+        "Nanoom Lee",
+        "Yacine Ali-Haimoud"
+      ],
+      "year": 2020,
+      "journal": "Physical Review D 102, 083517",
+      "doi": "10.1103/PhysRevD.102.083517",
+      "arxiv": "2007.14114",
+      "url": "https://journals.aps.org/prd/abstract/10.1103/PhysRevD.102.083517",
+      "type": "PRIMARY PEER-REVIEWED SCIENTIFIC PUBLICATION",
+      "retrieval": "Targeted web search: publisher abstract and arXiv metadata",
+      "role": "Context only; abstract does not establish this low-redshift wrapper repair or arbitrary EDE-domain tolerance"
+    }
+  ],
+  "claim_to_source_map": {
+    "C-Q042-V24-001": {
+      "claim": "Original-binary V24 observational task is complete within its one-point background/thermodynamics scope",
+      "sources": [
+        "I-Q042-V24-001",
+        "I-Q042-V24-002",
+        "I-Q042-V24-003",
+        "I-Q042-V24-005",
+        "I-Q042-V24-006"
+      ]
+    },
+    "C-Q042-V24-002": {
+      "claim": "Upper optical-depth trial is nonfinite; original routine returns success after two get_tau calls and zero bisection iterations",
+      "sources": [
+        "I-Q042-V24-002",
+        "I-Q042-V24-005",
+        "K-Q042-V24-001"
+      ]
+    },
+    "C-Q042-V24-003": {
+      "claim": "NaN defeats the ordered upper guard and loop test; lower switch fallthrough sets reio_start=0, consistently explaining the retained zero-redshift jump and V23 spline overshoot",
+      "sources": [
+        "I-Q042-V24-002",
+        "I-Q042-V24-005",
+        "K-Q042-V24-001",
+        "I-Q042-V23-002"
+      ],
+      "status": "Source-based causal interpretation corroborated by original-binary boundary events; not a repair test"
+    },
+    "C-Q042-V24-004": {
+      "claim": "First creation of the upper-trial nonfinite evolved state is not located by the boundary trace",
+      "sources": [
+        "I-Q042-V24-002",
+        "I-Q042-V24-006",
+        "K-Q042-V24-001"
+      ],
+      "status": "Unresolved"
+    },
+    "C-Q042-V24-005": {
+      "claim": "Four native table/probe products exactly preserve V23 hashes; independent probe/extrema reconstruction agrees",
+      "sources": [
+        "I-Q042-V24-002",
+        "I-Q042-V24-005",
+        "I-Q042-V24-001"
+      ]
+    },
+    "C-Q042-V24-006": {
+      "claim": "Lower-trial scratch first_d3kappa[3] remains NaN in the raw event; this is not proof of a nonfinite final table or a second physical anomaly",
+      "sources": [
+        "I-Q042-V24-002",
+        "I-Q042-V24-005",
+        "K-Q042-V24-001"
+      ]
+    },
+    "C-Q042-V24-007": {
+      "claim": "All 80 inherited optimizer records and frozen science criteria survive; no scientific comparison or production authorization is added",
+      "sources": [
+        "I-Q042-V24-001",
+        "I-Q042-V24-004",
+        "I-Q042-V24-005"
+      ]
+    },
+    "C-Q042-V24-008": {
+      "claim": "A bounded causal diagnosis and repair-readiness decision remains material to the exact Q; an unchanged V24 replay is unnecessary",
+      "sources": [
+        "C-Q042-V24-002",
+        "C-Q042-V24-003",
+        "C-Q042-V24-004",
+        "C-Q042-V24-007"
+      ],
+      "status": "Routing inference, not measured cosmology"
+    },
+    "C-Q042-V25-001": [
+      "K-Q042-V24-001",
+      "K-Q042-V25-001"
+    ],
+    "C-Q042-V25-002": [
+      "I-Q042-V24-002",
+      "I-Q042-V24-005",
+      "I-Q042-V25-003"
+    ],
+    "C-Q042-V25-003": [
+      "I-Q042-V25-002"
+    ],
+    "C-Q042-V25-004": [
+      "K-Q042-V25-002"
+    ],
+    "C-Q042-V25-005": [
+      "I-Q042-V25-004",
+      "I-Q042-V25-007"
+    ],
+    "C-Q042-V25-006": [
+      "I-Q042-V25-004",
+      "K-Q042-V25-003",
+      "K-Q042-V25-005",
+      "I-Q042-V25-006"
+    ],
+    "C-Q042-V25-007": [
+      "K-Q042-V25-004",
+      "I-Q042-V25-006"
+    ],
+    "C-Q042-V25-008": [
+      "I-Q042-V25-004",
+      "I-Q042-V25-007",
+      "I-Q042-V24-002"
+    ],
+    "C-Q042-V25-009": [
+      "I-Q042-V25-004",
+      "K-Q042-V25-006"
+    ],
+    "C-Q042-TREATMENT-001": {
+      "claim": "Official source contains an explicit lower reio_camb break; it is a branch-correction reference, not a validated whole-treatment result",
+      "sources": [
+        "K-Q042-TREATMENT-003",
+        "K-Q042-V24-001"
+      ]
+    },
+    "C-Q042-TREATMENT-002": {
+      "claim": "Standalone HyRec exits simultaneous H/He evolution after xHeII falls below XHEII_MIN; transferring this accepted-step phase behavior into CLASS requires a separate mathematical/numerical justification",
+      "sources": [
+        "K-Q042-TREATMENT-001",
+        "K-Q042-TREATMENT-002"
+      ],
+      "status": "Observed source semantics plus explicit proposed inference; no equivalence proof"
+    },
+    "C-Q042-TREATMENT-003": {
+      "claim": "The retrieved checkpoint and chain diagnostic references are insufficient as CLASS treatment benchmarks",
+      "sources": [
+        "I-Q042-TREATMENT-001",
+        "I-Q042-TREATMENT-002"
+      ]
+    },
+    "C-Q042-TREATMENT-004": {
+      "claim": "The frozen science criteria do not supply a ready CLASS prediction/likelihood acceptance budget; sampler stopping settings and materiality thresholds cannot silently become that budget",
+      "sources": [
+        "I-Q042-TREATMENT-003",
+        "I-Q042-V25-004"
+      ]
+    }
+  },
+  "research_stop": "Source semantics and missing prerequisites are established for this bounded mechanism decision. No broad search, unchanged V25 replay, arbitrary threshold/precision variation or candidate execution.",
+  "next_required_action": "Ingestion should preserve this BLOCKED decision and route the finite reference/error-budget and accepted-step treatment specification task using established architecture. Reuse the supplied scoped task prompt with the complete handoff; do not launch a program yet.",
+  "stop_condition": "At most one fully preregistered candidate evaluation once every required reference/tolerance/identity gate passes; return either PASS, FAIL or UNRESOLVED to ingestion without automatic retry or production. Close Q only when its exact full inference question is sufficiently documented."
+}
