@@ -1,0 +1,103 @@
+name: Bubbleverse Q042 V27 — bounded original HyRec switch probes
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q042-switch-probe-v27
+  cancel-in-progress: false
+env:
+  CURRENT_Q: Q-042
+  PROGRAM_ID: Q042-SWITCHPROBE-V27
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Exact registered target and immutable package
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          test "$REQUESTED_PROGRAM_ID" = "$PROGRAM_ID"
+          python q042_switch_probe_v27.py static
+          python -m unittest discover -s . -p 'q042_switch_tests_v27.py' -v
+  probes:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Account for preflight/cache failures
+        run: |
+          python - <<'PY'
+          import os
+          import q042_switch_probe_v27 as m
+          m.write('switch_probe/preflight_pending.json',dict(**m.identity(m.read(m.HERE/m.CONTRACT),os.environ['GITHUB_RUN_ID']),expected_trials=m.EXPECTED,status='CACHE_AND_ORIGINAL_BINARY_PENDING'))
+          PY
+      - name: Restore existing original cache; no rebuild or cache write
+        timeout-minutes: 10
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - name: One original-binary 24-sample campaign; no integration
+        timeout-minutes: 8
+        run: python q042_switch_probe_v27.py run --out switch_probe
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q042-v27-${{ github.run_id }}-raw-switch-probes
+          path: switch_probe/**
+          if-no-files-found: error
+          retention-days: 30
+  collect:
+    needs: [static, probes]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: q042-v27-${{ github.run_id }}-raw-switch-probes
+          path: collected
+      - name: Exact sample/routing gates or explicit partial result
+        run: python q042_switch_probe_v27.py collect --directory collected --out q042_switch_final_v27.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q042-v27-${{ github.run_id }}-diagnostic-final
+          path: |
+            q042_switch_final_v27.json
+            q042_switch_contract_v27.json
+            q042_switch_manifest_v27.json
+            q042_execution_handoff_switch_v27.md
+          if-no-files-found: error
+          retention-days: 30

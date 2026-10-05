@@ -467,3 +467,12 @@ Results are **RAW_NOT_QUALIFIED**, even when all twelve branches complete. Obser
 The worker has bounded call/time/storage budgets and a60-minute job limit. This finite target uses one worker; no long stateful chain, checkpoint or merge across different configurations is needed. Collection checks all twelve identities and artifact hashes. Raw nodes, defects, accepted entry/grid, logs and `q042_reference_worker_result_v26.json` are in `q042-v26-<run_id>-raw-acquisition`; the collected result is `q042-v26-<run_id>-diagnostic-final`. The complete received journal is retained verbatim in `q042_execution_handoff_reference_v26.md`; the contract carries source IDs and claim mappings. Return actual artifacts to Result Ingestion & Routing.
 
 V25, its hash failure and earlier scientific/technical history remain historical. V26 validates this mutable README semantically rather than against a prior campaign's README hash.
+
+
+## Q-042: bounded original HyRec switch attribution (V27)
+
+Open **[🚀 BUBBLEVERSE START](.github/workflows/00-bubbleverse-start.yml)**, enter `Q042-SWITCHPROBE-V27`, and run once after installing the V27 files. The canonical registry is `bubbleverse_program_registry.json`.
+
+This diagnostic restores the original hash-pinned CLASS cache and evaluates only 24 fixed-state RHS samples on either side of the original HyRec temperature threshold. It reuses two RAW V26 states; it does not integrate a new history, solve a root, run likelihoods or restart production. Results remain `RAW_NOT_QUALIFIED`. The target is `.github/workflows/q042-switch-probe-v27.yml`; artifacts are `q042-v27-<run_id>-raw-switch-probes` and `q042-v27-<run_id>-diagnostic-final`.
+
+Three bounded jobs check package identity, acquire two isolated probe sets and collect their completeness/model-route evidence. Finite derivative offsets and solver stage fingerprints do not qualify a reference history. The inherited journal and original scientific contract remain in `q042_execution_handoff_switch_v27.md`.
