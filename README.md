@@ -10,6 +10,21 @@ The scientific model that survives this process is maintained separately in [`Mo
 
 Website: **https://bubbleverse.dk**
 
+
+## Current Q-042 target — V29 initialized context and interval prerequisite
+
+Q-042 remains open. V26/V27/V28 are completed `RAW_NOT_QUALIFIED` diagnostics; do not relaunch them. The prepared active target is `Q042-CONTEXT-V29`. It captures the hash-pinned original initialization once and checks a bounded real-table interval RHS prerequisite. It does not integrate a history, search for a root, evaluate a likelihood or restart production.
+
+Install the individual V29 files at the repository root, except `q042-context-v29.yml`, which belongs in `.github/workflows/`. Install this README and `bubbleverse_program_registry.json` together with the immutable package. The existing launcher is unchanged: **[🚀 BUBBLEVERSE START](https://github.com/Morfindien/Bubbleverse/actions/workflows/00-bubbleverse-start.yml)** → enter **`Q042-CONTEXT-V29`** → **Run workflow**. Canonical launcher: `.github/workflows/00-bubbleverse-start.yml`; registry: `bubbleverse_program_registry.json`.
+
+Controller: `q042_context_v29.py`; native capture: `q042_context_native_v29.c`; interval evaluator: `q042_interval_v29.py`; frozen configuration: `q042_context_contract_v29.json`; immutable hashes: `q042_context_manifest_v29.json`. Finite tests: `q042_interval_tests_v29.py` and `q042_source_check_v29.py`. The unchanged original binary is restored from the existing exact-key cache; there is no rebuild fallback. The evaluator requires MPFR 4.2.1 on Linux x86_64 and uses directed rounding. A different version fails preflight.
+
+There is one computational worker between static and collection jobs. The worker has a 50-minute timeout; original initialization is capped at 600 seconds and interval qualification at 300 seconds. No trajectory sharding, checkpoint or resume is needed. A prior V29 workflow attempt blocks another acquisition; failures go back to ingestion rather than automatic retry.
+
+Outputs are under `context_v29/`: exact hexadecimal initialized tables/grid, provenance and hashes, original point diagnostics, continuous background positivity checks and interval boxes. GitHub output names are `q042-v29-<run_id>-context-and-checks` and `q042-v29-<run_id>-final`; final JSON is `q042_context_final_v29.json`. Full journal/source/provenance continuity is in `q042_context_full_handoff_v29.md`.
+
+Local checks qualify only implementation tests. Actual capture and real-table checks are pending until execution. Even runtime prerequisite success leaves original-binary arithmetic bounds, upstream accuracy and the complete history/reference/scientific result **UNRESOLVED**. Successful point containment is diagnostic; it is not a history-error proof. Return either the completed prerequisite or the concrete failed gate to the Result Ingestion & Routing Engine.
+
 ---
 
 ## What this repository is
@@ -458,7 +473,7 @@ A fork or third-party modification is not an official Bubbleverse result unless 
 
 ## Q-042 V26 bounded raw reference acquisition
 
-`Q042-REFACQ-V26` is one isolated diagnostic target. Open **🚀 BUBBLEVERSE START**, enter that PROGRAM_ID and press **Run workflow**. The canonical launcher is `.github/workflows/00-bubbleverse-start.yml`; exact target resolution uses `bubbleverse_program_registry.json`. The internal target is `.github/workflows/q042-reference-acquisition-v26.yml`.
+`Q042-REFACQ-V26` is a completed historical diagnostic (run `37323656302`), with result status `RAW_NOT_QUALIFIED`. Do not relaunch it unchanged. The historical target is `.github/workflows/q042-reference-acquisition-v26.yml`.
 
 The frozen `q042_reference_contract_v26.json` and byte-exact `q042_reference_point_v26.ini` define two fixed trials, RK4 and implicit midpoint, levels1/2/4:12 branches attempted once. The original cached CLASS source and binary must match their pinned identities; the binary is never rebuilt. A common original background/recombination prefix supplies conditional initial state. Isolated child processes implement the new stepping and preserve failures. No root search, spectra, optimizer, posterior, production restart, automatic retries or resume is authorized.
 
@@ -471,16 +486,16 @@ V25, its hash failure and earlier scientific/technical history remain historical
 
 ## Q-042: bounded original HyRec switch attribution (V27)
 
-Open **[🚀 BUBBLEVERSE START](.github/workflows/00-bubbleverse-start.yml)**, enter `Q042-SWITCHPROBE-V27`, and run once after installing the V27 files. The canonical registry is `bubbleverse_program_registry.json`.
+`Q042-SWITCHPROBE-V27` is a completed historical diagnostic (run `37333030105`), with result status `RAW_NOT_QUALIFIED`. Do not relaunch it unchanged.
 
 This diagnostic restores the original hash-pinned CLASS cache and evaluates only 24 fixed-state RHS samples on either side of the original HyRec temperature threshold. It reuses two RAW V26 states; it does not integrate a new history, solve a root, run likelihoods or restart production. Results remain `RAW_NOT_QUALIFIED`. The target is `.github/workflows/q042-switch-probe-v27.yml`; artifacts are `q042-v27-<run_id>-raw-switch-probes` and `q042-v27-<run_id>-diagnostic-final`.
 
 Three bounded jobs check package identity, acquire two isolated probe sets and collect their completeness/model-route evidence. Finite derivative offsets and solver stage fingerprints do not qualify a reference history. The inherited journal and original scientific contract remain in `q042_execution_handoff_switch_v27.md`.
 
 
-## Current finite Q-042 follow-up: event-aware cell diagnostic (V28)
+## Historical Q-042 event-aware cell diagnostic (V28)
 
-The next technical target is `Q042-EVENTCELL-V28`. Open **🚀 BUBBLEVERSE START**, enter that PROGRAM_ID, and press **Run workflow**. The permanent launcher remains `.github/workflows/00-bubbleverse-start.yml`; exact dispatch uses `bubbleverse_program_registry.json` and the target `.github/workflows/q042-event-cell-v28.yml`.
+`Q042-EVENTCELL-V28` completed as run `37347357296`, with result status `RAW_NOT_QUALIFIED`. It is not the next runnable target. The historical workflow is `.github/workflows/q042-event-cell-v28.yml`; do not repeat it unchanged.
 
 This target preserves the original cached CLASS binary, physical switch and frozen scientific contract. It compares only one native crossing cell at the two archived RAW V26 conditioning states, using RK4 L1/L2/L4 (six independent branches;112 original-kernel stages). The terminal pre-event stage samples the immediately adjacent representable pre-event coordinate; the post-event segment restarts at the exact threshold with the same propagated state. Actual routing and the additional temperature-ratio predicate are checked at every stage. A new active crossing fails explicitly.
 
@@ -495,4 +510,4 @@ Raw stages, accepted nodes and endpoints are in `q042-v28-<run_id>-raw-event-cel
 
 Run37344813050 stopped in the controlled test before any actual original-binary cell computation: the fixture used `LOCAL` while the strict collector expected GitHub's run-id. The fixture now inherits `GITHUB_RUN_ID`, falling back to `LOCAL` only outside Actions; unrelated identities remain rejected. Numerical physics,contract,program,workflow,registry and launcher are unchanged. The complete failure/provenance and journal update are in the current V28 handoff/source evidence.
 
-Install the corrected test,manifest,source evidence,full handoff and README together,then start a **new** `Q042-EVENTCELL-V28` run through **🚀 BUBBLEVERSE START**. `Re-run jobs` increments the attempt and is deliberately rejected by the unchanged no-retry controller. After one scientific pass,return raw and final artifacts to ingestion. Local implementation tests do not qualify physical/history accuracy.
+The fixture correction was followed by completed run `37347357296`. The failed run and fix remain historical evidence; no further V28 launch or retry is required. Local implementation tests and successful cell execution do not qualify whole-history accuracy.
