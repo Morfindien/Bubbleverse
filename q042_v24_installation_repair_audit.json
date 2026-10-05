@@ -1,0 +1,256 @@
+{
+  "q": "Q-042",
+  "program_id": "Q042-CLASSORIGIN-V24",
+  "case_id": "NOT DOCUMENTED",
+  "date_time_utc": "2026-10-05T06:10:33.650513+00:00",
+  "source_type": "BUBBLEVERSE TECHNICAL EVIDENCE",
+  "result_id": "R-Q042-V24-INSTALL-001",
+  "repository": "Morfindien/Bubbleverse",
+  "execution_commit": "b8bd4e647e5bffd5b2c5f84183dfd657b9b0bd0b",
+  "github_run_id": 37269270548,
+  "github_run_url": "https://github.com/Morfindien/Bubbleverse/actions/runs/37269270548",
+  "jobs": [
+    {
+      "id": 111632590230,
+      "name": "static",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 37269270548,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Exact ID, package, launcher and scientific context",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 4
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        }
+      ]
+    },
+    {
+      "id": 111632625782,
+      "name": "collect",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 37269270548,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Preserve exact completeness outcome; no science upgrade",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 5
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 11
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 12
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 13
+        }
+      ]
+    },
+    {
+      "id": 111632626407,
+      "name": "class-origin",
+      "status": "completed",
+      "conclusion": "skipped",
+      "run_id": 37269270548,
+      "logs_url": null,
+      "steps": null
+    }
+  ],
+  "root_cause": "Required archival JSONL file absent from repository, not a hash mismatch of an existing file",
+  "missing_files": [
+    "q042_class_origin_local_trace_v24.jsonl"
+  ],
+  "required_files": [
+    {
+      "path": "README.md",
+      "expected_sha256": "f8802e4b4d8e94fcfcf2f32e6a9387de265b32761d9b59d06e044be81475bc73",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 14034
+    },
+    {
+      "path": "bubbleverse_program_registry.json",
+      "expected_sha256": "fbb1afd7a2ddab562e26eb5f7dd5ec5671d185530c0426567420aa290047ff36",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 79083
+    },
+    {
+      "path": ".github/workflows/q042-class-origin-v24.yml",
+      "expected_sha256": "cd2ba0cc7ac45ba97c3aef3eb8e6a6cd8caa937bc540bdb156f0e6387276da1d",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 3131
+    },
+    {
+      "path": "q042_class_origin_contract_v24.json",
+      "expected_sha256": "1872e0ad1ccab975e8dcdd86e7a3a8b0d964e02ab568613217d266ad84af71b9",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 16763
+    },
+    {
+      "path": "q042_class_origin_local_trace_v24.jsonl",
+      "expected_sha256": "31a3f4ae2b0f285d9c5ddccb44420746efd394d91f626564ad35725276a3e945",
+      "github_present": false,
+      "github_blob_identity_matches": false,
+      "size_bytes": 2894
+    },
+    {
+      "path": "q042_class_origin_local_v24.json",
+      "expected_sha256": "c8c2be63d81ed712cb9131aeedb7ba8217bf5ea992197a1751dca64a7ef1142a",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 8817
+    },
+    {
+      "path": "q042_class_origin_probe_v24.c",
+      "expected_sha256": "a9b43a671f1290587bf91a0780e86c9038b7e16c9de7c7e9e3df3461c37b893a",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 10165
+    },
+    {
+      "path": "q042_class_origin_tests_v24.py",
+      "expected_sha256": "768c6af597b0a3c8bd7943838bf9a289ad4aac8312d8b90d21298e3e26b6e885",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 2269
+    },
+    {
+      "path": "q042_class_origin_v24.py",
+      "expected_sha256": "b6dc50a3a2828996f437626f9b7472cf806f8eaae67ff050a3f189b736fff3db",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 10365
+    },
+    {
+      "path": "q042_execution_handoff_v24.md",
+      "expected_sha256": "c16c6880e50ac79363c69d13edcc09cbe6641e830dd985d6808aeeb60cc7028c",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 1146361
+    },
+    {
+      "path": "q042_class_diagnostic_v23.py",
+      "expected_sha256": "ba32d1c503c108283d253f112f3218d9782d5c5065c338877468b56e115ee178",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 13198
+    },
+    {
+      "path": "q042_class_tests_v23.py",
+      "expected_sha256": "c6d6a3feb75e13c0be886847e3895df8c91060c7b7fd8dc0d4bf3b0673cbdc45",
+      "github_present": true,
+      "github_blob_identity_matches": true,
+      "size_bytes": 4082
+    }
+  ],
+  "red_reproduction": "PACKAGE_HASH_GATE=FAIL q042_class_origin_local_trace_v24.jsonl",
+  "green_after_original_file_restore": "PACKAGE_GATE=PASS LAUNCHER_GATE=PASS README_GATE=PASS REPOSITORY_CONSISTENCY_GATE=PASS",
+  "regression_tests_passed": 15,
+  "regression_test_logs": [
+    "......\n----------------------------------------------------------------------\nRan 6 tests in 0.000s\n\nOK\n",
+    ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.009s\n\nOK\n"
+  ],
+  "original_trace_sha256": "31a3f4ae2b0f285d9c5ddccb44420746efd394d91f626564ad35725276a3e945",
+  "frozen_executable_changed": false,
+  "scientific_contract_changed": false,
+  "github_written": false,
+  "github_dispatched": false,
+  "new_class_executions": 0,
+  "new_bobyqa_starts": 0,
+  "frozen_bobyqa_records": 80,
+  "full_journal_parent_file": "q042_execution_handoff_v24.md",
+  "full_journal_parent_sha256": "c16c6880e50ac79363c69d13edcc09cbe6641e830dd985d6808aeeb60cc7028c",
+  "journal_effect": {
+    "ADD": "V24 run 37269270548 failed static because required raw local trace was not installed; original-binary job was skipped. One-file restoration reproduces PASS locally.",
+    "KEEP": "Full V24 accumulated journal, local source-equivalent NaN observation, unresolved original-binary corroboration, frozen science and 80 BOBYQA records."
+  },
+  "readme_action": "UNCHANGED; restoring an already specified package member creates no new execution functionality; supplementary installation instructions explicitly name it",
+  "q_completion_gate": "NOT SATISFIED",
+  "final_result_gate": "UNRESOLVED",
+  "production_restart_authorized": false,
+  "next_task": "Install exact original JSONL at repository root, then launch same bounded V24 target once",
+  "return_route": "Result Ingestion & Routing"
+}
