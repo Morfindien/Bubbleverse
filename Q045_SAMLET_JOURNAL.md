@@ -1,3 +1,75 @@
+# BUBBLEVERSE — Q045 REFERENCE HISTORY V1 INGESTION / V2 OFFLINE RECOVERY
+
+DATE AND TIME: 2026-10-10T09:19:09.033675+00:00 (UTC).
+CURRENT Q: Q-045 / Q045 — PROPOSED_CANONICAL_REGISTRATION_PENDING.
+CASE ID: NOT DOCUMENTED.
+EXACT QUESTION: For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?
+STATUS: CONTINUES. No scientific closure or model revision is established by this repair.
+RECOMMENDED CHATGPT SETTING: current Work/Codex, strong reasoning (High if selectable); focused repository and offline numerical debugging. Current configured effort and account-specific ASTRA MAX/model menu are not visible. GPT-5.6 with comparable code/repository capability is an if-available fallback. No model switch or subagents used.
+
+KEEP: the exact incoming executed journal follows verbatim (627359 bytes, SHA256 `20e7f963d2be02c85fcb83d716bacfa3becb975cbdec878f1364eab5e6e165a3`). All existing source IDs/claim mappings, Q041 scientific freezes, accepted v0.5/R000005 through Q043, closed Q042/Q044 states and previous successes/failures survive. This differential update governs current status; old prospective “not computed” statements are historical.
+
+ADD — J-Q045-RECOVERY-01 [RUN_FAILURE / TECHNICAL EVIDENCE]: original reference-history V1 run38039690879 at commit849f33d54d31c58c58cba37d5134e240987741fe completed all8 native background/thermodynamics evaluations. Six worker analyses passed; HiLLiPoP LCDM-L1 and EDE-L1 failed only afterward with exact error `ValueError: UNCHANGED_PHYSICAL_NORMALIZATION YHe`. Original failed outcomes remain FAILED historically. The full run is not relabeled as a successful Actions execution.
+
+ADD — J-Q045-RECOVERY-02 [ROOT CAUSE / CORRECTED VALIDATION]: both failed workers report YHe=0.2453270944664975; their respective L0 parents report0.24532709446649748. Difference=2.7755575615628914e-17, exactly1 binary64 ULP. All frozen requested physical dictionaries, requested tau_reio, nine numerical settings/effective precision whitelist and recorded nH0/fHe/physical constants remain exact under existing checks. The strict V1 equality test treated derived BBN YHe as an invariant input. Pinned source K-Q045-REFHIST-SOURCE-001, `thermodynamics_helium_from_bbn`, calls background_at_z at BBN and obtains Neff for interpolation; output therefore depends on the numerical background. This is consistent with numerical rounding under refinement; the source does not uniquely prove a particular floating-point operation caused the1ULP change. It supplies no physics falsification or new anomaly claim.
+
+UPDATE — J-Q045-RECOVERY-03 [FINITE CORRECTION / NO SCIENTIFIC CHANGE]: Q045-REFHIST-V2 only retrieves and reanalyzes the frozen original artifacts. It permits≤1ULP only for BBN-derived YHe and records old/new/delta/ULP/bitwise-equality status. Explicit numeric YHe, changed requested inputs, larger drift and any normalization-constant change remain rejected. No raw value is changed, rounded, clipped or substituted. No CLASS source/binary build, native execution, cache restore, new refinement, CMB/likelihood, fit, sampler or production run exists in the V2 execution target.
+
+ADD — J-Q045-RECOVERY-04 [ACTUAL RECOVERED RESULT]: all10 source archives match official byte counts/SHA256; every member matches its frozen inventory and original worker hash inventory. Offline analysis recovers8/8 histories, and all6 originally successful numerical summaries reproduce exactly using NumPy1.26.4. Local Python differs from original runner (3.12 versus3.11.16); exact reproduction is checked rather than assumed. There are4 L0/L1/L2 common-grid comparisons. L1 has56666 native nodes; L2 has113333. Opacity, scalar calibration, trace completeness, precision and input gates pass as component diagnostics. Original statuses and errors are retained alongside recovery status. Actual runtime metadata are in the final JSON.
+
+| Point | Accepted native tau L0 | L1 | L2 | max xe drift L0→L1, z≤50 | L1→L2 |
+|---|---:|---:|---:|---:|---:|
+| camspec-ede_n3 | 0.05141522621 | 0.05141992655 | 0.05141902842 | 0.000569497 | 9.49163e-05 |
+| camspec-lcdm | 0.05141528223 | 0.05141998267 | 0.05141908455 | 0.000569499 | 9.49161e-05 |
+| hillipop-ede_n3 | 0.05150733944 | 0.05150539545 | 0.0515061513 | 0.000189823 | 9.49126e-05 |
+| hillipop-lcdm | 0.05150741928 | 0.05150547519 | 0.05150623903 | 0.000189824 | 9.49127e-05 |
+
+All tau and xe values/differences above are dimensionless diagnostic quantities. Tables show numerical calculation precision, not physical accuracy. All4 accepted-tau sequences change direction across levels: no positive Richardson order/remaining estimate exists for these sequences. Calibrated z_reio/support drift is mixed with history refinement; no isolated continuum error is identified. The full-domain redshift32 versus eta-cubic difference remains about0.0666–0.0669 at L1 and0.01666–0.01674 at L2; below z≤1500 it is about9.24e-8–9.51e-8 at L1 and2.31e-8–2.38e-8 at L2. These are representation discrepancies with sampled H, not global physical-reference bounds. Unexpected values and all native rows remain preserved, not normalized away.
+
+UPDATE — J-Q045-RECOVERY-05 [EXACT BUDGET / STOP]: 4 FULL baseline starts +4 prior telemetry observations +8 completed refinement observations =16/52 consumed;36 remain. Offline recovery adds0. The prior48-FULL matrix still requires44 further FULL calls; the cap is short8, or12 including4 original independent FULL repeats. No budget increase, test waiver or redesigned response campaign is authorized. Do not rerun V1 or the two failed native jobs. Stop this finite recovery after the mandatory artifact/input/reconstruction tests; no extra levels or repeated native trials are needed.
+
+UPDATE — J-Q045-RECOVERY-06 [REPOSITORY]: main was inspected at849f33d54d31c58c58cba37d5134e240987741fe, nontruncated1578-entry tree, no AGENTS.md and no prior V2 target. README/registry/launcher/controller/journal/handoff local V1 blobs match exact installed Git blobs. Reuse pure V1 numerical analysis and scientific contract; remove native worker paths in V2 and narrowly correct derived-YHe validation. New registered target Q045-REFHIST-V2 is prepared for manual installation. V1 registry status becomes COMPLETED_WITH_POSTPROCESSING_FAILURE, which the unchanged launcher blocks. Canonical launcher is byte-identical; README points to offline V2. No remote write or dispatch occurred.
+
+UNCHANGED / UNRESOLVED: REFERENCE_TRUTH_GATE=UNQUALIFIED; FINAL_RESULT_GATE=UNRESOLVED. No global continuum/source/species/event/endpoint/calibration enclosure, no isolated treatment-response result, no TT/TE/EE or native likelihood contrast and no recovered qualified H0/EDE decision margin. The physical hypothesis survives unchanged because a program postprocessing failure is not model failure. Q045 cannot be declared answered from this diagnostic alone. Return exactly once to Result Ingestion & Routing with the actual outputs and inherited blockers; it assesses whether obtainable evidence can materially change the exact question or an honest inconclusive closure belongs at Motor14. No automatic further computation.
+
+## Source-register differential additions and claim map
+
+K-Q045-REFHIST-SOURCE-001 retains its existing identity/commit/SHA; add relevant section `thermodynamics_helium_from_bbn` and claim J-Q045-RECOVERY-02. Original file SHA256 d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6, mwt5345/class_ede@5a131c91d657dd9a7c6364cc45b038710f8d0d97. All earlier sources remain below.
+
+```json
+[
+  {
+    "source_id": "I-Q045-REFHIST-RUN-V1-001",
+    "type": "BUBBLEVERSE TECHNICAL/NUMERICAL EVIDENCE",
+    "repository": "Morfindien/Bubbleverse",
+    "run_id": "38039690879",
+    "commit": "849f33d54d31c58c58cba37d5134e240987741fe",
+    "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38039690879",
+    "status": "Original Actions run FAILED; eight native computations completed, six analyses COMPLETE, two postprocessing failures",
+    "source_register": "q045_reference_history_contract_v2.json: ten official artifact identities/digests and all raw member hashes"
+  },
+  {
+    "source_id": "I-Q045-REFHIST-RECOVERY-V2-001",
+    "type": "BUBBLEVERSE STORED-HISTORY REANALYSIS",
+    "program_id": "Q045-REFHIST-V2",
+    "result": "q045_reference_history_final_v2.json",
+    "source_run_id": "38039690879",
+    "new_theory_evaluations": 0,
+    "analysis_status": "Eight recovered reports COMPLETE; six successful original summaries reproduced exactly under NumPy1.26.4",
+    "physical_reference_status": "UNQUALIFIED",
+    "local_python": "3.12.14; exact runtime string is in final JSON",
+    "original_python": "3.11.16",
+    "remaining_budget": 36
+  }
+]
+```
+
+J-Q045-RECOVERY-01/02 → I-Q045-REFHIST-RUN-V1-001; J-Q045-RECOVERY-02 → K-Q045-REFHIST-SOURCE-001. J-Q045-RECOVERY-03/04 → I-Q045-REFHIST-RECOVERY-V2-001 and original V1 raw evidence. J-Q045-RECOVERY-05 → original run records + inherited budget contract. J-Q045-RECOVERY-06 → installed repository tree/commit and local package manifest.
+
+Detailed current raw provenance: Q045_REFERENCE_HISTORY_RAW_FILE_INDEX.md and frozen V2 artifact/member registry. Raw archives are internal retrieval inputs, never delivered as archives. Original Actions artifacts have30-day retention; all nonempty original V1 worker files are additionally preserved as individual unchanged job-prefixed files; zero-byte compile logs are represented exactly by the inventory rather than fake nonempty files. Complete inventories are indexed in Q045_REFERENCE_HISTORY_PRESERVED_RAW_MEMBERS.json. External Actions retention is not asserted to be permanent.
+
+## Complete incoming authoritative journal — verbatim historical state
+
 # BUBBLEVERSE — Q045 BOUNDED NATIVE HISTORY REFINEMENT V1
 
 DATE AND TIME: 2026-10-10T10:36:39.832774+02:00 (Europe/Copenhagen).

@@ -1,25 +1,16 @@
-## Q045 current execution: bounded native history refinement
+# Bubbleverse — current Q045 offline recovery
 
-Use **🚀 BUBBLEVERSE START** (`.github/workflows/00-bubbleverse-start.yml`), enter
-`Q045-REFHIST-V1`, then **Run workflow**. The canonical registry is
-`bubbleverse_program_registry.json`. Install the workflow at
-`.github/workflows/q045-reference-history-v1.yml`; all Python/C/JSON and journal files are at repository root.
+Open **🚀 BUBBLEVERSE START**, enter `Q045-REFHIST-V2`, and select **Run workflow** after installing this package. The canonical launcher is `.github/workflows/00-bubbleverse-start.yml`; the registry is `bubbleverse_program_registry.json`; the target is `.github/workflows/q045-reference-history-v2.yml`. Other package files belong at repository root.
 
-Optical audit V3 completed in run **38035928310**, commit
-`2b08781ce57e3b71d7a6de19076db71d9e7702fe`; its four histories are reused as level 0.
-The original binary and physical inputs are preserved. Eight independent jobs run levels 1 and 2,
-with nine preregistered numerical controls. No CMB, likelihood, optimization, reference intervention,
-or production restart is executed. `REFERENCE_TRUTH_GATE=UNQUALIFIED` remains explicit;
-three-level agreement supplies an empirical diagnostic, never a continuum error bound.
+**Do not rerun Q045-REFHIST-V1 or either failed native worker.** All eight original computations completed in run [38039690879](https://github.com/Morfindien/Bubbleverse/actions/runs/38039690879). Six passed analysis; both HiLLiPoP L1 jobs failed after computation because V1 required exact equality for BBN-derived `YHe`. Both outputs differ from L0 by one binary64 ULP, while requested physical dictionaries and recorded normalization constants are unchanged. Original failed records remain historical failures.
 
-Workers upload raw histories, scalar trials, settings, input/compile provenance and diagnostics.
-The collector checks eight unique complete jobs and rederives their summaries, then writes
-`q045_reference_history_final_v1.json` and four common-grid tables. Partial jobs remain partial.
-No automatic rerun, refinement extension or dispatch follows. Maximum accounting is **16/52**
-consumed (8 inherited + 8 new); at least **36** remain. This stage uses component observations,
-not eight FULL CMB/likelihood runs. The unchanged48-FULL matrix would then require44 more FULL calls with only36 slots left (8-slot conflict; 12 including its4 independent repeats). No full campaign or test waiver is authorized. Complete state: `Q045_SAMLET_JOURNAL.md`,
-`Q045_EXECUTION_HANDOFF.md`, `Q045_OPTICAL_AUDIT_INGESTION_RESULT.json`, and
-`Q045_OPTICAL_AUDIT_RAW_FILE_INDEX.md`. Historical sections below describe prior stages.
+V2 retrieves the ten frozen original artifacts, verifies archive digests and every member, and reanalyzes the stored histories with `numpy==1.26.4`. It permits at most one ULP only in BBN-derived helium output, records the difference, rejects changed explicit helium/physical inputs or normalization constants, and requires the six originally successful summaries to reproduce exactly. It performs **zero new native/theory evaluations**, needs no CLASS cache or compilation, and cannot launch a native worker. Missing/expired artifacts or incompatible data cause failure. Original GitHub artifacts have 30-day retention; the pinned IDs/digests and raw-member index remain in the contract.
+
+Outputs: `q045_recovery/q045_reference_history_final_v2.json`, eight recovered worker reports and four `*_common_grid.tsv` comparisons. Each report preserves the original status/error and its worker hash. The locally recovered final result and common grids are also delivered individually.
+
+Recovery has passed for all eight stored histories. This is a component diagnostic: `REFERENCE_TRUTH_GATE=UNQUALIFIED`, `FINAL_RESULT_GATE=UNRESOLVED`. No CMB/likelihood response or continuum-error enclosure has been computed. The accepted tau sequence is non-monotonic at all four points, so no positive Richardson order is established for it. Budget remains16/52 consumed and36 remaining; the unmodified FULL matrix remains incompatible with the cap. No automatic next stage is authorized.
+
+The authoritative journal is `Q045_SAMLET_JOURNAL.md`; complete handoff/source history is `Q045_EXECUTION_HANDOFF.md`. Existing V1 source, contract, manifest, observer and workflow remain unchanged for provenance. Registry status blocks repeating V1 through the launcher.
 
 ---
 
@@ -42,7 +33,7 @@ Q042 and Q044 remain closed with inconclusive scientific boundaries. Q045 remain
 
 V2 baseline run [38023210800](https://github.com/Morfindien/Bubbleverse/actions/runs/38023210800) completed all four native FULL diagnostic starts. Installation, completeness and raw-product gates passed. Those starts are fixed inputs, not fitted minima; their likelihood values establish no model preference. The registry records `Q045-BASELINE-V2` as **COMPLETED** so it is not relaunched unchanged. Its V1 failed installation and V2 Flit repair remain preserved.
 
-Completed PROGRAM_ID: **`Q045-OPTICAL-AUDIT-V3`** (the prior duplicated `Q045-` prefix is corrected). The registry records this target **COMPLETED**, run [38035928310](https://github.com/Morfindien/Bubbleverse/actions/runs/38035928310). Its original files and workflow are retained for provenance, not another unchanged launch. The current launcher target is `Q045-REFHIST-V1` above.
+Completed PROGRAM_ID: **`Q045-OPTICAL-AUDIT-V3`** (the prior duplicated `Q045-` prefix is corrected). The registry records this target **COMPLETED**, run [38035928310](https://github.com/Morfindien/Bubbleverse/actions/runs/38035928310). Its original files and workflow are retained for provenance, not another unchanged launch. The current launcher target is `Q045-REFHIST-V2` above; V1 native computation completed and must not be repeated.
 
 The completed target retrieved the exact four completed V2 worker artifacts, then uses read-only original-function observation to export each scalar calibration trial/support, raw cumulative optical depth before exponentiation, effective precision/constants and species workspace snapshots. The unchanged original diagnostic CLASS binary and source are required; there is no cache-miss rebuild, scientific source patch, new spectrum/likelihood run, optimizer, sampler or automatic retry. Final native table columns must exactly match V2. Separate worker jobs have45-minute caps and15-minute native-process caps. The original52-evaluation budget is retained: four V2 evaluations already complete, at most four telemetry observations now, at most44 slots remaining after all four start. Background/thermodynamics observations do not constitute full CMB/likelihood reproducibility runs.
 

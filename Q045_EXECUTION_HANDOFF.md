@@ -1,5 +1,113 @@
 # BUBBLEVERSE — EXECUTION-MECHANISM HANDOFF
 
+STATUS: OFFLINE RECOVERY COMPLETED LOCALLY; REPRODUCIBLE V2 TARGET PREPARED FOR MANUAL INSTALLATION.
+DATE AND TIME: 2026-10-10T09:19:09.033675+00:00 (UTC).
+
+## A. CURRENT Q
+
+CURRENT Q: Q-045 / Q045 — PROPOSED_CANONICAL_REGISTRATION_PENDING.
+CASE ID: NOT DOCUMENTED.
+EXACT QUESTION: For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?
+
+## B. RECOMMENDED CHATGPT SETTING
+
+Current Work/Codex, strong reasoning/High if selectable: targeted source/code debugging and stored-data recovery. GPT-5.6 with equivalent tools is a conditional fallback. User's ASTRA MAX access/current reasoning effort/context capacity/usage limits are not visible. A broader frontier analysis is unnecessary for this correction.
+
+## C. PLUGIN / CAPABILITY PLAN
+
+Authenticated GitHub read-only capability retrieved the exact run, jobs, official artifact identities, current tree/commit and pinned source. Python with NumPy1.26.4 verifies hashes and recomputes existing numerical diagnostics. No broad literature, deployment, remote writes/dispatch or subagents used. GitHub supplies underlying raw evidence, not automatic scientific authority.
+
+## D. EXECUTION DECISION
+
+Existing motor + patched pure numerical analysis + repository retrieval. Eight native computations already finished. Smallest sufficient mechanism is offline reanalysis; neither a new scientific motor nor an HPC/native rerun is necessary.
+
+## E. SCIENTIFIC REQUIREMENT
+
+Recover completed history diagnostics without consuming another evaluation or changing frozen physics; preserve original failures and qualification limits. This repair alone cannot answer the physical question.
+
+## F. JOURNAL CONTEXT
+
+Q045_SAMLET_JOURNAL.md is authoritative. Its differential update contains the exact incoming627359-byte journal verbatim. Previous actual results/failures, Q042/Q044 closure, v0.5/R000005 and all source/claim mappings survive. This handoff preserves the incoming678338-byte handoff verbatim below.
+
+## G. SOURCES AND PROVENANCE
+
+Original refinement run38039690879 attempt1, commit849f33d54d31c58c58cba37d5134e240987741fe; original scientific contract SHA256f54e3a908c35241530bd9db1eacbf95b5e201423f6d0fc9574e7274d2b532b08. Ten official archives/member inventories are pinned in q045_reference_history_contract_v2.json. Six original statuses COMPLETE, two FAILED after native completion with `UNCHANGED_PHYSICAL_NORMALIZATION YHe`. Each original started count=1. Prior V3 run38035928310 and FULL baseline run38023210800 remain inherited. Original CLASS commit5a131c91d657dd9a7c6364cc45b038710f8d0d97 and binary SHA256df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf remain exact. Source K-Q045-REFHIST-SOURCE-001 records BBN derivation. New internal IDs I-Q045-REFHIST-RUN-V1-001 and I-Q045-REFHIST-RECOVERY-V2-001 distinguish raw run evidence from offline arithmetic. Original compiler remains NOT DOCUMENTED; actual new observer compiler is preserved in original raw workers. NumPy pinned1.26.4; local Python3.12, original3.11.16, exact reconstruction of six summaries required.
+
+## H. EXISTING MOTOR ASSESSMENT
+
+EXISTING MOTOR SUFFICIENT: YES. SELECTED MOTOR: existing Execution-Mechanism / Numerical / HPC / Motor-Builder Engine. RETURN ROUTE: Result Ingestion & Routing Engine, exactly one destination.
+
+## I. BUBBLEVERSE GITHUB SEARCH
+
+Full current tree1578 entries at849f33d54d31c58c58cba37d5134e240987741fe, no AGENTS.md or V2 collision. Local V1 registry, README, launcher, program, journal and handoff match installed Git blobs. REUSE: pure V1 analysis/settings/parent integrity checks and frozen scientific contract. PATCH: narrow BBN-derived one-ULP validator. V1 native program/observer/contract/workflow/manifest remain unchanged. No new native worker/compile/cache path exists in V2. Registry blocks repeated V1; README documents current offline target. Previous Flit/cache/path failures remain historical and require no rerun.
+
+## J. NUMERICAL SPECIFICATION
+
+Same four Q041 physical dictionaries and all L0/L1/L2 effective settings are frozen in unchanged V1 contract. V2 reads them; it does not solve the model. Likelihood/data/prior/nuisance/source freezes remain inherited. Same eta cubic-minus/Gauss2, redshift cubic-xe/linear-H Gauss16/32 and cubic common-grid projection. No clipping. Requested physical inputs and recorded nH0/fHe/constants must remain exact; only derived BBN YHe may differ≤1ULP with diagnostic provenance. Explicit numeric helium or larger change fails. Accepted tau sequence is non-monotonic, so no positive Richardson order is inferred.
+
+| Point | Accepted native tau L0 | L1 | L2 | max xe drift L0→L1, z≤50 | L1→L2 |
+|---|---:|---:|---:|---:|---:|
+| camspec-ede_n3 | 0.05141522621 | 0.05141992655 | 0.05141902842 | 0.000569497 | 9.49163e-05 |
+| camspec-lcdm | 0.05141528223 | 0.05141998267 | 0.05141908455 | 0.000569499 | 9.49161e-05 |
+| hillipop-ede_n3 | 0.05150733944 | 0.05150539545 | 0.0515061513 | 0.000189823 | 9.49126e-05 |
+| hillipop-lcdm | 0.05150741928 | 0.05150547519 | 0.05150623903 | 0.000189824 | 9.49127e-05 |
+
+## K. PROGRAM_ID
+
+PROGRAM_ID: Q045-REFHIST-V2. Changed executable scope: OFFLINE_ARTIFACT_REANALYSIS_ONLY, new_theory_evaluations_max=0.
+
+## L. BUBBLEVERSE START REGISTRATION
+
+LAUNCHER: 🚀 BUBBLEVERSE START. LAUNCHER FILE: .github/workflows/00-bubbleverse-start.yml, unchanged. PROGRAM_ID REGISTERED: YES in locally staged bubbleverse_program_registry.json. TARGET: .github/workflows/q045-reference-history-v2.yml. LAUNCHER_GATE: local validation required below; remote installation not performed. Exact registry lookup and approved workflow dispatch remain intact; PROGRAM_ID is never executed as shell code.
+
+## M. GITHUB RUNTIME ASSESSMENT
+
+Local stored-history reanalysis takes seconds; retrieval duration depends on artifact service. One20-minute workflow job: up to10 minutes for pinned retrieval,5 for reanalysis plus setup/tests/transfers. No native computation, long stateful solver, shard/checkpoint/resume or expensive validation is required. Single-job risk LOW for arithmetic; retrieval availability/duration UNKNOWN. Strategy SINGLE. Estimated jobs1. Checkpoint NO; native merge NO; artifact compatibility/recovered-history combination YES. Test jobs run inside the same bounded job. No current hard-limit assumption is needed:20-minute job cap is well below the previously documented hosted bound; exact future service limits remain external.
+
+## N. JOB PLAN
+
+1 recover job: package/registry/launcher gates → finite tests → retrieve10 frozen artifacts → verify every archive/member → verify8 raw input/worker identities → reanalyze8 stored histories → reconstruct6 prior successful summaries exactly → compare4 L0/L1/L2 histories → emit final/worker/common-grid outputs. Failure stops recovery and preserves reports. Never retry or relaunch native computations.
+
+## O. RESULT TEST PLAN
+
+Mandatory finite tests: T001 package/registry/README/launcher consistency; T002 ten archive digests and full member inventories; T003 eight unique raw worker identities and started counts; T004 exact frozen physical vectors and declared effective precision; T005 narrow derived-helium acceptance/larger or explicit-input drift rejection; T006 scalar traces/support/bisection/native calibration and representation checks; T007 six successful summaries exactly reconstructed; T008 four common-grid comparisons and no qualification promotion; T009 absence of native worker execution route. Unit regressions cover these relevant failure modes; raw actual artifacts additionally exercise full reanalysis. All required local test evidence goes to Q045_REFERENCE_HISTORY_RECOVERY_VALIDATION.json. Final scientific result remains UNRESOLVED despite passing technical tests.
+
+## P. FILE DECISIONS
+
+REUSE UNCHANGED: q045_reference_history_contract_v1.json and original sources/observer/workflow/history; unchanged canonical launcher. PATCH: bubbleverse_program_registry.json, README.md, authoritative journal and handoff. CREATE: V2 controller/tests/recovery contract/manifest/canonical workflow; recovered final JSON;4 common grids; raw index and validation record. No new C/native/HPC file, no archive delivery.
+
+## Q. README STATUS
+
+ACTION UPDATE; FILE README.md. Current instructions point to zero-native offline V2 and warn against rerunning V1. It documents actual computed component results, limits, file locations and artifact retention; historical repository sections remain. README_GATE and REPOSITORY_CONSISTENCY_GATE must pass fresh local validation. No remote deployment/installation success is claimed.
+
+## R. ACTUAL MOTOR / PROGRAM FILES
+
+The existing motor is sufficient; no new motor prompt required. Individual files are delivered. Install V2 workflow at canonical .github/workflows/q045-reference-history-v2.yml and remaining new/updated package files at repository root. The already installed unchanged V1 contract and launcher are dependencies, not replacements. Do not overwrite V1 program/observer/workflow/manifest. Recovered outputs are evidence for ingestion, not executable setup files.
+
+## S. EXECUTION
+
+Offline recovery already completed locally. If reproducing it on GitHub after manual installation: OPEN 🚀 BUBBLEVERSE START; PASTE Q045-REFHIST-V2; PRESS Run workflow. This reads existing artifacts and adds0 native evaluations. Do not rerun Q045-REFHIST-V1 or its two failed workers.
+
+## T. EXPECTED / ACTUAL OUTPUTS
+
+Actual local q045_reference_history_final_v2.json:8 recovered histories COMPLETE, no errors, history/merge gates PASS_COMPONENT_ONLY/PASS; four common-grid TSVs and eight recovered worker JSONs. Original failures/statuses preserved. New native/theory calls0. reference_truth_gate UNQUALIFIED; final_result_gate UNRESOLVED; CMB/likelihood scientific answer NOT YET COMPUTED. Workflow reproduces the same result contract, with its own reanalysis run/commit provenance.
+
+## U. PASS / FAIL GATES
+
+Raw identity/artifact/input/precision/trace/normalization/six-summary reconstruction/job completeness must pass; malformed/missing/incompatible data fail. One-ULP allowance never applies to requested physical inputs or normalization constants. Local package/launcher/README gates verified before delivery. The reference truth and final scientific gates remain UNQUALIFIED/UNRESOLVED and cannot be promoted by this program. Incomplete recovery has no accepted final component result.
+
+## V. RETURN TO BUBBLEVERSE
+
+Preserve Q045, exact question, CASE unknown, full journal/handoff, source IDs/claim map, actual stored and recovered outputs, original failed statuses, all archive/member/config/native hashes and exact budget16/52,36remaining. NEXT REQUIRED ACTION: ingest the finite completed refinement diagnostic and its missing physical-reference/error/decision-margin evidence and52-cap/FULL-plan incompatibility. Return to Result Ingestion & Routing once. Stop arbitrary further refinement/reproduction; no new native execution is required to repair these failures. No scientific hypothesis is falsified by them; Motor14 routing occurs only after ingestion documents a defensible exact-Q answer, including an honest inconclusive closure if appropriate.
+
+## W. START THIS
+
+START THIS: Q045-REFHIST-V2 — offline reproduction only, after manual installation. Original native run must not be repeated.
+
+## Complete incoming handoff — verbatim historical state
+
+# BUBBLEVERSE — EXECUTION-MECHANISM HANDOFF
+
 STATUS: PREPARED LOCALLY; NATIVE REFINEMENT NOT YET EXECUTED.
 DATE AND TIME: 2026-10-10T10:36:39.832774+02:00 (Europe/Copenhagen).
 

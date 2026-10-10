@@ -1,0 +1,81 @@
+{
+  "q": "Q-045",
+  "program_id": "Q045-REFHIST-V2",
+  "source_run_id": "38039690879",
+  "source_commit": "849f33d54d31c58c58cba37d5134e240987741fe",
+  "created_utc": "2026-10-10T09:29:09.273313+00:00",
+  "validation_status": "PASS_COMPONENT_ONLY",
+  "checks": {
+    "package_static": {
+      "exit_code": 0,
+      "stdout": "PACKAGE_GATE=PASS LAUNCHER_GATE=PASS README_GATE=PASS REPOSITORY_CONSISTENCY_GATE=PASS ZERO_NEW_THEORY=PASS\n",
+      "stderr": ""
+    },
+    "finite_regression_tests": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "........................\n----------------------------------------------------------------------\nRan 24 tests in 0.068s\n\nOK\n"
+    },
+    "actual_frozen_artifact_recovery": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "actual_recovery": {
+      "gate": "PASS_COMPONENT_ONLY",
+      "histories": 8,
+      "common_grids": 4,
+      "original_failed_statuses_preserved": 2,
+      "prior_successful_summaries_exactly_reproduced": 6,
+      "new_native_evaluations": 0,
+      "reference_truth_gate": "UNQUALIFIED",
+      "final_result_gate": "UNRESOLVED"
+    },
+    "raw_integrity": {
+      "gate": "PASS",
+      "archives": 10,
+      "unchanged_members": 426,
+      "total_archive_bytes": 236831210
+    },
+    "journal_continuity": {
+      "gate": "PASS",
+      "incoming_journal_sha256": "20e7f963d2be02c85fcb83d716bacfa3becb975cbdec878f1364eab5e6e165a3",
+      "incoming_handoff_sha256": "a879388d807a949e3cf79e08b12ac72c2ebeeb69f3712601eb94b20c3f79efe2"
+    },
+    "frozen_methods_and_no_native_route": {
+      "gate": "PASS",
+      "unchanged_functions": [
+        "integrals",
+        "bracket",
+        "redshift_depth",
+        "settings",
+        "parameters",
+        "precision",
+        "convergence",
+        "cubic_at",
+        "compare_levels",
+        "parent"
+      ],
+      "native_entry_points": []
+    },
+    "launcher_and_workflow": {
+      "gate": "PASS",
+      "current_target_resolves": true,
+      "old_native_target_blocked": true,
+      "unknown_and_shell_text_blocked": true,
+      "workflow_read_only": true,
+      "native_execution": false
+    },
+    "red_green_proof": {
+      "initial_regression_count": 6,
+      "initial_failures": 2,
+      "original_failure_reproduced": "ValueError: UNCHANGED_PHYSICAL_NORMALIZATION YHe",
+      "after_narrow_fix": "6/6 PASS; final suite24/24 PASS"
+    }
+  },
+  "gitHub_execution": "NOT DISPATCHED",
+  "remote_repository_mutation": false,
+  "reference_truth_gate": "UNQUALIFIED",
+  "final_result_gate": "UNRESOLVED",
+  "output_sha256": "c9652b5016dd59da8cbc1e3d667739c828f46efe2c482fcc7feb006de0c42dab"
+}

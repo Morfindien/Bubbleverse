@@ -1,0 +1,57 @@
+name: Bubbleverse Q045 reference history V2 — offline recovery only
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q045-reference-history-v2
+  cancel-in-progress: false
+env:
+  CURRENT_Q: Q-045
+  PROGRAM_ID: Q045-REFHIST-V2
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+jobs:
+  recover:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Pinned numerical reader
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4
+      - name: Scope, package, launcher and finite recovery tests
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          python -c 'import os,q045_reference_history_v2 as a;a.check_id(os.environ["REQUESTED_PROGRAM_ID"]);a.static()'
+          python q045_reference_history_tests_v2.py
+      - name: Recover frozen original artifacts; no cache or native binary required
+        timeout-minutes: 10
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python q045_reference_history_v2.py prepare --out recovered_inputs
+      - name: Reanalyze stored histories; zero new theory evaluations
+        timeout-minutes: 5
+        run: python q045_reference_history_v2.py collect --directory recovered_inputs --out q045_recovery/q045_reference_history_final_v2.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q045-refhist-v2-${{ github.run_id }}-recovered
+          path: |
+            q045_recovery/**
+            recovered_inputs/input_preparation_v2.json
+            q045_reference_history_contract_v2.json
+            q045_reference_history_manifest_v2.json
+            Q045_SAMLET_JOURNAL.md
+            Q045_EXECUTION_HANDOFF.md
+          retention-days: 30
+          if-no-files-found: error
