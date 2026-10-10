@@ -1,3 +1,29 @@
+# BUBBLEVERSE — Q045 OPTICAL AUDIT V3 INSTALLATION-PATH REPAIR
+
+DATE AND TIME: 2026-10-10T08:36:36.753322+02:00 (Europe/Copenhagen).
+CURRENT Q: Q-045 / Q045 — PROPOSED_CANONICAL_REGISTRATION_PENDING.
+CASE ID: NOT DOCUMENTED.
+EXACT QUESTION: For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?
+PROGRAM_ID: Q045-OPTICAL-AUDIT-V3. STATUS: CONTINUES.
+
+KEEP: complete previous journal follows verbatim (597695 bytes, SHA256 `8ac73814394f9df228817288cf14b4a694c8f01851ae08a862536f3133bab4f8`). All previous source IDs, claim maps, baseline values, failures and Q042/Q044 closures survive. This header differentially updates the same authoritative journal.
+
+ADD — J-Q045-PATH-01 [TECHNICAL FAILURE]: optical audit V2 run38030968453, attempt1, commit `0124316bfb88629bcccd9b18a5cef448ade309ed` passed static/input recovery and restored the exact original cache in all four workers. Its finite-test step then failed because the cache regression test read the workflow from repository root, while the installed workflow exists at `.github/workflows/q045-optical-audit-v2.yml`. All four native observation steps were skipped. Zero theory evaluations started in optical V1 or V2; the inherited budget remains4/52 consumed. The inspected CamSpec-EDE worker's native-array synthetic fixture passed, but this is not an original cosmological binary observation.
+
+ADD — J-Q045-PATH-02 [CORRECTION]: V3 changes the test's workflow path to its canonical `.github/workflows/` location. Local validation stages the exact installed file map with no root YAML duplicate. Reproducing that layout exposed the old failure before correction. The production controller changes only optical target/file version names; the C observer is byte-identical to V2. The successful original nine-path cache identity, CLASS source/binary pins, physical dictionaries, precision, methods, data/likelihood/prior, four-worker limit and numerical gates remain unchanged. No substitute binary, rebuild or scientific tolerance is introduced.
+
+UPDATE: V2 is FAILED/inactive in the prepared registry, carrying actual run/commit and zero started evaluations; V3 is the new ACTIVE target. Other registry entries and the permanent launcher are unchanged. README describes the current target and retains V1/V2 failures. Earlier local preparation PASS did not establish installed-layout validity and is corrected for that limitation, without erasing its historical test evidence.
+
+ADD — I-Q045-OPTICAL-AUDIT-RUN-V2-001 [INTERNAL TECHNICAL EVIDENCE]: https://github.com/Morfindien/Bubbleverse/actions/runs/38030968453; official jobs/artifact metadata and CamSpec-EDE worker log, retrieved 2026-10-10T08:36:36.753322+02:00; preserved in `Q045_OPTICAL_AUDIT_V2_FAILURE.json`. Artifact inner files are not claimed as retrieved. I-Q045-PATH-REPAIR-001: this V3 code/contract/manifest and red/green installed-layout validation. Claim map: J-Q045-PATH-01→I-Q045-OPTICAL-AUDIT-RUN-V2-001; -02→I-Q045-PATH-REPAIR-001 plus frozen source/method IDs already in this journal.
+
+UNRESOLVED: new original-binary telemetry, qualified physical continuum reference, response in CMB/likelihood and actual original inference margins. FINAL_RESULT_GATE=UNRESOLVED; REFERENCE_TRUTH_GATE=UNQUALIFIED. No model is physically falsified or promoted. Scientific results are NOT YET COMPUTED.
+
+NEXT: one V3 launch, four bounded independent outcomes, then existing Result Ingestion & Routing Engine with complete Q/journal/source/provenance state. No automatic reruns, treatments, samplers or production continuation. Actual V3 GitHub installation/execution is not performed by assistant.
+
+---
+
+# COMPLETE PREVIOUS AUTHORITATIVE JOURNAL — VERBATIM BYTES FOLLOW
+
 # BUBBLEVERSE — Q045 OPTICAL AUDIT V2 CACHE REPAIR
 
 DATE AND TIME: 2026-10-10T07:16:28.480315+02:00 (Europe/Copenhagen).

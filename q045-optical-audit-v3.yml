@@ -1,0 +1,166 @@
+name: Bubbleverse Q045 optical audit V3 — original binary telemetry
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q045-optical-audit-v3
+  cancel-in-progress: false
+env:
+  CURRENT_Q: Q-045
+  PROGRAM_ID: Q045-OPTICAL-AUDIT-V3
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Scope, registry, journal, launcher and package
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python -c 'import os,q045_optical_audit_v3 as a;a.check_id(os.environ["REQUESTED_PROGRAM_ID"]);a.static();a.no_repeat()'
+  inputs:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Recover exact completed V2 artifacts once
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python q045_optical_audit_v3.py prepare --out baseline_inputs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q045-audit-${{ github.run_id }}-baselines
+          path: baseline_inputs/**
+          retention-days: 30
+          if-no-files-found: error
+  audit:
+    needs: [static, inputs]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        job: [camspec-lcdm, camspec-ede_n3, hillipop-lcdm, hillipop-ede_n3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Preserve attempted job before environment acquisition
+        env:
+          JOB: ${{ matrix.job }}
+        run: |
+          python - <<'PY'
+          import os,q045_optical_audit_v3 as a
+          a.write('preflight/q045_optical_audit_worker_v3.json',dict(**a.envelope(),job_id=os.environ['JOB'],status='FAILED',error='CACHE_OR_SETUP_NOT_COMPLETE',observation_gate='FAIL',files={},theory_evaluations_started=0))
+          PY
+      - name: Exact original cache identity including all nine paths; no rebuild/fallback/save
+        timeout-minutes: 10
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: q045-audit-${{ github.run_id }}-baselines
+          path: baselines
+      - name: Pinned numerical reader and finite contract tests
+        timeout-minutes: 5
+        run: |
+          python -m pip install --disable-pip-version-check numpy==1.26.4
+          python q045_optical_audit_tests_v3.py --native-root external/class_ede
+      - name: One original-binary observation and component audit
+        timeout-minutes: 20
+        env:
+          JOB: ${{ matrix.job }}
+        run: python q045_optical_audit_v3.py worker --job "$JOB" --inputs baselines --out q045_output --class-root external/class_ede
+      - name: Keep exactly one success or failure record
+        if: always()
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import q045_optical_audit_v3 as a
+          output=Path('q045_output');result=output/a.RESULT
+          attempt=output/'attempt.json';fallback=Path('preflight')/a.RESULT
+          if not result.is_file() and attempt.is_file():
+              r=a.read(attempt)
+              r.update(status='FAILED',observation_gate='FAIL',error='WORKER_INTERRUPTED_AFTER_ATTEMPT; actual started slot preserved')
+              r['files']={p.name:a.sha(p) for p in output.iterdir() if p.is_file() and p.name!=a.RESULT}
+              a.write(result,r)
+          if result.is_file():fallback.unlink(missing_ok=True)
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q045-audit-${{ github.run_id }}-worker-${{ matrix.job }}
+          path: |
+            q045_output/**
+            preflight/**
+          retention-days: 30
+          if-no-files-found: error
+  collect:
+    needs: [static, inputs, audit]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Pinned numerical reader
+        run: python -m pip install --disable-pip-version-check numpy==1.26.4
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: q045-audit-${{ github.run_id }}-baselines
+          path: collected/baselines
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q045-audit-${{ github.run_id }}-worker-*
+          path: collected/workers
+      - name: Verify raw hashes, rederive four audits and report exact stopping gate
+        run: python q045_optical_audit_v3.py collect --directory collected --out q045_optical_audit_final_v3.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q045-audit-${{ github.run_id }}-final
+          path: |
+            q045_optical_audit_final_v3.json
+            q045_optical_audit_contract_v3.json
+            q045_optical_audit_manifest_v3.json
+            Q045_EXECUTION_HANDOFF.md
+            Q045_SAMLET_JOURNAL.md
+          retention-days: 30
+          if-no-files-found: error

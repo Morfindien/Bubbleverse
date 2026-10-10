@@ -1,0 +1,691 @@
+{
+  "q": "Q-045",
+  "case_id": "NOT DOCUMENTED",
+  "scientific_question": "For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+  "program_id": "Q045-OPTICAL-AUDIT-V2",
+  "result_class": "RUN_FAILURE",
+  "failure_class": "VALIDATION",
+  "result_status": "TECHNICALLY_DOCUMENTED_TEST_PATH_ERROR",
+  "run_id": 38030968453,
+  "run_attempt": 1,
+  "execution_commit": "0124316bfb88629bcccd9b18a5cef448ade309ed",
+  "run_url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38030968453",
+  "jobs": [
+    {
+      "id": 114151648442,
+      "name": "static",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 38030968453,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Scope, registry, journal, launcher and package",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        }
+      ]
+    },
+    {
+      "id": 114151692868,
+      "name": "inputs",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 38030968453,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Recover exact completed V2 artifacts once",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 11
+        }
+      ]
+    },
+    {
+      "id": 114151765119,
+      "name": "audit (camspec-ede_n3)",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 38030968453,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Preserve attempted job before environment acquisition",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Exact original cache identity including all nine paths; no rebuild/fallback/save",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Pinned numerical reader and finite contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7
+        },
+        {
+          "name": "One original-binary observation and component audit",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8
+        },
+        {
+          "name": "Keep exactly one success or failure record",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    },
+    {
+      "id": 114151765124,
+      "name": "audit (hillipop-lcdm)",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 38030968453,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Preserve attempted job before environment acquisition",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Exact original cache identity including all nine paths; no rebuild/fallback/save",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Pinned numerical reader and finite contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7
+        },
+        {
+          "name": "One original-binary observation and component audit",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8
+        },
+        {
+          "name": "Keep exactly one success or failure record",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    },
+    {
+      "id": 114151765143,
+      "name": "audit (hillipop-ede_n3)",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 38030968453,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Preserve attempted job before environment acquisition",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Exact original cache identity including all nine paths; no rebuild/fallback/save",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Pinned numerical reader and finite contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7
+        },
+        {
+          "name": "One original-binary observation and component audit",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8
+        },
+        {
+          "name": "Keep exactly one success or failure record",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    },
+    {
+      "id": 114151765168,
+      "name": "audit (camspec-lcdm)",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 38030968453,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Preserve attempted job before environment acquisition",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Exact original cache identity including all nine paths; no rebuild/fallback/save",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Pinned numerical reader and finite contract tests",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7
+        },
+        {
+          "name": "One original-binary observation and component audit",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 8
+        },
+        {
+          "name": "Keep exactly one success or failure record",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 9
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 10
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 19
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 20
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 21
+        }
+      ]
+    },
+    {
+      "id": 114151936431,
+      "name": "collect",
+      "status": "completed",
+      "conclusion": "failure",
+      "run_id": 38030968453,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Pinned numerical reader",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Run actions/download-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Verify raw hashes, rederive four audits and report exact stopping gate",
+          "status": "completed",
+          "conclusion": "failure",
+          "number": 7
+        },
+        {
+          "name": "Run actions/upload-artifact@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Post Run actions/setup-python@v7",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 15
+        },
+        {
+          "name": "Post Run actions/checkout@v4",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 11662410197,
+      "name": "q045-audit-38030968453-worker-hillipop-ede_n3",
+      "size_in_bytes": 868,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11662410197",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11662410197/zip",
+      "expired": false,
+      "created_at": "2026-10-10T06:28:40Z",
+      "expires_at": "2026-11-09T06:28:39Z",
+      "updated_at": "2026-10-10T06:28:40Z",
+      "digest": "sha256:b79dd4c8292dfe03b7b695818039a0bdfc7250970231f8338e2be1f208b51660",
+      "workflow_run": {
+        "id": 38030968453,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "0124316bfb88629bcccd9b18a5cef448ade309ed"
+      }
+    },
+    {
+      "id": 11662350163,
+      "name": "q045-audit-38030968453-worker-camspec-lcdm",
+      "size_in_bytes": 867,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11662350163",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11662350163/zip",
+      "expired": false,
+      "created_at": "2026-10-10T06:28:40Z",
+      "expires_at": "2026-11-09T06:28:40Z",
+      "updated_at": "2026-10-10T06:28:40Z",
+      "digest": "sha256:fa182e0f3eeea59825aa974c7f6c69ec75939256aac78e7ab2dc097308e89b25",
+      "workflow_run": {
+        "id": 38030968453,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "0124316bfb88629bcccd9b18a5cef448ade309ed"
+      }
+    },
+    {
+      "id": 11662038529,
+      "name": "q045-audit-38030968453-worker-camspec-ede_n3",
+      "size_in_bytes": 868,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11662038529",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11662038529/zip",
+      "expired": false,
+      "created_at": "2026-10-10T06:28:25Z",
+      "expires_at": "2026-11-09T06:28:24Z",
+      "updated_at": "2026-10-10T06:28:25Z",
+      "digest": "sha256:1bbfefbad3681468c720eb67eb46f10b9945e3f312d177698ab8761b97b6cd99",
+      "workflow_run": {
+        "id": 38030968453,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "0124316bfb88629bcccd9b18a5cef448ade309ed"
+      }
+    },
+    {
+      "id": 11661958630,
+      "name": "q045-audit-38030968453-baselines",
+      "size_in_bytes": 44837822,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11661958630",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11661958630/zip",
+      "expired": false,
+      "created_at": "2026-10-10T06:27:40Z",
+      "expires_at": "2026-11-09T06:27:35Z",
+      "updated_at": "2026-10-10T06:27:40Z",
+      "digest": "sha256:deddbb310577d2e6560a3e4df41d8308fc17db637107c7622c81325e484b0e78",
+      "workflow_run": {
+        "id": 38030968453,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "0124316bfb88629bcccd9b18a5cef448ade309ed"
+      }
+    },
+    {
+      "id": 11661873621,
+      "name": "q045-audit-38030968453-final",
+      "size_in_bytes": 200811,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11661873621",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11661873621/zip",
+      "expired": false,
+      "created_at": "2026-10-10T06:29:02Z",
+      "expires_at": "2026-11-09T06:29:01Z",
+      "updated_at": "2026-10-10T06:29:02Z",
+      "digest": "sha256:784caa9890689aa1656af22beb563a85da03aa9329d70cab5deee18b7be05d7a",
+      "workflow_run": {
+        "id": 38030968453,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "0124316bfb88629bcccd9b18a5cef448ade309ed"
+      }
+    },
+    {
+      "id": 11661838813,
+      "name": "q045-audit-38030968453-worker-hillipop-lcdm",
+      "size_in_bytes": 868,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11661838813",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11661838813/zip",
+      "expired": false,
+      "created_at": "2026-10-10T06:28:40Z",
+      "expires_at": "2026-11-09T06:28:39Z",
+      "updated_at": "2026-10-10T06:28:40Z",
+      "digest": "sha256:276922429aea88d64345f00cb7244a4528d15a120386e93369e4a9f17cdf43bc",
+      "workflow_run": {
+        "id": 38030968453,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "0124316bfb88629bcccd9b18a5cef448ade309ed"
+      }
+    }
+  ],
+  "direct_log_excerpt": [
+    "2026-10-10T06:28:04.8119086Z Cache Size: ~2139 MB (2242870168 B)",
+    "2026-10-10T06:28:16.3031116Z Cache restored successfully",
+    "2026-10-10T06:28:16.4886245Z Cache restored from key: q042-prod-v1-Linux-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus",
+    "2026-10-10T06:28:24.4793955Z ERROR: test_cache_restore_uses_original_complete_identity (__main__.AuditTests.test_cache_restore_uses_original_complete_identity)",
+    "2026-10-10T06:28:24.4813186Z FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Bubbleverse/Bubbleverse/q045-optical-audit-v2.yml'",
+    "2026-10-10T06:28:24.4816102Z NATIVE_ARRAY_OBSERVER_FIXTURE=PASS; unchanged real pinned array outputs; synthetic callers only"
+  ],
+  "original_cache_restore": "PASS_ALL_FOUR_WORKERS",
+  "native_array_fixture": "PASS_IN_INSPECTED_CAMSPEC_EDE_WORKER_LOG",
+  "native_class_observations_started": 0,
+  "started_count_basis": "Official native observation steps explicitly skipped for all four workers",
+  "direct_error": "FileNotFoundError reading repository-root q045-optical-audit-v2.yml; actual installed file is .github/workflows/q045-optical-audit-v2.yml",
+  "root_cause": "Regression test used delivery-layout path. Previous local validation also retained a root workflow copy that the installation instructions correctly moved.",
+  "correction": "Read the canonical .github/workflows path and validate a staged installation with no root workflow copy.",
+  "warning_policy": "Preserve original Node deprecation warnings; these do not cause the Python path exception.",
+  "raw_artifact_inner_files": "NOT DOWNLOADED DURING THIS REPAIR; official job/log/artifact metadata verified",
+  "scientific_result": "NOT_AVAILABLE",
+  "final_result_gate": "UNRESOLVED",
+  "reference_truth_gate": "UNQUALIFIED",
+  "source_id": "I-Q045-OPTICAL-AUDIT-RUN-V2-001",
+  "retrieved": "2026-10-10T08:36:36.753322+02:00"
+}

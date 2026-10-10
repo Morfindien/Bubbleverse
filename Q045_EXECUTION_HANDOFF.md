@@ -1,3 +1,32 @@
+# BUBBLEVERSE — Q045 EXECUTION PACKAGE V3
+
+DATE AND TIME: 2026-10-10T08:36:36.753322+02:00 (Europe/Copenhagen).
+CURRENT Q: Q-045 / Q045; CASE ID: NOT DOCUMENTED.
+EXACT QUESTION: For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?
+STATUS: CONTINUES. RECOMMENDED CHATGPT SETTING: current Work/Codex with strong reasoning; High if selectable. Actual inference effort/account model menu is not exposed. A capable code-oriented GPT-5.6 setup is a fallback if available; this focused correction requires no heavier model or new motor.
+
+EXECUTION MODE: existing execution engine + minimally patched program/test workflow. Use connected GitHub to verify installed paths, jobs and logs; local Python/C to verify the corrected installation. No external scientific research, new agents, model switch, HPC expansion or scientific source changes are needed.
+
+RESULT / JOURNAL EFFECT: V2 restored the cache in all four workers. The cache-identity test incorrectly required a root workflow file. The uploaded workflow correctly resided at `.github/workflows/`; the error was in the generated test and previous local validation layout. All four original-binary observation steps were skipped; no new theory slots consumed. Complete prior journal/source maps/results/failures survive verbatim under the differential V3 journal header. Sources I-Q045-OPTICAL-AUDIT-RUN-V2-001 and I-Q045-PATH-REPAIR-001 document this technical correction; no physical model status changes.
+
+MINIMUM FIX: change the regression-test read to `.github/workflows/q045-optical-audit-v3.yml`; rename this executable target/version consistently to V3. Validate after staging precisely the installation map, without a root workflow duplicate. Native observer C is byte-identical; controller differs only in optical audit target/file identifiers. Original V2 parent artifact filenames such as `q045_worker_result_v2.json` remain unchanged. Cache action/key/nine paths/order/no-miss-fallback-save-rebuild and all frozen scientific pins remain unchanged.
+
+GITHUB SEARCH: inspected installed V2 test, current contract/registry/README, recursive nontruncated tree at `0124316bfb88629bcccd9b18a5cef448ade309ed`, actual run/jobs/artifacts and worker log. V3 did not already exist; the canonical workflow existed only under `.github/workflows/`. No remote write/dispatch is performed. Reuse unchanged source/binary/observer/method/launcher/inputs; patch test path and consistent version identifiers, registry/README/journal/handoff.
+
+INSTALL INDIVIDUAL FILES: put `q045-optical-audit-v3.yml` only at `.github/workflows/q045-optical-audit-v3.yml`. Put every other supplied file at repository root, replacing canonical README/registry/journal/handoff/validation. Preserve older versioned code/workflows and failure records. Keep `.github/workflows/00-bubbleverse-start.yml` unchanged. No root workflow copy is needed. No archives.
+
+RUNTIME / JOBS: inherited four independent45-minute workers; native process900s, compile120s, static5min, inputs15min and collector15min. Maximum4 new telemetry evaluations, inherited4/52 consumed, at most8/52 after all four start. Cache restoration took about21s in the inspected V2 worker (2,242,870,168 cached bytes); this is not a future guarantee. No added chains, checkpoints, automatic retry or numerical restart.
+
+TEST PLAN: T000 cache identity at canonical installed path; T001–T006 inherited artifact hashes/source/binary/bracket/exact-history/native-array/component/four-worker merge gates. Local preparation checks run in an installed staging directory containing no root YAML copy. Reference truth remains UNQUALIFIED and FINAL_RESULT_GATE remains UNRESOLVED even if telemetry acquisition completes. Actual new scientific result: NOT YET COMPUTED. Cached original CLASS is not executed locally. Actual V3 remote gates remain pending.
+
+RETURN / STOP: run these four bounded outcomes once, preserve successful independent records and all errors/started counts, return to exactly Result Ingestion & Routing Engine with full Q/question/journal/source/provenance state. No automatic physical reference treatment, inference, rerun or production continuation. Ingestion decides Q completion and Motor14 routing from actual evidence.
+
+OPEN 🚀 BUBBLEVERSE START → ENTER `Q045-OPTICAL-AUDIT-V3` → PRESS Run workflow after installation.
+
+The detailed previous A–W specification follows with optical target/file substitutions. This V3 header supersedes its earlier preparation/cache-availability wording while preserving the original scientific scope and historical evidence.
+
+---
+
 # BUBBLEVERSE — Q045 V2 MINIMAL CACHE REPAIR HANDOFF
 
 DATE AND TIME: 2026-10-10T07:16:28.480315+02:00.
@@ -19,13 +48,13 @@ RUNTIME/JOB PLAN: same static5min, inputs15min, four independent audit45min, col
 
 FINITE MANDATORY TESTS: T000 original cache identity regression; T001–T006 inherited artifact/source/binary/observer/bracket/exact-history/component/completeness tests. Local tests do not establish a live GitHub cache hit, original-binary runtime success or scientific validation. Actual remote launcher/cache/runtime/result gates are pending. FINAL_RESULT_GATE remains UNRESOLVED; REFERENCE_TRUTH_GATE remains UNQUALIFIED.
 
-FILE DECISIONS / INSTALLATION: upload each supplied file individually. Put `q045-optical-audit-v2.yml` at `.github/workflows/q045-optical-audit-v2.yml`; all other supplied files belong at repository root. Replace canonical README/registry/journal/handoff with these updated copies; preserve V1 code and workflow as history. Keep `.github/workflows/00-bubbleverse-start.yml` unchanged. Failure JSON is technical evidence, not a runnable program. `Q045_INGESTION_RESULT.json` is the exact unchanged baseline scientific ingestion record. Package manifest binds all runtime files and the unchanged launcher; package validation is local evidence only. No archives.
+FILE DECISIONS / INSTALLATION: upload each supplied file individually. Put `q045-optical-audit-v3.yml` at `.github/workflows/q045-optical-audit-v3.yml`; all other supplied files belong at repository root. Replace canonical README/registry/journal/handoff with these updated copies; preserve V1 code and workflow as history. Keep `.github/workflows/00-bubbleverse-start.yml` unchanged. Failure JSON is technical evidence, not a runnable program. `Q045_INGESTION_RESULT.json` is the exact unchanged baseline scientific ingestion record. Package manifest binds all runtime files and the unchanged launcher; package validation is local evidence only. No archives.
 
 EXPECTED OUTPUT / GATES: same four raw observation artifacts plus final JSON and complete journal; exact source/binary inputs and all four mandatory worker records must pass. Raw failures survive. Cache success alone is not a final result. Actual new telemetry is NOT YET COMPUTED. No physical hypothesis is falsified by this environment failure.
 
 RETURN: exactly existing Result Ingestion & Routing Engine with Q, exact question, full journal/source maps, prior numerical evidence, failed V1 run provenance, new raw outputs, hashes and started-slot counts. Stop after the four finite outcomes or failed prerequisites; do not repeat unchanged runs or advance reference treatments automatically. Ingestion determines scientific completion/routing to Motor14.
 
-OPEN 🚀 BUBBLEVERSE START → PASTE `Q045-OPTICAL-AUDIT-V2` → PRESS Run workflow, after installing the individual corrected files.
+OPEN 🚀 BUBBLEVERSE START → PASTE `Q045-OPTICAL-AUDIT-V3` → PRESS Run workflow, after installing the individual corrected files.
 
 The detailed inherited A–W execution specification follows with V2 filename/target substitutions. Its scientific scope is unchanged; the cache repair and observed prior execution history above supersede its earlier prospective installation wording.
 
@@ -93,11 +122,11 @@ ERROR: exact-cubic-minus and independent two-node Gauss share the same history. 
 
 ## K–L. PROGRAM_ID AND START REGISTRATION
 
-PROGRAM_ID: Q045-Q045-OPTICAL-AUDIT-V2.
+PROGRAM_ID: Q045-Q045-OPTICAL-AUDIT-V3.
 LAUNCHER: 🚀 BUBBLEVERSE START.
 LAUNCHER FILE: `.github/workflows/00-bubbleverse-start.yml` — unchanged existing file.
 REGISTRY: `bubbleverse_program_registry.json` — exact new entry; unrelated entries preserved.
-TARGET: `.github/workflows/q045-optical-audit-v2.yml`.
+TARGET: `.github/workflows/q045-optical-audit-v3.yml`.
 PROGRAM_ID REGISTERED: YES in the prepared local registry; remote installation NOT PERFORMED.
 LAUNCHER_GATE: locally validated package; actual remote gate pending installation/run.
 PROGRAM_ID is never shell-executed. It passes through the existing exact registry lookup; all user input goes via environment to exact checking. No unsafe eval is introduced.
@@ -121,11 +150,11 @@ Mandatory T001 official artifact and member identity; T002 source/binary/physica
 ## P. FILE DECISIONS AND INSTALLATION
 
 At repository root, CREATE:
-- `q045_optical_audit_v2.py`
-- `q045_optical_audit_probe_v2.c`
-- `q045_optical_audit_tests_v2.py`
-- `q045_optical_audit_contract_v2.json`
-- `q045_optical_audit_manifest_v2.json`
+- `q045_optical_audit_v3.py`
+- `q045_optical_audit_probe_v3.c`
+- `q045_optical_audit_tests_v3.py`
+- `q045_optical_audit_contract_v3.json`
+- `q045_optical_audit_manifest_v3.json`
 - `Q045_INGESTION_RESULT.json` (exact received immutable record; reused evidence)
 
 At repository root, UPDATE:
@@ -136,7 +165,7 @@ At repository root, UPDATE:
 - `Q045_PACKAGE_VALIDATION.json` (local preparation evidence)
 
 CREATE in `.github/workflows/`:
-- `q045-optical-audit-v2.yml`
+- `q045-optical-audit-v3.yml`
 
 UNCHANGED: existing launcher and all original V1/V2/production scientific files/source/data/binary. Required raw workers are recovered from official artifacts; do not upload43 raw files manually. No archive is delivered. Install every prepared file before launching so static integrity gates see one consistent snapshot. Base inspected head is `175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72`; if repository reality changes first, rebase registry/README differentially rather than overwriting unrelated changes.
 
@@ -150,13 +179,13 @@ This package contains actual Python, C, YAML, JSON and Markdown files individual
 
 After manual file installation:
 OPEN: 🚀 BUBBLEVERSE START.
-PASTE: `Q045-Q045-OPTICAL-AUDIT-V2`.
+PASTE: `Q045-Q045-OPTICAL-AUDIT-V3`.
 PRESS: Run workflow.
 Open the child optical-audit run; the launcher completion only confirms dispatch. The assistant has not uploaded files, mutated GitHub or launched computation.
 
 ## T. EXPECTED OUTPUTS
 
-Four worker artifacts with original input identity, compile/provenance/native logs, every scalar trial table, raw cumulative kappa/derivatives, final native nodes, effective precision, source species workspaces, native metadata, component-comparison tables and worker result. Final artifact includes `q045_optical_audit_final_v2.json`, contract, manifest, this handoff and complete journal. Actual values are NOT YET COMPUTED. Existing native CMB/likelihood bytes remain in the V2 baseline artifacts.
+Four worker artifacts with original input identity, compile/provenance/native logs, every scalar trial table, raw cumulative kappa/derivatives, final native nodes, effective precision, source species workspaces, native metadata, component-comparison tables and worker result. Final artifact includes `q045_optical_audit_final_v3.json`, contract, manifest, this handoff and complete journal. Actual values are NOT YET COMPUTED. Existing native CMB/likelihood bytes remain in the V2 baseline artifacts.
 
 ## U. PASS / FAIL GATES
 
@@ -174,4 +203,4 @@ The finite audit ends after these four outcomes or its failed prerequisites. Add
 
 ## W. START THIS
 
-START THIS: Q045-Q045-OPTICAL-AUDIT-V2
+START THIS: Q045-Q045-OPTICAL-AUDIT-V3
