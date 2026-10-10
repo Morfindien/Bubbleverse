@@ -1,0 +1,148 @@
+name: Bubbleverse Q045 V2 — four native FULL baselines
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q045-native-baseline-v2
+  cancel-in-progress: false
+env:
+  CURRENT_Q: Q-045
+  PROGRAM_ID: Q045-BASELINE-V2
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  COBAYA_PACKAGES_PATH: ${{ github.workspace }}/external/cobaya_packages
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Exact ID, package and bounded integrity tests
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          python -c 'import os,q045_native_baseline_v2 as m;m.check_id(os.environ["REQUESTED_PROGRAM_ID"]);m.static()'
+          python q045_native_baseline_tests_v2.py
+  inputs:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Recover original input bytes once and verify pinned artifact digest
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python q045_native_baseline_v2.py prepare --out recovered
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q045-v2-${{ github.run_id }}-inputs
+          path: recovered/**
+          if-no-files-found: error
+          retention-days: 30
+  baseline:
+    needs: [static, inputs]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 80
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        arm: [camspec, hillipop]
+        model: [lcdm, ede_n3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Preserve expected job before cache acquisition
+        env:
+          ARM: ${{ matrix.arm }}
+          MODEL: ${{ matrix.model }}
+        run: |
+          python - <<'PY'
+          import os,q045_native_baseline_v2 as m
+          m.write('q045_output/attempt.json',dict(**m.base(),job_id=os.environ['ARM']+'-'+os.environ['MODEL'],status='CACHE_PENDING'))
+          PY
+      - name: Exact original cache; no fallback or cache save
+        timeout-minutes: 10
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - uses: actions/download-artifact@v4
+        with:
+          name: q045-v2-${{ github.run_id }}-inputs
+          path: recovered
+      - name: Exact Q032 builders and native path mapping
+        timeout-minutes: 25
+        run: |
+          set -euo pipefail
+          git fetch --depth 1 origin 4dc873a5e880d40858d831a3b421456728f0c032
+          git worktree add --detach q032_parent 4dc873a5e880d40858d831a3b421456728f0c032
+          bash q045_setup_baseline_v2.sh
+      - name: One bounded native evaluation; no repair or sampler
+        timeout-minutes: 25
+        env:
+          ARM: ${{ matrix.arm }}
+          MODEL: ${{ matrix.model }}
+        run: python q045_native_baseline_v2.py run --arm "$ARM" --model "$MODEL" --inputs recovered/inputs --out q045_output
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q045-v2-${{ github.run_id }}-${{ matrix.arm }}-${{ matrix.model }}
+          path: q045_output/**
+          if-no-files-found: error
+          retention-days: 30
+  collect:
+    needs: [static, inputs, baseline]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q045-v2-${{ github.run_id }}-*
+          path: collected
+      - name: Four compatible jobs or explicit failure; no final scientific pass
+        run: python q045_native_baseline_v2.py collect --directory collected --out q045_native_baseline_final_v2.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q045-v2-${{ github.run_id }}-final
+          path: |
+            q045_native_baseline_final_v2.json
+            q045_native_baseline_contract_v2.json
+            q045_native_baseline_manifest_v2.json
+            Q045_EXECUTION_HANDOFF.md
+            Q045_SAMLET_JOURNAL.md
+          if-no-files-found: error
+          retention-days: 30

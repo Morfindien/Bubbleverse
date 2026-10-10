@@ -1,6 +1,12 @@
 # BUBBLEVERSE — OVERLEVERING
 
-STATUS: LOCAL PACKAGE PREPARED; GITHUB INSTALLATION AND NUMERICAL EXECUTION NOT PERFORMED.
+STATUS: V1 FAILED IN ENVIRONMENT SETUP; V2 REPAIR PREPARED, NOT INSTALLED OR DISPATCHED BY ASSISTANT.
+
+DATE AND TIME: 2026-10-10T04:04:19.081115+00:00 (UTC).
+
+FAILURE CLASS: ENVIRONMENT. Run #2 `38021982095` at `7b5047dd9eafbd7986c15514ec3534e2b0ed3bc3`: all four ACT lensing editable installs failed because V1 disabled build isolation without supplying flit_core. Static and input acquisition passed; all numerical evaluation steps were skipped. V2 adds `flit_core==3.12.0` and an early import/version/editable-capability gate. The failure and repaired build were reproduced locally with Python 3.12.14; this does not certify the complete Python 3.11.16 GitHub environment.
+
+Failure/source evidence: [run](https://github.com/Morfindien/Bubbleverse/actions/runs/38021982095), [frozen backend declaration](https://github.com/ACTCollaboration/act_dr6_lenslike/blob/b386ddbb5821c1216c709f051c9289292f174d30/pyproject.toml).
 
 ## A. Current Q
 
@@ -22,13 +28,13 @@ EXECUTION MODE: existing numerical execution engine + conventional finite progra
 
 SCIENTIFIC REQUIREMENT: before implementing the scalar/cumulative reference treatments, acquire valid native FULL baseline products at the four frozen diagnostic starts. Success is necessary preliminary evidence; it cannot answer the main question or qualify reference accuracy.
 
-JOURNAL: KEEP the complete incoming journal, Q and source IDs, previous results, failures and scientific boundaries. ADD technical recovery/package evidence. Q044 and Q042 stay closed inconclusive. Q045 stays proposed. The complete updated authoritative journal is `Q045_SAMLET_JOURNAL.md`; it contains all incoming bytes unchanged after its differential update. It replaces the supplied journal's identity and does not start a parallel journal.
+JOURNAL: KEEP the complete incoming journal, Q and source IDs, previous results, failures and scientific boundaries. ADD V1 failure provenance, local build reproduction and the minimal V2 repair. Preserve the full earlier journal verbatim. Q044 and Q042 stay closed inconclusive. Q045 stays proposed. The complete updated authoritative journal is `Q045_SAMLET_JOURNAL.md`; it contains all incoming bytes unchanged after its differential update. It replaces the supplied journal's identity and does not start a parallel journal.
 
 ## I. GitHub inspection and reuse
 
 Execution repository: `Morfindien/Bubbleverse`.
 
-Inspected main: `72cf9e92fc794c122f593a77b6a555e6e97f6a2e`; recursive tree nontruncated; no prior Q045 target. The existing launcher is unchanged.
+Inspected main: `7b5047dd9eafbd7986c15514ec3534e2b0ed3bc3`. The current registry has Q045 V1 and no V2. Current README/journal/registry match the previously delivered bytes/state. The existing launcher is unchanged.
 
 REUSE unchanged existing repository files:
 
@@ -56,13 +62,13 @@ POINTS: both arms × both models, FULL, original production start index 0. The e
 
 SOLVER: restored unchanged CLASS EDE at commit `5a131c91d657dd9a7c6364cc45b038710f8d0d97`, required documented diagnostic binary SHA256 `df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf`. Loaded binary routing is checked after model initialization. Equivalence to the original campaign binary beyond the documented diagnostic pin is not assumed.
 
-SOFTWARE: Python 3.11.16; Cobaya 3.5.6; NumPy 1.26.4; SciPy 1.15.3; PyYAML 6.0.2; Py-BOBYQA 1.5.0; GetDist 1.6.1; Cython 0.29.37; SACC 1.0.2; Astropy 7.2.2. Pinned HiLLiPoP/ACT Python interfaces and the established DESI definition/pandas compatibility backport are restored. There is no CLASS compilation, PolyChord run, sampler or optimizer.
+SOFTWARE: Python 3.11.16; Cobaya 3.5.6; NumPy 1.26.4; SciPy 1.15.3; PyYAML 6.0.2; Py-BOBYQA 1.5.0; GetDist 1.6.1; Cython 0.29.37; SACC 1.0.2; Astropy 7.2.2; build backend Flit Core 3.12.0 (new technical dependency). Pinned HiLLiPoP/ACT Python interfaces and the established DESI definition/pandas compatibility backport are restored. There is no CLASS compilation, PolyChord run, sampler or optimizer.
 
 LIKELIHOOD OUTPUT: per-component log likelihood and its sum are distinct from log priors and log posterior. Native raw spectra retain C_ell units muK² without the ell factor. Full sampled vector and effective CLASS inputs are preserved.
 
 ## K–L. Program and launcher
 
-PROGRAM_ID: `Q045-BASELINE-V1`.
+PROGRAM_ID: `Q045-BASELINE-V2`.
 
 LAUNCHER: 🚀 BUBBLEVERSE START.
 
@@ -70,9 +76,9 @@ LAUNCHER FILE: `.github/workflows/00-bubbleverse-start.yml` — unchanged.
 
 REGISTRY: `bubbleverse_program_registry.json`.
 
-TARGET: `.github/workflows/q045-native-baseline-v1.yml`.
+TARGET: `.github/workflows/q045-native-baseline-v2.yml`.
 
-PROGRAM_ID REGISTERED: YES in the delivered local registry; NO remote installation performed. The prepared registry retires Q042 V29 as COMPLETED and adds the finite Q045 target. Unrelated entries remain unchanged. Execution registration is not canonical scientific acceptance or model promotion.
+PROGRAM_ID REGISTERED: YES in the delivered local registry; NO remote installation performed. The prepared registry retires Q045 V1 as SUPERSEDED and adds the V2 repair target. Q042 V29 remains COMPLETED. Unrelated entries remain unchanged. Execution registration is not canonical scientific acceptance or model promotion.
 
 LAUNCHER_GATE: local package validation PASS; remote runtime pending.
 
@@ -91,7 +97,7 @@ Mandatory tests:
 | ID | Test | Failure effect |
 |---|---|---|
 | T001 | Q, package hashes, journal, registry, safe launcher target and README | Do not acquire inputs or evaluate |
-| T002 | Original artifact/files, parents, supports, source/versions and actual backend identity | Record blocker, preserve provenance |
+| T002 | Original artifact/files, parents, supports, source/versions, Flit backend capability and actual CLASS backend identity | Record blocker, preserve provenance |
 | T003 | One finite native likelihood at each unchanged FULL start | Preserve native failure; no repair/retry |
 | T004 | Finite complete background/total-x_e thermodynamics and TT/TE/EE exports with declared units | Baseline incomplete |
 | T005 | Exactly four workers, compatible Q/run/config/binary/external data and output hashes | Merge fails; successful independent artifacts remain |
@@ -104,19 +110,19 @@ All files are individual deliverables; no archive.
 
 | Delivered file | Repository destination | Action |
 |---|---|---|
-| `q045_native_baseline_v1.py` | root | CREATE |
-| `q045_native_baseline_tests_v1.py` | root | CREATE |
-| `q045_native_baseline_contract_v1.json` | root | CREATE |
-| `q045_native_baseline_manifest_v1.json` | root | CREATE |
-| `q045_native_baseline_requirements_v1.txt` | root | CREATE |
-| `q045_setup_baseline_v1.sh` | root | CREATE |
-| `q045-native-baseline-v1.yml` | `.github/workflows/` | CREATE |
+| `q045_native_baseline_v2.py` | root | CREATE |
+| `q045_native_baseline_tests_v2.py` | root | CREATE |
+| `q045_native_baseline_contract_v2.json` | root | CREATE |
+| `q045_native_baseline_manifest_v2.json` | root | CREATE |
+| `q045_native_baseline_requirements_v2.txt` | root | CREATE |
+| `q045_setup_baseline_v2.sh` | root | CREATE |
+| `q045-native-baseline-v2.yml` | `.github/workflows/` | CREATE |
 | `bubbleverse_program_registry.json` | root | UPDATE |
 | `README.md` | root | UPDATE |
 | `Q045_SAMLET_JOURNAL.md` | root, canonical current journal for this package | authoritative journal update |
-| `Q045_EXECUTION_HANDOFF.md` | root | CREATE, next-task instructions only |
+| `Q045_EXECUTION_HANDOFF.md` | root | UPDATE, next-task instructions only |
 
-README update is differential: the obsolete current-Q042/V29 section becomes the actual prepared Q045 baseline stage; the rest of the repository introduction/history remains. README_GATE and REPOSITORY_CONSISTENCY_GATE: local PASS; remote installation pending.
+README update is differential: the current Q045 section names V2 and records V1's pre-evaluation environment failure; the rest of the repository introduction/history remains. README_GATE and REPOSITORY_CONSISTENCY_GATE: local PASS; remote installation pending.
 
 Upload all files before launching, with the YAML at its stated path. Existing frozen builders must remain byte-identical. The registry/README snapshots are based on the inspected main; preserve any later unrelated changes if main changes before installation. Hash guards reject an incomplete package. No user search through internal workflow names is necessary.
 
@@ -124,13 +130,13 @@ Upload all files before launching, with the YAML at its stated path. Existing fr
 
 OPEN: 🚀 BUBBLEVERSE START.
 
-PASTE: `Q045-BASELINE-V1`.
+PASTE: `Q045-BASELINE-V2`.
 
 PRESS: Run workflow.
 
-Expected raw outputs per worker: `attempt.json`, `native.log`, `sampled_vector.json`, `likelihood.json`, `spectra.tsv`, `thermodynamics.tsv`, `background.tsv`, `product_manifest.json`, `runtime_input_manifest.json`, `q045_worker_result_v1.json`. Failed preconditions may produce only the attempt/log and failure evidence; they cannot masquerade as complete scientific products.
+Expected raw outputs per worker: `attempt.json`, `native.log`, `sampled_vector.json`, `likelihood.json`, `spectra.tsv`, `thermodynamics.tsv`, `background.tsv`, `product_manifest.json`, `runtime_input_manifest.json`, `q045_worker_result_v2.json`. Failed preconditions may produce only the attempt/log and failure evidence; they cannot masquerade as complete scientific products.
 
-Final output: `q045_native_baseline_final_v1.json`, contract, manifest, full authoritative journal and handoff. The final JSON retains expected/completed/failed/pending jobs, provenance and gates. Retrieve all four worker artifacts with the final artifact; source/input failures are in the input acquisition artifact.
+Final output: `q045_native_baseline_final_v2.json`, contract, manifest, full authoritative journal and handoff. The final JSON retains expected/completed/failed/pending jobs, provenance and gates. Retrieve all four worker artifacts with the final artifact; source/input failures are in the input acquisition artifact.
 
 `BASELINE_GATE=PASS_NATIVE_DIAGNOSTIC_ONLY` requires T001–T005. `FINAL_RESULT_GATE` remains `UNRESOLVED` even if they pass. Raw baseline products are `RAW_NOT_QUALIFIED`. No artifact means no calculation; missing jobs mean partial execution. There is no automatic retry, production restart or next-stage dispatch.
 
@@ -142,4 +148,4 @@ Next action: ingest native success or the exact failed gate. If baselines succee
 
 ## W. Start this
 
-START THIS: `Q045-BASELINE-V1`
+START THIS: `Q045-BASELINE-V2`

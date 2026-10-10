@@ -1,18 +1,23 @@
 {
   "q": "Q-045",
-  "q_status": "PROPOSED_CANONICAL_REGISTRATION_PENDING",
-  "program_id": "Q045-BASELINE-V1",
-  "status": "LOCAL_PACKAGE_CHECKS_PASS",
+  "program_id": "Q045-BASELINE-V2",
+  "verified_at": "2026-10-10T04:05:14.672517+00:00",
+  "status": "LOCAL_REPAIR_AND_PACKAGE_CHECKS_PASS",
   "scientific_result": false,
-  "actual_computed_scientific_result": "NOT_YET_COMPUTED",
+  "actual_computed_scientific_result": "NOT_COMPUTED",
   "final_result_gate": "UNRESOLVED",
   "remote_writes": false,
   "workflow_dispatch_performed": false,
-  "verified_at": "2026-10-10T05:39:07.584431+02:00",
-  "scope": "Package integrity and synthetic control fixtures only; no CLASS or real likelihood evaluation",
+  "failed_v1_run": {
+    "id": 38021982095,
+    "run_number": 2,
+    "commit": "7b5047dd9eafbd7986c15514ec3534e2b0ed3bc3",
+    "failure_class": "ENVIRONMENT",
+    "four_numerical_evaluations": "SKIPPED"
+  },
   "checks": {
     "standalone_integrity_tests": {
-      "passed": 10,
+      "passed": 12,
       "failed": 0
     },
     "python_ast": "PASS",
@@ -21,27 +26,48 @@
     "workflow_run_shell_syntax": "PASS",
     "user_input_interpolation_guard": "PASS",
     "registry_unrelated_entries_preserved": "PASS",
-    "incoming_journal_bytes_preserved": "PASS",
-    "source_artifact_digest": "PASS",
+    "complete_previous_journal_bytes_preserved": "PASS",
+    "readme_unrelated_tail_preserved": "PASS",
+    "scientific_contract_unchanged": "PASS_EXCLUDING_VERSION_PROVENANCE_AND_TECHNICAL_BACKEND",
     "package_gate": "PASS",
     "launcher_gate": "PASS_LOCAL",
     "readme_gate": "PASS_LOCAL",
     "repository_consistency_gate": "PASS_LOCAL"
   },
-  "runtime_checks": "NOT_EXECUTED",
-  "environment_cache_status": "NOT_VERIFIED_CURRENTLY",
-  "all_repository_test_suite": "NOT_RUN: standalone package only; existing HPC tests require absent frozen runtime/data",
+  "build_reproduction": {
+    "local_python": "3.12.14",
+    "github_python": "3.11.16",
+    "before": "BackendUnavailable: Cannot import flit_core.buildapi",
+    "after": "ACT_LENSING_EDITABLE_INSTALL_PASS_WITH_FLIT_CORE_3.12.0",
+    "actual_backend_preflight": {
+      "build_backend_gate": "PASS",
+      "backend": "flit_core.buildapi",
+      "version": "3.12.0"
+    },
+    "source_commit": "b386ddbb5821c1216c709f051c9289292f174d30",
+    "source_subset_sha256": {
+      "LICENSE": "97924d9979ac33b37b7d5d82f28bf9e2c8a2e892eab1d46de42214e8af49ceb4",
+      "README.md": "516476df9c75f0d4ecb59927d818b8bb34637846c75a8f6fe7c22bcca5a59693",
+      "act_dr6_lenslike/__init__.py": "94f1cf18311e979c922bd5f865711caabd78357cdc07ea3ed7840a571ab17816",
+      "act_dr6_lenslike/act_dr6_lenslike.py": "dc8148148f55c6a319b82e81a66b1d1567c2c8e9d96b1319589828fcd462c284",
+      "pyproject.toml": "be13582138ac42f5bd80bd3eed19c5ae1a30c1881cce6ef596c19ebdeb3d4c36"
+    },
+    "wheel_sha256": "e7a0304069ea895172e3c7bb703292e992c5d1555dd1233ab7b5621b5b69e62c",
+    "scope": "Build backend and editable packaging only; no numerical likelihood or data execution"
+  },
+  "runtime_checks": "FULL_GITHUB_NUMERICAL_RUNTIME_PENDING",
+  "all_repository_test_suite": "NOT_RUN: frozen scientific runtime/data absent locally",
   "file_sha256": {
-    "Q045_SAMLET_JOURNAL.md": "03006221b8d73a0f8d0e51a133e733d8b7a61fea6ef8a180f1c8149c510ab298",
-    "q045-native-baseline-v1.yml": "ab96a3d0844f78ed991f81298e40603932908746b290f2d707721d818fe6218b",
-    "q045_setup_baseline_v1.sh": "0eda39a642649da8ccc2f31ffb759f083ddb2bdc804e6642ecd10ca9cfe24e9d",
-    "q045_native_baseline_requirements_v1.txt": "01ce039efb380158ed51da01053156c95132244733eb84b2febc66c244f2de43",
-    "q045_native_baseline_contract_v1.json": "5306ef4d07144677ef45f566d8a71814914759f8b1de28553f4f0d188d50e362",
-    "Q045_EXECUTION_HANDOFF.md": "5dbc6402cc2b35515136aadc3309d58ce2268248828f472e1df80a548ebf1b07",
-    "q045_native_baseline_v1.py": "ad896aeef9ab1b95d2d353deb9d689c5ac8ebc9f100c819527f489c1a2afc746",
-    "README.md": "193f3b278335f222b74f4d359822c90bed818730daa82f753fb277614a67f8f0",
-    "bubbleverse_program_registry.json": "6341cfd46cdf8532a80128d8cef5295c6de911914542783809902e9b9bbe132a",
-    "q045_native_baseline_tests_v1.py": "1b64715bd0ee588ff51c107cfc1372e3ff2e17aef3ba05530a4a19a861ff568e",
-    "q045_native_baseline_manifest_v1.json": "380e1743cdb4925c7fa0b79c071fb2b78037cce4c047d3ec4ab959ac1971d6f8"
+    "q045_native_baseline_v2.py": "02e15b11c5ba141861a02db105ad1f6aa4423d74c475beab6aee97aac57be9c7",
+    "q045_native_baseline_tests_v2.py": "98ff54ec6cd277dd96d542683b552d331852fa9a0fb645c31e7dc022d0a61c6f",
+    "q045_setup_baseline_v2.sh": "58b878de6f787b1cf86a84df2e9b577c25a99c2f2967d0c8ab684c3e82e775bf",
+    "q045_native_baseline_requirements_v2.txt": "0f14f7c39c055b040f483494bdeac2f7a99c86d5f54bb7249dd3ad261b44fdeb",
+    "q045_native_baseline_contract_v2.json": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
+    ".github/workflows/q045-native-baseline-v2.yml": "5c54d50bbf5fd2fbb445e8636152c099b88c1dd7844747121fdd2b0844a2f806",
+    "Q045_SAMLET_JOURNAL.md": "aec2dd628f61197a2b06f732fe39ad8be09c374e43b1f632c3c0c6644757f4cc",
+    "Q045_EXECUTION_HANDOFF.md": "c142316624af4b4121433b27213f4dcaff8b85402eb286c6cc7804589bf9480c",
+    "q045_native_baseline_manifest_v2.json": "db99756eedaa318600ed20dc7bfa386b8f9971edc125f997b35267623004d094",
+    "README.md": "695a02df99a60d5907bfd06be478a8572ed1d8af1da378b6ecae44c04254f3c1",
+    "bubbleverse_program_registry.json": "c6a6c644928b19bed03e29750fd8090c5b31c48986629e84be0e49d685bc108e"
   }
 }

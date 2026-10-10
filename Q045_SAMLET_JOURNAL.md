@@ -1,5 +1,50 @@
 # BUBBLEVERSE — OVERLEVERING
 
+STATUS: CONTINUES — V1 ENVIRONMENT FAILURE DOCUMENTED; V2 REPAIR PREPARED, GITHUB VALIDATION PENDING.
+CURRENT Q: Q045 / Q-045 — PROPOSED; canonical scientific registration pending.
+STAGE RECORD: I-Q045-ENV-FLIT-REPAIR-002.
+DATE AND TIME: 2026-10-10T04:04:19.081115+00:00 (UTC, runtime clock).
+PROGRAM_ID: Q045-BASELINE-V2; supersedes Q045-BASELINE-V1.
+NEXT ENGINE: Result Ingestion & Routing Engine after bounded baseline acquisition.
+ACTUAL COMPUTED SCIENTIFIC RESULT: NOT COMPUTED; all four V1 evaluations were skipped.
+FINAL_RESULT_GATE: UNRESOLVED.
+REMOTE WRITES / DISPATCH BY ASSISTANT: false.
+
+## CHATGPT-SETUPVURDERING
+
+Recommended: current Work/Codex with repository reads, local code execution and strong reasoning; High if selectable. Capability classes C/A + H. This is a contained installation repair. GPT-5.6 with equivalent tools is a suitable fallback if available; ASTRA MAX menu availability is not verified. No model switch is necessary. Upgrade only if a later failure requires substantial scientific or numerical reconstruction.
+
+## Differential journal update
+
+KEEP the full previous authoritative journal verbatim below, including Q, scientific question, sources/source IDs, constraints, results, failures and unresolved scientific qualifications. Prior journal SHA256: `03006221b8d73a0f8d0e51a133e733d8b7a61fea6ef8a180f1c8149c510ab298`. Historical instructions below are superseded by this current action; no journal is rebuilt.
+
+ADD [BUBBLEVERSE TECHNICAL EVIDENCE] Read-only repository inspection at `7b5047dd9eafbd7986c15514ec3534e2b0ed3bc3`. V1 was installed by the operator. Run #2, ID `38021982095`, failed: static and original-input recovery passed; all four baseline jobs failed in interface setup; their native evaluation steps were skipped. All four logs contain `Cannot import 'flit_core.buildapi'` after obtaining `external/act_dr6_lenslike`. Collector failed completeness. Reported CamSpec/EDE job: `114124874775`; other jobs: `114124874735`, `114124874759`, `114124874765`. Run #1 also reports failure, but its cause was not inspected in this repair.
+
+FAILED: Q045 V1 editable ACT lensing installation with `--no-build-isolation` and no flit_core dependency.
+CAUSE: At frozen ACT lensing commit `b386ddbb5821c1216c709f051c9289292f174d30`, `pyproject.toml` declares `flit_core >=3.2,<4` and backend `flit_core.buildapi`. Disabling build isolation makes the caller responsible for supplying it. V1's requirements omitted it. The earlier Q041 setup allowed pip build isolation; V1 introduced the omission by disabling it.
+FIX: Add exactly `flit_core==3.12.0`, retaining all nine scientific package pins; import/version/PEP660 gate before editable installations. CLASS, model, likelihood definitions, physical inputs, source commits, data and precision are unchanged.
+KNOWN GOOD (LOCAL BUILD MECHANISM ONLY): The same backend failure was reproduced in a clean local Python 3.12.14 environment; installing only flit_core 3.12.0 enabled editable installation of the frozen ACT lensing source subset (metadata/module files retrieved directly at its commit). Actual V2 backend preflight passed. Wheel SHA256: `e7a0304069ea895172e3c7bb703292e992c5d1555dd1233ab7b5621b5b69e62c`. This is not a full likelihood/data test; GitHub remains Python 3.11.16 and its complete restored environment must still pass all gates.
+
+SUPERSEDE the executable V1 target with Q045-BASELINE-V2 in the prepared registry; V1 status becomes SUPERSEDED and is rejected by the unchanged launcher. Preserve V1 files, run and artifacts as technical history. Other registry entries are unchanged. README's current target and failure boundary are updated differentially.
+
+KEEP all scientific boundaries: Q042/Q044 closed inconclusive; Q045 proposed; four native FULL start-index-0 diagnostic points only; no reference treatments, optimization, posterior inference, production restart or model promotion. All acquired outputs remain RAW_NOT_QUALIFIED and FINAL_RESULT_GATE remains UNRESOLVED. No hypothesis was tested by the failed setup.
+
+NEXT REQUIRED ACTION: Upload the complete V2 files at their stated paths, replace the canonical registry/README/journal/handoff, and launch only Q045-BASELINE-V2 through 🚀 BUBBLEVERSE START. Return the final JSON and worker artifacts to ingestion, including any newly failed gate. The assistant has neither modified GitHub nor dispatched this target.
+
+## Technical source continuity
+
+Run: https://github.com/Morfindien/Bubbleverse/actions/runs/38021982095
+Reported job: https://github.com/Morfindien/Bubbleverse/actions/runs/38021982095/job/114124874775
+Backend declaration: https://github.com/ACTCollaboration/act_dr6_lenslike/blob/b386ddbb5821c1216c709f051c9289292f174d30/pyproject.toml
+Prior working installation route: `q041_setup_v13.sh`, retained frozen file hash in the contract.
+The GitHub connector supplied primary logs/source files; local Python supplied the isolated build reproduction. No new external scientific source ID or physical claim is created.
+
+---
+
+## COMPLETE PREVIOUS AUTHORITATIVE JOURNAL — VERBATIM
+
+# BUBBLEVERSE — OVERLEVERING
+
 STATUS: CONTINUES — LOCAL EXECUTION PACKAGE PREPARED; NOT EXECUTED.
 CURRENT Q: Q045 / Q-045, PROPOSED; CANONICAL SCIENTIFIC REGISTRATION PENDING.
 STAGE RECORD: I-Q045-EXECUTION-BASELINE-PREPARATION-001.
