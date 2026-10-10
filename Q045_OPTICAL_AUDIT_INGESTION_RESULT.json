@@ -1,0 +1,3595 @@
+{
+  "q": "Q-045",
+  "q_alias": "Q045",
+  "canonical_q_registration": "PROPOSED_CANONICAL_REGISTRATION_PENDING",
+  "case_id": "NOT DOCUMENTED",
+  "scientific_question": "For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+  "date": "2026-10-10T10:07:51.443051+02:00",
+  "status": "CONTINUES",
+  "result_id": "R-Q045-OPTICAL-AUDIT-V3-001",
+  "result_class": [
+    "RUN_SUCCESS",
+    "NUMERICAL_RESULT",
+    "VALIDATION_RESULT"
+  ],
+  "result_status": "TECHNICALLY_VALIDATED_COMPONENT_ONLY",
+  "scientific_answer": "INSUFFICIENT EVIDENCE for isolated physical-reference CMB/likelihood response and original inference-margin materiality",
+  "origin": {
+    "repository": "Morfindien/Bubbleverse",
+    "run_id": "38035928310",
+    "commit": "2b08781ce57e3b71d7a6de19076db71d9e7702fe",
+    "program_id": "Q045-OPTICAL-AUDIT-V3"
+  },
+  "raw_final_result": {
+    "q": "Q-045",
+    "program_id": "Q045-OPTICAL-AUDIT-V3",
+    "case_id": "NOT DOCUMENTED",
+    "scientific_question": "For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+    "run_id": "38035928310",
+    "execution_commit": "2b08781ce57e3b71d7a6de19076db71d9e7702fe",
+    "config_sha256": "b801912f8bb523f001ff5b0b4794274bc5dff1ef3e52219efe9ab804c2fdde08",
+    "scientific_result": false,
+    "final_result_gate": "UNRESOLVED",
+    "reference_truth_gate": "UNQUALIFIED",
+    "production_restart_authorized": false,
+    "reference_treatments_executed": [],
+    "next_motor": "Result Ingestion & Routing Engine",
+    "execution_status": "COMPLETE",
+    "result_status": "RAW_COMPONENT_ONLY",
+    "job_completeness_gate": "PASS",
+    "merge_compatibility_gate": "PASS",
+    "observation_gate": "PASS_NATIVE_COMPONENT_ONLY",
+    "tests_status": "COMPLETE",
+    "records": [
+      {
+        "q": "Q-045",
+        "program_id": "Q045-OPTICAL-AUDIT-V3",
+        "case_id": "NOT DOCUMENTED",
+        "scientific_question": "For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+        "run_id": "38035928310",
+        "execution_commit": "2b08781ce57e3b71d7a6de19076db71d9e7702fe",
+        "config_sha256": "b801912f8bb523f001ff5b0b4794274bc5dff1ef3e52219efe9ab804c2fdde08",
+        "scientific_result": false,
+        "final_result_gate": "UNRESOLVED",
+        "reference_truth_gate": "UNQUALIFIED",
+        "production_restart_authorized": false,
+        "reference_treatments_executed": [],
+        "next_motor": "Result Ingestion & Routing Engine",
+        "job_id": "camspec-ede_n3",
+        "status": "COMPLETE",
+        "error": "",
+        "theory_evaluations_started": 1,
+        "provenance": {
+          "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+          "observer_executable_sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d",
+          "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "compile_command": [
+            "gcc",
+            "-O2",
+            "-fopenmp",
+            "-rdynamic",
+            "-Wall",
+            "-Wextra",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/include",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/HyRec2020",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/RecfastCLASS",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/heating",
+            "/home/runner/work/Bubbleverse/Bubbleverse/q045_optical_audit_probe_v3.c",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so",
+            "-L/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+            "-lpython3.11",
+            "-Wl,-rpath,/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311",
+            "-Wl,-rpath,/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+            "-ldl",
+            "-lm",
+            "-o",
+            "/home/runner/work/Bubbleverse/Bubbleverse/q045_output/q045_original_binary_observer"
+          ],
+          "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+          "original_binary_compiler": "NOT DOCUMENTED",
+          "python": "3.11.16",
+          "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+          "observer_scope": "Background + thermodynamics only; no new spectrum or likelihood evaluation"
+        },
+        "analysis": {
+          "observational_table_identity": {
+            "z": true,
+            "eta_Mpc": true,
+            "xe": true,
+            "q_1_Mpc": true,
+            "exp_minus_kappa": true,
+            "g_1_Mpc": true
+          },
+          "calibration": {
+            "requested_tau": 0.05141852352021917,
+            "relative_tolerance": 0.0001,
+            "initial_bracket_tau": [
+              1.0566539286552316e-05,
+              0.6992429867145751
+            ],
+            "accepted_bracket_tau": [
+              0.05141522620600854,
+              0.05141856611747197
+            ],
+            "accepted_bracket_z": [
+              7.4735260009765625,
+              7.473876953125
+            ],
+            "last_trial_residual": -3.2973142106290654e-06,
+            "bisection_trials": 17,
+            "native_stopping_condition_met": true,
+            "reconstruction": "Replay of the pinned branch comparison; no smooth monotonicity assumption through selector jumps"
+          },
+          "opacity_normalization_max_relative_residual": 5.298403148787251e-16,
+          "original_binary_cumulative_vs_decoded_plus_max_abs": 1.5133991837501526e-09,
+          "cubic_minus_vs_gauss2_max_abs": 2.9103830456733704e-11,
+          "plus_minus_max_abs": 1.6074782040668651,
+          "native_underflow_rows": 11618,
+          "reference_truth_gate": "UNQUALIFIED",
+          "reference_error_bound": null,
+          "reason": "Same-history cubic controls acquired. Continuum/history/event and calibration remainder qualification, matched refinement levels and consumed-observable response are absent.",
+          "requested_tau": 0.05141852352021917,
+          "actual_computed_scientific_result": "NOT_YET_COMPUTED"
+        },
+        "observation_gate": "PASS_NATIVE_COMPONENT_ONLY",
+        "wall_seconds": 1.4827617090000018,
+        "files": {
+          "attempt.json": "79fe3568fc3b1f4a8f655d80381cc463ccaf4e063169f864dd99aa47e64632ff",
+          "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cumulative_component_comparison.tsv": "3429cb75836964a89b86cda6e50c079c327201b792b239f0fa6cb452348654c7",
+          "cumulative_native.tsv": "a1a1846fc9d918f9b3889499e2e0ad6b7c9822913dbad9ecf88e32f0a0dc4bd5",
+          "effective_precision.tsv": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0",
+          "final_native_nodes.tsv": "172f9825a23d16768702f97232b7185bc192cd1469dac0348a3af94f583b3f98",
+          "input_identity.json": "7489a127b4ef64461b6b0890a4dafed27818ec246be03525d7c0fbce15edb823",
+          "native.log": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c",
+          "native_meta.json": "11bb690f0e2ce3c330b576b6c0d87fa895efce9a4aa583043438d2c0946e7875",
+          "native_trace.jsonl": "71c4a2c396d68bcc00d024541a3b3ab7bff617c6debff8b1c4dcd4d3edc9b0dd",
+          "point.ini": "4bc1cd65cc7316aa5abf438b7077acd71fde12b5e68fde837014467ebe756ada",
+          "q045_original_binary_observer": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d",
+          "redshift_node_diagnostic.tsv": "6630a055fe4a10bc881f4ccae2799344b4605c36b8bbaaa5d56c07acb4a65cfb",
+          "scalar_001.tsv": "12a984e773eaf3fd041b28589d6ceb7d26fe95d7065c9b274ab4c136da587c8c",
+          "scalar_002.tsv": "bd0448fd5bd8fab389f5e7c6de0e4e09466f0b579bca3239dc92e5c145e3632e",
+          "scalar_003.tsv": "f4f2fb873f41ea1f78f1a6d480bc4f9347e1beeab8df719c0010a7bea02ee443",
+          "scalar_004.tsv": "9a2df80c9cbe0061c145cf34f028bf601d574308596da609d4e215c675bced1e",
+          "scalar_005.tsv": "89a20651f57d222052b11a4b8da3629053f66f094f1e4242fb3a3e94f7b8ffeb",
+          "scalar_006.tsv": "fef0b48a83cc3ef9becc539208d14794c64a314306ea48f6911184ca1a7d97d6",
+          "scalar_007.tsv": "d045b1828a01bcc88ef54d188e3c4658bcef9dcf3e0605a913caebd362bea515",
+          "scalar_008.tsv": "46f3771bc38743edd36dba4ca628d245084828bbbffee6cfa8274758c0da633b",
+          "scalar_009.tsv": "c7b617c01155d375bda41b39a06a39a59bd0952c06bc60bdb903cc7241123225",
+          "scalar_010.tsv": "d49d8e9c71213c178b9152657dc006d73f766ea70676fd9ab977f62036f33b47",
+          "scalar_011.tsv": "9ed14d29d0e24c052990e77de50c4b69be3e3dc9860dec7ee622c447cc8e1c2f",
+          "scalar_012.tsv": "790562d3424e39e30f2b4b87a4c804a310ee03226e227b0c62e92f481bdd1bc0",
+          "scalar_013.tsv": "8a15f5a34279e0650aa4be6363dadcf3725f55a18bb5f769196f121e353d3e9b",
+          "scalar_014.tsv": "404bbba2fffe32a73e2d1292565b7c32f90b89c10d5459942cfb99763c56b818",
+          "scalar_015.tsv": "e835800817b1eea84b43a94ab5b93f433c954e7077c1faa61391c7d54f29660b",
+          "scalar_016.tsv": "62b2dfdefc2daf0228689d54fb4712e2c483f30cd44bc302f9b752b908a306b2",
+          "scalar_017.tsv": "01a83eac3cc3ad1dbff5b2979f565b160701de0bd36f39f1cbc6cc8bd20e8aec",
+          "scalar_018.tsv": "ed842038be5fda0921db995c0caf1128d5d58c56508f9c356bb94f73ba4c8667",
+          "scalar_019.tsv": "8d1af9e5dbc5906abb24a317d2665492bc0232801094eb44d5b67b8262aabcd7",
+          "scalar_component_comparison.json": "ae28fa7701c86b2d90c9626aa9521b27481c6cfa6e40cae4b3194d2a56e33e9a",
+          "source_species.tsv": "c61794e1c160eaf64dc5e0bc5555cb7c96a8646adc80131039fed9e8642017b4"
+        }
+      },
+      {
+        "q": "Q-045",
+        "program_id": "Q045-OPTICAL-AUDIT-V3",
+        "case_id": "NOT DOCUMENTED",
+        "scientific_question": "For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+        "run_id": "38035928310",
+        "execution_commit": "2b08781ce57e3b71d7a6de19076db71d9e7702fe",
+        "config_sha256": "b801912f8bb523f001ff5b0b4794274bc5dff1ef3e52219efe9ab804c2fdde08",
+        "scientific_result": false,
+        "final_result_gate": "UNRESOLVED",
+        "reference_truth_gate": "UNQUALIFIED",
+        "production_restart_authorized": false,
+        "reference_treatments_executed": [],
+        "next_motor": "Result Ingestion & Routing Engine",
+        "job_id": "camspec-lcdm",
+        "status": "COMPLETE",
+        "error": "",
+        "theory_evaluations_started": 1,
+        "provenance": {
+          "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+          "observer_executable_sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d",
+          "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "compile_command": [
+            "gcc",
+            "-O2",
+            "-fopenmp",
+            "-rdynamic",
+            "-Wall",
+            "-Wextra",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/include",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/HyRec2020",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/RecfastCLASS",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/heating",
+            "/home/runner/work/Bubbleverse/Bubbleverse/q045_optical_audit_probe_v3.c",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so",
+            "-L/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+            "-lpython3.11",
+            "-Wl,-rpath,/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311",
+            "-Wl,-rpath,/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+            "-ldl",
+            "-lm",
+            "-o",
+            "/home/runner/work/Bubbleverse/Bubbleverse/q045_output/q045_original_binary_observer"
+          ],
+          "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+          "original_binary_compiler": "NOT DOCUMENTED",
+          "python": "3.11.16",
+          "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+          "observer_scope": "Background + thermodynamics only; no new spectrum or likelihood evaluation"
+        },
+        "analysis": {
+          "observational_table_identity": {
+            "z": true,
+            "eta_Mpc": true,
+            "xe": true,
+            "q_1_Mpc": true,
+            "exp_minus_kappa": true,
+            "g_1_Mpc": true
+          },
+          "calibration": {
+            "requested_tau": 0.05141852352021917,
+            "relative_tolerance": 0.0001,
+            "initial_bracket_tau": [
+              1.0566534663011955e-05,
+              0.699252999339081
+            ],
+            "accepted_bracket_tau": [
+              0.05141528223303573,
+              0.05141862215160879
+            ],
+            "accepted_bracket_z": [
+              7.4735260009765625,
+              7.473876953125
+            ],
+            "last_trial_residual": -3.241287183437802e-06,
+            "bisection_trials": 17,
+            "native_stopping_condition_met": true,
+            "reconstruction": "Replay of the pinned branch comparison; no smooth monotonicity assumption through selector jumps"
+          },
+          "opacity_normalization_max_relative_residual": 4.792819339177581e-16,
+          "original_binary_cumulative_vs_decoded_plus_max_abs": 1.979060471057892e-09,
+          "cubic_minus_vs_gauss2_max_abs": 3.637978807091713e-12,
+          "plus_minus_max_abs": 1.6075042152078822,
+          "native_underflow_rows": 11712,
+          "reference_truth_gate": "UNQUALIFIED",
+          "reference_error_bound": null,
+          "reason": "Same-history cubic controls acquired. Continuum/history/event and calibration remainder qualification, matched refinement levels and consumed-observable response are absent.",
+          "requested_tau": 0.05141852352021917,
+          "actual_computed_scientific_result": "NOT_YET_COMPUTED"
+        },
+        "observation_gate": "PASS_NATIVE_COMPONENT_ONLY",
+        "wall_seconds": 1.2780598850000047,
+        "files": {
+          "attempt.json": "da3a3fa08410dba50dca9a8df4222c1277ea2320b59add970ab8f616b3d87b5e",
+          "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cumulative_component_comparison.tsv": "bbb3a8932a2787addae6569638409cf43f9162b118079c7ebbf1cad2a941e7d0",
+          "cumulative_native.tsv": "1e3a3abb11b23d63018c3ba1495a4c5044f49a8f5d926b9cef489f6477e9b641",
+          "effective_precision.tsv": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0",
+          "final_native_nodes.tsv": "f36affc0c2b24556d057ec0b28a7ca7217de36a752f54175fbbb54306840ffaf",
+          "input_identity.json": "d0bfb6121ad1d974bc03f01390182c9446e88f74728623ac5311cd4b4a964ddd",
+          "native.log": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c",
+          "native_meta.json": "11bb690f0e2ce3c330b576b6c0d87fa895efce9a4aa583043438d2c0946e7875",
+          "native_trace.jsonl": "b37d85954660b657d806856c4189856e45d816204b5332afbea4d54029dc89d2",
+          "point.ini": "e8adcdf5f2b7017c68fcc70b2d45eb6c43bd969570211fa56fb54ab696075a8c",
+          "q045_original_binary_observer": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d",
+          "redshift_node_diagnostic.tsv": "cb9439ee9c74bc8b00b4ad669754ce002fff3bb8464bd1916866eb9b3c50cf3a",
+          "scalar_001.tsv": "afaa6ea21af1147ca71ff934caf3ad7fe4f7ac23f9f0386f4980e05c880bb37d",
+          "scalar_002.tsv": "d9e7b8a451de0aa5a93c215b0ad9d36d21551cf81b89609bedcedc934e5d93fe",
+          "scalar_003.tsv": "f49729ffe3a5fc63214712e348af00eb78e8a9bec14556110c9d4bd1bf46409a",
+          "scalar_004.tsv": "521aee6c282ba465f0616350263c5dd73e2c3df33fcd4320075395b836c15ac1",
+          "scalar_005.tsv": "498dd8742013a952bbcf5d5640b2fdea1725a352b1fecf5b574a6d588d06fe74",
+          "scalar_006.tsv": "58d457137405ff2dc66a6bc32aaf4d94f14e1f37a4779e824d2737a7c58f305c",
+          "scalar_007.tsv": "a896417ff1622b40120a1a5365bea39dfa35faf7debec84015dda0e586772354",
+          "scalar_008.tsv": "164026998473a331db638340cd4c31797605c412049839c61360df5c5516c069",
+          "scalar_009.tsv": "3f5f2c4940be136a7f344fd0373b673c862e40bc9413bb43438bcf08134355a6",
+          "scalar_010.tsv": "219abc00ede158a281faab5e4e103e5e0632f6a5a35481c9051162dbf9f59463",
+          "scalar_011.tsv": "1ae1db510ae45b39d26d420b270242328600fe83359d7d092f9efb0a829cd199",
+          "scalar_012.tsv": "e217c7808c31ed282ad1a78fed2d18d88835d3f93daabae570949ab3719428e6",
+          "scalar_013.tsv": "89a26fc61ac4bcc58ac29cea5b8caff825c233a9be7189f6368d004028da0e22",
+          "scalar_014.tsv": "65d75e0424ac9e024c9fd8065d1b2de89191c47f7f03dc98cb38932667691dd2",
+          "scalar_015.tsv": "4f670e7ccb006708856e5a5d0a8e2ae82bab85b44ac855f34556ea4dbddc91ce",
+          "scalar_016.tsv": "342702a2c8c107be0461b46646efcd598d109c25e6b06ecca450e34938a01d28",
+          "scalar_017.tsv": "9889e806afb34ee0cf0ae594faaf9d678ef0554620a677972bb5780dcaa3df8d",
+          "scalar_018.tsv": "e94d2658eb97e873e29872e3056239deac0488d4d7d94455fe852b0e1e81c186",
+          "scalar_019.tsv": "a4e1ff62b574bea27148e09a4ed7b2102c8b85f94d523a21bc09066f8b65d0f0",
+          "scalar_component_comparison.json": "ca35919412b0d4dfef6589a01872f6020a0539edff0ff92db86f346ec0b1d5e2",
+          "source_species.tsv": "c81072cc1033379fe4b375d78eb0eef72cd1a335f9ff5ffae4ea357db4bfa78c"
+        }
+      },
+      {
+        "q": "Q-045",
+        "program_id": "Q045-OPTICAL-AUDIT-V3",
+        "case_id": "NOT DOCUMENTED",
+        "scientific_question": "For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+        "run_id": "38035928310",
+        "execution_commit": "2b08781ce57e3b71d7a6de19076db71d9e7702fe",
+        "config_sha256": "b801912f8bb523f001ff5b0b4794274bc5dff1ef3e52219efe9ab804c2fdde08",
+        "scientific_result": false,
+        "final_result_gate": "UNRESOLVED",
+        "reference_truth_gate": "UNQUALIFIED",
+        "production_restart_authorized": false,
+        "reference_treatments_executed": [],
+        "next_motor": "Result Ingestion & Routing Engine",
+        "job_id": "hillipop-ede_n3",
+        "status": "COMPLETE",
+        "error": "",
+        "theory_evaluations_started": 1,
+        "provenance": {
+          "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+          "observer_executable_sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d",
+          "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "compile_command": [
+            "gcc",
+            "-O2",
+            "-fopenmp",
+            "-rdynamic",
+            "-Wall",
+            "-Wextra",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/include",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/HyRec2020",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/RecfastCLASS",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/heating",
+            "/home/runner/work/Bubbleverse/Bubbleverse/q045_optical_audit_probe_v3.c",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so",
+            "-L/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+            "-lpython3.11",
+            "-Wl,-rpath,/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311",
+            "-Wl,-rpath,/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+            "-ldl",
+            "-lm",
+            "-o",
+            "/home/runner/work/Bubbleverse/Bubbleverse/q045_output/q045_original_binary_observer"
+          ],
+          "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+          "original_binary_compiler": "NOT DOCUMENTED",
+          "python": "3.11.16",
+          "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+          "observer_scope": "Background + thermodynamics only; no new spectrum or likelihood evaluation"
+        },
+        "analysis": {
+          "observational_table_identity": {
+            "z": true,
+            "eta_Mpc": true,
+            "xe": true,
+            "q_1_Mpc": true,
+            "exp_minus_kappa": true,
+            "g_1_Mpc": true
+          },
+          "calibration": {
+            "requested_tau": 0.05150685267029027,
+            "relative_tolerance": 0.0001,
+            "initial_bracket_tau": [
+              1.0443457373522836e-05,
+              0.6976868125760719
+            ],
+            "accepted_bracket_tau": [
+              0.051504001958525246,
+              0.05150733944258592
+            ],
+            "accepted_bracket_z": [
+              7.498443603515625,
+              7.4987945556640625
+            ],
+            "last_trial_residual": 4.867722956519716e-07,
+            "bisection_trials": 17,
+            "native_stopping_condition_met": true,
+            "reconstruction": "Replay of the pinned branch comparison; no smooth monotonicity assumption through selector jumps"
+          },
+          "opacity_normalization_max_relative_residual": 4.40995150028358e-16,
+          "original_binary_cumulative_vs_decoded_plus_max_abs": 3.026798367500305e-09,
+          "cubic_minus_vs_gauss2_max_abs": 2.3283064365386963e-10,
+          "plus_minus_max_abs": 1.6013393563916907,
+          "native_underflow_rows": 11547,
+          "reference_truth_gate": "UNQUALIFIED",
+          "reference_error_bound": null,
+          "reason": "Same-history cubic controls acquired. Continuum/history/event and calibration remainder qualification, matched refinement levels and consumed-observable response are absent.",
+          "requested_tau": 0.05150685267029027,
+          "actual_computed_scientific_result": "NOT_YET_COMPUTED"
+        },
+        "observation_gate": "PASS_NATIVE_COMPONENT_ONLY",
+        "wall_seconds": 2.186861778000008,
+        "files": {
+          "attempt.json": "fada5f7b0aa9e4b23475a5c733dba6839f5224f1311414a21e26361b5d1be4aa",
+          "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cumulative_component_comparison.tsv": "1525e4d27dd7ff8c54f1d18b958624cd029c68b2994883e34d5134768084b007",
+          "cumulative_native.tsv": "9acd29116fb1f15b93859917d7949764a2005c1b5429a6d98cf23066a3fe0721",
+          "effective_precision.tsv": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0",
+          "final_native_nodes.tsv": "eaa3fd6b41b0dbe699bdf10c10e248e82b8defaa36cc98501d00ed2f6a4c117b",
+          "input_identity.json": "8ba1294a64b6d6a7c3fc57d3745c61b29f8afe508d6fbf2cc5aec30702ed02b9",
+          "native.log": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c",
+          "native_meta.json": "6bc155ec54262c72da715ef25eb8a7bbb18b4b7426e4d2da2292f3ab25208ee4",
+          "native_trace.jsonl": "c33600768ae2812297dfd7f84829b142f81080c00699640e98a4a383034438e8",
+          "point.ini": "126b5df19a0956be8825352f77bf24c40ecb5c7296fe6c03e3efac7eaa7a5cf9",
+          "q045_original_binary_observer": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d",
+          "redshift_node_diagnostic.tsv": "27682cf2d373ca2157be10c9bc3e0b36ef0fd03487ecc2c6eda162ce35617d4c",
+          "scalar_001.tsv": "3a220b1eebdfce0d026229a3e21e25b84c8087e9e40dbc9d3b5d4e4fe36b9abf",
+          "scalar_002.tsv": "6ba140a0cb5b831d80478827556941ff0900a63749f558bb9311303dc6fee1a5",
+          "scalar_003.tsv": "4856fa55c1e217883d0d456cf1db7c1eedee74d9d052111f024658e480186e46",
+          "scalar_004.tsv": "0a8e8240caed58f52f593063318b38a4d560c292ae93bad309faf353ff259333",
+          "scalar_005.tsv": "7e015ec0cd821f4fdf9e3e7b02f69f5e9af0655e6b050f8623a9c15e6e11a60e",
+          "scalar_006.tsv": "aec69ad1a7315f4546948e85dd77b254d0b44eeb46933aa204ecc1cb5a5f47e6",
+          "scalar_007.tsv": "6cc46b1037da2da059d01537a0af1844102d290d4d0850118623d8a80787ca30",
+          "scalar_008.tsv": "9d58c779be5af69648e05bd27aff5967eb9d384a7d183eb5be3ac811d7c8fcd4",
+          "scalar_009.tsv": "bc960eeab6ead93b1e7aa20ad5d9741123c3dcc8634f80809a6b7724be8364a5",
+          "scalar_010.tsv": "3f06b3f5401f6bd779a3bd93ebb313d9831a1fb097a80c11e8d5f03ee848f5b9",
+          "scalar_011.tsv": "c3c2d367f2ef8fc30cfbc9cb6ffd677ac0aa5be246dabce716db682bf0465911",
+          "scalar_012.tsv": "2ecd35eb6fb2e5de1e4a727ed76f650f93a8f0351bf8afbbea66cd6626c1c465",
+          "scalar_013.tsv": "c351cfc235879a4261766eb2652ecbcec429f6b1d7107f5051b6e2cfce73abba",
+          "scalar_014.tsv": "0571bcbb852c75d7e03e54f471b1232fa0eae6497bea67f4d33370b2f2e30cda",
+          "scalar_015.tsv": "4e5ab1aa6299ddda9f88d5e8f39c7e06a9f095e5d69928a6137da2b2b89694f1",
+          "scalar_016.tsv": "84940e34935c92e483d99b83e4a88e57838749ddfd840f91babc4112a3a0ed09",
+          "scalar_017.tsv": "b7fdab9a6a321bb5c09df2266ee66859bb469404ac4e4d2369af9b7ae41f2c03",
+          "scalar_018.tsv": "df176b0371a6736d8bb984bbdf18ca4bf965e02e9affe7b260adeaaafff89990",
+          "scalar_019.tsv": "58a7fb1fb4bfd773d2f402df891e705bbe953497f79e68f023ebbb1a718c1504",
+          "scalar_component_comparison.json": "09321004736f652e1eefa3b14cd2f0ede3d67ef2692a4bc5cd4a46691e8b0a15",
+          "source_species.tsv": "33e09cf215cd3f41b60bc45332e8dc11a730f52732d611100b78a3afa14b05c2"
+        }
+      },
+      {
+        "q": "Q-045",
+        "program_id": "Q045-OPTICAL-AUDIT-V3",
+        "case_id": "NOT DOCUMENTED",
+        "scientific_question": "For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+        "run_id": "38035928310",
+        "execution_commit": "2b08781ce57e3b71d7a6de19076db71d9e7702fe",
+        "config_sha256": "b801912f8bb523f001ff5b0b4794274bc5dff1ef3e52219efe9ab804c2fdde08",
+        "scientific_result": false,
+        "final_result_gate": "UNRESOLVED",
+        "reference_truth_gate": "UNQUALIFIED",
+        "production_restart_authorized": false,
+        "reference_treatments_executed": [],
+        "next_motor": "Result Ingestion & Routing Engine",
+        "job_id": "hillipop-lcdm",
+        "status": "COMPLETE",
+        "error": "",
+        "theory_evaluations_started": 1,
+        "provenance": {
+          "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+          "observer_executable_sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d",
+          "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+          "compile_command": [
+            "gcc",
+            "-O2",
+            "-fopenmp",
+            "-rdynamic",
+            "-Wall",
+            "-Wextra",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/include",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/HyRec2020",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/RecfastCLASS",
+            "-I",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/external/heating",
+            "/home/runner/work/Bubbleverse/Bubbleverse/q045_optical_audit_probe_v3.c",
+            "/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so",
+            "-L/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+            "-lpython3.11",
+            "-Wl,-rpath,/home/runner/work/Bubbleverse/Bubbleverse/external/class_ede/python/build/lib.linux-x86_64-cpython-311",
+            "-Wl,-rpath,/opt/hostedtoolcache/Python/3.11.16/x64/lib",
+            "-ldl",
+            "-lm",
+            "-o",
+            "/home/runner/work/Bubbleverse/Bubbleverse/q045_output/q045_original_binary_observer"
+          ],
+          "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0",
+          "original_binary_compiler": "NOT DOCUMENTED",
+          "python": "3.11.16",
+          "platform": "Linux-6.17.0-1022-azure-x86_64-with-glibc2.39",
+          "observer_scope": "Background + thermodynamics only; no new spectrum or likelihood evaluation"
+        },
+        "analysis": {
+          "observational_table_identity": {
+            "z": true,
+            "eta_Mpc": true,
+            "xe": true,
+            "q_1_Mpc": true,
+            "exp_minus_kappa": true,
+            "g_1_Mpc": true
+          },
+          "calibration": {
+            "requested_tau": 0.05150685267029027,
+            "relative_tolerance": 0.0001,
+            "initial_bracket_tau": [
+              1.044345109622314e-05,
+              0.6977013704707082
+            ],
+            "accepted_bracket_tau": [
+              0.051504081785466026,
+              0.0515074192794346
+            ],
+            "accepted_bracket_z": [
+              7.498443603515625,
+              7.4987945556640625
+            ],
+            "last_trial_residual": 5.666091443326526e-07,
+            "bisection_trials": 17,
+            "native_stopping_condition_met": true,
+            "reconstruction": "Replay of the pinned branch comparison; no smooth monotonicity assumption through selector jumps"
+          },
+          "opacity_normalization_max_relative_residual": 4.3925069019391248e-16,
+          "original_binary_cumulative_vs_decoded_plus_max_abs": 2.561137080192566e-09,
+          "cubic_minus_vs_gauss2_max_abs": 1.1641532182693481e-10,
+          "plus_minus_max_abs": 1.601350987330079,
+          "native_underflow_rows": 11685,
+          "reference_truth_gate": "UNQUALIFIED",
+          "reference_error_bound": null,
+          "reason": "Same-history cubic controls acquired. Continuum/history/event and calibration remainder qualification, matched refinement levels and consumed-observable response are absent.",
+          "requested_tau": 0.05150685267029027,
+          "actual_computed_scientific_result": "NOT_YET_COMPUTED"
+        },
+        "observation_gate": "PASS_NATIVE_COMPONENT_ONLY",
+        "wall_seconds": 1.5829321500000049,
+        "files": {
+          "attempt.json": "51a3df2ec726933e64c6106182f93c63c6012e092077d88fb8fd638c1bcbe56b",
+          "compile.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "cumulative_component_comparison.tsv": "b7c0a4555cc97e582e7a8dcd572af2e4adcc44da0902151c18fddf8e43f1d1f3",
+          "cumulative_native.tsv": "e2924b6e03542e2eca968c495048c2dff5c52b516fe3a7df47b1218b5c71de26",
+          "effective_precision.tsv": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0",
+          "final_native_nodes.tsv": "595a5c19ee0a2e4aedcec4a8629dc01957c50d9d3b696ce4a9aec413e6af2d61",
+          "input_identity.json": "02661c1cb87dda006e3af3425c55c652b66e5de10434815d4cf4135592927ecf",
+          "native.log": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c",
+          "native_meta.json": "6bc155ec54262c72da715ef25eb8a7bbb18b4b7426e4d2da2292f3ab25208ee4",
+          "native_trace.jsonl": "2504cc2125ebcce997acd7133e6d2ab76ce540c47294cd012a6b698eacdac1ff",
+          "point.ini": "453d1670e4821ed21f09ed4e828f9bd5c9da8c0d1a63cb7a963c49e5c4747576",
+          "q045_original_binary_observer": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d",
+          "redshift_node_diagnostic.tsv": "4306b913362eb6bc30340aff2b97e5a2ac6ba9e49990dd2b6a2a998762696476",
+          "scalar_001.tsv": "7dcbf5a9d4679f5987185b048e41ca355d3bdb3b2aa43022014b62b308cc8870",
+          "scalar_002.tsv": "fbc252a46b6144153be1d5aa6ac3686570ab306aaf77a91bf7ca9ca1460b7b15",
+          "scalar_003.tsv": "dafcf5b924d8530c8a3b5b1ec9691fba4b71a659967ec6d5b2cfdaa4661ce183",
+          "scalar_004.tsv": "dc2a1e36fd914171fcccbd0e887e121386650d978d7490bbf1c6dbe5cdb859a1",
+          "scalar_005.tsv": "5f00cf8607ba629ca21ddc6bd0119a48bbc1227171654d3f811f327bf093e588",
+          "scalar_006.tsv": "e40c0048f4e0df5a1aa89ae6ef1ca49a3ada3192c3217074c3cee9d48b0352f1",
+          "scalar_007.tsv": "a209c946dd6b532fe19451d4bc6f8b5cb39e1c3475c60bce91f42fb7b1c95001",
+          "scalar_008.tsv": "81c4faf3bcd7a848bf2fcbb1bf602cd0d97bfc6a55e6eaf2dfbb9c29e8032e44",
+          "scalar_009.tsv": "7092f830d10943479abc1b932bca3f5c68d6fe44e433ee72b682979547c03899",
+          "scalar_010.tsv": "76f56697a0354f77d88ce0ffc9ca1f5d2d25b9e295121c2f9ad0a05baf8dc9ba",
+          "scalar_011.tsv": "0f5415d98b75f86537a1ce4d75d7ed3d450812d87dc381ae264e24229768469a",
+          "scalar_012.tsv": "b1c65f6d01f14eda4ccec775ded7f82909044c4749a0d2e843698ab41388a259",
+          "scalar_013.tsv": "a81a77fe57e70f3e4312e53fe2cf1280e75d207d6e9d387a2c25ac7b12b0c5cb",
+          "scalar_014.tsv": "a53736920abe44a18d85d1872fc0648b04a9763150d15ff7617d4fc78284d956",
+          "scalar_015.tsv": "3b82001e58f983c9bc0caba3d1222639d9784b423bc3f8588a267b57c833da16",
+          "scalar_016.tsv": "1add61e73fbe275f63c96c7816126e8a9aa18c0cf5e40997bfe54cf31ac70abe",
+          "scalar_017.tsv": "a11dddb719285daeb75fdec40bb14bc21fb1c5694333cafa8831f7985e2e326a",
+          "scalar_018.tsv": "56f64abb3918adebebf487475b185ad5b868ef4fdde9d7f8af879c4a22075c09",
+          "scalar_019.tsv": "6892876a7768b75d729da094111587e2d5b2047fe3b647a1f5696545162958bd",
+          "scalar_component_comparison.json": "7b13fed6b87d4a958180c3cee8616f408f0eef3cdec86ea05655129ce8ff0d9f",
+          "source_species.tsv": "28a1f6aee93385f345991601e24a80378b161c406b4d852a9aba689a1f082e2d"
+        }
+      }
+    ],
+    "errors": [],
+    "expected_jobs": [
+      "camspec-ede_n3",
+      "camspec-lcdm",
+      "hillipop-ede_n3",
+      "hillipop-lcdm"
+    ],
+    "completed_jobs": [
+      "camspec-ede_n3",
+      "camspec-lcdm",
+      "hillipop-ede_n3",
+      "hillipop-lcdm"
+    ],
+    "failed_jobs": [],
+    "pending_jobs": [],
+    "evaluations_inherited": 4,
+    "evaluations_started_this_target": 4,
+    "evaluations_total_upper_bound_this_target": 8,
+    "inherited_total_budget": 52,
+    "automatic_continuation": false,
+    "actual_computed_scientific_result": "NOT_YET_COMPUTED",
+    "terminal_stage_reason": "Reference history/remainder gate is UNQUALIFIED; no treatments or extra refinements auto-dispatched."
+  },
+  "ingestion_validation": {
+    "q": "Q-045",
+    "run_id": "38035928310",
+    "validated_at": "2026-10-10T08:02:49.574717+00:00",
+    "archive_digests": "PASS",
+    "manifest_files": "PASS",
+    "workers": [
+      {
+        "job_id": "camspec-ede_n3",
+        "raw_hashes": "PASS",
+        "parent_worker_identity": "PASS",
+        "record_rederivation": "PASS",
+        "derived_file_byte_identity": "PASS",
+        "independent_curvature_prefix_max_absolute_residual": 7.701403959003983e-10,
+        "table_rows": 28333,
+        "max_difference_node": {
+          "z": 5000000.000000003,
+          "native_kappa": 1042127.9461287906,
+          "exp_minus_kappa": 0.0,
+          "signed_difference": 1.6074782040668651
+        },
+        "last_scalar_trial": {
+          "event": "scalar",
+          "call": 19,
+          "status": 0,
+          "argmin": 729,
+          "support_rows": 729,
+          "tau": 0.05141522620600854,
+          "z_reio": 7.4735260009765625,
+          "reio_start": 11.473526000976562,
+          "endpoint_z": 10.921092109210921,
+          "component_integrals": {
+            "plus": 0.05141522620600854,
+            "minus": 0.051414813506088314,
+            "gauss2": 0.051414813506088314
+          },
+          "native_replay_difference": 0.0,
+          "spline_bias": 4.12699920224191e-07
+        },
+        "cumulative_redshift_windows": [
+          {
+            "z_upper_limit": 10,
+            "last_node_z": 9.990999099909992,
+            "max_abs_same_history_cumulative_difference": 5.777434922624169e-07,
+            "same_history_difference_at_last_node": 4.1266278135582146e-07
+          },
+          {
+            "z_upper_limit": 30,
+            "last_node_z": 29.98799879987999,
+            "max_abs_same_history_cumulative_difference": 5.777434922624169e-07,
+            "same_history_difference_at_last_node": 4.1272979579148883e-07
+          },
+          {
+            "z_upper_limit": 100,
+            "last_node_z": 99.75,
+            "max_abs_same_history_cumulative_difference": 5.777434922624169e-07,
+            "same_history_difference_at_last_node": 4.283631581669667e-07
+          },
+          {
+            "z_upper_limit": 1500,
+            "last_node_z": 1499.715,
+            "max_abs_same_history_cumulative_difference": 2.384346537631643e-05,
+            "same_history_difference_at_last_node": 2.2028404835339188e-05
+          }
+        ],
+        "max_abs_difference_native_kappa_le_10": 2.273387280737893e-05,
+        "max_abs_difference_where_native_exp_nonzero": 3.504037556467665e-05,
+        "independent_method_scope": "Same stored cubic representation only; not continuum-history accuracy or new CMB/likelihood execution."
+      },
+      {
+        "job_id": "camspec-lcdm",
+        "raw_hashes": "PASS",
+        "parent_worker_identity": "PASS",
+        "record_rederivation": "PASS",
+        "derived_file_byte_identity": "PASS",
+        "independent_curvature_prefix_max_absolute_residual": 7.308094129854226e-10,
+        "table_rows": 28333,
+        "max_difference_node": {
+          "z": 5000000.000000003,
+          "native_kappa": 1042153.5875100818,
+          "exp_minus_kappa": 0.0,
+          "signed_difference": 1.6075042152078822
+        },
+        "last_scalar_trial": {
+          "event": "scalar",
+          "call": 19,
+          "status": 0,
+          "argmin": 729,
+          "support_rows": 729,
+          "tau": 0.05141528223303573,
+          "z_reio": 7.4735260009765625,
+          "reio_start": 11.473526000976562,
+          "endpoint_z": 10.921092109210921,
+          "component_integrals": {
+            "plus": 0.05141528223303573,
+            "minus": 0.051414869533382083,
+            "gauss2": 0.05141486953338208
+          },
+          "native_replay_difference": 0.0,
+          "spline_bias": 4.12699653645765e-07
+        },
+        "cumulative_redshift_windows": [
+          {
+            "z_upper_limit": 10,
+            "last_node_z": 9.990999099909992,
+            "max_abs_same_history_cumulative_difference": 5.777435302042888e-07,
+            "same_history_difference_at_last_node": 4.1266251663008013e-07
+          },
+          {
+            "z_upper_limit": 30,
+            "last_node_z": 29.98799879987999,
+            "max_abs_same_history_cumulative_difference": 5.777435302042888e-07,
+            "same_history_difference_at_last_node": 4.1272950903475936e-07
+          },
+          {
+            "z_upper_limit": 100,
+            "last_node_z": 99.75,
+            "max_abs_same_history_cumulative_difference": 5.777435302042888e-07,
+            "same_history_difference_at_last_node": 4.283500093862913e-07
+          },
+          {
+            "z_upper_limit": 1500,
+            "last_node_z": 1499.715,
+            "max_abs_same_history_cumulative_difference": 2.390954226427766e-05,
+            "same_history_difference_at_last_node": 2.2082203365414443e-05
+          }
+        ],
+        "max_abs_difference_native_kappa_le_10": 2.2799884487056943e-05,
+        "max_abs_difference_where_native_exp_nonzero": 3.511301008529699e-05,
+        "independent_method_scope": "Same stored cubic representation only; not continuum-history accuracy or new CMB/likelihood execution."
+      },
+      {
+        "job_id": "hillipop-ede_n3",
+        "raw_hashes": "PASS",
+        "parent_worker_identity": "PASS",
+        "record_rederivation": "PASS",
+        "derived_file_byte_identity": "PASS",
+        "independent_curvature_prefix_max_absolute_residual": 2.020300593486013e-09,
+        "table_rows": 28333,
+        "max_difference_node": {
+          "z": 5000000.000000003,
+          "native_kappa": 1038142.412320819,
+          "exp_minus_kappa": 0.0,
+          "signed_difference": 1.6013393563916907
+        },
+        "last_scalar_trial": {
+          "event": "scalar",
+          "call": 19,
+          "status": 0,
+          "argmin": 730,
+          "support_rows": 730,
+          "tau": 0.05150733944258592,
+          "z_reio": 7.4987945556640625,
+          "reio_start": 11.498794555664062,
+          "endpoint_z": 10.936093609360936,
+          "component_integrals": {
+            "plus": 0.05150733944258592,
+            "minus": 0.05150692979543184,
+            "gauss2": 0.05150692979543184
+          },
+          "native_replay_difference": 0.0,
+          "spline_bias": 4.096471540801505e-07
+        },
+        "cumulative_redshift_windows": [
+          {
+            "z_upper_limit": 10,
+            "last_node_z": 9.990999099909992,
+            "max_abs_same_history_cumulative_difference": 5.741820705493228e-07,
+            "same_history_difference_at_last_node": 4.09605837463356e-07
+          },
+          {
+            "z_upper_limit": 30,
+            "last_node_z": 29.98799879987999,
+            "max_abs_same_history_cumulative_difference": 5.741820705493228e-07,
+            "same_history_difference_at_last_node": 4.096770295641816e-07
+          },
+          {
+            "z_upper_limit": 100,
+            "last_node_z": 99.75,
+            "max_abs_same_history_cumulative_difference": 5.741820705493228e-07,
+            "same_history_difference_at_last_node": 4.2531940441792315e-07
+          },
+          {
+            "z_upper_limit": 1500,
+            "last_node_z": 1499.715,
+            "max_abs_same_history_cumulative_difference": 2.3793019172657637e-05,
+            "same_history_difference_at_last_node": 2.1990983135822262e-05
+          }
+        ],
+        "max_abs_difference_native_kappa_le_10": 2.2702957242159982e-05,
+        "max_abs_difference_where_native_exp_nonzero": 3.4938836392939265e-05,
+        "independent_method_scope": "Same stored cubic representation only; not continuum-history accuracy or new CMB/likelihood execution."
+      },
+      {
+        "job_id": "hillipop-lcdm",
+        "raw_hashes": "PASS",
+        "parent_worker_identity": "PASS",
+        "record_rederivation": "PASS",
+        "derived_file_byte_identity": "PASS",
+        "independent_curvature_prefix_max_absolute_residual": 8.132314821551745e-10,
+        "table_rows": 28333,
+        "max_difference_node": {
+          "z": 5000000.000000003,
+          "native_kappa": 1038163.0733984635,
+          "exp_minus_kappa": 0.0,
+          "signed_difference": 1.601350987330079
+        },
+        "last_scalar_trial": {
+          "event": "scalar",
+          "call": 19,
+          "status": 0,
+          "argmin": 730,
+          "support_rows": 730,
+          "tau": 0.0515074192794346,
+          "z_reio": 7.4987945556640625,
+          "reio_start": 11.498794555664062,
+          "endpoint_z": 10.936093609360936,
+          "component_integrals": {
+            "plus": 0.0515074192794346,
+            "minus": 0.051507009632489754,
+            "gauss2": 0.05150700963248974
+          },
+          "native_replay_difference": 0.0,
+          "spline_bias": 4.0964694484474373e-07
+        },
+        "cumulative_redshift_windows": [
+          {
+            "z_upper_limit": 10,
+            "last_node_z": 9.990999099909992,
+            "max_abs_same_history_cumulative_difference": 5.741821074503606e-07,
+            "same_history_difference_at_last_node": 4.096056308369733e-07
+          },
+          {
+            "z_upper_limit": 30,
+            "last_node_z": 29.98799879987999,
+            "max_abs_same_history_cumulative_difference": 5.741821074503606e-07,
+            "same_history_difference_at_last_node": 4.0967679103970367e-07
+          },
+          {
+            "z_upper_limit": 100,
+            "last_node_z": 99.75,
+            "max_abs_same_history_cumulative_difference": 5.741821074503606e-07,
+            "same_history_difference_at_last_node": 4.253007785809393e-07
+          },
+          {
+            "z_upper_limit": 1500,
+            "last_node_z": 1499.715,
+            "max_abs_same_history_cumulative_difference": 2.3849332791314737e-05,
+            "same_history_difference_at_last_node": 2.202309491750043e-05
+          }
+        ],
+        "max_abs_difference_native_kappa_le_10": 2.274560870674236e-05,
+        "max_abs_difference_where_native_exp_nonzero": 3.503327070575324e-05,
+        "independent_method_scope": "Same stored cubic representation only; not continuum-history accuracy or new CMB/likelihood execution."
+      }
+    ],
+    "new_theory_evaluations": 0,
+    "technical_ingestion_gate": "PASS",
+    "reference_truth_gate": "UNQUALIFIED",
+    "final_result_gate": "UNRESOLVED"
+  },
+  "jobs": {
+    "jobs": [
+      {
+        "id": 114166219147,
+        "name": "static",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 38035928310,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Scope, registry, journal, launcher and package",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Post Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          }
+        ]
+      },
+      {
+        "id": 114166270461,
+        "name": "inputs",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 38035928310,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Recover exact completed V2 artifacts once",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Post Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 11
+          }
+        ]
+      },
+      {
+        "id": 114166336758,
+        "name": "audit (camspec-lcdm)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 38035928310,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Preserve attempted job before environment acquisition",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Exact original cache identity including all nine paths; no rebuild/fallback/save",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Pinned numerical reader and finite contract tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "One original-binary observation and component audit",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Keep exactly one success or failure record",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Post Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 20
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21
+          }
+        ]
+      },
+      {
+        "id": 114166336800,
+        "name": "audit (hillipop-ede_n3)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 38035928310,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Preserve attempted job before environment acquisition",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Exact original cache identity including all nine paths; no rebuild/fallback/save",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Pinned numerical reader and finite contract tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "One original-binary observation and component audit",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Keep exactly one success or failure record",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Post Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 20
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21
+          }
+        ]
+      },
+      {
+        "id": 114166336812,
+        "name": "audit (camspec-ede_n3)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 38035928310,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Preserve attempted job before environment acquisition",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Exact original cache identity including all nine paths; no rebuild/fallback/save",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Pinned numerical reader and finite contract tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "One original-binary observation and component audit",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Keep exactly one success or failure record",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Post Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 20
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21
+          }
+        ]
+      },
+      {
+        "id": 114166336831,
+        "name": "audit (hillipop-lcdm)",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 38035928310,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Preserve attempted job before environment acquisition",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Exact original cache identity including all nine paths; no rebuild/fallback/save",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Pinned numerical reader and finite contract tests",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "One original-binary observation and component audit",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Keep exactly one success or failure record",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 9
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 10
+          },
+          {
+            "name": "Post Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 19
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 20
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 21
+          }
+        ]
+      },
+      {
+        "id": 114166515922,
+        "name": "collect",
+        "status": "completed",
+        "conclusion": "success",
+        "run_id": 38035928310,
+        "logs_url": null,
+        "steps": [
+          {
+            "name": "Set up job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 1
+          },
+          {
+            "name": "Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 2
+          },
+          {
+            "name": "Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 3
+          },
+          {
+            "name": "Pinned numerical reader",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 4
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 5
+          },
+          {
+            "name": "Run actions/download-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 6
+          },
+          {
+            "name": "Verify raw hashes, rederive four audits and report exact stopping gate",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 7
+          },
+          {
+            "name": "Run actions/upload-artifact@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 8
+          },
+          {
+            "name": "Post Run actions/setup-python@v7",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 15
+          },
+          {
+            "name": "Post Run actions/checkout@v4",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 16
+          },
+          {
+            "name": "Complete job",
+            "status": "completed",
+            "conclusion": "success",
+            "number": 17
+          }
+        ]
+      }
+    ]
+  },
+  "retrieved_artifacts": [
+    {
+      "artifact_id": 11664510984,
+      "artifact_name": "q045-audit-38035928310-worker-camspec-ede_n3",
+      "archive_size": 8872393,
+      "archive_sha256": "89cab696b213ee096b8e4404794a6b80302f9c43c0f9260f4c52fc92f7880817",
+      "files": [
+        {
+          "path": "q045_output/attempt.json",
+          "size": 2743,
+          "sha256": "79fe3568fc3b1f4a8f655d80381cc463ccaf4e063169f864dd99aa47e64632ff"
+        },
+        {
+          "path": "q045_output/compile.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "q045_output/cumulative_native.tsv",
+          "size": 2906675,
+          "sha256": "a1a1846fc9d918f9b3889499e2e0ad6b7c9822913dbad9ecf88e32f0a0dc4bd5"
+        },
+        {
+          "path": "q045_output/cumulative_component_comparison.tsv",
+          "size": 3325362,
+          "sha256": "3429cb75836964a89b86cda6e50c079c327201b792b239f0fa6cb452348654c7"
+        },
+        {
+          "path": "q045_output/effective_precision.tsv",
+          "size": 6844,
+          "sha256": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0"
+        },
+        {
+          "path": "q045_output/input_identity.json",
+          "size": 4108,
+          "sha256": "7489a127b4ef64461b6b0890a4dafed27818ec246be03525d7c0fbce15edb823"
+        },
+        {
+          "path": "q045_output/final_native_nodes.tsv",
+          "size": 5237584,
+          "sha256": "172f9825a23d16768702f97232b7185bc192cd1469dac0348a3af94f583b3f98"
+        },
+        {
+          "path": "q045_output/native.log",
+          "size": 61,
+          "sha256": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c"
+        },
+        {
+          "path": "q045_output/native_meta.json",
+          "size": 458,
+          "sha256": "11bb690f0e2ce3c330b576b6c0d87fa895efce9a4aa583043438d2c0946e7875"
+        },
+        {
+          "path": "q045_output/native_trace.jsonl",
+          "size": 3547,
+          "sha256": "71c4a2c396d68bcc00d024541a3b3ab7bff617c6debff8b1c4dcd4d3edc9b0dd"
+        },
+        {
+          "path": "q045_output/point.ini",
+          "size": 570,
+          "sha256": "4bc1cd65cc7316aa5abf438b7077acd71fde12b5e68fde837014467ebe756ada"
+        },
+        {
+          "path": "q045_output/q045_optical_audit_worker_v3.json",
+          "size": 7522,
+          "sha256": "7cc6ff44554058aaebd7233adcf70151761df2c2ae72666129fe982f06ee7337"
+        },
+        {
+          "path": "q045_output/q045_original_binary_observer",
+          "size": 38736,
+          "sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d"
+        },
+        {
+          "path": "q045_output/redshift_node_diagnostic.tsv",
+          "size": 1596566,
+          "sha256": "6630a055fe4a10bc881f4ccae2799344b4605c36b8bbaaa5d56c07acb4a65cfb"
+        },
+        {
+          "path": "q045_output/scalar_001.tsv",
+          "size": 290496,
+          "sha256": "12a984e773eaf3fd041b28589d6ceb7d26fe95d7065c9b274ab4c136da587c8c"
+        },
+        {
+          "path": "q045_output/scalar_002.tsv",
+          "size": 279,
+          "sha256": "bd0448fd5bd8fab389f5e7c6de0e4e09466f0b579bca3239dc92e5c145e3632e"
+        },
+        {
+          "path": "q045_output/scalar_003.tsv",
+          "size": 156822,
+          "sha256": "f4f2fb873f41ea1f78f1a6d480bc4f9347e1beeab8df719c0010a7bea02ee443"
+        },
+        {
+          "path": "q045_output/scalar_004.tsv",
+          "size": 88125,
+          "sha256": "9a2df80c9cbe0061c145cf34f028bf601d574308596da609d4e215c675bced1e"
+        },
+        {
+          "path": "q045_output/scalar_005.tsv",
+          "size": 53403,
+          "sha256": "89a20651f57d222052b11a4b8da3629053f66f094f1e4242fb3a3e94f7b8ffeb"
+        },
+        {
+          "path": "q045_output/scalar_006.tsv",
+          "size": 70868,
+          "sha256": "fef0b48a83cc3ef9becc539208d14794c64a314306ea48f6911184ca1a7d97d6"
+        },
+        {
+          "path": "q045_output/scalar_007.tsv",
+          "size": 62156,
+          "sha256": "d045b1828a01bcc88ef54d188e3c4658bcef9dcf3e0605a913caebd362bea515"
+        },
+        {
+          "path": "q045_output/scalar_008.tsv",
+          "size": 66549,
+          "sha256": "46f3771bc38743edd36dba4ca628d245084828bbbffee6cfa8274758c0da633b"
+        },
+        {
+          "path": "q045_output/scalar_009.tsv",
+          "size": 64358,
+          "sha256": "c7b617c01155d375bda41b39a06a39a59bd0952c06bc60bdb903cc7241123225"
+        },
+        {
+          "path": "q045_output/scalar_010.tsv",
+          "size": 63224,
+          "sha256": "d49d8e9c71213c178b9152657dc006d73f766ea70676fd9ab977f62036f33b47"
+        },
+        {
+          "path": "q045_output/scalar_011.tsv",
+          "size": 63723,
+          "sha256": "9ed14d29d0e24c052990e77de50c4b69be3e3dc9860dec7ee622c447cc8e1c2f"
+        },
+        {
+          "path": "q045_output/scalar_012.tsv",
+          "size": 64091,
+          "sha256": "790562d3424e39e30f2b4b87a4c804a310ee03226e227b0c62e92f481bdd1bc0"
+        },
+        {
+          "path": "q045_output/scalar_013.tsv",
+          "size": 63938,
+          "sha256": "8a15f5a34279e0650aa4be6363dadcf3725f55a18bb5f769196f121e353d3e9b"
+        },
+        {
+          "path": "q045_output/scalar_014.tsv",
+          "size": 63818,
+          "sha256": "404bbba2fffe32a73e2d1292565b7c32f90b89c10d5459942cfb99763c56b818"
+        },
+        {
+          "path": "q045_output/scalar_015.tsv",
+          "size": 63932,
+          "sha256": "e835800817b1eea84b43a94ab5b93f433c954e7077c1faa61391c7d54f29660b"
+        },
+        {
+          "path": "q045_output/scalar_016.tsv",
+          "size": 63843,
+          "sha256": "62b2dfdefc2daf0228689d54fb4712e2c483f30cd44bc302f9b752b908a306b2"
+        },
+        {
+          "path": "q045_output/scalar_017.tsv",
+          "size": 63927,
+          "sha256": "01a83eac3cc3ad1dbff5b2979f565b160701de0bd36f39f1cbc6cc8bd20e8aec"
+        },
+        {
+          "path": "q045_output/scalar_018.tsv",
+          "size": 63906,
+          "sha256": "ed842038be5fda0921db995c0caf1128d5d58c56508f9c356bb94f73ba4c8667"
+        },
+        {
+          "path": "q045_output/scalar_019.tsv",
+          "size": 63895,
+          "sha256": "8d1af9e5dbc5906abb24a317d2665492bc0232801094eb44d5b67b8262aabcd7"
+        },
+        {
+          "path": "q045_output/scalar_component_comparison.json",
+          "size": 9457,
+          "sha256": "ae28fa7701c86b2d90c9626aa9521b27481c6cfa6e40cae4b3194d2a56e33e9a"
+        },
+        {
+          "path": "q045_output/source_species.tsv",
+          "size": 13217853,
+          "sha256": "c61794e1c160eaf64dc5e0bc5555cb7c96a8646adc80131039fed9e8642017b4"
+        }
+      ]
+    },
+    {
+      "artifact_id": 11664106256,
+      "artifact_name": "q045-audit-38035928310-worker-camspec-lcdm",
+      "archive_size": 8875268,
+      "archive_sha256": "1b33c6eac26aa007152afc91f8d1cab57a6114deea95395776e54041e943e536",
+      "files": [
+        {
+          "path": "q045_output/compile.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "q045_output/cumulative_component_comparison.tsv",
+          "size": 3325347,
+          "sha256": "bbb3a8932a2787addae6569638409cf43f9162b118079c7ebbf1cad2a941e7d0"
+        },
+        {
+          "path": "q045_output/attempt.json",
+          "size": 2741,
+          "sha256": "da3a3fa08410dba50dca9a8df4222c1277ea2320b59add970ab8f616b3d87b5e"
+        },
+        {
+          "path": "q045_output/cumulative_native.tsv",
+          "size": 2906808,
+          "sha256": "1e3a3abb11b23d63018c3ba1495a4c5044f49a8f5d926b9cef489f6477e9b641"
+        },
+        {
+          "path": "q045_output/effective_precision.tsv",
+          "size": 6844,
+          "sha256": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0"
+        },
+        {
+          "path": "q045_output/final_native_nodes.tsv",
+          "size": 5235890,
+          "sha256": "f36affc0c2b24556d057ec0b28a7ca7217de36a752f54175fbbb54306840ffaf"
+        },
+        {
+          "path": "q045_output/input_identity.json",
+          "size": 3582,
+          "sha256": "d0bfb6121ad1d974bc03f01390182c9446e88f74728623ac5311cd4b4a964ddd"
+        },
+        {
+          "path": "q045_output/native.log",
+          "size": 61,
+          "sha256": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c"
+        },
+        {
+          "path": "q045_output/native_meta.json",
+          "size": 458,
+          "sha256": "11bb690f0e2ce3c330b576b6c0d87fa895efce9a4aa583043438d2c0946e7875"
+        },
+        {
+          "path": "q045_output/native_trace.jsonl",
+          "size": 3552,
+          "sha256": "b37d85954660b657d806856c4189856e45d816204b5332afbea4d54029dc89d2"
+        },
+        {
+          "path": "q045_output/point.ini",
+          "size": 342,
+          "sha256": "e8adcdf5f2b7017c68fcc70b2d45eb6c43bd969570211fa56fb54ab696075a8c"
+        },
+        {
+          "path": "q045_output/q045_optical_audit_worker_v3.json",
+          "size": 7516,
+          "sha256": "9ed74a4398361b4848e1779912597f2b64a410d41fe25cd7e3f44ba825e60dd5"
+        },
+        {
+          "path": "q045_output/q045_original_binary_observer",
+          "size": 38736,
+          "sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d"
+        },
+        {
+          "path": "q045_output/redshift_node_diagnostic.tsv",
+          "size": 1596560,
+          "sha256": "cb9439ee9c74bc8b00b4ad669754ce002fff3bb8464bd1916866eb9b3c50cf3a"
+        },
+        {
+          "path": "q045_output/scalar_001.tsv",
+          "size": 290473,
+          "sha256": "afaa6ea21af1147ca71ff934caf3ad7fe4f7ac23f9f0386f4980e05c880bb37d"
+        },
+        {
+          "path": "q045_output/scalar_002.tsv",
+          "size": 279,
+          "sha256": "d9e7b8a451de0aa5a93c215b0ad9d36d21551cf81b89609bedcedc934e5d93fe"
+        },
+        {
+          "path": "q045_output/scalar_003.tsv",
+          "size": 156839,
+          "sha256": "f49729ffe3a5fc63214712e348af00eb78e8a9bec14556110c9d4bd1bf46409a"
+        },
+        {
+          "path": "q045_output/scalar_004.tsv",
+          "size": 88149,
+          "sha256": "521aee6c282ba465f0616350263c5dd73e2c3df33fcd4320075395b836c15ac1"
+        },
+        {
+          "path": "q045_output/scalar_005.tsv",
+          "size": 53404,
+          "sha256": "498dd8742013a952bbcf5d5640b2fdea1725a352b1fecf5b574a6d588d06fe74"
+        },
+        {
+          "path": "q045_output/scalar_007.tsv",
+          "size": 62155,
+          "sha256": "a896417ff1622b40120a1a5365bea39dfa35faf7debec84015dda0e586772354"
+        },
+        {
+          "path": "q045_output/scalar_006.tsv",
+          "size": 70880,
+          "sha256": "58d457137405ff2dc66a6bc32aaf4d94f14e1f37a4779e824d2737a7c58f305c"
+        },
+        {
+          "path": "q045_output/scalar_008.tsv",
+          "size": 66555,
+          "sha256": "164026998473a331db638340cd4c31797605c412049839c61360df5c5516c069"
+        },
+        {
+          "path": "q045_output/scalar_009.tsv",
+          "size": 64368,
+          "sha256": "3f5f2c4940be136a7f344fd0373b673c862e40bc9413bb43438bcf08134355a6"
+        },
+        {
+          "path": "q045_output/scalar_010.tsv",
+          "size": 63221,
+          "sha256": "219abc00ede158a281faab5e4e103e5e0632f6a5a35481c9051162dbf9f59463"
+        },
+        {
+          "path": "q045_output/scalar_011.tsv",
+          "size": 63751,
+          "sha256": "1ae1db510ae45b39d26d420b270242328600fe83359d7d092f9efb0a829cd199"
+        },
+        {
+          "path": "q045_output/scalar_012.tsv",
+          "size": 64086,
+          "sha256": "e217c7808c31ed282ad1a78fed2d18d88835d3f93daabae570949ab3719428e6"
+        },
+        {
+          "path": "q045_output/scalar_013.tsv",
+          "size": 63948,
+          "sha256": "89a26fc61ac4bcc58ac29cea5b8caff825c233a9be7189f6368d004028da0e22"
+        },
+        {
+          "path": "q045_output/scalar_014.tsv",
+          "size": 63842,
+          "sha256": "65d75e0424ac9e024c9fd8065d1b2de89191c47f7f03dc98cb38932667691dd2"
+        },
+        {
+          "path": "q045_output/scalar_016.tsv",
+          "size": 63816,
+          "sha256": "342702a2c8c107be0461b46646efcd598d109c25e6b06ecca450e34938a01d28"
+        },
+        {
+          "path": "q045_output/scalar_017.tsv",
+          "size": 63946,
+          "sha256": "9889e806afb34ee0cf0ae594faaf9d678ef0554620a677972bb5780dcaa3df8d"
+        },
+        {
+          "path": "q045_output/scalar_015.tsv",
+          "size": 63939,
+          "sha256": "4f670e7ccb006708856e5a5d0a8e2ae82bab85b44ac855f34556ea4dbddc91ce"
+        },
+        {
+          "path": "q045_output/scalar_018.tsv",
+          "size": 63932,
+          "sha256": "e94d2658eb97e873e29872e3056239deac0488d4d7d94455fe852b0e1e81c186"
+        },
+        {
+          "path": "q045_output/scalar_component_comparison.json",
+          "size": 9452,
+          "sha256": "ca35919412b0d4dfef6589a01872f6020a0539edff0ff92db86f346ec0b1d5e2"
+        },
+        {
+          "path": "q045_output/scalar_019.tsv",
+          "size": 63922,
+          "sha256": "a4e1ff62b574bea27148e09a4ed7b2102c8b85f94d523a21bc09066f8b65d0f0"
+        },
+        {
+          "path": "q045_output/source_species.tsv",
+          "size": 13216965,
+          "sha256": "c81072cc1033379fe4b375d78eb0eef72cd1a335f9ff5ffae4ea357db4bfa78c"
+        }
+      ]
+    },
+    {
+      "artifact_id": 11664032213,
+      "artifact_name": "q045-audit-38035928310-final",
+      "archive_size": 210202,
+      "archive_sha256": "7f75dee1a9db28f7f5407ed950535123dcf73a84a0162bba9780fb2461e15d96",
+      "files": [
+        {
+          "path": "q045_optical_audit_final_v3.json",
+          "size": 34023,
+          "sha256": "861766197339550eebdb68c5c032c7f6713b4ea068ca9b287fe80d7c2e70b56b"
+        },
+        {
+          "path": "q045_optical_audit_contract_v3.json",
+          "size": 18619,
+          "sha256": "b801912f8bb523f001ff5b0b4794274bc5dff1ef3e52219efe9ab804c2fdde08"
+        },
+        {
+          "path": "q045_optical_audit_manifest_v3.json",
+          "size": 2689,
+          "sha256": "894f7819568d4c8bf2381795beaccf26ac3c62943bd2f41ded582608e9c69da2"
+        },
+        {
+          "path": "Q045_EXECUTION_HANDOFF.md",
+          "size": 26604,
+          "sha256": "5da780522b40d393b500337da6bfe8dff3fdfd9f73fe6516d76a3a8f7d862937"
+        },
+        {
+          "path": "Q045_SAMLET_JOURNAL.md",
+          "size": 601700,
+          "sha256": "2ad3e5771cfe79007fe1717048ba7bfd660c789a4dfb39696933b8a595b61a23"
+        }
+      ]
+    },
+    {
+      "artifact_id": 11663672292,
+      "artifact_name": "q045-audit-38035928310-worker-hillipop-lcdm",
+      "archive_size": 8863901,
+      "archive_sha256": "5ce5f7baca5a37c8aaf7f3f40bf86ab106f6b41ad2f443e64d424c67cfcc392d",
+      "files": [
+        {
+          "path": "q045_output/attempt.json",
+          "size": 2742,
+          "sha256": "51a3df2ec726933e64c6106182f93c63c6012e092077d88fb8fd638c1bcbe56b"
+        },
+        {
+          "path": "q045_output/compile.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "q045_output/cumulative_component_comparison.tsv",
+          "size": 3325220,
+          "sha256": "b7c0a4555cc97e582e7a8dcd572af2e4adcc44da0902151c18fddf8e43f1d1f3"
+        },
+        {
+          "path": "q045_output/cumulative_native.tsv",
+          "size": 2906957,
+          "sha256": "e2924b6e03542e2eca968c495048c2dff5c52b516fe3a7df47b1218b5c71de26"
+        },
+        {
+          "path": "q045_output/effective_precision.tsv",
+          "size": 6844,
+          "sha256": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0"
+        },
+        {
+          "path": "q045_output/final_native_nodes.tsv",
+          "size": 5236206,
+          "sha256": "595a5c19ee0a2e4aedcec4a8629dc01957c50d9d3b696ce4a9aec413e6af2d61"
+        },
+        {
+          "path": "q045_output/input_identity.json",
+          "size": 4029,
+          "sha256": "02661c1cb87dda006e3af3425c55c652b66e5de10434815d4cf4135592927ecf"
+        },
+        {
+          "path": "q045_output/native.log",
+          "size": 61,
+          "sha256": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c"
+        },
+        {
+          "path": "q045_output/native_meta.json",
+          "size": 458,
+          "sha256": "6bc155ec54262c72da715ef25eb8a7bbb18b4b7426e4d2da2292f3ab25208ee4"
+        },
+        {
+          "path": "q045_output/native_trace.jsonl",
+          "size": 3551,
+          "sha256": "2504cc2125ebcce997acd7133e6d2ab76ce540c47294cd012a6b698eacdac1ff"
+        },
+        {
+          "path": "q045_output/point.ini",
+          "size": 342,
+          "sha256": "453d1670e4821ed21f09ed4e828f9bd5c9da8c0d1a63cb7a963c49e5c4747576"
+        },
+        {
+          "path": "q045_output/q045_optical_audit_worker_v3.json",
+          "size": 7520,
+          "sha256": "b84748adb955dbde2abde6db975cc0e5bd006c769d2469d430f10386258c6548"
+        },
+        {
+          "path": "q045_output/q045_original_binary_observer",
+          "size": 38736,
+          "sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d"
+        },
+        {
+          "path": "q045_output/redshift_node_diagnostic.tsv",
+          "size": 1596625,
+          "sha256": "4306b913362eb6bc30340aff2b97e5a2ac6ba9e49990dd2b6a2a998762696476"
+        },
+        {
+          "path": "q045_output/scalar_001.tsv",
+          "size": 290423,
+          "sha256": "7dcbf5a9d4679f5987185b048e41ca355d3bdb3b2aa43022014b62b308cc8870"
+        },
+        {
+          "path": "q045_output/scalar_002.tsv",
+          "size": 279,
+          "sha256": "fbc252a46b6144153be1d5aa6ac3686570ab306aaf77a91bf7ca9ca1460b7b15"
+        },
+        {
+          "path": "q045_output/scalar_003.tsv",
+          "size": 156815,
+          "sha256": "dafcf5b924d8530c8a3b5b1ec9691fba4b71a659967ec6d5b2cfdaa4661ce183"
+        },
+        {
+          "path": "q045_output/scalar_004.tsv",
+          "size": 88161,
+          "sha256": "dc2a1e36fd914171fcccbd0e887e121386650d978d7490bbf1c6dbe5cdb859a1"
+        },
+        {
+          "path": "q045_output/scalar_005.tsv",
+          "size": 53443,
+          "sha256": "5f00cf8607ba629ca21ddc6bd0119a48bbc1227171654d3f811f327bf093e588"
+        },
+        {
+          "path": "q045_output/scalar_006.tsv",
+          "size": 70895,
+          "sha256": "e40c0048f4e0df5a1aa89ae6ef1ca49a3ada3192c3217074c3cee9d48b0352f1"
+        },
+        {
+          "path": "q045_output/scalar_007.tsv",
+          "size": 62206,
+          "sha256": "a209c946dd6b532fe19451d4bc6f8b5cb39e1c3475c60bce91f42fb7b1c95001"
+        },
+        {
+          "path": "q045_output/scalar_008.tsv",
+          "size": 66603,
+          "sha256": "81c4faf3bcd7a848bf2fcbb1bf602cd0d97bfc6a55e6eaf2dfbb9c29e8032e44"
+        },
+        {
+          "path": "q045_output/scalar_009.tsv",
+          "size": 64433,
+          "sha256": "7092f830d10943479abc1b932bca3f5c68d6fe44e433ee72b682979547c03899"
+        },
+        {
+          "path": "q045_output/scalar_010.tsv",
+          "size": 63258,
+          "sha256": "76f56697a0354f77d88ce0ffc9ca1f5d2d25b9e295121c2f9ad0a05baf8dc9ba"
+        },
+        {
+          "path": "q045_output/scalar_011.tsv",
+          "size": 63784,
+          "sha256": "0f5415d98b75f86537a1ce4d75d7ed3d450812d87dc381ae264e24229768469a"
+        },
+        {
+          "path": "q045_output/scalar_012.tsv",
+          "size": 64129,
+          "sha256": "b1c65f6d01f14eda4ccec775ded7f82909044c4749a0d2e843698ab41388a259"
+        },
+        {
+          "path": "q045_output/scalar_013.tsv",
+          "size": 63963,
+          "sha256": "a81a77fe57e70f3e4312e53fe2cf1280e75d207d6e9d387a2c25ac7b12b0c5cb"
+        },
+        {
+          "path": "q045_output/scalar_014.tsv",
+          "size": 64030,
+          "sha256": "a53736920abe44a18d85d1872fc0648b04a9763150d15ff7617d4fc78284d956"
+        },
+        {
+          "path": "q045_output/scalar_015.tsv",
+          "size": 64030,
+          "sha256": "3b82001e58f983c9bc0caba3d1222639d9784b423bc3f8588a267b57c833da16"
+        },
+        {
+          "path": "q045_output/scalar_016.tsv",
+          "size": 64089,
+          "sha256": "1add61e73fbe275f63c96c7816126e8a9aa18c0cf5e40997bfe54cf31ac70abe"
+        },
+        {
+          "path": "q045_output/scalar_017.tsv",
+          "size": 64055,
+          "sha256": "a11dddb719285daeb75fdec40bb14bc21fb1c5694333cafa8831f7985e2e326a"
+        },
+        {
+          "path": "q045_output/scalar_018.tsv",
+          "size": 64049,
+          "sha256": "56f64abb3918adebebf487475b185ad5b868ef4fdde9d7f8af879c4a22075c09"
+        },
+        {
+          "path": "q045_output/scalar_019.tsv",
+          "size": 64055,
+          "sha256": "6892876a7768b75d729da094111587e2d5b2047fe3b647a1f5696545162958bd"
+        },
+        {
+          "path": "q045_output/scalar_component_comparison.json",
+          "size": 9460,
+          "sha256": "7b13fed6b87d4a958180c3cee8616f408f0eef3cdec86ea05655129ce8ff0d9f"
+        },
+        {
+          "path": "q045_output/source_species.tsv",
+          "size": 13216226,
+          "sha256": "28a1f6aee93385f345991601e24a80378b161c406b4d852a9aba689a1f082e2d"
+        }
+      ]
+    },
+    {
+      "artifact_id": 11663577235,
+      "artifact_name": "q045-audit-38035928310-worker-hillipop-ede_n3",
+      "archive_size": 8881624,
+      "archive_sha256": "8368e832fee6e69fe308120c4c9145de60cdf827399dc794d8d9337c20be0fd6",
+      "files": [
+        {
+          "path": "q045_output/attempt.json",
+          "size": 2744,
+          "sha256": "fada5f7b0aa9e4b23475a5c733dba6839f5224f1311414a21e26361b5d1be4aa"
+        },
+        {
+          "path": "q045_output/compile.log",
+          "size": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "q045_output/cumulative_component_comparison.tsv",
+          "size": 3325321,
+          "sha256": "1525e4d27dd7ff8c54f1d18b958624cd029c68b2994883e34d5134768084b007"
+        },
+        {
+          "path": "q045_output/cumulative_native.tsv",
+          "size": 2906693,
+          "sha256": "9acd29116fb1f15b93859917d7949764a2005c1b5429a6d98cf23066a3fe0721"
+        },
+        {
+          "path": "q045_output/effective_precision.tsv",
+          "size": 6844,
+          "sha256": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0"
+        },
+        {
+          "path": "q045_output/final_native_nodes.tsv",
+          "size": 5239175,
+          "sha256": "eaa3fd6b41b0dbe699bdf10c10e248e82b8defaa36cc98501d00ed2f6a4c117b"
+        },
+        {
+          "path": "q045_output/input_identity.json",
+          "size": 4522,
+          "sha256": "8ba1294a64b6d6a7c3fc57d3745c61b29f8afe508d6fbf2cc5aec30702ed02b9"
+        },
+        {
+          "path": "q045_output/native.log",
+          "size": 61,
+          "sha256": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c"
+        },
+        {
+          "path": "q045_output/native_meta.json",
+          "size": 458,
+          "sha256": "6bc155ec54262c72da715ef25eb8a7bbb18b4b7426e4d2da2292f3ab25208ee4"
+        },
+        {
+          "path": "q045_output/native_trace.jsonl",
+          "size": 3550,
+          "sha256": "c33600768ae2812297dfd7f84829b142f81080c00699640e98a4a383034438e8"
+        },
+        {
+          "path": "q045_output/point.ini",
+          "size": 559,
+          "sha256": "126b5df19a0956be8825352f77bf24c40ecb5c7296fe6c03e3efac7eaa7a5cf9"
+        },
+        {
+          "path": "q045_output/q045_optical_audit_worker_v3.json",
+          "size": 7522,
+          "sha256": "17868a4065642918f7feeba7f33323321716fcd82cb2a24590219a768338b8f9"
+        },
+        {
+          "path": "q045_output/q045_original_binary_observer",
+          "size": 38736,
+          "sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d"
+        },
+        {
+          "path": "q045_output/redshift_node_diagnostic.tsv",
+          "size": 1596503,
+          "sha256": "27682cf2d373ca2157be10c9bc3e0b36ef0fd03487ecc2c6eda162ce35617d4c"
+        },
+        {
+          "path": "q045_output/scalar_001.tsv",
+          "size": 290440,
+          "sha256": "3a220b1eebdfce0d026229a3e21e25b84c8087e9e40dbc9d3b5d4e4fe36b9abf"
+        },
+        {
+          "path": "q045_output/scalar_002.tsv",
+          "size": 280,
+          "sha256": "6ba140a0cb5b831d80478827556941ff0900a63749f558bb9311303dc6fee1a5"
+        },
+        {
+          "path": "q045_output/scalar_003.tsv",
+          "size": 156783,
+          "sha256": "4856fa55c1e217883d0d456cf1db7c1eedee74d9d052111f024658e480186e46"
+        },
+        {
+          "path": "q045_output/scalar_004.tsv",
+          "size": 88146,
+          "sha256": "0a8e8240caed58f52f593063318b38a4d560c292ae93bad309faf353ff259333"
+        },
+        {
+          "path": "q045_output/scalar_005.tsv",
+          "size": 53409,
+          "sha256": "7e015ec0cd821f4fdf9e3e7b02f69f5e9af0655e6b050f8623a9c15e6e11a60e"
+        },
+        {
+          "path": "q045_output/scalar_006.tsv",
+          "size": 70892,
+          "sha256": "aec69ad1a7315f4546948e85dd77b254d0b44eeb46933aa204ecc1cb5a5f47e6"
+        },
+        {
+          "path": "q045_output/scalar_007.tsv",
+          "size": 62197,
+          "sha256": "6cc46b1037da2da059d01537a0af1844102d290d4d0850118623d8a80787ca30"
+        },
+        {
+          "path": "q045_output/scalar_008.tsv",
+          "size": 66488,
+          "sha256": "9d58c779be5af69648e05bd27aff5967eb9d384a7d183eb5be3ac811d7c8fcd4"
+        },
+        {
+          "path": "q045_output/scalar_009.tsv",
+          "size": 64384,
+          "sha256": "bc960eeab6ead93b1e7aa20ad5d9741123c3dcc8634f80809a6b7724be8364a5"
+        },
+        {
+          "path": "q045_output/scalar_010.tsv",
+          "size": 63244,
+          "sha256": "3f06b3f5401f6bd779a3bd93ebb313d9831a1fb097a80c11e8d5f03ee848f5b9"
+        },
+        {
+          "path": "q045_output/scalar_011.tsv",
+          "size": 63788,
+          "sha256": "c3c2d367f2ef8fc30cfbc9cb6ffd677ac0aa5be246dabce716db682bf0465911"
+        },
+        {
+          "path": "q045_output/scalar_012.tsv",
+          "size": 64084,
+          "sha256": "2ecd35eb6fb2e5de1e4a727ed76f650f93a8f0351bf8afbbea66cd6626c1c465"
+        },
+        {
+          "path": "q045_output/scalar_013.tsv",
+          "size": 63939,
+          "sha256": "c351cfc235879a4261766eb2652ecbcec429f6b1d7107f5051b6e2cfce73abba"
+        },
+        {
+          "path": "q045_output/scalar_014.tsv",
+          "size": 64023,
+          "sha256": "0571bcbb852c75d7e03e54f471b1232fa0eae6497bea67f4d33370b2f2e30cda"
+        },
+        {
+          "path": "q045_output/scalar_015.tsv",
+          "size": 64024,
+          "sha256": "4e5ab1aa6299ddda9f88d5e8f39c7e06a9f095e5d69928a6137da2b2b89694f1"
+        },
+        {
+          "path": "q045_output/scalar_016.tsv",
+          "size": 64023,
+          "sha256": "84940e34935c92e483d99b83e4a88e57838749ddfd840f91babc4112a3a0ed09"
+        },
+        {
+          "path": "q045_output/scalar_017.tsv",
+          "size": 64020,
+          "sha256": "b7fdab9a6a321bb5c09df2266ee66859bb469404ac4e4d2369af9b7ae41f2c03"
+        },
+        {
+          "path": "q045_output/scalar_018.tsv",
+          "size": 64011,
+          "sha256": "df176b0371a6736d8bb984bbdf18ca4bf965e02e9affe7b260adeaaafff89990"
+        },
+        {
+          "path": "q045_output/scalar_019.tsv",
+          "size": 64020,
+          "sha256": "58a7fb1fb4bfd773d2f402df891e705bbe953497f79e68f023ebbb1a718c1504"
+        },
+        {
+          "path": "q045_output/scalar_component_comparison.json",
+          "size": 9463,
+          "sha256": "09321004736f652e1eefa3b14cd2f0ede3d67ef2692a4bc5cd4a46691e8b0a15"
+        },
+        {
+          "path": "q045_output/source_species.tsv",
+          "size": 13216308,
+          "sha256": "33e09cf215cd3f41b60bc45332e8dc11a730f52732d611100b78a3afa14b05c2"
+        }
+      ]
+    }
+  ],
+  "raw_file_index": [
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_attempt.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_attempt.json",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/attempt.json",
+      "size": 2743,
+      "sha256": "79fe3568fc3b1f4a8f655d80381cc463ccaf4e063169f864dd99aa47e64632ff"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_compile.log",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_compile.log",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/compile.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_cumulative_native.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_cumulative_native.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/cumulative_native.tsv",
+      "size": 2906675,
+      "sha256": "a1a1846fc9d918f9b3889499e2e0ad6b7c9822913dbad9ecf88e32f0a0dc4bd5"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_cumulative_component_comparison.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_cumulative_component_comparison.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/cumulative_component_comparison.tsv",
+      "size": 3325362,
+      "sha256": "3429cb75836964a89b86cda6e50c079c327201b792b239f0fa6cb452348654c7"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_effective_precision.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_effective_precision.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/effective_precision.tsv",
+      "size": 6844,
+      "sha256": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_input_identity.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_input_identity.json",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/input_identity.json",
+      "size": 4108,
+      "sha256": "7489a127b4ef64461b6b0890a4dafed27818ec246be03525d7c0fbce15edb823"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_final_native_nodes.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_final_native_nodes.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/final_native_nodes.tsv",
+      "size": 5237584,
+      "sha256": "172f9825a23d16768702f97232b7185bc192cd1469dac0348a3af94f583b3f98"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_native.log",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_native.log",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/native.log",
+      "size": 61,
+      "sha256": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_native_meta.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_native_meta.json",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/native_meta.json",
+      "size": 458,
+      "sha256": "11bb690f0e2ce3c330b576b6c0d87fa895efce9a4aa583043438d2c0946e7875"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_native_trace.jsonl",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_native_trace.jsonl",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/native_trace.jsonl",
+      "size": 3547,
+      "sha256": "71c4a2c396d68bcc00d024541a3b3ab7bff617c6debff8b1c4dcd4d3edc9b0dd"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_point.ini",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_point.ini",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/point.ini",
+      "size": 570,
+      "sha256": "4bc1cd65cc7316aa5abf438b7077acd71fde12b5e68fde837014467ebe756ada"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_q045_optical_audit_worker_v3.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_q045_optical_audit_worker_v3.json",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/q045_optical_audit_worker_v3.json",
+      "size": 7522,
+      "sha256": "7cc6ff44554058aaebd7233adcf70151761df2c2ae72666129fe982f06ee7337"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_q045_original_binary_observer",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_q045_original_binary_observer",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/q045_original_binary_observer",
+      "size": 38736,
+      "sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_redshift_node_diagnostic.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_redshift_node_diagnostic.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/redshift_node_diagnostic.tsv",
+      "size": 1596566,
+      "sha256": "6630a055fe4a10bc881f4ccae2799344b4605c36b8bbaaa5d56c07acb4a65cfb"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_001.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_001.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_001.tsv",
+      "size": 290496,
+      "sha256": "12a984e773eaf3fd041b28589d6ceb7d26fe95d7065c9b274ab4c136da587c8c"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_002.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_002.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_002.tsv",
+      "size": 279,
+      "sha256": "bd0448fd5bd8fab389f5e7c6de0e4e09466f0b579bca3239dc92e5c145e3632e"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_003.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_003.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_003.tsv",
+      "size": 156822,
+      "sha256": "f4f2fb873f41ea1f78f1a6d480bc4f9347e1beeab8df719c0010a7bea02ee443"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_004.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_004.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_004.tsv",
+      "size": 88125,
+      "sha256": "9a2df80c9cbe0061c145cf34f028bf601d574308596da609d4e215c675bced1e"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_005.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_005.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_005.tsv",
+      "size": 53403,
+      "sha256": "89a20651f57d222052b11a4b8da3629053f66f094f1e4242fb3a3e94f7b8ffeb"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_006.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_006.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_006.tsv",
+      "size": 70868,
+      "sha256": "fef0b48a83cc3ef9becc539208d14794c64a314306ea48f6911184ca1a7d97d6"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_007.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_007.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_007.tsv",
+      "size": 62156,
+      "sha256": "d045b1828a01bcc88ef54d188e3c4658bcef9dcf3e0605a913caebd362bea515"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_008.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_008.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_008.tsv",
+      "size": 66549,
+      "sha256": "46f3771bc38743edd36dba4ca628d245084828bbbffee6cfa8274758c0da633b"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_009.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_009.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_009.tsv",
+      "size": 64358,
+      "sha256": "c7b617c01155d375bda41b39a06a39a59bd0952c06bc60bdb903cc7241123225"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_010.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_010.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_010.tsv",
+      "size": 63224,
+      "sha256": "d49d8e9c71213c178b9152657dc006d73f766ea70676fd9ab977f62036f33b47"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_011.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_011.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_011.tsv",
+      "size": 63723,
+      "sha256": "9ed14d29d0e24c052990e77de50c4b69be3e3dc9860dec7ee622c447cc8e1c2f"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_012.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_012.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_012.tsv",
+      "size": 64091,
+      "sha256": "790562d3424e39e30f2b4b87a4c804a310ee03226e227b0c62e92f481bdd1bc0"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_013.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_013.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_013.tsv",
+      "size": 63938,
+      "sha256": "8a15f5a34279e0650aa4be6363dadcf3725f55a18bb5f769196f121e353d3e9b"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_014.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_014.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_014.tsv",
+      "size": 63818,
+      "sha256": "404bbba2fffe32a73e2d1292565b7c32f90b89c10d5459942cfb99763c56b818"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_015.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_015.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_015.tsv",
+      "size": 63932,
+      "sha256": "e835800817b1eea84b43a94ab5b93f433c954e7077c1faa61391c7d54f29660b"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_016.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_016.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_016.tsv",
+      "size": 63843,
+      "sha256": "62b2dfdefc2daf0228689d54fb4712e2c483f30cd44bc302f9b752b908a306b2"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_017.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_017.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_017.tsv",
+      "size": 63927,
+      "sha256": "01a83eac3cc3ad1dbff5b2979f565b160701de0bd36f39f1cbc6cc8bd20e8aec"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_018.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_018.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_018.tsv",
+      "size": 63906,
+      "sha256": "ed842038be5fda0921db995c0caf1128d5d58c56508f9c356bb94f73ba4c8667"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_019.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_019.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_019.tsv",
+      "size": 63895,
+      "sha256": "8d1af9e5dbc5906abb24a317d2665492bc0232801094eb44d5b67b8262aabcd7"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_component_comparison.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_scalar_component_comparison.json",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/scalar_component_comparison.json",
+      "size": 9457,
+      "sha256": "ae28fa7701c86b2d90c9626aa9521b27481c6cfa6e40cae4b3194d2a56e33e9a"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_EDE_N3_source_species.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_EDE_N3_source_species.tsv",
+      "job_id": "camspec-ede_n3",
+      "artifact_id": 11664510984,
+      "original_path": "q045_output/source_species.tsv",
+      "size": 13217853,
+      "sha256": "c61794e1c160eaf64dc5e0bc5555cb7c96a8646adc80131039fed9e8642017b4"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_compile.log",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_compile.log",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/compile.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_cumulative_component_comparison.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_cumulative_component_comparison.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/cumulative_component_comparison.tsv",
+      "size": 3325347,
+      "sha256": "bbb3a8932a2787addae6569638409cf43f9162b118079c7ebbf1cad2a941e7d0"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_attempt.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_attempt.json",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/attempt.json",
+      "size": 2741,
+      "sha256": "da3a3fa08410dba50dca9a8df4222c1277ea2320b59add970ab8f616b3d87b5e"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_cumulative_native.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_cumulative_native.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/cumulative_native.tsv",
+      "size": 2906808,
+      "sha256": "1e3a3abb11b23d63018c3ba1495a4c5044f49a8f5d926b9cef489f6477e9b641"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_effective_precision.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_effective_precision.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/effective_precision.tsv",
+      "size": 6844,
+      "sha256": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_final_native_nodes.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_final_native_nodes.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/final_native_nodes.tsv",
+      "size": 5235890,
+      "sha256": "f36affc0c2b24556d057ec0b28a7ca7217de36a752f54175fbbb54306840ffaf"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_input_identity.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_input_identity.json",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/input_identity.json",
+      "size": 3582,
+      "sha256": "d0bfb6121ad1d974bc03f01390182c9446e88f74728623ac5311cd4b4a964ddd"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_native.log",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_native.log",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/native.log",
+      "size": 61,
+      "sha256": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_native_meta.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_native_meta.json",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/native_meta.json",
+      "size": 458,
+      "sha256": "11bb690f0e2ce3c330b576b6c0d87fa895efce9a4aa583043438d2c0946e7875"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_native_trace.jsonl",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_native_trace.jsonl",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/native_trace.jsonl",
+      "size": 3552,
+      "sha256": "b37d85954660b657d806856c4189856e45d816204b5332afbea4d54029dc89d2"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_point.ini",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_point.ini",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/point.ini",
+      "size": 342,
+      "sha256": "e8adcdf5f2b7017c68fcc70b2d45eb6c43bd969570211fa56fb54ab696075a8c"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_q045_optical_audit_worker_v3.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_q045_optical_audit_worker_v3.json",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/q045_optical_audit_worker_v3.json",
+      "size": 7516,
+      "sha256": "9ed74a4398361b4848e1779912597f2b64a410d41fe25cd7e3f44ba825e60dd5"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_q045_original_binary_observer",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_q045_original_binary_observer",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/q045_original_binary_observer",
+      "size": 38736,
+      "sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_redshift_node_diagnostic.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_redshift_node_diagnostic.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/redshift_node_diagnostic.tsv",
+      "size": 1596560,
+      "sha256": "cb9439ee9c74bc8b00b4ad669754ce002fff3bb8464bd1916866eb9b3c50cf3a"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_001.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_001.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_001.tsv",
+      "size": 290473,
+      "sha256": "afaa6ea21af1147ca71ff934caf3ad7fe4f7ac23f9f0386f4980e05c880bb37d"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_002.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_002.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_002.tsv",
+      "size": 279,
+      "sha256": "d9e7b8a451de0aa5a93c215b0ad9d36d21551cf81b89609bedcedc934e5d93fe"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_003.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_003.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_003.tsv",
+      "size": 156839,
+      "sha256": "f49729ffe3a5fc63214712e348af00eb78e8a9bec14556110c9d4bd1bf46409a"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_004.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_004.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_004.tsv",
+      "size": 88149,
+      "sha256": "521aee6c282ba465f0616350263c5dd73e2c3df33fcd4320075395b836c15ac1"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_005.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_005.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_005.tsv",
+      "size": 53404,
+      "sha256": "498dd8742013a952bbcf5d5640b2fdea1725a352b1fecf5b574a6d588d06fe74"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_007.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_007.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_007.tsv",
+      "size": 62155,
+      "sha256": "a896417ff1622b40120a1a5365bea39dfa35faf7debec84015dda0e586772354"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_006.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_006.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_006.tsv",
+      "size": 70880,
+      "sha256": "58d457137405ff2dc66a6bc32aaf4d94f14e1f37a4779e824d2737a7c58f305c"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_008.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_008.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_008.tsv",
+      "size": 66555,
+      "sha256": "164026998473a331db638340cd4c31797605c412049839c61360df5c5516c069"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_009.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_009.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_009.tsv",
+      "size": 64368,
+      "sha256": "3f5f2c4940be136a7f344fd0373b673c862e40bc9413bb43438bcf08134355a6"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_010.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_010.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_010.tsv",
+      "size": 63221,
+      "sha256": "219abc00ede158a281faab5e4e103e5e0632f6a5a35481c9051162dbf9f59463"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_011.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_011.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_011.tsv",
+      "size": 63751,
+      "sha256": "1ae1db510ae45b39d26d420b270242328600fe83359d7d092f9efb0a829cd199"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_012.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_012.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_012.tsv",
+      "size": 64086,
+      "sha256": "e217c7808c31ed282ad1a78fed2d18d88835d3f93daabae570949ab3719428e6"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_013.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_013.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_013.tsv",
+      "size": 63948,
+      "sha256": "89a26fc61ac4bcc58ac29cea5b8caff825c233a9be7189f6368d004028da0e22"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_014.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_014.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_014.tsv",
+      "size": 63842,
+      "sha256": "65d75e0424ac9e024c9fd8065d1b2de89191c47f7f03dc98cb38932667691dd2"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_016.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_016.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_016.tsv",
+      "size": 63816,
+      "sha256": "342702a2c8c107be0461b46646efcd598d109c25e6b06ecca450e34938a01d28"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_017.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_017.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_017.tsv",
+      "size": 63946,
+      "sha256": "9889e806afb34ee0cf0ae594faaf9d678ef0554620a677972bb5780dcaa3df8d"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_015.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_015.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_015.tsv",
+      "size": 63939,
+      "sha256": "4f670e7ccb006708856e5a5d0a8e2ae82bab85b44ac855f34556ea4dbddc91ce"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_018.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_018.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_018.tsv",
+      "size": 63932,
+      "sha256": "e94d2658eb97e873e29872e3056239deac0488d4d7d94455fe852b0e1e81c186"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_component_comparison.json",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_component_comparison.json",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_component_comparison.json",
+      "size": 9452,
+      "sha256": "ca35919412b0d4dfef6589a01872f6020a0539edff0ff92db86f346ec0b1d5e2"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_019.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_scalar_019.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/scalar_019.tsv",
+      "size": 63922,
+      "sha256": "a4e1ff62b574bea27148e09a4ed7b2102c8b85f94d523a21bc09066f8b65d0f0"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_CAMSPEC_LCDM_source_species.tsv",
+      "file_name": "Q045_AUDIT_V3_CAMSPEC_LCDM_source_species.tsv",
+      "job_id": "camspec-lcdm",
+      "artifact_id": 11664106256,
+      "original_path": "q045_output/source_species.tsv",
+      "size": 13216965,
+      "sha256": "c81072cc1033379fe4b375d78eb0eef72cd1a335f9ff5ffae4ea357db4bfa78c"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_FINAL_q045_optical_audit_final_v3.json",
+      "file_name": "Q045_AUDIT_V3_FINAL_q045_optical_audit_final_v3.json",
+      "job_id": "final",
+      "artifact_id": 11664032213,
+      "original_path": "q045_optical_audit_final_v3.json",
+      "size": 34023,
+      "sha256": "861766197339550eebdb68c5c032c7f6713b4ea068ca9b287fe80d7c2e70b56b"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_FINAL_q045_optical_audit_contract_v3.json",
+      "file_name": "Q045_AUDIT_V3_FINAL_q045_optical_audit_contract_v3.json",
+      "job_id": "final",
+      "artifact_id": 11664032213,
+      "original_path": "q045_optical_audit_contract_v3.json",
+      "size": 18619,
+      "sha256": "b801912f8bb523f001ff5b0b4794274bc5dff1ef3e52219efe9ab804c2fdde08"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_FINAL_q045_optical_audit_manifest_v3.json",
+      "file_name": "Q045_AUDIT_V3_FINAL_q045_optical_audit_manifest_v3.json",
+      "job_id": "final",
+      "artifact_id": 11664032213,
+      "original_path": "q045_optical_audit_manifest_v3.json",
+      "size": 2689,
+      "sha256": "894f7819568d4c8bf2381795beaccf26ac3c62943bd2f41ded582608e9c69da2"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_attempt.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_attempt.json",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/attempt.json",
+      "size": 2742,
+      "sha256": "51a3df2ec726933e64c6106182f93c63c6012e092077d88fb8fd638c1bcbe56b"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_compile.log",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_compile.log",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/compile.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_cumulative_component_comparison.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_cumulative_component_comparison.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/cumulative_component_comparison.tsv",
+      "size": 3325220,
+      "sha256": "b7c0a4555cc97e582e7a8dcd572af2e4adcc44da0902151c18fddf8e43f1d1f3"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_cumulative_native.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_cumulative_native.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/cumulative_native.tsv",
+      "size": 2906957,
+      "sha256": "e2924b6e03542e2eca968c495048c2dff5c52b516fe3a7df47b1218b5c71de26"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_effective_precision.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_effective_precision.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/effective_precision.tsv",
+      "size": 6844,
+      "sha256": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_final_native_nodes.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_final_native_nodes.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/final_native_nodes.tsv",
+      "size": 5236206,
+      "sha256": "595a5c19ee0a2e4aedcec4a8629dc01957c50d9d3b696ce4a9aec413e6af2d61"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_input_identity.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_input_identity.json",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/input_identity.json",
+      "size": 4029,
+      "sha256": "02661c1cb87dda006e3af3425c55c652b66e5de10434815d4cf4135592927ecf"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_native.log",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_native.log",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/native.log",
+      "size": 61,
+      "sha256": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_native_meta.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_native_meta.json",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/native_meta.json",
+      "size": 458,
+      "sha256": "6bc155ec54262c72da715ef25eb8a7bbb18b4b7426e4d2da2292f3ab25208ee4"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_native_trace.jsonl",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_native_trace.jsonl",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/native_trace.jsonl",
+      "size": 3551,
+      "sha256": "2504cc2125ebcce997acd7133e6d2ab76ce540c47294cd012a6b698eacdac1ff"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_point.ini",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_point.ini",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/point.ini",
+      "size": 342,
+      "sha256": "453d1670e4821ed21f09ed4e828f9bd5c9da8c0d1a63cb7a963c49e5c4747576"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_q045_optical_audit_worker_v3.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_q045_optical_audit_worker_v3.json",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/q045_optical_audit_worker_v3.json",
+      "size": 7520,
+      "sha256": "b84748adb955dbde2abde6db975cc0e5bd006c769d2469d430f10386258c6548"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_q045_original_binary_observer",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_q045_original_binary_observer",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/q045_original_binary_observer",
+      "size": 38736,
+      "sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_redshift_node_diagnostic.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_redshift_node_diagnostic.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/redshift_node_diagnostic.tsv",
+      "size": 1596625,
+      "sha256": "4306b913362eb6bc30340aff2b97e5a2ac6ba9e49990dd2b6a2a998762696476"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_001.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_001.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_001.tsv",
+      "size": 290423,
+      "sha256": "7dcbf5a9d4679f5987185b048e41ca355d3bdb3b2aa43022014b62b308cc8870"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_002.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_002.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_002.tsv",
+      "size": 279,
+      "sha256": "fbc252a46b6144153be1d5aa6ac3686570ab306aaf77a91bf7ca9ca1460b7b15"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_003.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_003.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_003.tsv",
+      "size": 156815,
+      "sha256": "dafcf5b924d8530c8a3b5b1ec9691fba4b71a659967ec6d5b2cfdaa4661ce183"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_004.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_004.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_004.tsv",
+      "size": 88161,
+      "sha256": "dc2a1e36fd914171fcccbd0e887e121386650d978d7490bbf1c6dbe5cdb859a1"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_005.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_005.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_005.tsv",
+      "size": 53443,
+      "sha256": "5f00cf8607ba629ca21ddc6bd0119a48bbc1227171654d3f811f327bf093e588"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_006.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_006.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_006.tsv",
+      "size": 70895,
+      "sha256": "e40c0048f4e0df5a1aa89ae6ef1ca49a3ada3192c3217074c3cee9d48b0352f1"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_007.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_007.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_007.tsv",
+      "size": 62206,
+      "sha256": "a209c946dd6b532fe19451d4bc6f8b5cb39e1c3475c60bce91f42fb7b1c95001"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_008.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_008.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_008.tsv",
+      "size": 66603,
+      "sha256": "81c4faf3bcd7a848bf2fcbb1bf602cd0d97bfc6a55e6eaf2dfbb9c29e8032e44"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_009.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_009.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_009.tsv",
+      "size": 64433,
+      "sha256": "7092f830d10943479abc1b932bca3f5c68d6fe44e433ee72b682979547c03899"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_010.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_010.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_010.tsv",
+      "size": 63258,
+      "sha256": "76f56697a0354f77d88ce0ffc9ca1f5d2d25b9e295121c2f9ad0a05baf8dc9ba"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_011.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_011.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_011.tsv",
+      "size": 63784,
+      "sha256": "0f5415d98b75f86537a1ce4d75d7ed3d450812d87dc381ae264e24229768469a"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_012.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_012.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_012.tsv",
+      "size": 64129,
+      "sha256": "b1c65f6d01f14eda4ccec775ded7f82909044c4749a0d2e843698ab41388a259"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_013.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_013.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_013.tsv",
+      "size": 63963,
+      "sha256": "a81a77fe57e70f3e4312e53fe2cf1280e75d207d6e9d387a2c25ac7b12b0c5cb"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_014.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_014.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_014.tsv",
+      "size": 64030,
+      "sha256": "a53736920abe44a18d85d1872fc0648b04a9763150d15ff7617d4fc78284d956"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_015.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_015.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_015.tsv",
+      "size": 64030,
+      "sha256": "3b82001e58f983c9bc0caba3d1222639d9784b423bc3f8588a267b57c833da16"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_016.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_016.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_016.tsv",
+      "size": 64089,
+      "sha256": "1add61e73fbe275f63c96c7816126e8a9aa18c0cf5e40997bfe54cf31ac70abe"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_017.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_017.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_017.tsv",
+      "size": 64055,
+      "sha256": "a11dddb719285daeb75fdec40bb14bc21fb1c5694333cafa8831f7985e2e326a"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_018.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_018.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_018.tsv",
+      "size": 64049,
+      "sha256": "56f64abb3918adebebf487475b185ad5b868ef4fdde9d7f8af879c4a22075c09"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_019.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_019.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_019.tsv",
+      "size": 64055,
+      "sha256": "6892876a7768b75d729da094111587e2d5b2047fe3b647a1f5696545162958bd"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_component_comparison.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_scalar_component_comparison.json",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/scalar_component_comparison.json",
+      "size": 9460,
+      "sha256": "7b13fed6b87d4a958180c3cee8616f408f0eef3cdec86ea05655129ce8ff0d9f"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_LCDM_source_species.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_LCDM_source_species.tsv",
+      "job_id": "hillipop-lcdm",
+      "artifact_id": 11663672292,
+      "original_path": "q045_output/source_species.tsv",
+      "size": 13216226,
+      "sha256": "28a1f6aee93385f345991601e24a80378b161c406b4d852a9aba689a1f082e2d"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_attempt.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_attempt.json",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/attempt.json",
+      "size": 2744,
+      "sha256": "fada5f7b0aa9e4b23475a5c733dba6839f5224f1311414a21e26361b5d1be4aa"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_compile.log",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_compile.log",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/compile.log",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_cumulative_component_comparison.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_cumulative_component_comparison.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/cumulative_component_comparison.tsv",
+      "size": 3325321,
+      "sha256": "1525e4d27dd7ff8c54f1d18b958624cd029c68b2994883e34d5134768084b007"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_cumulative_native.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_cumulative_native.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/cumulative_native.tsv",
+      "size": 2906693,
+      "sha256": "9acd29116fb1f15b93859917d7949764a2005c1b5429a6d98cf23066a3fe0721"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_effective_precision.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_effective_precision.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/effective_precision.tsv",
+      "size": 6844,
+      "sha256": "a04b4d4eca53fac44e661bbb6d0367891638f07dd45ce3857fb7b745085190e0"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_final_native_nodes.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_final_native_nodes.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/final_native_nodes.tsv",
+      "size": 5239175,
+      "sha256": "eaa3fd6b41b0dbe699bdf10c10e248e82b8defaa36cc98501d00ed2f6a4c117b"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_input_identity.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_input_identity.json",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/input_identity.json",
+      "size": 4522,
+      "sha256": "8ba1294a64b6d6a7c3fc57d3745c61b29f8afe508d6fbf2cc5aec30702ed02b9"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_native.log",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_native.log",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/native.log",
+      "size": 61,
+      "sha256": "4294a93417c0ee540db5b07549dfe5947818bae69d23116250b886a6970b152c"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_native_meta.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_native_meta.json",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/native_meta.json",
+      "size": 458,
+      "sha256": "6bc155ec54262c72da715ef25eb8a7bbb18b4b7426e4d2da2292f3ab25208ee4"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_native_trace.jsonl",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_native_trace.jsonl",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/native_trace.jsonl",
+      "size": 3550,
+      "sha256": "c33600768ae2812297dfd7f84829b142f81080c00699640e98a4a383034438e8"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_point.ini",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_point.ini",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/point.ini",
+      "size": 559,
+      "sha256": "126b5df19a0956be8825352f77bf24c40ecb5c7296fe6c03e3efac7eaa7a5cf9"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_q045_optical_audit_worker_v3.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_q045_optical_audit_worker_v3.json",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/q045_optical_audit_worker_v3.json",
+      "size": 7522,
+      "sha256": "17868a4065642918f7feeba7f33323321716fcd82cb2a24590219a768338b8f9"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_q045_original_binary_observer",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_q045_original_binary_observer",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/q045_original_binary_observer",
+      "size": 38736,
+      "sha256": "d301cf7e70c0f6927810e1495ddfa167c12bceed0ef2872863ae62b1c181226d"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_redshift_node_diagnostic.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_redshift_node_diagnostic.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/redshift_node_diagnostic.tsv",
+      "size": 1596503,
+      "sha256": "27682cf2d373ca2157be10c9bc3e0b36ef0fd03487ecc2c6eda162ce35617d4c"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_001.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_001.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_001.tsv",
+      "size": 290440,
+      "sha256": "3a220b1eebdfce0d026229a3e21e25b84c8087e9e40dbc9d3b5d4e4fe36b9abf"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_002.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_002.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_002.tsv",
+      "size": 280,
+      "sha256": "6ba140a0cb5b831d80478827556941ff0900a63749f558bb9311303dc6fee1a5"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_003.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_003.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_003.tsv",
+      "size": 156783,
+      "sha256": "4856fa55c1e217883d0d456cf1db7c1eedee74d9d052111f024658e480186e46"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_004.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_004.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_004.tsv",
+      "size": 88146,
+      "sha256": "0a8e8240caed58f52f593063318b38a4d560c292ae93bad309faf353ff259333"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_005.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_005.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_005.tsv",
+      "size": 53409,
+      "sha256": "7e015ec0cd821f4fdf9e3e7b02f69f5e9af0655e6b050f8623a9c15e6e11a60e"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_006.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_006.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_006.tsv",
+      "size": 70892,
+      "sha256": "aec69ad1a7315f4546948e85dd77b254d0b44eeb46933aa204ecc1cb5a5f47e6"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_007.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_007.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_007.tsv",
+      "size": 62197,
+      "sha256": "6cc46b1037da2da059d01537a0af1844102d290d4d0850118623d8a80787ca30"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_008.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_008.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_008.tsv",
+      "size": 66488,
+      "sha256": "9d58c779be5af69648e05bd27aff5967eb9d384a7d183eb5be3ac811d7c8fcd4"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_009.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_009.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_009.tsv",
+      "size": 64384,
+      "sha256": "bc960eeab6ead93b1e7aa20ad5d9741123c3dcc8634f80809a6b7724be8364a5"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_010.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_010.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_010.tsv",
+      "size": 63244,
+      "sha256": "3f06b3f5401f6bd779a3bd93ebb313d9831a1fb097a80c11e8d5f03ee848f5b9"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_011.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_011.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_011.tsv",
+      "size": 63788,
+      "sha256": "c3c2d367f2ef8fc30cfbc9cb6ffd677ac0aa5be246dabce716db682bf0465911"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_012.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_012.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_012.tsv",
+      "size": 64084,
+      "sha256": "2ecd35eb6fb2e5de1e4a727ed76f650f93a8f0351bf8afbbea66cd6626c1c465"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_013.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_013.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_013.tsv",
+      "size": 63939,
+      "sha256": "c351cfc235879a4261766eb2652ecbcec429f6b1d7107f5051b6e2cfce73abba"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_014.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_014.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_014.tsv",
+      "size": 64023,
+      "sha256": "0571bcbb852c75d7e03e54f471b1232fa0eae6497bea67f4d33370b2f2e30cda"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_015.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_015.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_015.tsv",
+      "size": 64024,
+      "sha256": "4e5ab1aa6299ddda9f88d5e8f39c7e06a9f095e5d69928a6137da2b2b89694f1"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_016.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_016.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_016.tsv",
+      "size": 64023,
+      "sha256": "84940e34935c92e483d99b83e4a88e57838749ddfd840f91babc4112a3a0ed09"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_017.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_017.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_017.tsv",
+      "size": 64020,
+      "sha256": "b7fdab9a6a321bb5c09df2266ee66859bb469404ac4e4d2369af9b7ae41f2c03"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_018.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_018.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_018.tsv",
+      "size": 64011,
+      "sha256": "df176b0371a6736d8bb984bbdf18ca4bf965e02e9affe7b260adeaaafff89990"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_019.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_019.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_019.tsv",
+      "size": 64020,
+      "sha256": "58a7fb1fb4bfd773d2f402df891e705bbe953497f79e68f023ebbb1a718c1504"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_component_comparison.json",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_scalar_component_comparison.json",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/scalar_component_comparison.json",
+      "size": 9463,
+      "sha256": "09321004736f652e1eefa3b14cd2f0ede3d67ef2692a4bc5cd4a46691e8b0a15"
+    },
+    {
+      "local_path": "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT_INGESTION/Q045_AUDIT_V3_HILLIPOP_EDE_N3_source_species.tsv",
+      "file_name": "Q045_AUDIT_V3_HILLIPOP_EDE_N3_source_species.tsv",
+      "job_id": "hillipop-ede_n3",
+      "artifact_id": 11663577235,
+      "original_path": "q045_output/source_species.tsv",
+      "size": 13216308,
+      "sha256": "33e09cf215cd3f41b60bc45332e8dc11a730f52732d611100b78a3afa14b05c2"
+    }
+  ],
+  "new_sources": [
+    {
+      "source_id": "I-Q045-OPTICAL-AUDIT-RUN-V3-001",
+      "type": "BUBBLEVERSE TECHNICAL EVIDENCE",
+      "title": "Q045 original-binary optical audit V3, completed run and all seven jobs",
+      "repository": "Morfindien/Bubbleverse",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38035928310",
+      "run_id": "38035928310",
+      "commit": "2b08781ce57e3b71d7a6de19076db71d9e7702fe",
+      "retrieved_at": "2026-10-10T10:07:51.443051+02:00",
+      "supports": [
+        "J-Q045-INGEST-V3-01",
+        "J-Q045-INGEST-V3-05"
+      ],
+      "retrieval_method": "Authenticated GitHub run/jobs/artifact retrieval; actual artifact bytes SHA256 verified"
+    },
+    {
+      "source_id": "I-Q045-OPTICAL-AUDIT-RAW-V3-001",
+      "type": "BUBBLEVERSE NUMERICAL RESULT",
+      "title": "Four native optical calibration and cumulative-opacity raw observations",
+      "repository": "Morfindien/Bubbleverse",
+      "run_id": "38035928310",
+      "commit": "2b08781ce57e3b71d7a6de19076db71d9e7702fe",
+      "artifact_ids": [
+        11664510984,
+        11664106256,
+        11664032213,
+        11663672292,
+        11663577235
+      ],
+      "artifacts": [
+        {
+          "artifact_id": 11664510984,
+          "artifact_name": "q045-audit-38035928310-worker-camspec-ede_n3",
+          "archive_size": 8872393,
+          "archive_sha256": "89cab696b213ee096b8e4404794a6b80302f9c43c0f9260f4c52fc92f7880817"
+        },
+        {
+          "artifact_id": 11664106256,
+          "artifact_name": "q045-audit-38035928310-worker-camspec-lcdm",
+          "archive_size": 8875268,
+          "archive_sha256": "1b33c6eac26aa007152afc91f8d1cab57a6114deea95395776e54041e943e536"
+        },
+        {
+          "artifact_id": 11664032213,
+          "artifact_name": "q045-audit-38035928310-final",
+          "archive_size": 210202,
+          "archive_sha256": "7f75dee1a9db28f7f5407ed950535123dcf73a84a0162bba9780fb2461e15d96"
+        },
+        {
+          "artifact_id": 11663672292,
+          "artifact_name": "q045-audit-38035928310-worker-hillipop-lcdm",
+          "archive_size": 8863901,
+          "archive_sha256": "5ce5f7baca5a37c8aaf7f3f40bf86ab106f6b41ad2f443e64d424c67cfcc392d"
+        },
+        {
+          "artifact_id": 11663577235,
+          "artifact_name": "q045-audit-38035928310-worker-hillipop-ede_n3",
+          "archive_size": 8881624,
+          "archive_sha256": "8368e832fee6e69fe308120c4c9145de60cdf827399dc794d8d9337c20be0fd6"
+        }
+      ],
+      "supports": [
+        "J-Q045-INGEST-V3-02",
+        "J-Q045-INGEST-V3-03",
+        "J-Q045-INGEST-V3-04"
+      ],
+      "retrieval_method": "Official artifact download; archive/member digests; unchanged original raw files saved individually"
+    },
+    {
+      "source_id": "I-Q045-OPTICAL-AUDIT-INGEST-V3-001",
+      "type": "BUBBLEVERSE TECHNICAL EVIDENCE",
+      "title": "Independent raw-product ingestion and same-cubic arithmetic validation",
+      "date": "2026-10-10T10:07:51.443051+02:00",
+      "method": "Reverify original parent worker identities and exact manifests; replay pinned executed analyze(); compare derived file bytes; independently sum -((m_i+m_i+1)*h_i^3)/12 as cumulative component discrepancy",
+      "validation_file": "Q045_OPTICAL_AUDIT_INGESTION_VALIDATION.json",
+      "scope": "Existing stored histories only; zero new theory runs; no continuum error certificate",
+      "supports": [
+        "J-Q045-INGEST-V3-02",
+        "J-Q045-INGEST-V3-03",
+        "J-Q045-INGEST-V3-04"
+      ]
+    }
+  ],
+  "claim_to_source_map_additions": {
+    "J-Q045-INGEST-V3-01": [
+      "I-Q045-OPTICAL-AUDIT-RUN-V3-001",
+      "I-Q045-OPTICAL-AUDIT-RAW-V3-001"
+    ],
+    "J-Q045-INGEST-V3-02": [
+      "I-Q045-OPTICAL-AUDIT-RAW-V3-001",
+      "I-Q045-OPTICAL-AUDIT-INGEST-V3-001",
+      "I-Q045-WORKERS-V2-001"
+    ],
+    "J-Q045-INGEST-V3-03": [
+      "I-Q045-OPTICAL-AUDIT-RAW-V3-001",
+      "I-Q045-OPTICAL-AUDIT-INGEST-V3-001",
+      "K-Q042-INGESTDESIGN-001"
+    ],
+    "J-Q045-INGEST-V3-04": [
+      "I-Q045-OPTICAL-AUDIT-RAW-V3-001",
+      "I-Q045-OPTICAL-AUDIT-INGEST-V3-001"
+    ],
+    "J-Q045-INGEST-V3-05": [
+      "I-Q045-OPTICAL-AUDIT-RUN-V3-001",
+      "I-Q045-OPTICAL-AUDIT-DESIGN-001"
+    ],
+    "J-Q045-INGEST-V3-06": [
+      "I-Q045-MATH-OPTICAL-TRANSPORT-001",
+      "I-Q045-OPTICAL-AUDIT-RAW-V3-001"
+    ]
+  },
+  "next_engine": "Execution-Mechanism / Numerical / HPC / Motor-Builder Engine",
+  "next_task": "Recover the named numerical controls and event/support semantics from the acquired effective_precision.tsv, exact source and traces. Make the existing J-045-09 reference-qualification stage concrete: freeze baseline/half/quarter accuracy settings and an independent eta/redshift Thomson integration, then justify a physical history/interpolation/event/endpoint/calibration error enclosure. Reuse the four completed native inputs and raw histories. Do not repeat V3 or repair unrelated physics.\n\nBefore new computation, resolve exact original-binary/compiler reproducibility and species/history validity prerequisites; qualify each rather than assuming a workspace snapshot is an independent species solution. Missing historical compiler information remains a documented limitation; a new build must not be declared identical by assumption. Establish whether the isolated two-call-site intervention is valid without solver/source-physics repairs.\n\nAllocate any necessary new histories prospectively within the 44 remaining theory slots. The original 48-treatment/three-level plan plus independent FULL repeats cannot simply be launched in addition to telemetry: these four telemetry runs are background/thermodynamics observations, not independent FULL CMB/likelihood repeats. Document reuse and mandatory tests, or report a finite budget/specification conflict; do not raise 52 or waive a test silently. Unqualified continuum remainder is a terminal prerequisite for that bounded stage, not permission to dispatch counterfactuals.\n\nOnly after reference qualification may a separately documented finite 00/10/01/11 response target be proposed with exact consumed-observable/native-likelihood coverage and unchanged inputs. No new target, PROGRAM_ID, remote dispatch, spectrum/likelihood execution, optimizer, sampler or production is authorized or created by this ingestion. Return qualification evidence or the exact blocker to Result Ingestion & Routing Engine. Actual original decision margins remain missing; no substitute spectral-percent tolerance or fixed-start likelihood gap may replace them.",
+  "q_completion_gate": "NOT_YET_SATISFIED",
+  "technical_ingestion_gate": "PASS",
+  "reference_truth_gate": "UNQUALIFIED",
+  "final_result_gate": "UNRESOLVED",
+  "theory_evaluations": {
+    "completed_baselines": 4,
+    "started_telemetry": 4,
+    "started_this_ingestion": 0,
+    "consumed_total": 8,
+    "cap": 52,
+    "remaining_maximum": 44
+  },
+  "journal_incoming": {
+    "bytes": 601700,
+    "sha256": "2ad3e5771cfe79007fe1717048ba7bfd660c789a4dfb39696933b8a595b61a23"
+  },
+  "handoff_incoming": {
+    "bytes": 26604,
+    "sha256": "5da780522b40d393b500337da6bfe8dff3fdfd9f73fe6516d76a3a8f7d862937"
+  },
+  "production_restart_authorized": false,
+  "automatic_continuation": false
+}

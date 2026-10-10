@@ -1,0 +1,306 @@
+{
+  "q": "Q-045",
+  "program_id": "Q045-REFHIST-V1",
+  "case_id": "NOT DOCUMENTED",
+  "date": "2026-10-10T10:42:15.541729+02:00",
+  "package_gate": "PASS",
+  "scope": "LOCAL_TECHNICAL_VALIDATION_ONLY; ZERO NEW THEORY CALLS",
+  "refined_history_results": "NOT_YET_COMPUTED",
+  "reference_truth_gate": "UNQUALIFIED",
+  "reference_error_bound": null,
+  "final_result_gate": "UNRESOLVED",
+  "remote_installation": "NOT_PERFORMED",
+  "github_dispatch": "NOT_PERFORMED",
+  "scientific_question": "For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+  "installed_static_stdout": "PACKAGE_GATE=PASS LAUNCHER_GATE=PASS README_GATE=PASS REPOSITORY_CONSISTENCY_GATE=PASS",
+  "installed_layout_no_root_yaml": "PASS",
+  "finite_tests": {
+    "status": "PASS",
+    "count": 17,
+    "native_array_fixture": "PASS; REAL PINNED ARRAY BODIES WITH SYNTHETIC CALLERS ONLY",
+    "log_sha256": "ae05925e106ffaaae1493e17d72437b347f7eea19cec695a5ff916f0128bbad7"
+  },
+  "observer_object_compile": {
+    "status": "PASS",
+    "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+    "stderr": "",
+    "original_cached_binary_execution": "NOT PERFORMED LOCALLY"
+  },
+  "launcher_exact_lookup_tests": [
+    {
+      "input": "Q045-REFHIST-V1",
+      "accepted": true,
+      "status": "PASS"
+    },
+    {
+      "input": "Q045-NONEXISTENT-V1",
+      "accepted": false,
+      "status": "PASS"
+    },
+    {
+      "input": "Q045;echo unsafe",
+      "accepted": false,
+      "status": "PASS"
+    },
+    {
+      "input": "Q045-OPTICAL-AUDIT-V3",
+      "accepted": false,
+      "status": "PASS"
+    }
+  ],
+  "launcher_byte_identity": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
+  "registry_differential": {
+    "status": "PASS",
+    "changed_existing": [
+      "Q045-OPTICAL-AUDIT-V3"
+    ],
+    "added": [
+      "Q045-REFHIST-V1"
+    ],
+    "unrelated_entries_preserved": true
+  },
+  "journal_continuity": {
+    "status": "PASS",
+    "incoming_bytes": 615773,
+    "incoming_sha256": "cda8486d30a4236de7fd17785ecbc99639f62fbcc3b8968b91b10e7873601919",
+    "updated_bytes": 627359,
+    "updated_sha256": "20e7f963d2be02c85fcb83d716bacfa3becb975cbdec878f1364eab5e6e165a3",
+    "historical_handoff_sha256": "330c9aa84d50b1bbff0d1d20b63197cac86cc9f07873fa5b9dcabc6592d3100e",
+    "historical_handoff_preserved_verbatim": true
+  },
+  "workflow_schema": {
+    "status": "PASS",
+    "jobs": [
+      "camspec-ede_n3-L1",
+      "camspec-ede_n3-L2",
+      "camspec-lcdm-L1",
+      "camspec-lcdm-L2",
+      "hillipop-ede_n3-L1",
+      "hillipop-ede_n3-L2",
+      "hillipop-lcdm-L1",
+      "hillipop-lcdm-L2"
+    ],
+    "max_parallel": 4,
+    "worker_timeout_minutes": 45,
+    "cache_identity": "EXACT_ALL_NINE_PATHS",
+    "common_grid_products_uploaded": true
+  },
+  "existing_L0_reanalysis": {
+    "camspec-ede_n3": {
+      "parent_inventory_hash_gate": "PASS",
+      "native_rows": 28333,
+      "windows": {
+        "30": {
+          "plus_minus_max_abs": 5.777434922624169e-07,
+          "redshift16_32_max_abs": 1.0842021724855044e-19,
+          "redshift32_eta_cubic_max_abs": 6.411088625257744e-08
+        },
+        "50": {
+          "plus_minus_max_abs": 5.777434922624169e-07,
+          "redshift16_32_max_abs": 1.0842021724855044e-19,
+          "redshift32_eta_cubic_max_abs": 6.411168704256731e-08
+        },
+        "1500": {
+          "plus_minus_max_abs": 2.384346537631643e-05,
+          "redshift16_32_max_abs": 1.7763568394002505e-15,
+          "redshift32_eta_cubic_max_abs": 3.800400634190737e-07
+        },
+        "5000000.000000003": {
+          "plus_minus_max_abs": 1.6074782040668651,
+          "redshift16_32_max_abs": 1.1641532182693481e-10,
+          "redshift32_eta_cubic_max_abs": 0.26755982730537653
+        }
+      },
+      "calibration": {
+        "requested_tau": 0.05141852352021917,
+        "relative_tolerance": 0.0001,
+        "initial_bracket_tau": [
+          1.0566539286552316e-05,
+          0.6992429867145751
+        ],
+        "accepted_bracket_tau": [
+          0.05141522620600854,
+          0.05141856611747197
+        ],
+        "accepted_bracket_z": [
+          7.4735260009765625,
+          7.473876953125
+        ],
+        "last_trial_residual": -3.2973142106290654e-06,
+        "bisection_trials": 17,
+        "native_stopping_condition_met": true,
+        "reconstruction": "Replay of the pinned branch comparison; no smooth monotonicity assumption through selector jumps"
+      },
+      "reference_truth_gate": "UNQUALIFIED"
+    },
+    "camspec-lcdm": {
+      "parent_inventory_hash_gate": "PASS",
+      "native_rows": 28333,
+      "windows": {
+        "30": {
+          "plus_minus_max_abs": 5.777435302042888e-07,
+          "redshift16_32_max_abs": 6.938893903907228e-18,
+          "redshift32_eta_cubic_max_abs": 6.408493441467655e-08
+        },
+        "50": {
+          "plus_minus_max_abs": 5.777435302042888e-07,
+          "redshift16_32_max_abs": 6.938893903907228e-18,
+          "redshift32_eta_cubic_max_abs": 6.408573470506607e-08
+        },
+        "1500": {
+          "plus_minus_max_abs": 2.390954226427766e-05,
+          "redshift16_32_max_abs": 6.938893903907228e-18,
+          "redshift32_eta_cubic_max_abs": 3.6974430273062353e-07
+        },
+        "5000000.000000003": {
+          "plus_minus_max_abs": 1.6075042152078822,
+          "redshift16_32_max_abs": 5.820766091346741e-11,
+          "redshift32_eta_cubic_max_abs": 0.2676252124365419
+        }
+      },
+      "calibration": {
+        "requested_tau": 0.05141852352021917,
+        "relative_tolerance": 0.0001,
+        "initial_bracket_tau": [
+          1.0566534663011955e-05,
+          0.699252999339081
+        ],
+        "accepted_bracket_tau": [
+          0.05141528223303573,
+          0.05141862215160879
+        ],
+        "accepted_bracket_z": [
+          7.4735260009765625,
+          7.473876953125
+        ],
+        "last_trial_residual": -3.241287183437802e-06,
+        "bisection_trials": 17,
+        "native_stopping_condition_met": true,
+        "reconstruction": "Replay of the pinned branch comparison; no smooth monotonicity assumption through selector jumps"
+      },
+      "reference_truth_gate": "UNQUALIFIED"
+    },
+    "hillipop-lcdm": {
+      "parent_inventory_hash_gate": "PASS",
+      "native_rows": 28333,
+      "windows": {
+        "30": {
+          "plus_minus_max_abs": 5.741821074503606e-07,
+          "redshift16_32_max_abs": 1.3877787807814457e-17,
+          "redshift32_eta_cubic_max_abs": 6.377897812659405e-08
+        },
+        "50": {
+          "plus_minus_max_abs": 5.741821074503606e-07,
+          "redshift16_32_max_abs": 1.3877787807814457e-17,
+          "redshift32_eta_cubic_max_abs": 6.3779778715356e-08
+        },
+        "1500": {
+          "plus_minus_max_abs": 2.3849332791314737e-05,
+          "redshift16_32_max_abs": 3.552713678800501e-15,
+          "redshift32_eta_cubic_max_abs": 3.690901912989375e-07
+        },
+        "5000000.000000003": {
+          "plus_minus_max_abs": 1.601350987330079,
+          "redshift16_32_max_abs": 1.1641532182693481e-10,
+          "redshift32_eta_cubic_max_abs": 0.26660186902154237
+        }
+      },
+      "calibration": {
+        "requested_tau": 0.05150685267029027,
+        "relative_tolerance": 0.0001,
+        "initial_bracket_tau": [
+          1.044345109622314e-05,
+          0.6977013704707082
+        ],
+        "accepted_bracket_tau": [
+          0.051504081785466026,
+          0.0515074192794346
+        ],
+        "accepted_bracket_z": [
+          7.498443603515625,
+          7.4987945556640625
+        ],
+        "last_trial_residual": 5.666091443326526e-07,
+        "bisection_trials": 17,
+        "native_stopping_condition_met": true,
+        "reconstruction": "Replay of the pinned branch comparison; no smooth monotonicity assumption through selector jumps"
+      },
+      "reference_truth_gate": "UNQUALIFIED"
+    },
+    "hillipop-ede_n3": {
+      "parent_inventory_hash_gate": "PASS",
+      "native_rows": 28333,
+      "windows": {
+        "30": {
+          "plus_minus_max_abs": 5.741820705493228e-07,
+          "redshift16_32_max_abs": 6.938893903907228e-18,
+          "redshift32_eta_cubic_max_abs": 6.380560940016933e-08
+        },
+        "50": {
+          "plus_minus_max_abs": 5.741820705493228e-07,
+          "redshift16_32_max_abs": 6.938893903907228e-18,
+          "redshift32_eta_cubic_max_abs": 6.380641074527071e-08
+        },
+        "1500": {
+          "plus_minus_max_abs": 2.3793019172657637e-05,
+          "redshift16_32_max_abs": 8.881784197001252e-16,
+          "redshift32_eta_cubic_max_abs": 3.7145577991282153e-07
+        },
+        "5000000.000000003": {
+          "plus_minus_max_abs": 1.6013393563916907,
+          "redshift16_32_max_abs": 2.9103830456733704e-11,
+          "redshift32_eta_cubic_max_abs": 0.2665366780711338
+        }
+      },
+      "calibration": {
+        "requested_tau": 0.05150685267029027,
+        "relative_tolerance": 0.0001,
+        "initial_bracket_tau": [
+          1.0443457373522836e-05,
+          0.6976868125760719
+        ],
+        "accepted_bracket_tau": [
+          0.051504001958525246,
+          0.05150733944258592
+        ],
+        "accepted_bracket_z": [
+          7.498443603515625,
+          7.4987945556640625
+        ],
+        "last_trial_residual": 4.867722956519716e-07,
+        "bisection_trials": 17,
+        "native_stopping_condition_met": true,
+        "reconstruction": "Replay of the pinned branch comparison; no smooth monotonicity assumption through selector jumps"
+      },
+      "reference_truth_gate": "UNQUALIFIED"
+    }
+  },
+  "same_history_comparison_control": "PASS; no computed L1/L2 claimed, cannot pass reference truth",
+  "source_body_digest_gate": "PASS",
+  "evaluation_accounting": {
+    "new_this_local_preparation": 0,
+    "inherited_consumed": 8,
+    "new_target_max": 8,
+    "total_upper_bound": 16,
+    "cap": 52,
+    "remaining_lower_bound": 36,
+    "full_response_tests_satisfied_by_this_target": 0
+  },
+  "readme_gate": "PASS_CURRENT_FEATURES_AND_NEW_RUNTIME_REFERENCES",
+  "repository_consistency_gate": "PASS_LOCAL_INSTALLED_LAYOUT",
+  "files": {
+    "q045_reference_history_v1.py": "3d0ad07079049679041322c21a89c90ff5ec736d7f5f57419e01d7b6c5e9ff6a",
+    "q045_reference_history_probe_v1.c": "b7b5302d304bc9071d2194324e7a9da182e5f962fbca66ba1352c59b05b63f13",
+    "q045_reference_history_tests_v1.py": "9bf66f634557914e14b8c749545df400aec6cc8c3f02ddf97377a17223b96907",
+    "q045_reference_history_contract_v1.json": "f54e3a908c35241530bd9db1eacbf95b5e201423f6d0fc9574e7274d2b532b08",
+    "bubbleverse_program_registry.json": "7f4ae5c8288ca6e49ae7cbef5e0dbcfe322ed8924b0a630c4d7a855b77cc3e35",
+    "README.md": "d2a683e885ff59ef6d3afc827b7196a24fd1e347d5740aebab79a462c0ee98a2",
+    "Q045_SAMLET_JOURNAL.md": "20e7f963d2be02c85fcb83d716bacfa3becb975cbdec878f1364eab5e6e165a3",
+    "Q045_EXECUTION_HANDOFF.md": "a879388d807a949e3cf79e08b12ac72c2ebeeb69f3712601eb94b20c3f79efe2",
+    "Q045_OPTICAL_AUDIT_INGESTION_RESULT.json": "d71dd4e9f4b7d082f0486b23cc9c35cb46f9ec69840b6d5e84f0755986cc851d",
+    "Q045_OPTICAL_AUDIT_RAW_FILE_INDEX.md": "840795b3ab97df601b28122cd1a3d523ba958a11baf0c1d9bfe20ca265063c4d",
+    ".github/workflows/q045-reference-history-v1.yml": "843c50e096bcee4b52b2f67c67a132f62b7916f99e8b7512933ab33d08768b4f",
+    "q045_reference_history_manifest_v1.json": "451484b0a954af7a50bd06fdc982058f751d5930ee32381b4f4b6252275500c0",
+    "q045-reference-history-v1.yml": "843c50e096bcee4b52b2f67c67a132f62b7916f99e8b7512933ab33d08768b4f"
+  }
+}
