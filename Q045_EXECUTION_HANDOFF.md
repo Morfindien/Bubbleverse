@@ -1,3 +1,36 @@
+# BUBBLEVERSE — Q045 V2 MINIMAL CACHE REPAIR HANDOFF
+
+DATE AND TIME: 2026-10-10T07:16:28.480315+02:00.
+CURRENT Q: Q-045 / Q045. CASE ID: NOT DOCUMENTED.
+EXACT QUESTION: For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?
+STATUS: CONTINUES. RECOMMENDED CHATGPT SETTING: current Work/Codex with strong reasoning (High if selectable); actual inference setting and account model menu are not exposed. GPT-5.6 is a capability-equivalent fallback if available. This focused environmental repair does not require a larger autonomous setting.
+
+EXECUTION MODE: existing execution engine + patched program/workflow. No new motor. GitHub/source retrieval and local code verification materially support the repair; no model switch, parallel agents or scientific research campaign is required.
+
+NEW EVIDENCE: official run38026287784 at `e4a4c1061ae84d5bb638afaa2d0902004d779dcb`; static/input recovery passed; four cache prerequisites failed; all four numerical observation steps skipped. Collector correctly failed incomplete acquisition. Zero new theory evaluations started; inherited count remains4/52. Source IDs I-Q045-OPTICAL-AUDIT-RUN-V1-001 and I-Q045-CACHE-VERSION-001 plus complete inherited source register/maps are in the full journal.
+
+MINIMAL CHANGE: restore all nine original cache paths in the exact original order. Cache key, Linux runner, cache restore action and no-miss-fallback/save/rebuild policy remain unchanged. Cache versions incorporate path/compression metadata; merely keeping the key was insufficient. Current cache availability is not separately confirmed. The frozen original source, original classy binary and physical inputs remain mandatory. No scientific changes, fresh CLASS compilation, new data/prior/likelihood or tolerance are authorized.
+
+FREEZE: every scientific contract field from optical V1, four original V2 FULL start0 input dictionaries/artifact member hashes, original CLASS commit/binary SHA, same observation/comparison/gate logic and prior52-evaluation cap. Native observer C is byte-identical to V1. Controller differs only in target/file version names. V1 history remains available; its target is FAILED/inactive, V2 is ACTIVE in the prepared registry. Remote registration remains NOT INSTALLED BY ASSISTANT. Source/binary compiler provenance gaps are unchanged.
+
+GITHUB SEARCH: inspected the current recursive tree at `e4a4c1061ae84d5bb638afaa2d0902004d779dcb`, installed V1 workflow/controller/contract/manifest, successful V2 baseline workflow, full registry/README and permanent launcher. No optical audit V2 existed. Reuse source/binary/observer/method/inputs/launcher; patch cache path identity, version names, regression test, registry/README/journal/handoff. Current repository items match the prior delivered V1 text. No remote writes or dispatch occurred.
+
+RUNTIME/JOB PLAN: same static5min, inputs15min, four independent audit45min, collector15min; native subprocess900s/compile120s; four starts maximum, ≤8 total slots consumed if all start and ≤44 remain afterward. Plan elapsed5–20min is still an estimate; restoring the original full cache may take longer than the erroneous immediate miss. Exact original cache restoration had previously succeeded in baseline V2. Official hosted hard cap6h was verified in the inherited preparation. No new timeout assumption or job splitting is needed beyond these four existing bounded jobs. No long stateful checkpoint, automatic retry, sampler or treatment. A repeated missing cache after this correction is a preserved environment blocker; stop without replacement binary.
+
+FINITE MANDATORY TESTS: T000 original cache identity regression; T001–T006 inherited artifact/source/binary/observer/bracket/exact-history/component/completeness tests. Local tests do not establish a live GitHub cache hit, original-binary runtime success or scientific validation. Actual remote launcher/cache/runtime/result gates are pending. FINAL_RESULT_GATE remains UNRESOLVED; REFERENCE_TRUTH_GATE remains UNQUALIFIED.
+
+FILE DECISIONS / INSTALLATION: upload each supplied file individually. Put `q045-optical-audit-v2.yml` at `.github/workflows/q045-optical-audit-v2.yml`; all other supplied files belong at repository root. Replace canonical README/registry/journal/handoff with these updated copies; preserve V1 code and workflow as history. Keep `.github/workflows/00-bubbleverse-start.yml` unchanged. Failure JSON is technical evidence, not a runnable program. `Q045_INGESTION_RESULT.json` is the exact unchanged baseline scientific ingestion record. Package manifest binds all runtime files and the unchanged launcher; package validation is local evidence only. No archives.
+
+EXPECTED OUTPUT / GATES: same four raw observation artifacts plus final JSON and complete journal; exact source/binary inputs and all four mandatory worker records must pass. Raw failures survive. Cache success alone is not a final result. Actual new telemetry is NOT YET COMPUTED. No physical hypothesis is falsified by this environment failure.
+
+RETURN: exactly existing Result Ingestion & Routing Engine with Q, exact question, full journal/source maps, prior numerical evidence, failed V1 run provenance, new raw outputs, hashes and started-slot counts. Stop after the four finite outcomes or failed prerequisites; do not repeat unchanged runs or advance reference treatments automatically. Ingestion determines scientific completion/routing to Motor14.
+
+OPEN 🚀 BUBBLEVERSE START → PASTE `Q045-OPTICAL-AUDIT-V2` → PRESS Run workflow, after installing the individual corrected files.
+
+The detailed inherited A–W execution specification follows with V2 filename/target substitutions. Its scientific scope is unchanged; the cache repair and observed prior execution history above supersede its earlier prospective installation wording.
+
+---
+
 # BUBBLEVERSE — AUTONOMOUS EXECUTION-MECHANISM HANDOFF
 
 DATE AND TIME: 2026-10-10T06:56:50.876576+02:00 (Europe/Copenhagen).
@@ -60,11 +93,11 @@ ERROR: exact-cubic-minus and independent two-node Gauss share the same history. 
 
 ## K–L. PROGRAM_ID AND START REGISTRATION
 
-PROGRAM_ID: Q045-OPTICAL-AUDIT-V1.
+PROGRAM_ID: Q045-Q045-OPTICAL-AUDIT-V2.
 LAUNCHER: 🚀 BUBBLEVERSE START.
 LAUNCHER FILE: `.github/workflows/00-bubbleverse-start.yml` — unchanged existing file.
 REGISTRY: `bubbleverse_program_registry.json` — exact new entry; unrelated entries preserved.
-TARGET: `.github/workflows/q045-optical-audit-v1.yml`.
+TARGET: `.github/workflows/q045-optical-audit-v2.yml`.
 PROGRAM_ID REGISTERED: YES in the prepared local registry; remote installation NOT PERFORMED.
 LAUNCHER_GATE: locally validated package; actual remote gate pending installation/run.
 PROGRAM_ID is never shell-executed. It passes through the existing exact registry lookup; all user input goes via environment to exact checking. No unsafe eval is introduced.
@@ -88,11 +121,11 @@ Mandatory T001 official artifact and member identity; T002 source/binary/physica
 ## P. FILE DECISIONS AND INSTALLATION
 
 At repository root, CREATE:
-- `q045_optical_audit_v1.py`
-- `q045_optical_audit_probe_v1.c`
-- `q045_optical_audit_tests_v1.py`
-- `q045_optical_audit_contract_v1.json`
-- `q045_optical_audit_manifest_v1.json`
+- `q045_optical_audit_v2.py`
+- `q045_optical_audit_probe_v2.c`
+- `q045_optical_audit_tests_v2.py`
+- `q045_optical_audit_contract_v2.json`
+- `q045_optical_audit_manifest_v2.json`
 - `Q045_INGESTION_RESULT.json` (exact received immutable record; reused evidence)
 
 At repository root, UPDATE:
@@ -103,7 +136,7 @@ At repository root, UPDATE:
 - `Q045_PACKAGE_VALIDATION.json` (local preparation evidence)
 
 CREATE in `.github/workflows/`:
-- `q045-optical-audit-v1.yml`
+- `q045-optical-audit-v2.yml`
 
 UNCHANGED: existing launcher and all original V1/V2/production scientific files/source/data/binary. Required raw workers are recovered from official artifacts; do not upload43 raw files manually. No archive is delivered. Install every prepared file before launching so static integrity gates see one consistent snapshot. Base inspected head is `175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72`; if repository reality changes first, rebase registry/README differentially rather than overwriting unrelated changes.
 
@@ -117,13 +150,13 @@ This package contains actual Python, C, YAML, JSON and Markdown files individual
 
 After manual file installation:
 OPEN: 🚀 BUBBLEVERSE START.
-PASTE: `Q045-OPTICAL-AUDIT-V1`.
+PASTE: `Q045-Q045-OPTICAL-AUDIT-V2`.
 PRESS: Run workflow.
 Open the child optical-audit run; the launcher completion only confirms dispatch. The assistant has not uploaded files, mutated GitHub or launched computation.
 
 ## T. EXPECTED OUTPUTS
 
-Four worker artifacts with original input identity, compile/provenance/native logs, every scalar trial table, raw cumulative kappa/derivatives, final native nodes, effective precision, source species workspaces, native metadata, component-comparison tables and worker result. Final artifact includes `q045_optical_audit_final_v1.json`, contract, manifest, this handoff and complete journal. Actual values are NOT YET COMPUTED. Existing native CMB/likelihood bytes remain in the V2 baseline artifacts.
+Four worker artifacts with original input identity, compile/provenance/native logs, every scalar trial table, raw cumulative kappa/derivatives, final native nodes, effective precision, source species workspaces, native metadata, component-comparison tables and worker result. Final artifact includes `q045_optical_audit_final_v2.json`, contract, manifest, this handoff and complete journal. Actual values are NOT YET COMPUTED. Existing native CMB/likelihood bytes remain in the V2 baseline artifacts.
 
 ## U. PASS / FAIL GATES
 
@@ -141,4 +174,4 @@ The finite audit ends after these four outcomes or its failed prerequisites. Add
 
 ## W. START THIS
 
-START THIS: Q045-OPTICAL-AUDIT-V1
+START THIS: Q045-Q045-OPTICAL-AUDIT-V2

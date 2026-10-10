@@ -1,3 +1,34 @@
+# BUBBLEVERSE — Q045 OPTICAL AUDIT V2 CACHE REPAIR
+
+DATE AND TIME: 2026-10-10T07:16:28.480315+02:00 (Europe/Copenhagen).
+CURRENT Q: Q-045 / Q045 — PROPOSED_CANONICAL_REGISTRATION_PENDING.
+CASE ID: NOT DOCUMENTED.
+EXACT QUESTION: For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?
+PROGRAM_ID: Q045-OPTICAL-AUDIT-V2.
+STATUS: CONTINUES; locally checked repair prepared, remote installation and execution not performed by assistant.
+
+KEEP: the complete prior authoritative journal follows verbatim (592961 bytes; SHA256 `1e9fefdaa4c528501cd24994f2ff8f9596af927d0de7d5f3673cb7a98934fb36`). Every inherited source ID, claim map, failed hypothesis, Q042/Q044 closure, frozen scientific input and baseline result survives. This differential header updates the same journal.
+
+ADD — J-Q045-CACHE-01 [TECHNICAL FAILURE]: optical audit V1 run38026287784, attempt1, commit `e4a4c1061ae84d5bb638afaa2d0902004d779dcb` passed static and baseline-input recovery. All four audit jobs failed at cache acquisition; their original-binary observation steps were skipped. The collector failed its completeness requirement and preserved the final artifact. Zero new theory evaluations started, supported by official job-step records. Four original V2 native baseline evaluations remain consumed out of52; the four telemetry slots remain available. No physical answer, parameter preference or anomaly was produced.
+
+ADD — J-Q045-CACHE-02 [DOCUMENTED DIAGNOSIS]: V1 used the correct original key but replaced its nine-path cache list with only `external/class_ede`. GitHub matches the cache version as well as key; the path metadata contributes to that version. This explains why V1 cannot select the previously used nine-path version. Current cache retention/availability is not independently established. The Node punycode warning is preserved; it is not the failing prerequisite.
+
+UPDATE — J-Q045-CACHE-03 [MINIMAL REPAIR]: V2 restores the exact original nine paths, order, key and cache action from the successful baseline workflow. `fail-on-cache-miss:true`, no restore keys, no cache save, no rebuild and exact CLASS source/binary hashes remain enforced. The native observer C is byte-identical to V1; controller changes only target/file version names. Numerical methods, input dictionaries, precision, likelihoods, data, priors, limits and physical gates are unchanged. Ten Python tests now include a regression for the original complete cache identity.
+
+SUPERSEDE: V1 is retained as FAILED in the prepared registry, with actual run/commit and zero started evaluations. V2 is the new active target; all other registry entries survive exactly. The permanent launcher is unchanged. README current-target references move to V2 and preserve the failed V1 record.
+
+ADD — I-Q045-OPTICAL-AUDIT-RUN-V1-001 [INTERNAL TECHNICAL EVIDENCE]: https://github.com/Morfindien/Bubbleverse/actions/runs/38026287784; official jobs/artifact metadata and worker/collector logs, retrieved 2026-10-10T07:16:28.480315+02:00; summarized with original excerpts in `Q045_OPTICAL_AUDIT_V1_FAILURE.json`. Raw artifact inner contents were not downloaded during this repair; no claim is invented from their filenames.
+
+ADD — I-Q045-CACHE-VERSION-001 [OFFICIAL TECHNICAL DOCUMENTATION]: GitHub, Dependency caching reference, https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching, retrieved 2026-10-10T07:16:28.480315+02:00; cache matching includes key/version, with path/compression metadata in the version. Claim map: J-Q045-CACHE-01→I-Q045-OPTICAL-AUDIT-RUN-V1-001; -02→I-Q045-CACHE-VERSION-001,I-Q045-OPTICAL-AUDIT-RUN-V1-001; -03→the frozen V2 baseline workflow at `e4a4c1061ae84d5bb638afaa2d0902004d779dcb`, this V2 package/tests/manifest.
+
+UNRESOLVED: original-binary remote observation, physical continuum reference qualification, CMB/likelihood response and original inference margins. FINAL_RESULT_GATE=UNRESOLVED; REFERENCE_TRUTH_GATE=UNQUALIFIED. Successful cache recovery alone resolves no physical claim. A corrected lookup that still misses must stop before computation and preserve its evidence, not build a substitute binary.
+
+RETURN ROUTE: existing Result Ingestion & Routing Engine after the four bounded outcomes or failed prerequisites. No automatic treatment, repeated campaign, posterior, source repair or production restart.
+
+---
+
+# COMPLETE PREVIOUS AUTHORITATIVE JOURNAL — VERBATIM BYTES FOLLOW
+
 # BUBBLEVERSE — Q045 OPTICAL AUDIT EXECUTION UPDATE
 
 DATE AND TIME: 2026-10-10T06:56:50.876576+02:00 (Europe/Copenhagen).

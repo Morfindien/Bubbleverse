@@ -1,112 +1,106 @@
 {
   "q": "Q-045",
-  "program_id": "Q045-OPTICAL-AUDIT-V1",
+  "program_id": "Q045-OPTICAL-AUDIT-V2",
   "status": "PASS_LOCAL_PREPARATION_ONLY",
-  "actual_computed_scientific_result": "NOT_YET_COMPUTED",
   "final_result_gate": "UNRESOLVED",
   "reference_truth_gate": "UNQUALIFIED",
+  "actual_new_scientific_result": "NOT_YET_COMPUTED",
   "current_q_preserved": true,
-  "incoming_complete_journal_preserved": true,
-  "inherited_source_ids_and_claim_maps_preserved": true,
-  "existing_v2_results_reused": true,
+  "exact_question_preserved": true,
+  "complete_prior_journal_preserved_verbatim": true,
+  "source_ids_and_claim_maps_preserved": true,
+  "original_class_binary_and_source_pins_unchanged": true,
+  "physical_contract_unchanged": true,
+  "native_observer_byte_identical": true,
+  "controller_changes": "Target/file version names only",
+  "original_cache_action_key_nine_paths_order_preserved": true,
+  "no_fallback_save_or_rebuild": true,
   "existing_launcher_unchanged": true,
-  "unrelated_registry_entries_preserved": 45,
+  "unrelated_registry_entries_preserved": 46,
+  "v1_failed_run": "38026287784",
+  "v1_theory_evaluations_started": 0,
+  "inherited_evaluations_completed": 4,
+  "total_budget": 52,
+  "new_evaluations_max": 4,
+  "regression_red": "10 controller tests: cache-path regression failed on single-path V1 configuration; other nine passed",
+  "regression_green": "10 controller tests pass; pinned native-array observer fixture pass; exact original cache identity and launcher rejection checks pass",
   "local_python": "3.12.14",
   "local_numpy": "2.3.5",
   "github_python_required": "3.11.16",
   "github_numpy_required": "1.26.4",
-  "local_test_scope": "9 bounded controller tests; pinned real spline bodies with synthetic caller observer fixture; C syntax; exact launcher resolution; package/journal/registry integrity",
-  "original_classy_binary_executed_locally": false,
-  "new_cosmological_theory_evaluations": 0,
-  "new_github_evaluations_reserved_max": 4,
-  "inherited_evaluations_completed": 4,
-  "inherited_budget": 52,
+  "github_cache_hit": "NOT_VERIFIED",
   "github_installation": "NOT_PERFORMED",
   "github_dispatch": "NOT_PERFORMED",
-  "full_history_reference": "UNQUALIFIED",
+  "original_classy_executed_locally": false,
   "checks": [
     {
       "command": [
         "python",
-        "q045_optical_audit_tests_v1.py",
+        "q045_optical_audit_tests_v2.py",
         "--native-root",
         "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers"
       ],
       "exit_code": 0,
-      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.004s\n\nOK\nNATIVE_ARRAY_OBSERVER_FIXTURE=PASS; unchanged real pinned array outputs; synthetic callers only\n"
+      "output": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.005s\n\nOK\nNATIVE_ARRAY_OBSERVER_FIXTURE=PASS; unchanged real pinned array outputs; synthetic callers only\n"
     },
     {
       "command": [
         "python",
-        "q045_optical_audit_v1.py",
+        "q045_optical_audit_v2.py",
         "static"
       ],
       "exit_code": 0,
       "output": "PACKAGE_GATE=PASS LAUNCHER_GATE=PASS README_GATE=PASS REPOSITORY_CONSISTENCY_GATE=PASS\n"
     },
     {
-      "command": [
-        "gcc",
-        "-std=c11",
-        "-fsyntax-only",
-        "-Wall",
-        "-Wextra",
-        "-Werror",
-        "-I",
-        "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers/include",
-        "-I",
-        "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers/external/HyRec2020",
-        "-I",
-        "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers/external/RecfastCLASS",
-        "-I",
-        "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers/external/heating",
-        "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT/q045_optical_audit_probe_v1.c"
-      ],
-      "exit_code": 0,
-      "output": ""
-    },
-    {
-      "test": "actual existing launcher exact registry resolution",
-      "input": "Q045-OPTICAL-AUDIT-V1",
+      "test": "Unchanged launcher exact lookup",
+      "requested": "Q045-OPTICAL-AUDIT-V2",
       "expected_accept": true,
       "exit_code": 0
     },
     {
-      "test": "actual existing launcher exact registry resolution",
-      "input": "Q045-BASELINE-V2",
+      "test": "Unchanged launcher exact lookup",
+      "requested": "Q045-OPTICAL-AUDIT-V1",
       "expected_accept": false,
       "exit_code": 1
     },
     {
-      "test": "actual existing launcher exact registry resolution",
-      "input": "NOT-A-PROGRAM",
+      "test": "Unchanged launcher exact lookup",
+      "requested": "Q045-BASELINE-V2",
       "expected_accept": false,
       "exit_code": 1
     },
     {
-      "test": "actual existing launcher exact registry resolution",
-      "input": "$(echo nope)",
+      "test": "Unchanged launcher exact lookup",
+      "requested": "UNKNOWN",
       "expected_accept": false,
       "exit_code": 1
     },
     {
-      "test": "actual existing launcher exact registry resolution",
-      "input": "Q045-OPTICAL-AUDIT-V1\nextra",
+      "test": "Unchanged launcher exact lookup",
+      "requested": "$(echo unsafe)",
+      "expected_accept": false,
+      "exit_code": 1
+    },
+    {
+      "test": "Unchanged launcher exact lookup",
+      "requested": "Q045-OPTICAL-AUDIT-V2\nextra",
       "expected_accept": false,
       "exit_code": 1
     }
   ],
-  "package_files": {
-    "Q045_SAMLET_JOURNAL.md": "1e9fefdaa4c528501cd24994f2ff8f9596af927d0de7d5f3673cb7a98934fb36",
-    "q045_optical_audit_probe_v1.c": "da19a95885728d2982d84a117fe1629ae9a9af9754995481b95031ce76afc9ff",
-    "q045_optical_audit_tests_v1.py": "cf537d7fd4514b52569ab0d9c7a38e491877f471b8cde23cf07cf73c1036dbda",
-    "q045_optical_audit_manifest_v1.json": "ae566e6028da0cebec456d07f767c1d4ff624c561586501f91f30852546a9f77",
+  "files": {
+    "q045_optical_audit_manifest_v2.json": "1ad2c544f3fe389bf4ea5304a2609c78a18a15cd14a8875c65e7bf9ed385b25f",
+    "Q045_SAMLET_JOURNAL.md": "8ac73814394f9df228817288cf14b4a694c8f01851ae08a862536f3133bab4f8",
     "Q045_INGESTION_RESULT.json": "63a5e7ee2e1082e2ed692ccc36657faf8dbb3c6ac7d507cf78ee3c44b33329de",
-    "q045_optical_audit_contract_v1.json": "bc9b84389fbf80ceede12b6113bd399bb2153cac5a8d8e048760ddcd0a820032",
-    "Q045_EXECUTION_HANDOFF.md": "c074b852e29e3ab5bf8cc5752c5271e6f6036b9bf7b2cf81318a161383f9771c",
-    "q045-optical-audit-v1.yml": "da98452bf8706f6dcf3de8efe30693d5d81df3f44222e8033e364e74a3d661a7",
-    "README.md": "0032b2f11012f85b2183625fd60614bb4415a472cf3c56a1e127dc56cde3dcca",
-    "bubbleverse_program_registry.json": "aefddd3d4b5f8cd39ebfc7e1f939e605def7d19f7c9b134feb1f9038057be107",
-    "q045_optical_audit_v1.py": "88cdfd63f385ece89313ad801c637430ae457d027b496da88603b9a6a87ccce1"
+    "q045_optical_audit_tests_v2.py": "cec89eabb41118c4e7a2bf48b3c0ad0c97306fe835e7603b6466d476664bd437",
+    "Q045_OPTICAL_AUDIT_V1_FAILURE.json": "3d62e9212cc2cb4e33778ab3023dcd295727b20a6bfa98e86d5ffec7b3522a50",
+    "q045-optical-audit-v2.yml": "cf5916c29051c23e478a9cf527ee94c8d519cea4e7c484e89dfe22a68a564569",
+    "Q045_EXECUTION_HANDOFF.md": "b30ade2affd61c3b5c7e64b616f7288aafa2ab39236237e76cda92003c1e4793",
+    "q045_optical_audit_v2.py": "7d17381503458a361d0e5a0cc256d23cf9a4abe445e544794a08b741fe475d33",
+    "README.md": "95c24aaefa6c3fccb7ea467234e157c7b73e195bd5b83533686663e4922e8519",
+    "bubbleverse_program_registry.json": "b15a76f6b117c7fda1c8b7873ec7d32df783d6c003e5747246d9bbfb9894f3c9",
+    "q045_optical_audit_probe_v2.c": "da19a95885728d2982d84a117fe1629ae9a9af9754995481b95031ce76afc9ff",
+    "q045_optical_audit_contract_v2.json": "fcc5862820f507f83e9dccd3f45e8a0c4c7b8054156619146728b74a9e25277d"
   }
 }
