@@ -1,6 +1,24 @@
-# Bubbleverse — current Q045 offline recovery
+# Bubbleverse — current Q047 certificate qualification
 
-Open **🚀 BUBBLEVERSE START**, enter `Q045-REFHIST-V2`, and select **Run workflow** after installing this package. The canonical launcher is `.github/workflows/00-bubbleverse-start.yml`; the registry is `bubbleverse_program_registry.json`; the target is `.github/workflows/q045-reference-history-v2.yml`. Other package files belong at repository root.
+Open **🚀 BUBBLEVERSE START**, enter **`Q047-CERTCHECK-V1`**, then select **Run workflow** after this package is installed on main. The permanent launcher remains `.github/workflows/00-bubbleverse-start.yml`; the canonical registry is `bubbleverse_program_registry.json`; the target is `.github/workflows/q047-certificate-check-v1.yml`. The existing launcher is unchanged and all 51 prior registry entries are preserved.
+
+Q-047 remains **PROPOSED; canonical scientific admission unverified**. It asks whether each of four frozen Q041 FULL/start0 helium trajectories reaches the strict numerical cutoff at a first event with negative upper rate and no competing switch/reset. Actual applicability is **INSUFFICIENT EVIDENCE in all four cases**.
+
+V1 implements the Mathematics Engine's source-consistent rational interval/AD field, signed comparison-matrix propagation, prospective error rectangles, continuous predictor bounds and a conditional local event checker. A **manufactured local proof-input control** exercises the checker; it is not an actual cosmological initial state or a complete helium history. The actual-input gate lists the missing effective-model/background/onset/full-path/switch qualifications. An asserted qualification boolean, raw native output or successful process exit cannot pass that gate.
+
+The program performs **zero new CLASS/native/theory evaluations** and cannot launch a cosmology, spectrum, likelihood or sampler. The inherited ledger remains16/52 consumed and36 remaining. It uses Python3.12.14 standard library and pinned source/action identities, with no pip installation, CLASS cache or remote HPC service. One short atomic job has a10-minute cap. There is no shard/merge/checkpoint dependency, automatic retry or downstream dispatch.
+
+Outputs are in `q047_results/`: the technical final JSON, exact required-input reports, manufactured conditional-control certificate, four regional arithmetic controls and package/source/result tests. **FINAL_RESULT_GATE=UNRESOLVED** remains the scientific result even when all technical checks pass. Return the result artifact to Result Ingestion & Routing with the same Q047 and journal; no optical-depth/CMB/likelihood/H0 bias is inferred.
+
+The authoritative accumulated journal snapshot travels as `Q047_SAMLET_JOURNAL.md`. Frozen requested/native identities are in `q047_targets_v1.json`; the executable/source lock is `q047_package_v1.json`; the numerical specification and finite test plan are in `Q047_EXECUTION_SPEC_V1.md`. The source-continuum input remains unqualified. Conditional packet mode is `python q047_certificate_v1.py --packet PATH --out DIRECTORY`; its output remains conditional and cannot close the factual question.
+
+Local replay: `python -m unittest discover -p 'q047_*tests_v1.py' -v`, `python q047_certificate_v1.py`, `python q047_math_v1.py > q047_results/q047_regional_controls_v1.json`, then `python q047_package_check_v1.py results`. No supplied file is an archive.
+
+---
+
+# Completed preceding stage — Q045 offline recovery
+
+The previous Q045 recovery used `Q045-REFHIST-V2` through the same permanent launcher and registry. Its target was `.github/workflows/q045-reference-history-v2.yml`. The Q047 checker is now the current bounded preparation target described above.
 
 **Do not rerun Q045-REFHIST-V1 or either failed native worker.** All eight original computations completed in run [38039690879](https://github.com/Morfindien/Bubbleverse/actions/runs/38039690879). Six passed analysis; both HiLLiPoP L1 jobs failed after computation because V1 required exact equality for BBN-derived `YHe`. Both outputs differ from L0 by one binary64 ULP, while requested physical dictionaries and recorded normalization constants are unchanged. Original failed records remain historical failures.
 
@@ -33,7 +51,7 @@ Q042 and Q044 remain closed with inconclusive scientific boundaries. Q045 remain
 
 V2 baseline run [38023210800](https://github.com/Morfindien/Bubbleverse/actions/runs/38023210800) completed all four native FULL diagnostic starts. Installation, completeness and raw-product gates passed. Those starts are fixed inputs, not fitted minima; their likelihood values establish no model preference. The registry records `Q045-BASELINE-V2` as **COMPLETED** so it is not relaunched unchanged. Its V1 failed installation and V2 Flit repair remain preserved.
 
-Completed PROGRAM_ID: **`Q045-OPTICAL-AUDIT-V3`** (the prior duplicated `Q045-` prefix is corrected). The registry records this target **COMPLETED**, run [38035928310](https://github.com/Morfindien/Bubbleverse/actions/runs/38035928310). Its original files and workflow are retained for provenance, not another unchanged launch. The current launcher target is `Q045-REFHIST-V2` above; V1 native computation completed and must not be repeated.
+Completed PROGRAM_ID: **`Q045-OPTICAL-AUDIT-V3`** (the prior duplicated `Q045-` prefix is corrected). The registry records this target **COMPLETED**, run [38035928310](https://github.com/Morfindien/Bubbleverse/actions/runs/38035928310). Its original files and workflow are retained for provenance, not another unchanged launch. The historical recovery launcher target was `Q045-REFHIST-V2`; V1 native computation completed and must not be repeated.
 
 The completed target retrieved the exact four completed V2 worker artifacts, then uses read-only original-function observation to export each scalar calibration trial/support, raw cumulative optical depth before exponentiation, effective precision/constants and species workspace snapshots. The unchanged original diagnostic CLASS binary and source are required; there is no cache-miss rebuild, scientific source patch, new spectrum/likelihood run, optimizer, sampler or automatic retry. Final native table columns must exactly match V2. Separate worker jobs have45-minute caps and15-minute native-process caps. The original52-evaluation budget is retained: four V2 evaluations already complete, at most four telemetry observations now, at most44 slots remaining after all four start. Background/thermodynamics observations do not constitute full CMB/likelihood reproducibility runs.
 
@@ -535,3 +553,4 @@ Raw stages, accepted nodes and endpoints are in `q042-v28-<run_id>-raw-event-cel
 Run37344813050 stopped in the controlled test before any actual original-binary cell computation: the fixture used `LOCAL` while the strict collector expected GitHub's run-id. The fixture now inherits `GITHUB_RUN_ID`, falling back to `LOCAL` only outside Actions; unrelated identities remain rejected. Numerical physics,contract,program,workflow,registry and launcher are unchanged. The complete failure/provenance and journal update are in the current V28 handoff/source evidence.
 
 The fixture correction was followed by completed run `37347357296`. The failed run and fix remain historical evidence; no further V28 launch or retry is required. Local implementation tests and successful cell execution do not qualify whole-history accuracy.
+

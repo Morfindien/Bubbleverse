@@ -1,0 +1,65 @@
+name: Bubbleverse Q047 certificate checker V1 — qualification only
+
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: q047-certificate-check-v1
+  cancel-in-progress: false
+
+env:
+  CURRENT_Q: Q-047
+  PROGRAM_ID: Q047-CERTCHECK-V1
+  PYTHONHASHSEED: '0'
+
+jobs:
+  qualify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
+        with:
+          python-version: '3.12.14'
+      - name: Exact target and installed package gates
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          python -c 'import os,q047_certificate_v1 as c; assert os.environ["REQUESTED_PROGRAM_ID"]==c.ID, "PROGRAM_ID_GATE"'
+          python q047_package_check_v1.py static
+      - name: Frozen scientific source integrity
+        timeout-minutes: 3
+        run: python q047_package_check_v1.py sources
+      - name: Mandatory finite numerical and failure controls
+        timeout-minutes: 2
+        run: |
+          python -m unittest discover -p 'q047_*tests_v1.py' -v
+      - name: Actual input gates and manufactured conditional proof control
+        timeout-minutes: 2
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          python q047_certificate_v1.py --program-id "$REQUESTED_PROGRAM_ID" --out q047_results
+          python q047_math_v1.py > q047_results/q047_regional_controls_v1.json
+          python q047_package_check_v1.py results
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        if: always()
+        with:
+          name: q047-certcheck-v1-${{ github.run_id }}-technical
+          path: |
+            q047_results/**
+            q047_targets_v1.json
+            q047_package_v1.json
+            Q047_EXECUTION_SPEC_V1.md
+            Q047_SAMLET_JOURNAL.md
+          retention-days: 30
+          if-no-files-found: error
