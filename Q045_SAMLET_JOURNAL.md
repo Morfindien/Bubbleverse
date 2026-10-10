@@ -1,3 +1,142 @@
+# BUBBLEVERSE — Q045 OPTICAL AUDIT EXECUTION UPDATE
+
+DATE AND TIME: 2026-10-10T06:56:50.876576+02:00 (Europe/Copenhagen).
+CURRENT Q: Q-045 / Q045 — PROPOSED_CANONICAL_REGISTRATION_PENDING.
+CASE ID: NOT DOCUMENTED.
+QUESTION: For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?
+
+STATUS: bounded observation package prepared and locally checked; GitHub installation and execution NOT PERFORMED by assistant.
+PROGRAM_ID: Q045-OPTICAL-AUDIT-V1.
+
+## Differential journal actions
+
+KEEP: all incoming scientific state, source IDs, maps, numerical values, technical failures and warnings. The complete 586654-byte incoming journal (SHA256 `a02f72a9b9354e29eef3000db5344fce95bcd817637b945a8adf30d3ef77ac81`) follows verbatim. This header is a differential update to the same authoritative journal; it is not a new or competing journal.
+
+UPDATE: V2 baseline run38023210800 is complete (four diagnostic points), while its remote README still said full runtime validation was pending. The prepared README/registry now record that actual completion and make V2 inactive against redundant relaunch. All other registry entries survive exactly.
+
+ADD — J-Q045-OPTICAL-AUDIT-01 [TECHNICAL PREPARATION]: inspect exact scalar trials and raw cumulative kappa through read-only symbol observers linked to the unchanged original diagnostic classy binary. Reuse the existing Q042 V24 linking method, never the V24 scientific point or Q042 repair task. Fixed physical input dictionaries are copied from the four verified V2 manifests; sampled vectors/nuisances remain connected to those original baseline records. No new motor, physical input, source patch, accuracy override, dataset, prior, optimizer or posterior is introduced.
+
+ADD — J-Q045-OPTICAL-AUDIT-02 [PREREGISTERED METHOD]: record every actual scalar support, source-produced spline second derivatives, trial z_reio/tau/endpoint, native accepted bracket replay, effective precision/default paths/constants, source species workspace snapshots, raw cumulative kappa before exponentiation, and final total-x_e/opacity/background tables. Require exact equality of decoded final native columns against V2. Workspace H/He are snapshots after source returns; smoothing may leave them at the previous-regime evaluation and parametric reionization modifies the total separately. They are not independent fully qualified species histories. Preserve both workspace and actually stored total x_e instead of imposing equality between different physical conventions.
+
+ADD — J-Q045-OPTICAL-AUDIT-03 [MATHEMATICAL COMPONENT]: native-plus and exact-cubic-minus use identical emitted eta/opacity/second derivatives; independent two-node Gauss evaluation checks the same cubic integral. A redshift-space node trapezoid uses the fork's nH0, sigma, Mpc and native H in1/Mpc; no c is inserted twice. The coordinate reconstruction and shared history dependence stay explicit. Neither comparison establishes a converged physical Thomson reference, a continuum remainder, a response in CMB/likelihood, or an original decision margin.
+
+UNRESOLVED: original binary compiler provenance, full historical campaign equivalence, physical species/history/event validity, independently qualified continuum error, prospective matched three-level reference accuracy, all required new response observables and actual inference margins. FINAL_RESULT_GATE remains UNRESOLVED. Actual new telemetry/numerical response is NOT YET COMPUTED. No physical hypothesis is falsified or promoted.
+
+ADD — J-Q045-OPTICAL-AUDIT-04 [FINITE EXECUTION]: exactly four original-background/thermodynamics observations maximum, one per fixed input. Reserve four conservative theory-evaluation slots in the existing52 total; four native baselines are already complete. At most8 slots consumed after this target; at most44 remain for any separately justified work. No count reset, automatic retry, new point, fourth refinement, source repair or historical sampler resume. These are new telemetry evaluations, not full CMB/likelihood reproducibility runs. Runtime attempts/failures consume their started slots; unstarted jobs do not. The first failed prerequisite stops its worker, preserves raw logs, and returns the failure. Valid independent workers remain preserved.
+
+ADD — I-Q045-OPTICAL-AUDIT-DESIGN-001 [INTERNAL TECHNICAL EVIDENCE]: this prepared contract/code/manifest/test record; inspection head `175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72`. Primary method sources remain K-Q042-INGESTDESIGN-001 (pinned arrays.c), K-Q042-V24-001/K-Q042-DESIGN-001 (pinned thermodynamics.c), I-Q045-WORKERS-V2-001 and I-Q045-RUN-V2-001. New implementation reference: repository `q042_class_origin_probe_v24.c` / `q042_class_origin_v24.py` at the inspection head. These supply a previously executed observation architecture, not an independent scientific reference.
+
+ADD — I-Q045-GITHUB-LIMITS-001 [OFFICIAL TECHNICAL DOCUMENTATION]: GitHub, Actions limits, retrieved 2026-10-10T06:56:50.876576+02:00, https://docs.github.com/en/actions/reference/limits. Hosted job limit6hours; four45-minute worker caps with900-second native process caps are below it. Actual cache/install/observer time is NOT YET MEASURED; runtime estimates are planning estimates, not measured CPU-hours.
+
+CLAIM MAP: J-Q045-OPTICAL-AUDIT-01→I-Q045-WORKERS-V2-001,I-Q045-ARCHITECTURE-001,I-Q045-OPTICAL-AUDIT-DESIGN-001; -02/-03→K-Q042-INGESTDESIGN-001,K-Q042-V24-001,K-Q042-DESIGN-001,I-Q045-OPTICAL-AUDIT-DESIGN-001; -04→I-Q045-OPTICAL-AUDIT-DESIGN-001,I-Q045-GITHUB-LIMITS-001. No new numerical or physical claim is assigned before execution.
+
+RETURN ROUTE: exactly Result Ingestion & Routing Engine with this complete journal, raw products and honest reference gate. Q042/Q044 remain closed. No admission/promotion/production restart occurs. A terminal blocker from this audit is evidence for ingestion's closure decision; this preparation does not close Q045.
+
+---
+
+# COMPLETE INCOMING AUTHORITATIVE JOURNAL — UNCHANGED BYTES FOLLOW
+
+# BUBBLEVERSE — RESULT INGESTION & ROUTING HANDOFF
+
+STATUS: CONTINUES.
+CASE ID: NOT DOCUMENTED.
+CURRENT Q: Q-045 / Q045 — PROPOSED; canonical scientific registration pending.
+QUESTION: For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?
+DATE AND TIME: 2026-10-10T06:30:30.109873+02:00 (Europe/Copenhagen; runtime clock).
+RESULT ID: R-Q045-NATIVE-BASELINE-INGESTION-001.
+SELECTED NEXT ENGINE: BUBBLEVERSE — AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE.
+Q-COMPLETION GATE: NOT YET SATISFIED.
+FINAL_RESULT_GATE: UNRESOLVED.
+
+## RECOMMENDED CHATGPT EXECUTION PROFILE
+
+AVAILABLE CONFIGURATIONS CONSIDERED: current Work/Codex with code/files, GitHub reads/artifact retrieval and web/primary-source access. The exposed agent catalogue includes GPT-6.1 Sol, GPT-6 Astra, GPT-6 Sol, GPT-5.6 Sol and GPT-6 Luna, but this does not establish the operator's model menu or comparative scientific reliability. No model switch or agent delegation occurred.
+RECOMMENDED MODEL / MODE: current Work/Codex with a strong reasoning configuration.
+RECOMMENDED REASONING LEVEL: High or deeper if selectable; exact active effort is not independently verified.
+RECOMMENDED EXECUTION STYLE: bounded autonomous source/code/numerical work; capability classes C + E in this ingestion engine's catalogue.
+WHY: full journal continuity and a narrowly defined two-call-site numerical reference need careful provenance and real code execution. A maximum-mode research campaign is unnecessary for parsing these successful raw baselines.
+RECOMMENDED PLUGINS / TOOLS: read-only GitHub for pinned methods/artifacts; local Python for raw integrity and reference calculations; persistent individual-file delivery.
+OPTIONAL CAPABILITIES: primary literature/source lookup only for missing reference/error definitions. No browser, broad literature search, plugin installation, images, deployment or parallel agents are needed now.
+FALLBACK: another strong reasoning setup with equivalent file/repository/computation tools; GPT-5.6 if available and sufficient.
+UPGRADE: only if switched-event reference/error enclosure or coupled calibration/transport implementation exceeds the current setup's reliable capacity.
+CAPABILITY LIMITATIONS: account model menu, exact context/usage limits and allocated HPC are not verified. More reasoning cannot supply missing physical/inference products.
+
+## SAMLET JOURNAL — CURRENT EFFECTIVE UPDATE
+
+KEEP all 568275 incoming journal bytes, including the complete 91-object inherited source register, the inherited claim-map trees, all Q/source IDs and scientific/technical failures. Incoming SHA256 `aec2dd628f61197a2b06f732fe39ad8be09c374e43b1f632c3c0c6644757f4cc`. They follow this differential update verbatim. The current supplied journal identity is preserved; no parallel scientific journal is created. Historical preparation/launch instructions below are superseded for the completed V2 acquisition.
+
+KEEP Q042 and Q044 closed inconclusive; KEEP Q045 proposed/open; KEEP the accepted-model boundary only as inherited, not freshly verified or promoted. No main question, source pin, physical model or original scientific decision rule changes.
+
+ADD [BUBBLEVERSE NUMERICAL / TECHNICAL RESULT] Run `38023210800`, attempt 1, workflow `.github/workflows/q045-native-baseline-v2.yml`, execution commit `175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72`, completed successfully. All seven jobs succeeded. The four native FULL diagnostic starts completed with process return code 0 and no worker errors. Job completeness and merge compatibility PASS; baseline gate PASS_NATIVE_DIAGNOSTIC_ONLY. The received final archive matches official artifact `11659125612` digest `d1a236bbf4d0660e7b3d38f13aff1a2aa8f3f330d45ddc3b51072edaaa428e97`. Contract SHA256 `d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8`. Attached handoff/journal equal their archived copies.
+
+| Native FULL diagnostic | log likelihood sum | H0 input (km/s/Mpc) | Requested tau | Worker wall time (s) |
+|---|---:|---:|---:|---:|
+| camspec-lcdm | -1590.008076 | 68.165994 | 0.05141852 | 35.103 |
+| camspec-ede_n3 | -1283.825249 | 68.165994 | 0.05141852 | 61.641 |
+| hillipop-lcdm | -1692.644369 | 68.711122 | 0.05150685 | 34.828 |
+| hillipop-ede_n3 | -1248.049955 | 68.711122 | 0.05150685 | 48.079 |
+
+These H0/tau values are fixed diagnostic INPUTS, not new fitted estimates or measurements. Likelihoods include the unchanged shape/penalty components recorded by the original builders; no cross-arm absolute subtraction, evidence comparison, model ranking or optimized DeltaChi2 is inferred. Full machine precision and component/prior/posterior separation are preserved in the raw JSONs.
+
+STRENGTHEN [TECHNICAL USABILITY] All four downloaded worker archives match their official SHA256 digests; every original file hash matches its worker record. The final/worker Q, run, contract and execution identities agree. All workers report the pinned original diagnostic CLASS binary `df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf`, Python 3.11.16, all ten package versions, identical external source pins, the same complete 175-file cached-data snapshot and the same external signature. Native likelihood sums match component sums; posterior accounting agrees within <=2.3e-13. All three tables are finite and correctly shaped: 9,002 TT/TE/EE rows (ell 0..9001), 28,333 thermodynamics rows and 40,000 background rows. This is role-limited validation, not independent physical-history or full historical-parent qualification.
+
+UPDATE [KNOWN GOOD TECHNICAL PATH] The flit_core 3.12.0 repair is now demonstrated in the actual Python 3.11.16 GitHub execution. V1's environment failure remains historical. No baseline repeat is needed merely to show that the installation works.
+
+ADD [REPRESENTATION LIMITATION; RAW OUTPUT PRESERVED] Thermodynamics contains native total x_e, opacity, exp(-kappa) and visibility. Depending on the worker, 11,547–11,712 exp(-kappa) entries are exactly zero. At those rows raw g equals DBL_MIN=2.2250738585072014e-308, matching the pinned source's explicit zero-visibility guard. This explains the tiny absolute residual in g versus opacity*exp(-kappa); it is not a new scientific anomaly or a reason to delete the rows. The exported exponent does not preserve the pre-exponentiation kappa at those rows. A -log inversion would not recover that missing curve. Requested tau is present; calibrated z_reio, accepted bracket/residual, scalar-specific spline derivatives and direct raw kappa are not explicitly recorded in this package.
+
+UNRESOLVED [SCIENTIFIC ANSWER] No 10/01/11 intervention, independently qualified Thomson reference, refinement/remainder bound, calibrated spectrum/native-likelihood contrast, actual original decision-margin transport or full-domain inference envelope was produced. Native total x_e is not an independently qualified species history. Original campaign-binary equivalence and independently missing parent-data qualification remain exactly as documented. The finite values do not repair or refute the historical failing V29 point; these are different frozen input vectors.
+
+PRESERVE warnings: legacy SACC FITS ordering assumption and ACT lensing's Hartlap correction 0.9860935524652339. They are original raw execution details, not new data choices; they are not independently qualified by this ingestion. No undocumented warning is silently waived into a physical final PASS.
+
+SELECT exactly one next engine: the existing Execution-Mechanism / Numerical / HPC / Motor-Builder Engine. The bottleneck is now actual reference-stage execution and missing internal quantities, not another proof of the already established integration formula. The repository's scoped motor file is historical Q042 context; its helium-repair instructions must not be imported into Q045. The operator's existing engine and J-045-09 finite optical-depth specification govern this handoff.
+
+NEXT TASK: Finish the already specified isolated Thomson-reference acquisition, reusing the verified native 00 baselines; first recover exact scalar-calibration support/spline/bracket and pre-exponentiation cumulative depth, then qualify same-history reference error before any 10/01/11 coupled history/spectrum/native-likelihood evaluation.
+
+## NEXT TASK — FROZEN SCOPE AND FINITE STOP
+
+1. Reuse these exact four 00 outputs and their immutable input vectors as the native diagnostic controls. Inspect recoverability from these stored products before scheduling anything. Do not repeat V2 wholesale or refit starts.
+2. Recover the scalar-calibration-specific table/eta nodes, selected first-minimum index and actual endpoint, spline boundary conditions/second derivatives, requested/reported/independently realized tau, z_reio and accepted calibration bracket/residual. Recover cumulative kappa BEFORE exponentiation, its full-table spline derivatives, and every additional observable consumed by the frozen likelihoods (including lensing). Export effective default precision/helium/constants/build identities where not already recorded. Use minimal observation-only instrumentation if exact quantities cannot be reconstructed; do not guess or merge a helium/branch repair into this experiment.
+3. Freeze units and source-derived normalization; H is in 1/Mpc in the export, conformal time is a length in Mpc, opacity is in 1/Mpc, and x_e is electrons per H nucleus. Derive reference n_e and c conversions from the actual fork. Compare native plus, exact-spline minus and independently integrated Thomson depth on IDENTICAL history/support; cross-check eta and z formulations. A same-grid minus correction is a control, not by itself a converged physical-model reference.
+4. Make the already specified J-045-09 reference stage executable only with a defensible interpolation/history/quadrature/calibration error account. Freeze the three accuracy levels and event/support handling before new treatment output. If qualification cannot be defended, stop this stage with the exact UNQUALIFIED/BLOCKED reason; do not choose a tolerance to make it pass.
+5. If that gate passes, carry out the existing isolated treatments 10 (reference scalar only), 01 (reference cumulative only), 11 (both), with matched native controls where a new build/refinement makes them necessary. Change only the authorized optical-depth call sites, preserve all physical inputs, native likelihoods/nuisances and requested tau. Preserve the original binary/control. The unchanged initial maximum is 52 theory evaluations across the entire preregistered diagnostic acquisition; four original 00 evaluations are now completed. Count instrumented controls/refinements/repeats in that ledger rather than restarting its budget. No arbitrary fourth refinement, automatic rerun, additional point or old sampler checkpoint resume.
+6. Report signed same-history scalar/cumulative biases, support/endpoint terms, calibration changes, absolute TT/TE/EE and consumed-observable changes, exact within-arm native likelihood contrasts and factorial interaction, with qualified uncertainty or explicit failed reference gate. Avoid dividing by TE near zero. Recover actual original decision margins only from qualified existing products; do not fabricate a replacement margin or launch inference to create one. Fixed-point sensitivity alone is not a changed posterior/best-fit preference.
+7. Return the complete current journal, source IDs, all raw products, build/patch/config/data/binary identities, the exact qualification/response scope and finite stop result to Result Ingestion & Routing. If no remaining obtainable material evidence can change the warranted answer, ingestion closes Q045 epistemically and routes directly to Motor14.
+
+SUCCESS: A same-definition reference with defensible uncertainty and qualified finite response, or a precise documented terminal prerequisite blocker. Acquisition success does not automatically establish inference materiality.
+FAILURE: Missing source/identity/observable, invalid history, unsupported reference or nonfinite bracket -> preserve the raw evidence and stop that acquisition branch. Technical failure is not physical falsification.
+STOP: Do not repeat successful baseline acquisition or old component proofs. End at the first terminal reference/identity failure, the inherited finite evaluation limit, or a defensible answer to the exact Q. If further obtainable work has no realistic material-reversal value, close Q045 with its honest warranted scope and route directly to Motor14. Report Writer is excluded.
+PRODUCTION_RESTART_AUTHORIZED=false. No sampler, optimizer, remote mutation, new PROGRAM_ID or dispatch is performed by this ingestion.
+
+## ACTIVE SOURCE REGISTER — CURRENT ADDITIONS AND RELEVANT INHERITED SOURCES
+
+- **I-Q045-FINAL-V2-001** — V2 four-native-baseline final artifact. Native completeness/merge result, identities and explicit unresolved science gates. https://github.com/Morfindien/Bubbleverse/actions/runs/38023210800/artifacts/11659125612
+- **I-Q045-WORKERS-V2-001** — Four exact raw V2 worker artifacts. Actual fixed inputs, native spectra/thermodynamics/background, likelihood components and original warnings. Exact artifacts/files and hashes are carried in Q045_INGESTION_RESULT.json and the raw-file index.
+- **I-Q045-RUN-V2-001** — GitHub run 38023210800 and seven job conclusions. All seven GitHub jobs succeeded; not physical qualification. https://github.com/Morfindien/Bubbleverse/actions/runs/38023210800
+- **I-Q045-CODE-V2-001** — Executed frozen V2 controller, workflow and contract. One unchanged FULL diagnostic evaluation at each original start; no optical-depth intervention or inference. https://github.com/Morfindien/Bubbleverse/blob/175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72/q045_native_baseline_v2.py
+- **I-Q045-PRODUCT-AUDIT-001** — Independent raw-byte and product audit. Role-limited technical usability, exact raw preservation and numerical representation limitations. Exact artifacts/files and hashes are carried in Q045_INGESTION_RESULT.json and the raw-file index.
+- **I-Q045-ARCHITECTURE-001** — Established execution engine and historical scoped repository motor. Existing engine function; this historical Q042 task does not authorize a Q045 helium repair or production restart. https://github.com/Morfindien/Bubbleverse/blob/175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72/q042_treatment_design_motor.md
+
+- **K-Q044-M14-REION-001** — Planck Collaboration, R. Adam et al., *Planck intermediate results. XLVII. Planck constraints on reionization history*, 2016, A&A 596 A108; DOI 10.1051/0004-6361/201628897; arXiv:1605.03507v3; https://arxiv.org/html/1605.03507v3 . Physical Thomson-depth and CMB-screening context only; not this fork's accuracy certificate.
+- **K-Q042-INGESTDESIGN-001** — `mwt5345/class_ede@5a131c91d657dd9a7c6364cc45b038710f8d0d97`, `tools/arrays.c`; SHA256 c38471b1395bc111817b2467db9af9795e1e1ab0ef2a441ecca801a82adc09c4. Scalar/cumulative plus-curvature integration formulas. https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/tools/arrays.c
+- **K-Q042-V24-001 / K-Q042-DESIGN-001** — same fork/pin, `source/thermodynamics.c`; SHA256 d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6. Scalar support/calibration, cumulative opacity, exponentiation and DBL_MIN visibility guard. These aliases are the same source, not independent evidence. https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/thermodynamics.c
+- **I-Q044-CONTRACT-001 / I-Q044-SOURCELOCK-001** — original scientific specification and dependency lock in `Morfindien/Bubbleverse`; SHA256 41e4d8f026933f64dbe41048f894002f479ba2b504432b33dc155f4dfe71378c and 0f973de56cc232e67b37839babadbe192bab4a4c58e0102bee98c48a2106df56. Original decision predicates and frozen identities; no inferred actual margins. https://github.com/Morfindien/Bubbleverse/blob/72cf9e92fc794c122f593a77b6a555e6e97f6a2e/q042_production_spec_v1.json
+- **I-Q045-MATH-OPTICAL-TRANSPORT-001** — preserved internal mathematical stage in the full journal: physical units/orientation, native support, calibration identity, two-call-site factorial and finite qualification/stop rules. Methodological evidence, not an independent observation.
+
+The complete inherited register and maps are physically preserved in the authoritative journal below. New internal source objects, exact artifact/file hashes and raw-file mappings are serialized in Q045_INGESTION_RESULT.json. Multiple references to the same pinned file are not independent evidence.
+
+## CLAIM-TO-SOURCE MAP — NEW DIFFERENTIAL ENTRIES
+
+- **C-Q045-I01**: All four native diagnostics completed; no failed/pending workers; native-only completeness/merge pass → I-Q045-FINAL-V2-001, I-Q045-WORKERS-V2-001, I-Q045-RUN-V2-001
+- **C-Q045-I02**: Actual files/hashes/identities, all three table products and component accounting pass role-limited ingestion checks → I-Q045-WORKERS-V2-001, I-Q045-PRODUCT-AUDIT-001
+- **C-Q045-I03**: H0 and requested tau are fixed start inputs; likelihoods are unoptimized values and are not a posterior/model-preference conclusion → I-Q045-WORKERS-V2-001, I-Q045-CODE-V2-001, I-Q044-CONTRACT-001
+- **C-Q045-I04**: No isolated optical-depth contrast, qualified reference or actual decision-margin transport has been computed → I-Q045-FINAL-V2-001, I-Q045-CODE-V2-001, I-Q045-MATH-OPTICAL-TRANSPORT-001
+- **C-Q045-I05**: exp(-kappa) has exact zero rows; pre-exponentiation native kappa cannot be recovered there by logarithm; g floor at these rows agrees with the pinned DBL_MIN guard → I-Q045-WORKERS-V2-001, I-Q045-PRODUCT-AUDIT-001, K-Q042-V24-001, K-Q042-DESIGN-001
+- **C-Q045-I06**: The sole next destination is the established execution engine for the finite reference stage, preserving Q045 rather than resurrecting historical Q042 treatment instructions → I-Q045-ARCHITECTURE-001, I-Q045-MATH-OPTICAL-TRANSPORT-001, I-Q045-WORKERS-V2-001
+
+---
+
+## COMPLETE INCOMING AUTHORITATIVE JOURNAL — VERBATIM HISTORICAL STATE
+
 # BUBBLEVERSE — OVERLEVERING
 
 STATUS: CONTINUES — V1 ENVIRONMENT FAILURE DOCUMENTED; V2 REPAIR PREPARED, GITHUB VALIDATION PENDING.

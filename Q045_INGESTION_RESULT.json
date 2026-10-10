@@ -1,0 +1,1506 @@
+{
+  "result_id": "R-Q045-NATIVE-BASELINE-INGESTION-001",
+  "q": "Q-045",
+  "q_alias": "Q045",
+  "q_status": "PROPOSED_CANONICAL_REGISTRATION_PENDING",
+  "case_id": "NOT DOCUMENTED",
+  "question": "For the frozen Q041 ΛCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+  "execution_question_spelling": "For the frozen Q041 LambdaCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+  "date": "2026-10-10T06:30:30.109873+02:00",
+  "program_id": "Q045-BASELINE-V2",
+  "run_id": 38023210800,
+  "execution_commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+  "config_sha256": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
+  "result_class": [
+    "RUN_SUCCESS",
+    "NUMERICAL_RESULT",
+    "VALIDATION_RESULT"
+  ],
+  "result_status": "TECHNICALLY_VALIDATED_FOR_NATIVE_DIAGNOSTIC_ROLE",
+  "science_result_status": "RAW_NOT_QUALIFIED",
+  "question_resolved": false,
+  "q_completion_gate": "NOT_YET_SATISFIED",
+  "final_result_gate": "UNRESOLVED",
+  "baseline_gate": "PASS_NATIVE_DIAGNOSTIC_ONLY",
+  "job_completeness_gate": "PASS",
+  "merge_compatibility_gate": "PASS",
+  "selected_next_engine": "BUBBLEVERSE — AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE",
+  "next_task": "Finish the already specified isolated Thomson-reference acquisition, reusing the verified native 00 baselines; first recover exact scalar-calibration support/spline/bracket and pre-exponentiation cumulative depth, then qualify same-history reference error before any 10/01/11 coupled history/spectrum/native-likelihood evaluation.",
+  "physical_conclusion": "No optical-depth bias, spectrum/likelihood intervention effect, H0 shift or EDE preference has been established.",
+  "native_results": [
+    {
+      "job_id": "camspec-lcdm",
+      "result_id": "R-Q045-NATIVE-CAMSPEC-LCDM-001",
+      "source_type": "BUBBLEVERSE NUMERICAL RESULT",
+      "status": "TECHNICALLY_VALIDATED_FOR_NATIVE_DIAGNOSTIC_ROLE",
+      "science_status": "RAW_NOT_QUALIFIED",
+      "sampled_parameters": 15,
+      "requested_tau_reio": 0.05141852352021917,
+      "H0_input_km_s_Mpc": 68.16599436660475,
+      "loglikelihood_sum": -1590.008076171244,
+      "logposterior": -1591.8422605281269,
+      "logprior_components": [
+        -1.8341843568829503,
+        -0.0
+      ],
+      "loglikelihood_components": {
+        "planck_NPIPE_highl_CamSpec.TTTEEE": -483.7142180764035,
+        "q019_shape_tau_reio": -0.0024328046802311984,
+        "q019_shape_A_planck": -0.07799829914457468,
+        "act_dr6_cmbonly.ACTDR6CMBonly": -385.50274185779773,
+        "act_dr6_lenslike.ACTDR6LensLike": -10.018943098329538,
+        "bao.desi_dr2": -8.871044823357604,
+        "sn.pantheonplus": -701.8206972115308
+      },
+      "elapsed_worker_wall_seconds": 35.103392550999985,
+      "product_audit": {
+        "job_id": "camspec-lcdm",
+        "finite_all": true,
+        "thermodynamics_rows": 28333,
+        "background_rows": 40000,
+        "spectra_rows": 9002,
+        "z_range": [
+          0.0,
+          5000000.000000003
+        ],
+        "xe_range": [
+          0.00020320509797266842,
+          1.1637365096309527
+        ],
+        "opacity_min": 1.0233965117844893e-08,
+        "exp_range": [
+          0.0,
+          1.0
+        ],
+        "exp_zero_rows": 11712,
+        "visibility_min": 1e-322,
+        "visibility_identity_abs_residual": 2.2250738585072014e-308,
+        "a_identity_max_residual": 0.0,
+        "z_ascending": true,
+        "eta_descending": true,
+        "background_H_min": 0.00022737728234178842,
+        "ell_range": [
+          0,
+          9001
+        ],
+        "sampled_h0": 68.16599436660475,
+        "loglikelihood_sum": -1590.008076171244
+      },
+      "artifact": {
+        "key": "camspec-lcdm",
+        "artifact_id": 11659485163,
+        "archive_sha256": "a97a5e606092ba062739e1079f5f8269c9ce53f46ff06dd384d60a5ba2f01b05",
+        "size_in_bytes": 10193920,
+        "files": [
+          "attempt.json",
+          "background.tsv",
+          "likelihood.json",
+          "native.log",
+          "product_manifest.json",
+          "q045_worker_result_v2.json",
+          "runtime_input_manifest.json",
+          "sampled_vector.json",
+          "spectra.tsv",
+          "thermodynamics.tsv"
+        ]
+      },
+      "input_parent_metadata": {
+        "parent_file": "/home/runner/work/Bubbleverse/Bubbleverse/recovered/inputs/q032_parent_profiles/camspec_m6_s0.json",
+        "parent_sha256": "48bdf2aab097aacb987b257fa89f59aceec40147902b59f47164db5957930a4c",
+        "support_sha256": "44307afe6da2c9515c8b1eafda7bb408dcaa05b0bcdbd511ff790a1d6d749e23",
+        "support_mode": "ELL_LE_599",
+        "q": "Q-042",
+        "program_id": "Q042-PROD-V1",
+        "model": "lcdm",
+        "combination": "FULL",
+        "supernova_included": true,
+        "legacy_combo": "P_A6_L6_D2"
+      },
+      "physics_changes": false
+    },
+    {
+      "job_id": "camspec-ede_n3",
+      "result_id": "R-Q045-NATIVE-CAMSPEC-EDE_N3-001",
+      "source_type": "BUBBLEVERSE NUMERICAL RESULT",
+      "status": "TECHNICALLY_VALIDATED_FOR_NATIVE_DIAGNOSTIC_ROLE",
+      "science_status": "RAW_NOT_QUALIFIED",
+      "sampled_parameters": 18,
+      "requested_tau_reio": 0.05141852352021917,
+      "H0_input_km_s_Mpc": 68.16599436660475,
+      "loglikelihood_sum": -1283.8252486625465,
+      "logposterior": -1285.8130978669735,
+      "logprior_components": [
+        -1.9878492044271,
+        -0.0
+      ],
+      "loglikelihood_components": {
+        "planck_NPIPE_highl_CamSpec.TTTEEE": -460.59252802588054,
+        "q019_shape_tau_reio": -0.0024328046802311984,
+        "q019_shape_A_planck": -0.07799829914457468,
+        "act_dr6_cmbonly.ACTDR6CMBonly": -97.62614423252147,
+        "act_dr6_lenslike.ACTDR6LensLike": -7.807444923659181,
+        "bao.desi_dr2": -15.898007359018438,
+        "sn.pantheonplus": -701.8206930176422
+      },
+      "elapsed_worker_wall_seconds": 61.641281722,
+      "product_audit": {
+        "job_id": "camspec-ede_n3",
+        "finite_all": true,
+        "thermodynamics_rows": 28333,
+        "background_rows": 40000,
+        "spectra_rows": 9002,
+        "z_range": [
+          0.0,
+          5000000.000000003
+        ],
+        "xe_range": [
+          0.0002033361357279688,
+          1.1637365096309527
+        ],
+        "opacity_min": 1.0240280326256778e-08,
+        "exp_range": [
+          0.0,
+          1.0
+        ],
+        "exp_zero_rows": 11618,
+        "visibility_min": 1e-322,
+        "visibility_identity_abs_residual": 2.2250738585072014e-308,
+        "a_identity_max_residual": 0.0,
+        "z_ascending": true,
+        "eta_descending": true,
+        "background_H_min": 0.00022737728234178538,
+        "ell_range": [
+          0,
+          9001
+        ],
+        "sampled_h0": 68.16599436660475,
+        "loglikelihood_sum": -1283.8252486625465
+      },
+      "artifact": {
+        "key": "camspec-ede_n3",
+        "artifact_id": 11659590507,
+        "archive_sha256": "4db84e6b5206bc5d5b789c41666b6a5fff450fa25f39f6645861769a8d37a3e5",
+        "size_in_bytes": 12232036,
+        "files": [
+          "attempt.json",
+          "background.tsv",
+          "likelihood.json",
+          "native.log",
+          "product_manifest.json",
+          "q045_worker_result_v2.json",
+          "runtime_input_manifest.json",
+          "sampled_vector.json",
+          "spectra.tsv",
+          "thermodynamics.tsv"
+        ]
+      },
+      "input_parent_metadata": {
+        "parent_file": "/home/runner/work/Bubbleverse/Bubbleverse/recovered/inputs/q032_parent_profiles/camspec_m6_s0.json",
+        "parent_sha256": "48bdf2aab097aacb987b257fa89f59aceec40147902b59f47164db5957930a4c",
+        "support_sha256": "44307afe6da2c9515c8b1eafda7bb408dcaa05b0bcdbd511ff790a1d6d749e23",
+        "support_mode": "ELL_LE_599",
+        "q": "Q-042",
+        "program_id": "Q042-PROD-V1",
+        "model": "ede_n3",
+        "combination": "FULL",
+        "supernova_included": true,
+        "legacy_combo": "P_A6_L6_D2"
+      },
+      "physics_changes": false
+    },
+    {
+      "job_id": "hillipop-lcdm",
+      "result_id": "R-Q045-NATIVE-HILLIPOP-LCDM-001",
+      "source_type": "BUBBLEVERSE NUMERICAL RESULT",
+      "status": "TECHNICALLY_VALIDATED_FOR_NATIVE_DIAGNOSTIC_ROLE",
+      "science_status": "RAW_NOT_QUALIFIED",
+      "sampled_parameters": 23,
+      "requested_tau_reio": 0.05150685267029027,
+      "H0_input_km_s_Mpc": 68.71112237752118,
+      "loglikelihood_sum": -1692.6443690792503,
+      "logposterior": -1684.068029994568,
+      "logprior_components": [
+        8.576339084682362,
+        -0.0
+      ],
+      "loglikelihood_components": {
+        "q031_shape_tau_reio": -0.0035680504080607906,
+        "q031_shape_A_planck": -0.00546876702395363,
+        "q031_shape_AdustT": -0.08723710069007623,
+        "q031_shape_beta_dustT": -0.008210809466074442,
+        "q031_shape_beta_cib": -0.013749947229978882,
+        "planck_2020_hillipop.TT": -457.14595587719134,
+        "act_dr6_cmbonly.ACTDR6CMBonly": -517.0066147068993,
+        "act_dr6_lenslike.ACTDR6LensLike": -9.990986324384247,
+        "bao.desi_dr2": -6.214619351007553,
+        "sn.pantheonplus": -702.1679581449497
+      },
+      "elapsed_worker_wall_seconds": 34.828135070999906,
+      "product_audit": {
+        "job_id": "hillipop-lcdm",
+        "finite_all": true,
+        "thermodynamics_rows": 28333,
+        "background_rows": 40000,
+        "spectra_rows": 9002,
+        "z_range": [
+          0.0,
+          5000000.000000003
+        ],
+        "xe_range": [
+          0.00020377025116384247,
+          1.1637050911454243
+        ],
+        "opacity_min": 1.0269389350803887e-08,
+        "exp_range": [
+          0.0,
+          1.0
+        ],
+        "exp_zero_rows": 11685,
+        "visibility_min": 1e-322,
+        "visibility_identity_abs_residual": 2.2250738585072014e-308,
+        "a_identity_max_residual": 0.0,
+        "z_ascending": true,
+        "eta_descending": true,
+        "background_H_min": 0.00022919563365907353,
+        "ell_range": [
+          0,
+          9001
+        ],
+        "sampled_h0": 68.71112237752118,
+        "loglikelihood_sum": -1692.6443690792503
+      },
+      "artifact": {
+        "key": "hillipop-lcdm",
+        "artifact_id": 11659745278,
+        "archive_sha256": "711662a12f3c639e3c457cdd4074ac82d05a1dec07342f5b74fdde971bebb6f7",
+        "size_in_bytes": 10192361,
+        "files": [
+          "attempt.json",
+          "background.tsv",
+          "likelihood.json",
+          "native.log",
+          "product_manifest.json",
+          "q045_worker_result_v2.json",
+          "runtime_input_manifest.json",
+          "sampled_vector.json",
+          "spectra.tsv",
+          "thermodynamics.tsv"
+        ]
+      },
+      "input_parent_metadata": {
+        "parent_file": "/home/runner/work/Bubbleverse/Bubbleverse/recovered/inputs/q032_parent_profiles/hillipop_m6_s2.json",
+        "parent_sha256": "6979a3934ab97b987f4b5d1ffccb74665279ce74e89e9d48445d3d31483398fa",
+        "support_sha256": "44307afe6da2c9515c8b1eafda7bb408dcaa05b0bcdbd511ff790a1d6d749e23",
+        "support_mode": "ELL_LE_599",
+        "q": "Q-042",
+        "program_id": "Q042-PROD-V1",
+        "model": "lcdm",
+        "combination": "FULL",
+        "supernova_included": true,
+        "legacy_combo": "P_A6_L6_D2"
+      },
+      "physics_changes": false
+    },
+    {
+      "job_id": "hillipop-ede_n3",
+      "result_id": "R-Q045-NATIVE-HILLIPOP-EDE_N3-001",
+      "source_type": "BUBBLEVERSE NUMERICAL RESULT",
+      "status": "TECHNICALLY_VALIDATED_FOR_NATIVE_DIAGNOSTIC_ROLE",
+      "science_status": "RAW_NOT_QUALIFIED",
+      "sampled_parameters": 26,
+      "requested_tau_reio": 0.05150685267029027,
+      "H0_input_km_s_Mpc": 68.71112237752118,
+      "loglikelihood_sum": -1248.0499554291212,
+      "logposterior": -1239.6272811919828,
+      "logprior_components": [
+        8.422674237138214,
+        -0.0
+      ],
+      "loglikelihood_components": {
+        "q031_shape_tau_reio": -0.0035680504080607906,
+        "q031_shape_A_planck": -0.00546876702395363,
+        "q031_shape_AdustT": -0.08723710069007623,
+        "q031_shape_beta_dustT": -0.008210809466074442,
+        "q031_shape_beta_cib": -0.013749947229978882,
+        "planck_2020_hillipop.TT": -432.7502487252151,
+        "act_dr6_cmbonly.ACTDR6CMBonly": -95.31528706397026,
+        "act_dr6_lenslike.ACTDR6LensLike": -7.37091684124233,
+        "bao.desi_dr2": -10.327317656038414,
+        "sn.pantheonplus": -702.1679504678368
+      },
+      "elapsed_worker_wall_seconds": 48.07855468900004,
+      "product_audit": {
+        "job_id": "hillipop-ede_n3",
+        "finite_all": true,
+        "thermodynamics_rows": 28333,
+        "background_rows": 40000,
+        "spectra_rows": 9002,
+        "z_range": [
+          0.0,
+          5000000.000000003
+        ],
+        "xe_range": [
+          0.0002039503349632198,
+          1.1637050911454243
+        ],
+        "opacity_min": 1.0278084040009019e-08,
+        "exp_range": [
+          0.0,
+          1.0
+        ],
+        "exp_zero_rows": 11547,
+        "visibility_min": 1e-322,
+        "visibility_identity_abs_residual": 2.2250738585072014e-308,
+        "a_identity_max_residual": 0.0,
+        "z_ascending": true,
+        "eta_descending": true,
+        "background_H_min": 0.00022919563365906567,
+        "ell_range": [
+          0,
+          9001
+        ],
+        "sampled_h0": 68.71112237752118,
+        "loglikelihood_sum": -1248.0499554291212
+      },
+      "artifact": {
+        "key": "hillipop-ede_n3",
+        "artifact_id": 11659110603,
+        "archive_sha256": "cdc17dacb8e7d3cfaf46f67bfcb85342f29738a501b56812358d770617058044",
+        "size_in_bytes": 12217681,
+        "files": [
+          "attempt.json",
+          "background.tsv",
+          "likelihood.json",
+          "native.log",
+          "product_manifest.json",
+          "q045_worker_result_v2.json",
+          "runtime_input_manifest.json",
+          "sampled_vector.json",
+          "spectra.tsv",
+          "thermodynamics.tsv"
+        ]
+      },
+      "input_parent_metadata": {
+        "parent_file": "/home/runner/work/Bubbleverse/Bubbleverse/recovered/inputs/q032_parent_profiles/hillipop_m6_s2.json",
+        "parent_sha256": "6979a3934ab97b987f4b5d1ffccb74665279ce74e89e9d48445d3d31483398fa",
+        "support_sha256": "44307afe6da2c9515c8b1eafda7bb408dcaa05b0bcdbd511ff790a1d6d749e23",
+        "support_mode": "ELL_LE_599",
+        "q": "Q-042",
+        "program_id": "Q042-PROD-V1",
+        "model": "ede_n3",
+        "combination": "FULL",
+        "supernova_included": true,
+        "legacy_combo": "P_A6_L6_D2"
+      },
+      "physics_changes": false
+    }
+  ],
+  "source_register_additions": [
+    {
+      "id": "I-Q045-FINAL-V2-001",
+      "type": "BUBBLEVERSE INTERNAL RESULT",
+      "title": "V2 four-native-baseline final artifact",
+      "repository": "Morfindien/Bubbleverse",
+      "commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+      "run_id": 38023210800,
+      "artifact_id": 11659125612,
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38023210800/artifacts/11659125612",
+      "archive_sha256": "d1a236bbf4d0660e7b3d38f13aff1a2aa8f3f330d45ddc3b51072edaaa428e97",
+      "file_sha256": "04e367af8c7d6d679704bdbc9bb25dc654dad0031c91f092b700dda6f3ecb29a",
+      "supports": "Native completeness/merge result, identities and explicit unresolved science gates"
+    },
+    {
+      "id": "I-Q045-WORKERS-V2-001",
+      "type": "BUBBLEVERSE NUMERICAL / TECHNICAL EVIDENCE",
+      "title": "Four exact raw V2 worker artifacts",
+      "artifacts": [
+        {
+          "key": "hillipop-lcdm",
+          "artifact_id": 11659745278,
+          "archive_sha256": "711662a12f3c639e3c457cdd4074ac82d05a1dec07342f5b74fdde971bebb6f7",
+          "size_in_bytes": 10192361,
+          "files": [
+            "attempt.json",
+            "background.tsv",
+            "likelihood.json",
+            "native.log",
+            "product_manifest.json",
+            "q045_worker_result_v2.json",
+            "runtime_input_manifest.json",
+            "sampled_vector.json",
+            "spectra.tsv",
+            "thermodynamics.tsv"
+          ]
+        },
+        {
+          "key": "camspec-ede_n3",
+          "artifact_id": 11659590507,
+          "archive_sha256": "4db84e6b5206bc5d5b789c41666b6a5fff450fa25f39f6645861769a8d37a3e5",
+          "size_in_bytes": 12232036,
+          "files": [
+            "attempt.json",
+            "background.tsv",
+            "likelihood.json",
+            "native.log",
+            "product_manifest.json",
+            "q045_worker_result_v2.json",
+            "runtime_input_manifest.json",
+            "sampled_vector.json",
+            "spectra.tsv",
+            "thermodynamics.tsv"
+          ]
+        },
+        {
+          "key": "camspec-lcdm",
+          "artifact_id": 11659485163,
+          "archive_sha256": "a97a5e606092ba062739e1079f5f8269c9ce53f46ff06dd384d60a5ba2f01b05",
+          "size_in_bytes": 10193920,
+          "files": [
+            "attempt.json",
+            "background.tsv",
+            "likelihood.json",
+            "native.log",
+            "product_manifest.json",
+            "q045_worker_result_v2.json",
+            "runtime_input_manifest.json",
+            "sampled_vector.json",
+            "spectra.tsv",
+            "thermodynamics.tsv"
+          ]
+        },
+        {
+          "key": "hillipop-ede_n3",
+          "artifact_id": 11659110603,
+          "archive_sha256": "cdc17dacb8e7d3cfaf46f67bfcb85342f29738a501b56812358d770617058044",
+          "size_in_bytes": 12217681,
+          "files": [
+            "attempt.json",
+            "background.tsv",
+            "likelihood.json",
+            "native.log",
+            "product_manifest.json",
+            "q045_worker_result_v2.json",
+            "runtime_input_manifest.json",
+            "sampled_vector.json",
+            "spectra.tsv",
+            "thermodynamics.tsv"
+          ]
+        }
+      ],
+      "files": [
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "attempt.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-attempt.json",
+          "sha256": "ec43cef9d38dcc1cf523b6fdfe834d2c5aa9e95f563a732071aa7451c0a58d53",
+          "size_in_bytes": 1078
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "background.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-background.tsv",
+          "sha256": "6c35c4a13d600a2b5d5768305e027ec23ba74ebbb1d8fcfd8ba59fb0dfe371e6",
+          "size_in_bytes": 17738659
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "likelihood.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-likelihood.json",
+          "sha256": "15a4677501f55719bde12d81b417afd51e8aad29580fa0ec78eb58aa2e8361e9",
+          "size_in_bytes": 1630
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "native.log",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-native.log",
+          "sha256": "4a2ab1231043e1acfd6366c6ded1d915372d9ba2978ca8eb9519cc6e67a5f079",
+          "size_in_bytes": 5100
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "product_manifest.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-product_manifest.json",
+          "sha256": "219e877a0316792c713f3a2ac32fe973731588cef81136c1fa028b88458a7e67",
+          "size_in_bytes": 2682
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "q045_worker_result_v2.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-q045_worker_result_v2.json",
+          "sha256": "c7d251d05af012061a213af8a97e2dafd5262107c3697ef4e9adc7f40b53e58e",
+          "size_in_bytes": 27210
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "runtime_input_manifest.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-runtime_input_manifest.json",
+          "sha256": "564e8df3b05d133f0f38c0c32fef74448b7d555819bea7e5470d204eb471cc6b",
+          "size_in_bytes": 23059
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "sampled_vector.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-sampled_vector.json",
+          "sha256": "03ae39d13431eb3a0d9b7c2f616533fca821eb87ff0e98995f4d7561d335db63",
+          "size_in_bytes": 2632
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "spectra.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-spectra.tsv",
+          "sha256": "d2eacf896b31aef895f435758e777d9ab9f26dc426131113d230557c3e3c175d",
+          "size_in_bytes": 666497
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-lcdm",
+          "original_name": "thermodynamics.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-thermodynamics.tsv",
+          "sha256": "107e3ead37fd2d638c9004a11a288a9bd607a7dc7a0005ee45cdb511b099955b",
+          "size_in_bytes": 6777243
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "attempt.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-attempt.json",
+          "sha256": "750583a07d71277de6b292829dc9dfeaaf4e788442949d32ce1701211b92fc6c",
+          "size_in_bytes": 1080
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "background.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-background.tsv",
+          "sha256": "4adbb8404741e764691b9e7cdd57b5b09d5325fc33d2a363e56112716ad90953",
+          "size_in_bytes": 24280923
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "likelihood.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-likelihood.json",
+          "sha256": "faa2a210b6edbc9e1ce16e4274f576977080b5df181ac3ef5a879d833272f661",
+          "size_in_bytes": 1630
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "native.log",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-native.log",
+          "sha256": "4a2ab1231043e1acfd6366c6ded1d915372d9ba2978ca8eb9519cc6e67a5f079",
+          "size_in_bytes": 5100
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "product_manifest.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-product_manifest.json",
+          "sha256": "2e48bcf3cca89e4530421bd968855752617a99bd09d1b446a9b73173af024a20",
+          "size_in_bytes": 2839
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "q045_worker_result_v2.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-q045_worker_result_v2.json",
+          "sha256": "8072784489a3ad2c27076fe4e47b0aae19e6c29ab0d1e7fac3bdfe62c2bf709b",
+          "size_in_bytes": 27206
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "runtime_input_manifest.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-runtime_input_manifest.json",
+          "sha256": "79c3bf4d9479d8616820cc9a39fe85f9e608cd6e6826767565c778cbd222ab47",
+          "size_in_bytes": 24152
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "sampled_vector.json",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-sampled_vector.json",
+          "sha256": "80b9b32ddd3eb18bcdf33a21cf9988b3d135c2cdda4dadd7e30507612c02b249",
+          "size_in_bytes": 2846
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "spectra.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-spectra.tsv",
+          "sha256": "484b663e31e67c1a90fecff8bc7b6f03420f63e690169a617718e7b3e747ce38",
+          "size_in_bytes": 666521
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "camspec-ede_n3",
+          "original_name": "thermodynamics.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-thermodynamics.tsv",
+          "sha256": "4aa7402e971e2e6e75449272acd409ac70627a2fa269b5734f05b935a7fe8aad",
+          "size_in_bytes": 6779135
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "attempt.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-attempt.json",
+          "sha256": "a13b8692f166886f4a931084f81a14a51f642072cf2b9b4502d0d1bffc468fd6",
+          "size_in_bytes": 1079
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "background.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-background.tsv",
+          "sha256": "7da5f838bdab00c3c54b62dfc7fccf9091de594bf209177ea4aeb378aebef425",
+          "size_in_bytes": 17738408
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "likelihood.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-likelihood.json",
+          "sha256": "fa65dfcf2c7459d06b1ee2daf4dc53eb37e3bfa4b3dab965d11cadee901113b0",
+          "size_in_bytes": 1767
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "native.log",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-native.log",
+          "sha256": "5999dde40bd58b90ff01d1a2552d20c3248b24f70058b380b5f36f94380a20c1",
+          "size_in_bytes": 3624
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "product_manifest.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-product_manifest.json",
+          "sha256": "525df254388d49fbf12b9a438c9dceca6bb132b40aed0b1fd721a5898d1f2faa",
+          "size_in_bytes": 2683
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "q045_worker_result_v2.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-q045_worker_result_v2.json",
+          "sha256": "0c349909b12a6a6a72d9b17bed5cd869e2ebc139325a9723ecbbfac28b79ef58",
+          "size_in_bytes": 27211
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "runtime_input_manifest.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-runtime_input_manifest.json",
+          "sha256": "15eb1691c91c507f10090f32c2bc984aac47185f48380eb903170a573d85b72d",
+          "size_in_bytes": 11997
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "sampled_vector.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-sampled_vector.json",
+          "sha256": "4b22500297be38d90fec521b2af02b468670e0ced4a567842d63ab7b9792efc5",
+          "size_in_bytes": 3052
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "spectra.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-spectra.tsv",
+          "sha256": "1452b83a097ef2a310babf8609f95c61a5dd8f86a5035c7b8d88771c029ef56d",
+          "size_in_bytes": 666546
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-lcdm",
+          "original_name": "thermodynamics.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-thermodynamics.tsv",
+          "sha256": "dc798ae7af47cbe9af48644a688b13c49aea575fec2b61c01c092f57b777e763",
+          "size_in_bytes": 6777381
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "attempt.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-attempt.json",
+          "sha256": "2ef031f4bae33cd02dae66988e0c977dd9fe51b25d8fefdca2395c66370b87ce",
+          "size_in_bytes": 1081
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "background.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-background.tsv",
+          "sha256": "3ab5609d7c30923a23c64b4549179c557858de22cdb93899298ab130603b55b6",
+          "size_in_bytes": 24263038
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "likelihood.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-likelihood.json",
+          "sha256": "6981b8992c03971d8b5ddb20a3b4bbf2fd02ecc67c505c6fd9d14a2930551991",
+          "size_in_bytes": 1769
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "native.log",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-native.log",
+          "sha256": "5999dde40bd58b90ff01d1a2552d20c3248b24f70058b380b5f36f94380a20c1",
+          "size_in_bytes": 3624
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "product_manifest.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-product_manifest.json",
+          "sha256": "00539a3c8bb0afb162acb61a7c886c16af142e637ea7da1631abf039372522c3",
+          "size_in_bytes": 2840
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "q045_worker_result_v2.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-q045_worker_result_v2.json",
+          "sha256": "f0ab23d7f39b8423920f37256e9a677af3fae35b119f37b5213f3243485e7284",
+          "size_in_bytes": 27212
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "runtime_input_manifest.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-runtime_input_manifest.json",
+          "sha256": "ab38a3b45636adde4da8e912b3979fca5eed50cae588f64a64228416ee8941b2",
+          "size_in_bytes": 13068
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "sampled_vector.json",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-sampled_vector.json",
+          "sha256": "4027f3a3519fa4e78510d37ac4416246ac7d994a07ac3be957c0478dacc1ff82",
+          "size_in_bytes": 3244
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "spectra.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-spectra.tsv",
+          "sha256": "e042c6267f99ac7992812e7f711ba6f3673f764e9f7babf9e054397b52ee1a65",
+          "size_in_bytes": 666486
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "hillipop-ede_n3",
+          "original_name": "thermodynamics.tsv",
+          "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-thermodynamics.tsv",
+          "sha256": "6c9fbfec8122699bd40118812b8fc7a7f032f4f6e0681544614c855c5a4fea41",
+          "size_in_bytes": 6780701
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "FINAL",
+          "original_name": "q045_native_baseline_final_v2.json",
+          "delivered_file": "q045_native_baseline_final_v2.json",
+          "sha256": "04e367af8c7d6d679704bdbc9bb25dc654dad0031c91f092b700dda6f3ecb29a",
+          "size_in_bytes": 114606
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "FINAL",
+          "original_name": "q045_native_baseline_contract_v2.json",
+          "delivered_file": "q045_native_baseline_contract_v2.json",
+          "sha256": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
+          "size_in_bytes": 13748
+        },
+        {
+          "q": "Q-045",
+          "program_id": "Q045-BASELINE-V2",
+          "run_id": 38023210800,
+          "job_id": "FINAL",
+          "original_name": "q045_native_baseline_manifest_v2.json",
+          "delivered_file": "q045_native_baseline_manifest_v2.json",
+          "sha256": "db99756eedaa318600ed20dc7bfa386b8f9971edc125f997b35267623004d094",
+          "size_in_bytes": 2398
+        }
+      ],
+      "supports": "Actual fixed inputs, native spectra/thermodynamics/background, likelihood components and original warnings"
+    },
+    {
+      "id": "I-Q045-RUN-V2-001",
+      "type": "OFFICIAL EXECUTION METADATA FOR INTERNAL RESULT",
+      "title": "GitHub run 38023210800 and seven job conclusions",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38023210800",
+      "commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+      "started": "2026-10-10T04:11:49Z",
+      "updated": "2026-10-10T04:15:30Z",
+      "event": "workflow_dispatch",
+      "attempt": 1,
+      "jobs": [
+        {
+          "id": 114128468079,
+          "name": "static",
+          "conclusion": "success"
+        },
+        {
+          "id": 114128520958,
+          "name": "inputs",
+          "conclusion": "success"
+        },
+        {
+          "id": 114128615683,
+          "name": "baseline (camspec, lcdm)",
+          "conclusion": "success"
+        },
+        {
+          "id": 114128615714,
+          "name": "baseline (hillipop, lcdm)",
+          "conclusion": "success"
+        },
+        {
+          "id": 114128615732,
+          "name": "baseline (camspec, ede_n3)",
+          "conclusion": "success"
+        },
+        {
+          "id": 114128615795,
+          "name": "baseline (hillipop, ede_n3)",
+          "conclusion": "success"
+        },
+        {
+          "id": 114129047837,
+          "name": "collect",
+          "conclusion": "success"
+        }
+      ],
+      "supports": "All seven GitHub jobs succeeded; not physical qualification"
+    },
+    {
+      "id": "I-Q045-CODE-V2-001",
+      "type": "INTERNAL EXECUTION METHOD",
+      "title": "Executed frozen V2 controller, workflow and contract",
+      "repository": "Morfindien/Bubbleverse",
+      "commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+      "controller_sha256": "02e15b11c5ba141861a02db105ad1f6aa4423d74c475beab6aee97aac57be9c7",
+      "workflow_sha256": "5c54d50bbf5fd2fbb445e8636152c099b88c1dd7844747121fdd2b0844a2f806",
+      "contract_sha256": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
+      "url": "https://github.com/Morfindien/Bubbleverse/blob/175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72/q045_native_baseline_v2.py",
+      "supports": "One unchanged FULL diagnostic evaluation at each original start; no optical-depth intervention or inference"
+    },
+    {
+      "id": "I-Q045-PRODUCT-AUDIT-001",
+      "type": "BUBBLEVERSE INTERNAL INGESTION CHECK",
+      "title": "Independent raw-byte and product audit",
+      "method": "SHA256 over exact files; strict JSON identity checks; compare final/worker records, cached-data/signature/source/version equality; NumPy loadtxt finite/shape checks; math.fsum component accounting; scale-factor and visibility diagnostics",
+      "script_sha256": "8a5d81ad7ba4b433f87698291e591f6b67efcad44984c7c137e3219676112e6a",
+      "supports": "Role-limited technical usability, exact raw preservation and numerical representation limitations"
+    },
+    {
+      "id": "I-Q045-ARCHITECTURE-001",
+      "type": "PRIMARY REPOSITORY / OPERATOR ARCHITECTURE EVIDENCE",
+      "title": "Established execution engine and historical scoped repository motor",
+      "repository": "Morfindien/Bubbleverse",
+      "commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+      "path": "q042_treatment_design_motor.md",
+      "sha256": "409e31572137da8210c7cd360878edea03a7afa2c9d2f50dd87d2fc61ac45bd9",
+      "url": "https://github.com/Morfindien/Bubbleverse/blob/175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72/q042_treatment_design_motor.md",
+      "supports": "Existing engine function; this historical Q042 task does not authorize a Q045 helium repair or production restart"
+    }
+  ],
+  "new_claim_to_source_map": {
+    "C-Q045-I01": {
+      "claim": "All four native diagnostics completed; no failed/pending workers; native-only completeness/merge pass",
+      "sources": [
+        "I-Q045-FINAL-V2-001",
+        "I-Q045-WORKERS-V2-001",
+        "I-Q045-RUN-V2-001"
+      ]
+    },
+    "C-Q045-I02": {
+      "claim": "Actual files/hashes/identities, all three table products and component accounting pass role-limited ingestion checks",
+      "sources": [
+        "I-Q045-WORKERS-V2-001",
+        "I-Q045-PRODUCT-AUDIT-001"
+      ]
+    },
+    "C-Q045-I03": {
+      "claim": "H0 and requested tau are fixed start inputs; likelihoods are unoptimized values and are not a posterior/model-preference conclusion",
+      "sources": [
+        "I-Q045-WORKERS-V2-001",
+        "I-Q045-CODE-V2-001",
+        "I-Q044-CONTRACT-001"
+      ]
+    },
+    "C-Q045-I04": {
+      "claim": "No isolated optical-depth contrast, qualified reference or actual decision-margin transport has been computed",
+      "sources": [
+        "I-Q045-FINAL-V2-001",
+        "I-Q045-CODE-V2-001",
+        "I-Q045-MATH-OPTICAL-TRANSPORT-001"
+      ]
+    },
+    "C-Q045-I05": {
+      "claim": "exp(-kappa) has exact zero rows; pre-exponentiation native kappa cannot be recovered there by logarithm; g floor at these rows agrees with the pinned DBL_MIN guard",
+      "sources": [
+        "I-Q045-WORKERS-V2-001",
+        "I-Q045-PRODUCT-AUDIT-001",
+        "K-Q042-V24-001",
+        "K-Q042-DESIGN-001"
+      ]
+    },
+    "C-Q045-I06": {
+      "claim": "The sole next destination is the established execution engine for the finite reference stage, preserving Q045 rather than resurrecting historical Q042 treatment instructions",
+      "sources": [
+        "I-Q045-ARCHITECTURE-001",
+        "I-Q045-MATH-OPTICAL-TRANSPORT-001",
+        "I-Q045-WORKERS-V2-001"
+      ]
+    }
+  },
+  "inherited_source_register_count": 91,
+  "complete_inherited_journal_sha256": "aec2dd628f61197a2b06f732fe39ad8be09c374e43b1f632c3c0c6644757f4cc",
+  "complete_inherited_journal_bytes": 568275,
+  "production_restart_authorized": false,
+  "remote_writes_performed": false,
+  "workflow_dispatch_performed_by_ingestion": false,
+  "anomaly_status": "NO_NEW_SCIENTIFIC_ANOMALY_ESTABLISHED; SOURCE-EXPLAINED_NUMERICAL_EXPONENT_UNDERFLOW_PRESERVED",
+  "warnings": [
+    "SACC assumes legacy FITS ordering without sacc_ordering; preserved, not independently qualified here.",
+    "ACT lensing reports frozen Hartlap correction 0.9860935524652339; preserved, not a newly selected correction."
+  ],
+  "unchanged_uncertainties": [
+    "Original campaign binary equivalence beyond documented diagnostic pin",
+    "Complete independent parent-data qualification",
+    "Scalar/cumulative reference and history uncertainty",
+    "Unreported calibration/bracket/support diagnostics",
+    "Missing complete raw lensing observables and H/He provenance products for downstream reference scope",
+    "Actual original inference decision margins and full-domain optimizer/posterior qualification"
+  ],
+  "raw_file_map": [
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "attempt.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-attempt.json",
+      "sha256": "ec43cef9d38dcc1cf523b6fdfe834d2c5aa9e95f563a732071aa7451c0a58d53",
+      "size_in_bytes": 1078
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "background.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-background.tsv",
+      "sha256": "6c35c4a13d600a2b5d5768305e027ec23ba74ebbb1d8fcfd8ba59fb0dfe371e6",
+      "size_in_bytes": 17738659
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "likelihood.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-likelihood.json",
+      "sha256": "15a4677501f55719bde12d81b417afd51e8aad29580fa0ec78eb58aa2e8361e9",
+      "size_in_bytes": 1630
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "native.log",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-native.log",
+      "sha256": "4a2ab1231043e1acfd6366c6ded1d915372d9ba2978ca8eb9519cc6e67a5f079",
+      "size_in_bytes": 5100
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "product_manifest.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-product_manifest.json",
+      "sha256": "219e877a0316792c713f3a2ac32fe973731588cef81136c1fa028b88458a7e67",
+      "size_in_bytes": 2682
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "q045_worker_result_v2.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-q045_worker_result_v2.json",
+      "sha256": "c7d251d05af012061a213af8a97e2dafd5262107c3697ef4e9adc7f40b53e58e",
+      "size_in_bytes": 27210
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "runtime_input_manifest.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-runtime_input_manifest.json",
+      "sha256": "564e8df3b05d133f0f38c0c32fef74448b7d555819bea7e5470d204eb471cc6b",
+      "size_in_bytes": 23059
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "sampled_vector.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-sampled_vector.json",
+      "sha256": "03ae39d13431eb3a0d9b7c2f616533fca821eb87ff0e98995f4d7561d335db63",
+      "size_in_bytes": 2632
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "spectra.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-spectra.tsv",
+      "sha256": "d2eacf896b31aef895f435758e777d9ab9f26dc426131113d230557c3e3c175d",
+      "size_in_bytes": 666497
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-lcdm",
+      "original_name": "thermodynamics.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-lcdm-thermodynamics.tsv",
+      "sha256": "107e3ead37fd2d638c9004a11a288a9bd607a7dc7a0005ee45cdb511b099955b",
+      "size_in_bytes": 6777243
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "attempt.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-attempt.json",
+      "sha256": "750583a07d71277de6b292829dc9dfeaaf4e788442949d32ce1701211b92fc6c",
+      "size_in_bytes": 1080
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "background.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-background.tsv",
+      "sha256": "4adbb8404741e764691b9e7cdd57b5b09d5325fc33d2a363e56112716ad90953",
+      "size_in_bytes": 24280923
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "likelihood.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-likelihood.json",
+      "sha256": "faa2a210b6edbc9e1ce16e4274f576977080b5df181ac3ef5a879d833272f661",
+      "size_in_bytes": 1630
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "native.log",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-native.log",
+      "sha256": "4a2ab1231043e1acfd6366c6ded1d915372d9ba2978ca8eb9519cc6e67a5f079",
+      "size_in_bytes": 5100
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "product_manifest.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-product_manifest.json",
+      "sha256": "2e48bcf3cca89e4530421bd968855752617a99bd09d1b446a9b73173af024a20",
+      "size_in_bytes": 2839
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "q045_worker_result_v2.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-q045_worker_result_v2.json",
+      "sha256": "8072784489a3ad2c27076fe4e47b0aae19e6c29ab0d1e7fac3bdfe62c2bf709b",
+      "size_in_bytes": 27206
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "runtime_input_manifest.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-runtime_input_manifest.json",
+      "sha256": "79c3bf4d9479d8616820cc9a39fe85f9e608cd6e6826767565c778cbd222ab47",
+      "size_in_bytes": 24152
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "sampled_vector.json",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-sampled_vector.json",
+      "sha256": "80b9b32ddd3eb18bcdf33a21cf9988b3d135c2cdda4dadd7e30507612c02b249",
+      "size_in_bytes": 2846
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "spectra.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-spectra.tsv",
+      "sha256": "484b663e31e67c1a90fecff8bc7b6f03420f63e690169a617718e7b3e747ce38",
+      "size_in_bytes": 666521
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "camspec-ede_n3",
+      "original_name": "thermodynamics.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-camspec-ede_n3-thermodynamics.tsv",
+      "sha256": "4aa7402e971e2e6e75449272acd409ac70627a2fa269b5734f05b935a7fe8aad",
+      "size_in_bytes": 6779135
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "attempt.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-attempt.json",
+      "sha256": "a13b8692f166886f4a931084f81a14a51f642072cf2b9b4502d0d1bffc468fd6",
+      "size_in_bytes": 1079
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "background.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-background.tsv",
+      "sha256": "7da5f838bdab00c3c54b62dfc7fccf9091de594bf209177ea4aeb378aebef425",
+      "size_in_bytes": 17738408
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "likelihood.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-likelihood.json",
+      "sha256": "fa65dfcf2c7459d06b1ee2daf4dc53eb37e3bfa4b3dab965d11cadee901113b0",
+      "size_in_bytes": 1767
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "native.log",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-native.log",
+      "sha256": "5999dde40bd58b90ff01d1a2552d20c3248b24f70058b380b5f36f94380a20c1",
+      "size_in_bytes": 3624
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "product_manifest.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-product_manifest.json",
+      "sha256": "525df254388d49fbf12b9a438c9dceca6bb132b40aed0b1fd721a5898d1f2faa",
+      "size_in_bytes": 2683
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "q045_worker_result_v2.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-q045_worker_result_v2.json",
+      "sha256": "0c349909b12a6a6a72d9b17bed5cd869e2ebc139325a9723ecbbfac28b79ef58",
+      "size_in_bytes": 27211
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "runtime_input_manifest.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-runtime_input_manifest.json",
+      "sha256": "15eb1691c91c507f10090f32c2bc984aac47185f48380eb903170a573d85b72d",
+      "size_in_bytes": 11997
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "sampled_vector.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-sampled_vector.json",
+      "sha256": "4b22500297be38d90fec521b2af02b468670e0ced4a567842d63ab7b9792efc5",
+      "size_in_bytes": 3052
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "spectra.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-spectra.tsv",
+      "sha256": "1452b83a097ef2a310babf8609f95c61a5dd8f86a5035c7b8d88771c029ef56d",
+      "size_in_bytes": 666546
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-lcdm",
+      "original_name": "thermodynamics.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-lcdm-thermodynamics.tsv",
+      "sha256": "dc798ae7af47cbe9af48644a688b13c49aea575fec2b61c01c092f57b777e763",
+      "size_in_bytes": 6777381
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "attempt.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-attempt.json",
+      "sha256": "2ef031f4bae33cd02dae66988e0c977dd9fe51b25d8fefdca2395c66370b87ce",
+      "size_in_bytes": 1081
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "background.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-background.tsv",
+      "sha256": "3ab5609d7c30923a23c64b4549179c557858de22cdb93899298ab130603b55b6",
+      "size_in_bytes": 24263038
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "likelihood.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-likelihood.json",
+      "sha256": "6981b8992c03971d8b5ddb20a3b4bbf2fd02ecc67c505c6fd9d14a2930551991",
+      "size_in_bytes": 1769
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "native.log",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-native.log",
+      "sha256": "5999dde40bd58b90ff01d1a2552d20c3248b24f70058b380b5f36f94380a20c1",
+      "size_in_bytes": 3624
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "product_manifest.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-product_manifest.json",
+      "sha256": "00539a3c8bb0afb162acb61a7c886c16af142e637ea7da1631abf039372522c3",
+      "size_in_bytes": 2840
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "q045_worker_result_v2.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-q045_worker_result_v2.json",
+      "sha256": "f0ab23d7f39b8423920f37256e9a677af3fae35b119f37b5213f3243485e7284",
+      "size_in_bytes": 27212
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "runtime_input_manifest.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-runtime_input_manifest.json",
+      "sha256": "ab38a3b45636adde4da8e912b3979fca5eed50cae588f64a64228416ee8941b2",
+      "size_in_bytes": 13068
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "sampled_vector.json",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-sampled_vector.json",
+      "sha256": "4027f3a3519fa4e78510d37ac4416246ac7d994a07ac3be957c0478dacc1ff82",
+      "size_in_bytes": 3244
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "spectra.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-spectra.tsv",
+      "sha256": "e042c6267f99ac7992812e7f711ba6f3673f764e9f7babf9e054397b52ee1a65",
+      "size_in_bytes": 666486
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "hillipop-ede_n3",
+      "original_name": "thermodynamics.tsv",
+      "delivered_file": "raw/q045-v2-38023210800-hillipop-ede_n3-thermodynamics.tsv",
+      "sha256": "6c9fbfec8122699bd40118812b8fc7a7f032f4f6e0681544614c855c5a4fea41",
+      "size_in_bytes": 6780701
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "FINAL",
+      "original_name": "q045_native_baseline_final_v2.json",
+      "delivered_file": "q045_native_baseline_final_v2.json",
+      "sha256": "04e367af8c7d6d679704bdbc9bb25dc654dad0031c91f092b700dda6f3ecb29a",
+      "size_in_bytes": 114606
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "FINAL",
+      "original_name": "q045_native_baseline_contract_v2.json",
+      "delivered_file": "q045_native_baseline_contract_v2.json",
+      "sha256": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
+      "size_in_bytes": 13748
+    },
+    {
+      "q": "Q-045",
+      "program_id": "Q045-BASELINE-V2",
+      "run_id": 38023210800,
+      "job_id": "FINAL",
+      "original_name": "q045_native_baseline_manifest_v2.json",
+      "delivered_file": "q045_native_baseline_manifest_v2.json",
+      "sha256": "db99756eedaa318600ed20dc7bfa386b8f9971edc125f997b35267623004d094",
+      "size_in_bytes": 2398
+    }
+  ]
+}

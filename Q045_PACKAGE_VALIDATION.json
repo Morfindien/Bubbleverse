@@ -1,73 +1,112 @@
 {
   "q": "Q-045",
-  "program_id": "Q045-BASELINE-V2",
-  "verified_at": "2026-10-10T04:05:14.672517+00:00",
-  "status": "LOCAL_REPAIR_AND_PACKAGE_CHECKS_PASS",
-  "scientific_result": false,
-  "actual_computed_scientific_result": "NOT_COMPUTED",
+  "program_id": "Q045-OPTICAL-AUDIT-V1",
+  "status": "PASS_LOCAL_PREPARATION_ONLY",
+  "actual_computed_scientific_result": "NOT_YET_COMPUTED",
   "final_result_gate": "UNRESOLVED",
-  "remote_writes": false,
-  "workflow_dispatch_performed": false,
-  "failed_v1_run": {
-    "id": 38021982095,
-    "run_number": 2,
-    "commit": "7b5047dd9eafbd7986c15514ec3534e2b0ed3bc3",
-    "failure_class": "ENVIRONMENT",
-    "four_numerical_evaluations": "SKIPPED"
-  },
-  "checks": {
-    "standalone_integrity_tests": {
-      "passed": 12,
-      "failed": 0
+  "reference_truth_gate": "UNQUALIFIED",
+  "current_q_preserved": true,
+  "incoming_complete_journal_preserved": true,
+  "inherited_source_ids_and_claim_maps_preserved": true,
+  "existing_v2_results_reused": true,
+  "existing_launcher_unchanged": true,
+  "unrelated_registry_entries_preserved": 45,
+  "local_python": "3.12.14",
+  "local_numpy": "2.3.5",
+  "github_python_required": "3.11.16",
+  "github_numpy_required": "1.26.4",
+  "local_test_scope": "9 bounded controller tests; pinned real spline bodies with synthetic caller observer fixture; C syntax; exact launcher resolution; package/journal/registry integrity",
+  "original_classy_binary_executed_locally": false,
+  "new_cosmological_theory_evaluations": 0,
+  "new_github_evaluations_reserved_max": 4,
+  "inherited_evaluations_completed": 4,
+  "inherited_budget": 52,
+  "github_installation": "NOT_PERFORMED",
+  "github_dispatch": "NOT_PERFORMED",
+  "full_history_reference": "UNQUALIFIED",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "q045_optical_audit_tests_v1.py",
+        "--native-root",
+        "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers"
+      ],
+      "exit_code": 0,
+      "output": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.004s\n\nOK\nNATIVE_ARRAY_OBSERVER_FIXTURE=PASS; unchanged real pinned array outputs; synthetic callers only\n"
     },
-    "python_ast": "PASS",
-    "setup_bash_syntax": "PASS",
-    "workflow_yaml": "PASS",
-    "workflow_run_shell_syntax": "PASS",
-    "user_input_interpolation_guard": "PASS",
-    "registry_unrelated_entries_preserved": "PASS",
-    "complete_previous_journal_bytes_preserved": "PASS",
-    "readme_unrelated_tail_preserved": "PASS",
-    "scientific_contract_unchanged": "PASS_EXCLUDING_VERSION_PROVENANCE_AND_TECHNICAL_BACKEND",
-    "package_gate": "PASS",
-    "launcher_gate": "PASS_LOCAL",
-    "readme_gate": "PASS_LOCAL",
-    "repository_consistency_gate": "PASS_LOCAL"
-  },
-  "build_reproduction": {
-    "local_python": "3.12.14",
-    "github_python": "3.11.16",
-    "before": "BackendUnavailable: Cannot import flit_core.buildapi",
-    "after": "ACT_LENSING_EDITABLE_INSTALL_PASS_WITH_FLIT_CORE_3.12.0",
-    "actual_backend_preflight": {
-      "build_backend_gate": "PASS",
-      "backend": "flit_core.buildapi",
-      "version": "3.12.0"
+    {
+      "command": [
+        "python",
+        "q045_optical_audit_v1.py",
+        "static"
+      ],
+      "exit_code": 0,
+      "output": "PACKAGE_GATE=PASS LAUNCHER_GATE=PASS README_GATE=PASS REPOSITORY_CONSISTENCY_GATE=PASS\n"
     },
-    "source_commit": "b386ddbb5821c1216c709f051c9289292f174d30",
-    "source_subset_sha256": {
-      "LICENSE": "97924d9979ac33b37b7d5d82f28bf9e2c8a2e892eab1d46de42214e8af49ceb4",
-      "README.md": "516476df9c75f0d4ecb59927d818b8bb34637846c75a8f6fe7c22bcca5a59693",
-      "act_dr6_lenslike/__init__.py": "94f1cf18311e979c922bd5f865711caabd78357cdc07ea3ed7840a571ab17816",
-      "act_dr6_lenslike/act_dr6_lenslike.py": "dc8148148f55c6a319b82e81a66b1d1567c2c8e9d96b1319589828fcd462c284",
-      "pyproject.toml": "be13582138ac42f5bd80bd3eed19c5ae1a30c1881cce6ef596c19ebdeb3d4c36"
+    {
+      "command": [
+        "gcc",
+        "-std=c11",
+        "-fsyntax-only",
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+        "-I",
+        "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers/include",
+        "-I",
+        "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers/external/HyRec2020",
+        "-I",
+        "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers/external/RecfastCLASS",
+        "-I",
+        "/workspace/scratch/209ce6e19162/tmp/q045_execution/class_headers/external/heating",
+        "/workspace/scratch/209ce6e19162/deliverables/Q045_OPTICAL_AUDIT/q045_optical_audit_probe_v1.c"
+      ],
+      "exit_code": 0,
+      "output": ""
     },
-    "wheel_sha256": "e7a0304069ea895172e3c7bb703292e992c5d1555dd1233ab7b5621b5b69e62c",
-    "scope": "Build backend and editable packaging only; no numerical likelihood or data execution"
-  },
-  "runtime_checks": "FULL_GITHUB_NUMERICAL_RUNTIME_PENDING",
-  "all_repository_test_suite": "NOT_RUN: frozen scientific runtime/data absent locally",
-  "file_sha256": {
-    "q045_native_baseline_v2.py": "02e15b11c5ba141861a02db105ad1f6aa4423d74c475beab6aee97aac57be9c7",
-    "q045_native_baseline_tests_v2.py": "98ff54ec6cd277dd96d542683b552d331852fa9a0fb645c31e7dc022d0a61c6f",
-    "q045_setup_baseline_v2.sh": "58b878de6f787b1cf86a84df2e9b577c25a99c2f2967d0c8ab684c3e82e775bf",
-    "q045_native_baseline_requirements_v2.txt": "0f14f7c39c055b040f483494bdeac2f7a99c86d5f54bb7249dd3ad261b44fdeb",
-    "q045_native_baseline_contract_v2.json": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
-    ".github/workflows/q045-native-baseline-v2.yml": "5c54d50bbf5fd2fbb445e8636152c099b88c1dd7844747121fdd2b0844a2f806",
-    "Q045_SAMLET_JOURNAL.md": "aec2dd628f61197a2b06f732fe39ad8be09c374e43b1f632c3c0c6644757f4cc",
-    "Q045_EXECUTION_HANDOFF.md": "c142316624af4b4121433b27213f4dcaff8b85402eb286c6cc7804589bf9480c",
-    "q045_native_baseline_manifest_v2.json": "db99756eedaa318600ed20dc7bfa386b8f9971edc125f997b35267623004d094",
-    "README.md": "695a02df99a60d5907bfd06be478a8572ed1d8af1da378b6ecae44c04254f3c1",
-    "bubbleverse_program_registry.json": "c6a6c644928b19bed03e29750fd8090c5b31c48986629e84be0e49d685bc108e"
+    {
+      "test": "actual existing launcher exact registry resolution",
+      "input": "Q045-OPTICAL-AUDIT-V1",
+      "expected_accept": true,
+      "exit_code": 0
+    },
+    {
+      "test": "actual existing launcher exact registry resolution",
+      "input": "Q045-BASELINE-V2",
+      "expected_accept": false,
+      "exit_code": 1
+    },
+    {
+      "test": "actual existing launcher exact registry resolution",
+      "input": "NOT-A-PROGRAM",
+      "expected_accept": false,
+      "exit_code": 1
+    },
+    {
+      "test": "actual existing launcher exact registry resolution",
+      "input": "$(echo nope)",
+      "expected_accept": false,
+      "exit_code": 1
+    },
+    {
+      "test": "actual existing launcher exact registry resolution",
+      "input": "Q045-OPTICAL-AUDIT-V1\nextra",
+      "expected_accept": false,
+      "exit_code": 1
+    }
+  ],
+  "package_files": {
+    "Q045_SAMLET_JOURNAL.md": "1e9fefdaa4c528501cd24994f2ff8f9596af927d0de7d5f3673cb7a98934fb36",
+    "q045_optical_audit_probe_v1.c": "da19a95885728d2982d84a117fe1629ae9a9af9754995481b95031ce76afc9ff",
+    "q045_optical_audit_tests_v1.py": "cf537d7fd4514b52569ab0d9c7a38e491877f471b8cde23cf07cf73c1036dbda",
+    "q045_optical_audit_manifest_v1.json": "ae566e6028da0cebec456d07f767c1d4ff624c561586501f91f30852546a9f77",
+    "Q045_INGESTION_RESULT.json": "63a5e7ee2e1082e2ed692ccc36657faf8dbb3c6ac7d507cf78ee3c44b33329de",
+    "q045_optical_audit_contract_v1.json": "bc9b84389fbf80ceede12b6113bd399bb2153cac5a8d8e048760ddcd0a820032",
+    "Q045_EXECUTION_HANDOFF.md": "c074b852e29e3ab5bf8cc5752c5271e6f6036b9bf7b2cf81318a161383f9771c",
+    "q045-optical-audit-v1.yml": "da98452bf8706f6dcf3de8efe30693d5d81df3f44222e8033e364e74a3d661a7",
+    "README.md": "0032b2f11012f85b2183625fd60614bb4415a472cf3c56a1e127dc56cde3dcca",
+    "bubbleverse_program_registry.json": "aefddd3d4b5f8cd39ebfc7e1f939e605def7d19f7c9b134feb1f9038057be107",
+    "q045_optical_audit_v1.py": "88cdfd63f385ece89313ad801c637430ae457d027b496da88603b9a6a87ccce1"
   }
 }
