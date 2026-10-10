@@ -2,31 +2,37 @@
 
 STATUS: FORTSÆTTER
 
-DRIFTSSTATUS: BLOKERET — GitHub installation is blocked by the current integration write permission (HTTP 403). The bounded local checker and technical tests are complete. Actual four-case trajectory integration remains unqualified and was not started.
+DRIFTSSTATUS: BLOKERET FOR ACTUAL QUALIFICATION — finite source precursor backend and local installation package are built; actual accepted effective/init proof data are unavailable. Remote package installation is not performed; no native/production job is running.
 
-SAG OG TIDSPUNKT: Existing proposed Q047, same unresolved applicability question; canonical admission remains unverified. Execution/HPC Engine. Verified environment time: 2026-10-11T00:11:44+02:00 (Europe/Copenhagen, UTC+02:00). Technical PROGRAM_ID Q047-CERTCHECK-V1 is allocated to the bounded checker; this does not canonically admit Q047. No Q048, CASE-ID or canonical scientific RESULT-ID is allocated.
+CASE ID: NOT DOCUMENTED.
 
-VALGT NÆSTE MOTOR: RESULT INGESTION & ROUTING ENGINE.
+CURRENT Q: Q-047 — preserved proposed identity; canonical scientific admission unverified. Old Q047-CERTCHECK-V1 unchanged; new Q047-PRECURSORCHECK-V1 is registered only in the prepared local candidate.
 
-OVERLEVERINGSSTATUS: KLARGJORT. No receiving motor or GitHub workflow was dispatched. A bounded local checker was implemented and actually run; its 20 mandatory regression tests and package/result/source controls passed. Repository installation FAILED (HTTP 403: Resource not accessible by integration); GitHub files/registry remain unchanged. No native cosmology run, spectra, likelihood, sampling, production or refinement was started. The inherited 16/52 full-evaluation ledger, with 36 remaining, is unchanged; budget is not authorization.
+QUESTION: For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?
+
+DATE AND TIME: 2026-10-10T23:22:52+00:00, UTC, verified from the execution environment. Prior mathematics/ingestion/GitHub timestamps remain historical, not this preparation-run time.
+
+VALGT NÆSTE MOTOR: RESULT INGESTION & ROUTING ENGINE — inspect the new finite implementation result and precisely blocked actual-state admission. The existing HPC-LAVEREN implementation task is now concretely addressed; no automatic motor or GitHub delivery occurred.
+
+OVERLEVERINGSSTATUS: KLARGJORT. No receiving motor or GitHub workflow was automatically started.
 
 ## CHATGPT-SETUPVURDERING FOR NÆSTE TRIN
 
-AKTUELT SETUP: ChatGPT Work/Codex with file/source access, code execution, web search and tool orchestration verified. Exact active model variant and allocated reasoning effort: IKKE VERIFICERET. Available installed Python 3.12.14 can execute the included rational controls. No complete validated cosmological solver or HPC connection is claimed.
+AKTUELT SETUP: Work/Codex with local files, standard-library Python, primary-source code and GitHub read capability. Active exact model and reasoning setting NOT VERIFIED. No model, subscription or mode was switched.
 
-ANBEFALET PRIMÆRT SETUP: ChatGPT Work/Codex with GPT-6.1 Sol, Extra High reasoning if selectable, the same authoritative journal, immutable source/file access and an outward numerical environment. Documented model/effort option; the user's picker/access to this exact combination is not verified. No model switch occurred.
+ANBEFALET PRIMÆRT SETUP: Current Work/Codex with read-only repository/files and Python; high reasoning if selectable. For the named GPT-5.6 versus ASTRA MAX choices, a bounded code/review setup is sufficient if available; exact account/mode availability and performance are NOT VERIFIED. No model was changed.
 
-KAPABILITETSKLASSE: C + A with deep reasoning (X for the conclusion-critical checker/qualification work). These are this prompt's functional classes, not OpenAI subscription tiers.
+KAPABILITETSKLASSE: C + H (code/computation and focused mathematical verification).
 
-REASONING-NIVEAU: Extra High if actually selectable; current allocated level is IKKE VERIFICERET.
+REASONING-NIVEAU: Recommended High if selectable; active level NOT VERIFIED.
 
-BEGRUNDELSE: The immediate next task is finite result ingestion and identifying the exact unresolved effective-input/forcing proof objects. The implemented checker and local tests are technical evidence only. Official OpenAI guidance describes Sol for complex coding/long workflows; the choice is an assessment, not a measured cross-model benchmark. The preceding mathematical analysis recommended Astra Extra High for derivation; the change in advice follows the implementation task, not new scientific evidence. More model compute cannot qualify missing forcing/input data.
+BEGRUNDELSE: The next task is a finite source-specific certificate implementation with exact identity, forcing, mode-transfer and error controls. Maximum model compute or native job time alone does not resolve missing effective inputs.
 
-FALLBACK: The strongest actually available coding/reasoning setup with the same required tools (Astra Extra High if available). The present Work/Codex environment can prepare the checker; case execution still requires the explicit input and execution gates below.
+FALLBACK: Current Work/Codex; use the existing rational primitives and narrowly checked cells. Do not silently reduce proof requirements to suit a weaker environment.
 
-UPGRADE-TRIGGER: A new unresolved proof/target-definition conflict, numerical bound that cannot be closed after justified implementation checks, or disagreement between arithmetic/source correspondence checks. A long machine job alone does not require a stronger model.
+UPGRADE-TRIGGER: A concrete failure in coupled EDE enclosure/initialization or incompatible source semantics that cannot be resolved by the specified finite bounds; then choose an available stronger reasoning setup with the same evidence and tool access. No automatic model hopping.
 
-PLUGIN-/TOOLBEHOV: JA — pinned source/data/file access, code execution and auditable outward arithmetic. Primary literature is retained for method control. A remote HPC service is not necessary merely to build this bounded package and no such connection is claimed. Actual account quotas, prices and remaining platform usage are not known.
+PLUGIN-/TOOLBEHOV: YES. Frozen source/archives and repository reads, Python/outward arithmetic and files. Repository changes require existing write access; previous HTTP403 remains historical. No fresh native cosmology, production sampler, HPC dispatch or broad literature sweep was required in this mathematical stage. Named agent options in the runtime do not establish account-picker access or measured rankings; no agents were used.
 
 ## SAMLET JOURNAL
 
@@ -59,7 +65,7 @@ The following global statements are retained in their original evidence scopes; 
 14. [INHERITED PINNED OPERATIONAL SNAPSHOT] The previously inspected model-head snapshot is ba520fb2cbad9b4c0e09fdda7f8c09025e348c63; accepted v0.7/R000007 ends at Q045. The inherited execution snapshot is a9a5777b5923f32930cd9c84a49227ba36249326. Q045's physical reference remains UNQUALIFIED, materiality UNRESOLVED, production unauthorized. Proposed Q046/Q047 are local completed assessments; canonical admission is not demonstrated. Old Q044-only current acceptance is superseded; older operational claims are historical. Live heads were not freshly established in this research round.
 15. [CONDITIONAL MATHEMATICAL RESULT] In future time u=ln(a), q=xHeII=f*x_He, epsilon=10^-6, the literal upper branch applies at equality. On a valid regular mode, F_+=(Y_down/H)*[(f-q)*s-q*(q+h)], with a positive prefactor. At the boundary its sign is that of D_epsilon=(f-epsilon)*s-epsilon*(epsilon+h). A reached strict-negative boundary with the proved regularity/mode hypotheses has no absolutely continuous literal forward continuation. This is a theorem about a defined realization, not a demonstrated defect in any of the four cosmologies.
 16. [INSUFFICIENT QUALIFICATION / SCIENTIFIC DEBT] Actual first-hit reachability, rate margin, mode separation and continuation remain unqualified for camspec-lcdm, camspec-ede_n3, hillipop-lcdm and hillipop-ede_n3. The finite control fixtures and native completion do not replace a certified coupled trajectory. No new Delta tau, spectrum response, likelihood shift, H0 bias, observational conflict or model preference is obtained.
-17. [ACTIVE NEXT INVESTIGATION / UPDATED] Preserve existing Q047 identity. Research acquired concrete archived inputs/diagnostics; mathematics now supplies the source-consistent reduction, signed defect-tube theorem, executed conditional local controls and prospective first-hit gates (M01-M06). The bounded conditional checker and explicit actual-input qualification failure reports are now implemented (E01-E03). Next is result ingestion of this technical evidence with the same missing effective-input/forcing obligations; actual reachability remains unresolved in all four cases. Do not repeat the inherited guard proof, allocate Q048 or treat unused budget as permission.
+17. [ACTIVE NEXT INVESTIGATION / UPDATED] Preserve existing Q047 identity. Research acquired concrete archived inputs/diagnostics; mathematics now supplies the source-consistent reduction, signed defect-tube theorem, executed conditional local controls and prospective first-hit gates (M01-M06). The bounded conditional checker and explicit actual-input qualification failure reports are now implemented (E01-E03). Result ingestion E05-I01 verified the external technical evidence. Mathematics M07-M10 defined the source-specific precursor admission contract. HPC-LAVEREN E06-E08 now implements and locally validates the finite source backend, complete artificial four-mode control and manual-install package. Actual initialized-state/export evidence remains unavailable; no actual case is promoted. Actual reachability remains unresolved in all four cases. Do not repeat the inherited guard proof, allocate Q048 or treat unused budget as permission.
 
 ACTIVE PREDICTIONS: PRED-H0-INDEPENDENT-001, PRED-EDE-PORTABILITY-001 and PRED-Q039-COUPLED-001 remain OPEN. CTR-HIST-BASIN-LABEL-001 remains RESOLVED_METHODOLOGICALLY. Dark-matter identity, acceleration microphysics, inaccessible topology/extent, earliest-epoch interpretation and finite-search globality remain unresolved in their inherited scopes.
 
@@ -338,46 +344,350 @@ Known failures and fixes: (1) a negative right-neighborhood width could shorten 
 
 The manufactured local packet has CONDITIONAL_EVENT_GATE=PASS for its assumed local IVP only. New regional arithmetic controls retain the prior broad D_epsilon<-9.91e-7 and temperature damping-loss<0.193 bounds, and four local signed-stability checks. Exact outputs changed under the tighter hydrogen interval arithmetic; the original mathematics code/input/result remain embedded unchanged as historical controls. Both computations are conditional regional bounds. Actual four-case application remains INSUFFICIENT EVIDENCE, FINAL_RESULT_GATE=UNRESOLVED. No qualified source-continuum event time, nonreachability result, optical-depth bias, CMB response, likelihood or model preference has been computed.
 
-Ledger KEEP: 16/52 consumed, 36 remaining, zero new native/theory evaluations. Work actually started/completed: finite local checker and tests. Work not started: any GitHub run or new cosmology job. Sources: I-PROPOSED-Q047-EXECUTION-001, I-PROPOSED-Q047-CONTROLS-001 and retained pinned source records.
+Ledger KEEP: 16/52 consumed, 36 remaining, zero new native/theory evaluations. Work actually started/completed: finite local checker and tests. At the original preparation checkpoint, no GitHub run or new cosmology job had been started. [UPDATED IN E05] Two external checker runs are now documented; no new cosmology job was performed. Sources: I-PROPOSED-Q047-EXECUTION-001, I-PROPOSED-Q047-CONTROLS-001 and retained pinned source records.
 
 ### J-PROPOSED-Q047-E03 — Repository discovery and installation boundary
 
-[FAKTA / TECHNICAL EVIDENCE] Morfindien/Bubbleverse main was read at a9a5777b5923f32930cd9c84a49227ba36249326; full tree inspection found no existing Q047 executable. Canonical launcher .github/workflows/00-bubbleverse-start.yml was reused byte-for-byte (SHA256 e0c11fccd3300710acb1f02ea1bc2b2c327ae2f42584a05e7f7906ea0a5864cd). The canonical root registry had 51 entries; all remain unchanged in the 52-entry candidate with Q047-CERTCHECK-V1. Q042 V29 interval code and Q045 reference-history observers/controller were read as REFERENCE ONLY, not substituted for source-continuum truth. README was differentially updated for this current bounded preparation target, with prior completed recovery retained. One 10-minute-cap job includes source checks, 20 tests, local controls and output gates; no shards, merge, checkpoint, automatic retry or receiving-motor dispatch are needed. GitHub's current official hosted-job hard limit is 6 hours. Remote setup/network timing has not been measured; local core/tests complete in seconds.
+[FAKTA / TECHNICAL EVIDENCE] Morfindien/Bubbleverse main was read at a9a5777b5923f32930cd9c84a49227ba36249326; full tree inspection found no existing Q047 executable. Canonical launcher .github/workflows/00-bubbleverse-start.yml was intended to be reused unchanged. [CORRECTED IN E04] Its local preparation copy contained an extra final LF; the previous SHA256 e0c11fccd3300710acb1f02ea1bc2b2c327ae2f42584a05e7f7906ea0a5864cd described that altered local copy, not repository bytes. The actual unchanged Git blob is 7f22c617fb98d1508a0b22a42dd3735a74d8288e; its correct SHA256 is 3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288. The canonical root registry had 51 entries; all remain unchanged in the 52-entry candidate with Q047-CERTCHECK-V1. Q042 V29 interval code and Q045 reference-history observers/controller were read as REFERENCE ONLY, not substituted for source-continuum truth. README was differentially updated for this current bounded preparation target, with prior completed recovery retained. One 10-minute-cap job includes source checks, 20 tests, local controls and output gates; no shards, merge, checkpoint, automatic retry or receiving-motor dispatch are needed. GitHub's current official hosted-job hard limit is 6 hours. At preparation, remote timing had not been measured. [UPDATED IN E05] The successful external run is now timed and verified; no expensive job splitting is required for V1.
 
-REPOSITORY_INSTALLATION: BLOCKED. The GitHub create-blob request for the full journal was actually attempted and rejected with HTTP 403, Resource not accessible by integration. No blob, tree, commit, branch update, file change, registry change or workflow run was completed. Reported repository push/admin metadata did not establish an integration write scope. Available contents/branch write APIs share the same connection; no alternative authenticated local checkout is present. No repeated identical call, credential probe or browser fallback was used. LAUNCHER/REGISTRY/README/REPOSITORY_CONSISTENCY gates PASS apply to the local candidate layout only. Actual PROGRAM_ID_REGISTERED=NO. Required next access is a GitHub connection with contents-write and workflow-write access, or installation of the individual prepared files through the repository owner’s existing authorized interface. Do not claim an installed remote workflow from the candidate gates. Sources: K-PROPOSED-Q047-EXECREPO-001, K-PROPOSED-Q047-ACTIONSLIMITS-001 and I-PROPOSED-Q047-EXECUTION-001.
+ORIGINAL ENGINE INSTALLATION ATTEMPT: BLOCKED. [UPDATED IN E04] Subsequent external installation and first-run failure are now verified.  The GitHub create-blob request for the full journal was actually attempted and rejected with HTTP 403, Resource not accessible by integration. No blob, tree, commit, branch update, file change, registry change or workflow run was completed. Reported repository push/admin metadata did not establish an integration write scope. Available contents/branch write APIs share the same connection; no alternative authenticated local checkout is present. No repeated identical call, credential probe or browser fallback was used. LAUNCHER/REGISTRY/README/REPOSITORY_CONSISTENCY gates PASS apply to the local candidate layout only. Original preparation PROGRAM_ID_REGISTERED=NO; updated E04 establishes subsequent external PROGRAM_ID_REGISTERED=YES. That was the original installation requirement; it is no longer the present next task because external installation and successful checker execution are now verified in E05. Do not claim an installed remote workflow from the candidate gates. Sources: K-PROPOSED-Q047-EXECREPO-001, K-PROPOSED-Q047-ACTIONSLIMITS-001 and I-PROPOSED-Q047-EXECUTION-001.
+
+### J-PROPOSED-Q047-E04 — First external run and exact launcher-hash repair
+
+[FAILED TECHNICAL RUN / CORRECTED METADATA] Run 38091253941, job 114327978471, checked out commit 01930ca77fb5e29244ced896ababedba22c66610. Checkout and Python 3.12.14 setup passed. Static validation failed UNCHANGED_LAUNCHER_HASH; scientific-source verification, mandatory numerical tests and conditional controls were skipped. Upload saved the input/specification/journal evidence, not computed Q047 result files. The Node.js action-runtime warning did not cause this exception. No native evaluation or scientific result followed.
+
+The repository launcher is unchanged from the inspected original Git blob 7f22c617fb98d1508a0b22a42dd3735a74d8288e. Exact retrieved UTF-8 bytes reproduce that Git object: 3169 bytes, SHA256 3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288. The engine's old local copy was 3170 bytes and exactly equals those bytes plus one LF. That preparation error produced the wrong frozen SHA256 e0c11fccd3300710acb1f02ea1bc2b2c327ae2f42584a05e7f7906ea0a5864cd. The earlier byte-identical reuse claim is corrected; the actual repository was not modified to cause this failure. All nine frozen package file byte hashes and all 51 old registry entries match the installed checkout.
+
+Minimum repair: change only launcher_sha256 in q047_package_v1.json to the verified 3169-byte value. Retain exact-byte integrity checks, the same executable PROGRAM_ID Q047-CERTCHECK-V1, all code/workflow/scientific hashes and native sources. This is a metadata correction, not a new executable/scientific target. A recreated exact installed checkout failed before the repair with the same exception, then passed static validation after the single-field repair. All 20 tests passed in 3.109 s, ten source hashes passed, and conditional/regional/output controls passed locally. Actual cosmological applicability and FINAL_RESULT_GATE remain UNRESOLVED/INSUFFICIENT EVIDENCE. No actual reference trajectory was computed.
+
+A contents-API correction upload was attempted with the current manifest blob SHA c902a9a485df2aaad55638a0500bea1301c23fcf; GitHub rejected it with HTTP 403 Resource not accessible by integration. At the repair checkpoint, remote fix installation and remote rerun were NOT performed by this engine. [SUPERSEDED OPERATIONAL STATUS IN E05] The owner subsequently installed the correction and completed a new run; the old failure and denied write remain historical evidence. Replace the single manifest at repository root through the owner's existing GitHub access, then start a new workflow_dispatch on current main. Re-running jobs on the failed run's old commit will still use the wrong old manifest. README and launcher need no functional changes; no registry or workflow replacement is required. Full technical evidence: Q047_LAUNCHER_HASH_FIX_V1.json, source I-PROPOSED-Q047-LAUNCHER-FIX-001. The unchanged ledger remains 16/52 consumed, 36 remaining.
+
+### J-PROPOSED-Q047-E05 — Successful external checker run and evidence identity
+
+[FAKTA / TECHNICALLY VALIDATED / BUBBLEVERSE TECHNICAL EVIDENCE] GitHub run 38091858306, attempt 1, run number 2, job 114329741408, is completed/success at commit 3bfffa1c905d0c58ccee8b55eaf539eebcb2dec8. Checkout, installed package/launcher/README/registry controls, ten frozen source hash checks, 20 mandatory regression tests, local conditional/regional controls, result-set checks and artifact upload all completed. The actual test log states 20 tests in 2.952 s, OK. Runner: Ubuntu 24.04.5, image ubuntu-24.04 version 20261004.327.1, runner 2.337.0, Python 3.12.14. The process-reported main checker elapsed time is 0.6736055610000022 s; it is not total job duration or a scientific uncertainty. Node.js 20 deprecation/forced Node.js 24 warnings remain operational warnings and did not fail this run.
+
+The received 366155-byte archive has SHA256 79afcac59a6f83d6e353dd33f913e31575615505908a6fe014efdfd9da0fd2e1, exactly equal to GitHub artifact 11684357107's recorded digest. All four result digests in q047_results_gate_v1.json match the actual extracted bytes. The embedded conditional object equals q047_conditional_control_v1.json; the input-admission object equals q047_required_inputs_v1.json; targets/control-input hashes match their pinned values. The corrected package manifest has SHA256 daceeba1601687195d12ca7c040559850da3695b8b029ed05e1d5633f7ac01aa and the unchanged launcher SHA256 3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288. The former UNCHANGED_LAUNCHER_HASH failure is resolved. No integrity check was disabled and the source, parameters, PROGRAM_ID, workflow and scientific gates were not changed to achieve success.
+
+The external final JSON differs from the previous locally generated final JSON only in elapsed_seconds, executed_repository_commit and run_id. The conditional/regional arithmetic and required-input report are byte-identical. This is a successful controlled external execution of the same dependent method, not a new independent cosmological observation. Ledger KEEP: 16/52 consumed, 36 remaining, zero new native/theory evaluations.
+
+The attached journal and the journal member inside the run artifact are byte-identical old preparation snapshots, SHA256 220801cd56f8ce196035c7f48088dbfe428563daf1663e17cc40c96dd04cc93f. Their installation-blocked/not-run language is now superseded in the active journal. Raw snapshot bytes and historic failures are retained; the current journal does not adopt stale transport metadata over verified run evidence. Source: I-PROPOSED-Q047-INGESTION-001; historical repair: I-PROPOSED-Q047-LAUNCHER-FIX-001.
+
+### J-PROPOSED-Q047-I01 — Result ingestion, three-layer interpretation and routing
+
+[TECHNICAL RESULT / CONDITIONAL RESULT] Direct output: execution_status=COMPLETE, tests_status=COMPLETE, technical_result_gate=PASS, final_result_gate=UNRESOLVED, result_status=TECHNICAL_QUALIFICATION_ONLY. The manufactured local upper-IVP event gate is PASS. All four actual case verdicts remain INSUFFICIENT_EVIDENCE; source hash verification is PASS while source-to-binary/continuum equivalence is NOT ESTABLISHED.
+
+[FORTOLKNING / SCOPE LIMIT] V1 input_admission has no actual-case PASS path: it reports six absent proof categories by construction. Therefore its four FAIL admission reports are an explicit scope/qualification inventory, not four attempted complete physical trajectory tests, a measured likelihood rejection, or evidence that the events do not occur. The local fixture assumes its initial state and continuous forcing; the conditional event only concerns that short local domain. The fixed-box negative boundary expression and temperature damping controls remain conditional; actual trajectories have not been proved to enter their boxes. Existing M01-M06 specify the upper-flow method and acceptance criteria but do not yet provide independently checkable full background and preceding-temperature admission proofs. A boolean, raw native onset or backward EDE diagnostic cannot replace those proofs.
+
+[ÅBENT SPØRGSMÅL] Physical interpretation: no new reachability/nonreachability conclusion for any frozen case, actual noncontinuation result, optical-depth bias, CMB/likelihood change, H0 shift, model preference or new-physics evidence follows. The strict-cutoff conditional theorem and native numerical hints remain preserved with their scopes. No new candidate physical anomaly was established by this run; the original conditional source-prescription issue is not erased.
+
+[HISTORICAL ROUTING / ADDRESSED METHOD STAGE IN M07-M10; ACTUAL INPUT ADMISSION STILL OPEN] The then-next material task was MATEMATIKMOTOR's source-continuum precursor admission contract: determine exactly how fixed effective LCDM/EDE input identity, complete background forcing and preceding thermal modes can be enclosed and independently verified at helium onset. This is the missing mathematical dependency of the existing upper-IVP certificate, not a repeat of its guard proof. Existing V1 reruns or added arbitrary seeds cannot alter this dependency and are stopped. Once the precursor contract is defined and the needed data objects are available, numerical implementation can be considered under the inherited execution authorization. No new production/native job is authorized by this routing.
+
+Sources: I-PROPOSED-Q047-INGESTION-001; I-PROPOSED-Q047-EXECUTION-001; I-PROPOSED-Q047-METHOD-001; K-PROPOSED-Q047-SOURCE-001; K-PROPOSED-Q047-INPUTCODE-001; K-PROPOSED-Q047-BACKGROUNDCODE-001. Q identity and accepted-model boundary are operationally retained; they are not mathematical substitutes for missing proof.
+
+### J-PROPOSED-Q047-M07 — Minimal background state and the missing derivative forcing
+
+[BEREGNET / SOURCE-CONSISTENT REDUCTION] For the admitted flat no-IDM/no-decay/no-fluid variant, write u=ln(a), gamma=Omega_g H0^2, U=Omega_ur H0^2, M=(Omega_b+Omega_cdm)H0^2 and Lambda=Omega_lambda H0^2 in CLASS units. Then
+
+    rho_gamma=gamma*a^-4
+    rho=(gamma+U)*a^-4+M*a^-3+Lambda+rho_nu+rho_scf
+    p=(gamma+U)*a^-4/3-Lambda+p_nu+p_scf
+    H^2=rho-K/a^2; Hs=H*c/metres_per_Mpc
+    ell=dlnH/dlna=-3*(rho+p)/(2*H^2)+K/(a^2*H^2).
+
+K=0 is a checked reduced-variant predicate, not a default invented parameter. All absent component flags must be admitted before using these equations. Photons are algebraic: rho_gamma needs no ODE. LCDM has no background ODE state needed for this local Q once the effective amplitudes and neutrino moment realization are admitted. Native age, conformal time, sound horizon and growth states do not feed the reduced H/rho/pressure calculation. This does not discard their roles in the inherited full output-map problem.
+
+For EDE set X=phi_prime/a (Mpc^-1), with phi in reduced-Planck units. Only two background states are required:
+
+    phi_u=X/H; X_u=-3X-Vphi/H
+    rho_scf=(X^2/2+V)/3; p_scf=(X^2/2-V)/3
+    V=4152.39*m^2*F^2*[1-cos(kappa*phi/F)]^3+B*3.968e-8
+    kappa=2.435e27; F=scf_parameters[1] eV; m=scf_parameters[2] eV;
+    B=scf_parameters[3], dimensionless.
+
+The invertible change from the source's (phi,phi_prime) equations gives E_u=-3X^2 for E=X^2/2+V, since the two Vphi*X/H terms cancel; therefore rho_scf,u=-X^2. This identity is exact for the defined source-real potential/derivative, not a proof of native floating-point equivalence. With positive admitted components and nonnegative V one may use -3<=ell<=0 as a coarse bootstrap; do not apply that range when positivity/flags have not passed. The full (phi,X) Jacobian is given explicitly in the contract; H_phi=Vphi/(6H) and H_X=X/(6H), so background coupling cannot be treated as fixed external H in the EDE solver.
+
+[NEW CONCLUSION-CRITICAL INPUT] H and rho_gamma alone do not define the early source thermal equation. ell, or equivalently a qualified H_prime/(aH^2), is additionally required. Independent direct evaluation of H/rho_gamma/ell avoids a native background spline as reference truth. A native-spline agreement claim remains a separate accuracy obligation.
+
+[SOURCE ERROR CONDITION] The pinned background function also aborts when V_e/(3H^2)>=0.5. This is an implementation latch, not a physical exclusion. An actual source-active precursor must exclude it along the whole admitted background path; the requested fEDE value is not a substitute for a uniform bound. Also check H^2>0 and rho_gamma>0. These conditions were not proven for any actual case here.
+
+Sources: K-PROPOSED-Q047-BACKGROUNDCODE-001, background.c:394-627, 2155-2327, 2682-2765 and 2980-3100; K-PROPOSED-Q047-INPUTCODE-001, input.c:3380-3445; I-PROPOSED-Q047-PRECURSOR-METHOD-001; I-PROPOSED-Q047-PRECURSOR-CONTROLS-001. All ten frozen source hashes passed in this round; actual effective-field/binary linkage remains unqualified.
+
+### J-PROPOSED-Q047-M08 — Source-specific precursor thermal equations and stable Saha map
+
+[BEREGNET] Let Trad=T0/a, w=-D_Tmat/Trad=1-Tmat/Trad and
+
+    beta=[8*sigma_T/(3*m_e*c)]*[rho_gamma*Jm3_over_Mpc2/Hs]*x/(1+f+x).
+
+In the no-exotic/no-varconst/no-IDM variant, the pinned brec mode uses D_u=-Trad*(ell+3)/beta, hence
+
+    brec:        w_u=w+(ell+3)/beta
+    He1/He1f/He2: w_u=1-(1+beta)*w.
+
+The early approximation is the source prescription, not a license to replace it by the later full equation or a quasistatic temperature value. Start at the admitted thermal z_initial with D=0. The reference evolves this prescription; proving its physical approximation accuracy would be a distinct requirement. x_reio=x_noreio before the reionization mode in this code, so the source analytic electron root is the appropriate thermal x. The placeholder x_H=x_He=1 in early modes does not mean x=1+2f at every point.
+
+Both Saha expressions solve x^2+(r-A)x-Br=0. A stable real-arithmetic form is
+
+    x=A+2*r*(B-A)/[A+r+sqrt((A+r)^2+4*r*(B-A))],
+    r=s*(C_NR*Tmat)^(3/2)*a^3*exp(-I/Tmat)/nH0.
+
+HeIII (brec/He1): s=1,A=1+f,B=1+2f,I=I_HeII. HeI (He1f/He2): s=4,A=1,B=1+f,I=I_HeI. For r>0 and B>A>0, A<x<B and the positive root is unique. At r->0, x->A; at r->infinity, x->B. The formula avoids cancellation of two large nearly equal quantities. Its mathematical equivalence does not silently change the native arithmetic target.
+
+Implicit differentiation gives x_r=(B-x)/(2x+r-A)>0 and
+
+    r*x_r/x=(x-A)/(2x+r-A) <= eta=(B-A)/(2B-A).
+
+The bound follows by dropping r in the denominator and maximizing (x-A)/(2x-A) on [A,B]; it is a conservative bound, not the exact maximum of the original ratio. Since r_w/r=-(3/2+I/Tmat)/(1-w), beta_w<=0. For a prospective 0<=w<=w_bar<1, Tmat>=Tmin>0, the later scalar field obeys
+
+    G_w=-1-beta-w*beta_w <= -1-beta*(1-c_pre),
+    c_pre=w_bar/(1-w_bar)*eta*(3/2+I/Tmin).
+
+When c_pre<1 this proves contraction. When it is not, use the general finite-growth certificate rather than inventing contraction. In brec, G_w=1-(ell+3)*beta_w/beta^2>=1 if ell+3>=0. Thus a nonzero defect cannot satisfy a uniform contractive/invariant-radius condition there. This is a limitation of the old sufficient certificate rule, not an instability or falsification of any cosmological model.
+
+Carry D (equivalently w at a continuous Trad) across each source-defined mode boundary. At H onset z=2870 introduce q=x_HeI_Saha-1 using the stable formula already established in M01, and retain the inherited w; q is not evolved in the preceding analytic modes. Source boundaries and their rounding must be supplied, not inferred from nearby output rows. Output smoothing is not an RHS reset. The source error test x>1 && z<z_end_reco_test && z>reionization_z_start_max must also be inactive on the certified source-active domain.
+
+Sources: K-PROPOSED-Q047-SOURCE-001, thermodynamics.c:790-892, 1930-2095, 2535-2800, 3960-4113; K-PROPOSED-Q047-CONSTANTCODE-001; I-PROPOSED-Q047-PRECURSOR-METHOD-001 and -CONTROLS-001.
+
+### J-PROPOSED-Q047-M09 — Finite error growth and neutrino quadrature qualification
+
+[BEREGNET / SUFFICIENT CERTIFICATE] For scalar error e between an exact solution and a polynomial predictor p, bound the signed derivative by L and the total defect by delta>=0 on the entire prospective convex tube. The mean-value identity and upper Dini derivative give D+|e|<=L|e|+delta. With initial error R0>=0, comparison yields
+
+    R(s)=exp(Ls)*R0+delta*(exp(Ls)-1)/L (L!=0),
+    R(s)=R0+delta*s (L=0).
+
+For constant L and nonnegative R0,delta, R is monotone or constant, so its all-time maximum on [0,dt] is max(R0,R(dt)), even for L<0. Require p(cell)+[-Rmax,Rmax] strictly inside the domain where derivative/defect bounds were computed. A first-exit argument then closes the tube. This permits L>0 on a finite interval; no condition L*B+delta<=0 is required. Shortening cells may help but does not guarantee that the full desired path can be certified.
+
+For a vector, form a Metzler M from upper signed diagonal derivatives and absolute off-diagonal bounds, and retain the M03 comparison proof. R(s)=exp(Ms)R0+integral_0^s exp(Mv)*delta dv. For an easily checked all-time envelope set sigma=max(0,-min M_ii), N=M+sigma*I>=0. Since exp(Ms)=exp(-sigma*s)exp(Ns),
+
+    R(s) <= exp(N*dt)*(R0+dt*delta), 0<=s<=dt.
+
+Use strict tube containment for closure. Nonnegative Taylor coefficients allow a finite certified matrix bound: alpha=||N||_infty*dt, Taylor degree k, alpha<k+2 gives norm remainder <= alpha^(k+1)/(k+1)!/[1-alpha/(k+2)]. A scalar remainder per entry encloses each missing entry. Scaling/splitting may reduce pessimism; signed endpoint bounds may be sharper. No whole-history implementation or matrix integration was run in this stage.
+
+[SOURCE SEMANTICS] The source's massive-neutrino background is a finite-node sum, not an automatically exact Fermi-Dirac integral. With mu=a*M_ncdm and fixed native weights/nodes,
+
+    rho_nu=C*a^-4*sum(q_j^2*sqrt(q_j^2+mu^2)*w_j),
+    p_nu=C*a^-4*sum(q_j^4*w_j/[3*sqrt(q_j^2+mu^2)]).
+
+Both the finite-node realization and the corresponding continuous integral satisfy rho_nu,u=-3(rho_nu+p_nu). Export actual background nodes/weights and effective C; the quadrature test function/tolerance alone proves no error bound for these specific moments. Requested m_ncdm=0.06 eV is not permission to neglect the species. Do not silently readjust closure Lambda/B, mass or normalization when comparing realizations.
+
+For the admitted analytic FD distribution, f0(q)<=[2*cosh(xi)/(2*pi)^3]*exp(-q). Since sqrt(q^2+mu^2)<=q+mu and q^4/sqrt(q^2+mu^2)<=q^3, the tail above Q is bounded by
+
+    density tail <= Axi*exp(-Q)*[P3(Q)+mu_max*P2(Q)],
+    pressure tail <= Axi*exp(-Q)*P3(Q)/3,
+    P2=Q^2+2Q+2; P3=Q^3+3Q^2+6Q+6.
+
+Multiply C*a^-4 outward. Enclose the finite interior [0,Q] by sums of interval-integrand ranges times exact cell widths; at q=mu=0 use the continuous pressure-zero limit/bound, never divide by a zero interval. This supplies a finite convergent enclosure scheme, not a claimed efficient actual quadrature execution. If a file distribution is active, the FD bound is inapplicable and its own interpolation/tail definition must be admitted. A common background enclosure can cover native-node and continuous-reference realizations with unchanged effective normalization; otherwise their certificates must be explicitly distinguished. Their identity is not assumed.
+
+Sources: pinned background.c:1228-1363, 1390-1598 and 1624-1685, K-PROPOSED-Q047-BACKGROUNDCODE-001; retained M03 and K-PROPOSED-Q047-DISSIPATIVE-001 for comparison-method context; I-PROPOSED-Q047-PRECURSOR-METHOD-001 and -CONTROLS-001. The finite growth/tail arguments above are this engine's supplied derivations; the primary method paper is not evidence of an actual Q047 trajectory.
+
+### J-PROPOSED-Q047-M10 — Implementable admission contract, executed controls and next task
+
+[BEREGNET / METHOD DEFINED] Q047_PRECURSOR_CONTRACT_V1.json defines exact effective-field/export roles, units, source pins, initialization and neutrino semantics, source-specific equations/Jacobian, finite cell/tail/defect bounds, mode transfer, deterministic accuracy allocation and eleven finite acceptance predicates PT01-PT11. It preserves each complete requested_input_identity and each original native_meta_text without treating decoded JSON decimals as qualified physical inputs. It is a method/interface artifact, not an admitted packet or a native model export.
+
+For each case A_i=(Theta_i,B_i,O_i,S_i): Theta is effective source/build/arithmetic identity with initialization; B is certified H/rho_gamma/rho+p/ell forcing; O is the complete source-mode precursor thermal solution and onset map; S is transition/latch/threshold semantics and source-error separation. The verifier must recompute residual/Jacobian/slack from primitive exact inputs rather than trust qualification booleans. Existing archives partly identify requested inputs/raw native coefficients but have not supplied complete effective post-shooting EDE parameters, exact accepted initialization, native quadrature arrays or qualified precursor trajectories. A rounded nearby native temperature is not an onset enclosure. Neither one-field source identity nor successful V1 execution admits A_i.
+
+The minimal missing export is specified field by field in the contract: exact accepted state/derived source coefficients, the actual EDE array and accepted a_ini/phi_ini/phi_prime_ini, native background q/w/factor/mass parameters, temperature constants and mode boundaries, flags/error state and arithmetic/build linkage. Two legitimate identity routes are described: read an already cached accepted initialized state/complete archive, or a complete validated inverse of rounded archive data with justified arithmetic error. The previous approximate inversion does not qualify the second route. No fresh native initialization, shooting or fallback rebuild was performed or authorized to manufacture missing fields.
+
+[ACTUALLY EXECUTED / CONDITIONAL CONTROLS] The standalone standard-library q047_precursor_controls_v1.py completed with six PASS groups: 54 exact rational original/transformed scalar-energy identities; six stable Saha-root/implicit-derivative/elasticity controls; exact original D-to-w early/full transformations and an outward radiation-limit solution; a positive-growth finite tube; four exact neutrino moment identities plus outward FD tails; and exact binary64 threshold/preimage arithmetic. Controls are finite algebra or manufactured cases, not four cosmological trajectory tests. The control output records exact rational bounds and the code SHA256.
+
+In the manufactured scalar test, L=2, dt=1/4, R0=0.001 and delta=0.0001 yield R(dt)<0.001682<0.002 while L*0.002+delta=0.0041>0. The old invariant-radius criterion fails although the finite tube closes; this is an explicit nonvacuous control of the needed method change. In a controlled radiation limit with fixed heat-capacity x, ell=-2 and beta=beta0*exp(-2s), w=(exp(2s)-exp(s))/beta0 solves the early equation, not the later one. FD Q=40, mu_max=12, xi=0 tails are <=7.582e-13 (density) and <=1.956e-13 (pressure) before the explicitly omitted factor/(2*pi)^3 and C*a^-4; these are dimensionless tail bounds for a chosen control, not actual cosmological errors.
+
+[THRESHOLD REPRESENTATION] Mathematical epsilon=1/1000000. Binary64 epsilon=4722366482869645/4722366482869645213696, smaller by 3339/73786976294838206464000000. Under normal binary64 multiplication with round-to-nearest/ties-to-even and no excess precision, the product-rounding transition between the predecessor and epsilon is the midpoint 9444732965739289/9444732965739290427392. At the midpoint the even predecessor wins, so the native strict product<epsilon test is true. This establishes the conditional arithmetic map, not that these compiler assumptions hold for the archived binary, and not a new theorem about a floating-point dynamical system. Exact guard source and the inherited literal continuum noncontinuation result remain unchanged.
+
+[STATUS / ROUTING] All four actual verdicts remain INSUFFICIENT_EVIDENCE; scientific FINAL_RESULT_GATE=UNRESOLVED. No actual initial-state/background/thermal/event certificate, physical anomaly, optical-depth response, likelihood shift or cosmological model update follows. Ledger KEEP:16/52 consumed,36 remaining,zero new native/theory evaluations. The earlier mathematical handoff's precursor method task is now addressed; HPC-LAVEREN is selected to implement these concrete finite predicates and resolve archived effective fields. This is new method information, not a Math-HPC-Math loop with the same missing-list output. Stop fresh native execution at the existing permission boundary. A cached state absent from the available archives is a data/access limitation, not a scientific null result.
+
+Sources: I-PROPOSED-Q047-PRECURSOR-METHOD-001 and -CONTROLS-001; K-PROPOSED-Q047-SOURCE-001, -INPUTCODE-001, -BACKGROUNDCODE-001, -CONSTANTCODE-001; I-PROPOSED-Q047-ARCHIVE-AUDIT-001, -BASELINE-AUDIT-001 and -INGESTION-001. These sources are dependent implementation/method evidence, not independent observational lines.
+
+### J-PROPOSED-Q047-E06 — Source-specific finite-growth backend implemented
+
+[BEREGNET / CONDITIONAL IMPLEMENTATION] q047_precursor_check_v1.py reuses unchanged V1 rational/AD/sqrt/exp/Bernstein/signed-comparison primitives and implements algebraic LCDM forcing, declared native/analytic/common neutrino references with finite interval/tail bounds, two-state n_scf=3 EDE forcing and finite prospectively closed cells, brec's distinct thermal equation, later scalar source modes, continuous carried w and stable helium onset. Positive-growth errors are permitted through strict finite first-exit containment, replacing the inappropriate mandatory contractive-radius requirement for the early equation. Source residuals, Jacobians and slacks are recomputed; provided PASS flags or residual claims never qualify a cell.
+
+[IMPLEMENTATION PRECISATION] Cell coordinate is exact a>0, with dy/da=F_u/a; monotone da/du=a preserves source trajectories and order while avoiding uncertain logarithmic endpoint conversion. The mathematical model, constants/normalization, source switches and M06 event theorem are unchanged. Fixed rational source-boundary primitives define conditional realizations; uncertain actual boundaries need explicit enlargement before admission. A bounded Euler predictor constructor accepts only recomputed closed cells and returns preserved partial/unresolved output at caps.
+
+[CORRECTION DURING IMPLEMENTATION] Direct quotient AD of the Saha root produced a gross positive overestimate at large r, exhausting the exponential growth cap in the full artificial four-mode control. No criterion or physics was changed. M08's implicit logarithmic derivative bound 0<=dln(x)/dln(r)<=(B-A)/(2B-A) is now used for thermal x; it removes that dependency overestimate while enclosing the same root. The failing regression was observed before correction and the complete four-mode source-expression control then closed. This is enclosure improvement, not evidence for an actual cosmology.
+
+[CONTROL RESULT] A deliberately artificial radiation realization now has a real PASS path through all four precursor modes and the onset map; EDE-background and scalar/vector positive-growth cells also have finite PASS paths. This is stronger method implementation evidence than another fixed missing-object inventory. Actual effective-state, accepted initialization accuracy/source-binary linkage and downstream full M06 event evidence remain unadmitted. Scope flags prevent control PASS from upgrading any actual case. No initialization/re-shoot/rebuild/CLASS/native/cosmology evaluation was performed.
+
+[LIMITATIONS] The backend checks conditional source-real primitive boxes; it does not attest original cached-instance identity, solve a complete archive inverse, certify native interpolation or verify compiled libm/guard equivalence. The effective-state schema and read-only audit identify fields and representation errors but cannot themselves admit an initialized instance. PT01/PT03 and PT10 remain actual scientific debt. The original insufficient-evidence verdicts are KEEP in every case.
+
+Sources: I-PROPOSED-Q047-PRECURSOR-EXECUTION-001; I-PROPOSED-Q047-PRECURSOR-METHOD-001/-CONTROLS-001; K-PROPOSED-Q047-BACKGROUNDCODE-001/-SOURCE-001/-CONSTANTCODE-001.
+
+### J-PROPOSED-Q047-E07 — Current repository discovery and manual-install package
+
+[TECHNICAL EVIDENCE] Read-only GitHub main3bfffa1c905d0c58ccee8b55eaf539eebcb2dec8; recursive tree1605 entries, nontruncated. Exact52-entry registry, README, canonical launcher, V1 mathematical/certificate/tests and Q045 observers were inspected. q_ncdm/phi_prime_ini_scf/precursor keyword searches returned no matches; the inspected observers contain no complete initialized effective/quadrature export. This bounded search does not prove absence from all remote/expired artifacts. No GitHub write or dispatch was attempted in this round. The old successful run38091858306 and prior denied writes/failures remain E03-E05, unchanged historical evidence.
+
+[PREPARED ONLY] New PROGRAM_ID Q047-PRECURSORCHECK-V1 is unique in the inspected tree/registry and registered in a local53-entry candidate. All52 prior parsed entries remain exactly unchanged. Target.github/workflows/q047-precursor-check-v1.yml; README updated differentially. Canonical launcher remains3169bytes/SHA2563cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288. No renamed launcher, arbitrary shell PROGRAM_ID, archive deliverable, new motor, remote registration or run is claimed.
+
+[FINITE EXECUTION] One Python3.12.14 standard-library job,10-minute cap, bounded source retrieval/tests/backend90-second alarm, zero native evaluations and no retry/shard/merge/checkpoint/automatic downstream dispatch. Current official hosted-job execution ceiling6hours was checked; runtime here is measured separately from unmeasured remote setup/network time. Program installation remains manual under the read-only GitHub preference. Inspect live registry before merging the candidate if main changes.
+
+Sources: I-PROPOSED-Q047-PRECURSOR-EXECUTION-001; K-PROPOSED-Q047-GITHUB-LIMITS-001; inherited E03-E05 source IDs.
+
+### J-PROPOSED-Q047-E08 — Validation/result and exact scientific boundary
+
+[TECHNICAL VALIDATION] All47 finite/new and unchanged Q047 regression tests PASS locally in4.256seconds; backend complete four-mode control PASS in0.290seconds; all ten source hashes PASS; exact count/runtime, source/package hashes and actual output locations are recorded in q047_precursor_local_validation_v1.json. The result JSON records CONDITIONAL backend-control PASS separately from complete actual qualification. Source-byte PASS is file identity only. An optimized Python, wrong source/Q/ID, changed launcher, malformed rational/hex, gap/wrong mode, unmodelled component, nonclosed tube, incomplete export or exhausted work cap cannot become an actual scientific PASS.
+
+[KEEP] All four actual verdicts INSUFFICIENT_EVIDENCE; FINAL_RESULT_GATE=UNRESOLVED. Ledger16/52 consumed,36 remaining,zero new native/theory evaluations. No physical hypothesis/model was falsified or confirmed; no new optical-depth/CMB/likelihood/H0 result, canonical universe revision or actual first-hit theorem instance was established. Case ID remains NOT DOCUMENTED. No job runs in the background.
+
+[DIFFERENTIAL JOURNAL EFFECT] ADD E06-E08 implementation/validation evidence and new source/claim mappings. KEEP all earlier scientific results, rejected claims, anomalies, controls, original receipts and source identities. SUPERSEDE only M10's operational instruction to implement the finite backend: now addressed by actual files. Its raw contract remains unchanged. This is the same complete journal, with the829100-byte inherited historical tail preserved byte-identically (SHA2561957224fdb4f84dffa80f610578ddb5c68ae185b9a521aa19002c855bef87f8b).
+
+Sources: I-PROPOSED-Q047-PRECURSOR-EXECUTION-001 and I-PROPOSED-Q047-PRECURSOR-VALIDATION-001; retained source identities are unchanged.
 
 ## AKTUEL OVERLEVERING
 
-Technical installation checkpoint: the existing launcher is unchanged; the new target, 52-entry candidate registry, README and full journal must be installed together before launch. Minimum user action is to enable an authorized contents/workflow-write connection for Morfindien/Bubbleverse, or upload the 13 prepared implementation/config/workflow/registry/README/journal files at their documented repository paths. The eight local result JSON files are retained as evidence and can also be installed under q047_results/. Do not create another launcher. On resumption, first re-read main/registry/README for concurrent changes; patch the existing base rather than overwriting newer entries, verify the frozen package and source gates, then confirm the actual target registration. Do not start a cosmology job. No background work continues.
+CURRENT Q remains exactly the question above; all four actual cases are unresolved. Selected next engine: RESULT INGESTION & ROUTING ENGINE. OVERLEVERINGSSTATUS=KLARGJORT; no automatic delivery.
 
-The bounded implementation task is technically completed; the main question is still open. Return this same proposed Q047 to RESULT INGESTION & ROUTING ENGINE with E01-E03, M01-M06, all inherited evidence and source identities. No motor was automatically dispatched. Do not repeat the literal guard proof or create Q048.
+NEW RESULT: source-specific finite-growth backend and complete artificial four-mode precursor control implemented, tested and packaged. Recomputed actual source fields/defects are conditional on primitive parameter/initial boxes; actual initialization/source-binary identity is unadmitted. Relevant concrete files, bounded installation/run instructions, finite tests and explicit gates are Q047_PRECURSOR_EXECUTION_SPEC_V1.md, q047_precursor_check_v1.py, q047_precursor_tests_v1.py, q047_precursor_package_v1.json, q047_precursor_packet_control_v1.json, Q047_EFFECTIVE_STATE_SCHEMA_V1.json, target workflow and current result/validation JSON. The unchanged mathematical contract and earlier complete controls remain attached to the same case.
 
-The concrete next task is to ingest the finite local technical result without upgrading it to cosmological evidence and resolve the exact missing proof objects for each frozen case: (1) effective source-continuum physical realization, including selected EDE post-shooting fields and initialization/linkage/compiler semantics; (2) qualified preceding-temperature/onset state from the actual earlier source modes; (3) source-continuum H(t) and rho_gamma(t) enclosures with their background/initialization/interpolation/quadrature errors; (4) complete enabled upper pre-event path and error tubes; (5) every competing switch/reset/invalidity flag, and exact mathematical/native cutoff mapping. Existing requested/native records and M05 backward reconstruction remain available, but do not prove these obligations. A cached-state read-only export may resolve native identity if actually accessible; it does not certify continuum accuracy.
+IMPORTANT REMAINING INPUT: complete originally accepted initialized-state/effective export (including post-shooting EDE phi/psi/F/m/B and native neutrino q/weights/factor/M), frozen binary/build/inputs/raw linkage and validated initialization/rounding error; or a complete rigorously justified archive inverse. Existing requested metadata/rounded first rows are not that input. The read-only export audit is not origin attestation. No fresh native init/re-shoot/rebuild is authorized to create absent data. Cached records may be read where already available; the absent essential input is a data/access limit, not physical nonreachability.
 
-Expected product: a per-case, replayable effective-input/forcing admission proof or a precise missing-object report, retaining the original four vectors and source pins. V1's conditional packet interface cannot verify an asserted actual qualification; adding genuine proof formats/independent verifiers or extending noncontractive propagation would require a separately versioned executable and newly justified finite test plan. No actual cosmology, spectrum, likelihood, sampling, refinement or production job is started or newly authorized by the remaining budget or this return route.
+EXACT NEXT TASK: Ingest E06-E08 and the saved finite result, retain all scientific state and prior failures, distinguish backend control PASS from actual PT01/PT03/PT10 debt, and recover qualifying original effective/init evidence if accessible. Do not route to another generic theorem or rerun old CERTCHECK solely to reproduce its list. Manual installation of this candidate is optional for reproducible replay of the new backend; it will not invent actual inputs. If original evidence is unavailable, record the exact export blockage without endless validation. Any new native action needs a separately authorized concrete proposal.
 
-Acceptance: use M06 unchanged. A certified reached-negative first event or covered-domain nonreachability can change the actual answer; conditional control PASS or failed input admission cannot. All four actual answers remain INSUFFICIENT EVIDENCE. The precise missing objects are emitted in q047_required_inputs_v1.json; the complete finite technical test/result gates are preserved below and in separate individual artifacts. This is a limit of the completed work, not a demonstrated universal impossibility of obtaining qualified data.
+SUCCESS: correctly integrate the completed finite implementation and either admit sufficient existing original data for a complete actual precursor/onset/M06 event certificate, or preserve the precise unavailable input and insufficient-evidence status. Q can close and go to Motor14 only after the exact actual question has a justified documented answer; code exit/control PASS is not closure.
 
-Recommended next setup: the present Work/Codex tools are sufficient for finite ingestion and provenance checks. If deeper qualification/code work is actually undertaken, use GPT-6.1 Sol Extra High if available, with pinned-source/file access and outward arithmetic. Current active model/effort and account picker are NOT VERIFIED; no switch occurred. Astra Extra High is a conditional alternative, not a verified ASTRA MAX identity. More reasoning or remote HPC alone cannot supply missing physical input/error proofs.
+FROZEN: Q/question; four case identities/requested vectors and accepted z_reio; source5a131c91...; epsilon/guard/normalization; contract V1 and source IDs; prior falsifications/failures; accepted-model boundary v0.7/R000007; budget16/52/36. No retuning closure/mass/parameters/bounds or criteria after results.
 
-## KILDER TIL NÆSTE MOTOR
+STOP: finite mandatory tests are complete when relevant source/identity/closure failure modes are covered. Preserve successful branches and partial cells; do not extend work solely because other tests are possible. There is no supported background continuation or receiving-motor execution.
+
+## CURRENT MATHEMATICAL RESULT AND PROVENANCE
+
+RESULT ID: I-PROPOSED-Q047-PRECURSOR-CONTROLS-001 (internal method/control result, not a scientific measurement).
+
+ORIGIN: This mathematical stage, standard-library Python 3.12.14, Linux x86_64; no native code or scientific solver executed.
+
+RESULT CLASS: MATHEMATICAL_RESULT / CONDITIONAL_METHOD_CONTROL. RESULT STATUS: finite controls PASS, actual cosmological qualification UNRESOLVED.
+
+DIRECT OUTPUT: Six control groups passed; all actual case verdicts INSUFFICIENT_EVIDENCE; new_native_or_theory_evaluations=0. Exact input/output/code hashes and contents follow in the artifact block. No external proof assistant or actual IVP integration was used.
+
+PHYSICAL INTERPRETATION: No new inference about reality. The reduction and sufficient bounds define the next reproducible test; they do not establish actual crossings or a physical CLASS_EDE error.
+
+TOOL/PLUGIN RESEARCH: Local frozen primary source actually read and all ten scientific hashes verified. Existing native input/evidence artifacts read. No additional web literature sweep, fresh GitHub head claim, installation, workflow launch, external message or new cosmology evaluation. Prior verified GitHub run38091858306 remains E05. Source files are the evidence objects; file/GitHub capability is retrieval, not independent scientific evidence.
+
+## CLAIM-TO-SOURCE MAP — current additions; all earlier maps retained
+
+- M07: K-PROPOSED-Q047-BACKGROUNDCODE-001, K-PROPOSED-Q047-INPUTCODE-001 and I-PROPOSED-Q047-PRECURSOR-METHOD-001/-CONTROLS-001.
+- M08: K-PROPOSED-Q047-SOURCE-001, K-PROPOSED-Q047-CONSTANTCODE-001 and I-PROPOSED-Q047-PRECURSOR-METHOD-001/-CONTROLS-001.
+- M09: K-PROPOSED-Q047-BACKGROUNDCODE-001, retained M03/K-PROPOSED-Q047-DISSIPATIVE-001, new method/control source IDs.
+- M10/admission: new method/control IDs, original archive/baseline/ingestion sources. Prior requested/raw input claims remain R01-R06; native hints are not accuracy certificates.
+- E04/E05/I01: I-PROPOSED-Q047-LAUNCHER-FIX-001, -INGESTION-001 and -EXECUTION-001 remain attached to the exact prior runs/commits/artifacts. Their evidence is not replaced by these controls.
+
+## JOURNAL EFFECT / LIMITATIONS
+
+ADD M07-M10: minimal background dynamics, ell forcing, early/full thermal distinction, stable Saha/derivative bounds, finite-growth closure, FD error recipe, complete implementable admission contract and executed finite controls.
+
+KEEP: Every unaffected inherited global/scientific journal point, source ID, failure/result, exact question and all raw evidence. Accepted model v0.7/R000007 unchanged; production restriction and16/52 ledger unchanged. All four actual verdicts unchanged.
+
+REFINE: The old sufficient invariant-error-radius rule applies only when its inequality holds; it is inadequate as a mandatory criterion for the early source branch. This does not invalidate the already passed manufactured upper-IVP fixture or its conditional theorem.
+
+SUPERSEDE OPERATIONAL NEXT TASK ONLY: I01's request to define the precursor method is now addressed by M07-M10. Its raw result/provenance and unfinished actual admission remain intact. No hypothesis or physical model was falsified here.
+
+Q-COMPLETION GATE: NOT SATISFIED. Actual precursor/background/first-hit proof is missing; this is a limitation of completed work/data, not proof that current scientific data universally cannot decide the question.
+
+MATERIAL-REVERSAL TEST: A valid actual precursor/certificate can change reached-event applicability. Repeating the original V1 missing-object inventory or manufactured fixture cannot. HPC-LAVEREN implementation of the specified verifier is therefore the single selected next task.
+
+## ACTIVE SOURCE REGISTER — complete active and inherited sources
+
+#### I-PROPOSED-Q047-PRECURSOR-EXECUTION-001
+TYPE: BUBBLEVERSE TECHNICAL EVIDENCE / IMPLEMENTATION, local prepared v1, not external publication.
+REFERENCE: Bubbleverse Q047 finite-growth source-real precursor backend, 2026; program Q047-PRECURSORCHECK-V1.
+IDENTIFIERS/VERSION: q047_precursor_check_v1.py, q047_precursor_tests_v1.py, q047_precursor_package_v1.json, Q047_PRECURSOR_EXECUTION_SPEC_V1.md, Q047_EFFECTIVE_STATE_SCHEMA_V1.json, q047_precursor_packet_control_v1.json, candidate workflow/registry/README; hashes in manifest and validation receipt. Repository base3bfffa1c905d0c58ccee8b55eaf539eebcb2dec8; source5a131c91d657dd9a7c6364cc45b038710f8d0d97.
+URL/LOCATION: individually delivered files; current read-only base https://github.com/Morfindien/Bubbleverse/tree/3bfffa1c905d0c58ccee8b55eaf539eebcb2dec8 . New program is NOT claimed installed there.
+RELEVANT LOCATION: scalar/vector_envelope, source field evaluators, certify_cell, generate_cells, verify_packet, audit_export, package/source gates.
+USED FOR: E06-E08 implementation/reuse/conditional scope and repository preparation.
+CONTROL STATUS: exact GitHub bytes/source files read; local finite mathematical/refusal tests and complete artificial source-mode control run; not actual original cosmology reproduction.
+DEPENDENCE: same M07-M10 method, pinned source, unchanged V1 interval/comparison code and artificial controls. Not independent scientific/observational evidence.
+NEXT MOTOR: direct implementation/input-format evidence; no actual-event authority.
+
+#### I-PROPOSED-Q047-PRECURSOR-VALIDATION-001
+TYPE: BUBBLEVERSE TECHNICAL EVIDENCE / FINITE LOCAL TEST RESULT, v1.
+REFERENCE: q047_precursor_local_validation_v1.json and q047_precursor_results/q047_precursor_*_v1.json/log, local2026 run; internal result scope only.
+IDENTIFIERS: original journal input hashcd0ae147483daa177c2c411f28916a76076ca4aea910106eadba2e23e6bb5e68; exact retained contract/control identities in this journal. Runtime/result file hashes and numerical exact enclosures preserved in receipt/results.
+RELEVANT LOCATION: source/package/launcher/README integrity, complete inherited/new suite, conditional complete four-mode and onset output, all four actual verdicts.
+USED FOR: E08; finite scalar/vector, forcing/neutrino/mode/closure/refusal controls and correction regression E06.
+CONTROL STATUS: actually computed finite tests, not native model initialization or actual background/history/event reproduction.
+DEPENDENCE: same executable/source/method; local test agreement is not independent external evidence.
+NEXT MOTOR: direct new technical result and actual unadmitted boundary.
+
+#### K-PROPOSED-Q047-GITHUB-LIMITS-001
+TYPE: OFFICIAL TECHNICAL DOCUMENTATION; dynamic page, checked2026-10-10 UTC.
+REFERENCE: GitHub, Actions limits; https://docs.github.com/en/actions/reference/limits .
+RELEVANT LOCATION: Existing system limits, All GitHub-hosted runners / Job execution time:6hours.
+USED FOR: E07 bounded one-job runtime planning; not scientific cosmological evidence.
+CONTROL STATUS: official page opened/read at the relevant row.
+DEPENDENCE: platform constraint only; account quota/runner cost not established.
+NEXT MOTOR: preserved execution context only.
+
+CLAIM MAP ADDITIONS: E06→I-PROPOSED-Q047-PRECURSOR-EXECUTION-001,M07-M10 and retained source-code IDs. E07→same execution ID,K-PROPOSED-Q047-GITHUB-LIMITS-001. E08→execution/validation IDs. Existing maps and source IDs remain unchanged; no source ID is reused or renumbered.
+
+
+#### I-PROPOSED-Q047-PRECURSOR-METHOD-001
+
+TYPE AND PUBLICATION STATUS: Internal explicit mathematical derivation and prospective machine-readable certificate contract; unpublished, not observational evidence.
+REFERENCE: Bubbleverse Q047 precursor admission method, M07-M10, 2026.
+IDENTIFIER AND VERSION: Q-047; Q047_PRECURSOR_CONTRACT_V1.json v1 SHA256 bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc.
+URL: No independent publication URL. Full contract is embedded in this same authoritative journal and delivered individually.
+RELEVANT LOCATION: M07-M10 derivations; contract equations/finite_certificate_method/predicates PT01-PT11/verifier_interface; four frozen case records.
+USED FOR: Minimal background/thermal reduction, sufficient error/forcing/mode criteria, source-real/reference separation and exact next implementation task.
+EVIDENCE ROLE: Mathematics/method and input-interface specification; not actual-case event proof.
+CONTROL STATUS: Relevant ten frozen primary source files hashed; background/temperature/initialization/Saha/quadrature/error-latch sections read. Algebraic and manufactured controls executed separately. Native equivalence, actual precursor integration and global/physical error tests NOT PERFORMED.
+DEPENDENCE: Same pinned source and archived native lineage as retained R/M/E records. This derivation and contract are not a new independent cosmological evidence line.
+RELEVANCE FOR NEXT MOTOR: DIRECT WORKING INPUT; all primitive-field and finite-verifier predicates must be implemented/recomputed rather than trusted as booleans.
+
+#### I-PROPOSED-Q047-PRECURSOR-CONTROLS-001
+
+TYPE AND PUBLICATION STATUS: Bubbleverse internal finite mathematical/control calculations, unpublished.
+REFERENCE: q047_precursor_controls_v1.py and Q047_PRECURSOR_CONTROLS_V1.json, executed 2026-10-10T23:00:57+00:00.
+IDENTIFIER AND VERSION: v1, Python3.12.14; code SHA256 a81d80d0ac0274acfc662bf44eb7cf8d683ed4d576f1ef96571ab8c5e656653d; output SHA256 d24d4c4eeaab12c7645c30e43da9e94280225ea27bf680e1959bf274fc06e4f8.
+URL: No independent external URL; complete code/result embedded below and delivered individually.
+RELEVANT LOCATION: Six checks, 54 exact scalar-energy tuples, six Saha controls, temperature transformations, manufactured positive-growth tube, four moment identities/FD tails, threshold rational/preimage calculation.
+USED FOR: M07-M10 source transformation/enclosure controls and precise failure of mandatory contractive-radius criterion in a finite-growth control.
+EVIDENCE ROLE: Computed finite method controls; no actual-case cosmological accuracy, event or physical measurement.
+CONTROL STATUS: ACTUALLY EXECUTED, PASS. Exact Fraction identities, 10^-90 outward rational lattice, integer-square-root enclosure and range-reduced positive Taylor exponential/geometric tail. Checks have defined domains; exp control work is explicitly capped. Float display values do not replace exact endpoints. No external formal proof checker used.
+DEPENDENCE: Same derived equations. Original/transformed algebra and closed special-case identities are cross-checks, not independent physical experiments.
+RELEVANCE FOR NEXT MOTOR: DIRECT REPLAY/VALIDATION INPUT and documentation for retained computed journal points. Do not treat these six groups as actual source-case tests.
+
 
 The following active sources are direct input or preserved supporting evidence. All older source registers and claim maps remain inside the same journal's historical evidence section; existing IDs are not reassigned. No source count implies independence. Newly acquired archives, reconstructions and the source theorem are one dependent implementation/provenance chain.
 
 ### Current source controls and ID continuity
 
-Existing source IDs below retain their original identities. No ID was retired or reused in this research round. The inherited global records and their source registers are carried forward, not contemporaneously remeasured. The inherited model snapshot remains previously pinned; execution main was freshly checked at a9a5777b5923f32930cd9c84a49227ba36249326. Research/mathematics control dates remain 2026-10-10 UTC; the execution round date/time is given in the active header.
+Existing source IDs below retain their original identities. No ID was retired or reused. I-PROPOSED-Q047-LAUNCHER-FIX-001 retains the existing repair identity; I-PROPOSED-Q047-INGESTION-001 is the only new technical source identity for this ingestion. The inherited global records and their source registers are carried forward, not contemporaneously remeasured. The inherited model snapshot remains previously pinned; execution main was freshly checked at a9a5777b5923f32930cd9c84a49227ba36249326. Research/mathematics control dates remain 2026-10-10 UTC; the execution round date/time is given in the active header.
+
+#### I-PROPOSED-Q047-INGESTION-001
+
+TYPE AND PUBLICATION STATUS: Bubbleverse-generated technical qualification outputs, with external GitHub execution/digest records; not a scientific publication or independent observation.
+REFERENCE: Bubbleverse Q047 certificate checker V1, successful run38091858306 and finite result ingestion, 2026.
+IDENTIFIER AND VERSION: Q047-CERTCHECK-V1; run38091858306 attempt1; job114329741408; artifact11684357107; executed commit3bfffa1c905d0c58ccee8b55eaf539eebcb2dec8. Individual output hashes and archive identity in Q047_INGESTION_RECEIPT.json.
+URL: https://github.com/Morfindien/Bubbleverse/actions/runs/38091858306
+RELEVANT LOCATION: Complete decoded qualify job log; steps4–8; run/artifact metadata; inspected execution/model READMEs for operational architecture and Q045 accepted boundary; q047_static_gate_v1.json, q047_sources_gate_v1.json, q047_results_gate_v1.json, q047_certificate_final_v1.json, q047_required_inputs_v1.json and conditional/regional control JSONs.
+USED FOR: E05 run/test/artifact identity; I01 technical/conditional versus actual scientific status; correction of old package journal's operational state.
+EVIDENCE ROLE: Technical execution/replay/provenance; does not establish actual four-case event reachability.
+CONTROL STATUS: CONTROLLED — primary run metadata, all job steps and complete decoded job log retrieved; reported20 tests2.952s checked; GitHub artifact digest exactly matched uploaded bytes; output/input hashes and cross-object identities checked. No numerical reproduction was rerun this ingestion because these immutable outputs and logs suffice for scope classification.
+DEPENDENCE: Same V1 code, source, native diagnostics, assumptions and controls as I-PROPOSED-Q047-EXECUTION-001 and prior local run. Not a new independent physical evidence line.
+NEXT MOTOR RELEVANCE: Direct proof-obligation inventory and technical evidence; source/init/background/method entries below remain the direct mathematical input.
+CONTROL DATE: 2026-10-11 Europe/Copenhagen; execution timestamps2026-10-10T22:33:17Z–22:33:44Z.
+
+#### I-PROPOSED-Q047-LAUNCHER-FIX-001
+
+TYPE AND PUBLICATION STATUS: Bubbleverse technical failure and reproduced local metadata repair.
+REFERENCE: Q047 first workflow run, exact launcher byte audit and single-field manifest repair, 2026.
+IDENTIFIER AND VERSION: run 38091253941; job 114327978471; installed commit 01930ca77fb5e29244ced896ababedba22c66610; Q047_LAUNCHER_HASH_FIX_V1.json. Same Q047-CERTCHECK-V1 executable.
+URL: https://github.com/Morfindien/Bubbleverse/actions/runs/38091253941
+RELEVANT LOCATION: full job logs, static failure; Git blob 7f22c617fb98d1508a0b22a42dd3735a74d8288e; q047_package_v1.json launcher_sha256.
+USED FOR: J-PROPOSED-Q047-E04, corrected E03 provenance and preserved repair history.
+EVIDENCE ROLE: Technical execution/failure and repair evidence only.
+CONTROL STATUS: Actual run/job status and complete logs read; all installed package bytes checked against Git blob identities and frozen hashes; precise extra-LF failure reproduced and fixed locally; 20 tests and finite controls passed. At the repair checkpoint the remote update was denied by HTTP 403. E05 and I-PROPOSED-Q047-INGESTION-001 now document subsequent successful external installation/execution separately.
+DEPENDENCE: Same code/input/scientific source lineage; not independent cosmological evidence.
+NEXT MOTOR RELEVANCE: Direct repair and ingestion input; do not repeat this failure without a changed cause.
 
 #### I-PROPOSED-Q047-EXECUTION-001
 
 TYPE AND PUBLICATION STATUS: Bubbleverse technical code and actual local computational controls; not observational evidence or a qualified actual cosmological result.
 REFERENCE: Q047 certificate checker V1 and finite technical result suite, Bubbleverse, 2026.
 IDENTIFIER AND VERSION: Q-047; PROGRAM_ID Q047-CERTCHECK-V1; v1; exact executable/input/test/workflow and output hashes below.
-URL: Repository installation BLOCKED by HTTP 403; no new immutable commit exists. Local individual artifacts are identified below.
+URL: https://github.com/Morfindien/Bubbleverse/tree/3bfffa1c905d0c58ccee8b55eaf539eebcb2dec8 ; local original preparation, first failed run and successful external execution are distinguished in E01–E05.
 RELEVANT LOCATION: q047_certificate_v1.py check_upper_packet/input_admission; q047_math_v1.py hydrogen/flow; q047_package_check_v1.py static/sources/results; 20 regression tests; q047_results_gate_v1.json.
 USED FOR: J-PROPOSED-Q047-E01-E03 and technical preparation/result state only.
 EVIDENCE ROLE: Numerical/method implementation and technical controls.
-CONTROL STATUS: Executed locally and finite required controls passed; no actual cosmological reference or external workflow was run. Scientific gate remains UNRESOLVED.
+CONTROL STATUS: Executed locally with finite controls, then externally at run38091858306; the full log confirms20 tests and all required technical gates. No actual cosmological reference was run; scientific gate remains UNRESOLVED.
 DEPENDENCE: Reuses the existing journal's source/model/region controls and native input diagnostics; manufactured conditional fixture shares those inputs. No new independent physical evidence line.
 NEXT MOTOR RELEVANCE: Direct technical work input and retained journal evidence.
 
@@ -413,7 +723,7 @@ TYPE AND PUBLICATION STATUS: Frozen original implementation; no observational or
 REFERENCE: mwt5345/class_ede, embedded HyRec2020 and CLASS thermodynamics source.
 IDENTIFIER AND VERSION: commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97; exact four file hashes in the embedded audit and inherited register.
 URL: https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97
-RELEVANT LOCATION: wrap_hyrec.c:174-200 (normalization, strict guard and time conversion); helium.c:108-179 (upper rate); history.h XHEII_MIN; thermodynamics.c:830-890, 1918-2100, 2690-2776, 2980-3005, 4035-4076 (modes, initialization, temperature, output smoothing and algebraic hydrogen).
+RELEVANT LOCATION: wrap_hyrec.c:174-200 (normalization, strict guard and time conversion); helium.c:108-179 (upper rate); history.h XHEII_MIN; thermodynamics.c:790-892,1918-2100,2535-2800,2980-3005,3960-4113 (constants/modes, initialization, early/full temperature, source error predicate, output smoothing, analytic Saha and hydrogen).
 USED FOR: J-PROPOSED-Q047-R01 through R06; source-defined target and retained conditional theorem.
 EVIDENCE ROLE: Implementation definition, not independent physical validation.
 CONTROL STATUS: CONTROLLED — actual pinned files fetched, hashed and relevant source sections read. Neither binary equivalence, all associated tables nor a cosmological integration was independently validated.
@@ -465,8 +775,8 @@ TYPE AND PUBLICATION STATUS: Frozen original source code.
 REFERENCE: mwt5345/class_ede, source/input.c.
 IDENTIFIER AND VERSION: commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97; SHA-256 9caa7c64b39b226bca210cfc82856f2be15b30b0b4802112f67dc9c18bccd873.
 URL: https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/input.c
-RELEVANT LOCATION: 523-551 (shooting target/unknown map), 650-739 (root storage/re-read), 3360-3442 (effective scalar parameters), 5822 (default T_cmb).
-USED FOR: R01, R03, R04 and R06.
+RELEVANT LOCATION:523-551 (shooting target/unknown map),650-739 (root storage/re-read),2640-2740 (mass/normalization),3360-3445 (effective scalar parameters and initialization),5822 (default T_cmb).
+USED FOR:R01,R03,R04,R06 and M07/M10.
 EVIDENCE ROLE: Target and shooting/input interpretation.
 CONTROL STATUS: CONTROLLED — actual source fetched and relevant sections read; actual stored post-shooting internals not directly acquired.
 DEPENDENCE: Same frozen native implementation.
@@ -478,10 +788,10 @@ TYPE AND PUBLICATION STATUS: Frozen original source code.
 REFERENCE: mwt5345/class_ede, source/background.c.
 IDENTIFIER AND VERSION: commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97; SHA-256 84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451.
 URL: https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/background.c
-RELEVANT LOCATION: 2304-2311 (non-attractor initialization), 2485-2490 (derived outputs), 3003-3052 (V_e, additive constant and derivatives).
-USED FOR: R04 and R06.
-EVIDENCE ROLE: Scalar-field source definition and reconstruction algebra.
-CONTROL STATUS: CONTROLLED — actual code read; neither coupled background nor shooting root independently solved or enclosed.
+RELEVANT LOCATION: 394-627 (components/Friedmann/H_prime/EDE latch),1228-1363 (distribution),1390-1598 (native quadrature),1624-1685 (moments),2155-2327 (accepted initialization),2485-2490 (derived outputs),2682-2765 (background ODE),2980-3100 (potential and derivatives).
+USED FOR: R04, R06 and M07-M10.
+EVIDENCE ROLE: Background/potential/quadrature/source error definition and reconstruction algebra.
+CONTROL STATUS: CONTROLLED — relevant primary code read, exact frozen SHA256 rechecked in M07-M10; neither actual coupled background nor shooting root independently solved/enclosed.
 DEPENDENCE: Same model implementation and native background outputs.
 NEXT MOTOR RELEVANCE: Direct working input.
 
@@ -814,9 +1124,1582 @@ This same file contains the complete active journal, curated source block, inher
 
 No independently validated trajectory/event artefact exists in this run. Native executables were downloaded inside archives but never run. Source/compiler/table and actual forcing/initial-state qualification remain part of the implementation gates. The mathematical controls below were actually run; they are regional algebraic controls only.
 
+### Precursor mathematics artifacts — current v1
+
+These code/data/control files are not additional journals. The entire precursor contract, exact outputs and complete standalone control code are embedded here so continuity does not depend on a previous chat, an expiring raw archive or a separate temporary artifact. Raw prior ingestion receipt and GitHub outputs were not rewritten. Ten frozen source file digests match the source lock in the contract.
+
+Artifact: Q047_PRECURSOR_CONTRACT_V1.json; version v1; SHA256 bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc; individual working path /workspace/scratch/ffc651cf1b5e/q047_precursor/Q047_PRECURSOR_CONTRACT_V1.json.
+
+```json
+{
+  "budget": {
+    "cap": 52,
+    "consumed": 16,
+    "new_native_or_theory_evaluations": 0,
+    "remaining": 36
+  },
+  "case_id": "NOT_DOCUMENTED",
+  "cases": {
+    "camspec-ede_n3": {
+      "accepted_z_reio": "7.4735260009765625",
+      "actual_verdict": "INSUFFICIENT_EVIDENCE",
+      "archive_input_roles": {
+        "first_background_raw": "native hint; not accepted initialization proof",
+        "native_meta_text": "exact archived text; not a qualified source-continuum IVP state",
+        "requested_input_identity": "requested vector/provenance only",
+        "temperature_neighbor": "stored nearby row; not exact onset state"
+      },
+      "current_evidence": {
+        "PT01": "PARTIAL requested/raw identity; effective derived fields/rounding-linkage not complete",
+        "PT03": "UNRESOLVED actual accepted initialization linkage",
+        "PT04": "UNRESOLVED native q/weights and distribution/normalization error contract",
+        "PT05": "NOT_EXECUTED independent background/ell enclosure",
+        "PT07": "NOT_EXECUTED precursor thermal enclosure",
+        "PT09": "UNRESOLVED actual onset box",
+        "PT10": "NOT_EXECUTED actual first-hit certificate"
+      },
+      "original_native_meta_text": "{\"q\":\"Q-045\",\"treatment\":\"00\",\"precision_changed\":false,\"source_patch\":false,\"nH0_m3\":0.18878164397279548,\"fHe\":0.081868254815476466,\"YHe\":0.24536262542199344,\"sigma_m2\":6.6524616000000001e-29,\"metres_per_Mpc\":3.0856775812820001e+22,\"c_m_s\":299792458,\"m_H_kg\":1.673575e-27,\"not4\":3.9714999999999998,\"tau_reported\":0.051418523520219167,\"z_reio\":7.4735260009765625,\"rows\":28333,\"has_exotic_injection\":0,\"has_varconst\":0,\"has_idm_g\":0,\"reio_parametrization\":1}\n",
+      "qualified_precursor_packet": null,
+      "raw_hints": {
+        "archive_id": 11659590507,
+        "archive_sha256": "4db84e6b5206bc5d5b789c41666b6a5fff450fa25f39f6645861769a8d37a3e5",
+        "baseline_background_sha256": "4adbb8404741e764691b9e7cdd57b5b09d5325fc33d2a363e56112716ad90953",
+        "baseline_thermodynamics_sha256": "4aa7402e971e2e6e75449272acd409ac70627a2fa269b5734f05b935a7fe8aad",
+        "first_background_raw": {
+          "(.)p_ncdm[0]": "2.1104903166919976e+43",
+          "(.)p_prime_scf": "-0",
+          "(.)p_scf": "-1487.2541590794683",
+          "(.)p_tot": "1.5516678001090172e+44",
+          "(.)p_tot_prime": "-1.3391176692069598e+53",
+          "(.)rho_b": "2.4799866598904064e+33",
+          "(.)rho_cdm": "1.3793970728832686e+34",
+          "(.)rho_crit": "4.6550034004897914e+44",
+          "(.)rho_g": "2.7515605354698381e+44",
+          "(.)rho_ncdm[0]": "6.331470950075991e+43",
+          "(.)rho_scf": "1487.2541590794683",
+          "(.)rho_tot": "4.6550034004897914e+44",
+          "(.)rho_ur": "1.2702957698496144e+44",
+          "H [1/Mpc]": "2.1575456890851214e+22",
+          "V''_scf": "-1026719.427248811",
+          "V'_scf": "18720.273472816123",
+          "V_e_scf": "4461.7624771323526",
+          "V_scf": "4461.7624772384052",
+          "ang.diam.dist.": "1.3969465118571829e-10",
+          "comov. dist.": "13969.465118571847",
+          "comov.snd.hrz.": "2.6759584842647987e-09",
+          "conf. time [Mpc]": "4.6347850002348423e-09",
+          "gr.fac. D": "5.426727235993561e-06",
+          "gr.fac. f": "1.9999999999999976",
+          "lum. dist.": "1.3969465118571863e+18",
+          "phi'_scf": "0",
+          "phi_scf": "0.22885273814542192",
+          "proper time [Gyr]": "7.5585045345417337e-26",
+          "z": "99999999999999.125"
+        },
+        "native_hint": {
+          "H_1_Mpc": "10.396503280442424",
+          "ap": "4",
+          "row": "6543",
+          "trial": "1",
+          "x_H_workspace": "0.9979023215500622",
+          "x_He_workspace": "1.2570431520969717e-05",
+          "x_noreio": "0.9979033506693531",
+          "x_reio": "0.9979033506693531",
+          "xe_stored": "0.9979033506693531",
+          "z": "1646.9749999999999"
+        },
+        "native_meta_text": "{\"q\":\"Q-045\",\"treatment\":\"00\",\"precision_changed\":false,\"source_patch\":false,\"nH0_m3\":0.18878164397279548,\"fHe\":0.081868254815476466,\"YHe\":0.24536262542199344,\"sigma_m2\":6.6524616000000001e-29,\"metres_per_Mpc\":3.0856775812820001e+22,\"c_m_s\":299792458,\"m_H_kg\":1.673575e-27,\"not4\":3.9714999999999998,\"tau_reported\":0.051418523520219167,\"z_reio\":7.4735260009765625,\"rows\":28333,\"has_exotic_injection\":0,\"has_varconst\":0,\"has_idm_g\":0,\"reio_parametrization\":1}\n",
+        "scalar_first_row_for_CC": {
+          "(.)p_ncdm[0]": "2.1104903166919976e+43",
+          "(.)p_prime_scf": "-0",
+          "(.)p_scf": "-1487.2541590794683",
+          "(.)p_tot": "1.5516678001090172e+44",
+          "(.)p_tot_prime": "-1.3391176692069598e+53",
+          "(.)rho_b": "2.4799866598904064e+33",
+          "(.)rho_cdm": "1.3793970728832686e+34",
+          "(.)rho_crit": "4.6550034004897914e+44",
+          "(.)rho_g": "2.7515605354698381e+44",
+          "(.)rho_ncdm[0]": "6.331470950075991e+43",
+          "(.)rho_scf": "1487.2541590794683",
+          "(.)rho_tot": "4.6550034004897914e+44",
+          "(.)rho_ur": "1.2702957698496144e+44",
+          "H [1/Mpc]": "2.1575456890851214e+22",
+          "V''_scf": "-1026719.427248811",
+          "V'_scf": "18720.273472816123",
+          "V_e_scf": "4461.7624771323526",
+          "V_scf": "4461.7624772384052",
+          "ang.diam.dist.": "1.3969465118571829e-10",
+          "comov. dist.": "13969.465118571847",
+          "comov.snd.hrz.": "2.6759584842647987e-09",
+          "conf. time [Mpc]": "4.6347850002348423e-09",
+          "gr.fac. D": "5.426727235993561e-06",
+          "gr.fac. f": "1.9999999999999976",
+          "lum. dist.": "1.3969465118571863e+18",
+          "phi'_scf": "0",
+          "phi_scf": "0.22885273814542192",
+          "proper time [Gyr]": "7.5585045345417337e-26",
+          "z": "99999999999999.125"
+        },
+        "temperature_neighbor": {
+          "Tb [K]": "4491.5511355061426",
+          "c_b^2": "8.6275299293813936e-10",
+          "conf. time [Mpc]": "201.72092255521227",
+          "dTb [K]": "2.72550458538826",
+          "exp(-kappa)": "9.9916236538158099e-17",
+          "g [Mpc^-1]": "1.0493454212283593e-16",
+          "kappa' [Mpc^-1]": "1.050225126151157",
+          "scale factor a": "0.00060680532168267114",
+          "tau_d": "77.939216907622651",
+          "w_b": "6.4706430230195841e-10",
+          "x_e": "0.9979033506693531",
+          "z": "1646.9749999999999"
+        }
+      },
+      "requested_input_identity": {
+        "baseline_run_id": "38023210800",
+        "baseline_worker_sha256": "8072784489a3ad2c27076fe4e47b0aae19e6c29ab0d1e7fac3bdfe62c2bf709b",
+        "class_parameters": {
+          "A_s": 2.0864545912845155e-09,
+          "CC_scf": 1,
+          "H0": 68.16599436660475,
+          "N_ncdm": 1,
+          "N_ur": 2.0328,
+          "Omega_Lambda": 0,
+          "Omega_fld": 0,
+          "Omega_scf": -1,
+          "P_k_max_1/Mpc": 2.0,
+          "T_ncdm": 0.71611,
+          "attractor_ic_scf": "no",
+          "fEDE": 0.04285217982520269,
+          "l_max_scalars": 9001,
+          "lensing": "yes",
+          "log10z_c": 3.861464518222328,
+          "m_ncdm": 0.06,
+          "n_s": 0.9698398276398953,
+          "n_scf": 3,
+          "non_linear": "hmcode",
+          "omega_b": 0.02228900853774718,
+          "omega_cdm": 0.12397402627882406,
+          "output": "tCl,pCl,lCl,mPk pCl mPk lCl tCl",
+          "scf_parameters": "1,1,1,1,1,0.0",
+          "scf_tuning_index": 3,
+          "tau_reio": 0.05141852352021917,
+          "thetai_scf": 2.923499862506229
+        },
+        "job_id": "camspec-ede_n3",
+        "original_runtime_manifest_sha256": "79c3bf4d9479d8616820cc9a39fe85f9e608cd6e6826767565c778cbd222ab47",
+        "original_sampled_vector": {
+          "config_sha256": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
+          "decision_margin_gate": "MISSING_ACTUAL_MARGIN",
+          "execution_commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+          "final_result_gate": "UNRESOLVED",
+          "history_accuracy_gate": "UNRESOLVED",
+          "job_id": "camspec-ede_n3",
+          "next_motor": "Result Ingestion & Routing Engine",
+          "parent_metadata": {
+            "combination": "FULL",
+            "legacy_combo": "P_A6_L6_D2",
+            "model": "ede_n3",
+            "parent_file": "/home/runner/work/Bubbleverse/Bubbleverse/recovered/inputs/q032_parent_profiles/camspec_m6_s0.json",
+            "parent_sha256": "48bdf2aab097aacb987b257fa89f59aceec40147902b59f47164db5957930a4c",
+            "program_id": "Q042-PROD-V1",
+            "q": "Q-042",
+            "supernova_included": true,
+            "support_mode": "ELL_LE_599",
+            "support_sha256": "44307afe6da2c9515c8b1eafda7bb408dcaa05b0bcdbd511ff790a1d6d749e23"
+          },
+          "production_restart_authorized": false,
+          "program_id": "Q045-BASELINE-V2",
+          "q": "Q-045",
+          "q_status": "PROPOSED_CANONICAL_REGISTRATION_PENDING",
+          "reference_truth_gate": "BLOCKED",
+          "result_status": "RAW_NOT_QUALIFIED",
+          "run_id": "38023210800",
+          "scientific_question": "For the frozen Q041 LambdaCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+          "scientific_result": false,
+          "scientific_role": "DIAGNOSTIC_START_NOT_OPTIMIZED_MINIMUM",
+          "start_index": 0,
+          "start_rule_values": {
+            "A_act": 1.0,
+            "H0": 68.16599436660475,
+            "P_act": 1.0,
+            "amp_143": 19.06097111007752,
+            "amp_143x217": 9.859995605449981,
+            "amp_217": 12.94407930006934,
+            "fEDE": 0.04285217982520269,
+            "log10z_c": 3.861464518222328,
+            "logA": 3.038051350703181,
+            "n_143": 0.9532159371018946,
+            "n_143x217": 1.3698548766627547,
+            "n_217": 1.3084047024607666,
+            "n_s": 0.9698398276398953,
+            "omega_b": 0.02228900853774718,
+            "omega_cdm": 0.12397402627882406,
+            "tau_reio": 0.05141852352021917,
+            "thetai_scf": 2.923499862506229
+          },
+          "values": {
+            "A_act": 1.0,
+            "A_planck": 0.9990125898829224,
+            "H0": 68.16599436660475,
+            "P_act": 1.0,
+            "amp_143": 19.06097111007752,
+            "amp_143x217": 9.859995605449981,
+            "amp_217": 12.94407930006934,
+            "fEDE": 0.04285217982520269,
+            "log10z_c": 3.861464518222328,
+            "logA": 3.038051350703181,
+            "n_143": 0.9532159371018946,
+            "n_143x217": 1.3698548766627547,
+            "n_217": 1.3084047024607666,
+            "n_s": 0.9698398276398953,
+            "omega_b": 0.02228900853774718,
+            "omega_cdm": 0.12397402627882406,
+            "tau_reio": 0.05141852352021917,
+            "thetai_scf": 2.923499862506229
+          }
+        },
+        "program_id": "Q045-OPTICAL-AUDIT-V3",
+        "q": "Q-045"
+      }
+    },
+    "camspec-lcdm": {
+      "accepted_z_reio": "7.4735260009765625",
+      "actual_verdict": "INSUFFICIENT_EVIDENCE",
+      "archive_input_roles": {
+        "first_background_raw": "native hint; not accepted initialization proof",
+        "native_meta_text": "exact archived text; not a qualified source-continuum IVP state",
+        "requested_input_identity": "requested vector/provenance only",
+        "temperature_neighbor": "stored nearby row; not exact onset state"
+      },
+      "current_evidence": {
+        "PT01": "PARTIAL requested/raw identity; effective derived fields/rounding-linkage not complete",
+        "PT03": "UNRESOLVED actual accepted initialization linkage",
+        "PT04": "UNRESOLVED native q/weights and distribution/normalization error contract",
+        "PT05": "NOT_EXECUTED independent background/ell enclosure",
+        "PT07": "NOT_EXECUTED precursor thermal enclosure",
+        "PT09": "UNRESOLVED actual onset box",
+        "PT10": "NOT_EXECUTED actual first-hit certificate"
+      },
+      "original_native_meta_text": "{\"q\":\"Q-045\",\"treatment\":\"00\",\"precision_changed\":false,\"source_patch\":false,\"nH0_m3\":0.18878164397279548,\"fHe\":0.081868254815476466,\"YHe\":0.24536262542199344,\"sigma_m2\":6.6524616000000001e-29,\"metres_per_Mpc\":3.0856775812820001e+22,\"c_m_s\":299792458,\"m_H_kg\":1.673575e-27,\"not4\":3.9714999999999998,\"tau_reported\":0.051418523520219167,\"z_reio\":7.4735260009765625,\"rows\":28333,\"has_exotic_injection\":0,\"has_varconst\":0,\"has_idm_g\":0,\"reio_parametrization\":1}\n",
+      "qualified_precursor_packet": null,
+      "raw_hints": {
+        "archive_id": 11659485163,
+        "archive_sha256": "a97a5e606092ba062739e1079f5f8269c9ce53f46ff06dd384d60a5ba2f01b05",
+        "baseline_background_sha256": "6c35c4a13d600a2b5d5768305e027ec23ba74ebbb1d8fcfd8ba59fb0dfe371e6",
+        "baseline_thermodynamics_sha256": "107e3ead37fd2d638c9004a11a288a9bd607a7dc7a0005ee45cdb511b099955b",
+        "first_background_raw": {
+          "(.)p_ncdm[0]": "2.1104903166919976e+43",
+          "(.)p_tot": "1.5516678001090172e+44",
+          "(.)p_tot_prime": "-1.3391176692069598e+53",
+          "(.)rho_b": "2.4799866598904064e+33",
+          "(.)rho_cdm": "1.3793970728832686e+34",
+          "(.)rho_crit": "4.6550034004897914e+44",
+          "(.)rho_g": "2.7515605354698381e+44",
+          "(.)rho_lambda": "3.5350772208798806e-08",
+          "(.)rho_ncdm[0]": "6.331470950075991e+43",
+          "(.)rho_tot": "4.6550034004897914e+44",
+          "(.)rho_ur": "1.2702957698496144e+44",
+          "H [1/Mpc]": "2.1575456890851214e+22",
+          "ang.diam.dist.": "1.3971909394040556e-10",
+          "comov. dist.": "13971.909394040573",
+          "comov.snd.hrz.": "2.6759584842647987e-09",
+          "conf. time [Mpc]": "4.6347850002348423e-09",
+          "gr.fac. D": "5.3222651507178289e-06",
+          "gr.fac. f": "1.9999999999999976",
+          "lum. dist.": "1.3971909394040591e+18",
+          "proper time [Gyr]": "7.5585045345417337e-26",
+          "z": "99999999999999.125"
+        },
+        "native_hint": {
+          "H_1_Mpc": "10.358221059467112",
+          "ap": "4",
+          "row": "6544",
+          "trial": "1",
+          "x_H_workspace": "0.99792341842580012",
+          "x_He_workspace": "1.2872299313581105e-05",
+          "x_noreio": "0.99792447225848036",
+          "x_reio": "0.99792447225848036",
+          "xe_stored": "0.99792447225848036",
+          "z": "1647.4725000000001"
+        },
+        "native_meta_text": "{\"q\":\"Q-045\",\"treatment\":\"00\",\"precision_changed\":false,\"source_patch\":false,\"nH0_m3\":0.18878164397279548,\"fHe\":0.081868254815476466,\"YHe\":0.24536262542199344,\"sigma_m2\":6.6524616000000001e-29,\"metres_per_Mpc\":3.0856775812820001e+22,\"c_m_s\":299792458,\"m_H_kg\":1.673575e-27,\"not4\":3.9714999999999998,\"tau_reported\":0.051418523520219167,\"z_reio\":7.4735260009765625,\"rows\":28333,\"has_exotic_injection\":0,\"has_varconst\":0,\"has_idm_g\":0,\"reio_parametrization\":1}\n",
+        "temperature_neighbor": {
+          "Tb [K]": "4492.907093475299",
+          "c_b^2": "8.6302216154323498e-10",
+          "conf. time [Mpc]": "203.25226951802912",
+          "dTb [K]": "2.725503928470054",
+          "exp(-kappa)": "8.5097302987614792e-17",
+          "g [Mpc^-1]": "8.9427186524034607e-17",
+          "kappa' [Mpc^-1]": "1.0508815601012642",
+          "scale factor a": "0.00060662219114968551",
+          "tau_d": "78.301551998178326",
+          "w_b": "6.4726621845351067e-10",
+          "x_e": "0.99792447225848036",
+          "z": "1647.4725000000001"
+        }
+      },
+      "requested_input_identity": {
+        "baseline_run_id": "38023210800",
+        "baseline_worker_sha256": "c7d251d05af012061a213af8a97e2dafd5262107c3697ef4e9adc7f40b53e58e",
+        "class_parameters": {
+          "A_s": 2.0864545912845155e-09,
+          "H0": 68.16599436660475,
+          "N_ncdm": 1,
+          "N_ur": 2.0328,
+          "P_k_max_1/Mpc": 2.0,
+          "T_ncdm": 0.71611,
+          "l_max_scalars": 9001,
+          "lensing": "yes",
+          "m_ncdm": 0.06,
+          "n_s": 0.9698398276398953,
+          "non_linear": "hmcode",
+          "omega_b": 0.02228900853774718,
+          "omega_cdm": 0.12397402627882406,
+          "output": "tCl mPk tCl,pCl,lCl,mPk lCl pCl",
+          "tau_reio": 0.05141852352021917
+        },
+        "job_id": "camspec-lcdm",
+        "original_runtime_manifest_sha256": "564e8df3b05d133f0f38c0c32fef74448b7d555819bea7e5470d204eb471cc6b",
+        "original_sampled_vector": {
+          "config_sha256": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
+          "decision_margin_gate": "MISSING_ACTUAL_MARGIN",
+          "execution_commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+          "final_result_gate": "UNRESOLVED",
+          "history_accuracy_gate": "UNRESOLVED",
+          "job_id": "camspec-lcdm",
+          "next_motor": "Result Ingestion & Routing Engine",
+          "parent_metadata": {
+            "combination": "FULL",
+            "legacy_combo": "P_A6_L6_D2",
+            "model": "lcdm",
+            "parent_file": "/home/runner/work/Bubbleverse/Bubbleverse/recovered/inputs/q032_parent_profiles/camspec_m6_s0.json",
+            "parent_sha256": "48bdf2aab097aacb987b257fa89f59aceec40147902b59f47164db5957930a4c",
+            "program_id": "Q042-PROD-V1",
+            "q": "Q-042",
+            "supernova_included": true,
+            "support_mode": "ELL_LE_599",
+            "support_sha256": "44307afe6da2c9515c8b1eafda7bb408dcaa05b0bcdbd511ff790a1d6d749e23"
+          },
+          "production_restart_authorized": false,
+          "program_id": "Q045-BASELINE-V2",
+          "q": "Q-045",
+          "q_status": "PROPOSED_CANONICAL_REGISTRATION_PENDING",
+          "reference_truth_gate": "BLOCKED",
+          "result_status": "RAW_NOT_QUALIFIED",
+          "run_id": "38023210800",
+          "scientific_question": "For the frozen Q041 LambdaCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+          "scientific_result": false,
+          "scientific_role": "DIAGNOSTIC_START_NOT_OPTIMIZED_MINIMUM",
+          "start_index": 0,
+          "start_rule_values": {
+            "A_act": 1.0,
+            "H0": 68.16599436660475,
+            "P_act": 1.0,
+            "amp_143": 19.06097111007752,
+            "amp_143x217": 9.859995605449981,
+            "amp_217": 12.94407930006934,
+            "logA": 3.038051350703181,
+            "n_143": 0.9532159371018946,
+            "n_143x217": 1.3698548766627547,
+            "n_217": 1.3084047024607666,
+            "n_s": 0.9698398276398953,
+            "omega_b": 0.02228900853774718,
+            "omega_cdm": 0.12397402627882406,
+            "tau_reio": 0.05141852352021917
+          },
+          "values": {
+            "A_act": 1.0,
+            "A_planck": 0.9990125898829224,
+            "H0": 68.16599436660475,
+            "P_act": 1.0,
+            "amp_143": 19.06097111007752,
+            "amp_143x217": 9.859995605449981,
+            "amp_217": 12.94407930006934,
+            "logA": 3.038051350703181,
+            "n_143": 0.9532159371018946,
+            "n_143x217": 1.3698548766627547,
+            "n_217": 1.3084047024607666,
+            "n_s": 0.9698398276398953,
+            "omega_b": 0.02228900853774718,
+            "omega_cdm": 0.12397402627882406,
+            "tau_reio": 0.05141852352021917
+          }
+        },
+        "program_id": "Q045-OPTICAL-AUDIT-V3",
+        "q": "Q-045"
+      }
+    },
+    "hillipop-ede_n3": {
+      "accepted_z_reio": "7.4987945556640625",
+      "actual_verdict": "INSUFFICIENT_EVIDENCE",
+      "archive_input_roles": {
+        "first_background_raw": "native hint; not accepted initialization proof",
+        "native_meta_text": "exact archived text; not a qualified source-continuum IVP state",
+        "requested_input_identity": "requested vector/provenance only",
+        "temperature_neighbor": "stored nearby row; not exact onset state"
+      },
+      "current_evidence": {
+        "PT01": "PARTIAL requested/raw identity; effective derived fields/rounding-linkage not complete",
+        "PT03": "UNRESOLVED actual accepted initialization linkage",
+        "PT04": "UNRESOLVED native q/weights and distribution/normalization error contract",
+        "PT05": "NOT_EXECUTED independent background/ell enclosure",
+        "PT07": "NOT_EXECUTED precursor thermal enclosure",
+        "PT09": "UNRESOLVED actual onset box",
+        "PT10": "NOT_EXECUTED actual first-hit certificate"
+      },
+      "original_native_meta_text": "{\"q\":\"Q-045\",\"treatment\":\"00\",\"precision_changed\":false,\"source_patch\":false,\"nH0_m3\":0.18806240632995103,\"fHe\":0.081852545572712224,\"YHe\":0.24532709446649748,\"sigma_m2\":6.6524616000000001e-29,\"metres_per_Mpc\":3.0856775812820001e+22,\"c_m_s\":299792458,\"m_H_kg\":1.673575e-27,\"not4\":3.9714999999999998,\"tau_reported\":0.051506852670290267,\"z_reio\":7.4987945556640625,\"rows\":28333,\"has_exotic_injection\":0,\"has_varconst\":0,\"has_idm_g\":0,\"reio_parametrization\":1}\n",
+      "qualified_precursor_packet": null,
+      "raw_hints": {
+        "archive_id": 11659110603,
+        "archive_sha256": "cdc17dacb8e7d3cfaf46f67bfcb85342f29738a501b56812358d770617058044",
+        "baseline_background_sha256": "3ab5609d7c30923a23c64b4549179c557858de22cdb93899298ab130603b55b6",
+        "baseline_thermodynamics_sha256": "6c9fbfec8122699bd40118812b8fc7a7f032f4f6e0681544614c855c5a4fea41",
+        "first_background_raw": {
+          "(.)p_ncdm[0]": "2.1104903166919976e+43",
+          "(.)p_prime_scf": "-0",
+          "(.)p_scf": "-636.0313617891336",
+          "(.)p_tot": "1.551667800109018e+44",
+          "(.)p_tot_prime": "-1.339117669206882e+53",
+          "(.)rho_b": "2.470421862914621e+33",
+          "(.)rho_cdm": "1.3748729736007871e+34",
+          "(.)rho_crit": "4.6550034004892455e+44",
+          "(.)rho_g": "2.7515605354698397e+44",
+          "(.)rho_ncdm[0]": "6.331470950075991e+43",
+          "(.)rho_scf": "636.0313617891336",
+          "(.)rho_tot": "4.6550034004892455e+44",
+          "(.)rho_ur": "1.270295769849615e+44",
+          "H [1/Mpc]": "2.1575456890849948e+22",
+          "V''_scf": "-428277.39907927864",
+          "V'_scf": "6889.4111057795517",
+          "V_e_scf": "1908.0940852586934",
+          "V_scf": "1908.0940853674008",
+          "ang.diam.dist.": "1.3966257903225444e-10",
+          "comov. dist.": "13966.257903225462",
+          "comov.snd.hrz.": "2.6759584842649558e-09",
+          "conf. time [Mpc]": "4.6347850002348423e-09",
+          "gr.fac. D": "5.4861566130625501e-06",
+          "gr.fac. f": "1.9999999999999976",
+          "lum. dist.": "1.396625790322548e+18",
+          "phi'_scf": "0",
+          "phi_scf": "0.23552725020727686",
+          "proper time [Gyr]": "7.5585045345421768e-26",
+          "z": "99999999999999.125"
+        },
+        "native_hint": {
+          "H_1_Mpc": "10.394176157580304",
+          "ap": "4",
+          "row": "6542",
+          "trial": "1",
+          "x_H_workspace": "0.99788903749390612",
+          "x_He_workspace": "1.2303860486202036e-05",
+          "x_noreio": "0.99789004459620734",
+          "x_reio": "0.99789004459620734",
+          "xe_stored": "0.99789004459620734",
+          "z": "1646.4775"
+        },
+        "native_meta_text": "{\"q\":\"Q-045\",\"treatment\":\"00\",\"precision_changed\":false,\"source_patch\":false,\"nH0_m3\":0.18806240632995103,\"fHe\":0.081852545572712224,\"YHe\":0.24532709446649748,\"sigma_m2\":6.6524616000000001e-29,\"metres_per_Mpc\":3.0856775812820001e+22,\"c_m_s\":299792458,\"m_H_kg\":1.673575e-27,\"not4\":3.9714999999999998,\"tau_reported\":0.051506852670290267,\"z_reio\":7.4987945556640625,\"rows\":28333,\"has_exotic_injection\":0,\"has_varconst\":0,\"has_idm_g\":0,\"reio_parametrization\":1}\n",
+        "scalar_first_row_for_CC": {
+          "(.)p_ncdm[0]": "2.1104903166919976e+43",
+          "(.)p_prime_scf": "-0",
+          "(.)p_scf": "-636.0313617891336",
+          "(.)p_tot": "1.551667800109018e+44",
+          "(.)p_tot_prime": "-1.339117669206882e+53",
+          "(.)rho_b": "2.470421862914621e+33",
+          "(.)rho_cdm": "1.3748729736007871e+34",
+          "(.)rho_crit": "4.6550034004892455e+44",
+          "(.)rho_g": "2.7515605354698397e+44",
+          "(.)rho_ncdm[0]": "6.331470950075991e+43",
+          "(.)rho_scf": "636.0313617891336",
+          "(.)rho_tot": "4.6550034004892455e+44",
+          "(.)rho_ur": "1.270295769849615e+44",
+          "H [1/Mpc]": "2.1575456890849948e+22",
+          "V''_scf": "-428277.39907927864",
+          "V'_scf": "6889.4111057795517",
+          "V_e_scf": "1908.0940852586934",
+          "V_scf": "1908.0940853674008",
+          "ang.diam.dist.": "1.3966257903225444e-10",
+          "comov. dist.": "13966.257903225462",
+          "comov.snd.hrz.": "2.6759584842649558e-09",
+          "conf. time [Mpc]": "4.6347850002348423e-09",
+          "gr.fac. D": "5.4861566130625501e-06",
+          "gr.fac. f": "1.9999999999999976",
+          "lum. dist.": "1.396625790322548e+18",
+          "phi'_scf": "0",
+          "phi_scf": "0.23552725020727686",
+          "proper time [Gyr]": "7.5585045345421768e-26",
+          "z": "99999999999999.125"
+        },
+        "temperature_neighbor": {
+          "Tb [K]": "4490.1951960334827",
+          "c_b^2": "8.6252106955447757e-10",
+          "conf. time [Mpc]": "201.64359724474721",
+          "dTb [K]": "2.7255040071850871",
+          "exp(-kappa)": "1.234981984114891e-16",
+          "g [Mpc^-1]": "1.2912704319794555e-16",
+          "kappa' [Mpc^-1]": "1.0455783554647611",
+          "scale factor a": "0.00060698856281800513",
+          "tau_d": "77.764947558445286",
+          "w_b": "6.4689039402444121e-10",
+          "x_e": "0.99789004459620734",
+          "z": "1646.4775"
+        }
+      },
+      "requested_input_identity": {
+        "baseline_run_id": "38023210800",
+        "baseline_worker_sha256": "f0ab23d7f39b8423920f37256e9a677af3fae35b119f37b5213f3243485e7284",
+        "class_parameters": {
+          "A_s": 2.102153954742424e-09,
+          "CC_scf": 1,
+          "H0": 68.71112237752118,
+          "N_ncdm": 1,
+          "N_ur": 2.0328,
+          "Omega_Lambda": 0,
+          "Omega_fld": 0,
+          "Omega_scf": -1,
+          "P_k_max_1/Mpc": 2.0,
+          "T_ncdm": 0.71611,
+          "attractor_ic_scf": "no",
+          "fEDE": 0.047853456097294196,
+          "l_max_scalars": 9001,
+          "lensing": "yes",
+          "log10z_c": 3.7502704155779822,
+          "m_ncdm": 0.06,
+          "n_s": 0.9718548882321028,
+          "n_scf": 3,
+          "non_linear": "hmcode",
+          "omega_b": 0.022203044429591638,
+          "omega_cdm": 0.12356742051289905,
+          "output": "pCl tCl,pCl,lCl,mPk tCl mPk lCl",
+          "scf_parameters": "1,1,1,1,1,0.0",
+          "scf_tuning_index": 3,
+          "tau_reio": 0.05150685267029027,
+          "thetai_scf": 2.95
+        },
+        "job_id": "hillipop-ede_n3",
+        "original_runtime_manifest_sha256": "ab38a3b45636adde4da8e912b3979fca5eed50cae588f64a64228416ee8941b2",
+        "original_sampled_vector": {
+          "config_sha256": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
+          "decision_margin_gate": "MISSING_ACTUAL_MARGIN",
+          "execution_commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+          "final_result_gate": "UNRESOLVED",
+          "history_accuracy_gate": "UNRESOLVED",
+          "job_id": "hillipop-ede_n3",
+          "next_motor": "Result Ingestion & Routing Engine",
+          "parent_metadata": {
+            "combination": "FULL",
+            "legacy_combo": "P_A6_L6_D2",
+            "model": "ede_n3",
+            "parent_file": "/home/runner/work/Bubbleverse/Bubbleverse/recovered/inputs/q032_parent_profiles/hillipop_m6_s2.json",
+            "parent_sha256": "6979a3934ab97b987f4b5d1ffccb74665279ce74e89e9d48445d3d31483398fa",
+            "program_id": "Q042-PROD-V1",
+            "q": "Q-042",
+            "supernova_included": true,
+            "support_mode": "ELL_LE_599",
+            "support_sha256": "44307afe6da2c9515c8b1eafda7bb408dcaa05b0bcdbd511ff790a1d6d749e23"
+          },
+          "production_restart_authorized": false,
+          "program_id": "Q045-BASELINE-V2",
+          "q": "Q-045",
+          "q_status": "PROPOSED_CANONICAL_REGISTRATION_PENDING",
+          "reference_truth_gate": "BLOCKED",
+          "result_status": "RAW_NOT_QUALIFIED",
+          "run_id": "38023210800",
+          "scientific_question": "For the frozen Q041 LambdaCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+          "scientific_result": false,
+          "scientific_role": "DIAGNOSTIC_START_NOT_OPTIMIZED_MINIMUM",
+          "start_index": 0,
+          "start_rule_values": {
+            "A_act": 1.0,
+            "Acib": 1.8280064789322492,
+            "Adusty": 5.980990136411378,
+            "Aksz": 4.875301534658886,
+            "Aradio": 60.63758995597009,
+            "Atsz": 8.623587304485474,
+            "H0": 68.71112237752118,
+            "P_act": 1.0,
+            "cal100A": 1.014827771218167,
+            "cal100B": 1.0066061018681405,
+            "cal143B": 0.9942349705740255,
+            "cal217A": 0.9907015937283674,
+            "cal217B": 1.0013130146269569,
+            "fEDE": 0.047853456097294196,
+            "log10z_c": 3.7502704155779822,
+            "logA": 3.045547604794533,
+            "n_s": 0.9718548882321028,
+            "omega_b": 0.022203044429591638,
+            "omega_cdm": 0.12356742051289905,
+            "tau_reio": 0.05150685267029027,
+            "thetai_scf": 2.95,
+            "xi": 0.2328374089428436
+          },
+          "values": {
+            "A_act": 1.0,
+            "A_planck": 0.9997385433347581,
+            "Acib": 1.8280064789322492,
+            "AdustT": 1.04177010909492,
+            "Adusty": 5.980990136411378,
+            "Aksz": 4.875301534658886,
+            "Aradio": 60.63758995597009,
+            "Atsz": 8.623587304485474,
+            "H0": 68.71112237752118,
+            "P_act": 1.0,
+            "beta_cib": 1.7599498552781359,
+            "beta_dustT": 1.5087185313530114,
+            "cal100A": 1.014827771218167,
+            "cal100B": 1.0066061018681405,
+            "cal143B": 0.9942349705740255,
+            "cal217A": 0.9907015937283674,
+            "cal217B": 1.0013130146269569,
+            "fEDE": 0.047853456097294196,
+            "log10z_c": 3.7502704155779822,
+            "logA": 3.045547604794533,
+            "n_s": 0.9718548882321028,
+            "omega_b": 0.022203044429591638,
+            "omega_cdm": 0.12356742051289905,
+            "tau_reio": 0.05150685267029027,
+            "thetai_scf": 2.95,
+            "xi": 0.2328374089428436
+          }
+        },
+        "program_id": "Q045-OPTICAL-AUDIT-V3",
+        "q": "Q-045"
+      }
+    },
+    "hillipop-lcdm": {
+      "accepted_z_reio": "7.4987945556640625",
+      "actual_verdict": "INSUFFICIENT_EVIDENCE",
+      "archive_input_roles": {
+        "first_background_raw": "native hint; not accepted initialization proof",
+        "native_meta_text": "exact archived text; not a qualified source-continuum IVP state",
+        "requested_input_identity": "requested vector/provenance only",
+        "temperature_neighbor": "stored nearby row; not exact onset state"
+      },
+      "current_evidence": {
+        "PT01": "PARTIAL requested/raw identity; effective derived fields/rounding-linkage not complete",
+        "PT03": "UNRESOLVED actual accepted initialization linkage",
+        "PT04": "UNRESOLVED native q/weights and distribution/normalization error contract",
+        "PT05": "NOT_EXECUTED independent background/ell enclosure",
+        "PT07": "NOT_EXECUTED precursor thermal enclosure",
+        "PT09": "UNRESOLVED actual onset box",
+        "PT10": "NOT_EXECUTED actual first-hit certificate"
+      },
+      "original_native_meta_text": "{\"q\":\"Q-045\",\"treatment\":\"00\",\"precision_changed\":false,\"source_patch\":false,\"nH0_m3\":0.18806240632995103,\"fHe\":0.081852545572712224,\"YHe\":0.24532709446649748,\"sigma_m2\":6.6524616000000001e-29,\"metres_per_Mpc\":3.0856775812820001e+22,\"c_m_s\":299792458,\"m_H_kg\":1.673575e-27,\"not4\":3.9714999999999998,\"tau_reported\":0.051506852670290267,\"z_reio\":7.4987945556640625,\"rows\":28333,\"has_exotic_injection\":0,\"has_varconst\":0,\"has_idm_g\":0,\"reio_parametrization\":1}\n",
+      "qualified_precursor_packet": null,
+      "raw_hints": {
+        "archive_id": 11659745278,
+        "archive_sha256": "711662a12f3c639e3c457cdd4074ac82d05a1dec07342f5b74fdde971bebb6f7",
+        "baseline_background_sha256": "7da5f838bdab00c3c54b62dfc7fccf9091de594bf209177ea4aeb378aebef425",
+        "baseline_thermodynamics_sha256": "dc798ae7af47cbe9af48644a688b13c49aea575fec2b61c01c092f57b777e763",
+        "first_background_raw": {
+          "(.)p_ncdm[0]": "2.1104903166919976e+43",
+          "(.)p_tot": "1.551667800109018e+44",
+          "(.)p_tot_prime": "-1.339117669206882e+53",
+          "(.)rho_b": "2.470421862914621e+33",
+          "(.)rho_cdm": "1.3748729736007871e+34",
+          "(.)rho_crit": "4.6550034004892455e+44",
+          "(.)rho_g": "2.7515605354698397e+44",
+          "(.)rho_lambda": "3.6235787961846274e-08",
+          "(.)rho_ncdm[0]": "6.331470950075991e+43",
+          "(.)rho_tot": "4.6550034004892455e+44",
+          "(.)rho_ur": "1.270295769849615e+44",
+          "H [1/Mpc]": "2.1575456890849948e+22",
+          "ang.diam.dist.": "1.3969368497679661e-10",
+          "comov. dist.": "13969.368497679679",
+          "comov.snd.hrz.": "2.6759584842649558e-09",
+          "conf. time [Mpc]": "4.6347850002348423e-09",
+          "gr.fac. D": "5.3633566931175518e-06",
+          "gr.fac. f": "1.9999999999999976",
+          "lum. dist.": "1.3969368497679698e+18",
+          "proper time [Gyr]": "7.5585045345421768e-26",
+          "z": "99999999999999.125"
+        },
+        "native_hint": {
+          "H_1_Mpc": "10.34117896179802",
+          "ap": "4",
+          "row": "6543",
+          "trial": "1",
+          "x_H_workspace": "0.99791028058099351",
+          "x_He_workspace": "1.253143469980639e-05",
+          "x_noreio": "0.99791130631082336",
+          "x_reio": "0.99791130631082336",
+          "xe_stored": "0.99791130631082336",
+          "z": "1646.9749999999999"
+        },
+        "native_meta_text": "{\"q\":\"Q-045\",\"treatment\":\"00\",\"precision_changed\":false,\"source_patch\":false,\"nH0_m3\":0.18806240632995103,\"fHe\":0.081852545572712224,\"YHe\":0.24532709446649748,\"sigma_m2\":6.6524616000000001e-29,\"metres_per_Mpc\":3.0856775812820001e+22,\"c_m_s\":299792458,\"m_H_kg\":1.673575e-27,\"not4\":3.9714999999999998,\"tau_reported\":0.051506852670290267,\"z_reio\":7.4987945556640625,\"rows\":28333,\"has_exotic_injection\":0,\"has_varconst\":0,\"has_idm_g\":0,\"reio_parametrization\":1}\n",
+        "temperature_neighbor": {
+          "Tb [K]": "4491.551160714358",
+          "c_b^2": "8.6279034926124001e-10",
+          "conf. time [Mpc]": "203.44905899812386",
+          "dTb [K]": "2.7255039265472463",
+          "exp(-kappa)": "9.7268246311333944e-17",
+          "g [Mpc^-1]": "1.0176517355534355e-16",
+          "kappa' [Mpc^-1]": "1.0462322228943652",
+          "scale factor a": "0.00060680532168267114",
+          "tau_d": "78.300513375114889",
+          "w_b": "6.470923595388328e-10",
+          "x_e": "0.99791130631082336",
+          "z": "1646.9749999999999"
+        }
+      },
+      "requested_input_identity": {
+        "baseline_run_id": "38023210800",
+        "baseline_worker_sha256": "0c349909b12a6a6a72d9b17bed5cd869e2ebc139325a9723ecbbfac28b79ef58",
+        "class_parameters": {
+          "A_s": 2.102153954742424e-09,
+          "H0": 68.71112237752118,
+          "N_ncdm": 1,
+          "N_ur": 2.0328,
+          "P_k_max_1/Mpc": 2.0,
+          "T_ncdm": 0.71611,
+          "l_max_scalars": 9001,
+          "lensing": "yes",
+          "m_ncdm": 0.06,
+          "n_s": 0.9718548882321028,
+          "non_linear": "hmcode",
+          "omega_b": 0.022203044429591638,
+          "omega_cdm": 0.12356742051289905,
+          "output": "lCl mPk pCl tCl tCl,pCl,lCl,mPk",
+          "tau_reio": 0.05150685267029027
+        },
+        "job_id": "hillipop-lcdm",
+        "original_runtime_manifest_sha256": "15eb1691c91c507f10090f32c2bc984aac47185f48380eb903170a573d85b72d",
+        "original_sampled_vector": {
+          "config_sha256": "d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8",
+          "decision_margin_gate": "MISSING_ACTUAL_MARGIN",
+          "execution_commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+          "final_result_gate": "UNRESOLVED",
+          "history_accuracy_gate": "UNRESOLVED",
+          "job_id": "hillipop-lcdm",
+          "next_motor": "Result Ingestion & Routing Engine",
+          "parent_metadata": {
+            "combination": "FULL",
+            "legacy_combo": "P_A6_L6_D2",
+            "model": "lcdm",
+            "parent_file": "/home/runner/work/Bubbleverse/Bubbleverse/recovered/inputs/q032_parent_profiles/hillipop_m6_s2.json",
+            "parent_sha256": "6979a3934ab97b987f4b5d1ffccb74665279ce74e89e9d48445d3d31483398fa",
+            "program_id": "Q042-PROD-V1",
+            "q": "Q-042",
+            "supernova_included": true,
+            "support_mode": "ELL_LE_599",
+            "support_sha256": "44307afe6da2c9515c8b1eafda7bb408dcaa05b0bcdbd511ff790a1d6d749e23"
+          },
+          "production_restart_authorized": false,
+          "program_id": "Q045-BASELINE-V2",
+          "q": "Q-045",
+          "q_status": "PROPOSED_CANONICAL_REGISTRATION_PENDING",
+          "reference_truth_gate": "BLOCKED",
+          "result_status": "RAW_NOT_QUALIFIED",
+          "run_id": "38023210800",
+          "scientific_question": "For the frozen Q041 LambdaCDM and n_scf=3 EDE configurations, does replacing only the native optical-depth integration functional with a convergent Thomson-integral reference, at identical requested tau_reio and otherwise unchanged physical inputs, alter CMB TT/TE/EE predictions and native likelihood values enough to threaten the original H0/EDE decision margins?",
+          "scientific_result": false,
+          "scientific_role": "DIAGNOSTIC_START_NOT_OPTIMIZED_MINIMUM",
+          "start_index": 0,
+          "start_rule_values": {
+            "A_act": 1.0,
+            "Acib": 1.8280064789322492,
+            "Adusty": 5.980990136411378,
+            "Aksz": 4.875301534658886,
+            "Aradio": 60.63758995597009,
+            "Atsz": 8.623587304485474,
+            "H0": 68.71112237752118,
+            "P_act": 1.0,
+            "cal100A": 1.014827771218167,
+            "cal100B": 1.0066061018681405,
+            "cal143B": 0.9942349705740255,
+            "cal217A": 0.9907015937283674,
+            "cal217B": 1.0013130146269569,
+            "logA": 3.045547604794533,
+            "n_s": 0.9718548882321028,
+            "omega_b": 0.022203044429591638,
+            "omega_cdm": 0.12356742051289905,
+            "tau_reio": 0.05150685267029027,
+            "xi": 0.2328374089428436
+          },
+          "values": {
+            "A_act": 1.0,
+            "A_planck": 0.9997385433347581,
+            "Acib": 1.8280064789322492,
+            "AdustT": 1.04177010909492,
+            "Adusty": 5.980990136411378,
+            "Aksz": 4.875301534658886,
+            "Aradio": 60.63758995597009,
+            "Atsz": 8.623587304485474,
+            "H0": 68.71112237752118,
+            "P_act": 1.0,
+            "beta_cib": 1.7599498552781359,
+            "beta_dustT": 1.5087185313530114,
+            "cal100A": 1.014827771218167,
+            "cal100B": 1.0066061018681405,
+            "cal143B": 0.9942349705740255,
+            "cal217A": 0.9907015937283674,
+            "cal217B": 1.0013130146269569,
+            "logA": 3.045547604794533,
+            "n_s": 0.9718548882321028,
+            "omega_b": 0.022203044429591638,
+            "omega_cdm": 0.12356742051289905,
+            "tau_reio": 0.05150685267029027,
+            "xi": 0.2328374089428436
+          }
+        },
+        "program_id": "Q045-OPTICAL-AUDIT-V3",
+        "q": "Q-045"
+      }
+    }
+  },
+  "created_utc": "2026-10-10T22:57:41+00:00",
+  "equations": {
+    "background": "gamma=Omega_g*H0^2; U=Omega_ur*H0^2; M=(Omega_b+Omega_cdm)*H0^2; Lambda=Omega_lambda*H0^2. rho_gamma=gamma*a^-4; rho=gamma*a^-4+U*a^-4+M*a^-3+Lambda+rho_nu+rho_scf. p=(gamma+U)*a^-4/3-Lambda+p_nu+p_scf; H^2=rho-K/a^2; ell=-3*(rho+p)/(2*H^2)+K/(a^2*H^2).",
+    "coordinate": "u=ln(a), a=1/(1+z); H is CLASS Mpc^-1; Hs=H*c/metres_per_Mpc.",
+    "ede": "X=phi_prime/a; phi_u=X/H; X_u=-3*X-Vphi/H. rho_scf=(X^2/2+V)/3; p_scf=(X^2/2-V)/3. V=4152.39*m^2*F^2*(1-cos(kappa*phi/F))^3+B*3.968e-8; kappa=2.435e27. E=X^2/2+V obeys E_u=-3*X^2.",
+    "ncdm_distribution": "f0(q)=(2*pi)^-3*((exp(q-xi)+1)^-1+(exp(q+xi)+1)^-1). Replace sums by integrals with the same effective factor. Both versions satisfy rho_nu,u=-3*(rho_nu+p_nu).",
+    "ncdm_native": "mu=a*M_ncdm; rho_nu=factor*a^-4*sum(q_j^2*sqrt(q_j^2+mu^2)*w_j); p_nu=factor*a^-4*sum(q_j^4*w_j/(3*sqrt(q_j^2+mu^2))). Nodes/weights are fixed for each declared realization.",
+    "onset": "At admitted z_H=2870: carry w continuously, q0=x_HeI_Saha-1=2*f*r/(1+r+sqrt((1+r)^2+4*f*r)); h subsequently from existing M01 hydrogen root.",
+    "saha": "r=s*(C_NR*Tmat)^(3/2)*a^3/nH0*exp(-I/Tmat); x^2+(r-A)*x-B*r=0; x=A+2*r*(B-A)/(A+r+sqrt((A+r)^2+4*r*(B-A))). HeIII: s=1,A=1+f,B=1+2*f,I=I_HeII. HeI: s=4,A=1,B=1+f,I=I_HeI.",
+    "thermal": "Trad=T0/a; w=1-Tmat/Trad=-D_Tmat/Trad; beta=(8*sigma_T/(3*m_e*c))*rho_gamma*Jm3_over_Mpc2/Hs*x/(1+f+x). Early brec: w_u=w+(ell+3)/beta. He1/He1f/He2: w_u=1-(1+beta)*w. No exotic/variable-constant/IDM terms in this reduced variant."
+  },
+  "finite_certificate_method": {
+    "accuracy_allocation": "M06 strict endpoint/prefix/rate/switch margins set admissible errors: Rq(tL)<p_q(tL)-epsilon_hi; Rq(tR)<epsilon_lo-p_q(tR), plus strict between-node prefix lower bounds and negative upper-rate bound. Propagate onset/background error sensitivities with the same comparison matrices. No guessed universal rtol or post-result threshold movement.",
+    "ede_jacobian": "For y=(phi,X), H_phi=Vphi/(6*H), H_X=X/(6*H). J11=-X*Vphi/(6*H^3); J12=1/H-X^2/(6*H^3); J21=-Vphiphi/H+Vphi^2/(6*H^3); J22=-3+Vphi*X/(6*H^3). Outward range these on a prospectively declared convex state/parameter box; source potential derivative constants retained.",
+    "forcing_cells": "Partition finite u domain. For each cell record outward H,Hs,rho_gamma,rho+p,ell enclosures and source/Theta links. H_lower>0, rho_gamma_lower>0. Do not interpolate unsigned native sample errors into a proof.",
+    "matrix_tail": "For alpha=||N||_infty*dt and Taylor degree k with alpha<k+2, scalar norm remainder <= alpha^(k+1)/(k+1)!/(1-alpha/(k+2)). Add outward remainder per entry. Scale/dyadically split if needed; cap work with explicit UNRESOLVED rather than clipping.",
+    "mode_transfer": "Use source-defined boundaries and reset map with certified u(z) conversion. D/w carry at continuous photon temperature; q is introduced only at H onset through the algebraic preceding He2 root. Enclose uncertain transition location if applicable. Do not turn output smoothing into an RHS reset.",
+    "neutrino_interior": "On finite [0,Q], integrate interval ranges on rational cells: sum(cell_width*[integrand(cell,mu,xi)]). All endpoints/exp/sqrt outward. Avoid 0/0 at q=mu=0; pressure is continuously zero and bounded by q^3*f0/3. Compare native sum enclosure to integral enclosure to obtain deterministic quadrature error; do not infer it from tol_ncdm_bg or node count.",
+    "neutrino_tail": "For mu<=mu_max, Axi=2*cosh(xi)/(2*pi)^3: density tail <= Axi*exp(-Q)*(P3(Q)+mu_max*P2(Q)); pressure tail <= Axi*exp(-Q)*P3(Q)/3; P2=Q^2+2Q+2, P3=Q^3+3Q^2+6Q+6. Multiply factor*a^-4 outward. This bound requires the admitted analytic FD distribution; not arbitrary file distributions.",
+    "ode_defect": "For polynomial predictor p on a cell, outward bound p-p_initial, p_prime-F(u,p,Theta,forcing) and J on the whole prospective tube, not only nodes. Existing Bernstein bounds may be reused. Initial-state, parameter, forcing, approximation and arithmetic errors are deterministic components of the total defect/enclosure.",
+    "scalar_error": "D+|e|<=L*|e|+delta where L=sup partial_w G. R(s)=exp(L*s)*R0+delta*J(L,s); J=(exp(L*s)-1)/L for L!=0 and J=s for L=0. Max_{0<=s<=dt}R(s)=max(R0,R(dt)) for fixed L,R0,delta>=0 except L may be signed; enforce p(cell)+[-Rmax,Rmax] strictly inside the prospective domain.",
+    "thermal_derivative": "x_r=(B-x)/(2*x+r-A); r*x_r/x=(x-A)/(2*x+r-A)<=eta=(B-A)/(2*B-A). beta_w<=0. Full-mode G_w=-1-beta-w*beta_w <= -1-beta*(1-c_pre), c_pre=w_bar/(1-w_bar)*eta*(3/2+I/Tmin), for 0<=w<=w_bar<1 and Tmin>0. Contraction only if c_pre<1; otherwise use finite-growth certificate. Early G_w=1-(ell+3)*beta_w/beta^2 >=1 when ell+3>=0.",
+    "vector_error": "Signed diagonal J_ii upper and absolute off-diagonal upper form a Metzler M. R(s)=exp(M*s)R0+integral_0^s exp(M*v)*delta dv. Finite growth is allowed. A safe all-time envelope is exp(N*dt)*(R0+dt*delta), N=M+sigma*I>=0, sigma=max(0,-min M_ii). Strict tube containment, not M*B+delta<=0, closes the proof."
+  },
+  "identity_routes": [
+    {
+      "requirement": "Existing serialized, already accepted initialized instance or complete archived effective fields linked to original case/binary/input hashes. Read-only export; never silently initialize, re-shoot or rebuild a native model to obtain it.",
+      "route": "CACHED_EFFECTIVE_STATE_EXPORT"
+    },
+    {
+      "requirement": "Solve source algebra plus rounded-output inverse constraints with rigorously bounded output/libm errors, retain every consistent parameter/state box, certify completeness and link to original accepted initialization. The previous approximate first-row inversion is not such a certificate.",
+      "route": "VALIDATED_ARCHIVE_INVERSE"
+    }
+  ],
+  "next_engine": "HPC-LAVEREN",
+  "next_task": {
+    "build": "Implement a finite-growth precursor verifier, source-specific effective-state export schema, independent algebraic/LCDM + two-state EDE background and mode-specific scalar thermal certificate generation, and per-predicate fail reports. Check source-latch and actual target semantics.",
+    "first": "Search current connected repository for earlier initialized-state exports, quadrature data and certificate primitives; reuse/patch V1 arithmetic and Bernstein checks. Do not rerun Q047-CERTCHECK-V1 solely to reproduce the unchanged missing-input inventory.",
+    "not_planned": [
+      "new motor",
+      "native physics patch",
+      "changed accepted model",
+      "production sampler",
+      "new scientific Q",
+      "external message",
+      "GitHub launch by this mathematical round"
+    ],
+    "permission_boundary": "Preparation, static/source checks and finite manufactured tests can proceed. Read already cached state/archives only within available access. Do not initialize/reshoot/rebuild native cosmology or start production solely to create absent effective state. The unused 36 evaluations do not grant permission.",
+    "required_tests": [
+      "source/effective-field mismatch refusal",
+      "scalar and vector positive-growth finite closure",
+      "early/full mode swap refusal",
+      "Saha normalization/sentinel distinction",
+      "FD versus finite-quadrature and closure normalization mismatch",
+      "missing ell/background latch refusal",
+      "transition carry/q-onset correctness",
+      "rounding/threshold-preimage semantics",
+      "forged qualification refusal",
+      "actual-input absence cannot become PASS"
+    ],
+    "stop": "Stop at the first unavailable essential identity/initialization datum with exact affected PT predicate; keep completed branches. If actual precursor packets pass and authorized numerical certificate execution is available, apply unchanged M06 and stop when each case has a justified scoped verdict. Route scientific completion to Motor14 only after the exact Q is documented."
+  },
+  "predicates": [
+    {
+      "id": "PT01",
+      "name": "IDENTITY",
+      "pass": "case hash linkage; frozen source/build; complete effective Theta/initial fields or validated inverse covering every consistent realization; no placeholder equals effective EDE claim"
+    },
+    {
+      "id": "PT02",
+      "name": "REDUCED_VARIANT",
+      "pass": "admitted flags justify omitted components/thermal terms; otherwise explicitly extend equations before any PASS"
+    },
+    {
+      "id": "PT03",
+      "name": "BACKGROUND_INITIALIZATION",
+      "pass": "accepted a_ini and actual phi_ini/phi_prime_ini linked to original source initialization; not assumed equal to a rounded first output row"
+    },
+    {
+      "id": "PT04",
+      "name": "NEUTRINO",
+      "pass": "declared finite-node and/or distribution reference, correct normalizations, outward interior/tail/moment errors; mass, normalization and closure frozen"
+    },
+    {
+      "id": "PT05",
+      "name": "BACKGROUND_TUBES",
+      "pass": "finite closed EDE defect tubes or algebraic LCDM forcing cells; H/rho_gamma positive; ell enclosed; EDE source latch Ve/(3*H^2)<0.5 strictly throughout source-active path"
+    },
+    {
+      "id": "PT06",
+      "name": "THERMAL_INITIALIZATION",
+      "pass": "source z_initial and D=0 plus correct early source equation; inherited background domain covers it"
+    },
+    {
+      "id": "PT07",
+      "name": "THERMAL_TUBES",
+      "pass": "all brec/He1/He1f/He2 cells close with rigorous residual and finite-growth/contractive error propagation, Tmat>0, no undefined Saha roots"
+    },
+    {
+      "id": "PT08",
+      "name": "SWITCHES_AND_RESETS",
+      "pass": "source chronological transitions, w continuity/q onset map, guard/arithmetic semantics and error latches; recombination warning predicate x>1 && z<z_end_reco_test && z>reionization_z_start_max excluded on its active domain"
+    },
+    {
+      "id": "PT09",
+      "name": "ONSET",
+      "pass": "strict q0 lower>epsilon_hi and same realized w0, H, rho_gamma, Theta links delivered to downstream upper IVP; rounding separately bounded"
+    },
+    {
+      "id": "PT10",
+      "name": "DOWNSTREAM_EVENT",
+      "pass": "all unchanged M06 prefix, strict bracket, negative boundary rate, regular right neighborhood and complete competing-switch exclusions pass"
+    },
+    {
+      "id": "PT11",
+      "name": "PROVENANCE_AND_AUTHORIZATION",
+      "pass": "proof inputs/raw diagnostics distinguished; no additional native/production run without existing authorization; no scientific PASS based on code exit or local fixture"
+    }
+  ],
+  "q": "Q-047",
+  "question": "For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?",
+  "required_theta_fields": {
+    "arithmetic": [
+      "compiler/build flags",
+      "binary hash and source linkage",
+      "libm evaluation/error assumptions",
+      "rounding mode",
+      "float contraction/excess precision",
+      "derived-constant rounding enclosures",
+      "native threshold field bit pattern",
+      "guard multiplication order"
+    ],
+    "background_common": {
+      "H0_CLASS": "Mpc^-1",
+      "K": "Mpc^-2",
+      "Omega0_b": "dimensionless",
+      "Omega0_cdm": "dimensionless",
+      "Omega0_g": "dimensionless",
+      "Omega0_lambda": "dimensionless",
+      "Omega0_ur": "dimensionless",
+      "T_cmb": "K"
+    },
+    "background_flags": [
+      "has_scf",
+      "has_lambda",
+      "has_cdm",
+      "has_ncdm",
+      "has_ur",
+      "has_idm",
+      "has_idr",
+      "has_dcdm",
+      "has_dr",
+      "has_fld",
+      "has_curvature",
+      "N_ncdm"
+    ],
+    "ede_only": {
+      "B_scf": "dimensionless, scf_parameters[3]",
+      "F_scf": "decay constant eV, scf_parameters[1]",
+      "a_ini_accepted": "dimensionless actual accepted initialization",
+      "attractor_ic_scf": "false for this reduced variant",
+      "m_scf": "eV, scf_parameters[2]",
+      "n_scf": "3",
+      "phi_ini_scf": "reduced-Planck units",
+      "phi_prime_ini_scf": "Mpc^-1",
+      "scf_parameters": "entire post-shooting array, not the requested placeholder 1,1,1,1,1,0.0"
+    },
+    "mode_boundaries": [
+      "recfast_z_He_1+recfast_delta_z_He_1",
+      "recfast_z_He_2+recfast_delta_z_He_2",
+      "recfast_z_He_3+recfast_delta_z_He_3",
+      "recfast_z_early_H_recombination",
+      "recfast_z_full_H_recombination",
+      "reionization_z_start_max",
+      "z_end_reco_test",
+      "all transition smoothing widths"
+    ],
+    "neutrino_per_species": {
+      "M_ncdm": "dimensionless mass/temperature ratio",
+      "T_ncdm": "temperature ratio",
+      "deg_ncdm": "degeneracy",
+      "distribution_file_and_hash": "required if present",
+      "factor_ncdm": "native Mpc^-2 normalization",
+      "got_files": "distribution-table flag",
+      "ksi_ncdm": "chemical potential",
+      "q_ncdm_bg": "all dimensionless nodes",
+      "quadrature_strategy": "native enum",
+      "w_ncdm_bg": "all effective weights including distribution weighting"
+    },
+    "representation": "Each scalar: source field name, unit, exact native hex/bit pattern if available, exact rational interval, derivation, raw-field linkage and bound type. Missing values cannot be replaced by booleans or requested inputs.",
+    "thermal": {
+      "C_NR": "m^-2 K^-1",
+      "D_Tmat_initial": "0 K for admitted variant",
+      "I_H": "K",
+      "I_HeI": "K",
+      "I_HeII": "K",
+      "Jm3_over_Mpc2": "J/m^3 per Mpc^-2",
+      "T0": "K",
+      "YHe": "mass fraction; preserve BBN/output linkage",
+      "c": "m/s",
+      "fHe_CLASS": "nHe/nH",
+      "fHe_HyRec": "same normalization, equality/linkage required",
+      "m_e": "kg",
+      "metres_per_Mpc": "m",
+      "nH0_SI": "m^-3",
+      "sigma_T": "m^2",
+      "z_initial": "source thermal initialization"
+    },
+    "thermal_flags": [
+      "has_varconst",
+      "has_exotic_injection",
+      "has_idm_b",
+      "has_idm_g",
+      "has_idm_dr",
+      "has_ap_idmtca",
+      "recombination_enum",
+      "HyRec_MODEL",
+      "HyRec_error_latch_initial"
+    ]
+  },
+  "scope": {
+    "domain": "Background initialization to thermal initialization, then all source modes to z=2870; the existing M06 upper-branch event certificate is downstream.",
+    "model_admission": "Q047 proposed; accepted model v0.7/R000007 ends at Q045",
+    "native_production_authorized": false,
+    "not_established": [
+      "actual initial-state accuracy",
+      "actual four-case event",
+      "source-to-binary equivalence",
+      "complete low-z/reionization/output-map reference",
+      "physical bias",
+      "likelihood effect"
+    ]
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "source_gate": "PASS_FOR_SOURCE_FILE_IDENTITY_ONLY",
+  "source_sha256": {
+    "external/HyRec2020/helium.c": "cc113cdc4b2d4ffa0762ab82d5485816bbbb3bbf63cd3441be5206c4c3bf6587",
+    "external/HyRec2020/history.h": "b1331aed246610d2b1d598f8bedfa951974da0d2845b5c8f3d672bf33bf316f1",
+    "external/HyRec2020/wrap_hyrec.c": "4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd",
+    "external/RecfastCLASS/wrap_recfast.h": "1e5609a3e5b1ddd8f7ad99df336311a9f769867e52f203e0cb6481b617e2de73",
+    "include/background.h": "b329b21bce11705eed64aa242a06272a7d9554ad1fe1de8eda870b6cfb3f2397",
+    "include/common.h": "410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c",
+    "include/thermodynamics.h": "f000e372c0db60663cc49f4bb95ab9f1d63238201ee7b3b51ca791c0f45ba0f0",
+    "source/background.c": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451",
+    "source/input.c": "9caa7c64b39b226bca210cfc82856f2be15b30b0b4802112f67dc9c18bccd873",
+    "source/thermodynamics.c": "d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6"
+  },
+  "sources": [
+    "K-PROPOSED-Q047-SOURCE-001",
+    "K-PROPOSED-Q047-INPUTCODE-001",
+    "K-PROPOSED-Q047-BACKGROUNDCODE-001",
+    "K-PROPOSED-Q047-CONSTANTCODE-001",
+    "I-PROPOSED-Q047-ARCHIVE-AUDIT-001",
+    "I-PROPOSED-Q047-BASELINE-AUDIT-001",
+    "I-PROPOSED-Q047-METHOD-001",
+    "I-PROPOSED-Q047-EXECUTION-001",
+    "I-PROPOSED-Q047-INGESTION-001",
+    "I-PROPOSED-Q047-PRECURSOR-METHOD-001",
+    "I-PROPOSED-Q047-PRECURSOR-CONTROLS-001"
+  ],
+  "status": "METHOD_DEFINED_ACTUAL_INPUTS_UNADMITTED",
+  "target_semantics": {
+    "background_interpolation": "Independent reduced exact-real reference can use direct H/rho_gamma/ell evaluation; no native spline required. A claim of native-source interpolation agreement separately needs a deterministic interpolation+ODE error enclosure.",
+    "closure": "Do not recompute Omega_lambda, B_scf, effective mass or normalization to absorb quadrature differences.",
+    "neutrinos": "Keep native finite-node moments and continuous distribution moments distinct. Prefer a common enclosure that covers both with the SAME effective normalization, mass and closure constants. Otherwise issue an explicitly labelled source-real or PSD-reference certificate; never silently replace one by the other.",
+    "required_declaration": "A certificate names exact-real source-expression realization, effective input box and initialization rule. A compiled numerical path is separate. Decimals, their binary64 values and genuine physical parameter uncertainty are not interchangeable.",
+    "thresholds": "Mathematical epsilon=1/1000000. Native binary64 threshold and guard-product preimage are separate objects, tested under declared arithmetic; keep exact conditional theorem unchanged."
+  },
+  "verifier_interface": {
+    "cell_fields": [
+      "u_lo_exact",
+      "u_hi_exact",
+      "mode",
+      "predictor_coefficients_exact",
+      "prospective_box",
+      "initial_error_box",
+      "parameter_box_reference",
+      "forcing_box_reference",
+      "residual_upper",
+      "jacobian_or_scalar_L_upper",
+      "computed_error_envelope",
+      "strict_closure_slack",
+      "endpoint_box",
+      "source_error_slacks"
+    ],
+    "current_case_status": "No actual admission packet exists; all PT01-PT10 remain NOT_EXECUTED or UNRESOLVED for actual cases. The method and finite controls do not admit actual inputs.",
+    "outcomes": [
+      "QUALIFIED_PRECURSOR_ONLY",
+      "REACHED_NEGATIVE",
+      "NONREACHABLE_ON_DECLARED_FINITE_DOMAIN",
+      "INSUFFICIENT_EVIDENCE",
+      "UNRESOLVED_REFERENCE_SEMANTICS",
+      "SOURCE_ERROR_LATCH_NOT_EXCLUDED"
+    ],
+    "packet_fields": [
+      "q",
+      "case",
+      "question_sha256",
+      "source_commit",
+      "Theta",
+      "background_cells",
+      "background_initial_proof",
+      "thermal_cells",
+      "mode_transfer_proofs",
+      "onset_box",
+      "threshold_semantics",
+      "switch_latch_audit",
+      "source_claim_links",
+      "artifacts_and_hashes"
+    ],
+    "rules": "Recompute interval bounds and all slacks from primitive inputs. Refuse supplied PASS booleans or trusted precomputed error norms. Nonfinite/missing/duplicate fields, interval gaps/overlap misuse, hash or identity mismatch fail explicitly."
+  },
+  "version": 1
+}
+```
+
+Artifact: Q047_PRECURSOR_CONTROLS_V1.json; version v1; SHA256 d24d4c4eeaab12c7645c30e43da9e94280225ea27bf680e1959bf274fc06e4f8; individual working path /workspace/scratch/ffc651cf1b5e/q047_precursor/Q047_PRECURSOR_CONTROLS_V1.json.
+
+```json
+{
+  "actual_case_verdicts": {
+    "camspec-ede_n3": "INSUFFICIENT_EVIDENCE",
+    "camspec-lcdm": "INSUFFICIENT_EVIDENCE",
+    "hillipop-ede_n3": "INSUFFICIENT_EVIDENCE",
+    "hillipop-lcdm": "INSUFFICIENT_EVIDENCE"
+  },
+  "case_id": "NOT_DOCUMENTED",
+  "checks": {
+    "finite_growth": {
+      "L": "2",
+      "R0": "1/1000",
+      "delta": "1/10000",
+      "dt": "1/4",
+      "end_radius": {
+        "hi_display": 0.0016811573342351345,
+        "hi_exact": "52536166694847954818471353975152242194889528304551731629807289913209189757935199658263/31250000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "lo_display": 0.0016811573342351345,
+        "lo_exact": "840578667117567277095541663602435875118232452872827706076916638611347036126963194532207/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "old_invariant_radius_expression": "41/10000",
+      "prospective_radius": "1/500",
+      "scope": "manufactured error inequality only; no actual trajectory",
+      "status": "PASS",
+      "zero_L_limit": "41/40000"
+    },
+    "ncdm": {
+      "Q": "40",
+      "density_tail_bound": {
+        "hi_display": 7.58161300399337e-13,
+        "hi_exact": "4738508127495856075665345245930975686692420429978400028534682151697124128759/6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "lo_display": 7.58161300399337e-13,
+        "lo_exact": "37908065019966848605322761967447805493539363439827200228277457213576993021149/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "exact_moment_controls": 4,
+      "identity": "rho_u=-3*(rho+p)",
+      "mu_upper": "12",
+      "normalization": "FD sum with xi=0; factor/(2*pi)^3 omitted, multiply separately",
+      "pressure_tail_bound": {
+        "hi_display": 1.9555457860724203e-13,
+        "hi_exact": "195554578607242035847668229878172601001674988835317633603171228717444585957963/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "lo_display": 1.9555457860724203e-13,
+        "lo_exact": "195554578607242035847668229878172601001674988835317633603171228717444585911931/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "scope": "tail bound only; finite-interval integral not computed",
+      "status": "PASS"
+    },
+    "saha": {
+      "controls": [
+        {
+          "A": "27/25",
+          "B": "29/25",
+          "bound": "2/31",
+          "elasticity": "999/13501999",
+          "known_root": "13501/12500",
+          "r": "13501/12487500",
+          "root_interval": {
+            "hi_display": 1.08008,
+            "hi_exact": "1080080000000000000000000000000000000000000000000000000000000000000000000000000000000000001/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "lo_display": 1.08008,
+            "lo_exact": "1080079999999999999999999999999999999999999999999999999999999999999999999999999999999999999/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "A": "27/25",
+          "B": "29/25",
+          "bound": "2/31",
+          "elasticity": "4/253",
+          "known_root": "83/75",
+          "r": "83/150",
+          "root_interval": {
+            "hi_display": 1.1066666666666667,
+            "hi_exact": "1106666666666666666666666666666666666666666666666666666666666666666666666666666666666666667/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "lo_display": 1.1066666666666667,
+            "lo_exact": "553333333333333333333333333333333333333333333333333333333333333333333333333333333333333333/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "A": "27/25",
+          "B": "29/25",
+          "bound": "2/31",
+          "elasticity": "37/537037",
+          "known_root": "14499/12500",
+          "r": "14484501/12500",
+          "root_interval": {
+            "hi_display": 1.15992,
+            "hi_exact": "1159920000000000000000000000000000000000000000000000000000000000000000000000000000000000071/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "lo_display": 1.15992,
+            "lo_exact": "231983999999999999999999999999999999999999999999999999999999999999999999999999999999999977/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "A": "1",
+          "B": "27/25",
+          "bound": "2/29",
+          "elasticity": "37/463037",
+          "known_root": "12501/12500",
+          "r": "463/462500",
+          "root_interval": {
+            "hi_display": 1.00008,
+            "hi_exact": "1000080000000000000000000000000000000000000000000000000000000000000000000000000000000000001/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "lo_display": 1.00008,
+            "lo_exact": "1000079999999999999999999999999999999999999999999999999999999999999999999999999999999999999/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "A": "1",
+          "B": "27/25",
+          "bound": "2/29",
+          "elasticity": "4/235",
+          "known_root": "77/75",
+          "r": "77/150",
+          "root_interval": {
+            "hi_display": 1.0266666666666666,
+            "hi_exact": "1026666666666666666666666666666666666666666666666666666666666666666666666666666666666666667/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "lo_display": 1.0266666666666666,
+            "lo_exact": "513333333333333333333333333333333333333333333333333333333333333333333333333333333333333333/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        },
+        {
+          "A": "1",
+          "B": "27/25",
+          "bound": "2/29",
+          "elasticity": "999/13499999",
+          "known_root": "13499/12500",
+          "r": "13485501/12500",
+          "root_interval": {
+            "hi_display": 1.07992,
+            "hi_exact": "539960000000000000000000000000000000000000000000000000000000000000000000000000000000000063/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+            "lo_display": 1.07992,
+            "lo_exact": "1079919999999999999999999999999999999999999999999999999999999999999999999999999999999999953/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+          }
+        }
+      ],
+      "status": "PASS"
+    },
+    "scalar_energy": {
+      "identity": "E_u=-3*X^2; rho_scf,u=-X^2",
+      "rational_tuples": 54,
+      "status": "PASS"
+    },
+    "temperature": {
+      "closed_solution_residual": {
+        "hi_display": 1e-90,
+        "hi_exact": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "lo_display": -2e-90,
+        "lo_exact": "-1/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "early_equation": "w_u=w+(ell+3)/beta",
+      "full_equation": "w_u=1-(1+beta)*w",
+      "manufactured_radiation_w": {
+        "hi_display": 0.00036469585401238664,
+        "hi_exact": "364695854012386662775230219751727113317495235428684922357572014768453255326977605879471/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "lo_display": 0.00036469585401238664,
+        "lo_exact": "36469585401238666277523021975172711331749523542868492235757201476845325532697760587947/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "scope": "constant fully ionized heat-capacity limit; not an actual case",
+      "status": "PASS"
+    },
+    "threshold": {
+      "assumptions": "normal binary64 multiply, round-to-nearest/ties-to-even, no excess precision or fused reassociation",
+      "binary64_epsilon": "4722366482869645/4722366482869645213696",
+      "binary_minus_exact": "-3339/73786976294838206464000000",
+      "mathematical_epsilon": "1/1000000",
+      "midpoint_minus_mathematical": "-22303/147573952589676412928000000",
+      "native_product_transition_midpoint": "9444732965739289/9444732965739290427392",
+      "status": "PASS",
+      "tie_result": "predecessor (even significand); strict native less-than true at midpoint"
+    }
+  },
+  "control_gate": "PASS",
+  "final_scientific_result_gate": "UNRESOLVED",
+  "new_native_or_theory_evaluations": 0,
+  "q": "Q-047",
+  "scope": "FINITE_SOURCE_ALGEBRA_AND_MANUFACTURED_ERROR_CONTROLS_ONLY",
+  "script_sha256": "a81d80d0ac0274acfc662bf44eb7cf8d683ed4d576f1ef96571ab8c5e656653d",
+  "version": 1
+}
+```
+
+Artifact: q047_precursor_controls_v1.py; version v1; SHA256 a81d80d0ac0274acfc662bf44eb7cf8d683ed4d576f1ef96571ab8c5e656653d; individual working path /workspace/scratch/ffc651cf1b5e/q047_precursor/q047_precursor_controls_v1.py.
+
+```python
+"""Q-047 finite precursor algebra controls; NOT an actual-case IVP solver.
+
+Standard library only. Exact rational identities and outward exp/sqrt bounds.
+Run: python q047_precursor_controls_v1.py > Q047_PRECURSOR_CONTROLS_V1.json
+No native initialization, shooting, cosmological integration or network I/O.
+"""
+from fractions import Fraction as F
+from math import isqrt, factorial, nextafter, inf
+from pathlib import Path
+import hashlib
+import json
+import sys
+
+DEN = 10**90
+
+
+def floor(x):
+    return F(x.numerator * DEN // x.denominator, DEN)
+
+
+def ceil(x):
+    return -floor(-x)
+
+
+class I:
+    def __init__(self, lo, hi=None):
+        self.lo = F(lo)
+        self.hi = F(lo if hi is None else hi)
+        if self.lo > self.hi:
+            raise ValueError('REVERSED_INTERVAL')
+
+    def __add__(a, b):
+        b = iv(b)
+        return I(floor(a.lo+b.lo), ceil(a.hi+b.hi))
+
+    __radd__ = __add__
+
+    def __neg__(a):
+        return I(-a.hi, -a.lo)
+
+    def __sub__(a, b):
+        return a + -iv(b)
+
+    def __rsub__(a, b):
+        return iv(b) + -a
+
+    def __mul__(a, b):
+        b = iv(b)
+        p = [a.lo*b.lo, a.lo*b.hi, a.hi*b.lo, a.hi*b.hi]
+        return I(floor(min(p)), ceil(max(p)))
+
+    __rmul__ = __mul__
+
+    def __truediv__(a, b):
+        b = iv(b)
+        if b.lo <= 0 <= b.hi:
+            raise ValueError('ZERO_IN_DENOMINATOR')
+        return a * I(floor(1/b.hi), ceil(1/b.lo))
+
+    def __rtruediv__(a, b):
+        return iv(b)/a
+
+
+def iv(x):
+    return x if isinstance(x, I) else I(x)
+
+
+def sqrt_i(x):
+    x = iv(x)
+    if x.lo < 0:
+        raise ValueError('NEGATIVE_SQRT')
+    def lower(v):
+        return F(isqrt(v.numerator*DEN*DEN//v.denominator), DEN)
+    lo, hi = lower(x.lo), lower(x.hi)+F(1, DEN)
+    if not lo*lo <= x.lo <= x.hi <= hi*hi:
+        raise ArithmeticError('SQRT_ENCLOSURE')
+    return I(lo, hi)
+
+
+def exp_point(x):
+    x = F(x)
+    if abs(x) > 100:
+        raise ValueError('CONTROL_EXP_RANGE')
+    if x < 0:
+        return 1/exp_point(-x)
+    y, k = x, 0
+    while y > F(1, 8):
+        y /= 2
+        k += 1
+    term = total = F(1)
+    for j in range(1, 65):
+        term *= y/j
+        total += term
+    tail = (term*y/65)/(1-y/66)
+    out = I(floor(total), ceil(total+tail))
+    for _ in range(k):
+        out = out*out
+    return out
+
+
+def js(x):
+    if isinstance(x, I):
+        return {'lo_exact': str(x.lo), 'hi_exact': str(x.hi),
+                'lo_display': float(x.lo), 'hi_display': float(x.hi)}
+    if isinstance(x, F):
+        return str(x)
+    return x
+
+
+def require(ok, name):
+    if not ok:
+        raise AssertionError(name)
+
+
+def main():
+    if sys.flags.optimize:
+        raise RuntimeError('OPTIMIZED_EXECUTION_NOT_ALLOWED')
+    out = {'q': 'Q-047', 'case_id': 'NOT_DOCUMENTED', 'version': 1,
+           'scope': 'FINITE_SOURCE_ALGEBRA_AND_MANUFACTURED_ERROR_CONTROLS_ONLY',
+           'actual_case_verdicts': {k: 'INSUFFICIENT_EVIDENCE' for k in
+             ('camspec-lcdm', 'camspec-ede_n3', 'hillipop-lcdm', 'hillipop-ede_n3')},
+           'new_native_or_theory_evaluations': 0, 'checks': {}}
+
+    # Independent original/transformed scalar equations; potential derivative
+    # can be arbitrary, so cancellation checks no chosen cosmological fit.
+    count = 0
+    for a in (F(1, 7), F(2, 3), F(3)):
+        for psi in (F(-5, 4), F(0), F(7, 11)):
+            for H in (F(2, 5), F(13, 9)):
+                for Vphi in (F(-9, 2), F(0), F(17, 7)):
+                    X = psi/a
+                    phi_u = psi/(a*H)
+                    psi_u = -2*psi-a*Vphi/H
+                    X_u_original = (psi_u-psi)/a
+                    X_u_transformed = -3*X-Vphi/H
+                    require(X_u_original == X_u_transformed, 'SCALAR_TRANSFORM')
+                    E_u_original = psi*psi_u/a**2-psi**2/a**2+Vphi*phi_u
+                    E_u_transformed = X*X_u_transformed+Vphi*X/H
+                    require(E_u_original == E_u_transformed == -3*X**2,
+                            'SCALAR_ENERGY_CANCELLATION')
+                    count += 1
+    out['checks']['scalar_energy'] = {'status': 'PASS', 'rational_tuples': count,
+        'identity': 'E_u=-3*X^2; rho_scf,u=-X^2'}
+
+    # Exact positive Saha root, compared to deliberately rational roots
+    # determined independently through r=x(x-A)/(B-x).
+    saha = []
+    for A, B in ((F(27, 25), F(29, 25)), (F(1), F(27, 25))):
+        eta_bound = (B-A)/(2*B-A)
+        for part in (F(1, 1000), F(1, 3), F(999, 1000)):
+            x = A+(B-A)*part
+            r = x*(x-A)/(B-x)
+            root = A+2*r*(B-A)/(A+r+sqrt_i((A+r)**2+4*r*(B-A)))
+            require(root.lo <= x <= root.hi, 'STABLE_SAHA_ROOT')
+            xr = (B-x)/(2*x+r-A)
+            drdx = ((2*x-A)*(B-x)+x*(x-A))/(B-x)**2
+            require(xr*drdx == 1, 'SAHA_IMPLICIT_DERIVATIVE')
+            eta = r*xr/x
+            require(0 <= eta <= eta_bound, 'SAHA_ELASTICITY_BOUND')
+            saha.append({'A': str(A), 'B': str(B), 'r': str(r),
+                         'known_root': str(x), 'root_interval': js(root),
+                         'elasticity': str(eta), 'bound': str(eta_bound)})
+    out['checks']['saha'] = {'status': 'PASS', 'controls': saha}
+
+    # Original D-temperature source and w change of variables.
+    for Tr, w, beta, ell in ((F(13), F(1, 1000), F(100), F(-2)),
+                            (F(29), F(2, 100), F(7), F(-1))):
+        D = -Tr*w
+        D_u_full = -Tr-(2+beta)*D
+        w_u_full = 1-(1+beta)*w
+        require(D_u_full == Tr*(w-w_u_full), 'FULL_TEMPERATURE_CHANGE')
+        D_u_early = -Tr*(ell+3)/beta
+        w_u_early = w+(ell+3)/beta
+        require(D_u_early == Tr*(w-w_u_early), 'EARLY_TEMPERATURE_CHANGE')
+        require(w_u_full != w_u_early, 'EARLY_FULL_NOT_IDENTICAL')
+    # Controlled radiation-limit solution: beta=beta0 exp(-2h), ell=-2.
+    # w=(exp(2h)-exp(h))/beta0, which gives w'-w=exp(2h)/beta0.
+    h, beta0 = F(1, 4), F(1000)
+    e1, e2 = exp_point(h), exp_point(2*h)
+    wclosed = (e2-e1)/beta0
+    residual = (2*e2-e1)/beta0-wclosed-e2/beta0
+    require(residual.lo <= 0 <= residual.hi, 'EARLY_CLOSED_LIMIT')
+    out['checks']['temperature'] = {'status': 'PASS',
+        'early_equation': 'w_u=w+(ell+3)/beta',
+        'full_equation': 'w_u=1-(1+beta)*w',
+        'manufactured_radiation_w': js(wclosed),
+        'closed_solution_residual': js(residual),
+        'scope': 'constant fully ionized heat-capacity limit; not an actual case'}
+
+    # A positive-growth error tube closes on a finite interval, although
+    # the old invariant-error-rectangle condition L*B+delta<=0 fails.
+    L, dt, R0, delta, B = F(2), F(1, 4), F(1, 1000), F(1, 10000), F(1, 500)
+    em = exp_point(L*dt)
+    Rend = em*R0+delta*(em-1)/L
+    require(Rend.hi < B, 'FINITE_POSITIVE_GROWTH_CLOSURE')
+    require(L*B+delta > 0, 'NONCONTRACTIVE_CONTROL')
+    zero_limit = R0+delta*dt
+    out['checks']['finite_growth'] = {'status': 'PASS', 'L': str(L),
+        'dt': str(dt), 'R0': str(R0), 'delta': str(delta), 'prospective_radius': str(B),
+        'end_radius': js(Rend), 'zero_L_limit': str(zero_limit),
+        'old_invariant_radius_expression': str(L*B+delta),
+        'scope': 'manufactured error inequality only; no actual trajectory'}
+
+    # ncdm moment identity checked with exact Pythagorean energies.
+    ncount = 0
+    for q, mu, energy in ((F(3), F(4), F(5)), (F(5), F(12), F(13)),
+                          (F(8), F(15), F(17)), (F(0), F(2), F(2))):
+        rho, pressure = q*q*energy, q**4/(3*energy)
+        density_u = -4*rho+q*q*mu*mu/energy
+        require(density_u == -3*(rho+pressure), 'NCDM_ENERGY_IDENTITY')
+        ncount += 1
+    # Dimensionless tail with xi=0 and normalization omitted consistently.
+    Q, mumax = F(40), F(12)
+    P2, P3 = Q**2+2*Q+2, Q**3+3*Q**2+6*Q+6
+    density_tail = 2*exp_point(-Q)*(P3+mumax*P2)
+    pressure_tail = 2*exp_point(-Q)*P3/3
+    require(0 < density_tail.lo < density_tail.hi < F(1, 10**12), 'FD_DENSITY_TAIL')
+    require(0 < pressure_tail.lo < pressure_tail.hi < density_tail.hi, 'FD_PRESSURE_TAIL')
+    out['checks']['ncdm'] = {'status': 'PASS', 'exact_moment_controls': ncount,
+        'identity': 'rho_u=-3*(rho+p)', 'Q': str(Q), 'mu_upper': str(mumax),
+        'density_tail_bound': js(density_tail), 'pressure_tail_bound': js(pressure_tail),
+        'normalization': 'FD sum with xi=0; factor/(2*pi)^3 omitted, multiply separately',
+        'scope': 'tail bound only; finite-interval integral not computed'}
+
+    exact, binary = F(1, 1000000), F.from_float(1e-6)
+    predecessor = F.from_float(nextafter(1e-6, -inf))
+    midpoint = (binary+predecessor)/2
+    significand = binary/(binary-predecessor)
+    require(significand.denominator == 1, 'THRESHOLD_ULP_SCALE')
+    significand_even = (significand.numerator % 2 == 0)
+    require(binary < exact, 'THRESHOLD_BINARY_DIRECTION')
+    require(not significand_even, 'THRESHOLD_TIE_PARITY')
+    out['checks']['threshold'] = {'status': 'PASS', 'mathematical_epsilon': str(exact),
+        'binary64_epsilon': str(binary), 'binary_minus_exact': str(binary-exact),
+        'native_product_transition_midpoint': str(midpoint),
+        'midpoint_minus_mathematical': str(midpoint-exact),
+        'tie_result': 'predecessor (even significand); strict native less-than true at midpoint',
+        'assumptions': 'normal binary64 multiply, round-to-nearest/ties-to-even, no excess precision or fused reassociation'}
+    out['control_gate'] = 'PASS'
+    out['final_scientific_result_gate'] = 'UNRESOLVED'
+    out['script_sha256'] = hashlib.sha256(Path(__file__).read_bytes()).hexdigest()
+    print(json.dumps(out, indent=2, sort_keys=True))
+
+
+if __name__ == '__main__':
+    main()
+```
+
 ### Execution artifacts — bounded checker V1
 
-These are separate code/data/result artifacts, not parallel journals. Q047_SAMLET_JOURNAL.md in the candidate repository package is a byte-identical transport snapshot of this authoritative file. Repository installation failed with HTTP 403; all prepared files remain local individual deliverables. All files are individual; no new archive was made. The mathematical controls and all older received evidence below remain unchanged.
+These are separate code/data/result artifacts, not parallel journals. Q047_SAMLET_JOURNAL.md in the executed repository package is a transport snapshot of the earlier preparation state; it is not byte-identical to this updated authoritative ingestion journal. HISTORICAL preparation: the engine installation attempt failed with HTTP403. CURRENT E05: the owner installed the package and the external checker completed; all raw run evidence is delivered individually. All files are individual; no new archive was made. The mathematical controls and all older received evidence below remain unchanged.
 
 Frozen executable/package artifacts and SHA256:
 
@@ -830,7 +2713,7 @@ Frozen executable/package artifacts and SHA256:
 - Q047_EXECUTION_SPEC_V1.md: `81337f2049c9f85efd7133fa99ed25107f1c5a859f31744763752e68f30bd761`
 - .github/workflows/q047-certificate-check-v1.yml: `766f16fd4ef7833e4a06419049588a6f5587a40f3ec1ed77506e745230ba293b`
 
-Mandatory output digest report, actually computed locally:
+HISTORICAL LOCAL OUTPUT DIGEST REPORT — retained unchanged; do not confuse its LOCAL final JSON digest with run38091858306. The external digests are in E05 and the new evidence table:
 
 ```json
 {
@@ -921,6 +2804,25 @@ Actual fixture/event certificate, parameter/source identities, exact regional bo
   }
 }
 ```
+
+### Successful external run evidence — unmodified individual files
+
+The following files belong to run38091858306 and replace no historical raw output. Their archive provenance matches the external GitHub digest. The preceding local-run output report stays historical; no apparent hash difference is interpreted as a changed physical result.
+
+| File | Actual bytes | SHA256 | Accessible individual file |
+| --- | ---: | --- | --- |
+| Q047_EXECUTION_SPEC_V1.md | 6339 | 81337f2049c9f85efd7133fa99ed25107f1c5a859f31744763752e68f30bd761 | [Q047_EXECUTION_SPEC_V1.md](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/Q047_EXECUTION_SPEC_V1.md) |
+| q047_package_v1.json | 4826 | daceeba1601687195d12ca7c040559850da3695b8b029ed05e1d5633f7ac01aa | [q047_package_v1.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/q047_package_v1.json) |
+| q047_results/q047_certificate_final_v1.json | 10682 | 3842f93552c92186f9c02153111c801013d5e4cb990bea0d7887abb820451928 | [q047_certificate_final_v1.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/q047_results/q047_certificate_final_v1.json) |
+| q047_results/q047_conditional_control_v1.json | 6637 | 442cd6495520a618527969f88720d49cd9af61c01aafc4850cc5ad6a42ff903c | [q047_conditional_control_v1.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/q047_results/q047_conditional_control_v1.json) |
+| q047_results/q047_regional_controls_v1.json | 77342 | de2f0fec349ac475ef1886bea5b7d0cb14246d991b3f58fa65aeab45ede454f0 | [q047_regional_controls_v1.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/q047_results/q047_regional_controls_v1.json) |
+| q047_results/q047_required_inputs_v1.json | 2285 | 5d47c962b24e3ccd7093165b87bb1cec7dbdc7269bc135d45271f8f73ce62827 | [q047_required_inputs_v1.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/q047_results/q047_required_inputs_v1.json) |
+| q047_results/q047_results_gate_v1.json | 774 | d055fb477e702fa9d6ea9849c4900456cbc20ffb8bf47dbd5a5f350276a0e6d2 | [q047_results_gate_v1.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/q047_results/q047_results_gate_v1.json) |
+| q047_results/q047_sources_gate_v1.json | 1219 | 98d2ff1f694da0989d44f8c537ec7607675db5fad3058b5d7a9ba73ae55e8e84 | [q047_sources_gate_v1.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/q047_results/q047_sources_gate_v1.json) |
+| q047_results/q047_static_gate_v1.json | 250 | c5cb0e2888304060e4cd85c9a4c72ac1be0b1bf6d6a20e47f32becc617370ed3 | [q047_static_gate_v1.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/q047_results/q047_static_gate_v1.json) |
+| q047_targets_v1.json | 24690 | 8abc49f9865c71226431f562f6f793bf2d134d23acd65940d4e80d1d1f4e4478 | [q047_targets_v1.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/raw/q047_targets_v1.json) |
+
+[Q047_INGESTION_RECEIPT.json](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/Q047_INGESTION_RECEIPT.json) preserves run/audit/member identity. [Q047_GITHUB_JOB_114329741408.log](sandbox:/workspace/scratch/ffc651cf1b5e/q047_ingestion/Q047_GITHUB_JOB_114329741408.log) preserves the full decoded job log. These are technical artifacts, not alternate journals. Original execution specification is byte-identical to the provided attachment; requested target vectors remain pinned. Exact core code and original workflow are retrievable at immutable execution commit3bfffa1c905d0c58ccee8b55eaf539eebcb2dec8 under the manifest paths.
 
 ### Embedded mathematics control package — complete code/input/output
 

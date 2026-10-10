@@ -1,6 +1,22 @@
-# Bubbleverse — current Q047 certificate qualification
+# Q047 finite-growth precursor backend V1
 
-Open **🚀 BUBBLEVERSE START**, enter **`Q047-CERTCHECK-V1`**, then select **Run workflow** after this package is installed on main. The permanent launcher remains `.github/workflows/00-bubbleverse-start.yml`; the canonical registry is `bubbleverse_program_registry.json`; the target is `.github/workflows/q047-certificate-check-v1.yml`. The existing launcher is unchanged and all 51 prior registry entries are preserved.
+Current prepared target: **`Q047-PRECURSORCHECK-V1`**. After this candidate package is installed, open **🚀 BUBBLEVERSE START**, paste that exact PROGRAM_ID and select **Run workflow**. Target: `.github/workflows/q047-precursor-check-v1.yml`; registry: `bubbleverse_program_registry.json`. The permanent launcher `.github/workflows/00-bubbleverse-start.yml` is byte-unchanged. All52 existing registry entries are preserved; the candidate has53. No remote installation or launch is claimed by these files.
+
+The backend recomputes rational interval source fields, signed scalar/two-state comparison errors, between-node polynomial defects and strict prospective-tube closure. Positive finite error growth is allowed. It implements algebraic radiation/matter/Lambda/curvature plus declared neutrino references, n_scf=3 EDE background cells, the distinct brec and later thermal equations, four ordered source modes, carried temperature and the helium onset map. Cell coordinate is exact rational **a**; source equations in u=ln(a) are transformed by dy/da=F_u/a. This avoids uncertain log endpoint conversion without changing the model.
+
+**CONDITIONAL** source-real proof inputs are assumptions. The full four-mode radiation fixture is deliberately artificial, and can pass finite source-control gates without qualifying any actual frozen case. All four actual cases remain **INSUFFICIENT_EVIDENCE** and **FINAL_RESULT_GATE=UNRESOLVED**. Effective initialized-instance linkage, actual initialization errors, uncertain source/binary arithmetic and the downstream M06 first-event proof remain outstanding. No native build/init/re-shoot, CLASS call, sampler, optical-depth or likelihood run is included; budget stays16/52 consumed,36 remaining.
+
+Files: `q047_precursor_check_v1.py`, `q047_precursor_tests_v1.py`, `q047_precursor_packet_control_v1.json`, `q047_precursor_package_v1.json`, `Q047_EFFECTIVE_STATE_SCHEMA_V1.json`, unchanged `Q047_PRECURSOR_CONTRACT_V1.json`, and `Q047_PRECURSOR_EXECUTION_SPEC_V1.md`. The backend reuses unchanged installed `q047_math_v1.py` and `q047_certificate_v1.py`. Complete scientific memory remains `Q047_SAMLET_JOURNAL.md`. Source locks identify the exact ten files from class_ede5a131c91...; fetched files are read, never compiled or executed.
+
+One finite job has a10-minute cap, with bounded source retrieval and a90-second backend limit. Work caps return unresolved; there is no retry/sharding/merge/checkpoint or downstream dispatch. Outputs are in `q047_precursor_results/`; technical success does not close Q047.
+
+Replay: `python -m unittest discover -p 'q047_*tests_v1.py' -v`, then `python q047_precursor_check_v1.py --source-dir PATH_TO_PINNED_SOURCE`. Optional conditional primitive input: `--packet FILE`; optional read-only export representation audit: `--audit-effective FILE`. A representation PASS is never actual admission. Do not relaunch old CERTCHECK merely to repeat the previous missing-object list.
+
+---
+
+# Completed prior Q047 certificate qualification — historical
+
+The prior **`Q047-CERTCHECK-V1`** package completed its technical qualification as run38091858306. Its files and target `.github/workflows/q047-certificate-check-v1.yml` remain preserved. Do not relaunch it solely to repeat the unchanged missing-input inventory. The following text documents that preceding package; the current prepared precursor target is described above. At its original preparation, all51 prior registry entries were preserved in the52-entry candidate.
 
 Q-047 remains **PROPOSED; canonical scientific admission unverified**. It asks whether each of four frozen Q041 FULL/start0 helium trajectories reaches the strict numerical cutoff at a first event with negative upper rate and no competing switch/reset. Actual applicability is **INSUFFICIENT EVIDENCE in all four cases**.
 

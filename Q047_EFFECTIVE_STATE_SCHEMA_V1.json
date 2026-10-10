@@ -1,0 +1,142 @@
+{
+  "schema": "Q047-EFFECTIVE-STATE-EXPORT-SCHEMA-V1",
+  "q": "Q-047",
+  "source_repository": "mwt5345/class_ede",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "role": "READ_ONLY_CACHED_EFFECTIVE_STATE_EXPORT; not initialization, inverse proof or actual admission",
+  "required_identity": [
+    "q",
+    "case",
+    "source_commit",
+    "original_binary_sha256",
+    "accepted_input_sha256",
+    "accepted_instance_or_archive_sha256",
+    "source_build_link",
+    "accepted_initialization_record"
+  ],
+  "scalar_representation": {
+    "required": [
+      "source_field",
+      "unit",
+      "native_hex",
+      "bounds",
+      "raw_link",
+      "bound_type",
+      "derivation"
+    ],
+    "bounds": "[lo_exact,hi_exact] as rational strings, covering native hex; float JSON values refused",
+    "raw_link": "exact archive/file/member/path/hash and accepted initialization linkage; a boolean is insufficient"
+  },
+  "required_theta_fields": {
+    "arithmetic": [
+      "compiler/build flags",
+      "binary hash and source linkage",
+      "libm evaluation/error assumptions",
+      "rounding mode",
+      "float contraction/excess precision",
+      "derived-constant rounding enclosures",
+      "native threshold field bit pattern",
+      "guard multiplication order"
+    ],
+    "background_common": {
+      "H0_CLASS": "Mpc^-1",
+      "K": "Mpc^-2",
+      "Omega0_b": "dimensionless",
+      "Omega0_cdm": "dimensionless",
+      "Omega0_g": "dimensionless",
+      "Omega0_lambda": "dimensionless",
+      "Omega0_ur": "dimensionless",
+      "T_cmb": "K"
+    },
+    "background_flags": [
+      "has_scf",
+      "has_lambda",
+      "has_cdm",
+      "has_ncdm",
+      "has_ur",
+      "has_idm",
+      "has_idr",
+      "has_dcdm",
+      "has_dr",
+      "has_fld",
+      "has_curvature",
+      "N_ncdm"
+    ],
+    "ede_only": {
+      "B_scf": "dimensionless, scf_parameters[3]",
+      "F_scf": "decay constant eV, scf_parameters[1]",
+      "a_ini_accepted": "dimensionless actual accepted initialization",
+      "attractor_ic_scf": "false for this reduced variant",
+      "m_scf": "eV, scf_parameters[2]",
+      "n_scf": "3",
+      "phi_ini_scf": "reduced-Planck units",
+      "phi_prime_ini_scf": "Mpc^-1",
+      "scf_parameters": "entire post-shooting array, not the requested placeholder 1,1,1,1,1,0.0"
+    },
+    "mode_boundaries": [
+      "recfast_z_He_1+recfast_delta_z_He_1",
+      "recfast_z_He_2+recfast_delta_z_He_2",
+      "recfast_z_He_3+recfast_delta_z_He_3",
+      "recfast_z_early_H_recombination",
+      "recfast_z_full_H_recombination",
+      "reionization_z_start_max",
+      "z_end_reco_test",
+      "all transition smoothing widths"
+    ],
+    "neutrino_per_species": {
+      "M_ncdm": "dimensionless mass/temperature ratio",
+      "T_ncdm": "temperature ratio",
+      "deg_ncdm": "degeneracy",
+      "distribution_file_and_hash": "required if present",
+      "factor_ncdm": "native Mpc^-2 normalization",
+      "got_files": "distribution-table flag",
+      "ksi_ncdm": "chemical potential",
+      "q_ncdm_bg": "all dimensionless nodes",
+      "quadrature_strategy": "native enum",
+      "w_ncdm_bg": "all effective weights including distribution weighting"
+    },
+    "representation": "Each scalar: source field name, unit, exact native hex/bit pattern if available, exact rational interval, derivation, raw-field linkage and bound type. Missing values cannot be replaced by booleans or requested inputs.",
+    "thermal": {
+      "C_NR": "m^-2 K^-1",
+      "D_Tmat_initial": "0 K for admitted variant",
+      "I_H": "K",
+      "I_HeI": "K",
+      "I_HeII": "K",
+      "Jm3_over_Mpc2": "J/m^3 per Mpc^-2",
+      "T0": "K",
+      "YHe": "mass fraction; preserve BBN/output linkage",
+      "c": "m/s",
+      "fHe_CLASS": "nHe/nH",
+      "fHe_HyRec": "same normalization, equality/linkage required",
+      "m_e": "kg",
+      "metres_per_Mpc": "m",
+      "nH0_SI": "m^-3",
+      "sigma_T": "m^2",
+      "z_initial": "source thermal initialization"
+    },
+    "thermal_flags": [
+      "has_varconst",
+      "has_exotic_injection",
+      "has_idm_b",
+      "has_idm_g",
+      "has_idm_dr",
+      "has_ap_idmtca",
+      "recombination_enum",
+      "HyRec_MODEL",
+      "HyRec_error_latch_initial"
+    ]
+  },
+  "identity_routes": [
+    {
+      "requirement": "Existing serialized, already accepted initialized instance or complete archived effective fields linked to original case/binary/input hashes. Read-only export; never silently initialize, re-shoot or rebuild a native model to obtain it.",
+      "route": "CACHED_EFFECTIVE_STATE_EXPORT"
+    },
+    {
+      "requirement": "Solve source algebra plus rounded-output inverse constraints with rigorously bounded output/libm errors, retain every consistent parameter/state box, certify completeness and link to original accepted initialization. The previous approximate first-row inversion is not such a certificate.",
+      "route": "VALIDATED_ARCHIVE_INVERSE"
+    }
+  ],
+  "neutrino_rules": "all effective nodes/weights, distribution weighting, mass, normalization, files/hash/strategy; declare finite, analytic FD or common enclosing reference; do not retune closure",
+  "guard_rules": "binary64 threshold hex, multiplication order, rounding/build/libm assumptions separately documented; exact-real certificate is not source-binary equivalence",
+  "result_rules": "audit_export validates representation/completeness only. PT01/PT03/actual admission unresolved until original initialized-instance and IVP/error evidence are qualified."
+}

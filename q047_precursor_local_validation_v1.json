@@ -1,0 +1,49 @@
+{
+  "schema": "Q047-PRECURSOR-LOCAL-VALIDATION-V1",
+  "q": "Q-047",
+  "program_id": "Q047-PRECURSORCHECK-V1",
+  "created_utc": "2026-10-10T23:23:17.982219+00:00",
+  "execution_status": "COMPLETE_LOCAL_FINITE_CONTROL",
+  "source_gate": "PASS_SOURCE_BYTES_ONLY",
+  "tests": {
+    "count": 47,
+    "suite_seconds": 4.256,
+    "command": "python -m unittest discover -s q047_hpc/package -p 'q047_*tests_v1.py' -v",
+    "status": "PASS"
+  },
+  "backend_duration_seconds": 0.2904783330004648,
+  "control_complete_source_precursor": true,
+  "actual_verdicts": {
+    "camspec-ede_n3": "INSUFFICIENT_EVIDENCE",
+    "camspec-lcdm": "INSUFFICIENT_EVIDENCE",
+    "hillipop-ede_n3": "INSUFFICIENT_EVIDENCE",
+    "hillipop-lcdm": "INSUFFICIENT_EVIDENCE"
+  },
+  "final_result_gate": "UNRESOLVED",
+  "new_native_evaluations": 0,
+  "ledger": {
+    "cap": 52,
+    "consumed": 16,
+    "new_native_or_theory_evaluations": 0,
+    "remaining": 36
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "repository_base_commit": "3bfffa1c905d0c58ccee8b55eaf539eebcb2dec8",
+  "remote_installed": false,
+  "remote_launched": false,
+  "input_hashes": {
+    "Q047_SAMLET_JOURNAL.md": "cd0ae147483daa177c2c411f28916a76076ca4aea910106eadba2e23e6bb5e68",
+    "Q047_PRECURSOR_CONTRACT_V1.json": "bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc",
+    "Q047_PRECURSOR_CONTROLS_V1.json": "d24d4c4eeaab12c7645c30e43da9e94280225ea27bf680e1959bf274fc06e4f8",
+    "q047_precursor_controls_v1.py": "a81d80d0ac0274acfc662bf44eb7cf8d683ed4d576f1ef96571ab8c5e656653d"
+  },
+  "output_hashes": {
+    "q047_precursor_final_v1.json": "b42390aef6e3f3fb794041409d04a832528e2f2257159f514f8167057840905c",
+    "q047_precursor_conditional_v1.json": "48a8fceb5931fe76c16889589cff5fbef2401e42dec452fe9adea03db6369041",
+    "q047_precursor_sources_v1.json": "260f61e3416ba64befacad2f9dd29ee3ad5e8d6616826aab24b605dd9f375fae",
+    "q047_precursor_tests_v1.log": "8f0e379abacf32f84fb511abcd490f10e78dfc93d0b8cd1526b001a9d8feeb5b",
+    "q047_precursor_static_v1.json": "6b984732e413cc77352bfb012233be7dca6f4ddbb46dcc4331dbc24a62f04287"
+  },
+  "package_sha256": "6cb15dd246eef54b2142dd4a571d4a0d6e2d3982aa365cacf0b79f3bd47bdd58",
+  "journal_output_sha256": "d162f1577543f272e613d3215ac5946938d0857f5fd4c5a06e220767fece58e9"
+}

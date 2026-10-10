@@ -1,0 +1,70 @@
+name: Bubbleverse Q047 finite-growth precursor backend V1 — conditional only
+
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Exact registered PROGRAM_ID
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: q047-precursor-check-v1
+  cancel-in-progress: false
+
+env:
+  CURRENT_Q: Q-047
+  PROGRAM_ID: Q047-PRECURSORCHECK-V1
+  PYTHONHASHSEED: '0'
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+        with:
+          python-version: '3.12.14'
+      - name: Exact ID and repository/source-contract gates
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          python q047_precursor_check_v1.py --program-id "$REQUESTED_PROGRAM_ID" --static
+      - name: Finite source numerical and refusal controls
+        timeout-minutes: 2
+        run: |
+          python -m unittest discover -p 'q047_*tests_v1.py' -v 2>&1 | tee q047_precursor_results/q047_precursor_tests_v1.log
+      - name: Source byte identity and manufactured complete precursor control
+        timeout-minutes: 3
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          python q047_precursor_check_v1.py --program-id "$REQUESTED_PROGRAM_ID" --download-sources
+          python - <<'PY'
+          import q047_certificate_v1 as c
+          r=c.load('q047_precursor_results/q047_precursor_final_v1.json')
+          assert r['conditional_control_gate']=='PASS'
+          assert r['control_complete_source_precursor']
+          assert r['final_result_gate']=='UNRESOLVED'
+          assert r['new_native_evaluations']==0
+          assert all(v['actual_applicability']=='INSUFFICIENT_EVIDENCE' for v in r['actual_cases'].values())
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: q047-precursor-v1-${{ github.run_id }}-technical
+          path: |
+            q047_precursor_results/**
+            Q047_SAMLET_JOURNAL.md
+            Q047_PRECURSOR_CONTRACT_V1.json
+            Q047_PRECURSOR_EXECUTION_SPEC_V1.md
+            Q047_EFFECTIVE_STATE_SCHEMA_V1.json
+            q047_precursor_package_v1.json
+          retention-days: 30
+          if-no-files-found: error
