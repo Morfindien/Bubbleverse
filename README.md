@@ -1,4 +1,22 @@
-# Q047 finite-growth precursor backend V1
+# Q048 reconstruction metadata qualification V1
+
+Prepared target: **`Q048-INPUTCHECK-V1`**. This package audits the already captured four-case reconstruction from run `38140371059`; it performs no new CLASS initialization, compilation, sampling or likelihood evaluation. The local metadata audit has completed. The GitHub target is a reproducible replay after installation, not a prerequisite to repeating completed work.
+
+Open **🚀 BUBBLEVERSE START**, enter **`Q048-INPUTCHECK-V1`**, then select **Run workflow**. Permanent launcher: `.github/workflows/00-bubbleverse-start.yml` (unchanged). Target: `.github/workflows/q048-input-check-v1.yml`. Registry: `bubbleverse_program_registry.json`. This candidate preserves all 55 existing entries and adds one. Remote installation and dispatch have not been performed.
+
+The stage checks five pinned metadata files per case, their declared source/rate-table links, the seven thermal phase starts, exact hexadecimal ingestion and fixed accepted `z_reio`. The quantity in the CLASS vector is `x_He`; the cutoff quantity is **`q = fHe_CLASS * x_He`**. Four native late-phase samples are slightly below the cutoff. Neither sampled crossing nor repeated equal samples establish a continuous first-event certificate. `FINAL_RESULT_GATE` remains **UNRESOLVED**.
+
+Scientific memory: `Q047_SAMLET_JOURNAL.md`, carrying proposed Q-048 and the complete inherited journal. Contract: `Q048_INPUTCHECK_CONTRACT_V1.json`. Package pins: `Q048_INPUTCHECK_PACKAGE_V1.json`. Code/tests: `q048_inputcheck_v1.py`, `q048_inputcheck_tests_v1.py`, `q048_package_check_v1.py`. Outputs: `q048_inputcheck_results/Q048_INPUTCHECK_RESULT_V1.json` plus the exact contract/package/journal in the result artifact.
+
+Replay uses one finite job with a 20-minute total cap, a 12-minute frozen-artifact retrieval cap, and 90-second test and audit caps. No splitting, checkpoint or mathematical merge is needed for this metadata workload. Missing/expired artifacts fail admission; they do not authorize reconstruction or a version change. No automatic retries or downstream launches are included.
+
+Offline replay: `python -m unittest -v q048_inputcheck_tests_v1`, then `python q048_inputcheck_v1.py --input-root PATH_TO_q047_reconstructed --output NEW_RECEIPT.json`. A pre-existing receipt is never overwritten. Run `python q048_package_check_v1.py` after installing all files at their canonical paths. Keep the permanent launcher unchanged. Apply the registry addition and README/journal updates against the current repository; the supplied complete files are based on commit `76d6b4a4b02ddd929899008f476e99da29c1f931`.
+
+The next scientific requirement is validated qualification of the common upper flow and its first cutoff event or certified no reach. Coupled hydrogen/temperature propagation, smoothing/interpolation and cumulative Thomson-depth bounds follow only if required. This package does not implement those solvers.
+
+---
+
+# Historical Q047 finite-growth precursor backend V1
 
 Current prepared target: **`Q047-PRECURSORCHECK-V1`**. After this candidate package is installed, open **🚀 BUBBLEVERSE START**, paste that exact PROGRAM_ID and select **Run workflow**. Target: `.github/workflows/q047-precursor-check-v1.yml`; registry: `bubbleverse_program_registry.json`. The permanent launcher `.github/workflows/00-bubbleverse-start.yml` is byte-unchanged. All52 existing registry entries are preserved; the candidate has53. No remote installation or launch is claimed by these files.
 

@@ -1,3 +1,9852 @@
+# BUBBLEVERSE — OVERLEVERING
+
+STATUS: FORTSÆTTER — finite execution/input-qualification stage completed locally; scientific Q remains unresolved.
+Date/time: 2026-10-11T16:29:37.407635+00:00 (UTC).
+
+## A. CURRENT Q
+
+CURRENT_Q: Q-048 — PROPOSED, canonical assignment UNVERIFIED. CASE ID: NOT ASSIGNED.
+The exact question and its SHA256 c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436 remain unchanged. Technical subtasks have not created another scientific Q. The primary evidence retains its original Q-047 identity; the new audit attaches it to proposed Q-048 without relabelling old records.
+
+## B. CHATGPT-SETUPVURDERING / RECOMMENDED CHATGPT SETTING
+
+RECOMMENDED: current Codex/ChatGPT Work with deep reasoning and local exact computation, capability classes A/C + H/X as required by the next certificate. The finite metadata work fits this available setting. ASTRA MAX and GPT-5.6 availability in the operator's picker, an exact active UI reasoning level, quotas and context size are not independently verified; no model change is claimed. The exposed agent alternatives do not establish performance or picker availability.
+REASON: targeted repository reuse, exact ingestion and local tests are sufficient for this finite stage; heavy autonomous orchestration is unnecessary.
+FALLBACK: any actually available strong reasoning/code setting preserving pinned files and exact arithmetic.
+UPGRADE: state/event enclosure failure, long nonlinear coupled proof, independent disagreement or a substantial validated numerical campaign. Recommend the strongest suitable long-horizon setting if actually available; do not select by model name alone.
+
+## C. PLUGIN / CAPABILITY PLAN
+
+USED: read-only connected GitHub for frozen repository/program/launcher/registry inspection and existing-run artifact metadata; connected file retrieval for already preserved raw objects; local Python for exact rational decoding and verification; web for current official GitHub limits. Source/data identity, not plugin authority, supports claims. No plugin installation, agent delegation, external repository mutation or dispatch occurred.
+
+## D. EXECUTION DECISION
+
+EXECUTION_MODE: EXISTING MOTOR + SMALL OFFLINE PROGRAM + READ-ONLY CAPABILITIES.
+The existing execution engine suffices; no new motor is constructed. The actual next finite requirement was to qualify captured metadata before attempting a continuum event/whole-history certificate. A metadata program was implemented and actually run. HPC, MCMC, new native reconstruction, likelihood fitting, job splitting and checkpointing provide no benefit for this workload.
+
+The prepared GitHub target is an optional reproducible replay of this completed finite stage after manual installation. It is not the scientific solver and is not a reason to repeat the completed check now. Do not relaunch Q047-PRECURSORCHECK-V1 unchanged; its early-phase signed-growth backend does not certify the complete Q048 flow.
+
+## E. SCIENTIFIC REQUIREMENT
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+CURRENT LIMIT: no four-case complete-history bounds have been computed or validated. The common source upper flow needs a qualified first descending event, separated from competing transitions, or certified no reach. Native phase samples are not interval enclosures of that continuum flow.
+
+## F. SAMLET JOURNAL — DIFFERENTIAL UPDATE
+
+Canonical journal identity remains Q047_SAMLET_JOURNAL.md. This file is the candidate complete updated journal and transport handoff; no parallel scientific journal is created. The entire incoming mathematics handoff is appended byte-for-byte, including its full inherited journal and source/code/control appendices. Incoming bytes: 4,154,094; SHA256 5cce60b81e72367ee739e7d3334dba88489bbf8d7a557f67322f839790201e94. Remote or existing persistent journal identities have not been overwritten by this candidate file.
+
+KEEP: Q048 question/conditioning, Q047 historical closure INCONCLUSIVE, original source IDs, accepted-model boundary, exact epsilon 1/1000000, irreversible event rules, all previous successes/failures, no re-shoot at fixed accepted z_reio, and the distinction between NEW_RECONSTRUCTION and historical exports.
+ADD — J-PROPOSED-Q048-E01: all twenty selected metadata members were recovered by their preserved identities, checked against the immutable raw-evidence index and worker declarations, and read. Seven thermal phase starts per case, precision metadata and eight rate-data declarations per case are present. Earlier omissions from a compact state object do not establish absence from the raw archive.
+ADD — J-PROPOSED-Q048-E02: local exact normalization/control result below. Source/data payload hash declarations are checked, not all underlying source/data payloads in this stage. Source continuum, operator errors, reionization effective-field linkage, first event and whole-history bounds remain UNRESOLVED.
+CORRECTED — J-PROPOSED-Q048-E03: the preliminary verbal reading of the approximately 1.22e-5 native helium component as cutoff q was wrong. The pinned wrapper defines q=fHe*x_He. This correction does not change the incoming mathematics or the frozen scientific threshold. No 'above-cutoff late plateau' hypothesis is admitted.
+ADD — J-PROPOSED-Q048-E04: finite offline input checker, nine adversarial controls, observed metadata PASS and prospective repository package. No native/cosmological or likelihood execution was added. Registry/README updates are local candidates only.
+UNRESOLVED: canonical Q assignment; actual continuous upper-flow admission and event enclosure; exact complete effective reionization parameter linkage; paired coupled propagation if required; interpolation/smoothing and cumulative-depth certificate; actual GitHub installation/runtime.
+
+## G. SOURCES AND PROVENANCE
+
+All inherited K/I/R IDs remain stable in the appendix. Additions:
+
+K-PROPOSED-Q048-RAW-001 — preserved raw metadata, not a new observation. Q047_RAW_EVIDENCE_INDEX_V1.json, original 315-member index, original run 38140371059, execution commit 76d6b4a4b02ddd929899008f476e99da29c1f931; exact index SHA is recorded in Q048_INPUTCHECK_CONTRACT_V1.json. Twenty selected member paths, SHA256 values, byte sizes, artifact IDs and preserved file IDs are frozen there. Original origin NEW_RECONSTRUCTION; historical_export=false. The four original raw artifacts were still reported unexpired during this inspection. No new reconstruction was performed.
+
+K-PROPOSED-Q048-REPO-001 — read-only repository inspection. Morfindien/Bubbleverse at 76d6b4a4b02ddd929899008f476e99da29c1f931. Reused strict JSON/hex/hash ingestion from q047_collection_v1.py, blob c5f6739da36b68c01dab5c720cf0d948c25eb2dd. Referenced q047_reconstruction_v1.py, q047_precursor_check_v1.py, q047_math_v1.py and q047_certificate_v1.py. No matching Q048 target was found in the inspected registry/search results; this is scoped inspection, not proof of global absence.
+
+K-PROPOSED-Q048-NORMALIZATION-001 — pinned source semantics. mwt5345/class_ede at 5a131c91d657dd9a7c6364cc45b038710f8d0d97. external/HyRec2020/wrap_hyrec.c defines xHeII=x_He*phy->data->cosmo->fHe and the strict native guard. Wrapper SHA256 4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd. source/thermodynamics.c SHA256 d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6. Native core SHA256 df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf. These source pins do not certify continuum/native equivalence.
+
+K-PROPOSED-Q048-GH-LIMITS-001 — GitHub official Actions limits, retrieved 2026-10-11: https://docs.github.com/en/actions/reference/limits . Hosted-job execution hard limit 6 hours; this candidate uses 20 minutes. Account-specific minute/storage quotas remain unknown. Official actions/download-artifact v4 interface supports frozen prior-run retrieval; the prepared workflow follows the documented interface, but has not been run here.
+
+R-PROPOSED-Q048-INPUTCHECK-001 — actual Bubbleverse technical result. Q048_INPUTCHECK_RESULT_V1.json; q Q-048 PROPOSED; source Q-047; PROGRAM_ID Q048-INPUTCHECK-V1; local uncommitted source; no remote run ID assigned. Four cases complete, metadata PASS, 20 member bindings, seven phase starts each. Actual complete x_e/tau_T bounds NOT COMPUTED. Scientific FINAL_RESULT_GATE UNRESOLVED.
+I-PROPOSED-Q048-EXECUTION-001 — local implementation, nine passing adversarial controls and candidate integration receipt Q048_EXECUTION_VALIDATION_V1.json. Numerical displays describe deterministic captured binary64 state values, not physical measurement precision.
+
+## H. EXISTING MOTOR ASSESSMENT
+
+EXISTING_MOTOR_SUFFICIENT: YES.
+SELECTED_MOTOR: existing Execution-Mechanism / Numerical / HPC Engine for this finite implementation; return to existing Result Ingestion & Routing Engine. No new prompt/motor is needed. The supplied current engine prompt and incoming mathematics handoff remain in force.
+
+## I. BUBBLEVERSE GITHUB SEARCH
+
+REUSE: strict ingestion primitives, immutable prior-run member/worker records, permanent launcher.
+REFERENCE ONLY: Q047 early precursor interval backend and reconstruction/collection implementations. Do not execute or modify them to imply a whole-history result.
+PATCH: canonical registry (55 entries preserved, one added), README front-door update, complete journal differential update.
+CREATE: input checker, tests, contract, package consistency checker/manifest, one replay workflow and technical receipts.
+LAUNCHER: existing safe exact-registry resolver unchanged; local resolver tests cover exact target, unknown ID and injection-like input. No eval or arbitrary shell execution of PROGRAM_ID.
+REGISTRY/README: candidate updates only; remote installation NOT PERFORMED.
+
+## J. FROZEN NUMERICAL SPECIFICATION
+
+MODEL/DATA: identical source, binary, reconstructed effective input and accepted z_reio pins from the incoming mathematics. Contract fixes all twenty metadata members. No fitting, changed priors, covariance assumptions, solver tolerances, physical initial conditions or production seeds are introduced by this stage.
+METHOD: strict unique-key JSON, exact finite binary64 hex ingestion, byte/hash binding, frozen worker/source declarations, thermal chronology and vector mapping, exact rational q=fHe*x_He.
+OUTPUT: metadata receipt with all actual case outcomes, exact rational normalized phase values and scientific unresolved statuses.
+DOMAIN: metadata of four NEW_RECONSTRUCTION cases only. Native samples are not source-continuum event enclosures. In particular equal phase samples do not imply a mathematically constant trajectory.
+
+Recorded late phase states at z=1600 and z=50 have identical x_He binary64 bits within each case. Exact rational products retained in the result give the following rounded deterministic displays; q is dimensionless, normalized per hydrogen:
+
+| Case | q=fHe*x_He at those phase starts | q-1e-6 |
+|---|---:|---:|
+| camspec-lcdm | 9.999945462840e-7 | -5.453716018e-12 |
+| camspec-ede_n3 | 9.999967688684e-7 | -3.231131632e-12 |
+| hillipop-lcdm | 9.999987116027e-7 | -1.288397300e-12 |
+| hillipop-ede_n3 | 9.999955729319e-7 | -4.427068052e-12 |
+
+No probabilistic uncertainties are attached to exact stored-bit arithmetic. The missing source/native error enclosure is a material limitation and prevents promotion to a continuum first-hit proof. Native rounded multiplication and the native rounded epsilon are distinct from these exact-real products and the frozen rational epsilon.
+
+## K–L. PROGRAM_ID / BUBBLEVERSE START
+
+PROGRAM_ID: Q048-INPUTCHECK-V1.
+LAUNCHER: 🚀 BUBBLEVERSE START.
+LAUNCHER_FILE: .github/workflows/00-bubbleverse-start.yml (unchanged).
+REGISTRY: bubbleverse_program_registry.json.
+TARGET: .github/workflows/q048-input-check-v1.yml.
+REGISTERED: YES_IN_LOCAL_CANDIDATE; REMOTE_NOT_INSTALLED.
+LAUNCHER_GATE: PASS_LOCAL_RESOLVER; actual remote dispatch UNTESTED.
+Materially changed executable target requires a new version/ID. Never reuse this target for a paired solver.
+
+## M–N. RUNTIME / JOB PLAN
+
+Measured local backend: approximately 0.011 seconds for twenty metadata members; nine controls approximately 0.03 seconds. Local Python 3.12; prospective workflow uses existing repository Python 3.11.16, whose remote execution is untested.
+Expected GitHub stage: one job. Fresh setup, retrieval and transfer dominate; total wall time UNKNOWN, with a planning expectation of minutes rather than hours. Four existing compressed raw artifacts total approximately 96 MB; the larger retrieved payload is not a new simulation. 20-minute whole-job cap, 12-minute retrieval cap, two 90-second code/test caps and 4-minute preservation cap provide bounded execution. Substep caps do not guarantee the sum finishes; the whole-job cap remains decisive. Hosted hard limit is currently 6 hours.
+SINGLE_JOB_RISK: LOW for computation; network/artifact availability remains UNKNOWN. STRATEGY: SINGLE. JOBS: 1. CHECKPOINT: NO. MATHEMATICAL MERGE: NO. SEPARATE_TEST_JOBS: NO. No retries. If artifact retrieval fails or expires, record the failure and use the already preserved individual objects; do not restart native reconstruction automatically.
+
+## O. FINITE RESULT TEST PLAN
+
+Mandatory controls executed locally:
+T001 exact finite binary64 hex, signed zero, inexact mantissa rejection;
+T002 duplicate-key/nonfinite JSON rejection;
+T003 member hash, path and symlink controls;
+T004 all four captured phase/context/normalization outcomes;
+T005 wrong source-case/run/history context rejection;
+T006 missing phase, duplicate indices and boolean flag rejection;
+T007 accepted-z and constant freeze rejection;
+T008 missing cases prohibit completeness;
+T009 existing receipts cannot be overwritten.
+Package qualification additionally executes the existing launcher resolver without dispatch and checks preserved registry entries, package hashes, canonical paths and README/journal links. No convergence, physical robustness or model-comparison PASS is claimed by these metadata tests. Future whole-history execution must first define its own mandatory scientific test plan.
+
+## P–Q. FILE DECISIONS / README
+
+CREATE: q048_inputcheck_v1.py; q048_inputcheck_tests_v1.py; Q048_INPUTCHECK_CONTRACT_V1.json; q048_package_check_v1.py; Q048_INPUTCHECK_PACKAGE_V1.json; .github/workflows/q048-input-check-v1.yml; Q048_INPUTCHECK_RESULT_V1.json; Q048_EXECUTION_VALIDATION_V1.json.
+PATCH: bubbleverse_program_registry.json; README.md; Q047_SAMLET_JOURNAL.md.
+UNCHANGED: permanent launcher and all previously registered implementations.
+README_ACTION: UPDATE. Existing documentation is retained as history; the new front door describes only the implemented metadata workload and distinguishes prepared/local/remote state.
+README_GATE: evaluated in the accompanying local candidate receipt; no remote README change is claimed.
+
+## R–S. ACTUAL FILES / EXECUTION
+
+Each required user-facing file is delivered separately, never as an archive. The workflow is delivered as q048-input-check-v1.yml and must be installed at .github/workflows/q048-input-check-v1.yml. All other implementation/integration files belong at repository root.
+Use the current repository as the base. The complete registry/README candidates are based on commit 76d6b4a4b02ddd929899008f476e99da29c1f931; apply their additive/differential changes rather than overwriting unrelated later work. Install the full current journal and preserve its single identity. Existing launcher remains unchanged. Local package checker rejects unexpected changes to its frozen resolver or preserved registry entries and requires reassessment instead of silent replacement.
+After installation and passing package checks, optional GitHub replay:
+OPEN: 🚀 BUBBLEVERSE START
+PASTE: Q048-INPUTCHECK-V1
+PRESS: Run workflow.
+No installation, dispatch, PR, merge or GitHub write was performed here. Local technical results are already available; replay is not needed to claim the completed local metadata stage.
+
+## T–U. OUTPUTS / GATES
+
+Expected replay output: q048_inputcheck_results/Q048_INPUTCHECK_RESULT_V1.json, exact contract/package and full journal in the target's result artifact. The twenty original metadata inputs remain original Q047 evidence. Actual local result is delivered separately.
+Q_IDENTITY_GATE: PASS_FOR_PRESERVING_PROPOSED_Q; canonical assignment UNVERIFIED.
+JOURNAL_CONTINUITY_GATE: complete incoming bytes preserved, with differential updates.
+METADATA_GATE: PASS across four cases.
+JOB_COMPLETENESS_GATE: PASS for this local finite metadata stage, not any future simulation.
+SOURCE_DATA_PAYLOAD_ADMISSION: NOT_TESTED_HERE; declaration links only.
+FIRST_HIT_GATE / CONTINUOUS_NO_HIT_GATE / FULL_HISTORY_GATE: UNRESOLVED.
+FINAL_RESULT_GATE: UNRESOLVED.
+LAUNCHER_GATE / README_GATE / REPOSITORY_CONSISTENCY_GATE: local candidate result in Q048_EXECUTION_VALIDATION_V1.json; remote installation and dispatch remain UNTESTED.
+
+## V. RETURN TO BUBBLEVERSE / AKTUEL OVERLEVERING
+
+NEXT_MOTOR: RESULT INGESTION & ROUTING ENGINE.
+Carry CURRENT_Q Q-048 PROPOSED, exact question, this complete journal, PROGRAM_ID Q048-INPUTCHECK-V1, actual receipt, original Q047 source IDs/member identities, exact source/core/contract pins, test status, corrected q normalization, unresolved issues and all inherited failures.
+
+The conclusion-critical uncertainty is admission of the common continuous upper flow and its first descending cutoff event. The precise next scientific task is to establish source/effective-input/operator-error linkage and build a validated event enclosure (or a validated nonreach certificate) for the reconstructed cases. Use the existing mathematics/numerical capabilities when routed by ingestion; the early precursor backend needs a source-appropriate extension before reuse. Complete reionization field binding must be resolved from pinned source/captured input before whole-output comparison. If a first event is admitted, use the already frozen paired event map and coupled h/T equations; retain full phase transfers, smoothing/interpolation, and cumulative tau_T integral bounds. Do not infer final differences from these samples or from the elementary immediate-jump identities alone.
+
+STOP for this finite qualification stage: all relevant available metadata was actually recovered and checked; unchanged replay or extra decimals cannot resolve the missing continuum proof. Main Q is not closed and no result is promoted to Universe Revision.
+
+## W. START THIS
+
+START THIS: Q048-INPUTCHECK-V1 — only after installation, for optional GitHub reproduction. This ID launches metadata qualification, not the complete-history scientific solver.
+
+---
+
+## COMPLETE INCOMING MATHEMATICS HANDOFF AND AUTHORITATIVE INHERITED JOURNAL
+
+The following 4,154,094-byte suffix is preserved without edits. Older routing is superseded only by the differential update above; earlier scientific/source records retain their identities.
+
+# BUBBLEVERSE — OVERLEVERING
+
+**STATUS:** FORTSÆTTER — mathematical comparison defined conditionally; four-case numerical bounds not established.
+
+**VALGT NÆSTE MOTOR:** BUBBLEVERSE AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE.
+
+**Q:** Q-048 — PROPOSED; canonical assignment remains unverified. **CASE ID:** NOT ASSIGNED.
+
+**Date/time:** 2026-10-11T16:37:12+02:00 (Europe/Copenhagen, UTC+02:00)
+
+## CHATGPT-SETUPVURDERING
+
+Current observed environment: Codex in ChatGPT Work Mode, local file/code execution, Python exact integer/rational arithmetic, read-only GitHub access, web research and connected file persistence. The collaboration interface exposes alternative agent models and reasoning settings; this does not verify the operator's model picker, available quota or performance ranking. No agent or model switch was used. Exact active model variant, active reasoning selector, context limit and usage limits are not independently verified.
+
+Recommended primary setup: the strongest actually available deep-reasoning configuration that preserves local validated computation and pinned source access. Capability classes H/X + A/C. High reasoning minimum; deeper reasoning when event qualification or a whole-history certificate demands it. This environment is suitable for the completed mathematical/source stage; no claim of superiority to untested alternatives.
+
+Fallback: an available strong reasoning/code configuration with the same evidence access, exact input semantics and outward error control. Upgrade if nonlinear/event enclosures fail, rate-table interpolation cannot be bounded, competing transitions arise or independent implementations disagree. Speed-oriented setups can perform extraction and clerical tasks, but do not replace a decisive certificate. Tools required: files, exact computation and pinned implementation inspection; targeted primary-method research where needed. No new plugin installation is required.
+
+## SAMLET JOURNAL — CURRENT EFFECTIVE DIFFERENTIAL UPDATE
+
+This document transports the single updated authoritative journal. Its canonical scientific identity remains Q047_SAMLET_JOURNAL.md, as specified by the input. This is not a second journal or an accepted repository release. The complete incoming journal is preserved byte-for-byte in the final historical appendix; current instructions below supersede its older routing only for this new question. No existing Library journal item or remote repository has been overwritten by this delivery.
+
+### J-PROPOSED-Q048-M01 — Question, conditioning and evidence boundary
+
+**Main question:** For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436.
+
+The four targets remain NEW_RECONSTRUCTION, not historical exports. Q047 remains closed INCONCLUSIVE; its conditional strict-guard theorem and unresolved historical applicability are unchanged. Current accepted repository boundary v0.7/R000007 through Q045 is inherited, not freshly checked or promoted here. No H0 estimate, likelihood comparison, EDE selection, new physical anomaly or whole recombination-accuracy claim is produced.
+
+| Target | Fixed accepted z_reio, exact binary64 | Four-case coupled certificate |
+|---|---|---|
+| camspec-lcdm | 0x1.de4e4p+2 | NOT ESTABLISHED |
+| camspec-ede_n3 | 0x1.de4e4p+2 | NOT ESTABLISHED |
+| hillipop-lcdm | 0x1.dfec4p+2 | NOT ESTABLISHED |
+| hillipop-ede_n3 | 0x1.dfec4p+2 | NOT ESTABLISHED |
+
+Keep the captured scalar initialization, eleven-node neutrino realization, initial-coordinate mismatch, effective fields, requested dictionaries and source pins. Fixed input objects carry deterministic representation provenance, not new statistical error bars. Statistical cosmological parameter uncertainty is outside this four-configuration comparison.
+
+### J-PROPOSED-Q048-M02 — Verified full source and minimal comparison definition
+
+[SOURCE FACT] The complete pinned source/thermodynamics.c was retrieved read-only and its Git blob identity independently reproduced: c1683f56b43e0f2ec24a8ba6120133f604cb947c. The input contained only a partial excerpt of this file. The pinned wrapper was rechecked and is identical to the preserved wrapper (SHA256 4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd). This extends source coverage, not trajectory evidence.
+
+Source commit: 5a131c91d657dd9a7c6364cc45b038710f8d0d97 in mwt5345/class_ede. Full thermodynamics source SHA256: d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6.
+
+Use u=ln(a), increasing toward the future, q=f*x_He, f=n_He/n_H, h=xHII, w=1-T_b/T_gamma. q,h,w,f and u are dimensionless; T_b and T_gamma are in kelvin. Qualification must include f>epsilon, positive background/temperatures and the regularity of each active branch. Source dynamics use the appropriate analytical fractions before dynamic helium, then algebraic hydrogen, then evolved hydrogen. The sampled/smoothed electron output is a separate map.
+
+[MODEL DEFINITION — explicit proposed interpretation of the named candidates] Before the event both completions use the same qualified upper source flow and background. Let u_* be its first qualified descending arrival at q=epsilon in a mode where q is dynamically present. Use exact epsilon=1/1000000 for this mathematical target. The native rounded binary64 threshold is a distinct inherited representation; its discrepancy must be included if a native implementation is compared. No actual arrival, negative rate or nonreachability has been proved here.
+
+At u_* introduce an irreversible helium-completion flag. In A set q=epsilon; in B set q=0. In BOTH set q_u=0 thereafter for the residual recombination state. This flag is essential: merely putting q exactly at epsilon while leaving the strict native guard unchanged does not create a latch. All other evolved variables, including D_Tmat=T_b-T_gamma, are continuous. Evolved h is continuous; when h is algebraic it is recomputed from the same source equation. No compensating hydrogen-electron transfer, heat impulse, rate retuning, interpolation retuning or second shooting is inserted. Reionization uses its source electron map; the held q is a residual recombination coordinate, not a claim that physical helium never reionizes.
+
+The reset is a defined numerical/model intervention, not a resolved physical recombination process. Omitting an energy impulse is part of this comparison definition and does not prove thermodynamic accuracy. Resetting x_He requires x_He=q/f, not x_He=q.
+
+Use the original source macro-mode schedule and transfer maps. With the captured no-varconst/no-IDM flags these macro transitions occur at common fixed source/precision redshifts (thermodynamics.c:835–890), rather than at independently fitted event times. Carry D_Tmat and q across the H-to-frec and frec-to-reio transitions; initialize h via the source Saha map at frec entry (2048–2116). The hydrogen wrapper also chooses a rate model using radiation temperature and T_b/T_gamma; those branch interfaces must be enclosed, not erased by assuming all later dynamics are smooth.
+
+For a certified event strictly separated from other switches, the definition above is unambiguous. Simultaneous macro/helium events, grazing or incomplete reachability remain explicitly outside this regular certificate until a justified joint-event rule is supplied. No arbitrary tie-breaking result is reported. If nonreachability is certified on the common full domain and all remaining equations/output maps are identical, the two clauses are inactive and Delta x_e=Delta tau_T=0. A missing event certificate does not establish that equality.
+
+### J-PROPOSED-Q048-M03 — Exact immediate electron response
+
+[DERIVED, CONDITIONAL] In the source's algebraic-hydrogen mode (4055–4075), for r=r_H(T_b,z)>0,
+
+    h^2+(q+r)h-r=0,
+    h=2r/[q+r+sqrt((q+r)^2+4r)],
+    x_noreio=h+q.
+
+At fixed T_b,z and other inputs,
+
+    dh/dq=-h/(2h+q+r),
+    d(h+q)/dq=(h+q+r)/(2h+q+r),
+    1/2 < d(h+q)/dq < 1.
+
+Let h_L=h(epsilon,r) and h_R=h(0,r). Subtracting their quadratic equations gives the exact finite difference
+
+    h_L-h_R=-epsilon*h_L/(h_L+h_R+r),
+    Delta x_noreio=epsilon*(h_R+r)/(h_L+h_R+r),
+    epsilon/2 < Delta x_noreio < epsilon.
+
+This is the unsmoothed immediate post-event value when both temperatures coincide. In the evolved-hydrogen mode h is preserved at the event and Delta x_noreio=epsilon exactly. These statements are alternatives determined by the actual mode, not four-case numerical results. They do not establish a global bound after T_b and h diverge. Smoothed output may blend a preceding analytical map and need not satisfy the same lower bound.
+
+### J-PROPOSED-Q048-M04 — Temperature and hydrogen coupling
+
+[SOURCE + DERIVED] For the captured no-injection/no-varconst/no-IDM cases, after the early steady-state approximation,
+
+    T_b,u=-2T_b+beta*(T_gamma-T_b),
+    w_u=1-(1+beta)w,
+    beta=A(u)*x_e/(1+f+x_e), A(u)>0.
+
+The thermal equation uses x_reio; the hydrogen derivative uses x_noreio. These must not be interchanged during reionization. This follows from thermodynamics.c:2610–2770.
+
+At common u and common background,
+
+    beta_L-beta_R = A*(1+f)*(x_e,L-x_e,R)
+                     /[(1+f+x_e,L)*(1+f+x_e,R)].
+
+The exact difference equation can be written
+
+    (Delta w)_u=-(1+beta_L)*Delta w-(beta_L-beta_R)*w_R.
+
+It contains damping and electron-driven forcing. Damping of temperature alone does not bound the whole coupled system. The coupled hydrogen rate must include the derivative with respect to electron fraction and temperature, all active rate-table interpolation and every rate-model branch.
+
+A manufactured exact flow q_u=0, h_u=2q over Delta u=1/4 produces Delta x_e=3epsilon/2 from an initial q difference epsilon and identical h. This is NOT cosmological evidence. It is a rigorous counterexample to inferring a universal epsilon-only electron bound from the cutoff size without controlling the remaining dynamics.
+
+### J-PROPOSED-Q048-M05 — Finite, nonlinear coupled bound
+
+[CONDITIONAL THEOREM, NOT A FOUR-CASE CERTIFICATE] After the latch flag, both arms use the same post-event field with q_u=0 but different initial q. Include q in the state; use y=(q,w) in algebraic-hydrogen mode and y=(q,h,w) in frec/reio mode. For a convex certified tube and common parameter/background object theta, enclose the full field Jacobian on each smooth cell:
+
+    M_ii >= sup dF_i/dy_i,
+    M_ij >= sup |dF_i/dy_j|, i!=j.
+
+M is Metzler; retain signed diagonal derivatives. If b>=0 encloses any additional defect/forcing mismatch not already enclosed, the upper Dini derivative gives
+
+    D+ |Delta y| <= M |Delta y| + b,
+    R(t)=exp(Mt)R(0)+integral_0^t exp(M(t-s))b ds,
+    |Delta y_i| <= R_i.
+
+At an exact event in H mode R(0)=(epsilon,0); in evolved-H mode R(0)=(epsilon,0,0). These are exact mathematical reset differences, not error radii around an approximate event. Exact paired common inputs do not require a spurious independent-input forcing term. Numerical realization and source-real mapping defects enter an explicitly qualified error budget.
+
+Proof: integrate the full Jacobian along the segment between the two states; apply signed diagonal and absolute off-diagonal comparison to the componentwise absolute error. Close a first-exit argument by verifying the entire prospective tube remains inside the region on which the derivative/defect bounds hold. Without full tube containment this formula is not a certificate. Piecewise cells may have positive growth. Carry radii through fixed macro reset maps using interval Jacobians; introduced h at frec entry inherits both q and temperature error. Unsynchronised state-dependent switches need event-aware tubes or a certified piecewise enumeration.
+
+For a differentiable isolated guard, event-time uncertainty is controlled by a nonzero guard-speed lower bound. A guard-value error eta_g with |dg/du|>=nu>0 gives a local root error at most eta_g/nu when the entire crossing neighbourhood and earliest-root separation have been qualified. Common primary-event uncertainty must be transported as one shared uncertainty, not two independent errors.
+
+Saltation matrices can diagnose first-order timing sensitivity at later state-dependent transitions. They do not alone certify the finite epsilon intervention: bound higher-order terms uniformly or use direct nonlinear interval tubes. A zero or unbounded guard denominator invalidates a regular sensitivity argument. The primary hybrid-method source is Kong et al., cited below.
+
+For already certified paired predictors, a simpler independent observable enclosure is
+
+    |Delta x_e(z) - [xhat_e,L(z)-xhat_e,R(z)]|
+        <= E_e,L(z)+E_e,R(z),
+    B_e(z)=|xhat_e,L-xhat_e,R|+E_e,L+E_e,R.
+
+This triangle bound does not assume independent errors or prove their radii. It can be pessimistic; a validated difference system often preserves shared-input cancellation more effectively.
+
+### J-PROPOSED-Q048-M06 — Reionization, smoothing and interpolation
+
+[EXACT MAP IDENTITY, CONDITIONAL ON COMMON SOURCE PARAMETERS] For the source reio_camb branch (4153–4180), write S(z)=[1+tanh(argument(z))]/2 and let C_He(z) be the common later-helium contribution. Then
+
+    x_reio=(1-S)*x_noreio+S*x_after+C_He,
+    Delta x_reio=(1-S)*Delta x_noreio,
+    |Delta x_reio| <= |Delta x_noreio|.
+
+Above the tanh start, the map is the identity. Fixed accepted z_reio plus common widths, exponent, helium abundance and helium-reionization parameters are required. Fixing z_reio alone is not enough if those other parameters differ. The result describes the map at the same z, not the preceding dynamics, which also feel reionization through temperature. It neither forces exact equality at z=0 nor permits re-shooting to equal tau_reio.
+
+[SOURCE FACT] Despite its Recfast comment, the smoothing condition in thermodynamics_sources at 2965 is not guarded by `recombination == recfast`; the source condition can act in HyRec calculations too. At common macro boundary/width, f2(s)=3s^2-2s^3 and 0<=s<=1 gives 0<=omega<=1. Thus
+
+    Delta x_out=omega*Delta x_current+(1-omega)*Delta x_previous,
+    B_out<=omega*B_current+(1-omega)*B_previous.
+
+The preceding map is reevaluated at the current state, not substituted by an identical stored old value. Both map differences must be bounded. If boundaries/weights are uncertain, also enclose the changed-weight contribution. This convex statement concerns transition smoothing; generic cubic-spline interpolation can have negative weights and requires its own operator/remainder bound. Node equality is insufficient between nodes.
+
+### J-PROPOSED-Q048-M07 — Physical cumulative optical depth
+
+[DERIVED] Within each pair the captured background is common, and the source has no active varying constants. With consistent SI units,
+
+    W(z)=c*sigma_T*n_H0*(1+z)^2/H_s(z)>0,
+    tau_T(z)=integral_0^z W(s)*x_e(s) ds,
+    Delta tau_T(z)=integral_0^z W(s)*Delta x_e(s) ds,
+    |Delta tau_T(z)|<=integral_0^z W(s)*B_e(s) ds.
+
+c has units m/s, sigma_T m^2, n_H0 m^-3, H_s s^-1; W and tau are dimensionless. The native H field is converted by H_s=H_CLASS*c/metres_per_Mpc (2580–2585). n_H0 uses the source mass fraction and constants (800–806); a field named H0 is not itself km/s/Mpc.
+
+Pointwise signed enclosures ell_e<=Delta x_e<=u_e give integral_0^z W*ell_e <= Delta tau_T <= integral_0^z W*u_e for each common exact W. With uncertain W use interval products respecting signs, not a naive upper weight for both endpoints. An outward quadrature/remainder bound is required to turn evaluated integrals into numerical certificates.
+
+For a central quadrature of What*Delta xhat_e, one sufficient error budget is
+
+    E_tau <= E_quad + integral_0^z [|What|*E_Deltae
+                + E_W*(|Delta xhat_e|+E_Deltae)] ds.
+
+This preserves the common background conditioning and includes the product term. Do not assign independent statistical errors to copied inputs. Define E_Deltae to include all integration, event, source-map and interpolation errors actually needed for the chosen target.
+
+[SUPPORT RESULT] If the common pre-event histories and output maps are identical above z_*, then Delta x_e(z)=0 there, but
+
+    Delta tau_T(z)=integral_0^min(z,z_*) W(s)*Delta x_e(s) ds.
+
+Consequently Delta tau_T is generally a constant plateau for z>=z_* rather than zero. A point discontinuity in x_e does not create a jump in tau. Output smoothing/interpolation can enlarge the output-support boundary; when this occurs replace z_* by the certified support endpoint. A globally constructed spline need not preserve exact compact support, so a plateau for that interpolated target must be proved separately or replaced by a residual-tail bound. A manufactured W=1, Delta x_e=epsilon on 0<=z<=1 and zero on 1<z<=2 demonstrates the plateau exactly. This is not a cosmological estimate.
+
+The native thermodynamics_reionization_get_tau routine (3030–3133) selects a support from the global minimum of its electron table and integrates a conformal-time spline to that location. Its reported tau_reio is not this complete cumulative tau_T(z). Equal requested/native tau diagnostics do not prove equal cumulative depth.
+
+### J-PROPOSED-Q048-M08 — Executed checks, uncertainties and current decision
+
+[EXECUTED] Eight groups of exact sparse-polynomial/rational controls passed: Saha derivative, electron derivative, finite reset identity, Compton difference identity, fixed-tanh map difference, f2 monotonicity identity, manufactured coupling counterexample and manufactured cumulative-depth plateau. Manual derivations above provide the other control route. The full-source Git blob hash passed. The controls use standard-library arbitrary integers/Fraction; no native CLASS process, numerical cosmological integration, shooting, CMB/likelihood evaluation, repository write or dispatch occurred. SymPy was unavailable in both exposed Python environments; no symbolic package result is claimed. The actual independent algebra checks are embedded below.
+
+**EVIDENCE STRENGTH:** Strong for these scoped source/algebra/observable facts; insufficient for actual paired four-case full-history bounds. The exact checks do not certify the unknown trajectories.
+
+**CONCLUSION-CRITICAL GAP:** No case-linked complete coupled enclosure exists for the defined pair, including qualified prehistory/first event, both post-event thermal/hydrogen paths and full observable map to z=0. The selected four background-state objects are available; the metadata needed to identify the thermal constants, precision macro schedule, rate tables, initialization and reionization/output settings must be linked to these new cases from existing preserved objects rather than silently borrowed from historical metadata. Their absence from the selected state objects does not prove their absence from the larger preserved archive. The inherited approximate representation diagnostics do not fill this gap.
+
+No numerical B_e(z), B_tau(z), event redshift, materiality claim or actual no-event verdict is invented. Q048 is NOT CLOSED. No global 10^-6 bound and no sign of the complete Delta tau_T have been established. Repeating the same symbolic calculations cannot produce the missing four trajectories.
+
+### J-PROPOSED-Q048-M09 — Journal effect and preservation
+
+All current inherited global observations, H0 inference-chain tensions, implementation-geometry debt, candidate statuses, Q040–Q047 qualification limits and source/claim mappings remain in force. These new derived relations add a controlled observable-comparison method; they change no fitted physical parameter or accepted model preference. Q047 historical applicability is not reopened by this scoped new question.
+
+The complete inherited journal and raw state objects remain recoverable in this same transport. Historical instructions in its appendix are not current launch authorization. Proposed internal IDs here identify this local mathematical addition only and do not claim GitHub registry admission.
+
+## AKTUEL OVERLEVERING — ONE NEXT MOTOR
+
+**Next task:** Implement and validate the defined paired comparison and nonlinear error-to-observable contract, beginning with a read-only, finite audit of already preserved thermal/source metadata for the four NEW_RECONSTRUCTION cases. The principal bottleneck is now a missing coupled numerical certificate, so the execution/numerical builder is the appropriate receiving motor.
+
+1. Reuse the existing run 38140371059 states, collection lock and raw index. Resolve exact thermal constants, fHe/n_H0/YHe, mode schedule/widths, rate-table bytes, initial thermal prescription and full reionization settings with new-case linkage. Use the source-real exact threshold chosen above; separately bound native threshold/rounding differences if native predictions are included. Do not infer internal state from table equality.
+2. Freeze the stated intervention rules, source-mode/output maps, common finite background and fixed accepted z_reio. Record whether the actual event is in algebraic or evolved hydrogen. Handle competing/grazing events explicitly; do not insert an arbitrary priority or forced hit. Establish the common source thermal domain from its actual precision objects through z=0; no new upper endpoint is asserted here.
+3. Prepare a bounded validated reference or difference calculation using the componentwise comparison/defect method above, with source-consistent early thermal evolution, fully bounded hydrogen-rate branches, macro transfers, transition smoothing, interpolation and outward quadrature. A numerical predictor or refinement comparison alone is insufficient; prove residual bounds and whole-cell tube containment.
+4. Deliver for EACH case: event enclosure or certified nonreachability; signed/envelope Delta x_e on its stated domain; cumulative Delta tau_T interval/envelope on the same domain; separated deterministic input/representation and numerical budgets; pinned inputs/source; actual certificate status and achieved accuracy. Use the exact fixed-tanh and Saha checks as regression controls, not as substitutes for integration.
+5. Stop when those intervals are certified at a reported accuracy, or the first specific missing primitive prevents certification. Report that primitive and its scope once; do not initiate unlimited sweeps or revisit historical Q047 identity. No materiality threshold is supplied by this mathematics stage.
+
+**Execution boundary:** This delivery prepares a mathematical and implementation contract. It does not invoke native runs, grant historical capture-budget extensions, launch HPC jobs, authorize new shooting, write to GitHub or claim production readiness. Existing task authorization covers the read-only audit and local mathematical work performed here. Any later scientific execution must respect its own concrete scope. No launch command or PROGRAM_ID is created.
+
+On a completed bounded scientific result return to ingestion and Motor 14. On a failed qualification return the exact failure with the same journal and source objects. Do not route this unfinished question as a closed physical finding.
+
+## KILDER TIL NÆSTE MOTOR AND CLAIM MAPPING
+
+**K-PROPOSED-Q048-SOURCE-001 — Primary implementation.** Repository authors: class_ede/CLASS contributors; mwt5345/class_ede, pinned 5a131c91d657dd9a7c6364cc45b038710f8d0d97. [Full thermodynamics.c](https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/thermodynamics.c), Git blob c1683f56b43e0f2ec24a8ba6120133f604cb947c. [thermodynamics.h](https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/include/thermodynamics.h), inspected lines 1–170, parent blob f02f2591077ee11f3bc9481a4491b0feb83cf26d. [wrap_hyrec.c](https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/wrap_hyrec.c), blob fa44c774cf1fc7dbf6185e01980764f7eb260204. Source revision date not independently verified. Supports actual units, normalization, rate-model choices, thermal coupling, macro transfers, unconditional smoothing, reionization and selected-support diagnostic. Not an independent physical measurement.
+
+**K-PROPOSED-Q048-HYBRID-001 — Primary method context.** Nathan J. Kong, J. Joe Payne, James Zhu and Aaron M. Johnson. *Saltation Matrices: The Essential Tool for Linearizing Hybrid Dynamical Systems*, Proceedings of the IEEE, 2024. DOI [10.1109/JPROC.2024.3440211](https://doi.org/10.1109/JPROC.2024.3440211); [arXiv:2306.06862v3](https://arxiv.org/html/2306.06862v3), especially §III equations 9–11. Supports first-order event sensitivity, transversality and limitations; does not validate a finite Q048 bound.
+
+**K-PROPOSED-Q048-HYREC-001 — Physical-method context only.** Yacine Ali-Haïmoud and Christopher M. Hirata. *HyRec: A fast and highly accurate primordial hydrogen and helium recombination code*, Phys. Rev. D 83, 043513 (2011). DOI [10.1103/PhysRevD.83.043513](https://doi.org/10.1103/PhysRevD.83.043513); [arXiv:1011.3758v2](https://arxiv.org/abs/1011.3758v2). Nanoom Lee and Yacine Ali-Haïmoud. *hyrec-2: A highly accurate sub-millisecond recombination code*, Phys. Rev. D 102, 083517 (2020). DOI [10.1103/PhysRevD.102.083517](https://doi.org/10.1103/PhysRevD.102.083517); arXiv:2007.14114. The abstract/metadata were verified. These papers describe the framework, not the exact fork's completion semantics or these four configurations; their accuracy claims are not transferred to EDE or the proposed interventions.
+
+**Inherited I-PROPOSED-Q047-RUN38140371059-001, I-PROPOSED-Q047-M15-001 and I-PROPOSED-Q047-M15-INGESTION-001:** Four captured new states, scoped finite-background/representation results and Q047 closure. Run/execution/source locks and full original registers are preserved below. These are shared internal computational evidence, not multiple independent observations.
+
+**I-PROPOSED-Q048-MATHEMATICS-001 — This derivation and exact controls.** Supports M03–M07 identities, nonlinear conditional comparison proof and manufactured counterexamples. Controls code/result are embedded in the journal below. Author/institution/DOI: not an external publication; no DOI asserted.
+
+Claim map: immediate Saha/evolved-H response -> pinned source + M03 + exact controls; temperature forcing -> pinned source + M04; rigorous coupled comparison -> M05 proof + inherited Q047 M03/M09 methods; fixed-tanh/smoothing bounds -> pinned source + M06; cumulative identity/plateau -> defined physical tau + M07 + exact controls; unresolved actual bounds -> absence of a paired full certificate in current evidence, not proof of physical instability.
+
+## TOOL AND PLUGIN PROVENANCE
+
+Local attachment bytes -> structured captured states/source records and complete inherited journal -> targeted active/source audit. GitHub read-only fetch -> pinned full source and wrapper -> independent Git blob/SHA256 checks. Exact polynomial/rational code -> displayed controls -> conditional algebra checks. Web search/open -> original arXiv/APS method records -> limited methodological context. Persistent file delivery -> continuity transport, not scientific evidence. No browser or external messaging was used.
+
+## REPRODUCIBLE EXACT CONTROLS — PART OF THE SAME JOURNAL
+
+The program below is standalone standard-library Python. Its default working-directory paths refer to this run's scratch layout; recreate those paths with the attached incoming handoff and the pinned thermodynamics source, or adjust only file paths. It tests algebra and the documented source hash, not cosmological trajectories.
+
+```python
+from pathlib import Path
+from fractions import Fraction as Q
+import json, hashlib
+
+# Independent exact sparse-polynomial checker; no external algebra dependency.
+names='q r h eps a b f xL xR A eta s'.split()
+N=len(names)
+class P:
+ def __init__(self,v=0):
+  self.d=v if isinstance(v,dict) else {(0,)*N:Q(v)} if v else {}
+ def __add__(self,o):
+  o=o if isinstance(o,P) else P(o);d=dict(self.d)
+  for k,v in o.d.items():d[k]=d.get(k,0)+v
+  return P({k:v for k,v in d.items() if v})
+ __radd__=__add__
+ def __neg__(self):return P({k:-v for k,v in self.d.items()})
+ def __sub__(self,o):return self+-P(o) if not isinstance(o,P) else self+-o
+ def __rsub__(self,o):return P(o)+-self
+ def __mul__(self,o):
+  o=o if isinstance(o,P) else P(o);d={}
+  for a,x in self.d.items():
+   for b,y in o.d.items():
+    k=tuple(v+w for v,w in zip(a,b));d[k]=d.get(k,0)+x*y
+  return P({k:v for k,v in d.items() if v})
+ __rmul__=__mul__
+ def deriv(self,n):
+  i=names.index(n);d={}
+  for k,v in self.d.items():
+   if k[i]:j=list(k);j[i]-=1;d[tuple(j)]=v*k[i]
+  return P(d)
+ def zero(self):assert not self.d,self.d
+def var(n):
+ k=[0]*N;k[names.index(n)]=1;return P({tuple(k):Q(1)})
+q,r,h,eps,a,b,f,xL,xR,A,eta,s=map(var,names)
+poly=h*h+(q+r)*h-r;den=2*h+q+r
+(poly.deriv('q')*den-poly.deriv('h')*h).zero()
+(den-h-(h+q+r)).zero()
+PL=a*a+(eps+r)*a-r;PR=b*b+r*b-r
+(PL-PR-((a-b)*(a+b+r)+eps*a)).zero()
+(eps*(a+b+r)-eps*a-eps*(b+r)).zero()
+(A*xL*(1+f+xR)-A*xR*(1+f+xL)-A*(1+f)*(xL-xR)).zero()
+def reio(x):return (a-x)*eta+x+b
+(reio(xL)-reio(xR)-(1-eta)*(xL-xR)).zero()
+weight=3*s*s-2*s*s*s
+(weight.deriv('s')-6*s*(1-s)).zero()
+# Exact manufactured coupled flow: q constant, dh/du=k*q, h(0)=h0.
+# No actual cosmological integration. Demonstrates failure of epsilon-only bound.
+e=Q(1,10**6);k=Q(2);du=Q(1,4);h0=Q(1,1000)
+delta_h=k*e*du;delta_e=delta_h+e
+assert delta_e>e and 0<h0+delta_h<1
+# W=1, Delta xe=e on z in [0,1], zero on (1,2].
+# Integral from 0 to z has a plateau, although local xe difference vanishes.
+assert e*min(Q(2),Q(1))==e and e*Q(0)==0
+source=Path('upload/Q048_PROPOSED_AUTONOMOUS_HANDOFF_V1.md').read_bytes()
+marker=b'# BUBBLEVERSE \xe2\x80\x94 UNIVERSAL REVISION'
+journal=source[source.index(marker):]
+thermo=Path('analysis/thermodynamics.c').read_bytes()
+out={'schema':'Q048_MATHEMATICS_CONTROLS_V1','status':'PASS',
+ 'scope':'symbolic identities and exact manufactured examples only; no four-case trajectory certificate',
+ 'checks':['Saha implicit derivative','electron-map derivative','finite reset identity','Compton finite difference','fixed-tanh reionization difference','convex f2 weight','coupling counterexample','cumulative-depth plateau counterexample'],
+ 'manufactured_delta_xe':str(delta_e),'epsilon':str(e),
+ 'input_sha256':hashlib.sha256(source).hexdigest(),
+ 'inherited_journal_bytes':len(journal),'inherited_journal_sha256':hashlib.sha256(journal).hexdigest(),
+ 'thermodynamics_sha256':hashlib.sha256(thermo).hexdigest(),
+ 'thermodynamics_git_blob_sha':hashlib.sha1(b'blob '+str(len(thermo)).encode()+b'\0'+thermo).hexdigest(),
+ 'controls_code_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest()}
+assert out['thermodynamics_git_blob_sha']=='c1683f56b43e0f2ec24a8ba6120133f604cb947c'
+Path('analysis/Q048_MATHEMATICS_CONTROLS_V1.json').write_text(json.dumps(out,indent=2)+'\n')
+print(json.dumps(out,indent=2))
+```
+
+Actual output:
+
+```json
+{
+  "schema": "Q048_MATHEMATICS_CONTROLS_V1",
+  "status": "PASS",
+  "scope": "symbolic identities and exact manufactured examples only; no four-case trajectory certificate",
+  "checks": [
+    "Saha implicit derivative",
+    "electron-map derivative",
+    "finite reset identity",
+    "Compton finite difference",
+    "fixed-tanh reionization difference",
+    "convex f2 weight",
+    "coupling counterexample",
+    "cumulative-depth plateau counterexample"
+  ],
+  "manufactured_delta_xe": "3/2000000",
+  "epsilon": "1/1000000",
+  "input_sha256": "9167e201833586ac3dfd46a2a45bc8586266bf37bdefa26fc98a2beb6798279d",
+  "inherited_journal_bytes": 3912473,
+  "inherited_journal_sha256": "61e21fc0e7376131ac480f01a542a88416baaab8be7db0ba39278e1008fd60da",
+  "thermodynamics_sha256": "d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6",
+  "thermodynamics_git_blob_sha": "c1683f56b43e0f2ec24a8ba6120133f604cb947c",
+  "controls_code_sha256": "856901fd417576c301bf0a444cda76ecf6824e182ab0257282edee1ffedd4562"
+}
+```
+
+## COMPLETE PINNED THERMODYNAMICS SOURCE — RECOVERABLE EVIDENCE
+
+The code block below contains the full newly retrieved source, with the SHA256 and Git blob identity stated above. This is source evidence within the same journal, not a modified native program.
+
+```c
+/** @file thermodynamics.c Documented thermodynamics module
+ *
+ * * Julien Lesgourgues, 6.09.2010
+ * * Restructured by Nils Schoeneberg and Matteo Lucca, 27.02.2019
+ * * Evolver implementation by Daniel Meinert, spring 2019
+ *
+ * Deals with the thermodynamical evolution.
+ * This module has two purposes:
+ *
+ * - at the beginning, to initialize the thermodynamics, i.e. to
+ *   integrate the thermodynamical equations, and store all
+ *   thermodynamical quantities as a function of redshift inside an
+ *   interpolation table.
+ *
+ * - to provide a routine which allow other modules to evaluate any
+ *   thermodynamical quantities at a given redshift value (by
+ *   interpolating within the interpolation table).
+ *
+ * The most important differential equations to compute the free
+ * electron fraction x at each step are provided either by the HyRec
+ * 2020 or RecFastCLASS code, located in the external/ directory. The
+ * thermodynamics module integrates these equations using the generic
+ * integrator (which can be set to ndf15, rkck4, etc.) The HyRec and
+ * RecFastCLASS algorithms are used and called in the same way by this
+ * module.
+ *
+ * In summary, the following functions can be called from other modules:
+ *
+ * -# thermodynamics_init at the beginning (but after background_init)
+ * -# thermodynamics_at_z at any later time
+ * -# thermodynamics_free at the end, when no more calls to thermodynamics_at_z are needed
+ */
+
+#include "thermodynamics.h"
+
+#include "history.h"
+#include "hyrectools.h"
+#include "helium.h"
+#include "wrap_hyrec.h"
+
+
+/**
+ * Thermodynamics quantities at given redshift z.
+ * Evaluates all thermodynamics quantities at a given value of the redshift by reading the pre-computed table and interpolating.
+ *
+ * @param pba          Input: pointer to background structure
+ * @param pth          Input: pointer to the thermodynamics structure (containing pre-computed table)
+ * @param z            Input: redshift
+ * @param inter_mode   Input: interpolation mode (normal or growing_closeby)
+ * @param last_index   Input/Output: index of the previous/current point in the interpolation array (input only for closeby mode, output for both)
+ * @param pvecback     Input: vector of background quantities (used only in case z>z_initial for getting ddkappa and dddkappa; in that case,
+ should be already allocated (!) and filled (!), with format short_info or larger; in other cases, will be ignored)
+ * @param pvecthermo Output: vector of thermodynamics quantities (assumed to be already allocated)
+ * @return the error status
+ */
+
+int thermodynamics_at_z(
+                        struct background * pba,
+                        struct thermodynamics * pth,
+                        double z,
+                        enum interpolation_method inter_mode,
+                        int * last_index,
+                        double * pvecback, //should be filled for z>z_initial!
+                        double * pvecthermo
+                        ) {
+
+  /** Summary: */
+
+  /** - define local variables */
+  double x0;
+  /* Dark matter baryon scattering */
+  double Vrms_idm_b2, T_diff_idm_b, m_b, FHe;
+  /* Varying fundamental constants */
+  double sigmaTrescale = 1., alpha = 1., me = 1.;
+
+  /* The fact that z is in the pre-computed range 0 <= z <= z_initial will be checked in the interpolation routines below. Before
+     trying to interpolate, allow the routine to deal with the case z > z_initial: then, all relevant quantities can be extrapolated
+     using simple analytic approximations */
+
+  if (z >= pth->z_table[pth->tt_size-1]) {
+
+    /* ionization fraction assumed to remain constant at large z */
+    x0= pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_xe];
+    pvecthermo[pth->index_th_xe] = x0;
+
+    /* In the case of varying fundamental constants, compute correction factor (according to 1705.03925) */
+    if (pth->has_varconst == _TRUE_) {
+      class_call(background_varconst_of_z(pba, z, &alpha, &me),
+                 pba->error_message,
+                 pth->error_message);
+      sigmaTrescale = alpha*alpha/me/me;
+    }
+
+    /* Calculate dkappa/dtau (dkappa/dtau = a n_e x_e sigma_T = a^{-2} n_e(today) x_e sigma_T in units of 1/Mpc) */
+    pvecthermo[pth->index_th_dkappa] = (1.+z) * (1.+z) * pth->n_e * x0 * sigmaTrescale * _sigma_ * _Mpc_over_m_;
+
+    /* tau_d scales like (1+z)**2 */
+    pvecthermo[pth->index_th_tau_d] = pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_tau_d]*pow((1+z)/(1.+pth->z_table[pth->tt_size-1]),2);
+
+    if (pth->compute_damping_scale == _TRUE_) {
+
+      /* r_d scales like (1+z)**-3/2 */
+      pvecthermo[pth->index_th_r_d] = pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_r_d]*pow((1+z)/(1.+pth->z_table[pth->tt_size-1]),-1.5);
+    }
+
+    /* Calculate d2kappa/dtau2 = dz/dtau d/dz[dkappa/dtau] given that [dkappa/dtau] proportional to (1+z)^2 and dz/dtau = -H */
+    pvecthermo[pth->index_th_ddkappa] = -pvecback[pba->index_bg_H] * 2. / (1.+z) * pvecthermo[pth->index_th_dkappa];
+
+    /* Calculate d3kappa/dtau3 given that [dkappa/dtau] proportional to (1+z)^2 */
+    pvecthermo[pth->index_th_dddkappa] = (pvecback[pba->index_bg_H]*pvecback[pba->index_bg_H]/ (1.+z) - pvecback[pba->index_bg_H_prime]) * 2. / (1.+z) * pvecthermo[pth->index_th_dkappa];
+
+    /* \f$ exp^{-\kappa}, g, g', g'' \f$ can be set to zero: they are used only for computing the source functions in the
+       perturbation module; but source functions only need to be sampled below z_initial (the condition that
+       z_start_sources<z_initial is checked in the perturbation module) */
+    pvecthermo[pth->index_th_exp_m_kappa] = 0.;
+    pvecthermo[pth->index_th_g]=0.;
+    pvecthermo[pth->index_th_dg]=0.;
+    pvecthermo[pth->index_th_ddg]=0.;
+
+    /* Calculate Tb assuming Tb ~ T_g at early times */
+    pvecthermo[pth->index_th_Tb] = pba->T_cmb*(1.+z);
+
+    /* Tb derivative */
+    pvecthermo[pth->index_th_dTb] = pba->T_cmb;
+
+    /* Calculate baryon equation of state parameter wb = (k_B/mu) Tb */
+    /* note that m_H / mu = 1 + (m_H/m_He-1) Y_p + x_e (1-Y_p) */
+    pvecthermo[pth->index_th_wb] = _k_B_ / ( _c_ * _c_ * _m_H_ ) * (1. + (1./_not4_ - 1.) * pth->YHe + x0 * (1.-pth->YHe)) * pba->T_cmb * (1.+z);
+
+    /* Calculate cb2 (cb2 = (k_B/mu) Tb (1-1/3 dlnTb/dlna) = (k_B/mu) Tb (1+1/3 (1+z) dlnTb/dz)) */
+    /* note that m_H / mu = 1 + (m_H/m_He-1) Y_p + x_e (1-Y_p) */
+    pvecthermo[pth->index_th_cb2] = pvecthermo[pth->index_th_wb] * 4. / 3.;
+
+    /* derivatives of baryon sound speed (only computed if some non-minimal tight-coupling schemes is requested) */
+    if (pth->compute_cb2_derivatives == _TRUE_) {
+
+      /* since cb2 proportional to (1+z) or 1/a, its derivative wrt conformal time is given by dcb2 = - a H cb2 */
+      pvecthermo[pth->index_th_dcb2] = - pvecback[pba->index_bg_H] * pvecback[pba->index_bg_a] * pvecthermo[pth->index_th_cb2];
+
+      /* then its second derivative is given by ddcb2 = - a H' cb2 */
+      pvecthermo[pth->index_th_ddcb2] = - pvecback[pba->index_bg_H_prime] * pvecback[pba->index_bg_a] * pvecthermo[pth->index_th_cb2];
+    }
+
+    /* in this regime, variation rate = dkappa/dtau */
+    pvecthermo[pth->index_th_rate] = pvecthermo[pth->index_th_dkappa];
+
+    /* Quantities related to idm */
+    if (pba->has_idm == _TRUE_) {
+
+      /* Temperature and sound speed of idm (assuming T_idm ~ T_g at early times) */
+      pvecthermo[pth->index_th_T_idm] = pba->T_cmb* (1+z);
+      pvecthermo[pth->index_th_c2_idm] = _k_B_ * pba->T_cmb*(1+z)/(pth->m_idm*_eV_)  * (1 - (1.+z)/3./pvecback[pba->index_bg_H]);
+
+      /* For DM-g calculate at early times the optical depth parameters */
+      if (pth->has_idm_g == _TRUE_) {
+        /* calculate dmu_idm_g and its derivatives */
+        pvecthermo[pth->index_th_dmu_idm_g] = 3./8./_PI_/_G_*pow(1.+z, 2+pth->n_index_idm_g)*pba->Omega0_idm*pba->H0*pba->H0*pth->u_idm_g*pow(_c_,4)*_sigma_/1.e11/_eV_/_Mpc_over_m_;
+        pvecthermo[pth->index_th_ddmu_idm_g] = -(2.+pth->n_index_idm_g) * pvecback[pba->index_bg_H] * pvecback[pba->index_bg_a] * pvecthermo[pth->index_th_dmu_idm_g];
+        pvecthermo[pth->index_th_dddmu_idm_g] = (2.+pth->n_index_idm_g)*pvecthermo[pth->index_th_dmu_idm_g]/(1.+z) *
+          (pvecback[pba->index_bg_H]*pvecback[pba->index_bg_H]/(1.+z) * (1.+pth->n_index_idm_g) - pvecback[pba->index_bg_H_prime]);
+        /* extrapolate optical depth of idm_g */
+        if (pth->n_index_idm_g == -1){
+          pvecthermo[pth->index_th_exp_mu_idm_g] = pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_exp_mu_idm_g] * exp( - pvecthermo[pth->index_th_dmu_idm_g] *pow(1.+z, -2-pth->n_index_idm_g) * log((1.+z)/(1.+pth->z_table[pth->tt_size-1]))*(1.+z)*(1.+z)/pvecback[pba->index_bg_H]);
+        }
+        else{
+          pvecthermo[pth->index_th_exp_mu_idm_g] = pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_exp_mu_idm_g] * exp( - pvecthermo[pth->index_th_dmu_idm_g] *pow(1.+z, -2-pth->n_index_idm_g) /(1.+pth->n_index_idm_g) * (pow(1.+z,pth->n_index_idm_g+1)-pow(1.+pth->z_table[pth->tt_size-1],pth->n_index_idm_g+1))*(1.+z)*(1.+z)/pvecback[pba->index_bg_H] );
+        }
+      }
+
+      /* For idm_b calculate at early times the interaction rate parameters */
+      if (pth->has_idm_b == _TRUE_){
+
+        /* some constants used in the scattering rate and temperatures */
+        FHe = 1-pth->YHe;
+        m_b = _m_p_*_c_*_c_/_eV_;
+        Vrms_idm_b2 = 1.e-8; /* approximation for V_rms at early times */
+        T_diff_idm_b = (pvecthermo[pth->index_th_Tb]*_k_B_/_eV_/m_b)+(pvecthermo[pth->index_th_T_idm]*_k_B_/_eV_/pth->m_idm)+(Vrms_idm_b2/3.0); /* T and m are all in eV */
+
+        /* Now compute the coupling coefficients */
+        pvecthermo[pth->index_th_R_idm_b] = (pvecback[pba->index_bg_a]*pvecback[pba->index_bg_rho_b]*pth->cross_idm_b*pth->n_coeff_idm_b/(m_b+pth->m_idm))
+          *pow(T_diff_idm_b,(pth->n_index_idm_b+1.0)/2.0)*FHe
+          *(3.e-4*pow(_c_,4.)/(8.*_PI_*_Mpc_over_m_*_G_*_eV_)); /* conversion coefficient for the units */
+        pvecthermo[pth->index_th_dR_idm_b] = pvecthermo[pth->index_th_R_idm_b] * pvecback[pba->index_bg_a] * pvecback[pba->index_bg_H]
+          * ( -2. - (1.+z) * (pth->n_index_idm_b+1.0)/2.0 * (pba->T_cmb*_k_B_/_eV_/m_b + pba->T_cmb*_k_B_/_eV_/pth->m_idm)/T_diff_idm_b);
+      }
+
+      /* For idm_dr calculate at early times the optical depth parameters */
+      if (pth->has_idm_dr == _TRUE_){
+        /* calculate dmu_idm_dr and its derivatives */
+        pvecthermo[pth->index_th_dmu_idm_dr] = pth->a_idm_dr*pow((1.+z)/1.e7,pth->n_index_idm_dr)*pba->Omega0_idm*pow(pba->h,2);
+        pvecthermo[pth->index_th_ddmu_idm_dr] =  -pvecback[pba->index_bg_H] * pth->n_index_idm_dr / (1+z) * pvecthermo[pth->index_th_dmu_idm_dr];
+        pvecthermo[pth->index_th_dddmu_idm_dr] = (pvecback[pba->index_bg_H]*pvecback[pba->index_bg_H]/ (1.+z) * (pth->n_index_idm_dr - 1.) - pvecback[pba->index_bg_H_prime])
+          * pth->n_index_idm_dr / (1.+z) * pvecthermo[pth->index_th_dmu_idm_dr];
+
+        /* extrapolate optical depth of idm_dr and idr */
+        if (pth->n_index_idm_dr == 1 ){
+          pvecthermo[pth->index_th_tau_idr] = pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_tau_idr]+pvecthermo[pth->index_th_dmu_idm_dr] * pow(1.+z, - pth->n_index_idm_dr) * log((1.+z)/(1.+pth->z_table[pth->tt_size-1]))/(pvecback[pba->index_bg_H]/(1.+z)/(1.+z));
+        }
+        else{
+          pvecthermo[pth->index_th_tau_idr] = pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_tau_idr]+pvecthermo[pth->index_th_dmu_idm_dr] * pow(1.+z, - pth->n_index_idm_dr)/(1.-pth->n_index_idm_dr) * (pow(1.+pth->z_table[pth->tt_size-1], pth->n_index_idm_dr -1) - pow(1.+z, pth->n_index_idm_dr -1))/(pvecback[pba->index_bg_H]/(1.+z)/(1.+z));
+        }
+
+        if (pth->n_index_idm_dr == 0 ){
+          pvecthermo[pth->index_th_tau_idm_dr] = pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_tau_idm_dr]+pvecthermo[pth->index_th_dmu_idm_dr] * pow(1.+z, - pth->n_index_idm_dr) * 4./3. * pba->Omega0_idr/pba->Omega0_idm * log((1.+z)/(1.+pth->z_table[pth->tt_size-1]))/(pvecback[pba->index_bg_H]/(1.+z)/(1.+z));
+        }
+        else{
+          pvecthermo[pth->index_th_tau_idm_dr] = pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_tau_idm_dr]+pvecthermo[pth->index_th_dmu_idm_dr] * pow(1.+z, - pth->n_index_idm_dr) * 4./3. * pba->Omega0_idr/pba->Omega0_idm /(-pth->n_index_idm_dr) * (pow(1.+pth->z_table[pth->tt_size-1], pth->n_index_idm_dr) - pow(1.+z, pth->n_index_idm_dr))/(pvecback[pba->index_bg_H]/(1.+z)/(1.+z));
+        }
+
+        /* extrapolate idm_dr visibility function */
+        pvecthermo[pth->index_th_g_idm_dr] = pvecthermo[pth->index_th_dmu_idm_dr] * 4./3. * pba->Omega0_idr/pba->Omega0_idm * (1.+z) * exp(-pvecthermo[pth->index_th_tau_idm_dr]);
+      }
+
+    }
+
+    /* Quantities related to idr */
+    if (pba->has_idr == _TRUE_) {
+
+      /* Use the temperature scaling assumed throughout */
+      pvecthermo[pth->index_th_T_idr] = pba->T_idr* (1+z);
+
+      /* calculate dmu_idr (self interaction) */
+      pvecthermo[pth->index_th_dmu_idr] = pth->b_idr*pow((1.+z)/1.e7,pth->n_index_idm_dr)*pba->Omega0_idr*pow(pba->h,2);
+    }
+  }
+
+  /** - interpolate in table with array_interpolate_spline (normal mode) or array_interpolate_spline_growing_closeby (closeby mode) */
+
+  else {
+
+    /* some very specific cases require linear interpolation because of a break in the derivative of the functions */
+    if (((pth->reio_parametrization == reio_half_tanh) && (z < 2*pth->z_reio))
+        || ((pth->reio_parametrization == reio_inter) && (z < 50.))) {
+
+      class_call(array_interpolate_linear(pth->z_table,
+                                          pth->tt_size,
+                                          pth->thermodynamics_table,
+                                          pth->th_size,
+                                          z,
+                                          last_index,
+                                          pvecthermo,
+                                          pth->th_size,
+                                          pth->error_message),
+                 pth->error_message,
+                 pth->error_message);
+    }
+
+    /* in the "normal" case, use spline interpolation */
+    else {
+
+      if (inter_mode == inter_normal) {
+
+        class_call(array_interpolate_spline(pth->z_table,
+                                            pth->tt_size,
+                                            pth->thermodynamics_table,
+                                            pth->d2thermodynamics_dz2_table,
+                                            pth->th_size,
+                                            z,
+                                            last_index,
+                                            pvecthermo,
+                                            pth->th_size,
+                                            pth->error_message),
+                   pth->error_message,
+                   pth->error_message);
+      }
+
+      if (inter_mode == inter_closeby) {
+
+        class_call(array_interpolate_spline_growing_closeby(pth->z_table,
+                                                            pth->tt_size,
+                                                            pth->thermodynamics_table,
+                                                            pth->d2thermodynamics_dz2_table,
+                                                            pth->th_size,
+                                                            z,
+                                                            last_index,
+                                                            pvecthermo,
+                                                            pth->th_size,
+                                                            pth->error_message),
+                   pth->error_message,
+                   pth->error_message);
+
+      }
+    }
+  }
+  return _SUCCESS_;
+}
+
+/**
+ * Initialize the thermodynamics structure, and in particular the
+ * thermodynamics interpolation table.
+ *
+ * @param ppr   Input: pointer to precision structure
+ * @param pba   Input: pointer to background structure
+ * @param pth   Input/Output: pointer to initialized thermodynamics structure
+ * @return the error status
+ */
+
+int thermodynamics_init(
+                        struct precision * ppr,
+                        struct background * pba,
+                        struct thermodynamics * pth
+                        ) {
+
+  /** Summary: */
+
+  /** - define local variables */
+
+  /* vector of background values for calling background_at_tau */
+  double * pvecback;
+
+  /* structures for storing temporarily information on recombination and reionization */
+  struct thermo_workspace * ptw;
+
+  pth->has_idm_g = pba->has_idm && (pth->u_idm_g > 0.);
+  pth->has_idm_dr = pba->has_idm && (pba->has_idr && pth->a_idm_dr > 0.);
+  pth->has_idm_b = pba->has_idm && (pth->cross_idm_b > 0.);
+
+  /** - update the user about which recombination code is being run */
+  if (pth->thermodynamics_verbose > 0) {
+    switch (pth->recombination) {
+
+    case recfast:
+      printf("Computing thermodynamics using RecFastCLASS (based on v1.5)\n");
+      break;
+
+    case hyrec:
+      printf("Computing thermodynamics using HyRec 2020\n");
+      break;
+
+    default:
+      class_stop(pth->error_message,"pth->recombination=%d different from all known cases",pth->recombination);
+      break;
+    }
+  }
+
+  /** - set flag for varying constants */
+  pth->has_varconst = pba->has_varconst;
+
+  /** - compute and check primordial Helium mass fraction rho_He/(rho_H+rho_He) */
+
+  if (pth->YHe == _YHE_BBN_) {
+    class_call(thermodynamics_helium_from_bbn(ppr,pba,pth),
+               pth->error_message,
+               pth->error_message);
+  }
+  if (pth->thermodynamics_verbose > 0) {
+    printf(" -> with primordial helium mass fraction Y_He = %.4f\n",pth->YHe);
+  }
+
+  /** - infer primordial helium-to-hydrogen nucleon ratio n_He/n_H
+   * It is calculated via n_He/n_H = rho_He/(m_He/m_H * rho_H) = YHe * rho_b / (m_He/m_H * (1-YHe) rho_b) = YHe / (m_He/m_H * (1-YHe))*/
+  pth->fHe = pth->YHe/(_not4_ *(1.-pth->YHe));
+
+  /** - infer number of hydrogen nuclei today in m**-3 */
+  pth->n_e = 3.*pow(pba->H0 * _c_ / _Mpc_over_m_,2)*pba->Omega0_b/(8.*_PI_*_G_*_m_H_)*(1.-pth->YHe);
+
+  /** - test whether all parameters are in the correct regime */
+  class_call(thermodynamics_checks(ppr,pba,pth),
+             pth->error_message,
+             pth->error_message);
+
+  /** - allocate and assign all temporary structures and indices */
+  class_alloc(ptw, sizeof(struct thermo_workspace), pth->error_message);
+
+  /*  in the case of idm, we need to adapt the start of integration time,
+      to be sure we capture the time at which the two species are still coupled.
+      This is after thermo_workspace was allocated to set the has_ap_idmtca flag*/
+  class_call(thermodynamics_obtain_z_ini(ppr,pba,pth, ptw),
+             pth->error_message,
+             pth->error_message);
+
+  class_call(thermodynamics_workspace_init(ppr,pba,pth,ptw),
+             pth->error_message,
+             pth->error_message);
+
+  class_call(thermodynamics_indices(pba,pth,ptw),
+             pth->error_message,
+             pth->error_message);
+
+  class_alloc(pvecback,pba->bg_size*sizeof(double),pba->error_message);
+
+  class_call(thermodynamics_lists(ppr,pba,pth,ptw),
+             pth->error_message,
+             pth->error_message);
+
+  /** - initialize injection struct (not temporary) */
+  if (pth->has_exotic_injection == _TRUE_) {
+    class_call(injection_init(ppr,
+                              pba,
+                              pth),
+               (pth->in).error_message,
+               pth->error_message);
+  }
+
+  /** - assign reionisation parameters */
+  class_call(thermodynamics_set_parameters_reionization(ppr,
+                                                        pba,
+                                                        pth,
+                                                        ptw->ptrp),
+             pth->error_message,
+             pth->error_message);
+
+  /** - solve recombination and reionization and store values of \f$ z, x_e, d \kappa / d \tau, T_b, c_b^2 \f$  */
+  class_call(thermodynamics_solve(ppr,pba,pth,ptw,pvecback),
+             pth->error_message,
+             pth->error_message);
+
+  /** - the differential equation system is now completely solved  */
+
+  /** - fill missing columns (quantities not computed during the differential evolution but related) */
+  class_call(thermodynamics_calculate_remaining_quantities(ppr,pba,pth,pvecback),
+             pth->error_message,
+             pth->error_message);
+
+  /** - write information on thermal history in standard output */
+  if (pth->thermodynamics_verbose > 0) {
+    class_call(thermodynamics_output_summary(pba,pth),
+               pth->error_message,
+               pth->error_message);
+  }
+
+  /** - free workspace and local variables */
+  class_call(thermodynamics_workspace_free(pth,ptw),
+             pth->error_message,
+             pth->error_message);
+
+  free(pvecback);
+
+  return _SUCCESS_;
+}
+
+
+/**
+ * Free all memory space allocated by thermodynamics_init.
+ *
+ * @param pth Input/Output: pointer to thermodynamics structure (to be freed)
+ * @return the error status
+ */
+int thermodynamics_free(
+                        struct thermodynamics * pth
+                        ) {
+
+  if (pth->has_exotic_injection == _TRUE_) {
+    /* Free all injection-related functions */
+    class_call(injection_free(pth),
+               (pth->in).error_message,
+               pth->error_message);
+  }
+
+  /* Free thermodynamics-related functions */
+  free(pth->z_table);
+  free(pth->tau_table);
+  free(pth->thermodynamics_table);
+  free(pth->d2thermodynamics_dz2_table);
+
+  class_call(thermodynamics_free_input(pth),
+             pth->error_message,
+             pth->error_message);
+
+  return _SUCCESS_;
+}
+/**
+ * Free all memory space allocated by input.c for the thermodynamics module.
+ *
+ * @param pth Input/Output: pointer to thermodynamics structure (to be freed)
+ * @return the error status
+ */
+int thermodynamics_free_input(
+                        struct thermodynamics * pth
+                        ) {
+
+  switch(pth->reio_parametrization){
+
+  case reio_none:
+  case reio_camb:
+  case reio_half_tanh:
+  default:
+    /* nothing to be read*/
+    break;
+
+  case reio_bins_tanh:
+    /* Read */
+    free(pth->binned_reio_z);
+    free(pth->binned_reio_xe);
+    break;
+
+  case reio_many_tanh:
+    /* Read */
+    free(pth->many_tanh_z);
+    free(pth->many_tanh_xe);
+    break;
+
+    /** 8.d) reionization parameters if reio_parametrization=reio_many_tanh */
+  case reio_inter:
+    /* Read */
+    free(pth->reio_inter_z);
+    free(pth->reio_inter_xe);
+    break;
+
+  }
+
+  return _SUCCESS_;
+}
+/**
+ * Infer the primordial helium mass fraction from standard BBN
+ * calculations, as a function of the baryon density and expansion
+ * rate during BBN.
+ *
+ * This module is simpler then the one used in arXiv:0712.2826 because
+ * it neglects the impact of a possible significant chemical
+ * potentials for electron neutrinos. The full code with xi_nu_e could
+ * be introduced here later.
+ *
+ * @param ppr   Input: pointer to precision structure
+ * @param pba   Input: pointer to background structure
+ * @param pth   Input/Output: pointer to initialized thermodynamics structure
+ * @return the error status
+ */
+int thermodynamics_helium_from_bbn(
+                                   struct precision * ppr,
+                                   struct background * pba,
+                                   struct thermodynamics * pth
+                                   ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  FILE * fA;
+  char line[_LINE_LENGTH_MAX_];
+  char * left;
+
+  int num_omegab=0;
+  int num_deltaN=0;
+
+  double * omegab=NULL;
+  double * deltaN=NULL;
+  double * YHe=NULL;
+  double * ddYHe=NULL;
+  double * YHe_at_deltaN=NULL;
+  double * ddYHe_at_deltaN=NULL;
+
+  int array_line=0;
+  double DeltaNeff;
+  double omega_b;
+  int last_index;
+  double Neff_bbn, z_bbn, * pvecback;
+
+  /** - Infer effective number of neutrinos at the time of BBN */
+  class_alloc(pvecback,pba->bg_size*sizeof(double),pba->error_message);
+
+  /** - We randomly choose 0.1 MeV to be the temperature of BBN */
+  z_bbn = 0.1*1e6/(_eV_over_Kelvin_*pba->T_cmb)-1.0;
+
+  class_call(background_at_z(pba,
+                             z_bbn,
+                             long_info,
+                             inter_normal,
+                             &last_index,
+                             pvecback),
+             pba->error_message,
+             pth->error_message);
+
+  Neff_bbn = (pvecback[pba->index_bg_Omega_r]
+              *pvecback[pba->index_bg_rho_crit]
+              -pvecback[pba->index_bg_rho_g])
+    /(7./8.*pow(4./11.,4./3.)*pvecback[pba->index_bg_rho_g]);
+
+
+  //  printf("Neff early = %g, Neff at bbn: %g\n",pba->Neff,Neff_bbn);
+
+  /** - compute Delta N_eff as defined in bbn file, i.e. \f$ \Delta N_{eff}=0\f$ means \f$ N_{eff}=3.046\f$.
+   * Note that even if 3.044 is a better default value, we must keep 3.046 here as long as the BBN file we are
+   * using has been computed assuming 3.046.
+   */
+  DeltaNeff = Neff_bbn - 3.046;
+
+  /* the following file is assumed to contain (apart from comments and blank lines):
+     - the two numbers (num_omegab, num_deltaN) = number of values of BBN free parameters
+     - three columns (omegab, deltaN, YHe) where omegab = Omega0_b h^2 and deltaN = Neff-3.046 by definition
+     - omegab and deltaN are assumed to be arranged as:
+     omegab1 deltaN1 YHe
+     omegab2 deltaN1 YHe
+     .....
+     omegab1 delatN2 YHe
+     omegab2 deltaN2 YHe
+     .....
+  */
+
+  class_open(fA,ppr->sBBN_file, "r",pth->error_message);
+
+  /* go through each line */
+  while (fgets(line,_LINE_LENGTH_MAX_-1,fA) != NULL) {
+
+    /* eliminate blank spaces at beginning of line */
+    left=line;
+    while (left[0]==' ') {
+      left++;
+    }
+
+    /* check that the line is neither blank neither a comment. In ASCII, left[0]>39 means that first non-blank character might
+       be the beginning of some data (it is not a newline, a #, a %, etc.) */
+    if (left[0] > 39) {
+
+      /* if the line contains data, we must interpret it. If (num_omegab, num_deltaN)=(0,0), the current line must contain
+         their values. Otherwise, it must contain (omegab, delatN, YHe). */
+      if ((num_omegab==0) && (num_deltaN==0)) {
+
+        /* read (num_omegab, num_deltaN), infer size of arrays and allocate them */
+        class_test(sscanf(line,"%d %d",&num_omegab,&num_deltaN) != 2,
+                   pth->error_message,
+                   "could not read value of parameters (num_omegab,num_deltaN) in file %s\n",ppr->sBBN_file);
+
+        class_alloc(omegab,num_omegab*sizeof(double),pth->error_message);
+        class_alloc(deltaN,num_deltaN*sizeof(double),pth->error_message);
+        class_alloc(YHe,num_omegab*num_deltaN*sizeof(double),pth->error_message);
+        class_alloc(ddYHe,num_omegab*num_deltaN*sizeof(double),pth->error_message);
+        class_alloc(YHe_at_deltaN,num_omegab*sizeof(double),pth->error_message);
+        class_alloc(ddYHe_at_deltaN,num_omegab*sizeof(double),pth->error_message);
+        array_line=0;
+
+      }
+      else{
+
+        /* read (omegab, deltaN, YHe) */
+        class_test(sscanf(line,"%lg %lg %lg",&(omegab[array_line%num_omegab]),
+                          &(deltaN[array_line/num_omegab]),
+                          &(YHe[array_line])
+                          ) != 3,
+                   pth->error_message,
+                   "could not read value of parameters (omegab,deltaN,YHe) in file %s\n",ppr->sBBN_file);
+        array_line ++;
+      }
+    }
+  }
+
+  fclose(fA);
+
+  /** - spline in one dimension (along deltaN) */
+  class_call(array_spline_table_lines(deltaN,
+                                      num_deltaN,
+                                      YHe,
+                                      num_omegab,
+                                      ddYHe,
+                                      _SPLINE_NATURAL_,
+                                      pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  omega_b=pba->Omega0_b*pba->h*pba->h;
+
+  class_test(omega_b < omegab[0],
+             pth->error_message,
+             "You have asked for an unrealistic small value omega_b = %e. The corresponding value of the primordial helium fraction cannot be found in the interpolation table. If you really want this value, you should fix YHe to a given value rather than to BBN",
+             omega_b);
+
+  class_test(omega_b > omegab[num_omegab-1],
+             pth->error_message,
+             "You have asked for an unrealistic high value omega_b = %e. The corresponding value of the primordial helium fraction cannot be found in the interpolation table. If you really want this value, you should fix YHe to a given value rather than to BBN",
+             omega_b);
+
+  class_test(DeltaNeff < deltaN[0],
+             pth->error_message,
+             "You have asked for an unrealistic small value of Delta N_eff = %e. The corresponding value of the primordial helium fraction cannot be found in the interpolation table. If you really want this value, you should fix YHe to a given value rather than to BBN",
+             DeltaNeff);
+
+  class_test(DeltaNeff > deltaN[num_deltaN-1],
+             pth->error_message,
+             "You have asked for an unrealistic high value of Delta N_eff = %e. The corresponding value of the primordial helium fraction cannot be found in the interpolation table. If you really want this value, you should fix YHe to a given value rather than to BBN",
+             DeltaNeff);
+
+  /** - interpolate in one dimension (along deltaN) */
+  class_call(array_interpolate_spline(deltaN,
+                                      num_deltaN,
+                                      YHe,
+                                      ddYHe,
+                                      num_omegab,
+                                      DeltaNeff,
+                                      &last_index,
+                                      YHe_at_deltaN,
+                                      num_omegab,
+                                      pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /** - spline in remaining dimension (along omegab) */
+  class_call(array_spline_table_lines(omegab,
+                                      num_omegab,
+                                      YHe_at_deltaN,
+                                      1,
+                                      ddYHe_at_deltaN,
+                                      _SPLINE_NATURAL_,
+                                      pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /** - interpolate in remaining dimension (along omegab) */
+  class_call(array_interpolate_spline(omegab,
+                                      num_omegab,
+                                      YHe_at_deltaN,
+                                      ddYHe_at_deltaN,
+                                      1,
+                                      omega_b,
+                                      &last_index,
+                                      &(pth->YHe),
+                                      1,
+                                      pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /** - Take into account impact of varying alpha on helium fraction */
+  if (pth->has_varconst == _TRUE_) {
+    pth->YHe *= pth->bbn_alpha_sensitivity * (pvecback[pba->index_bg_varc_alpha]-1.)+1.;
+  }
+
+  /** - deallocate arrays */
+  free(omegab);
+  free(deltaN);
+  free(YHe);
+  free(ddYHe);
+  free(YHe_at_deltaN);
+  free(ddYHe_at_deltaN);
+  free(pvecback);
+
+  return _SUCCESS_;
+}
+
+/**
+ * Check the thermodynamics structure parameters for bounds and critical values.
+ *
+ * @param ppr   Input: pointer to precision structure
+ * @param pba   Input: pointer to background structure
+ * @param pth   Input: pointer to initialized thermodynamics structure
+ * @return the error status
+ */
+
+int thermodynamics_checks(
+                          struct precision * ppr,
+                          struct background* pba,
+                          struct thermodynamics * pth
+                          ) {
+
+  /** Summary: */
+
+  /** - check BBN Y_He fracion */
+  class_test((pth->YHe < _YHE_SMALL_)||(pth->YHe > _YHE_BIG_),
+             pth->error_message,
+             "Y_He=%g out of bounds (%g<Y_He<%g)",pth->YHe,_YHE_SMALL_,_YHE_BIG_);
+
+  /** - tests in order to prevent divisions by zero */
+  class_test(pth->YHe == 1.,
+             pth->error_message,
+             "stop to avoid division by zero");
+
+  /** - test initial condition for recombination */
+  class_test(ppr->thermo_z_initial < ppr->recfast_z_He_3,
+             pth->error_message,
+             "increase z_initial in order to start before HeliumIII recombination");
+
+  return _SUCCESS_;
+}
+
+/**
+ * Initialize the thermodynamics workspace.
+ *
+ * The workspace contains the arrays used for solving differential
+ * equations (dubbed thermo_diffeq_workspace), and storing all
+ * approximations, reionization parameters, heating parameters.
+ *
+ * @param ppr        Input: pointer to precision structure
+ * @param pba        Input: pointer to background structure
+ * @param pth        Input: pointer to the thermodynamics structure
+ * @param ptw        Input/Output: pointer to thermodynamics workspace
+ * @return the error status
+ */
+
+int thermodynamics_workspace_init(
+                                  struct precision * ppr,
+                                  struct background * pba,
+                                  struct thermodynamics * pth,
+                                  struct thermo_workspace * ptw
+                                  ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  int index_ap;
+  /* for varying fundamental constants */
+  double alpha = 1., me = 1.;
+
+  /** - number of z values */
+  ptw->Nz_reco_lin = ppr->thermo_Nz_lin;
+  ptw->Nz_reco_log = ppr->thermo_Nz_log;
+  ptw->Nz_reco = ptw->Nz_reco_lin + ptw->Nz_reco_log;
+  ptw->Nz_reio = ppr->reionization_z_start_max / ppr->reionization_sampling;
+  ptw->Nz_tot = ptw->Nz_reio + ptw->Nz_reco;
+
+  /** - relevant cosmological parameters */
+
+  /* primordial helium mass fraction */
+  ptw->YHe = pth->YHe;
+  /* primordial helium-to-hydrogen nucleon ratio */
+  ptw->fHe = pth->fHe;
+  /* Hubble parameter today in SI units */
+  ptw->SIunit_H0 = pba->H0 * _c_ / _Mpc_over_m_;
+  /* H number density today in SI units*/
+  ptw->SIunit_nH0 = 3.*ptw->SIunit_H0*ptw->SIunit_H0*pba->Omega0_b/(8.*_PI_*_G_*_m_H_)*(1.-ptw->YHe);
+  /* CMB temperature today in Kelvin */
+  ptw->Tcmb = pba->T_cmb;
+
+  /** - relevant constants */
+
+  /* Prefactor in non-relativistic number density for temperature -- (2*pi*m_e) and unit conversion */
+  ptw->const_NR_numberdens = 2.*_PI_*(_m_e_/_h_P_)*(_k_B_/_h_P_);
+  /* Ionization energy for HI -- temperature equivalent in Kelvin */
+  ptw->const_Tion_H = _h_P_*_c_*_L_H_ion_/_k_B_;
+  /* Ionization energy for HeI -- temperature equivalent in Kelvin */
+  ptw->const_Tion_HeI = _h_P_*_c_*_L_He1_ion_/_k_B_;
+  /* Ionization energy for HeII -- temperature equivalent in Kelvin */
+  ptw->const_Tion_HeII = _h_P_*_c_*_L_He2_ion_/_k_B_;
+
+  /* the field reionization_optical_depth is computed and filled later */
+
+  /** - Allocate and initialize differential equation workspace */
+  class_alloc(ptw->ptdw,
+              sizeof(struct thermo_diffeq_workspace),
+              pth->error_message);
+
+  // Initialize ionisation fraction.
+  ptw->ptdw->x_reio = 1.+2.*ptw->fHe;
+  ptw->ptdw->x_noreio = 1.+2.*ptw->fHe;
+
+  /** - define approximations */
+  index_ap=0;
+  /* Approximations have to appear in chronological order here! */
+  class_define_index(ptw->ptdw->index_ap_idmtca,ptw->has_ap_idmtca,index_ap,1); //DM tight coupling (assumed always before any recombination phases)
+  class_define_index(ptw->ptdw->index_ap_brec,_TRUE_,index_ap,1); // before H- and He-recombination
+  class_define_index(ptw->ptdw->index_ap_He1,_TRUE_,index_ap,1);  // during 1st He-recombination (HeIII)
+  class_define_index(ptw->ptdw->index_ap_He1f,_TRUE_,index_ap,1); // in between 1st and 2nd He recombination
+  class_define_index(ptw->ptdw->index_ap_He2,_TRUE_,index_ap,1);  // beginning of 2nd He-recombination (HeII)
+  class_define_index(ptw->ptdw->index_ap_H,_TRUE_,index_ap,1);    // beginning of H-recombination (HI)
+  class_define_index(ptw->ptdw->index_ap_frec,_TRUE_,index_ap,1); // during and after full H- and HeII-recombination
+  class_define_index(ptw->ptdw->index_ap_reio,_TRUE_,index_ap,1); // during reionization
+  ptw->ptdw->ap_size=index_ap;
+
+  /* Set correct initial approximation scheme */
+  ptw->ptdw->ap_current = ptw->ptdw->index_ap_brec;
+  if (ptw->has_ap_idmtca == _TRUE_)
+    ptw->ptdw->ap_current = ptw->ptdw->index_ap_idmtca;
+
+  /** - store all ending redshifts for each approximation */
+  class_alloc(ptw->ptdw->ap_z_limits,ptw->ptdw->ap_size*sizeof(double),pth->error_message);
+
+  if (ptw->has_ap_idmtca == _TRUE_)
+    ptw->ptdw->ap_z_limits[ptw->ptdw->index_ap_idmtca] = ptw->z_ap_idmtca;
+  ptw->ptdw->ap_z_limits[ptw->ptdw->index_ap_brec] =
+    ppr->recfast_z_He_1+ppr->recfast_delta_z_He_1; // beginning 1st He-recombination
+  ptw->ptdw->ap_z_limits[ptw->ptdw->index_ap_He1] =
+    ppr->recfast_z_He_2+ppr->recfast_delta_z_He_2; // end 1st He-recombination
+  ptw->ptdw->ap_z_limits[ptw->ptdw->index_ap_He1f] =
+    ppr->recfast_z_He_3+ppr->recfast_delta_z_He_3; // beginning 2nd He-recombination
+  ptw->ptdw->ap_z_limits[ptw->ptdw->index_ap_He2] =
+    ppr->recfast_z_early_H_recombination;          // beginning early H-recombination
+  ptw->ptdw->ap_z_limits[ptw->ptdw->index_ap_H] =
+    ppr->recfast_z_full_H_recombination;           // beginning full recombination equations
+  ptw->ptdw->ap_z_limits[ptw->ptdw->index_ap_frec] =
+    ppr->reionization_z_start_max;                 // beginning reionization
+  ptw->ptdw->ap_z_limits[ptw->ptdw->index_ap_reio] = 0.0; // today
+
+  /** - Rescale these redshifts in case of varying fundamental constants */
+  if (pth->has_varconst == _TRUE_) {
+    for (index_ap=0;index_ap<ptw->ptdw->ap_size;++index_ap){
+      class_call(background_varconst_of_z(pba,ptw->ptdw->ap_z_limits[index_ap], &alpha, &me),
+                 pba->error_message,
+                 pth->error_message);
+      ptw->ptdw->ap_z_limits[index_ap]*=me*alpha*alpha;
+    }
+  }
+
+  /** - store smoothing deltas for transitions at the beginning of each aproximation */
+  class_alloc(ptw->ptdw->ap_z_limits_delta,ptw->ptdw->ap_size*sizeof(double),pth->error_message);
+
+  if (ptw->has_ap_idmtca == _TRUE_)
+    ptw->ptdw->ap_z_limits_delta[ptw->ptdw->index_ap_idmtca] = 0.;
+  ptw->ptdw->ap_z_limits_delta[ptw->ptdw->index_ap_brec] = 0.;
+  ptw->ptdw->ap_z_limits_delta[ptw->ptdw->index_ap_He1] = ppr->recfast_delta_z_He_1;
+  ptw->ptdw->ap_z_limits_delta[ptw->ptdw->index_ap_He1f] = ppr->recfast_delta_z_He_2;
+  ptw->ptdw->ap_z_limits_delta[ptw->ptdw->index_ap_He2] = ppr->recfast_delta_z_He_3;
+  ptw->ptdw->ap_z_limits_delta[ptw->ptdw->index_ap_H] = ppr->recfast_delta_z_early_H_recombination;
+  ptw->ptdw->ap_z_limits_delta[ptw->ptdw->index_ap_frec] = ppr->recfast_delta_z_full_H_recombination;
+  ptw->ptdw->ap_z_limits_delta[ptw->ptdw->index_ap_reio] = ppr->recfast_delta_z_reio;
+
+  /* With recombination computed by HyRec or Recfast, we need to allocate and initialize the wrappers */
+
+  switch (pth->recombination) {
+
+  case hyrec:
+    class_alloc(ptw->ptdw->phyrec,
+                sizeof(struct thermohyrec),
+                pth->error_message);
+
+    ptw->ptdw->phyrec->thermohyrec_verbose = pth->hyrec_verbose;
+    class_call(thermodynamics_hyrec_init(ppr,pba,pth,ptw->SIunit_nH0,pba->T_cmb,ptw->fHe, ptw->ptdw->ap_z_limits[ptw->ptdw->index_ap_brec],ptw->ptdw->phyrec),
+               ptw->ptdw->phyrec->error_message,
+               pth->error_message);
+    break;
+
+  case recfast:
+    class_alloc(ptw->ptdw->precfast,
+                sizeof(struct thermorecfast),
+                pth->error_message);
+
+    class_call(recfast_init(ppr,pba,pth,ptw->ptdw->precfast,pth->recfast_photoion_mode,ptw->fHe),
+               ptw->ptdw->precfast->error_message,
+               pth->error_message);
+
+    break;
+  }
+
+  /** - Allocate reionisation parameter workspace */
+  class_alloc(ptw->ptrp,
+              sizeof(struct thermo_reionization_parameters),
+              pth->error_message);
+
+  return _SUCCESS_;
+
+}
+
+/**
+ * Assign value to each relevant index in vectors of thermodynamical
+ * quantities, and the reionization parameters
+ *
+ * @param pba   Input: pointer to background structure
+ * @param pth   Input/Output: pointer to thermodynamics structure
+ * @param ptw   Input/Output: pointer to thermo workspace
+ * @return the error status
+ */
+
+int thermodynamics_indices(
+                           struct background * pba,
+                           struct thermodynamics * pth,
+                           struct thermo_workspace * ptw
+                           ) {
+
+  /** Summary: */
+
+  /** - define local variables */
+  struct thermo_reionization_parameters* ptrp = ptw->ptrp;
+  /* a running index for the vector of thermodynamics quantities */
+  int index_th;
+  /* a running index for the vector of reionization parameters */
+  int index_re;
+
+  /** - initialization of all indices and flags in thermodynamics structure */
+  index_th = 0;
+
+  /* Free electron fraction */
+  class_define_index(pth->index_th_xe,_TRUE_,index_th,1);
+  /* Optical depth and related quantities */
+  class_define_index(pth->index_th_dkappa,_TRUE_,index_th,1);
+  class_define_index(pth->index_th_ddkappa,_TRUE_,index_th,1);
+  class_define_index(pth->index_th_dddkappa,_TRUE_,index_th,1);
+  class_define_index(pth->index_th_exp_m_kappa,_TRUE_,index_th,1);
+  /* Visibility function + derivatives */
+  class_define_index(pth->index_th_g,_TRUE_,index_th,1);
+  class_define_index(pth->index_th_dg,_TRUE_,index_th,1);
+  class_define_index(pth->index_th_ddg,_TRUE_,index_th,1);
+  /* Baryon quantities, Temperature, Sound Speed, Drag time end */
+  class_define_index(pth->index_th_Tb,_TRUE_,index_th,1);
+  class_define_index(pth->index_th_dTb,_TRUE_,index_th,1);
+  class_define_index(pth->index_th_wb,_TRUE_,index_th,1);
+  class_define_index(pth->index_th_cb2,_TRUE_,index_th,1);
+  class_define_index(pth->index_th_tau_d,_TRUE_,index_th,1);
+  /* Derivatives of baryon sound speed (only computed if some non-minimal tight-coupling schemes is requested) */
+  class_define_index(pth->index_th_dcb2,pth->compute_cb2_derivatives,index_th,1);
+  class_define_index(pth->index_th_ddcb2,pth->compute_cb2_derivatives,index_th,1);
+
+  /* idm quantities  */
+  if (pba->has_idm == _TRUE_) {
+    /* global quantities */
+    class_define_index(pth->index_th_T_idm, pba->has_idm, index_th, 1);
+    class_define_index(pth->index_th_c2_idm, pba->has_idm, index_th, 1);
+    /* idm-b quantities */
+    class_define_index(pth->index_th_R_idm_b,pth->has_idm_b,index_th,1);
+    class_define_index(pth->index_th_dR_idm_b,pth->has_idm_b,index_th,1);
+    class_define_index(pth->index_th_ddR_idm_b,pth->has_idm_b,index_th,1);
+    /* idm-g quantities */
+    class_define_index(pth->index_th_dmu_idm_g,pth->has_idm_g, index_th, 1);
+    class_define_index(pth->index_th_ddmu_idm_g,pth->has_idm_g, index_th, 1);
+    class_define_index(pth->index_th_dddmu_idm_g,pth->has_idm_g, index_th, 1);
+    class_define_index(pth->index_th_exp_mu_idm_g,pth->has_idm_g, index_th, 1);
+    /* idm-dr quantities */
+    class_define_index(pth->index_th_dmu_idm_dr,pth->has_idm_dr, index_th, 1);
+    class_define_index(pth->index_th_ddmu_idm_dr,pth->has_idm_dr, index_th, 1);
+    class_define_index(pth->index_th_dddmu_idm_dr,pth->has_idm_dr, index_th, 1);
+    class_define_index(pth->index_th_tau_idm_dr,pth->has_idm_dr, index_th, 1);
+    class_define_index(pth->index_th_tau_idr,pth->has_idm_dr, index_th, 1);
+    class_define_index(pth->index_th_g_idm_dr,pth->has_idm_dr, index_th, 1);
+  }
+  /* idr quantities */
+  if (pba->has_idr == _TRUE_) {
+    class_define_index(pth->index_th_T_idr,pba->has_idr, index_th, 1);
+    class_define_index(pth->index_th_dmu_idr,pba->has_idr, index_th, 1);
+  }
+
+  /* Quantity defining the stepsize in perturbations.c */
+  class_define_index(pth->index_th_rate,_TRUE_,index_th,1);
+  /* Damping scale */
+  class_define_index(pth->index_th_r_d,pth->compute_damping_scale,index_th,1);
+
+  /* end of thermodynamics indices */
+
+  pth->th_size = index_th;
+
+  /** - initialization of all indices of parameters of reionization function */
+
+  index_re=0;
+
+  class_define_index(ptrp->index_re_reio_start,_TRUE_,index_re,1);
+
+  switch (pth->reio_parametrization) {
+
+    /* case with no reionization requested */
+  case reio_none:
+    class_define_index(ptrp->index_re_xe_before,_TRUE_,index_re,1);
+    break;
+
+    /* case where x_e(z) taken like in CAMB (other cases can be added) */
+  case reio_camb:
+  case reio_half_tanh:
+    class_define_index(ptrp->index_re_reio_redshift,_TRUE_,index_re,1);
+    class_define_index(ptrp->index_re_reio_exponent,_TRUE_,index_re,1);
+    class_define_index(ptrp->index_re_reio_width,_TRUE_,index_re,1);
+    class_define_index(ptrp->index_re_xe_before,_TRUE_,index_re,1);
+    class_define_index(ptrp->index_re_xe_after,_TRUE_,index_re,1);
+    class_define_index(ptrp->index_re_helium_fullreio_fraction,_TRUE_,index_re,1);
+    class_define_index(ptrp->index_re_helium_fullreio_redshift,_TRUE_,index_re,1);
+    class_define_index(ptrp->index_re_helium_fullreio_width,_TRUE_,index_re,1);
+    break;
+
+    /* case where x_e(z) is interpolated by tanh between plateaux */
+  case reio_bins_tanh:
+
+    /* the code will not only copy here the "bin centers" passed in input. It will add an initial and final value for (z,xe). So
+       this array has a dimension bigger than the bin center array */
+
+    ptrp->re_z_size=pth->binned_reio_num+2; /* add two values: beginning and end of reio */
+
+    class_define_index(ptrp->index_re_first_z,_TRUE_,index_re,ptrp->re_z_size);
+    class_define_index(ptrp->index_re_first_xe,_TRUE_,index_re,ptrp->re_z_size);
+    class_define_index(ptrp->index_re_step_sharpness,_TRUE_,index_re,1);
+    class_define_index(ptrp->index_re_xe_before,_TRUE_,index_re,1);
+    break;
+
+    /* case where x_e(z) is interpolated by tanh between knots */
+  case reio_many_tanh:
+
+    /* the code will not only copy here the "jump centers" passed in input. It will add an initial and final value for (z,xe). So
+       this array has a dimension bigger than the jump center array */
+
+    ptrp->re_z_size=pth->many_tanh_num+2; /* add two values: beginning and end of reio */
+
+    class_define_index(ptrp->index_re_first_z,_TRUE_,index_re,ptrp->re_z_size);
+    class_define_index(ptrp->index_re_first_xe,_TRUE_,index_re,ptrp->re_z_size);
+    class_define_index(ptrp->index_re_step_sharpness,_TRUE_,index_re,1);
+    class_define_index(ptrp->index_re_xe_before,_TRUE_,index_re,1);
+    break;
+
+    /* case where x_e(z) is linearly interpolated between knots */
+  case reio_inter:
+
+    ptrp->re_z_size=pth->reio_inter_num;
+
+    class_define_index(ptrp->index_re_first_z,_TRUE_,index_re,ptrp->re_z_size);
+    class_define_index(ptrp->index_re_first_xe,_TRUE_,index_re,ptrp->re_z_size);
+    class_define_index(ptrp->index_re_xe_before,_TRUE_,index_re,1);
+    break;
+
+  default:
+    class_stop(pth->error_message,
+               "value of reio_parametrization=%d unclear",pth->reio_parametrization);
+    break;
+  }
+  ptrp->re_size = index_re;
+
+  return _SUCCESS_;
+
+}
+
+/**
+ * Initialize the lists (of redshift, tau, etc.) of the thermodynamics struct
+ *
+ * @param ppr   Input: pointer to precision structure
+ * @param pba   Input: pointer to background structure
+ * @param pth   Input/Output: pointer to thermodynamics structure
+ * @param ptw   Input: pointer to thermo workspace
+ * @return the error status
+ */
+
+int thermodynamics_lists(
+                         struct precision * ppr,
+                         struct background* pba,
+                         struct thermodynamics* pth,
+                         struct thermo_workspace* ptw
+                         ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  int index_tau, index_z;
+  double zinitial,zlinear;
+
+  pth->tt_size = ptw->Nz_tot;
+
+  /** - allocate tables*/
+  class_alloc(pth->tau_table,pth->tt_size*sizeof(double),pth->error_message);
+  class_alloc(pth->z_table,pth->tt_size*sizeof(double),pth->error_message);
+  class_alloc(pth->thermodynamics_table,pth->th_size*pth->tt_size*sizeof(double),pth->error_message);
+  class_alloc(pth->d2thermodynamics_dz2_table,pth->th_size*pth->tt_size*sizeof(double),pth->error_message);
+
+  /** - define time sampling */
+
+  /* Initial z, and the z at which we switch to linear sampling */
+  zinitial = ppr->thermo_z_initial;
+  zlinear  = ppr->thermo_z_linear;
+
+  /* -> Between z_initial and z_linear, we use the spacing of recombination sampling */
+  for (index_z=0; index_z <ptw->Nz_reco_log; index_z++) {
+    pth->z_table[(pth->tt_size-1) - index_z] = -(-exp((log(zinitial)-log(zlinear))*(double)(ptw->Nz_reco_log-1-index_z) / (double)(ptw->Nz_reco_log-1)+log(zlinear)));
+  }
+
+  /* -> Between z_linear and reionization_z_start_max, we use the spacing of recombination sampling */
+  for (index_z=0; index_z <ptw->Nz_reco_lin; index_z++) {
+    pth->z_table[(pth->tt_size-1)-(index_z+ptw->Nz_reco_log)] = -(-(zlinear-ppr->reionization_z_start_max) * (double)(ptw->Nz_reco_lin-1-index_z) / (double)(ptw->Nz_reco_lin) - ppr->reionization_z_start_max);
+  }
+
+  /* -> Between reionization_z_start_max and 0, we use the spacing of reionization sampling, leaving out the first point to not double-count it */
+  for (index_z=0; index_z <ptw->Nz_reio; index_z++) {
+    pth->z_table[(pth->tt_size-1)-(index_z+ptw->Nz_reco)] = -(-ppr->reionization_z_start_max * (double)(ptw->Nz_reio-1-index_z) / (double)(ptw->Nz_reio));
+  }
+
+  for (index_tau=0; index_tau < pth->tt_size; index_tau++) {
+    class_call(background_tau_of_z(pba,
+                                   pth->z_table[index_tau],
+                                   pth->tau_table+index_tau),
+               pba->error_message,
+               pth->error_message);
+  }
+
+  /** - store initial value of conformal time in the structure */
+  pth->tau_ini = pth->tau_table[pth->tt_size-1];
+
+  return _SUCCESS_;
+}
+
+/**
+ * This routine initializes reionization_parameters for the chosen scheme of reionization function.
+ *
+ * @param ppr        Input: pointer to precision structure
+ * @param pba        Input: pointer to background structure
+ * @param pth        Input: pointer to the thermodynamics structure
+ * @param preio      Input/Output: pointer to the reionization parameters structure
+ * @return the error status
+ */
+
+int thermodynamics_set_parameters_reionization(
+                                               struct precision * ppr,
+                                               struct background * pba,
+                                               struct thermodynamics * pth,
+                                               struct thermo_reionization_parameters * preio
+                                               ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  int bin;
+  int point;
+  double xe_input,xe_actual,z_sup;
+
+  /** - allocate the vector of parameters defining the function \f$ X_e(z) \f$ */
+  class_alloc(preio->reionization_parameters,preio->re_size*sizeof(double),pth->error_message);
+
+  class_test(ppr->reionization_sampling <= 0.0,
+             pth->error_message,
+             "stop to avoid division by zero. Reionization stepsize has to be larger than zero");
+
+  switch (pth->reio_parametrization) {
+
+    /** - (a) no reionization */
+  case reio_none:
+    preio->reionization_parameters[preio->index_re_reio_start] = 0.;
+    break;
+
+    /** - (b) if reionization implemented like in CAMB, or half tanh like in  1209.0247 */
+  case reio_camb:
+  case reio_half_tanh:
+
+    /** - --> set values of these parameters, excepted those depending on the reionization redshift */
+
+    if (pth->reio_parametrization == reio_camb) {
+      /* xe_after_reio: H + singly ionized He (checked before that denominator is non-zero) */
+      preio->reionization_parameters[preio->index_re_xe_after] = 1. + pth->YHe/(_not4_*(1.-pth->YHe));
+    }
+    if (pth->reio_parametrization == reio_half_tanh) {
+      /* xe_after_reio: neglect He ionization */
+      preio->reionization_parameters[preio->index_re_xe_after] = 1.;
+      //+ 2*pth->YHe/(_not4_*(1.-pth->YHe));    /* xe_after_reio: H + fully ionized He */
+    }
+
+    preio->reionization_parameters[preio->index_re_reio_exponent] = pth->reionization_exponent; /* reio_exponent */
+    preio->reionization_parameters[preio->index_re_reio_width] = pth->reionization_width;    /* reio_width */
+    preio->reionization_parameters[preio->index_re_helium_fullreio_fraction] = pth->YHe/(_not4_*(1.-pth->YHe)); /* helium_fullreio_fraction (checked before that denominator is non-zero) */
+    preio->reionization_parameters[preio->index_re_helium_fullreio_redshift] = pth->helium_fullreio_redshift; /* helium_fullreio_redshift */
+    preio->reionization_parameters[preio->index_re_helium_fullreio_width] = pth->helium_fullreio_width;    /* helium_fullreio_width */
+
+    class_test(preio->reionization_parameters[preio->index_re_reio_exponent]==0,
+               pth->error_message,
+               "stop to avoid division by zero");
+
+    class_test(preio->reionization_parameters[preio->index_re_reio_width]==0,
+               pth->error_message,
+               "stop to avoid division by zero");
+
+    class_test(preio->reionization_parameters[preio->index_re_helium_fullreio_width]==0,
+               pth->error_message,
+               "stop to avoid division by zero");
+
+    /** - --> if reionization redshift given as an input, initialize the remaining values*/
+
+    if (pth->reio_z_or_tau == reio_z) {
+
+      /* reionization redshift */
+      preio->reionization_parameters[preio->index_re_reio_redshift] = pth->z_reio;
+
+      /* infer starting redshift for hydrogen */
+
+      if (pth->reio_parametrization == reio_camb) {
+
+        preio->reionization_parameters[preio->index_re_reio_start] = preio->reionization_parameters[preio->index_re_reio_redshift]+
+          ppr->reionization_start_factor*pth->reionization_width;
+
+        /* if starting redshift for helium is larger, take that one (does not happen in realistic models) */
+        if (preio->reionization_parameters[preio->index_re_reio_start] <
+            pth->helium_fullreio_redshift+ppr->reionization_start_factor*pth->helium_fullreio_width)
+
+          preio->reionization_parameters[preio->index_re_reio_start] =
+            pth->helium_fullreio_redshift+ppr->reionization_start_factor*pth->helium_fullreio_width;
+
+      }
+      else {
+
+        preio->reionization_parameters[preio->index_re_reio_start] = pth->z_reio;
+      }
+
+      class_test(preio->reionization_parameters[preio->index_re_reio_start] > ppr->reionization_z_start_max,
+                 pth->error_message,
+                 "starting redshift for reionization > reionization_z_start_max = %e\n",ppr->reionization_z_start_max);
+
+    }
+
+    /** - --> if reionization optical depth given as an input, find reionization redshift by bisection and initialize the remaining values */
+    if (pth->reio_z_or_tau == reio_tau) {
+      z_sup = ppr->reionization_z_start_max-ppr->reionization_start_factor*pth->reionization_width;
+      class_test(z_sup < 0.,
+                 pth->error_message,
+                 "parameters are such that reionization cannot take place before today while starting after z_start_max; need to increase z_start_max");
+
+      /* maximum possible reionization redshift */
+      preio->reionization_parameters[preio->index_re_reio_redshift] = z_sup;
+      /* maximum possible starting redshift */
+      preio->reionization_parameters[preio->index_re_reio_start] = ppr->reionization_z_start_max;
+    }
+    break;
+
+    /** - (c) if reionization implemented with reio_bins_tanh scheme */
+  case reio_bins_tanh:
+
+    /* this algorithm requires at least two bin centers (i.e. at least 4 values in the (z,xe) array, counting the edges). */
+    class_test(pth->binned_reio_num<2,
+               pth->error_message,
+               "current implementation of binned reio requires at least two bin centers");
+
+    /* check that this input can be interpreted by the code */
+    for (bin=1; bin<pth->binned_reio_num; bin++) {
+      class_test(pth->binned_reio_z[bin-1]>=pth->binned_reio_z[bin],
+                 pth->error_message,
+                 "value of reionization bin centers z_i expected to be passed in growing order: %e, %e",
+                 pth->binned_reio_z[bin-1],
+                 pth->binned_reio_z[bin]);
+    }
+
+    /* the code will not only copy here the "bin centers" passed in input. It will add an initial and final value for (z,xe).
+       First, fill all entries except the first and the last */
+    for (bin=1; bin<preio->re_z_size-1; bin++) {
+      preio->reionization_parameters[preio->index_re_first_z+bin] = pth->binned_reio_z[bin-1];
+      preio->reionization_parameters[preio->index_re_first_xe+bin] = pth->binned_reio_xe[bin-1];
+    }
+
+    /* find largest value of z in the array. We choose to define it as z_(i_max) + 2*(the distance between z_(i_max) and z_(i_max-1)). E.g. if
+       the bins are in 10,12,14, the largest z will be 18. */
+    preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-1] =
+      preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-2]
+      +2.*(preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-2]
+           -preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-3]);
+
+    /* copy this value in reio_start */
+    preio->reionization_parameters[preio->index_re_reio_start] = preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-1];
+
+    /* check it's not too big */
+    class_test(preio->reionization_parameters[preio->index_re_reio_start] > ppr->reionization_z_start_max,
+               pth->error_message,
+               "starting redshift for reionization = %e, reionization_z_start_max = %e, you must change the binning or increase reionization_z_start_max",
+               preio->reionization_parameters[preio->index_re_reio_start],
+               ppr->reionization_z_start_max);
+
+    /* find smallest value of z in the array. We choose to define it as z_0 - (the distance between z_1 and z_0). E.g. if
+       the bins are in 10,12,14, the stop redshift will be 8. */
+    preio->reionization_parameters[preio->index_re_first_z] =
+      2.*preio->reionization_parameters[preio->index_re_first_z+1]
+      -preio->reionization_parameters[preio->index_re_first_z+2];
+
+    /* check it's not too small */
+    /* 6.06.2015: changed this test to simply imposing that the first z is at least zero */
+    /*
+      class_test(preio->reionization_parameters[preio->index_re_first_z] < 0,
+      pth->error_message,
+      "final redshift for reionization = %e, you must change the binning or redefine the way in which the code extrapolates below the first value of z_i",preio->reionization_parameters[preio->index_re_first_z]);
+    */
+    if (preio->reionization_parameters[preio->index_re_first_z] < 0) {
+      preio->reionization_parameters[preio->index_re_first_z] = 0.;
+    }
+
+    /* infer xe after reio */
+    preio->reionization_parameters[preio->index_re_first_xe] = 1. + pth->YHe/(_not4_*(1.-pth->YHe)); /* xe_after_reio: H + singly ionized He (note: segmentation fault impossible,
+                                                                                                        checked before that denominator is non-zero) */
+
+    /* pass step sharpness parameter */
+    preio->reionization_parameters[preio->index_re_step_sharpness] = pth->binned_reio_step_sharpness;
+    break;
+
+    /** - (d) if reionization implemented with reio_many_tanh scheme */
+  case reio_many_tanh:
+
+    /* this algorithm requires at least one jump centers */
+    class_test(pth->many_tanh_num<1,
+               pth->error_message,
+               "current implementation of reio_many_tanh requires at least one jump center");
+
+    /* check that z input can be interpreted by the code */
+    for (bin=1; bin<pth->many_tanh_num; bin++) {
+      class_test(pth->many_tanh_z[bin-1]>=pth->many_tanh_z[bin],
+                 pth->error_message,
+                 "value of reionization bin centers z_i expected to be passed in growing order: %e, %e",
+                 pth->many_tanh_z[bin-1],
+                 pth->many_tanh_z[bin]);
+
+    }
+
+    /* the code will not only copy here the "jump centers" passed in input. It will add an initial and final value for (z,xe).
+       First, fill all entries except the first and the last */
+    for (bin=1; bin<preio->re_z_size-1; bin++) {
+
+      preio->reionization_parameters[preio->index_re_first_z+bin] = pth->many_tanh_z[bin-1];
+
+      /* check that xe input can be interpreted by the code */
+      xe_input = pth->many_tanh_xe[bin-1];
+      if (xe_input >= 0.) {
+        xe_actual = xe_input;
+      }
+      //-1 means "after hydrogen + first helium recombination"
+      else if ((xe_input<-0.9) && (xe_input>-1.1)) {
+        xe_actual = 1. + pth->YHe/(_not4_*(1.-pth->YHe));
+      }
+      //-2 means "after hydrogen + second helium recombination"
+      else if ((xe_input<-1.9) && (xe_input>-2.1)) {
+        xe_actual = 1. + 2.*pth->YHe/(_not4_*(1.-pth->YHe));
+      }
+      //other negative number is nonsense
+      else {
+        class_stop(pth->error_message,
+                   "Your entry for many_tanh_xe[%d] is %e, this makes no sense (either positive or 0,-1,-2)",
+                   bin-1,pth->many_tanh_xe[bin-1]);
+      }
+
+      preio->reionization_parameters[preio->index_re_first_xe+bin] = xe_actual;
+    }
+
+    /* find largest value of z in the array. We choose to define it as z_(i_max) + ppr->reionization_start_factor*step_sharpness. */
+    preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-1] =
+      preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-2]
+      +ppr->reionization_start_factor*pth->many_tanh_width;
+
+    /* copy this value in reio_start */
+    preio->reionization_parameters[preio->index_re_reio_start] = preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-1];
+
+    /* check it's not too big */
+    class_test(preio->reionization_parameters[preio->index_re_reio_start] > ppr->reionization_z_start_max,
+               pth->error_message,
+               "starting redshift for reionization = %e, reionization_z_start_max = %e, you must change the binning or increase reionization_z_start_max",
+               preio->reionization_parameters[preio->index_re_reio_start],
+               ppr->reionization_z_start_max);
+
+    /* find smallest value of z in the array. We choose to define it as z_0 - ppr->reionization_start_factor*step_sharpness, but at least zero. */
+    preio->reionization_parameters[preio->index_re_first_z] =
+      preio->reionization_parameters[preio->index_re_first_z+1]
+      -ppr->reionization_start_factor*pth->many_tanh_width;
+
+    if (preio->reionization_parameters[preio->index_re_first_z] < 0) {
+      preio->reionization_parameters[preio->index_re_first_z] = 0.;
+    }
+
+    /* infer xe after reio */
+    preio->reionization_parameters[preio->index_re_first_xe] = preio->reionization_parameters[preio->index_re_first_xe+1];
+
+    /* if we want to model only hydrogen reionization and neglect both helium reionization */
+    //preio->reionization_parameters[preio->index_re_first_xe] = 1.;
+
+    /* if we want to model only hydrogen + first helium reionization and neglect second helium reionization */
+    //preio->reionization_parameters[preio->index_re_first_xe] = 1. + pth->YHe/(_not4_*(1.-pth->YHe));
+
+    /* if we want to model hydrogen + two helium reionization */
+    //preio->reionization_parameters[preio->index_re_first_xe] = 1. + 2.*pth->YHe/(_not4_*(1.-pth->YHe));
+
+    /* pass step sharpness parameter */
+    class_test(pth->many_tanh_width<=0,
+               pth->error_message,
+               "many_tanh_width must be strictly positive, you passed %e",
+               pth->many_tanh_width);
+
+    preio->reionization_parameters[preio->index_re_step_sharpness] = pth->many_tanh_width;
+    break;
+
+    /** - (e) if reionization implemented with reio_inter scheme */
+  case reio_inter:
+
+    /* this parametrization requires at least one point (z,xe) */
+    class_test(pth->reio_inter_num<1,
+               pth->error_message,
+               "current implementation of reio_inter requires at least one point (z,xe)");
+
+    /* this parametrization requires that the first z value is zero */
+    class_test(pth->reio_inter_z[0] != 0.,
+               pth->error_message,
+               "For reio_inter scheme, the first value of reio_inter_z[...]  should always be zero, you passed %e",
+               pth->reio_inter_z[0]);
+
+    /* check that z input can be interpreted by the code */
+    for (point=1; point<pth->reio_inter_num; point++) {
+      class_test(pth->reio_inter_z[point-1]>=pth->reio_inter_z[point],
+                 pth->error_message,
+                 "value of reionization bin centers z_i expected to be passed in growing order, unlike: %e, %e",
+                 pth->reio_inter_z[point-1],
+                 pth->reio_inter_z[point]);
+    }
+
+    /* this parametrization requires that the last x_i value is zero (the code will substitute it with the value that one would get in
+       absence of reionization, as compute by the recombination code) */
+    class_test(pth->reio_inter_xe[pth->reio_inter_num-1] != 0.,
+               pth->error_message,
+               "For reio_inter scheme, the last value of reio_inter_xe[...]  should always be zero, you passed %e",
+               pth->reio_inter_xe[pth->reio_inter_num-1]);
+
+    /* copy here the (z,xe) values passed in input. */
+    for (point=0; point<preio->re_z_size; point++) {
+
+      preio->reionization_parameters[preio->index_re_first_z+point] = pth->reio_inter_z[point];
+
+      /* check that xe input can be interpreted by the code */
+      xe_input = pth->reio_inter_xe[point];
+      if (xe_input >= 0.) {
+        xe_actual = xe_input;
+      }
+      //-1 means "after hydrogen + first helium recombination"
+      else if ((xe_input<-0.9) && (xe_input>-1.1)) {
+        xe_actual = 1. + pth->YHe/(_not4_*(1.-pth->YHe));
+      }
+      //-2 means "after hydrogen + second helium recombination"
+      else if ((xe_input<-1.9) && (xe_input>-2.1)) {
+        xe_actual = 1. + 2.*pth->YHe/(_not4_*(1.-pth->YHe));
+      }
+      //other negative number is nonsense
+      else {
+        class_stop(pth->error_message,
+                   "Your entry for reio_inter_xe[%d] is %e, this makes no sense (either positive or 0,-1,-2)",
+                   point,pth->reio_inter_xe[point]);
+      }
+
+      preio->reionization_parameters[preio->index_re_first_xe+point] = xe_actual;
+    }
+
+    /* copy highest redshift in reio_start */
+    preio->reionization_parameters[preio->index_re_reio_start] = preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-1];
+
+    /* check it's not too big */
+    class_test(preio->reionization_parameters[preio->index_re_reio_start] > ppr->reionization_z_start_max,
+               pth->error_message,
+               "starting redshift for reionization = %e, reionization_z_start_max = %e, you must change the binning or increase reionization_z_start_max",
+               preio->reionization_parameters[preio->index_re_reio_start],
+               ppr->reionization_z_start_max);
+    break;
+
+  default:
+    class_stop(pth->error_message,
+               "value of reio_parametrization=%d unclear",pth->reio_parametrization);
+    break;
+  }
+
+  return _SUCCESS_;
+
+}
+
+/**
+ * Integrate thermodynamics with your favorite recombination code. The default options are HyRec and RecFastCLASS.
+ *
+ * Integrate thermodynamics with HyRec or Recfast, allocate and fill part of the thermodynamics interpolation table (the rest is filled in
+ * thermodynamics_calculate_remaining_quantitie).
+ *
+ * Version modified by Daniel Meinert and Nils Schoeneberg to use the ndf15 evolver or any other evolver inherent to CLASS,
+ * modified again by Nils Schoeneberg to use wrappers.
+ *
+ * @param ppr      Input: pointer to precision structure
+ * @param pba      Input: pointer to background structure
+ * @param pth      Input/Output: pointer to thermodynamics structure where results are stored
+ * @param ptw      Input: pointer to thermo_workspace structure used to communicate with generic evolver
+ * @param pvecback Input: pointer to an allocated (but empty) vector of background variables
+ * @return the error status
+ *
+ * Integrate thermodynamics with your favorite recombination code. The default options are HyRec and Recfast.
+ */
+
+int thermodynamics_solve(
+                         struct precision * ppr,
+                         struct background * pba,
+                         struct thermodynamics * pth,
+                         struct thermo_workspace * ptw,
+                         double * pvecback
+                         ) {
+  /** Summary: */
+
+  /** - define local variables */
+  /* Index of current approximation scheme */
+  int index_ap;
+  /* number of time intervals of one approximation scheme */
+  int interval_number;
+  /* index running over such time intervals */
+  int index_interval;
+  /* edge of intervals where approximation scheme is uniform: z_ini, z_switch_1, ..., z_end */
+  double * interval_limit;
+  /* other z sampling variables */
+  int i;
+  double * mz_output;
+
+  /* contains all fixed parameters which should be passed to thermodynamics_derivs */
+  struct thermodynamics_parameters_and_workspace tpaw;
+
+  /* function pointer to ODE evolver and names of possible evolvers. */
+  extern int evolver_rk();
+  extern int evolver_ndf15();
+  int (*generic_evolver)() = evolver_ndf15;
+
+  /** - choose evolver */
+  switch (ppr->thermo_evolver) {
+  case rk:
+    generic_evolver = evolver_rk;
+    break;
+  case ndf15:
+    generic_evolver = evolver_ndf15;
+    break;
+  }
+
+  /** - define the fields of the 'thermodynamics parameter and workspace' structure */
+  tpaw.pba = pba;
+  tpaw.ppr = ppr;
+  tpaw.pth = pth;
+  tpaw.pvecback = pvecback;
+  tpaw.ptw = ptw;
+
+  /** - define time sampling: create a local array of minus z values
+      called mz (from mz=-zinitial growing towards mz=0) */
+
+  class_alloc(mz_output,pth->tt_size*sizeof(double), pth->error_message);
+  for (i=0; i < pth->tt_size; ++i) {
+    mz_output[i] = -pth->z_table[pth->tt_size-1-i];
+  }
+
+  /** - define intervals for each approximation scheme */
+
+  /* create the array of interval limits */
+  class_alloc(interval_limit,(ptw->ptdw->ap_size+1)*sizeof(double),pth->error_message);
+  /* fix interval number to number of approximations */
+  interval_number = ptw->ptdw->ap_size;
+  /* integration starts at z_ini and ends at z_end */
+  interval_limit[0]= mz_output[0];
+  interval_limit[ptw->ptdw->ap_size] = mz_output[ptw->Nz_tot-1];
+  /* each interval ends with the proper ending redshift of its approximation */
+  for (index_ap=0; index_ap < ptw->ptdw->ap_size-1; index_ap++) {
+    interval_limit[index_ap+1] = -ptw->ptdw->ap_z_limits[index_ap];
+  }
+
+  /** - loop over intervals over which approximation scheme is
+      uniform. For each interval: */
+
+  for (index_interval=0; index_interval<interval_number; index_interval++) {
+
+    /** - --> (a) fix current approximation scheme. */
+
+    ptw->ptdw->ap_current = index_interval;
+
+    /** - --> (b) define the vector of quantities to be integrated
+        over. If the current interval starts from the
+        initial time zinitial, fill the vector with initial
+        conditions. If it starts from an approximation
+        switching point, redistribute correctly the values
+        from the previous to the new vector. For both
+        RECFAST and HYREC, the vector consists of Tmat, x_H,
+        x_He, + others for exotic models */
+
+    class_call(thermodynamics_vector_init(ppr,
+                                          pba,
+                                          pth,
+                                          interval_limit[index_interval],
+                                          ptw),
+               pth->error_message,
+               pth->error_message);
+
+    /* find the value of last_index_back at z = - interval_limit[index_interval], in order to speed up
+       subsequent interpolations in thermodynamics_derivs */
+    class_call(background_at_z(pba,
+                               -interval_limit[index_interval],
+                               normal_info,
+                               inter_normal,
+                               &(ptw->last_index_back),
+                               pvecback),
+               pba->error_message,
+               pth->error_message);
+
+    /** - --> (c1) If we have the optical depth tau_reio as input the
+        last evolver step (reionization approximation) is done
+        separately in a loop, to find the approximate redshift of
+        reionization given the input of tau_reio, using a bisection
+        method. This is similar to the general CLASS shooting method,
+        but doing this step here is more advantageous since we only
+        need to do repeatedly the last approximation step of the
+        integration, instead of the full background and thermodynamics
+        module */
+    if ((pth->reio_z_or_tau == reio_tau) && (index_interval == ptw->ptdw->index_ap_reio)) {
+
+      class_call(thermodynamics_reionization_evolve_with_tau(&tpaw,
+                                                             interval_limit[index_interval],
+                                                             interval_limit[index_interval+1],
+                                                             mz_output,
+                                                             pth->tt_size),
+                 pth->error_message,
+                 pth->error_message);
+    }
+
+    /** --> (c2) otherwise, just integrate quantities over the current interval. */
+    else{
+
+      class_call(generic_evolver(thermodynamics_derivs,
+                                 interval_limit[index_interval],
+                                 interval_limit[index_interval+1],
+                                 ptw->ptdw->ptv->y,
+                                 ptw->ptdw->ptv->used_in_output,
+                                 ptw->ptdw->ptv->ti_size,
+                                 &tpaw,
+                                 ppr->tol_thermo_integration,
+                                 ppr->smallest_allowed_variation,
+                                 thermodynamics_timescale,  // timescale
+                                 ppr->thermo_integration_stepsize, // stepsize = this number * timescale
+                                 mz_output, // values of z for output
+                                 pth->tt_size, // size of previous array
+                                 thermodynamics_sources, // function for output
+                                 NULL, // print variables
+                                 pth->error_message),
+                 pth->error_message,
+                 pth->error_message);
+    }
+
+  }
+
+  /** - Compute reionization optical depth, if not supplied as input parameter */
+  if (pth->reio_z_or_tau == reio_z) {
+
+    class_call(thermodynamics_reionization_get_tau(ppr,
+                                                   pba,
+                                                   pth,
+                                                   ptw),
+               pth->error_message,
+               pth->error_message);
+
+    pth->tau_reio=ptw->reionization_optical_depth;
+
+  }
+
+  /** - free quantities allocated at the beginning of the routine */
+  if (ptw->ptdw->ap_size != 0) {
+    class_call(thermodynamics_vector_free(ptw->ptdw->ptv),
+               pth->error_message,
+               pth->error_message);
+  }
+
+  free(interval_limit);
+  free(mz_output);
+
+  return _SUCCESS_;
+
+}
+
+/**
+ * Calculate those thermodynamics quantities which are not inside of
+ * the thermodynamics table already.
+ *
+ * @param ppr        Input: pointer to precision structure
+ * @param pba        Input: pointer to background structure
+ * @param pth        Input/Output: pointer to initialized thermodynamics structure
+ * @param pvecback   Input: pointer to some allocated pvecback
+ * @return the error status
+ */
+
+int thermodynamics_calculate_remaining_quantities(
+                                                  struct precision * ppr,
+                                                  struct background * pba,
+                                                  struct thermodynamics* pth,
+                                                  double* pvecback
+                                                  ) {
+
+  /** Summary: */
+
+  /* The temporary quantities stored in columns ddkappa and dddkappa will not be used anymore, so they can and WILL be overwritten by other
+     intermediate steps of other computations */
+
+  class_call(thermodynamics_calculate_conformal_drag_time(pba,pth,pvecback),
+             pth->error_message,
+             pth->error_message);
+
+  if (pth->compute_damping_scale == _TRUE_) {
+    class_call(thermodynamics_calculate_damping_scale(pba,pth,pvecback),
+               pth->error_message,
+               pth->error_message);
+  }
+
+  class_call(thermodynamics_calculate_opticals(ppr,pth),
+             pth->error_message,
+             pth->error_message);
+
+  /* Please note, this function has to be before the spline_table_lines to generate the correct d2thdz2_table */
+  if (pba->has_idr == _TRUE_ || pth->has_idm_b == _TRUE_) {
+    class_call(thermodynamics_calculate_idm_and_idr_quantities(ppr,pba,pth,pvecback),
+               pth->error_message,
+               pth->error_message);
+  }
+
+  /** - fill tables of second derivatives with respect to z (in view of spline interpolation) */
+  class_call(array_spline_table_lines(pth->z_table,
+                                      pth->tt_size,
+                                      pth->thermodynamics_table,
+                                      pth->th_size,
+                                      pth->d2thermodynamics_dz2_table,
+                                      _SPLINE_EST_DERIV_,
+                                      pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  class_call(thermodynamics_calculate_recombination_quantities(ppr,pba,pth,pvecback),
+             pth->error_message,
+             pth->error_message);
+
+  class_call(thermodynamics_calculate_drag_quantities(ppr,pba,pth,pvecback),
+             pth->error_message,
+             pth->error_message);
+
+
+  return _SUCCESS_;
+}
+
+/**
+ * In verbose mode, print basic information on the thermal history
+ *
+ * @param pba   Input: pointer to background structure
+ * @param pth   Input/Output: pointer to initialized thermodynamics structure
+ * @return the error status
+ */
+
+int thermodynamics_output_summary(
+                                  struct background* pba,
+                                  struct thermodynamics* pth
+                                  ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  double tau_reio;
+
+  printf(" -> recombination (maximum of visibility function) at z = %f\n",pth->z_rec);
+  printf("    corresponding to conformal time = %f Mpc\n",pth->tau_rec);
+  printf("    with comoving sound horizon = %f Mpc\n",pth->rs_rec);
+  printf("    angular diameter distance = %f Mpc\n",pth->da_rec);
+  printf("    sound horizon angle 100*theta_s = %f\n",100.*pth->rs_rec/pth->ra_rec);
+  if (pth->compute_damping_scale == _TRUE_) {
+    printf("    comoving photon damping scale = %f Mpc\n",pth->rd_rec);
+    printf("    comoving damping wavenumber k_d = %f 1/Mpc\n",2.*_PI_/pth->rd_rec);
+  }
+  printf("    Thomson optical depth crosses one at z_* = %f\n",pth->z_star);
+  printf("    giving an angle 100*theta_* = %f\n",100.*pth->rs_star/pth->ra_star);
+  printf(" -> baryon drag stops at z = %f\n",pth->z_d);
+  printf("    corresponding to conformal time = %f Mpc\n",pth->tau_d);
+  printf("    with comoving sound horizon rs = %f Mpc\n",pth->rs_d);
+
+  switch (pth->reio_parametrization) {
+
+  case reio_none:
+    /* the information returned by this line could be interesting when
+       using reio_none + exotic energy ionjection, since there could
+       still be a global minimum of x_e(z) */
+    printf(" -> no reionization requested, optical depth = %f\n",pth->tau_reio);
+    break;
+
+  case reio_camb:
+  case reio_half_tanh:
+    switch (pth->reio_z_or_tau) {
+    case reio_tau:
+      printf(" -> reionization at z = %f\n",pth->z_reio);
+      break;
+    case reio_z:
+      printf(" -> reionization with optical depth = %f\n",pth->tau_reio);
+      break;
+    }
+    class_call(background_tau_of_z(pba,pth->z_reio,&tau_reio),
+               pba->error_message,
+               pth->error_message);
+    printf("    corresponding to conformal time = %f Mpc\n",tau_reio);
+    break;
+
+  case reio_bins_tanh:
+    printf(" -> binned reionization gives optical depth = %f\n",pth->tau_reio);
+    break;
+
+  case reio_many_tanh:
+    printf(" -> many-step reionization gives optical depth = %f\n",pth->tau_reio);
+    break;
+
+  case reio_inter:
+    printf(" -> interpolated reionization history gives optical depth = %f\n",pth->tau_reio);
+    break;
+
+  default:
+    class_stop(pth->error_message,
+               "value of reio_parametrization=%d unclear",pth->reio_parametrization);
+    break;
+  }
+
+  if (pth->thermodynamics_verbose > 1)
+    printf(" -> free-streaming approximation can be turned on as soon as tau=%g Mpc\n",pth->tau_free_streaming);
+  if ((pba->has_idr == _TRUE_)&&(pth->thermodynamics_verbose > 1))
+    printf(" -> dark free-streaming approximation can be turned on as soon as tau=%g Mpc\n",pth->tau_idr_free_streaming);
+
+  return _SUCCESS_;
+}
+
+/**
+ * Free the thermo_workspace structure (with the exception of the thermo_vector '->ptv' field, which is freed separately in
+ * thermo_vector_free).
+ *
+ * @param pth        Input: pointer to initialized thermodynamics structure
+ * @param ptw        Input: pointer to perturbations_workspace structure to be freed
+ * @return the error status
+ */
+int thermodynamics_workspace_free(
+                                  struct thermodynamics* pth,
+                                  struct thermo_workspace * ptw
+                                  ) {
+
+  free(ptw->ptdw->ap_z_limits);
+  free(ptw->ptdw->ap_z_limits_delta);
+
+  switch (pth->recombination) {
+
+  case hyrec:
+    class_call(thermodynamics_hyrec_free(ptw->ptdw->phyrec),
+               ptw->ptdw->phyrec->error_message,
+               pth->error_message);
+    free(ptw->ptdw->phyrec);
+    break;
+
+  case recfast:
+    free(ptw->ptdw->precfast);
+    break;
+  }
+
+  free(ptw->ptrp->reionization_parameters);
+  free(ptw->ptdw);
+  free(ptw->ptrp);
+
+  free(ptw);
+
+  return _SUCCESS_;
+}
+
+/**
+ * Initialize the field '->ptv' of a thermo_diffeq_workspace structure, which is a thermo_vector structure. This structure contains indices
+ * and values of all quantities which need to be integrated with respect to time (and only them: quantities fixed analytically or obeying
+ * constraint equations are NOT included in this vector).
+ *
+ * The routine sets and allocates the vector y, dy and used_in_output with the right size depending on the current approximation scheme
+ * stored in the workspace. Moreover the initial conditions for each approximation scheme are calculated and set correctly.
+ *
+ *
+ * @param ppr        Input: pointer to precision structure
+ * @param pba        Input: pointer to background structure
+ * @param pth        Input: pointer to the thermodynamics structure
+ * @param mz         Input: negative redshift
+ * @param ptw        Input/Output: pointer to thermodynamics workspace
+ *
+ * @return the error status
+ */
+
+int thermodynamics_vector_init(
+                               struct precision * ppr,
+                               struct background * pba,
+                               struct thermodynamics * pth,
+                               double mz,
+                               struct thermo_workspace * ptw
+                               ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  int index_ti;
+  /* ptdw->ptv unallocated if ap_current == index_ap_brec, allocated and filled otherwise */
+  struct thermo_vector * ptv;
+  struct thermo_diffeq_workspace * ptdw = ptw->ptdw;
+  double z;
+
+  class_alloc(ptv,sizeof(struct thermo_vector),pth->error_message);
+
+  /* mz = Minus z is inverted*/
+  z = -mz;
+
+  /* Start from no component */
+  index_ti = 0;
+
+  /* Add common indices (Have to be added before) */
+  class_define_index(ptv->index_ti_D_Tmat,_TRUE_,index_ti,1);
+
+  /* Add all components that should be evolved */
+  if (ptdw->ap_current == ptdw->index_ap_brec) {
+    /* Nothing else to add */
+  }
+  else if (ptdw->ap_current == ptdw->index_ap_He1) {
+    /* Nothing else to add */
+  }
+  else if (ptdw->ap_current == ptdw->index_ap_He1f) {
+    /* Nothing else to add */
+  }
+  else if (ptdw->ap_current == ptdw->index_ap_He2) {
+    /* Nothing else to add */
+  }
+  else if (ptdw->ap_current == ptdw->index_ap_H) {
+    class_define_index(ptv->index_ti_x_He,_TRUE_,index_ti,1);
+  }
+  else if (ptdw->ap_current == ptdw->index_ap_frec) {
+    class_define_index(ptv->index_ti_x_He,_TRUE_,index_ti,1);
+    class_define_index(ptv->index_ti_x_H,_TRUE_,index_ti,1);
+  }
+  else if (ptdw->ap_current == ptdw->index_ap_reio) {
+    class_define_index(ptv->index_ti_x_He,_TRUE_,index_ti,1);
+    class_define_index(ptv->index_ti_x_H,_TRUE_,index_ti,1);
+  }
+
+  /* Only in the case where we in idm case but not idm TCA define T_idm */
+  if (pba->has_idm == _TRUE_){
+    class_define_index(ptv->index_ti_T_idm,(ptw->has_ap_idmtca == _FALSE_ || ptdw->ap_current != ptdw->index_ap_idmtca),index_ti,1);
+  }
+
+  /* We have now obtained the full size */
+  ptv->ti_size = index_ti;
+
+  /* Allocate all arrays used during the evolution */
+  class_calloc(ptv->y,ptv->ti_size,sizeof(double),pth->error_message);
+  class_alloc(ptv->dy,ptv->ti_size*sizeof(double),pth->error_message);
+  class_alloc(ptv->used_in_output,ptv->ti_size*sizeof(int),pth->error_message);
+
+  for (index_ti=0; index_ti<ptv->ti_size; index_ti++) {
+    ptv->used_in_output[index_ti] = _TRUE_;
+  }
+
+  if (ptw->has_ap_idmtca == _TRUE_ && ptdw->ap_current == ptdw->index_ap_idmtca) {
+    /* Store Tmat in workspace for later use */
+    ptdw->Tmat = ptw->Tcmb*(1.+z);
+
+    /* Set the new vector and its indices */
+    ptdw->ptv = ptv;
+
+    ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat] = 0.;
+
+    /* set other initial conditions */
+    ptdw->require_H = _FALSE_;
+    ptdw->require_He = _FALSE_;
+  }
+  else if (ptw->has_ap_idmtca == _TRUE_ && ptdw->ap_current == ptdw->index_ap_brec) {
+    /* Copy old values */
+    ptv->y[ptv->index_ti_D_Tmat] = ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat];
+    ptv->dy[ptv->index_ti_D_Tmat] = ptdw->ptv->dy[ptdw->ptv->index_ti_D_Tmat];
+
+    /* Set initial conditions */
+    ptv->y[ptv->index_ti_T_idm] = pba->T_cmb * (1.+z);
+    /* If we instead have idr tight coupling, we choose instead */
+    if ((pth->has_idm_dr == _TRUE_) && pth->n_index_idm_dr > 0)
+      ptv->y[ptv->index_ti_T_idm] = pba->T_idr * (1.+z);
+
+    /* Free the old vector and its indices */
+    class_call(thermodynamics_vector_free(ptdw->ptv),
+               pth->error_message,
+               pth->error_message);
+
+    /* Copy the new vector into the position of the old one */
+    ptdw->ptv = ptv;
+    ptdw->require_H = _FALSE_;
+    ptdw->require_He = _FALSE_;
+  }
+  else if (ptdw->ap_current == ptdw->index_ap_brec) {
+
+    /* Store Tmat in workspace for later use */
+    ptdw->Tmat = ptw->Tcmb*(1.+z);
+
+    /* Set the new vector and its indices */
+    ptdw->ptv = ptv;
+
+    ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat] = 0.;
+
+    ptdw->require_H = _FALSE_;
+    ptdw->require_He = _FALSE_;
+
+    /* Set idm initial temperature if not coupled */
+    if (pba->has_idm == _TRUE_) {
+      class_call(thermodynamics_idm_initial_temperature(pba,
+                                                        pth,
+                                                        z,
+                                                        ptdw),
+                 pth->error_message,
+                 pth->error_message);
+      ptv->y[ptv->index_ti_T_idm] = ptdw->T_idm;
+    }
+  }
+  /* - in this scheme we start to evolve Helium and thus need to set its initial condition via the analytic function */
+  else if (ptdw->ap_current == ptdw->index_ap_H) {
+    /* Store Tmat in workspace for later use */
+    ptdw->Tmat = ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat] + ptw->Tcmb*(1.+z);
+
+    /* Obtain initial contents of new vector analytically, especially x_He */
+    class_call(thermodynamics_ionization_fractions(z,ptdw->ptv->y,pba,pth,ptw,ptdw->ap_current-1),
+               pth->error_message,
+               pth->error_message);
+
+    /* Set the new vector and its indices */
+    ptv->y[ptv->index_ti_D_Tmat] = ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat];
+    ptv->y[ptv->index_ti_x_He] = ptdw->x_He;
+    if (pba->has_idm == _TRUE_)
+      ptv->y[ptv->index_ti_T_idm] = ptdw->ptv->y[ptdw->ptv->index_ti_T_idm];
+
+    /* Free the old vector and its indices */
+    class_call(thermodynamics_vector_free(ptdw->ptv),
+               pth->error_message,
+               pth->error_message);
+
+    /* Copy the new vector into the position of the old one*/
+    ptdw->ptv = ptv;
+
+    ptdw->require_H = _FALSE_;
+    ptdw->require_He = _TRUE_;
+  }
+  /* - in the scheme of full recombination (=frec) we evolve all quantities and thus need to set their initial conditions.
+     Tmat and x_He are solely taken from the previous scheme, x_H is set via the analytic function */
+  else if (ptdw->ap_current == ptdw->index_ap_frec) {
+    /* Store Tmat in workspace for later use */
+    ptdw->Tmat = ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat] + ptw->Tcmb*(1.+z);
+
+    /* Obtain initial contents of new vector analytically, especially x_H */
+    class_call(thermodynamics_ionization_fractions(z,ptdw->ptv->y,pba,pth,ptw,ptdw->ap_current-1),
+               pth->error_message,
+               pth->error_message);
+
+    /* Set the new vector and its indices */
+    ptv->y[ptv->index_ti_D_Tmat] = ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat];
+    ptv->y[ptv->index_ti_x_H] = ptdw->x_H;
+    ptv->y[ptv->index_ti_x_He] = ptdw->ptv->y[ptdw->ptv->index_ti_x_He];
+    if (pba->has_idm == _TRUE_)
+      ptv->y[ptv->index_ti_T_idm] = ptdw->ptv->y[ptdw->ptv->index_ti_T_idm];
+
+    /* Free the old vector and its indices */
+    class_call(thermodynamics_vector_free(ptdw->ptv),
+               pth->error_message,
+               pth->error_message);
+
+    /* Copy the new vector into the position of the old one*/
+
+    ptdw->ptv = ptv;
+
+    ptdw->require_H = _TRUE_;
+    ptdw->require_He = _TRUE_;
+  }
+  /* - during reionization we continue to evolve all quantities. Now all three intial conditions are just taken from the previous scheme */
+  else if (ptdw->ap_current == ptdw->index_ap_reio) {
+
+    /* Set the new vector and its indices */
+    ptv->y[ptv->index_ti_D_Tmat] = ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat];
+    ptv->y[ptv->index_ti_x_H] = ptdw->ptv->y[ptdw->ptv->index_ti_x_H];
+    ptv->y[ptv->index_ti_x_He] = ptdw->ptv->y[ptdw->ptv->index_ti_x_He];
+    if (pba->has_idm == _TRUE_)
+      ptv->y[ptv->index_ti_T_idm] = ptdw->ptv->y[ptdw->ptv->index_ti_T_idm];
+
+    /* Free the old vector and its indices */
+    class_call(thermodynamics_vector_free(ptdw->ptv),
+               pth->error_message,
+               pth->error_message);
+
+    /* Copy the new vector into the position of the old one*/
+
+    ptdw->ptv = ptv;
+
+    ptdw->require_H = _TRUE_;
+    ptdw->require_He = _TRUE_;
+  }
+  /* - in all other approximations we only evolve Tmat and set its initial conditions from the previous scheme */
+  else{
+    /* Store Tmat in workspace for later use */
+    ptdw->Tmat = ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat] + ptw->Tcmb*(1.+z);
+
+    /* Set the new vector and its indices */
+    ptv->y[ptv->index_ti_D_Tmat] = ptdw->ptv->y[ptdw->ptv->index_ti_D_Tmat];
+    if (pba->has_idm == _TRUE_)
+      ptv->y[ptv->index_ti_T_idm] = ptdw->ptv->y[ptdw->ptv->index_ti_T_idm];
+
+    /* Free the old vector and its indices */
+    class_call(thermodynamics_vector_free(ptdw->ptv),
+               pth->error_message,
+               pth->error_message);
+
+    /* Copy the new vector into the position of the old one*/
+    ptdw->ptv = ptv;
+
+    ptdw->require_H = _FALSE_;
+    ptdw->require_He = _FALSE_;
+  }
+
+  return _SUCCESS_;
+}
+
+/**
+ * If the input for reionization is tau_reio, thermodynamics_solve()
+ * calls this function instead of the evolver for dealing with the
+ * last era (the reionization era).
+ *
+ * Instead of computing the evolution of quantities during
+ * reionization for a fixed z_reio, as the evolver would do, this
+ * function finds z_reio by bisection. First we make an initial guess
+ * for z_reio with reionization_z_start_max and then find a z_reio
+ * which leads to the given tau_reio (in the range of tolerance
+ * reionization_optical_depth_tol).
+ *
+ * @param ptpaw      Input: pointer to parameters and workspace
+ * @param mz_ini     Input: initial redshift
+ * @param mz_end     Input: ending redshift
+ * @param mz_output  Input: pointer to redshift array at which output should be written
+ * @param mz_size    Input: number of redshift values in this array
+ * @return the error status
+ */
+
+int thermodynamics_reionization_evolve_with_tau(
+                                                struct thermodynamics_parameters_and_workspace * ptpaw,
+                                                double mz_ini,
+                                                double mz_end,
+                                                double * mz_output,
+                                                int mz_size
+                                                ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  int counter;
+  double z_sup,z_mid,z_inf;
+  double tau_sup,tau_mid,tau_inf;
+
+  int index_ti;
+  int last_index_back_mz_ini;
+
+  struct precision * ppr;
+  struct background * pba;
+  struct thermodynamics * pth;
+  struct thermo_workspace * ptw;
+
+  /* function pointer to ODE evolver and names of possible evolvers */
+  extern int evolver_rk();
+  extern int evolver_ndf15();
+  int (*generic_evolver)() = evolver_ndf15;
+
+  /* pointers towards two thermo vector stuctures (see below) */
+
+  struct thermo_vector * ptvs; // Vector for storing the initial conditions
+  struct thermo_vector * ptv; // Temporary vector as workspace
+
+  /** - Remame fields to avoid heavy notations */
+
+  ppr = ptpaw->ppr;
+  pba = ptpaw->pba;
+  pth = ptpaw->pth;
+  ptw = ptpaw->ptw;
+
+  /** - Choose evolver */
+
+  switch (ppr->thermo_evolver) {
+  case rk:
+    generic_evolver = evolver_rk;
+    break;
+  case ndf15:
+    generic_evolver = evolver_ndf15;
+    break;
+  }
+
+  /** - ptvs will be a pointer towards the same thermo vector that was
+      used in the previous approximation schemes; it contains values
+      that will serve here to set initial conditions. */
+
+  ptvs = ptw->ptdw->ptv;
+
+  /** - ptv is a pointer towards a whole new thermo vector used for
+      the calculations in the bisection, that we must allocate and
+      initialize */
+
+  class_alloc(ptv,sizeof(struct thermo_vector),pth->error_message);
+
+  /* allocate vector indices dynamically */
+  index_ti = 0;
+  class_define_index(ptv->index_ti_D_Tmat,_TRUE_,index_ti,1);
+  class_define_index(ptv->index_ti_x_He,_TRUE_,index_ti,1);
+  class_define_index(ptv->index_ti_x_H,_TRUE_,index_ti,1);
+  class_define_index(ptv->index_ti_T_idm,pba->has_idm,index_ti,1);
+  ptv->ti_size = index_ti;
+
+  /* Allocate all arrays used during the evolution */
+  class_calloc(ptv->y,ptv->ti_size,sizeof(double),pth->error_message);
+  class_alloc(ptv->dy,ptv->ti_size*sizeof(double),pth->error_message);
+  class_alloc(ptv->used_in_output,ptv->ti_size*sizeof(int),pth->error_message);
+
+  for (index_ti=0; index_ti<ptv->ti_size; index_ti++) {
+    ptv->used_in_output[index_ti] = _TRUE_;
+  }
+
+  /** - Initialize the values of the temporary vector */
+  ptv->y[ptv->index_ti_D_Tmat] = ptvs->y[ptvs->index_ti_D_Tmat];
+  ptv->y[ptv->index_ti_x_H] = ptvs->y[ptvs->index_ti_x_H];
+  ptv->y[ptv->index_ti_x_He] = ptvs->y[ptvs->index_ti_x_He];
+  if (pba->has_idm == _TRUE_)
+    ptv->y[ptv->index_ti_T_idm] = ptvs->y[ptvs->index_ti_T_idm];
+
+  ptw->ptdw->ptv = ptv;
+
+  /** - Evolve quantities through reionization assuming upper value of z_reio */
+
+  z_sup = ppr->reionization_z_start_max-ppr->reionization_start_factor*pth->reionization_width;
+  class_test(z_sup < 0.,
+             pth->error_message,
+             "parameters are such that reionization cannot take place before today while starting after z_start_max; need to increase z_start_max");
+
+  /* maximum possible reionization redshift */
+  ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_redshift] = z_sup;
+  /* maximum possible starting redshift */
+  switch (pth->reio_parametrization) {
+  case reio_camb:
+    ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] = ppr->reionization_z_start_max;
+    break;
+  case reio_half_tanh:
+    ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] = z_sup;
+    break;
+  default:
+    class_stop(pth->error_message,"Should not be there: tau_reio acan be an input only for reio_camb and reio_half_tanh");
+    break;
+  }
+
+  /* ptaw->ptw->last_index_back has been properly set according to the
+     redshift z = -mz_inbi, we should keep memory of it */
+  last_index_back_mz_ini = ptpaw->ptw->last_index_back;
+
+  /* Calculate a first ionization history at upper limit */
+  class_call(generic_evolver(thermodynamics_derivs,
+                             mz_ini,
+                             mz_end,
+                             ptv->y,
+                             ptv->used_in_output,
+                             ptv->ti_size,
+                             ptpaw,
+                             ppr->tol_thermo_integration,
+                             ppr->smallest_allowed_variation,
+                             thermodynamics_timescale,  // timescale
+                             ppr->thermo_integration_stepsize, // stepsize
+                             mz_output, // values of z for output
+                             mz_size, // size of previous array
+                             thermodynamics_sources, // function for output
+                             NULL, // print variables
+                             pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /* infer corresponding tau_reio */
+  class_call(thermodynamics_reionization_get_tau(ppr,
+                                                 pba,
+                                                 pth,
+                                                 ptw),
+             pth->error_message,
+             pth->error_message);
+
+  tau_sup=ptw->reionization_optical_depth;
+
+  class_test(tau_sup < pth->tau_reio,
+             pth->error_message,
+             "parameters are such that reionization cannot start after z_start_max");
+
+  /** - Restore initial conditions */
+  ptv->y[ptv->index_ti_D_Tmat] = ptvs->y[ptvs->index_ti_D_Tmat];
+  ptv->y[ptv->index_ti_x_H] = ptvs->y[ptvs->index_ti_x_H];
+  ptv->y[ptv->index_ti_x_He] = ptvs->y[ptvs->index_ti_x_He];
+  if (pba->has_idm == _TRUE_)
+    ptv->y[ptv->index_ti_T_idm] = ptvs->y[ptvs->index_ti_T_idm];
+
+  /** - Evolve quantities through reionization assuming lower value of z_reio */
+
+  z_inf = 0.;
+
+  /* minimum possible reionization redshift */
+  ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_redshift] = z_inf;
+  /* minimum possible starting redshift */
+  switch (pth->reio_parametrization) {
+  case reio_camb:
+    ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] = ppr->reionization_start_factor*pth->reionization_width;
+    if (ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] < pth->helium_fullreio_redshift+ppr->reionization_start_factor*pth->helium_fullreio_width) {
+      ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] = pth->helium_fullreio_redshift+ppr->reionization_start_factor*pth->helium_fullreio_width;
+    }
+  case reio_half_tanh:
+    ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] = z_inf;
+    break;
+  default:
+    class_stop(pth->error_message,"Should not be there: tau_reio acan be an input only for reio_camb and reio_half_tanh");
+    break;
+  }
+
+  /* reset ptaw->ptw->last_index_back to match the redshift z = -mz_inbi */
+  ptpaw->ptw->last_index_back = last_index_back_mz_ini;
+
+  /* Calculate a second ionization history at lower limit */
+  class_call(generic_evolver(thermodynamics_derivs,
+                             mz_ini,
+                             mz_end,
+                             ptv->y,
+                             ptv->used_in_output,
+                             ptv->ti_size,
+                             ptpaw,
+                             ppr->tol_thermo_integration,
+                             ppr->smallest_allowed_variation,
+                             thermodynamics_timescale,  // timescale
+                             ppr->thermo_integration_stepsize, // stepsize
+                             mz_output, // values of z for output
+                             mz_size, // size of previous array
+                             thermodynamics_sources, // function for output
+                             NULL, // print variables
+                             pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /* infer corresponding tau_reio */
+  class_call(thermodynamics_reionization_get_tau(ppr,
+                                                 pba,
+                                                 pth,
+                                                 ptw),
+             pth->error_message,
+             pth->error_message);
+
+  tau_inf=ptw->reionization_optical_depth;
+
+  class_test(tau_inf > pth->tau_reio,
+             pth->error_message,
+             "CLASS cannot reach the low value of tau_reio that was selected, even when setting z_reio as low as 0.\nThis means that some additional physical component is requiring some minimal tau_reio_min = %.10e.\nThis is usually caused by strong energy injections or other modifications of the x_e(z) behaviour.",tau_inf);
+
+  /** - Restore initial conditions */
+  ptv->y[ptv->index_ti_D_Tmat] = ptvs->y[ptvs->index_ti_D_Tmat];
+  ptv->y[ptv->index_ti_x_H] = ptvs->y[ptvs->index_ti_x_H];
+  ptv->y[ptv->index_ti_x_He] = ptvs->y[ptvs->index_ti_x_He];
+  if (pba->has_idm == _TRUE_)
+    ptv->y[ptv->index_ti_T_idm] = ptvs->y[ptvs->index_ti_T_idm];
+
+  /** - Evolve quantities through reionization, trying intermediate values of z_reio by bisection */
+  counter=0;
+  while ((tau_sup-tau_inf) > pth->tau_reio * ppr->reionization_optical_depth_tol) {
+    z_mid=0.5*(z_sup+z_inf);
+
+    /* reionization redshift */
+    ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_redshift] = z_mid;
+
+    /* infer starting redshift for hydrogen (Note, that this is only the start of the ADDITIONAL tanh re-ionization function)*/
+    switch (pth->reio_parametrization) {
+    case reio_camb:
+      ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] = ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_redshift]+ppr->reionization_start_factor*pth->reionization_width;
+      /* if starting redshift for helium is larger, take that one
+       *    (does not happen in realistic models) */
+      if (ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] < pth->helium_fullreio_redshift+ppr->reionization_start_factor*pth->helium_fullreio_width) {
+        ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] = pth->helium_fullreio_redshift+ppr->reionization_start_factor*pth->helium_fullreio_width;
+      }
+      break;
+    case reio_half_tanh:
+      ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] = z_mid;
+      break;
+    default:
+      class_stop(pth->error_message,"Should not be there: tau_reio acan be an input only for reio_camb and reio_half_tanh");
+      break;
+    }
+
+    class_test(ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_start] > ppr->reionization_z_start_max,
+               pth->error_message,
+               "starting redshift for reionization > reionization_z_start_max = %e",ppr->reionization_z_start_max);
+
+    /* reset ptaw->ptw->last_index_back to match the redshift z = -mz_inbi */
+    ptpaw->ptw->last_index_back = last_index_back_mz_ini;
+
+    /* Compute a new ionization history */
+    class_call(generic_evolver(thermodynamics_derivs,
+                               mz_ini,
+                               mz_end,
+                               ptv->y,
+                               ptv->used_in_output,
+                               ptv->ti_size,
+                               ptpaw,
+                               ppr->tol_thermo_integration,
+                               ppr->smallest_allowed_variation,
+                               thermodynamics_timescale,  // timescale
+                               ppr->thermo_integration_stepsize, // stepsize
+                               mz_output, // values of z for output
+                               mz_size, // size of previous array
+                               thermodynamics_sources, // function for output
+                               NULL, // print variables
+                               pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /* infer corresponding tau_reio */
+    class_call(thermodynamics_reionization_get_tau(ppr,
+                                                   pba,
+                                                   pth,
+                                                   ptw),
+               pth->error_message,
+               pth->error_message);
+
+    tau_mid=ptw->reionization_optical_depth;
+
+    /* trial */
+    if (tau_mid > pth->tau_reio) {
+      z_sup=z_mid;
+      tau_sup=tau_mid;
+    }
+    else {
+      z_inf=z_mid;
+      tau_inf=tau_mid;
+    }
+
+    /* Restore initial conditions */
+    ptv->y[ptv->index_ti_D_Tmat] = ptvs->y[ptvs->index_ti_D_Tmat];
+    ptv->y[ptv->index_ti_x_H] = ptvs->y[ptvs->index_ti_x_H];
+    ptv->y[ptv->index_ti_x_He] = ptvs->y[ptvs->index_ti_x_He];
+    if (pba->has_idm == _TRUE_)
+      ptv->y[ptv->index_ti_T_idm] = ptvs->y[ptvs->index_ti_T_idm];
+
+    /* counter to avoid infinite loop */
+    counter++;
+    class_test(counter > _MAX_IT_,
+               pth->error_message,
+               "while searching for reionization_optical_depth, maximum number of iterations exceeded");
+  }
+
+  /** - Store the ionization redshift in the thermodynamics structure */
+  pth->z_reio = ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_reio_redshift];
+
+  /** - Free tempeoraty thermo vector */
+  class_call(thermodynamics_vector_free(ptv),
+             pth->error_message,
+             pth->error_message);
+
+  /* point ptw->ptdw->ptv to same location as when entering the function */
+  ptw->ptdw->ptv = ptvs;
+
+  return _SUCCESS_;
+}
+
+/**
+ * Subroutine evaluating the derivative of thermodynamical quantities
+ * with respect to negative redshift mz=-z.
+ *
+ * Automatically recognizes the current approximation interval and
+ * computes the derivatives for this interval of the vector y, which
+ * contains (Tmat, x_H, x_He) + others for exotic models.
+ *
+ * Derivatives are obtained either by calling either HyRec 2020 (Lee and Ali-Haimoud 2020, 2007.14114)
+ * or RecFastCLASS (that is, RecFast version 1.5, modified by Daniel Meinert and Nils Schoeneberg for
+ * better precision and smoothness at early times). See credits and licences in the wrappers (in external/...)
+ *
+ * This is one of the few functions in the code which are passed to the generic_evolver routine.  Since generic_evolver
+ * should work with functions passed from various modules, the format of the arguments is a bit special:
+ *
+ * - fixed parameters and workspaces are passed through a generic pointer. Here, this pointer contains the precision, background
+ *   and thermodynamics structures, plus a background vector, but generic_evolver doesn't know its precise structure.
+ *
+ * - the error management is a bit special: errors are not written as usual to pth->error_message, but to a generic error_message
+ *   passed in the list of arguments.
+ *
+ * @param mz                       Input: negative redshift mz = -z
+ * @param y                        Input: vector of variable to integrate
+ * @param dy                       Output: its derivative (already allocated)
+ * @param parameters_and_workspace Input: pointer to fixed parameters (e.g. indices) and workspace (already allocated)
+ * @param error_message            Output: error message
+ */
+
+int thermodynamics_derivs(
+                          double mz,
+                          double * y,
+                          double * dy,
+                          void * parameters_and_workspace,
+                          ErrorMsg error_message
+                          ) {
+  /** Summary: */
+
+  /** Define local variables */
+  /* Index for iterating over derivatives */
+  int index_ti;
+
+  /* Shorthand notations */
+  double z,x,nH,Trad,Tmat,x_H,x_He,Hz,eps,depsdlna,dHdlna,heat_capacity,rate_gamma_b;
+
+  /* Baryon molecular weight */
+  double mu_bar;
+
+  /* Shorthand notations for all of the structs */
+  struct thermodynamics_parameters_and_workspace * ptpaw;
+  struct precision * ppr;
+  struct background * pba;
+  struct thermodynamics * pth;
+  double * pvecback;
+  struct thermo_workspace * ptw;
+  struct thermo_diffeq_workspace * ptdw;
+  struct thermo_vector * ptv;
+  struct thermorecfast * precfast;
+  struct injection * pin;
+  int ap_current;
+
+  /* varying fundamental constants */
+  double alpha = 1., me = 1., rescale_rate = 1.;
+
+  /* Redshift */
+  z = -mz;
+
+  /** - Rename structure fields (just to avoid heavy notations) */
+
+  /* structures */
+  ptpaw = parameters_and_workspace;
+  ppr = ptpaw->ppr;
+  pba = ptpaw->pba;
+  pth = ptpaw->pth;
+  pin = &(pth->in);
+  /* vector of background quantities */
+  pvecback = ptpaw->pvecback;
+  /* thermodynamics workspace & vector */
+  ptw = ptpaw->ptw;
+  ptdw = ptw->ptdw;
+  ptv = ptdw->ptv;
+  /* pointer to Recfast/HyRec wrappers */
+  precfast = ptdw->precfast;
+  /* Approximation flag */
+  ap_current = ptdw->ap_current;
+
+  /** - Get background/thermo quantities in this point */
+
+  class_call(background_at_z(pba,
+                             z,
+                             long_info,
+                             inter_closeby,
+                             &(ptw->last_index_back),
+                             pvecback),
+             pba->error_message,
+             error_message);
+
+  /* Hz is H in inverse seconds (while pvecback returns [H0/c] in inverse Mpcs) */
+  Hz = pvecback[pba->index_bg_H] * _c_ / _Mpc_over_m_;
+
+  /* Total number density of Hydrogen nuclei in SI units */
+  nH = ptw->SIunit_nH0 * (1.+z) * (1.+z) * (1.+z);
+
+  /* Photon temperature in Kelvins. Modify this for some non-trivial photon temperature changes */
+  Trad = ptw->Tcmb * (1.+z);
+
+  /** Set Tmat from the evolver (it is always evolved) and store it in the workspace. */
+  Tmat = y[ptv->index_ti_D_Tmat] + ptw->Tcmb*(1.+z);
+
+  /* For varying fundamental constants (according to 1705.03925) */
+  if (pth->has_varconst == _TRUE_) {
+    alpha = pvecback[pba->index_bg_varc_alpha];
+    me = pvecback[pba->index_bg_varc_me];
+    rescale_rate = alpha*alpha/me/me/me;
+  }
+
+  /** - The input vector y contains thermodynamic variables like
+      (Tmat, x_H,x_He).  The goal of this function is: 1) Depending on
+      the chosen code and current approximation, to use either
+      analytical approximations or the vector y to calculate x_e; 2) To
+      compute re-ionization effects on x_e; The output of this function
+      is stored in the workspace ptdw */
+
+  class_call(thermodynamics_ionization_fractions(z,y,pba,pth,ptw,ap_current),
+             pth->error_message,
+             error_message);
+
+  /* Save the output in local variables */
+  x = ptdw->x_reio;
+
+  /** - If needed, calculate heating effects (i.e. any possible energy deposition rates
+      affecting the evolution equations for x and Tmat) */
+
+  if (pth->has_exotic_injection == _TRUE_) {
+    /* In case of energy injection, we currently neglect the contribution to helium ionization for RecFast ! */
+    /* Note that we calculate here the energy injection INCLUDING reionization ! */
+    class_call(injection_calculate_at_z(pba,pth,x,z,Tmat,pvecback),
+               pin->error_message,
+               error_message);
+  }
+
+  /** - Derivative of the ionization fractions */
+  x_H = ptdw->x_H;
+  x_He = ptdw->x_He;
+  x = ptdw->x_noreio;
+  switch (pth->recombination) {
+
+    /** --> use Recfast or HyRec to get the derivatives d(x_H)/dz and
+        d(x_He)/dz, and store the result directly in the vector
+        dy. This gives the derivative of the ionization fractions from
+        recombination only (not from reionization). Of course, the
+        full treatment would involve the actual evolution equations
+        for x_H and x_He during reionization, but these are not yet
+        fully implemented. */
+  case recfast:
+    precfast->fsR = alpha; /**< Pass value of fsR = relative alpha (fine-structure) */
+    precfast->meR = me;    /**< Pass value of meR = relative m_e (effective eletron mass) */
+    /* Hydrogen equations */
+    if (ptdw->require_H == _TRUE_) {
+      class_call(recfast_dx_H_dz(pth,precfast,x_H,x,nH,z,Hz,Tmat,Trad,&(dy[ptv->index_ti_x_H])),
+                 precfast->error_message,
+                 error_message);
+    }
+
+    /* Helium equations */
+    if (ptdw->require_He == _TRUE_) {
+      class_call(recfast_dx_He_dz(pth,precfast,x_He,x,x_H,nH,z,Hz,Tmat,Trad,&(dy[ptv->index_ti_x_He])),
+                 precfast->error_message,
+                 error_message);
+    }
+
+    break;
+  case hyrec:
+    /* Hydrogen equations */
+    if (ptdw->require_H == _TRUE_) {
+      class_call(hyrec_dx_H_dz(pth,ptw->ptdw->phyrec,x_H,x_He,x,nH,z,Hz,Tmat,Trad,alpha,me,&(dy[ptv->index_ti_x_H])),
+                 ptw->ptdw->phyrec->error_message,
+                 error_message);
+    }
+
+    /* Helium equations */
+    if (ptdw->require_He == _TRUE_) {
+      class_call(hyrec_dx_He_dz(pth,ptw->ptdw->phyrec,x_H,x_He,x,nH,z,Hz,Tmat,Trad,alpha,me,&(dy[ptv->index_ti_x_He])),
+                 ptw->ptdw->phyrec->error_message,
+                 error_message);
+    }
+    break;
+  }
+
+  /** - Derivative of the matter temperature (relevant for both Recfast and HyRec cases) */
+
+  /* Restore the real x for the temperature equations. */
+  x = ptdw->x_reio;
+
+  /** - Calculate quantities for interacting dark matter */
+  if (pba->has_idm == _TRUE_ || pba->has_idr == _TRUE_) {
+    class_call(thermodynamics_idm_quantities(pba, z, y, dy, pth, ptw, pvecback),
+               pth->error_message,
+               pth->error_message);
+  }
+
+  /* Using the following definitions and equations, we derive a few important quantities
+     Using n_e = x * n_H, n_He = f * n_H, rho_He ~ YHe * rho_b, rho_H ~ (1-YHe)*rho_b)
+     - Heat capacity of the IGM
+     heat_capacity = (3/2)*k_B*(n_H+n_He+n_e) = (3/2)*k_B*(1+f+x)*n_H
+     - Mean baryonic molecular mass
+     mu_bar = (rho_H + rho_He + rho_e)/(n_H + n_He + n_e) ~ ( (1. + YHe/(1+YHe) + 0.) * rho_H )/( (1. + f + x) * n_H) = m_H / (1+x+f) /(1-YHe)
+     - Photon-baryon momentum transfer rate
+     R_g = (4/3 * rho_g/rho_b) * (sigma_T * n_e) = (4/3 * rho_g * sigma_T ) * x * (1-YHe)/m_H
+     - Photon-Baryon interaction rate:
+     rate_gamma_b = 2 * mu_bar / m_e * R_g =  2 * (sigma_T/m_e) * (4/3 * rho_g) * x / (1. + f + x)
+  */
+  /* Photon-Baryon temperature change rate  */
+  rate_gamma_b = ( 2. * _sigma_/_m_e_/_c_ ) * ( 4./3. * pvecback[pba->index_bg_rho_g] * _Jm3_over_Mpc2_ ) * x / (1.+x+ptw->fHe);
+  if (pth->has_varconst == _TRUE_) {
+    rate_gamma_b *= rescale_rate;
+  }
+
+  /* Heat capacity of the IGM */
+  heat_capacity = (3./2.)*_k_B_*nH*(1.+ptw->fHe+x);
+
+  /*
+   * A note on the temperature definition:
+   *
+   * All equations work with D_Tmat = Tmat - Trad
+   *
+   * Thus all derivatives are calculated as dD_Tmat/dz = dTmat/dz - Tcmb
+   **/
+
+  /*
+   * A note on the 'early' time steady state expansion (activated here before HeIII recombination):
+   *
+   * Note: dTr/dz = Tr/(1+z) = Tcmb
+   *
+   * The early system of CMB and matter is very tightly coupled anyway, so we can expand in the following way:
+   * The full equation is dTm/dz = (Tm-Tr)/e /(1+z) + 2 Tm/(1+z). Here e = H*(1+x+f)/(cT*Tr^4*x) << 1 at early times
+   *
+   * Find the first order solution in e, by multiplying in (1+z)*e, and approximate
+   *  e*(dTm/dz)*(1+z) ~ e*(dTr/dz)*(1+z) + O(e^2) ~ e * Tr
+   *
+   * You find e*Tr = (Tm-Tr) + 2 Tm * e
+   * Thus Tm = (1+e)/(1+2*e) * Tr = Tr * (1-e) + O(e^2)
+   *
+   * This is the steady state solution, which is the SAME as e.g. in HyRec
+   * In our notation, eps = e*Tr, so we get Tm = Tr - eps
+   *
+   * So, taking the derivative of the right hand side, we obtain dTm/dz = Tcmb - eps*(dln(eps)/dz)
+   *
+   * Now use the form of eps = Tr*e = H*(1+x+f)/(cT*Tr^3*x) to derive the remaining terms in the below formula
+   * => dln(eps)/dlna = dln(H)/dlna  - (1+f)/(1+x+f)*dln(x)/dlna + 3*dln(Tr)/dlna
+   *
+   * We also approximate dln(x)/dlna << 1, since we are before HeIII recombination, thus finding
+   * => dln(eps)/dlna ~ dln(H)/dlna + 3
+   *
+   * dD_Tmat/dz = d(-eps)/dz = - eps * dln(eps)/dz = eps *dln(eps)/dlna /(1.+z)
+   **/
+
+  if ( ap_current == ptdw->index_ap_brec || (ptw->has_ap_idmtca == _TRUE_ && ap_current == ptdw->index_ap_idmtca)) {
+    /* Early time steady state equation */
+    dHdlna = (1.+z)*pvecback[pba->index_bg_H_prime]/pvecback[pba->index_bg_H] * _c_ / _Mpc_over_m_;
+    eps =  Trad * Hz / rate_gamma_b;
+    depsdlna = dHdlna/Hz + 3.;
+    /* Recfast v 1.5: add here a smoothing term as suggested by Adam Moss */
+    dy[ptdw->ptv->index_ti_D_Tmat] = eps * depsdlna / (1.+z);
+  }
+
+  else {
+    /* Full equations at later times */
+    dy[ptv->index_ti_D_Tmat] =
+      + 2.*Tmat/(1.+z)                                                          /* Adiabatic expansion */
+      + rate_gamma_b * (Tmat-Trad) / (Hz*(1.+z))                                /* Coupling to photons*/
+      - ptw->Tcmb;                                                              /* dTrad/dz */
+
+    /* Add heating from energy injection */
+    if (pth->has_exotic_injection == _TRUE_) {
+      dy[ptv->index_ti_D_Tmat] -= pin->pvecdeposition[pin->index_dep_heat] / heat_capacity / (Hz*(1.+z));
+    }
+    /* Add term coming from idm_b */
+    if (pth->has_idm_b == _TRUE_){
+      mu_bar = _m_H_ / (1. + x + ptw->fHe) / (1. - pth->YHe); //In units of kg
+      dy[ptv->index_ti_D_Tmat] += 2.* pvecback[pba->index_bg_rho_idm]/pvecback[pba->index_bg_rho_b]
+        * mu_bar/(pth->m_idm*_eV_/_c_/_c_ + _m_p_)
+        * ptdw->R_idm_b*(Tmat-ptdw->T_idm) / (pvecback[pba->index_bg_a]*pvecback[pba->index_bg_H]*(1.+z));
+    }
+  }
+
+  /** - Derivative of the Dark Matter temperature */
+  if (pba->has_idm == _TRUE_ && !(ptw->has_ap_idmtca == _TRUE_ && ap_current == ptdw->index_ap_idmtca)) {
+    dy[ptv->index_ti_T_idm] = - ptdw->T_idm_prime; // the negative sign will be negated at the end
+  }
+
+  /** - If we have extreme heatings, recombination does not fully happen
+   * and/or re-ionization happens before a redshift of
+   * reionization_z_start_max (default = 50).  We want to catch this
+   * unphysical regime, because it would lead to further errors
+   * (and/or unphysical calculations) within our recombination codes
+   */
+
+  class_test((x>1.0) && (z < ppr->z_end_reco_test) && (z > ppr->reionization_z_start_max),
+             error_message,
+             "At redshift %.5g : Recombination did not complete by redshift %.5g, or re-ionization happened before %.5g.\nIf this is a desired behavior, please adjust z_end_reco_test and/or reionization_z_start_max.",
+             z,ppr->z_end_reco_test,ppr->reionization_z_start_max);
+
+  /** - invert all derivatives (because the evolver evolves with -z, not with +z) */
+
+  for (index_ti=0;index_ti<ptdw->ptv->ti_size;index_ti++) {
+    dy[index_ti]=-dy[index_ti];
+  }
+
+  return _SUCCESS_;
+}
+
+/**
+ * This function is relevant for the rk evolver, not ndf15. It
+ * estimates a timescale 'delta z' over which quantitites vary. The rk
+ * evolver divides large intervals in steps given by this timescale
+ * multiplied by ppr->thermo_integration_stepsize.
+ *
+ * This is one of the few functions in the code which is passed to the generic_evolver routine. Since generic_evolver
+ * should work with functions passed from various modules, the format of the arguments is a bit special:
+ *
+ * - fixed parameters and workspaces are passed through a generic pointer. generic_evolver doesn't know the content of this
+ *   pointer.
+ *
+ * - the error management is a bit special: errors are not written as usual to pth->error_message, but to a generic error_message passed
+ *   in the list of arguments.
+ *
+ * @param mz                              Input: minus the redshift
+ * @param thermo_parameters_and_workspace Input: pointer to parameters and workspace
+ * @param timescale                       Output: pointer to the timescale
+ * @param error_message                   Output: possible errors are written here
+ * @return the error status
+ */
+
+int thermodynamics_timescale(
+                             double mz,
+                             void * thermo_parameters_and_workspace,
+                             double * timescale,
+                             ErrorMsg error_message
+                             ) {
+
+  int index_z;
+  struct thermodynamics_parameters_and_workspace * ptpaw;
+
+  ptpaw = thermo_parameters_and_workspace;
+
+  /* We could evaluate the timescale automatically, e.g, as [x / (dx/dz)]. */
+
+  /* But for simplicity, we assume that the array of values of z to
+     sample (pth->z_table) has been chosen in such way that the
+     quantities vary only by a small amount over each step. Thus we
+     define our step as delta(-z) = ((-z_i+1) - (-z_i)) = (z_i -
+     z_i+1) */
+
+  /* find index_z such that pth->z_table[index_z] > z > pth->z_table[index_z+1] */
+  class_call(array_hunt_ascending(ptpaw->pth->z_table,
+                                  ptpaw->pth->tt_size,
+                                  -mz,
+                                  &index_z,
+                                  error_message),
+             error_message,
+             error_message);
+
+  *timescale = ptpaw->pth->z_table[index_z+1] - ptpaw->pth->z_table[index_z];
+
+  return _SUCCESS_;
+}
+
+/**
+ * This function is passed to the generic evolver and is called whenever we want to store values for a given mz.
+ *
+ * The ionization fraction is either computed within a call to
+ * thermodynamics_derivs(). Moreover there is an automatic smoothing
+ * enabled which smoothes out the the ionization_fraction after each
+ * approximation switch. This is also the place where HyRec is asked
+ * to evolve x(z) using its internal system of differential equations
+ * over the next range [z_i, z_i+1], and to store the result in a
+ * temporary table.
+ *
+ * This is one of the few functions in the code which is passed to the generic_evolver routine. Since generic_evolver
+ * should work with functions passed from various modules, the format of the arguments is a bit special:
+ *
+ * - fixed parameters and workspaces are passed through a generic pointer. generic_evolver doesn't know the content of this
+ *   pointer.
+ *
+ * - the error management is a bit special: errors are not written as usual to pth->error_message, but to a generic error_message passed
+ *   in the list of arguments.
+ *
+ * All quantities are computed by a simple call to thermodynamics_derivs, which computes all necessary quantities
+ * and stores them in the ptdw thermo_diffeq_workspace structure
+ *
+ * @param mz                              Input: negative redshift, belonging to array mz_output
+ * @param y                               Input: vector of evolved thermodynamical quantities
+ * @param dy                              Input: derivatives of this vector w.r.t redshift
+ * @param index_z                         Input: index in the array mz_output
+ * @param thermo_parameters_and_workspace Input/Output: in input, all parameters needed by thermodynamics_derivs; in output, recombination table
+ * @param error_message            Output: error message
+ * @return the error status
+ */
+
+int thermodynamics_sources(
+                           double mz,
+                           double * y,
+                           double * dy,
+                           int index_z,
+                           void * thermo_parameters_and_workspace,
+                           ErrorMsg error_message
+                           ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  /* Shorthand notations */
+  double z,x=0.,Tmat,Trad,dTmat;
+  /* Varying fundamental constants */
+  double sigmaTrescale = 1.,alpha = 1.,me = 1.;
+  /* Recfast smoothing */
+  double x_previous, weight,s;
+  /* Structures as shorthand_notation */
+  struct thermodynamics_parameters_and_workspace * ptpaw;
+  struct background * pba;
+  struct thermodynamics * pth;
+  struct thermo_workspace * ptw;
+  struct thermo_diffeq_workspace * ptdw;
+  struct thermo_vector * ptv;
+  int ap_current;
+
+  /* Redshift */
+  z = -mz;
+
+  /** - Rename structure fields (just to avoid heavy notations) */
+
+  /* Structs */
+  ptpaw = thermo_parameters_and_workspace;
+  pba = ptpaw->pba;
+  pth = ptpaw->pth;
+  /* Thermo workspace & vector */
+  ptw = ptpaw->ptw;
+  ptdw = ptw->ptdw;
+  ptv = ptdw->ptv;
+  /* Approximation flag */
+  ap_current = ptdw->ap_current;
+
+  if (pth->has_exotic_injection == _TRUE_) {
+    /* Tell heating module that it should store the heating at this z in its internal table */
+    (pth->in).to_store = _TRUE_;
+  }
+
+  /** - Recalculate all quantities at this current redshift: we need
+      at least pvecback, ptdw->x_reio, dy[ptv->index_ti_D_Tmat] */
+
+  class_call(thermodynamics_derivs(mz,y,dy,thermo_parameters_and_workspace,error_message),
+             error_message,
+             error_message);
+
+  /* Assign local variables (note that pvecback is filled through derivs) */
+  Trad = ptw->Tcmb*(1.+z);
+  Tmat = y[ptv->index_ti_D_Tmat] + Trad;
+  /* Note that dy[index_ti_Q] represents dQ/d(-z), thus we need -dy here */
+  dTmat = -dy[ptv->index_ti_D_Tmat] + Trad/(1.+z);
+
+  /* Get sigmaT rescale factor from fundamental constants */
+  if (pth->has_varconst == _TRUE_) {
+    class_call(background_varconst_of_z(pba, z, &alpha, &me),
+               pba->error_message,
+               pth->error_message);
+    sigmaTrescale = alpha*alpha/me/me;
+  }
+
+  /* get x */
+  x = ptdw->x_reio;
+
+  /** - In the recfast case, we manually smooth the results a bit */
+
+  /* Smoothing if we are shortly after an approximation switch, i.e. if z is within 2 delta after the switch*/
+  if ((ap_current != 0) && (z > ptdw->ap_z_limits[ap_current-1]-2*ptdw->ap_z_limits_delta[ap_current])) {
+
+    class_call(thermodynamics_ionization_fractions(z,y,pba,pth,ptw,ap_current-1),
+               pth->error_message,
+               error_message);
+
+    x_previous = ptdw->x_reio;
+    // get s from 0 to 1
+    s = (ptdw->ap_z_limits[ap_current-1]-z)/(2*ptdw->ap_z_limits_delta[ap_current]);
+    // infer f2(x) = smooth function interpolating from 0 to 1
+    weight = f2(s);
+
+    /* get smoothed x */
+    x = weight*x+(1.-weight)*x_previous;
+  }
+
+  /** - Store the results in the table. Results are obtained in order of decreasing z, and stored in order of growing z */
+
+  /* ionization fraction */
+  pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size+pth->index_th_xe] = x;
+
+  /* Tb */
+  pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size+pth->index_th_Tb] = Tmat;
+
+  /* Baryon temperature derivative */
+  pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size+pth->index_th_dTb] = dTmat;
+
+  /* wb = (k_B/mu) Tb */
+  pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size+pth->index_th_wb]
+    = _k_B_ / ( _c_ * _c_ * _m_H_ ) * (1. + (1./_not4_ - 1.) * ptw->YHe + x * (1.-ptw->YHe)) * Tmat;
+
+  /* cb2 = (k_B/mu) Tb (1-1/3 dlnTb/dlna) = (k_B/mu) Tb (1 + 1/3 (1+z) dlnTb/dz) */
+  pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size+pth->index_th_cb2]
+    = _k_B_ / ( _c_ * _c_ * _m_H_ ) * (1. + (1./_not4_ - 1.) * ptw->YHe + x * (1.-ptw->YHe)) * Tmat * (1. + (1.+z) * dTmat / Tmat / 3.);
+
+  /* dkappa/dtau = a n_e x_e sigma_T = a^{-2} n_e(today) x_e sigma_T (in units of 1/Mpc) */
+  pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size+pth->index_th_dkappa]
+    = (1.+z) * (1.+z) * ptw->SIunit_nH0 * x * sigmaTrescale * _sigma_ * _Mpc_over_m_;
+
+  if (pba->has_idm == _TRUE_) {
+    pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size + pth->index_th_T_idm] = ptdw->T_idm;
+    pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size + pth->index_th_c2_idm] = ptdw->c2_idm;
+    if (pth->has_idm_g == _TRUE_) {
+      pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size + pth->index_th_dmu_idm_g] = ptdw->dmu_idm_g;
+    }
+    if (pth->has_idm_dr == _TRUE_) {
+      pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size + pth->index_th_dmu_idm_dr]  = ptdw->dmu_idm_dr;
+      pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size + pth->index_th_ddmu_idm_dr] = ptdw->Sinv_idm_dr * ptdw->dmu_idm_dr; /* store temporarily in 'wrong' column */
+    }
+    if (pth->has_idm_b == _TRUE_){
+      pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size+pth->index_th_R_idm_b] = ptdw->R_idm_b;
+    }
+  }
+  if (pba->has_idr == _TRUE_) {
+    pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size + pth->index_th_T_idr] = pba->T_idr*(1.+z);
+    pth->thermodynamics_table[(pth->tt_size-index_z-1)*pth->th_size + pth->index_th_dmu_idr] = ptdw->dmu_idr;
+  }
+
+  return _SUCCESS_;
+}
+
+/**
+ * Get the optical depth of reionization tau_reio for a given thermodynamical history.
+ *
+ * @param ppr        Input: pointer to precision structure
+ * @param pba        Input: pointer to background structure
+ * @param pth        Input: pointer to the thermodynamics structure
+ * @param ptw        Input: pointer to thermodynamics workspace
+ * @return the error status
+ */
+
+int thermodynamics_reionization_get_tau(
+                                        struct precision * ppr,
+                                        struct background * pba,
+                                        struct thermodynamics * pth,
+                                        struct thermo_workspace * ptw
+                                        ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  /* running index inside thermodynamics table */
+  int index_z,index_reio_start=0;
+  double x_e_min;
+
+  x_e_min = _HUGE_;
+
+  /**
+   * We are searching now for the start of reionization. This will be
+   * the time at which the optical depth tau_reio will be computed.
+   *
+   * Note that the value reionization_parameters[index_reio_start] is
+   * only the start of the reionization function added manually, but
+   * not necessarily the total start of reionization. Reionization
+   * could be longer/shifted by energy injection.
+   *
+   * The actual the definition of tau_reio is not unique and
+   * unambiguous. We defined it here to be the optical depth up to the
+   * time at which there is a global minimum in the free electron
+   * fraction. We search for this time by iterating over the
+   * thermodynamics table, in order to find the corresponding
+   * index_reio_start.
+   */
+
+  for (index_z=0; index_z<pth->tt_size-1; index_z++) {
+    if (pth->thermodynamics_table[index_z*pth->th_size+pth->index_th_xe] < x_e_min) {
+      x_e_min = pth->thermodynamics_table[index_z*pth->th_size+pth->index_th_xe];
+      index_reio_start = index_z;
+    }
+  }
+
+  class_test(index_reio_start == pth->tt_size,
+             pth->error_message,
+             "reionization start = %e > largest redshift in thermodynamics table",pth->z_table[index_reio_start]);
+
+  if (index_reio_start == 0) {
+    /* the global minimum of xe(z) is at z=0. This is possible in
+       models no reionization and no exotic energy
+       injection. According to our definition of the reionization
+       optical depth, tau_reio should then be zero. */
+    ptw->reionization_optical_depth = 0;
+    return _SUCCESS_;
+  }
+  if (index_reio_start < 3) {
+    /* we need a minimum of three values to do a spline integration in the next step */
+    index_reio_start =3;
+  }
+
+  /** - --> spline \f$ d \tau / dz \f$ with respect to z in view of
+   *         integrating for optical depth between 0 and the just found
+   *         starting index
+   */
+  class_call(array_spline_table_line_to_line(pth->tau_table,
+                                             index_reio_start,
+                                             pth->thermodynamics_table,
+                                             pth->th_size,
+                                             pth->index_th_dkappa,
+                                             pth->index_th_dddkappa,
+                                             _SPLINE_EST_DERIV_,
+                                             pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /** - --> integrate for optical depth */
+  class_call(array_integrate_all_spline_table_line_to_line(pth->tau_table,
+                                                           index_reio_start,
+                                                           pth->thermodynamics_table,
+                                                           pth->th_size,
+                                                           pth->index_th_dkappa,
+                                                           pth->index_th_dddkappa,
+                                                           &(ptw->reionization_optical_depth),
+                                                           pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  ptw->reionization_optical_depth *= -1; // tau and z go in reverse order, so we must flip the sign
+
+  return _SUCCESS_;
+}
+
+/**
+ * Free the thermo_vector structure, which is the '->ptv' field of the thermodynamics_differential_workspace ptdw structure
+ *
+ * @param tv        Input: pointer to thermo_vector structure to be freed
+ * @return the error status
+ */
+
+int thermodynamics_vector_free(
+                               struct thermo_vector * tv
+                               ) {
+
+  free(tv->y);
+  free(tv->dy);
+  free(tv->used_in_output);
+  free(tv);
+
+  return _SUCCESS_;
+}
+
+/**
+ * Compute the baryon drag conformal time tau_d = [int_{tau_today}^{tau} dtau -dkappa_d/dtau]
+ *
+ * @param pba                Input: pointer to background structure
+ * @param pth                Input/Output: pointer to initialized thermodynamics structure
+ * @param pvecback           Input: Initialized vector of background quantities
+ * @return the error status
+ */
+
+int thermodynamics_calculate_conformal_drag_time(
+                                                 struct background* pba,
+                                                 struct thermodynamics* pth,
+                                                 double* pvecback
+                                                 ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  double R;
+  int index_tau;
+  int last_index_back;
+
+  /** - compute minus the baryon drag interaction rate time, -dkappa_d/dtau = -[1/R * kappa'], with R = 3 rho_b / 4 rho_gamma,
+      stored temporarily in column ddkappa */
+
+  /* find the value of last_index_back for tau_table[0] in order to speed up subsequent interpolations in the loop */
+  class_call(background_at_tau(pba,
+                               pth->tau_table[0],
+                               normal_info,
+                               inter_normal,
+                               &last_index_back,
+                               pvecback),
+             pba->error_message,
+             pth->error_message);
+
+  for (index_tau=0; index_tau < pth->tt_size; index_tau++) {
+
+    class_call(background_at_tau(pba,
+                                 pth->tau_table[index_tau],
+                                 normal_info,
+                                 inter_closeby,
+                                 &last_index_back,
+                                 pvecback),
+               pba->error_message,
+               pth->error_message);
+
+    R = 3./4.*pvecback[pba->index_bg_rho_b]/pvecback[pba->index_bg_rho_g];
+
+    pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_ddkappa] =
+      -1./R*pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_dkappa];
+
+  }
+
+  /** - compute second derivative of this rate, -[1/R * kappa']'', stored temporarily in column dddkappa */
+  class_call(array_spline_table_line_to_line(pth->tau_table,
+                                             pth->tt_size,
+                                             pth->thermodynamics_table,
+                                             pth->th_size,
+                                             pth->index_th_ddkappa,
+                                             pth->index_th_dddkappa,
+                                             _SPLINE_EST_DERIV_,
+                                             pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /** - compute tau_d = [int_{tau_today}^{tau} dtau -dkappa_d/dtau] */
+  class_call(array_integrate_spline_table_line_to_line(pth->tau_table,
+                                                       pth->tt_size,
+                                                       pth->thermodynamics_table,
+                                                       pth->th_size,
+                                                       pth->index_th_ddkappa,
+                                                       pth->index_th_dddkappa,
+                                                       pth->index_th_tau_d,
+                                                       pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  return _SUCCESS_;
+}
+
+/**
+ * Compute the damping scale
+ *   r_d = 2pi/k_d = 2pi * [int_{tau_ini}^{tau} dtau (1/kappa') 1/6 (R^2+16/15(1+R))/(1+R)^2]^1/2
+ *                 =  2pi * [int_{tau_ini}^{tau} dtau (1/kappa') 1/6 (R^2/(1+R)+16/15)/(1+R)]^1/2
+ *
+ * which is like in CosmoTherm (CT), but slightly different from Wayne Hu (WH)'s thesis eq. (5.59):
+ * The factor 16/15 in CT is 4/5 in WH, but 16/15 is taking more effects into account
+ *
+ * @param pba                Input: pointer to background structure
+ * @param pth                Input/Output: pointer to initialized thermodynamics structure
+ * @param pvecback           Input: Initialized vector of background quantities
+ * @return the error status
+ */
+
+int thermodynamics_calculate_damping_scale(
+                                           struct background* pba,
+                                           struct thermodynamics* pth,
+                                           double* pvecback
+                                           ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  double R;
+  /* Initial time and dkappa/dtau */
+  double tau_ini,dkappa_ini;
+  double* tau_table_growing;
+  int index_tau;
+  int last_index_back;
+
+  class_alloc(tau_table_growing,pth->tt_size*sizeof(double),pth->error_message);
+
+  /* find the value of last_index_back for
+     tau_table[pth->tt_size-1] = tau_table_growing[0] in order to
+     speed up subsequent interpolations in the loop */
+  class_call(background_at_tau(pba,
+                               pth->tau_table[pth->tt_size-1],
+                               normal_info,
+                               inter_normal,
+                               &last_index_back,
+                               pvecback),
+             pba->error_message,
+             pth->error_message);
+
+  /* compute integrand and store temporarily in column "ddkappa" */
+  for (index_tau=0; index_tau < pth->tt_size; index_tau++) {
+
+    tau_table_growing[index_tau] = pth->tau_table[pth->tt_size-1-index_tau];
+
+    class_call(background_at_tau(pba,
+                                 tau_table_growing[index_tau],
+                                 normal_info,
+                                 inter_closeby,
+                                 &last_index_back,
+                                 pvecback),
+               pba->error_message,
+               pth->error_message);
+
+    R = 3./4.*pvecback[pba->index_bg_rho_b]/pvecback[pba->index_bg_rho_g];
+
+    pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_ddkappa] =
+      1./6./pth->thermodynamics_table[(pth->tt_size-1-index_tau)*pth->th_size+pth->index_th_dkappa]
+      *(R*R/(1+R)+16./15.)/(1.+R);
+
+  }
+
+  /* compute second derivative of integrand, and store temporarily in column "dddkappa" */
+  class_call(array_spline_table_line_to_line(tau_table_growing,
+                                             pth->tt_size,
+                                             pth->thermodynamics_table,
+                                             pth->th_size,
+                                             pth->index_th_ddkappa,
+                                             pth->index_th_dddkappa,
+                                             _SPLINE_EST_DERIV_,
+                                             pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /* compute integratal and store temporarily in column "g" */
+  class_call(array_integrate_spline_table_line_to_line(tau_table_growing,
+                                                       pth->tt_size,
+                                                       pth->thermodynamics_table,
+                                                       pth->th_size,
+                                                       pth->index_th_ddkappa,
+                                                       pth->index_th_dddkappa,
+                                                       pth->index_th_g,
+                                                       pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  free(tau_table_growing);
+
+  /* we could now write the result as r_d = 2pi * sqrt(integral),
+   *  but we will first better acount for the contribution frokm the tau_ini boundary.
+   *  Close to this boundary, R=0 and the integrand is just 16/(15*6)/kappa'
+   *  Using kappa' propto 1/a^2 and tau propro a during RD, we get the analytic result:
+   *  int_0^{tau_ini} dtau / kappa' = tau_ini / 3 / kappa'_ini
+   *  Thus r_d = 2pi * sqrt( 16/(15*6*3) * (tau_ini/ kappa'_ini) * integral)
+   */
+
+  tau_ini = pth->tau_table[pth->tt_size-1];
+  dkappa_ini = pth->thermodynamics_table[(pth->tt_size-1)*pth->th_size+pth->index_th_dkappa];
+
+  for (index_tau=0; index_tau < pth->tt_size; index_tau++) {
+
+    pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_r_d] =
+      2.*_PI_*sqrt(16./(15.*6.*3.)*tau_ini/dkappa_ini
+                   +pth->thermodynamics_table[(pth->tt_size-1-index_tau)*pth->th_size+pth->index_th_g]);
+
+  }
+
+  return _SUCCESS_;
+}
+
+
+/**
+ * Calculate quantities relating to optical phenomena like kappa' and exp(-kappa) and the visibility function,
+ * optical depth (including dark matter photon interactions if necessary)
+ *
+ * @param ppr   Input: pointer to precision structure
+ * @param pth   Input/Output: pointer to thermodynamics structure
+ * @return the error status
+ */
+
+int thermodynamics_calculate_opticals(
+                                      struct precision* ppr,
+                                      struct thermodynamics* pth
+                                      ) {
+
+  /** Summary: */
+
+  /** Define local quantities */
+  /* Visibility function value */
+  double g;
+  /* kappa derivative values*/
+  double dkappa,ddkappa,dddkappa,expmkappa;
+  int index_tau;
+
+  /** - --> second derivative with respect to tau of dkappa (in view of of spline interpolation) */
+  class_call(array_spline_table_line_to_line(pth->tau_table,
+                                             pth->tt_size,
+                                             pth->thermodynamics_table,
+                                             pth->th_size,
+                                             pth->index_th_dkappa,
+                                             pth->index_th_dddkappa,
+                                             _SPLINE_EST_DERIV_,
+                                             pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /** - --> first derivative with respect to tau of dkappa (using spline interpolation) */
+  class_call(array_derive_spline_table_line_to_line(pth->tau_table,
+                                                    pth->tt_size,
+                                                    pth->thermodynamics_table,
+                                                    pth->th_size,
+                                                    pth->index_th_dkappa,
+                                                    pth->index_th_dddkappa,
+                                                    pth->index_th_ddkappa,
+                                                    pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /** - --> compute -kappa = [int_{tau_today}^{tau} dtau dkappa/dtau], store temporarily in column "g" */
+  class_call(array_integrate_spline_table_line_to_line(pth->tau_table,
+                                                       pth->tt_size,
+                                                       pth->thermodynamics_table,
+                                                       pth->th_size,
+                                                       pth->index_th_dkappa,
+                                                       pth->index_th_dddkappa,
+                                                       pth->index_th_g,
+                                                       pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+
+  /** if there is idm_g, calculate its optical contributions */
+  if (pth->has_idm_g == _TRUE_) {
+    /** - --> second derivative with respect to tau of dmu (in view of of spline interpolation) */
+    class_call(array_spline_table_line_to_line(pth->tau_table,
+                                               pth->tt_size,
+                                               pth->thermodynamics_table,
+                                               pth->th_size,
+                                               pth->index_th_dmu_idm_g,
+                                               pth->index_th_dddmu_idm_g,
+                                               _SPLINE_EST_DERIV_,
+                                               pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /** - --> first derivative with respect to tau of dmu (using spline interpolation) */
+    class_call(array_derive_spline_table_line_to_line(pth->tau_table,
+                                                      pth->tt_size,
+                                                      pth->thermodynamics_table,
+                                                      pth->th_size,
+                                                      pth->index_th_dmu_idm_g,
+                                                      pth->index_th_dddmu_idm_g,
+                                                      pth->index_th_ddmu_idm_g,
+                                                      pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /** - --> compute -mu = [int_{tau_today}^{tau} dtau dmu/dtau], store temporarily in column "exp_mu_idm_g" */
+    class_call(array_integrate_spline_table_line_to_line(pth->tau_table,
+                                                         pth->tt_size,
+                                                         pth->thermodynamics_table,
+                                                         pth->th_size,
+                                                         pth->index_th_dmu_idm_g,
+                                                         pth->index_th_dddmu_idm_g,
+                                                         pth->index_th_exp_mu_idm_g,
+                                                         pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+  }
+  /** - --> compute visibility: \f$ g= (d \kappa/d \tau) e^{- \kappa} \f$ */
+
+  /* loop on z (decreasing z, increasing time) */
+  for (index_tau=pth->tt_size-1; index_tau>=0; index_tau--) {
+
+    dkappa = pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_dkappa];
+    ddkappa = pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_ddkappa];
+    dddkappa = pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_dddkappa];
+    expmkappa = exp(pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_g]);
+
+    /* This would be the rate without accounting for idm_g : */
+    /* pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_rate] = */
+    /*   sqrt(pow(dkappa,2)+pow(ddkappa/dkappa,2)+fabs(dddkappa/dkappa)); */
+
+    pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_exp_m_kappa] = expmkappa;
+
+    /* presence of idm_g modifies visibility function */
+    if (pth->has_idm_g == _TRUE_) {
+      dkappa += pth->thermodynamics_table[index_tau*pth->th_size + pth->index_th_dmu_idm_g];
+      ddkappa += pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_ddmu_idm_g];
+      dddkappa += pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_dddmu_idm_g];
+      pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_exp_mu_idm_g] =
+        exp(pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_exp_mu_idm_g]); /* we previously calculated -mu_idm_g and stored it here */
+      expmkappa *= pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_exp_mu_idm_g];
+    }
+
+    /** - ---> compute g */
+    g = dkappa * expmkappa;
+
+    /* for some very extreme models, in the last line, the exponential of a large negative number could go beyond
+     * the range covered by the "double" representation numbers, and be set to zero. To avoid a division by zero in
+     * the next steps, it is then better to set it to the minimum non-zero double (this has no impact on observables). */
+    if (g==0.) g=DBL_MIN;
+
+    /** - ---> compute g' (the plus sign of the second term is correct, see def of -kappa in thermodynamics module!) */
+    pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_dg] =
+      (ddkappa + dkappa * dkappa) * expmkappa;
+
+    /** - ---> compute g''  */
+    pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_ddg] =
+      (dddkappa + dkappa * ddkappa * 3. + dkappa * dkappa * dkappa ) * expmkappa;
+
+    /** - ---> store g */
+    pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_g] = g;
+
+    /** - ---> compute variation rate */
+    class_test(pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_dkappa] == 0.,
+               pth->error_message,
+               "variation rate diverges");
+
+    pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_rate] =
+      sqrt(pow(dkappa,2)+pow(ddkappa/dkappa,2)+fabs(dddkappa/dkappa));
+
+  }
+
+  /** - smooth the rate (details of smoothing unimportant: only the
+      order of magnitude of the rate matters) */
+  class_call(array_smooth(pth->thermodynamics_table,
+                          pth->th_size,
+                          pth->tt_size,
+                          pth->index_th_rate,
+                          ppr->thermo_rate_smoothing_radius,
+                          pth->error_message),
+             pth->error_message,
+             pth->error_message);
+
+  /** - --> derivatives of baryon sound speed (only computed if some non-minimal tight-coupling schemes is requested) */
+  if (pth->compute_cb2_derivatives == _TRUE_) {
+
+    /** - ---> second derivative with respect to tau of cb2 */
+    class_call(array_spline_table_line_to_line(pth->tau_table,
+                                               pth->tt_size,
+                                               pth->thermodynamics_table,
+                                               pth->th_size,
+                                               pth->index_th_cb2,
+                                               pth->index_th_ddcb2,
+                                               _SPLINE_EST_DERIV_,
+                                               pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /** - ---> first derivative with respect to tau of cb2 (using spline interpolation) */
+    class_call(array_derive_spline_table_line_to_line(pth->tau_table,
+                                                      pth->tt_size,
+                                                      pth->thermodynamics_table,
+                                                      pth->th_size,
+                                                      pth->index_th_cb2,
+                                                      pth->index_th_ddcb2,
+                                                      pth->index_th_dcb2,
+                                                      pth->error_message),
+               pth->error_message,
+               pth->error_message);
+  }
+
+  return _SUCCESS_;
+}
+
+/**
+ * Calculate dark optical depths, idm_b interation rate, and other quantities relevant
+ * for idm and idr.
+ *
+ * @param ppr                Input: pointer to precision structure
+ * @param pba                Input: pointer to background structure
+ * @param pth                Input/Output: pointer to initialized thermo structure
+ * @param pvecback           Input: Initialized vector of background quantities
+ *
+ * @return the error status
+ **/
+int thermodynamics_calculate_idm_and_idr_quantities(struct precision* ppr,
+                                                    struct background * pba,
+                                                    struct thermodynamics * pth,
+                                                    double* pvecback){
+
+  /** Summary: **/
+
+  /** - Define local variables **/
+  int index_tau_fs;
+  int index_tau;
+
+  /** - Calculate optical functions tau_idm_dr, tau_idr, g_idm_dr */
+  if (pth->has_idm_dr == _TRUE_) {
+    /* - second derivative of idm_dr interaction rate (with idr), [Sinv*dmu_idm_dr]'', stored temporarily in column dddmu */
+    class_call(array_spline_table_line_to_line(pth->tau_table,
+                                               pth->tt_size,
+                                               pth->thermodynamics_table,
+                                               pth->th_size,
+                                               pth->index_th_ddmu_idm_dr,
+                                               pth->index_th_dddmu_idm_dr,
+                                               _SPLINE_EST_DERIV_,
+                                               pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /* - compute optical depth of idm, tau_idm_dr = [int_{tau_today}^{tau} dtau [Sinv*dmu_idm_dr] ].*/
+    /*    This step gives -tau_idm_dr. The resulty is mutiplied by -1 later on. */
+    class_call(array_integrate_spline_table_line_to_line(pth->tau_table,
+                                                         pth->tt_size,
+                                                         pth->thermodynamics_table,
+                                                         pth->th_size,
+                                                         pth->index_th_ddmu_idm_dr,
+                                                         pth->index_th_dddmu_idm_dr,
+                                                         pth->index_th_tau_idm_dr,
+                                                         pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /* - second derivative of idr interaction rate (with idm_dr), [dmu_idm_idr]'', stored temporarily in column dddmu */
+    class_call(array_spline_table_line_to_line(pth->tau_table,
+                                               pth->tt_size,
+                                               pth->thermodynamics_table,
+                                               pth->th_size,
+                                               pth->index_th_dmu_idm_dr,
+                                               pth->index_th_dddmu_idm_dr,
+                                               _SPLINE_EST_DERIV_,
+                                               pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /* - compute optical depth of idr, tau_idr = [int_{tau_today}^{tau} dtau [dmu_idm_idr] ]. */
+    /*   This step gives -tau_idr. The resulty is mutiplied by -1 later on. */
+    class_call(array_integrate_spline_table_line_to_line(pth->tau_table,
+                                                         pth->tt_size,
+                                                         pth->thermodynamics_table,
+                                                         pth->th_size,
+                                                         pth->index_th_dmu_idm_dr,
+                                                         pth->index_th_dddmu_idm_dr,
+                                                         pth->index_th_tau_idr,
+                                                         pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+
+    /* - restore correct sign for idm_dr and idr optical depth, and calculate idm_dr visibility function */
+    /* loop on z (decreasing z, increasing time) */
+
+    for (index_tau=pth->tt_size-1; index_tau>=0; index_tau--) {
+      /* - --> restore the correct sign for tau_idm_dr */
+      pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_tau_idm_dr] *= -1.;
+
+      /* - --> restore the correct sign for tau_idr */
+      pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_tau_idr] *= -1.;
+
+      /* - --> visibility function for idm_dr : g_idm_dr = [Sinv*dmu_idm_dr] * exp(-tau_idm_dr) */
+      pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_g_idm_dr] =
+        pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_ddmu_idm_dr]
+        * exp(-pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_tau_idm_dr]);
+    }
+
+    /* - fill columns for ddmu_idm_dr and dddmu_idm_dr with true values, and compute idm_dr temperature and sound speed */
+    /* - --> second derivative with respect to tau of dmu_idm_dr (in view of spline interpolation) */
+    class_call(array_spline_table_line_to_line(pth->tau_table,
+                                               pth->tt_size,
+                                               pth->thermodynamics_table,
+                                               pth->th_size,
+                                               pth->index_th_dmu_idm_dr,
+                                               pth->index_th_dddmu_idm_dr,
+                                               _SPLINE_EST_DERIV_,
+                                               pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /* - --> first derivative with respect to tau of dmu_idm_dr (using spline interpolation) */
+    class_call(array_spline_table_line_to_line(pth->tau_table,
+                                               pth->tt_size,
+                                               pth->thermodynamics_table,
+                                               pth->th_size,
+                                               pth->index_th_dmu_idm_dr,
+                                               pth->index_th_dddmu_idm_dr,
+                                               _SPLINE_EST_DERIV_,
+                                               pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /* - --> first derivative with respect to tau of dmu_idm_dr (using spline interpolation) */
+    class_call(array_derive_spline_table_line_to_line(pth->tau_table,
+                                                      pth->tt_size,
+                                                      pth->thermodynamics_table,
+                                                      pth->th_size,
+                                                      pth->index_th_dmu_idm_dr,
+                                                      pth->index_th_dddmu_idm_dr,
+                                                      pth->index_th_ddmu_idm_dr,
+                                                      pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+  }
+
+  /** - Find interacting dark radiation free-streaming time */
+  /* First, find index of recombination, or free streaming for ordinary radiation */
+  index_tau = pth->tt_size - 1;
+  while(1./pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_dkappa]/pth->tau_table[index_tau] < ppr->radiation_streaming_trigger_tau_c_over_tau && index_tau > 0)
+    index_tau--;
+  index_tau_fs = index_tau;
+
+  /** - Search after the above free-streaming time for idr free-streaming as well */
+  if (pth->has_idm_dr == _TRUE_) {
+
+    if (pth->n_index_idm_dr>=2) {
+      index_tau=index_tau_fs-1;
+      while ((1./pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_dmu_idm_dr]/pth->tau_table[index_tau]
+              < ppr->idr_streaming_trigger_tau_c_over_tau) && index_tau > 0)
+        index_tau--;
+    }
+    else {
+      index_tau=0;
+      while ((1./pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_dmu_idm_dr]/pth->tau_table[index_tau]
+              < ppr->idr_streaming_trigger_tau_c_over_tau) && index_tau < pth->tt_size-1)
+        index_tau++;
+    }
+
+    /* tau_idm_dr_fs = tau; */
+    pth->tau_idr_free_streaming = pth->tau_table[index_tau];
+  }
+  /* case of idr alone without idm_dr: Set idr free streaming simply to normal free-streaming */
+  else {
+    index_tau= (index_tau_fs > 0 ? index_tau_fs - 1: 0);
+    pth->tau_idr_free_streaming = pth->tau_table[index_tau];
+  }
+
+  if (pth->has_idm_b == _TRUE_) {
+    /** - --> second derivative with respect to tau of R_idm_b (in view of spline interpolation) */
+    class_call(array_spline_table_line_to_line(pth->tau_table,
+                                               pth->tt_size,
+                                               pth->thermodynamics_table,
+                                               pth->th_size,
+                                               pth->index_th_R_idm_b,
+                                               pth->index_th_ddR_idm_b,
+                                               _SPLINE_EST_DERIV_,
+                                               pth->error_message),
+               pth->error_message,
+               pth->error_message);
+
+    /** - --> first derivative with respect to tau of R_idm_b (using spline interpolation) */
+    class_call(array_derive_spline_table_line_to_line(pth->tau_table,
+                                                      pth->tt_size,
+                                                      pth->thermodynamics_table,
+                                                      pth->th_size,
+                                                      pth->index_th_R_idm_b,
+                                                      pth->index_th_ddR_idm_b,
+                                                      pth->index_th_dR_idm_b,
+                                                      pth->error_message),
+               pth->error_message,
+               pth->error_message);
+  }
+
+  return _SUCCESS_;
+
+}
+
+
+/**
+ * Calculate various quantities at the time of recombination, as well
+ * as the time tau_cut at which visibility gets negligible and one can
+ * assume pure free-streaming.
+ *
+ * @param ppr                Input: pointer to precision structure
+ * @param pba                Input: pointer to background structure
+ * @param pth                Input/Output: pointer to initialized thermodynamics structure
+ * @param pvecback           Input: pointer to some allocated pvecback
+ * @return the error status
+ */
+
+int thermodynamics_calculate_recombination_quantities(
+                                                      struct precision* ppr,
+                                                      struct background * pba,
+                                                      struct thermodynamics* pth,
+                                                      double* pvecback
+                                                      ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  double g_max;
+
+  int index_tau;
+  int index_tau_max;
+  int last_index_back=0;
+
+  /** - find maximum of g */
+  index_tau=pth->tt_size-1;
+  while (pth->z_table[index_tau]>_Z_REC_MAX_) {
+    index_tau--;
+  }
+
+  class_test(pth->thermodynamics_table[(index_tau+1)*pth->th_size+pth->index_th_g] >
+             pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_g],
+             pth->error_message,
+             "The visibility function is not increasing at redshift _Z_REC_MAX_=%g, which is the value imposed in thermodynamics.h\n This implies that recombination must have already happened at a too early time.",_Z_REC_MAX_);
+
+  while (pth->thermodynamics_table[(index_tau+1)*pth->th_size+pth->index_th_g] <=
+         pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_g]) {
+    index_tau--;
+  }
+
+  g_max = pth->thermodynamics_table[index_tau*pth->th_size+pth->index_th_g];
+  index_tau_max = index_tau;
+
+  /* approximation for maximum of g, using cubic interpolation, assuming equally spaced z's */
+  pth->z_rec=pth->z_table[index_tau+1]+0.5*(pth->z_table[index_tau+1]-pth->z_table[index_tau])
+    *(pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_g]
+      -pth->thermodynamics_table[(index_tau+2)*pth->th_size+pth->index_th_g])
+    /(pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_g]
+      -2.*pth->thermodynamics_table[(index_tau+1)*pth->th_size+pth->index_th_g]
+      +pth->thermodynamics_table[(index_tau+2)*pth->th_size+pth->index_th_g]
+      );
+
+  class_test(pth->z_rec+ppr->smallest_allowed_variation >= _Z_REC_MAX_,
+             pth->error_message,
+             "recombination (at z=%g) happens before _Z_REC_MAX_=%g, which is the maximum value imposed in thermodynamics.h",pth->z_rec+ppr->smallest_allowed_variation,_Z_REC_MAX_);
+
+  class_test(pth->z_rec-ppr->smallest_allowed_variation <= _Z_REC_MIN_,
+             pth->error_message,
+             "recombination (at z=%g) happens after _Z_REC_MIN_=%g, which is the minimum value imposed in thermodynamics.h",pth->z_rec-ppr->smallest_allowed_variation,_Z_REC_MIN_);
+
+  /** - find conformal recombination time using background_tau_of_z **/
+
+  class_call(background_tau_of_z(pba,pth->z_rec,&(pth->tau_rec)),
+             pba->error_message,
+             pth->error_message);
+
+  class_call(background_at_z(pba,pth->z_rec, long_info, inter_normal, &last_index_back, pvecback),
+             pba->error_message,
+             pth->error_message);
+
+  pth->rs_rec=pvecback[pba->index_bg_rs];
+  pth->ds_rec=pth->rs_rec/(1.+pth->z_rec);
+  pth->da_rec=pvecback[pba->index_bg_ang_distance];
+  pth->ra_rec=pth->da_rec*(1.+pth->z_rec);
+  pth->angular_rescaling=pth->ra_rec/(pba->conformal_age-pth->tau_rec);
+
+  /** - find damping scale at recombination (using linear interpolation) */
+  if (pth->compute_damping_scale == _TRUE_) {
+
+    pth->rd_rec = (pth->z_table[index_tau+1]-pth->z_rec)/(pth->z_table[index_tau+1]-pth->z_table[index_tau])*pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_r_d]
+      +(pth->z_rec-pth->z_table[index_tau])/(pth->z_table[index_tau+1]-pth->z_table[index_tau])*pth->thermodynamics_table[(index_tau+1)*pth->th_size+pth->index_th_r_d];
+
+  }
+
+  /** - find time (always after recombination) at which tau_c/tau falls below some threshold, defining tau_free_streaming */
+  while (1./pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_dkappa]/pth->tau_table[index_tau]
+         < ppr->radiation_streaming_trigger_tau_c_over_tau) {
+
+    index_tau--;
+    class_test(index_tau<0, pth->error_message,"Could not find a time at which photons free-stream. This is very suspicious. Aborting.\n");
+
+  }
+
+  pth->tau_free_streaming = pth->tau_table[index_tau];
+
+  /** - find time above which visibility falls below a given fraction of its maximum */
+  index_tau=index_tau_max;
+  while ((pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_g] >
+          g_max * ppr->neglect_CMB_sources_below_visibility)
+         && (index_tau > 0))
+    index_tau--;
+
+  class_call(background_tau_of_z(pba,pth->z_table[index_tau],&(pth->tau_cut)),
+             pba->error_message,
+             pth->error_message);
+
+  /** - find z_star (when optical depth kappa crosses one, using linear
+      interpolation) and sound horizon at that time */
+
+  index_tau=0;
+  while ((pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_exp_m_kappa] > 1./_E_) && (index_tau < pth->tt_size))
+    index_tau++;
+
+  pth->z_star = pth->z_table[index_tau-1]+
+    (1./_E_-pth->thermodynamics_table[(index_tau-1)*pth->th_size+pth->index_th_exp_m_kappa])
+    /(pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_exp_m_kappa]-pth->thermodynamics_table[(index_tau-1)*pth->th_size+pth->index_th_exp_m_kappa])
+    *(pth->z_table[index_tau]-pth->z_table[index_tau-1]);
+
+  class_call(background_tau_of_z(pba,pth->z_star,&(pth->tau_star)),
+             pba->error_message,
+             pth->error_message);
+
+  class_call(background_at_tau(pba,pth->tau_star, long_info, inter_normal, &last_index_back, pvecback),
+             pba->error_message,
+             pth->error_message);
+
+  pth->rs_star=pvecback[pba->index_bg_rs];
+  pth->ds_star=pth->rs_star/(1.+pth->z_star);
+  pth->da_star=pvecback[pba->index_bg_ang_distance];
+  pth->ra_star=pth->da_star*(1.+pth->z_star);
+
+  if (pth->compute_damping_scale == _TRUE_) {
+
+    pth->rd_star = (pth->z_table[index_tau+1]-pth->z_star)/(pth->z_table[index_tau+1]-pth->z_table[index_tau])*pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_r_d]
+      +(pth->z_star-pth->z_table[index_tau])/(pth->z_table[index_tau+1]-pth->z_table[index_tau])*pth->thermodynamics_table[(index_tau+1)*pth->th_size+pth->index_th_r_d];
+
+  }
+
+  return _SUCCESS_;
+}
+
+/**
+ * Calculate various quantities at the time of ending of baryon drag (It is precisely where tau_d crosses one)
+ *
+ * @param ppr                Input: pointer to precision structure
+ * @param pba                Input: pointer to background structure
+ * @param pth                Input/Output: pointer to initialized thermodynamics structure
+ * @param pvecback           Input: pointer to some allocated pvecback
+ * @return the error status
+ */
+
+int thermodynamics_calculate_drag_quantities(
+                                             struct precision* ppr,
+                                             struct background * pba,
+                                             struct thermodynamics* pth,
+                                             double* pvecback
+                                             ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  int index_tau;
+  int last_index_back;
+
+  /** - find baryon drag time (when tau_d crosses one, using linear interpolation) and sound horizon at that time */
+  index_tau=0;
+  while ((pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_tau_d] < 1.) && (index_tau < pth->tt_size)) {
+    index_tau++;
+  }
+
+  pth->z_d = pth->z_table[index_tau-1]+
+    (1.-pth->thermodynamics_table[(index_tau-1)*pth->th_size+pth->index_th_tau_d])
+    /(pth->thermodynamics_table[(index_tau)*pth->th_size+pth->index_th_tau_d]-pth->thermodynamics_table[(index_tau-1)*pth->th_size+pth->index_th_tau_d])
+    *(pth->z_table[index_tau]-pth->z_table[index_tau-1]);
+
+  class_call(background_tau_of_z(pba,pth->z_d,&(pth->tau_d)),
+             pba->error_message,
+             pth->error_message);
+
+  class_call(background_at_z(pba,pth->z_d, long_info, inter_normal, &last_index_back, pvecback),
+             pba->error_message,
+             pth->error_message);
+
+  pth->rs_d=pvecback[pba->index_bg_rs];
+  pth->ds_d=pth->rs_d/(1.+pth->z_d);
+
+  return _SUCCESS_;
+}
+
+/**
+ * Compute ionization fractions with the RecFast of HyRec algorithm.
+ *
+ * Compute ionization fractions using either the vector y or, in some
+ * approximation schemes, some analytic approximations. The output of
+ * this function is located in the ptw->ptdw workspace. We need to
+ * assign:
+ *
+ * - in the RecFast scheme only:
+ *   -- ptdw->x_H, ptdw-> x_He (all neglecting reionisation, which is accounted for later on);
+ *
+ * - in both schemes:
+ *   -- ptdw->x_noreio (neglecting reionisation);
+ *   -- ptdw->x_reio (if reionisation is going on; obtained by calling
+ *                    thermodynamics_reionization_function() and adding something to ptdw->x_noreio)
+ *
+ * @param z            Input: redshift
+ * @param y            Input: vector of quantities to integrate with evolver
+ * @param pth          Input: pointer to thermodynamics structure
+ * @param pba          Input: pointer to background structure
+ * @param ptw          Input/Output: pointer to thermo workspace. Contains output for x, ...
+ * @param current_ap   Input: index of current approximation scheme
+ * @return the error status
+ */
+
+int thermodynamics_ionization_fractions(
+                                        double z,
+                                        double * y,
+                                        struct background * pba,
+                                        struct thermodynamics * pth,
+                                        struct thermo_workspace * ptw,
+                                        int current_ap
+                                        ) {
+
+  /** Summary: */
+
+  /** Define local variables */
+  struct thermo_diffeq_workspace * ptdw = ptw->ptdw;
+  struct thermo_vector * ptv = ptdw->ptv;
+
+  /* Thermo quantities */
+  double x_H, x_He, xHeII, x=0., Tmat;
+  /* Analytical quantities */
+  double rhs, sqrt_val;
+
+  /* Varying fundamental constants (according to 1705.03925) */
+  double rescale_rhs = 1., rescale_T = 1.;
+  double alpha = 1., me = 1.;
+
+  if (pth->has_varconst == _TRUE_) {
+    class_call(background_varconst_of_z(pba, z, &alpha, &me),
+               pba->error_message,
+               pth->error_message);
+    rescale_rhs = alpha*alpha*alpha*me*me*me;
+    rescale_T = 1./alpha/alpha/me;
+  }
+
+  /** - Calculate x_noreio from Recfast/Hyrec in each approximation
+      regime. Store the results in the workspace. */
+  /** - --> For credits, see external/wrap_recfast.c */
+
+  /* Set Tmat from the y vector (it is always evolved). */
+  Tmat = y[ptv->index_ti_D_Tmat] + ptw->Tcmb*(1.+z);
+  if (pth->has_varconst == _TRUE_) {
+    Tmat *= rescale_T;
+  }
+
+  /** - --> first regime: H and Helium fully ionized */
+  if (current_ap == ptdw->index_ap_brec || (ptw->has_ap_idmtca && current_ap == ptdw->index_ap_idmtca)) {
+
+    /* This is equivalent to the formula for HeIII --> HeII in Saha, just using rhs' = 1/rhs */
+    rhs = ptw->SIunit_nH0/exp( 1.5*log(ptw->const_NR_numberdens*Tmat/(1.+z)/(1.+z)) - ptw->const_Tion_HeII/Tmat );
+    if (pth->has_varconst == _TRUE_) {
+      rhs /= rescale_rhs;
+    }
+
+    sqrt_val = sqrt(pow(1.-rhs*(1.+ptw->fHe),2) + 4.*rhs*(1.+2*ptw->fHe));
+
+    x = 2.*(1+2.*ptw->fHe)/(1.-rhs*(1.+ptw->fHe) + sqrt_val);
+
+    ptdw->x_H = 1.;
+    ptdw->x_He = 1.;
+
+  }
+  /** - --> second regime: first Helium recombination (analytic approximation) */
+  else if (current_ap == ptdw->index_ap_He1) {
+
+    /* Assuming Saha equilibrium for HeIII --> HeII */
+    rhs = exp( 1.5*log(ptw->const_NR_numberdens*Tmat/(1.+z)/(1.+z)) - ptw->const_Tion_HeII/Tmat ) / ptw->SIunit_nH0;
+    if (pth->has_varconst == _TRUE_) {
+      rhs *= rescale_rhs;
+    }
+
+    sqrt_val = sqrt(pow((rhs-1.-ptw->fHe),2) + 4.*(1.+2.*ptw->fHe)*rhs);
+
+    x = 0.5*(sqrt_val - (rhs-1.-ptw->fHe));
+
+    ptdw->x_H = 1.;
+    ptdw->x_He = 1.;
+
+  }
+  /** - --> third regime: first Helium recombination finished, H and Helium fully ionized */
+  else if (current_ap == ptdw->index_ap_He1f) {
+
+    /* Assuming Saha equilibrium for HeII --> HeI with HII fully ionized, again expanding in rhs' = 1/rhs compared to below */
+    rhs = 0.25*ptw->SIunit_nH0/exp( 1.5*log(ptw->const_NR_numberdens*Tmat/(1.+z)/(1.+z)) - ptw->const_Tion_HeI/Tmat );
+    if (pth->has_varconst == _TRUE_) {
+      rhs /= rescale_rhs;
+    }
+
+    sqrt_val = sqrt(pow(1.-rhs,2) + 4.*rhs*(1.+ptw->fHe));
+
+    x = 2.*(1+ptw->fHe)/(1.-rhs + sqrt_val);
+
+    ptdw->x_H = 1.;
+    ptdw->x_He = 1.;
+
+  }
+  /** - --> fourth regime: second Helium recombination starts (analytic approximation) */
+  else if (current_ap == ptdw->index_ap_He2) {
+
+    /* Assuming Saha equilibrium for HeII --> HeI with HII fully ionized */
+    rhs = 4.*exp(1.5*log(ptw->const_NR_numberdens*Tmat/(1.+z)/(1.+z)) - ptw->const_Tion_HeI/Tmat ) / ptw->SIunit_nH0;
+    if (pth->has_varconst == _TRUE_) {
+      rhs *= rescale_rhs;
+    }
+
+    sqrt_val = sqrt(pow((rhs-1.),2) + 4.*(1.+ptw->fHe)*rhs );
+
+    x = 0.5*(sqrt_val - (rhs-1.));
+
+    ptdw->x_H = 1.;
+    ptdw->x_He = (x-1.)/ptw->fHe;
+
+  }
+  /** - --> fifth regime: Hydrogen recombination starts (analytic approximation)
+      while Helium recombination continues (full equation) */
+  else if (current_ap == ptdw->index_ap_H) {
+
+    rhs = exp(1.5*log(ptw->const_NR_numberdens*Tmat/(1.+z)/(1.+z)) - ptw->const_Tion_H/Tmat)/ptw->SIunit_nH0;
+    if (pth->has_varconst == _TRUE_) {
+      rhs *= rescale_rhs;
+    }
+
+    /* Assuming Saha equilibrium for HII->HI. Includes xHeII corrections from incomplete recombination of HeII --> HeI (non-zero x_HeII) */
+    xHeII = y[ptv->index_ti_x_He]*ptw->fHe;
+    x_H = 2./(1.+xHeII/rhs + sqrt((1.+xHeII/rhs)*(1.+xHeII/rhs)+4./rhs));
+
+    x_He = y[ptv->index_ti_x_He];
+    x = x_H + ptw->fHe * x_He;
+
+    ptdw->x_H = x_H;
+    ptdw->x_He = x_He;
+
+  }
+  /** - --> sixth regime: full Hydrogen and Helium equations */
+  else if (current_ap == ptdw->index_ap_frec) {
+    x_H = y[ptv->index_ti_x_H];
+    x_He = y[ptv->index_ti_x_He];
+    x = x_H + ptw->fHe * x_He;
+
+    ptdw->x_H = x_H;
+    ptdw->x_He = x_He;
+
+  }
+  /** - --> seventh regime: calculate x_noreio during reionization
+      (i.e. x before taking reionisation into account) */
+  else if (current_ap == ptdw->index_ap_reio) {
+
+    x_H = y[ptv->index_ti_x_H];
+    x_He = y[ptv->index_ti_x_He];
+    x = x_H + ptw->fHe * x_He;
+
+    ptdw->x_H = x_H;
+    ptdw->x_He = x_He;
+
+  }
+
+  ptdw->x_noreio = x;
+
+  /** - If z is during reionization, also calculate the reionized x */
+  if (current_ap == ptdw->index_ap_reio) {
+
+    /* set x from the evolver (which is very low ~10^-4) as 'xe_before' */
+    ptw->ptrp->reionization_parameters[ptw->ptrp->index_re_xe_before] = x;
+
+    /* compute x */
+    class_call(thermodynamics_reionization_function(z,pth,ptw->ptrp,&x),
+               pth->error_message,
+               pth->error_message);
+  }
+
+  ptdw->x_reio = x;
+
+  return _SUCCESS_;
+}
+
+/**
+ * This subroutine contains the reionization function \f$ X_e(z) \f$ (one for each scheme) and gives x for a given z.
+ *
+ * @param z     Input: redshift
+ * @param pth   Input: pointer to thermodynamics structure, to know which scheme is used
+ * @param preio Input: pointer to reionization parameters of the function \f$ X_e(z) \f$
+ * @param x     Output: \f$ X_e(z) \f$
+ */
+
+int thermodynamics_reionization_function(
+                                         double z,
+                                         struct thermodynamics * pth,
+                                         struct thermo_reionization_parameters * preio,
+                                         double * x
+                                         ) {
+
+  /** Summary: */
+
+  /** - define local variables */
+  double argument;
+  int i;
+  double z_jump;
+
+  int jump;
+  double center,before, after,width,one_jump;
+  double z_min, z_max;
+
+  switch (pth->reio_parametrization) {
+
+    /** - no reionization means nothing to be added to xe_before */
+  case reio_none:
+    *x = preio->reionization_parameters[preio->index_re_xe_before];
+    break;
+
+    /** - implementation of ionization function similar to the one in CAMB */
+  case reio_camb:
+
+    /** - --> case z > z_reio_start */
+    if (z > preio->reionization_parameters[preio->index_re_reio_start]) {
+      *x = preio->reionization_parameters[preio->index_re_xe_before];
+    }
+    else {
+      /** - --> case z < z_reio_start: hydrogen contribution (tanh of complicated argument) */
+      argument = (pow((1.+preio->reionization_parameters[preio->index_re_reio_redshift]),
+                      preio->reionization_parameters[preio->index_re_reio_exponent])
+                  -pow((1.+z),preio->reionization_parameters[preio->index_re_reio_exponent]))
+        /(preio->reionization_parameters[preio->index_re_reio_exponent]
+          *pow((1.+preio->reionization_parameters[preio->index_re_reio_redshift]),
+               (preio->reionization_parameters[preio->index_re_reio_exponent]-1.)))
+        /preio->reionization_parameters[preio->index_re_reio_width];
+
+      *x = (preio->reionization_parameters[preio->index_re_xe_after]
+            -preio->reionization_parameters[preio->index_re_xe_before])
+        *(tanh(argument)+1.)/2.
+        +preio->reionization_parameters[preio->index_re_xe_before];
+
+      /** - --> case z < z_reio_start: helium contribution (tanh of simpler argument) */
+      argument = (preio->reionization_parameters[preio->index_re_helium_fullreio_redshift] - z)
+        /preio->reionization_parameters[preio->index_re_helium_fullreio_width];
+
+      *x += preio->reionization_parameters[preio->index_re_helium_fullreio_fraction]
+        *(tanh(argument)+1.)/2.;
+    }
+    break;
+
+    /** - implementation of half-tangent like in 1209.0247 */
+  case reio_half_tanh:
+
+    /** - --> case z > z_reio_start */
+    if (z > preio->reionization_parameters[preio->index_re_reio_start]) {
+      *x = preio->reionization_parameters[preio->index_re_xe_before];
+    }
+    else {
+      /** - --> case z < z_reio_start: hydrogen contribution (tanh of complicated argument) */
+      argument = (pow((1.+preio->reionization_parameters[preio->index_re_reio_redshift]),
+                      preio->reionization_parameters[preio->index_re_reio_exponent])
+                  -pow((1.+z),preio->reionization_parameters[preio->index_re_reio_exponent]))
+        /(preio->reionization_parameters[preio->index_re_reio_exponent]
+          *pow((1.+preio->reionization_parameters[preio->index_re_reio_redshift]),
+               (preio->reionization_parameters[preio->index_re_reio_exponent]-1.)))
+        /preio->reionization_parameters[preio->index_re_reio_width];
+
+      /* argument goes from 0 to infty, not from -infty to infty like
+         in reio_camb case. Thus tanh(argument) goes from 0 to 1, not
+         from -1 to 1.  */
+
+      *x = (preio->reionization_parameters[preio->index_re_xe_after]
+            -preio->reionization_parameters[preio->index_re_xe_before])
+        *tanh(argument)
+        +preio->reionization_parameters[preio->index_re_xe_before];
+    }
+    break;
+
+    /** - implementation of binned ionization function similar to astro-ph/0606552 */
+  case reio_bins_tanh:
+
+    /** - --> case z > z_reio_start */
+    if (z > preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-1]) {
+      *x = preio->reionization_parameters[preio->index_re_xe_before];
+    }
+    else if (z < preio->reionization_parameters[preio->index_re_first_z]) {
+      *x = preio->reionization_parameters[preio->index_re_first_xe];
+    }
+    else {
+      i = 0;
+      while (preio->reionization_parameters[preio->index_re_first_z+i+1]<z) i++;
+
+      /* fix the final xe to xe_before*/
+      preio->reionization_parameters[preio->index_re_first_xe+preio->re_z_size-1] = preio->reionization_parameters[preio->index_re_xe_before];
+
+      /* This is the expression of the tanh-like jumps of the reio_bins_tanh scheme until the 10.06.2015. It appeared to be
+         not robust enough. It could lead to a kink in xe(z) near the maximum value of z at which reionisation is sampled. It has
+         been replaced by the simpler and more robust expression below.
+
+         *xe = preio->reionization_parameters[preio->index_re_first_xe+i]
+         +0.5*(tanh((2.*(z-preio->reionization_parameters[preio->index_re_first_z+i])
+         /(preio->reionization_parameters[preio->index_re_first_z+i+1]
+         -preio->reionization_parameters[preio->index_re_first_z+i])-1.)
+         /preio->reionization_parameters[preio->index_re_step_sharpness])
+         /tanh(1./preio->reionization_parameters[preio->index_re_step_sharpness])+1.)
+         *(preio->reionization_parameters[preio->index_re_first_xe+i+1]
+         -preio->reionization_parameters[preio->index_re_first_xe+i]);
+      */
+
+      /* compute the central redshift value of the tanh jump */
+      if (i == preio->re_z_size-2) {
+        z_jump = preio->reionization_parameters[preio->index_re_first_z+i]
+          + 0.5*(preio->reionization_parameters[preio->index_re_first_z+i]
+                 -preio->reionization_parameters[preio->index_re_first_z+i-1]);
+      }
+      else{
+        z_jump =  0.5*(preio->reionization_parameters[preio->index_re_first_z+i+1]
+                       + preio->reionization_parameters[preio->index_re_first_z+i]);
+      }
+
+      /* implementation of the tanh jump */
+      *x = preio->reionization_parameters[preio->index_re_first_xe+i]
+        +0.5*(tanh((z-z_jump)
+                   /preio->reionization_parameters[preio->index_re_step_sharpness])+1.)
+        *(preio->reionization_parameters[preio->index_re_first_xe+i+1]
+          -preio->reionization_parameters[preio->index_re_first_xe+i]);
+    }
+    break;
+
+    /** - implementation of many tanh jumps */
+  case reio_many_tanh:
+
+    /** - --> case z > z_reio_start */
+    if (z > preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-1]) {
+      *x = preio->reionization_parameters[preio->index_re_xe_before];
+    }
+    else if (z > preio->reionization_parameters[preio->index_re_first_z]) {
+
+      *x = preio->reionization_parameters[preio->index_re_xe_before];
+
+      /* fix the final xe to xe_before*/
+      preio->reionization_parameters[preio->index_re_first_xe+preio->re_z_size-1] = preio->reionization_parameters[preio->index_re_xe_before];
+
+      for (jump=1; jump<preio->re_z_size-1; jump++) {
+
+        center = preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-1-jump];
+
+        /* before and after are meant with respect to growing z, not growing time */
+        before = preio->reionization_parameters[preio->index_re_first_xe+preio->re_z_size-1-jump]
+          -preio->reionization_parameters[preio->index_re_first_xe+preio->re_z_size-jump];
+        after = 0.;
+        width = preio->reionization_parameters[preio->index_re_step_sharpness];
+
+        one_jump = before + (after-before)*(tanh((z-center)/width)+1.)/2.;
+
+        *x += one_jump;
+      }
+
+    }
+    else{
+      *x = preio->reionization_parameters[preio->index_re_first_xe];
+    }
+    break;
+
+    /** - implementation of reio_inter */
+  case reio_inter:
+
+    /** - --> case z > z_reio_start */
+    if (z > preio->reionization_parameters[preio->index_re_first_z+preio->re_z_size-1]) {
+      *x = preio->reionization_parameters[preio->index_re_xe_before];
+    }
+    else{
+      i=0;
+      while (preio->reionization_parameters[preio->index_re_first_z+i+1] < z) i++;
+
+      z_min = preio->reionization_parameters[preio->index_re_first_z+i];
+      z_max = preio->reionization_parameters[preio->index_re_first_z+i+1];
+
+      /* fix the final xe to xe_before*/
+      preio->reionization_parameters[preio->index_re_first_xe+preio->re_z_size-1] = preio->reionization_parameters[preio->index_re_xe_before];
+
+      class_test(z<z_min,
+                 pth->error_message,
+                 "z out of range for reionization interpolation");
+
+      class_test(z>z_max,
+                 pth->error_message,
+                 "z out of range for reionization interpolation");
+
+      argument =(z-preio->reionization_parameters[preio->index_re_first_z+i])
+        /(preio->reionization_parameters[preio->index_re_first_z+i+1]
+          -preio->reionization_parameters[preio->index_re_first_z+i]);
+
+      *x = preio->reionization_parameters[preio->index_re_first_xe+i]
+        + argument*(preio->reionization_parameters[preio->index_re_first_xe+i+1]
+                    -preio->reionization_parameters[preio->index_re_first_xe+i]);
+
+      class_test(*x<0.,
+                 pth->error_message,
+                 "Interpolation gives negative ionization fraction\n",
+                 argument,
+                 preio->reionization_parameters[preio->index_re_first_xe+i],
+                 preio->reionization_parameters[preio->index_re_first_xe+i+1]);
+    }
+    break;
+
+  default:
+    class_stop(pth->error_message,
+               "value of reio_parametrization=%d unclear",pth->reio_parametrization);
+    break;
+  }
+  return _SUCCESS_;
+}
+
+/**
+ * Function for formatting the titles to be output
+ *
+ * @param pba        Input: pointer to background structure
+ * @param pth        Input: pointer to the thermodynamics structure
+ * @param titles     Input: titles string containing all titles
+ * @return the error status
+ */
+
+int thermodynamics_output_titles(
+                                 struct background * pba,
+                                 struct thermodynamics *pth,
+                                 char titles[_MAXTITLESTRINGLENGTH_]
+                                 ) {
+
+  class_store_columntitle(titles,"scale factor a",_TRUE_); //NS TODO :: Added a, tell Julien
+  class_store_columntitle(titles,"z",_TRUE_);
+  class_store_columntitle(titles,"conf. time [Mpc]",_TRUE_);
+  class_store_columntitle(titles,"x_e",_TRUE_);
+  class_store_columntitle(titles,"kappa' [Mpc^-1]",_TRUE_);
+  //class_store_columntitle(titles,"kappa''",_TRUE_);
+  //class_store_columntitle(titles,"kappa'''",_TRUE_);
+  class_store_columntitle(titles,"exp(-kappa)",_TRUE_);
+  class_store_columntitle(titles,"g [Mpc^-1]",_TRUE_);
+  //class_store_columntitle(titles,"g'",_TRUE_);
+  //class_store_columntitle(titles,"g''",_TRUE_);
+  class_store_columntitle(titles,"Tb [K]",_TRUE_);
+  class_store_columntitle(titles,"dTb [K]",_TRUE_);
+  class_store_columntitle(titles,"w_b",_TRUE_);
+  class_store_columntitle(titles,"c_b^2",_TRUE_);
+  if (pba->has_idm == _TRUE_) {
+    class_store_columntitle(titles,"T_idm [K]",_TRUE_);
+    class_store_columntitle(titles,"c_idm^2",_TRUE_);
+    if (pth->has_idm_g == _TRUE_) {
+      class_store_columntitle(titles,"dmu_idm_g",_TRUE_);
+      class_store_columntitle(titles,"ddmu_idm_g",_TRUE_);
+    }
+    if (pth->has_idm_b==_TRUE_){
+      class_store_columntitle(titles,"R_idm_b",_TRUE_);
+    }
+    if (pth->has_idm_dr == _TRUE_){
+      class_store_columntitle(titles,"dmu_idm_dr",_TRUE_);
+      class_store_columntitle(titles,"tau_idm_dr",_TRUE_);
+      class_store_columntitle(titles,"tau_idr",_TRUE_);
+      class_store_columntitle(titles,"g_idm_dr [Mpc^-1]",_TRUE_);
+    }
+  }
+  if (pba->has_idr == _TRUE_) {
+    class_store_columntitle(titles, "T_idr [K]", _TRUE_);
+    class_store_columntitle(titles,"dmu_idr",_TRUE_);
+  }
+  class_store_columntitle(titles,"tau_d",_TRUE_);
+  //class_store_columntitle(titles,"max. rate",_TRUE_);
+  class_store_columntitle(titles,"r_d",pth->compute_damping_scale);
+
+  return _SUCCESS_;
+}
+
+/**
+ * Output the data for the output into files
+ *
+ * @param pba                 Input: pointer to background structure
+ * @param pth                 Input: pointer to the thermodynamics structure
+ * @param number_of_titles    Input: number of titles
+ * @param data                Input: pointer to data file
+ * @return the error status
+ */
+
+int thermodynamics_output_data(
+                               struct background * pba,
+                               struct thermodynamics *pth,
+                               int number_of_titles,
+                               double *data
+                               ) {
+
+  int index_z, storeidx;
+  double *dataptr, *pvecthermo;
+  double z,tau;
+
+  // pth->number_of_thermodynamics_titles = get_number_of_titles(pth->thermodynamics_titles);
+  // pth->size_thermodynamics_data = pth->number_of_thermodynamics_titles*pth->tt_size;
+
+  /* Store quantities: */
+  for (index_z=0; index_z<pth->tt_size; index_z++) {
+    dataptr = data + index_z*number_of_titles;
+    pvecthermo = pth->thermodynamics_table+index_z*pth->th_size;
+    z = pth->z_table[index_z];
+    storeidx=0;
+
+    class_call(background_tau_of_z(pba, z, &tau),
+               pba->error_message,
+               pth->error_message);
+
+    class_store_double(dataptr,1./(1.+z),_TRUE_,storeidx);
+    class_store_double(dataptr,z,_TRUE_,storeidx);
+    class_store_double(dataptr,tau,_TRUE_,storeidx);
+    class_store_double(dataptr,pvecthermo[pth->index_th_xe],_TRUE_,storeidx);
+    class_store_double(dataptr,pvecthermo[pth->index_th_dkappa],_TRUE_,storeidx);
+    //class_store_double(dataptr,pvecthermo[pth->index_th_ddkappa],_TRUE_,storeidx);
+    //class_store_double(dataptr,pvecthermo[pth->index_th_dddkappa],_TRUE_,storeidx);
+    class_store_double(dataptr,pvecthermo[pth->index_th_exp_m_kappa],_TRUE_,storeidx);
+    class_store_double(dataptr,pvecthermo[pth->index_th_g],_TRUE_,storeidx);
+    //class_store_double(dataptr,pvecthermo[pth->index_th_dg],_TRUE_,storeidx);
+    //class_store_double(dataptr,pvecthermo[pth->index_th_ddg],_TRUE_,storeidx);
+    class_store_double(dataptr,pvecthermo[pth->index_th_Tb],_TRUE_,storeidx);
+    class_store_double(dataptr,pvecthermo[pth->index_th_dTb],_TRUE_,storeidx);
+    class_store_double(dataptr,pvecthermo[pth->index_th_wb],_TRUE_,storeidx);
+    class_store_double(dataptr,pvecthermo[pth->index_th_cb2],_TRUE_,storeidx);
+    if (pba->has_idm == _TRUE_) {
+      class_store_double(dataptr,pvecthermo[pth->index_th_T_idm],_TRUE_,storeidx);
+      class_store_double(dataptr,pvecthermo[pth->index_th_c2_idm],_TRUE_,storeidx);
+      if (pth->has_idm_g == _TRUE_) {
+        class_store_double(dataptr,pvecthermo[pth->index_th_dmu_idm_g],_TRUE_,storeidx);
+        class_store_double(dataptr,pvecthermo[pth->index_th_ddmu_idm_g],_TRUE_,storeidx);
+      }
+      if (pth->has_idm_b == _TRUE_){
+        class_store_double(dataptr,pvecthermo[pth->index_th_R_idm_b],_TRUE_,storeidx);
+      }
+      if (pth->has_idm_dr == _TRUE_){
+        class_store_double(dataptr,pvecthermo[pth->index_th_dmu_idm_dr],_TRUE_,storeidx);
+        class_store_double(dataptr,pvecthermo[pth->index_th_tau_idm_dr],_TRUE_,storeidx);
+        class_store_double(dataptr,pvecthermo[pth->index_th_tau_idr],_TRUE_,storeidx);
+        class_store_double(dataptr,pvecthermo[pth->index_th_g_idm_dr],_TRUE_,storeidx);
+      }
+    }
+    if (pba->has_idr == _TRUE_) {
+      class_store_double(dataptr, pvecthermo[pth->index_th_T_idr],_TRUE_,storeidx);
+      class_store_double(dataptr,pvecthermo[pth->index_th_dmu_idr],_TRUE_,storeidx);
+    }
+    class_store_double(dataptr,pvecthermo[pth->index_th_tau_d],_TRUE_,storeidx);
+    //class_store_double(dataptr,pvecthermo[pth->index_th_rate],_TRUE_,storeidx);
+    class_store_double(dataptr,pvecthermo[pth->index_th_r_d],pth->compute_damping_scale,storeidx);
+
+  }
+
+  return _SUCCESS_;
+}
+
+
+
+/**
+ * This routine computes the quantities connected to interacting dark
+ * matter with photons, baryons & dark radiation (idm), and interacting dark radiation (idr)
+ *
+ * @param pba          Input: pointer to background structure
+ * @param z            Input: redshift
+ * @param y            Input: vector of evolver quantities
+ * @param dy           Input: derivative of this vector
+ * @param pth          Input: pointer to thermodynamics structure
+ * @param ptw          Input/Output: pointer to thermo workspace
+ * @param pvecback     Input: vector of background quantities
+ *
+ * @return the error status
+ *
+ */
+int thermodynamics_idm_quantities(struct background * pba,
+                                  double z,
+                                  double * y,
+                                  double * dy,
+                                  struct thermodynamics * pth,
+                                  struct thermo_workspace * ptw,
+                                  double * pvecback){
+  /** Summary: */
+
+  /** Define local variables */
+  struct thermo_diffeq_workspace * ptdw = ptw->ptdw;
+  struct thermo_vector * ptv = ptdw->ptv;
+
+  /* Thermo quantities */
+  double T_g, Tmat, T_idr = 0.;
+  double Vrms_idm_b2, m_b, T_diff_idm_b, FHe;
+
+  T_g = ptw->Tcmb * (1.+z);
+  Tmat = y[ptv->index_ti_D_Tmat] + T_g;
+
+  /** - First deal with any required dark radiation */
+  if (pba->has_idr == _TRUE_) {
+    T_idr = pba->T_idr*(1.+z);
+    ptdw->dmu_idr = pth->b_idr*pow((1.+z)/1.e7,pth->n_index_idm_dr)*pba->Omega0_idr*pow(pba->h,2);
+  }
+
+  /** - Now deal with any required dark matter (and its interactions) */
+  if (pba->has_idm == _TRUE_) {
+    /* First, set the IDM temperature in tight coupling */
+    if (ptw->has_ap_idmtca == _TRUE_ && ptdw->ap_current == ptdw->index_ap_idmtca) {
+      ptdw->T_idm = T_g;
+      /* If we are coupling strongly to dark radiation instead */
+      if ((pth->has_idm_dr == _TRUE_) && pth->n_index_idm_dr > 0)
+        ptdw->T_idm = T_idr;
+    }
+
+    /* Also set idm temperature without tight coupling */
+    else {
+      ptdw->T_idm = y[ptv->index_ti_T_idm];
+    }
+
+    /* Compute idm temperature derivatives, starting with homogeneous expansion */
+    ptdw->T_idm_prime = - 2. * ptdw->T_idm / (1.+z);
+
+    /* Now add also coupling to photons*/
+    if (pth->has_idm_g == _TRUE_) {
+      /* - photon interaction rate with idm_g */
+      ptdw->dmu_idm_g = 3./8./_PI_/_G_*pow(1.+z, 2+pth->n_index_idm_g)*pba->Omega0_idm*pba->H0*pba->H0*pth->u_idm_g*pow(_c_,4)*_sigma_/1.e11/_eV_/_Mpc_over_m_;
+      ptdw->T_idm_prime += - 2.*4./3. * pvecback[pba->index_bg_rho_g]/pvecback[pba->index_bg_rho_idm] * ptdw->dmu_idm_g * (ptdw->T_idm  - T_g) / pvecback[pba->index_bg_H];
+    }
+    /* Now add also coupling to dark radiation */
+    if (pth->has_idm_dr == _TRUE_) {
+      /* - idr interaction rate with idm_dr */
+      ptdw->dmu_idm_dr = pth->a_idm_dr*pow((1.+ z)/1.e7,pth->n_index_idm_dr)*pba->Omega0_idm*pow(pba->h,2);
+      ptdw->Sinv_idm_dr  = 4./3.*pvecback[pba->index_bg_rho_idr]/pvecback[pba->index_bg_rho_idm];
+      ptdw->T_idm_prime += - 2* ptdw->dmu_idm_dr * ptdw->Sinv_idm_dr * (ptdw->T_idm - T_idr) / pvecback[pba->index_bg_H];
+    }
+    /* Now add also coupling to baryons */
+    /* Note that here we do a simplified calculation of the velocity, as described in 2010.04074. This will be adapted in future versions. */
+    if (pth->has_idm_b == _TRUE_) {
+      if (z > 1.e3)
+        Vrms_idm_b2 = 1.e-8;
+      else
+        Vrms_idm_b2 = 1.e-8*pow(((1.+z)/1.e3),2);
+
+      FHe = 1- ptw->YHe;
+      m_b = _m_p_*_c_*_c_/_eV_; /* Note that for now we always assume scattering with protons. This will be adapted in future versions. */
+
+      T_diff_idm_b = (Tmat*_k_B_/_eV_/m_b)+(ptdw->T_idm*_k_B_/_eV_/pth->m_idm)+(Vrms_idm_b2/3.0);
+
+      ptdw->R_idm_b = (pvecback[pba->index_bg_a]*pvecback[pba->index_bg_rho_b]*pth->cross_idm_b*pth->n_coeff_idm_b/(m_b+pth->m_idm))
+        *pow(T_diff_idm_b,(pth->n_index_idm_b+1.0)/2.0)*FHe
+        *(3.e-4*pow(_c_,4.)/(8.*_PI_*_Mpc_over_m_*_G_*_eV_));
+
+      ptdw->T_idm_prime += -2.*pth->m_idm/(pth->m_idm + m_b)*ptdw->R_idm_b*(ptdw->T_idm-Tmat) / pvecback[pba->index_bg_H];
+    }
+
+    /* Now conclude by computing the sound speed */
+    ptdw->c2_idm = _k_B_ /(pth->m_idm*_eV_)  * (ptdw->T_idm - (1.+z)/3. * ptdw->T_idm_prime);
+  }
+
+  return _SUCCESS_;
+}
+
+/**
+ * Check if the initial integration time and spacing needs adjusting, for example for interacting dark matter
+ *
+ * @param ppr   Input: pointer to precision structure
+ * @param pba   Input: pointer to background structure
+ * @param pth   Input: pointer to thermo structure
+ * @param ptw   Input/Output: pointer to thermo workspace
+ * @return the error status
+ */
+int thermodynamics_obtain_z_ini(
+                                struct precision * ppr,
+                                struct background *pba,
+                                struct thermodynamics *pth,
+                                struct thermo_workspace * ptw
+                                ) {
+
+  /* These wil affect when and how the temperature integration starts*/
+  double z_initial;
+  int Nz_log;
+  /* This describes until when (if at all) any idm might be coupled to either photon or IDR temp*/
+  double z_idm_dec, z_idm_dec_min=_HUGE_;
+
+  double R_dm;
+  double f1nu = 7./8.*pow((4./11.),(4./3.));
+
+  z_initial = ppr->thermo_z_initial;
+  Nz_log = ppr->thermo_Nz_log;
+
+  /* Set this initially to False and check if it's needed */
+  ptw->has_ap_idmtca = _FALSE_;
+
+  /* If there is idm, we want the thermodynamics table to
+   * start at a much larger z, in order to capture the possible
+   * non-trivial behavior of the dark matter interaction rate at early times */
+
+  /* First, calculate the approximate decoupling time iff there is coupling, based on formulae from 2010.04074 */
+  if (pba->has_idm == _TRUE_) {
+    if ((pth->has_idm_g == _TRUE_) && (pth->n_index_idm_g > -2)) {
+      z_idm_dec = pow(3.01e9, 1./(2+pth->n_index_idm_g)) * pow((1.+pba->Neff*f1nu)/(1.+3.044*f1nu), 1./(4.+2.*pth->n_index_idm_g)) * pow(pth->u_idm_g*1e4, -1./(2.+pth->n_index_idm_g));
+      if (pth->thermodynamics_verbose > 3)
+        printf("The decoupling redshift for idm_g is z_idm_dec = %.5e\n", z_idm_dec);
+      z_idm_dec_min = MIN(z_idm_dec, z_idm_dec_min);
+    }
+    if ((pth->has_idm_b == _TRUE_) && (pth->n_index_idm_b > -3)) {
+      R_dm = pth->m_idm / (_m_p_*_c_*_c_/_eV_);
+      z_idm_dec = 4e4 * pow(  9.15/pth->n_coeff_idm_b
+                              *pow((1.+pba->Neff*f1nu)/(1.+3.044*f1nu), 1./2.) * (0.0224/pba->Omega0_b/pba->h/pba->h)
+                              *pow(R_dm, (pth->n_index_idm_b+1.)/2.)/pow(1.+R_dm, (pth->n_index_idm_b-1.)/2.)
+                              *pow(10.,4*pth->n_index_idm_b - 25)/pth->cross_idm_b        ,  2./(pth->n_index_idm_b+3));
+
+      if (pth->n_index_idm_b == -2)
+        z_idm_dec *= 10;
+      if (pth->thermodynamics_verbose > 3)
+        printf("The decoupling redshift for idm_b is z_idm_dec = %.5e\n", z_idm_dec);
+      z_idm_dec_min = MIN(z_idm_dec, z_idm_dec_min);
+    }
+    if ((pth->has_idm_dr == _TRUE_) && (pth->n_index_idm_dr > 0)) {
+      z_idm_dec = pow(10., 7.-6./ pth->n_index_idm_dr)
+        * pow( 1.6 * (1e-6/pba->Omega0_idr/pba->h/pba->h)
+               * pow((1.+pba->Neff*f1nu)/(1.+3.044*f1nu), 1./2.)
+               * (1e6 / pth->a_idm_dr)  ,  1./pth->n_index_idm_dr);
+      if (pth->thermodynamics_verbose > 3)
+        printf("The decoupling redshift for idm_dr is z_idm_dec = %.5e\n", z_idm_dec);
+      /* we need to be careful if idm is coupled to photons and idr at the same time */
+      class_test(z_idm_dec_min != _HUGE_ && abs(pba->T_idr - pba->T_cmb) > 1e-2,
+                 pth->error_message,
+                 "It seems that at early times idm is thermally coupled to both idr and photons (possibly through baryons).\nPlease set the initial temperatures equal or disable this error.");
+
+      z_idm_dec_min = MIN(z_idm_dec, z_idm_dec_min);
+    }
+
+    /* if there is initial coupling then we need the approximation scheme ap_idmtca */
+    if (z_idm_dec_min != _HUGE_) {
+      ptw->has_ap_idmtca = _TRUE_;
+      /* assert that ap_idmtca ends before ap_brec ends */
+      ptw->z_ap_idmtca = MAX( 1e2 * z_idm_dec_min, (ppr->recfast_z_He_1+ppr->recfast_delta_z_He_1)*1.5);
+      if (pth->thermodynamics_verbose > 3)
+        printf("Starting the idm TCA at z_ap_idmtca = %.5e\n", ptw->z_ap_idmtca);
+    }
+
+    /* From this, decide the initial time of integration */
+    /* start the integration before the decoupling */
+    if (ptw->has_ap_idmtca == _TRUE_) {
+      class_test(ptw->z_ap_idmtca * ppr->a_ini_over_a_today_default > 1,
+                 pth->error_message,
+                 "The decoupling time of the idm species is set earlier than the background integration. Start the background integration earlier.");
+
+      z_initial = MAX(z_initial, MIN(100 * ptw->z_ap_idmtca, 1/ppr->a_ini_over_a_today_default-2.));
+    }
+
+    /* if there is no coupling at early time, we need to set an another starting point */
+    else {
+      z_initial = MAX(ppr->thermo_z_initial_if_idm, z_initial);
+    }
+
+    if (pth->thermodynamics_verbose > 2)
+      printf(" -> Increasing the initial redshift of thermodynamics from %e to %e \n",ppr->thermo_z_initial,z_initial);
+
+    /* Rescale Nz_log (if necessary) in order to cover with equal spacing the enlarged range */
+    Nz_log = MAX((int)(Nz_log/log(ppr->thermo_z_initial)*log(z_initial)),Nz_log);
+  }
+
+  ppr->thermo_z_initial = z_initial;
+  ppr->thermo_Nz_log = Nz_log;
+  class_test(z_initial * ppr->a_ini_over_a_today_default > 1.,
+             pth->error_message,
+             "The initial starting time for the temperature integration is set earlier than the background integration. Adjust obtain_z_ini to mitigate this");
+  class_test(z_initial <  ppr->recfast_z_He_3,
+             pth->error_message,
+             "The initial starting time for the temperature integration is set after HeliumIII recombination starts. Adjust obtain_z_ini to mitigate this");
+
+  return _SUCCESS_;
+
+}
+
+/**
+ * Set the correct initial temperature for the idm species
+ *
+ * @param pba   Input: pointer to background structure
+ * @param pth   Input: pointer to thermo structure
+ * @param z_ini Input: z_ini
+ * @param ptdw  Input/Output: pointer to thermo differential equation workspace
+ * @return the error status
+ */
+int thermodynamics_idm_initial_temperature(
+                                           struct background* pba,
+                                           struct thermodynamics* pth,
+                                           double z_ini,
+                                           struct thermo_diffeq_workspace * ptdw
+                                           ) {
+
+  /** - define local parameters */
+  double* pvecback;
+  int last_index;
+  /* idm-b special parameters */
+  double m_b, FHe, T_diff_idm_b;
+  /* steady state factors ( = prefactors in temperature evolution equation) */
+  double alpha=0.,beta=0.,epsilon=0.;
+
+  /** - obtain necessary background information */
+  class_alloc(pvecback,pba->bg_size*sizeof(double),pba->error_message);
+  class_call(background_at_z(pba,
+                             z_ini,
+                             long_info,
+                             inter_normal,
+                             &last_index,
+                             pvecback),
+             pba->error_message,
+             pth->error_message);
+
+  /* idm-idr steady state */
+  if ((pth->has_idm_dr == _TRUE_) && (pth->n_index_idm_dr == 0)) {
+    epsilon = 2*4./3.*pvecback[pba->index_bg_rho_idr]/pvecback[pba->index_bg_rho_idm]*
+      pth->a_idm_dr*pow((1.+ z_ini)/1.e7,pth->n_index_idm_dr)*pba->Omega0_idm*pow(pba->h,2) / pvecback[pba->index_bg_H]*(1.+z_ini);
+  }
+  /* idm_g steady state */
+  else if (pth->has_idm_g == _TRUE_ && pth->n_index_idm_g == -2) {
+    ptdw->dmu_idm_dr = pth->a_idm_dr*pow((1.+ z_ini)/1.e7,pth->n_index_idm_dr)*pba->Omega0_idm*pow(pba->h,2);
+    ptdw->Sinv_idm_dr  = 4./3.*pvecback[pba->index_bg_rho_idr]/pvecback[pba->index_bg_rho_idm];
+    alpha = 2.* ptdw->dmu_idm_dr * ptdw->Sinv_idm_dr;
+  }
+  /* idm_b steady state */
+  else if (pth->has_idm_b == _TRUE_ && pth->n_index_idm_b == -3) {
+    FHe = 1-pth->YHe;
+    m_b = _m_p_*_c_*_c_/_eV_;
+    /* This is super-highly approximated, and will not usually be correct. However, the small error we incur should be corrected by the evolution equation */
+    T_diff_idm_b = (pba->T_cmb*(1.+z_ini)*_k_B_/_eV_/m_b)+(pba->T_cmb*(1.+z_ini)*_k_B_/_eV_/pth->m_idm)+(1.e-8/3.0);
+    ptdw->R_idm_b = (pvecback[pba->index_bg_a]*pvecback[pba->index_bg_rho_b]*pth->cross_idm_b*pth->n_coeff_idm_b/(m_b+pth->m_idm))
+      *pow(T_diff_idm_b,(pth->n_index_idm_b+1.0)/2.0)*FHe
+      *(3.e-4*pow(_c_,4.)/(8.*_PI_*_Mpc_over_m_*_G_*_eV_));
+    alpha = 2.*pth->m_idm/(pth->m_idm + m_b)*ptdw->R_idm_b;
+  }
+
+  /* This formula (assuming alpha,beta,epsilon=const) approximates the steady-state solution of the IDM temperature evolution equation */
+  ptdw->T_idm = (alpha + beta + epsilon * pba->T_idr/pba->T_cmb)/(1.+epsilon+alpha+beta) * pba->T_cmb * (1.+z_ini);
+
+  free(pvecback);
+
+  return _SUCCESS_;
+}
+```
+
+## COMPLETE INHERITED SAMLET JOURNAL — BYTE-PRESERVED HISTORICAL APPENDIX
+
+Preserved incoming journal bytes: 3912473. SHA256: 61e21fc0e7376131ac480f01a542a88416baaab8be7db0ba39278e1008fd60da. The suffix below is exactly the incoming authoritative journal from its `BUBBLEVERSE — UNIVERSAL REVISION` heading through its end. Its complete source register, captured objects, earlier controls, raw indexes and history remain intact.
+
+# BUBBLEVERSE — UNIVERSAL REVISION
+
+COPY BOX 1 — WORD / AUTHORITATIVE UNIVERSAL REVISION
+
+STATUS: REVISION COMPLETE — scientific revision and next-question selection; remote model admission pending.
+DATE AND TIME: 2026-10-11T16:06:56+02:00 (Europe/Copenhagen, UTC+02:00); 2026-10-11T14:06:56+00:00 (UTC)
+TIME PROVENANCE: Actual runtime clock with UTC and Europe/Copenhagen conversion; no separately verified external time source.
+CLOSED Q: Q-047; CASE ID: NOT DOCUMENTED.
+REVISION RECORD: I-PROPOSED-Q047-M14-REVISION-001, proposed internal identifier, not a registered case/result ID.
+NO NEXT-QUESTION INVESTIGATION PERFORMED.
+
+---
+
+## MASTER JOURNAL
+
+This is the single authoritative MASTER JOURNAL, kept under the existing Q047_SAMLET_JOURNAL.md identity. The current active synthesis below governs. The complete incoming journal, its source register, claim mappings, raw-result references, contracts and scientific history are preserved verbatim in the historical appendix. Its older continuation instructions are historical where superseded by the documented Q-047 closure. No competing scientific journal or new accepted repository release is created.
+
+Authority boundary: the local completed state reaches Q-047; the freshly inspected remote accepted model remains v0.7/R000007 through Q045. This revision does not silently admit Q046/Q047 to that repository, promote a candidate, or alter its source-access boundary. CASE ID for Q-047 remains NOT DOCUMENTED.
+
+### Current active scientific model
+
+1. OBS-COSMIC-EVOLUTION-001 and OBS-HOT-DENSE-PAST-001 remain SUPPORTED: evolving cosmic geometry and a hotter, denser past are supported by the inherited observable relations. A physical initial singularity is not established.
+2. OBS-MISSING-MASS-001 and OBS-LATE-ACCEL-001 remain SUPPORTED within their stated gravitational/cosmological frameworks. The microscopic identity of dark matter and the origin of late-time acceleration remain OPEN. Neither is solved by this case.
+3. MECH-LCDM-001 remains a supported reference framework. MECH-DYNDE-001 remains a candidate, not a directly observed field. MECH-EDE-N3-001 and MECH-ME-001 remain constrained candidates, not established solutions to the H0 discrepancy.
+4. OBS-H0-LOCAL-001, OBS-H0-CMB-001 and OBS-H0-BAOBBN-001 retain their inherited model/inference-chain provenance. They must not be averaged into one raw measurement or upgraded to independent direct determinations. CTR-H0-001 remains OPEN as an inference-chain tension; no new H0 estimate or detection of new physics is produced here.
+5. CTR-PLANCK-IMPL-001 remains OPEN_NARROWED: CamSpec and HiLLiPoP endpoint-geometry differences survive the locked Q039 tests. Those tests reject only the specified full explanations under tested conditions. Shared Planck information prevents treating the two pipelines as independent observations. Their causal explanation and downstream scientific significance remain unresolved.
+6. CTR-HIST-BASIN-LABEL-001 remains RESOLVED_METHODOLOGICALLY. Classifier dependence is not evidence that a classifier-invariant geometric feature physically disappeared. CON-GLOBALITY-001 remains ACTIVE: best-observed finite-search EDE solutions are not mathematical global minima.
+7. Q040's common-CMB nuisance-marginalization construction remains methodologically useful; its tested numerical representations failed validation before endpoint geometry. Q041 V19 remains a controlled NO_SCIENCE terminal result: 0/32 documented complete chains, 30 reaching the frozen maximum and two partial. Neither supplies a portability or model-preference result. V19's narrower EDE-only scope does not replace the broader original downstream contract.
+8. Q042 remains closed INCONCLUSIVE for general feasibility. Partial histories and the conditional 32-support result are not full physical tau or a universal impossibility proof. Q043 established technical preparation, not scientific viability or production authorization.
+9. Q044's component-wise exact-real bounds remain conditional and scoped. They do not certify the full coupled thermal history, physical tau, likelihood response or cosmological inference. Q045 remains closed with physical materiality INCONCLUSIVE; native same-history diagnostics do not supply an independently qualified physical reference. Q046 does not establish the missing full reference qualification.
+10. Q-047 is CLOSED epistemically INCONCLUSIVE under current preserved evidence. Q_COMPLETION_GATE=PASS_FOR_INCONCLUSIVE_CLOSURE. All four historical PT01/PT03, full PT04, first-hit and FINAL_RESULT_GATE values remain UNRESOLVED. No actual qualified first event, certified nonreachability, physical falsification or new physical anomaly is established.
+11. Q-047's conditional mathematical result survives: if a qualified trajectory reaches the helium boundary with a strictly negative upper rate and no competing switch/reset, the literal strict-guard ODE has no absolutely continuous local forward continuation under the stated regularity conditions. The four actual historical antecedents are unproved. Numerical overshoot or a successful native run does not invalidate this conditional theorem. A latch/reset changes the target dynamics and must be labelled separately.
+12. Run 38140371059 supplies four technically validated NEW_RECONSTRUCTION state/output objects. Eight output tables are byte-identical to the archived goldens, but this does not establish historical internal-state identity. Preserve historical and newly reconstructed targets separately.
+13. M15 validates positive finite neutrino-measure structure and selected captured initial-state linkage for those new objects. Reduced exact-real positive-H^2 regularity is scoped to the demonstrated subsystem. The approximately 3.361650813731439 ppm finite-node/source-decimal massless-reference difference and approximately -1.2615211826894587e-15 log-coordinate mismatch are deterministic representation diagnostics, not physical error bars, historical equivalence or a CMB/H0 bias.
+14. No bound on the complete coupled difference in x_e(z) or cumulative physical tau follows merely from the direct boundary helium contribution q=10^-6. Hydrogen, temperature, mode transitions, smoothing and reionization can respond. The native selected-support tau diagnostic and complete physical cumulative Thomson depth are different objects.
+15. PRED-EDE-PORTABILITY-001, PRED-Q039-COUPLED-001 and PRED-H0-INDEPENDENT-001 remain OPEN. The new completion-sensitivity question addresses a prediction-validity dependency; it does not answer any of those larger scientific questions.
+16. No active physical parameter, model preference, observation or prediction is overwritten by administrative closure. Historical failures, superseded operational instructions and rejected shortcuts remain recoverable, with their original provenance and scope. All existing source IDs and mappings survive in the complete inherited appendix.
+
+### Central inherited benchmarks — not newly measured or independently reverified
+
+| Claim ID | Inherited value | Unit | Interpretation / provenance |
+|---|---|---|---|
+| OBS-H0-LOCAL-001 | 73.50 ± 0.81 | km s^-1 Mpc^-1 | Local distance-network inference; accepted/observations.json and original source chain retained in history |
+| OBS-H0-CMB-001 | 67.24 ± 0.35 | km s^-1 Mpc^-1 | Combined CMB inference under flat LCDM; original likelihood/data dependencies retained |
+| OBS-H0-BAOBBN-001 | 68.51 ± 0.58 | km s^-1 Mpc^-1 | DESI DR2 + BBN inference under flat LCDM; sound-horizon/model dependence retained |
+
+The accepted artifact labels the quoted uncertainties as sigma. Their complete original convention, data and source basis are preserved in inherited history; this revision does not recompute significance or present them as current freshly verified measurements.
+
+---
+
+## INTEGRATION OF THE NEW CASE
+
+CLOSED CASE: Q-047; CASE ID NOT DOCUMENTED.
+QUESTION: For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?
+DOCUMENTED ANSWER: INCONCLUSIVE / INSUFFICIENT_EVIDENCE under the current preserved evidence; Q_COMPLETION_GATE=PASS_FOR_INCONCLUSIVE_CLOSURE; actual scientific FINAL_RESULT_GATE=UNRESOLVED for all four cases.
+EVIDENCE STRENGTH: Strong for byte identities, captured structural/runtime facts and M15's stated exact mathematical scopes; insufficient for historical admission, complete thermal/event certification or a physical event verdict.
+CONCLUSION-CRITICAL CAVEATS: NEW_RECONSTRUCTION is not historical state identity. No complete validated inverse has been supplied. Nonsingleton admitted states could suffice if every member had the same certified conclusion; uniqueness is not required. No impossibility theorem is asserted. No first event or nonreachability is certified.
+CENTRAL SOURCES: Ingestion record, full inherited journal, capture results, M15 exact audit/symbolic control and pinned implementation.
+RELEVANT GITHUB RESULTS: Run 38140371059 is technically complete; all six jobs successful, none certifies the Q-047 event.
+RELATIONSHIP: [REFINES] the evidence scope; [EXTENDS] preserved computational knowledge; [SUPERSEDES] the former operational continuation instruction only. No new robust physical contradiction or model falsification.
+RAW OUTPUT / TECHNICAL / PHYSICAL: Four complete new capture objects and table equality / structurally credible reconstructed inputs with scoped controls / no new historical or cosmological truth verdict.
+
+---
+
+## WHAT THE CASE ACTUALLY CHANGED
+
+SCIENTIFIC CHANGE: The active description now explicitly separates the conditional strict-guard theorem, new captured inputs, representation diagnostics and unresolved historical/physical inference. A concrete completion-sensitivity gap is registered.
+WHAT DID NOT CHANGE: Exact Q-047, its four historical scientific gates, original source/core/contracts, accepted z_reio, the inherited observations/constraints/model statuses and rejected tested explanations.
+NEWLY RESOLVED UNCERTAINTY: The authorized new capture completed and selected finite input structures were checked; further unchanged work is not necessary for the documented inconclusive closure.
+REMAINING SCIENTIFIC UNCERTAINTY: Historical linkage and actual event applicability; coupled prediction dependence on a separately defined completion; complete qualified reference history and downstream likelihood/portability consequences.
+
+---
+
+## GITHUB CHECK
+
+REPOSITORIES: Morfindien/bubbleverse-model; execution provenance Morfindien/Bubbleverse; pinned implementation mwt5345/class_ede.
+RELEVANT SEARCH KEYS: Q047/Q048, reconstruction contract/program, accepted_model_version, helium boundary/reset, relevant implementation paths. Indexed absence was followed by direct path reads where available.
+FILES / WORKFLOWS / RESULTS: Registered individually below, with the full read-only responses preserved. Fresh run-job inspection confirms success; pinned wrapper and thermal excerpt confirm implementation semantics.
+VALIDATION STATUS: Acquisition technically validated; historical/event/full scientific qualification unresolved.
+SUPERSEDED RESULTS: Initial static failure is superseded for capture execution, not erased. Older remote target/status pointers lag the documented capture/closure.
+FAILED/PARTIAL RUNS: Failed static REGISTRY_ID attempt and earlier failed numerical/partial histories are technical evidence, not physical falsification.
+JOURNAL–GITHUB CONSISTENCY: DIVERGENCE — [GITHUB–JOURNAL DIVERGENCE].
+DESCRIPTION: Remote accepted model remains v0.7 through Q045 while the supplied authoritative local case history reaches Q-047. Remote reconstruction registry entry remains ACTIVE despite the completed capture, and execution README retains older acquisition/continuation status. The provided local README is already a prepared documentation update; it is not remote proof of installation.
+SCIENTIFIC CONSEQUENCE: Do not silently treat Q046/Q047 as accepted remote model evidence or launch the apparently active capture again. These are authority/version and operational discrepancies, not a physical contradiction. No remote changes were performed. Current branch HEADs are not documented; individual file blob identities and pinned execution/source commits are documented.
+
+---
+
+## CHANGES TO ACTIVE KNOWLEDGE
+
+REFINED: Q-047 is epistemically closed with all four scientific event gates unresolved; no reclassification as physical confirmation/falsification.
+ADDED: Four tagged new state objects and M15's scoped representation facts; the proposed completion-sensitivity investigation and explicit separation of remote acceptance/local completion.
+SUPERSEDED: Prior “continue Q-047/applicability acquisition” operational instructions, including the older PDF supplements, under the newer inconclusive closure. Reopening requires concrete material new evidence/proof and retains Q-047.
+DELETED FROM ACTIVE MODEL: No previously supported physical claim is deleted by this case. Unsupported upgrades—table equality implies historical identity, green workflow proves an event, epsilon bounds the full coupled history—are excluded from active inference and retained as rejected shortcuts.
+Sources and computational provenance: The complete registers below and the preserved inherited mappings.
+
+---
+
+## DEPENDENCY CONSEQUENCES
+
+The conditional guard obstruction makes a completion choice a potential dependency of an admissible forward prediction; it does not prove the relevant historical trajectory encounters it. The new capture permits a separately conditioned scientific comparison. Any resulting x_e/tau bound must feed a distinct downstream likelihood/inference bridge before altering H0, EDE preference or portability. Existing posterior/geometry questions remain open. No numerical uncertainty propagation is imitated with prose, and no inherited precision is increased.
+
+---
+
+## CONTRADICTIONS AND TENSIONS
+
+CTR-H0-001 — TENSION / OPEN. Results: inherited local distance-network versus lower CMB and BAO+BBN inference chains. Sources: inherited original references plus accepted/observations.json; dependencies include calibration, early-universe assumptions and partially shared cosmological information. It matters for model discrimination, not as a direct new-physics significance.
+CTR-PLANCK-IMPL-001 — TENSION / OPEN_NARROWED (preserve inherited C036IMPL alias where used). Results: locked CamSpec and HiLLiPoP endpoint geometry; Q039 narrowing; Q040/Q041 lack a qualified downstream conclusion. Shared Planck PR4/NPIPE information, native likelihood/pipeline differences and original result provenance remain explicit.
+CTR-HIST-BASIN-LABEL-001 — RESOLVED_METHODOLOGICALLY; retained in history, not an active physical contradiction.
+Q-047 creates no demonstrated new physical contradiction. Its conditional literal-ODE obstruction is preserved as a scoped mathematical issue, with unestablished actual antecedents. Repository/journal divergence is classified separately.
+
+---
+
+## SCIENTIFIC DEBT
+
+ORIGINATING CASES: Q039–Q047 scientific thread.
+UNRESOLVED QUESTIONS: Matched-likelihood EDE portability; cause/significance of the Planck implementation geometry difference; full qualified forward/reference history and physical optical-depth materiality.
+WHY UNRESOLVED: Failed numerical representations, incomplete convergence/comparison, unqualified physical reference and incomplete historical/event admission cannot answer those claims.
+PREVIOUS BLOCKERS: Effective-state evidence, source-real/historical mapping, coupled thermal/event qualification, full observable map and production convergence.
+CURRENT STATUS: PARTIALLY CLEARED for fresh-state acquisition and scoped finite background structure; ACTIVE for historical equivalence, complete thermal/event and downstream inference.
+SHOULD THREAD RESUME? YES, via the distinct prediction-completion comparison on explicitly new captured states. This does not resume an unchanged Q-047 historical campaign or authorize production.
+WHAT WOULD CLEAR DEBT: Validated scoped forward predictions and their full observable/error relation, then the original matched-likelihood/convergence contract or an explicitly admitted materially different scientific design. A source edit, model promotion or README change alone cannot clear it.
+
+---
+
+## NEW CONNECTIONS
+
+No new robust common physical mechanism is identified. The connection between cutoff completion, coupled electron history and optical depth is a defined mathematical dependency, not evidence of a common cause of the H0 tension.
+
+---
+
+## REOPENED CASES
+
+No previous closed case is reopened by this revision. Q-047 may be reopened only with a concrete material historical-equivalence object or complete validated inverse/error package followed by the needed event certification; do not rerun a generic recovery loop.
+
+---
+
+## COMPRESSED REJECTED HISTORY
+
+Preserve: numerical failure is not model failure; table equality is not historical live-state identity; ELF/DWARF is not a serialized accepted state; symbol dlsym references are not full original call-resolution/error evidence; reduced background positivity is not full thermodynamic certification; a conditional guard theorem is not an actual four-case event verdict; direct helium epsilon is not a global coupled-error bound; native selected-support tau is not complete physical tau; failed or partial chains are not posterior evidence; repeated tools/publications do not create independent observations. The complete source-specific rejected/falsified/superseded history remains verbatim below.
+
+---
+
+## NON-Q TECHNICAL FOLLOW-UP
+
+ACTION: Bring remote model acceptance and execution status documentation into agreement with explicitly approved case admission/status decisions when a separate repository task is authorized.
+WHY: Prevent reuse of obsolete accepted boundaries or repeated invocation of a completed capture.
+SCIENTIFIC Q SUPPORTED: Accurate provenance for the proposed completion-sensitivity question and larger retained debts.
+BLOCKING? NO for this read-only scientific handoff; remote acceptance must not be falsely claimed.
+ACTION: Resolve canonical Q numbering from the authoritative case registry before assigning a permanent new case identifier.
+WHY: Local operational highest Q is 047, remote accepted boundary is 045; limited indexed searches cannot certify all existing canonical cases.
+BLOCKING? YES for permanent identifier assignment, NO for preserving the exact proposed scientific question. It is an administrative prerequisite, not the scientific Q.
+ACTION: Freeze/qualify a reproducible comparison method only if the receiving mathematics task establishes the scientific problem and needed execution.
+WHY: Any later code/workflow is an execution mechanism for controlled x_e/tau bounds.
+BLOCKING? The precise coupled forward definitions are a scientific prerequisite; no infrastructure repair is automatically required or authorized here. No README/source/workflow/PDF rewrite is performed.
+
+---
+
+## PRIORITIZED ACTIVE SCIENTIFIC QUESTION LIST
+
+Selected first — Q-ID: Q-048 — PROPOSED; [Q-ID REQUIRES CANONICALIZATION]; PRIORITY: HIGH.
+QUESTION: For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+SCIENTIFIC ORIGIN: SCIENTIFIC VALIDATION GAP / MODEL DEPENDENCE / DEPENDENCY BOTTLENECK.
+WHY: The completed case preserves a conditional obstruction and captured new inputs, but supplies no coupled prediction-sensitivity bound. Determining this missing robustness property is a bounded scientific step before interpreting a downstream numerical/reference discrepancy.
+WHAT A SMALL CONTROLLED BOUND WOULD CHANGE: It would establish scoped completion robustness for x_e/tau on the tested new configurations, with explicitly stated accuracy/domain; it would not establish historical equivalence or H0/EDE viability.
+WHAT A NON-NEGLIGIBLE OR UNCONTROLLED DIFFERENCE WOULD CHANGE: It would require retaining completion dependence or the qualification gap before physical downstream inference. No arbitrary threshold is predefined.
+CENTRAL SOURCES: Q-047 theorem/output-map record, I-PROPOSED-Q047-RUN38140371059-001 and I-PROPOSED-Q047-M15-001.
+RELEVANT GITHUB MATERIAL: Pinned wrapper/thermal source, reconstruction contract/workflow/run and four state objects.
+STARTING MOTOR: BUBBLEVERSE AUTONOMOUS MATHEMATICS ENGINE.
+
+Retained existing scientific debt — ID: PRED-EDE-PORTABILITY-001; PRIORITY: HIGH.
+QUESTION: Does the surviving high-H0 n=3 EDE region remain scientifically viable across the genuinely matched likelihood implementations and external-data combinations under the original downstream contract?
+WHY: Q041/Q042 did not produce the required complete converged comparison; this new revision does not answer it.
+YES/NO CONSEQUENCES: Greater portability support versus constrained likelihood/model dependence, subject to the predefined full scientific classifier.
+SOURCES / PROVENANCE: Existing Q041/Q042 records, accepted/predictions.json and inherited original contract.
+STARTING MOTOR WHEN ADMITTED: NUMERICAL / HPC ENGINE; prerequisites include a qualified forward/reference model and viable converged design. No new numbered case or production restart is assigned here.
+
+Retained existing scientific debt — ID: PRED-Q039-COUPLED-001; PRIORITY: HIGH.
+QUESTION: Does the locked residual CamSpec–HiLLiPoP endpoint-geometry difference survive a validated common-CMB nuisance-marginalization comparison treating the tested implementation layers jointly?
+WHY: Q040's numerical validation failed before the physical comparison.
+YES/NO CONSEQUENCES: Persistence of scoped implementation tension versus a constrained explanation in the specified coupled comparison.
+SOURCES / PROVENANCE: Q039/Q040 evidence and accepted/predictions.json; shared Planck data remain explicit.
+STARTING MOTOR WHEN ADMITTED: AUTONOMOUS MATHEMATICS ENGINE for the numerical-representation bottleneck, before expensive production.
+
+Retained existing discriminating target — ID: PRED-H0-INDEPENDENT-001; PRIORITY: HIGH.
+QUESTION: Can a roughly one-percent H0 inference chain nearly independent of both stellar-ladder and early-universe sound-horizon calibration discriminate the competing inherited H0 routes?
+WHY: The inference-chain tension remains open.
+YES/NO CONSEQUENCES: A discriminating independent constraint versus continued inability to separate surviving explanations.
+SOURCES: Original H0 source/dependency chain and accepted/predictions.json. No new independent dataset is asserted available.
+STARTING MOTOR WHEN ADMITTED: DOCUMENTED RESEARCH ENGINE to establish the available independent evidence and its dependencies.
+
+Other inherited open uncertainties, including dark-matter identity, acceleration origin and finite-search globality, remain in the complete journal rather than receiving invented case IDs or new priority claims from Q-047.
+
+Ranking: The selected bounded completion-sensitivity problem uses explicitly preserved new states and concerns a concrete forward-prediction validity gap exposed by the case. Larger posterior and causal tests remain important but require unresolved validated forward/reference and convergence prerequisites. Repeating Q-047's historical admission search, counting a model release as science, or merely updating README/registry was rejected. This prioritization is a scientific planning inference, not a measured importance ordering or proof that any completion effect is large.
+
+---
+
+## NEXT RECOMMENDED SCIENTIFIC INVESTIGATION
+
+SELECTED Q-ID: Q-048 — PROPOSED; [Q-ID REQUIRES CANONICALIZATION]
+SELECTED QUESTION: For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+PRIORITY: HIGH.
+SCIENTIFIC ORIGIN: SCIENTIFIC VALIDATION GAP / MODEL DEPENDENCE / DEPENDENCY BOTTLENECK.
+WHY BEFORE OTHERS: Quantify the newly exposed forward-prediction robustness gap using preserved fresh states before expensive physical downstream inference. No effect magnitude or model preference is assumed.
+WHAT ANSWER WOULD MOST REDUCE: Uncertainty in the dependence of coupled electron/optical-depth predictions on an explicit cutoff completion.
+STARTING MOTOR: BUBBLEVERSE AUTONOMOUS MATHEMATICS ENGINE.
+TECHNICAL BLOCKER: Permanent Q-ID canonicalization and an eventual reproducible controlled implementation if mathematically warranted. The conclusion-critical scientific prerequisite is complete definition/qualification of both coupled forward problems and their observable map.
+REQUIRED SUPPORT: Existing individual source/state/artifact objects; bounded symbolic/exact or validated numerical work if necessary. No production restart or new program is prescribed.
+SCIENTIFIC QUESTION FIREWALL: PASS — scientific observables; evidence/mathematics-computable bounds; model/prediction consequences; conditional/quantitative/insufficient-evidence endpoints; neutral wording; no maintenance action. This asks about completion-sensitive predictions for explicitly NEW states and is not a paraphrase of historical Q-047 event applicability.
+
+---
+
+## SOURCE REGISTER AND CLAIM-TO-SOURCE MAP
+
+The complete inherited source register and claim-to-source map are retained verbatim below. Existing IDs are neither renumbered nor fabricated. New proposed revision-record IDs identify internal objects only; they do not imply registry admission.
+
+SOURCE ID: I-PROPOSED-Q047-M15-INGESTION-001
+REFERENCE: Q047_M15_INGESTION_V1.json and Q047_M15_INGESTION_MOTOR14_HANDOFF_V1.md.
+TYPE: Bubbleverse internal result-ingestion/closure record.
+SUPPORTS: Exact Q-047 closure, unresolved scientific gates, reopening condition and journal continuity.
+INDEPENDENCE: Derived from the same preserved case and M15 evidence, not external confirmation.
+CAVEAT: Operational closure is not a scientific YES/NO event result. JSON SHA256 175cc6457835f24b062ee7afd34301fdc8bdc191f2a8ae8f260f5b8ff676b8cd; handoff SHA256 97a950b247dfeb9e6fd12f2cc40812eeb2c93240208a3e8b746dd8ec8b85fab1.
+
+SOURCE ID: I-PROPOSED-Q047-RUN38140371059-001
+REFERENCE: Q047_RECONSTRUCTION_INGESTION_V1.json, four captured state objects, raw evidence index and pinned reconstruction contract.
+TYPE: Bubbleverse internally generated computation/provenance.
+SUPPORTS: Four newly captured accepted effective states, measured runtime, structural completeness and byte-equal native tables.
+INDEPENDENCE: Shared requested vectors/core/goldens; not an independent observation or historical state export.
+CAVEAT: Actual historical admission and first-event gates unresolved.
+
+SOURCE ID: I-PROPOSED-Q047-M15-001
+REFERENCE: Q047_M15_EXACT_AUDIT_V1.json, q047_m15_exact_audit_v1.py, Q047_M15_SYMBOLIC_CONTROL_V1.json; original source/receipt links retained.
+TYPE: Bubbleverse mathematical result with exact rational controls and independent symbolic algebra checking.
+SUPPORTS: Finite positive-measure structure, captured scalar linkage, scoped positivity and deterministic representation bounds.
+INDEPENDENCE: A second mathematical control checks algebra, not a second observation of reality.
+CAVEAT: No complete historical inverse, thermal-event certification or physical materiality. Audit SHA256 b1a232c0d850287534bae0c319db137ed4bb2c4ffef7b67a9418c65aa58a21e1; symbolic control SHA256 aceac7672dba34a51ef1f54b4e2c7aec1f205ec9cf11d44f322074ee75f2ea68.
+
+SOURCE ID: I-PROPOSED-Q047-M14-REPOSITORY-001
+REFERENCE: Fresh read-only GitHub response objects embedded below, with individual blob identities and retrieval record hashes.
+TYPE: Repository implementation/provenance access record, not external physical evidence.
+SUPPORTS: Remote accepted boundary, registry/README lag, pinned source guard, actual workflow completion.
+INDEPENDENCE: Retrieval does not make the underlying artifacts independent.
+CAVEAT: Branch search returned names but no branch-head SHA. Default-branch files are individually blob-pinned; current repository HEAD is NOT DOCUMENTED. Limited indexed searches returning no Q047/Q048 matches do not prove canonical absence.
+
+EXTERNAL SOURCE OBJECT: mwt5345/class_ede, external/HyRec2020/wrap_hyrec.c at source commit recorded below.
+TYPE: Primary source-code implementation.
+SUPPORTS: Literal q=x_He*fHe normalization, strict q<10^-6 guard and source branch formulas. source/thermodynamics.c excerpt supports native tau selected-support semantics.
+INDEPENDENCE: Source code documents implementation, not an independent cosmological observation.
+CAVEAT: Neither code nor workflow success establishes actual historical event antecedents or physical truth.
+
+PUBLICATION OBJECTS: the three supplied Q047-updated Bubbleverse PDFs, identified by name/hash/pages below.
+TYPE: Bubbleverse scientific synthesis and historical case documentation.
+SUPPORTS: Inherited model/history, conditional theorem, physical-output map and prior continuation instructions.
+INDEPENDENCE: Shared underlying evidence; three publications are not three confirmations.
+CAVEAT: Their 10 October continuation instructions precede the 11 October capture, M15 findings and epistemic closure. Only those operational instructions are superseded; their scoped theorem and absence of a certified actual event remain compatible.
+
+CLAIM-TO-SOURCE MAP:
+Q-047 exact question / closure / unresolved gates -> I-PROPOSED-Q047-M15-INGESTION-001.
+New state capture / table equality -> I-PROPOSED-Q047-RUN38140371059-001 plus pinned run/contract.
+M15 scoped mathematical findings -> I-PROPOSED-Q047-M15-001, exact audit and symbolic control.
+Literal guard / output-map distinction -> pinned source objects plus inherited M01–M15 derivations.
+Remote accepted boundary / lag -> I-PROPOSED-Q047-M14-REPOSITORY-001.
+Global inherited observations/constraints/models -> existing journal source mappings plus freshly retrieved accepted/observations.json, constraints.json, mechanisms.json, predictions.json, contradictions.json and robustness.json.
+Proposed next-Q rationale -> those documented scope gaps; it is a planning inference, not a measured effect.
+
+---
+
+## GITHUB PROVENANCE REGISTER
+
+Two repositories have separate roles: Morfindien/bubbleverse-model stores the accepted model and computational provenance; Morfindien/Bubbleverse stores execution mechanisms and run provenance. Neither replaces this MASTER JOURNAL.
+
+| Artifact / path | Repository / revision | Git blob SHA | Status / role |
+|---|---|---|---|
+| accepted/model_state.json | bubbleverse-model, main file retrieval; HEAD NOT DOCUMENTED | be112fe2012d204adbe8e5767380d22523b95af8 | Accepted v0.7/R000007 through Q045 |
+| accepted/MODEL_CURRENT.md | same | 9662866f709c84ad5cf401ef07110af7a8b0727a | Accepted boundary pointer |
+| model/model_manifest.json | same | f0503fd95a0dac35de649d9223ffb465e4908ac6 | Formalization only; no new scientific change |
+| accepted/observations.json | same | 61bdf1b761b1001a388946a52d84ff8a9a93f7e7 | Inherited active observations/inference claims |
+| accepted/constraints.json | same | bd2bed37cc1bd5cbae8c17fe91c5abd1f4243ed7 | Active constraints and scientific scope |
+| accepted/mechanisms.json | same | e15824f4aced192d76307c554c62a0e25d28ddad | Surviving/rejected mechanisms |
+| accepted/predictions.json | same | aa8d737c14c67aa34c4aad2a2fc47ec613097047 | Three open scientific prediction threads |
+| accepted/contradictions.json | same | 110bf5dfb685fd99972b9770e5fcd9ee2fab6c92 | Open tensions and resolved classifier history |
+| accepted/robustness.json | same | 506b98f9451be7db778ac0137db7868a3a06c03e | Computational/methodological scope |
+| bubbleverse_program_registry.json | Bubbleverse, main file retrieval; HEAD NOT DOCUMENTED | 3a13e197643066031270229960841f2325826565 | Reconstruction entry still ACTIVE; completed run known |
+| README.md | Bubbleverse, main file retrieval | 5dfca04e4b1dc1c20bce2c8890d9049d220110af | Older operational state; no remote edit performed |
+| Q047_RECONSTRUCTION_CONTRACT_V1.json | Bubbleverse at 76d6b4a4b02ddd929899008f476e99da29c1f931 | c078fd25a1b84150f5d0ed3dc30d9aa6930af925 | Acquisition contract; no first-event/CMB science |
+| .github/workflows/q047-reconstruction-v1.yml | Bubbleverse at 76d6b4a4b02ddd929899008f476e99da29c1f931 | de8a7b984cf4f5dac3f21195d1235f3698a24c7a | Actual bounded capture workflow |
+| external/HyRec2020/wrap_hyrec.c | mwt5345/class_ede at 5a131c91d657dd9a7c6364cc45b038710f8d0d97 | fa44c774cf1fc7dbf6185e01980764f7eb260204 | Verified strict guard and normalization |
+| source/thermodynamics.c, lines 3030–3190 | mwt5345/class_ede at 5a131c91d657dd9a7c6364cc45b038710f8d0d97 | c1683f56b43e0f2ec24a8ba6120133f604cb947c | Partial excerpt; blob identifies parent file, not full content recovered |
+
+RUN ID: 38140371059; ATTEMPT: 1; PROGRAM ID: Q047-RECONSTRUCTION-V1; VERSION: v1.
+EXECUTION COMMIT: 76d6b4a4b02ddd929899008f476e99da29c1f931.
+SOURCE COMMIT: 5a131c91d657dd9a7c6364cc45b038710f8d0d97.
+RUN INTERVAL: 2026-10-11T12:43:46Z to 2026-10-11T12:45:42Z, as preserved in the run provenance.
+STATUS: All six workflow jobs COMPLETED/SUCCESS. Four captured cases technically validated for acquisition; not scientifically validated for event truth.
+JOBS: static 114472840272; camspec-lcdm 114472894374; camspec-ede_n3 114472894407; hillipop-ede_n3 114472894439; hillipop-lcdm 114472894492; collect 114473127730.
+FINAL RESULT SHA256: 5279a67dfcfc30537a12425b691c1e19b84dfef03a1e3ddb6d69a80ac03b8cc4.
+CORE SHA256: df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf.
+RECONSTRUCTION CONTRACT SHA256: 958b5417b52a993d6cfcdf5bbf209fb9de6287679019e9c74ac34aa96b84c51b.
+ORIGINAL PRECURSOR CONTRACT SHA256: bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc.
+COLLECTION LOCK SHA256: 4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a.
+VERIFIED WRAPPER SHA256: 4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd.
+FAILED PRECURSOR RUN: 38139955970, execution commit 4d28297c71471652ef785dfac5f05deb5e7581e9; stale REGISTRY_ID static failure, exit 2. Technical failure only.
+SUPERSEDES: Successful acquisition replaces the failed attempt's acquisition status. It does not replace the historical IVP or certify Q-047.
+EXTERNAL SOURCES USED: Pinned class_ede source and existing archived inputs; shared computational evidence.
+CENTRAL CAVEAT: All original historical/event/final scientific gates remain unresolved. No new invocation occurred during Motor 14.
+
+Capture accounting: four top-level processes, 28 internal initialization entries (24 shooting + four final), zero CMB/likelihood evaluations. The inherited 16/52 ledger and 36 remaining are distinct from the separately authorized capture ledger; internal starts are not assumed free. Raw preservation: 315 members, 307 nonempty saved objects, eight declared empty files, 247,963,175 original bytes. Exact per-object identities and locations remain in the inherited raw index; do not redownload or rerun merely to obtain another copy.
+
+---
+
+## REVISION END STATE
+
+The global model is refined in scope and extended in internal computational knowledge; no fundamental physical model is strengthened, weakened or falsified by this case. Historical/event and downstream physical uncertainty remain explicit. Active scientific debt is preserved, while operational continuation drift is stopped.
+THE NEXT CANONICAL BUBBLEVERSE Q IS A SCIENTIFIC QUESTION, NOT A MAINTENANCE ACTION. Its exact question is selected; Q-048 remains a proposed identifier pending canonicalization.
+
+---
+
+## MOTOR 14 COMPARISON CONTRACT FOR HANDOFF
+
+This is a proposed scientific comparison, not a completed computation or an instruction to launch a campaign.
+
+TARGET: The four NEW_RECONSTRUCTION state objects from run 38140371059. They are not substitutes for the original historical Q-047 targets.
+COMPARISON CANDIDATES: A separately defined event-resolved latch at q=10^-6 and a separately defined reset to q=0 at the same qualified first cutoff event. Both are proposed dynamical completions, not validated physical models, approved native repairs or equivalent realizations of the literal strict-guard ODE.
+INITIAL RECEIVING TASK: Determine whether the two candidate forward problems and full observable map can be made well-defined under the retained source-real assumptions; freeze the exact common equations, normalized variables, event priority and all post-event rules before numerical execution. Document the handling of h, temperature, charge bookkeeping, helium modes and later reionization. Do not silently choose an arbitrary completion when a definition matters to the answer.
+DOMAIN: A common, explicitly qualified thermal starting domain through z=0, including early helium/HeIII, recombination, residual ionization, source-matched smoothing/output construction and reionization. The exact upper endpoint and event qualification are to be established from existing captured/source objects, not invented as a historical fact.
+FROZEN: Same case identity, captured effective binary64 fields interpreted with declared source/unit semantics, accepted z_reio, original requested vectors and source version. No re-shooting to a requested tau target; otherwise the comparison changes its conditioning. Hold every unrelated precision/model/data choice fixed.
+VARIABLE: Only the separately documented helium cutoff completion and the error-control/refinement needed to certify its effects. Do not silently replace the finite captured neutrino realization by an analytic continuum.
+EVENT SAFETY: Do not force the boundary to be reached or assume a negative rate. A competing switch/reset must be explicitly treated. If no cutoff is reached on the common qualified domain, the two completion clauses are inactive; equality follows only when the remaining qualified equations/states/output maps are identical. A conditional or insufficient-evidence answer is valid when qualification cannot be completed.
+OBSERVABLES: x_e=n_e/n_H, dimensionless, including the complete coupled source output definition; cumulative physical tau_T(z)=integral from 0 to z of c*sigma_T*n_H0*(1+z')^2*x_e(z')/H(z') dz', dimensionless with consistent SI/Mpc conversion. This is not automatically the native selected-support tau_reio diagnostic. Define Delta as latch minus reset and report pointwise/envelope bounds and cumulative bounds with their domain and assumptions.
+ERROR REQUIREMENT: Include input/source-real mapping, full coupled integration, event location, mode transition, interpolation/smoothing and quadrature uncertainty as relevant. A boundary direct contribution of 10^-6 is not a proved global |Delta x_e| bound. A green workflow, a zero table difference or an unsupported tolerance is insufficient.
+OUTCOME: A quantitative controlled bound or a precisely scoped conditional/insufficient-evidence result. No numerical materiality threshold is invented here. If downstream CMB/H0 significance is subsequently claimed, a separate justified likelihood/inference bridge is necessary.
+STOP: Stop once the qualified comparison is bounded at a stated meaningful accuracy, or the single conclusion-critical missing input prevents an honest stronger conclusion and the remaining uncertainty is documented. Do not generate unlimited precision sweeps, repeats or historical-recovery campaigns. Return the completed scientific case to result ingestion and Motor 14.
+EXECUTION LIMIT: This handoff does not extend the former capture authorization to source modification, new native runs, dispatch, CMB/likelihood production or repository writes. No PROGRAM_ID or launch command is created by this revision.
+
+---
+
+## PRESERVED INPUT AND PUBLICATION IDENTITIES
+
+```json
+{
+  "inputs": {
+    "Q047_SAMLET_JOURNAL.md": {
+      "bytes": 3490651,
+      "sha256": "bf9382dbb935e2b5dd4f055bbe0bcf383d38b6d4292d81dd471305eca6858f81"
+    },
+    "README.md": {
+      "bytes": 38363,
+      "sha256": "7ca26a4a6716123077fa2b065624eac8b92b6d228e86bc631d96ae3836637dbf"
+    },
+    "Q047_M15_INGESTION_MOTOR14_HANDOFF_V1.md": {
+      "bytes": 3507078,
+      "sha256": "97a950b247dfeb9e6fd12f2cc40812eeb2c93240208a3e8b746dd8ec8b85fab1"
+    },
+    "Q047_M15_INGESTION_V1.json": {
+      "bytes": 4988,
+      "sha256": "175cc6457835f24b062ee7afd34301fdc8bdc191f2a8ae8f260f5b8ff676b8cd"
+    }
+  },
+  "publications": [
+    {
+      "filename": "Bubbleverse_Q-Journals_Q001-Q045_Q046_Q047_UPDATED.pdf",
+      "bytes": 463836,
+      "sha256": "fe1da83eb821c8d6312d2b9eed1fadea1e38a83162bcab100598cf7e76353641",
+      "pages": 140,
+      "q047_pages": [
+        137,
+        139,
+        140
+      ]
+    },
+    {
+      "filename": "Bubbleverse_Main_Book_Q047_UPDATED.pdf",
+      "bytes": 1052812,
+      "sha256": "8f2784f5a47f7f4548e129ed9930f83a0bcaff609597aaf52dc49cdf542559a7",
+      "pages": 62,
+      "q047_pages": [
+        61,
+        62
+      ]
+    },
+    {
+      "filename": "Bubbleverse_Technical_Appendices_A-D_Q047_UPDATED.pdf",
+      "bytes": 296865,
+      "sha256": "533a8fb7857dd5e2bc852a4b128484d4edf90656b9ab225fb82bc672534624ea",
+      "pages": 64,
+      "q047_pages": [
+        63,
+        64
+      ]
+    }
+  ],
+  "incoming_journal_identity": "libfile_0456c140dbfc8191b05ab2b0b4d7cc4e"
+}
+```
+
+---
+
+## FRESH READ-ONLY GITHUB RESPONSE OBJECTS
+
+```json
+{
+  "github_modelstate.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"accepted_at\": \"2026-10-10T12:04:51.022884+00:00\",\n  \"accepted_model_version\": \"v0.7\",\n  \"artifact_type\": \"BUBBLEVERSE_ACCEPTED_MODEL_STATE\",\n  \"candidate_input_commit\": \"bba3528250b3d56c451bf5ca363b0d75120acb03\",\n  \"candidate_model_version\": \"v0.7\",\n  \"candidate_revision\": \"R000007\",\n  \"created_at\": \"2026-10-10T11:52:56.395959+00:00\",\n  \"current_q\": \"Q045\",\n  \"high_q_data_used\": false,\n  \"input_document_type\": \"PDF_AUTHORIZED_SUBSTITUTE_WITH_VERIFIED_WORKFLOW_RESULT\",\n  \"input_documents\": [\n    {\n      \"archived_name\": \"q045_reference_history_final_v2.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 135718,\n      \"path\": \"evidence/sources/Q045/q045_reference_history_final_v2.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"f6a214d6ed8b58619a27f0f40df4bfbfe892056b4eb0985f24e662fa5fe0ed26\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"camspec-ede_n3_common_grid.tsv\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 3841061,\n      \"path\": \"evidence/sources/Q045/camspec-ede_n3_common_grid.tsv\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"48b248872970cef29d5f55c7936d3fb8c90fa04ba0da2bb992885f2af42837bd\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"camspec-lcdm_common_grid.tsv\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 3841043,\n      \"path\": \"evidence/sources/Q045/camspec-lcdm_common_grid.tsv\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"beceee0d288f3d23e5e2a62c21d26632f9f6a9d5c02495d5f145b7c3a85f95e2\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"hillipop-ede_n3_common_grid.tsv\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 3840777,\n      \"path\": \"evidence/sources/Q045/hillipop-ede_n3_common_grid.tsv\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"cc728dfb5ecebce20ea1d9cfb66f827b8eaf3261c86b59eb8a2c08444148e00b\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"hillipop-lcdm_common_grid.tsv\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 3840851,\n      \"path\": \"evidence/sources/Q045/hillipop-lcdm_common_grid.tsv\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"c46de605f316a841fae33f44350e1ee349de39a4effa4ad770d5ca695fb808ad\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"camspec-ede_n3-L1.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 4815,\n      \"path\": \"evidence/sources/Q045/recovered_workers/camspec-ede_n3-L1.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"a2868fbe04276ef609a2ccf3afd4f90b67969383dd8f3c38d3470e7f9f188393\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"camspec-ede_n3-L2.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 4811,\n      \"path\": \"evidence/sources/Q045/recovered_workers/camspec-ede_n3-L2.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"1ab57dc1854080ba49036d1612dd1f18797d4d2080717a196b8c7d9bc29c7f0e\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"camspec-lcdm-L1.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 4813,\n      \"path\": \"evidence/sources/Q045/recovered_workers/camspec-lcdm-L1.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"8953d6aa453d899d6e29bd566d0990dc811712bb031abd99513949e90604b522\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"camspec-lcdm-L2.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 4816,\n      \"path\": \"evidence/sources/Q045/recovered_workers/camspec-lcdm-L2.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"cb1a7cea8fddf1b5f8814f8e89a5c98cd3eef40c84154f78a37871d2ba458d43\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"hillipop-ede_n3-L1.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 4882,\n      \"path\": \"evidence/sources/Q045/recovered_workers/hillipop-ede_n3-L1.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"52b183f85d3c39b57829d3dc4d17225234cfab2ff766c603bc80876b1ae803da\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"hillipop-ede_n3-L2.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 4819,\n      \"path\": \"evidence/sources/Q045/recovered_workers/hillipop-ede_n3-L2.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"08d450387201df4c25e323454d5534fa11bec51ec4b0d72d16d404b250e191cb\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"hillipop-lcdm-L1.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 4883,\n      \"path\": \"evidence/sources/Q045/recovered_workers/hillipop-lcdm-L1.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"a83226dea867d5d16e4fc5e570d9672f3252a82e96dc6ad161cc67f1ad432730\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"hillipop-lcdm-L2.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 4813,\n      \"path\": \"evidence/sources/Q045/recovered_workers/hillipop-lcdm-L2.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_WORKFLOW_RESULT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"555d7480337aed6c592efb7a6b4180972af1e63329a8482d864d4736fd66961b\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"q045_reference_history_contract_v2.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 57905,\n      \"path\": \"evidence/sources/Q045/q045_reference_history_contract_v2.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_EXECUTION_DEFINITION\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"996a713e0bf17d7239a00f73e013617fbf4f014b6b6eaea1db24a37660da5d44\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"q045_reference_history_manifest_v2.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 2737,\n      \"path\": \"evidence/sources/Q045/q045_reference_history_manifest_v2.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_EXECUTION_DEFINITION\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"e3cfa23b9cd63a168a98ccf6423f3a5ebcd0ed714ce841c497e293286fe01282\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"input_preparation_v2.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 3485,\n      \"path\": \"evidence/sources/Q045/input_preparation_v2.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"ORIGINAL_INPUT_PREPARATION\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"bc20de1b26d588b2a5a15fdac29928a27c2f3ce8af44ce85c5dd01a4a2993115\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"remote_execution_receipt.json\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 3207,\n      \"path\": \"evidence/sources/Q045/remote_execution_receipt.json\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"LIVE_REMOTE_VERIFICATION\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"77ec967f1c241fefa346d660cf4b14abdceea14b8a1adb8edf8118c0a1f920a8\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"Bubbleverse_Technical_Appendices_A-D_Q045_UPDATED.pdf\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 605050,\n      \"path\": \"provenance/input_archives/Q045/Bubbleverse_Technical_Appendices_A-D_Q045_UPDATED.pdf\",\n      \"q_boundary_status\": \"RAW_PROVENANCE_ONLY\",\n      \"role\": \"OPERATOR_MANUSCRIPT_RAW_PROVENANCE\",\n      \"scientific_ingestion\": false,\n      \"sha256\": \"72877724ddda998cc2519d6c00a1ae498fce18b7a6ef4dc61dbc12bcbeca828d\",\n      \"source_repository_commit\": null\n    },\n    {\n      \"archived_name\": \"Bubbleverse_Q-Journals_Q001-Q044_Q045_UPDATED.pdf\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 1132075,\n      \"path\": \"provenance/input_archives/Q045/Bubbleverse_Q-Journals_Q001-Q044_Q045_UPDATED.pdf\",\n      \"q_boundary_status\": \"RAW_PROVENANCE_ONLY\",\n      \"role\": \"OPERATOR_MANUSCRIPT_RAW_PROVENANCE\",\n      \"scientific_ingestion\": false,\n      \"sha256\": \"362fb7e1c3064f7090f5c9cce86cefd542781926670a0c8c86602e4cb08b18ed\",\n      \"source_repository_commit\": null\n    },\n    {\n      \"archived_name\": \"Bubbleverse_Main_Book_Q045_UPDATED.pdf\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 1337205,\n      \"path\": \"provenance/input_archives/Q045/Bubbleverse_Main_Book_Q045_UPDATED.pdf\",\n      \"q_boundary_status\": \"RAW_PROVENANCE_ONLY\",\n      \"role\": \"OPERATOR_MANUSCRIPT_RAW_PROVENANCE\",\n      \"scientific_ingestion\": false,\n      \"sha256\": \"3f0d59c12857133ad511e45807be68f15d5c39b4bf48f21a9fa5cd715274da3e\",\n      \"source_repository_commit\": null\n    },\n    {\n      \"archived_name\": \"q_journal_authorized.txt\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 2569,\n      \"derivation\": {\n        \"pdf\": \"Bubbleverse_Q-Journals_Q001-Q044_Q045_UPDATED.pdf\",\n        \"start_heading\": \"Identity and research question\",\n        \"stop_before_following_question\": true\n      },\n      \"path\": \"evidence/sources/Q045/q_journal_authorized.txt\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"AUTHORIZED_MANUSCRIPT_EXCERPT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"1d2adcbfeb03d623b53cde94724b7330f5d0ae7c7a1b85feefa1253c404b8845\",\n      \"source_repository_commit\": null\n    },\n    {\n      \"archived_name\": \"appendices_authorized.txt\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 1481,\n      \"derivation\": {\n        \"pdf\": \"Bubbleverse_Technical_Appendices_A-D_Q045_UPDATED.pdf\",\n        \"start_heading\": \"Q045 technical classification\",\n        \"stop_before_following_question\": true\n      },\n      \"path\": \"evidence/sources/Q045/appendices_authorized.txt\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"AUTHORIZED_MANUSCRIPT_EXCERPT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"a26e351a9d45e0b73b094824cfd033c14e3738a89d8d17537c374dbd28cef5d9\",\n      \"source_repository_commit\": null\n    },\n    {\n      \"archived_name\": \"main_book_authorized.txt\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 834,\n      \"derivation\": {\n        \"pdf\": \"Bubbleverse_Main_Book_Q045_UPDATED.pdf\",\n        \"start_heading\": \"The evidence boundary\",\n        \"stop_before_following_question\": true\n      },\n      \"path\": \"evidence/sources/Q045/main_book_authorized.txt\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"AUTHORIZED_MANUSCRIPT_EXCERPT\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"d650247ce266d3d8644f760be8b07a725560649b78e85d4afe5d40c540319f7c\",\n      \"source_repository_commit\": null\n    },\n    {\n      \"archived_name\": \"workflow_artifact.zip\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 4541261,\n      \"path\": \"provenance/input_archives/Q045/workflow_artifact.zip\",\n      \"q_boundary_status\": \"RAW_PROVENANCE_ONLY\",\n      \"role\": \"ORIGINAL_GITHUB_ARTIFACT\",\n      \"scientific_ingestion\": false,\n      \"sha256\": \"75cb18ca3c124f90aaa890147aea4f39656ca78b17d6a2d24f5e9a94836c1e08\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    },\n    {\n      \"archived_name\": \"cumulative_journal_historical.md\",\n      \"authority\": \"AUTHORITATIVE_BUBBLEVERSE_SOURCE\",\n      \"bytes\": 637400,\n      \"path\": \"evidence/sources/Q045/cumulative_journal_historical.md\",\n      \"q_boundary_status\": \"AUTHORIZED_THROUGH_Q045\",\n      \"role\": \"HISTORICAL_PRE_CLOSURE_JOURNAL\",\n      \"scientific_ingestion\": true,\n      \"sha256\": \"40ee6d04c8c4e1b2a19e1a8edda97a02827a94681433d1324478d7d6faa8d76e\",\n      \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\"\n    }\n  ],\n  \"knowledge_boundary\": \"Q001-Q045\",\n  \"layers\": {\n    \"constraints\": \"accepted/constraints.json\",\n    \"contradictions\": \"accepted/contradictions.json\",\n    \"mechanisms\": \"accepted/mechanisms.json\",\n    \"observations\": \"accepted/observations.json\",\n    \"predictions\": \"accepted/predictions.json\",\n    \"robustness\": \"accepted/robustness.json\"\n  },\n  \"local_installation_state\": true,\n  \"mode\": \"INCREMENTAL_UPDATE\",\n  \"model_repository\": \"Morfindien/bubbleverse-model\",\n  \"model_revision\": \"R000007\",\n  \"new_scientific_q_allocated\": false,\n  \"physical_model_change\": false,\n  \"previous_accepted_model_version\": \"v0.6\",\n  \"previous_accepted_q\": \"Q044\",\n  \"previous_accepted_revision\": \"R000006\",\n  \"processed_through_q\": \"Q045\",\n  \"production_restart_authorized\": false,\n  \"promotion_status\": \"PROMOTED_SCOPE_LIMITED_TECHNICAL_EVIDENCE\",\n  \"q042_investigation_status\": \"CLOSED_INCONCLUSIVE_GENERAL_FEASIBILITY\",\n  \"q043_investigation_status\": \"CLOSED_LOCAL_PREPARATION_AND_VALIDATION\",\n  \"q043_result\": \"PASS_LOCAL_PREPARATION_AND_VALIDATION_ONLY\",\n  \"q044_component_status\": \"ACCEPTED_WITH_SCOPE_LIMITS\",\n  \"q044_investigation_status\": \"CLOSED_EPISTEMICALLY_INCONCLUSIVE\",\n  \"q044_result\": \"INCONCLUSIVE / INSUFFICIENT_SCIENTIFIC_QUALIFICATION\",\n  \"q045_final_result_gate\": \"UNRESOLVED\",\n  \"q045_investigation_status\": \"CLOSED_INCONCLUSIVE_PHYSICAL_MATERIALITY\",\n  \"q045_reference_truth_gate\": \"UNQUALIFIED\",\n  \"q045_result\": \"R-Q045-REFHIST-INGESTION-002\",\n  \"q_access_end\": \"Q045\",\n  \"q_access_start\": \"Q001\",\n  \"schema_version\": 1,\n  \"scientific_rule\": \"Best current compression of validated Bubbleverse state inside the authorized Q range; not established truth.\",\n  \"source_bubbleverse_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\",\n  \"source_repository\": \"Morfindien/Bubbleverse\",\n  \"source_repository_commit\": \"a9a5777b5923f32930cd9c84a49227ba36249326\",\n  \"source_repository_sync_required\": true,\n  \"status\": \"ACCEPTED\",\n  \"target_q\": \"Q045\",\n  \"update_class\": \"MULTI_LAYER_UPDATE\",\n  \"word_input_filename\": null,\n  \"word_input_semantics\": \"NO_WORD_DOCUMENT_DISCOVERED; AUTHORITATIVE_PDF_AND_ORIGINAL_STRUCTURED_RESULTS_USED\",\n  \"word_input_sha256\": null\n}\n",
+      "encoding": "utf-8",
+      "sha": "be112fe2012d204adbe8e5767380d22523b95af8",
+      "display_url": "https://github.com/Morfindien/bubbleverse-model/blob/main/accepted/model_state.json",
+      "display_title": "model_state.json"
+    },
+    "isError": false
+  },
+  "github_modelcurrent.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "# Current accepted model\n\n**v0.7 / R000007 through Q045.**\n\nQ045 technical history recovery admitted with scope limits; CLOSED with inconclusive physical materiality. Physical reference UNQUALIFIED; final physical result UNRESOLVED. No new H0/EDE inference, public calculation or production authorization.\n",
+      "encoding": "utf-8",
+      "sha": "9662866f709c84ad5cf401ef07110af7a8b0727a",
+      "display_url": "https://github.com/Morfindien/bubbleverse-model/blob/main/accepted/MODEL_CURRENT.md",
+      "display_title": "MODEL_CURRENT.md"
+    },
+    "isError": false
+  },
+  "github_modelmanifest.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"accepted_model_version\": \"v0.7\",\n  \"accepted_state_scientific_revision\": \"R000007\",\n  \"artifact_type\": \"BUBBLEVERSE_FORMAL_MODEL_LAYER\",\n  \"current_q\": \"Q045\",\n  \"description\": \"Q045 technical history recovery and inconclusive physical closure; no new physical inference.\",\n  \"evidence_refs\": [\n    \"EVD-MANUSCRIPT-Q001-Q039\",\n    \"EVD-Q039-IMPLBLOCK\",\n    \"EVD-Q039-FGPROFILE\",\n    \"EVD-Q040-MANUSCRIPT\",\n    \"EVD-Q040-RQMC\",\n    \"EVD-Q041-QJOURNAL-PDF\",\n    \"EVD-Q041-MAINBOOK-PDF\",\n    \"EVD-Q041-APPENDICES-PDF\",\n    \"EVD-Q041-PORTABILITY-V19\",\n    \"EVD-Q042-QJOURNAL-PDF\",\n    \"EVD-Q042-INGESTION-V31\",\n    \"EVD-Q042-CAP-CERTIFICATE\",\n    \"EVD-Q042-MAINBOOK-PDF\",\n    \"EVD-Q042-CLOSURE-001\",\n    \"EVD-Q043-RESULT\",\n    \"EVD-Q043-JOURNAL\",\n    \"EVD-Q043-QJOURNAL-PDF\",\n    \"EVD-Q043-APPENDICES-PDF\",\n    \"EVD-Q043-MAINBOOK-PDF\",\n    \"EVD-Q044-INGESTION\",\n    \"EVD-Q044-COMPONENT\",\n    \"EVD-Q044-CHECKS\",\n    \"EVD-Q044-ENDPOINT-AUDIT\",\n    \"EVD-Q044-JOURNAL\",\n    \"EVD-Q044-QJOURNAL-PDF\",\n    \"EVD-Q044-APPENDICES-PDF\",\n    \"EVD-Q044-MAINBOOK-PDF\",\n    \"EVD-Q045-RECOVERY\",\n    \"EVD-Q045-QJOURNAL\",\n    \"EVD-Q045-APPENDICES\",\n    \"EVD-Q045-MAINBOOK\",\n    \"EVD-Q045-REMOTE-RUN\"\n  ],\n  \"formal_files\": [\n    \"parameters.json\",\n    \"equations.json\",\n    \"assumptions.json\",\n    \"uncertainty.json\",\n    \"domain_of_validity.json\",\n    \"limitations.json\",\n    \"input_schema.json\",\n    \"output_schema.json\",\n    \"benchmarks.json\",\n    \"environment.json\",\n    \"result_registry.json\",\n    \"external_catalog_registry.json\"\n  ],\n  \"formal_model_version\": \"v0.7-formalization-1\",\n  \"formalization_rule\": \"NO_NEW_SCIENTIFIC_CLAIMS_OR_NUMERIC_VALUES\",\n  \"model_revision\": \"R000007\",\n  \"q_access_end\": \"Q045\",\n  \"q_access_start\": \"Q001\",\n  \"schema_version\": 1,\n  \"scientific_change\": false,\n  \"source_layers\": [\n    \"accepted/model_state.json\",\n    \"accepted/observations.json\",\n    \"accepted/constraints.json\",\n    \"accepted/mechanisms.json\",\n    \"accepted/robustness.json\",\n    \"evidence/evidence_registry.json\",\n    \"release/MODEL_RELEASE_HANDOFF.json\"\n  ]\n}\n",
+      "encoding": "utf-8",
+      "sha": "f0503fd95a0dac35de649d9223ffb465e4908ac6",
+      "display_url": "https://github.com/Morfindien/bubbleverse-model/blob/main/model/model_manifest.json",
+      "display_title": "model_manifest.json"
+    },
+    "isError": false
+  },
+  "accepted_observations.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"observations\": [\n    {\n      \"claim\": \"The observable universe is dynamically evolving; redshift, distance, and time relations support an evolving large-scale geometry.\",\n      \"epistemic_level\": \"inference from multiple observable relations\",\n      \"id\": \"OBS-COSMIC-EVOLUTION-001\",\n      \"status\": \"SUPPORTED\"\n    },\n    {\n      \"claim\": \"CMB, expansion, and light-element evidence support a hotter and denser early phase; this does not establish a physical singularity.\",\n      \"epistemic_level\": \"multi-probe physical inference\",\n      \"id\": \"OBS-HOT-DENSE-PAST-001\",\n      \"status\": \"SUPPORTED\"\n    },\n    {\n      \"claim\": \"Within the standard gravitational framework, observed gravitational behavior requires a substantial non-luminous gravitating component; its microscopic identity is unknown.\",\n      \"epistemic_level\": \"phenomenon supported; particle identity unresolved\",\n      \"id\": \"OBS-MISSING-MASS-001\",\n      \"status\": \"SUPPORTED\"\n    },\n    {\n      \"claim\": \"Late-time acceleration is strongly supported within the relevant relativistic cosmological framework; its microscopic cause is unresolved.\",\n      \"epistemic_level\": \"model-dependent physical inference\",\n      \"id\": \"OBS-LATE-ACCEL-001\",\n      \"status\": \"SUPPORTED\"\n    },\n    {\n      \"id\": \"OBS-H0-LOCAL-001\",\n      \"inference_chain\": \"local distance network\",\n      \"not_raw_measurement\": true,\n      \"route\": \"H0 Distance Network\",\n      \"sigma\": 0.81,\n      \"status\": \"ACTIVE_BENCHMARK\",\n      \"units\": \"km s^-1 Mpc^-1\",\n      \"value\": 73.5\n    },\n    {\n      \"id\": \"OBS-H0-CMB-001\",\n      \"inference_chain\": \"CMB cosmological inference\",\n      \"not_raw_measurement\": true,\n      \"route\": \"Planck + SPT-3G + ACT DR6, flat LCDM\",\n      \"sigma\": 0.35,\n      \"status\": \"ACTIVE_BENCHMARK\",\n      \"units\": \"km s^-1 Mpc^-1\",\n      \"value\": 67.24\n    },\n    {\n      \"id\": \"OBS-H0-BAOBBN-001\",\n      \"inference_chain\": \"BAO standard ruler + BBN\",\n      \"not_raw_measurement\": true,\n      \"route\": \"DESI DR2 + BBN, flat LCDM\",\n      \"sigma\": 0.58,\n      \"status\": \"ACTIVE_BENCHMARK\",\n      \"units\": \"km s^-1 Mpc^-1\",\n      \"value\": 68.51\n    },\n    {\n      \"claim\": \"A common physical CMB-space likelihood can be defined for CamSpec and HiLLiPoP by separately marginalizing each implementation over its own native nuisance parameters while retaining the physical CMB TT spectrum and A_Planck as common coordinates. Native data, covariance, foreground models and priors remain inside their own likelihoods; the likelihoods are not multiplied or subtracted.\",\n      \"epistemic_level\": \"methodological computational construction\",\n      \"evidence_refs\": [\n        \"EVD-Q040-MANUSCRIPT\",\n        \"EVD-Q040-RQMC\"\n      ],\n      \"id\": \"OBS-Q040-CMB-MARGINAL-001\",\n      \"q_introduced\": \"Q040\",\n      \"status\": \"SUPPORTED\"\n    },\n    {\n      \"claim\": \"The finite defensive randomized quasi-Monte Carlo campaign reached m=16, 393216 nuisance nodes per replicate and implementation, but failed the preregistered numerical-stability tolerance 0.05. Maximum transition changes were approximately 16.59 for CamSpec and 61.13 for HiLLiPoP; independent-bank differences were approximately 28.44 and 63.11. Endpoint cosmological geometry was therefore not executed.\",\n      \"epistemic_level\": \"numerical validation result\",\n      \"evidence_refs\": [\n        \"EVD-Q040-MANUSCRIPT\",\n        \"EVD-Q040-RQMC\"\n      ],\n      \"id\": \"OBS-Q040-RQMC-VALIDATION-001\",\n      \"q_introduced\": \"Q040\",\n      \"scientific_falsification\": false,\n      \"status\": \"TECHNICAL_FAIL\"\n    },\n    {\n      \"claim\": \"The preregistered Q041 V19 downstream CamSpec-HiLLiPoP portability campaign reached a valid controlled terminal state without a complete converged posterior matrix. Thirty logical chains reached the frozen 20,000-sample limit and two remained partial through the eighth compute segment; 0 of 32 logical chains were documented COMPLETE. The mandatory completeness and Rhat science gates were blocked and no downstream portability class was scientifically issued.\",\n      \"epistemic_level\": \"validated computational non-result\",\n      \"evidence_refs\": [\n        \"EVD-Q041-PORTABILITY-V19\",\n        \"EVD-Q041-QJOURNAL-PDF\"\n      ],\n      \"id\": \"OBS-Q041-PORTABILITY-V19-001\",\n      \"q_introduced\": \"Q041\",\n      \"scientific_falsification\": false,\n      \"status\": \"INCONCLUSIVE_CONTROLLED_NO_SCIENTIFIC_RESULT\"\n    },\n    {\n      \"claim\": \"The executed V19 campaign is scientifically narrower than the broader original Q041 downstream design: V19 is n=3 EDE-only, omits a separate LCDM matrix and the common supernova block, uses three leave-one-out combinations rather than four, and uses its own preregistered decision rule. This does not invalidate V19, but V19 cannot substitute for the broader design.\",\n      \"epistemic_level\": \"provenance and scope audit\",\n      \"evidence_refs\": [\n        \"EVD-Q041-QJOURNAL-PDF\",\n        \"EVD-Q041-MAINBOOK-PDF\"\n      ],\n      \"id\": \"OBS-Q041-CONTRACT-SCOPE-001\",\n      \"q_introduced\": \"Q041\",\n      \"status\": \"SUPPORTED_PROVENANCE_SCOPE\"\n    },\n    {\n      \"claim\": \"The documented strategies did not qualify the original 20-cell downstream-portability contract. Q042 closes inconclusively; feasibility of a materially different contract-preserving design remains unresolved.\",\n      \"epistemic_level\": \"documented investigation closure\",\n      \"evidence_refs\": [\n        \"EVD-Q042-QJOURNAL-PDF\",\n        \"EVD-Q042-INGESTION-V31\",\n        \"EVD-Q042-CAP-CERTIFICATE\"\n      ],\n      \"id\": \"OBS-Q042-CLOSURE-001\",\n      \"physical_model_change\": false,\n      \"q_introduced\": \"Q042\",\n      \"scientific_falsification\": false,\n      \"status\": \"CLOSED_INCONCLUSIVE_GENERAL_FEASIBILITY\"\n    },\n    {\n      \"actual_computed_cosmological_result\": false,\n      \"actual_tau\": null,\n      \"actual_tau_status\": \"NOT_COMPUTED\",\n      \"claim\": \"Both bounded V31 attempts stopped at the parent 600-second deadline. Histories remain partial; no complete tau or cosmological result was computed. Final killed-tail counters and peak memory are not documented.\",\n      \"epistemic_level\": \"numerical provenance\",\n      \"evidence_refs\": [\n        \"EVD-Q042-QJOURNAL-PDF\",\n        \"EVD-Q042-INGESTION-V31\",\n        \"EVD-Q042-CAP-CERTIFICATE\"\n      ],\n      \"id\": \"OBS-Q042-PARTIAL-V31-001\",\n      \"q_introduced\": \"Q042\",\n      \"status\": \"PARTIAL_CONDITIONAL_RAW_EVIDENCE\",\n      \"whole_history\": \"PARTIAL\"\n    },\n    {\n      \"actual_functional_pipeline\": \"NOT_EXECUTED\",\n      \"cap\": 32,\n      \"claim\": \"Under the frozen source extension, global rails and append-only retention of the existing intervals, completion cannot remove the retained candidates enough to satisfy cap32. This is a policy/representation failure, not physical minima, an executed tau failure or universal numerical impossibility.\",\n      \"epistemic_level\": \"conditional frozen-algorithm support-cap incompatibility\",\n      \"evidence_refs\": [\n        \"EVD-Q042-QJOURNAL-PDF\",\n        \"EVD-Q042-INGESTION-V31\",\n        \"EVD-Q042-CAP-CERTIFICATE\"\n      ],\n      \"id\": \"OBS-Q042-CAP-POLICY-001\",\n      \"physical_minima_count\": null,\n      \"physical_minima_count_status\": \"NOT_ESTABLISHED\",\n      \"q_introduced\": \"Q042\",\n      \"retained_candidate_counts\": {\n        \"LOWER\": 3002,\n        \"UPPER\": 138\n      },\n      \"status\": \"SUPPORTED_CONDITIONAL_MATHEMATICAL_RESULT\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q044-COMPONENT\",\n        \"EVD-Q044-INGESTION\",\n        \"EVD-Q044-CHECKS\"\n      ],\n      \"id\": \"OBS-Q044-SUPPORT-HULLS-001\",\n      \"inference_adequacy\": \"UNDETERMINED\",\n      \"native_binary_rounding\": \"NOT_CERTIFIED\",\n      \"physical_falsification\": false,\n      \"q_introduced\": \"Q044\",\n      \"statement\": \"Conditional exact-real native-plus support-functional enclosures; independent source-box extrema need not be physically attainable.\",\n      \"status\": \"CONDITIONAL_MATHEMATICAL_COMPONENT_RESULT\",\n      \"target\": \"NATIVE_PLUS_REAL_ARITHMETIC; EXACT_MINUS_DIAGNOSTIC_SEPARATE\",\n      \"trials\": [\n        {\n          \"bounds\": [\n            0.7067653282305048,\n            0.7067869701940579\n          ],\n          \"support_count\": 138,\n          \"support_index_range\": [\n            3195,\n            3332\n          ],\n          \"trial\": \"UPPER\",\n          \"width\": 2.164196355314285e-05\n        },\n        {\n          \"bounds\": [\n            0.0016297839913017342,\n            0.0018091545475532051\n          ],\n          \"support_count\": 3002,\n          \"support_index_range\": [\n            331,\n            3332\n          ],\n          \"trial\": \"LOWER\",\n          \"width\": 0.00017937055625147098\n        }\n      ],\n      \"units\": \"dimensionless\",\n      \"value_kind\": \"COMPONENT_ENCLOSURE_NOT_PHYSICAL_TAU\"\n    }\n  ],\n  \"q_access_end\": \"Q045\",\n  \"schema_version\": 1\n}\n",
+      "encoding": "utf-8",
+      "sha": "61bdf1b761b1001a388946a52d84ff8a9a93f7e7",
+      "display_url": "https://github.com/Morfindien/bubbleverse-model/blob/main/accepted/observations.json",
+      "display_title": "observations.json"
+    },
+    "isError": false
+  },
+  "accepted_constraints.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"constraints\": [\n    {\n      \"id\": \"CON-H0-001\",\n      \"statement\": \"The H0 conflict must be preserved as disagreement among distinct inference chains, not averaged into one raw measurement.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-H0-002\",\n      \"statement\": \"The H0 Distance Network versus combined CMB benchmark differs by about 7.1 sigma under the manuscript's simple marginal Gaussian comparison; this is not a 7.1 sigma detection of new physics.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-H0-003\",\n      \"statement\": \"DESI DR2 + BBN supplies a separate lower-H0 route without CMB anisotropy data, while retaining early-universe and sound-horizon model dependence.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-SYSTEMATICS-001\",\n      \"statement\": \"No tested ordinary single systematic in the authorized state reconciles the complete local, CMB, and BAO+BBN evidence by itself.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-EDE-001\",\n      \"statement\": \"Moving H0 upward is insufficient; n=3 EDE must satisfy the complete likelihood structure and its viability is experiment- and likelihood-dependent.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-GLOBALITY-001\",\n      \"statement\": \"Corrected high-H0 EDE basins are best-observed finite-search solutions, not proven mathematical global minima.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-Q039-001\",\n      \"statement\": \"Relative-calibration neutralization, removal of native off-diagonal precision coupling, their tested combination, and native foreground profiling freedom do not individually remove the CamSpec-HiLLiPoP geometry discrepancy under the locked Q039 conditions.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-Q039-002\",\n      \"statement\": \"Q039 does not identify a physical Planck calibration error, foreground contamination, covariance defect, instrumental failure, likelihood superiority, EDE preference/falsification, or new physics.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-DM-IDENTITY-001\",\n      \"statement\": \"The microscopic identity of dark matter remains unresolved through Q040.\",\n      \"status\": \"OPEN\"\n    },\n    {\n      \"id\": \"CON-ACCEL-ORIGIN-001\",\n      \"statement\": \"The physical origin of late-time acceleration remains unresolved through Q040.\",\n      \"status\": \"OPEN\"\n    },\n    {\n      \"id\": \"CON-Q040-001\",\n      \"statement\": \"The Q040 common-CMB nuisance-marginalization bridge cannot establish whether the CamSpec-HiLLiPoP discrepancy disappears or survives physically because numerical validation failed before endpoint geometry was produced.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-Q040-002\",\n      \"statement\": \"Q040 does not establish likelihood defect or superiority, calibration, foreground, covariance or instrumental failure, n=3 EDE preference/falsification, or new physics.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-Q041-001\",\n      \"q_introduced\": \"Q041\",\n      \"statement\": \"No MATERIAL_DOWNSTREAM_DIFFERENCE, SCIENTIFICALLY_EQUIVALENT_CONSTRAINTS, or CONSTRAINED_MIXED conclusion may be assigned from V19 because the chain-completeness, hard-Rhat, and both-arms/all-combinations science gates were not satisfied.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-Q041-002\",\n      \"q_introduced\": \"Q041\",\n      \"statement\": \"Q041 non-convergence and a green workflow terminal state are not physical evidence for CamSpec-HiLLiPoP agreement or disagreement, likelihood superiority, EDE preference or falsification, or new physics.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"id\": \"CON-Q041-003\",\n      \"q_introduced\": \"Q041\",\n      \"statement\": \"Q041 conclusions are restricted to the preregistered V19 EDE-only campaign and must not be generalized to the broader original downstream contract.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q042-QJOURNAL-PDF\",\n        \"EVD-Q042-INGESTION-V31\",\n        \"EVD-Q042-CAP-CERTIFICATE\"\n      ],\n      \"id\": \"CON-Q042-001\",\n      \"q_introduced\": \"Q042\",\n      \"statement\": \"No posterior portability class, model preference, physical falsification, pipeline superiority or new physics follows from Q042. The original 20-cell scientific comparison remains unqualified.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q042-QJOURNAL-PDF\",\n        \"EVD-Q042-INGESTION-V31\",\n        \"EVD-Q042-CAP-CERTIFICATE\"\n      ],\n      \"id\": \"CON-Q042-002\",\n      \"production_restart_authorized\": false,\n      \"q_introduced\": \"Q042\",\n      \"statement\": \"Unchanged V31 reruns, more time alone and retrospective cap increases are not a sufficient qualified repair. A materially different design requires a new-case or explicit reopening decision; none is authorized here.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q044-INGESTION\",\n        \"EVD-Q044-ENDPOINT-AUDIT\"\n      ],\n      \"id\": \"CON-Q044-NO-DOWNSTREAM-001\",\n      \"q_introduced\": \"Q044\",\n      \"statement\": \"Q044 closes epistemically INCONCLUSIVE / INSUFFICIENT_SCIENTIFIC_QUALIFICATION. Neither material H0/EDE portability, equivalence nor dataset-conditional behavior is established. The original scientific classifier is NOT_AVAILABLE.\",\n      \"status\": \"UNRESOLVED\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q045-RECOVERY\",\n        \"EVD-Q045-QJOURNAL\",\n        \"EVD-Q045-APPENDICES\",\n        \"EVD-Q045-MAINBOOK\"\n      ],\n      \"id\": \"CON-Q045-NO-PHYSICAL-VERDICT\",\n      \"new_scientific_inference\": false,\n      \"physical_falsification\": false,\n      \"production_restart_authorized\": false,\n      \"q_introduced\": \"Q045\",\n      \"statement\": \"Q045 closes with inconclusive physical materiality. No sign or magnitude of physical optical-depth bias, isolated TT/TE/EE or native-likelihood response, H0 shift, EDE preference or portability classification is established.\",\n      \"status\": \"NOT_ESTABLISHED\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q045-RECOVERY\",\n        \"EVD-Q045-QJOURNAL\"\n      ],\n      \"id\": \"CON-Q045-NO-PRODUCTION\",\n      \"new_scientific_inference\": false,\n      \"physical_falsification\": false,\n      \"production_restart_authorized\": false,\n      \"q_introduced\": \"Q045\",\n      \"statement\": \"Technical offline recovery does not authorize production, native reruns or the unmodified full-matrix plan; reference truth remains UNQUALIFIED and final physical result UNRESOLVED.\",\n      \"status\": \"SCOPE_LIMIT\"\n    }\n  ],\n  \"q_access_end\": \"Q045\",\n  \"schema_version\": 1\n}\n",
+      "encoding": "utf-8",
+      "sha": "bd2bed37cc1bd5cbae8c17fe91c5abd1f4243ed7",
+      "display_url": "https://github.com/Morfindien/bubbleverse-model/blob/main/accepted/constraints.json",
+      "display_title": "constraints.json"
+    },
+    "isError": false
+  },
+  "accepted_mechanisms.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"mechanisms\": [\n    {\n      \"id\": \"MECH-LCDM-001\",\n      \"name\": \"flat LCDM\",\n      \"scope\": \"Highly successful compact cosmological description; not identical to underlying reality and does not identify microscopic dark matter/dark energy.\",\n      \"status\": \"SUPPORTED\"\n    },\n    {\n      \"id\": \"MECH-DYNDE-001\",\n      \"name\": \"dynamical dark energy\",\n      \"scope\": \"Model-comparison candidate; not directly observed as a changing field.\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"active\": true,\n      \"id\": \"MECH-EDE-N3-001\",\n      \"name\": \"n=3 early dark energy\",\n      \"scope\": \"Can access higher-H0 regions in tested profiles, but viability is strongly dataset-, likelihood-, basin-, and implementation-dependent; not established as a complete Hubble-tension solution.\",\n      \"status\": \"CONSTRAINED\"\n    },\n    {\n      \"active\": true,\n      \"id\": \"MECH-ME-001\",\n      \"name\": \"varying electron mass\",\n      \"scope\": \"Can reduce the drag-epoch ruler and move H0 upward in tested profiles, but transfers positive fit cost notably into BBN/DESI at high H0; not established as a complete solution.\",\n      \"status\": \"CONSTRAINED\"\n    },\n    {\n      \"id\": \"MECH-LOCAL-SINGLE-CAUSE-001\",\n      \"name\": \"tested ordinary local single-cause systematics\",\n      \"scope\": \"Can shift local inference but no tested ordinary single cause accounts for the full local/CMB/BAO+BBN discrepancy.\",\n      \"status\": \"REJECTED_AS_FULL_EXPLANATION\"\n    },\n    {\n      \"id\": \"MECH-Q039-CAL-001\",\n      \"name\": \"relative calibration as sole CamSpec-HiLLiPoP geometry explanation\",\n      \"scope\": \"Rejected as sufficient under Q039 locked intervention.\",\n      \"status\": \"REJECTED_AS_FULL_EXPLANATION\"\n    },\n    {\n      \"id\": \"MECH-Q039-PREC-001\",\n      \"name\": \"native off-diagonal precision coupling as sole explanation\",\n      \"scope\": \"Rejected as sufficient under Q039 locked intervention.\",\n      \"status\": \"REJECTED_AS_FULL_EXPLANATION\"\n    },\n    {\n      \"id\": \"MECH-Q039-FG-001\",\n      \"name\": \"native foreground nuisance profiling freedom as sole explanation\",\n      \"scope\": \"Sealed classification NATIVE_FOREGROUND_PROFILE_FREEDOM_REJECTED_AS_SUFFICIENT.\",\n      \"status\": \"REJECTED_AS_FULL_EXPLANATION\"\n    }\n  ],\n  \"q_access_end\": \"Q045\",\n  \"schema_version\": 1\n}\n",
+      "encoding": "utf-8",
+      "sha": "e15824f4aced192d76307c554c62a0e25d28ddad",
+      "display_url": "https://github.com/Morfindien/bubbleverse-model/blob/main/accepted/mechanisms.json",
+      "display_title": "mechanisms.json"
+    },
+    "isError": false
+  },
+  "accepted_predictions.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"predictions\": [\n    {\n      \"future_q_evidence_used\": false,\n      \"id\": \"PRED-H0-INDEPENDENT-001\",\n      \"statement\": \"A future roughly one-percent H0 determination nearly independent of both stellar distance-ladder calibration and early-universe sound-horizon calibration would strongly discriminate among current inference chains.\",\n      \"status\": \"OPEN\"\n    },\n    {\n      \"future_q_evidence_used\": false,\n      \"history\": [\n        {\n          \"note\": \"V19 reached a valid controlled no-science terminal state because convergence and completeness gates were not met; no portability class was issued.\",\n          \"q\": \"Q041\",\n          \"status\": \"INCONCLUSIVE_COMPUTATIONAL_ATTEMPT\"\n        },\n        {\n          \"note\": \"Q042 closed without a qualified 20-cell comparison; physical prediction remains open.\",\n          \"q\": \"Q042\",\n          \"status\": \"INCONCLUSIVE_FEASIBILITY_INVESTIGATION\"\n        }\n      ],\n      \"id\": \"PRED-EDE-PORTABILITY-001\",\n      \"statement\": \"A robust high-H0 n=3 EDE explanation should remain scientifically viable across genuinely matched likelihood implementations rather than only within one favorable construction.\",\n      \"status\": \"OPEN\"\n    },\n    {\n      \"future_q_evidence_used\": false,\n      \"history\": [\n        {\n          \"note\": \"A deeper common-latent nuisance-marginalization route was defined, but numerical validation failed before endpoint geometry.\",\n          \"q\": \"Q040\",\n          \"status\": \"INCONCLUSIVE_PREREQUISITE_ATTEMPT\"\n        }\n      ],\n      \"id\": \"PRED-Q039-COUPLED-001\",\n      \"statement\": \"A future preregistered coupled likelihood/data-vector harmonization test can discriminate whether the residual CamSpec-HiLLiPoP geometry difference is removed only by jointly changing multiple implementation layers.\",\n      \"status\": \"OPEN\"\n    }\n  ],\n  \"q_access_end\": \"Q045\",\n  \"schema_version\": 1\n}\n",
+      "encoding": "utf-8",
+      "sha": "aa8d737c14c67aa34c4aad2a2fc47ec613097047",
+      "display_url": "https://github.com/Morfindien/bubbleverse-model/blob/main/accepted/predictions.json",
+      "display_title": "predictions.json"
+    },
+    "isError": false
+  },
+  "accepted_contradictions.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"contradictions\": [\n    {\n      \"description\": \"High local H0 conflicts with lower CMB and BAO+BBN inferences.\",\n      \"id\": \"CTR-H0-001\",\n      \"resolution\": \"Unresolved through Q040; preserve chain distinctions and dependencies.\",\n      \"results\": [\n        \"OBS-H0-LOCAL-001\",\n        \"OBS-H0-CMB-001\",\n        \"OBS-H0-BAOBBN-001\"\n      ],\n      \"status\": \"OPEN\"\n    },\n    {\n      \"description\": \"CamSpec and HiLLiPoP produce materially different fitted endpoint geometry on overlapping Planck PR4/NPIPE information.\",\n      \"history\": [\n        {\n          \"note\": \"Feasibility closure gives no physical downstream verdict; methodological implementation tension preserved.\",\n          \"q\": \"Q042\",\n          \"status\": \"OPEN_NARROWED\"\n        }\n      ],\n      \"id\": \"CTR-PLANCK-IMPL-001\",\n      \"resolution\": \"Q039 excludes several simple single-block explanations. Q040 identifies a legitimate common physical CMB-space nuisance-marginalization route, but tested finite numerical representations fail validation before endpoint geometry. Q041 V19 then attempts direct downstream portability with matched external data, but the required complete converged posterior matrix is not obtained, so no physical downstream class is issued. The causal origin and downstream scientific significance remain unresolved; V19 is also narrower than the broader original Q041 contract.\",\n      \"results\": [\n        \"ROB-PLANCK-GEOM-001\",\n        \"ROB-Q039-001\",\n        \"ROB-Q040-CMB-MARGINAL-001\",\n        \"ROB-Q040-NUMERIC-001\",\n        \"ROB-Q041-CONTROLLED-NOSCIENCE-001\",\n        \"ROB-Q041-FIREWALL-001\",\n        \"ROB-Q041-CONTRACT-SCOPE-001\"\n      ],\n      \"status\": \"OPEN_NARROWED\"\n    },\n    {\n      \"description\": \"Historical stable vs later non-stable basin labels appeared contradictory.\",\n      \"id\": \"CTR-HIST-BASIN-LABEL-001\",\n      \"resolution\": \"Crosswalk showed classifier dependence rather than demonstrated disappearance of classifier-invariant geometry.\",\n      \"results\": [\n        \"ROB-CLASSIFIER-001\"\n      ],\n      \"status\": \"RESOLVED_METHODOLOGICALLY\"\n    }\n  ],\n  \"q_access_end\": \"Q045\",\n  \"schema_version\": 1\n}\n",
+      "encoding": "utf-8",
+      "sha": "110bf5dfb685fd99972b9770e5fcd9ee2fab6c92",
+      "display_url": "https://github.com/Morfindien/bubbleverse-model/blob/main/accepted/contradictions.json",
+      "display_title": "contradictions.json"
+    },
+    "isError": false
+  },
+  "github_follow0.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "branches": [
+        {
+          "branch": "main"
+        }
+      ],
+      "cursor": "MQ"
+    },
+    "isError": false
+  },
+  "github_follow1.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "branches": [
+        {
+          "branch": "main"
+        }
+      ],
+      "cursor": "MQ"
+    },
+    "isError": false
+  },
+  "github_follow2.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"programs\": {\n    \"Q036-GEOMETRY-V1\": {\n      \"alias_of\": \"Q036-GEOMETRY-V3\",\n      \"preregister\": \"q036_endpoint_geometry_preregister_v1.json\",\n      \"q\": \"Q-036\",\n      \"result_artifacts\": [\n        \"q036-final-v1\",\n        \"q036-tests-v1\",\n        \"q036-return-handoff-v1\",\n        \"q036-preregister-v1\",\n        \"q036-source-lock-v1\",\n        \"q036-run-manifest-v1\"\n      ],\n      \"result_id\": \"R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001\",\n      \"scientific_program\": \"q036_endpoint_geometry_portability_v1.py\",\n      \"scientific_program_id\": \"Q036-GEOMETRY-V1\",\n      \"scientific_task\": \"Backward-compatible launch alias for Q036 V3.\",\n      \"source_lock\": \"q036_endpoint_geometry_source_lock_v1.json\",\n      \"status\": \"ACTIVE\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q036_endpoint_geometry_tests_v1.py\",\n      \"version\": \"v3-compat-v1\",\n      \"workflow_id\": \"q036-endpoint-geometry-portability-v3.yml\",\n      \"workflow_path\": \".github/workflows/q036-endpoint-geometry-portability-v3.yml\"\n    },\n    \"Q036-GEOMETRY-V2\": {\n      \"alias_of\": \"Q036-GEOMETRY-V3\",\n      \"preregister\": \"q036_endpoint_geometry_preregister_v1.json\",\n      \"q\": \"Q-036\",\n      \"result_artifacts\": [\n        \"q036-final-v1\",\n        \"q036-tests-v1\",\n        \"q036-return-handoff-v1\",\n        \"q036-preregister-v1\",\n        \"q036-source-lock-v1\",\n        \"q036-run-manifest-v1\"\n      ],\n      \"result_id\": \"R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001\",\n      \"scientific_program\": \"q036_endpoint_geometry_portability_v1.py\",\n      \"scientific_program_id\": \"Q036-GEOMETRY-V1\",\n      \"scientific_task\": \"Backward-compatible launch alias for Q036 V3.\",\n      \"source_lock\": \"q036_endpoint_geometry_source_lock_v1.json\",\n      \"status\": \"ACTIVE\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q036_endpoint_geometry_tests_v1.py\",\n      \"version\": \"v3-compat-v2\",\n      \"workflow_id\": \"q036-endpoint-geometry-portability-v3.yml\",\n      \"workflow_path\": \".github/workflows/q036-endpoint-geometry-portability-v3.yml\"\n    },\n    \"Q036-GEOMETRY-V3\": {\n      \"preregister\": \"q036_endpoint_geometry_preregister_v1.json\",\n      \"q\": \"Q-036\",\n      \"result_artifacts\": [\n        \"q036-final-v1\",\n        \"q036-tests-v1\",\n        \"q036-return-handoff-v1\",\n        \"q036-preregister-v1\",\n        \"q036-source-lock-v1\",\n        \"q036-run-manifest-v1\"\n      ],\n      \"result_id\": \"R-Q036-EDE-ENDPOINT-GEOMETRY-PORTABILITY-001\",\n      \"scientific_program\": \"q036_endpoint_geometry_portability_v1.py\",\n      \"scientific_program_id\": \"Q036-GEOMETRY-V1\",\n      \"scientific_task\": \"Artifact-only Q022 CamSpec versus CASE-031 HiLLiPoP endpoint common-geometry portability comparison under exact Q031 locked scales.\",\n      \"source_lock\": \"q036_endpoint_geometry_source_lock_v1.json\",\n      \"status\": \"ACTIVE\",\n      \"supersedes\": \"Q036-GEOMETRY-V2\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q036_endpoint_geometry_tests_v1.py\",\n      \"version\": \"v3\",\n      \"workflow_id\": \"q036-endpoint-geometry-portability-v3.yml\",\n      \"workflow_path\": \".github/workflows/q036-endpoint-geometry-portability-v3.yml\"\n    },\n    \"Q038-COORDLOC-V1\": {\n      \"created_date\": \"2026-09-07\",\n      \"parent_result_id\": \"R-Q037-EDE-TT-COMMON-SUPPORT-GEOMETRY-001\",\n      \"preregister\": \"q038_coordinate_localization_preregister_v1.json\",\n      \"q\": \"Q-038\",\n      \"result_artifacts\": [\n        \"q038-q037-input-gate-v1\",\n        \"q038-preregister-v1\",\n        \"q038-source-lock-v1\",\n        \"q038-raw-decomposition-v1\",\n        \"q038-final-v1\",\n        \"q038-tests-v1\",\n        \"q038-return-handoff-v1\",\n        \"q038-run-manifest-v1\"\n      ],\n      \"result_id\": \"R-Q038-EDE-COORDINATE-LOCALIZATION-001\",\n      \"scientific_program\": \"q038_coordinate_localization_v1.py\",\n      \"scientific_program_id\": \"Q038-COORDLOC-V1\",\n      \"scientific_task\": \"Artifact-only coordinate localization of the Q037 exact-common-support CamSpec versus HiLLiPoP implementation geometry difference across the same seven Q031 locked coordinates, with preregistered all-subset concentration and leave-one-label-out stability rules.\",\n      \"source_lock\": \"q038_coordinate_localization_source_lock_v1.json\",\n      \"status\": \"ACTIVE\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q038_coordinate_localization_tests_v1.py\",\n      \"version\": \"v1\",\n      \"workflow_id\": \"q038-coordinate-localization-v1.yml\",\n      \"workflow_path\": \".github/workflows/q038-coordinate-localization-v1.yml\"\n    },\n    \"Q039-FGPROFILE-V1\": {\n      \"created_date\": \"2026-09-08\",\n      \"parent_result_id\": \"R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001\",\n      \"parent_successful_run\": 34161368438,\n      \"preregister\": \"q039_native_foreground_profile_preregister_v1.json\",\n      \"q\": \"Q-039\",\n      \"result_artifacts\": [\n        \"q039-fgprofile-static-v1\",\n        \"q039-fgprofile-parent-input-v1\",\n        \"q039-fgprofile-reference-v1\",\n        \"q039-fgprofile-runtime-preflight-v1\",\n        \"q039-fgprofile-provisional-v1\",\n        \"q039-fgprofile-final-v1\"\n      ],\n      \"result_id\": \"R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001\",\n      \"scientific_program\": \"q039_native_foreground_profile_v1.py\",\n      \"scientific_program_id\": \"Q039-FGPROFILE-V1\",\n      \"scientific_task\": \"Preregistered single-block intervention freezing each implementation's own sampled native TT foreground nuisance vector to its within-implementation best authoritative Q032 refinement endpoint, then reoptimizing all nine labels under frozen Q032/Q037 geometry semantics.\",\n      \"source_lock\": \"q039_native_foreground_profile_source_lock_v1.json\",\n      \"status\": \"ACTIVE\",\n      \"supersedes\": \"Q039-IMPLBLOCK-V5\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q039_native_foreground_profile_tests_v1.py\",\n      \"version\": \"v1\",\n      \"workflow_id\": \"q039-native-foreground-profile-v1.yml\",\n      \"workflow_path\": \".github/workflows/q039-native-foreground-profile-v1.yml\"\n    },\n    \"Q039-IMPLBLOCK-V1\": {\n      \"created_date\": \"2026-09-07\",\n      \"parent_result_id\": \"R-Q038-EDE-COORDINATE-LOCALIZATION-001\",\n      \"preregister\": \"q039_implementation_block_intervention_preregister_v1.json\",\n      \"q\": \"Q-039\",\n      \"result_artifacts\": [\n        \"q039-static-v1\",\n        \"q039-parent-input-gate-v1\",\n        \"q039-single-assessment-v1\",\n        \"q039-final-v1\"\n      ],\n      \"result_id\": \"R-Q039-EDE-IMPLEMENTATION-BLOCK-INTERVENTION-001\",\n      \"scientific_program\": \"q039_implementation_block_intervention_v1.py\",\n      \"scientific_program_id\": \"Q039-IMPLBLOCK-V1\",\n      \"scientific_task\": \"Preregistered native implementation-block interventions on Q032 exact TT common support to test whether relative-calibration semantics or quadratic precision coupling singly remove the Q037/Q038 distributed common geometry difference, with a conditional calibration-plus-precision coupled arm and explicit NOT-COMPARABLE gates for foreground/core construction.\",\n      \"source_lock\": \"q039_implementation_block_intervention_source_lock_v1.json\",\n      \"status\": \"ACTIVE\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q039_implementation_block_intervention_tests_v1.py\",\n      \"version\": \"v1\",\n      \"workflow_id\": \"q039-implementation-block-intervention-v1.yml\",\n      \"workflow_path\": \".github/workflows/q039-implementation-block-intervention-v1.yml\"\n    },\n    \"Q040-CMBSPACE-V1\": {\n      \"created_date\": \"2026-09-08\",\n      \"design_parent_commit\": \"449fe096e49a793446c0c859cf8caf0fcdaf4c8f\",\n      \"failed_run_id\": 34199777865,\n      \"failure_class\": \"NUMERICAL_FIXED_POINT_NONCONVERGENCE_ALL_SIX_COMPRESSION_MAP_STARTS\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001\",\n      \"preregister\": \"q040_cmbspace_coupled_bridge_preregister_v1.json\",\n      \"q\": \"Q-040\",\n      \"result_artifacts\": [\n        \"q040-static-v1\",\n        \"q040-parent-input-v1\",\n        \"q040-environment-gate-v1\",\n        \"q040-map-*\",\n        \"q040-compression-camspec-v1\",\n        \"q040-compression-hillipop-v1\",\n        \"q040-compression-validation-camspec-v1\",\n        \"q040-compression-validation-hillipop-v1\",\n        \"q040-endpoint-*\",\n        \"q040-provisional-v1\",\n        \"q040-final-v1\"\n      ],\n      \"result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-001\",\n      \"scientific_program\": \"q040_cmbspace_coupled_bridge_v1.py\",\n      \"scientific_program_id\": \"Q040-CMBSPACE-V1\",\n      \"scientific_task\": \"Preregistered native-nuisance-marginalized identity-multipole CMB-space coupled structural bridge on frozen Q032 exact TT common support, with implementation-native foreground/calibration priors, Schur-propagated CMB covariance, separate compression validation, frozen nine-label endpoint geometry and 9/9 leave-one-label-out sufficiency testing.\",\n      \"source_lock\": \"q040_cmbspace_coupled_bridge_source_lock_v1.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q040-CMBSPACE-V2\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q040_cmbspace_coupled_bridge_tests_v1.py\",\n      \"version\": \"v1\",\n      \"workflow_id\": \"q040-cmbspace-coupled-bridge-v1.yml\",\n      \"workflow_path\": \".github/workflows/q040-cmbspace-coupled-bridge-v1.yml\"\n    },\n    \"Q040-CMBSPACE-V2\": {\n      \"created_date\": \"2026-09-08\",\n      \"design_parent_commit\": \"4f144ec145753930ad1dab061ea4d95e71047581\",\n      \"failed_run_id\": 34203696897,\n      \"failure_class\": \"HILLIPOP_BOUNDED_ANDERSON_NONCONVERGENCE_ALL_THREE_MAP_STARTS_CAMSPEC_THREE_OF_THREE_PASSED\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001\",\n      \"preregister\": \"q040_cmbspace_coupled_bridge_preregister_v2.json\",\n      \"q\": \"Q-040\",\n      \"result_artifacts\": [\n        \"q040-static-v2\",\n        \"q040-parent-input-v2\",\n        \"q040-environment-gate-v2\",\n        \"q040-map-*\",\n        \"q040-compression-camspec-v2\",\n        \"q040-compression-hillipop-v2\",\n        \"q040-compression-validation-camspec-v2\",\n        \"q040-compression-validation-hillipop-v2\",\n        \"q040-endpoint-*\",\n        \"q040-provisional-v2\",\n        \"q040-final-v2\"\n      ],\n      \"result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-002\",\n      \"scientific_program\": \"q040_cmbspace_coupled_bridge_v2.py\",\n      \"scientific_program_id\": \"Q040-CMBSPACE-V2\",\n      \"scientific_task\": \"Preregistered native-nuisance-marginalized identity-multipole CMB-space coupled structural bridge on frozen Q032 exact TT common support, with implementation-native foreground/calibration priors, Schur-propagated CMB covariance, separate compression validation, frozen nine-label endpoint geometry and 9/9 leave-one-label-out sufficiency testing. Technical V2 replaces the non-convergent plain fixed-point iteration with bounded Anderson acceleration while preserving scientific locks and acceptance thresholds.\",\n      \"source_lock\": \"q040_cmbspace_coupled_bridge_source_lock_v2.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q040-CMBSPACE-V3\",\n      \"supersedes\": \"Q040-CMBSPACE-V1\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q040_cmbspace_coupled_bridge_tests_v2.py\",\n      \"v1_failed_run_id\": 34199777865,\n      \"version\": \"v2\",\n      \"workflow_id\": \"q040-cmbspace-coupled-bridge-v2.yml\",\n      \"workflow_path\": \".github/workflows/q040-cmbspace-coupled-bridge-v2.yml\"\n    },\n    \"Q040-CMBSPACE-V3\": {\n      \"created_date\": \"2026-09-08\",\n      \"design_parent_commit\": \"ff92802d873b3e0a7c640d80485a27d444d4db35\",\n      \"failed_run_id\": 34209404762,\n      \"failure_class\": \"ENVIRONMENT_GATE_Q032_ARTIFACT_NAME_MISMATCH\",\n      \"failure_repaired\": \"V2_HILLIPOP_ALL_THREE_MAP_STARTS_NOT_CONVERGED_UNDER_BOUNDED_ANDERSON; V3_REMOVES_OUTER_BLOCK_FIXED_POINT_AND_USES_EXACT_GLS_VARIABLE_PROJECTION\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001\",\n      \"preregister\": \"q040_cmbspace_coupled_bridge_preregister_v3.json\",\n      \"q\": \"Q-040\",\n      \"result_artifacts\": [\n        \"q040-static-v3\",\n        \"q040-parent-input-v3\",\n        \"q040-environment-gate-v3\",\n        \"q040-map-*\",\n        \"q040-compression-camspec-v3\",\n        \"q040-compression-hillipop-v3\",\n        \"q040-compression-validation-camspec-v3\",\n        \"q040-compression-validation-hillipop-v3\",\n        \"q040-endpoint-*\",\n        \"q040-provisional-v3\",\n        \"q040-final-v3\"\n      ],\n      \"result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-003\",\n      \"reuse_classification\": \"PATCH: reuse V2 validated native context/compression/validation/endpoints; replace failed MAP solver only\",\n      \"scientific_program\": \"q040_cmbspace_coupled_bridge_v3.py\",\n      \"scientific_program_id\": \"Q040-CMBSPACE-V3\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_task\": \"Preregistered native-nuisance-marginalized identity-multipole CMB-space coupled structural bridge using exact-GLS variable projection for nuisance MAP construction, separate native validation, frozen nine-label endpoint geometry and 9/9 leave-one-label-out sufficiency testing.\",\n      \"source_lock\": \"q040_cmbspace_coupled_bridge_source_lock_v3.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q040-CMBSPACE-V4\",\n      \"supersedes\": \"Q040-CMBSPACE-V2\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program\": \"q040_cmbspace_coupled_bridge_v2.py\",\n      \"technical_parent_program_id\": \"Q040-CMBSPACE-V2\",\n      \"tests\": \"q040_cmbspace_coupled_bridge_tests_v3.py\",\n      \"v2_failed_run_id\": 34203696897,\n      \"version\": \"v3\",\n      \"workflow_id\": \"q040-cmbspace-coupled-bridge-v3.yml\",\n      \"workflow_path\": \".github/workflows/q040-cmbspace-coupled-bridge-v3.yml\"\n    },\n    \"Q040-CMBSPACE-V4\": {\n      \"created_date\": \"2026-09-08\",\n      \"design_parent_commit\": \"1790e8570debeade2f87ff3bb2a1a582c311c32c\",\n      \"failed_run_id\": 34211073134,\n      \"failure_class\": \"CONTROLLED_COMPRESSION_VALIDATION_FAILURE_MISHANDLED_AS_JOB_ERROR__CAMSPEC_HESSIAN_PD_AND_HILLIPOP_MULTISTART\",\n      \"failure_repaired\": \"V2_HILLIPOP_ALL_THREE_MAP_STARTS_NOT_CONVERGED_UNDER_BOUNDED_ANDERSON; V3_REMOVES_OUTER_BLOCK_FIXED_POINT_AND_USES_EXACT_GLS_VARIABLE_PROJECTION\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q039-EDE-NATIVE-FOREGROUND-PROFILE-001\",\n      \"preregister\": \"q040_cmbspace_coupled_bridge_preregister_v4.json\",\n      \"q\": \"Q-040\",\n      \"result_artifacts\": [\n        \"q040-static-v4\",\n        \"q040-parent-input-v4\",\n        \"q040-environment-gate-v4\",\n        \"q040-map-*\",\n        \"q040-compression-camspec-v4\",\n        \"q040-compression-hillipop-v4\",\n        \"q040-compression-validation-camspec-v4\",\n        \"q040-compression-validation-hillipop-v4\",\n        \"q040-endpoint-*\",\n        \"q040-provisional-v4\",\n        \"q040-final-v4\"\n      ],\n      \"result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-004\",\n      \"reuse_classification\": \"PATCH: reuse V2 validated native context/compression/validation/endpoints; replace failed MAP solver only\",\n      \"scientific_program\": \"q040_cmbspace_coupled_bridge_v4.py\",\n      \"scientific_program_id\": \"Q040-CMBSPACE-V4\",\n      \"scientific_task\": \"Q040 CMB-space coupled bridge V4. Preserves V3 exact-GLS variable-projection solver and all frozen scientific locks; repairs only immutable Q032 V2 artifact references and adds a static parent-artifact provenance gate.\",\n      \"source_lock\": \"q040_cmbspace_coupled_bridge_source_lock_v4.json\",\n      \"status\": \"SUPERSEDED\",\n      \"superseded_by\": \"Q040-CMBSPACE-V5\",\n      \"supersedes\": \"Q040-CMBSPACE-V3\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program\": \"q040_cmbspace_coupled_bridge_v2.py\",\n      \"technical_parent_program_id\": \"Q040-CMBSPACE-V2\",\n      \"tests\": \"q040_cmbspace_coupled_bridge_tests_v4.py\",\n      \"v2_failed_run_id\": 34203696897,\n      \"v3_failed_run_id\": 34209404762,\n      \"version\": \"v4\",\n      \"workflow_id\": \"q040-cmbspace-coupled-bridge-v4.yml\",\n      \"workflow_path\": \".github/workflows/q040-cmbspace-coupled-bridge-v4.yml\"\n    },\n    \"Q040-CMBSPACE-V5\": {\n      \"created_date\": \"2026-09-08\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-004\",\n      \"preregister\": \"q040_cmbspace_coupled_bridge_preregister_v5.json\",\n      \"q\": \"Q-040\",\n      \"result_artifacts\": [\n        \"q040-final-v5\",\n        \"q040-return-handoff-v5\",\n        \"q040-validation-seal-v5\"\n      ],\n      \"result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-005\",\n      \"scientific_program\": \"q040_cmbspace_coupled_bridge_v5.py\",\n      \"scientific_program_id\": \"Q040-CMBSPACE-V5\",\n      \"scientific_task\": \"Artifact-only controlled sealing of Q040 V4 compression validation failure. Reuses six successful V4 variable-projection MAP artifacts; validates CamSpec hard-bound/symmetric-Laplace incompatibility and HiLLiPoP frozen multistart CMB instability; blocks science endpoints and returns COMPRESSION_VALIDATION_FAIL / UNRESOLVED without changing any scientific threshold.\",\n      \"source_lock\": \"q040_cmbspace_coupled_bridge_source_lock_v5.json\",\n      \"status\": \"SUPERSEDED\",\n      \"superseded_by\": \"Q040-RQMC-V1\",\n      \"supersedes\": \"Q040-CMBSPACE-V4\",\n      \"supersession_reason\": \"V5 sealed the single-Gaussian Laplace/Schur compression validation failure; Q040-RQMC-V1 implements the subsequently documented defensive native-prior RQMC marginalization mathematics without reopening V5.\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q040_cmbspace_coupled_bridge_tests_v5.py\",\n      \"v4_github_run_id\": 34211073134,\n      \"v4_head_sha\": \"8790262f02a26e4e9b764790ddf2a693532c599b\",\n      \"version\": \"v5\",\n      \"workflow_id\": \"q040-cmbspace-compression-seal-v5.yml\",\n      \"workflow_path\": \".github/workflows/q040-cmbspace-compression-seal-v5.yml\"\n    },\n    \"Q040-RQMC-V1\": {\n      \"created_date\": \"2026-09-08\",\n      \"failed_head_sha\": \"177e79778a286b5138858fba1f0716d75faf4e0b\",\n      \"failed_run_id\": 34244197767,\n      \"failure_class\": \"RQMC_SHARD_JSON_SERIALIZATION_REJECTED_NEGATIVE_INFINITY_EMPTY_ACCUMULATOR_SENTINEL\",\n      \"failure_scope\": \"SHARD_OUTPUT_SERIALIZATION_ONLY; RQMC_NUMERICAL_LOOP_REACHED_NORMAL_RESULT_WRITE_PATH; NO_Q040_SCIENCE_RESULT\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"math_result_id\": \"R-Q040-MATH-DEFENSIVE-MARGINAL-001\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-005\",\n      \"parent_v4_run\": 34211073134,\n      \"parent_v5_run\": 34236057202,\n      \"preregister\": \"q040_defensive_rqmc_preregister_v1.json\",\n      \"q\": \"Q-040\",\n      \"result_artifacts\": [\n        \"q040-rqmc-static-v1\",\n        \"q040-rqmc-parent-v1\",\n        \"q040-rqmc-prepare-v1\",\n        \"q040-rqmc-state-m*-v1\",\n        \"q040-rqmc-integration-final-v1\",\n        \"q040-rqmc-coreset-*-v1\",\n        \"q040-rqmc-bank-*\",\n        \"q040-rqmc-bank-stability-v1\",\n        \"q040-rqmc-production-*\",\n        \"q040-rqmc-provisional-v1\",\n        \"q040-rqmc-tests-v1\",\n        \"q040-rqmc-final-v1\"\n      ],\n      \"result_id\": \"R-Q040-EDE-DEFENSIVE-RQMC-CMB-MARGINAL-001\",\n      \"scientific_program\": \"q040_defensive_rqmc_v1.py\",\n      \"scientific_program_id\": \"Q040-RQMC-V1\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_task\": \"Preregistered defensive native-prior nuisance marginalization in frozen Q032 identity-multipole CMB TT space using deterministic-mixture importance sampling with four Owen-scrambled Sobol replicates, native hard-bound support, finite adaptive integration validation, independent A/B endpoint stability, non-Gaussian coreset acceleration validated against the full converged RQMC probe likelihood, and frozen Q037 full plus 9/9 LOO geometry.\",\n      \"source_lock\": \"q040_defensive_rqmc_source_lock_v1.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q040-RQMC-V2\",\n      \"supersedes\": \"Q040-CMBSPACE-V5\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q040_defensive_rqmc_tests_v1.py\",\n      \"version\": \"v1\",\n      \"workflow_id\": \"q040-defensive-rqmc-v1.yml\",\n      \"workflow_path\": \".github/workflows/q040-defensive-rqmc-v1.yml\"\n    },\n    \"Q040-RQMC-V2\": {\n      \"created_date\": \"2026-09-08\",\n      \"failed_head_sha\": \"f7a1484692140c4b37e9c77d4c59fb4b6cd6779e\",\n      \"failed_run_id\": 34247581888,\n      \"failure_class\": \"SAME_RUN_ARTIFACT_DOWNLOAD_HTTP_403_INTERMEDIARY_M12_HILLIPOP_SHARD_ABORT\",\n      \"failure_scope\": \"M12_HILLIPOP_0_OF_6_PRE_EXECUTION_SAME_RUN_ARTIFACT_LIST_403; V2_FINAL_ACTUAL_COMPUTED_RESULT_FALSE; NO_Q040_SCIENCE_RESULT\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"math_result_id\": \"R-Q040-MATH-DEFENSIVE-MARGINAL-001\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-005\",\n      \"parent_v4_run\": 34211073134,\n      \"parent_v5_run\": 34236057202,\n      \"preregister\": \"q040_defensive_rqmc_preregister_v2.json\",\n      \"q\": \"Q-040\",\n      \"result_artifacts\": [\n        \"q040-rqmc-static-v2\",\n        \"q040-rqmc-parent-v2\",\n        \"q040-rqmc-prepare-v2\",\n        \"q040-rqmc-state-m*-v2\",\n        \"q040-rqmc-integration-final-v2\",\n        \"q040-rqmc-coreset-*-v2\",\n        \"q040-rqmc-bank-*\",\n        \"q040-rqmc-bank-stability-v2\",\n        \"q040-rqmc-production-*\",\n        \"q040-rqmc-provisional-v2\",\n        \"q040-rqmc-tests-v2\",\n        \"q040-rqmc-final-v2\"\n      ],\n      \"result_id\": \"R-Q040-EDE-DEFENSIVE-RQMC-CMB-MARGINAL-002\",\n      \"rqmc_seed_namespace\": \"Q040-RQMC-V1\",\n      \"scientific_and_numerical_settings_changed_from_v1\": false,\n      \"scientific_program\": \"q040_defensive_rqmc_v2.py\",\n      \"scientific_program_id\": \"Q040-RQMC-V2\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_task\": \"Technical serialization repair of Q040-RQMC-V1 defensive native-prior RQMC marginalization. Preserves the exact V1 RQMC seed namespace and all frozen model/data/prior/proposal/threshold settings; encodes empty sparse log-sum accumulators (-inf) as JSON null and decodes null back to -inf before logaddexp, while rejecting NaN/+inf and requiring finite cumulative likelihoods before scientific deltas.\",\n      \"source_lock\": \"q040_defensive_rqmc_source_lock_v2.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q040-RQMC-V3\",\n      \"supersedes\": \"Q040-RQMC-V1\",\n      \"target_ref\": \"main\",\n      \"technical_parent_github_run_id\": 34244197767,\n      \"technical_parent_head_sha\": \"177e79778a286b5138858fba1f0716d75faf4e0b\",\n      \"technical_parent_program_id\": \"Q040-RQMC-V1\",\n      \"tests\": \"q040_defensive_rqmc_tests_v2.py\",\n      \"version\": \"v2\",\n      \"workflow_id\": \"q040-defensive-rqmc-v2.yml\",\n      \"workflow_path\": \".github/workflows/q040-defensive-rqmc-v2.yml\"\n    },\n    \"Q040-RQMC-V3\": {\n      \"created_date\": \"2026-09-08\",\n      \"failed_head_sha\": \"289d1b3aca238b58e797b03978d15258c465d52c\",\n      \"failed_run_id\": 34256042442,\n      \"failure_class\": \"LOCAL_COMPOSITE_ACTION_MISSING_BEFORE_RQMC_M9_SHARD_EXECUTION\",\n      \"failure_scope\": \"STATIC/PARENT/ENVIRONMENT/PREPARE PASS; ALL M9 SHARDS STOPPED BEFORE RQMC COMMAND; NO_Q040_SCIENCE_RESULT\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"math_result_id\": \"R-Q040-MATH-DEFENSIVE-MARGINAL-001\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-005\",\n      \"parent_v4_run\": 34211073134,\n      \"parent_v5_run\": 34236057202,\n      \"preregister\": \"q040_defensive_rqmc_preregister_v3.json\",\n      \"q\": \"Q-040\",\n      \"result_artifacts\": [\n        \"q040-rqmc-static-v3\",\n        \"q040-rqmc-parent-v3\",\n        \"q040-rqmc-prepare-v3\",\n        \"q040-rqmc-state-m*-v3\",\n        \"q040-rqmc-integration-final-v3\",\n        \"q040-rqmc-coreset-*-v3\",\n        \"q040-rqmc-bank-*\",\n        \"q040-rqmc-bank-stability-v3\",\n        \"q040-rqmc-production-*\",\n        \"q040-rqmc-provisional-v3\",\n        \"q040-rqmc-tests-v3\",\n        \"q040-rqmc-final-v3\"\n      ],\n      \"result_id\": \"R-Q040-EDE-DEFENSIVE-RQMC-CMB-MARGINAL-003\",\n      \"rqmc_seed_namespace\": \"Q040-RQMC-V1\",\n      \"scientific_and_numerical_settings_changed_from_v1\": false,\n      \"scientific_and_numerical_settings_changed_from_v2\": false,\n      \"scientific_program\": \"q040_defensive_rqmc_v3.py\",\n      \"scientific_program_id\": \"Q040-RQMC-V3\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_task\": \"Technical artifact-transport hardening of Q040-RQMC-V2. Preserves exact V1 RQMC seed namespace and every frozen model/data/prior/proposal/numerical/science setting. Same-run artifact downloads receive bounded retry/cleanup, and failed/cancelled upstream execution is explicitly prohibited from entering numerical-validation failure seals.\",\n      \"source_lock\": \"q040_defensive_rqmc_source_lock_v3.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q040-RQMC-V4\",\n      \"supersedes\": \"Q040-RQMC-V2\",\n      \"target_ref\": \"main\",\n      \"technical_parent_github_run_id\": 34247581888,\n      \"technical_parent_head_sha\": \"f7a1484692140c4b37e9c77d4c59fb4b6cd6779e\",\n      \"technical_parent_program_id\": \"Q040-RQMC-V2\",\n      \"tests\": \"q040_defensive_rqmc_tests_v3.py\",\n      \"version\": \"v3\",\n      \"workflow_id\": \"q040-defensive-rqmc-v3.yml\",\n      \"workflow_path\": \".github/workflows/q040-defensive-rqmc-v3.yml\"\n    },\n    \"Q040-RQMC-V4\": {\n      \"created_date\": \"2026-09-08\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start-segmented-v5.yml\",\n      \"math_result_id\": \"R-Q040-MATH-DEFENSIVE-MARGINAL-001\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q040-EDE-CMBSPACE-COUPLED-BRIDGE-005\",\n      \"parent_v4_run\": 34211073134,\n      \"parent_v5_run\": 34236057202,\n      \"preregister\": \"q040_defensive_rqmc_preregister_v4.json\",\n      \"q\": \"Q-040\",\n      \"result_artifacts\": [\n        \"q040-rqmc-final-v4\"\n      ],\n      \"result_id\": \"R-Q040-EDE-DEFENSIVE-RQMC-CMB-MARGINAL-004\",\n      \"rqmc_seed_namespace\": \"Q040-RQMC-V1\",\n      \"scientific_and_numerical_settings_changed_from_v1\": false,\n      \"scientific_and_numerical_settings_changed_from_v2\": false,\n      \"scientific_and_numerical_settings_changed_from_v3\": false,\n      \"scientific_program\": \"q040_defensive_rqmc_v4.py\",\n      \"scientific_program_id\": \"Q040-RQMC-V4\",\n      \"scientific_task\": \"Technical deployment hardening of Q040-RQMC-V3. Removes the separately packaged local composite action and inlines bounded three-attempt same-run artifact retry/cleanup/backoff directly in the workflow. Preserves exact V1 RQMC seed namespace and every frozen model/data/prior/proposal/numerical/science setting. Also aligns V4 coreset artifact/file suffixes before endpoint stages.\",\n      \"source_lock\": \"q040_defensive_rqmc_source_lock_v4.json\",\n      \"status\": \"ACTIVE\",\n      \"supersedes\": \"Q040-RQMC-V3\",\n      \"target_ref\": \"main\",\n      \"technical_parent_github_run_id\": 34256042442,\n      \"technical_parent_head_sha\": \"289d1b3aca238b58e797b03978d15258c465d52c\",\n      \"technical_parent_program_id\": \"Q040-RQMC-V3\",\n      \"tests\": \"q040_defensive_rqmc_tests_v4.py\",\n      \"version\": \"v4\",\n      \"workflow_id\": \"q040-defensive-rqmc-v4.yml\",\n      \"workflow_path\": \".github/workflows/q040-defensive-rqmc-v4.yml\"\n    },\n    \"Q041-PLANCKPORT-V1\": {\n      \"created_date\": \"2026-09-09\",\n      \"failure_class\": \"STATIC_REGISTRY_ENTRY_MISSING_KEYERROR_Q041_PLANCKPORT_V1\",\n      \"failure_scope\": \"STATIC_GATE_ONLY; SCIENTIFIC_EXECUTION_NOT_STARTED; NO_Q041_SCIENCE_RESULT\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v1.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v1\",\n        \"q041-environment-v1\",\n        \"q041-chain-*\",\n        \"q041-final-v1\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-001\",\n      \"scientific_program\": \"q041_planck_portability_v1.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V1\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_task\": \"Preregistered downstream posterior portability test of the Q037 exact-common-support native CamSpec/HiLLiPoP n=3 EDE geometry under identical ACT DR6 primary CMB, ACT DR6 ACT-only lensing and DESI DR2 BAO information, with conservative disjoint Planck/ACT primary-CMB multipole support, leave-one-out robustness and hard convergence gates.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v1.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V2\",\n      \"target_ref\": \"main\",\n      \"tests\": \"q041_planck_portability_tests_v1.py\",\n      \"version\": \"v1\",\n      \"workflow_id\": \"q041-planck-portability-v1.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v1.yml\"\n    },\n    \"Q041-PLANCKPORT-V10\": {\n      \"act_lensing_transport\": \"NASA_LAMBDA_PINNED_UPSTREAM\",\n      \"act_primary_transport\": \"NASA_LAMBDA_OFFICIAL\",\n      \"chain_artifact_pattern\": \"q041-chain-*-v10\",\n      \"created_date\": \"2026-09-09\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v10.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"failure_class\": \"DESI_DR2_BAO_DATA_RELEASE_METADATA_MISSING\",\n      \"failure_scope\": \"STATIC_PASS; Q032_CORE_PASS; ACT_PRIMARY_PASS; ACT_LENSING_PASS; DESI_FILES_PRESENT; RUNTIME_PREFLIGHT_REACHED_CAMSPEC_FULL_COMBINATION; FAILED_ONLY BECAUSE data/bao_data/version.dat WAS MISSING AND COBAYA INTERPRETED VERSION AS 0.0 < 2.6; NO_SAMPLE; NO_Q041_SCIENCE_RESULT\",\n      \"immediate_core_cache_save\": true,\n      \"immediate_full_cache_save\": true,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"pipefail_safe_archive_validation\": true,\n      \"preregister\": \"q041_planck_portability_preregister_v10.json\",\n      \"prior_q032_core_cache_fallbacks\": [\n        \"v9\",\n        \"v8\",\n        \"q032-v2\"\n      ],\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v10\",\n        \"q041-environment-v10\",\n        \"q041-chain-*-v10\",\n        \"q041-final-v10\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-010\",\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v9\": false,\n      \"scientific_program\": \"q041_planck_portability_v10.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V10\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v9_failure\": false,\n      \"scientific_task\": \"Shell-only pipefail/SIGPIPE repair of V9 archive validation; science and data transport unchanged.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v10.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V11\",\n      \"supersedes\": \"Q041-PLANCKPORT-V9\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V9\",\n      \"tests\": \"q041_planck_portability_tests_v10.py\",\n      \"version\": \"v10\",\n      \"workflow_id\": \"q041-planck-portability-v10.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v10.yml\"\n    },\n    \"Q041-PLANCKPORT-V11\": {\n      \"act_lensing_transport\": \"NASA_LAMBDA_PINNED_UPSTREAM\",\n      \"act_primary_transport\": \"NASA_LAMBDA_OFFICIAL\",\n      \"chain_artifact_pattern\": \"q041-chain-*-v11\",\n      \"chain_metadata_filename\": \"q041_chain_metadata_v11.json\",\n      \"created_date\": \"2026-09-09\",\n      \"desi_bao_data_release\": \"v2.6\",\n      \"desi_bao_version_metadata\": \"data/bao_data/version.dat\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v11.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"failure_class\": \"COBAYA_3P5P6_BAO_PANDAS_STRINGDTYPE_COMPATIBILITY\",\n      \"failure_scope\": \"DESI version metadata passed; runtime preflight reached DESI BAO.initialize and failed only at frozen Cobaya 3.5.6 object-dtype assertion under pandas StringDtype; no sample and no science result.\",\n      \"immediate_core_cache_save\": true,\n      \"immediate_full_cache_save\": true,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"pipefail_safe_archive_validation\": true,\n      \"preregister\": \"q041_planck_portability_preregister_v11.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v11\",\n        \"q041-environment-v11\",\n        \"q041-chain-*-v11\",\n        \"q041-final-v11\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-011\",\n      \"reuse_v10_full_environment_cache\": true,\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v10\": false,\n      \"scientific_program\": \"q041_planck_portability_v11.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V11\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v10_failure\": false,\n      \"scientific_task\": \"Technical repair only: reproduce Cobaya bao_data v2.6 version.dat metadata, verify DESI DR2 installation state, correct stale chain metadata filename, and reuse V10 full environment cache. Scientific configuration unchanged.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v11.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V12\",\n      \"supersedes\": \"Q041-PLANCKPORT-V10\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V10\",\n      \"tests\": \"q041_planck_portability_tests_v11.py\",\n      \"version\": \"v11\",\n      \"workflow_id\": \"q041-planck-portability-v11.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v11.yml\"\n    },\n    \"Q041-PLANCKPORT-V12\": {\n      \"act_lensing_transport\": \"NASA_LAMBDA_PINNED_UPSTREAM\",\n      \"act_primary_transport\": \"NASA_LAMBDA_OFFICIAL\",\n      \"bao_dtype_compatibility_source_commit\": \"b76b6fed2a6c8c5594c6f92d5058bef10079746a\",\n      \"chain_artifact_pattern\": \"q041-chain-*-v12\",\n      \"chain_metadata_filename\": \"q041_chain_metadata_v12.json\",\n      \"created_date\": \"2026-09-09\",\n      \"desi_bao_data_release\": \"v2.6\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v12.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"failure_class\": \"BAO_DTYPE_PATCHER_LITERAL_BACKSLASH_N_SIGNATURE_BUG\",\n      \"failure_scope\": \"STATIC_PASS; ACT_PRIMARY_DATA_PASS; ACT_LENSING_DATA_PASS; Q041_SETUP_ABORTED_BEFORE_DESI_DATA_RUNTIME BECAUSE PATCHER LOOKED FOR LITERAL BACKSLASH-N TEXT; NO_RUNTIME_PREFLIGHT; NO_SAMPLE; NO_Q041_SCIENCE_RESULT\",\n      \"immediate_core_cache_save\": true,\n      \"immediate_full_cache_save\": true,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"pipefail_safe_archive_validation\": true,\n      \"preregister\": \"q041_planck_portability_preregister_v12.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v12\",\n        \"q041-environment-v12\",\n        \"q041-chain-*-v12\",\n        \"q041-final-v12\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-012\",\n      \"reuse_v11_full_environment_cache\": true,\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v11\": false,\n      \"scientific_program\": \"q041_planck_portability_v12.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V12\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v11_failure\": false,\n      \"scientific_task\": \"Compatibility-only BAO StringDtype backport from pinned Cobaya commit; science unchanged.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v12.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V13\",\n      \"supersedes\": \"Q041-PLANCKPORT-V11\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V11\",\n      \"tests\": \"q041_planck_portability_tests_v12.py\",\n      \"version\": \"v12\",\n      \"workflow_id\": \"q041-planck-portability-v12.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v12.yml\"\n    },\n    \"Q041-PLANCKPORT-V13\": {\n      \"act_lensing_transport\": \"NASA_LAMBDA_PINNED_UPSTREAM\",\n      \"act_primary_transport\": \"NASA_LAMBDA_OFFICIAL\",\n      \"bao_dtype_compatibility_source_commit\": \"b76b6fed2a6c8c5594c6f92d5058bef10079746a\",\n      \"bao_dtype_patch_method\": \"semantic regex + compile + runtime import\",\n      \"chain_artifact_pattern\": \"q041-chain-*-v13\",\n      \"chain_metadata_filename\": \"q041_chain_metadata_v13.json\",\n      \"created_date\": \"2026-09-09\",\n      \"desi_bao_data_release\": \"v2.6\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v13.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"failed_head_sha\": \"a17cef5016900909d599ac6b7c72469e741fb790\",\n      \"failed_run_id\": 34379785115,\n      \"failure_class\": \"MCMC_CHAIN_EXCEEDS_SINGLE_GITHUB_JOB_RUNTIME_WITH_VALID_PARTIAL_CHECKPOINTS\",\n      \"failure_scope\": \"STATIC_PASS; ENVIRONMENT_PASS; RUNTIME_PREFLIGHT_PASS; SCIENTIFIC_MCMC_STARTED; CAMSPEC P AND OTHER EARLY MATRIX SHARDS REACHED 330-MINUTE JOB LIMIT BEFORE CONVERGENCE; PARTIAL CHAIN/CHECKPOINT/LEARNED-COVMAT ARTIFACTS UPLOADED; REQUIRED 32-CHAIN MATRIX NOT COMPLETE; NO_Q041_SCIENCE_RESULT\",\n      \"immediate_core_cache_save\": true,\n      \"immediate_full_cache_save\": true,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"pipefail_safe_archive_validation\": true,\n      \"preregister\": \"q041_planck_portability_preregister_v13.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v13\",\n        \"q041-environment-v13\",\n        \"q041-chain-*-v13\",\n        \"q041-final-v13\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-013\",\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v12\": false,\n      \"scientific_program\": \"q041_planck_portability_v13.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V13\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v12_failure\": false,\n      \"scientific_task\": \"Technical patcher repair only: apply the same upstream-approved BAO pandas StringDtype compatibility change using semantic regex matching and compile/runtime verification. Scientific configuration unchanged.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v13.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V14\",\n      \"supersedes\": \"Q041-PLANCKPORT-V12\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V12\",\n      \"tests\": \"q041_planck_portability_tests_v13.py\",\n      \"version\": \"v13\",\n      \"workflow_id\": \"q041-planck-portability-v13.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v13.yml\"\n    },\n    \"Q041-PLANCKPORT-V14\": {\n      \"auto_dispatch_next_segment\": true,\n      \"chain_artifact_pattern\": \"q041-chain-*-seg*-v14\",\n      \"chain_metadata_filename\": \"q041_chain_metadata_v14.json\",\n      \"chain_state_cache_prefix\": \"q041-state-v14-\",\n      \"created_date\": \"2026-09-10\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v14.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"max_segments\": 8,\n      \"mcmc_lock\": {\n        \"Rminus1_cl_stop\": 0.2,\n        \"Rminus1_stop\": 0.02,\n        \"hard_science_rhat_gate\": 1.05,\n        \"independent_chains_per_arm_combination\": 2,\n        \"max_samples_per_chain\": 20000\n      },\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v14.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-seg*-v14\",\n        \"q041-environment-seg*-v14\",\n        \"q041-chain-*-seg*-v14\",\n        \"q041-segment-decision-seg*-v14\",\n        \"q041-final-v14\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-014\",\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v13\": false,\n      \"scientific_program\": \"q041_planck_portability_v14.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V14\",\n      \"scientific_result_from_v13_failure\": false,\n      \"scientific_task\": \"Technical execution repair only: segment each unchanged Cobaya MCMC chain below the GitHub-hosted job limit, resume exact checkpoint/learned covariance state, salvage V13 partial chain artifacts, persist per-chain state, and automatically dispatch continuation segments until all unchanged convergence/completeness gates pass.\",\n      \"segment_soft_stop_minutes\": 300,\n      \"segmented_mcmc_resume\": true,\n      \"setup\": \"q041_setup_v14.sh\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v14.json\",\n      \"status\": \"SUPERSEDED\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V15\",\n      \"supersedes\": \"Q041-PLANCKPORT-V13\",\n      \"supersession_reason\": \"V15 preserves segmented resume but makes controlled numerical non-completion a green FINAL NO_SCIENTIFIC_RESULT; technical failures remain red.\",\n      \"target_ref\": \"main\",\n      \"technical_parent_github_run_id\": 34379785115,\n      \"technical_parent_head_sha\": \"a17cef5016900909d599ac6b7c72469e741fb790\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V13\",\n      \"tests\": \"q041_planck_portability_tests_v14.py\",\n      \"v13_partial_artifact_salvage\": true,\n      \"v13_partial_parent_run_id\": 34379785115,\n      \"version\": \"v14\",\n      \"workflow_id\": \"q041-planck-portability-v14.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v14.yml\"\n    },\n    \"Q041-PLANCKPORT-V15\": {\n      \"chain_artifact_pattern\": \"q041-chain-*-seg*-v15\",\n      \"chain_metadata_filename\": \"q041_chain_metadata_v15.json\",\n      \"controlled_no_science_is_green_final\": true,\n      \"created_date\": \"2026-09-10\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v15.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"failure_class\": \"CROSS_VERSION_COBAYA_RESUME_INFO_INCOMPATIBILITY_HILLIPOP_TT\",\n      \"failure_scope\": \"TECHNICAL_RESUME_FAILURE; Cobaya rejected restored older chain state because resolved likelihood:planck_2020_hillipop.TT information was incompatible; no Q041 scientific result.\",\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"max_segments\": 8,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v15.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-seg*-v15\",\n        \"q041-environment-seg*-v15\",\n        \"q041-chain-*-seg*-v15\",\n        \"q041-segment-decision-seg*-v15\",\n        \"q041-final-v15\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-015\",\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v14\": false,\n      \"scientific_program\": \"q041_planck_portability_v15.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V15\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_task\": \"Outcome-semantics hardening of V14 segmented downstream Planck portability execution. Scientific/numerical locks unchanged. Controlled preregistered non-convergence/budget exhaustion returns a validated green FINAL NO_SCIENTIFIC_RESULT; technical failures remain red.\",\n      \"segment_soft_stop_minutes\": 300,\n      \"segmented_mcmc_resume\": true,\n      \"source_lock\": \"q041_planck_portability_source_lock_v15.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V16\",\n      \"supersedes\": \"Q041-PLANCKPORT-V14\",\n      \"supersession_reason\": \"V16 forbids cross-version chain-state adoption and resumes only within one isolated V16 series; scientific/numerical settings and V15 final-color semantics are unchanged.\",\n      \"target_ref\": \"main\",\n      \"technical_failure_remains_red\": true,\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V14\",\n      \"tests\": \"q041_planck_portability_tests_v15.py\",\n      \"v14_state_adoption\": true,\n      \"version\": \"v15\",\n      \"workflow_id\": \"q041-planck-portability-v15.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v15.yml\"\n    },\n    \"Q041-PLANCKPORT-V16\": {\n      \"chain_artifact_pattern\": \"q041-chain-*-seg*-v16\",\n      \"chain_metadata_filename\": \"q041_chain_metadata_v16.json\",\n      \"chain_state_cache_prefix\": \"q041-state-v16-\",\n      \"cobaya_allow_changes_used\": false,\n      \"controlled_no_science_is_green_final\": true,\n      \"created_date\": \"2026-09-10\",\n      \"cross_version_chain_state_reuse_forbidden\": true,\n      \"environment_helper\": \"q041_prepare_frozen_core_v16.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"failed_continuation_run_id\": 34652796681,\n      \"failed_parent_series_id\": \"34498890334\",\n      \"failure_class\": \"SAME_SERIES_COBAYA_RESUME_INFO_INCOMPATIBILITY_HILLIPOP_TT\",\n      \"failure_scope\": \"V16 segment 1 produced valid resumable chain state. In segment 2 CamSpec resumed, but HiLLiPoP shards failed at Cobaya resume compatibility because newly resolved likelihood:planck_2020_hillipop.TT information did not compare equal to the serialized chain.updated.yaml component. No Q041 scientific result.\",\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"max_segments\": 8,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v16.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-seg*-v16\",\n        \"q041-environment-seg*-v16\",\n        \"q041-chain-*-seg*-v16\",\n        \"q041-segment-decision-seg*-v16\",\n        \"q041-final-v16\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-016\",\n      \"same_series_resume_only\": true,\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v15\": false,\n      \"scientific_program\": \"q041_planck_portability_v16.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V16\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v15_failure\": false,\n      \"scientific_task\": \"Technical resume-provenance repair only. Start fresh V16 chain state, isolate one V16 continuation series, and forbid cross-version Cobaya checkpoint adoption. Scientific/numerical locks and V15 green-final/red-technical semantics remain unchanged.\",\n      \"segment_soft_stop_minutes\": 300,\n      \"segmented_mcmc_resume\": true,\n      \"series_id_isolation\": true,\n      \"setup\": \"q041_setup_v16.sh\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v16.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V17\",\n      \"supersedes\": \"Q041-PLANCKPORT-V15\",\n      \"supersession_reason\": \"V17 reuses only the locked V16 lineage and supplies the exact serialized HiLLiPoP TT component from chain.updated.yaml before resume; no allow-changes bypass and no science-setting change.\",\n      \"target_ref\": \"main\",\n      \"technical_failure_remains_red\": true,\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V15\",\n      \"tests\": \"q041_planck_portability_tests_v16.py\",\n      \"version\": \"v16\",\n      \"workflow_id\": \"q041-planck-portability-v16.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v16.yml\"\n    },\n    \"Q041-PLANCKPORT-V17\": {\n      \"chain_artifact_pattern\": \"q041-chain-*-seg*-v17\",\n      \"chain_metadata_filename\": \"q041_chain_metadata_v17.json\",\n      \"chain_state_cache_prefix\": \"q041-state-v17-\",\n      \"cobaya_allow_changes_used\": false,\n      \"controlled_no_science_is_green_final\": true,\n      \"created_date\": \"2026-09-12\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v17.sh\",\n      \"failure_class\": \"ORCHESTRATION_COMPLEXITY_CROSS_WORKFLOW_SELF_DISPATCH_AND_DEPLOYMENT_FRICTION\",\n      \"failure_scope\": \"V17 not accepted as operational execution path; replaced before scientific completion by a single-run fixed linear 8-stage workflow. No Q041 scientific result.\",\n      \"hillipop_resume_component_lock\": true,\n      \"hillipop_resume_component_source\": \"chain.updated.yaml\",\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"locked_v16_checkpoint_migration_only\": true,\n      \"locked_v16_parent_series_id\": \"34498890334\",\n      \"max_compute_segments_per_chain\": 8,\n      \"max_parallel_sample_jobs\": 6,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"per_chain_compute_segment_budget_preserved\": true,\n      \"preregister\": \"q041_planck_portability_preregister_v17.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-seg*-v17\",\n        \"q041-environment-seg*-v17\",\n        \"q041-chain-*-seg*-v17\",\n        \"q041-segment-decision-seg*-v17\",\n        \"q041-final-v17\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-017\",\n      \"same_series_resume_after_migration\": true,\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v16\": false,\n      \"scientific_program\": \"q041_planck_portability_v17.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V17\",\n      \"scientific_result_from_v16_failure\": false,\n      \"scientific_task\": \"Technical resume-serialization repair of V16 only. Preserve all Q041 science and numerical locks; migrate only the exact V16 lineage, use the serialized chain.updated.yaml HiLLiPoP TT component for Cobaya compatibility, and preserve the eight successful compute-segment budget per chain.\",\n      \"segment_soft_stop_minutes\": 300,\n      \"segmented_mcmc_resume\": true,\n      \"setup\": \"q041_setup_v17.sh\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v17.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V18\",\n      \"supersedes\": \"Q041-PLANCKPORT-V16\",\n      \"supersession_reason\": \"V18 removes recursive/self-dispatched continuation entirely and uses eight fixed matrix stages inside one workflow run.\",\n      \"target_ref\": \"main\",\n      \"technical_failure_remains_red\": true,\n      \"technical_parent_failed_run_id\": 34652796681,\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V16\",\n      \"technical_parent_series_id\": \"34498890334\",\n      \"tests\": \"q041_planck_portability_tests_v17.py\",\n      \"version\": \"v17\",\n      \"workflow_id\": \"q041-planck-portability-v17.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v17.yml\"\n    },\n    \"Q041-PLANCKPORT-V18\": {\n      \"chain_metadata_filename\": \"q041_chain_metadata_v18.json\",\n      \"chain_state_transport\": \"same-run artifacts\",\n      \"cobaya_allow_changes_used\": false,\n      \"controlled_no_science_is_green_final\": true,\n      \"created_date\": \"2026-09-13\",\n      \"cross_version_chain_state_reuse_forbidden\": true,\n      \"environment_helper\": \"q041_prepare_frozen_core_v18.sh\",\n      \"failed_run_id\": 34778325440,\n      \"failure_class\": \"MISSING_HILLIPOP_COMPONENT_CONSTANT_NAMEERROR_AT_SEGMENT2_RESUME_LOCK\",\n      \"failure_scope\": \"V18 linear orchestration and segment-1 checkpoint transport worked. HiLLiPoP segment 2 passed the predecessor gate, then failed before MCMC resume because q041_planck_portability_v18.py referenced HILLIPOP_COMPONENT without defining it. No Q041 scientific result.\",\n      \"fixed_linear_segment_chain\": true,\n      \"fresh_segment1\": true,\n      \"hillipop_resume_component_lock\": true,\n      \"hillipop_resume_component_source\": \"chain.updated.yaml\",\n      \"immediate_predecessor_artifact_only\": true,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"matrix_jobs_per_segment\": 32,\n      \"matrix_jobs_total\": 256,\n      \"max_parallel_sample_jobs\": 6,\n      \"max_segments\": 8,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v18.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v18\",\n        \"q041-environment-v18\",\n        \"q041-chain-*-seg*-v18\",\n        \"q041-final-v18\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-018\",\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v17\": false,\n      \"scientific_program\": \"q041_planck_portability_v18.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V18\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v17_failure\": false,\n      \"scientific_task\": \"Technical orchestration repair only: run the unchanged Q041 posterior portability matrix as eight fixed sequential stages within one GitHub Actions workflow run. Segment 1 starts fresh; each later stage resumes only the immediately preceding artifact; no recursive workflow dispatch.\",\n      \"segment_soft_stop_minutes\": 300,\n      \"segmented_mcmc_resume\": true,\n      \"self_dispatch_removed\": true,\n      \"setup\": \"q041_setup_v18.sh\",\n      \"single_workflow_run\": true,\n      \"source_lock\": \"q041_planck_portability_source_lock_v18.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V19\",\n      \"supersedes\": \"Q041-PLANCKPORT-V17\",\n      \"supersession_reason\": \"V19 restores the omitted HILLIPOP_COMPONENT=\\\"planck_2020_hillipop.TT\\\" constant and adds a static regression gate; all V18 science/numerical locks and the linear eight-stage workflow architecture are preserved.\",\n      \"target_ref\": \"main\",\n      \"technical_failure_remains_red\": true,\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V17\",\n      \"tests\": \"q041_planck_portability_tests_v18.py\",\n      \"version\": \"v18\",\n      \"workflow_id\": \"q041-planck-portability-v18.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v18.yml\"\n    },\n    \"Q041-PLANCKPORT-V19\": {\n      \"chain_metadata_filename\": \"q041_chain_metadata_v19.json\",\n      \"chain_state_transport\": \"same-run artifacts\",\n      \"cobaya_allow_changes_used\": false,\n      \"controlled_no_science_is_green_final\": true,\n      \"created_date\": \"2026-09-15\",\n      \"cross_version_chain_state_reuse_forbidden\": true,\n      \"environment_helper\": \"q041_prepare_frozen_core_v19.sh\",\n      \"fixed_linear_segment_chain\": true,\n      \"fresh_segment1\": true,\n      \"hillipop_component_constant\": \"planck_2020_hillipop.TT\",\n      \"hillipop_resume_component_lock\": true,\n      \"hillipop_resume_component_source\": \"chain.updated.yaml\",\n      \"immediate_predecessor_artifact_only\": true,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"matrix_jobs_per_segment\": 32,\n      \"matrix_jobs_total\": 256,\n      \"max_parallel_sample_jobs\": 6,\n      \"max_segments\": 8,\n      \"missing_hillipop_component_constant_repaired\": true,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v19.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v19\",\n        \"q041-environment-v19\",\n        \"q041-chain-*-seg*-v19\",\n        \"q041-final-v19\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-019\",\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v18\": false,\n      \"scientific_program\": \"q041_planck_portability_v19.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V19\",\n      \"scientific_result_from_v18_failure\": false,\n      \"scientific_task\": \"Technical V19 repair only: preserve the V18 single-run eight-stage posterior portability workflow and all science/numerical locks, while restoring the omitted HiLLiPoP resume-component constant and adding a regression test for it.\",\n      \"segment_soft_stop_minutes\": 300,\n      \"segmented_mcmc_resume\": true,\n      \"self_dispatch_removed\": true,\n      \"setup\": \"q041_setup_v19.sh\",\n      \"single_workflow_run\": true,\n      \"source_lock\": \"q041_planck_portability_source_lock_v19.json\",\n      \"status\": \"ACTIVE\",\n      \"supersedes\": \"Q041-PLANCKPORT-V18\",\n      \"target_ref\": \"main\",\n      \"technical_failure_remains_red\": true,\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V18\",\n      \"tests\": \"q041_planck_portability_tests_v19.py\",\n      \"version\": \"v19\",\n      \"workflow_id\": \"q041-planck-portability-v19.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v19.yml\"\n    },\n    \"Q041-PLANCKPORT-V2\": {\n      \"created_date\": \"2026-09-09\",\n      \"failed_head_sha\": \"aff53853833baf8c99d2273602a262e4c4db6ff2\",\n      \"failed_run_id\": 34347454838,\n      \"failure_class\": \"COLD_CACHE_PRECONDITION_FAILURE_Q039_FROZEN_ENV_HELPER\",\n      \"failure_scope\": \"STATIC_PASS; Q032_WORKTREE_AND_AUTHORITATIVE_ARTIFACT_DOWNLOADS_PASS; ENVIRONMENT_ABORTED_BEFORE_Q032_SETUP; SAMPLE_NOT_STARTED; NO_Q041_SCIENCE_RESULT\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v2.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v2\",\n        \"q041-environment-v2\",\n        \"q041-chain-*-v2\",\n        \"q041-final-v2\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-002\",\n      \"scientific_and_numerical_settings_changed_from_v1\": false,\n      \"scientific_program\": \"q041_planck_portability_v2.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V2\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v1_failure\": false,\n      \"scientific_task\": \"Technical deployment repair of Q041-PLANCKPORT-V1. Preserves the exact preregistered downstream posterior portability design, datasets, overlap policy, MCMC settings, convergence gates, leave-one-out logic and classification thresholds. V2 changes only deployment and registry identity.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v2.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V3\",\n      \"supersedes\": \"Q041-PLANCKPORT-V1\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V1\",\n      \"tests\": \"q041_planck_portability_tests_v2.py\",\n      \"version\": \"v2\",\n      \"workflow_id\": \"q041-planck-portability-v2.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v2.yml\"\n    },\n    \"Q041-PLANCKPORT-V3\": {\n      \"created_date\": \"2026-09-09\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v3.sh\",\n      \"failed_head_sha\": \"11e7cdee0fd8690783270b63ce2540a3d07f55e3\",\n      \"failed_run_id\": 34348372678,\n      \"failure_class\": \"IMMUTABLE_Q032_V2_PARENT_REFERENCES_ACCIDENTALLY_VERSION_BUMPED_TO_V3\",\n      \"failure_scope\": \"STATIC_PASS; ENVIRONMENT_ABORTED_AT_Q032_ARTIFACT_LOOKUP; Q032_PREFLIGHT_V3_ARTIFACT_DOES_NOT_EXIST; SAMPLE_NOT_STARTED; NO_Q041_SCIENCE_RESULT\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v3.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v3\",\n        \"q041-environment-v3\",\n        \"q041-chain-*-v3\",\n        \"q041-final-v3\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-003\",\n      \"scientific_and_numerical_settings_changed_from_v1\": false,\n      \"scientific_and_numerical_settings_changed_from_v2\": false,\n      \"scientific_program\": \"q041_planck_portability_v3.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V3\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v2_failure\": false,\n      \"scientific_task\": \"Technical cold-cache bootstrap repair of Q041-PLANCKPORT-V2. Preserves the exact preregistered Q041 science design, Q032/Q037 Planck geometry, ACT DR6 primary/lensing, DESI DR2 BAO, non-overlap policy, MCMC settings, convergence gates, leave-one-out logic and classification thresholds. V3 changes only environment bootstrap/deployment logic.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v3.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V4\",\n      \"supersedes\": \"Q041-PLANCKPORT-V2\",\n      \"target_ref\": \"main\",\n      \"technical_parent_github_run_id\": 34347454838,\n      \"technical_parent_head_sha\": \"aff53853833baf8c99d2273602a262e4c4db6ff2\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V2\",\n      \"tests\": \"q041_planck_portability_tests_v3.py\",\n      \"version\": \"v3\",\n      \"workflow_id\": \"q041-planck-portability-v3.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v3.yml\"\n    },\n    \"Q041-PLANCKPORT-V4\": {\n      \"created_date\": \"2026-09-09\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v4.sh\",\n      \"failed_head_sha\": \"4fff5a3c74c6e8d622450acf9a9329ac76fa398f\",\n      \"failed_run_id\": 34348935182,\n      \"failure_class\": \"Q032_CONFIG_RELATIVE_PATH_DOUBLE_PARENT_PREFIX\",\n      \"failure_scope\": \"STATIC_PASS; Q032_ARTIFACTS_PASS; FROZEN_Q032_RUNTIME_PASS; Q041_EXTERNAL_LIKELIHOOD_INSTALL_PASS; PREPARE_NONOVERLAP_ABORTED_BEFORE SUPPORT/MATRIX CONSTRUCTION; SAMPLE_NOT_STARTED; NO_Q041_SCIENCE_RESULT\",\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v4.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v4\",\n        \"q041-environment-v4\",\n        \"q041-chain-*-v4\",\n        \"q041-final-v4\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-004\",\n      \"scientific_and_numerical_settings_changed_from_v1\": false,\n      \"scientific_and_numerical_settings_changed_from_v2\": false,\n      \"scientific_and_numerical_settings_changed_from_v3\": false,\n      \"scientific_program\": \"q041_planck_portability_v4.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V4\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v3_failure\": false,\n      \"scientific_task\": \"Technical immutable-parent-reference repair of Q041-PLANCKPORT-V3. Restores every historical Q032 artifact, module, config and cache fallback to the authoritative Q032 V2 execution surface while preserving the V3 cold-cache bootstrap. No Q041 scientific or numerical setting changes.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v4.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V5\",\n      \"supersedes\": \"Q041-PLANCKPORT-V3\",\n      \"target_ref\": \"main\",\n      \"technical_parent_github_run_id\": 34348372678,\n      \"technical_parent_head_sha\": \"11e7cdee0fd8690783270b63ce2540a3d07f55e3\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V3\",\n      \"tests\": \"q041_planck_portability_tests_v4.py\",\n      \"version\": \"v4\",\n      \"workflow_id\": \"q041-planck-portability-v4.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v4.yml\"\n    },\n    \"Q041-PLANCKPORT-V5\": {\n      \"created_date\": \"2026-09-09\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v5.sh\",\n      \"failure_class\": \"ACT_DR6_LENSLIKE_COBAYA_DATA_NOT_INSTALLED_AT_INSTALLABLELIKELIHOOD_PATH\",\n      \"failure_scope\": \"STATIC_PASS; FROZEN_Q032_RUNTIME_PASS; PRIMARY_NONOVERLAP_PASS; RUNTIME_PREFLIGHT_ABORTED_DURING_MODEL_CONSTRUCTION; SAMPLE_NOT_STARTED; NO_Q041_SCIENCE_RESULT\",\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v5.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v5\",\n        \"q041-environment-v5\",\n        \"q041-chain-*-v5\",\n        \"q041-final-v5\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-005\",\n      \"scientific_and_numerical_settings_changed_from_v1\": false,\n      \"scientific_and_numerical_settings_changed_from_v2\": false,\n      \"scientific_and_numerical_settings_changed_from_v3\": false,\n      \"scientific_and_numerical_settings_changed_from_v4\": false,\n      \"scientific_program\": \"q041_planck_portability_v5.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V5\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v4_failure\": false,\n      \"scientific_task\": \"Technical Q032 config-path resolution repair of Q041-PLANCKPORT-V4. Preserves the exact V4 science design and environment bootstrap; changes only q032_cfg so the authoritative Q032 V2 config is passed to Q032 load_cfg as an absolute path, preventing duplicate q032_parent prefixing.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v5.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V6\",\n      \"supersedes\": \"Q041-PLANCKPORT-V4\",\n      \"target_ref\": \"main\",\n      \"technical_parent_github_run_id\": 34348935182,\n      \"technical_parent_head_sha\": \"4fff5a3c74c6e8d622450acf9a9329ac76fa398f\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V4\",\n      \"tests\": \"q041_planck_portability_tests_v5.py\",\n      \"version\": \"v5\",\n      \"workflow_id\": \"q041-planck-portability-v5.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v5.yml\"\n    },\n    \"Q041-PLANCKPORT-V6\": {\n      \"act_dr6_lenslike_cobaya_component\": \"act_dr6_lenslike.ACTDR6LensLike\",\n      \"act_dr6_lenslike_cobaya_data_path\": \"data/ACT_dr6_likelihood/v1.2\",\n      \"created_date\": \"2026-09-09\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v6.sh\",\n      \"failure_class\": \"WORKFLOW_INTEGRITY_AND_COLD_CACHE_RESILIENCE_REPAIR\",\n      \"failure_scope\": \"NO_Q041_SCIENCE_RESULT; V6 #2 failed on NERSC connect timeout before science; stale chain artifact upload suffix also discovered before long MCMC execution.\",\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v6.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v6\",\n        \"q041-environment-v6\",\n        \"q041-chain-*-v6\",\n        \"q041-final-v6\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-006\",\n      \"scientific_and_numerical_settings_changed_from_v5\": false,\n      \"scientific_program\": \"q041_planck_portability_v6.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V6\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v5_failure\": false,\n      \"scientific_task\": \"Technical ACT DR6 lensing Cobaya data-path installation repair of V5. Preserves all Q041 scientific and numerical locks; installs the already pinned ACT DR6 lensing data through ACTDR6LensLike's official InstallableLikelihood contract under the frozen COBAYA_PACKAGES_PATH.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v6.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V7\",\n      \"supersedes\": \"Q041-PLANCKPORT-V5\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V5\",\n      \"tests\": \"q041_planck_portability_tests_v6.py\",\n      \"version\": \"v6\",\n      \"workflow_id\": \"q041-planck-portability-v6.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v6.yml\"\n    },\n    \"Q041-PLANCKPORT-V7\": {\n      \"chain_artifact_pattern\": \"q041-chain-*-v7\",\n      \"cold_cache_nersc_fail_fast\": true,\n      \"created_date\": \"2026-09-09\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v7.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"failure_class\": \"STALE_Q041_V6_EXECUTION_REFERENCES_IN_V7_WORKFLOW\",\n      \"failure_scope\": \"STATIC_LAUNCH_IDENTITY_PASS; V7_PROGRAM_STARTED; WORKFLOW_USED_V6_PREREGISTER/SOURCE_LOCK/TEST_FILENAMES; PREREGISTER_IDENTITY_GATE_FAIL; ENVIRONMENT_NOT_STARTED; NO_Q041_SCIENCE_RESULT\",\n      \"immediate_core_cache_save\": true,\n      \"immediate_full_cache_save\": true,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v7.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v7\",\n        \"q041-environment-v7\",\n        \"q041-chain-*-v7\",\n        \"q041-final-v7\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-007\",\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v6\": false,\n      \"scientific_program\": \"q041_planck_portability_v7.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V7\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v6_failure\": false,\n      \"scientific_task\": \"Technical workflow-integrity and cold-cache resilience repair only; scientific/numerical locks unchanged.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v7.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V8\",\n      \"supersedes\": \"Q041-PLANCKPORT-V6\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V6\",\n      \"tests\": \"q041_planck_portability_tests_v7.py\",\n      \"version\": \"v7\",\n      \"workflow_id\": \"q041-planck-portability-v7.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v7.yml\"\n    },\n    \"Q041-PLANCKPORT-V8\": {\n      \"chain_artifact_pattern\": \"q041-chain-*-v8\",\n      \"cold_cache_nersc_fail_fast\": true,\n      \"created_date\": \"2026-09-09\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v8.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"failure_class\": \"ACT_DR6_PRIMARY_NERSC_CONNECT_TIMEOUT\",\n      \"failure_scope\": \"STATIC_PASS; Q032_FROZEN_CORE_PASS; CORE_CACHE_SAVED; Q041_SETUP_ABORTED_DURING_ACT_DR6_PRIMARY_DATA_DOWNLOAD_AFTER_FOUR_NERSC_TIMEOUTS; NO_RUNTIME_PREFLIGHT; NO_SAMPLE; NO_Q041_SCIENCE_RESULT\",\n      \"immediate_core_cache_save\": true,\n      \"immediate_full_cache_save\": true,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"no_stale_q041_runtime_reference_gate\": true,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v8.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v8\",\n        \"q041-environment-v8\",\n        \"q041-chain-*-v8\",\n        \"q041-final-v8\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-008\",\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v7\": false,\n      \"scientific_program\": \"q041_planck_portability_v8.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V8\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v7_failure\": false,\n      \"scientific_task\": \"Technical stale-runtime-reference repair of V7 only. Scientific/numerical locks, Q032 V2 parent, NERSC fail-fast behavior, and cache persistence unchanged.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v8.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V9\",\n      \"supersedes\": \"Q041-PLANCKPORT-V7\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V7\",\n      \"tests\": \"q041_planck_portability_tests_v8.py\",\n      \"version\": \"v8\",\n      \"workflow_id\": \"q041-planck-portability-v8.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v8.yml\"\n    },\n    \"Q041-PLANCKPORT-V9\": {\n      \"act_lensing_transport\": \"NASA_LAMBDA_PINNED_UPSTREAM\",\n      \"act_primary_transport\": \"NASA_LAMBDA_OFFICIAL\",\n      \"act_primary_transport_change_commit\": \"627aeafb88ae5ad1aa66b406bea2d65cfa66a27d\",\n      \"chain_artifact_pattern\": \"q041-chain-*-v9\",\n      \"created_date\": \"2026-09-09\",\n      \"environment_helper\": \"q041_prepare_frozen_core_v9.sh\",\n      \"environment_timeout_minutes\": 330,\n      \"failure_class\": \"PIPEFAIL_SIGPIPE_DURING_ACT_LENS_ARCHIVE_VALIDATION\",\n      \"failure_scope\": \"ACT primary and ACT lensing LAMBDA downloads both succeeded; failure occurred only in tar listing piped to grep -q under pipefail; no runtime preflight, no sample, no science result.\",\n      \"immediate_core_cache_save\": true,\n      \"immediate_full_cache_save\": true,\n      \"immutable_q032_parent_version\": \"v2\",\n      \"launcher\": \".github/workflows/00-bubbleverse-start.yml\",\n      \"max_parallel_sample_jobs\": 6,\n      \"parent_q032_run\": 33994305721,\n      \"parent_result_id\": \"R-Q032-EDE-PLANCK-TT3PAIR-BRIDGE-002\",\n      \"preregister\": \"q041_planck_portability_preregister_v9.json\",\n      \"q\": \"Q-041\",\n      \"result_artifacts\": [\n        \"q041-static-v9\",\n        \"q041-environment-v9\",\n        \"q041-chain-*-v9\",\n        \"q041-final-v9\"\n      ],\n      \"result_id\": \"R-Q041-EDE-DOWNSTREAM-PORTABILITY-009\",\n      \"sample_timeout_minutes\": 330,\n      \"scientific_and_numerical_settings_changed_from_v8\": false,\n      \"scientific_program\": \"q041_planck_portability_v9.py\",\n      \"scientific_program_id\": \"Q041-PLANCKPORT-V9\",\n      \"scientific_result_from_failed_run\": false,\n      \"scientific_result_from_v8_failure\": false,\n      \"scientific_task\": \"Transport-only repair of V8: preserve pinned ACT likelihood commits and all science, replace failing ACT primary NERSC transport with ACT's official NASA LAMBDA mirror, and use bounded NASA LAMBDA transport for ACT lensing.\",\n      \"source_lock\": \"q041_planck_portability_source_lock_v9.json\",\n      \"status\": \"BROKEN\",\n      \"superseded_by\": \"Q041-PLANCKPORT-V10\",\n      \"supersedes\": \"Q041-PLANCKPORT-V8\",\n      \"target_ref\": \"main\",\n      \"technical_parent_program_id\": \"Q041-PLANCKPORT-V8\",\n      \"tests\": \"q041_planck_portability_tests_v9.py\",\n      \"version\": \"v9\",\n      \"workflow_id\": \"q041-planck-portability-v9.yml\",\n      \"workflow_path\": \".github/workflows/q041-planck-portability-v9.yml\"\n    },\n    \"Q042-STOCKDIAG-V20\": {\n      \"q\": \"Q-042\",\n      \"status\": \"BROKEN\",\n      \"workflow_id\": \"q042-stock-diagnostic-v20.yml\",\n      \"target_ref\": \"main\",\n      \"program_version\": \"20\",\n      \"workflow_version\": \"20\",\n      \"scientific_task\": \"One stock-resume diagnostic and one exact CLASS failure-point replay; no production restart\",\n      \"config\": \"q042_stock_diagnostic_contract_v20.json\",\n      \"scientific_spec\": \"q042_production_spec_v1.json\",\n      \"source_execution_commit\": \"d0f92c7f2ce53da32818244f8847f8e745e20c4f\",\n      \"result_artifacts\": [\n        \"q042-v20-<RUN_ID>-diagnostic-final\"\n      ],\n      \"science_status\": \"UNRESOLVED\",\n      \"supersedes\": null\n    },\n    \"Q042-STOCKDIAG-V21\": {\n      \"q\": \"Q-042\",\n      \"status\": \"SUPERSEDED\",\n      \"workflow_id\": \"q042-stock-diagnostic-v21.yml\",\n      \"target_ref\": \"main\",\n      \"program_version\": \"21\",\n      \"workflow_version\": \"21\",\n      \"scientific_task\": \"Recover missing stock-resume diagnostic; import completed V20 CLASS replay without recomputation\",\n      \"config\": \"q042_stock_diagnostic_contract_v21.json\",\n      \"scientific_spec\": \"q042_production_spec_v1.json\",\n      \"source_execution_commit\": \"d0f92c7f2ce53da32818244f8847f8e745e20c4f\",\n      \"result_artifacts\": [\n        \"q042-v21-<RUN_ID>-diagnostic-final\"\n      ],\n      \"science_status\": \"UNRESOLVED\",\n      \"supersedes\": \"Q042-STOCKDIAG-V20\",\n      \"reused_class_run_id\": 37195728280,\n      \"reused_class_artifact_id\": 11300612265,\n      \"superseded_by\": \"Q042-DURABLE-V22\"\n    },\n    \"Q042-DURABLE-V22\": {\n      \"q\": \"Q-042\",\n      \"status\": \"COMPLETED\",\n      \"workflow_id\": \"q042-durable-v22.yml\",\n      \"target_ref\": \"main\",\n      \"program_version\": \"22\",\n      \"workflow_version\": \"22\",\n      \"scientific_task\": \"Complete serial state checkpoint, compiled interruption reference and at most one bounded diagnostic pilot\",\n      \"config\": \"q042_durable_contract_v22.json\",\n      \"scientific_spec\": \"q042_production_spec_v1.json\",\n      \"source_execution_commit\": \"d0f92c7f2ce53da32818244f8847f8e745e20c4f\",\n      \"result_artifacts\": [\n        \"q042-v22-<RUN_ID>-diagnostic-final\",\n        \"q042-v22-<RUN_ID>-durability-diagnostic\"\n      ],\n      \"science_status\": \"UNRESOLVED\",\n      \"supersedes\": \"Q042-STOCKDIAG-V21\",\n      \"new_bobyqa_starts\": 0,\n      \"production_restart_authorized\": false,\n      \"completion_run_id\": 37221166634,\n      \"completion_scope\": \"Single-rank complete-state durability diagnosis; science remains UNRESOLVED\"\n    },\n    \"Q042-CLASSCAUSE-V23\": {\n      \"q\": \"Q-042\",\n      \"status\": \"COMPLETED\",\n      \"workflow_id\": \"q042-class-cause-v23.yml\",\n      \"target_ref\": \"main\",\n      \"program_version\": \"23\",\n      \"workflow_version\": \"23\",\n      \"scientific_task\": \"One frozen-point original-binary thermodynamic table/interpolation attribution; no precision repair\",\n      \"config\": \"q042_class_contract_v23.json\",\n      \"created_date\": \"2026-10-05\",\n      \"technical_parent\": \"Q042-DURABLE-V22\",\n      \"source_execution_commit\": \"b5cf6998d76a12c6d4bd45464008bde5e85af8a4\",\n      \"science_status\": \"UNRESOLVED\",\n      \"production_restart_authorized\": false,\n      \"new_bobyqa_starts\": 0,\n      \"result_artifacts\": [\n        \"q042-v23-<RUN_ID>-class-cause\",\n        \"q042-v23-<RUN_ID>-diagnostic-final\"\n      ],\n      \"completion_run_id\": 37264477494,\n      \"completion_commit\": \"89f7097a3fc0569a8e5664072f443baa799c22f9\",\n      \"completion_scope\": \"One original-binary table/interpolation attribution; scientific Q remains unresolved\"\n    },\n    \"Q042-CLASSORIGIN-V24\": {\n      \"q\": \"Q-042\",\n      \"status\": \"COMPLETED\",\n      \"workflow_id\": \"q042-class-origin-v24.yml\",\n      \"target_ref\": \"main\",\n      \"program_version\": 24,\n      \"workflow_version\": 24,\n      \"scientific_task\": \"One frozen-point original-binary read-only tau/table-origin observation; no algorithm or precision repair\",\n      \"config\": \"q042_class_origin_contract_v24.json\",\n      \"created_date\": \"2026-10-05\",\n      \"technical_parent\": \"Q042-CLASSCAUSE-V23\",\n      \"source_execution_commit\": \"89f7097a3fc0569a8e5664072f443baa799c22f9\",\n      \"science_status\": \"UNRESOLVED\",\n      \"production_restart_authorized\": false,\n      \"new_bobyqa_starts\": 0,\n      \"result_artifacts\": [\n        \"q042-v24-<RUN_ID>-class-origin\",\n        \"q042-v24-<RUN_ID>-diagnostic-final\"\n      ],\n      \"completion_run_id\": 37275520455,\n      \"completion_commit\": \"716a7b870f5d4470338c825ad87ae09bb8f04096\",\n      \"completion_scope\": \"Original-binary NaN bracket / zero bisection table-origin observation complete; scientific Q unresolved\"\n    },\n    \"Q042-CLASSNAN-V25\": {\n      \"q\": \"Q-042\",\n      \"status\": \"COMPLETED\",\n      \"workflow_id\": \"q042-class-nan-v25.yml\",\n      \"target_ref\": \"main\",\n      \"program_version\": 25,\n      \"workflow_version\": 25,\n      \"scientific_task\": \"One frozen-point original-binary upstream nonfinite boundary observation; no repair or production restart\",\n      \"config\": \"q042_class_nan_contract_v25.json\",\n      \"created_date\": \"2026-10-05\",\n      \"technical_parent\": \"Q042-CLASSORIGIN-V24\",\n      \"source_execution_commit\": \"716a7b870f5d4470338c825ad87ae09bb8f04096\",\n      \"science_status\": \"UNRESOLVED\",\n      \"production_restart_authorized\": false,\n      \"new_bobyqa_starts\": 0,\n      \"result_artifacts\": [\n        \"q042-v25-<RUN_ID>-class-nan\",\n        \"q042-v25-<RUN_ID>-diagnostic-final\"\n      ],\n      \"completion_run_id\": 37288546095,\n      \"completion_commit\": \"3d15a3a7a627de2f29533cac7fe9e43dd022226f\",\n      \"completion_scope\": \"Original-binary one-point upstream nonfinite boundary attribution completed; no repair, no scientific result, Q-042 remains unresolved\"\n    },\n    \"Q042-REFACQ-V26\": {\n      \"q\": \"Q-042\",\n      \"program_id\": \"Q042-REFACQ-V26\",\n      \"scientific_task\": \"One bounded raw reference-acquisition campaign,12 branches maximum; no inference or truth promotion\",\n      \"status\": \"COMPLETED\",\n      \"version\": \"v26\",\n      \"program_version\": \"v26\",\n      \"workflow_version\": \"v26\",\n      \"created\": \"2026-10-05T11:59:53.377355+00:00\",\n      \"supersedes\": null,\n      \"parent_program\": \"Q042-CLASSNAN-V25\",\n      \"target_ref\": \"main\",\n      \"scientific_program\": \"q042_reference_acquisition_v26.py\",\n      \"workflow_id\": \"q042-reference-acquisition-v26.yml\",\n      \"workflow_path\": \".github/workflows/q042-reference-acquisition-v26.yml\",\n      \"config\": \"q042_reference_contract_v26.json\",\n      \"point\": \"q042_reference_point_v26.ini\",\n      \"result_location\": \"q042-v26-<run_id>-raw-acquisition and q042-v26-<run_id>-diagnostic-final\",\n      \"bubbleverse_inventory_commit\": \"ab735c80dbc707a445aade7a8123a70b1ff3801d\",\n      \"journal\": \"q042_execution_handoff_reference_v26.md\",\n      \"tests\": \"q042_reference_tests_v26.py\",\n      \"completed_run_id\": \"37323656302\",\n      \"result_status\": \"RAW_NOT_QUALIFIED\",\n      \"restart_authorized\": false,\n      \"completion_evidence\": \"Q-042 post-V28 ingestion handoff, 2026-10-05; completion is technical, not reference qualification\"\n    },\n    \"Q042-SWITCHPROBE-V27\": {\n      \"q\": \"Q-042\",\n      \"program_id\": \"Q042-SWITCHPROBE-V27\",\n      \"scientific_task\": \"One 24-sample fixed-state original-binary HyRec switch attribution; no integration or inference\",\n      \"status\": \"COMPLETED\",\n      \"version\": \"v27\",\n      \"program_version\": \"v27\",\n      \"workflow_version\": \"v27\",\n      \"created\": \"2026-10-05T15:06:09.918167+00:00\",\n      \"supersedes\": null,\n      \"parent_program\": \"Q042-REFACQ-V26\",\n      \"target_ref\": \"main\",\n      \"scientific_program\": \"q042_switch_probe_v27.py\",\n      \"workflow_id\": \"q042-switch-probe-v27.yml\",\n      \"workflow_path\": \".github/workflows/q042-switch-probe-v27.yml\",\n      \"config\": \"q042_switch_contract_v27.json\",\n      \"point\": \"q042_switch_point_v27.ini\",\n      \"result_location\": \"q042-v27-<run_id>-raw-switch-probes and q042-v27-<run_id>-diagnostic-final\",\n      \"bubbleverse_inventory_commit\": \"92e0590f7b062b12ff86fd51a1af9258a32fe1be\",\n      \"journal\": \"q042_execution_handoff_switch_v27.md\",\n      \"tests\": \"q042_switch_tests_v27.py\",\n      \"completed_run_id\": \"37333030105\",\n      \"result_status\": \"RAW_NOT_QUALIFIED\",\n      \"restart_authorized\": false,\n      \"completion_evidence\": \"Q-042 post-V28 ingestion handoff, 2026-10-05; completion is technical, not reference qualification\"\n    },\n    \"Q042-EVENTCELL-V28\": {\n      \"q\": \"Q-042\",\n      \"program_id\": \"Q042-EVENTCELL-V28\",\n      \"scientific_task\": \"Six conditional original-binary one-cell event-aware RK4 branches; L1/L2/L4,112 stage checks; no full history/inference\",\n      \"status\": \"COMPLETED\",\n      \"version\": \"v28\",\n      \"program_version\": \"v28\",\n      \"workflow_version\": \"v28\",\n      \"created\": \"2026-10-05T16:32:39.647145+00:00\",\n      \"supersedes\": null,\n      \"parent_program\": \"Q042-SWITCHPROBE-V27\",\n      \"target_ref\": \"main\",\n      \"scientific_program\": \"q042_event_cell_v28.py\",\n      \"workflow_id\": \"q042-event-cell-v28.yml\",\n      \"workflow_path\": \".github/workflows/q042-event-cell-v28.yml\",\n      \"config\": \"q042_event_contract_v28.json\",\n      \"point\": \"q042_event_point_v28.ini\",\n      \"result_location\": \"q042-v28-<run_id>-raw-event-cell and q042-v28-<run_id>-diagnostic-final\",\n      \"bubbleverse_inventory_commit\": \"f0ef57b6db30cfd6a585b18e5cbfc3b9e4e2bece\",\n      \"journal\": \"q042_execution_handoff_event_v28.md\",\n      \"tests\": \"q042_event_tests_v28.py\",\n      \"completed_run_id\": \"37347357296\",\n      \"result_status\": \"RAW_NOT_QUALIFIED\",\n      \"restart_authorized\": false,\n      \"completion_evidence\": \"Q-042 post-V28 ingestion handoff, 2026-10-05; completion is technical, not reference qualification\"\n    },\n    \"Q042-CONTEXT-V29\": {\n      \"q\": \"Q-042\",\n      \"program_id\": \"Q042-CONTEXT-V29\",\n      \"scientific_task\": \"One original initialization capture and finite real-table interval prerequisite; no history or inference\",\n      \"status\": \"COMPLETED\",\n      \"version\": \"v29\",\n      \"program_version\": \"v29\",\n      \"workflow_version\": \"v29\",\n      \"created\": \"2026-10-05T20:58:01.850114+02:00\",\n      \"supersedes\": null,\n      \"parent_program\": \"Q042-EVENTCELL-V28\",\n      \"target_ref\": \"main\",\n      \"scientific_program\": \"q042_context_v29.py\",\n      \"workflow_id\": \"q042-context-v29.yml\",\n      \"workflow_path\": \".github/workflows/q042-context-v29.yml\",\n      \"config\": \"q042_context_contract_v29.json\",\n      \"point\": \"q042_context_point_v29.ini\",\n      \"result_location\": \"q042-v29-<run_id>-context-and-checks and q042-v29-<run_id>-final\",\n      \"bubbleverse_inventory_commit\": \"488a6c2ed59435137a9aad13b6c012e8aeef2e5e\",\n      \"journal\": \"q042_context_full_handoff_v29.md\",\n      \"tests\": \"q042_interval_tests_v29.py and q042_source_check_v29.py\",\n      \"scope\": \"REAL_FROZEN_TABLE_PREREQUISITE_ONLY\",\n      \"production_restart_authorized\": false,\n      \"automatic_retry\": false,\n      \"retirement_reason\": \"Authoritative incoming Q044/Q045 journal records Q042 closed inconclusive; do not repeat historical acquisition.\"\n    },\n    \"Q045-BASELINE-V1\": {\n      \"q\": \"Q-045\",\n      \"q_status\": \"PROPOSED_CANONICAL_REGISTRATION_PENDING\",\n      \"program_id\": \"Q045-BASELINE-V1\",\n      \"scientific_task\": \"Four unchanged native FULL diagnostic starts; baseline prerequisite only; no reference treatments or production restart.\",\n      \"scientific_program\": \"q045_native_baseline_v1.py\",\n      \"program_version\": \"v1\",\n      \"version\": \"v1\",\n      \"workflow_id\": \"q045-native-baseline-v1.yml\",\n      \"workflow_path\": \".github/workflows/q045-native-baseline-v1.yml\",\n      \"workflow_version\": \"v1\",\n      \"status\": \"SUPERSEDED\",\n      \"target_ref\": \"main\",\n      \"created_date\": \"2026-10-10T05:35:47.154976+02:00\",\n      \"config\": \"q045_native_baseline_contract_v1.json\",\n      \"source_lock\": \"q045_native_baseline_contract_v1.json\",\n      \"tests\": \"q045_native_baseline_tests_v1.py\",\n      \"journal\": \"Q045_SAMLET_JOURNAL.md\",\n      \"full_handoff\": \"Q045_EXECUTION_HANDOFF.md\",\n      \"result_location\": \"q045-v1-<run_id>-final / q045_native_baseline_final_v1.json\",\n      \"supersedes\": null,\n      \"repository_base_commit\": \"72cf9e92fc794c122f593a77b6a555e6e97f6a2e\",\n      \"execution_commit\": \"RECORDED_FROM_GITHUB_SHA_AT_RUN\",\n      \"scientific_acceptance\": false,\n      \"production_restart_authorized\": false,\n      \"superseded_by\": \"Q045-BASELINE-V2\",\n      \"retirement_reason\": \"ENVIRONMENT failure: missing flit_core during no-build-isolation ACT lensing editable installation. Four numerical evaluations skipped.\",\n      \"failed_run_id\": 38021982095,\n      \"failed_execution_commit\": \"7b5047dd9eafbd7986c15514ec3534e2b0ed3bc3\"\n    },\n    \"Q045-BASELINE-V2\": {\n      \"q\": \"Q-045\",\n      \"q_status\": \"PROPOSED_CANONICAL_REGISTRATION_PENDING\",\n      \"program_id\": \"Q045-BASELINE-V2\",\n      \"scientific_task\": \"Four unchanged native FULL diagnostic starts; baseline prerequisite only; no reference treatments or production restart.\",\n      \"scientific_program\": \"q045_native_baseline_v2.py\",\n      \"program_version\": \"v2\",\n      \"version\": \"v2\",\n      \"workflow_id\": \"q045-native-baseline-v2.yml\",\n      \"workflow_path\": \".github/workflows/q045-native-baseline-v2.yml\",\n      \"workflow_version\": \"v2\",\n      \"status\": \"COMPLETED\",\n      \"target_ref\": \"main\",\n      \"created_date\": \"2026-10-10T04:04:19.081115+00:00\",\n      \"config\": \"q045_native_baseline_contract_v2.json\",\n      \"source_lock\": \"q045_native_baseline_contract_v2.json\",\n      \"tests\": \"q045_native_baseline_tests_v2.py\",\n      \"journal\": \"Q045_SAMLET_JOURNAL.md\",\n      \"full_handoff\": \"Q045_EXECUTION_HANDOFF.md\",\n      \"result_location\": \"q045-v2-<run_id>-final / q045_native_baseline_final_v2.json\",\n      \"supersedes\": \"Q045-BASELINE-V1\",\n      \"repository_base_commit\": \"7b5047dd9eafbd7986c15514ec3534e2b0ed3bc3\",\n      \"execution_commit\": \"RECORDED_FROM_GITHUB_SHA_AT_RUN\",\n      \"scientific_acceptance\": false,\n      \"production_restart_authorized\": false,\n      \"completed_run_id\": \"38023210800\",\n      \"completed_commit\": \"175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72\",\n      \"completed_date\": \"2026-10-10T04:15:30Z\",\n      \"completion_scope\": \"PASS_NATIVE_DIAGNOSTIC_ONLY; no physical reference or inference result\"\n    },\n    \"Q045-OPTICAL-AUDIT-V1\": {\n      \"q\": \"Q-045\",\n      \"q_status\": \"PROPOSED_CANONICAL_REGISTRATION_PENDING\",\n      \"program_id\": \"Q045-OPTICAL-AUDIT-V1\",\n      \"scientific_task\": \"ORIGINAL_BINARY_OPTICAL_OBSERVATION_AND_SAME_HISTORY_COMPONENTS_ONLY\",\n      \"scientific_program\": \"q045_optical_audit_v1.py\",\n      \"program_version\": \"v1\",\n      \"version\": \"v1\",\n      \"workflow_id\": \"q045-optical-audit-v1.yml\",\n      \"workflow_path\": \".github/workflows/q045-optical-audit-v1.yml\",\n      \"workflow_version\": \"v1\",\n      \"status\": \"FAILED\",\n      \"target_ref\": \"main\",\n      \"created_date\": \"2026-10-10T06:56:50.876576+02:00\",\n      \"config\": \"q045_optical_audit_contract_v1.json\",\n      \"source_lock\": \"q045_optical_audit_contract_v1.json\",\n      \"tests\": \"q045_optical_audit_tests_v1.py\",\n      \"journal\": \"Q045_SAMLET_JOURNAL.md\",\n      \"full_handoff\": \"Q045_EXECUTION_HANDOFF.md\",\n      \"repository_base_commit\": \"175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72\",\n      \"execution_commit\": \"RECORDED_FROM_GITHUB_SHA_AT_RUN\",\n      \"result_location\": \"q045-audit-<run_id>-final / q045_optical_audit_final_v1.json\",\n      \"scientific_acceptance\": false,\n      \"production_restart_authorized\": false,\n      \"build_role\": \"Read-only executable linked to unchanged original diagnostic binary; CLASS is not rebuilt\",\n      \"failed_run_id\": \"38026287784\",\n      \"failed_commit\": \"e4a4c1061ae84d5bb638afaa2d0902004d779dcb\",\n      \"failure_class\": \"ENVIRONMENT\",\n      \"failure_cause\": \"CACHE_VERSION_PATH_MISMATCH\",\n      \"theory_evaluations_started\": 0,\n      \"superseded_by\": \"Q045-OPTICAL-AUDIT-V2\"\n    },\n    \"Q045-OPTICAL-AUDIT-V2\": {\n      \"q\": \"Q-045\",\n      \"q_status\": \"PROPOSED_CANONICAL_REGISTRATION_PENDING\",\n      \"program_id\": \"Q045-Q045-OPTICAL-AUDIT-V2\",\n      \"scientific_task\": \"ORIGINAL_BINARY_OPTICAL_OBSERVATION_AND_SAME_HISTORY_COMPONENTS_ONLY\",\n      \"scientific_program\": \"q045_optical_audit_v2.py\",\n      \"program_version\": \"v2\",\n      \"version\": \"v2\",\n      \"workflow_id\": \"q045-optical-audit-v2.yml\",\n      \"workflow_path\": \".github/workflows/q045-optical-audit-v2.yml\",\n      \"workflow_version\": \"v2\",\n      \"status\": \"FAILED\",\n      \"target_ref\": \"main\",\n      \"created_date\": \"2026-10-10T07:16:28.480315+02:00\",\n      \"config\": \"q045_optical_audit_contract_v2.json\",\n      \"source_lock\": \"q045_optical_audit_contract_v2.json\",\n      \"tests\": \"q045_optical_audit_tests_v2.py\",\n      \"journal\": \"Q045_SAMLET_JOURNAL.md\",\n      \"full_handoff\": \"Q045_EXECUTION_HANDOFF.md\",\n      \"repository_base_commit\": \"e4a4c1061ae84d5bb638afaa2d0902004d779dcb\",\n      \"execution_commit\": \"RECORDED_FROM_GITHUB_SHA_AT_RUN\",\n      \"result_location\": \"q045-audit-<run_id>-final / q045_optical_audit_final_v2.json\",\n      \"scientific_acceptance\": false,\n      \"production_restart_authorized\": false,\n      \"build_role\": \"Read-only executable linked to unchanged original diagnostic binary; CLASS is not rebuilt\",\n      \"supersedes\": \"Q045-OPTICAL-AUDIT-V1\",\n      \"failed_run_id\": \"38030968453\",\n      \"failed_commit\": \"0124316bfb88629bcccd9b18a5cef448ade309ed\",\n      \"failure_class\": \"VALIDATION\",\n      \"failure_cause\": \"TEST_WORKFLOW_PATH_MISMATCH\",\n      \"theory_evaluations_started\": 0,\n      \"superseded_by\": \"Q045-OPTICAL-AUDIT-V3\"\n    },\n    \"Q045-OPTICAL-AUDIT-V3\": {\n      \"q\": \"Q-045\",\n      \"q_status\": \"PROPOSED_CANONICAL_REGISTRATION_PENDING\",\n      \"program_id\": \"Q045-OPTICAL-AUDIT-V3\",\n      \"scientific_task\": \"ORIGINAL_BINARY_OPTICAL_OBSERVATION_AND_SAME_HISTORY_COMPONENTS_ONLY\",\n      \"scientific_program\": \"q045_optical_audit_v3.py\",\n      \"program_version\": \"v3\",\n      \"version\": \"v3\",\n      \"workflow_id\": \"q045-optical-audit-v3.yml\",\n      \"workflow_path\": \".github/workflows/q045-optical-audit-v3.yml\",\n      \"workflow_version\": \"v3\",\n      \"status\": \"COMPLETED\",\n      \"target_ref\": \"main\",\n      \"created_date\": \"2026-10-10T08:36:36.753322+02:00\",\n      \"config\": \"q045_optical_audit_contract_v3.json\",\n      \"source_lock\": \"q045_optical_audit_contract_v3.json\",\n      \"tests\": \"q045_optical_audit_tests_v3.py\",\n      \"journal\": \"Q045_SAMLET_JOURNAL.md\",\n      \"full_handoff\": \"Q045_EXECUTION_HANDOFF.md\",\n      \"repository_base_commit\": \"0124316bfb88629bcccd9b18a5cef448ade309ed\",\n      \"execution_commit\": \"RECORDED_FROM_GITHUB_SHA_AT_RUN\",\n      \"result_location\": \"q045-audit-<run_id>-final / q045_optical_audit_final_v3.json\",\n      \"scientific_acceptance\": false,\n      \"production_restart_authorized\": false,\n      \"build_role\": \"Read-only executable linked to unchanged original diagnostic binary; CLASS is not rebuilt\",\n      \"supersedes\": \"Q045-OPTICAL-AUDIT-V2\",\n      \"completed_run_id\": \"38035928310\",\n      \"completed_commit\": \"2b08781ce57e3b71d7a6de19076db71d9e7702fe\",\n      \"result_status\": \"PASS_NATIVE_COMPONENT_ONLY; REFERENCE_TRUTH_GATE=UNQUALIFIED\"\n    },\n    \"Q045-REFHIST-V1\": {\n      \"program_id\": \"Q045-REFHIST-V1\",\n      \"q\": \"Q-045\",\n      \"scientific_task\": \"Eight bounded native background/thermodynamics refinements; reference remains unqualified.\",\n      \"workflow_id\": \"q045-reference-history-v1.yml\",\n      \"workflow_path\": \".github/workflows/q045-reference-history-v1.yml\",\n      \"program_version\": \"v1\",\n      \"workflow_version\": \"v1\",\n      \"status\": \"COMPLETED_WITH_POSTPROCESSING_FAILURE\",\n      \"created_date\": \"2026-10-10T08:30:37.154103+00:00\",\n      \"supersedes\": null,\n      \"bubbleverse_commit\": \"PENDING_MANUAL_INSTALL\",\n      \"config\": \"q045_reference_history_contract_v1.json\",\n      \"result_location\": \"q045_reference_history_final_v1.json\",\n      \"current_q\": \"Q-045\",\n      \"version\": \"v1\",\n      \"target_ref\": \"main\",\n      \"scientific_program\": \"q045_reference_history_v1.py\",\n      \"source_lock\": \"q045_reference_history_contract_v1.json\",\n      \"tests\": \"q045_reference_history_tests_v1.py\",\n      \"journal\": \"Q045_SAMLET_JOURNAL.md\",\n      \"full_handoff\": \"Q045_EXECUTION_HANDOFF.md\",\n      \"repository_base_commit\": \"2b08781ce57e3b71d7a6de19076db71d9e7702fe\",\n      \"scientific_acceptance\": false,\n      \"production_restart_authorized\": false,\n      \"build_role\": \"Read-only observer linked to original cached binary; declared precision-input refinements only\",\n      \"completed_run_id\": \"38039690879\",\n      \"execution_commit\": \"849f33d54d31c58c58cba37d5134e240987741fe\",\n      \"native_evaluations_started\": 8,\n      \"offline_recovery_program_id\": \"Q045-REFHIST-V2\",\n      \"do_not_repeat\": true\n    },\n    \"Q045-REFHIST-V2\": {\n      \"program_id\": \"Q045-REFHIST-V2\",\n      \"q\": \"Q-045\",\n      \"scientific_task\": \"Offline recovery of eight completed V1 histories; zero new native/theory calls.\",\n      \"workflow_id\": \"q045-reference-history-v2.yml\",\n      \"workflow_path\": \".github/workflows/q045-reference-history-v2.yml\",\n      \"program_version\": \"v2\",\n      \"workflow_version\": \"v2\",\n      \"status\": \"ACTIVE\",\n      \"created_date\": \"2026-10-10T09:16:29.561256+00:00\",\n      \"supersedes\": \"Q045-REFHIST-V1\",\n      \"bubbleverse_commit\": \"PENDING_MANUAL_INSTALL\",\n      \"config\": \"q045_reference_history_contract_v2.json\",\n      \"result_location\": \"q045_recovery/q045_reference_history_final_v2.json\",\n      \"current_q\": \"Q-045\",\n      \"version\": \"v2\",\n      \"target_ref\": \"main\",\n      \"scientific_program\": \"q045_reference_history_v2.py\",\n      \"source_lock\": \"q045_reference_history_contract_v2.json\",\n      \"tests\": \"q045_reference_history_tests_v2.py\",\n      \"journal\": \"Q045_SAMLET_JOURNAL.md\",\n      \"full_handoff\": \"Q045_EXECUTION_HANDOFF.md\",\n      \"repository_base_commit\": \"849f33d54d31c58c58cba37d5134e240987741fe\",\n      \"scientific_acceptance\": false,\n      \"production_restart_authorized\": false,\n      \"build_role\": \"Offline artifact reanalysis only; no observer/native build or execution\",\n      \"new_theory_evaluations_max\": 0,\n      \"source_run_id\": \"38039690879\"\n    },\n    \"Q047-CERTCHECK-V1\": {\n      \"q\": \"Q-047\",\n      \"q_status\": \"PROPOSED_CANONICAL_ADMISSION_UNVERIFIED\",\n      \"scientific_task\": \"Bounded source-defined upper-IVP certificate checker and actual input qualification report; no native/theory execution and no actual Q047 closure.\",\n      \"status\": \"ACTIVE\",\n      \"created_date\": \"2026-10-11\",\n      \"version\": \"v1\",\n      \"scientific_program\": \"q047_certificate_v1.py\",\n      \"scientific_program_id\": \"Q047-CERTCHECK-V1\",\n      \"workflow_id\": \"q047-certificate-check-v1.yml\",\n      \"workflow_path\": \".github/workflows/q047-certificate-check-v1.yml\",\n      \"target_ref\": \"main\",\n      \"source_lock\": \"q047_package_v1.json\",\n      \"tests\": \"q047_certificate_tests_v1.py\",\n      \"package_tests\": \"q047_package_tests_v1.py\",\n      \"result_artifacts\": [\n        \"q047-certcheck-v1-*-technical\"\n      ],\n      \"new_native_evaluations\": 0,\n      \"final_scientific_result\": \"UNRESOLVED\",\n      \"return_route\": \"RESULT INGESTION & ROUTING ENGINE\"\n    },\n    \"Q047-PRECURSORCHECK-V1\": {\n      \"q\": \"Q-047\",\n      \"q_status\": \"PROPOSED_CANONICAL_ADMISSION_UNVERIFIED\",\n      \"status\": \"ACTIVE\",\n      \"version\": \"v1\",\n      \"program_version\": \"v1\",\n      \"workflow_version\": \"v1\",\n      \"scientific_program\": \"q047_precursor_check_v1.py\",\n      \"workflow_id\": \"q047-precursor-check-v1.yml\",\n      \"workflow_path\": \".github/workflows/q047-precursor-check-v1.yml\",\n      \"target_ref\": \"main\",\n      \"created_date\": \"2026-10-10T23:17:57.054893+00:00\",\n      \"repository_base_commit\": \"3bfffa1c905d0c58ccee8b55eaf539eebcb2dec8\",\n      \"execution_commit\": \"RECORDED_FROM_GITHUB_SHA_AT_RUN\",\n      \"scientific_task\": \"Finite-growth source-real precursor backend and manufactured complete mode controls; actual state admission remains unresolved.\",\n      \"source_lock\": \"q047_precursor_package_v1.json\",\n      \"mathematical_contract\": \"Q047_PRECURSOR_CONTRACT_V1.json\",\n      \"tests\": \"q047_precursor_tests_v1.py\",\n      \"journal\": \"Q047_SAMLET_JOURNAL.md\",\n      \"config\": \"q047_precursor_packet_control_v1.json\",\n      \"new_native_evaluations_max\": 0,\n      \"production_restart_authorized\": false,\n      \"scientific_acceptance\": false,\n      \"result_location\": \"q047_precursor_results/q047_precursor_final_v1.json\",\n      \"return_route\": \"RESULT INGESTION & ROUTING ENGINE\"\n    },\n    \"Q047-COLLECTION-PREFLIGHT-V1\": {\n      \"q\": \"Q-047\",\n      \"status\": \"COMPLETED_HISTORICAL\",\n      \"version\": \"v1\",\n      \"program_version\": \"v1\",\n      \"workflow_version\": \"v1\",\n      \"created_date\": \"2026-10-11T04:26:48.530096+00:00\",\n      \"repository_base_commit\": \"c768f33d433ca05e00f344bc9dcacca8383ab33f\",\n      \"execution_commit\": \"RECORDED_FROM_GITHUB_SHA_AT_RUN\",\n      \"workflow_id\": \"q047-collection-preflight-v1.yml\",\n      \"workflow_path\": \".github/workflows/q047-collection-preflight-v1.yml\",\n      \"target_ref\": \"main\",\n      \"scientific_program\": \"q047_execution_v1.py\",\n      \"capture_program\": \"q047_collection_v1.py\",\n      \"source_lock\": \"Q047_EXECUTION_PACKAGE_V1.json\",\n      \"journal\": \"Q047_SAMLET_JOURNAL.md\",\n      \"tests\": \"test_q047_execution_v1.py\",\n      \"scientific_acceptance\": false,\n      \"result_location\": \"q047_collection_preflight_final_v1.json\",\n      \"return_route\": \"RESULT INGESTION & ROUTING ENGINE\",\n      \"scientific_task\": \"Recover and verify original core/source/reference identities and build observer only; zero native initialization/shooting. No scientific admission.\",\n      \"new_native_evaluations_max\": 0,\n      \"superseded_by\": \"Q047-RECONSTRUCTION-V1\",\n      \"completed_run_id\": \"38113104261\"\n    },\n    \"Q047-RECONSTRUCTION-V1\": {\n      \"q\": \"Q-047\",\n      \"status\": \"ACTIVE\",\n      \"version\": \"v1\",\n      \"program_version\": \"v1\",\n      \"workflow_version\": \"v1\",\n      \"created_date\": \"2026-10-11T11:20:13.263193+00:00\",\n      \"workflow_id\": \"q047-reconstruction-v1.yml\",\n      \"workflow_path\": \".github/workflows/q047-reconstruction-v1.yml\",\n      \"target_ref\": \"main\",\n      \"scientific_program\": \"q047_reconstruction_v1.py\",\n      \"observer_source\": \"q047_collect_state_v2.c\",\n      \"source_lock\": \"Q047_RECONSTRUCTION_CONTRACT_V1.json\",\n      \"journal\": \"Q047_SAMLET_JOURNAL.md\",\n      \"result_location\": \"q047_reconstruction_final_v1.json\",\n      \"scientific_acceptance\": false,\n      \"scientific_task\": \"Approved bounded four-case original-core reconstruction with exact state and new-run FP/library provenance; no historical or first-hit promotion.\",\n      \"return_route\": \"RESULT INGESTION & ROUTING ENGINE\",\n      \"supersedes\": \"Q047-COLLECTION-PREFLIGHT-V1\"\n    }\n  },\n  \"registry_name\": \"Bubbleverse Program Registry\",\n  \"schema_version\": 3\n}\n",
+      "encoding": "utf-8",
+      "sha": "3a13e197643066031270229960841f2325826565",
+      "display_url": "https://github.com/Morfindien/Bubbleverse/blob/main/bubbleverse_program_registry.json",
+      "display_title": "bubbleverse_program_registry.json"
+    },
+    "isError": false
+  },
+  "github_follow3.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "# Q047 finite-growth precursor backend V1\n\nCurrent prepared target: **`Q047-PRECURSORCHECK-V1`**. After this candidate package is installed, open **🚀 BUBBLEVERSE START**, paste that exact PROGRAM_ID and select **Run workflow**. Target: `.github/workflows/q047-precursor-check-v1.yml`; registry: `bubbleverse_program_registry.json`. The permanent launcher `.github/workflows/00-bubbleverse-start.yml` is byte-unchanged. All52 existing registry entries are preserved; the candidate has53. No remote installation or launch is claimed by these files.\n\nThe backend recomputes rational interval source fields, signed scalar/two-state comparison errors, between-node polynomial defects and strict prospective-tube closure. Positive finite error growth is allowed. It implements algebraic radiation/matter/Lambda/curvature plus declared neutrino references, n_scf=3 EDE background cells, the distinct brec and later thermal equations, four ordered source modes, carried temperature and the helium onset map. Cell coordinate is exact rational **a**; source equations in u=ln(a) are transformed by dy/da=F_u/a. This avoids uncertain log endpoint conversion without changing the model.\n\n**CONDITIONAL** source-real proof inputs are assumptions. The full four-mode radiation fixture is deliberately artificial, and can pass finite source-control gates without qualifying any actual frozen case. All four actual cases remain **INSUFFICIENT_EVIDENCE** and **FINAL_RESULT_GATE=UNRESOLVED**. Effective initialized-instance linkage, actual initialization errors, uncertain source/binary arithmetic and the downstream M06 first-event proof remain outstanding. No native build/init/re-shoot, CLASS call, sampler, optical-depth or likelihood run is included; budget stays16/52 consumed,36 remaining.\n\nFiles: `q047_precursor_check_v1.py`, `q047_precursor_tests_v1.py`, `q047_precursor_packet_control_v1.json`, `q047_precursor_package_v1.json`, `Q047_EFFECTIVE_STATE_SCHEMA_V1.json`, unchanged `Q047_PRECURSOR_CONTRACT_V1.json`, and `Q047_PRECURSOR_EXECUTION_SPEC_V1.md`. The backend reuses unchanged installed `q047_math_v1.py` and `q047_certificate_v1.py`. Complete scientific memory remains `Q047_SAMLET_JOURNAL.md`. Source locks identify the exact ten files from class_ede5a131c91...; fetched files are read, never compiled or executed.\n\nOne finite job has a10-minute cap, with bounded source retrieval and a90-second backend limit. Work caps return unresolved; there is no retry/sharding/merge/checkpoint or downstream dispatch. Outputs are in `q047_precursor_results/`; technical success does not close Q047.\n\nReplay: `python -m unittest discover -p 'q047_*tests_v1.py' -v`, then `python q047_precursor_check_v1.py --source-dir PATH_TO_PINNED_SOURCE`. Optional conditional primitive input: `--packet FILE`; optional read-only export representation audit: `--audit-effective FILE`. A representation PASS is never actual admission. Do not relaunch old CERTCHECK merely to repeat the previous missing-object list.\n\n---\n\n# Completed prior Q047 certificate qualification — historical\n\nThe prior **`Q047-CERTCHECK-V1`** package completed its technical qualification as run38091858306. Its files and target `.github/workflows/q047-certificate-check-v1.yml` remain preserved. Do not relaunch it solely to repeat the unchanged missing-input inventory. The following text documents that preceding package; the current prepared precursor target is described above. At its original preparation, all51 prior registry entries were preserved in the52-entry candidate.\n\nQ-047 remains **PROPOSED; canonical scientific admission unverified**. It asks whether each of four frozen Q041 FULL/start0 helium trajectories reaches the strict numerical cutoff at a first event with negative upper rate and no competing switch/reset. Actual applicability is **INSUFFICIENT EVIDENCE in all four cases**.\n\nV1 implements the Mathematics Engine's source-consistent rational interval/AD field, signed comparison-matrix propagation, prospective error rectangles, continuous predictor bounds and a conditional local event checker. A **manufactured local proof-input control** exercises the checker; it is not an actual cosmological initial state or a complete helium history. The actual-input gate lists the missing effective-model/background/onset/full-path/switch qualifications. An asserted qualification boolean, raw native output or successful process exit cannot pass that gate.\n\nThe program performs **zero new CLASS/native/theory evaluations** and cannot launch a cosmology, spectrum, likelihood or sampler. The inherited ledger remains16/52 consumed and36 remaining. It uses Python3.12.14 standard library and pinned source/action identities, with no pip installation, CLASS cache or remote HPC service. One short atomic job has a10-minute cap. There is no shard/merge/checkpoint dependency, automatic retry or downstream dispatch.\n\nOutputs are in `q047_results/`: the technical final JSON, exact required-input reports, manufactured conditional-control certificate, four regional arithmetic controls and package/source/result tests. **FINAL_RESULT_GATE=UNRESOLVED** remains the scientific result even when all technical checks pass. Return the result artifact to Result Ingestion & Routing with the same Q047 and journal; no optical-depth/CMB/likelihood/H0 bias is inferred.\n\nThe authoritative accumulated journal snapshot travels as `Q047_SAMLET_JOURNAL.md`. Frozen requested/native identities are in `q047_targets_v1.json`; the executable/source lock is `q047_package_v1.json`; the numerical specification and finite test plan are in `Q047_EXECUTION_SPEC_V1.md`. The source-continuum input remains unqualified. Conditional packet mode is `python q047_certificate_v1.py --packet PATH --out DIRECTORY`; its output remains conditional and cannot close the factual question.\n\nLocal replay: `python -m unittest discover -p 'q047_*tests_v1.py' -v`, `python q047_certificate_v1.py`, `python q047_math_v1.py > q047_results/q047_regional_controls_v1.json`, then `python q047_package_check_v1.py results`. No supplied file is an archive.\n\n---\n\n# Completed preceding stage — Q045 offline recovery\n\nThe previous Q045 recovery used `Q045-REFHIST-V2` through the same permanent launcher and registry. Its target was `.github/workflows/q045-reference-history-v2.yml`. The Q047 checker is now the current bounded preparation target described above.\n\n**Do not rerun Q045-REFHIST-V1 or either failed native worker.** All eight original computations completed in run [38039690879](https://github.com/Morfindien/Bubbleverse/actions/runs/38039690879). Six passed analysis; both HiLLiPoP L1 jobs failed after computation because V1 required exact equality for BBN-derived `YHe`. Both outputs differ from L0 by one binary64 ULP, while requested physical dictionaries and recorded normalization constants are unchanged. Original failed records remain historical failures.\n\nV2 retrieves the ten frozen original artifacts, verifies archive digests and every member, and reanalyzes the stored histories with `numpy==1.26.4`. It permits at most one ULP only in BBN-derived helium output, records the difference, rejects changed explicit helium/physical inputs or normalization constants, and requires the six originally successful summaries to reproduce exactly. It performs **zero new native/theory evaluations**, needs no CLASS cache or compilation, and cannot launch a native worker. Missing/expired artifacts or incompatible data cause failure. Original GitHub artifacts have 30-day retention; the pinned IDs/digests and raw-member index remain in the contract.\n\nOutputs: `q045_recovery/q045_reference_history_final_v2.json`, eight recovered worker reports and four `*_common_grid.tsv` comparisons. Each report preserves the original status/error and its worker hash. The locally recovered final result and common grids are also delivered individually.\n\nRecovery has passed for all eight stored histories. This is a component diagnostic: `REFERENCE_TRUTH_GATE=UNQUALIFIED`, `FINAL_RESULT_GATE=UNRESOLVED`. No CMB/likelihood response or continuum-error enclosure has been computed. The accepted tau sequence is non-monotonic at all four points, so no positive Richardson order is established for it. Budget remains16/52 consumed and36 remaining; the unmodified FULL matrix remains incompatible with the cap. No automatic next stage is authorized.\n\nThe authoritative journal is `Q045_SAMLET_JOURNAL.md`; complete handoff/source history is `Q045_EXECUTION_HANDOFF.md`. Existing V1 source, contract, manifest, observer and workflow remain unchanged for provenance. Registry status blocks repeating V1 through the launcher.\n\n---\n\n# Bubbleverse HPC\n\n**One question at a time. Reproducible execution. Evidence before model.**\n\nBubbleverse HPC is the public research-execution and reproducibility repository behind the Bubbleverse project.\n\nBubbleverse does not begin with a model that must be defended. It begins with a scientific question. When a question requires numerical work, this repository is where the computational experiment is defined, locked, executed, tested and preserved.\n\nThe scientific model that survives this process is maintained separately in [`Morfindien/bubbleverse-model`](https://github.com/Morfindien/bubbleverse-model).\n\nWebsite: **https://bubbleverse.dk**\n\n\n## Completed prior stage — Q045 optical audit V3\n\nQ042 and Q044 remain closed with inconclusive scientific boundaries. Q045 remains **PROPOSED; canonical scientific registration pending**.\n\nV2 baseline run [38023210800](https://github.com/Morfindien/Bubbleverse/actions/runs/38023210800) completed all four native FULL diagnostic starts. Installation, completeness and raw-product gates passed. Those starts are fixed inputs, not fitted minima; their likelihood values establish no model preference. The registry records `Q045-BASELINE-V2` as **COMPLETED** so it is not relaunched unchanged. Its V1 failed installation and V2 Flit repair remain preserved.\n\nCompleted PROGRAM_ID: **`Q045-OPTICAL-AUDIT-V3`** (the prior duplicated `Q045-` prefix is corrected). The registry records this target **COMPLETED**, run [38035928310](https://github.com/Morfindien/Bubbleverse/actions/runs/38035928310). Its original files and workflow are retained for provenance, not another unchanged launch. The historical recovery launcher target was `Q045-REFHIST-V2`; V1 native computation completed and must not be repeated.\n\nThe completed target retrieved the exact four completed V2 worker artifacts, then uses read-only original-function observation to export each scalar calibration trial/support, raw cumulative optical depth before exponentiation, effective precision/constants and species workspace snapshots. The unchanged original diagnostic CLASS binary and source are required; there is no cache-miss rebuild, scientific source patch, new spectrum/likelihood run, optimizer, sampler or automatic retry. Final native table columns must exactly match V2. Separate worker jobs have45-minute caps and15-minute native-process caps. The original52-evaluation budget is retained: four V2 evaluations already complete, at most four telemetry observations now, at most44 slots remaining after all four start. Background/thermodynamics observations do not constitute full CMB/likelihood reproducibility runs.\n\nController `q045_optical_audit_v3.py`; native observer `q045_optical_audit_probe_v3.c`; immutable contract `q045_optical_audit_contract_v3.json`; integrity manifest `q045_optical_audit_manifest_v3.json`; finite tests `q045_optical_audit_tests_v3.py`. Complete current memory: `Q045_SAMLET_JOURNAL.md`; baseline ingestion record: `Q045_INGESTION_RESULT.json`.\n\nNative-plus, exact-cubic-minus and independent same-cubic Gauss integration are **component diagnostics**. Redshift-space node quadrature is a shared-history diagnostic. Both remain **UNQUALIFIED** as continuum Thomson references. Workspace species after source returns may reflect a previous regime during smoothing and are not separately certified physical histories. No treatments10/01/11, three new accuracy levels or inference continuation dispatch automatically. Preserve raw anomalies/failures and return to Result Ingestion & Routing.\n\nOutputs: `q045-audit-<run_id>-baselines`, four `q045-audit-<run_id>-worker-<job>` artifacts and `q045-audit-<run_id>-final`. Final JSON: `q045_optical_audit_final_v3.json`. Missing, duplicate or incompatible workers yield PARTIAL and failing technical merge gates. Even complete acquisition retains `FINAL_RESULT_GATE=UNRESOLVED` and `REFERENCE_TRUTH_GATE=UNQUALIFIED`. Exact histories, raw κ and full provenance survive in worker artifacts. A prior launch of this target blocks a new unchanged dispatch; recovery requires reviewing preserved records before assigning another executable version.\n\n\nOptical audit V1 [run38026287784](https://github.com/Morfindien/Bubbleverse/actions/runs/38026287784) failed before all four observations. Its key was correct but its shortened cache path list selected a different cache version. The V2 repair restored the original nine-path list exactly, while retaining no rebuild/fallback/save and the frozen source/binary checks. V1 consumed zero theory-evaluation slots. Failure evidence: `Q045_OPTICAL_AUDIT_V1_FAILURE.json`. Ten controller tests include the cache-identity regression; the native observer is unchanged. The V2 run subsequently verified cache restoration; V3 subsequently completed all four observations and collection in run38035928310.\n\n\nOptical audit V2 [run38030968453](https://github.com/Morfindien/Bubbleverse/actions/runs/38030968453) restored the original cache successfully in every worker, then failed its test because the workflow was read from the wrong directory. No original cosmological observation started. V3 reads `.github/workflows/q045-optical-audit-v3.yml`; local validation uses the actual installed layout without a root YAML duplicate. The source/binary/physical contract is unchanged. Failure evidence: `Q045_OPTICAL_AUDIT_V2_FAILURE.json`. Prior V1 evidence remains retained.\n\n---\n\n## What this repository is\n\nThis repository is the execution side of Bubbleverse.\n\nIt contains the machinery used to turn a scientific question into a traceable computational result, including:\n\n- GitHub Actions workflows\n- scientific Python programs\n- setup and environment scripts\n- preregistrations\n- source locks\n- program registries\n- validation tests\n- execution notes and install manifests\n- result-artifact contracts\n- historical and superseded implementations\n\nThe repository intentionally preserves technical history. A newer workflow may supersede an older one without erasing the path that led to it.\n\nThis is therefore both an active research system and a reproducibility record.\n\n---\n\n## The basic workflow\n\nA Bubbleverse computational question normally moves through a chain like this:\n\n```text\nScientific question\n        ↓\nPreregistered test\n        ↓\nLocked sources / data / environment\n        ↓\nRegistered PROGRAM_ID\n        ↓\nGitHub Actions execution\n        ↓\nNumerical result artifacts\n        ↓\nValidation and scientific gates\n        ↓\nResult / handoff\n        ↓\nBubbleverse Model\n```\n\nThe exact route depends on the question.\n\nNot every question needs HPC, and not every numerical run produces a scientific result.\n\n---\n\n## Start system\n\nThe repository includes a central launcher for registered programs.\n\nFrom GitHub:\n\n1. Open **Actions**\n2. Select **🚀 BUBBLEVERSE START**\n3. Press **Run workflow**\n4. Enter the exact `PROGRAM_ID`\n5. Start the run\n\nThe launcher checks the registry before dispatching the scientific workflow.\n\nIt verifies the exact `PROGRAM_ID`, active status, Q identity and allowed workflow/ref syntax against `bubbleverse_program_registry.json`.\n\nThe permanent launcher is `.github/workflows/00-bubbleverse-start.yml`. It dispatches the registered target; that target validates its inputs and publishes its own results. Open the child run to inspect its outcome.\n\n### Q-042 completed CLASS diagnostics; treatment not yet runnable\n\nV22 run `37221166634` completed the one-branch durability task; V23 run `37264477494` completed original-binary spline attribution; V24 run `37275520455` completed original-binary tau-path observation. V25 run `37288546095` completed one-point upstream boundary attribution at commit `3d15a3a7a627de2f29533cac7fe9e43dd022226f`. These technical targets are `COMPLETED`; scientific Q-042 is now closed with an inconclusive feasibility result; its numerical final result remains `UNRESOLVED`.\n\nV25 observed finite inputs and an infinite helium derivative at the low-temperature cutoff boundary. The original upper optical-depth trial is nonfinite, the routine returns success after two trial calls and zero bisection iterations, and the table remains byte-identical to V23/V24. The first observed function boundary is not asserted to locate the globally first invalid arithmetic operation. Preserve both V25 artifacts and all 80 inherited optimizer records.\n\nDo not launch `Q042-CLASSNAN-V25` again unchanged. The registry now records its completed run, so the permanent launcher rejects that inactive target. Existing V23–V25 controllers, contracts, observers, tests, workflow files and historical manifests remain preserved. Keep `.github/workflows/00-bubbleverse-start.yml` unchanged.\n\nA coupled numerical treatment requires valid matched references, an explicit justified helium phase/cutoff rule, frozen prediction/likelihood and optical-depth accuracy criteria, and a separate executable/config/checkpoint lineage before execution. No treatment target or new `PROGRAM_ID` has been registered. No repaired CLASS binary, new sampler/optimizer run, scientific result or production restart is authorized by these diagnostic completions. Return the documented state to the Result Ingestion & Routing Engine.\n\nThe registry is the authoritative mapping between a program identifier and the workflow that is allowed to execute it.\n\n---\n\n## Program registry\n\nThe central registry is:\n\n```text\nbubbleverse_program_registry.json\n```\n\nA registered scientific program can define information such as:\n\n```text\nPROGRAM_ID\nQ\nworkflow\nscientific program\ntests\npreregistration\nsource lock\nresult ID\nexpected artifacts\nstatus\nversion\nsupersession history\n```\n\nThis makes the execution path explicit instead of relying on filenames or memory.\n\nPrograms may be marked, for example, as active, broken or superseded as the implementation evolves.\n\n---\n\n## Scientific locking\n\nBubbleverse HPC tries to separate scientific changes from technical repairs.\n\nFor demanding runs, the repository can preserve or lock:\n\n- source versions\n- external repository commits\n- data definitions\n- package versions\n- execution commits\n- priors and parameter definitions\n- scientific acceptance criteria\n- expected result artifacts\n\nWhere practical, later technical versions reuse an already validated scientific setup rather than silently changing the experiment.\n\nA technical repair should not become a scientific change by accident.\n\n---\n\n## Preregistration\n\nMany workflows include a preregistration file before the numerical result exists.\n\nTypical files follow patterns such as:\n\n```text\nq###_*_preregister_*.json\n```\n\nA preregistration can define the test surface, comparison rules, acceptance thresholds, allowed branches of the analysis and other scientific decisions that should not be rewritten after seeing the outcome.\n\nThis is used to reduce result-driven rule changes.\n\n---\n\n## Source locks and provenance\n\nScientific programs can also carry source-lock files such as:\n\n```text\nq###_*_source_lock_*.json\n```\n\nThese record the external scientific state required by the run.\n\nDepending on the experiment, this may include exact commits, datasets, numerical packages or previously validated Bubbleverse results.\n\nRuntime setup can additionally record hashes and provenance for installed or downloaded scientific inputs before the main calculation begins.\n\nThe goal is simple:\n\n> A result should remain connected to the exact scientific inputs that produced it.\n\n---\n\n## Tests and gates\n\nThe repository contains question-specific validation code as well as workflow-level gates.\n\nThese can test things such as:\n\n- registry consistency\n- preregistration consistency\n- source-lock identity\n- valid numerical inputs\n- finite likelihoods\n- expected parameter support\n- convergence\n- artifact completeness\n- scientific classification rules\n- reproducibility contracts\n\nA workflow reaching the end of GitHub Actions is not, by itself, proof that a scientific result exists.\n\nTechnical success and scientific success are deliberately treated as different things.\n\n---\n\n## Long-running computation\n\nSome Bubbleverse questions are small.\n\nOthers are not.\n\nLong numerical campaigns can use:\n\n- matrix execution\n- parallel independent chains\n- cached scientific environments\n- checkpointed or resumable state\n- segmented runs\n- bounded runtime per segment\n- continuation decisions\n- final convergence gates\n\nFor example, current portability workflows can split independent posterior chains into bounded compute segments, preserve resumable state and continue until the preregistered completion criteria are reached or the allowed execution boundary is exhausted.\n\nThis is designed to make long calculations survive the practical limits of hosted CI infrastructure without pretending an incomplete chain is a finished result.\n\n---\n\n## Artifacts are part of the record\n\nBubbleverse workflows use named GitHub Actions artifacts as part of the scientific handoff.\n\nArtifacts may contain:\n\n- static validation results\n- environment provenance\n- numerical chains\n- endpoint results\n- test outputs\n- run manifests\n- preregistration copies\n- source-lock copies\n- final classifications\n- handoff material\n\nThe expected artifact set can be registered before execution.\n\nMissing required artifacts can therefore be treated as a failed execution contract rather than silently ignored.\n\n---\n\n## Failure is preserved\n\nBubbleverse does not require every program version to succeed.\n\nThe repository contains technical failures, superseded attempts and repaired implementations because they are part of the development and scientific audit trail.\n\nA failed version may reveal:\n\n- non-convergence\n- an invalid environment\n- an artifact-contract failure\n- a numerical instability\n- an implementation error\n- a scientific incompatibility\n\nWhere a later version repairs a technical problem, the earlier failure can remain documented instead of being rewritten out of history.\n\nNegative and failed results are information.\n\n---\n\n## Current cosmology work\n\nThe repository currently contains a substantial cosmology execution chain, including work on:\n\n- Hubble-constant inference\n- Early Dark Energy\n- likelihood attribution\n- optimizer/globality tests\n- Planck likelihood implementations\n- CamSpec / HiLLiPoP comparisons\n- ACT information\n- BAO information\n- robustness and portability tests\n\nOne example is the Q041 downstream portability campaign, which tests whether a validated CamSpec–HiLLiPoP geometry difference in an n=3 EDE analysis remains scientifically consequential after adding matched external CMB, lensing and BAO information.\n\nThe individual scientific conclusions should be taken from their completed result artifacts and the accepted Bubbleverse model — not inferred from the existence of a workflow alone.\n\n---\n\n## Repository map\n\nThe repository is intentionally execution-oriented rather than arranged like a conventional software library.\n\nImportant areas and filename families include:\n\n```text\n.github/workflows/\n    GitHub Actions launchers and question-specific execution workflows\n\nbubbleverse_program_registry.json\n    Central program-to-workflow registry\n\nq###_*.py\n    Scientific programs, analysis code and validation tests\n\nq###_*.sh\n    Environment preparation and execution setup\n\nq###_*_preregister_*.json\n    Preregistered scientific rules\n\nq###_*_source_lock_*.json\n    Locked scientific sources and external dependencies\n\n*_INSTALL.txt\n*_manifest.txt\n*_NOTE.txt\n    Installation, repair, execution and provenance notes\n```\n\nBecause Bubbleverse preserves the research path, multiple versions of a program can coexist.\n\nThe registry and status fields determine which version is authoritative for execution.\n\n---\n\n## Relationship to Bubbleverse Model\n\nBubbleverse uses two public repositories with different jobs.\n\n### Bubbleverse HPC\n\nRepository:\n\n[`Morfindien/Bubbleverse`](https://github.com/Morfindien/Bubbleverse)\n\nPurpose:\n\n**Execute, test and preserve scientific computations.**\n\nThis is where numerical experiments, workflows, source locks, preregistrations, artifacts and execution history live.\n\n### Bubbleverse Model\n\nRepository:\n\n[`Morfindien/bubbleverse-model`](https://github.com/Morfindien/bubbleverse-model)\n\nPurpose:\n\n**Maintain the version-controlled scientific model state produced from validated Bubbleverse evidence.**\n\nIt contains accepted and candidate model states, formalization, tests, provenance, releases and version history.\n\nIn short:\n\n```text\nBubbleverse HPC  →  asks and computes\nBubbleverse Model →  retains what survives\n```\n\n---\n\n## Scientific philosophy\n\nBubbleverse is not designed to prove Bubbleverse.\n\nIt is not designed to defend standard cosmology.\n\nIt is not designed to reject standard cosmology.\n\nThe working rule is:\n\n> **Reality has priority over the model.**\n\nIf a Bubbleverse idea fails, it should fail.\n\nIf an established result survives testing, it should survive.\n\nIf the evidence is insufficient, **unknown** is a valid scientific outcome.\n\nThe purpose of computation is not to manufacture certainty.\n\nIt is to make uncertainty, assumptions, failures and surviving results more explicit.\n\n---\n\n## Reproducibility notice\n\nThis repository is an active research environment, not a stable general-purpose software package.\n\nHistorical workflows may depend on:\n\n- specific GitHub Actions behavior\n- exact external commits\n- cached environments\n- external scientific datasets\n- artifacts from earlier Bubbleverse runs\n- version-specific numerical software\n\nThe existence of source code does not guarantee that every historical workflow can be rerun indefinitely without reconstructing its original environment.\n\nWhere the project has locked enough provenance to reconstruct that environment, those locks should be preferred over replacing dependencies with newer versions.\n\n---\n\n## Public use\n\nThe repository is public so the computational side of Bubbleverse can be inspected.\n\nYou are welcome to:\n\n- read the code\n- inspect workflows\n- examine preregistrations and source locks\n- follow the execution history\n- fork the repository\n- reproduce or independently challenge results\n\nA fork or third-party modification is not an official Bubbleverse result unless it is incorporated into the authoritative Bubbleverse process.\n\n---\n\n## Contact\n\n**jnperdersen@bubbleverse.dk**\n\n---\n\n## Links\n\n- Website: https://bubbleverse.dk\n- Bubbleverse HPC: https://github.com/Morfindien/Bubbleverse\n- Bubbleverse Model: https://github.com/Morfindien/bubbleverse-model\n\n---\n\n## Final rule\n\n**One question at a time.**\n\n**Lock the test.**\n\n**Run the evidence.**\n\n**Preserve the failures.**\n\n**Change the model when reality demands it.**\n\n\n## Q-042 V26 bounded raw reference acquisition\n\n`Q042-REFACQ-V26` is a completed historical diagnostic (run `37323656302`), with result status `RAW_NOT_QUALIFIED`. Do not relaunch it unchanged. The historical target is `.github/workflows/q042-reference-acquisition-v26.yml`.\n\nThe frozen `q042_reference_contract_v26.json` and byte-exact `q042_reference_point_v26.ini` define two fixed trials, RK4 and implicit midpoint, levels1/2/4:12 branches attempted once. The original cached CLASS source and binary must match their pinned identities; the binary is never rebuilt. A common original background/recombination prefix supplies conditional initial state. Isolated child processes implement the new stepping and preserve failures. No root search, spectra, optimizer, posterior, production restart, automatic retries or resume is authorized.\n\nResults are **RAW_NOT_QUALIFIED**, even when all twelve branches complete. Observed differences, point-sampled defects and same-spline optical depths do not establish an independent true history or downstream likelihood accuracy. Reporting completeness, numerical branch completeness and scientific qualification are separate gates.\n\nThe worker has bounded call/time/storage budgets and a60-minute job limit. This finite target uses one worker; no long stateful chain, checkpoint or merge across different configurations is needed. Collection checks all twelve identities and artifact hashes. Raw nodes, defects, accepted entry/grid, logs and `q042_reference_worker_result_v26.json` are in `q042-v26-<run_id>-raw-acquisition`; the collected result is `q042-v26-<run_id>-diagnostic-final`. The complete received journal is retained verbatim in `q042_execution_handoff_reference_v26.md`; the contract carries source IDs and claim mappings. Return actual artifacts to Result Ingestion & Routing.\n\nV25, its hash failure and earlier scientific/technical history remain historical. V26 validates this mutable README semantically rather than against a prior campaign's README hash.\n\n\n## Q-042: bounded original HyRec switch attribution (V27)\n\n`Q042-SWITCHPROBE-V27` is a completed historical diagnostic (run `37333030105`), with result status `RAW_NOT_QUALIFIED`. Do not relaunch it unchanged.\n\nThis diagnostic restores the original hash-pinned CLASS cache and evaluates only 24 fixed-state RHS samples on either side of the original HyRec temperature threshold. It reuses two RAW V26 states; it does not integrate a new history, solve a root, run likelihoods or restart production. Results remain `RAW_NOT_QUALIFIED`. The target is `.github/workflows/q042-switch-probe-v27.yml`; artifacts are `q042-v27-<run_id>-raw-switch-probes` and `q042-v27-<run_id>-diagnostic-final`.\n\nThree bounded jobs check package identity, acquire two isolated probe sets and collect their completeness/model-route evidence. Finite derivative offsets and solver stage fingerprints do not qualify a reference history. The inherited journal and original scientific contract remain in `q042_execution_handoff_switch_v27.md`.\n\n\n## Historical Q-042 event-aware cell diagnostic (V28)\n\n`Q042-EVENTCELL-V28` completed as run `37347357296`, with result status `RAW_NOT_QUALIFIED`. It is not the next runnable target. The historical workflow is `.github/workflows/q042-event-cell-v28.yml`; do not repeat it unchanged.\n\nThis target preserves the original cached CLASS binary, physical switch and frozen scientific contract. It compares only one native crossing cell at the two archived RAW V26 conditioning states, using RK4 L1/L2/L4 (six independent branches;112 original-kernel stages). The terminal pre-event stage samples the immediately adjacent representable pre-event coordinate; the post-event segment restarts at the exact threshold with the same propagated state. Actual routing and the additional temperature-ratio predicate are checked at every stage. A new active crossing fails explicitly.\n\nThree jobs perform static/numerical tests, one bounded worker, and failure-aware collection. The existing cache is restored read-only; a missing or mismatched original binary fails rather than rebuilding or changing dependencies. Successful branch outputs are preserved; no automatic retry or continuation campaign is configured. This finite diagnostic needs neither a checkpoint nor a numerical merge of independent trajectories.\n\nRaw stages, accepted nodes and endpoints are in `q042-v28-<run_id>-raw-event-cell`; the final diagnostic is in `q042-v28-<run_id>-diagnostic-final`. `q042_event_final_v28.json` reports finite refinement and heuristic roundoff diagnostics. RAW_NOT_QUALIFIED, REFERENCE_TRUTH_GATE=BLOCKED and FINAL_RESULT_GATE=UNRESOLVED remain explicit. A local technical PASS does not qualify a history, prefix, tau root, predictions, likelihood or cosmological inference.\n\n`q042_event_contract_v28.json` preregisters the scope/tests/interpretation. `q042_execution_handoff_event_v28.md` preserves the complete received journal verbatim, and `q042_event_source_evidence_v28.json` carries the source register, claim map and V27 raw/provenance evidence. Return the raw and final diagnostic to Result Ingestion & Routing after this one pass, including unresolved or failed outcomes. Do not repeat V27, add L8/L16, or restart production.\n\n\n### V28 fixture identity correction (fixture-runid-r1)\n\nRun37344813050 stopped in the controlled test before any actual original-binary cell computation: the fixture used `LOCAL` while the strict collector expected GitHub's run-id. The fixture now inherits `GITHUB_RUN_ID`, falling back to `LOCAL` only outside Actions; unrelated identities remain rejected. Numerical physics,contract,program,workflow,registry and launcher are unchanged. The complete failure/provenance and journal update are in the current V28 handoff/source evidence.\n\nThe fixture correction was followed by completed run `37347357296`. The failed run and fix remain historical evidence; no further V28 launch or retry is required. Local implementation tests and successful cell execution do not qualify whole-history accuracy.\n\n\n\n## Q-047: approved four-case reconstruction V1\n\nThe current target is **Q047-RECONSTRUCTION-V1**. Once the individual files are\ninstalled, open **🚀 BUBBLEVERSE START** (`.github/workflows/00-bubbleverse-start.yml`),\nenter that PROGRAM_ID and press **Run workflow**. The launcher is unchanged;\n`bubbleverse_program_registry.json` resolves the exact ID to\n`.github/workflows/q047-reconstruction-v1.yml`.\n\nThe original environment preflight V1 completed as run38113104261. It is a\nhistorical acquisition/build result and is not to be launched again unchanged.\nThe new acquisition is explicitly approved by the user; its contract is\n`Q047_RECONSTRUCTION_CONTRACT_V1.json`. It preserves the exact Q047 question,\nsource/core/input pins and the original precursor contract V1.\n\nFour independent case jobs restore the exact original nine-path cache, verify\nsource and binary, acquire their hash-pinned original reference tables, and\ncompile only observer v2. Each performs one new input/shooting/background/thermal\ninitialization, with a600-second native process cap. There is no core rebuild,\nproduction fit, CMB/likelihood evaluation, retry or checkpoint campaign.\n\nCaptured binary64 state is marked **NEW_RECONSTRUCTION**, never historical export.\nIt includes accepted initial vectors, effective scalar fields, neutrino nodes\nand weights, thermal starts and precision. Six new-run FP checkpoints, CPUID/XCR0,\nmath-symbol reference addresses and loaded-object hashes are saved. Actual libm,\nlibc/loader/OpenMP objects and pinned source/data inputs are preserved separately.\nObserver formatting restores the surrounding FP environment; full observer\nneutrality and all-call error bounds remain unproved.\n\nThe new ledger counts up to four top-level capture processes and records every\ninternal initialization entry. It does not assume that four cases cost four\nshooting calls or silently redefine the inherited16/52 native/theory ledger.\nThe explicit approved capture scope is separate; no full theory evaluation is\nperformed.60-minute case jobs run with max-parallel4; the collector has15 minutes.\nThese caps are below the checked6-hour hosted-runner hard job limit. Runtime and\ncache transfer variability are not measured for this new target.\n\nRaw artifacts: `q047-reconstruction-v1-<run_id>-<case>-raw`. Final artifact:\n`q047-reconstruction-v1-<run_id>-final`, containing\n`q047_reconstruction_final_v1.json`, the frozen new contract and full\n`Q047_SAMLET_JOURNAL.md`. Four-case collection checks IDs, config/contract and every\nraw member hash; missing cases produce PARTIAL_OR_FAILED. It never averages\nincompatible trajectories. Failed gates and nonmatching tables remain evidence.\n\nEven a COMPLETE acquisition retains **INSUFFICIENT_EVIDENCE** and\n**FINAL_RESULT_GATE=UNRESOLVED** for the historical first-hit question. Exact output\nequality is not a proof of unique historical state or source-real trajectory\naccuracy. Return the actual new raw states to Result Ingestion & Routing for the\nspecific state/linkage/error qualification, then the unchanged first-event test\nwhere admissible. Do not repeat a successful capture merely to obtain more\nagreement.\n\nBefore launch, read `Q047_RECONSTRUCTION_INSTALLATION_V1.md`. The prepared files\nhave not been remotely installed or executed by the authoring agent.\n",
+      "encoding": "utf-8",
+      "sha": "5dfca04e4b1dc1c20bce2c8890d9049d220110af",
+      "display_url": "https://github.com/Morfindien/Bubbleverse/blob/main/README.md",
+      "display_title": "README.md"
+    },
+    "isError": false
+  },
+  "github_follow4.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"items\": [\n    {\n      \"finding\": \"Cosmological parameter estimates must preserve inference-chain provenance and shared dependencies.\",\n      \"id\": \"ROB-INF-CHAIN-001\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"finding\": \"High-H0 n=3 EDE viability is not a generic property of 'the CMB'; Planck, SPT-3G, and ACT respond differently on matched surfaces.\",\n      \"id\": \"ROB-EDE-LIKE-001\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"finding\": \"ACT spectrum/multipole attribution changes materially across corrected basins; the earlier TE/intermediate-l pattern is not basin-independent.\",\n      \"id\": \"ROB-EDE-BASIN-001\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"finding\": \"Historical stable versus non-stable CamSpec basin labels were classifier-dependent; endpoint geometry remains valid while the binary label interpretation changed.\",\n      \"id\": \"ROB-CLASSIFIER-001\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"finding\": \"A material continuous CamSpec-HiLLiPoP endpoint-geometry difference survives common normalized and exact-TT support comparisons and is distributed across multiple coordinates.\",\n      \"id\": \"ROB-PLANCK-GEOM-001\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"finding\": \"Q039 single-block interventions fail to remove the surviving geometry difference; remaining explanatory space is structurally coupled and unresolved.\",\n      \"id\": \"ROB-Q039-001\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"finding\": \"Q039 V1-V4 failures are technical recovery provenance only and are excluded from physical evidence; V5 and FGPROFILE V1 are authoritative.\",\n      \"id\": \"ROB-TECH-001\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"finding\": \"A common physical CMB-space nuisance-marginalization construction can preserve native CamSpec and HiLLiPoP likelihood structure without a synthetic hybrid likelihood.\",\n      \"id\": \"ROB-Q040-CMB-MARGINAL-001\",\n      \"status\": \"SUPPORTED_METHODOLOGICALLY\"\n    },\n    {\n      \"finding\": \"The tested single-Gaussian compression and finite defensive-RQMC implementation fail numerical validation; this is TECHNICAL_FAIL and not physical falsification.\",\n      \"id\": \"ROB-Q040-NUMERIC-001\",\n      \"status\": \"TECHNICAL_FAIL\"\n    },\n    {\n      \"finding\": \"The Q041 V19 workflow reaches a valid controlled no-science terminal state: workflow success validates control flow, not a cosmological portability result. The convergence and completeness firewall prevents physical interpretation.\",\n      \"id\": \"ROB-Q041-CONTROLLED-NOSCIENCE-001\",\n      \"q_introduced\": \"Q041\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"finding\": \"The Q041 V19 source lock forbids Q040 scientific products as Q041 scientific inputs, and the final source-result firewall gate passes.\",\n      \"id\": \"ROB-Q041-FIREWALL-001\",\n      \"q_introduced\": \"Q041\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"finding\": \"The executed V19 contract is narrower than the broader original Q041 downstream design; its controlled no-science result is valid for V19 but cannot stand in for that broader test.\",\n      \"id\": \"ROB-Q041-CONTRACT-SCOPE-001\",\n      \"q_introduced\": \"Q041\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q042-QJOURNAL-PDF\",\n        \"EVD-Q042-INGESTION-V31\",\n        \"EVD-Q042-CAP-CERTIFICATE\"\n      ],\n      \"finding\": \"Question completion is separate from numerical/reference acceptance: closure is documented inconclusive, reference truth remains BLOCKED, final result UNRESOLVED and production not authorized.\",\n      \"id\": \"ROB-Q042-CLOSURE-001\",\n      \"q_introduced\": \"Q042\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q042-QJOURNAL-PDF\",\n        \"EVD-Q042-INGESTION-V31\",\n        \"EVD-Q042-CAP-CERTIFICATE\"\n      ],\n      \"finding\": \"The cap32 obstruction is conditional on the frozen retained-interval/global-rail policy. It does not falsify LCDM, n=3 EDE, the common-latent target or all alternative numerical designs.\",\n      \"id\": \"ROB-Q042-CAP-SCOPE-001\",\n      \"q_introduced\": \"Q042\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q043-RESULT\",\n        \"EVD-Q043-JOURNAL\"\n      ],\n      \"finding\": \"Q043 validates local candidate/control preparation at pinned historical bases only. It is internal technical consistency evidence, not independent physical validation, remote synchronization, numerical production or model acceptance.\",\n      \"id\": \"ROB-Q043-LOCAL-VALIDATION-001\",\n      \"q_introduced\": \"Q043\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q044-COMPONENT\",\n        \"EVD-Q044-CHECKS\"\n      ],\n      \"finding\": \"Scoped component acceptance does not certify uniform native-binary rounding, complete physical histories, CMB predictions, likelihood accuracy or converged posteriors. Received 64 rational fixtures and 18 native-C diagnostics are reported historical tests; they were not rerun in this update.\",\n      \"id\": \"ROB-Q044-COMPONENT-001\",\n      \"q_introduced\": \"Q044\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q044-INGESTION\"\n      ],\n      \"finding\": \"Epistemic closure leaves physical predictions and contradictions open. The native-plus versus cubic-minus distinction is not a measured physical bias or physical falsification. Production remains unauthorized.\",\n      \"id\": \"ROB-Q044-CLOSURE-001\",\n      \"q_introduced\": \"Q044\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q045-RECOVERY\",\n        \"EVD-Q045-REMOTE-RUN\"\n      ],\n      \"finding\": \"Verified V2 artifact records eight recovered worker histories, four common grids and zero new theory evaluations. Previous successful summaries and failed postprocessing statuses remain preserved. Scope: stored-history diagnostic recovery only.\",\n      \"id\": \"ROB-Q045-RECOVERY\",\n      \"new_scientific_inference\": false,\n      \"physical_falsification\": false,\n      \"production_restart_authorized\": false,\n      \"q_introduced\": \"Q045\",\n      \"status\": \"ACTIVE\"\n    },\n    {\n      \"evidence_refs\": [\n        \"EVD-Q045-RECOVERY\",\n        \"EVD-Q045-QJOURNAL\",\n        \"EVD-Q045-APPENDICES\"\n      ],\n      \"finding\": \"Native levels jointly vary nine numerical controls; four accepted-tau sequences reverse direction. Same-history quadrature agreement and empirical refinement estimates do not supply independent complete-history validation or a physical remainder enclosure.\",\n      \"id\": \"ROB-Q045-REFINEMENT-SCOPE\",\n      \"new_scientific_inference\": false,\n      \"physical_falsification\": false,\n      \"production_restart_authorized\": false,\n      \"q_introduced\": \"Q045\",\n      \"status\": \"ACTIVE\"\n    }\n  ],\n  \"q_access_end\": \"Q045\",\n  \"schema_version\": 1\n}\n",
+      "encoding": "utf-8",
+      "sha": "506b98f9451be7db778ac0137db7868a3a06c03e",
+      "display_url": "https://github.com/Morfindien/bubbleverse-model/blob/main/accepted/robustness.json",
+      "display_title": "robustness.json"
+    },
+    "isError": false
+  },
+  "github_execcontract.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "{\n  \"schema\": \"Q047_RECONSTRUCTION_CONTRACT_V1\",\n  \"q\": \"Q-047\",\n  \"case_id\": \"NOT_DOCUMENTED\",\n  \"program_id\": \"Q047-RECONSTRUCTION-V1\",\n  \"version\": \"v1\",\n  \"program_version\": \"v1\",\n  \"workflow_version\": \"v1\",\n  \"created_utc\": \"2026-10-11T11:20:13.263193+00:00\",\n  \"repository\": \"Morfindien/Bubbleverse\",\n  \"design_base_commit\": \"c2bd2a75525b205d02c45576372c81bc78bed4f3\",\n  \"question\": \"For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?\",\n  \"cases\": [\n    \"camspec-lcdm\",\n    \"camspec-ede_n3\",\n    \"hillipop-lcdm\",\n    \"hillipop-ede_n3\"\n  ],\n  \"authorization\": {\n    \"status\": \"USER_APPROVED\",\n    \"user_statement\": \"Den er godkendt\",\n    \"submitted_local\": \"2026-10-11T08:02:02+02:00\",\n    \"native_reconstruction\": true,\n    \"scope\": \"One bounded fresh input/shooting/background/thermodynamics observation for each frozen case; existing core only. Preserve original Q and all past admission limits.\",\n    \"github_writes_by_agent\": false,\n    \"github_dispatch_by_agent\": false,\n    \"production_or_spectra_likelihood_campaign\": false,\n    \"automatic_retries\": false\n  },\n  \"scientific_target_policy\": {\n    \"exact_question_unchanged\": true,\n    \"raw_origin\": \"NEW_RECONSTRUCTION\",\n    \"historical_export\": false,\n    \"amendment_kind\": \"Authorized acquisition annex; original precursor contract V1 preserved byte-identically.\",\n    \"reconstructed_ivp\": \"Effective binary64 fields and accepted initial state captured from the new original-core execution define a separately tagged candidate source-real IVP, subject to formal source/unit/error qualification.\",\n    \"original_case_admission\": \"Output equality alone cannot establish a unique historical internal state. Original PT01/PT03 remain UNRESOLVED until state equivalence or a complete validated inverse is proved.\",\n    \"no_silent_replacement\": \"A qualified reconstructed IVP can produce a scoped reconstruction answer only. Preserve the historical-target answer separately if equivalence is not established.\",\n    \"first_hit\": \"Unchanged M06/PT10 semantics, competing switches and strict negative upper-rate test; not performed by this acquisition campaign.\"\n  },\n  \"frozen\": {\n    \"source_commit\": \"5a131c91d657dd9a7c6364cc45b038710f8d0d97\",\n    \"core_sha256\": \"df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf\",\n    \"collection_lock_sha256\": \"4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a\",\n    \"precursor_contract_v1_sha256\": \"bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc\",\n    \"requested_vectors\": \"All four original class_parameters from collection lock; no tuning or precision edit.\",\n    \"original_python\": \"3.11.16\",\n    \"platform\": \"Linux x86_64\",\n    \"threads\": {\n      \"OMP_NUM_THREADS\": 1,\n      \"OPENBLAS_NUM_THREADS\": 1,\n      \"MKL_NUM_THREADS\": 1\n    },\n    \"new_dynamic_environment\": \"Measured as new-run CPU/FP/library evidence, not claimed identical to the historical run.\"\n  },\n  \"artifacts\": {\n    \"camspec-lcdm\": {\n      \"id\": 11659485163,\n      \"name\": \"q045-v2-38023210800-camspec-lcdm\",\n      \"bytes\": 10193920,\n      \"sha256\": \"a97a5e606092ba062739e1079f5f8269c9ce53f46ff06dd384d60a5ba2f01b05\",\n      \"expires_at_documented\": \"2026-11-09T04:14:35Z\",\n      \"control_status\": \"Reuse previously verified official artifact identity; availability rechecked by actual download at execution\"\n    },\n    \"camspec-ede_n3\": {\n      \"id\": 11659590507,\n      \"name\": \"q045-v2-38023210800-camspec-ede_n3\",\n      \"bytes\": 12232036,\n      \"sha256\": \"4db84e6b5206bc5d5b789c41666b6a5fff450fa25f39f6645861769a8d37a3e5\",\n      \"expires_at_documented\": \"2026-11-09T04:15:03Z\",\n      \"control_status\": \"Reuse previously verified official artifact identity; availability rechecked by actual download at execution\"\n    },\n    \"hillipop-lcdm\": {\n      \"id\": 11659745278,\n      \"name\": \"q045-v2-38023210800-hillipop-lcdm\",\n      \"bytes\": 10192361,\n      \"sha256\": \"711662a12f3c639e3c457cdd4074ac82d05a1dec07342f5b74fdde971bebb6f7\",\n      \"expires_at_documented\": \"2026-11-09T04:14:25Z\",\n      \"control_status\": \"Reuse previously verified official artifact identity; availability rechecked by actual download at execution\"\n    },\n    \"hillipop-ede_n3\": {\n      \"id\": 11659110603,\n      \"name\": \"q045-v2-38023210800-hillipop-ede_n3\",\n      \"bytes\": 12217681,\n      \"sha256\": \"cdc17dacb8e7d3cfaf46f67bfcb85342f29738a501b56812358d770617058044\",\n      \"expires_at_documented\": \"2026-11-09T04:14:51Z\",\n      \"control_status\": \"Reuse previously verified official artifact identity; availability rechecked by actual download at execution\"\n    }\n  },\n  \"limits\": {\n    \"max_native_processes\": 4,\n    \"max_native_processes_per_case\": 1,\n    \"native_seconds_per_case\": 600,\n    \"internal_initialization_entries_per_case_max\": 2048,\n    \"download_seconds_per_case\": 240,\n    \"observer_compile_seconds\": 120,\n    \"worker_job_minutes\": 60,\n    \"collector_job_minutes\": 15,\n    \"max_parallel\": 4,\n    \"checkpoint_resume\": false,\n    \"automatic_retry\": false,\n    \"run_attempt_required\": \"1\"\n  },\n  \"accounting\": {\n    \"inherited_ledger\": {\n      \"used\": 16,\n      \"limit\": 52,\n      \"remaining\": 36\n    },\n    \"new_scope_ledger\": \"At most four explicitly approved top-level capture processes. Record entry/exit and every internal initialization entry; never assume four shooting calls or a four-unit historical cost.\",\n    \"commensurability\": \"The prior native/theory ledger remains preserved; this diagnostic ledger is reported separately rather than silently defining its unit. This annex explicitly authorizes these four bounded captures without production evaluations.\",\n    \"full_cmb_or_likelihood_evaluations_max\": 0,\n    \"report_failed_or_interrupted_starts\": true\n  },\n  \"mandatory_software_tests\": [\n    \"six new-run FP checkpoints\",\n    \"reject FTZ/DAZ and wrong rounding\",\n    \"C instrument-only environment restoration\",\n    \"missing/modified/wrong-case branch rejection\",\n    \"missing required output rejection\",\n    \"unsafe member path refusal\",\n    \"forged scientific PASS refusal\"\n  ],\n  \"actual_result_tests\": {\n    \"identity\": \"Original core/source/input and archived table hashes before execution.\",\n    \"runtime\": \"Six measured FP checkpoints; CPU/XCR0 and named math symbol references. These do not prove every original-core relocation or every numerical call.\",\n    \"state\": \"Reuse unchanged V1 structural/effective/init/thermal/ncdm checks. Retain any failure and raw data.\",\n    \"reproduction\": \"All archived and new background/thermal output binary64 bits including signed zero; preserve nonmatching tables.\",\n    \"completeness\": \"Four immutable case reports and raw member hashes; missing/failed cases never become COMPLETE.\",\n    \"interpretation\": \"Always INSUFFICIENT_EVIDENCE/UNRESOLVED for historical first-hit; new actual data go to Result Ingestion & Routing.\"\n  },\n  \"outputs\": [\n    \"accepted_initial_hex.json\",\n    \"effective_background_hex.json\",\n    \"thermal_starts_hex.jsonl\",\n    \"effective_precision.json\",\n    \"native_background.tsv\",\n    \"native_thermodynamics.tsv\",\n    \"runtime_control_v2.json\",\n    \"runtime_maps.txt\",\n    \"mapped_dependencies.json\",\n    \"math_dependencies/*\",\n    \"source_objects/*\",\n    \"native_data/*\",\n    \"observation_counters.json\",\n    \"initialization_progress.jsonl\",\n    \"worker_result.json\",\n    \"q047_reconstruction_final_v1.json\"\n  ],\n  \"return_route\": \"RESULT INGESTION & ROUTING ENGINE\",\n  \"stop\": \"Exactly one attempted capture per case; no retries. Preserve failures. Downstream formal qualification is necessary before first-hit inference; do not repeat successful acquisition without a new technical cause.\",\n  \"sources\": [\n    \"K-PROPOSED-Q047-SOURCE-001\",\n    \"K-PROPOSED-Q047-INPUTCODE-001\",\n    \"K-PROPOSED-Q047-BACKGROUNDCODE-001\",\n    \"I-PROPOSED-Q047-RUNTIME-RECOVERY-001\",\n    \"R-PROPOSED-Q047-RUNTIME-INGESTION-001\"\n  ],\n  \"current_github_limits_reference\": {\n    \"url\": \"https://docs.github.com/en/actions/reference/limits\",\n    \"checked_utc\": \"2026-10-11\",\n    \"github_hosted_job_hard_limit_hours\": 6,\n    \"worker_safe_limit_minutes\": 60,\n    \"plan_or_remaining_minutes\": \"NOT_VERIFIED\"\n  },\n  \"file_sha256\": {\n    \"q047_reconstruction_v1.py\": \"ee3d4f66313841da607688c9649417fa26c3d9ec917d84c835bcd537b5592b5e\",\n    \"q047_collect_state_v2.c\": \"623985971eded8be0cf40f8c1922707e50dd92a604937b2e088c07d0d84c6e37\",\n    \"test_q047_reconstruction_v1.py\": \"76e742eea5956747522de3f99ca53a6a8309cd39218c83da95c86bfdf5649036\",\n    \"q047_collection_v1.py\": \"f1c0e26b20a5a24fb8cd12cd667c28faa340065421c8c19b929598893330c953\",\n    \"q047_collect_state_v1.c\": \"e15c27c4d1cb28ca87a149fd80373c76bc486999b98ab7b2db2de0f28cdab1f7\",\n    \"q047_execution_v1.py\": \"e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4\",\n    \"Q047_COLLECTION_LOCK_V1.json\": \"4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a\",\n    \"Q047_PRECURSOR_CONTRACT_V1.json\": \"bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc\",\n    \".github/workflows/q047-reconstruction-v1.yml\": \"6c2e6c1e26bc0f9d0ee046323c25b00654f5ca560e49e85da44936fbd741cbb0\"\n  }\n}\n",
+      "encoding": "utf-8",
+      "sha": "c078fd25a1b84150f5d0ed3dc30d9aa6930af925",
+      "display_url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/Q047_RECONSTRUCTION_CONTRACT_V1.json",
+      "display_title": "Q047_RECONSTRUCTION_CONTRACT_V1.json"
+    },
+    "isError": false
+  },
+  "github_runjobs.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "jobs": [
+        {
+          "id": 114472840272,
+          "name": "static",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38140371059,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Identity, authorization, package, launcher, registry, README and journal",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Post Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 9
+            }
+          ]
+        },
+        {
+          "id": 114472894374,
+          "name": "capture (camspec-lcdm)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38140371059,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Preserve expected case before cache acquisition",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Restore exact original nine-path cache; never build on miss",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "C instrumentation test against original headers; no CLASS execution",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "One authorized reconstruction; original core; preserve disagreements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        },
+        {
+          "id": 114472894407,
+          "name": "capture (camspec-ede_n3)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38140371059,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Preserve expected case before cache acquisition",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Restore exact original nine-path cache; never build on miss",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "C instrumentation test against original headers; no CLASS execution",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "One authorized reconstruction; original core; preserve disagreements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        },
+        {
+          "id": 114472894439,
+          "name": "capture (hillipop-ede_n3)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38140371059,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Preserve expected case before cache acquisition",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Restore exact original nine-path cache; never build on miss",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "C instrumentation test against original headers; no CLASS execution",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "One authorized reconstruction; original core; preserve disagreements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        },
+        {
+          "id": 114472894492,
+          "name": "capture (hillipop-lcdm)",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38140371059,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Preserve expected case before cache acquisition",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Restore exact original nine-path cache; never build on miss",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "C instrumentation test against original headers; no CLASS execution",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "One authorized reconstruction; original core; preserve disagreements",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 8
+            },
+            {
+              "name": "Post Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 15
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 16
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 17
+            }
+          ]
+        },
+        {
+          "id": 114473127730,
+          "name": "collect",
+          "status": "completed",
+          "conclusion": "success",
+          "run_id": 38140371059,
+          "logs_url": null,
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1
+            },
+            {
+              "name": "Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2
+            },
+            {
+              "name": "Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3
+            },
+            {
+              "name": "Run actions/download-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 4
+            },
+            {
+              "name": "Failure-aware four-case collection; no numerical averaging or scientific PASS",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 5
+            },
+            {
+              "name": "Run actions/upload-artifact@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6
+            },
+            {
+              "name": "Post Run actions/setup-python@v7",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 11
+            },
+            {
+              "name": "Post Run actions/checkout@v4",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 12
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 13
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  },
+  "github_finalread0.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": []
+    },
+    "isError": false
+  },
+  "github_finalread1.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "results": [
+        {
+          "url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/README.md",
+          "path": "README.md",
+          "display_url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/README.md",
+          "display_title": "README.md",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "\nQ-047 remains **PROPOSED; canonical scientific admission unverified**. It asks whether each of four frozen Q041 FULL/start0 helium trajectories reaches the strict numerical cutoff at a first event with negative upper rate and no competing switch/reset. Actual applicability is **INSUFFICIENT EVIDENCE in all four cases**.\n",
+              "matches": [
+                {
+                  "text": "reset",
+                  "indices": [
+                    247,
+                    252
+                  ]
+                }
+              ]
+            },
+            {
+              "property": "content",
+              "fragment": "\nV22 run `37221166634` completed the one-branch durability task; V23 run `37264477494` completed original-binary spline attribution; V24 run `37275520455` completed original-binary tau-path observation. V25 run `37288546095` completed one-point upstream boundary attribution at commit `3d15a3a7a627de2f29533cac7fe9e43dd022226f`. These technical targets are `COMPLETED`; scientific Q-042 is now closed with an inconclusive feasibility result; its numerical final result remains `UNRESOLVED`.\n",
+              "matches": [
+                {
+                  "text": "boundary",
+                  "indices": [
+                    254,
+                    262
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/q014_case_state_v1.json",
+          "path": "q014_case_state_v1.json",
+          "display_url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/q014_case_state_v1.json",
+          "display_title": "q014_case_state_v1.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "      \"Run Q014 chain smoke gates.\",\n      \"Run independent free-H0 and fixed-H0=71.5 profiles for Planck approximation and SPT-only; secondary SPT+DESI stays separate.\",\n      \"Aggregate within chain only.\",\n      \"Run multistart stability, source compatibility, fixed-vs-free monotonicity, completeness and claim-boundary tests.\",\n      \"If standard run is unstable/incomplete, rerun expanded starts or only failed atomic tasks; do not reset the case.\"\n    ],\n    \"required_tests\": [",
+              "matches": [
+                {
+                  "text": "boundary",
+                  "indices": [
+                    315,
+                    323
+                  ]
+                },
+                {
+                  "text": "reset",
+                  "indices": [
+                    438,
+                    443
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/q014_case_state_v2.json",
+          "path": "q014_case_state_v2.json",
+          "display_url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/q014_case_state_v2.json",
+          "display_title": "q014_case_state_v2.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "      \"Run Q014 chain smoke gates.\",\n      \"Run independent free-H0 and fixed-H0=71.5 profiles for Planck approximation and SPT-only; secondary SPT+DESI stays separate.\",\n      \"Aggregate within chain only.\",\n      \"Run multistart stability, source compatibility, fixed-vs-free monotonicity, completeness and claim-boundary tests.\",\n      \"If standard run is unstable/incomplete, rerun expanded starts or only failed atomic tasks; do not reset the case.\"\n    ],\n    \"program_history\": [",
+              "matches": [
+                {
+                  "text": "boundary",
+                  "indices": [
+                    315,
+                    323
+                  ]
+                },
+                {
+                  "text": "reset",
+                  "indices": [
+                    438,
+                    443
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/q014_case_state_v3.json",
+          "path": "q014_case_state_v3.json",
+          "display_url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/q014_case_state_v3.json",
+          "display_title": "q014_case_state_v3.json",
+          "text_matches": [
+            {
+              "property": "content",
+              "fragment": "      \"Run Q014 chain smoke gates.\",\n      \"Run independent free-H0 and fixed-H0=71.5 profiles for Planck approximation and SPT-only; secondary SPT+DESI stays separate.\",\n      \"Aggregate within chain only.\",\n      \"Run multistart stability, source compatibility, fixed-vs-free monotonicity, completeness and claim-boundary tests.\",\n      \"If standard run is unstable/incomplete, rerun expanded starts or only failed atomic tasks; do not reset the case.\"\n    ],\n    \"program_history\": [",
+              "matches": [
+                {
+                  "text": "boundary",
+                  "indices": [
+                    315,
+                    323
+                  ]
+                },
+                {
+                  "text": "reset",
+                  "indices": [
+                    438,
+                    443
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "isError": false
+  },
+  "github_finalread2.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "name: Bubbleverse Q047 — approved four-case reconstruction V1\n\n'on':\n  workflow_dispatch:\n    inputs:\n      program_id:\n        required: true\n        type: string\n\npermissions:\n  contents: read\n  actions: read\nconcurrency:\n  group: q047-reconstruction-v1\n  cancel-in-progress: false\nenv:\n  CURRENT_Q: Q-047\n  PROGRAM_ID: Q047-RECONSTRUCTION-V1\n  OMP_NUM_THREADS: '1'\n  OPENBLAS_NUM_THREADS: '1'\n  MKL_NUM_THREADS: '1'\n  LC_ALL: C\n\njobs:\n  static:\n    runs-on: ubuntu-24.04\n    timeout-minutes: 10\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v7\n        with:\n          python-version: '3.11.16'\n      - name: Identity, authorization, package, launcher, registry, README and journal\n        env:\n          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}\n        run: |\n          python q047_reconstruction_v1.py static --program-id \"$REQUESTED_PROGRAM_ID\"\n          python -m unittest -v test_q047_reconstruction_v1\n  capture:\n    needs: static\n    runs-on: ubuntu-24.04\n    timeout-minutes: 60\n    strategy:\n      fail-fast: false\n      max-parallel: 4\n      matrix:\n        case: [camspec-lcdm, camspec-ede_n3, hillipop-lcdm, hillipop-ede_n3]\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v7\n        with:\n          python-version: '3.11.16'\n      - name: Preserve expected case before cache acquisition\n        env:\n          CASE_ID: ${{ matrix.case }}\n        run: |\n          python - <<'PY'\n          import os,pathlib,q047_reconstruction_v1 as m\n          d=pathlib.Path('q047_stage')/os.environ['CASE_ID'];d.mkdir(parents=True)\n          m.write(d/'stage.json',dict(**m.base(),case=os.environ['CASE_ID'],native_processes_started=0,stage='CACHE_PENDING'))\n          PY\n      - name: Restore exact original nine-path cache; never build on miss\n        id: cache\n        timeout-minutes: 10\n        uses: actions/cache/restore@v4\n        with:\n          path: |\n            ~/.cache/pip\n            external/cobaya_packages\n            external/class_ede\n            external/hillipop\n            external/act_dr6_cmbonly\n            external/act_dr6_lenslike\n            external/cobaya_desi_dr2_source\n            external/bao_data_v2_6\n            external/PolyChordLite\n          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus\n          fail-on-cache-miss: true\n      - name: C instrumentation test against original headers; no CLASS execution\n        env:\n          Q047_TEST_HEADERS: ${{ github.workspace }}/external/class_ede\n        run: python -m unittest -v test_q047_reconstruction_v1.ReconstructionGates.test_actual_c_runtime_capture_and_observation_fp_restore\n      - name: One authorized reconstruction; original core; preserve disagreements\n        timeout-minutes: 25\n        env:\n          GH_TOKEN: ${{ github.token }}\n          Q047_CACHE_HIT: ${{ steps.cache.outputs.cache-hit }}\n          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}\n          CASE_ID: ${{ matrix.case }}\n        run: python q047_reconstruction_v1.py worker --program-id \"$REQUESTED_PROGRAM_ID\" --case \"$CASE_ID\" --directory \"q047_reconstructed/$CASE_ID\"\n      - uses: actions/upload-artifact@v4\n        if: always()\n        timeout-minutes: 10\n        with:\n          name: q047-reconstruction-v1-${{ github.run_id }}-${{ matrix.case }}-raw\n          path: |\n            q047_reconstructed/\n            q047_stage/\n          if-no-files-found: error\n          retention-days: 30\n  collect:\n    needs: [static, capture]\n    if: always()\n    runs-on: ubuntu-24.04\n    timeout-minutes: 15\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-python@v7\n        with:\n          python-version: '3.11.16'\n      - uses: actions/download-artifact@v4\n        continue-on-error: true\n        with:\n          pattern: q047-reconstruction-v1-${{ github.run_id }}-*-raw\n          merge-multiple: true\n          path: collected\n      - name: Failure-aware four-case collection; no numerical averaging or scientific PASS\n        env:\n          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}\n        run: python q047_reconstruction_v1.py finalize --program-id \"$REQUESTED_PROGRAM_ID\" --directory collected/q047_reconstructed --output q047_reconstruction_final_v1.json\n      - uses: actions/upload-artifact@v4\n        if: always()\n        with:\n          name: q047-reconstruction-v1-${{ github.run_id }}-final\n          path: |\n            q047_reconstruction_final_v1.json\n            Q047_RECONSTRUCTION_CONTRACT_V1.json\n            Q047_SAMLET_JOURNAL.md\n          if-no-files-found: error\n          retention-days: 30\n",
+      "encoding": "utf-8",
+      "sha": "de8a7b984cf4f5dac3f21195d1235f3698a24c7a",
+      "display_url": "https://github.com/Morfindien/Bubbleverse/blob/76d6b4a4b02ddd929899008f476e99da29c1f931/.github/workflows/q047-reconstruction-v1.yml",
+      "display_title": "q047-reconstruction-v1.yml"
+    },
+    "isError": false
+  },
+  "github_finalread3.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "/**\n * Small wrapper file for the hyrec code to be used in thermodynamics\n * Nils Schoeneberg Feb 2019\n * */\n\n#include \"common.h\"\n#include \"thermodynamics.h\"\n#include \"wrap_hyrec.h\"\n\n\n/**\n * Initialize the thermohyrec structure, and in particular HyRec 2020.\n *\n * @param ppr   Input: pointer to precision structure\n * @param pba   Input: pointer to background structure\n * @param pth   Input: pointer to thermodynamics structure\n * @param phy Input/Output: pointer to thermohyrec structure\n * @return the error status\n */\nint thermodynamics_hyrec_init(struct precision* ppr, struct background * pba, struct thermodynamics * pth, double Nnow, double T_cmb, double fHe, double zstart_hyrec, struct thermohyrec* phy){\n\n  /** Summary: */\n\n  if(phy->thermohyrec_verbose > 0){\n    printf(\" -> Using the hyrec wrapper programmed by Nils Sch. (Oct2020)\\n\");\n    printf(\"    implements HyRec2 version Oct 2020 by Yacine Ali-Haimoud, Chris Hirata, and Nanoom Lee\\n\");\n  }\n\n  /** - allocate necessary data structures */\n  class_alloc(phy->data,\n              sizeof(HYREC_DATA),\n              phy->error_message);\n\n  phy->zend = 0.;\n  phy->zstart = zstart_hyrec;\n\n  if(phy->thermohyrec_verbose > 1){\n    printf(\"    Starting HyRec at z = %.10e until z = %.10e\\n\",phy->zstart, phy->zend);\n  }\n\n  /** - allocate hyrec internally */\n  phy->data->path_to_hyrec = ppr->hyrec_path;\n  hyrec_allocate(phy->data, phy->zstart, phy->zend);\n  /* Error during allocation */\n  if(phy->data->error != 0){\n    class_call_message(phy->error_message,\"hyrec_allocate\",phy->data->error_message);\n    return _FAILURE_;\n  }\n\n  /** - set cosmological parameters for hyrec */\n  phy->data->cosmo->T0 = T_cmb;\n  phy->data->cosmo->obh2 = pba->Omega0_b*pba->h*pba->h;\n  phy->data->cosmo->ocbh2 = pba->Omega0_nfsm*pba->h*pba->h;\n\n  phy->data->cosmo->YHe = pth->YHe;\n  phy->data->cosmo->Neff = pba->Neff;\n  phy->data->cosmo->fHe = fHe; /* abundance of helium relative to hydrogen by number */\n  phy->data->cosmo->fsR = 1.;\n  phy->data->cosmo->meR = 1.;\n  phy->data->cosmo->nH0 = Nnow*1e-6;\n\n  /** - set other parameters for hyrec */\n  /* XEII_MIN = 1e-6 defined in history.h\n     HYREC-2 calculates Helium recombinations only until xHeII ~ XEII_MIN */\n  phy->xHeII_limit = XHEII_MIN;\n\n  return _SUCCESS_;\n}\n\n\n/**\n * Free all memory space allocated by thermodynamics_hyrec_init\n *\n * @param pth Input/Output: pointer to thermohyrec structure (to be freed)\n * @return the error status\n */\nint thermodynamics_hyrec_free(struct thermohyrec* phy){\n\n  /* We just need to free hyrec (without error management) */\n  hyrec_free(phy->data);\n  free(phy->data);\n\n  return _SUCCESS_;\n}\n\n/**\n * Calculate the derivative of the hydrogen HII ionization fraction\n *\n * @param pth   Input: pointer to thermodynamics structure\n * @param phy   Input: pointer to thermohyrec structure\n * @param x_H   Input: hydrogen HII ionization fraction\n * @param x_He  Input: helium HeIII ionization fraction\n * @param nH    Input: comoving total number of hydrogen atoms\n * @param z     Input: current cosmological redshift\n * @param Hz    Input: current value of hubble parameter in 1/s\n * @param Tmat  Input: temperature of baryons in Kelvin\n * @param Trad  Input: temperature of photons in Kelvin\n * @param alpha Input: fine structure constant relative to today\n * @param me    Input: effective electron mass relative to today\n * @param dx_H_dz        Output: change in ionization fraction of hydrogen HII\n * @return the error status\n */\nint hyrec_dx_H_dz(struct thermodynamics* pth, struct thermohyrec* phy, double x_H, double x_He, double xe, double nH, double z, double Hz, double Tmat, double Trad, double alpha, double me, double *dx_H_dz) {\n\n  /** Summary: */\n\n  /** - define local variables */\n  struct injection* pin = &(pth->in);\n  long iz = 0;\n  int model;\n  double Trad_phys;\n\n  /** - do tests */\n  class_test(MODEL == FULL, phy->error_message, \"FULL mode is currently not allowed for HyRec-2\");\n\n  /** - assign variables */\n  if (pth->has_exotic_injection == _TRUE_) {\n    phy->data->cosmo->inj_params->ion = pin->pvecdeposition[pin->index_dep_ionH]/nH/(_E_H_ion_*_eV_);\n    phy->data->cosmo->inj_params->exclya = pin->pvecdeposition[pin->index_dep_lya]/nH/(_E_H_lya_*_eV_);\n  }\n  else{\n    phy->data->cosmo->inj_params->ion = 0.;\n    phy->data->cosmo->inj_params->exclya = 0.;\n  }\n  if (pth->has_varconst == _TRUE_) {\n    phy->data->cosmo->fsR = alpha;\n    phy->data->cosmo->meR = me;\n  }\n\n  Trad_phys = Trad*kBoltz;\n  if (pth->has_varconst == _TRUE_) {\n    Trad_phys /= phy->data->cosmo->fsR*phy->data->cosmo->fsR*phy->data->cosmo->meR; //According to 1705.03925\n  }\n\n  if (Trad_phys <= TR_MIN || Tmat/Trad <= T_RATIO_MIN) { model = PEEBLES; }\n  else { model = MODEL; }\n\n  /** - convert to correct units, and retrieve derivative */\n  *dx_H_dz = -1./(1.+z)* rec_dxHIIdlna(phy->data, model, xe, x_H, nH*1e-6, Hz, Tmat*kBoltz, Trad*kBoltz, iz, z);\n\n  /** - do error management */\n  if(phy->data->error != 0){\n    class_call_message(phy->error_message,\"rec_dxHIIdlna\",phy->data->error_message);\n    return _FAILURE_;\n  }\n\n  return _SUCCESS_;\n}\n\n/**\n * Calculate the derivative of the helium HeIII ionization fraction\n *\n * @param pth   Input: pointer to thermodynamics structure\n * @param phy   Input: pointer to thermohyrec structure\n * @param x_H   Input: hydrogen HII ionization fraction\n * @param x_He  Input: helium HeIII ionization fraction\n * @param xe    Input: sum total ionization fraction\n * @param nH    Input: comoving total number of hydrogen atoms\n * @param z     Input: current cosmological redshift\n * @param Hz    Input: current value of hubble parameter in 1/s\n * @param Tmat  Input: temperature of baryons in Kelvin\n * @param Trad  Input: temperature of photons in Kelvin\n * @param alpha Input: fine structure constant relative to today\n * @param me    Input: effective electron mass relative to today\n * @param dx_He_dz       Output: change in ionization fraction of helium HeIII\n * @return the error status\n */\nint hyrec_dx_He_dz(struct thermodynamics* pth, struct thermohyrec* phy, double x_H, double x_He, double xe, double nH, double z, double Hz, double Tmat, double Trad, double alpha, double me, double *dx_He_dz) {\n\n  /** Summary: */\n\n  /** - define local variables */\n  struct injection* pin = &(pth->in);\n  double xHeII = x_He*phy->data->cosmo->fHe;    // Different definitions between CLASS and HYREC-2\n\n  /** - do tests */\n  class_test(MODEL == FULL, phy->error_message, \"FULL mode is currently not allowed for HyRec-2\");\n\n  /** - assign variables */\n  if (pth->has_exotic_injection == _TRUE_) {\n    phy->data->cosmo->inj_params->ion = pin->pvecdeposition[pin->index_dep_ionHe]/nH/(_E_H_ion_*_eV_);\n    phy->data->cosmo->inj_params->exclya = pin->pvecdeposition[pin->index_dep_lya]/nH/(_E_H_lya_*_eV_);\n  }\n  else{\n    phy->data->cosmo->inj_params->ion = 0.;\n    phy->data->cosmo->inj_params->exclya = 0.;\n  }\n  if (pth->has_varconst == _TRUE_) {\n    phy->data->cosmo->fsR = alpha;\n    phy->data->cosmo->meR = me;\n  }\n\n  if (xHeII<phy->xHeII_limit) {\n    /** - don't evolve He below the limit */\n    *dx_He_dz=0;\n  }\n  else {\n\n    /** - convert to correct units, and retrieve derivative */\n    *dx_He_dz = -1./(1.+z)* rec_helium_dxHeIIdlna(phy->data, z, 1.-x_H, xHeII, Hz) / phy->data->cosmo->fHe;\n\n    /** - do error management */\n    if(phy->data->error != 0){\n      class_call_message(phy->error_message,\"rec_helium_dxHeIIdlna\",phy->data->error_message);\n      return _FAILURE_;\n    }\n  }\n\n  return _SUCCESS_;\n}\n",
+      "encoding": "utf-8",
+      "sha": "fa44c774cf1fc7dbf6185e01980764f7eb260204",
+      "display_url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/wrap_hyrec.c",
+      "display_title": "wrap_hyrec.c"
+    },
+    "isError": false
+  },
+  "github_finalread4.json": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": " * @param pba        Input: pointer to background structure\n * @param pth        Input: pointer to the thermodynamics structure\n * @param ptw        Input: pointer to thermodynamics workspace\n * @return the error status\n */\n\nint thermodynamics_reionization_get_tau(\n                                        struct precision * ppr,\n                                        struct background * pba,\n                                        struct thermodynamics * pth,\n                                        struct thermo_workspace * ptw\n                                        ) {\n\n  /** Summary: */\n\n  /** Define local variables */\n  /* running index inside thermodynamics table */\n  int index_z,index_reio_start=0;\n  double x_e_min;\n\n  x_e_min = _HUGE_;\n\n  /**\n   * We are searching now for the start of reionization. This will be\n   * the time at which the optical depth tau_reio will be computed.\n   *\n   * Note that the value reionization_parameters[index_reio_start] is\n   * only the start of the reionization function added manually, but\n   * not necessarily the total start of reionization. Reionization\n   * could be longer/shifted by energy injection.\n   *\n   * The actual the definition of tau_reio is not unique and\n   * unambiguous. We defined it here to be the optical depth up to the\n   * time at which there is a global minimum in the free electron\n   * fraction. We search for this time by iterating over the\n   * thermodynamics table, in order to find the corresponding\n   * index_reio_start.\n   */\n\n  for (index_z=0; index_z<pth->tt_size-1; index_z++) {\n    if (pth->thermodynamics_table[index_z*pth->th_size+pth->index_th_xe] < x_e_min) {\n      x_e_min = pth->thermodynamics_table[index_z*pth->th_size+pth->index_th_xe];\n      index_reio_start = index_z;\n    }\n  }\n\n  class_test(index_reio_start == pth->tt_size,\n             pth->error_message,\n             \"reionization start = %e > largest redshift in thermodynamics table\",pth->z_table[index_reio_start]);\n\n  if (index_reio_start == 0) {\n    /* the global minimum of xe(z) is at z=0. This is possible in\n       models no reionization and no exotic energy\n       injection. According to our definition of the reionization\n       optical depth, tau_reio should then be zero. */\n    ptw->reionization_optical_depth = 0;\n    return _SUCCESS_;\n  }\n  if (index_reio_start < 3) {\n    /* we need a minimum of three values to do a spline integration in the next step */\n    index_reio_start =3;\n  }\n\n  /** - --> spline \\f$ d \\tau / dz \\f$ with respect to z in view of\n   *         integrating for optical depth between 0 and the just found\n   *         starting index\n   */\n  class_call(array_spline_table_line_to_line(pth->tau_table,\n                                             index_reio_start,\n                                             pth->thermodynamics_table,\n                                             pth->th_size,\n                                             pth->index_th_dkappa,\n                                             pth->index_th_dddkappa,\n                                             _SPLINE_EST_DERIV_,\n                                             pth->error_message),\n             pth->error_message,\n             pth->error_message);\n\n  /** - --> integrate for optical depth */\n  class_call(array_integrate_all_spline_table_line_to_line(pth->tau_table,\n                                                           index_reio_start,\n                                                           pth->thermodynamics_table,\n                                                           pth->th_size,\n                                                           pth->index_th_dkappa,\n                                                           pth->index_th_dddkappa,\n                                                           &(ptw->reionization_optical_depth),\n                                                           pth->error_message),\n             pth->error_message,\n             pth->error_message);\n\n  ptw->reionization_optical_depth *= -1; // tau and z go in reverse order, so we must flip the sign\n\n  return _SUCCESS_;\n}\n\n/**\n * Free the thermo_vector structure, which is the '->ptv' field of the thermodynamics_differential_workspace ptdw structure\n *\n * @param tv        Input: pointer to thermo_vector structure to be freed\n * @return the error status\n */\n\nint thermodynamics_vector_free(\n                               struct thermo_vector * tv\n                               ) {\n\n  free(tv->y);\n  free(tv->dy);\n  free(tv->used_in_output);\n  free(tv);\n\n  return _SUCCESS_;\n}\n\n/**\n * Compute the baryon drag conformal time tau_d = [int_{tau_today}^{tau} dtau -dkappa_d/dtau]\n *\n * @param pba                Input: pointer to background structure\n * @param pth                Input/Output: pointer to initialized thermodynamics structure\n * @param pvecback           Input: Initialized vector of background quantities\n * @return the error status\n */\n\nint thermodynamics_calculate_conformal_drag_time(\n                                                 struct background* pba,\n                                                 struct thermodynamics* pth,\n                                                 double* pvecback\n                                                 ) {\n\n  /** Summary: */\n\n  /** Define local variables */\n  double R;\n  int index_tau;\n  int last_index_back;\n\n  /** - compute minus the baryon drag interaction rate time, -dkappa_d/dtau = -[1/R * kappa'], with R = 3 rho_b / 4 rho_gamma,\n      stored temporarily in column ddkappa */\n\n  /* find the value of last_index_back for tau_table[0] in order to speed up subsequent interpolations in the loop */\n  class_call(background_at_tau(pba,\n                               pth->tau_table[0],\n                               normal_info,\n                               inter_normal,\n                               &last_index_back,\n                               pvecback),\n             pba->error_message,\n             pth->error_message);\n\n  for (index_tau=0; index_tau < pth->tt_size; index_tau++) {\n\n    class_call(background_at_tau(pba,\n                                 pth->tau_table[index_tau],\n                                 normal_info,\n                                 inter_closeby,\n                                 &last_index_back,\n                                 pvecback),\n               pba->error_message,\n               pth->error_message);\n\n    R = 3./4.*pvecback[pba->index_bg_rho_b]/pvecback[pba->index_bg_rho_g];",
+      "encoding": "utf-8",
+      "sha": "c1683f56b43e0f2ec24a8ba6120133f604cb947c",
+      "display_url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/thermodynamics.c",
+      "display_title": "thermodynamics.c"
+    },
+    "isError": false
+  }
+}
+```
+
+---
+
+## CAPTURED NEW STATE OBJECTS AND SCOPED M15 RESULT
+
+```json
+{
+  "state_objects": {
+    "camspec-lcdm": {
+      "q": "Q-047",
+      "case": "camspec-lcdm",
+      "program_id": "Q047-RECONSTRUCTION-V1",
+      "run_id": "38140371059",
+      "origin": "NEW_RECONSTRUCTION",
+      "historical_export": false,
+      "raw_member_sha256": {
+        "accepted_initial_hex.json": "0205acdb1d79b429c6b80dcbdd5a53910f699f87115f883f6b8395abe69ff8a2",
+        "effective_background_hex.json": "f2342c737770aeef4718ef6b0cae2e1837d91ee72e0e618dfe49601450674308",
+        "runtime_control_v2.json": "bfff66b7804a4d9b691426cdaec638a9ef49548429dae08b45ea2c34a71e2493",
+        "observation_counters.json": "e60291998a4990e1a5de79d60e771a2939e903d89229afad888ae93a2be5d59b"
+      },
+      "accepted_initial_hex": {
+        "schema": "Q047_CAPTURE_V1",
+        "case": "camspec-lcdm",
+        "origin": "NEW_RECONSTRUCTION",
+        "number_encoding": "C99_hex_binary64",
+        "callback": "background_initial_conditions:return_before_evolver",
+        "fields": {
+          "loga_ini": "-0x1.01e3b843eaa73p+5",
+          "a_ini_native": "0x1.6849b86a12b9bp-47"
+        },
+        "bi_size": 5,
+        "bi_indices": {
+          "time": 1,
+          "tau": 0,
+          "rs": 2,
+          "D": 3,
+          "D_prime": 4
+        },
+        "integration_vector": [
+          "0x1.3e81f423eb228p-28",
+          "0x1.c04277d2817bbp-76",
+          "0x1.6fc7eb43e357dp-29",
+          "0x1p+0",
+          "0x1.9b84e91d1286fp+28"
+        ]
+      },
+      "effective_background_hex": {
+        "schema": "Q047_CAPTURE_V1",
+        "case": "camspec-lcdm",
+        "origin": "NEW_RECONSTRUCTION",
+        "number_encoding": "C99_hex_binary64",
+        "fields": {
+          "H0": "0x1.dcd83fba75fd2p-13",
+          "K": "-0x0p+0",
+          "Omega0_b": "0x1.88f504d47397cp-5",
+          "Omega0_cdm": "0x1.113585a66790ep-2",
+          "Omega0_g": "0x1.be73ba1497792p-15",
+          "Omega0_lambda": "0x1.5e160304d38ap-1",
+          "Omega0_ur": "0x1.9c38b21751c0ap-16",
+          "T_cmb": "0x1.5cdd2f1a9fbe7p+1"
+        },
+        "flags": {
+          "has_scf": 0,
+          "has_lambda": 1,
+          "has_cdm": 1,
+          "has_ncdm": 1,
+          "has_ur": 1,
+          "has_idm": 0,
+          "has_idr": 0,
+          "has_dcdm": 0,
+          "has_dr": 0,
+          "has_fld": 0,
+          "has_curvature": 0
+        },
+        "N_ncdm": 1,
+        "thermal_flags": {
+          "has_varconst": 0,
+          "has_exotic_injection": 0,
+          "has_idm_b": 0,
+          "has_idm_g": 0,
+          "has_idm_dr": 0,
+          "recombination": 1
+        },
+        "scalar": null,
+        "neutrinos": [
+          {
+            "got_files": 0,
+            "quadrature_strategy": 0,
+            "fields": {
+              "M_ncdm": "0x1.64bd78a1e489fp+8",
+              "T_ncdm": "0x1.6ea5f84cad57cp-1",
+              "deg_ncdm": "0x1p+0",
+              "ksi_ncdm": "0x0p+0",
+              "factor_ncdm": "0x1.e63d04703becp-37"
+            },
+            "q_ncdm_bg": [
+              "0x1.01a190a9342cbp-3",
+              "0x1.54b1b39dfb502p-1",
+              "0x1.a5aba87e1c094p+0",
+              "0x1.8baa6a27e0966p+1",
+              "0x1.41dfcbaec45f4p+2",
+              "0x1.e0a200b4eb4f7p+2",
+              "0x1.5363f359c10c3p+3",
+              "0x1.cdcfc7a7ec757p+3",
+              "0x1.32dc99949745cp+4",
+              "0x1.937bbcc9df2eap+4",
+              "0x1.0bfa403e53648p+5"
+            ],
+            "w_ncdm_bg": [
+              "0x1.4009ab2f5de6dp-10",
+              "0x1.1006ce715aac3p-9",
+              "0x1.9c8eedb3807edp-10",
+              "0x1.3596887f2dc85p-11",
+              "0x1.e3971fda418acp-14",
+              "0x1.9ab390e676f98p-17",
+              "0x1.708031cc9cbe6p-21",
+              "0x1.3d8abef57be5dp-26",
+              "0x1.b8d797c4599acp-33",
+              "0x1.5e137d7053544p-41",
+              "0x1.0c1275d7b5e1fp-52"
+            ]
+          }
+        ],
+        "z_reio": "0x1.de4e4p+2",
+        "tau_reio": "0x1.a538759db1c04p-5",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0
+      },
+      "runtime_control_v2": {
+        "schema": "Q047_RUNTIME_CONTROL_V2",
+        "q": "Q-047",
+        "case": "camspec-lcdm",
+        "origin": "NEW_RECONSTRUCTION",
+        "events": [
+          {
+            "checkpoint": "before_input",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 0,
+            "mxcsr": 8064,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_input",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 40,
+            "mxcsr": 8104,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "before_background",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 40,
+            "mxcsr": 8104,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_background",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 40,
+            "mxcsr": 8104,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "before_thermal",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 40,
+            "mxcsr": 8104,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_thermal",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          }
+        ],
+        "cpuid_leaf1": [
+          10489617,
+          1050624,
+          4275712515,
+          395049983
+        ],
+        "cpuid_leaf7": [
+          0,
+          563873705,
+          4195972,
+          16
+        ],
+        "xcr0": "0x7",
+        "symbol_resolution_kind": "DLSYM_REFERENCE_NOT_CORE_GOT_PROOF",
+        "symbols": [
+          {
+            "name": "cos",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x7bad0"
+          },
+          {
+            "name": "sincos",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x7c2c0"
+          },
+          {
+            "name": "pow",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x3a630"
+          }
+        ]
+      },
+      "observation_counters": {
+        "input_shooting_initial_calls": 0,
+        "final_initial_calls": 1,
+        "thermal_start_calls": 7,
+        "capture_completed": true,
+        "historical_export": false
+      },
+      "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+      "first_hit_gate": "UNRESOLVED"
+    },
+    "camspec-ede_n3": {
+      "q": "Q-047",
+      "case": "camspec-ede_n3",
+      "program_id": "Q047-RECONSTRUCTION-V1",
+      "run_id": "38140371059",
+      "origin": "NEW_RECONSTRUCTION",
+      "historical_export": false,
+      "raw_member_sha256": {
+        "accepted_initial_hex.json": "8d7f57cc98f5ada05f77f57147e0d2d26ebf19e14602493a8f962e3c310d4ae0",
+        "effective_background_hex.json": "4ef09d4ecd66b4a67ca404565fcd8815a6db89182d448403c6b71331dd87328b",
+        "runtime_control_v2.json": "397f86b0981b97553fe37647e5626174b5f0fa77c62f649928218822ced36e97",
+        "observation_counters.json": "62c3c42fa102582b3079620bff9e9e489dfe1f8054bef02887f299e96f49f39c"
+      },
+      "accepted_initial_hex": {
+        "schema": "Q047_CAPTURE_V1",
+        "case": "camspec-ede_n3",
+        "origin": "NEW_RECONSTRUCTION",
+        "number_encoding": "C99_hex_binary64",
+        "callback": "background_initial_conditions:return_before_evolver",
+        "fields": {
+          "loga_ini": "-0x1.01e3b843eaa73p+5",
+          "a_ini_native": "0x1.6849b86a12b9bp-47",
+          "phi_ini": "0x1.d4b0be8f7a23fp-3",
+          "phi_prime_ini": "0x0p+0"
+        },
+        "bi_size": 7,
+        "bi_indices": {
+          "time": 3,
+          "tau": 0,
+          "rs": 4,
+          "D": 5,
+          "D_prime": 6,
+          "phi": 1,
+          "phi_prime": 2
+        },
+        "integration_vector": [
+          "0x1.3e81f423eb228p-28",
+          "0x1.d4b0be8f7a23fp-3",
+          "0x0p+0",
+          "0x1.c04277d2817bbp-76",
+          "0x1.6fc7eb43e357dp-29",
+          "0x1p+0",
+          "0x1.9b84e91d1286fp+28"
+        ]
+      },
+      "effective_background_hex": {
+        "schema": "Q047_CAPTURE_V1",
+        "case": "camspec-ede_n3",
+        "origin": "NEW_RECONSTRUCTION",
+        "number_encoding": "C99_hex_binary64",
+        "fields": {
+          "H0": "0x1.dcd83fba75fd2p-13",
+          "K": "-0x0p+0",
+          "Omega0_b": "0x1.88f504d47397cp-5",
+          "Omega0_cdm": "0x1.113585a66790ep-2",
+          "Omega0_g": "0x1.be73ba1497792p-15",
+          "Omega0_lambda": "0x0p+0",
+          "Omega0_ur": "0x1.9c38b21751c0ap-16",
+          "T_cmb": "0x1.5cdd2f1a9fbe7p+1"
+        },
+        "flags": {
+          "has_scf": 1,
+          "has_lambda": 0,
+          "has_cdm": 1,
+          "has_ncdm": 1,
+          "has_ur": 1,
+          "has_idm": 0,
+          "has_idr": 0,
+          "has_dcdm": 0,
+          "has_dr": 0,
+          "has_fld": 0,
+          "has_curvature": 0
+        },
+        "N_ncdm": 1,
+        "thermal_flags": {
+          "has_varconst": 0,
+          "has_exotic_injection": 0,
+          "has_idm_b": 0,
+          "has_idm_g": 0,
+          "has_idm_dr": 0,
+          "recombination": 1
+        },
+        "scalar": {
+          "attractor_ic_scf": 0,
+          "scf_tuning_index": 3,
+          "fields": {
+            "n_scf": "0x1.8p+1",
+            "CC_scf": "0x1p+0",
+            "phi_ini_scf": "0x1.d4b0be8f7a23fp-3",
+            "phi_prime_ini_scf": "0x0p+0"
+          },
+          "scf_parameters": [
+            "0x1.8p+1",
+            "0x1.3b57a652b2fb7p+87",
+            "0x1.3627a127b3d3ap-89",
+            "0x1.561aae3e94ap+1",
+            "0x1.76353e55a9917p+1",
+            "0x0p+0"
+          ]
+        },
+        "neutrinos": [
+          {
+            "got_files": 0,
+            "quadrature_strategy": 0,
+            "fields": {
+              "M_ncdm": "0x1.64bd78a1e489fp+8",
+              "T_ncdm": "0x1.6ea5f84cad57cp-1",
+              "deg_ncdm": "0x1p+0",
+              "ksi_ncdm": "0x0p+0",
+              "factor_ncdm": "0x1.e63d04703becp-37"
+            },
+            "q_ncdm_bg": [
+              "0x1.01a190a9342cbp-3",
+              "0x1.54b1b39dfb502p-1",
+              "0x1.a5aba87e1c094p+0",
+              "0x1.8baa6a27e0966p+1",
+              "0x1.41dfcbaec45f4p+2",
+              "0x1.e0a200b4eb4f7p+2",
+              "0x1.5363f359c10c3p+3",
+              "0x1.cdcfc7a7ec757p+3",
+              "0x1.32dc99949745cp+4",
+              "0x1.937bbcc9df2eap+4",
+              "0x1.0bfa403e53648p+5"
+            ],
+            "w_ncdm_bg": [
+              "0x1.4009ab2f5de6dp-10",
+              "0x1.1006ce715aac3p-9",
+              "0x1.9c8eedb3807edp-10",
+              "0x1.3596887f2dc85p-11",
+              "0x1.e3971fda418acp-14",
+              "0x1.9ab390e676f98p-17",
+              "0x1.708031cc9cbe6p-21",
+              "0x1.3d8abef57be5dp-26",
+              "0x1.b8d797c4599acp-33",
+              "0x1.5e137d7053544p-41",
+              "0x1.0c1275d7b5e1fp-52"
+            ]
+          }
+        ],
+        "z_reio": "0x1.de4e4p+2",
+        "tau_reio": "0x1.a538759db1c04p-5",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0
+      },
+      "runtime_control_v2": {
+        "schema": "Q047_RUNTIME_CONTROL_V2",
+        "q": "Q-047",
+        "case": "camspec-ede_n3",
+        "origin": "NEW_RECONSTRUCTION",
+        "events": [
+          {
+            "checkpoint": "before_input",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 0,
+            "mxcsr": 8064,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_input",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "before_background",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_background",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "before_thermal",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_thermal",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          }
+        ],
+        "cpuid_leaf1": [
+          10555153,
+          1050624,
+          4275712515,
+          395049983
+        ],
+        "cpuid_leaf7": [
+          1,
+          4055828393,
+          4218822,
+          16
+        ],
+        "xcr0": "0xe7",
+        "symbol_resolution_kind": "DLSYM_REFERENCE_NOT_CORE_GOT_PROOF",
+        "symbols": [
+          {
+            "name": "cos",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x7bad0"
+          },
+          {
+            "name": "sincos",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x7c2c0"
+          },
+          {
+            "name": "pow",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x3a630"
+          }
+        ]
+      },
+      "observation_counters": {
+        "input_shooting_initial_calls": 12,
+        "final_initial_calls": 1,
+        "thermal_start_calls": 7,
+        "capture_completed": true,
+        "historical_export": false
+      },
+      "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+      "first_hit_gate": "UNRESOLVED"
+    },
+    "hillipop-lcdm": {
+      "q": "Q-047",
+      "case": "hillipop-lcdm",
+      "program_id": "Q047-RECONSTRUCTION-V1",
+      "run_id": "38140371059",
+      "origin": "NEW_RECONSTRUCTION",
+      "historical_export": false,
+      "raw_member_sha256": {
+        "accepted_initial_hex.json": "302ea9e373707214779120a2bd3eab4064203d64e9585e60fe7e93926511b64f",
+        "effective_background_hex.json": "4228d94c84c085951704f212abe9a026a3e7428b9e456bbdd04bc2814df61a2e",
+        "runtime_control_v2.json": "82a38ec85e1fa5ce625487a161d4e4f2b7743ad1e5b7313a8fb96c8c4bd5bb07",
+        "observation_counters.json": "e60291998a4990e1a5de79d60e771a2939e903d89229afad888ae93a2be5d59b"
+      },
+      "accepted_initial_hex": {
+        "schema": "Q047_CAPTURE_V1",
+        "case": "hillipop-lcdm",
+        "origin": "NEW_RECONSTRUCTION",
+        "number_encoding": "C99_hex_binary64",
+        "callback": "background_initial_conditions:return_before_evolver",
+        "fields": {
+          "loga_ini": "-0x1.01e3b843eaa73p+5",
+          "a_ini_native": "0x1.6849b86a12b9bp-47"
+        },
+        "bi_size": 5,
+        "bi_indices": {
+          "time": 1,
+          "tau": 0,
+          "rs": 2,
+          "D": 3,
+          "D_prime": 4
+        },
+        "integration_vector": [
+          "0x1.3e81f423eb371p-28",
+          "0x1.c04277d281989p-76",
+          "0x1.6fc7eb43e36f9p-29",
+          "0x1p+0",
+          "0x1.9b84e91d126c6p+28"
+        ]
+      },
+      "effective_background_hex": {
+        "schema": "Q047_CAPTURE_V1",
+        "case": "hillipop-lcdm",
+        "origin": "NEW_RECONSTRUCTION",
+        "number_encoding": "C99_hex_binary64",
+        "fields": {
+          "H0": "0x1.e0a87807cbe58p-13",
+          "K": "-0x0p+0",
+          "Omega0_b": "0x1.81414da191ee2p-5",
+          "Omega0_cdm": "0x1.0c0260fc4ee05p-2",
+          "Omega0_g": "0x1.b7656d184c7aap-15",
+          "Omega0_lambda": "0x1.612dd94391db4p-1",
+          "Omega0_ur": "0x1.95b4e375d3fa6p-16",
+          "T_cmb": "0x1.5cdd2f1a9fbe7p+1"
+        },
+        "flags": {
+          "has_scf": 0,
+          "has_lambda": 1,
+          "has_cdm": 1,
+          "has_ncdm": 1,
+          "has_ur": 1,
+          "has_idm": 0,
+          "has_idr": 0,
+          "has_dcdm": 0,
+          "has_dr": 0,
+          "has_fld": 0,
+          "has_curvature": 0
+        },
+        "N_ncdm": 1,
+        "thermal_flags": {
+          "has_varconst": 0,
+          "has_exotic_injection": 0,
+          "has_idm_b": 0,
+          "has_idm_g": 0,
+          "has_idm_dr": 0,
+          "recombination": 1
+        },
+        "scalar": null,
+        "neutrinos": [
+          {
+            "got_files": 0,
+            "quadrature_strategy": 0,
+            "fields": {
+              "M_ncdm": "0x1.64bd78a1e489fp+8",
+              "T_ncdm": "0x1.6ea5f84cad57cp-1",
+              "deg_ncdm": "0x1p+0",
+              "ksi_ncdm": "0x0p+0",
+              "factor_ncdm": "0x1.e63d04703becp-37"
+            },
+            "q_ncdm_bg": [
+              "0x1.01a190a9342cbp-3",
+              "0x1.54b1b39dfb502p-1",
+              "0x1.a5aba87e1c094p+0",
+              "0x1.8baa6a27e0966p+1",
+              "0x1.41dfcbaec45f4p+2",
+              "0x1.e0a200b4eb4f7p+2",
+              "0x1.5363f359c10c3p+3",
+              "0x1.cdcfc7a7ec757p+3",
+              "0x1.32dc99949745cp+4",
+              "0x1.937bbcc9df2eap+4",
+              "0x1.0bfa403e53648p+5"
+            ],
+            "w_ncdm_bg": [
+              "0x1.4009ab2f5de6dp-10",
+              "0x1.1006ce715aac3p-9",
+              "0x1.9c8eedb3807edp-10",
+              "0x1.3596887f2dc85p-11",
+              "0x1.e3971fda418acp-14",
+              "0x1.9ab390e676f98p-17",
+              "0x1.708031cc9cbe6p-21",
+              "0x1.3d8abef57be5dp-26",
+              "0x1.b8d797c4599acp-33",
+              "0x1.5e137d7053544p-41",
+              "0x1.0c1275d7b5e1fp-52"
+            ]
+          }
+        ],
+        "z_reio": "0x1.dfec4p+2",
+        "tau_reio": "0x1.a5f1b2f7a4249p-5",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0
+      },
+      "runtime_control_v2": {
+        "schema": "Q047_RUNTIME_CONTROL_V2",
+        "q": "Q-047",
+        "case": "hillipop-lcdm",
+        "origin": "NEW_RECONSTRUCTION",
+        "events": [
+          {
+            "checkpoint": "before_input",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 0,
+            "mxcsr": 8064,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_input",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 40,
+            "mxcsr": 8104,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "before_background",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 40,
+            "mxcsr": 8104,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_background",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 40,
+            "mxcsr": 8104,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "before_thermal",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 40,
+            "mxcsr": 8104,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_thermal",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          }
+        ],
+        "cpuid_leaf1": [
+          10489617,
+          51382272,
+          4275712515,
+          395049983
+        ],
+        "cpuid_leaf7": [
+          0,
+          563873705,
+          4195972,
+          16
+        ],
+        "xcr0": "0x7",
+        "symbol_resolution_kind": "DLSYM_REFERENCE_NOT_CORE_GOT_PROOF",
+        "symbols": [
+          {
+            "name": "cos",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x7bad0"
+          },
+          {
+            "name": "sincos",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x7c2c0"
+          },
+          {
+            "name": "pow",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x3a630"
+          }
+        ]
+      },
+      "observation_counters": {
+        "input_shooting_initial_calls": 0,
+        "final_initial_calls": 1,
+        "thermal_start_calls": 7,
+        "capture_completed": true,
+        "historical_export": false
+      },
+      "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+      "first_hit_gate": "UNRESOLVED"
+    },
+    "hillipop-ede_n3": {
+      "q": "Q-047",
+      "case": "hillipop-ede_n3",
+      "program_id": "Q047-RECONSTRUCTION-V1",
+      "run_id": "38140371059",
+      "origin": "NEW_RECONSTRUCTION",
+      "historical_export": false,
+      "raw_member_sha256": {
+        "accepted_initial_hex.json": "6f5e88a8ad7c2b2344b7952f8d8467e6e4098e5bb22b60dbac5e117faf0c9ecd",
+        "effective_background_hex.json": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146",
+        "runtime_control_v2.json": "6c64ed67759d95ef58e3f230a97d3c3876f301afa71f19e6c41f1720d8cb53fa",
+        "observation_counters.json": "62c3c42fa102582b3079620bff9e9e489dfe1f8054bef02887f299e96f49f39c"
+      },
+      "accepted_initial_hex": {
+        "schema": "Q047_CAPTURE_V1",
+        "case": "hillipop-ede_n3",
+        "origin": "NEW_RECONSTRUCTION",
+        "number_encoding": "C99_hex_binary64",
+        "callback": "background_initial_conditions:return_before_evolver",
+        "fields": {
+          "loga_ini": "-0x1.01e3b843eaa73p+5",
+          "a_ini_native": "0x1.6849b86a12b9bp-47",
+          "phi_ini": "0x1.e25c1c67a810dp-3",
+          "phi_prime_ini": "0x0p+0"
+        },
+        "bi_size": 7,
+        "bi_indices": {
+          "time": 3,
+          "tau": 0,
+          "rs": 4,
+          "D": 5,
+          "D_prime": 6,
+          "phi": 1,
+          "phi_prime": 2
+        },
+        "integration_vector": [
+          "0x1.3e81f423eb371p-28",
+          "0x1.e25c1c67a810dp-3",
+          "0x0p+0",
+          "0x1.c04277d281989p-76",
+          "0x1.6fc7eb43e36f9p-29",
+          "0x1p+0",
+          "0x1.9b84e91d126c6p+28"
+        ]
+      },
+      "effective_background_hex": {
+        "schema": "Q047_CAPTURE_V1",
+        "case": "hillipop-ede_n3",
+        "origin": "NEW_RECONSTRUCTION",
+        "number_encoding": "C99_hex_binary64",
+        "fields": {
+          "H0": "0x1.e0a87807cbe58p-13",
+          "K": "-0x0p+0",
+          "Omega0_b": "0x1.81414da191ee2p-5",
+          "Omega0_cdm": "0x1.0c0260fc4ee05p-2",
+          "Omega0_g": "0x1.b7656d184c7aap-15",
+          "Omega0_lambda": "0x0p+0",
+          "Omega0_ur": "0x1.95b4e375d3fa6p-16",
+          "T_cmb": "0x1.5cdd2f1a9fbe7p+1"
+        },
+        "flags": {
+          "has_scf": 1,
+          "has_lambda": 0,
+          "has_cdm": 1,
+          "has_ncdm": 1,
+          "has_ur": 1,
+          "has_idm": 0,
+          "has_idr": 0,
+          "has_dcdm": 0,
+          "has_dr": 0,
+          "has_fld": 0,
+          "has_curvature": 0
+        },
+        "N_ncdm": 1,
+        "thermal_flags": {
+          "has_varconst": 0,
+          "has_exotic_injection": 0,
+          "has_idm_b": 0,
+          "has_idm_g": 0,
+          "has_idm_dr": 0,
+          "recombination": 1
+        },
+        "scalar": {
+          "attractor_ic_scf": 0,
+          "scf_tuning_index": 3,
+          "fields": {
+            "n_scf": "0x1.8p+1",
+            "CC_scf": "0x1p+0",
+            "phi_ini_scf": "0x1.e25c1c67a810dp-3",
+            "phi_prime_ini_scf": "0x0p+0"
+          },
+          "scf_parameters": [
+            "0x1.8p+1",
+            "0x1.419fbeb3d4926p+87",
+            "0x1.8c1be6d0d636dp-90",
+            "0x1.5eab3adf48e52p+1",
+            "0x1.799999999999ap+1",
+            "0x0p+0"
+          ]
+        },
+        "neutrinos": [
+          {
+            "got_files": 0,
+            "quadrature_strategy": 0,
+            "fields": {
+              "M_ncdm": "0x1.64bd78a1e489fp+8",
+              "T_ncdm": "0x1.6ea5f84cad57cp-1",
+              "deg_ncdm": "0x1p+0",
+              "ksi_ncdm": "0x0p+0",
+              "factor_ncdm": "0x1.e63d04703becp-37"
+            },
+            "q_ncdm_bg": [
+              "0x1.01a190a9342cbp-3",
+              "0x1.54b1b39dfb502p-1",
+              "0x1.a5aba87e1c094p+0",
+              "0x1.8baa6a27e0966p+1",
+              "0x1.41dfcbaec45f4p+2",
+              "0x1.e0a200b4eb4f7p+2",
+              "0x1.5363f359c10c3p+3",
+              "0x1.cdcfc7a7ec757p+3",
+              "0x1.32dc99949745cp+4",
+              "0x1.937bbcc9df2eap+4",
+              "0x1.0bfa403e53648p+5"
+            ],
+            "w_ncdm_bg": [
+              "0x1.4009ab2f5de6dp-10",
+              "0x1.1006ce715aac3p-9",
+              "0x1.9c8eedb3807edp-10",
+              "0x1.3596887f2dc85p-11",
+              "0x1.e3971fda418acp-14",
+              "0x1.9ab390e676f98p-17",
+              "0x1.708031cc9cbe6p-21",
+              "0x1.3d8abef57be5dp-26",
+              "0x1.b8d797c4599acp-33",
+              "0x1.5e137d7053544p-41",
+              "0x1.0c1275d7b5e1fp-52"
+            ]
+          }
+        ],
+        "z_reio": "0x1.dfec4p+2",
+        "tau_reio": "0x1.a5f1b2f7a4249p-5",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0
+      },
+      "runtime_control_v2": {
+        "schema": "Q047_RUNTIME_CONTROL_V2",
+        "q": "Q-047",
+        "case": "hillipop-ede_n3",
+        "origin": "NEW_RECONSTRUCTION",
+        "events": [
+          {
+            "checkpoint": "before_input",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 0,
+            "mxcsr": 8064,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_input",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "before_background",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_background",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "before_thermal",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          },
+          {
+            "checkpoint": "after_thermal",
+            "rounding_mode": 0,
+            "FE_TONEAREST": 0,
+            "exception_flags": 56,
+            "mxcsr": 8122,
+            "x87_control": 895
+          }
+        ],
+        "cpuid_leaf1": [
+          10489617,
+          1050624,
+          4275712515,
+          395049983
+        ],
+        "cpuid_leaf7": [
+          0,
+          563873705,
+          4195972,
+          16
+        ],
+        "xcr0": "0x7",
+        "symbol_resolution_kind": "DLSYM_REFERENCE_NOT_CORE_GOT_PROOF",
+        "symbols": [
+          {
+            "name": "cos",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x7bad0"
+          },
+          {
+            "name": "sincos",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x7c2c0"
+          },
+          {
+            "name": "pow",
+            "object": "/lib/x86_64-linux-gnu/libm.so.6",
+            "offset": "0x3a630"
+          }
+        ]
+      },
+      "observation_counters": {
+        "input_shooting_initial_calls": 12,
+        "final_initial_calls": 1,
+        "thermal_start_calls": 7,
+        "capture_completed": true,
+        "historical_export": false
+      },
+      "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+      "first_hit_gate": "UNRESOLVED"
+    }
+  },
+  "reconstruction_ingestion": {
+    "schema": "Q047_RECONSTRUCTION_INGESTION_V1",
+    "q": "Q-047",
+    "case_id": "NOT_DOCUMENTED",
+    "question": "For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?",
+    "result_id": "R-PROPOSED-Q047-RUN38140371059-INGESTION-001",
+    "source_id": "I-PROPOSED-Q047-RUN38140371059-001",
+    "checked_utc": "2026-10-11T13:03:03.788389+00:00",
+    "run_id": "38140371059",
+    "execution_commit": "76d6b4a4b02ddd929899008f476e99da29c1f931",
+    "origin": "NEW_RECONSTRUCTION",
+    "result_class": [
+      "RUN_SUCCESS",
+      "NUMERICAL_RESULT",
+      "REPRODUCTION_RESULT"
+    ],
+    "result_status": "TECHNICALLY_VALIDATED_FOR_ACQUISITION",
+    "direct_output": {
+      "execution_status": "COMPLETE",
+      "completed_jobs": [
+        "camspec-lcdm",
+        "camspec-ede_n3",
+        "hillipop-lcdm",
+        "hillipop-ede_n3"
+      ],
+      "failed_jobs": [],
+      "missing_jobs": [],
+      "job_completeness_gate": "PASS",
+      "capture_ledger": {
+        "native_processes_started": 4,
+        "unknown_start_cases": [],
+        "observed_internal_initializations": 28,
+        "full_cmb_likelihood_evaluations": 0,
+        "inherited_ledger": {
+          "used": 16,
+          "cap": 52
+        },
+        "accounting_note": "Four newly authorized bounded capture processes have their own ledger; internal shooting calls are measured, not assumed to cost four inherited units."
+      }
+    },
+    "checks": {
+      "q": "Q-047",
+      "program_id": "Q047-RECONSTRUCTION-V1",
+      "run_id": "38140371059",
+      "execution_commit": "76d6b4a4b02ddd929899008f476e99da29c1f931",
+      "final_sha256": "5279a67dfcfc30537a12425b691c1e19b84dfef03a1e3ddb6d69a80ac03b8cc4",
+      "contract_sha256": "958b5417b52a993d6cfcdf5bbf209fb9de6287679019e9c74ac34aa96b84c51b",
+      "original_journal_sha256": "02c7b36f2c426f0b594798d156690ccf0a7bc9f2213d76f1f0e8a2f659648c31",
+      "cases": {
+        "camspec-lcdm": {
+          "artifact_id": 11702936316,
+          "archive_sha256": "274cf8c3a1403239cb674621883af31728a34a635f9a72e3cc99559f41e73493",
+          "branch_files_hash_checked": 76,
+          "source_files_hash_checked": 40,
+          "worker_final_report_match": true,
+          "runtime_gate": "PASS",
+          "structural_gate_reported": "PASS",
+          "native_table_sha256_equals_archived_tables": true,
+          "internal_initializations": 1,
+          "thermal_starts": 7,
+          "worker_result_sha256": "68a66f6bde875d20885ac80d846f4f2355f619947edd9227de3ecd917f44af08",
+          "raw_directory": "/workspace/scratch/3621bc609e20/capture_ingestion/11702936316/raw/q047_reconstructed/camspec-lcdm",
+          "requested_vector_exact_text_match": true
+        },
+        "hillipop-lcdm": {
+          "artifact_id": 11702621733,
+          "archive_sha256": "51ee3c3c3297718f1563ab606ebc784a096106ed9245c95e1f7611e52476946e",
+          "branch_files_hash_checked": 76,
+          "source_files_hash_checked": 40,
+          "worker_final_report_match": true,
+          "runtime_gate": "PASS",
+          "structural_gate_reported": "PASS",
+          "native_table_sha256_equals_archived_tables": true,
+          "internal_initializations": 1,
+          "thermal_starts": 7,
+          "worker_result_sha256": "68981be24067ce9c2a6ae6c0d6da47b625e3a12e1cd4101ec25cd9e3208d05b3",
+          "raw_directory": "/workspace/scratch/3621bc609e20/capture_ingestion/11702621733/raw/q047_reconstructed/hillipop-lcdm",
+          "requested_vector_exact_text_match": true
+        },
+        "camspec-ede_n3": {
+          "artifact_id": 11702351624,
+          "archive_sha256": "8ff7caaadf26b878ae81fcc939aaa51b323c68273aaa364c159125d89cc24802",
+          "branch_files_hash_checked": 76,
+          "source_files_hash_checked": 40,
+          "worker_final_report_match": true,
+          "runtime_gate": "PASS",
+          "structural_gate_reported": "PASS",
+          "native_table_sha256_equals_archived_tables": true,
+          "internal_initializations": 13,
+          "thermal_starts": 7,
+          "worker_result_sha256": "5209922e9d628cb28e2b841c601cb3394f1bb7cf7135b1804d137a69288cb961",
+          "raw_directory": "/workspace/scratch/3621bc609e20/capture_ingestion/11702351624/raw/q047_reconstructed/camspec-ede_n3",
+          "requested_vector_exact_text_match": true
+        },
+        "hillipop-ede_n3": {
+          "artifact_id": 11702263934,
+          "archive_sha256": "8463afa4c76df60cc83f425c9234a10d0e5735c768dbc3788aeccaabfe1c4136",
+          "branch_files_hash_checked": 76,
+          "source_files_hash_checked": 40,
+          "worker_final_report_match": true,
+          "runtime_gate": "PASS",
+          "structural_gate_reported": "PASS",
+          "native_table_sha256_equals_archived_tables": true,
+          "internal_initializations": 13,
+          "thermal_starts": 7,
+          "worker_result_sha256": "a78670bd59d9776d5d9425a70689d8f1e30eee33b33adb4850b38296c8188f4c",
+          "raw_directory": "/workspace/scratch/3621bc609e20/capture_ingestion/11702263934/raw/q047_reconstructed/hillipop-ede_n3",
+          "requested_vector_exact_text_match": true
+        }
+      },
+      "total_member_hash_checks": 304,
+      "original_table_pairs_sha256_equal": 4,
+      "new_native_computation_in_ingestion": 0,
+      "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+      "final_result_gate": "UNRESOLVED",
+      "requested_vectors_checked": 4
+    },
+    "input_files": {
+      "Q047_INSTALLATION_REPAIR_VALIDATION_V1.json": "3ee2c80b39f717799b20a3b40add3f19cf5323c42f0525e599d6561612e36b50",
+      "Q047_INSTALLATION_REPAIR_V1.md": "837743f19245abe7987785712a6acc9102a2d1acc706880059cc6a8c4da290aa",
+      "README.md": "1c0b9994473eb87f1c29783ed67fceaacfe4d734141bc341267e2ef1d0df96da",
+      "Q047_SAMLET_JOURNAL.md": "02c7b36f2c426f0b594798d156690ccf0a7bc9f2213d76f1f0e8a2f659648c31"
+    },
+    "updated_journal_sha256": "df367942c93f7fa100951363bcf9221064b874d0a4ff74dc3b882d7f74fd863d",
+    "journal_inherited_bytes_preserved": 3331140,
+    "raw_preservation_status": "COMPLETE_WITH_EXPLICIT_EMPTY_FILE_DECLARATIONS",
+    "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+    "final_result_gate": "UNRESOLVED",
+    "historical_state_identity_gate": "UNRESOLVED",
+    "first_hit_gate": "UNRESOLVED",
+    "PT01": "UNRESOLVED",
+    "PT03": "UNRESOLVED",
+    "q_completion_gate": "NOT_YET_SATISFIED",
+    "anomaly_status": "NO_NEW_PHYSICAL_ANOMALY_ESTABLISHED",
+    "new_external_scientific_sources": [],
+    "selected_next_engine": "MATEMATIKMOTOR / Mathematics Engine",
+    "next_task": "Finite source-real IVP and historical admission mapping for newly captured state objects; no new native execution.",
+    "new_native_processes_started_in_ingestion": 0,
+    "remote_repository_writes": 0,
+    "workflow_dispatches": 0,
+    "rerun_required": false,
+    "raw_preservation": {
+      "index_file": "Q047_RAW_EVIDENCE_INDEX_V1.json",
+      "original_members": 315,
+      "saved_nonempty_files": 307,
+      "zero_byte_file_declarations": 8,
+      "bytes": 247963175,
+      "native_recomputation": 0
+    },
+    "preservation_completed_utc": "2026-10-11T13:09:33.233290+00:00",
+    "repository_maintenance": {
+      "remote_writes": 0,
+      "prepared_registry_action": "MARK_ONLY_Q047_RECONSTRUCTION_V1_COMPLETED_HISTORICAL",
+      "registry_remote_status_at_inspection": "ACTIVE",
+      "readme_action": "UPDATE",
+      "readme_gate": "PASS_FOR_PREPARED_CHANGE",
+      "repository_consistency_gate": "PASS_FOR_PREPARED_CHANGE",
+      "installation_status": "PREPARED_NOT_PUSHED"
+    }
+  },
+  "m15_audit": {
+    "schema": "Q047_M15_EXACT_AUDIT_V1",
+    "q": "Q-047",
+    "case_id": "NOT_DOCUMENTED",
+    "result_id": "R-PROPOSED-Q047-M15-001",
+    "run_id": "38140371059",
+    "origin": "NEW_RECONSTRUCTION",
+    "checked_utc": "2026-10-11T13:26:39.887881+00:00",
+    "runtime": "3.12.14",
+    "method": "Standard-library Fraction rational arithmetic; alternating arctangent and positive atanh logarithm remainder bounds. No native CLASS execution.",
+    "rounding_or_uncertainty": "Exact binary64 values are decoded to rationals; deterministic numerical reference bounds, not statistical/physical parameter errors.",
+    "cases": {
+      "camspec-lcdm": {
+        "state_sha256": "8492b9264da76e000fbe3c5e1b1449902a0185fd71d04135b4159280646fb524",
+        "positive_nodes": 11,
+        "positive_weights": 11,
+        "new_initial_vector_index_linkage": "PASS",
+        "new_finite_measure_structure": "PASS",
+        "new_common_field_positivity": "PASS",
+        "scalar": null,
+        "historical_PT01": "UNRESOLVED",
+        "historical_PT03": "UNRESOLVED",
+        "PT04_full": "UNRESOLVED",
+        "first_hit": "NOT_COMPUTED",
+        "final_result_gate": "UNRESOLVED"
+      },
+      "camspec-ede_n3": {
+        "state_sha256": "a0030c8cc26b599bc5d86fb8346ef3e5691c10891475b9eecb48e0ef371c4a4e",
+        "positive_nodes": 11,
+        "positive_weights": 11,
+        "new_initial_vector_index_linkage": "PASS",
+        "new_finite_measure_structure": "PASS",
+        "new_common_field_positivity": "PASS",
+        "scalar": {
+          "F_eV": "1.906127735906179001856E+26",
+          "m_eV": "1.957351987846800729996E-27",
+          "B": "2.672689228588978949119",
+          "phi_ini": "0.2288527381454219244983",
+          "V_floor_Mpc_minus2": {
+            "num": "364392957648891",
+            "den": "3435973836800000000000"
+          }
+        },
+        "historical_PT01": "UNRESOLVED",
+        "historical_PT03": "UNRESOLVED",
+        "PT04_full": "UNRESOLVED",
+        "first_hit": "NOT_COMPUTED",
+        "final_result_gate": "UNRESOLVED"
+      },
+      "hillipop-lcdm": {
+        "state_sha256": "c2a4e0858e71e6d1c36295bcdd9e0dbadf366cdf54d51bc7d85cf533dfbe698c",
+        "positive_nodes": 11,
+        "positive_weights": 11,
+        "new_initial_vector_index_linkage": "PASS",
+        "new_finite_measure_structure": "PASS",
+        "new_common_field_positivity": "PASS",
+        "scalar": null,
+        "historical_PT01": "UNRESOLVED",
+        "historical_PT03": "UNRESOLVED",
+        "PT04_full": "UNRESOLVED",
+        "first_hit": "NOT_COMPUTED",
+        "final_result_gate": "UNRESOLVED"
+      },
+      "hillipop-ede_n3": {
+        "state_sha256": "541dce767d3323303ec3aa9345929410f9591dac152786c906fd018308e553e4",
+        "positive_nodes": 11,
+        "positive_weights": 11,
+        "new_initial_vector_index_linkage": "PASS",
+        "new_finite_measure_structure": "PASS",
+        "new_common_field_positivity": "PASS",
+        "scalar": {
+          "F_eV": "1.944097811032946061754E+26",
+          "m_eV": "1.249899587939484709682E-27",
+          "B": "2.739600523973231283037",
+          "phi_ini": "0.2355272502072768558978",
+          "V_floor_Mpc_minus2": {
+            "num": "19123999043310283",
+            "den": "175921860444160000000000"
+          }
+        },
+        "historical_PT01": "UNRESOLVED",
+        "historical_PT03": "UNRESOLVED",
+        "PT04_full": "UNRESOLVED",
+        "first_hit": "NOT_COMPUTED",
+        "final_result_gate": "UNRESOLVED"
+      }
+    },
+    "controls": {
+      "actual_source_and_state_hashes": 16,
+      "two_pi_formulas_exact_tangent_and_overlapping_intervals": true,
+      "all_four_neutrino_objects_identical": true,
+      "all_four_a_loga_bits_identical": true,
+      "strictly_positive_massless_and_actual_initial_density_gap": true,
+      "strictly_negative_initial_coordinate_delta": true
+    },
+    "pi_enclosure": {
+      "lo": {
+        "num": "880794001069611548991079918499719293243803489233077787187889509630679857293303712265602942790769039628997106417373433343088994737685757316258665919557443277477584841591942327664593526730982384900773867551098136257669956514011018828640442553039683241942921196852752684376516631912419388196494377233185848406818493349469216436068382234335651389435527735634244885447792507248838315154212994490378152311498721588181023200517590133553712265713326665673641314666319291700565476906652822438640018455508825458471889526373683275016898988642758203013771506323543287124",
+        "den": "280365438231833651166655099700018077766536250935827127584029392745383340129241362737247784392661832187096374789820374916153345616171983025730526124559215568398999737588287143036761603929675541414184056783437190486856461404941833618352280486203744200304497014420281483313230579407234097627973638252975257835066410515074301910728979608595517649719179390182054130062749379617384435139741722418481834726425108931634328008681764326845168411079008268982139876094202713263915884279077273798339129259460688068952982352326501643002831798412444186396896839141845703125"
+      },
+      "hi": {
+        "num": "385494827239374113281927801727788069730836071336757841769178371190402766624054074799812215643445072577947298899430265472446408402002037754948845832749033492540868968156322720092066817518860067190615037673718146007768403362254965045030952264648863587906292984215780994584770304030668683524557380469453238461746235046011135859393626488057238242715293855307561473254098466487652060567491751729632822927639499803126436507799897015511852662964078907783198306896824613047946824899120539860823591079191561426531073683881220799493481528361146758976846742439030864",
+        "den": "122706814583005221882781770145838692322673032219248230766280961793991413022024020385343299483842121193211067203751849108100937315598458984318607046690015742195952336963764264909911242769592418468769829302461962538670743424021740523779468359361593897298934286173334449376424860999997416724135448544745040280748941070304398518377207860767282457292055194316474733488012018179559371833363265006950961435560086890825759356752229620824726637786019270050480504584217150112881376498607024473634534260368642035745602472088418288809208434031461365520954132080078125"
+      }
+    },
+    "massless_moments": {
+      "finite_S3": {
+        "num": "5059227303924643945568127157695083518426396612809491253279180680274391",
+        "den": "110427941548649020598956093796432407239217743554726184882600387580788736"
+      },
+      "source_PI_exact_decimal": {
+        "num": "6283185307179586476925286766559",
+        "den": "2000000000000000000000000000000"
+      },
+      "FD_definition": "1/[4*pi_source^3*(exp(q)+1)], pi_source is the exact pinned decimal macro; mathematical pi appears in analytic integrals. Native generation arithmetic is a distinct relation.",
+      "ideal_mathematical_pi_FD_S3": {
+        "lo": {
+          "num": "220198500267402887247769979624929823310950872308269446796972377407669964323325928066400735697692259907249276604343358335772248684421439329064666479889360819369396210397985581916148381682745596225193466887774534064417489128502754707160110638259920810485730299213188171094129157978104847049123594308296462101704623337367304109017095558583912847358881933908561221361948126812209578788553248622594538077874680397045255800129397533388428066428331666418410328666579822925141369226663205609660004613877206364617972381593420818754224747160689550753442876580885821781",
+          "den": "4806264655402862591428373137714595618854907158899893615726218161349428687929851932638533446731345694635937853539777855705485924848662566155380447849586552601125709787227779594915913210223009281386012402001780408346110766941860004886039094049207043433791377390061968285369667075552584530765262370051004420029709894544130889898211079004494588280900218117406642229647132222012304602395572384316831452453001867399445623005973102745917172761354427468265255018757760798809986587641324693685813644447897509753479697468454313880048545115641900338232517242431640625000"
+        },
+        "hi": {
+          "num": "24093426702460882080120487607986754358177254458547365110573648199400172914003379674988263477715317036121706181214391592027900525125127359684302864546814593283804310509770170005754176094928754199413439854607384125485525210140935315314434516540553974244143311513486312161548144001916792720284836279340827403859139690375695991212101655503577390169705865956722592078381154155478253785468234483102051432977468737695402281737493563469490791435254931736449894181051538315496676556195033741301474442449472589158192105242576299968342595522571672436052921402439429",
+          "den": "525886348212879522354779014910737252811455852368206703284061264831391770094388658794328426359323376542333145158936496177575445638279109932794030200100067466554081444130418278185333897583967507723299268439122696594303186102950316530483435825835402416995432655028576211613249404285703214532009065191764458346066890301304565078759462260431210531251665118499177429234337220769540165000128278601218406152400372389253254386080984089248828447654368300216345019646644929055205899279744390601290861115865608724624010594664649809182321860134834423661231994628906250"
+        }
+      },
+      "FD_S3": {
+        "lo": {
+          "num": "186267467841743659023913109511131982012858836488354212453130995110209004167080823428060390510518336240084454893856836146520797099707671194670587084290965457309236284441075263711042849002907003383168032989493783352547983684670929265841895477812412706440871201655920091658641831791299127566760185388165334953962980351468139443787026065765833199766294989518341339591610713367215131349929238006695493516161643208731389358192202742669486624554601898250012209789211170745746159910198325733473797473602415436160942094148713607682136723102250129636836299191669264555282618099331478974387691408746351984239567351812006549929312275048362019237310188950017271576689834473195774747745440506863387243724281590173968406734213097676575043293447475603905049633699359596709860456632231578816171684051821143080419891606179135061411796661214862622240423743812061093975624890914079368095117923102787992956996855070079130627900521147927573497446964052397301372491820324439445226869886514359014627612354952754079795199038461401476093917121404952225093151530147748511331075628586030002896614138183127770024793047772377150805445340984701707947458243986330663119434646967873259513931169487612354912537027983776433407406856366955170670470794438920947906086925207630488000499664006298178212774435081983094347816572554469917851486613157459873059176164765212208491331979579375582095266086962742290962597213876780386236467355232955978504139027885893010278046811674094020564297355035894202954152743438839795518323084978388224804939944567468446195473133872145388306895707113126945517499148689345958726163149976058667871082227909498394208717998053001087583515549837993620413011502556240644844257389757542342471811738533931886219970763215210388563979598826311597217392513720985117938093260536273886118238942457308079214153873715405772617877788035522250290587644137455646472860656227311471581745553135698218703364992678899830108185302269013016668636156012920832904345568067767792646598327730056814756337254471795393166125075895322577472003278230248549472477899462297234067501223016914914172959927669678386845749974237781209477015521884816999931754443691438137417653811401607292244880960631207206602362136139193735417258011981713352923459883230230520318418428928924709462101635284327422865965056",
+          "den": "4065653244922170044255879146882808914998636729221411424040101119693839734725092515991673679449549936856005395604611726952896662699109664556012007359007704582774621966753364464243272551127027750333606375216288571378275032186061460662657091472133239123057214094265528764849082926014735129134641230457469779315283158763116018178175531085711494360236884244444515484556834800780018581397811389249245548733296780661248599009401020748430443406117905270185165879366910462830840358416593601979423162708919431186780148454699838101159191871322222515936531927031176745704784496771434503076538706979604568973568431727459466343522065432929383067006240930354102529715746585259733911093390267819650423633879003690866353466078227337761457966980392236633195376600333021491256747327316589603474681804182956838426000257080746881392205510563477746318216194005733012830703458689336451980787972632612558111057651362393302715850167066065048992856087362644072979991801222114562434217977723442944832467021122571807678152754553053023900235652238720297647564741919091900694320469634472089586805009390513750449720337357476324807571724573055877614906959673561523584924535127279006158298281094474948071760922013087215336964175333412741331050872343951423028159493458433065102431064872636616358267505964765348053426975539852034107588640451010980885325840592443130044476707866459092521970603957067646579977737711676208857370848588503410763938284219927797769030459730089752013281215420189675548617049555533981927556561206059574950252855151408144479291937190417689325738339783659971526233789984313567976648724719670640967733616369393492415547868587604742538535828034461933490730087711860130916646122375048634406402552479066582947493490140179860255950500543198446229923478169790738160419543087123914686766643284837038313638071033661002403552134402684630533725583253170964573683775589856798561407658284669737491160954277201892460002326710742473137238963162413627655277097194721204215082307948407677250151056586534960983962717242498244139388097766332010839951517535351847457635110744878990252636139326329519641019035839338177335158141776571227248022984695327429401847082412630141132036274160247558384727143777416584991445911244226665539476150415391615946191471164805619764592847786843776702880859375"
+        },
+        "hi": {
+          "num": "6834611575971276278349156843665662140510750001276072363813022931477152753900199156407244443040375632962662123673366495628992782164912009279861308254478812453119973408220973554824461753677094603120656110207562062952076120570966558200251542822471455749174096490425100056722363688399624202024285386033796459874312804498508320140749855398329798722971960131952331021031766065147204321645691757645886425754421192574912317421201996462171252731305092491778469335751063455949997667824245118940679895467568498608004702730520597378224438690608501302817402116307815186545464689851316626525490091957467978676621941820286231411092814945897644095120029824578636111530997971677392834690698043151532596627642777656164979757016955804875730854724494093236162094590443315060545548475225428606893975040120664051883023186417376087082917088077160561875530442597212077998905783140881028357709290876471737113440491476267799176550523515836174070122085021966233225331021309720085014171972117292607007966387636288234636840418839444915667401866722573141039919726077645097429949759912614995074626704371916922094694087489758355166626872663259257287362372550811506752355585762949111215724242147506923635675643892433000118974616626657723363859632119392900662440551387144473197193906983573702643289811970981210388041932175537062013572510850802934335961935064367984677879793839581593363139365011990388918390373508112667300258784386744757306731694636390398903482038351127915351425291510402561516963307757670838288087755358036940057275555946504224667808227342060374732276612326681931250591521020187654178113651185287513197259893973401061671183242184901249847942275749951512711693366421534013942836092147303245209255809875872186581179611504213708958579232548096509690112119502251108525533257328669309865271498642620497482414703581095461828377793021628600927612689329231724041890838365605151675644659059771004998577149985043110482912540549837114067872835130568525537343577874079895222572436698242857148767708961961446923928836319588913743034051943497128102325877859306885777005191809377168638424254165944220897697385292870489950122406819256831120962962421956726424577184324858023183079674479262607468972457435294349318247522986205999896959039655972908807803426935957893910743425744896",
+          "den": "149178818253108695498289249634321459750198332062183200172673413310781978968525892725778183870210001670590481762855000705664557466362778072393176876026707387463081657214986328292042711559269400531521954915101981951977765206420080417117804194100494383459211217035066235224840329253606387282905599334941052018572728565531961758245895324648976268075937543879850777738273051015270877279364353406352618855234463609702164893852924371495566428872235955527430384275238742320431637124691208072839412521906723276342644104358248605092354050061666119837451139537668393999307061562976517072769002469907784248395373058193110726684178484069510220349391116634048360634829429449269036159918221285393787885408733012017484928049528877220954221254489774272079874891753400103304805198083239915756318566734461854674099428271381459079718756856525366377657404852645042945675958249823706418208899544964240624828840436140803145403857078000326001024553773056006895795226306452830308326852555579095205150604401636673350299185427442276746360288640207495760569605611340509092517814350895057979371819325710727466599053583326603481096165083532230787041769556945558194742492101702151605068211152417954976075302598064187645662943018683540487128814739096042677844228785409311797791076519952169278359277193592257880567798758362246253380683080604428840893971831148189302875495324427988874782270639947127465584624104217424087329531104052668180067090760110026171282160020818882092278658876061241223462628127705282147486966173382959402105142484333231657135429520311287711885339042292847616423205002086662369639819291995889004934932409725243371946446154856270118208541020759311293297461902232877494962501543092206989711682797386774313567920383070415901585705540922936771109792496591475654315447678190682053269242677367595803933286212281175602134397903801749257218910027247451657549062424805592960946887160496073685961835043731304806010055390687830519786402744656629901316742371172283166498378431791367769524952803855530670153729549411696089793913257801351497096432890735986108915579188156902576162020850573861393507559253997121687758739179066096658559933644462293414401621064224234962071600365706145843783169104768683914184947153457882196205341678550693185201225787750445306301116943359375"
+        }
+      },
+      "FD_minus_finite": {
+        "lo": {
+          "num": "69146242859461032246352678416967799229092099305812511472762039277120933988107501452467507198694261607232634323232648331099355550056096468925572981758413567977018950139698959033530898004281369909509150634360284233281194500248273804795144719319283914137478142680348789848154509981864741198890061636280844703857168217755802475327597543975247092954653987431848989615831645378399082342111939869132618755878005693720075561748098027298609961412744971957652928584682170923446917585291512575641094434613957619317832188022009319124591193996698195069948576932146576846779804351712002200630405459493889599939763052646537665895474605608150461673242411872604624896606871677570996096761638712746707298054802288194061499508810601585540365863143290381483775068276865460819535783878359126921651103101254920393418326099289498038395280833301539888363152545486146258266971423482851019551237362844756829905312497851725554558475451138961373865411930516714056178334587424333069498529300816271723639953414240154607855885507650759020921687879331996512822910500775557065995143645472379749074729268731389347882255227864176205462123332900190864099967017530784338300690289345585950623284574818568076097948233594368860181228303767208013053322807632189381529095196242502356898538244822749942670343788432914685714658221170199760148972751429943801440256217659235743156929679838169630124911865243773190949492700652352690072708073951392157221967832512788501510803384151375209398251599614207834306828287669583186814003471657329747376535523443989497387278745487978540976505054233432754030573442726302059186031671581785898377132359472561313074044571706752067543280522754835960973474222602834051407592080020867893516335273929541817469338405836558001923243824806520287295750343588398658453106910119201229840429661167484846456700690069276674869993681407264763926494870426154202004277804155160135463021772327355809020937900419930016309897658222474317821046454457456423904762189926077837759315247303742449431566256404872673395404121381023755383443342906767093769147179827495880158600946179178380706097123530343512785862635940979977021994464940427070780214862100126930939356836376431648278126856823919837731294851010790554764930431924388228977774200682115640466712481981787788401760972373463132594965413397085808934533051020730732425462411624312813402202960957409643591",
+          "den": "448961718887340614160571968698822939597871915309499091200435035034814030706067647935810487282127223986264153679826924153735359372993339302706927423317447879763041438317694576907620506085813086847585659159770282972515493264970942110612291160332529674933270905331702394486670258382738866131604924296260099948639018125614256535765745009842492249633611680983253291777416874975423853964283992857937715281646059142865699997165130108967255544950947384975997126606050705256716111336981543344374421497728524526468658364786784270975890093891587973966931589878280537635120220026236965059956106052293270080607892887502993028472305750282507021757383533765478843174463658543023481663221992658116089787439469851022822009635799283084664816519527248658096107929432790781890772532967867449517415099250548350883370808805661344766140760015154859118381895310889471202991980585327219408586296757895740480182013500657640143140610786802352045175187273260820481417663330314183293497043164225367133181322679228308294816742944429376852333781394094239986850468538053430092928517760171183685030787145732060410114261858028617210278385988827351867163608891898905120192884059610591730020034720972735654137202924647508733711830598974322071354398824853000129778394973021935681725930412057400118703666796179916144016229091932357849298524665751233532926753347693479635908336446440569123086920274864452581873610479406094350299634267854624896402987126825625348817615298701320466656072145008899177485573556841322991240744764033724617540291162482467246772373345227432633656798890370294542304059732743832311271523159791860291028428097813703131838901945301264479669939211480666914612165072980196957033067832180662214154053227798331329841871745039614828142049619799386116881510864879203091295814379887563100745809249925279218353510964544121544204936053802518242240421264318516559216111874630831371784065675324595897755551803891894690155226620449852781908653335545046942823858808035644465867730913291183481239817733592425417231424064100450214326288321947167824465186623919811029421434066846923556428489154868088917282875627279281616210937500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "hi": {
+          "num": "2537145736493894765667494070657549660031236226955216719355875335872651580823725149108030946923770385822360893685569168642747268646721697216492051157348974994385444886660267916411802128124074259407700399751743088829129451153603337728960075176297440700776463122643565970963394144885471307607734497639158000110972508569748612410734309867090628629509879074664734994777821634941328697958147992388695029275974462621325513330687974015820078151802287768497987928984576325520260659035119647649636060235190240297708390903564505952160124052330337496597592110151416925166793703008275202222471530175810426184428274088469651994101519864953214364918272028788411476957280626615757803694129054038750325976748206052834068973400649471783660712310257682231925833271741995581316203847234845828235841325152495966886456527188707648921748359662968654967816372761312676065068815916093078883338446155944347830815836146574376027196311354040227964195144101746745707114198548981700391333858832420203966302478089395843263784575654790123819123237426228870601944578548813178181671681320094741300523458579602635795041403278895333602700690179002982290772120933221775283215435429009404190905631199626475853070825473057337195356640158847283734833210453581308122065550998701376355202910447146285286797408145482561800060622182851625757985916119460734866220055648228930828489621321935225366193322855807728577347196329700764512135310355400277963713963968131240144553895222477305366492646639852469713672457108547158224249160677997178314515224940815483403841967627910499807555725523600951161152625961736463179815712291893745780633132011719444824138085512543299676174186978028906899842649256960693151461133462530847935876536933896276714308883878926924720801238665317479164859474979717509637060821494025850494479372379094019981078805312303049030998369266375267716776484682496177570340965238190948721164490295319305668577923787842189218303730769594376415364177630243293953288643166179136986632584012488740094332014509630065939839790044407312459341423342970853429972284530541276739644416733640327275622700813590547337045904705182608120155420760917322717251667080677890274776392435823560281350129699647466838184896810486201527705559976859327769969439712407799380035804463908035808133734045952524626273341536181317221609478334819952347681563007357359684025831",
+          "den": "16473509822350822621749810856217844911141734430053627743549450538946409794576643612791322543218275858192718930062671253507126851454954874523123340824126370108859966005428363623571977417728031998847529063612334315198956875493682718045506011475746425258647120924992955241583693084953634333339469492250962504751708808992609278569849245359565827104969452646480333697997485459657602137272704528409963089700158638150731600540758689323127826458150141522341334848239543007248132017761038449142473756554493847183180990191426278006998970529897581726744885050313887697010040273771673563128424651417611305516938842278321811178984335342276403096255585043934508025671316355318941308796810414198913873462602887999984034672838835657028075614992238558229680447394541192730213158964527442332249701001627147628079631597873601284724370203484476295892295182733602145540004825321323294601023702373421384702963126666560233854503592176030930501858413727646630966623880532824297212976641660241500597731456981451552090458993165733030108529442531033819804047422636570619375441447582533439443127694420147373880305279674249122921503032904048035533254291996130255918709599767724168499396806985169839249982455213881059232069252428696913937955270512450888401004585737702116819646054627972600773987009070165444347769498446334076689563702979054519662738736204689034273331933535105492455852096983274401864066961432899456176590725509153475328669294317635692776539326588274704686109199024785280843221330362080267229648162908297077480553076604189837945057175773857170751403127333072110623882192345492243325279376829138952824088942824418499094120353252207338983974818429227355668062110885026519307109798057131157850927688445195171247456708376816939150804266040492391483873270434205598705424486132037445776084244979008142953503797072675634586380495499353729291348734581061417772223160323142733072121164133102446843274199424078439614987301414524380241543940831446760843762477785888926022816749233566685132303999325310748330421193197464580096550859907201125946819942151974527985312714978283210598419827874749898910522460937500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "relative_gap_wrt_FD": {
+        "lo": {
+          "num": "27010251116976965721231515006628046573864101291333012294047671592625364839104492754870119999489945940325247782512753254335685761740662683174051945999380299991023027398319905872473007032922410120902011966546986028625466601659481954998103405984095278959952399484511246034435355461665914530816430326672204962444206335060860341924842790615330895685411713840566011568684236475937141539887476511379929201514845974109404516307850791913519516176853504670958175228391473016971452181754497099859802513521077195046028198446097390283043435154960232449198662864119756580773361074887500859621252132614800624976469942440053775740419767815683774091110317137736181600237059249051170350297515122166682538302657143825805273245629141244351705415290347805267099636045650570632631165577484033953769962148927703278679033632534960171248156575508414018891856463080525882135535712297988679512202094861233136681762694473330294749404473101156786666176535358091428194661948212630105272863008131356142046856802437560393693705276426077742547534327864061137821449414365451978904352986512648339482316120598198964016505948384443830258641926914137056289049616222962632148707144275619511962220537038503154725761028747800336008292306159065630098954221731323977159802811032227483163491501883886696355603042356607299107288367644609281308192481027321797437600085023138962170675656186785011767543697360848902714645586192325269559651591387262561414831184575308008402657571934130941171192031099299935276104799870930932349220106116144432568959188845308397416905759956241617568947286809934669543192751064961741869543621711635116553567327918969262919548660822950026384093954201107797255263368204232051331090656258151520904818466378727272448960314779905469501267119065046987224902477964218225958244886765312980406417836393548768147148707058311201121091281799712798408787058760216485157921017248109427915242879815373362898803867351535162621053772743154030398846271272443915587797730439874155374732518478024394309205568908153388045079734914462404446657555822955896003573117120115578186953494601241554963319188879040434681977592164445303524216587867354324523521430507862082398186264209543612608643303446843686613787051176090060455050949970464151944443047141451422057309563274135854844437879833384036169908364608236644115051973054972942353696254540747192735235531623988142027734375",
+          "den": "8034817598141769498686329297167686551330057926368295163273527083620420902061138671231008522057281881710765478213466558735122264566575125835415997730528392593761000978015142230758392123125354251930566399146549559315162847045610355802118015814550057021794137301038472271755108784598828306875579764620413193458041956869571130986407307372026455103753750989232592618241384896190550738887970567174630499790074714590554652551138384951179598329752197610836739888481720373904842562184034983094467289870351071938105417103358975224226062331962256863299855987272354544342814709665204205803774012419086569172823878212771963827793974522764626180168155628670754692964005290260525602084504082979066934397411749873253631137361914070895945811241867016252291625405578335103269298944843605077568642808951936615934936641207645586447825199839581775703888257268192765903275355169994941084734856386489310813688928776191742963013282433278646179259194571365966922572836344036796352435183839034005013455892095713479983481048638667443667208348803845233374043865383214520894442746843861624688135208062936439537116114199042600298626574798157554026366038394586850840529930642513332305013879643090112795174200434085725515890893358603952035977176207803945501075103029688256134076700578285222395179212679977214906684740369845481211620918962545938244708365816208606050979475587775057019415639123426394929226273382578397283866933923087484444561547245199379878060899500354234208732312045632912968257670473008624680195114709306488512251056370391453499052892328872581039020744256801425843806959533734106443523985310444536137760356193334702284753404527185605377690676893457514977114418645433590399968335850247994397116251842555389488959473736153093051747848391743760687561760489357476820991304810142546711052867357090409263336896137510114201220324441141922932847426985493372855713648172869017912002903103461413309161909118037821281449352040894487258609708422034711375324759409914101239761945087146922526972864734329834921428700799100380989478794053104471257742568173119051744975062106316002631186664561239604824573975336264952942438151288729207736368749841063304109516198405628510691650512609716237857139878420242135863395271087632045560560514216613861578307963775004635613044290238343086929115114446800949851130731123045636445762157087289340612052838582394353015332574068736"
+        },
+        "hi": {
+          "num": "27010251116976965721231515006628046573864101291333012294047671592625364839104492754870119999489945940325247812230066988608551210736347837289655841751744815312911740000683934061625996362746380490491512825711129627769239697426881553664926649586666656456769522309551131693095282362374805283272310354694905406569834781836847656341362136546390293088195202596892362945074428549466054605457977787573678252830547287026296903954007286826251966954589009208817647858843107722721862420256546089646851298370401210124145036667804451496830665856939302143859044095090523152681974621223199425951465327066963097316575620140081348927233467054317162597996790034065725069665887915781820406558089775694113008341158429795347639642040595670906338669899069252460801830341789290167833918131407304288073583902029825681900704616469558747366035048580771505888602995033804963238862925431389716607716813899841134892514797227586938007914057865137043336054132701973731494814931039116926455779547146012737664521672938159395605387227704795138010529345838840943443498438244940187601750850342931568842511638764851806560503150863612030832306475813552663325887718301557900130484508614953899844146930980775662075201125549517620144656733322200430776687483409168765743463842197767350231892164503046387661134755939780157108184510505448304967040927416287260921513323394044326736484464245584995764786213864961422243656791435152182696694153720726224357721638555812534542933388147441082792132792283032741510362736307160987315030099771608582279224093260408125135090781447090003015381442012586360933040487216006039737411510942689567174795034536709295350594566838318746074138947139159384189704269184123337688613985690598184385393021996234113815078183328706323370401435231462418086813694558581875836893817916631293920473316145539784345898627411554435290364432567250776939197274907118014662362149593474360792850267665063613132574317934434846877647705488037943507110763431445634097623238872123640620056931207608774136440090563129620074198502251651521715434148301983504200886616426521092806197265242637607247207821860044807291328804299525846951933828868185022065683399809988202781342208506082954070454492926720350670432314537397039271065783223679444049350358572089872241048832546389863912886242714925887431661679453635021569064457207441260475045605899285512278470059565169721001803111",
+          "den": "8034817598141769498686329297167686551330057926368295163273527083620420902061138671231008522057281881710765478213436841421387991701126130150261882126632640229245679089302539866730202970136024427960196809645690395171563703272514588402519348991306454450416640483915647231869450124671927597984827308740385170757597831241124354999092890852680524044356348205743836291890008505998477209974904996673354306041023398889241735658750738794684685597301419875332202029009089922270136811773796481045477502821566222614090338986520753517164848544731554884230161326891123573576242801051657870105207682205892117010351538107094263800220787709065387546779648742197858363420535861431858871434447822404413406966941711371967661594995517659441519256608612407530844431703384038964549763742091051154298308505330183513812533419536661651849249081961108703346401260521660812624194251842781807683697760871770272205690718024088988706370023923693882199002524693768623040269536191053969865614000922494990356860274430842979384479136956716164949812885808827258594238243334190641406234049445997794404905847867418272884273570201840121130426001133608654610759001556484772245261948865148992970625997716696170522666850993988923798606756994176788901176498474542267656286519368657090594209632177622603235487907148263631733826739473702620372597260114099549279244881902970235145614909778966998219431641880909890816706744371373154456953796880525150980898604354745399373534759224538020898590691104871729235451436215072188450140148899312833048101346105487038399325174143851090190635297822646223192115569685997955399226117442555305083309734965628084544720973481279590008970986848464576925527484204532610508681978326918561950452771267999771982118107618284544250893979257427594272130898578140882457341426161211395392739353301610657272320697387589760957986155167991155394868896575277225954184143731736672547070025496073563618911675347587238381765095446961742374696600157542552373606249584405668990276699762734192942593037499808179945196671680333043800361525276511992230134370859619745339460442862545361235134380672606623820201365985052817861894723571488206905671207679094001983395815249684214152309050798526757980475821774978774556416455072798792345268409309302430939857780035735363359035221789980205387263852693486104452753277110561483977444035737937982073733295347866411833753600000000"
+        }
+      },
+      "relative_gap_display": [
+        "0.000003361650813731439005918",
+        "0.000003361650813731439005918"
+      ]
+    },
+    "positive_mass_initial_density": {
+      "a_native_exact": {
+        "num": "6338253001141147",
+        "den": "633825300114114700748351602688"
+      },
+      "M_exact": {
+        "num": "6275838594926751",
+        "den": "17592186044416"
+      },
+      "factor_exact": {
+        "num": "133656179642107",
+        "den": "9671406556917033397649408"
+      },
+      "rho_FD_minus_rho_finite_Mpc_minus2": {
+        "lo": {
+          "num": "322848617959800222665948075363311054858547220136492598369854679598491809803519702240964866095448085340240525934624756864793352951164415729559462828896796999798128344587240197085512627251844059529609407592885025903815166379274980738123152843551196608020447061532423298221916407922572301423148426121225256902880961922413397847852837360530878258938808112165295631184671876221034289050097382900754189372034208111912823218864414215046797431972273741393519044157298684628129161457854526966587078532068943316051226049646165176649322393210604052910537631604609116109877346266853666354959377740640779716367568021303927132849731970088022947069298918271025741158605204944912548082404615426808602019912164249275366669531701786880840291331297610735583000564950374072712402889129178628990069847645165596027661710262611567249660722075024896807953703217549381744667453092659955379342538180058188929208645828578115399208510363309211607411391835179120330690911544195754360512800371519592579425446113378821517324721648805316231154173102840343725233562709136867070060941459106959750326834211646850399922567563714465608709608395927089913227814643853291781338742222677344870806634770311405366420166271657120151083327961106329005443267689488791592946216385274412334254272093560484543843188589286472378282393505170342785174788745882708284460932524858176851913615940413686013425455276581125859564163561910031127901967870166624132415282031985432861676390047905191651246234222873002537385906211145505951122790335183693814733019093060659939969530089083939726186797229451693611290597207108455142182510851812158301758696179459543421171964714891819711133083930199819339205825200993596514097884912172882683742681302686434044508409231006643234283751796283827728675158564423264126703547962596706002766598468665659026362056992048503250265260868876211375734676550811194560992031763991591921222722299326351094202749242933438694015783737715360888394425509980220981067179996032290072444496606491075028390709284278567173253000329972222255068402195121385958818268502145275958286788696790605366417834053889493138808570124256155908778062201947543298138424200671102251315366134056166381760340378706752460711101940482015639293485904992210512079318121975710934165688287768987439870002526240108013384352537236235901746450585177688082247901818184564921978749552817719725465205046565209073140614234682901091986270206495402255401007167068161029747",
+          "den": "1516841678404572471828946246193651790053828947967841840211804325979533327169457381753365672050433737653390775045374246082061874103790170882489537205228215733920356682341869573808030441809217142439541493173277562885341436586385851776775773126638288430968631574356180671098246832169930299069355765821055607764507619142774816833607303044184081752037866536712888293161709510062862283696969504948625581761519605168132147684342814331141041504065849268276834638702826826403185654249392083287669435125586205480107168123282383996451759975872340430869283591367767863653375509778621054334014074970814866229651493556823576977985722013517912586993831821172117105815531353283774274414762418700173676185513400739863641373086715982429221011863283935002491385290671016138883966611457985697535946954722269205815037400675081344783837270550076215591378388983240578218599493208613236180361410014013767261038510963168803115681137324663553651717770696541015431956030251204029840349834574232322779554156040443220449688043316645705140110496332818093833430741450012032047348105281281558371097122789255651364833164833114945388288275205213631961539367899136301310132589527116352695720498188814238126622307850507204708658258261044230193425170284528775211185620553127108721696020583762509044429880084323328215065343114969402837542466625211666330910257212695517663104399366227027269113677873089115699435951494243758031318406141436037284760144574689039432026574549329456209875521788882049432738776851106136434798009051745265094113249797694222441470390731906319144892553655706972225216326981119819244602824259677435397292626219745270520999365496716731988560985284333146661722631155304958599007107685720810390476494310590486429641938113006691185153840489833973455213757276616894960320266821194049483613091853390681273050966584656628450623045953664088020106344047704995313770135488815455321205737812210603096672586580147220756341535136797570757151560264638472465247013974307533757481601655653293575151858212312635282492324395253263868884635995937760033287599878436771722874053833221313709551966484056077633733740451465236804202763610383753812543235733856562269068469486662868671301300714603128439738201391969547785295122814640657402801560138527747767511755228042602539062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "hi": {
+          "num": "2228005649479178050255299589611965088346088388282139163074424230255553595300116905292272487436499390763492291354459425674599594255625931648948604537064927396500681992835787471847035413004349105527647506647413688841233726278265220472542781404253137352028785401858343576473748186524635920755733834593592225220576441943917423054435072686451795687110437945474502329118079952473143958261247209065490106107622110491675967279492071289702701190661953740425449517888030531813717387308067642354401861885695195155184667143515788125747241714831811399774334386686687762127372018399500429994335465261555497885693581129017269672944573883077126455848566289511096597587330611377330400739266890785417977176110716954250281277989734750566814841484204195003180107344762363705702951828378038585294336482357969272787600463766999394389790784873085976838263532368058264331176971282439768496791599101512479719087557566164917670378311380431235063763560395859593619433142292505681852935122804198549865988727920997005332342039755473884301510286134947966496175144277052108092692236859223725119410363383320061375091388964288008145327528619487281441532027573138874183124642158140270651102861242773526836917475329175895436050136538717450296452380943078230822346240723473716229292197400198626771411808629238983165223797514375668765290921842220658711859434289856321547523944697122457899635685555273607679194910666787052874840903989010624107416912842541378258592779739503795372339726489454064495582287324252665401833039347803188064389309581380150593593290370364669785649694381127028137857938974129272672672320124208137627223818218386257943475326874391038835458174863534369495589568124108513396357234763501264051306004514689820446319321872495422184031707526614808909182330176171294346021554132616520029137500058879868513472918117906809162846135493489053851708099321129579071967393989804136646678455828631592542390961254257635234399312789945730650732016918389657604765008708337564500946604804670483425465744361859108675052099570048288175119237501626073765554288674698323264303961377030497987283483737193156826167284777492024701775669772073418168090453262854995362613725454355948063184219730249458203310400749293286378593302953069829546302408399222128181527787924338766367125038377837063542406316831001367055960933256144040842969329944856893581717864550710271187024888122272903371685888",
+          "den": "10467852859979321221544091544322865876840707060283585523472061837667136491585939096062285470718159960332029103526908963351820500019205260528615280971125985475214124649941983058436672991743652316445185826711448939043742650206702590845201630968497795058758791273031040036253230576908014270153459833264698033079136677127336571511710804429822605515192609069243256655930531835569783921514256019978249407788530396944103049380983175469756755323111818286738244801081189391137474069104366720148888477522121115216778056858432459526749680408142399670246049840875564434729284618224413360010023245349660919578982241329919324484021314321747157692850719011575031342930183665134604338701438670476631830620002149261574995543435673452546638665395595864036277968749235894278308353501518991205471613320517085244000710089863150412300421179387828005915790520527257107713883041066555827460595866421054726630330165168990320472307428320401735012840156940885064056388043169275117054619206859072990636926376181243627564872397111640652395950211660192698358656572682052601004683965251405637204364975126813276280780112235581337308461731888678332519536548319607173264406178167057881257419112196544189686993829636959816043648632680576963678366934276540909296712865383773740188072761959334273738226643894295699539877849508525669999397291328302487015705093454759924783258470471839473404511503670243339492182780830545032860236412400117640907029546511503406280381052842283346300456891860872712371839400328005567133053438828133727128420564890184392835897700606396133839829139288238827578460075139447937695181702440712305696851322728725314605374891163810624492704845967192850911671177800885659402238143354315246350904902660123909525731275016290824252953337131486138040399766995011205488791631735963263433684144748175542503521584410496901158871998105580141749072122876244649222531437090317797782574962272576450075254175930393222117405916631661502541934341652285954693641124745513139018963508085026425509879168971571281445908892993690402750771057873357052490394879098459270532501339693767408945543290228821230815875434127487348254517789791691135654975886037628636395951383525195281836049100813667015484189443117647409684274953810295519468246253510354183680975105351257757445572614413123500745463623373094166381369607421447653905488550662994384765625"
+        }
+      },
+      "gap_display_Mpc_minus2": [
+        "2.128426602171000878256E+38",
+        "2.128426602171000879422E+38"
+      ],
+      "scope": "Exact-real finite-node versus source-decimal-PI analytic xi=0 FD reference, same captured normalization/mass/closure, at captured NEW native a_ini only. Not compiled-source rounding or an event certificate."
+    },
+    "initial_coordinate": {
+      "native_u_exact": {
+        "num": "-4536840597973619",
+        "den": "140737488355328"
+      },
+      "ln_native_a": {
+        "lo": {
+          "num": "-5900325169225935990164878809032942907362430818097990211700818760324246364664199192624520791098913924520141658019408827833337220941904444158128177633521436214712971249843640653622931235326924373205513024772614657244509396128650904895224336280721953343758067364966348681703581928346237007216409101285231754015370230373290156898342548522224466482641372329720849772638511595000892568216718928560154458557579463284652947461469189004615733771662728074562004969694096152079264749802823737261437144720924381494725504734748480355309312620801432832085982050900667923375818764446142859963969161342992642335080848590135157311655659355149050420645184868658072134790589708454698952182632749386424491493252642037035405036186188129727650047777358367514908643375426618672507228953009103412974622568282833998649284332664133547998477624121035828557584404820322139811209854165992126074683952267118722821328780075059592535545050472162306019675848708667317855362355449516890393204683945332780834674308254747785960765229896647884280631735636677054210164460058584958418596297401834946706690680433506595023559029223732938544670998391129114503032144053771810132348023537535435879325188068938978941435331577429094501851487014870519327304765215629139802140487774151009064331343345758701675563927394919075822954572840882348309278025699560689095681331655820170752409834243626733920550753072687972367063680599393609552257781388622791747883668647087051727024756087744751191918531310255290009801185918670992660392452862070956683088986471563483146059955891293424061982057132671557932863227960731910886844772061804629259667867901930817601269115550819236627664200844469822749109765130987745996582626260502105431428583601215770853699142250859889116398865962829804097674488315536408197704899827411942871326011758134299110276103103391020769421302039056950710578950215819349650528151467187974252632460952722311064435820919641264834292321025498848327134801209805208676737124904881929756498713976431013976139049571316065465903468263887183387658594116862610405122300656735438100405435764753795573170143985012431591802514511905470114394577982706150007409053754271986459733039468833321476804363413591335442022003946793443003197386446586153286043818278747514405752253989336315905840828312199948535841276492417421351177187762486561923243809378117023253959176332949493069592538327521593456083894546031157788437772282949924967172959451630785588608322802368609367860910272821930650094996593127861842826132462428005159037103888379114007892044574780777551400029436470544710122327144959046769512577329819097782876618031108436675923347055614856706894604635513700129636236305069128057390567305885309721883099999014292488230924297687628460493",
+          "den": "183034190173549609666664741621572784952514806127315824625272884999554808897966770955780574679382885499267019763451302141324001858099000773204892918392108507450324036401203566276910570689825950843015794265952499844084329288550520252094807720561302534824838962600035958237710491717628236332840850949270337527816609163620423158623983346360102166137199151242823512967576782999047738124880611091492082509312605512278214424324982490706831221296991455647154083935162296970210400931052357285145296005346763509049730548812867780188102172914813264058991961205094815988173428198092643138490971160888538931155418778261032820884642181678660545898153238534791374446212171438829816561144522875606560668098850508421472689104789284525966146057948500705446742758078422667703229618678374715620674675402268047291185028411873855497674650748332135425624229596814622589005710562806995779725137606025512025457192409199640759356817924353456935355692439544252335930863591659435570323266544321273858851848905187636870239369271291638633955769775714694050816498823173379999610804273755852747141340580545093182831096928764159481187543779667187551065386712753208869654752535916105126228204190718114808986883690620875122764228211722544565707778716124847166410808204516071574149946374597245922676691696275475858914561707425868153192753540211018336655193198809400391043243571353024204949647511870835046968493197372719650517985355946427132680034361345796325727806610348962318984834322975816275249039135218831970431381125067262420633239130506979938630414385697982104908545862403979903070608710837541833388660912377411095831923665513135098429288177386908900100136744995645277124651059448392405341836371649793033182530645592657215651212710634339871517118585922292589647167506358965831022140556556014753105624180949093314077271321896340221298206341250493344272213750253645657772499503157258830285286620227364777577068092516723068603635279758518371374016019429485107326560913875585896329495004674066351899259379945319021141188855283665151224162512191595569818719731087899737345061123784270529332458889612382932481616787877207845047861507497949631852234253432974027060671389509356699412850414938795130053869607118901733949721794258800893633331550781701045693938716770611427724929901749208147656354230377377354319994684514238781923048095539853999505081781638072484125828183560034861273720394321459714192930110070725593174310962647942072371843918324712083859223884823836191660497693419760635799535247118065124717704655984567505456754703990656474758841460561296195523196025871341147116562267169241703851078414991118268005279725394127741872989290938647552092508049402359513064700732959288397132732747722622664159023824863426266500"
+        },
+        "hi": {
+          "num": "-51569047666825593467432018578359499984381097670282970794707349479833216557974899567275949756980690374575203316336022752746495683498089627958905155117698376066672179992036056785411190908317936406704110913395432359362945761392810030116374519754826614634096266343528399154193225249520131423499237216643212004446467196421047930488576908643503113721644668868111620513509147109561739799694055020883264202776742066884616115766385408940862815608450864274929737758130634060414564065577193947618474883200777634653360588200125539833493904218071209387044930872406423618409409517788085625330443893147641015606662202153022076925471779560707717337652098440726235519474523257010165964516646673529937215739266082504623793386993328442309222357216200764906337280651323787073570182908227228616637865842441702735333670487914509892229390286316135872227395563896896366500097675281602488631615534407831452885301658261500196068455499551267610298390179277915008687292372727408878318232002801779317114279373646701385728079582478558802169782743005912811193160635921994611499272757355214455509730145789032128982271549876575331077564007349653548900022898837297454899272181761484096026329813257171694119157388342658705734996862602072855982781764106548819089227398011717505549280181043683130945672321624585074147139768773474650594225962132336328443266410404944075760893976976809718291297499837633582451987158029553407511339727912031813008878021270321152317415025517449832256397133631483929520657091084602183306830328896990887910332600517438431671993184762776800834563133351670601667338711202121547156041770270280270915770439518213869925184631134412254587809470629712066643092628152252383977318209852325826178782327950925306721977199656372155804456186009622862860023505219133376837704924363401678838928700269702794432307725174232048741594500438576962789807691725008666239065576320954752179659119528232427528192590540849502680678317379213971232409140622952121696106523431633451064335674824100671039148031765861457798577877931207895435175829399251126572781909580533231266167129275057823743836707906604135066491681099923818370392946891963911863207499541472050942627486391941527430437357680543769416549082642456468500451788497024492612224741773107248922321607840189811886560407730677998353543043320272699004261110747373472441542575828667057848707405743029513582525166447377392392907276471008085282573206624495211724642842730409990003909864044655928764458603164855078987343329774574806169234476523934970882198594542641462078496439486094765074824625885338296056035320191557995632524312988206335620636767305142902468618373601685159519971112915616281237660827812044243092666602527611882278845132930037690910653785026915906954369102449258910797960049713351",
+          "den": "1599725202764865613351678198112914211011562155153748763618553061438907191168777539233433479115645366012809651916033791247590479484253835427815053189790314523070055888446343601064069180837053226780002356355229858322382363885773302208943183332680853052627932822803012873059373568389168819155232526106437036349552943391035695006910441776515693330547992766493987255978576044918800344092367492758941072336364989521090950249032068223791032779178422946025022851332975750942428989639321309743469392070439564098789122363979007404643524386660413540538505905772963397187554342775164385041548353235507576651336042781212372965790687485894631739129455856944761162382193079203879063054389133775663401000423267627554719603674760069164734405067695365751322893990619518206648551856217031879413008779164856476326506866895610526510361275636911095460735646272765900102709331375767181400071043659936702090915155765321147634057528962180608144104087578321459018557126340838429252352350864770676038491583650578741887626126938106463672954900417226747107197088986157119345554054259266127409402591274483378536328334391100031746264951183407104651726090542420373412783606065838824143250096587205928480030715805368754831773274782948162207977957142423184366916847550519191549381166863635586755094683176159726532271646079175339781467534734413100654332843888138789851449213950461565780491055487658879158773421252759605234107678812910529522377759833763344355159845079981526170636893117210122434053777384027994014278064934939362878408803458391674585206696628982204286382821372554419744773759918977680027271584494207446773942347677931414395542622882694883119149393778692679608113222260998152103804416524276785215173692896660515770337899561323284070881361467660574018108641943378953691450276872312900168490972497425522187057442015524562101626577942921483987481476041843380096647168004942559532339731657833344288112477163974200170836366026988644358911974987792239132074489277536730902736897731959106225934082805389002288949899052098591623085842198277684380991520514537811878888528292201683259463434770541413865922717561630219522757287314434960987278169661356087657878178536814298268904939641814869230912511663490681782797261855947296020268624855750193311348300192468179566191506821724808291576960846709261278474598896215701414285513282853799524686934400544453670311985298165736421779476307881078059006145819265930270184550194744554427274454518162650927465315140844295062261697095656639427801356555069479710246242509305072149730177781726494895468027320983185535171000691956898406355345918598981375719401899872701171301769226050913289665380377401034814843690807638811297735333226906463386429981508000062763570764562908129571119561182626661947437744128000"
+        }
+      },
+      "u_native_minus_ln_a_native": {
+        "lo": {
+          "num": "-2018087229770067339074407312522316445819477780514351613021768132896850616487462746717177754229131406374089120515473007434103520987133974844385087174905050578672370193282793473873856801268732183026558421840500971644448346093091100110060732245890284143161453883294705664643777739198896127098930717653901849943597136588876830135900778133952206013890392674298166439935391033198812826370551021894174690575826473409548023768278100492902576938905708813390682404382081886563078321183944714340661177740327063055270152935349460994708337537437362860364082866288082156420734691988436956680566374467828308379359064890402130809617021031178979671896155088802010985692083968471771373860338161543134658796181612560172085529123911586317742141408383459727659940005550979782654084887286641917033317804472335080411224248010192057707074504688866720085412643019245756430804485860429662204303503852393616981238541988490489355934005221599227952914424246621002773883439084637342230128362409501039722177291702525232119727961939787369664986409066135265139765401089204447704024145487193960593914865999377545681900895180128961491465162462848132237364927692436074276531710233899494687764372833623890222983315364925047725349734687103099735029281627762332943140687590579334376299955842058344353172108275501328495740987741428201805213419040682399118385563369774316851851605352241756748745439137713831639410759936418626928582085065229756868917901338956206113572298626871355775065285271053238017859721621692846903174759661523327757880241484363813190957879932264810343568944693751917018088552521600816562540792243800912809931068367998856784373062462332503330143164014742248711172499369320297509748240363942758558894428609999505303893633457251017389095760591859895621293397753747401503051080056948299899415538338368401106431271405859185064731455775017058945839023843690130441919538664943959915869464419916795505788366348687545072642014611095088243079332932464962643568826694332074510906831273417809698648596714669991343303163928918321991760930606171976548063035601612595202930521237826397265762409989868955964679834321734415916193076703778850615534612803285418808109957251751421934944556834188098964755053574277209023792543940596831155831698181807454229875475953720071387325115492412868703105248181002684100910420406357733812983294175188261848883933391857565217079892335281903956778950451396471622057968217196427267775684713653442062057102622875255257713059238280608626487343476144733379280840794949660530572220374167126108045830472738819444336848300238204481773589956077159038867736696357525157004170860550536298779317531864239946572240817338592838341846658715755663994353799660853137483962112816404197591579792211749236616833389430649",
+          "den": "1599725202764865613351678198112914211011562155153748763618553061438907191168777539233433479115645366012809651916033791247590479484253835427815053189790314523070055888446343601064069180837053226780002356355229858322382363885773302208943183332680853052627932822803012873059373568389168819155232526106437036349552943391035695006910441776515693330547992766493987255978576044918800344092367492758941072336364989521090950249032068223791032779178422946025022851332975750942428989639321309743469392070439564098789122363979007404643524386660413540538505905772963397187554342775164385041548353235507576651336042781212372965790687485894631739129455856944761162382193079203879063054389133775663401000423267627554719603674760069164734405067695365751322893990619518206648551856217031879413008779164856476326506866895610526510361275636911095460735646272765900102709331375767181400071043659936702090915155765321147634057528962180608144104087578321459018557126340838429252352350864770676038491583650578741887626126938106463672954900417226747107197088986157119345554054259266127409402591274483378536328334391100031746264951183407104651726090542420373412783606065838824143250096587205928480030715805368754831773274782948162207977957142423184366916847550519191549381166863635586755094683176159726532271646079175339781467534734413100654332843888138789851449213950461565780491055487658879158773421252759605234107678812910529522377759833763344355159845079981526170636893117210122434053777384027994014278064934939362878408803458391674585206696628982204286382821372554419744773759918977680027271584494207446773942347677931414395542622882694883119149393778692679608113222260998152103804416524276785215173692896660515770337899561323284070881361467660574018108641943378953691450276872312900168490972497425522187057442015524562101626577942921483987481476041843380096647168004942559532339731657833344288112477163974200170836366026988644358911974987792239132074489277536730902736897731959106225934082805389002288949899052098591623085842198277684380991520514537811878888528292201683259463434770541413865922717561630219522757287314434960987278169661356087657878178536814298268904939641814869230912511663490681782797261855947296020268624855750193311348300192468179566191506821724808291576960846709261278474598896215701414285513282853799524686934400544453670311985298165736421779476307881078059006145819265930270184550194744554427274454518162650927465315140844295062261697095656639427801356555069479710246242509305072149730177781726494895468027320983185535171000691956898406355345918598981375719401899872701171301769226050913289665380377401034814843690807638811297735333226906463386429981508000062763570764562908129571119561182626661947437744128000"
+        },
+        "hi": {
+          "num": "-8124124575467570332337527801673624849712714334227647279407697215137152889635172758063515521319309628041833648297808009967098645547256784962541719060011104532628290212102955739134003571807912805161180871805147345067820405479412375015816857345938455754066622379802698436075070317540351632396258174418599749571640041141496125765971635629805776183392444879436330576178891513959134999521448522164791583629418763692313507367673524688682945489652721253494880982922316329925250433269174426863231683393256091681235750400198290212508856217153869731861352836461165974753238562994593264454792351973059957763011951705457980465090842699092730277569562089584679077460139582920090635211945576070946080438506265953222562375716771767399521360961029862058083114264246852677256283436652252855295836605506056153510846947985603577533185438222635444434261378791413501432222572051659162521708498531971330355212882048418193885158763271957285995086318297082029092029853738633631166888909616103183265348271784093071697210738995936767158838170767881681593386703150859890975620495534505519175894941757709034760968647223250711310639501545172119805543997755063176841967834787917437159254729350095048336888200075943688969928410569279403965228646688774804335410288039159932192339831924338964144216773936308560949350671565573359760716680589106851170079943141336027517673566142903667523917801019129077799360895149713584980378863388148495077573701918198189382668304894766670621840813081444225000141905016301478738319881943211272497743395808995549309493466668192266840818800094536024949838772412877797414555660159901246013436686031787725701199408489885362103954402939108117943996424516227215731224366440280942898979163182372377341898916062708242735862851320028967842755070854295442669042369295144462829415818360016331615124288387891281691863429044857314198211895196090641951395587539632087115241611891597753932140024791615746893865189627015831558447376841757846690827738318430467105803006676787684969920307435930900571118861419279320236105063034103711475781934399446852766732993388563194895182350770159186855992732572306051014371031101269297687624447937760688949777338339582592643184114172527200656025723082064375320506679940475748048725490105479543197003175523049059252430179507825530034748314058349074375754943839989118024657880968863416283111308338038187767000834250138550369530210237289234603443158535165026518586704933059052914274584383325532802673917397474400907568544849229769248782363344848346701527987512048972265893240384365175435671250955024291760402018798191100968974422180299052925726424078286050178676501287422134647326066904521361624514272656948548701310127070243993941458316984338403994164300902867351699",
+          "den": "6439943052044207208463487194406462418572836907193154593004081120449797150935425696971163487437088183758557035359510518051646325722140189091379021346210635317104755351108672325205191729393652685233000172615518725077297507208555984703757309142786876622721715673773847093698464611068249225098939806514599155669842547862434860433170668207024369195237613597711439813800543775537552051315790549339777910541772850100504636667914376588152537245796900906565315018541965721102692829085022825704705171056261451045394782165101762477097087475512606417554494980937998198770424192098403220340879523244404154454305334442519852784698687151898111391482471270837583146429410405637483123833199903377441212272840486329247316245399515086932078265319818292282381838054782280999325258922411377836229411408348421384940921537444487392788008378468830807645381480476787259755416584392685984431550348386134480412617612046269698837595250521904738155700921592029355438855494395612152990576950933510600628866344197441987389045855943597585294050478466661302066402300254225645863804084912442725478922774798654087770375045126947689829407357142948252025849166961606477530925375100786580822819543711288933247975033603460633290115852599532689290178008502772420056946204174950456667088967098768887067162506174283233860612526830125253118941548047520110139722734120534022692047605438246759882384485500624964017686955828136378544548221448985179446540700992605730947710097729629456855664093898010069410604296939020329912909995575505534131155416482406029198505712168966252738768449945118389239230581898116816432629182266527762560988234187959159244255507992053518044867939900491269141849974503363356104441552214582580368896916859602774253243416042815497524960184161812583791638385613583403258851786279512651830740339022587019467277408210644745851414109381678568714361462610828655041784164960146845049508006984604907962006090358164913461177367865545909718766234727462822822597665728491634995806433159335789533113110720400453337810032492568728596665731930948438085057625240473140209451232409800291800674464908490004984931288884323753642190444375580282518409920700625708435398677510107664465729084901803253147446777289310631778318319735930801343125369865276368703524605247143795228692001684728563204757753577980604211653685156925384414776259043153972367270923779612136470920488528326120094027988974460056235541642093915723117968313646343690342723868921209925704018952628309583171117265128008141462791542361058246340286076761216189371523588062691575797021684203189378770053927243895440429258830949904446383388254590716879597984477805769845651790387530462989342374120970648669829917690921675759330241309266549824077098177913432043365375020105728000"
+        }
+      },
+      "delta_u_display": [
+        "-1.261521182689458664864E-15",
+        "-1.261521182689458664864E-15"
+      ],
+      "one_minus_exp_u_over_native_a": {
+        "lo": {
+          "num": "8124124575467570332337527801673624849712714334227647279407697215137152889635172758063515521319309628041833648297808009967098645547256784962541719060011104532628290212102955739134003571807912805161180871805147345067820405479412375015816857345938455754066622379802698436075070317540351632396258174418599749571640041141496125765971635629805776183392444879436330576178891513959134999521448522164791583629418763692313507367673524688682945489652721253494880982922316329925250433269174426863231683393256091681235750400198290212508856217153869731861352836461165974753238562994593264454792351973059957763011951705457980465090842699092730277569562089584679077460139582920090635211945576070946080438506265953222562375716771767399521360961029862058083114264246852677256283436652252855295836605506056153510846947985603577533185438222635444434261378791413501432222572051659162521708498531971330355212882048418193885158763271957285995086318297082029092029853738633631166888909616103183265348271784093071697210738995936767158838170767881681593386703150859890975620495534505519175894941757709034760968647223250711310639501545172119805543997755063176841967834787917437159254729350095048336888200075943688969928410569279403965228646688774804335410288039159932192339831924338964144216773936308560949350671565573359760716680589106851170079943141336027517673566142903667523917801019129077799360895149713584980378863388148495077573701918198189382668304894766670621840813081444225000141905016301478738319881943211272497743395808995549309493466668192266840818800094536024949838772412877797414555660159901246013436686031787725701199408489885362103954402939108117943996424516227215731224366440280942898979163182372377341898916062708242735862851320028967842755070854295442669042369295144462829415818360016331615124288387891281691863429044857314198211895196090641951395587539632087115241611891597753932140024791615746893865189627015831558447376841757846690827738318430467105803006676787684969920307435930900571118861419279320236105063034103711475781934399446852766732993388563194895182350770159186855992732572306051014371031101269297687624447937760688949777338339582592643184114172527200656025723082064375320506679940475748048725490105479543197003175523049059252430179507825530034748314058349074375754943839989118024657880968863416283111308338038187767000834250138550369530210237289234603443158535165026518586704933059052914274584383325532802673917397474400907568544849229769248782363344848346701527987512048972265893240384365175435671250955024291760402018798191100968974422180299052925726424078286050178676501287422134647326066904521361624514272656948548701310127070243993941458316984338403994164300902867351699",
+          "den": "6439943052044215332588062661976794756100638580818004305718415348097076558632640834124053122609846247274078354669138559885294623530150156190024568602995597858823815362213204953495403832349391819236571980528323886258169312355901052524162788555161892439579061612229601160320844413766685300169257346866231551928016966462184432073211809703150135166873243403487623206245423211868128230207304508474777431990295014892088266086678068901659904919321589589510804671263219215983675751401352750955138440230688314277078175421193443712847487673802818926410712134807730060123260653264377973579442517837668609246657307502477615796650392609878576482325170363567860715991499990316560583972782823468076424218416557275327754751665468309494453982091585691803742799084644339082439523169264055092512848060601276680777527043500640903634956364072408340830819703112231694016795375806187416654122400045297002121116144017600054050477298940098623314464193549315350525173791477641245020430689567141767517775960300625252737317640036669282504789474403428460904573068135907239250507235772333701099418309304173263665316802835982450798054580393659562665350712133726283074923130163963422790654331628726092502704383698508970178315928543221659218588577782176385285592892949754792077377006258701079406994430513247378077386463138686202469613113620879870856403323227385192771990746774274277555950628404292487935487974957214177905443371162570159825404089141100808521412015927818839523968988664680691251417378383245330054815011876984272451037359693678526941901521164515562232235118137385230058030676434141766271401595144325177116648394089205172680941539779779219244276429785853373096252913611481300100866068441798311593263357140545673232406598415192839423876246870055319654489705642551246013922640574955320873109634167049848883095768226976360975702497272960260577790507468142853253679361050788796445095546616692023203617981955918845601202159481292803583955861743294381269974507486338325823544751589802895336119787508085423258117468423469299715527151210268674190120659344184615991385631856653058533667853471684900167282059043510609634923016681631296889441021969923396059846615270796614243067424484395896331560949816511287804041401800306121849805310341024417429014710726686992231867524733787815634937261403510638959967743505999760169720099032271997025151892643028419582228826566513887094862239113010425765751879383150326561126848811370208929428801980262839978603335953842385845034662602409049031336391590827495122649421609562890899511100111663841690262068568364814441304882268187200831277629141005415357810434889769805324408556091820024328291674952597636668441025492010294344190347870224460640368379510543765535415162251836037529675922973079699"
+        },
+        "hi": {
+          "num": "2018087229770067339074407312522316445819477780514351613021768132896850616487462746717177754229131406374089120515473007434103520987133974844385087174905050578672370193282793473873856801268732183026558421840500971644448346093091100110060732245890284143161453883294705664643777739198896127098930717653901849943597136588876830135900778133952206013890392674298166439935391033198812826370551021894174690575826473409548023768278100492902576938905708813390682404382081886563078321183944714340661177740327063055270152935349460994708337537437362860364082866288082156420734691988436956680566374467828308379359064890402130809617021031178979671896155088802010985692083968471771373860338161543134658796181612560172085529123911586317742141408383459727659940005550979782654084887286641917033317804472335080411224248010192057707074504688866720085412643019245756430804485860429662204303503852393616981238541988490489355934005221599227952914424246621002773883439084637342230128362409501039722177291702525232119727961939787369664986409066135265139765401089204447704024145487193960593914865999377545681900895180128961491465162462848132237364927692436074276531710233899494687764372833623890222983315364925047725349734687103099735029281627762332943140687590579334376299955842058344353172108275501328495740987741428201805213419040682399118385563369774316851851605352241756748745439137713831639410759936418626928582085065229756868917901338956206113572298626871355775065285271053238017859721621692846903174759661523327757880241484363813190957879932264810343568944693751917018088552521600816562540792243800912809931068367998856784373062462332503330143164014742248711172499369320297509748240363942758558894428609999505303893633457251017389095760591859895621293397753747401503051080056948299899415538338368401106431271405859185064731455775017058945839023843690130441919538664943959915869464419916795505788366348687545072642014611095088243079332932464962643568826694332074510906831273417809698648596714669991343303163928918321991760930606171976548063035601612595202930521237826397265762409989868955964679834321734415916193076703778850615534612803285418808109957251751421934944556834188098964755053574277209023792543940596831155831698181807454229875475953720071387325115492412868703105248181002684100910420406357733812983294175188261848883933391857565217079892335281903956778950451396471622057968217196427267775684713653442062057102622875255257713059238280608626487343476144733379280840794949660530572220374167126108045830472738819444336848300238204481773589956077159038867736696357525157004170860550536298779317531864239946572240817338592838341846658715755663994353799660853137483962112816404197591579792211749236616833389430649",
+          "den": "1599725202764865613351678198112914211011562155153748763618553061438907191168777539233433479115645366012809651916033791247590479484253835427815053189790314523070055888446343601064069180837053226780002356355229858322382363885773302208943183332680853052627932822803012873059373568389168819155232526106437036349552943391035695006910441776515693330547992766493987255978576044918800344092367492758941072336364989521090950249032068223791032779178422946025022851332975750942428989639321309743469392070439564098789122363979007404643524386660413540538505905772963397187554342775164385041548353235507576651336042781212372965790687485894631739129455856944761162382193079203879063054389133775663401000423267627554719603674760069164734405067695365751322893990619518206648551856217031879413008779164856476326506866895610526510361275636911095460735646272765900102709331375767181400071043659936702090915155765321147634057528962180608144104087578321459018557126340838429252352350864770676038491583650578741887626126938106463672954900417226747107197088986157119345554054259266127409402591274483378536328334391100031746264951183407104651726090542420373412783606065838824143250096587205928480030715805368754831773274782948162207977957142423184366916847550519191549381166863635586755094683176159726532271646079175339781467534734413100654332843888138789851449213950461565780491055487658879158773421252759605234107678812910529522377759833763344355159845079981526170636893117210122434053777384027994014278064934939362878408803458391674585206696628982204286382821372554419744773759918977680027271584494207446773942347677931414395542622882694883119149393778692679608113222260998152103804416524276785215173692896660515770337899561323284070881361467660574018108641943378953691450276872312900168490972497425522187057442015524562101626577942921483987481476041843380096647168004942559532339731657833344288112477163974200170836366026988644358911974987792239132074489277536730902736897731959106225934082805389002288949899052098591623085842198277684380991520514537811878888528292201683259463434770541413865922717561630219522757287314434960987278169661356087657878178536814298268904939641814869230912511663490681782797261855947296020268624855750193311348300192468179566191506821724808291576960846709261278474598896215701414285513282853799524686934400544453670311985298165736421779476307881078059006145819265930270184550194744554427274454518162650927465315140844295062261697095656639427801356555069479710246242509305072149730177781726494895468027320983185535171000691956898406355345918598981375719401899872701171301769226050913289665380377401034814843690807638811297735333226906463386429981508000062763570764562908129571119561182626661947437744128000"
+        }
+      },
+      "scope": "Native log(a) is a distinct rounded coordinate; a_hat and u_hat cannot simultaneously be imposed as exact-real a=exp(u). Define source-real initialization at a_hat, carry this offset for a claimed compiled-path relation."
+    },
+    "first_unsupported_historical_primitive": "Original accepted Theta and initial realization equivalence or complete validated inverse. Exact output equality does not discharge it.",
+    "native_processes_started": 0,
+    "cmb_or_likelihood_evaluations": 0,
+    "repository_writes": 0,
+    "workflow_dispatches": 0,
+    "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+    "final_result_gate": "UNRESOLVED",
+    "sources": [
+      {
+        "case": "camspec-lcdm",
+        "member": "q047_reconstructed/camspec-lcdm/accepted_initial_hex.json",
+        "sha256": "0205acdb1d79b429c6b80dcbdd5a53910f699f87115f883f6b8395abe69ff8a2"
+      },
+      {
+        "case": "camspec-lcdm",
+        "member": "q047_reconstructed/camspec-lcdm/effective_background_hex.json",
+        "sha256": "f2342c737770aeef4718ef6b0cae2e1837d91ee72e0e618dfe49601450674308"
+      },
+      {
+        "case": "camspec-lcdm",
+        "member": "q047_reconstructed/camspec-lcdm/source_objects/source/background.c",
+        "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451"
+      },
+      {
+        "case": "camspec-lcdm",
+        "member": "q047_reconstructed/camspec-lcdm/source_objects/include/common.h",
+        "sha256": "410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c"
+      },
+      {
+        "case": "camspec-ede_n3",
+        "member": "q047_reconstructed/camspec-ede_n3/accepted_initial_hex.json",
+        "sha256": "8d7f57cc98f5ada05f77f57147e0d2d26ebf19e14602493a8f962e3c310d4ae0"
+      },
+      {
+        "case": "camspec-ede_n3",
+        "member": "q047_reconstructed/camspec-ede_n3/effective_background_hex.json",
+        "sha256": "4ef09d4ecd66b4a67ca404565fcd8815a6db89182d448403c6b71331dd87328b"
+      },
+      {
+        "case": "camspec-ede_n3",
+        "member": "q047_reconstructed/camspec-ede_n3/source_objects/source/background.c",
+        "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451"
+      },
+      {
+        "case": "camspec-ede_n3",
+        "member": "q047_reconstructed/camspec-ede_n3/source_objects/include/common.h",
+        "sha256": "410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c"
+      },
+      {
+        "case": "hillipop-lcdm",
+        "member": "q047_reconstructed/hillipop-lcdm/accepted_initial_hex.json",
+        "sha256": "302ea9e373707214779120a2bd3eab4064203d64e9585e60fe7e93926511b64f"
+      },
+      {
+        "case": "hillipop-lcdm",
+        "member": "q047_reconstructed/hillipop-lcdm/effective_background_hex.json",
+        "sha256": "4228d94c84c085951704f212abe9a026a3e7428b9e456bbdd04bc2814df61a2e"
+      },
+      {
+        "case": "hillipop-lcdm",
+        "member": "q047_reconstructed/hillipop-lcdm/source_objects/source/background.c",
+        "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451"
+      },
+      {
+        "case": "hillipop-lcdm",
+        "member": "q047_reconstructed/hillipop-lcdm/source_objects/include/common.h",
+        "sha256": "410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c"
+      },
+      {
+        "case": "hillipop-ede_n3",
+        "member": "q047_reconstructed/hillipop-ede_n3/accepted_initial_hex.json",
+        "sha256": "6f5e88a8ad7c2b2344b7952f8d8467e6e4098e5bb22b60dbac5e117faf0c9ecd"
+      },
+      {
+        "case": "hillipop-ede_n3",
+        "member": "q047_reconstructed/hillipop-ede_n3/effective_background_hex.json",
+        "sha256": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146"
+      },
+      {
+        "case": "hillipop-ede_n3",
+        "member": "q047_reconstructed/hillipop-ede_n3/source_objects/source/background.c",
+        "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451"
+      },
+      {
+        "case": "hillipop-ede_n3",
+        "member": "q047_reconstructed/hillipop-ede_n3/source_objects/include/common.h",
+        "sha256": "410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c"
+      }
+    ]
+  },
+  "latest_ingestion": {
+    "schema": "Q047_M15_INGESTION_V1",
+    "checked_utc": "2026-10-11T13:43:51.168682+00:00",
+    "q": "Q-047",
+    "case_id": "NOT_DOCUMENTED",
+    "question": "For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?",
+    "question_sha256": "f6b22049c8308369f9de3a598447f10ff0e54e5e13afadacb3d4567076c79e23",
+    "result_id": "R-PROPOSED-Q047-M15-INGESTION-001",
+    "source_id": "I-PROPOSED-Q047-M15-INGESTION-001",
+    "status": "QUESTION_RESOLVED",
+    "epistemic_status": "INCONCLUSIVE_UNDER_CURRENT_PRESERVED_EVIDENCE",
+    "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+    "q_completion_gate": "PASS_FOR_INCONCLUSIVE_CLOSURE",
+    "q_completion_scope": "Epistemic stop/routing decision; no physical YES/NO event verdict and no numerical certification.",
+    "final_result_gate": "UNRESOLVED",
+    "selected_next_engine": "BUBBLEVERSE — MOTOR 14: AUTONOMOUS UNIVERSE REVISION",
+    "actual_qualified_first_event": "NOT_COMPUTED",
+    "certified_nonreachability": "NOT_ESTABLISHED",
+    "cases": {
+      "camspec-lcdm": {
+        "answer": "INCONCLUSIVE",
+        "historical_PT01": "UNRESOLVED",
+        "historical_PT03": "UNRESOLVED",
+        "full_PT04": "UNRESOLVED",
+        "first_hit_gate": "UNRESOLVED",
+        "final_result_gate": "UNRESOLVED"
+      },
+      "camspec-ede_n3": {
+        "answer": "INCONCLUSIVE",
+        "historical_PT01": "UNRESOLVED",
+        "historical_PT03": "UNRESOLVED",
+        "full_PT04": "UNRESOLVED",
+        "first_hit_gate": "UNRESOLVED",
+        "final_result_gate": "UNRESOLVED"
+      },
+      "hillipop-lcdm": {
+        "answer": "INCONCLUSIVE",
+        "historical_PT01": "UNRESOLVED",
+        "historical_PT03": "UNRESOLVED",
+        "full_PT04": "UNRESOLVED",
+        "first_hit_gate": "UNRESOLVED",
+        "final_result_gate": "UNRESOLVED"
+      },
+      "hillipop-ede_n3": {
+        "answer": "INCONCLUSIVE",
+        "historical_PT01": "UNRESOLVED",
+        "historical_PT03": "UNRESOLVED",
+        "full_PT04": "UNRESOLVED",
+        "first_hit_gate": "UNRESOLVED",
+        "final_result_gate": "UNRESOLVED"
+      }
+    },
+    "what_changed": "Scoped M15 findings integrated; prior operational continuation superseded by an inconclusive closure under current evidence.",
+    "what_did_not_change": [
+      "Exact question",
+      "CASE remains undocumented",
+      "All frozen scientific specifications/contracts",
+      "M15 mathematical scopes",
+      "Historical/event/final scientific gates",
+      "Prior rejected/falsified history"
+    ],
+    "new_external_scientific_sources": [],
+    "new_native_processes": 0,
+    "new_cmb_likelihood_evaluations": 0,
+    "workflow_dispatches": 0,
+    "remote_repository_writes": 0,
+    "m15_calculation_replayed": false,
+    "new_program_id": null,
+    "start_instruction_required": false,
+    "missing_material": "Attributable historical accepted-state/equivalence linkage or complete validated inverse with justified historical forward-error relations, followed by required event certification.",
+    "reopening_condition": "A concrete material new evidence/proof package; retain Q-047 and the full journal. No unchanged campaign or generic recovery loop.",
+    "impossibility_theorem_asserted": false,
+    "unique_state_required": false,
+    "physical_falsification_asserted": false,
+    "journal_continuity_gate": "PASS",
+    "inherited_journal_bytes": 3481393,
+    "inherited_journal_sha256": "82426f269c9005fea561da7da49acd946721af181b2caff64ec0d6211e785081",
+    "handoff_complete_journal_gate": "PASS",
+    "incoming_m15_receipt_hash_checks": 6,
+    "readme_gate": "PASS_FOR_PREPARED_DIFFERENTIAL_UPDATE",
+    "readme_replacement_count": 1,
+    "remote_installation_status": "PREPARED_NOT_PUSHED",
+    "repository_consistency_scope": "Documentation consistent with preserved evidence and completed target; current remote registry/README not re-inspected or changed.",
+    "input_files": {
+      "Q047_SAMLET_JOURNAL.md": "82426f269c9005fea561da7da49acd946721af181b2caff64ec0d6211e785081",
+      "README.md": "2c38e5647c32e2321d0189de191d6f152b5309f6bf2f1fe777277d9686386797",
+      "Q047_M15_DELIVERY_VALIDATION_V1.json": "3997a1bab9d60c8933fda7f7216ddcfafeb59419feeb473b6c76928ff94fa5fc",
+      "Q047_M15_HANDOFF_V1.md": "32e1803592edd511c864424a45d02de1511a82a448b125edc8b2b85517839dd6",
+      "Q047_M15_EXACT_AUDIT_V1.json": "b1a232c0d850287534bae0c319db137ed4bb2c4ffef7b67a9418c65aa58a21e1",
+      "Q047_M15_SYMBOLIC_CONTROL_V1.json": "aceac7672dba34a51ef1f54b4e2c7aec1f205ec9cf11d44f322074ee75f2ea68",
+      "q047_m15_exact_audit_v1.py": "1d23f4f5b70d259db8ea36f9f625e168a55a81aa2071c810c1ce7ced3278364f"
+    },
+    "files": {
+      "Q047_SAMLET_JOURNAL.md": "bf9382dbb935e2b5dd4f055bbe0bcf383d38b6d4292d81dd471305eca6858f81",
+      "README.md": "7ca26a4a6716123077fa2b065624eac8b92b6d228e86bc631d96ae3836637dbf",
+      "Q047_M15_INGESTION_MOTOR14_HANDOFF_V1.md": "97a950b247dfeb9e6fd12f2cc40812eeb2c93240208a3e8b746dd8ec8b85fab1"
+    }
+  }
+}
+```
+
+---
+
+## COMPLETE INHERITED MASTER-JOURNAL HISTORY
+
+The following 3,490,651 bytes are preserved verbatim, SHA256 bf9382dbb935e2b5dd4f055bbe0bcf383d38b6d4292d81dd471305eca6858f81. They contain all inherited scientific journal state, exact question/contracts, original source IDs/claim mappings, internal evidence/provenance, historical paths/identities, earlier handoffs and raw-result registers. Preserve recoverability; do not treat superseded operational instructions as the current route. This is history within the same authoritative journal, not a competing knowledge base.
+
+<!-- BEGIN VERBATIM INHERITED JOURNAL -->
+
+# BUBBLEVERSE — Q047 M15 result ingestion and epistemic closure
+
+DATE AND TIME UTC: 2026-10-11T13:43:51.168682+00:00
+STATUS: QUESTION RESOLVED — epistemic closure as INCONCLUSIVE under the currently preserved evidence.
+CURRENT Q: Q-047
+CASE ID: NOT DOCUMENTED.
+EXACT QUESTION: For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?
+SELECTED NEXT ENGINE: BUBBLEVERSE — MOTOR 14: AUTONOMOUS UNIVERSE REVISION.
+
+## J-PROPOSED-Q047-M15-INGESTION-001 — differential integration and stop decision
+
+RESULT ID: R-PROPOSED-Q047-M15-INGESTION-001.
+SOURCE ID: I-PROPOSED-Q047-M15-INGESTION-001; internal technical/routing evidence, not an external scientific source.
+
+[KEEP / CONTINUITY] The complete incoming 3,481,393-byte SAMLET JOURNAL is preserved verbatim below, SHA256 82426f269c9005fea561da7da49acd946721af181b2caff64ec0d6211e785081. It retains M01–M15, exact contracts, previous scientific and technical failures, raw result objects, source IDs, claim mappings, rejected alternatives and historical routing. All six files declared by the supplied M15 delivery receipt match their hashes. The incoming M15 handoff contains this complete journal as its exact byte suffix. No scientific journal is recreated.
+
+[CONFIRM / INGESTION] R-PROPOSED-Q047-M15-001 is technically usable for its expressly scoped mathematical claims. It verifies positivity/index linkage of the captured NEW_RECONSTRUCTION realization, reduced exact-real background regularity, the bounded finite-node/analytic-FD difference and the rounded-coordinate offset. These claims share the captured inputs and do not constitute independent observations. The approximately 3.36165 ppm massless reference difference and approximately -1.26152e-15 coordinate offset are deterministic bounded mathematical differences; they are not first-event displacements, cosmological measurements or physical anomalies.
+
+[KEEP / SCIENTIFIC LIMIT] The original historical accepted-state/equivalence relation remains unsupported. Neither output-byte reproduction nor scoped background regularity supplies it. A complete validated inverse with justified historical forward-error relations could be sufficient, including a non-singleton family with a common certified event verdict. No such admitted package is present in the supplied evidence. This does not prove inverse recovery impossible, require a unique state, establish noninjectivity or refute any physical model.
+
+| Case | Answer supported by current evidence | Historical PT01/PT03 | Full PT04 | First-hit / final-result gate |
+|---|---|---|---|---|
+| camspec-lcdm | INCONCLUSIVE / INSUFFICIENT_EVIDENCE | UNRESOLVED | UNRESOLVED | UNRESOLVED |
+| camspec-ede_n3 | INCONCLUSIVE / INSUFFICIENT_EVIDENCE | UNRESOLVED | UNRESOLVED | UNRESOLVED |
+| hillipop-lcdm | INCONCLUSIVE / INSUFFICIENT_EVIDENCE | UNRESOLVED | UNRESOLVED | UNRESOLVED |
+| hillipop-ede_n3 | INCONCLUSIVE / INSUFFICIENT_EVIDENCE | UNRESOLVED | UNRESOLVED | UNRESOLVED |
+
+ACTUAL QUALIFIED FIRST EVENT: NOT COMPUTED. No certified nonreachability or YES/NO answer is established for any case. FINAL_RESULT_GATE remains UNRESOLVED.
+
+[UPDATE / ROUTING ONLY] The earlier operational CONTINUES / NOT_YET_SATISFIED instructions are superseded by this ingestion decision to stop active investigation with the defensible answer INCONCLUSIVE / insufficient evidence under the current preserved record. They remain historical below. The mandatory scientific predicates and original result gates are not superseded or promoted. The question, threshold, four configurations, source commit, model, likelihood, datasets, priors and success/falsification criteria are unchanged.
+
+[Q-COMPLETION / EPISTEMIC] PASS_FOR_INCONCLUSIVE_CLOSURE. This records completion of the current investigation's evidence assessment, not completion of the missing first-event calculation. The exact physical truth remains undetermined. The current material establishes why it cannot supply the requested qualified answer. No concrete new admissible historical object or justified complete forward-error/inverse primitive is identified in the preserved state. Repeating capture, generic recovery, M14 or M15 has no identified information gain. A theoretically possible proof is a reopening condition, not an automatic instruction to repeat investigation. There is no theorem that future evidence cannot resolve Q-047.
+
+[MATERIAL-REVERSAL TEST] A genuinely new attributable historical/equivalence object or complete validated inverse plus event certificate could change the answer. The present materials do not provide that new input. Unchanged replays or arbitrary robustness variations do not discharge the missing relation and are not required. No new repository/literature search or symbolic/native computation is justified by this ingestion task.
+
+[STOP / RETURN] Stop active research, numerical execution, validation and reproduction. Route exactly to the established MOTOR 14 with this complete journal and provenance. Motor 14 integrates the inconclusive evidence status and the scoped M15 mathematical qualifications into accumulated knowledge; it must not upgrade an unresolved historical gate. Reopen Q-047, preserving this identifier and its full state, only if a concrete material new evidence/proof package appears. A separately authorized reconstructed-IVP question requires an explicit scope/contract decision and is not silently substituted for this Q. Report Writer is excluded.
+
+[ACCOUNTING / REPOSITORY] This ingestion launches zero native processes, zero CMB/likelihood evaluations and zero workflow dispatches; it makes zero remote repository writes. The inherited 16/52 ledger (36 remaining) and separate four-process/28-internal-initialization reconstruction ledger remain unchanged. No new runnable program, PROGRAM_ID, workflow or launcher registration is required. Q047-RECONSTRUCTION-V1 remains a completed acquisition target; do not start it again unchanged. README receives only the current-route wording change as a prepared local replacement. Remote documentation/registry installation is not asserted.
+
+## Source register and claim-to-source map — differential addition
+
+I-PROPOSED-Q047-M15-INGESTION-001: Bubbleverse Result Ingestion & Routing Engine, 2026, current file-identity/continuity audit and documented epistemic closure. Inputs: complete supplied M15 journal and handoff, six verified M15 artifact hashes, existing recovery/admission record. Method: local byte/hash and journal-scope checks; no new physical computation. Exact active model/UI reasoning selection is NOT DOCUMENTED.
+
+Scoped mathematical claims -> I-PROPOSED-Q047-M15-001, I-PROPOSED-Q047-RUN38140371059-001, K-PROPOSED-Q047-BACKGROUNDCODE-001 and K-PROPOSED-Q047-CONSTANTCODE-001. Historical admission remains unresolved -> unchanged original contracts and complete M11–M15 argument preserved below. Operational closure -> I-PROPOSED-Q047-M15-INGESTION-001 plus the explicit epistemic-closure/anti-loop rules of the incoming routing instruction. This is a reasoning decision from preserved evidence, not a new external measurement.
+
+## Incoming M15 delivery receipt — preserved technical evidence
+
+```json
+{
+  "schema": "Q047_M15_DELIVERY_VALIDATION_V1",
+  "q": "Q-047",
+  "case_id": "NOT_DOCUMENTED",
+  "checked_utc": "2026-10-11T13:33:43.990934+00:00",
+  "question_sha256": "f6b22049c8308369f9de3a598447f10ff0e54e5e13afadacb3d4567076c79e23",
+  "journal_continuity_gate": "PASS",
+  "inherited_journal_bytes": 3339404,
+  "inherited_sha256": "df367942c93f7fa100951363bcf9221064b874d0a4ff74dc3b882d7f74fd863d",
+  "updated_journal_sha256": "82426f269c9005fea561da7da49acd946721af181b2caff64ec0d6211e785081",
+  "handoff_complete_journal_gate": "PASS",
+  "frozen_contracts_hash_gate": "PASS",
+  "actual_input_source_checks": 16,
+  "exact_arithmetic_controls_gate": "PASS",
+  "independent_symbolic_control_gate": "PASS",
+  "readme_gate": "PASS_FOR_PREPARED_DIFFERENTIAL_UPDATE",
+  "readme_replacement_count": 1,
+  "new_campaign_or_program_id": false,
+  "remote_repository_writes": 0,
+  "new_native_processes": 0,
+  "full_cmb_likelihood_evaluations": 0,
+  "q_completion_gate": "NOT_YET_SATISFIED",
+  "historical_PT01": "UNRESOLVED",
+  "historical_PT03": "UNRESOLVED",
+  "full_PT04": "UNRESOLVED",
+  "final_result_gate": "UNRESOLVED",
+  "selected_next_engine": "RESULT INGESTION & ROUTING ENGINE",
+  "files": {
+    "Q047_M15_EXACT_AUDIT_V1.json": "b1a232c0d850287534bae0c319db137ed4bb2c4ffef7b67a9418c65aa58a21e1",
+    "README.md": "2c38e5647c32e2321d0189de191d6f152b5309f6bf2f1fe777277d9686386797",
+    "Q047_M15_SYMBOLIC_CONTROL_V1.json": "aceac7672dba34a51ef1f54b4e2c7aec1f205ec9cf11d44f322074ee75f2ea68",
+    "q047_m15_exact_audit_v1.py": "1d23f4f5b70d259db8ea36f9f625e168a55a81aa2071c810c1ce7ced3278364f",
+    "Q047_SAMLET_JOURNAL.md": "82426f269c9005fea561da7da49acd946721af181b2caff64ec0d6211e785081",
+    "Q047_M15_HANDOFF_V1.md": "32e1803592edd511c864424a45d02de1511a82a448b125edc8b2b85517839dd6"
+  }
+}
+```
+
+# COMPLETE INHERITED SAMLET JOURNAL — original bytes follow unchanged
+
+# BUBBLEVERSE — Q047 M15: finite admission assessment of the actual reconstructed state
+
+DATE AND TIME UTC: 2026-10-11T13:30:30.170258+00:00
+DATE AND TIME Europe/Copenhagen: 2026-10-11T15:30:30.170258+02:00
+STATUS: CONTINUES — the M15 assessment is complete; the exact Q is unresolved.
+CURRENT Q: Q-047
+CASE ID: NOT DOCUMENTED; unchanged.
+QUESTION: For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?
+SELECTED NEXT ENGINE: Existing RESULT INGESTION & ROUTING ENGINE.
+ACTIVE ROUTING: Integrate the finite M15 result and precise contract-admission limit. No native replay, generic search, unchanged M14/M15 repetition or automatically authorized next campaign.
+
+## J-PROPOSED-Q047-M15 — newly instantiated finite measure and source-real initialization distinctions
+
+RESULT ID: R-PROPOSED-Q047-M15-001.
+INTERNAL SOURCE ID: I-PROPOSED-Q047-M15-001.
+SOURCE TYPE: Bubbleverse-generated mathematical/technical evidence, using the actual NEW_RECONSTRUCTION objects from run 38140371059, attempt 1, commit 76d6b4a4b02ddd929899008f476e99da29c1f931. No new external scientific publication or scientific Q.
+
+[KEEP / CONTINUITY] The complete inherited 3,339,404-byte journal follows verbatim after this differential entry and its reproducibility objects. Parent SHA256: df367942c93f7fa100951363bcf9221064b874d0a4ff74dc3b882d7f74fd863d. This preserves M01–M14, every existing K/I/R ID, previous failures, rejected routes, raw results, contracts and sources. The complete supplied handoff and all ten attachment contents were read locally; their declared prior-delivery hashes match. Their validation receipt is reused as technical evidence, not treated as a physics certificate.
+
+[ADD / ACTUAL INPUT QUALIFICATION] Sixteen relevant state/source objects were hash-checked: accepted initial state, effective background, background.c and common.h for each case. The four compact state views equal the corresponding raw JSON objects. All four new realizations have exactly eleven strictly positive, strictly increasing neutrino momenta and eleven strictly positive effective weights. Their neutrino objects, including mass M, normalization N, temperature ratio, degeneracy, xi=0 and no-distribution-file flag, are identical. The initial a and loga bit patterns are also identical across cases. A weight is an effective integration weight, not a probability; no invented sum-to-one normalization is imposed.
+
+The new accepted scalar coordinates agree exactly with the exported integration-vector indices and effective scalar fields. Both EDE cases have n=3, non-attractor initial conditions, F>0, m>0, B>0 and phi_prime_ini=0. All four common density coefficients needed below are positive, K=0 and the omitted background component flags are zero. This establishes the checked representation/index/positivity subclaims for NEW_RECONSTRUCTION only. It does not set original PT01/PT03, PT02 or complete PT04 to PASS.
+
+| New case | F [eV], display approximation | m [eV], display approximation | B, dimensionless | accepted phi_ini, reduced-Planck units |
+|---|---:|---:|---:|---:|
+| camspec-ede_n3 | 1.906128e26 | 1.957352e-27 | 2.672689 | 0.2288527381 |
+| hillipop-ede_n3 | 1.944098e26 | 1.249900e-27 | 2.739601 | 0.2355272502 |
+
+These are decoded native parameter representations, not fits, posterior uncertainties or measurements of the Universe. Exact hexadecimal inputs and rational values remain in the preserved state objects/control artifact. In particular, the requested placeholder scf_parameters array is not substituted for these post-shooting fields.
+
+### M15.1 — exact-real candidate and dimensions
+
+Let a be dimensionless, u=ln(a), H in Mpc^-1, and all CLASS-normalized densities/pressures in Mpc^-2. Define N as the exact rational decoded from factor_ncdm, M from M_ncdm, and q_i,w_i from the captured binary64 arrays. They are fixed inputs of a separately tagged finite-node candidate, not uncertain physical parameters.
+
+    epsilon_i(a) = sqrt(q_i^2 + M^2*a^2)
+    rho_Q(a) = N*a^-4*sum_i w_i*q_i^2*epsilon_i(a)
+    p_Q(a) = N*a^-4/3*sum_i w_i*q_i^4/epsilon_i(a).
+
+There is no repeated Fermi–Dirac weighting: w_i already contains the distribution contribution. The source functions background_ncdm_momenta and background_functions support the kernel and normalization mapping. Rounding of the compiled z=1/a-1, pow, multiplication and sqrt paths is a separate forward relation; the above exact-real formula is not claimed to equal the compiled output without error.
+
+For LCDM, use the unchanged source-real background equation in the precursor contract with the captured H0 and Omega coefficients. For EDE, use the same equation plus
+
+    V(phi) = C*m^2*F^2*[1-cos(kappa*phi/F)]^3 + b0*B
+    C = 4152.39, kappa = 2.435e27 eV, b0 = 3.968e-8 in the pinned unit convention
+    X = phi_prime/a
+    phi_u = X/H,  X_u = -3*X - V_phi/H
+    rho_scf = (X^2/2+V)/3, p_scf = (X^2/2-V)/3.
+
+Here phi is dimensionless in reduced-Planck units, phi_prime and X have Mpc^-1 units, F and m are eV, and V has the Mpc^-2 numerical convention after factoring out reduced-Planck mass squared. C and b0 carry the pinned conversion units. Their decimal definitions are fixed model constants, not tunable conversion factors. No recomputation of Lambda, B, M or N absorbs the finite-node/continuous-reference difference.
+
+[DERIVED / SCOPED REGULARITY] Positivity of the actually captured q_i,w_i,N,M instantiates the retained M14 finite-measure assumptions for this new candidate. For a>0, rho_Q>0 and p_Q>0,
+
+    rho_Q - 3*p_Q = N*M^2*a^-2*sum_i w_i*q_i^2/epsilon_i > 0
+    d rho_Q/d ln(a) = -3*(rho_Q+p_Q).
+
+Thus 0<3p_Q<rho_Q, and the retained M14 monotone forcing bounds apply to the exact-real finite-node realization. This is stronger than the earlier conditional statement that weight positivity and realized nodes had not been supplied. It is not an all-realizations/historical error certificate.
+
+The new LCDM candidate has H^2>0 on a>0 because the radiation/matter/neutrino contributions are positive. For each new EDE candidate, V>=b0*B>0, hence H^2>=b0*B/3>0. The two-state vector field is locally smooth at finite phi,X and a>0. Its energy E=X^2/2+V satisfies E_u=-3X^2. Starting from the declared new initial state, E cannot increase forward; X is bounded by its initial energy and phi_u remains bounded on every finite u interval. This excludes finite-u blow-up for this reduced exact-real background equation. It does not certify the source-active latch V_e/(3H^2)<0.5, thermodynamics, source error latches, native integration error, historical identity or any helium event. PT05 remains UNRESOLVED.
+
+### M15.2 — source/ideal FD references are distinct from the actual finite rule
+
+The captured flags select an analytic xi=0 distribution, not a distribution file. Preserve the pinned macro
+
+    pi_s = 3.1415926535897932384626433832795
+
+as an exact decimal when defining a source-decimal exact-real reference. Let pi denote mathematical pi. This distinguishes source-literal, compiled binary64 and ideal mathematical constants rather than silently replacing one by another.
+
+    f_s(q) = 1/[4*pi_s^3*(exp(q)+1)]
+    S3_s = integral_0^infinity q^3*f_s(q)dq = 7*pi^4/(480*pi_s^3)
+    S1_s = integral_0^infinity q*f_s(q)dq = pi^2/(48*pi_s^3).
+
+For the separately named ideal mathematical-pi FD reference, S3_FD=7*pi/480 and S1_FD=1/(48*pi). The expansions 1/(e^q+1)=sum_{k>=1}(-1)^(k-1)e^(-kq), followed by integrating q^3 and q, give these expressions using the alternating zeta sums. Absolute integrability of the summed integrated terms justifies interchange. The Wolfram symbolic control independently returns {7*pi/480,1/(48*pi),0}, where zero is the density/pressure conservation identity. The source-decimal version follows by the explicit normalization ratio (pi/pi_s)^3. No native FD-generation arithmetic/error assumption is added.
+
+Using exact decoded nodes and weights,
+
+    S3_Q = sum_i w_i*q_i^3 approximately 0.04581473885117927
+    S3_s approximately 0.04581489286485115
+    (S3_s-S3_Q)/S3_s approximately 3.36165e-6 = 3.36165 ppm, strictly positive.
+
+Exact rational arctangent intervals bound pi; the lower and upper discrepancy bounds remain positive. The number is a deterministic massless-limit quadrature/reference discrepancy for this particular new finite rule and the same fixed normalization. It is not a physical uncertainty, compiled-code ULP bound, total cosmological-density error, result for all redshifts or event-location error. The ideal-pi comparison is separately recorded and has the same displayed six significant digits.
+
+[DERIVED / ACTUAL POSITIVE-MASS INITIAL POINT] The actual captured M is positive. The inequality
+
+    0 <= sqrt(q^2+mu^2)-q <= mu^2/(2q), q>0
+
+transfers the massless calculation to the captured new a_ini without pretending that M=0. With mu=M*a and S1_Q=sum_i w_i*q_i,
+
+    rho_s(M,a)-rho_Q(M,a) >= N*a^-4*[S3_s-S3_Q - (M*a)^2*S1_Q/2]
+    rho_s(M,a)-rho_Q(M,a) <= N*a^-4*[S3_s-S3_Q + (M*a)^2*pi^2/(96*pi_s^3)].
+
+Both endpoints were evaluated outward at the exact captured a_ini, about 1e-14. The lower bound is strictly positive; the density difference is approximately 2.12843e38 Mpc^-2 in CLASS H^2-normalized units at that initial point. The large dimensional value reflects the a^-4 early-time scale. It establishes that even with the actual nonzero mass, these two exact-real reference forcings cannot be called identical at this point. It is not an observed cosmological discrepancy or a bound at helium recombination. The full precursor-domain quadrature/error certificate is not supplied, and PT04 remains UNRESOLVED.
+
+### M15.3 — the rounded initial coordinate is a separate mathematical object
+
+All four actual captures give
+
+    a_hat = exact value of 0x1.6849b86a12b9bp-47
+    u_hat = exact value of -0x1.01e3b843eaa73p+5.
+
+The source sets *loga_ini=log(a) after computing the accepted state at a. An exact rational atanh-series enclosure proves
+
+    delta_u = u_hat - ln(a_hat) approximately -1.26152e-15, strictly negative.
+
+Consequently a_hat and u_hat cannot simultaneously be imposed as exact-real values satisfying a=exp(u). This is a documented deterministic coordinate-rounding relation, not a bug or failed initialization. A candidate using the captured physical scale factor initializes at u0=ln(a_hat); a claimed relation to the compiled integration beginning at u_hat must carry delta_u. Alternatively, a reference that starts at u_hat must explicitly propagate the scale-factor/initial-state change. Do not silently replace either native value.
+
+For d=-delta_u>0,
+
+    d/(1+d) <= 1-exp(u_hat)/a_hat <= d.
+
+This follows from e^d>=1+d and e^(-d)>=1-d. It supplies a finite conservative coordinate bound using no unproved native log/exp error constant. It does not relate the accepted NEW state to the original historical accepted state.
+
+### M15.4 — original-case admission remains the first unsupported primitive
+
+[MATHEMATICAL LOGIC] Let A be the preserved historical archive, O(Theta,E) the numerical output map with its environment E, and C(A) a rigorously complete enclosure of source-real realizations compatible with A under justified source/output errors. The actual equality O_new=A demonstrates reproduction by this NEW numerical run. It does not prove historical Theta_new=Theta_old or that a proposed source-real C(A) is complete.
+
+Uniqueness is not required unnecessarily: a non-singleton C(A) can suffice if it contains the actual realization and the same event verdict is certified for every retained realization. The missing primitive is either attributable historical state/equivalence linkage, or a justified historical forward-output relation plus complete inverse covering every compatible accepted initialization. The new native witness and ideal once-rounded M12 boxes do not supply that universal statement. No actual counterexample to injectivity, no theorem of impossibility and no physical falsification is asserted.
+
+The new library bytes, six FP checkpoints and dlsym reference addresses remain useful new-run evidence. They do not establish the original worker's all-call FP/GOT relation or a domain-specific historical cos/sincos/pow error enclosure. No eta_j is guessed, and no compiled arithmetic path is replaced by one final rounding. These are genuine remaining obligations, not a repeated request to acquire the successful new snapshots.
+
+| Case | New finite-measure/index/positivity subclaims | Original PT01 | Original PT03 | Full PT04 | First hit / final result |
+|---|---|---|---|---|---|
+| camspec-lcdm | PASS within stated scope | UNRESOLVED | UNRESOLVED | UNRESOLVED | NOT COMPUTED / UNRESOLVED |
+| camspec-ede_n3 | PASS within stated scope | UNRESOLVED | UNRESOLVED | UNRESOLVED | NOT COMPUTED / UNRESOLVED |
+| hillipop-lcdm | PASS within stated scope | UNRESOLVED | UNRESOLVED | UNRESOLVED | NOT COMPUTED / UNRESOLVED |
+| hillipop-ede_n3 | PASS within stated scope | UNRESOLVED | UNRESOLVED | UNRESOLVED | NOT COMPUTED / UNRESOLVED |
+
+[REFINE / WHAT CHANGED] The new discrete measure's positivity and common realization are established, the new accepted scalar index linkage is checked, exact-real background regularity is derived within the stated reduced model, and two actual deterministic reference/coordinate differences are bounded. The earlier absence of NEW nodes/weights/initial vectors is superseded. Historical absence and incomplete error/inverse linkage remain separate.
+
+[KEEP / WHAT DID NOT CHANGE] Exact Q, CASE status, four requested configurations, original core/source/contract hashes, scientific threshold, source switches, all prior conditional mathematical results and falsified/rejected methods. All four scientific verdicts remain INSUFFICIENT_EVIDENCE; PT01/PT03 and FINAL_RESULT_GATE remain UNRESOLVED. No first hit, nonreachability, optical-depth bias, CMB/likelihood effect, H0 shift or model preference is inferred. No physical anomaly is established by the two explicitly derived implementation/reference differences.
+
+[ACCOUNTING] New native CLASS processes, CMB/likelihood evaluations, GitHub writes and workflow dispatches in M15: zero. The small exact-rational arithmetic audit and independent symbolic checks are actual mathematical computation, not a native cosmological campaign. Inherited ledger 16/52 used, 36 remaining is unchanged. The completed reconstruction's separate four-process/28-internal-entry ledger is preserved. No new runnable GitHub target, registry entry, workflow or PROGRAM_ID is introduced.
+
+[STOP / NO LOOP] The finite mathematical task is complete at the first unsupported historical admission primitive. Additional unchanged acquisition, old inventory searches, M14 disassembly or M15 arithmetic replay has no justified information gain. Return this result to the established Result Ingestion & Routing Engine for integration and contract-feasibility assessment. Resume specialist mathematics only for a specific new attributable historical/equivalence object or a genuinely justified forward-error/inverse primitive; there is no automatic new campaign. A separately authorized scoped reconstructed first-event certificate would remain separate from the original historical answer until linkage is established. No target/contract amendment is made here.
+
+[Q-COMPLETION GATE] NOT YET SATISFIED: no admitted original precursor/onset/event packet exists, and a concrete missing identity/error relation could materially alter the answer. Completion of the finite admission assessment is not closure of the exact scientific Q. If later integration establishes a defensible sufficiently documented answer, stop investigation and send the full case directly to MOTOR 14. Report Writer is excluded.
+
+### Source register and claim map — additions, existing IDs retained
+
+I-PROPOSED-Q047-M15-001: Bubbleverse Mathematical Engine, 2026, “Finite assessment of Q047 run 38140371059 reconstructed state.” Primary objects: q047_m15_exact_audit_v1.py, its exact-rational JSON result, the complete symbolic control including the initially warned query and corrected query, input hash checks and the four actual state JSONs. Retrieval: supplied local files and the already preserved actual raw members; independent Wolfram symbolic evaluator. DOI/arXiv: not applicable; internal project evidence.
+
+I-PROPOSED-Q047-RUN38140371059-001: actual capture run/worker/member evidence from the earlier ingestion. Supports attribution and capture scope, not historical identity.
+
+K-PROPOSED-Q047-BACKGROUNDCODE-001: mwt5345/class_ede, source/background.c at 5a131c91d657dd9a7c6364cc45b038710f8d0d97, SHA256 84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451. Roles: analytic FD function 1228–1301, native moment kernel 1624–1681, initial-state/coordinate rule 2160–2354, scalar potential and units near 2980–3069. URL: https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/source/background.c . Author legal name/year of original code publication: NOT DOCUMENTED; no invented bibliography.
+
+K-PROPOSED-Q047-CONSTANTCODE-001: same pinned repository, include/common.h, SHA256 410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c. Role: the exact decimal _PI_ macro. URL: https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/include/common.h . Source-defined decimals, native binary constants and mathematical pi are separate objects.
+
+Q047_PRECURSOR_CONTRACT_V1.json: SHA256 bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc; exact original predicates, fixed equations and identity routes. Q047_RECONSTRUCTION_CONTRACT_V1.json: SHA256 958b5417b52a993d6cfcdf5bbf209fb9de6287679019e9c74ac34aa96b84c51b; authorized acquisition annex and separate reconstructed-IVP scope. Their original source IDs and complete definitions remain in the inherited journal.
+
+Claim mapping: captured positivity/index linkage -> actual run source + M15 rational controls; moment/FD/coordinate formulas -> pinned background/common sources + M15 derivations; independent conservation/integral control -> exact Wolfram query/result; historical admission distinction -> unchanged contracts + retained M11–M14 + M15 logical scope. These are related calculations using shared inputs, not independent cosmological observations.
+
+### Reproducibility objects
+
+The exact audit code, result and four compact input state objects are embedded next. High-digit displays in the JSON identify deterministic arithmetic bounds/representations, not claimed physical precision. The original raw members and all 315-member provenance remain in the preserved evidence index; eight empty files retain exact zero-byte declarations. No archive is delivered.
+
+#### M15 ARTIFACT q047_m15_exact_audit_v1.py
+
+SHA256: 1d23f4f5b70d259db8ea36f9f625e168a55a81aa2071c810c1ce7ced3278364f
+
+```python
+"""Q-047 M15: offline rational audit of NEW_RECONSTRUCTION fields.
+No CLASS load, cosmological integration, fitting, GitHub write or dispatch.
+Run from a workspace containing the supplied upload/*.json and raw evidence.
+"""
+from pathlib import Path
+from fractions import Fraction as F
+from decimal import Decimal, localcontext
+import json, hashlib, datetime, platform
+
+ROOT = Path(__file__).resolve().parent.parent
+CASES = ['camspec-lcdm', 'camspec-ede_n3', 'hillipop-lcdm', 'hillipop-ede_n3']
+
+def exact(s):
+    return F.from_float(float.fromhex(s))
+
+def rational(x):
+    return {'num':str(x.numerator), 'den':str(x.denominator)}
+
+def interval(lo, hi):
+    assert lo <= hi
+    return {'lo':rational(lo), 'hi':rational(hi)}
+
+def display(x):
+    with localcontext() as c:
+        c.prec = 22
+        return str(Decimal(x.numerator)/Decimal(x.denominator))
+
+def atan_interval(x, terms=80):
+    assert 0 < x < 1
+    s = sum((-1)**k*x**(2*k+1)/F(2*k+1) for k in range(terms))
+    next_term = (-1)**terms*x**(2*terms+1)/F(2*terms+1)
+    return min(s,s+next_term), max(s,s+next_term)
+
+def log_positive_interval(x, terms=80):
+    assert x > 0
+    r=x; e=0
+    while r < 1: r*=2; e-=1
+    while r >= 2: r/=2; e+=1
+    def log_unit(t):
+        h=(t-1)/(t+1)
+        assert 0 <= h <= F(1,3)
+        s=2*sum(h**(2*k+1)/F(2*k+1) for k in range(terms))
+        tail=2*h**(2*terms+1)/F(2*terms+1)/(1-h*h)
+        return s,s+tail
+    ml,mh=log_unit(r); tl,th=log_unit(F(2))
+    return (ml+e*tl,mh+e*th) if e>=0 else (ml+e*th,mh+e*tl)
+
+p5=atan_interval(F(1,5)); p239=atan_interval(F(1,239))
+pi_lo=16*p5[0]-4*p239[1]; pi_hi=16*p5[1]-4*p239[0]
+p2=atan_interval(F(1,2)); p3=atan_interval(F(1,3))
+alt_lo=4*(p2[0]+p3[0]);alt_hi=4*(p2[1]+p3[1])
+assert max(pi_lo,alt_lo) <= min(pi_hi,alt_hi)
+# Exact tangent-addition checks identify both angles with pi/4.
+two=2*F(1,5)/(1-F(1,5)**2);four=2*two/(1-two**2)
+assert (four-F(1,239))/(1+four*F(1,239))==1
+assert (F(1,2)+F(1,3))/(1-F(1,2)*F(1,3))==1
+
+idx=json.loads((ROOT/'upload/Q047_RAW_EVIDENCE_INDEX_V1.json').read_text())
+state={}; records={}; links=[]
+for case in CASES:
+    path=ROOT/f'upload/Q047_RECONSTRUCTION_STATE_{case}_V1.json'
+    s=json.loads(path.read_text()); assert s['q']=='Q-047' and s['origin']=='NEW_RECONSTRUCTION' and s['historical_export'] is False
+    # Only the sixteen actual mathematical input/source objects are checked here.
+    for name in ['accepted_initial_hex.json','effective_background_hex.json','source_objects/source/background.c','source_objects/include/common.h']:
+        member=f'q047_reconstructed/{case}/{name}'
+        item=next(f for f in idx['files'] if f['artifact_relative_path']==member)
+        p=Path(item['local_path']); got=hashlib.sha256(p.read_bytes()).hexdigest();assert got==item['sha256']
+        if name in s['raw_member_sha256']: assert got==s['raw_member_sha256'][name]
+        if name=='accepted_initial_hex.json':assert json.loads(p.read_text())==s['accepted_initial_hex']
+        if name=='effective_background_hex.json':assert json.loads(p.read_text())==s['effective_background_hex']
+        links.append({'case':case,'member':member,'sha256':got})
+    b=s['effective_background_hex'];a=s['accepted_initial_hex'];v=[exact(x) for x in a['integration_vector']]
+    assert exact(b['fields']['H0'])>0 and exact(b['fields']['K'])==0
+    assert all(exact(b['fields'][k])>0 for k in ['Omega0_b','Omega0_cdm','Omega0_g','Omega0_ur','T_cmb'])
+    assert exact(b['fields']['Omega0_lambda'])>=0
+    assert all(b['flags'][k]==0 for k in ['has_idm','has_idr','has_dcdm','has_dr','has_fld','has_curvature'])
+    assert exact(a['fields']['a_ini_native'])>0
+    assert len(v)==a['bi_size'] and v[a['bi_indices']['D']]==1
+    assert b['N_ncdm']==1 and len(b['neutrinos'])==1
+    nu=b['neutrinos'][0]; qs=[exact(x) for x in nu['q_ncdm_bg']];ws=[exact(x) for x in nu['w_ncdm_bg']]
+    assert len(qs)==len(ws)==11 and all(q>0 for q in qs) and all(w>0 for w in ws)
+    assert all(l<r for l,r in zip(qs,qs[1:]))
+    assert exact(nu['fields']['M_ncdm'])>0 and exact(nu['fields']['factor_ncdm'])>0
+    assert nu['got_files']==0 and exact(nu['fields']['ksi_ncdm'])==0
+    if b['scalar'] is not None:
+        sc=b['scalar'];par=[exact(x) for x in sc['scf_parameters']]
+        assert par[0]==3 and par[1]>0 and par[2]>0 and par[3]>0 and sc['attractor_ic_scf']==0
+        assert v[a['bi_indices']['phi']]==exact(a['fields']['phi_ini'])==exact(sc['fields']['phi_ini_scf'])
+        assert v[a['bi_indices']['phi_prime']]==exact(a['fields']['phi_prime_ini'])==exact(sc['fields']['phi_prime_ini_scf'])==0
+        scalar={'F_eV':display(par[1]),'m_eV':display(par[2]),'B':display(par[3]),'phi_ini':display(v[a['bi_indices']['phi']]),'V_floor_Mpc_minus2':rational(par[3]*F(3968,10**11))}
+    else: scalar=None
+    state[case]=s
+    records[case]={'state_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'positive_nodes':11,'positive_weights':11,'new_initial_vector_index_linkage':'PASS','new_finite_measure_structure':'PASS','new_common_field_positivity':'PASS','scalar':scalar,'historical_PT01':'UNRESOLVED','historical_PT03':'UNRESOLVED','PT04_full':'UNRESOLVED','first_hit':'NOT_COMPUTED','final_result_gate':'UNRESOLVED'}
+
+nu=state[CASES[0]]['effective_background_hex']['neutrinos'][0]
+assert all(state[c]['effective_background_hex']['neutrinos'][0]==nu for c in CASES)
+assert all(state[c]['accepted_initial_hex']['fields']['a_ini_native']==state[CASES[0]]['accepted_initial_hex']['fields']['a_ini_native'] for c in CASES)
+assert all(state[c]['accepted_initial_hex']['fields']['loga_ini']==state[CASES[0]]['accepted_initial_hex']['fields']['loga_ini'] for c in CASES)
+qs=[exact(x) for x in nu['q_ncdm_bg']];ws=[exact(x) for x in nu['w_ncdm_bg']]
+s3=sum(q**3*w for q,w in zip(qs,ws));s1=sum(q*w for q,w in zip(qs,ws));nn=exact(nu['fields']['factor_ncdm']);mass=exact(nu['fields']['M_ncdm'])
+source_pi=F('3.1415926535897932384626433832795')
+ideal_fd_lo=7*pi_lo/480;ideal_fd_hi=7*pi_hi/480
+fd_lo=7*pi_lo**4/(480*source_pi**3);fd_hi=7*pi_hi**4/(480*source_pi**3);gap_lo=fd_lo-s3;gap_hi=fd_hi-s3
+assert gap_lo>0
+rel_lo=gap_lo/fd_hi;rel_hi=gap_hi/fd_lo
+ai=exact(state[CASES[0]]['accepted_initial_hex']['fields']['a_ini_native']);ui=exact(state[CASES[0]]['accepted_initial_hex']['fields']['loga_ini'])
+# Positive-mass corrections: sqrt(q^2+mu^2)-q <= mu^2/(2q).
+finite_correction=mass**2*ai**2*s1/2
+fd_correction_hi=mass**2*ai**2*pi_hi**2/(96*source_pi**3)
+full_gap_lo=gap_lo-finite_correction;full_gap_hi=gap_hi+fd_correction_hi
+assert full_gap_lo>0
+rho_gap_lo=nn*ai**-4*full_gap_lo;rho_gap_hi=nn*ai**-4*full_gap_hi
+log_lo,log_hi=log_positive_interval(ai);du_lo=ui-log_hi;du_hi=ui-log_lo
+assert du_hi<0
+# With d=-delta_u>0, d/(1+d) <= 1-exp(-d) <= d.
+dlo=-du_hi;dhi=-du_lo;relative_a_lo=dlo/(1+dlo);relative_a_hi=dhi
+
+result={'schema':'Q047_M15_EXACT_AUDIT_V1','q':'Q-047','case_id':'NOT_DOCUMENTED','result_id':'R-PROPOSED-Q047-M15-001','run_id':'38140371059','origin':'NEW_RECONSTRUCTION','checked_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'runtime':platform.python_version(),'method':'Standard-library Fraction rational arithmetic; alternating arctangent and positive atanh logarithm remainder bounds. No native CLASS execution.','rounding_or_uncertainty':'Exact binary64 values are decoded to rationals; deterministic numerical reference bounds, not statistical/physical parameter errors.','cases':records,'controls':{'actual_source_and_state_hashes':16,'two_pi_formulas_exact_tangent_and_overlapping_intervals':True,'all_four_neutrino_objects_identical':True,'all_four_a_loga_bits_identical':True,'strictly_positive_massless_and_actual_initial_density_gap':True,'strictly_negative_initial_coordinate_delta':True},'pi_enclosure':interval(pi_lo,pi_hi),'massless_moments':{'finite_S3':rational(s3),'source_PI_exact_decimal':rational(source_pi),'FD_definition':'1/[4*pi_source^3*(exp(q)+1)], pi_source is the exact pinned decimal macro; mathematical pi appears in analytic integrals. Native generation arithmetic is a distinct relation.','ideal_mathematical_pi_FD_S3':interval(ideal_fd_lo,ideal_fd_hi),'FD_S3':interval(fd_lo,fd_hi),'FD_minus_finite':interval(gap_lo,gap_hi),'relative_gap_wrt_FD':interval(rel_lo,rel_hi),'relative_gap_display':[display(rel_lo),display(rel_hi)]},'positive_mass_initial_density':{'a_native_exact':rational(ai),'M_exact':rational(mass),'factor_exact':rational(nn),'rho_FD_minus_rho_finite_Mpc_minus2':interval(rho_gap_lo,rho_gap_hi),'gap_display_Mpc_minus2':[display(rho_gap_lo),display(rho_gap_hi)],'scope':'Exact-real finite-node versus source-decimal-PI analytic xi=0 FD reference, same captured normalization/mass/closure, at captured NEW native a_ini only. Not compiled-source rounding or an event certificate.'},'initial_coordinate':{'native_u_exact':rational(ui),'ln_native_a':interval(log_lo,log_hi),'u_native_minus_ln_a_native':interval(du_lo,du_hi),'delta_u_display':[display(du_lo),display(du_hi)],'one_minus_exp_u_over_native_a':interval(relative_a_lo,relative_a_hi),'scope':'Native log(a) is a distinct rounded coordinate; a_hat and u_hat cannot simultaneously be imposed as exact-real a=exp(u). Define source-real initialization at a_hat, carry this offset for a claimed compiled-path relation.'},'first_unsupported_historical_primitive':'Original accepted Theta and initial realization equivalence or complete validated inverse. Exact output equality does not discharge it.','native_processes_started':0,'cmb_or_likelihood_evaluations':0,'repository_writes':0,'workflow_dispatches':0,'scientific_verdict':'INSUFFICIENT_EVIDENCE','final_result_gate':'UNRESOLVED','sources':links}
+(ROOT/'q047_math_work/Q047_M15_EXACT_AUDIT_V1.json').write_text(json.dumps(result,indent=2)+'\n')
+print(json.dumps({'controls':result['controls'],'relative_massless_gap':result['massless_moments']['relative_gap_display'],'initial_density_gap':result['positive_mass_initial_density']['gap_display_Mpc_minus2'],'delta_u':result['initial_coordinate']['delta_u_display'],'cases':records},indent=2))
+
+```
+
+#### M15 ARTIFACT Q047_M15_EXACT_AUDIT_V1.json
+
+SHA256: b1a232c0d850287534bae0c319db137ed4bb2c4ffef7b67a9418c65aa58a21e1
+
+```json
+{
+  "schema": "Q047_M15_EXACT_AUDIT_V1",
+  "q": "Q-047",
+  "case_id": "NOT_DOCUMENTED",
+  "result_id": "R-PROPOSED-Q047-M15-001",
+  "run_id": "38140371059",
+  "origin": "NEW_RECONSTRUCTION",
+  "checked_utc": "2026-10-11T13:26:39.887881+00:00",
+  "runtime": "3.12.14",
+  "method": "Standard-library Fraction rational arithmetic; alternating arctangent and positive atanh logarithm remainder bounds. No native CLASS execution.",
+  "rounding_or_uncertainty": "Exact binary64 values are decoded to rationals; deterministic numerical reference bounds, not statistical/physical parameter errors.",
+  "cases": {
+    "camspec-lcdm": {
+      "state_sha256": "8492b9264da76e000fbe3c5e1b1449902a0185fd71d04135b4159280646fb524",
+      "positive_nodes": 11,
+      "positive_weights": 11,
+      "new_initial_vector_index_linkage": "PASS",
+      "new_finite_measure_structure": "PASS",
+      "new_common_field_positivity": "PASS",
+      "scalar": null,
+      "historical_PT01": "UNRESOLVED",
+      "historical_PT03": "UNRESOLVED",
+      "PT04_full": "UNRESOLVED",
+      "first_hit": "NOT_COMPUTED",
+      "final_result_gate": "UNRESOLVED"
+    },
+    "camspec-ede_n3": {
+      "state_sha256": "a0030c8cc26b599bc5d86fb8346ef3e5691c10891475b9eecb48e0ef371c4a4e",
+      "positive_nodes": 11,
+      "positive_weights": 11,
+      "new_initial_vector_index_linkage": "PASS",
+      "new_finite_measure_structure": "PASS",
+      "new_common_field_positivity": "PASS",
+      "scalar": {
+        "F_eV": "1.906127735906179001856E+26",
+        "m_eV": "1.957351987846800729996E-27",
+        "B": "2.672689228588978949119",
+        "phi_ini": "0.2288527381454219244983",
+        "V_floor_Mpc_minus2": {
+          "num": "364392957648891",
+          "den": "3435973836800000000000"
+        }
+      },
+      "historical_PT01": "UNRESOLVED",
+      "historical_PT03": "UNRESOLVED",
+      "PT04_full": "UNRESOLVED",
+      "first_hit": "NOT_COMPUTED",
+      "final_result_gate": "UNRESOLVED"
+    },
+    "hillipop-lcdm": {
+      "state_sha256": "c2a4e0858e71e6d1c36295bcdd9e0dbadf366cdf54d51bc7d85cf533dfbe698c",
+      "positive_nodes": 11,
+      "positive_weights": 11,
+      "new_initial_vector_index_linkage": "PASS",
+      "new_finite_measure_structure": "PASS",
+      "new_common_field_positivity": "PASS",
+      "scalar": null,
+      "historical_PT01": "UNRESOLVED",
+      "historical_PT03": "UNRESOLVED",
+      "PT04_full": "UNRESOLVED",
+      "first_hit": "NOT_COMPUTED",
+      "final_result_gate": "UNRESOLVED"
+    },
+    "hillipop-ede_n3": {
+      "state_sha256": "541dce767d3323303ec3aa9345929410f9591dac152786c906fd018308e553e4",
+      "positive_nodes": 11,
+      "positive_weights": 11,
+      "new_initial_vector_index_linkage": "PASS",
+      "new_finite_measure_structure": "PASS",
+      "new_common_field_positivity": "PASS",
+      "scalar": {
+        "F_eV": "1.944097811032946061754E+26",
+        "m_eV": "1.249899587939484709682E-27",
+        "B": "2.739600523973231283037",
+        "phi_ini": "0.2355272502072768558978",
+        "V_floor_Mpc_minus2": {
+          "num": "19123999043310283",
+          "den": "175921860444160000000000"
+        }
+      },
+      "historical_PT01": "UNRESOLVED",
+      "historical_PT03": "UNRESOLVED",
+      "PT04_full": "UNRESOLVED",
+      "first_hit": "NOT_COMPUTED",
+      "final_result_gate": "UNRESOLVED"
+    }
+  },
+  "controls": {
+    "actual_source_and_state_hashes": 16,
+    "two_pi_formulas_exact_tangent_and_overlapping_intervals": true,
+    "all_four_neutrino_objects_identical": true,
+    "all_four_a_loga_bits_identical": true,
+    "strictly_positive_massless_and_actual_initial_density_gap": true,
+    "strictly_negative_initial_coordinate_delta": true
+  },
+  "pi_enclosure": {
+    "lo": {
+      "num": "880794001069611548991079918499719293243803489233077787187889509630679857293303712265602942790769039628997106417373433343088994737685757316258665919557443277477584841591942327664593526730982384900773867551098136257669956514011018828640442553039683241942921196852752684376516631912419388196494377233185848406818493349469216436068382234335651389435527735634244885447792507248838315154212994490378152311498721588181023200517590133553712265713326665673641314666319291700565476906652822438640018455508825458471889526373683275016898988642758203013771506323543287124",
+      "den": "280365438231833651166655099700018077766536250935827127584029392745383340129241362737247784392661832187096374789820374916153345616171983025730526124559215568398999737588287143036761603929675541414184056783437190486856461404941833618352280486203744200304497014420281483313230579407234097627973638252975257835066410515074301910728979608595517649719179390182054130062749379617384435139741722418481834726425108931634328008681764326845168411079008268982139876094202713263915884279077273798339129259460688068952982352326501643002831798412444186396896839141845703125"
+    },
+    "hi": {
+      "num": "385494827239374113281927801727788069730836071336757841769178371190402766624054074799812215643445072577947298899430265472446408402002037754948845832749033492540868968156322720092066817518860067190615037673718146007768403362254965045030952264648863587906292984215780994584770304030668683524557380469453238461746235046011135859393626488057238242715293855307561473254098466487652060567491751729632822927639499803126436507799897015511852662964078907783198306896824613047946824899120539860823591079191561426531073683881220799493481528361146758976846742439030864",
+      "den": "122706814583005221882781770145838692322673032219248230766280961793991413022024020385343299483842121193211067203751849108100937315598458984318607046690015742195952336963764264909911242769592418468769829302461962538670743424021740523779468359361593897298934286173334449376424860999997416724135448544745040280748941070304398518377207860767282457292055194316474733488012018179559371833363265006950961435560086890825759356752229620824726637786019270050480504584217150112881376498607024473634534260368642035745602472088418288809208434031461365520954132080078125"
+    }
+  },
+  "massless_moments": {
+    "finite_S3": {
+      "num": "5059227303924643945568127157695083518426396612809491253279180680274391",
+      "den": "110427941548649020598956093796432407239217743554726184882600387580788736"
+    },
+    "source_PI_exact_decimal": {
+      "num": "6283185307179586476925286766559",
+      "den": "2000000000000000000000000000000"
+    },
+    "FD_definition": "1/[4*pi_source^3*(exp(q)+1)], pi_source is the exact pinned decimal macro; mathematical pi appears in analytic integrals. Native generation arithmetic is a distinct relation.",
+    "ideal_mathematical_pi_FD_S3": {
+      "lo": {
+        "num": "220198500267402887247769979624929823310950872308269446796972377407669964323325928066400735697692259907249276604343358335772248684421439329064666479889360819369396210397985581916148381682745596225193466887774534064417489128502754707160110638259920810485730299213188171094129157978104847049123594308296462101704623337367304109017095558583912847358881933908561221361948126812209578788553248622594538077874680397045255800129397533388428066428331666418410328666579822925141369226663205609660004613877206364617972381593420818754224747160689550753442876580885821781",
+        "den": "4806264655402862591428373137714595618854907158899893615726218161349428687929851932638533446731345694635937853539777855705485924848662566155380447849586552601125709787227779594915913210223009281386012402001780408346110766941860004886039094049207043433791377390061968285369667075552584530765262370051004420029709894544130889898211079004494588280900218117406642229647132222012304602395572384316831452453001867399445623005973102745917172761354427468265255018757760798809986587641324693685813644447897509753479697468454313880048545115641900338232517242431640625000"
+      },
+      "hi": {
+        "num": "24093426702460882080120487607986754358177254458547365110573648199400172914003379674988263477715317036121706181214391592027900525125127359684302864546814593283804310509770170005754176094928754199413439854607384125485525210140935315314434516540553974244143311513486312161548144001916792720284836279340827403859139690375695991212101655503577390169705865956722592078381154155478253785468234483102051432977468737695402281737493563469490791435254931736449894181051538315496676556195033741301474442449472589158192105242576299968342595522571672436052921402439429",
+        "den": "525886348212879522354779014910737252811455852368206703284061264831391770094388658794328426359323376542333145158936496177575445638279109932794030200100067466554081444130418278185333897583967507723299268439122696594303186102950316530483435825835402416995432655028576211613249404285703214532009065191764458346066890301304565078759462260431210531251665118499177429234337220769540165000128278601218406152400372389253254386080984089248828447654368300216345019646644929055205899279744390601290861115865608724624010594664649809182321860134834423661231994628906250"
+      }
+    },
+    "FD_S3": {
+      "lo": {
+        "num": "186267467841743659023913109511131982012858836488354212453130995110209004167080823428060390510518336240084454893856836146520797099707671194670587084290965457309236284441075263711042849002907003383168032989493783352547983684670929265841895477812412706440871201655920091658641831791299127566760185388165334953962980351468139443787026065765833199766294989518341339591610713367215131349929238006695493516161643208731389358192202742669486624554601898250012209789211170745746159910198325733473797473602415436160942094148713607682136723102250129636836299191669264555282618099331478974387691408746351984239567351812006549929312275048362019237310188950017271576689834473195774747745440506863387243724281590173968406734213097676575043293447475603905049633699359596709860456632231578816171684051821143080419891606179135061411796661214862622240423743812061093975624890914079368095117923102787992956996855070079130627900521147927573497446964052397301372491820324439445226869886514359014627612354952754079795199038461401476093917121404952225093151530147748511331075628586030002896614138183127770024793047772377150805445340984701707947458243986330663119434646967873259513931169487612354912537027983776433407406856366955170670470794438920947906086925207630488000499664006298178212774435081983094347816572554469917851486613157459873059176164765212208491331979579375582095266086962742290962597213876780386236467355232955978504139027885893010278046811674094020564297355035894202954152743438839795518323084978388224804939944567468446195473133872145388306895707113126945517499148689345958726163149976058667871082227909498394208717998053001087583515549837993620413011502556240644844257389757542342471811738533931886219970763215210388563979598826311597217392513720985117938093260536273886118238942457308079214153873715405772617877788035522250290587644137455646472860656227311471581745553135698218703364992678899830108185302269013016668636156012920832904345568067767792646598327730056814756337254471795393166125075895322577472003278230248549472477899462297234067501223016914914172959927669678386845749974237781209477015521884816999931754443691438137417653811401607292244880960631207206602362136139193735417258011981713352923459883230230520318418428928924709462101635284327422865965056",
+        "den": "4065653244922170044255879146882808914998636729221411424040101119693839734725092515991673679449549936856005395604611726952896662699109664556012007359007704582774621966753364464243272551127027750333606375216288571378275032186061460662657091472133239123057214094265528764849082926014735129134641230457469779315283158763116018178175531085711494360236884244444515484556834800780018581397811389249245548733296780661248599009401020748430443406117905270185165879366910462830840358416593601979423162708919431186780148454699838101159191871322222515936531927031176745704784496771434503076538706979604568973568431727459466343522065432929383067006240930354102529715746585259733911093390267819650423633879003690866353466078227337761457966980392236633195376600333021491256747327316589603474681804182956838426000257080746881392205510563477746318216194005733012830703458689336451980787972632612558111057651362393302715850167066065048992856087362644072979991801222114562434217977723442944832467021122571807678152754553053023900235652238720297647564741919091900694320469634472089586805009390513750449720337357476324807571724573055877614906959673561523584924535127279006158298281094474948071760922013087215336964175333412741331050872343951423028159493458433065102431064872636616358267505964765348053426975539852034107588640451010980885325840592443130044476707866459092521970603957067646579977737711676208857370848588503410763938284219927797769030459730089752013281215420189675548617049555533981927556561206059574950252855151408144479291937190417689325738339783659971526233789984313567976648724719670640967733616369393492415547868587604742538535828034461933490730087711860130916646122375048634406402552479066582947493490140179860255950500543198446229923478169790738160419543087123914686766643284837038313638071033661002403552134402684630533725583253170964573683775589856798561407658284669737491160954277201892460002326710742473137238963162413627655277097194721204215082307948407677250151056586534960983962717242498244139388097766332010839951517535351847457635110744878990252636139326329519641019035839338177335158141776571227248022984695327429401847082412630141132036274160247558384727143777416584991445911244226665539476150415391615946191471164805619764592847786843776702880859375"
+      },
+      "hi": {
+        "num": "6834611575971276278349156843665662140510750001276072363813022931477152753900199156407244443040375632962662123673366495628992782164912009279861308254478812453119973408220973554824461753677094603120656110207562062952076120570966558200251542822471455749174096490425100056722363688399624202024285386033796459874312804498508320140749855398329798722971960131952331021031766065147204321645691757645886425754421192574912317421201996462171252731305092491778469335751063455949997667824245118940679895467568498608004702730520597378224438690608501302817402116307815186545464689851316626525490091957467978676621941820286231411092814945897644095120029824578636111530997971677392834690698043151532596627642777656164979757016955804875730854724494093236162094590443315060545548475225428606893975040120664051883023186417376087082917088077160561875530442597212077998905783140881028357709290876471737113440491476267799176550523515836174070122085021966233225331021309720085014171972117292607007966387636288234636840418839444915667401866722573141039919726077645097429949759912614995074626704371916922094694087489758355166626872663259257287362372550811506752355585762949111215724242147506923635675643892433000118974616626657723363859632119392900662440551387144473197193906983573702643289811970981210388041932175537062013572510850802934335961935064367984677879793839581593363139365011990388918390373508112667300258784386744757306731694636390398903482038351127915351425291510402561516963307757670838288087755358036940057275555946504224667808227342060374732276612326681931250591521020187654178113651185287513197259893973401061671183242184901249847942275749951512711693366421534013942836092147303245209255809875872186581179611504213708958579232548096509690112119502251108525533257328669309865271498642620497482414703581095461828377793021628600927612689329231724041890838365605151675644659059771004998577149985043110482912540549837114067872835130568525537343577874079895222572436698242857148767708961961446923928836319588913743034051943497128102325877859306885777005191809377168638424254165944220897697385292870489950122406819256831120962962421956726424577184324858023183079674479262607468972457435294349318247522986205999896959039655972908807803426935957893910743425744896",
+        "den": "149178818253108695498289249634321459750198332062183200172673413310781978968525892725778183870210001670590481762855000705664557466362778072393176876026707387463081657214986328292042711559269400531521954915101981951977765206420080417117804194100494383459211217035066235224840329253606387282905599334941052018572728565531961758245895324648976268075937543879850777738273051015270877279364353406352618855234463609702164893852924371495566428872235955527430384275238742320431637124691208072839412521906723276342644104358248605092354050061666119837451139537668393999307061562976517072769002469907784248395373058193110726684178484069510220349391116634048360634829429449269036159918221285393787885408733012017484928049528877220954221254489774272079874891753400103304805198083239915756318566734461854674099428271381459079718756856525366377657404852645042945675958249823706418208899544964240624828840436140803145403857078000326001024553773056006895795226306452830308326852555579095205150604401636673350299185427442276746360288640207495760569605611340509092517814350895057979371819325710727466599053583326603481096165083532230787041769556945558194742492101702151605068211152417954976075302598064187645662943018683540487128814739096042677844228785409311797791076519952169278359277193592257880567798758362246253380683080604428840893971831148189302875495324427988874782270639947127465584624104217424087329531104052668180067090760110026171282160020818882092278658876061241223462628127705282147486966173382959402105142484333231657135429520311287711885339042292847616423205002086662369639819291995889004934932409725243371946446154856270118208541020759311293297461902232877494962501543092206989711682797386774313567920383070415901585705540922936771109792496591475654315447678190682053269242677367595803933286212281175602134397903801749257218910027247451657549062424805592960946887160496073685961835043731304806010055390687830519786402744656629901316742371172283166498378431791367769524952803855530670153729549411696089793913257801351497096432890735986108915579188156902576162020850573861393507559253997121687758739179066096658559933644462293414401621064224234962071600365706145843783169104768683914184947153457882196205341678550693185201225787750445306301116943359375"
+      }
+    },
+    "FD_minus_finite": {
+      "lo": {
+        "num": "69146242859461032246352678416967799229092099305812511472762039277120933988107501452467507198694261607232634323232648331099355550056096468925572981758413567977018950139698959033530898004281369909509150634360284233281194500248273804795144719319283914137478142680348789848154509981864741198890061636280844703857168217755802475327597543975247092954653987431848989615831645378399082342111939869132618755878005693720075561748098027298609961412744971957652928584682170923446917585291512575641094434613957619317832188022009319124591193996698195069948576932146576846779804351712002200630405459493889599939763052646537665895474605608150461673242411872604624896606871677570996096761638712746707298054802288194061499508810601585540365863143290381483775068276865460819535783878359126921651103101254920393418326099289498038395280833301539888363152545486146258266971423482851019551237362844756829905312497851725554558475451138961373865411930516714056178334587424333069498529300816271723639953414240154607855885507650759020921687879331996512822910500775557065995143645472379749074729268731389347882255227864176205462123332900190864099967017530784338300690289345585950623284574818568076097948233594368860181228303767208013053322807632189381529095196242502356898538244822749942670343788432914685714658221170199760148972751429943801440256217659235743156929679838169630124911865243773190949492700652352690072708073951392157221967832512788501510803384151375209398251599614207834306828287669583186814003471657329747376535523443989497387278745487978540976505054233432754030573442726302059186031671581785898377132359472561313074044571706752067543280522754835960973474222602834051407592080020867893516335273929541817469338405836558001923243824806520287295750343588398658453106910119201229840429661167484846456700690069276674869993681407264763926494870426154202004277804155160135463021772327355809020937900419930016309897658222474317821046454457456423904762189926077837759315247303742449431566256404872673395404121381023755383443342906767093769147179827495880158600946179178380706097123530343512785862635940979977021994464940427070780214862100126930939356836376431648278126856823919837731294851010790554764930431924388228977774200682115640466712481981787788401760972373463132594965413397085808934533051020730732425462411624312813402202960957409643591",
+        "den": "448961718887340614160571968698822939597871915309499091200435035034814030706067647935810487282127223986264153679826924153735359372993339302706927423317447879763041438317694576907620506085813086847585659159770282972515493264970942110612291160332529674933270905331702394486670258382738866131604924296260099948639018125614256535765745009842492249633611680983253291777416874975423853964283992857937715281646059142865699997165130108967255544950947384975997126606050705256716111336981543344374421497728524526468658364786784270975890093891587973966931589878280537635120220026236965059956106052293270080607892887502993028472305750282507021757383533765478843174463658543023481663221992658116089787439469851022822009635799283084664816519527248658096107929432790781890772532967867449517415099250548350883370808805661344766140760015154859118381895310889471202991980585327219408586296757895740480182013500657640143140610786802352045175187273260820481417663330314183293497043164225367133181322679228308294816742944429376852333781394094239986850468538053430092928517760171183685030787145732060410114261858028617210278385988827351867163608891898905120192884059610591730020034720972735654137202924647508733711830598974322071354398824853000129778394973021935681725930412057400118703666796179916144016229091932357849298524665751233532926753347693479635908336446440569123086920274864452581873610479406094350299634267854624896402987126825625348817615298701320466656072145008899177485573556841322991240744764033724617540291162482467246772373345227432633656798890370294542304059732743832311271523159791860291028428097813703131838901945301264479669939211480666914612165072980196957033067832180662214154053227798331329841871745039614828142049619799386116881510864879203091295814379887563100745809249925279218353510964544121544204936053802518242240421264318516559216111874630831371784065675324595897755551803891894690155226620449852781908653335545046942823858808035644465867730913291183481239817733592425417231424064100450214326288321947167824465186623919811029421434066846923556428489154868088917282875627279281616210937500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "hi": {
+        "num": "2537145736493894765667494070657549660031236226955216719355875335872651580823725149108030946923770385822360893685569168642747268646721697216492051157348974994385444886660267916411802128124074259407700399751743088829129451153603337728960075176297440700776463122643565970963394144885471307607734497639158000110972508569748612410734309867090628629509879074664734994777821634941328697958147992388695029275974462621325513330687974015820078151802287768497987928984576325520260659035119647649636060235190240297708390903564505952160124052330337496597592110151416925166793703008275202222471530175810426184428274088469651994101519864953214364918272028788411476957280626615757803694129054038750325976748206052834068973400649471783660712310257682231925833271741995581316203847234845828235841325152495966886456527188707648921748359662968654967816372761312676065068815916093078883338446155944347830815836146574376027196311354040227964195144101746745707114198548981700391333858832420203966302478089395843263784575654790123819123237426228870601944578548813178181671681320094741300523458579602635795041403278895333602700690179002982290772120933221775283215435429009404190905631199626475853070825473057337195356640158847283734833210453581308122065550998701376355202910447146285286797408145482561800060622182851625757985916119460734866220055648228930828489621321935225366193322855807728577347196329700764512135310355400277963713963968131240144553895222477305366492646639852469713672457108547158224249160677997178314515224940815483403841967627910499807555725523600951161152625961736463179815712291893745780633132011719444824138085512543299676174186978028906899842649256960693151461133462530847935876536933896276714308883878926924720801238665317479164859474979717509637060821494025850494479372379094019981078805312303049030998369266375267716776484682496177570340965238190948721164490295319305668577923787842189218303730769594376415364177630243293953288643166179136986632584012488740094332014509630065939839790044407312459341423342970853429972284530541276739644416733640327275622700813590547337045904705182608120155420760917322717251667080677890274776392435823560281350129699647466838184896810486201527705559976859327769969439712407799380035804463908035808133734045952524626273341536181317221609478334819952347681563007357359684025831",
+        "den": "16473509822350822621749810856217844911141734430053627743549450538946409794576643612791322543218275858192718930062671253507126851454954874523123340824126370108859966005428363623571977417728031998847529063612334315198956875493682718045506011475746425258647120924992955241583693084953634333339469492250962504751708808992609278569849245359565827104969452646480333697997485459657602137272704528409963089700158638150731600540758689323127826458150141522341334848239543007248132017761038449142473756554493847183180990191426278006998970529897581726744885050313887697010040273771673563128424651417611305516938842278321811178984335342276403096255585043934508025671316355318941308796810414198913873462602887999984034672838835657028075614992238558229680447394541192730213158964527442332249701001627147628079631597873601284724370203484476295892295182733602145540004825321323294601023702373421384702963126666560233854503592176030930501858413727646630966623880532824297212976641660241500597731456981451552090458993165733030108529442531033819804047422636570619375441447582533439443127694420147373880305279674249122921503032904048035533254291996130255918709599767724168499396806985169839249982455213881059232069252428696913937955270512450888401004585737702116819646054627972600773987009070165444347769498446334076689563702979054519662738736204689034273331933535105492455852096983274401864066961432899456176590725509153475328669294317635692776539326588274704686109199024785280843221330362080267229648162908297077480553076604189837945057175773857170751403127333072110623882192345492243325279376829138952824088942824418499094120353252207338983974818429227355668062110885026519307109798057131157850927688445195171247456708376816939150804266040492391483873270434205598705424486132037445776084244979008142953503797072675634586380495499353729291348734581061417772223160323142733072121164133102446843274199424078439614987301414524380241543940831446760843762477785888926022816749233566685132303999325310748330421193197464580096550859907201125946819942151974527985312714978283210598419827874749898910522460937500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "relative_gap_wrt_FD": {
+      "lo": {
+        "num": "27010251116976965721231515006628046573864101291333012294047671592625364839104492754870119999489945940325247782512753254335685761740662683174051945999380299991023027398319905872473007032922410120902011966546986028625466601659481954998103405984095278959952399484511246034435355461665914530816430326672204962444206335060860341924842790615330895685411713840566011568684236475937141539887476511379929201514845974109404516307850791913519516176853504670958175228391473016971452181754497099859802513521077195046028198446097390283043435154960232449198662864119756580773361074887500859621252132614800624976469942440053775740419767815683774091110317137736181600237059249051170350297515122166682538302657143825805273245629141244351705415290347805267099636045650570632631165577484033953769962148927703278679033632534960171248156575508414018891856463080525882135535712297988679512202094861233136681762694473330294749404473101156786666176535358091428194661948212630105272863008131356142046856802437560393693705276426077742547534327864061137821449414365451978904352986512648339482316120598198964016505948384443830258641926914137056289049616222962632148707144275619511962220537038503154725761028747800336008292306159065630098954221731323977159802811032227483163491501883886696355603042356607299107288367644609281308192481027321797437600085023138962170675656186785011767543697360848902714645586192325269559651591387262561414831184575308008402657571934130941171192031099299935276104799870930932349220106116144432568959188845308397416905759956241617568947286809934669543192751064961741869543621711635116553567327918969262919548660822950026384093954201107797255263368204232051331090656258151520904818466378727272448960314779905469501267119065046987224902477964218225958244886765312980406417836393548768147148707058311201121091281799712798408787058760216485157921017248109427915242879815373362898803867351535162621053772743154030398846271272443915587797730439874155374732518478024394309205568908153388045079734914462404446657555822955896003573117120115578186953494601241554963319188879040434681977592164445303524216587867354324523521430507862082398186264209543612608643303446843686613787051176090060455050949970464151944443047141451422057309563274135854844437879833384036169908364608236644115051973054972942353696254540747192735235531623988142027734375",
+        "den": "8034817598141769498686329297167686551330057926368295163273527083620420902061138671231008522057281881710765478213466558735122264566575125835415997730528392593761000978015142230758392123125354251930566399146549559315162847045610355802118015814550057021794137301038472271755108784598828306875579764620413193458041956869571130986407307372026455103753750989232592618241384896190550738887970567174630499790074714590554652551138384951179598329752197610836739888481720373904842562184034983094467289870351071938105417103358975224226062331962256863299855987272354544342814709665204205803774012419086569172823878212771963827793974522764626180168155628670754692964005290260525602084504082979066934397411749873253631137361914070895945811241867016252291625405578335103269298944843605077568642808951936615934936641207645586447825199839581775703888257268192765903275355169994941084734856386489310813688928776191742963013282433278646179259194571365966922572836344036796352435183839034005013455892095713479983481048638667443667208348803845233374043865383214520894442746843861624688135208062936439537116114199042600298626574798157554026366038394586850840529930642513332305013879643090112795174200434085725515890893358603952035977176207803945501075103029688256134076700578285222395179212679977214906684740369845481211620918962545938244708365816208606050979475587775057019415639123426394929226273382578397283866933923087484444561547245199379878060899500354234208732312045632912968257670473008624680195114709306488512251056370391453499052892328872581039020744256801425843806959533734106443523985310444536137760356193334702284753404527185605377690676893457514977114418645433590399968335850247994397116251842555389488959473736153093051747848391743760687561760489357476820991304810142546711052867357090409263336896137510114201220324441141922932847426985493372855713648172869017912002903103461413309161909118037821281449352040894487258609708422034711375324759409914101239761945087146922526972864734329834921428700799100380989478794053104471257742568173119051744975062106316002631186664561239604824573975336264952942438151288729207736368749841063304109516198405628510691650512609716237857139878420242135863395271087632045560560514216613861578307963775004635613044290238343086929115114446800949851130731123045636445762157087289340612052838582394353015332574068736"
+      },
+      "hi": {
+        "num": "27010251116976965721231515006628046573864101291333012294047671592625364839104492754870119999489945940325247812230066988608551210736347837289655841751744815312911740000683934061625996362746380490491512825711129627769239697426881553664926649586666656456769522309551131693095282362374805283272310354694905406569834781836847656341362136546390293088195202596892362945074428549466054605457977787573678252830547287026296903954007286826251966954589009208817647858843107722721862420256546089646851298370401210124145036667804451496830665856939302143859044095090523152681974621223199425951465327066963097316575620140081348927233467054317162597996790034065725069665887915781820406558089775694113008341158429795347639642040595670906338669899069252460801830341789290167833918131407304288073583902029825681900704616469558747366035048580771505888602995033804963238862925431389716607716813899841134892514797227586938007914057865137043336054132701973731494814931039116926455779547146012737664521672938159395605387227704795138010529345838840943443498438244940187601750850342931568842511638764851806560503150863612030832306475813552663325887718301557900130484508614953899844146930980775662075201125549517620144656733322200430776687483409168765743463842197767350231892164503046387661134755939780157108184510505448304967040927416287260921513323394044326736484464245584995764786213864961422243656791435152182696694153720726224357721638555812534542933388147441082792132792283032741510362736307160987315030099771608582279224093260408125135090781447090003015381442012586360933040487216006039737411510942689567174795034536709295350594566838318746074138947139159384189704269184123337688613985690598184385393021996234113815078183328706323370401435231462418086813694558581875836893817916631293920473316145539784345898627411554435290364432567250776939197274907118014662362149593474360792850267665063613132574317934434846877647705488037943507110763431445634097623238872123640620056931207608774136440090563129620074198502251651521715434148301983504200886616426521092806197265242637607247207821860044807291328804299525846951933828868185022065683399809988202781342208506082954070454492926720350670432314537397039271065783223679444049350358572089872241048832546389863912886242714925887431661679453635021569064457207441260475045605899285512278470059565169721001803111",
+        "den": "8034817598141769498686329297167686551330057926368295163273527083620420902061138671231008522057281881710765478213436841421387991701126130150261882126632640229245679089302539866730202970136024427960196809645690395171563703272514588402519348991306454450416640483915647231869450124671927597984827308740385170757597831241124354999092890852680524044356348205743836291890008505998477209974904996673354306041023398889241735658750738794684685597301419875332202029009089922270136811773796481045477502821566222614090338986520753517164848544731554884230161326891123573576242801051657870105207682205892117010351538107094263800220787709065387546779648742197858363420535861431858871434447822404413406966941711371967661594995517659441519256608612407530844431703384038964549763742091051154298308505330183513812533419536661651849249081961108703346401260521660812624194251842781807683697760871770272205690718024088988706370023923693882199002524693768623040269536191053969865614000922494990356860274430842979384479136956716164949812885808827258594238243334190641406234049445997794404905847867418272884273570201840121130426001133608654610759001556484772245261948865148992970625997716696170522666850993988923798606756994176788901176498474542267656286519368657090594209632177622603235487907148263631733826739473702620372597260114099549279244881902970235145614909778966998219431641880909890816706744371373154456953796880525150980898604354745399373534759224538020898590691104871729235451436215072188450140148899312833048101346105487038399325174143851090190635297822646223192115569685997955399226117442555305083309734965628084544720973481279590008970986848464576925527484204532610508681978326918561950452771267999771982118107618284544250893979257427594272130898578140882457341426161211395392739353301610657272320697387589760957986155167991155394868896575277225954184143731736672547070025496073563618911675347587238381765095446961742374696600157542552373606249584405668990276699762734192942593037499808179945196671680333043800361525276511992230134370859619745339460442862545361235134380672606623820201365985052817861894723571488206905671207679094001983395815249684214152309050798526757980475821774978774556416455072798792345268409309302430939857780035735363359035221789980205387263852693486104452753277110561483977444035737937982073733295347866411833753600000000"
+      }
+    },
+    "relative_gap_display": [
+      "0.000003361650813731439005918",
+      "0.000003361650813731439005918"
+    ]
+  },
+  "positive_mass_initial_density": {
+    "a_native_exact": {
+      "num": "6338253001141147",
+      "den": "633825300114114700748351602688"
+    },
+    "M_exact": {
+      "num": "6275838594926751",
+      "den": "17592186044416"
+    },
+    "factor_exact": {
+      "num": "133656179642107",
+      "den": "9671406556917033397649408"
+    },
+    "rho_FD_minus_rho_finite_Mpc_minus2": {
+      "lo": {
+        "num": "322848617959800222665948075363311054858547220136492598369854679598491809803519702240964866095448085340240525934624756864793352951164415729559462828896796999798128344587240197085512627251844059529609407592885025903815166379274980738123152843551196608020447061532423298221916407922572301423148426121225256902880961922413397847852837360530878258938808112165295631184671876221034289050097382900754189372034208111912823218864414215046797431972273741393519044157298684628129161457854526966587078532068943316051226049646165176649322393210604052910537631604609116109877346266853666354959377740640779716367568021303927132849731970088022947069298918271025741158605204944912548082404615426808602019912164249275366669531701786880840291331297610735583000564950374072712402889129178628990069847645165596027661710262611567249660722075024896807953703217549381744667453092659955379342538180058188929208645828578115399208510363309211607411391835179120330690911544195754360512800371519592579425446113378821517324721648805316231154173102840343725233562709136867070060941459106959750326834211646850399922567563714465608709608395927089913227814643853291781338742222677344870806634770311405366420166271657120151083327961106329005443267689488791592946216385274412334254272093560484543843188589286472378282393505170342785174788745882708284460932524858176851913615940413686013425455276581125859564163561910031127901967870166624132415282031985432861676390047905191651246234222873002537385906211145505951122790335183693814733019093060659939969530089083939726186797229451693611290597207108455142182510851812158301758696179459543421171964714891819711133083930199819339205825200993596514097884912172882683742681302686434044508409231006643234283751796283827728675158564423264126703547962596706002766598468665659026362056992048503250265260868876211375734676550811194560992031763991591921222722299326351094202749242933438694015783737715360888394425509980220981067179996032290072444496606491075028390709284278567173253000329972222255068402195121385958818268502145275958286788696790605366417834053889493138808570124256155908778062201947543298138424200671102251315366134056166381760340378706752460711101940482015639293485904992210512079318121975710934165688287768987439870002526240108013384352537236235901746450585177688082247901818184564921978749552817719725465205046565209073140614234682901091986270206495402255401007167068161029747",
+        "den": "1516841678404572471828946246193651790053828947967841840211804325979533327169457381753365672050433737653390775045374246082061874103790170882489537205228215733920356682341869573808030441809217142439541493173277562885341436586385851776775773126638288430968631574356180671098246832169930299069355765821055607764507619142774816833607303044184081752037866536712888293161709510062862283696969504948625581761519605168132147684342814331141041504065849268276834638702826826403185654249392083287669435125586205480107168123282383996451759975872340430869283591367767863653375509778621054334014074970814866229651493556823576977985722013517912586993831821172117105815531353283774274414762418700173676185513400739863641373086715982429221011863283935002491385290671016138883966611457985697535946954722269205815037400675081344783837270550076215591378388983240578218599493208613236180361410014013767261038510963168803115681137324663553651717770696541015431956030251204029840349834574232322779554156040443220449688043316645705140110496332818093833430741450012032047348105281281558371097122789255651364833164833114945388288275205213631961539367899136301310132589527116352695720498188814238126622307850507204708658258261044230193425170284528775211185620553127108721696020583762509044429880084323328215065343114969402837542466625211666330910257212695517663104399366227027269113677873089115699435951494243758031318406141436037284760144574689039432026574549329456209875521788882049432738776851106136434798009051745265094113249797694222441470390731906319144892553655706972225216326981119819244602824259677435397292626219745270520999365496716731988560985284333146661722631155304958599007107685720810390476494310590486429641938113006691185153840489833973455213757276616894960320266821194049483613091853390681273050966584656628450623045953664088020106344047704995313770135488815455321205737812210603096672586580147220756341535136797570757151560264638472465247013974307533757481601655653293575151858212312635282492324395253263868884635995937760033287599878436771722874053833221313709551966484056077633733740451465236804202763610383753812543235733856562269068469486662868671301300714603128439738201391969547785295122814640657402801560138527747767511755228042602539062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "hi": {
+        "num": "2228005649479178050255299589611965088346088388282139163074424230255553595300116905292272487436499390763492291354459425674599594255625931648948604537064927396500681992835787471847035413004349105527647506647413688841233726278265220472542781404253137352028785401858343576473748186524635920755733834593592225220576441943917423054435072686451795687110437945474502329118079952473143958261247209065490106107622110491675967279492071289702701190661953740425449517888030531813717387308067642354401861885695195155184667143515788125747241714831811399774334386686687762127372018399500429994335465261555497885693581129017269672944573883077126455848566289511096597587330611377330400739266890785417977176110716954250281277989734750566814841484204195003180107344762363705702951828378038585294336482357969272787600463766999394389790784873085976838263532368058264331176971282439768496791599101512479719087557566164917670378311380431235063763560395859593619433142292505681852935122804198549865988727920997005332342039755473884301510286134947966496175144277052108092692236859223725119410363383320061375091388964288008145327528619487281441532027573138874183124642158140270651102861242773526836917475329175895436050136538717450296452380943078230822346240723473716229292197400198626771411808629238983165223797514375668765290921842220658711859434289856321547523944697122457899635685555273607679194910666787052874840903989010624107416912842541378258592779739503795372339726489454064495582287324252665401833039347803188064389309581380150593593290370364669785649694381127028137857938974129272672672320124208137627223818218386257943475326874391038835458174863534369495589568124108513396357234763501264051306004514689820446319321872495422184031707526614808909182330176171294346021554132616520029137500058879868513472918117906809162846135493489053851708099321129579071967393989804136646678455828631592542390961254257635234399312789945730650732016918389657604765008708337564500946604804670483425465744361859108675052099570048288175119237501626073765554288674698323264303961377030497987283483737193156826167284777492024701775669772073418168090453262854995362613725454355948063184219730249458203310400749293286378593302953069829546302408399222128181527787924338766367125038377837063542406316831001367055960933256144040842969329944856893581717864550710271187024888122272903371685888",
+        "den": "10467852859979321221544091544322865876840707060283585523472061837667136491585939096062285470718159960332029103526908963351820500019205260528615280971125985475214124649941983058436672991743652316445185826711448939043742650206702590845201630968497795058758791273031040036253230576908014270153459833264698033079136677127336571511710804429822605515192609069243256655930531835569783921514256019978249407788530396944103049380983175469756755323111818286738244801081189391137474069104366720148888477522121115216778056858432459526749680408142399670246049840875564434729284618224413360010023245349660919578982241329919324484021314321747157692850719011575031342930183665134604338701438670476631830620002149261574995543435673452546638665395595864036277968749235894278308353501518991205471613320517085244000710089863150412300421179387828005915790520527257107713883041066555827460595866421054726630330165168990320472307428320401735012840156940885064056388043169275117054619206859072990636926376181243627564872397111640652395950211660192698358656572682052601004683965251405637204364975126813276280780112235581337308461731888678332519536548319607173264406178167057881257419112196544189686993829636959816043648632680576963678366934276540909296712865383773740188072761959334273738226643894295699539877849508525669999397291328302487015705093454759924783258470471839473404511503670243339492182780830545032860236412400117640907029546511503406280381052842283346300456891860872712371839400328005567133053438828133727128420564890184392835897700606396133839829139288238827578460075139447937695181702440712305696851322728725314605374891163810624492704845967192850911671177800885659402238143354315246350904902660123909525731275016290824252953337131486138040399766995011205488791631735963263433684144748175542503521584410496901158871998105580141749072122876244649222531437090317797782574962272576450075254175930393222117405916631661502541934341652285954693641124745513139018963508085026425509879168971571281445908892993690402750771057873357052490394879098459270532501339693767408945543290228821230815875434127487348254517789791691135654975886037628636395951383525195281836049100813667015484189443117647409684274953810295519468246253510354183680975105351257757445572614413123500745463623373094166381369607421447653905488550662994384765625"
+      }
+    },
+    "gap_display_Mpc_minus2": [
+      "2.128426602171000878256E+38",
+      "2.128426602171000879422E+38"
+    ],
+    "scope": "Exact-real finite-node versus source-decimal-PI analytic xi=0 FD reference, same captured normalization/mass/closure, at captured NEW native a_ini only. Not compiled-source rounding or an event certificate."
+  },
+  "initial_coordinate": {
+    "native_u_exact": {
+      "num": "-4536840597973619",
+      "den": "140737488355328"
+    },
+    "ln_native_a": {
+      "lo": {
+        "num": "-5900325169225935990164878809032942907362430818097990211700818760324246364664199192624520791098913924520141658019408827833337220941904444158128177633521436214712971249843640653622931235326924373205513024772614657244509396128650904895224336280721953343758067364966348681703581928346237007216409101285231754015370230373290156898342548522224466482641372329720849772638511595000892568216718928560154458557579463284652947461469189004615733771662728074562004969694096152079264749802823737261437144720924381494725504734748480355309312620801432832085982050900667923375818764446142859963969161342992642335080848590135157311655659355149050420645184868658072134790589708454698952182632749386424491493252642037035405036186188129727650047777358367514908643375426618672507228953009103412974622568282833998649284332664133547998477624121035828557584404820322139811209854165992126074683952267118722821328780075059592535545050472162306019675848708667317855362355449516890393204683945332780834674308254747785960765229896647884280631735636677054210164460058584958418596297401834946706690680433506595023559029223732938544670998391129114503032144053771810132348023537535435879325188068938978941435331577429094501851487014870519327304765215629139802140487774151009064331343345758701675563927394919075822954572840882348309278025699560689095681331655820170752409834243626733920550753072687972367063680599393609552257781388622791747883668647087051727024756087744751191918531310255290009801185918670992660392452862070956683088986471563483146059955891293424061982057132671557932863227960731910886844772061804629259667867901930817601269115550819236627664200844469822749109765130987745996582626260502105431428583601215770853699142250859889116398865962829804097674488315536408197704899827411942871326011758134299110276103103391020769421302039056950710578950215819349650528151467187974252632460952722311064435820919641264834292321025498848327134801209805208676737124904881929756498713976431013976139049571316065465903468263887183387658594116862610405122300656735438100405435764753795573170143985012431591802514511905470114394577982706150007409053754271986459733039468833321476804363413591335442022003946793443003197386446586153286043818278747514405752253989336315905840828312199948535841276492417421351177187762486561923243809378117023253959176332949493069592538327521593456083894546031157788437772282949924967172959451630785588608322802368609367860910272821930650094996593127861842826132462428005159037103888379114007892044574780777551400029436470544710122327144959046769512577329819097782876618031108436675923347055614856706894604635513700129636236305069128057390567305885309721883099999014292488230924297687628460493",
+        "den": "183034190173549609666664741621572784952514806127315824625272884999554808897966770955780574679382885499267019763451302141324001858099000773204892918392108507450324036401203566276910570689825950843015794265952499844084329288550520252094807720561302534824838962600035958237710491717628236332840850949270337527816609163620423158623983346360102166137199151242823512967576782999047738124880611091492082509312605512278214424324982490706831221296991455647154083935162296970210400931052357285145296005346763509049730548812867780188102172914813264058991961205094815988173428198092643138490971160888538931155418778261032820884642181678660545898153238534791374446212171438829816561144522875606560668098850508421472689104789284525966146057948500705446742758078422667703229618678374715620674675402268047291185028411873855497674650748332135425624229596814622589005710562806995779725137606025512025457192409199640759356817924353456935355692439544252335930863591659435570323266544321273858851848905187636870239369271291638633955769775714694050816498823173379999610804273755852747141340580545093182831096928764159481187543779667187551065386712753208869654752535916105126228204190718114808986883690620875122764228211722544565707778716124847166410808204516071574149946374597245922676691696275475858914561707425868153192753540211018336655193198809400391043243571353024204949647511870835046968493197372719650517985355946427132680034361345796325727806610348962318984834322975816275249039135218831970431381125067262420633239130506979938630414385697982104908545862403979903070608710837541833388660912377411095831923665513135098429288177386908900100136744995645277124651059448392405341836371649793033182530645592657215651212710634339871517118585922292589647167506358965831022140556556014753105624180949093314077271321896340221298206341250493344272213750253645657772499503157258830285286620227364777577068092516723068603635279758518371374016019429485107326560913875585896329495004674066351899259379945319021141188855283665151224162512191595569818719731087899737345061123784270529332458889612382932481616787877207845047861507497949631852234253432974027060671389509356699412850414938795130053869607118901733949721794258800893633331550781701045693938716770611427724929901749208147656354230377377354319994684514238781923048095539853999505081781638072484125828183560034861273720394321459714192930110070725593174310962647942072371843918324712083859223884823836191660497693419760635799535247118065124717704655984567505456754703990656474758841460561296195523196025871341147116562267169241703851078414991118268005279725394127741872989290938647552092508049402359513064700732959288397132732747722622664159023824863426266500"
+      },
+      "hi": {
+        "num": "-51569047666825593467432018578359499984381097670282970794707349479833216557974899567275949756980690374575203316336022752746495683498089627958905155117698376066672179992036056785411190908317936406704110913395432359362945761392810030116374519754826614634096266343528399154193225249520131423499237216643212004446467196421047930488576908643503113721644668868111620513509147109561739799694055020883264202776742066884616115766385408940862815608450864274929737758130634060414564065577193947618474883200777634653360588200125539833493904218071209387044930872406423618409409517788085625330443893147641015606662202153022076925471779560707717337652098440726235519474523257010165964516646673529937215739266082504623793386993328442309222357216200764906337280651323787073570182908227228616637865842441702735333670487914509892229390286316135872227395563896896366500097675281602488631615534407831452885301658261500196068455499551267610298390179277915008687292372727408878318232002801779317114279373646701385728079582478558802169782743005912811193160635921994611499272757355214455509730145789032128982271549876575331077564007349653548900022898837297454899272181761484096026329813257171694119157388342658705734996862602072855982781764106548819089227398011717505549280181043683130945672321624585074147139768773474650594225962132336328443266410404944075760893976976809718291297499837633582451987158029553407511339727912031813008878021270321152317415025517449832256397133631483929520657091084602183306830328896990887910332600517438431671993184762776800834563133351670601667338711202121547156041770270280270915770439518213869925184631134412254587809470629712066643092628152252383977318209852325826178782327950925306721977199656372155804456186009622862860023505219133376837704924363401678838928700269702794432307725174232048741594500438576962789807691725008666239065576320954752179659119528232427528192590540849502680678317379213971232409140622952121696106523431633451064335674824100671039148031765861457798577877931207895435175829399251126572781909580533231266167129275057823743836707906604135066491681099923818370392946891963911863207499541472050942627486391941527430437357680543769416549082642456468500451788497024492612224741773107248922321607840189811886560407730677998353543043320272699004261110747373472441542575828667057848707405743029513582525166447377392392907276471008085282573206624495211724642842730409990003909864044655928764458603164855078987343329774574806169234476523934970882198594542641462078496439486094765074824625885338296056035320191557995632524312988206335620636767305142902468618373601685159519971112915616281237660827812044243092666602527611882278845132930037690910653785026915906954369102449258910797960049713351",
+        "den": "1599725202764865613351678198112914211011562155153748763618553061438907191168777539233433479115645366012809651916033791247590479484253835427815053189790314523070055888446343601064069180837053226780002356355229858322382363885773302208943183332680853052627932822803012873059373568389168819155232526106437036349552943391035695006910441776515693330547992766493987255978576044918800344092367492758941072336364989521090950249032068223791032779178422946025022851332975750942428989639321309743469392070439564098789122363979007404643524386660413540538505905772963397187554342775164385041548353235507576651336042781212372965790687485894631739129455856944761162382193079203879063054389133775663401000423267627554719603674760069164734405067695365751322893990619518206648551856217031879413008779164856476326506866895610526510361275636911095460735646272765900102709331375767181400071043659936702090915155765321147634057528962180608144104087578321459018557126340838429252352350864770676038491583650578741887626126938106463672954900417226747107197088986157119345554054259266127409402591274483378536328334391100031746264951183407104651726090542420373412783606065838824143250096587205928480030715805368754831773274782948162207977957142423184366916847550519191549381166863635586755094683176159726532271646079175339781467534734413100654332843888138789851449213950461565780491055487658879158773421252759605234107678812910529522377759833763344355159845079981526170636893117210122434053777384027994014278064934939362878408803458391674585206696628982204286382821372554419744773759918977680027271584494207446773942347677931414395542622882694883119149393778692679608113222260998152103804416524276785215173692896660515770337899561323284070881361467660574018108641943378953691450276872312900168490972497425522187057442015524562101626577942921483987481476041843380096647168004942559532339731657833344288112477163974200170836366026988644358911974987792239132074489277536730902736897731959106225934082805389002288949899052098591623085842198277684380991520514537811878888528292201683259463434770541413865922717561630219522757287314434960987278169661356087657878178536814298268904939641814869230912511663490681782797261855947296020268624855750193311348300192468179566191506821724808291576960846709261278474598896215701414285513282853799524686934400544453670311985298165736421779476307881078059006145819265930270184550194744554427274454518162650927465315140844295062261697095656639427801356555069479710246242509305072149730177781726494895468027320983185535171000691956898406355345918598981375719401899872701171301769226050913289665380377401034814843690807638811297735333226906463386429981508000062763570764562908129571119561182626661947437744128000"
+      }
+    },
+    "u_native_minus_ln_a_native": {
+      "lo": {
+        "num": "-2018087229770067339074407312522316445819477780514351613021768132896850616487462746717177754229131406374089120515473007434103520987133974844385087174905050578672370193282793473873856801268732183026558421840500971644448346093091100110060732245890284143161453883294705664643777739198896127098930717653901849943597136588876830135900778133952206013890392674298166439935391033198812826370551021894174690575826473409548023768278100492902576938905708813390682404382081886563078321183944714340661177740327063055270152935349460994708337537437362860364082866288082156420734691988436956680566374467828308379359064890402130809617021031178979671896155088802010985692083968471771373860338161543134658796181612560172085529123911586317742141408383459727659940005550979782654084887286641917033317804472335080411224248010192057707074504688866720085412643019245756430804485860429662204303503852393616981238541988490489355934005221599227952914424246621002773883439084637342230128362409501039722177291702525232119727961939787369664986409066135265139765401089204447704024145487193960593914865999377545681900895180128961491465162462848132237364927692436074276531710233899494687764372833623890222983315364925047725349734687103099735029281627762332943140687590579334376299955842058344353172108275501328495740987741428201805213419040682399118385563369774316851851605352241756748745439137713831639410759936418626928582085065229756868917901338956206113572298626871355775065285271053238017859721621692846903174759661523327757880241484363813190957879932264810343568944693751917018088552521600816562540792243800912809931068367998856784373062462332503330143164014742248711172499369320297509748240363942758558894428609999505303893633457251017389095760591859895621293397753747401503051080056948299899415538338368401106431271405859185064731455775017058945839023843690130441919538664943959915869464419916795505788366348687545072642014611095088243079332932464962643568826694332074510906831273417809698648596714669991343303163928918321991760930606171976548063035601612595202930521237826397265762409989868955964679834321734415916193076703778850615534612803285418808109957251751421934944556834188098964755053574277209023792543940596831155831698181807454229875475953720071387325115492412868703105248181002684100910420406357733812983294175188261848883933391857565217079892335281903956778950451396471622057968217196427267775684713653442062057102622875255257713059238280608626487343476144733379280840794949660530572220374167126108045830472738819444336848300238204481773589956077159038867736696357525157004170860550536298779317531864239946572240817338592838341846658715755663994353799660853137483962112816404197591579792211749236616833389430649",
+        "den": "1599725202764865613351678198112914211011562155153748763618553061438907191168777539233433479115645366012809651916033791247590479484253835427815053189790314523070055888446343601064069180837053226780002356355229858322382363885773302208943183332680853052627932822803012873059373568389168819155232526106437036349552943391035695006910441776515693330547992766493987255978576044918800344092367492758941072336364989521090950249032068223791032779178422946025022851332975750942428989639321309743469392070439564098789122363979007404643524386660413540538505905772963397187554342775164385041548353235507576651336042781212372965790687485894631739129455856944761162382193079203879063054389133775663401000423267627554719603674760069164734405067695365751322893990619518206648551856217031879413008779164856476326506866895610526510361275636911095460735646272765900102709331375767181400071043659936702090915155765321147634057528962180608144104087578321459018557126340838429252352350864770676038491583650578741887626126938106463672954900417226747107197088986157119345554054259266127409402591274483378536328334391100031746264951183407104651726090542420373412783606065838824143250096587205928480030715805368754831773274782948162207977957142423184366916847550519191549381166863635586755094683176159726532271646079175339781467534734413100654332843888138789851449213950461565780491055487658879158773421252759605234107678812910529522377759833763344355159845079981526170636893117210122434053777384027994014278064934939362878408803458391674585206696628982204286382821372554419744773759918977680027271584494207446773942347677931414395542622882694883119149393778692679608113222260998152103804416524276785215173692896660515770337899561323284070881361467660574018108641943378953691450276872312900168490972497425522187057442015524562101626577942921483987481476041843380096647168004942559532339731657833344288112477163974200170836366026988644358911974987792239132074489277536730902736897731959106225934082805389002288949899052098591623085842198277684380991520514537811878888528292201683259463434770541413865922717561630219522757287314434960987278169661356087657878178536814298268904939641814869230912511663490681782797261855947296020268624855750193311348300192468179566191506821724808291576960846709261278474598896215701414285513282853799524686934400544453670311985298165736421779476307881078059006145819265930270184550194744554427274454518162650927465315140844295062261697095656639427801356555069479710246242509305072149730177781726494895468027320983185535171000691956898406355345918598981375719401899872701171301769226050913289665380377401034814843690807638811297735333226906463386429981508000062763570764562908129571119561182626661947437744128000"
+      },
+      "hi": {
+        "num": "-8124124575467570332337527801673624849712714334227647279407697215137152889635172758063515521319309628041833648297808009967098645547256784962541719060011104532628290212102955739134003571807912805161180871805147345067820405479412375015816857345938455754066622379802698436075070317540351632396258174418599749571640041141496125765971635629805776183392444879436330576178891513959134999521448522164791583629418763692313507367673524688682945489652721253494880982922316329925250433269174426863231683393256091681235750400198290212508856217153869731861352836461165974753238562994593264454792351973059957763011951705457980465090842699092730277569562089584679077460139582920090635211945576070946080438506265953222562375716771767399521360961029862058083114264246852677256283436652252855295836605506056153510846947985603577533185438222635444434261378791413501432222572051659162521708498531971330355212882048418193885158763271957285995086318297082029092029853738633631166888909616103183265348271784093071697210738995936767158838170767881681593386703150859890975620495534505519175894941757709034760968647223250711310639501545172119805543997755063176841967834787917437159254729350095048336888200075943688969928410569279403965228646688774804335410288039159932192339831924338964144216773936308560949350671565573359760716680589106851170079943141336027517673566142903667523917801019129077799360895149713584980378863388148495077573701918198189382668304894766670621840813081444225000141905016301478738319881943211272497743395808995549309493466668192266840818800094536024949838772412877797414555660159901246013436686031787725701199408489885362103954402939108117943996424516227215731224366440280942898979163182372377341898916062708242735862851320028967842755070854295442669042369295144462829415818360016331615124288387891281691863429044857314198211895196090641951395587539632087115241611891597753932140024791615746893865189627015831558447376841757846690827738318430467105803006676787684969920307435930900571118861419279320236105063034103711475781934399446852766732993388563194895182350770159186855992732572306051014371031101269297687624447937760688949777338339582592643184114172527200656025723082064375320506679940475748048725490105479543197003175523049059252430179507825530034748314058349074375754943839989118024657880968863416283111308338038187767000834250138550369530210237289234603443158535165026518586704933059052914274584383325532802673917397474400907568544849229769248782363344848346701527987512048972265893240384365175435671250955024291760402018798191100968974422180299052925726424078286050178676501287422134647326066904521361624514272656948548701310127070243993941458316984338403994164300902867351699",
+        "den": "6439943052044207208463487194406462418572836907193154593004081120449797150935425696971163487437088183758557035359510518051646325722140189091379021346210635317104755351108672325205191729393652685233000172615518725077297507208555984703757309142786876622721715673773847093698464611068249225098939806514599155669842547862434860433170668207024369195237613597711439813800543775537552051315790549339777910541772850100504636667914376588152537245796900906565315018541965721102692829085022825704705171056261451045394782165101762477097087475512606417554494980937998198770424192098403220340879523244404154454305334442519852784698687151898111391482471270837583146429410405637483123833199903377441212272840486329247316245399515086932078265319818292282381838054782280999325258922411377836229411408348421384940921537444487392788008378468830807645381480476787259755416584392685984431550348386134480412617612046269698837595250521904738155700921592029355438855494395612152990576950933510600628866344197441987389045855943597585294050478466661302066402300254225645863804084912442725478922774798654087770375045126947689829407357142948252025849166961606477530925375100786580822819543711288933247975033603460633290115852599532689290178008502772420056946204174950456667088967098768887067162506174283233860612526830125253118941548047520110139722734120534022692047605438246759882384485500624964017686955828136378544548221448985179446540700992605730947710097729629456855664093898010069410604296939020329912909995575505534131155416482406029198505712168966252738768449945118389239230581898116816432629182266527762560988234187959159244255507992053518044867939900491269141849974503363356104441552214582580368896916859602774253243416042815497524960184161812583791638385613583403258851786279512651830740339022587019467277408210644745851414109381678568714361462610828655041784164960146845049508006984604907962006090358164913461177367865545909718766234727462822822597665728491634995806433159335789533113110720400453337810032492568728596665731930948438085057625240473140209451232409800291800674464908490004984931288884323753642190444375580282518409920700625708435398677510107664465729084901803253147446777289310631778318319735930801343125369865276368703524605247143795228692001684728563204757753577980604211653685156925384414776259043153972367270923779612136470920488528326120094027988974460056235541642093915723117968313646343690342723868921209925704018952628309583171117265128008141462791542361058246340286076761216189371523588062691575797021684203189378770053927243895440429258830949904446383388254590716879597984477805769845651790387530462989342374120970648669829917690921675759330241309266549824077098177913432043365375020105728000"
+      }
+    },
+    "delta_u_display": [
+      "-1.261521182689458664864E-15",
+      "-1.261521182689458664864E-15"
+    ],
+    "one_minus_exp_u_over_native_a": {
+      "lo": {
+        "num": "8124124575467570332337527801673624849712714334227647279407697215137152889635172758063515521319309628041833648297808009967098645547256784962541719060011104532628290212102955739134003571807912805161180871805147345067820405479412375015816857345938455754066622379802698436075070317540351632396258174418599749571640041141496125765971635629805776183392444879436330576178891513959134999521448522164791583629418763692313507367673524688682945489652721253494880982922316329925250433269174426863231683393256091681235750400198290212508856217153869731861352836461165974753238562994593264454792351973059957763011951705457980465090842699092730277569562089584679077460139582920090635211945576070946080438506265953222562375716771767399521360961029862058083114264246852677256283436652252855295836605506056153510846947985603577533185438222635444434261378791413501432222572051659162521708498531971330355212882048418193885158763271957285995086318297082029092029853738633631166888909616103183265348271784093071697210738995936767158838170767881681593386703150859890975620495534505519175894941757709034760968647223250711310639501545172119805543997755063176841967834787917437159254729350095048336888200075943688969928410569279403965228646688774804335410288039159932192339831924338964144216773936308560949350671565573359760716680589106851170079943141336027517673566142903667523917801019129077799360895149713584980378863388148495077573701918198189382668304894766670621840813081444225000141905016301478738319881943211272497743395808995549309493466668192266840818800094536024949838772412877797414555660159901246013436686031787725701199408489885362103954402939108117943996424516227215731224366440280942898979163182372377341898916062708242735862851320028967842755070854295442669042369295144462829415818360016331615124288387891281691863429044857314198211895196090641951395587539632087115241611891597753932140024791615746893865189627015831558447376841757846690827738318430467105803006676787684969920307435930900571118861419279320236105063034103711475781934399446852766732993388563194895182350770159186855992732572306051014371031101269297687624447937760688949777338339582592643184114172527200656025723082064375320506679940475748048725490105479543197003175523049059252430179507825530034748314058349074375754943839989118024657880968863416283111308338038187767000834250138550369530210237289234603443158535165026518586704933059052914274584383325532802673917397474400907568544849229769248782363344848346701527987512048972265893240384365175435671250955024291760402018798191100968974422180299052925726424078286050178676501287422134647326066904521361624514272656948548701310127070243993941458316984338403994164300902867351699",
+        "den": "6439943052044215332588062661976794756100638580818004305718415348097076558632640834124053122609846247274078354669138559885294623530150156190024568602995597858823815362213204953495403832349391819236571980528323886258169312355901052524162788555161892439579061612229601160320844413766685300169257346866231551928016966462184432073211809703150135166873243403487623206245423211868128230207304508474777431990295014892088266086678068901659904919321589589510804671263219215983675751401352750955138440230688314277078175421193443712847487673802818926410712134807730060123260653264377973579442517837668609246657307502477615796650392609878576482325170363567860715991499990316560583972782823468076424218416557275327754751665468309494453982091585691803742799084644339082439523169264055092512848060601276680777527043500640903634956364072408340830819703112231694016795375806187416654122400045297002121116144017600054050477298940098623314464193549315350525173791477641245020430689567141767517775960300625252737317640036669282504789474403428460904573068135907239250507235772333701099418309304173263665316802835982450798054580393659562665350712133726283074923130163963422790654331628726092502704383698508970178315928543221659218588577782176385285592892949754792077377006258701079406994430513247378077386463138686202469613113620879870856403323227385192771990746774274277555950628404292487935487974957214177905443371162570159825404089141100808521412015927818839523968988664680691251417378383245330054815011876984272451037359693678526941901521164515562232235118137385230058030676434141766271401595144325177116648394089205172680941539779779219244276429785853373096252913611481300100866068441798311593263357140545673232406598415192839423876246870055319654489705642551246013922640574955320873109634167049848883095768226976360975702497272960260577790507468142853253679361050788796445095546616692023203617981955918845601202159481292803583955861743294381269974507486338325823544751589802895336119787508085423258117468423469299715527151210268674190120659344184615991385631856653058533667853471684900167282059043510609634923016681631296889441021969923396059846615270796614243067424484395896331560949816511287804041401800306121849805310341024417429014710726686992231867524733787815634937261403510638959967743505999760169720099032271997025151892643028419582228826566513887094862239113010425765751879383150326561126848811370208929428801980262839978603335953842385845034662602409049031336391590827495122649421609562890899511100111663841690262068568364814441304882268187200831277629141005415357810434889769805324408556091820024328291674952597636668441025492010294344190347870224460640368379510543765535415162251836037529675922973079699"
+      },
+      "hi": {
+        "num": "2018087229770067339074407312522316445819477780514351613021768132896850616487462746717177754229131406374089120515473007434103520987133974844385087174905050578672370193282793473873856801268732183026558421840500971644448346093091100110060732245890284143161453883294705664643777739198896127098930717653901849943597136588876830135900778133952206013890392674298166439935391033198812826370551021894174690575826473409548023768278100492902576938905708813390682404382081886563078321183944714340661177740327063055270152935349460994708337537437362860364082866288082156420734691988436956680566374467828308379359064890402130809617021031178979671896155088802010985692083968471771373860338161543134658796181612560172085529123911586317742141408383459727659940005550979782654084887286641917033317804472335080411224248010192057707074504688866720085412643019245756430804485860429662204303503852393616981238541988490489355934005221599227952914424246621002773883439084637342230128362409501039722177291702525232119727961939787369664986409066135265139765401089204447704024145487193960593914865999377545681900895180128961491465162462848132237364927692436074276531710233899494687764372833623890222983315364925047725349734687103099735029281627762332943140687590579334376299955842058344353172108275501328495740987741428201805213419040682399118385563369774316851851605352241756748745439137713831639410759936418626928582085065229756868917901338956206113572298626871355775065285271053238017859721621692846903174759661523327757880241484363813190957879932264810343568944693751917018088552521600816562540792243800912809931068367998856784373062462332503330143164014742248711172499369320297509748240363942758558894428609999505303893633457251017389095760591859895621293397753747401503051080056948299899415538338368401106431271405859185064731455775017058945839023843690130441919538664943959915869464419916795505788366348687545072642014611095088243079332932464962643568826694332074510906831273417809698648596714669991343303163928918321991760930606171976548063035601612595202930521237826397265762409989868955964679834321734415916193076703778850615534612803285418808109957251751421934944556834188098964755053574277209023792543940596831155831698181807454229875475953720071387325115492412868703105248181002684100910420406357733812983294175188261848883933391857565217079892335281903956778950451396471622057968217196427267775684713653442062057102622875255257713059238280608626487343476144733379280840794949660530572220374167126108045830472738819444336848300238204481773589956077159038867736696357525157004170860550536298779317531864239946572240817338592838341846658715755663994353799660853137483962112816404197591579792211749236616833389430649",
+        "den": "1599725202764865613351678198112914211011562155153748763618553061438907191168777539233433479115645366012809651916033791247590479484253835427815053189790314523070055888446343601064069180837053226780002356355229858322382363885773302208943183332680853052627932822803012873059373568389168819155232526106437036349552943391035695006910441776515693330547992766493987255978576044918800344092367492758941072336364989521090950249032068223791032779178422946025022851332975750942428989639321309743469392070439564098789122363979007404643524386660413540538505905772963397187554342775164385041548353235507576651336042781212372965790687485894631739129455856944761162382193079203879063054389133775663401000423267627554719603674760069164734405067695365751322893990619518206648551856217031879413008779164856476326506866895610526510361275636911095460735646272765900102709331375767181400071043659936702090915155765321147634057528962180608144104087578321459018557126340838429252352350864770676038491583650578741887626126938106463672954900417226747107197088986157119345554054259266127409402591274483378536328334391100031746264951183407104651726090542420373412783606065838824143250096587205928480030715805368754831773274782948162207977957142423184366916847550519191549381166863635586755094683176159726532271646079175339781467534734413100654332843888138789851449213950461565780491055487658879158773421252759605234107678812910529522377759833763344355159845079981526170636893117210122434053777384027994014278064934939362878408803458391674585206696628982204286382821372554419744773759918977680027271584494207446773942347677931414395542622882694883119149393778692679608113222260998152103804416524276785215173692896660515770337899561323284070881361467660574018108641943378953691450276872312900168490972497425522187057442015524562101626577942921483987481476041843380096647168004942559532339731657833344288112477163974200170836366026988644358911974987792239132074489277536730902736897731959106225934082805389002288949899052098591623085842198277684380991520514537811878888528292201683259463434770541413865922717561630219522757287314434960987278169661356087657878178536814298268904939641814869230912511663490681782797261855947296020268624855750193311348300192468179566191506821724808291576960846709261278474598896215701414285513282853799524686934400544453670311985298165736421779476307881078059006145819265930270184550194744554427274454518162650927465315140844295062261697095656639427801356555069479710246242509305072149730177781726494895468027320983185535171000691956898406355345918598981375719401899872701171301769226050913289665380377401034814843690807638811297735333226906463386429981508000062763570764562908129571119561182626661947437744128000"
+      }
+    },
+    "scope": "Native log(a) is a distinct rounded coordinate; a_hat and u_hat cannot simultaneously be imposed as exact-real a=exp(u). Define source-real initialization at a_hat, carry this offset for a claimed compiled-path relation."
+  },
+  "first_unsupported_historical_primitive": "Original accepted Theta and initial realization equivalence or complete validated inverse. Exact output equality does not discharge it.",
+  "native_processes_started": 0,
+  "cmb_or_likelihood_evaluations": 0,
+  "repository_writes": 0,
+  "workflow_dispatches": 0,
+  "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+  "final_result_gate": "UNRESOLVED",
+  "sources": [
+    {
+      "case": "camspec-lcdm",
+      "member": "q047_reconstructed/camspec-lcdm/accepted_initial_hex.json",
+      "sha256": "0205acdb1d79b429c6b80dcbdd5a53910f699f87115f883f6b8395abe69ff8a2"
+    },
+    {
+      "case": "camspec-lcdm",
+      "member": "q047_reconstructed/camspec-lcdm/effective_background_hex.json",
+      "sha256": "f2342c737770aeef4718ef6b0cae2e1837d91ee72e0e618dfe49601450674308"
+    },
+    {
+      "case": "camspec-lcdm",
+      "member": "q047_reconstructed/camspec-lcdm/source_objects/source/background.c",
+      "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451"
+    },
+    {
+      "case": "camspec-lcdm",
+      "member": "q047_reconstructed/camspec-lcdm/source_objects/include/common.h",
+      "sha256": "410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c"
+    },
+    {
+      "case": "camspec-ede_n3",
+      "member": "q047_reconstructed/camspec-ede_n3/accepted_initial_hex.json",
+      "sha256": "8d7f57cc98f5ada05f77f57147e0d2d26ebf19e14602493a8f962e3c310d4ae0"
+    },
+    {
+      "case": "camspec-ede_n3",
+      "member": "q047_reconstructed/camspec-ede_n3/effective_background_hex.json",
+      "sha256": "4ef09d4ecd66b4a67ca404565fcd8815a6db89182d448403c6b71331dd87328b"
+    },
+    {
+      "case": "camspec-ede_n3",
+      "member": "q047_reconstructed/camspec-ede_n3/source_objects/source/background.c",
+      "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451"
+    },
+    {
+      "case": "camspec-ede_n3",
+      "member": "q047_reconstructed/camspec-ede_n3/source_objects/include/common.h",
+      "sha256": "410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c"
+    },
+    {
+      "case": "hillipop-lcdm",
+      "member": "q047_reconstructed/hillipop-lcdm/accepted_initial_hex.json",
+      "sha256": "302ea9e373707214779120a2bd3eab4064203d64e9585e60fe7e93926511b64f"
+    },
+    {
+      "case": "hillipop-lcdm",
+      "member": "q047_reconstructed/hillipop-lcdm/effective_background_hex.json",
+      "sha256": "4228d94c84c085951704f212abe9a026a3e7428b9e456bbdd04bc2814df61a2e"
+    },
+    {
+      "case": "hillipop-lcdm",
+      "member": "q047_reconstructed/hillipop-lcdm/source_objects/source/background.c",
+      "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451"
+    },
+    {
+      "case": "hillipop-lcdm",
+      "member": "q047_reconstructed/hillipop-lcdm/source_objects/include/common.h",
+      "sha256": "410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c"
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "member": "q047_reconstructed/hillipop-ede_n3/accepted_initial_hex.json",
+      "sha256": "6f5e88a8ad7c2b2344b7952f8d8467e6e4098e5bb22b60dbac5e117faf0c9ecd"
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "member": "q047_reconstructed/hillipop-ede_n3/effective_background_hex.json",
+      "sha256": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146"
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "member": "q047_reconstructed/hillipop-ede_n3/source_objects/source/background.c",
+      "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451"
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "member": "q047_reconstructed/hillipop-ede_n3/source_objects/include/common.h",
+      "sha256": "410ea60e5ca1de7fc501d644711fc21023fa2cbdd56dd8daede1637a3b9e900c"
+    }
+  ]
+}
+
+```
+
+#### M15 ARTIFACT Q047_M15_SYMBOLIC_CONTROL_V1.json
+
+SHA256: aceac7672dba34a51ef1f54b4e2c7aec1f205ec9cf11d44f322074ee75f2ea68
+
+```json
+{
+  "initial": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Symbol::undefined2: Warning: Global symbols \"M, M, M, M, M\" are undefined.\nClear::wrsym: Symbol N is Protected.\nGeneral::messages: Messages were generated which may indicate errors.\n\nOut[1]= {(7*Pi)/480, 1/(48*Pi), 0}"
+      }
+    ],
+    "isError": false
+  },
+  "corrected": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Out[1]= {(7*Pi)/480, 1/(48*Pi), 0}"
+      }
+    ],
+    "isError": false
+  },
+  "note": "Initial query used protected N and emitted a warning; corrected Module query is the independent accepted control. No warning output is silently erased."
+}
+
+```
+
+#### M15 ARTIFACT input_validation.json
+
+SHA256: 9ace1fb409aa3ffd3047ec2e01d86aea56fb2260fb3a3d36dbdf855227c18df4
+
+```json
+{
+  "q": "Q-047",
+  "files": [
+    {
+      "file": "bubbleverse_program_registry.json",
+      "bytes": 101494,
+      "sha256": "c5e6edc7413b9a7a0e7991f7aad7313db4671858a82f0959d90e1e74ff25e9ae",
+      "prior_delivery_hash_match": true
+    },
+    {
+      "file": "README.md",
+      "bytes": 37771,
+      "sha256": "a021f1740992bbadeb9feef07a2567670e903f173b5ffdccb64cadeb96e09958",
+      "prior_delivery_hash_match": true
+    },
+    {
+      "file": "Q047_RECONSTRUCTION_STATE_hillipop-ede_n3_V1.json",
+      "bytes": 6365,
+      "sha256": "541dce767d3323303ec3aa9345929410f9591dac152786c906fd018308e553e4",
+      "prior_delivery_hash_match": true
+    },
+    {
+      "file": "Q047_RECONSTRUCTION_STATE_hillipop-lcdm_V1.json",
+      "bytes": 5782,
+      "sha256": "c2a4e0858e71e6d1c36295bcdd9e0dbadf366cdf54d51bc7d85cf533dfbe698c",
+      "prior_delivery_hash_match": true
+    },
+    {
+      "file": "Q047_RESULT_INGESTION_HANDOFF_V1.md",
+      "bytes": 3353151,
+      "sha256": "335149370834ea7ce30fe553ea057534a991161535be827410a0400daa1c7f0d",
+      "prior_delivery_hash_match": true
+    },
+    {
+      "file": "Q047_RECONSTRUCTION_STATE_camspec-lcdm_V1.json",
+      "bytes": 5776,
+      "sha256": "8492b9264da76e000fbe3c5e1b1449902a0185fd71d04135b4159280646fb524",
+      "prior_delivery_hash_match": true
+    },
+    {
+      "file": "Q047_RECONSTRUCTION_STATE_camspec-ede_n3_V1.json",
+      "bytes": 6361,
+      "sha256": "a0030c8cc26b599bc5d86fb8346ef3e5691c10891475b9eecb48e0ef371c4a4e",
+      "prior_delivery_hash_match": true
+    },
+    {
+      "file": "Q047_INGESTION_DELIVERY_VALIDATION_V1.json",
+      "bytes": 2372,
+      "sha256": "bc25ce4667600f44ebae61beebf351d88efc15d31ab88d03ef8685d12bce98b7",
+      "prior_delivery_hash_match": "receipt itself"
+    },
+    {
+      "file": "Q047_RAW_EVIDENCE_INDEX_V1.json",
+      "bytes": 281593,
+      "sha256": "286b899b4b42279d62d67fab195b9803b4b9902838408849282f61c2f2aba3a1",
+      "prior_delivery_hash_match": true
+    },
+    {
+      "file": "Q047_RECONSTRUCTION_INGESTION_V1.json",
+      "bytes": 7418,
+      "sha256": "49bad32f60ec077602e0cb3e167285ad6694df1bc268ad4d313a18aa66ba08ea",
+      "prior_delivery_hash_match": true
+    }
+  ],
+  "complete_journal_hash_matches_receipt": true,
+  "program_registry_status": "COMPLETED_HISTORICAL_PREPARED"
+}
+
+```
+
+#### M15 INPUT Q047_RECONSTRUCTION_STATE_camspec-ede_n3_V1.json
+
+SHA256: a0030c8cc26b599bc5d86fb8346ef3e5691c10891475b9eecb48e0ef371c4a4e
+
+```json
+{
+  "q": "Q-047",
+  "case": "camspec-ede_n3",
+  "program_id": "Q047-RECONSTRUCTION-V1",
+  "run_id": "38140371059",
+  "origin": "NEW_RECONSTRUCTION",
+  "historical_export": false,
+  "raw_member_sha256": {
+    "accepted_initial_hex.json": "8d7f57cc98f5ada05f77f57147e0d2d26ebf19e14602493a8f962e3c310d4ae0",
+    "effective_background_hex.json": "4ef09d4ecd66b4a67ca404565fcd8815a6db89182d448403c6b71331dd87328b",
+    "runtime_control_v2.json": "397f86b0981b97553fe37647e5626174b5f0fa77c62f649928218822ced36e97",
+    "observation_counters.json": "62c3c42fa102582b3079620bff9e9e489dfe1f8054bef02887f299e96f49f39c"
+  },
+  "accepted_initial_hex": {
+    "schema": "Q047_CAPTURE_V1",
+    "case": "camspec-ede_n3",
+    "origin": "NEW_RECONSTRUCTION",
+    "number_encoding": "C99_hex_binary64",
+    "callback": "background_initial_conditions:return_before_evolver",
+    "fields": {
+      "loga_ini": "-0x1.01e3b843eaa73p+5",
+      "a_ini_native": "0x1.6849b86a12b9bp-47",
+      "phi_ini": "0x1.d4b0be8f7a23fp-3",
+      "phi_prime_ini": "0x0p+0"
+    },
+    "bi_size": 7,
+    "bi_indices": {
+      "time": 3,
+      "tau": 0,
+      "rs": 4,
+      "D": 5,
+      "D_prime": 6,
+      "phi": 1,
+      "phi_prime": 2
+    },
+    "integration_vector": [
+      "0x1.3e81f423eb228p-28",
+      "0x1.d4b0be8f7a23fp-3",
+      "0x0p+0",
+      "0x1.c04277d2817bbp-76",
+      "0x1.6fc7eb43e357dp-29",
+      "0x1p+0",
+      "0x1.9b84e91d1286fp+28"
+    ]
+  },
+  "effective_background_hex": {
+    "schema": "Q047_CAPTURE_V1",
+    "case": "camspec-ede_n3",
+    "origin": "NEW_RECONSTRUCTION",
+    "number_encoding": "C99_hex_binary64",
+    "fields": {
+      "H0": "0x1.dcd83fba75fd2p-13",
+      "K": "-0x0p+0",
+      "Omega0_b": "0x1.88f504d47397cp-5",
+      "Omega0_cdm": "0x1.113585a66790ep-2",
+      "Omega0_g": "0x1.be73ba1497792p-15",
+      "Omega0_lambda": "0x0p+0",
+      "Omega0_ur": "0x1.9c38b21751c0ap-16",
+      "T_cmb": "0x1.5cdd2f1a9fbe7p+1"
+    },
+    "flags": {
+      "has_scf": 1,
+      "has_lambda": 0,
+      "has_cdm": 1,
+      "has_ncdm": 1,
+      "has_ur": 1,
+      "has_idm": 0,
+      "has_idr": 0,
+      "has_dcdm": 0,
+      "has_dr": 0,
+      "has_fld": 0,
+      "has_curvature": 0
+    },
+    "N_ncdm": 1,
+    "thermal_flags": {
+      "has_varconst": 0,
+      "has_exotic_injection": 0,
+      "has_idm_b": 0,
+      "has_idm_g": 0,
+      "has_idm_dr": 0,
+      "recombination": 1
+    },
+    "scalar": {
+      "attractor_ic_scf": 0,
+      "scf_tuning_index": 3,
+      "fields": {
+        "n_scf": "0x1.8p+1",
+        "CC_scf": "0x1p+0",
+        "phi_ini_scf": "0x1.d4b0be8f7a23fp-3",
+        "phi_prime_ini_scf": "0x0p+0"
+      },
+      "scf_parameters": [
+        "0x1.8p+1",
+        "0x1.3b57a652b2fb7p+87",
+        "0x1.3627a127b3d3ap-89",
+        "0x1.561aae3e94ap+1",
+        "0x1.76353e55a9917p+1",
+        "0x0p+0"
+      ]
+    },
+    "neutrinos": [
+      {
+        "got_files": 0,
+        "quadrature_strategy": 0,
+        "fields": {
+          "M_ncdm": "0x1.64bd78a1e489fp+8",
+          "T_ncdm": "0x1.6ea5f84cad57cp-1",
+          "deg_ncdm": "0x1p+0",
+          "ksi_ncdm": "0x0p+0",
+          "factor_ncdm": "0x1.e63d04703becp-37"
+        },
+        "q_ncdm_bg": [
+          "0x1.01a190a9342cbp-3",
+          "0x1.54b1b39dfb502p-1",
+          "0x1.a5aba87e1c094p+0",
+          "0x1.8baa6a27e0966p+1",
+          "0x1.41dfcbaec45f4p+2",
+          "0x1.e0a200b4eb4f7p+2",
+          "0x1.5363f359c10c3p+3",
+          "0x1.cdcfc7a7ec757p+3",
+          "0x1.32dc99949745cp+4",
+          "0x1.937bbcc9df2eap+4",
+          "0x1.0bfa403e53648p+5"
+        ],
+        "w_ncdm_bg": [
+          "0x1.4009ab2f5de6dp-10",
+          "0x1.1006ce715aac3p-9",
+          "0x1.9c8eedb3807edp-10",
+          "0x1.3596887f2dc85p-11",
+          "0x1.e3971fda418acp-14",
+          "0x1.9ab390e676f98p-17",
+          "0x1.708031cc9cbe6p-21",
+          "0x1.3d8abef57be5dp-26",
+          "0x1.b8d797c4599acp-33",
+          "0x1.5e137d7053544p-41",
+          "0x1.0c1275d7b5e1fp-52"
+        ]
+      }
+    ],
+    "z_reio": "0x1.de4e4p+2",
+    "tau_reio": "0x1.a538759db1c04p-5",
+    "rounding_mode": 0,
+    "FE_TONEAREST": 0
+  },
+  "runtime_control_v2": {
+    "schema": "Q047_RUNTIME_CONTROL_V2",
+    "q": "Q-047",
+    "case": "camspec-ede_n3",
+    "origin": "NEW_RECONSTRUCTION",
+    "events": [
+      {
+        "checkpoint": "before_input",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 0,
+        "mxcsr": 8064,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_input",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "before_background",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_background",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "before_thermal",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_thermal",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      }
+    ],
+    "cpuid_leaf1": [
+      10555153,
+      1050624,
+      4275712515,
+      395049983
+    ],
+    "cpuid_leaf7": [
+      1,
+      4055828393,
+      4218822,
+      16
+    ],
+    "xcr0": "0xe7",
+    "symbol_resolution_kind": "DLSYM_REFERENCE_NOT_CORE_GOT_PROOF",
+    "symbols": [
+      {
+        "name": "cos",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x7bad0"
+      },
+      {
+        "name": "sincos",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x7c2c0"
+      },
+      {
+        "name": "pow",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x3a630"
+      }
+    ]
+  },
+  "observation_counters": {
+    "input_shooting_initial_calls": 12,
+    "final_initial_calls": 1,
+    "thermal_start_calls": 7,
+    "capture_completed": true,
+    "historical_export": false
+  },
+  "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+  "first_hit_gate": "UNRESOLVED"
+}
+
+```
+
+#### M15 INPUT Q047_RECONSTRUCTION_STATE_camspec-lcdm_V1.json
+
+SHA256: 8492b9264da76e000fbe3c5e1b1449902a0185fd71d04135b4159280646fb524
+
+```json
+{
+  "q": "Q-047",
+  "case": "camspec-lcdm",
+  "program_id": "Q047-RECONSTRUCTION-V1",
+  "run_id": "38140371059",
+  "origin": "NEW_RECONSTRUCTION",
+  "historical_export": false,
+  "raw_member_sha256": {
+    "accepted_initial_hex.json": "0205acdb1d79b429c6b80dcbdd5a53910f699f87115f883f6b8395abe69ff8a2",
+    "effective_background_hex.json": "f2342c737770aeef4718ef6b0cae2e1837d91ee72e0e618dfe49601450674308",
+    "runtime_control_v2.json": "bfff66b7804a4d9b691426cdaec638a9ef49548429dae08b45ea2c34a71e2493",
+    "observation_counters.json": "e60291998a4990e1a5de79d60e771a2939e903d89229afad888ae93a2be5d59b"
+  },
+  "accepted_initial_hex": {
+    "schema": "Q047_CAPTURE_V1",
+    "case": "camspec-lcdm",
+    "origin": "NEW_RECONSTRUCTION",
+    "number_encoding": "C99_hex_binary64",
+    "callback": "background_initial_conditions:return_before_evolver",
+    "fields": {
+      "loga_ini": "-0x1.01e3b843eaa73p+5",
+      "a_ini_native": "0x1.6849b86a12b9bp-47"
+    },
+    "bi_size": 5,
+    "bi_indices": {
+      "time": 1,
+      "tau": 0,
+      "rs": 2,
+      "D": 3,
+      "D_prime": 4
+    },
+    "integration_vector": [
+      "0x1.3e81f423eb228p-28",
+      "0x1.c04277d2817bbp-76",
+      "0x1.6fc7eb43e357dp-29",
+      "0x1p+0",
+      "0x1.9b84e91d1286fp+28"
+    ]
+  },
+  "effective_background_hex": {
+    "schema": "Q047_CAPTURE_V1",
+    "case": "camspec-lcdm",
+    "origin": "NEW_RECONSTRUCTION",
+    "number_encoding": "C99_hex_binary64",
+    "fields": {
+      "H0": "0x1.dcd83fba75fd2p-13",
+      "K": "-0x0p+0",
+      "Omega0_b": "0x1.88f504d47397cp-5",
+      "Omega0_cdm": "0x1.113585a66790ep-2",
+      "Omega0_g": "0x1.be73ba1497792p-15",
+      "Omega0_lambda": "0x1.5e160304d38ap-1",
+      "Omega0_ur": "0x1.9c38b21751c0ap-16",
+      "T_cmb": "0x1.5cdd2f1a9fbe7p+1"
+    },
+    "flags": {
+      "has_scf": 0,
+      "has_lambda": 1,
+      "has_cdm": 1,
+      "has_ncdm": 1,
+      "has_ur": 1,
+      "has_idm": 0,
+      "has_idr": 0,
+      "has_dcdm": 0,
+      "has_dr": 0,
+      "has_fld": 0,
+      "has_curvature": 0
+    },
+    "N_ncdm": 1,
+    "thermal_flags": {
+      "has_varconst": 0,
+      "has_exotic_injection": 0,
+      "has_idm_b": 0,
+      "has_idm_g": 0,
+      "has_idm_dr": 0,
+      "recombination": 1
+    },
+    "scalar": null,
+    "neutrinos": [
+      {
+        "got_files": 0,
+        "quadrature_strategy": 0,
+        "fields": {
+          "M_ncdm": "0x1.64bd78a1e489fp+8",
+          "T_ncdm": "0x1.6ea5f84cad57cp-1",
+          "deg_ncdm": "0x1p+0",
+          "ksi_ncdm": "0x0p+0",
+          "factor_ncdm": "0x1.e63d04703becp-37"
+        },
+        "q_ncdm_bg": [
+          "0x1.01a190a9342cbp-3",
+          "0x1.54b1b39dfb502p-1",
+          "0x1.a5aba87e1c094p+0",
+          "0x1.8baa6a27e0966p+1",
+          "0x1.41dfcbaec45f4p+2",
+          "0x1.e0a200b4eb4f7p+2",
+          "0x1.5363f359c10c3p+3",
+          "0x1.cdcfc7a7ec757p+3",
+          "0x1.32dc99949745cp+4",
+          "0x1.937bbcc9df2eap+4",
+          "0x1.0bfa403e53648p+5"
+        ],
+        "w_ncdm_bg": [
+          "0x1.4009ab2f5de6dp-10",
+          "0x1.1006ce715aac3p-9",
+          "0x1.9c8eedb3807edp-10",
+          "0x1.3596887f2dc85p-11",
+          "0x1.e3971fda418acp-14",
+          "0x1.9ab390e676f98p-17",
+          "0x1.708031cc9cbe6p-21",
+          "0x1.3d8abef57be5dp-26",
+          "0x1.b8d797c4599acp-33",
+          "0x1.5e137d7053544p-41",
+          "0x1.0c1275d7b5e1fp-52"
+        ]
+      }
+    ],
+    "z_reio": "0x1.de4e4p+2",
+    "tau_reio": "0x1.a538759db1c04p-5",
+    "rounding_mode": 0,
+    "FE_TONEAREST": 0
+  },
+  "runtime_control_v2": {
+    "schema": "Q047_RUNTIME_CONTROL_V2",
+    "q": "Q-047",
+    "case": "camspec-lcdm",
+    "origin": "NEW_RECONSTRUCTION",
+    "events": [
+      {
+        "checkpoint": "before_input",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 0,
+        "mxcsr": 8064,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_input",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 40,
+        "mxcsr": 8104,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "before_background",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 40,
+        "mxcsr": 8104,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_background",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 40,
+        "mxcsr": 8104,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "before_thermal",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 40,
+        "mxcsr": 8104,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_thermal",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      }
+    ],
+    "cpuid_leaf1": [
+      10489617,
+      1050624,
+      4275712515,
+      395049983
+    ],
+    "cpuid_leaf7": [
+      0,
+      563873705,
+      4195972,
+      16
+    ],
+    "xcr0": "0x7",
+    "symbol_resolution_kind": "DLSYM_REFERENCE_NOT_CORE_GOT_PROOF",
+    "symbols": [
+      {
+        "name": "cos",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x7bad0"
+      },
+      {
+        "name": "sincos",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x7c2c0"
+      },
+      {
+        "name": "pow",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x3a630"
+      }
+    ]
+  },
+  "observation_counters": {
+    "input_shooting_initial_calls": 0,
+    "final_initial_calls": 1,
+    "thermal_start_calls": 7,
+    "capture_completed": true,
+    "historical_export": false
+  },
+  "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+  "first_hit_gate": "UNRESOLVED"
+}
+
+```
+
+#### M15 INPUT Q047_RECONSTRUCTION_STATE_hillipop-ede_n3_V1.json
+
+SHA256: 541dce767d3323303ec3aa9345929410f9591dac152786c906fd018308e553e4
+
+```json
+{
+  "q": "Q-047",
+  "case": "hillipop-ede_n3",
+  "program_id": "Q047-RECONSTRUCTION-V1",
+  "run_id": "38140371059",
+  "origin": "NEW_RECONSTRUCTION",
+  "historical_export": false,
+  "raw_member_sha256": {
+    "accepted_initial_hex.json": "6f5e88a8ad7c2b2344b7952f8d8467e6e4098e5bb22b60dbac5e117faf0c9ecd",
+    "effective_background_hex.json": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146",
+    "runtime_control_v2.json": "6c64ed67759d95ef58e3f230a97d3c3876f301afa71f19e6c41f1720d8cb53fa",
+    "observation_counters.json": "62c3c42fa102582b3079620bff9e9e489dfe1f8054bef02887f299e96f49f39c"
+  },
+  "accepted_initial_hex": {
+    "schema": "Q047_CAPTURE_V1",
+    "case": "hillipop-ede_n3",
+    "origin": "NEW_RECONSTRUCTION",
+    "number_encoding": "C99_hex_binary64",
+    "callback": "background_initial_conditions:return_before_evolver",
+    "fields": {
+      "loga_ini": "-0x1.01e3b843eaa73p+5",
+      "a_ini_native": "0x1.6849b86a12b9bp-47",
+      "phi_ini": "0x1.e25c1c67a810dp-3",
+      "phi_prime_ini": "0x0p+0"
+    },
+    "bi_size": 7,
+    "bi_indices": {
+      "time": 3,
+      "tau": 0,
+      "rs": 4,
+      "D": 5,
+      "D_prime": 6,
+      "phi": 1,
+      "phi_prime": 2
+    },
+    "integration_vector": [
+      "0x1.3e81f423eb371p-28",
+      "0x1.e25c1c67a810dp-3",
+      "0x0p+0",
+      "0x1.c04277d281989p-76",
+      "0x1.6fc7eb43e36f9p-29",
+      "0x1p+0",
+      "0x1.9b84e91d126c6p+28"
+    ]
+  },
+  "effective_background_hex": {
+    "schema": "Q047_CAPTURE_V1",
+    "case": "hillipop-ede_n3",
+    "origin": "NEW_RECONSTRUCTION",
+    "number_encoding": "C99_hex_binary64",
+    "fields": {
+      "H0": "0x1.e0a87807cbe58p-13",
+      "K": "-0x0p+0",
+      "Omega0_b": "0x1.81414da191ee2p-5",
+      "Omega0_cdm": "0x1.0c0260fc4ee05p-2",
+      "Omega0_g": "0x1.b7656d184c7aap-15",
+      "Omega0_lambda": "0x0p+0",
+      "Omega0_ur": "0x1.95b4e375d3fa6p-16",
+      "T_cmb": "0x1.5cdd2f1a9fbe7p+1"
+    },
+    "flags": {
+      "has_scf": 1,
+      "has_lambda": 0,
+      "has_cdm": 1,
+      "has_ncdm": 1,
+      "has_ur": 1,
+      "has_idm": 0,
+      "has_idr": 0,
+      "has_dcdm": 0,
+      "has_dr": 0,
+      "has_fld": 0,
+      "has_curvature": 0
+    },
+    "N_ncdm": 1,
+    "thermal_flags": {
+      "has_varconst": 0,
+      "has_exotic_injection": 0,
+      "has_idm_b": 0,
+      "has_idm_g": 0,
+      "has_idm_dr": 0,
+      "recombination": 1
+    },
+    "scalar": {
+      "attractor_ic_scf": 0,
+      "scf_tuning_index": 3,
+      "fields": {
+        "n_scf": "0x1.8p+1",
+        "CC_scf": "0x1p+0",
+        "phi_ini_scf": "0x1.e25c1c67a810dp-3",
+        "phi_prime_ini_scf": "0x0p+0"
+      },
+      "scf_parameters": [
+        "0x1.8p+1",
+        "0x1.419fbeb3d4926p+87",
+        "0x1.8c1be6d0d636dp-90",
+        "0x1.5eab3adf48e52p+1",
+        "0x1.799999999999ap+1",
+        "0x0p+0"
+      ]
+    },
+    "neutrinos": [
+      {
+        "got_files": 0,
+        "quadrature_strategy": 0,
+        "fields": {
+          "M_ncdm": "0x1.64bd78a1e489fp+8",
+          "T_ncdm": "0x1.6ea5f84cad57cp-1",
+          "deg_ncdm": "0x1p+0",
+          "ksi_ncdm": "0x0p+0",
+          "factor_ncdm": "0x1.e63d04703becp-37"
+        },
+        "q_ncdm_bg": [
+          "0x1.01a190a9342cbp-3",
+          "0x1.54b1b39dfb502p-1",
+          "0x1.a5aba87e1c094p+0",
+          "0x1.8baa6a27e0966p+1",
+          "0x1.41dfcbaec45f4p+2",
+          "0x1.e0a200b4eb4f7p+2",
+          "0x1.5363f359c10c3p+3",
+          "0x1.cdcfc7a7ec757p+3",
+          "0x1.32dc99949745cp+4",
+          "0x1.937bbcc9df2eap+4",
+          "0x1.0bfa403e53648p+5"
+        ],
+        "w_ncdm_bg": [
+          "0x1.4009ab2f5de6dp-10",
+          "0x1.1006ce715aac3p-9",
+          "0x1.9c8eedb3807edp-10",
+          "0x1.3596887f2dc85p-11",
+          "0x1.e3971fda418acp-14",
+          "0x1.9ab390e676f98p-17",
+          "0x1.708031cc9cbe6p-21",
+          "0x1.3d8abef57be5dp-26",
+          "0x1.b8d797c4599acp-33",
+          "0x1.5e137d7053544p-41",
+          "0x1.0c1275d7b5e1fp-52"
+        ]
+      }
+    ],
+    "z_reio": "0x1.dfec4p+2",
+    "tau_reio": "0x1.a5f1b2f7a4249p-5",
+    "rounding_mode": 0,
+    "FE_TONEAREST": 0
+  },
+  "runtime_control_v2": {
+    "schema": "Q047_RUNTIME_CONTROL_V2",
+    "q": "Q-047",
+    "case": "hillipop-ede_n3",
+    "origin": "NEW_RECONSTRUCTION",
+    "events": [
+      {
+        "checkpoint": "before_input",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 0,
+        "mxcsr": 8064,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_input",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "before_background",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_background",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "before_thermal",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_thermal",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      }
+    ],
+    "cpuid_leaf1": [
+      10489617,
+      1050624,
+      4275712515,
+      395049983
+    ],
+    "cpuid_leaf7": [
+      0,
+      563873705,
+      4195972,
+      16
+    ],
+    "xcr0": "0x7",
+    "symbol_resolution_kind": "DLSYM_REFERENCE_NOT_CORE_GOT_PROOF",
+    "symbols": [
+      {
+        "name": "cos",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x7bad0"
+      },
+      {
+        "name": "sincos",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x7c2c0"
+      },
+      {
+        "name": "pow",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x3a630"
+      }
+    ]
+  },
+  "observation_counters": {
+    "input_shooting_initial_calls": 12,
+    "final_initial_calls": 1,
+    "thermal_start_calls": 7,
+    "capture_completed": true,
+    "historical_export": false
+  },
+  "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+  "first_hit_gate": "UNRESOLVED"
+}
+
+```
+
+#### M15 INPUT Q047_RECONSTRUCTION_STATE_hillipop-lcdm_V1.json
+
+SHA256: c2a4e0858e71e6d1c36295bcdd9e0dbadf366cdf54d51bc7d85cf533dfbe698c
+
+```json
+{
+  "q": "Q-047",
+  "case": "hillipop-lcdm",
+  "program_id": "Q047-RECONSTRUCTION-V1",
+  "run_id": "38140371059",
+  "origin": "NEW_RECONSTRUCTION",
+  "historical_export": false,
+  "raw_member_sha256": {
+    "accepted_initial_hex.json": "302ea9e373707214779120a2bd3eab4064203d64e9585e60fe7e93926511b64f",
+    "effective_background_hex.json": "4228d94c84c085951704f212abe9a026a3e7428b9e456bbdd04bc2814df61a2e",
+    "runtime_control_v2.json": "82a38ec85e1fa5ce625487a161d4e4f2b7743ad1e5b7313a8fb96c8c4bd5bb07",
+    "observation_counters.json": "e60291998a4990e1a5de79d60e771a2939e903d89229afad888ae93a2be5d59b"
+  },
+  "accepted_initial_hex": {
+    "schema": "Q047_CAPTURE_V1",
+    "case": "hillipop-lcdm",
+    "origin": "NEW_RECONSTRUCTION",
+    "number_encoding": "C99_hex_binary64",
+    "callback": "background_initial_conditions:return_before_evolver",
+    "fields": {
+      "loga_ini": "-0x1.01e3b843eaa73p+5",
+      "a_ini_native": "0x1.6849b86a12b9bp-47"
+    },
+    "bi_size": 5,
+    "bi_indices": {
+      "time": 1,
+      "tau": 0,
+      "rs": 2,
+      "D": 3,
+      "D_prime": 4
+    },
+    "integration_vector": [
+      "0x1.3e81f423eb371p-28",
+      "0x1.c04277d281989p-76",
+      "0x1.6fc7eb43e36f9p-29",
+      "0x1p+0",
+      "0x1.9b84e91d126c6p+28"
+    ]
+  },
+  "effective_background_hex": {
+    "schema": "Q047_CAPTURE_V1",
+    "case": "hillipop-lcdm",
+    "origin": "NEW_RECONSTRUCTION",
+    "number_encoding": "C99_hex_binary64",
+    "fields": {
+      "H0": "0x1.e0a87807cbe58p-13",
+      "K": "-0x0p+0",
+      "Omega0_b": "0x1.81414da191ee2p-5",
+      "Omega0_cdm": "0x1.0c0260fc4ee05p-2",
+      "Omega0_g": "0x1.b7656d184c7aap-15",
+      "Omega0_lambda": "0x1.612dd94391db4p-1",
+      "Omega0_ur": "0x1.95b4e375d3fa6p-16",
+      "T_cmb": "0x1.5cdd2f1a9fbe7p+1"
+    },
+    "flags": {
+      "has_scf": 0,
+      "has_lambda": 1,
+      "has_cdm": 1,
+      "has_ncdm": 1,
+      "has_ur": 1,
+      "has_idm": 0,
+      "has_idr": 0,
+      "has_dcdm": 0,
+      "has_dr": 0,
+      "has_fld": 0,
+      "has_curvature": 0
+    },
+    "N_ncdm": 1,
+    "thermal_flags": {
+      "has_varconst": 0,
+      "has_exotic_injection": 0,
+      "has_idm_b": 0,
+      "has_idm_g": 0,
+      "has_idm_dr": 0,
+      "recombination": 1
+    },
+    "scalar": null,
+    "neutrinos": [
+      {
+        "got_files": 0,
+        "quadrature_strategy": 0,
+        "fields": {
+          "M_ncdm": "0x1.64bd78a1e489fp+8",
+          "T_ncdm": "0x1.6ea5f84cad57cp-1",
+          "deg_ncdm": "0x1p+0",
+          "ksi_ncdm": "0x0p+0",
+          "factor_ncdm": "0x1.e63d04703becp-37"
+        },
+        "q_ncdm_bg": [
+          "0x1.01a190a9342cbp-3",
+          "0x1.54b1b39dfb502p-1",
+          "0x1.a5aba87e1c094p+0",
+          "0x1.8baa6a27e0966p+1",
+          "0x1.41dfcbaec45f4p+2",
+          "0x1.e0a200b4eb4f7p+2",
+          "0x1.5363f359c10c3p+3",
+          "0x1.cdcfc7a7ec757p+3",
+          "0x1.32dc99949745cp+4",
+          "0x1.937bbcc9df2eap+4",
+          "0x1.0bfa403e53648p+5"
+        ],
+        "w_ncdm_bg": [
+          "0x1.4009ab2f5de6dp-10",
+          "0x1.1006ce715aac3p-9",
+          "0x1.9c8eedb3807edp-10",
+          "0x1.3596887f2dc85p-11",
+          "0x1.e3971fda418acp-14",
+          "0x1.9ab390e676f98p-17",
+          "0x1.708031cc9cbe6p-21",
+          "0x1.3d8abef57be5dp-26",
+          "0x1.b8d797c4599acp-33",
+          "0x1.5e137d7053544p-41",
+          "0x1.0c1275d7b5e1fp-52"
+        ]
+      }
+    ],
+    "z_reio": "0x1.dfec4p+2",
+    "tau_reio": "0x1.a5f1b2f7a4249p-5",
+    "rounding_mode": 0,
+    "FE_TONEAREST": 0
+  },
+  "runtime_control_v2": {
+    "schema": "Q047_RUNTIME_CONTROL_V2",
+    "q": "Q-047",
+    "case": "hillipop-lcdm",
+    "origin": "NEW_RECONSTRUCTION",
+    "events": [
+      {
+        "checkpoint": "before_input",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 0,
+        "mxcsr": 8064,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_input",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 40,
+        "mxcsr": 8104,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "before_background",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 40,
+        "mxcsr": 8104,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_background",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 40,
+        "mxcsr": 8104,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "before_thermal",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 40,
+        "mxcsr": 8104,
+        "x87_control": 895
+      },
+      {
+        "checkpoint": "after_thermal",
+        "rounding_mode": 0,
+        "FE_TONEAREST": 0,
+        "exception_flags": 56,
+        "mxcsr": 8122,
+        "x87_control": 895
+      }
+    ],
+    "cpuid_leaf1": [
+      10489617,
+      51382272,
+      4275712515,
+      395049983
+    ],
+    "cpuid_leaf7": [
+      0,
+      563873705,
+      4195972,
+      16
+    ],
+    "xcr0": "0x7",
+    "symbol_resolution_kind": "DLSYM_REFERENCE_NOT_CORE_GOT_PROOF",
+    "symbols": [
+      {
+        "name": "cos",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x7bad0"
+      },
+      {
+        "name": "sincos",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x7c2c0"
+      },
+      {
+        "name": "pow",
+        "object": "/lib/x86_64-linux-gnu/libm.so.6",
+        "offset": "0x3a630"
+      }
+    ]
+  },
+  "observation_counters": {
+    "input_shooting_initial_calls": 0,
+    "final_initial_calls": 1,
+    "thermal_start_calls": 7,
+    "capture_completed": true,
+    "historical_export": false
+  },
+  "scientific_verdict": "INSUFFICIENT_EVIDENCE",
+  "first_hit_gate": "UNRESOLVED"
+}
+
+```
+
+---
+
+# INHERITED JOURNAL — complete original bytes below; prior routing is historical where superseded by M15
+
+# BUBBLEVERSE — Q047 actual reconstruction result ingestion
+
+STATUS: CONTINUES
+CURRENT Q: Q-047
+CASE ID: NOT DOCUMENTED; no canonical promotion.
+PROGRAM_ID: Q047-RECONSTRUCTION-V1
+QUESTION: For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?
+CHECKED UTC: 2026-10-11T13:03:03.788389+00:00
+CHECKED Europe/Copenhagen: 2026-10-11T15:03:03.788389+02:00
+SELECTED NEXT ENGINE: MATEMATIKMOTOR / existing Mathematics Engine.
+OPERATING STATE: Acquisition COMPLETE; no new capture/replay. Finite mathematical admission of the newly acquired state objects remains necessary. Not a MOTOR14 closure.
+
+## J-PROPOSED-Q047-RUN38140371059-INGESTION-001
+
+[CONFIRM / REPAIR INSTALLED] Exact current main tree 76d6b4a4b02ddd929899008f476e99da29c1f931 matches the supplied correct registry, README and journal by Git blob identity. Registry has 55 IDs and the approved Q047 target. The supplied repair receipt's README/journal SHA256 values match the supplied files. Its remote_repair_installed=false and installation-pending routing are HISTORICAL, superseded by this actual installation/run evidence, not edited inside the original receipt. Failed run 38139955970 remains preserved; it performed no native capture.
+
+[ADD / ACTUAL NUMERICAL-TECHNICAL RESULT] R-PROPOSED-Q047-RUN38140371059-INGESTION-001 ingests run 38140371059, attempt 1, commit 76d6b4a4b02ddd929899008f476e99da29c1f931, created 2026-10-11T12:43:46Z and completed/updated 2026-10-11T12:45:42Z. Static, all four capture jobs and collector report success. The actual final report reports COMPLETE and JOB_COMPLETENESS_GATE=PASS, with four completed cases and no failed/missing case. The actual final JSON SHA256 is 5279a67dfcfc30537a12425b691c1e19b84dfef03a1e3ddb6d69a80ac03b8cc4. Origin remains NEW_RECONSTRUCTION and historical_export=false.
+
+[TECHNICALLY VALIDATED FOR ACQUISITION] Five downloaded transport artifacts match their official SHA256 digests. All 304 worker-declared member hashes, four worker/final report equalities, run/Q/program/contract identities and four runtime controls were checked. All 40 frozen source/header hashes per case match. Requested INI text matches each frozen vector. All eight native/golden table file hashes match: the complete stored background and thermodynamics tables are byte-identical to their archived counterparts. This independently corroborates the worker ALL_BINARY64_OUTPUT_BITS_MATCH reports without repeating native computation. The final artifact's journal is byte-identical to the supplied 3331140-byte journal; its contract is the frozen958b5417... contract.
+
+| Case | Capture | Structural/runtime gates | Archived-table reproduction | Internal initialization entries |
+|---|---|---|---|---|
+| camspec-lcdm | COMPLETE | PASS / PASS | all stored table bytes match | 1 |
+| camspec-ede_n3 | COMPLETE | PASS / PASS | all stored table bytes match | 13 |
+| hillipop-lcdm | COMPLETE | PASS / PASS | all stored table bytes match | 1 |
+| hillipop-ede_n3 | COMPLETE | PASS / PASS | all stored table bytes match | 13 |
+
+[ACCOUNTING] Actual acquisition: 4 top-level native processes, 28 observed background-initialization entries, of which 24 were input/shooting-phase entries and 4 final initialization entries. Each case has 7 captured thermal starts, 28 total. These are measured callback entries, not an assertion of 28 independent fits or a conversion into the inherited native/theory budget. Full CMB/likelihood evaluations 0. Inherited ledger remains 16/52 used and 36 remaining, separately from this authorized acquisition. Current ingestion launches 0 native processes and performs 0 GitHub writes/dispatches.
+
+[NEW STATE / QUALIFICATION SCOPE] Exact binary64 accepted initial vectors, effective background/scalar fields, ncdm quadrature nodes/weights, thermal starts, precision, source/data files and new-run FP/CPU/libm records are now captured and attributable to these four new executions. Six checkpoints and dlsym reference addresses pass their limited runtime checks. libm/libc/loader/OpenMP byte copies are preserved. This supersedes the statement that these NEW reconstructed state objects have not been acquired. It does not supersede the absence of an original historical state/equivalence proof, source-real error relation, all-call FP/GOT proof or full observer-neutrality proof. Preflight flags native_library_loaded=false/initialization_executed=false describe preflight only; the subsequent capture is separately actual execution.
+
+[KEEP / PHYSICAL INTERPRETATION] All four original-case PT01/PT03 remain UNRESOLVED. No actual first hit, nonreachability, negative boundary rate, no-competing-switch condition, optical-depth bias, CMB/likelihood effect, H0 shift or model preference is inferred. No new physical anomaly or falsification is established. Exact output reproduction constrains possible realizations but does not establish unique historical internal state or source-real accuracy. All M01–M14 and original rejected routes remain within their documented conditions; no scientific zombie.
+
+[NEXT / MATERIAL-REVERSAL TEST] One finite Mathematics Engine task is justified by genuinely new accepted-state/ncdm/library objects. Determine the exact mapping from these captured objects to the reconstructed source-real IVP and the original PT01/PT03 obligations; explicitly separate historical equivalence from scoped reconstruction. Use the unchanged precursor contract and M11–M14. Identify and resolve, or name, the first unsupported source/unit/error/linkage primitive. Do not repeat the old search or unchanged M14 argument, assume libm dlsym references are actual core-call targets, or promote output match into historical identity. A justified admissible primitive can materially change whether the exact Q can be answered; arbitrary recapture cannot.
+
+[STOP / ROUTING] Successful acquisition is complete; no native rerun, retry, new fit or new PROGRAM_ID. Not sufficient for MOTOR14 because the exact first-hit question still has material, explicitly identified admission gaps and no qualified first-event result. If the finite mathematical task finds no support for its next necessary primitive, stop and return the specific evidence limit to ingestion; do not trigger another generic acquisition. If the exact Q becomes defensibly sufficiently documented, stop investigative work and route directly to MOTOR14. Report Writer is excluded.
+
+SOURCE ID: I-PROPOSED-Q047-RUN38140371059-001
+SOURCE TYPE: BUBBLEVERSE NUMERICAL / TECHNICAL EVIDENCE
+PRIMARY OBJECTS: GitHub run 38140371059 and six job records; four 78-member raw artifacts and three-member final artifact; immutable JSON and raw objects, with original member hashes. Official run URL: https://github.com/Morfindien/Bubbleverse/actions/runs/38140371059 . Repository/source/core/contract freezes and previous K/I/R IDs remain below.
+NEW EXTERNAL SCIENTIFIC PUBLICATIONS: none. Targeted read-only repository/run retrieval supplies internal execution evidence, not a new cosmology source.
+JOURNAL CONTINUITY: the entire supplied journal follows byte-for-byte; parent SHA256 02c7b36f2c426f0b594798d156690ccf0a7bc9f2213d76f1f0e8a2f659648c31. Earlier operational instructions below are historical where superseded by this entry; underlying raw receipts are unchanged.
+
+---
+
+[RAW PRESERVATION] All 315 original artifact members are retained by exact-byte storage or explicit empty-file declarations: 307 nonempty files saved, eight zero-byte logs declared with exact original paths and empty SHA256. Total original bytes: 247,963,175. Q047_RAW_EVIDENCE_INDEX_V1.json preserves each member hash, artifact/run identity and retrieval reference. No archive is delivered; no native computation was repeated.
+
+[REPOSITORY MAINTENANCE] Prepared README update and registry retirement preserve all 55 IDs and change only the completed Q047 reconstruction entry. Remote registry remains ACTIVE at the inspected commit; authoring-agent repository writes/dispatches remain zero. These maintenance files are prepared manual replacements, not installed remote changes.
+
 # Q047 — installation registry failure and differential repair
 
 CURRENT Q: Q-047
