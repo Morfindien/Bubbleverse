@@ -1,0 +1,61 @@
+name: Q048 pinned reconstruction input check V1
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Exact registered target
+        type: string
+        required: true
+        default: Q048-INPUTCHECK-V1
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  input-check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Fail fast; exact target, package, journal and registry
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: python q048_package_check_v1.py
+      - name: Mandatory adversarial and representation controls
+        run: timeout 90s python -m unittest -v q048_inputcheck_tests_v1
+      - name: Read only the four frozen raw artifacts; no native restart
+        timeout-minutes: 12
+        uses: actions/download-artifact@v4
+        with:
+          repository: Morfindien/Bubbleverse
+          run-id: 38140371059
+          github-token: ${{ github.token }}
+          pattern: q047-reconstruction-v1-38140371059-*-raw
+          merge-multiple: true
+          path: q048_downloaded
+      - name: Twenty pinned metadata members; no trajectory or likelihood computation
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: >-
+          timeout 90s python q048_inputcheck_v1.py
+          --program-id "$REQUESTED_PROGRAM_ID"
+          --input-root q048_downloaded/q047_reconstructed
+          --output q048_inputcheck_results/Q048_INPUTCHECK_RESULT_V1.json
+      - name: Preserve receipt with exact contracts and scientific memory
+        if: always()
+        timeout-minutes: 4
+        uses: actions/upload-artifact@v4
+        with:
+          name: q048-inputcheck-v1-${{ github.run_id }}-result
+          path: |
+            q048_inputcheck_results/
+            Q048_INPUTCHECK_CONTRACT_V1.json
+            Q048_INPUTCHECK_PACKAGE_V1.json
+            Q047_SAMLET_JOURNAL.md
+          if-no-files-found: error
+          retention-days: 30

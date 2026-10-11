@@ -1,0 +1,676 @@
+{
+  "schema": "Q048_INPUTCHECK_RESULT_V1",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "program_id": "Q048-INPUTCHECK-V1",
+  "scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_run_id": "38140371059",
+  "source_execution_commit": "76d6b4a4b02ddd929899008f476e99da29c1f931",
+  "current_execution_commit": "LOCAL_UNCOMMITTED",
+  "current_run_id": "LOCAL",
+  "execution_status": "COMPLETE",
+  "job_completeness_gate": "PASS",
+  "metadata_gate": "PASS",
+  "final_result_gate": "UNRESOLVED",
+  "actual_xe_history_bounds": "NOT_COMPUTED",
+  "actual_tau_T_bounds": "NOT_COMPUTED",
+  "cases": {
+    "camspec-lcdm": {
+      "metadata_gate": "PASS",
+      "phase_start_records": [
+        {
+          "event": 1,
+          "phase": 0,
+          "mz_hex": "-0x1.312d000000003p+22",
+          "native_y_hex": [
+            "0x0p+0"
+          ]
+        },
+        {
+          "event": 2,
+          "phase": 1,
+          "mz_hex": "-0x1.f72p+12",
+          "native_y_hex": [
+            "-0x1.3c9ac5c17d75p-11"
+          ]
+        },
+        {
+          "event": 3,
+          "phase": 2,
+          "mz_hex": "-0x1.1f8p+12",
+          "native_y_hex": [
+            "-0x1.3e73dd8009abap-10"
+          ]
+        },
+        {
+          "event": 4,
+          "phase": 3,
+          "mz_hex": "-0x1.bbcp+11",
+          "native_y_hex": [
+            "-0x1.b62b2273c25c5p-10"
+          ]
+        },
+        {
+          "event": 5,
+          "phase": 4,
+          "mz_hex": "-0x1.66cp+11",
+          "native_y_hex": [
+            "-0x1.1e822c81845cbp-9",
+            "0x1.fd79f887eccefp-1"
+          ],
+          "x_He_native": {
+            "num": "8962804467813615",
+            "den": "9007199254740992"
+          },
+          "q_xHeII": {
+            "num": "26436820125577838531307522699915",
+            "den": "324518553658426726783156020576256"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "413070243859752814134074055373350371",
+            "den": "5070602400912917605986812821504000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "ABOVE",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        },
+        {
+          "event": 6,
+          "phase": 5,
+          "mz_hex": "-0x1.9p+10",
+          "native_y_hex": [
+            "-0x1.41482c4a3f15fp-8",
+            "0x1.99db4db082187p-17",
+            "0x1.fd2314b5594d3p-1"
+          ],
+          "x_He_native": {
+            "num": "7210274512183687",
+            "den": "590295810358705651712"
+          },
+          "q_xHeII": {
+            "num": "21267531944846459586323909610627",
+            "den": "21267647932558653966460912964485513216"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "-1812308003037189640677404039269",
+            "den": "332306998946228968225951765070086144000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "AT_OR_BELOW",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        },
+        {
+          "event": 7,
+          "phase": 6,
+          "mz_hex": "-0x1.9p+5",
+          "native_y_hex": [
+            "-0x1.6102030368505p+6",
+            "0x1.99db4db082187p-17",
+            "0x1.fade257f63561p-13"
+          ],
+          "x_He_native": {
+            "num": "7210274512183687",
+            "den": "590295810358705651712"
+          },
+          "q_xHeII": {
+            "num": "21267531944846459586323909610627",
+            "den": "21267647932558653966460912964485513216"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "-1812308003037189640677404039269",
+            "den": "332306998946228968225951765070086144000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "AT_OR_BELOW",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        }
+      ],
+      "thermal_start_events": 7,
+      "accepted_z_reio_hex": "0x1.de4e4p+2",
+      "late_phase_samples": {
+        "x_He_at_frec": "0x1.99db4db082187p-17",
+        "x_He_at_reio": "0x1.99db4db082187p-17",
+        "same_binary64_x_He": true,
+        "q_at_frec": {
+          "num": "21267531944846459586323909610627",
+          "den": "21267647932558653966460912964485513216"
+        },
+        "q_at_reio": {
+          "num": "21267531944846459586323909610627",
+          "den": "21267647932558653966460912964485513216"
+        }
+      },
+      "rate_data_manifest_gate": "PASS_DECLARATIONS_ONLY",
+      "source_manifest_gate": "PASS_DECLARATIONS_ONLY",
+      "reionization_effective_fields_gate": "UNRESOLVED_NOT_IN_CHECKED_METADATA",
+      "continuous_no_hit_gate": "UNRESOLVED",
+      "first_hit_gate": "UNRESOLVED",
+      "full_history_gate": "UNRESOLVED",
+      "final_result_gate": "UNRESOLVED",
+      "scope": "Five metadata files only; source/data payloads and trajectories are not validated here"
+    },
+    "camspec-ede_n3": {
+      "metadata_gate": "PASS",
+      "phase_start_records": [
+        {
+          "event": 1,
+          "phase": 0,
+          "mz_hex": "-0x1.312d000000003p+22",
+          "native_y_hex": [
+            "0x0p+0"
+          ]
+        },
+        {
+          "event": 2,
+          "phase": 1,
+          "mz_hex": "-0x1.f72p+12",
+          "native_y_hex": [
+            "-0x1.42f6b09a53554p-11"
+          ]
+        },
+        {
+          "event": 3,
+          "phase": 2,
+          "mz_hex": "-0x1.1f8p+12",
+          "native_y_hex": [
+            "-0x1.41447e6b1348fp-10"
+          ]
+        },
+        {
+          "event": 4,
+          "phase": 3,
+          "mz_hex": "-0x1.bbcp+11",
+          "native_y_hex": [
+            "-0x1.baff6fbcf5b69p-10"
+          ]
+        },
+        {
+          "event": 5,
+          "phase": 4,
+          "mz_hex": "-0x1.66cp+11",
+          "native_y_hex": [
+            "-0x1.20bfc54706fb1p-9",
+            "0x1.fd79f8846ed77p-1"
+          ],
+          "x_He_native": {
+            "num": "8962804464151927",
+            "den": "9007199254740992"
+          },
+          "q_xHeII": {
+            "num": "26436820114777269651375116207667",
+            "den": "324518553658426726783156020576256"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "413070243690993925385130203931975371",
+            "den": "5070602400912917605986812821504000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "ABOVE",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        },
+        {
+          "event": 6,
+          "phase": 5,
+          "mz_hex": "-0x1.9p+10",
+          "native_y_hex": [
+            "-0x1.4287caef0d607p-8",
+            "0x1.99db8963a53cbp-17",
+            "0x1.fd2314ad89c32p-1"
+          ],
+          "x_He_native": {
+            "num": "7210290537714635",
+            "den": "590295810358705651712"
+          },
+          "q_xHeII": {
+            "num": "21267579213988680704692375093335",
+            "den": "21267647932558653966460912964485513216"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "-1073727655832215133404236726769",
+            "den": "332306998946228968225951765070086144000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "AT_OR_BELOW",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        },
+        {
+          "event": 7,
+          "phase": 6,
+          "mz_hex": "-0x1.9p+5",
+          "native_y_hex": [
+            "-0x1.60f6d694b8555p+6",
+            "0x1.99db8963a53cbp-17",
+            "0x1.fb3c596ff7604p-13"
+          ],
+          "x_He_native": {
+            "num": "7210290537714635",
+            "den": "590295810358705651712"
+          },
+          "q_xHeII": {
+            "num": "21267579213988680704692375093335",
+            "den": "21267647932558653966460912964485513216"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "-1073727655832215133404236726769",
+            "den": "332306998946228968225951765070086144000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "AT_OR_BELOW",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        }
+      ],
+      "thermal_start_events": 7,
+      "accepted_z_reio_hex": "0x1.de4e4p+2",
+      "late_phase_samples": {
+        "x_He_at_frec": "0x1.99db8963a53cbp-17",
+        "x_He_at_reio": "0x1.99db8963a53cbp-17",
+        "same_binary64_x_He": true,
+        "q_at_frec": {
+          "num": "21267579213988680704692375093335",
+          "den": "21267647932558653966460912964485513216"
+        },
+        "q_at_reio": {
+          "num": "21267579213988680704692375093335",
+          "den": "21267647932558653966460912964485513216"
+        }
+      },
+      "rate_data_manifest_gate": "PASS_DECLARATIONS_ONLY",
+      "source_manifest_gate": "PASS_DECLARATIONS_ONLY",
+      "reionization_effective_fields_gate": "UNRESOLVED_NOT_IN_CHECKED_METADATA",
+      "continuous_no_hit_gate": "UNRESOLVED",
+      "first_hit_gate": "UNRESOLVED",
+      "full_history_gate": "UNRESOLVED",
+      "final_result_gate": "UNRESOLVED",
+      "scope": "Five metadata files only; source/data payloads and trajectories are not validated here"
+    },
+    "hillipop-lcdm": {
+      "metadata_gate": "PASS",
+      "phase_start_records": [
+        {
+          "event": 1,
+          "phase": 0,
+          "mz_hex": "-0x1.312d000000003p+22",
+          "native_y_hex": [
+            "0x0p+0"
+          ]
+        },
+        {
+          "event": 2,
+          "phase": 1,
+          "mz_hex": "-0x1.f72p+12",
+          "native_y_hex": [
+            "-0x1.3c71df855926cp-11"
+          ]
+        },
+        {
+          "event": 3,
+          "phase": 2,
+          "mz_hex": "-0x1.1f8p+12",
+          "native_y_hex": [
+            "-0x1.3e3893398081dp-10"
+          ]
+        },
+        {
+          "event": 4,
+          "phase": 3,
+          "mz_hex": "-0x1.bbcp+11",
+          "native_y_hex": [
+            "-0x1.b5cd64821e061p-10"
+          ]
+        },
+        {
+          "event": 5,
+          "phase": 4,
+          "mz_hex": "-0x1.66cp+11",
+          "native_y_hex": [
+            "-0x1.1e3e43b0bfb57p-9",
+            "0x1.fd7c6dab40269p-1"
+          ],
+          "x_He_native": {
+            "num": "8962973350756969",
+            "den": "9007199254740992"
+          },
+          "q_xHeII": {
+            "num": "52864490711317311736375120866717",
+            "den": "649037107316853453566312041152512"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "825997526159531170045649289916810117",
+            "den": "10141204801825835211973625643008000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "ABOVE",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        },
+        {
+          "event": 6,
+          "phase": 5,
+          "mz_hex": "-0x1.9p+10",
+          "native_y_hex": [
+            "-0x1.40e79d2fab4a7p-8",
+            "0x1.99efe0ab21666p-17",
+            "0x1.fd25d7a320244p-1"
+          ],
+          "x_He_native": {
+            "num": "3605844178045747",
+            "den": "295147905179352825856"
+          },
+          "q_xHeII": {
+            "num": "21267620531378470476627368756271",
+            "den": "21267647932558653966460912964485513216"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "-428143440367028649128253351769",
+            "den": "332306998946228968225951765070086144000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "AT_OR_BELOW",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        },
+        {
+          "event": 7,
+          "phase": 6,
+          "mz_hex": "-0x1.9p+5",
+          "native_y_hex": [
+            "-0x1.60c1192450e76p+6",
+            "0x1.99efe0ab21666p-17",
+            "0x1.fc23bfa1e375bp-13"
+          ],
+          "x_He_native": {
+            "num": "3605844178045747",
+            "den": "295147905179352825856"
+          },
+          "q_xHeII": {
+            "num": "21267620531378470476627368756271",
+            "den": "21267647932558653966460912964485513216"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "-428143440367028649128253351769",
+            "den": "332306998946228968225951765070086144000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "AT_OR_BELOW",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        }
+      ],
+      "thermal_start_events": 7,
+      "accepted_z_reio_hex": "0x1.dfec4p+2",
+      "late_phase_samples": {
+        "x_He_at_frec": "0x1.99efe0ab21666p-17",
+        "x_He_at_reio": "0x1.99efe0ab21666p-17",
+        "same_binary64_x_He": true,
+        "q_at_frec": {
+          "num": "21267620531378470476627368756271",
+          "den": "21267647932558653966460912964485513216"
+        },
+        "q_at_reio": {
+          "num": "21267620531378470476627368756271",
+          "den": "21267647932558653966460912964485513216"
+        }
+      },
+      "rate_data_manifest_gate": "PASS_DECLARATIONS_ONLY",
+      "source_manifest_gate": "PASS_DECLARATIONS_ONLY",
+      "reionization_effective_fields_gate": "UNRESOLVED_NOT_IN_CHECKED_METADATA",
+      "continuous_no_hit_gate": "UNRESOLVED",
+      "first_hit_gate": "UNRESOLVED",
+      "full_history_gate": "UNRESOLVED",
+      "final_result_gate": "UNRESOLVED",
+      "scope": "Five metadata files only; source/data payloads and trajectories are not validated here"
+    },
+    "hillipop-ede_n3": {
+      "metadata_gate": "PASS",
+      "phase_start_records": [
+        {
+          "event": 1,
+          "phase": 0,
+          "mz_hex": "-0x1.312d000000003p+22",
+          "native_y_hex": [
+            "0x0p+0"
+          ]
+        },
+        {
+          "event": 2,
+          "phase": 1,
+          "mz_hex": "-0x1.f72p+12",
+          "native_y_hex": [
+            "-0x1.3fdaccd7ed205p-11"
+          ]
+        },
+        {
+          "event": 3,
+          "phase": 2,
+          "mz_hex": "-0x1.1f8p+12",
+          "native_y_hex": [
+            "-0x1.43f59f1299a84p-10"
+          ]
+        },
+        {
+          "event": 4,
+          "phase": 3,
+          "mz_hex": "-0x1.bbcp+11",
+          "native_y_hex": [
+            "-0x1.ba01b08b291d1p-10"
+          ]
+        },
+        {
+          "event": 5,
+          "phase": 4,
+          "mz_hex": "-0x1.66cp+11",
+          "native_y_hex": [
+            "-0x1.217d73563496p-9",
+            "0x1.fd7c6da63556bp-1"
+          ],
+          "x_He_native": {
+            "num": "8962973345469803",
+            "den": "9007199254740992"
+          },
+          "q_xHeII": {
+            "num": "52864490680133091170485876359879",
+            "den": "649037107316853453566312041152512"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "825997525672277723703629844497466367",
+            "den": "10141204801825835211973625643008000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "ABOVE",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        },
+        {
+          "event": 6,
+          "phase": 5,
+          "mz_hex": "-0x1.9p+10",
+          "native_y_hex": [
+            "-0x1.42dfa624fa78dp-8",
+            "0x1.99ef8c5893147p-17",
+            "0x1.fd25d796dabaep-1"
+          ],
+          "x_He_native": {
+            "num": "7211665720947015",
+            "den": "590295810358705651712"
+          },
+          "q_xHeII": {
+            "num": "42535107558467880631299927613395",
+            "den": "42535295865117307932921825928971026432"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "-2942291397301587842161180875413",
+            "den": "664613997892457936451903530140172288000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "AT_OR_BELOW",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        },
+        {
+          "event": 7,
+          "phase": 6,
+          "mz_hex": "-0x1.9p+5",
+          "native_y_hex": [
+            "-0x1.60b14cd786914p+6",
+            "0x1.99ef8c5893147p-17",
+            "0x1.fca8aedb7eb1p-13"
+          ],
+          "x_He_native": {
+            "num": "7211665720947015",
+            "den": "590295810358705651712"
+          },
+          "q_xHeII": {
+            "num": "42535107558467880631299927613395",
+            "den": "42535295865117307932921825928971026432"
+          },
+          "q_minus_exact_epsilon": {
+            "num": "-2942291397301587842161180875413",
+            "den": "664613997892457936451903530140172288000000"
+          },
+          "q_xHeII_vs_exact_epsilon": "AT_OR_BELOW",
+          "semantics": "CLASS vector x_He is abundance per helium; q=fHe*x_He per hydrogen"
+        }
+      ],
+      "thermal_start_events": 7,
+      "accepted_z_reio_hex": "0x1.dfec4p+2",
+      "late_phase_samples": {
+        "x_He_at_frec": "0x1.99ef8c5893147p-17",
+        "x_He_at_reio": "0x1.99ef8c5893147p-17",
+        "same_binary64_x_He": true,
+        "q_at_frec": {
+          "num": "42535107558467880631299927613395",
+          "den": "42535295865117307932921825928971026432"
+        },
+        "q_at_reio": {
+          "num": "42535107558467880631299927613395",
+          "den": "42535295865117307932921825928971026432"
+        }
+      },
+      "rate_data_manifest_gate": "PASS_DECLARATIONS_ONLY",
+      "source_manifest_gate": "PASS_DECLARATIONS_ONLY",
+      "reionization_effective_fields_gate": "UNRESOLVED_NOT_IN_CHECKED_METADATA",
+      "continuous_no_hit_gate": "UNRESOLVED",
+      "first_hit_gate": "UNRESOLVED",
+      "full_history_gate": "UNRESOLVED",
+      "final_result_gate": "UNRESOLVED",
+      "scope": "Five metadata files only; source/data payloads and trajectories are not validated here"
+    }
+  },
+  "failed_cases": [],
+  "verified_members": [
+    {
+      "case": "camspec-lcdm",
+      "member": "worker_result.json",
+      "sha256": "68a66f6bde875d20885ac80d846f4f2355f619947edd9227de3ecd917f44af08",
+      "bytes": 10117
+    },
+    {
+      "case": "camspec-lcdm",
+      "member": "effective_background_hex.json",
+      "sha256": "f2342c737770aeef4718ef6b0cae2e1837d91ee72e0e618dfe49601450674308",
+      "bytes": 1522
+    },
+    {
+      "case": "camspec-lcdm",
+      "member": "effective_precision.json",
+      "sha256": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+      "bytes": 8915
+    },
+    {
+      "case": "camspec-lcdm",
+      "member": "thermal_starts_hex.jsonl",
+      "sha256": "7a087c87dd01367a1ea1dba21be57e26c1940d27c1d9fea8998478eaa8484df7",
+      "bytes": 6277
+    },
+    {
+      "case": "camspec-lcdm",
+      "member": "native_data.json",
+      "sha256": "a836b4e6a233a803029548a1f413cb791efb8e676129428d7550156383f24090",
+      "bytes": 1897
+    },
+    {
+      "case": "camspec-ede_n3",
+      "member": "worker_result.json",
+      "sha256": "5209922e9d628cb28e2b841c601cb3394f1bb7cf7135b1804d137a69288cb961",
+      "bytes": 12418
+    },
+    {
+      "case": "camspec-ede_n3",
+      "member": "effective_background_hex.json",
+      "sha256": "4ef09d4ecd66b4a67ca404565fcd8815a6db89182d448403c6b71331dd87328b",
+      "bytes": 1795
+    },
+    {
+      "case": "camspec-ede_n3",
+      "member": "effective_precision.json",
+      "sha256": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+      "bytes": 8915
+    },
+    {
+      "case": "camspec-ede_n3",
+      "member": "thermal_starts_hex.jsonl",
+      "sha256": "d07772269b1e222b6e684b82dd34e39b626c9fd3678fea0430cf083da9656fc6",
+      "bytes": 6292
+    },
+    {
+      "case": "camspec-ede_n3",
+      "member": "native_data.json",
+      "sha256": "a836b4e6a233a803029548a1f413cb791efb8e676129428d7550156383f24090",
+      "bytes": 1897
+    },
+    {
+      "case": "hillipop-lcdm",
+      "member": "worker_result.json",
+      "sha256": "68981be24067ce9c2a6ae6c0d6da47b625e3a12e1cd4101ec25cd9e3208d05b3",
+      "bytes": 10119
+    },
+    {
+      "case": "hillipop-lcdm",
+      "member": "effective_background_hex.json",
+      "sha256": "4228d94c84c085951704f212abe9a026a3e7428b9e456bbdd04bc2814df61a2e",
+      "bytes": 1524
+    },
+    {
+      "case": "hillipop-lcdm",
+      "member": "effective_precision.json",
+      "sha256": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+      "bytes": 8915
+    },
+    {
+      "case": "hillipop-lcdm",
+      "member": "thermal_starts_hex.jsonl",
+      "sha256": "c7f0756b21532af7716c7cd8c135d7edce00230d66e8eefcd2fe80e04925a787",
+      "bytes": 6285
+    },
+    {
+      "case": "hillipop-lcdm",
+      "member": "native_data.json",
+      "sha256": "a836b4e6a233a803029548a1f413cb791efb8e676129428d7550156383f24090",
+      "bytes": 1897
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "member": "worker_result.json",
+      "sha256": "a78670bd59d9776d5d9425a70689d8f1e30eee33b33adb4850b38296c8188f4c",
+      "bytes": 12432
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "member": "effective_background_hex.json",
+      "sha256": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146",
+      "bytes": 1798
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "member": "effective_precision.json",
+      "sha256": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+      "bytes": 8915
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "member": "thermal_starts_hex.jsonl",
+      "sha256": "7d4144e2615ccb36fa48867ee43b2ad342968469f1d1a2bc3f1088e1db2b884a",
+      "bytes": 6297
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "member": "native_data.json",
+      "sha256": "a836b4e6a233a803029548a1f413cb791efb8e676129428d7550156383f24090",
+      "bytes": 1897
+    }
+  ],
+  "seconds": 0.010949488000051133,
+  "python": "3.12.14",
+  "checked_utc": "2026-10-11T16:26:24.335141+00:00",
+  "new_native_processes": 0,
+  "new_likelihood_evaluations": 0,
+  "next_required_action": "Qualify the common continuous first event or no reach before paired completion integration",
+  "return_route": "RESULT INGESTION & ROUTING ENGINE",
+  "contract_sha256": "feabddeaec3b178c299b21548284150f26403f4cdbab2d69ee112a48a7ac5faf",
+  "program_sha256": "ad5b32232fda138fc3172904a268a51fa5d6720be91bc35daf2dc8f6b6bb85aa"
+}
