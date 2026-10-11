@@ -1,8 +1,41 @@
 # Q047 — installation and one bounded preflight
 
-Status: PREPARED AND OFFLINE CHECKED. Not installed or dispatched on GitHub.
+Status: Operator-installed at commit `64328b317b910cd72da6c18efb02543f0fe5d4d5`; first run failed in static. One launcher-pin correction is prepared and verified locally; the assistant has not written to GitHub or dispatched a run.
 Repository basis: `Morfindien/Bubbleverse`, commit `c768f33d433ca05e00f344bc9dcacca8383ab33f`.
 Preserve the existing permanent launcher. No archive is delivered.
+
+## Current repair — failed run38112534403
+
+CURRENT_Q: Q-047. PROGRAM_ID: Q047-COLLECTION-PREFLIGHT-V1.
+Execution mode: PATCH EXISTING CONFIGURATION; existing HPC-LAVEREN is sufficient.
+The package pinned a local launcher copy with one extra trailing LF. The original
+GitHub launcher is unchanged at the design and execution commits. Its actual SHA256
+is `3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288`.
+Only that existing hash value is corrected. The other seven locked files match
+the exact deployed Git blobs. Scripts, workflows and scientific inputs are unchanged.
+The deployed registry contains the active exact target, and README references it.
+README ACTION: UNCHANGED; README_GATE: PASS for inspected deployed references.
+No new PROGRAM_ID is required because the executable target is unchanged.
+
+1. Replace only `Q047_EXECUTION_PACKAGE_V1.json` at the repository root with the corrected file.
+2. Preserve the updated `Q047_SAMLET_JOURNAL.md` as the same authoritative journal.
+3. Open **🚀 BUBBLEVERSE START**, enter **Q047-COLLECTION-PREFLIGHT-V1** and press **Run workflow** for a NEW run.
+
+Do **not** use **Re-run jobs**: the worker rejects run attempts beyond1. Do not
+replace the launcher or reinstall the remaining program/workflow/registry files.
+The original static failure was reproduced locally; the corrected static command
+and six unit tests pass. Adding a trailing LF still causes rejection, so exact
+integrity checking remains enabled. These are software checks; original-runtime
+recovery and observer compilation have not run. Worker was skipped in the failed
+run, so zero native evaluations were consumed. All four scientific cases retain
+INSUFFICIENT_EVIDENCE, PT01/PT03/final UNRESOLVED and budget16/52 used.
+
+Source: K-PROPOSED-Q047-PREFLIGHTRUN-001, official run/job records and exact files
+at `64328b317b910cd72da6c18efb02543f0fe5d4d5`; detailed verified hashes/corrections
+are in `Q047_EXECUTION_VALIDATION_V1.json`. Read-only GitHub scope is preserved.
+
+The full initial installation design below is retained for reference. Its
+pre-installation control descriptions are historical; this repair takes precedence.
 
 ## A. CURRENT Q
 
@@ -62,7 +95,7 @@ PATCH: registry (one entry added;53 existing entries unchanged) and README
 PROGRAM_ID: **Q047-COLLECTION-PREFLIGHT-V1**.
 TARGET: `.github/workflows/q047-collection-preflight-v1.yml`.
 REGISTRY: `bubbleverse_program_registry.json`.
-PROGRAM_ID REGISTERED: YES in the prepared registry; NO in the live repository.
+PROGRAM_ID REGISTERED: YES in the inspected live registry at commit64328b317b910cd72da6c18efb02543f0fe5d4d5. Initial installation table below is historical; apply the current repair above.
 LAUNCHER_GATE: PASS locally against the actual resolver; remote dispatch NOT EXECUTED.
 
 ### Exact file locations for installation
@@ -133,8 +166,7 @@ NOT EXECUTED in this preparation. No old precursor fixture campaign is replayed.
 ## P–R. FILES AND README
 
 README ACTION: UPDATE; FILE: README.md; prepared README_GATE: PASS.
-Repository consistency: PASS for the prepared file tree; live deployment remains
-NOT APPLIED. Full program, workflow, controls and package are delivered individually.
+Repository consistency: corrected package PASS locally against the deployed eight locked files and current README/registry; corrected package NOT APPLIED to GitHub by the assistant. Full program, workflow, controls and package are delivered individually.
 No new motor prompt is needed because the existing HPC-LAVEREN is sufficient.
 
 ## S–W. EXECUTION, OUTPUTS, GATES AND RETURN
@@ -166,4 +198,4 @@ accounting and the required state/error-linkage route, rather than searching aga
 On failure, inspect the concrete new cache/object/build failure before changing
 the execution mechanism; no false scientific falsification.
 
-START THIS: **Q047-COLLECTION-PREFLIGHT-V1** — after the files are installed.
+START THIS: **Q047-COLLECTION-PREFLIGHT-V1** — new dispatch after the corrected package is committed.

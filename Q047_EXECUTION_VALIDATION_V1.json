@@ -1,64 +1,185 @@
 {
   "q": "Q-047",
   "program_id": "Q047-COLLECTION-PREFLIGHT-V1",
-  "checked_utc": "2026-10-11T04:31:21.544642+00:00",
-  "status": "OFFLINE_PREPARATION_CHECKED; GITHUB_NOT_MODIFIED; NATIVE_NOT_EXECUTED",
-  "controls": {
-    "python_unit_tests": "6 tests PASS, synthetic technical fixtures only",
-    "workflow_yaml": "PASS",
-    "workflow_shell_syntax": "PASS",
-    "original_nine_cache_paths_unchanged": "PASS",
-    "launcher_exact_lookup_local": "PASS",
-    "launcher_unknown_and_shell_injection_rejected": "PASS",
-    "53_existing_registry_entries_unchanged": "PASS",
-    "README_prior_bytes_preserved_append_only": "PASS",
-    "original_launcher_byte_identical": "PASS",
-    "native_no_execution_in_selected_target": "PASS",
-    "package_closure": "PASS"
+  "checked_utc": "2026-10-11T04:51:31.335041+00:00",
+  "status": "LAUNCHER_PIN_CORRECTED_AND_OFFLINE_VERIFIED; NOT_INSTALLED_OR_DISPATCHED_BY_ASSISTANT",
+  "correction_scope": "Exactly one existing JSON SHA256 value changed; no executable, workflow, scientific input, registry or README change.",
+  "failed_run": {
+    "run_id": "38112534403",
+    "attempt": 1,
+    "execution_commit": "64328b317b910cd72da6c18efb02543f0fe5d4d5",
+    "error": "PACKAGE_FILE .github/workflows/00-bubbleverse-start.yml",
+    "static": "failure",
+    "worker": "skipped",
+    "collect": "failure",
+    "static_started_utc": "2026-10-11T04:44:27Z",
+    "static_completed_utc": "2026-10-11T04:44:42Z",
+    "jobs_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/runs/38112534403/jobs"
   },
-  "launcher_controls": [
+  "root_cause": {
+    "kind": "CONFIGURATION",
+    "owner": "assistant_package_preparation",
+    "cause": "Locally serialized launcher included one additional trailing LF. The original GitHub launcher was unchanged.",
+    "old_pin": "e0c11fccd3300710acb1f02ea1bc2b2c327ae2f42584a05e7f7906ea0a5864cd",
+    "corrected_pin": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
+    "original_git_blob": "7f22c617fb98d1508a0b22a42dd3735a74d8288e",
+    "launcher_same_at_design_and_execution_commits": true,
+    "old_pin_equals_actual_bytes_plus_one_lf": true
+  },
+  "controls": {
+    "all_eight_deployed_git_blob_bytes_verified": "PASS",
+    "seven_other_existing_pins_match": "PASS",
+    "old_failure_reproduced": "PASS",
+    "corrected_static_package_readme_registry_continuity": "PASS_LOCAL",
+    "original_six_unit_tests": "PASS_SYNTHETIC_TECHNICAL_ONLY",
+    "modified_launcher_still_rejected": "PASS",
+    "only_one_json_field_changed": "PASS",
+    "remote_readme_and_registry_inspected_unchanged": "PASS"
+  },
+  "file_controls": [
     {
-      "input": "Q047-COLLECTION-PREFLIGHT-V1",
-      "expected_accept": true,
-      "exit_code": 0,
-      "output": "PROGRAM_ID_GATE=PASS program_id=Q047-COLLECTION-PREFLIGHT-V1\nQ_IDENTITY_GATE=PASS q=Q-047\nLAUNCHER_GATE=PASS workflow_id=q047-collection-preflight-v1.yml\n"
+      "path": "q047_execution_v1.py",
+      "git_blob_sha": "a33091dfb2e010ceb57ad97b9fcb5c70b545e323",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
     },
     {
-      "input": "UNKNOWN",
-      "expected_accept": false,
-      "exit_code": 1,
-      "output": "PROGRAM_ID_GATE=FAIL exact registry match not found\n"
+      "path": "test_q047_execution_v1.py",
+      "git_blob_sha": "e8b5e8f0d3ba358d28f7d4ba15a774a7f0f6d487",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "6a903ef5a6215573522fb3f5004dc3957c1852afdf00fde2a8099856fadc0cae",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
     },
     {
-      "input": "$(touch SHOULD_NOT_EXIST)",
-      "expected_accept": false,
-      "exit_code": 1,
-      "output": "PROGRAM_ID_GATE=FAIL invalid identifier syntax\n"
+      "path": "q047_collection_v1.py",
+      "git_blob_sha": "c5f6739da36b68c01dab5c720cf0d948c25eb2dd",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "f1c0e26b20a5a24fb8cd12cd667c28faa340065421c8c19b929598893330c953",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": "q047_collect_state_v1.c",
+      "git_blob_sha": "49f86e553b48bf2a53b878b09816b169d2d58c9f",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "e15c27c4d1cb28ca87a149fd80373c76bc486999b98ab7b2db2de0f28cdab1f7",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": "Q047_COLLECTION_LOCK_V1.json",
+      "git_blob_sha": "aa762b44246ed9efeeb4f3333366395b42599067",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": "Q047_PRECURSOR_CONTRACT_V1.json",
+      "git_blob_sha": "c4026caa639ad50b21539027a75f6723252b9b03",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": ".github/workflows/00-bubbleverse-start.yml",
+      "git_blob_sha": "7f22c617fb98d1508a0b22a42dd3735a74d8288e",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
+      "old_lock_matches": false,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": ".github/workflows/q047-collection-preflight-v1.yml",
+      "git_blob_sha": "72904f674b06fcd993cfd74664125df7bece29b0",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "9a4efe333d1ad1e088192003b89fc42a58a9bdc2a3798691358fb5f445f8aea0",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
     }
   ],
-  "preparation_failure_corrected": "Two local generation invocations used the package directory with paths relative to its parent. No native/remote execution occurred. Absolute paths corrected; final checks rerun successfully.",
-  "gates": {
-    "Q_IDENTITY_GATE": "PASS",
-    "JOURNAL_CONTINUITY_GATE": "PASS",
-    "PACKAGE_GATE": "PASS",
-    "LAUNCHER_GATE": "PASS_LOCAL_PREPARED_FILES_ONLY",
-    "README_GATE": "PASS_PREPARED_FILES_ONLY",
-    "REPOSITORY_CONSISTENCY_GATE": "PASS_PREPARED_FILES_ONLY",
-    "GITHUB_DEPLOYMENT_GATE": "NOT_APPLIED_READ_ONLY",
-    "ORIGINAL_ENVIRONMENT_GATE": "NOT_EXECUTED",
-    "OBSERVER_LINK_GATE": "NOT_EXECUTED",
-    "FINAL_RESULT_GATE": "UNRESOLVED",
-    "PT01": "UNRESOLVED",
-    "PT03": "UNRESOLVED"
-  },
+  "package_sha256": "c2c74f581cc3cd14107381c974bb9908957615e8e0788f457b54b0fc967e3c99",
+  "runtime_original_objects": "NOT_EXECUTED",
+  "observer_build": "NOT_EXECUTED",
   "new_native_or_theory_evaluations": 0,
-  "expected_remote_execution": "One zero-native preflight; not started or dispatched.",
-  "artifacts": {
-    "q047_execution_v1.py": "e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4",
-    "test_q047_execution_v1.py": "6a903ef5a6215573522fb3f5004dc3957c1852afdf00fde2a8099856fadc0cae",
-    "Q047_EXECUTION_PACKAGE_V1.json": "d17c4ab0bfb9105e9ec07d5352a6e712ef22ca90c072c1377a9f37f986cb4f40",
-    "bubbleverse_program_registry.json": "0de36458f01c313af6bf5acc7067c873000345cea1280d544c1b74deaa3de9b5",
-    "README.md": "a7af1f9eacabdf7e7860785fdf824eb4a883d2211146ce29d511215ed6d42d75",
-    ".github/workflows/q047-collection-preflight-v1.yml": "9a4efe333d1ad1e088192003b89fc42a58a9bdc2a3798691358fb5f445f8aea0"
-  }
+  "scientific_status": {
+    "all_four_cases": "INSUFFICIENT_EVIDENCE",
+    "PT01": "UNRESOLVED",
+    "PT03": "UNRESOLVED",
+    "FINAL_RESULT_GATE": "UNRESOLVED",
+    "native_budget_used": 16,
+    "native_budget_limit": 52,
+    "native_budget_remaining": 36
+  },
+  "next_action": "Replace Q047_EXECUTION_PACKAGE_V1.json at repository root; preserve journal; start a NEW dispatch through BUBBLEVERSE START with same program_id. Do not Re-run jobs because attempt >1 is rejected.",
+  "provenance_source_id": "K-PROPOSED-Q047-PREFLIGHTRUN-001",
+  "previous_preparation_receipt_historical": {
+    "q": "Q-047",
+    "program_id": "Q047-COLLECTION-PREFLIGHT-V1",
+    "checked_utc": "2026-10-11T04:31:21.544642+00:00",
+    "status": "OFFLINE_PREPARATION_CHECKED; GITHUB_NOT_MODIFIED; NATIVE_NOT_EXECUTED",
+    "controls": {
+      "python_unit_tests": "6 tests PASS, synthetic technical fixtures only",
+      "workflow_yaml": "PASS",
+      "workflow_shell_syntax": "PASS",
+      "original_nine_cache_paths_unchanged": "PASS",
+      "launcher_exact_lookup_local": "PASS",
+      "launcher_unknown_and_shell_injection_rejected": "PASS",
+      "53_existing_registry_entries_unchanged": "PASS",
+      "README_prior_bytes_preserved_append_only": "PASS",
+      "original_launcher_byte_identical": "PASS",
+      "native_no_execution_in_selected_target": "PASS",
+      "package_closure": "PASS"
+    },
+    "launcher_controls": [
+      {
+        "input": "Q047-COLLECTION-PREFLIGHT-V1",
+        "expected_accept": true,
+        "exit_code": 0,
+        "output": "PROGRAM_ID_GATE=PASS program_id=Q047-COLLECTION-PREFLIGHT-V1\nQ_IDENTITY_GATE=PASS q=Q-047\nLAUNCHER_GATE=PASS workflow_id=q047-collection-preflight-v1.yml\n"
+      },
+      {
+        "input": "UNKNOWN",
+        "expected_accept": false,
+        "exit_code": 1,
+        "output": "PROGRAM_ID_GATE=FAIL exact registry match not found\n"
+      },
+      {
+        "input": "$(touch SHOULD_NOT_EXIST)",
+        "expected_accept": false,
+        "exit_code": 1,
+        "output": "PROGRAM_ID_GATE=FAIL invalid identifier syntax\n"
+      }
+    ],
+    "preparation_failure_corrected": "Two local generation invocations used the package directory with paths relative to its parent. No native/remote execution occurred. Absolute paths corrected; final checks rerun successfully.",
+    "gates": {
+      "Q_IDENTITY_GATE": "PASS",
+      "JOURNAL_CONTINUITY_GATE": "PASS",
+      "PACKAGE_GATE": "PASS",
+      "LAUNCHER_GATE": "PASS_LOCAL_PREPARED_FILES_ONLY",
+      "README_GATE": "PASS_PREPARED_FILES_ONLY",
+      "REPOSITORY_CONSISTENCY_GATE": "PASS_PREPARED_FILES_ONLY",
+      "GITHUB_DEPLOYMENT_GATE": "NOT_APPLIED_READ_ONLY",
+      "ORIGINAL_ENVIRONMENT_GATE": "NOT_EXECUTED",
+      "OBSERVER_LINK_GATE": "NOT_EXECUTED",
+      "FINAL_RESULT_GATE": "UNRESOLVED",
+      "PT01": "UNRESOLVED",
+      "PT03": "UNRESOLVED"
+    },
+    "new_native_or_theory_evaluations": 0,
+    "expected_remote_execution": "One zero-native preflight; not started or dispatched.",
+    "artifacts": {
+      "q047_execution_v1.py": "e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4",
+      "test_q047_execution_v1.py": "6a903ef5a6215573522fb3f5004dc3957c1852afdf00fde2a8099856fadc0cae",
+      "Q047_EXECUTION_PACKAGE_V1.json": "d17c4ab0bfb9105e9ec07d5352a6e712ef22ca90c072c1377a9f37f986cb4f40",
+      "bubbleverse_program_registry.json": "0de36458f01c313af6bf5acc7067c873000345cea1280d544c1b74deaa3de9b5",
+      "README.md": "a7af1f9eacabdf7e7860785fdf824eb4a883d2211146ce29d511215ed6d42d75",
+      ".github/workflows/q047-collection-preflight-v1.yml": "9a4efe333d1ad1e088192003b89fc42a58a9bdc2a3798691358fb5f445f8aea0"
+    }
+  },
+  "prior_claim_correction": "Prior original_launcher_byte_identical PASS compared two locally reserialized copies, not verified Git blob bytes. Prior package closure PASS was local only and did not establish deployed closure."
 }

@@ -1,9 +1,9 @@
 # BUBBLEVERSE — OVERLEVERING
 
 STATUS: FORTSÆTTER
-DRIFTSSTATUS: KLAR FOR MANUEL INSTALLATION AF ZERO-NATIVE PREFLIGHT. Runtime preflight/acquisition has not run; original core is still absent locally. Native capture remains blocked by original-environment qualification and unresolved shooting budget accounting. Scientific linkage/error admission remains unresolved. No scientific closure or remote deployment is claimed.
-SAG OG TIDSPUNKT: Q-047; CASE ID NOT DOCUMENTED; 2026-10-11T04:34:17.452249+00:00, UTC. Existing proposed identity preserved; canonical model admission not established.
-VALGT NÆSTE MOTOR: HPC-LAVEREN — install the prepared Q047-COLLECTION-PREFLIGHT-V1 target and use the actual Actions cache-restore capability for zero-native original-object acquisition/preflight/observer-only build. No unchanged archive inventory, M11 or precursor-fixture replay.
+DRIFTSSTATUS: KLAR FOR MANUEL HASH-PIN-RETTELSE OG NY ZERO-NATIVE DISPATCH. Run38112534403 stopped at static; worker skipped. Original runtime acquisition/observer build remain NOT EXECUTED. Native capture and scientific admission remain unresolved.
+SAG OG TIDSPUNKT: Q-047; CASE ID NOT DOCUMENTED; 2026-10-11T04:51:31.335041+00:00, UTC. Existing proposed identity preserved; canonical model admission not established.
+VALGT NÆSTE MOTOR: HPC-LAVEREN — correct one launcher SHA256 pin in the existing Q047-COLLECTION-PREFLIGHT-V1 package, then use a NEW dispatcher run for the unchanged zero-native preflight target.
 OVERLEVERINGSSTATUS: KLARGJORT. No receiving motor launched or delivery acknowledged.
 
 ## ANBEFALET CHATGPT-SETUP TIL NÆSTE MOTOR
@@ -28,11 +28,23 @@ Budget KEEP: 16/52 native/theory evaluations consumed; 36 remain. Current docume
 
 The additional existing-material recovery J-PROPOSED-Q047-ARCHIVESEARCH-001 is integrated below. It verifies the original input archive and distinguishes the eight refined metadata records from four original-precision optical metadata records; the original effective-state/error-linkage admission remains unsupported. The existing journal points, source IDs, raw input/output/code, failed runs and necessary inherited evidence continue below. Current operational fields above and AKTUEL OVERLEVERING replace the previous front matter and acquisition instruction. J-PROPOSED-Q047-COLLECTIONPACK-001 records the newly authorized package preparation and concrete HPC handoff; it supersedes the prior operational choice to wait for archival recovery while preserving all scientific admission requirements. Historical banners are explicitly labelled; they are not active routing or renewed authorization. R07-R09 are integrated next to the existing research points. There is one authoritative journal; earlier cache records and source IDs are retained.
 
+### J-PROPOSED-Q047-PREFLIGHTFIX-001 — Deployed static failure and exact launcher-pin repair
+
+[TECHNICAL FAILURE / CONFIGURATION / UPDATE] Operator-installed execution commit64328b317b910cd72da6c18efb02543f0fe5d4d5 ran Q047-COLLECTION-PREFLIGHT-V1 as run38112534403,attempt1. Official jobs show static failure, worker skipped and collect failure; static ran2026-10-11T04:44:27Z–04:44:42Z. The supplied log identifies PACKAGE_FILE .github/workflows/00-bubbleverse-start.yml. No cache restore, original-object acquisition, observer build or native computation started. This is a packaging failure, not a physical result.
+
+[CONTROLLED TECHNICAL CAUSE] All eight deployed locked files were read at the execution commit and their exact UTF-8 bytes verified against Git blob SHA1 identities. Seven SHA256 pins match. Launcher Git blob7f22c617fb98d1508a0b22a42dd3735a74d8288e is identical at design commitc768f33d433ca05e00f344bc9dcacca8383ab33f and execution commit. Actual SHA256 is3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288. Previous pine0c11fccd3300710acb1f02ea1bc2b2c327ae2f42584a05e7f7906ea0a5864cd equals precisely the actual launcher bytes plus one trailing LF. The error arose in assistant package preparation; the launcher on GitHub was correct. The earlier local byte-identity/closure assertions did not validate original deployed bytes and are superseded for this point.
+
+[FIX PREPARED / OFFLINE VERIFIED] Only that existing JSON hash value in Q047_EXECUTION_PACKAGE_V1.json is changed. Executable code/workflow/scientific locks, Q, sources and current PROGRAM_ID are preserved. No new executable target or version is introduced. The old static failure was reproduced against a local projection of the deployed files; the corrected static command and six existing unit tests pass. A changed launcher with an extra LF is still rejected. The live exact registry entry and README references were inspected; neither requires a change. Correction remains NOT APPLIED/NOT DISPATCHED by the assistant under GitHub READ ONLY scope.
+
+[KEEP SCIENTIFIC STATUS] Zero new native/theory evaluations,16/52 used,36 remaining. All four cases retain INSUFFICIENT_EVIDENCE; PT01/PT03/final first-hit gate remain UNRESOLVED. Conditional theorem/inverse results, state/error-linkage obligations and all prior failures remain unchanged. The repair enables a new bounded preflight attempt, not a scientific answer or native capture permission.
+
+Source: K-PROPOSED-Q047-PREFLIGHTRUN-001; method I-PROPOSED-Q047-EXECUTION-PREFLIGHT-001. Detailed current repair receipt and exact corrected bytes replace their active artifact blocks below; old failure identity and erroneous pin are preserved here and in the historical receipt.
+
 ### J-PROPOSED-Q047-EXECUTION-PREFLIGHT-001 — New bounded Actions preflight route, zero native work
 
 [ADD / TECHNICAL IMPLEMENTATION / NO SCIENTIFIC UPGRADE] The execution-engine instruction is implemented as a new finite zero-native target, reusing the existing collection V1 and permanent launcher. Current repository HEAD was read as c768f33d433ca05e00f344bc9dcacca8383ab33f. The launcher, complete registry/README, original-cache baseline workflow and setup were read at that pin; the relevant Q047 tree was checked for reuse/version collisions. Q047-CERTCHECK-V1 and Q047-PRECURSORCHECK-V1 already exist but do not recover the original runtime. New ID Q047-COLLECTION-PREFLIGHT-V1 is absent from the pinned repository. No live registration, README change or dispatch occurred.
 
-The prepared registry adds one unique exact target while retaining53 existing entries; README retains prior bytes and adds the actual new target. The launcher is byte-identical. Its actual resolver was locally exercised with the new ID, an unknown ID and shell-injection input: only the exact registered ID was accepted; no shell input executed. Six finite adversarial tests passed for hash-selected safe archive member retrieval, wrong/missing/duplicate reference rejection, cache miss/job-rerun barriers, full zero-native four-reference report integrity and fail-aware collection. Workflow YAML and shell blocks passed parsing/syntax checks. Initial local generator path errors were corrected without native or remote execution; the final receipt preserves that technical history. These controls do not establish original-runtime build success.
+The prepared registry adds one unique exact target while retaining53 existing entries; README retains prior bytes and adds the actual new target. The prior claim that the launcher was byte-identical is corrected by J-PROPOSED-Q047-PREFLIGHTFIX-001: two locally serialized copies matched, while the deployed Git blob had one fewer trailing LF. Its actual resolver was locally exercised with the new ID, an unknown ID and shell-injection input: only the exact registered ID was accepted; no shell input executed. Six finite adversarial tests passed for hash-selected safe archive member retrieval, wrong/missing/duplicate reference rejection, cache miss/job-rerun barriers, full zero-native four-reference report integrity and fail-aware collection. Workflow YAML and shell blocks passed parsing/syntax checks. Initial local generator path errors were corrected without native or remote execution; the final receipt preserves that technical history. These controls do not establish original-runtime build success.
 
 [UPDATE OPERATION ONLY] A four-case capture cannot be assigned a guessed shooting budget cost. The active target therefore stops at original-object recovery/preflight and observer-only build. Actual read-only runtime preflight, native linking, capture and output reproduction remain NOT EXECUTED in this environment. It saves the core and40 source/header objects/reference tables for direct subsequent work. It does not preserve the entire cached data/system environment or admit source-real IVP linkage. Zero new native/theory evaluations;16/52 consumed,36 remaining. The four scientific cases remain INSUFFICIENT_EVIDENCE; PT01/PT03/first-hit UNRESOLVED. The conditional mathematical results and V1 precursor contract remain unchanged.
 
@@ -138,25 +150,23 @@ For LCDM, the analogous first unsupported primitive is the admitted native ncdm 
 
 ## AKTUEL OVERLEVERING
 
-SELECTED MOTOR: HPC-LAVEREN. EXECUTION_MODE: EXISTING MOTOR + CONVENTIONAL PREFLIGHT PROGRAM + GITHUB CAPABILITY. No new motor or scientific solver is needed. The concrete target is Q047-COLLECTION-PREFLIGHT-V1; workflow .github/workflows/q047-collection-preflight-v1.yml; existing permanent 🚀 BUBBLEVERSE START unchanged. Registration is prepared locally, NOT applied to the live repository. GitHub remains READ ONLY under the user's existing instruction; no job or background process was dispatched.
+SELECTED MOTOR: HPC-LAVEREN. EXECUTION_MODE: PATCH EXISTING CONFIGURATION + EXISTING ZERO-NATIVE PREFLIGHT PROGRAM + READ-ONLY GITHUB CAPABILITY. Q-047 and scientific question unchanged. The live repository at64328b317b910cd72da6c18efb02543f0fe5d4d5 already contains the registered Q047-COLLECTION-PREFLIGHT-V1 target and README references. No new motor, program, workflow or launcher is required.
 
-NEXT ACTUAL TASK: Install the individual prepared files at the documented repository paths, then dispatch the single preflight ID through the existing launcher. The target restores the original exact cache with all nine original paths, verifies source/core/platform and four original artifact/member identities, builds only the observer, and saves the original SO plus40 pinned source/header files and reference tables as individual objects. It never loads/runs CLASS, initializes/shoots, computes a background/thermal trajectory, installs likelihoods, rebuilds the core or creates a precursor packet. Native/theory evaluations added:0. No four-unit capture cost is assumed.
+NEXT ACTUAL TASK / MINIMUM USER ACTION: Replace only Q047_EXECUTION_PACKAGE_V1.json at repository root with the supplied correction; preserve the updated Q047_SAMLET_JOURNAL.md as the same authoritative journal. Then open 🚀 BUBBLEVERSE START, enter Q047-COLLECTION-PREFLIGHT-V1 and press Run workflow to create a NEW dispatch. Do not Re-run jobs: attempt>1 is rejected. Assistant has not changed GitHub or started another run. The one changed pin was verified against original Git blob bytes; seven other deployed pins already match.
 
-WHY THIS ROUTE IS NEW: Existing read-only connector cache enumeration was blocked; the newly prepared Actions job uses the platform's actual restore capability in the owning repository. That route has not yet been executed. Reusing the four golden raw objects supplies required preflight inputs; it is not another search of already inspected inventories. Cache existence and actual observer linking remain NOT EXECUTED, not inferred from offline PASS.
+REASON: Run38112534403 stopped before the worker because the package locked a local launcher copy with one extra LF. The deployed launcher was unchanged/correct. Replacing the erroneous hash preserves exact integrity checking and the unchanged executable target. Old failure reproduced; corrected static and six adversarial synthetic technical tests pass; tampered launcher still rejected. README ACTION UNCHANGED, relevant deployed references PASS. Existing source IDs and journal history are retained. No old archive/M11/precursor-fixture replay is requested.
 
-PREPARED FILES: q047_execution_v1.py; test_q047_execution_v1.py; Q047_EXECUTION_PACKAGE_V1.json; .github/workflows/q047-collection-preflight-v1.yml; one-entry bubbleverse_program_registry.json update preserving53 prior entries; append-only README.md; Q047_EXECUTION_VALIDATION_V1.json; Q047_GITHUB_INSTALLATION_V1.md. Existing V1 driver, C observer, lock and precursor contract are reused byte-identically. Full new bytes are embedded below. The updated current journal remains the sole authority.
+EXPECTED PRODUCT / SUFFICIENT TECHNICAL TREATMENT: One bounded preflight restores the original exact cache with all nine original paths, verifies core/source/platform and four archive/member identities, builds only the observer and saves original SO plus40 source/header objects and reference tables. Require original identities, successful build receipt, complete exported object set, Q/run/commit/config/hash provenance and explicit zero native work. Original acquisition/build remains NOT EXECUTED; local checks do not establish it. Cache miss, missing/wrong object or failed link is a concrete new technical failure to diagnose before repetition.
 
-SUFFICIENT TECHNICAL TREATMENT: Exact original core/source/reference identities, successful observer-only link/build receipt, complete exported file set, run/commit/Q identity, immutable hashes and explicit zero native work. Six adversarial local tests and workflow/launcher/registry/README controls passed; these are synthetic technical checks, not original-runtime execution. The full recovered cache/data/system runtime is not repackaged; a later execution must qualify its actual environment.
+RETURN ROUTE: RESULT INGESTION & ROUTING ENGINE. On technical success, use newly recovered objects to define justified capture/shooting budget accounting and assess preserved state/error-linkage requirements before a separately versioned capture campaign. No assumed four-unit cost, core rebuild, CLASS loading, initialization/shooting, trajectory, likelihood, sampler or scientific first-hit test is authorized by this repair.
 
-OUTCOME ROUTING: A complete preflight returns new original objects and actual logs to RESULT INGESTION & ROUTING ENGINE. Define justified capture/shooting budget accounting and assess the preserved state/error-linkage requirements before a separately versioned capture campaign. A cache miss, wrong object, missing reference or failed link is a concrete technical failure; preserve it and change that failed condition before another campaign. No unchanged retries, job reruns, checkpoint continuation, archive-inventory searches, V29 recovery, M11 controls or old precursor fixtures.
+SCIENTIFIC LIMIT: All four actual cases retain INSUFFICIENT_EVIDENCE, PT01/PT03/FINAL_RESULT_GATE UNRESOLVED. Budget16/52 used,36 left; current failure/repair consumed0. Preflight supplies no admitted state/error enclosure, historical linkage or observer-neutrality proof. These requirements and conditional mathematical results remain conclusion-critical after technical recovery.
 
-SCIENTIFIC LIMIT: PT01/PT03 and FINAL_RESULT_GATE remain UNRESOLVED for all four cases. Preflight does not establish accepted state, historical linkage, observer neutrality, an admitted reconstruction route, source-real error bounds or a first hit. Keep the conditional theorem, M11-M13 analysis and original scientific/precision parameters. Existing V1 capture remains a proposed new-reconstruction candidate mechanism, not an authorized scientific inference from output equality.
-
-MINIMUM USER ACTION: Install the individually supplied files using the exact destination table; existing journal/inputs do not need to be re-sent. Preserve newer repository edits if its README/registry changed after base c768f33d433ca05e00f344bc9dcacca8383ab33f. Then START THIS: Q047-COLLECTION-PREFLIGHT-V1. This is installation/dispatch of a concrete result under retained read-only GitHub scope, not a request to restart research or choose a strategy.
+START THIS: Q047-COLLECTION-PREFLIGHT-V1 — new dispatch after the corrected package is committed.
 
 ## NØDVENDIGE ARTEFAKTER — execution preflight V1, complete new bytes
 
-This is the same authoritative case. Existing V1 artifacts/source contract remain embedded in their inherited blocks. New repository-facing files are prepared snapshots, not a deployed repository. Prior journal input SHA256 c868a540a760307d6510cd2d3640752f60c92f6167b3528be0e9eeec63fcfe51. No ZIP/archive deliverable.
+This is the same authoritative case. Existing V1 artifacts/source contract remain embedded in their inherited blocks. The initial target was operator-installed; the corrected package and updated documentation below are current prepared replacements. Assistant repository access remains read only. Prior journal input SHA256 c868a540a760307d6510cd2d3640752f60c92f6167b3528be0e9eeec63fcfe51. No ZIP/archive deliverable.
 
 ### ARTIFACT q047_execution_v1.py
 
@@ -561,7 +571,7 @@ if __name__ == '__main__': unittest.main()
 
 ### ARTIFACT Q047_EXECUTION_PACKAGE_V1.json
 
-SHA256: d17c4ab0bfb9105e9ec07d5352a6e712ef22ca90c072c1377a9f37f986cb4f40; bytes: 4740
+SHA256: c2c74f581cc3cd14107381c974bb9908957615e8e0788f457b54b0fc967e3c99; bytes: 4740
 
 ~~~~~~~~
 {
@@ -585,7 +595,7 @@ SHA256: d17c4ab0bfb9105e9ec07d5352a6e712ef22ca90c072c1377a9f37f986cb4f40; bytes:
     "q047_collect_state_v1.c": "e15c27c4d1cb28ca87a149fd80373c76bc486999b98ab7b2db2de0f28cdab1f7",
     "Q047_COLLECTION_LOCK_V1.json": "4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a",
     "Q047_PRECURSOR_CONTRACT_V1.json": "bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc",
-    ".github/workflows/00-bubbleverse-start.yml": "e0c11fccd3300710acb1f02ea1bc2b2c327ae2f42584a05e7f7906ea0a5864cd",
+    ".github/workflows/00-bubbleverse-start.yml": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
     ".github/workflows/q047-collection-preflight-v1.yml": "9a4efe333d1ad1e088192003b89fc42a58a9bdc2a3798691358fb5f445f8aea0"
   },
   "original_source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
@@ -3320,86 +3330,240 @@ Return them to Result Ingestion & Routing.
 
 ### ARTIFACT Q047_EXECUTION_VALIDATION_V1.json
 
-SHA256: 1b8e424bfae5bec7588ce6f51e3802add4398308dee6ddf7b2d4f276eea185cc; bytes: 2945
+SHA256: 403c609532e0482f2c66bde3ca65674844fc4faf9eae839bf3669cb3193beb99; bytes: 8612
 
 ~~~~~~~~
 {
   "q": "Q-047",
   "program_id": "Q047-COLLECTION-PREFLIGHT-V1",
-  "checked_utc": "2026-10-11T04:31:21.544642+00:00",
-  "status": "OFFLINE_PREPARATION_CHECKED; GITHUB_NOT_MODIFIED; NATIVE_NOT_EXECUTED",
-  "controls": {
-    "python_unit_tests": "6 tests PASS, synthetic technical fixtures only",
-    "workflow_yaml": "PASS",
-    "workflow_shell_syntax": "PASS",
-    "original_nine_cache_paths_unchanged": "PASS",
-    "launcher_exact_lookup_local": "PASS",
-    "launcher_unknown_and_shell_injection_rejected": "PASS",
-    "53_existing_registry_entries_unchanged": "PASS",
-    "README_prior_bytes_preserved_append_only": "PASS",
-    "original_launcher_byte_identical": "PASS",
-    "native_no_execution_in_selected_target": "PASS",
-    "package_closure": "PASS"
+  "checked_utc": "2026-10-11T04:51:31.335041+00:00",
+  "status": "LAUNCHER_PIN_CORRECTED_AND_OFFLINE_VERIFIED; NOT_INSTALLED_OR_DISPATCHED_BY_ASSISTANT",
+  "correction_scope": "Exactly one existing JSON SHA256 value changed; no executable, workflow, scientific input, registry or README change.",
+  "failed_run": {
+    "run_id": "38112534403",
+    "attempt": 1,
+    "execution_commit": "64328b317b910cd72da6c18efb02543f0fe5d4d5",
+    "error": "PACKAGE_FILE .github/workflows/00-bubbleverse-start.yml",
+    "static": "failure",
+    "worker": "skipped",
+    "collect": "failure",
+    "static_started_utc": "2026-10-11T04:44:27Z",
+    "static_completed_utc": "2026-10-11T04:44:42Z",
+    "jobs_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/runs/38112534403/jobs"
   },
-  "launcher_controls": [
+  "root_cause": {
+    "kind": "CONFIGURATION",
+    "owner": "assistant_package_preparation",
+    "cause": "Locally serialized launcher included one additional trailing LF. The original GitHub launcher was unchanged.",
+    "old_pin": "e0c11fccd3300710acb1f02ea1bc2b2c327ae2f42584a05e7f7906ea0a5864cd",
+    "corrected_pin": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
+    "original_git_blob": "7f22c617fb98d1508a0b22a42dd3735a74d8288e",
+    "launcher_same_at_design_and_execution_commits": true,
+    "old_pin_equals_actual_bytes_plus_one_lf": true
+  },
+  "controls": {
+    "all_eight_deployed_git_blob_bytes_verified": "PASS",
+    "seven_other_existing_pins_match": "PASS",
+    "old_failure_reproduced": "PASS",
+    "corrected_static_package_readme_registry_continuity": "PASS_LOCAL",
+    "original_six_unit_tests": "PASS_SYNTHETIC_TECHNICAL_ONLY",
+    "modified_launcher_still_rejected": "PASS",
+    "only_one_json_field_changed": "PASS",
+    "remote_readme_and_registry_inspected_unchanged": "PASS"
+  },
+  "file_controls": [
     {
-      "input": "Q047-COLLECTION-PREFLIGHT-V1",
-      "expected_accept": true,
-      "exit_code": 0,
-      "output": "PROGRAM_ID_GATE=PASS program_id=Q047-COLLECTION-PREFLIGHT-V1\nQ_IDENTITY_GATE=PASS q=Q-047\nLAUNCHER_GATE=PASS workflow_id=q047-collection-preflight-v1.yml\n"
+      "path": "q047_execution_v1.py",
+      "git_blob_sha": "a33091dfb2e010ceb57ad97b9fcb5c70b545e323",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
     },
     {
-      "input": "UNKNOWN",
-      "expected_accept": false,
-      "exit_code": 1,
-      "output": "PROGRAM_ID_GATE=FAIL exact registry match not found\n"
+      "path": "test_q047_execution_v1.py",
+      "git_blob_sha": "e8b5e8f0d3ba358d28f7d4ba15a774a7f0f6d487",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "6a903ef5a6215573522fb3f5004dc3957c1852afdf00fde2a8099856fadc0cae",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
     },
     {
-      "input": "$(touch SHOULD_NOT_EXIST)",
-      "expected_accept": false,
-      "exit_code": 1,
-      "output": "PROGRAM_ID_GATE=FAIL invalid identifier syntax\n"
+      "path": "q047_collection_v1.py",
+      "git_blob_sha": "c5f6739da36b68c01dab5c720cf0d948c25eb2dd",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "f1c0e26b20a5a24fb8cd12cd667c28faa340065421c8c19b929598893330c953",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": "q047_collect_state_v1.c",
+      "git_blob_sha": "49f86e553b48bf2a53b878b09816b169d2d58c9f",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "e15c27c4d1cb28ca87a149fd80373c76bc486999b98ab7b2db2de0f28cdab1f7",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": "Q047_COLLECTION_LOCK_V1.json",
+      "git_blob_sha": "aa762b44246ed9efeeb4f3333366395b42599067",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": "Q047_PRECURSOR_CONTRACT_V1.json",
+      "git_blob_sha": "c4026caa639ad50b21539027a75f6723252b9b03",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": ".github/workflows/00-bubbleverse-start.yml",
+      "git_blob_sha": "7f22c617fb98d1508a0b22a42dd3735a74d8288e",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
+      "old_lock_matches": false,
+      "corrected_lock_matches": true
+    },
+    {
+      "path": ".github/workflows/q047-collection-preflight-v1.yml",
+      "git_blob_sha": "72904f674b06fcd993cfd74664125df7bece29b0",
+      "git_blob_bytes_verified": true,
+      "actual_sha256": "9a4efe333d1ad1e088192003b89fc42a58a9bdc2a3798691358fb5f445f8aea0",
+      "old_lock_matches": true,
+      "corrected_lock_matches": true
     }
   ],
-  "preparation_failure_corrected": "Two local generation invocations used the package directory with paths relative to its parent. No native/remote execution occurred. Absolute paths corrected; final checks rerun successfully.",
-  "gates": {
-    "Q_IDENTITY_GATE": "PASS",
-    "JOURNAL_CONTINUITY_GATE": "PASS",
-    "PACKAGE_GATE": "PASS",
-    "LAUNCHER_GATE": "PASS_LOCAL_PREPARED_FILES_ONLY",
-    "README_GATE": "PASS_PREPARED_FILES_ONLY",
-    "REPOSITORY_CONSISTENCY_GATE": "PASS_PREPARED_FILES_ONLY",
-    "GITHUB_DEPLOYMENT_GATE": "NOT_APPLIED_READ_ONLY",
-    "ORIGINAL_ENVIRONMENT_GATE": "NOT_EXECUTED",
-    "OBSERVER_LINK_GATE": "NOT_EXECUTED",
-    "FINAL_RESULT_GATE": "UNRESOLVED",
-    "PT01": "UNRESOLVED",
-    "PT03": "UNRESOLVED"
-  },
+  "package_sha256": "c2c74f581cc3cd14107381c974bb9908957615e8e0788f457b54b0fc967e3c99",
+  "runtime_original_objects": "NOT_EXECUTED",
+  "observer_build": "NOT_EXECUTED",
   "new_native_or_theory_evaluations": 0,
-  "expected_remote_execution": "One zero-native preflight; not started or dispatched.",
-  "artifacts": {
-    "q047_execution_v1.py": "e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4",
-    "test_q047_execution_v1.py": "6a903ef5a6215573522fb3f5004dc3957c1852afdf00fde2a8099856fadc0cae",
-    "Q047_EXECUTION_PACKAGE_V1.json": "d17c4ab0bfb9105e9ec07d5352a6e712ef22ca90c072c1377a9f37f986cb4f40",
-    "bubbleverse_program_registry.json": "0de36458f01c313af6bf5acc7067c873000345cea1280d544c1b74deaa3de9b5",
-    "README.md": "a7af1f9eacabdf7e7860785fdf824eb4a883d2211146ce29d511215ed6d42d75",
-    ".github/workflows/q047-collection-preflight-v1.yml": "9a4efe333d1ad1e088192003b89fc42a58a9bdc2a3798691358fb5f445f8aea0"
-  }
+  "scientific_status": {
+    "all_four_cases": "INSUFFICIENT_EVIDENCE",
+    "PT01": "UNRESOLVED",
+    "PT03": "UNRESOLVED",
+    "FINAL_RESULT_GATE": "UNRESOLVED",
+    "native_budget_used": 16,
+    "native_budget_limit": 52,
+    "native_budget_remaining": 36
+  },
+  "next_action": "Replace Q047_EXECUTION_PACKAGE_V1.json at repository root; preserve journal; start a NEW dispatch through BUBBLEVERSE START with same program_id. Do not Re-run jobs because attempt >1 is rejected.",
+  "provenance_source_id": "K-PROPOSED-Q047-PREFLIGHTRUN-001",
+  "previous_preparation_receipt_historical": {
+    "q": "Q-047",
+    "program_id": "Q047-COLLECTION-PREFLIGHT-V1",
+    "checked_utc": "2026-10-11T04:31:21.544642+00:00",
+    "status": "OFFLINE_PREPARATION_CHECKED; GITHUB_NOT_MODIFIED; NATIVE_NOT_EXECUTED",
+    "controls": {
+      "python_unit_tests": "6 tests PASS, synthetic technical fixtures only",
+      "workflow_yaml": "PASS",
+      "workflow_shell_syntax": "PASS",
+      "original_nine_cache_paths_unchanged": "PASS",
+      "launcher_exact_lookup_local": "PASS",
+      "launcher_unknown_and_shell_injection_rejected": "PASS",
+      "53_existing_registry_entries_unchanged": "PASS",
+      "README_prior_bytes_preserved_append_only": "PASS",
+      "original_launcher_byte_identical": "PASS",
+      "native_no_execution_in_selected_target": "PASS",
+      "package_closure": "PASS"
+    },
+    "launcher_controls": [
+      {
+        "input": "Q047-COLLECTION-PREFLIGHT-V1",
+        "expected_accept": true,
+        "exit_code": 0,
+        "output": "PROGRAM_ID_GATE=PASS program_id=Q047-COLLECTION-PREFLIGHT-V1\nQ_IDENTITY_GATE=PASS q=Q-047\nLAUNCHER_GATE=PASS workflow_id=q047-collection-preflight-v1.yml\n"
+      },
+      {
+        "input": "UNKNOWN",
+        "expected_accept": false,
+        "exit_code": 1,
+        "output": "PROGRAM_ID_GATE=FAIL exact registry match not found\n"
+      },
+      {
+        "input": "$(touch SHOULD_NOT_EXIST)",
+        "expected_accept": false,
+        "exit_code": 1,
+        "output": "PROGRAM_ID_GATE=FAIL invalid identifier syntax\n"
+      }
+    ],
+    "preparation_failure_corrected": "Two local generation invocations used the package directory with paths relative to its parent. No native/remote execution occurred. Absolute paths corrected; final checks rerun successfully.",
+    "gates": {
+      "Q_IDENTITY_GATE": "PASS",
+      "JOURNAL_CONTINUITY_GATE": "PASS",
+      "PACKAGE_GATE": "PASS",
+      "LAUNCHER_GATE": "PASS_LOCAL_PREPARED_FILES_ONLY",
+      "README_GATE": "PASS_PREPARED_FILES_ONLY",
+      "REPOSITORY_CONSISTENCY_GATE": "PASS_PREPARED_FILES_ONLY",
+      "GITHUB_DEPLOYMENT_GATE": "NOT_APPLIED_READ_ONLY",
+      "ORIGINAL_ENVIRONMENT_GATE": "NOT_EXECUTED",
+      "OBSERVER_LINK_GATE": "NOT_EXECUTED",
+      "FINAL_RESULT_GATE": "UNRESOLVED",
+      "PT01": "UNRESOLVED",
+      "PT03": "UNRESOLVED"
+    },
+    "new_native_or_theory_evaluations": 0,
+    "expected_remote_execution": "One zero-native preflight; not started or dispatched.",
+    "artifacts": {
+      "q047_execution_v1.py": "e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4",
+      "test_q047_execution_v1.py": "6a903ef5a6215573522fb3f5004dc3957c1852afdf00fde2a8099856fadc0cae",
+      "Q047_EXECUTION_PACKAGE_V1.json": "d17c4ab0bfb9105e9ec07d5352a6e712ef22ca90c072c1377a9f37f986cb4f40",
+      "bubbleverse_program_registry.json": "0de36458f01c313af6bf5acc7067c873000345cea1280d544c1b74deaa3de9b5",
+      "README.md": "a7af1f9eacabdf7e7860785fdf824eb4a883d2211146ce29d511215ed6d42d75",
+      ".github/workflows/q047-collection-preflight-v1.yml": "9a4efe333d1ad1e088192003b89fc42a58a9bdc2a3798691358fb5f445f8aea0"
+    }
+  },
+  "prior_claim_correction": "Prior original_launcher_byte_identical PASS compared two locally reserialized copies, not verified Git blob bytes. Prior package closure PASS was local only and did not establish deployed closure."
 }
 
 ~~~~~~~~
 
 ### ARTIFACT Q047_GITHUB_INSTALLATION_V1.md
 
-SHA256: 833bc38fdb80547933b729d7897ccd98958329dc6ae79ac7309c4be3af4cb32b; bytes: 9734
+SHA256: e95437bc9166dfaccf7e884cea8b657986a3ecfd75bfaa670db9920b1dfdcaa0; bytes: 12277
 
 ~~~~~~~~
 # Q047 — installation and one bounded preflight
 
-Status: PREPARED AND OFFLINE CHECKED. Not installed or dispatched on GitHub.
+Status: Operator-installed at commit `64328b317b910cd72da6c18efb02543f0fe5d4d5`; first run failed in static. One launcher-pin correction is prepared and verified locally; the assistant has not written to GitHub or dispatched a run.
 Repository basis: `Morfindien/Bubbleverse`, commit `c768f33d433ca05e00f344bc9dcacca8383ab33f`.
 Preserve the existing permanent launcher. No archive is delivered.
+
+## Current repair — failed run38112534403
+
+CURRENT_Q: Q-047. PROGRAM_ID: Q047-COLLECTION-PREFLIGHT-V1.
+Execution mode: PATCH EXISTING CONFIGURATION; existing HPC-LAVEREN is sufficient.
+The package pinned a local launcher copy with one extra trailing LF. The original
+GitHub launcher is unchanged at the design and execution commits. Its actual SHA256
+is `3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288`.
+Only that existing hash value is corrected. The other seven locked files match
+the exact deployed Git blobs. Scripts, workflows and scientific inputs are unchanged.
+The deployed registry contains the active exact target, and README references it.
+README ACTION: UNCHANGED; README_GATE: PASS for inspected deployed references.
+No new PROGRAM_ID is required because the executable target is unchanged.
+
+1. Replace only `Q047_EXECUTION_PACKAGE_V1.json` at the repository root with the corrected file.
+2. Preserve the updated `Q047_SAMLET_JOURNAL.md` as the same authoritative journal.
+3. Open **🚀 BUBBLEVERSE START**, enter **Q047-COLLECTION-PREFLIGHT-V1** and press **Run workflow** for a NEW run.
+
+Do **not** use **Re-run jobs**: the worker rejects run attempts beyond1. Do not
+replace the launcher or reinstall the remaining program/workflow/registry files.
+The original static failure was reproduced locally; the corrected static command
+and six unit tests pass. Adding a trailing LF still causes rejection, so exact
+integrity checking remains enabled. These are software checks; original-runtime
+recovery and observer compilation have not run. Worker was skipped in the failed
+run, so zero native evaluations were consumed. All four scientific cases retain
+INSUFFICIENT_EVIDENCE, PT01/PT03/final UNRESOLVED and budget16/52 used.
+
+Source: K-PROPOSED-Q047-PREFLIGHTRUN-001, official run/job records and exact files
+at `64328b317b910cd72da6c18efb02543f0fe5d4d5`; detailed verified hashes/corrections
+are in `Q047_EXECUTION_VALIDATION_V1.json`. Read-only GitHub scope is preserved.
+
+The full initial installation design below is retained for reference. Its
+pre-installation control descriptions are historical; this repair takes precedence.
 
 ## A. CURRENT Q
 
@@ -3459,7 +3623,7 @@ PATCH: registry (one entry added;53 existing entries unchanged) and README
 PROGRAM_ID: **Q047-COLLECTION-PREFLIGHT-V1**.
 TARGET: `.github/workflows/q047-collection-preflight-v1.yml`.
 REGISTRY: `bubbleverse_program_registry.json`.
-PROGRAM_ID REGISTERED: YES in the prepared registry; NO in the live repository.
+PROGRAM_ID REGISTERED: YES in the inspected live registry at commit64328b317b910cd72da6c18efb02543f0fe5d4d5. Initial installation table below is historical; apply the current repair above.
 LAUNCHER_GATE: PASS locally against the actual resolver; remote dispatch NOT EXECUTED.
 
 ### Exact file locations for installation
@@ -3530,8 +3694,7 @@ NOT EXECUTED in this preparation. No old precursor fixture campaign is replayed.
 ## P–R. FILES AND README
 
 README ACTION: UPDATE; FILE: README.md; prepared README_GATE: PASS.
-Repository consistency: PASS for the prepared file tree; live deployment remains
-NOT APPLIED. Full program, workflow, controls and package are delivered individually.
+Repository consistency: corrected package PASS locally against the deployed eight locked files and current README/registry; corrected package NOT APPLIED to GitHub by the assistant. Full program, workflow, controls and package are delivered individually.
 No new motor prompt is needed because the existing HPC-LAVEREN is sufficient.
 
 ## S–W. EXECUTION, OUTPUTS, GATES AND RETURN
@@ -3563,7 +3726,7 @@ accounting and the required state/error-linkage route, rather than searching aga
 On failure, inspect the concrete new cache/object/build failure before changing
 the execution mechanism; no false scientific falsification.
 
-START THIS: **Q047-COLLECTION-PREFLIGHT-V1** — after the files are installed.
+START THIS: **Q047-COLLECTION-PREFLIGHT-V1** — new dispatch after the corrected package is committed.
 
 ~~~~~~~~
 
@@ -5290,11 +5453,24 @@ SHA256: c83c3fed078f9e4dc0223c23f10cc282d0586e7679f8b58cff3646644f9c7fbe; bytes:
 
 ### Current research source additions — full inherited register remains part of this same journal
 
+KILDE-ID: K-PROPOSED-Q047-PREFLIGHTRUN-001
+TYPE OG PUBLIKATIONSSTATUS: BUBBLEVERSE TECHNICAL EVIDENCE; original GitHub workflow job records and pinned repository file bytes; technical configuration repair, no scientific measurement.
+REFERENCE: Morfindien/Bubbleverse, Q047 original environment preflight V1 run38112534403,2026.
+IDENTIFIKATOR OG VERSION: Run38112534403,attempt1; execution commit64328b317b910cd72da6c18efb02543f0fe5d4d5; static job114390899577,collect114390942703,worker114390943021. Original launcher blob7f22c617fb98d1508a0b22a42dd3735a74d8288e; same blob at design commitc768f33d433ca05e00f344bc9dcacca8383ab33f. Exact file hashes and local controls in Q047_EXECUTION_VALIDATION_V1.json.
+URL: https://github.com/Morfindien/Bubbleverse/actions/runs/38112534403 ; https://api.github.com/repos/Morfindien/Bubbleverse/actions/runs/38112534403/jobs ; https://github.com/Morfindien/Bubbleverse/blob/64328b317b910cd72da6c18efb02543f0fe5d4d5/.github/workflows/00-bubbleverse-start.yml .
+RELEVANT PLACERING: Official static/worker/collect conclusions and step timings; eight package-locked files at execution commit; base launcher; live registry and README references; supplied static error line.
+ANVENDT TIL: J-PROPOSED-Q047-PREFLIGHTFIX-001; cause, skipped worker, zero new native work, exact launcher pin and minimum corrective action. Supersedes prior deployed launcher-byte/closure claim.
+EVIDENSROLLE: Original technical failure/provenance and reproducible local repair checks.
+KONTROLSTATUS: KONTROLLERET for official job metadata, exact eight UTF-8 file byte/Git blob identities, old static failure reproduction, corrected local static, six synthetic unit tests and changed-launcher rejection. Full original job logs/artifact contents not retrieved; precise static error supplied by user. Corrected remote run NOT STARTED; runtime/cache/build NOT EXECUTED.
+AFHÆNGIGHED: Same deployed files/launcher and Q047 preflight method, original four-case inputs; no new independent scientific evidence. Fixture controls are software checks only.
+RELEVANS FOR NÆSTE MOTOR: Direct repair input and documentation of preserved failed-run evidence; existing scientific source register KEEP.
+KONTROLDATO: 2026-10-11T04:51:31.335041+00:00,UTC.
+
 KILDE-ID: I-PROPOSED-Q047-EXECUTION-PREFLIGHT-001
 TYPE OG PUBLIKATIONSSTATUS: Internal execution method, prepared files and actual local technical controls V1; not a scientific measurement or peer-reviewed result.
 REFERENCE: Bubbleverse Q047 original collection environment preflight,2026; existing Morfindien/Bubbleverse launcher/registry/README/baseline architecture; GitHub official runtime/cache documentation.
 IDENTIFIKATOR OG VERSION: Q047-COLLECTION-PREFLIGHT-V1; q047_execution_v1.py; Q047_EXECUTION_PACKAGE_V1.json; Q047_EXECUTION_VALIDATION_V1.json. Base commit c768f33d433ca05e00f344bc9dcacca8383ab33f. Artifact filenames/hashes and full bytes preserved below. Existing source/core/baseline pins unchanged.
-URL: https://github.com/Morfindien/Bubbleverse/tree/c768f33d433ca05e00f344bc9dcacca8383ab33f ; https://docs.github.com/en/actions/reference/limits ; https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching . Prepared target not claimed deployed.
+URL: https://github.com/Morfindien/Bubbleverse/tree/c768f33d433ca05e00f344bc9dcacca8383ab33f ; https://docs.github.com/en/actions/reference/limits ; https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching . The initial target is now operator-installed at64328b317b910cd72da6c18efb02543f0fe5d4d5; its first static failure and prepared pin correction are documented by K-PROPOSED-Q047-PREFLIGHTRUN-001.
 RELEVANT PLACERING: .github/workflows/00-bubbleverse-start.yml resolver; bubbleverse_program_registry.json complete programs map; README.md; .github/workflows/q045-native-baseline-v2.yml exact cache paths/key; q045_setup_baseline_v2.sh; new worker/aggregate/package controls; GitHub hosted job limit and cache version/path/exact-match semantics.
 ANVENDT TIL: J-PROPOSED-Q047-EXECUTION-PREFLIGHT-001, concrete zero-native acquisition/build/collection design, local integration gates and next execution scope.
 EVIDENSROLLE: Technical implementation/provenance and platform limits; no independent cosmological evidence.
