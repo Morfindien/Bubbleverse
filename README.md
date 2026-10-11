@@ -570,3 +570,42 @@ Run37344813050 stopped in the controlled test before any actual original-binary 
 
 The fixture correction was followed by completed run `37347357296`. The failed run and fix remain historical evidence; no further V28 launch or retry is required. Local implementation tests and successful cell execution do not qualify whole-history accuracy.
 
+
+
+## Q-047: original collection environment preflight V1
+
+After these files are installed, open the permanent **🚀 BUBBLEVERSE START**
+(`.github/workflows/00-bubbleverse-start.yml`), paste **Q047-COLLECTION-PREFLIGHT-V1**,
+and press **Run workflow**. The registry is `bubbleverse_program_registry.json`;
+target: `.github/workflows/q047-collection-preflight-v1.yml`. The launcher is unchanged.
+
+The target restores the original cache using its original nine paths and an exact
+cache-hit gate. It verifies the frozen source and original binary and all four
+original background/thermodynamics archives before compiling only the observer.
+It preserves the original binary and40 pinned source/header files as individual
+objects. It never runs the observer, initializes/shoots CLASS, rebuilds the core,
+installs likelihoods or creates a precursor packet. No new native/theory evaluation.
+
+Three finite jobs perform package checks, one sequential acquisition/build worker
+(limit60 minutes), and completeness/provenance collection (limit10 minutes).
+No numerical merge, checkpoint continuation, automatic retry or run replay.
+A missing cache/object, wrong identity or failed build produces a failure report;
+it cannot become a completed preflight.
+
+Raw objects: `q047-preflight-v1-<run_id>-raw`; final report:
+`q047-preflight-v1-<run_id>-final`, including `q047_collection_preflight_final_v1.json`.
+`Q047_SAMLET_JOURNAL.md` remains authoritative and follows the final report.
+The package is `Q047_EXECUTION_PACKAGE_V1.json`; requested vectors, reference hashes
+and scientific requirements remain in `Q047_COLLECTION_LOCK_V1.json` and the
+unchanged precursor contract. The original native cache, dataset paths and system
+dependencies are not completely packaged by these recovered objects; future
+execution must qualify its actual runtime again.
+
+**Preflight has not run when these installation files are delivered.**
+Even successful preflight establishes only technical object identity/buildability,
+not effective-state linkage, observer neutrality, source-real error bounds or a
+first hit. PT01/PT03 and FINAL_RESULT_GATE remain UNRESOLVED. Before a separately
+versioned capture campaign, define a justified shooting/capture accounting policy
+for the inherited16/52 budget; do not assume four cases cost four units. Use the
+new preserved objects and actual logs, rather than repeat this preflight unchanged.
+Return them to Result Ingestion & Routing.

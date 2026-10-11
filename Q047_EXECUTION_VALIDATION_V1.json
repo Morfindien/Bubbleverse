@@ -1,0 +1,64 @@
+{
+  "q": "Q-047",
+  "program_id": "Q047-COLLECTION-PREFLIGHT-V1",
+  "checked_utc": "2026-10-11T04:31:21.544642+00:00",
+  "status": "OFFLINE_PREPARATION_CHECKED; GITHUB_NOT_MODIFIED; NATIVE_NOT_EXECUTED",
+  "controls": {
+    "python_unit_tests": "6 tests PASS, synthetic technical fixtures only",
+    "workflow_yaml": "PASS",
+    "workflow_shell_syntax": "PASS",
+    "original_nine_cache_paths_unchanged": "PASS",
+    "launcher_exact_lookup_local": "PASS",
+    "launcher_unknown_and_shell_injection_rejected": "PASS",
+    "53_existing_registry_entries_unchanged": "PASS",
+    "README_prior_bytes_preserved_append_only": "PASS",
+    "original_launcher_byte_identical": "PASS",
+    "native_no_execution_in_selected_target": "PASS",
+    "package_closure": "PASS"
+  },
+  "launcher_controls": [
+    {
+      "input": "Q047-COLLECTION-PREFLIGHT-V1",
+      "expected_accept": true,
+      "exit_code": 0,
+      "output": "PROGRAM_ID_GATE=PASS program_id=Q047-COLLECTION-PREFLIGHT-V1\nQ_IDENTITY_GATE=PASS q=Q-047\nLAUNCHER_GATE=PASS workflow_id=q047-collection-preflight-v1.yml\n"
+    },
+    {
+      "input": "UNKNOWN",
+      "expected_accept": false,
+      "exit_code": 1,
+      "output": "PROGRAM_ID_GATE=FAIL exact registry match not found\n"
+    },
+    {
+      "input": "$(touch SHOULD_NOT_EXIST)",
+      "expected_accept": false,
+      "exit_code": 1,
+      "output": "PROGRAM_ID_GATE=FAIL invalid identifier syntax\n"
+    }
+  ],
+  "preparation_failure_corrected": "Two local generation invocations used the package directory with paths relative to its parent. No native/remote execution occurred. Absolute paths corrected; final checks rerun successfully.",
+  "gates": {
+    "Q_IDENTITY_GATE": "PASS",
+    "JOURNAL_CONTINUITY_GATE": "PASS",
+    "PACKAGE_GATE": "PASS",
+    "LAUNCHER_GATE": "PASS_LOCAL_PREPARED_FILES_ONLY",
+    "README_GATE": "PASS_PREPARED_FILES_ONLY",
+    "REPOSITORY_CONSISTENCY_GATE": "PASS_PREPARED_FILES_ONLY",
+    "GITHUB_DEPLOYMENT_GATE": "NOT_APPLIED_READ_ONLY",
+    "ORIGINAL_ENVIRONMENT_GATE": "NOT_EXECUTED",
+    "OBSERVER_LINK_GATE": "NOT_EXECUTED",
+    "FINAL_RESULT_GATE": "UNRESOLVED",
+    "PT01": "UNRESOLVED",
+    "PT03": "UNRESOLVED"
+  },
+  "new_native_or_theory_evaluations": 0,
+  "expected_remote_execution": "One zero-native preflight; not started or dispatched.",
+  "artifacts": {
+    "q047_execution_v1.py": "e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4",
+    "test_q047_execution_v1.py": "6a903ef5a6215573522fb3f5004dc3957c1852afdf00fde2a8099856fadc0cae",
+    "Q047_EXECUTION_PACKAGE_V1.json": "d17c4ab0bfb9105e9ec07d5352a6e712ef22ca90c072c1377a9f37f986cb4f40",
+    "bubbleverse_program_registry.json": "0de36458f01c313af6bf5acc7067c873000345cea1280d544c1b74deaa3de9b5",
+    "README.md": "a7af1f9eacabdf7e7860785fdf824eb4a883d2211146ce29d511215ed6d42d75",
+    ".github/workflows/q047-collection-preflight-v1.yml": "9a4efe333d1ad1e088192003b89fc42a58a9bdc2a3798691358fb5f445f8aea0"
+  }
+}

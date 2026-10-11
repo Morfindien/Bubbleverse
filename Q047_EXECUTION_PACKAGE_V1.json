@@ -1,0 +1,91 @@
+{
+  "schema": "Q047_EXECUTION_PACKAGE_V1",
+  "q": "Q-047",
+  "program_id": "Q047-COLLECTION-PREFLIGHT-V1",
+  "version": "v1",
+  "repository": "Morfindien/Bubbleverse",
+  "design_base_commit": "c768f33d433ca05e00f344bc9dcacca8383ab33f",
+  "question": "For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?",
+  "cases": [
+    "camspec-lcdm",
+    "camspec-ede_n3",
+    "hillipop-lcdm",
+    "hillipop-ede_n3"
+  ],
+  "file_sha256": {
+    "q047_execution_v1.py": "e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4",
+    "test_q047_execution_v1.py": "6a903ef5a6215573522fb3f5004dc3957c1852afdf00fde2a8099856fadc0cae",
+    "q047_collection_v1.py": "f1c0e26b20a5a24fb8cd12cd667c28faa340065421c8c19b929598893330c953",
+    "q047_collect_state_v1.c": "e15c27c4d1cb28ca87a149fd80373c76bc486999b98ab7b2db2de0f28cdab1f7",
+    "Q047_COLLECTION_LOCK_V1.json": "4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a",
+    "Q047_PRECURSOR_CONTRACT_V1.json": "bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc",
+    ".github/workflows/00-bubbleverse-start.yml": "e0c11fccd3300710acb1f02ea1bc2b2c327ae2f42584a05e7f7906ea0a5864cd",
+    ".github/workflows/q047-collection-preflight-v1.yml": "9a4efe333d1ad1e088192003b89fc42a58a9bdc2a3798691358fb5f445f8aea0"
+  },
+  "original_source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "original_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+  "baseline_run_id": "38023210800",
+  "baseline_execution_commit": "175a657490c2a04bbbd8e1b3e4a3c3fbbc499f72",
+  "artifacts": {
+    "camspec-lcdm": {
+      "id": 11659485163,
+      "name": "q045-v2-38023210800-camspec-lcdm",
+      "bytes": 10193920,
+      "sha256": "a97a5e606092ba062739e1079f5f8269c9ce53f46ff06dd384d60a5ba2f01b05",
+      "expires_at_documented": "2026-11-09T04:14:35Z",
+      "control_status": "Reuse previously verified official artifact identity; availability rechecked by actual download at execution"
+    },
+    "camspec-ede_n3": {
+      "id": 11659590507,
+      "name": "q045-v2-38023210800-camspec-ede_n3",
+      "bytes": 12232036,
+      "sha256": "4db84e6b5206bc5d5b789c41666b6a5fff450fa25f39f6645861769a8d37a3e5",
+      "expires_at_documented": "2026-11-09T04:15:03Z",
+      "control_status": "Reuse previously verified official artifact identity; availability rechecked by actual download at execution"
+    },
+    "hillipop-lcdm": {
+      "id": 11659745278,
+      "name": "q045-v2-38023210800-hillipop-lcdm",
+      "bytes": 10192361,
+      "sha256": "711662a12f3c639e3c457cdd4074ac82d05a1dec07342f5b74fdde971bebb6f7",
+      "expires_at_documented": "2026-11-09T04:14:25Z",
+      "control_status": "Reuse previously verified official artifact identity; availability rechecked by actual download at execution"
+    },
+    "hillipop-ede_n3": {
+      "id": 11659110603,
+      "name": "q045-v2-38023210800-hillipop-ede_n3",
+      "bytes": 12217681,
+      "sha256": "cdc17dacb8e7d3cfaf46f67bfcb85342f29738a501b56812358d770617058044",
+      "expires_at_documented": "2026-11-09T04:14:51Z",
+      "control_status": "Reuse previously verified official artifact identity; availability rechecked by actual download at execution"
+    }
+  },
+  "technical_scope": "Original runtime and four reference acquisition; observer-only build; zero native initialization/shooting; no core rebuild, admission or remote dispatch.",
+  "capture_limits": {
+    "new_native_or_theory_evaluations_max": 0,
+    "worker_minutes_max": 60,
+    "download_seconds_per_case_max": 240,
+    "build_seconds_max": 180,
+    "retry": false,
+    "checkpoint_resume": false
+  },
+  "scientific_gates": {
+    "PT01": "UNRESOLVED",
+    "PT03": "UNRESOLVED",
+    "FINAL_RESULT_GATE": "UNRESOLVED"
+  },
+  "direct_input_source_ids": [
+    "K-PROPOSED-Q047-SOURCE-001",
+    "K-PROPOSED-Q047-INPUTCODE-001",
+    "K-PROPOSED-Q047-BACKGROUNDCODE-001",
+    "K-PROPOSED-Q047-CONSTANTCODE-001",
+    "I-PROPOSED-Q047-COLLECTIONPACK-001"
+  ],
+  "provenance_documentation": {
+    "workflow": "https://github.com/Morfindien/Bubbleverse/blob/c768f33d433ca05e00f344bc9dcacca8383ab33f/.github/workflows/q045-native-baseline-v2.yml",
+    "actions_limits": "https://docs.github.com/en/actions/reference/limits",
+    "cache_semantics": "https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching",
+    "control_date": "2026-10-11"
+  },
+  "deferred_capture": "Budget accounting of shooting must be defined before a separately versioned capture campaign; no assumed four-unit cost."
+}
