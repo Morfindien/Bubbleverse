@@ -2,17 +2,17 @@
 
 STATUS: FORTSÆTTER
 
-DRIFTSSTATUS: BLOKERET FOR ACTUAL QUALIFICATION — finite source precursor backend and local installation package are built; actual accepted effective/init proof data are unavailable. Remote package installation is not performed; no native/production job is running.
+DRIFTSSTATUS: BLOKERET — external installation run38096470600 failed because the required root contract file is absent. The byte-identical missing file is now delivered and the focused local static restoration test PASS; manual GitHub installation and external rerun remain outstanding. Actual accepted effective/init proof data are independently unavailable. No native/production job is running.
 
 CASE ID: NOT DOCUMENTED.
 
-CURRENT Q: Q-047 — preserved proposed identity; canonical scientific admission unverified. Old Q047-CERTCHECK-V1 unchanged; new Q047-PRECURSORCHECK-V1 is registered only in the prepared local candidate.
+CURRENT Q: Q-047 — preserved proposed identity; canonical scientific admission unverified. Old Q047-CERTCHECK-V1 unchanged; Q047-PRECURSORCHECK-V1 is now verified registered at execution commit c5b5e4a316f5f5d3b87e7ce7c54f715a3803a9cb, but its first external static run failed on an absent contract file. No program/version change is needed.
 
 QUESTION: For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?
 
-DATE AND TIME: 2026-10-10T23:22:52+00:00, UTC, verified from the execution environment. Prior mathematics/ingestion/GitHub timestamps remain historical, not this preparation-run time.
+DATE AND TIME: 2026-10-11T00:09:17+00:00, UTC, verified from the execution environment. Prior preparation time2026-10-10T23:22:52+00:00 and earlier timestamps remain historical.
 
-VALGT NÆSTE MOTOR: RESULT INGESTION & ROUTING ENGINE — inspect the new finite implementation result and precisely blocked actual-state admission. The existing HPC-LAVEREN implementation task is now concretely addressed; no automatic motor or GitHub delivery occurred.
+VALGT NÆSTE MOTOR: HPC-LAVEREN / existing execution-mechanism engine — complete the one-file manual installation correction and ingest the bounded external replay outcome, then return it to RESULT INGESTION & ROUTING ENGINE. The correction is prepared and locally static-verified here; no GitHub mutation or dispatch occurred.
 
 OVERLEVERINGSSTATUS: KLARGJORT. No receiving motor or GitHub workflow was automatically started.
 
@@ -26,7 +26,7 @@ KAPABILITETSKLASSE: C + H (code/computation and focused mathematical verificatio
 
 REASONING-NIVEAU: Recommended High if selectable; active level NOT VERIFIED.
 
-BEGRUNDELSE: The next task is a finite source-specific certificate implementation with exact identity, forcing, mode-transfer and error controls. Maximum model compute or native job time alone does not resolve missing effective inputs.
+BEGRUNDELSE: The next task is a one-file installation restoration and bounded static/conditional replay using the unchanged verifier. Repository/file access and exact-byte verification are sufficient; maximum reasoning alone cannot restore the missing file or admit actual effective inputs.
 
 FALLBACK: Current Work/Codex; use the existing rational primitives and narrowly checked cells. Do not silently reduce proof requirements to suit a weaker environment.
 
@@ -65,7 +65,7 @@ The following global statements are retained in their original evidence scopes; 
 14. [INHERITED PINNED OPERATIONAL SNAPSHOT] The previously inspected model-head snapshot is ba520fb2cbad9b4c0e09fdda7f8c09025e348c63; accepted v0.7/R000007 ends at Q045. The inherited execution snapshot is a9a5777b5923f32930cd9c84a49227ba36249326. Q045's physical reference remains UNQUALIFIED, materiality UNRESOLVED, production unauthorized. Proposed Q046/Q047 are local completed assessments; canonical admission is not demonstrated. Old Q044-only current acceptance is superseded; older operational claims are historical. Live heads were not freshly established in this research round.
 15. [CONDITIONAL MATHEMATICAL RESULT] In future time u=ln(a), q=xHeII=f*x_He, epsilon=10^-6, the literal upper branch applies at equality. On a valid regular mode, F_+=(Y_down/H)*[(f-q)*s-q*(q+h)], with a positive prefactor. At the boundary its sign is that of D_epsilon=(f-epsilon)*s-epsilon*(epsilon+h). A reached strict-negative boundary with the proved regularity/mode hypotheses has no absolutely continuous literal forward continuation. This is a theorem about a defined realization, not a demonstrated defect in any of the four cosmologies.
 16. [INSUFFICIENT QUALIFICATION / SCIENTIFIC DEBT] Actual first-hit reachability, rate margin, mode separation and continuation remain unqualified for camspec-lcdm, camspec-ede_n3, hillipop-lcdm and hillipop-ede_n3. The finite control fixtures and native completion do not replace a certified coupled trajectory. No new Delta tau, spectrum response, likelihood shift, H0 bias, observational conflict or model preference is obtained.
-17. [ACTIVE NEXT INVESTIGATION / UPDATED] Preserve existing Q047 identity. Research acquired concrete archived inputs/diagnostics; mathematics now supplies the source-consistent reduction, signed defect-tube theorem, executed conditional local controls and prospective first-hit gates (M01-M06). The bounded conditional checker and explicit actual-input qualification failure reports are now implemented (E01-E03). Result ingestion E05-I01 verified the external technical evidence. Mathematics M07-M10 defined the source-specific precursor admission contract. HPC-LAVEREN E06-E08 now implements and locally validates the finite source backend, complete artificial four-mode control and manual-install package. Actual initialized-state/export evidence remains unavailable; no actual case is promoted. Actual reachability remains unresolved in all four cases. Do not repeat the inherited guard proof, allocate Q048 or treat unused budget as permission.
+17. [ACTIVE NEXT INVESTIGATION / UPDATED] Preserve existing Q047 identity. Research acquired concrete archived inputs/diagnostics; mathematics now supplies the source-consistent reduction, signed defect-tube theorem, executed conditional local controls and prospective first-hit gates (M01-M06). The bounded conditional checker and explicit actual-input qualification failure reports are now implemented (E01-E03). Result ingestion E05-I01 verified the external technical evidence. Mathematics M07-M10 defined the source-specific precursor admission contract. HPC-LAVEREN E06-E08 implements and locally validates the finite source backend, complete artificial four-mode control and manual-install package. E09 records the first external installation failure and the minimal byte-identical contract restoration; actual external replay is not yet verified. Actual initialized-state/export evidence remains unavailable; no actual case is promoted. Actual reachability remains unresolved in all four cases. Do not repeat the inherited guard proof, allocate Q048 or treat unused budget as permission.
 
 ACTIVE PREDICTIONS: PRED-H0-INDEPENDENT-001, PRED-EDE-PORTABILITY-001 and PRED-Q039-COUPLED-001 remain OPEN. CTR-HIST-BASIN-LABEL-001 remains RESOLVED_METHODOLOGICALLY. Dark-matter identity, acceleration microphysics, inaccessible topology/extent, earliest-epoch interpretation and finite-search globality remain unresolved in their inherited scopes.
 
@@ -531,21 +531,37 @@ Sources: I-PROPOSED-Q047-PRECURSOR-EXECUTION-001; K-PROPOSED-Q047-GITHUB-LIMITS-
 
 Sources: I-PROPOSED-Q047-PRECURSOR-EXECUTION-001 and I-PROPOSED-Q047-PRECURSOR-VALIDATION-001; retained source identities are unchanged.
 
+### J-PROPOSED-Q047-E09 — External installation failure and minimal locked-contract restoration
+
+[TECHNICAL EVIDENCE / RUN_FAILURE] External run38096470600, job114343287881 (verify), executed commit c5b5e4a316f5f5d3b87e7ce7c54f715a3803a9cb on2026-10-10T23:51:43Z. The exact ID/static gate failed before the finite-test and source/control steps; both later steps were skipped. The exception was FileNotFoundError for repository-root Q047_PRECURSOR_CONTRACT_V1.json, not a demonstrated MATHEMATICAL_CONTRACT_CHANGED mismatch. The full retrieved log is preserved in Q047_PRECURSOR_JOB_114343287881.log. Its Node.js deprecation warning is separate from the missing-file failure; no unrelated action/version update is made.
+
+[ROOT CAUSE / DELIVERY CORRECTION] The previous installation table omitted the unchanged mathematical contract. Read-only inspection of the nontruncated tree at the failed/current commit confirms it is absent at the canonical path and no renamed Q047_PRECURSOR_CONTRACT variant is present. The installed checker and manifest were retrieved/read;21 required installed-file Git blob identities match the delivered candidate exactly, and all16 manifest-listed file SHA256 checks PASS. Registry, launcher, README and journal bytes match that same candidate. README instructions are current for the unchanged program and require no patch.
+
+[VERIFIED LOCAL REPAIR] Reconstructed the static checkout from those verified-identical files, removed the contract, and reproduced the same FileNotFoundError. Adding only the original60068-byte Q047_PRECURSOR_CONTRACT_V1.json restored static package/launcher/registry/README/history checks to PASS in approximately0.003seconds. SHA256 bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc equals the installed manifest contract_sha256. No gate was disabled, hash rewritten, scientific assumption changed, code patched, launcher/registry modified or new version/PROGRAM_ID assigned. A local static PASS is not an external workflow PASS; no remote rerun was performed. The prior47-test local result is retained as prior evidence and not relabelled as a new test run.
+
+[DELIVERY / EXACT NEXT ACTION] Deliver the existing locked contract individually. Manually add it at repository root under exactly Q047_PRECURSOR_CONTRACT_V1.json, without a download suffix or subdirectory. Replace the same authoritative root Q047_SAMLET_JOURNAL.md with this cumulative update. Then use the existing permanent launcher and existing registered Q047-PRECURSORCHECK-V1 for the bounded conditional-only replay. GitHub remains read-only for this assistant; installation/dispatch is not claimed. This one missing-file repair is ready; actual qualification remains independently blocked.
+
+[KEEP SCIENTIFIC STATE] Four actual cases remain INSUFFICIENT_EVIDENCE, FINAL_RESULT_GATE=UNRESOLVED. PT01/PT03/PT10 remain unqualified, source5a131c91d657dd9a7c6364cc45b038710f8d0d97 and mathematical contract V1 remain frozen, budget16/52 consumed36remaining, zero new native/theory evaluations. This failure neither confirms nor falsifies a physical model, and adds no event/time, optical-depth, CMB, likelihood or H0 result.
+
+Source and claim: E09 → I-PROPOSED-Q047-PRECURSOR-INSTALLATION-001; retained mathematical contract identity → I-PROPOSED-Q047-PRECURSOR-METHOD-001. Full old journal/history, sources and prior failures remain preserved.
+
 ## AKTUEL OVERLEVERING
 
-CURRENT Q remains exactly the question above; all four actual cases are unresolved. Selected next engine: RESULT INGESTION & ROUTING ENGINE. OVERLEVERINGSSTATUS=KLARGJORT; no automatic delivery.
+CURRENT Q and its exact question are preserved above. Four actual applicability verdicts remain INSUFFICIENT_EVIDENCE. Selected next engine: existing HPC-LAVEREN / execution-mechanism engine. OVERLEVERINGSSTATUS=KLARGJORT; no automatic receiving-motor or GitHub delivery.
 
-NEW RESULT: source-specific finite-growth backend and complete artificial four-mode precursor control implemented, tested and packaged. Recomputed actual source fields/defects are conditional on primitive parameter/initial boxes; actual initialization/source-binary identity is unadmitted. Relevant concrete files, bounded installation/run instructions, finite tests and explicit gates are Q047_PRECURSOR_EXECUTION_SPEC_V1.md, q047_precursor_check_v1.py, q047_precursor_tests_v1.py, q047_precursor_package_v1.json, q047_precursor_packet_control_v1.json, Q047_EFFECTIVE_STATE_SCHEMA_V1.json, target workflow and current result/validation JSON. The unchanged mathematical contract and earlier complete controls remain attached to the same case.
+NEW RESULT: first external finite-backend replay failed on an omitted repository-root contract file. E09 documents root cause, exact failed commit/run/job, the same-file hash and the successful local static red/green restoration. No new code or science is required for this installation fix.
 
-IMPORTANT REMAINING INPUT: complete originally accepted initialized-state/effective export (including post-shooting EDE phi/psi/F/m/B and native neutrino q/weights/factor/M), frozen binary/build/inputs/raw linkage and validated initialization/rounding error; or a complete rigorously justified archive inverse. Existing requested metadata/rounded first rows are not that input. The read-only export audit is not origin attestation. No fresh native init/re-shoot/rebuild is authorized to create absent data. Cached records may be read where already available; the absent essential input is a data/access limit, not physical nonreachability.
+EXACT NEXT TASK: Manually add the individually supplied unchanged Q047_PRECURSOR_CONTRACT_V1.json at the canonical repository root and replace this same cumulative journal file. Start the existing registered Q047-PRECURSORCHECK-V1 using .github/workflows/00-bubbleverse-start.yml (display 🚀 BUBBLEVERSE START). Preserve run/head/steps/results and distinguish any conditional control PASS from actual-case qualification. Ingest that finite external outcome without rerunning successful unrelated campaigns. The assistant performs no GitHub writes/dispatches.
 
-EXACT NEXT TASK: Ingest E06-E08 and the saved finite result, retain all scientific state and prior failures, distinguish backend control PASS from actual PT01/PT03/PT10 debt, and recover qualifying original effective/init evidence if accessible. Do not route to another generic theorem or rerun old CERTCHECK solely to reproduce its list. Manual installation of this candidate is optional for reproducible replay of the new backend; it will not invent actual inputs. If original evidence is unavailable, record the exact export blockage without endless validation. Any new native action needs a separately authorized concrete proposal.
+SUCCESS: the bounded external static gate and specified conditional/refusal/source controls complete under the unchanged contract, all four actual cases remain correctly unadmitted, zero native evaluations are recorded, and the outcome is returned with exact provenance to RESULT INGESTION & ROUTING ENGINE. Further installation debugging stops once this finite target is verified; no stronger physical answer is implied.
 
-SUCCESS: correctly integrate the completed finite implementation and either admit sufficient existing original data for a complete actual precursor/onset/M06 event certificate, or preserve the precise unavailable input and insufficient-evidence status. Q can close and go to Motor14 only after the exact actual question has a justified documented answer; code exit/control PASS is not closure.
+FAILURE: another material static/source/control error must be preserved and diagnosed from its exact evidence. Do not disable guards, replace frozen scientific values or introduce arbitrary reruns. A technical failure is not physical falsification.
 
-FROZEN: Q/question; four case identities/requested vectors and accepted z_reio; source5a131c91...; epsilon/guard/normalization; contract V1 and source IDs; prior falsifications/failures; accepted-model boundary v0.7/R000007; budget16/52/36. No retuning closure/mass/parameters/bounds or criteria after results.
+INDEPENDENT SCIENTIFIC BLOCKAGE: complete originally accepted initialized-state/effective export (including post-shooting EDE phi/psi/F/m/B and native neutrino q/weights/factor/M), frozen binary/build/inputs/raw linkage and validated initialization/rounding error; or a rigorously complete archive inverse. Requested metadata/rounded first rows are insufficient. No fresh native init/re-shoot/rebuild is authorized to create absent data. Installing this contract does not resolve PT01/PT03/PT10 or certify actual reachability.
 
-STOP: finite mandatory tests are complete when relevant source/identity/closure failure modes are covered. Preserve successful branches and partial cells; do not extend work solely because other tests are possible. There is no supported background continuation or receiving-motor execution.
+FROZEN: Q/question; four cases/requested vectors and accepted z_reio; source5a131c91...; epsilon/guard/normalization; contract V1 and stable source IDs; prior failures/falsifications; accepted-model boundary v0.7/R000007; budget16/52/36; existing PROGRAM_ID/code/workflow/launcher/registry. Only installation completeness and current journal/provenance are updated.
+
+STOP: after the required finite external replay is technically resolved, return to RESULT INGESTION & ROUTING ENGINE with exact state. Q goes to Motor14 only after the actual scientific question has a defensible documented answer; conditional/static PASS alone never closes Q. No background continuation is claimed.
 
 ## CURRENT MATHEMATICAL RESULT AND PROVENANCE
 
@@ -567,6 +583,7 @@ TOOL/PLUGIN RESEARCH: Local frozen primary source actually read and all ten scie
 - M08: K-PROPOSED-Q047-SOURCE-001, K-PROPOSED-Q047-CONSTANTCODE-001 and I-PROPOSED-Q047-PRECURSOR-METHOD-001/-CONTROLS-001.
 - M09: K-PROPOSED-Q047-BACKGROUNDCODE-001, retained M03/K-PROPOSED-Q047-DISSIPATIVE-001, new method/control source IDs.
 - M10/admission: new method/control IDs, original archive/baseline/ingestion sources. Prior requested/raw input claims remain R01-R06; native hints are not accuracy certificates.
+- E09: I-PROPOSED-Q047-PRECURSOR-INSTALLATION-001; locked contract identity also I-PROPOSED-Q047-PRECURSOR-METHOD-001.
 - E04/E05/I01: I-PROPOSED-Q047-LAUNCHER-FIX-001, -INGESTION-001 and -EXECUTION-001 remain attached to the exact prior runs/commits/artifacts. Their evidence is not replaced by these controls.
 
 ## JOURNAL EFFECT / LIMITATIONS
@@ -581,9 +598,22 @@ SUPERSEDE OPERATIONAL NEXT TASK ONLY: I01's request to define the precursor meth
 
 Q-COMPLETION GATE: NOT SATISFIED. Actual precursor/background/first-hit proof is missing; this is a limitation of completed work/data, not proof that current scientific data universally cannot decide the question.
 
-MATERIAL-REVERSAL TEST: A valid actual precursor/certificate can change reached-event applicability. Repeating the original V1 missing-object inventory or manufactured fixture cannot. HPC-LAVEREN implementation of the specified verifier is therefore the single selected next task.
+MATERIAL-REVERSAL TEST: A valid actual precursor/certificate can change reached-event applicability. Repeating the original V1 missing-object inventory or manufactured fixture cannot. The implementation obligation is addressed by E06-E08; E09 narrows the present operational next task to missing-contract installation and bounded external replay. Actual input recovery/admission remains the separate scientific bottleneck.
 
 ## ACTIVE SOURCE REGISTER — complete active and inherited sources
+
+#### I-PROPOSED-Q047-PRECURSOR-INSTALLATION-001
+TYPE: BUBBLEVERSE TECHNICAL EVIDENCE / EXTERNAL RUN_FAILURE plus LOCAL STATIC RESTORATION TEST; not external scientific publication.
+REFERENCE: Bubbleverse Q047 finite-growth precursor backend V1 conditional-only external run38096470600,2026-10-10; this restoration audit 2026-10-11T00:09:17+00:00.
+IDENTIFIERS/VERSION: Q-047; Q047-PRECURSORCHECK-V1; job114343287881; execution/current read commit c5b5e4a316f5f5d3b87e7ce7c54f715a3803a9cb. Contract V1 SHA256 bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc.
+URL: https://github.com/Morfindien/Bubbleverse/actions/runs/38096470600 ; https://github.com/Morfindien/Bubbleverse/tree/c5b5e4a316f5f5d3b87e7ce7c54f715a3803a9cb .
+RELEVANT LOCATION: verify step4 Exact ID and repository/source-contract gates; checker package_gate contract read at line303; manifest contract_sha256; source/control steps skipped.
+USED FOR: E09 root cause, preserved failure, installed-byte identity, minimal repair and read-only delivery status.
+ARTIFACTS: Q047_PRECURSOR_JOB_114343287881.log (complete retrieved job log); Q047_PRECURSOR_INSTALLATION_REPAIR_V1.json (21 installed identities, locked contract hash, static before/after result and scope); unchanged contract individually provided. New receipt is technical installation evidence, not replacement for old local47-test receipt.
+CONTROL STATUS: full job log and installed manifest/checker read; nontruncated pinned tree inspected; installed Git blobs compared to local bytes for21 required paths;16 manifest hashes checked; same absent-file failure reproduced and original contract restoration static-tested. External rerun NOT PERFORMED, GitHub mutations NONE.
+DEPENDENCE: same Q047 method/code/control lineage. Cryptographic identities establish file equivalence, not independent physical evidence. Missing initialized actual-state data remain absent.
+NEXT MOTOR: direct installation input and technical provenance; retained scientific verdicts unchanged.
+
 
 #### I-PROPOSED-Q047-PRECURSOR-EXECUTION-001
 TYPE: BUBBLEVERSE TECHNICAL EVIDENCE / IMPLEMENTATION, local prepared v1, not external publication.

@@ -1,0 +1,252 @@
+﻿2026-10-10T23:51:48.5406646Z Current runner version: '2.337.0'
+2026-10-10T23:51:48.5432996Z ##[group]Runner Image Provisioner
+2026-10-10T23:51:48.5434144Z Hosted Compute Agent
+2026-10-10T23:51:48.5434816Z Version: 20261002.596
+2026-10-10T23:51:48.5435528Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+2026-10-10T23:51:48.5436233Z Build Date: 2026-10-02T22:28:27Z
+2026-10-10T23:51:48.5436986Z Worker ID: {1d2bfe6b-c6f2-4add-90f5-5fa25e836295}
+2026-10-10T23:51:48.5437735Z Region: westus
+2026-10-10T23:51:48.5438345Z Cloud: Azure
+2026-10-10T23:51:48.5438940Z ##[endgroup]
+2026-10-10T23:51:48.5440602Z ##[group]Operating System
+2026-10-10T23:51:48.5441323Z Ubuntu
+2026-10-10T23:51:48.5441852Z 24.04.5
+2026-10-10T23:51:48.5442358Z LTS
+2026-10-10T23:51:48.5443013Z ##[endgroup]
+2026-10-10T23:51:48.5443581Z ##[group]Runner Image
+2026-10-10T23:51:48.5444507Z Image: ubuntu-24.04
+2026-10-10T23:51:48.5445088Z Version: 20261004.327.1
+2026-10-10T23:51:48.5446819Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-10T23:51:48.5448518Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+2026-10-10T23:51:48.5449572Z ##[endgroup]
+2026-10-10T23:51:48.5450687Z ##[group]GITHUB_TOKEN Permissions
+2026-10-10T23:51:48.5452993Z Contents: read
+2026-10-10T23:51:48.5453603Z Metadata: read
+2026-10-10T23:51:48.5454546Z ##[endgroup]
+2026-10-10T23:51:48.5456914Z Secret source: Actions
+2026-10-10T23:51:48.5457893Z Cache mode: write
+2026-10-10T23:51:48.5458694Z Prepare workflow directory
+2026-10-10T23:51:48.5888337Z Prepare all required actions
+2026-10-10T23:51:48.5937982Z Getting action download info
+2026-10-10T23:51:48.9480239Z Download action repository 'actions/checkout@11d5960a326750d5838078e36cf38b85af677262' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-10T23:51:49.0508975Z Download action repository 'actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97' (SHA:5fda3b95a4ea91299a34e894583c3862153e4b97)
+2026-10-10T23:51:49.1298637Z Download action repository 'actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-10T23:51:49.3541370Z Complete job name: verify
+2026-10-10T23:51:49.4365307Z ##[group]Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+2026-10-10T23:51:49.4366524Z with:
+2026-10-10T23:51:49.4366985Z   persist-credentials: false
+2026-10-10T23:51:49.4367533Z   repository: Morfindien/Bubbleverse
+2026-10-10T23:51:49.4371479Z   token: ***
+2026-10-10T23:51:49.4371922Z   ssh-strict: true
+2026-10-10T23:51:49.4372359Z   ssh-user: git
+2026-10-10T23:51:49.4372784Z   clean: true
+2026-10-10T23:51:49.4373230Z   sparse-checkout-cone-mode: true
+2026-10-10T23:51:49.4374122Z   fetch-depth: 1
+2026-10-10T23:51:49.4374767Z   fetch-tags: false
+2026-10-10T23:51:49.4375229Z   show-progress: true
+2026-10-10T23:51:49.4375692Z   lfs: false
+2026-10-10T23:51:49.4376103Z   submodules: false
+2026-10-10T23:51:49.4376560Z   set-safe-directory: true
+2026-10-10T23:51:49.4377061Z   allow-unsafe-pr-checkout: false
+2026-10-10T23:51:49.4377943Z env:
+2026-10-10T23:51:49.4378355Z   CURRENT_Q: Q-047
+2026-10-10T23:51:49.4378822Z   PROGRAM_ID: Q047-PRECURSORCHECK-V1
+2026-10-10T23:51:49.4379405Z   PYTHONHASHSEED: 0
+2026-10-10T23:51:49.4379844Z ##[endgroup]
+2026-10-10T23:51:49.5454651Z Syncing repository: Morfindien/Bubbleverse
+2026-10-10T23:51:49.5457499Z ##[group]Getting Git version info
+2026-10-10T23:51:49.5458728Z Working directory is '/home/runner/work/Bubbleverse/Bubbleverse'
+2026-10-10T23:51:49.5460522Z [command]/usr/bin/git version
+2026-10-10T23:51:49.5531492Z git version 2.55.0
+2026-10-10T23:51:49.5556741Z ##[endgroup]
+2026-10-10T23:51:49.5584595Z Temporarily overriding HOME='/home/runner/work/_temp/e5a606ea-7e49-466a-b32a-d105fedad271' before making global git config changes
+2026-10-10T23:51:49.5587063Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-10T23:51:49.5588649Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Bubbleverse/Bubbleverse
+2026-10-10T23:51:49.5665670Z Deleting the contents of '/home/runner/work/Bubbleverse/Bubbleverse'
+2026-10-10T23:51:49.5667637Z ##[group]Initializing the repository
+2026-10-10T23:51:49.5676165Z [command]/usr/bin/git init /home/runner/work/Bubbleverse/Bubbleverse
+2026-10-10T23:51:49.5779122Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-10T23:51:49.5780495Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-10T23:51:49.5781532Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-10T23:51:49.5782332Z hint: call:
+2026-10-10T23:51:49.5782751Z hint:
+2026-10-10T23:51:49.5783302Z hint: 	git config --global init.defaultBranch <name>
+2026-10-10T23:51:49.5784556Z hint:
+2026-10-10T23:51:49.5785608Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-10T23:51:49.5787244Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-10T23:51:49.5788685Z hint:
+2026-10-10T23:51:49.5789416Z hint: 	git branch -m <name>
+2026-10-10T23:51:49.5790205Z hint:
+2026-10-10T23:51:49.5791350Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-10T23:51:49.5793312Z Initialized empty Git repository in /home/runner/work/Bubbleverse/Bubbleverse/.git/
+2026-10-10T23:51:49.5806691Z [command]/usr/bin/git remote add origin https://github.com/Morfindien/Bubbleverse
+2026-10-10T23:51:49.5864859Z ##[endgroup]
+2026-10-10T23:51:49.5866215Z ##[group]Disabling automatic garbage collection
+2026-10-10T23:51:49.5869234Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-10T23:51:49.5917651Z ##[endgroup]
+2026-10-10T23:51:49.5918917Z ##[group]Setting up auth
+2026-10-10T23:51:49.5923009Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-10T23:51:49.5972584Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-10T23:51:49.6510379Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-10T23:51:49.6554687Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-10T23:51:49.6827955Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-10T23:51:49.6868662Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-10T23:51:49.7111721Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-10T23:51:49.7159277Z ##[endgroup]
+2026-10-10T23:51:49.7160931Z ##[group]Fetching the repository
+2026-10-10T23:51:49.7171780Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c5b5e4a316f5f5d3b87e7ce7c54f715a3803a9cb:refs/remotes/origin/main
+2026-10-10T23:51:52.1752330Z From https://github.com/Morfindien/Bubbleverse
+2026-10-10T23:51:52.1755085Z  * [new ref]         c5b5e4a316f5f5d3b87e7ce7c54f715a3803a9cb -> origin/main
+2026-10-10T23:51:52.1758959Z ##[endgroup]
+2026-10-10T23:51:52.1760501Z ##[group]Determining the checkout info
+2026-10-10T23:51:52.1762392Z ##[endgroup]
+2026-10-10T23:51:52.1769341Z [command]/usr/bin/git sparse-checkout disable
+2026-10-10T23:51:52.1829550Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-10T23:51:52.1870895Z ##[group]Checking out the ref
+2026-10-10T23:51:52.1876382Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-10T23:51:52.4441802Z Switched to a new branch 'main'
+2026-10-10T23:51:52.4445709Z branch 'main' set up to track 'origin/main'.
+2026-10-10T23:51:52.4462305Z ##[endgroup]
+2026-10-10T23:51:52.4513036Z [command]/usr/bin/git log -1 --format=%H
+2026-10-10T23:51:52.4543291Z c5b5e4a316f5f5d3b87e7ce7c54f715a3803a9cb
+2026-10-10T23:51:52.4554715Z ##[group]Removing auth
+2026-10-10T23:51:52.4560954Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-10T23:51:52.4596807Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-10T23:51:52.4831425Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-10T23:51:52.4865094Z http.https://github.com/.extraheader
+2026-10-10T23:51:52.4876194Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-10T23:51:52.4917881Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-10T23:51:52.5157065Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-10T23:51:52.5195018Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-10T23:51:52.5434347Z ##[endgroup]
+2026-10-10T23:51:52.5812777Z ##[group]Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
+2026-10-10T23:51:52.5814686Z with:
+2026-10-10T23:51:52.5815604Z   python-version: 3.12.14
+2026-10-10T23:51:52.5816643Z   check-latest: false
+2026-10-10T23:51:52.5826004Z   token: ***
+2026-10-10T23:51:52.5897866Z   update-environment: true
+2026-10-10T23:51:52.5899833Z   allow-prereleases: false
+2026-10-10T23:51:52.5901352Z   freethreaded: false
+2026-10-10T23:51:52.5902718Z env:
+2026-10-10T23:51:52.5904359Z   CURRENT_Q: Q-047
+2026-10-10T23:51:52.5905962Z   PROGRAM_ID: Q047-PRECURSORCHECK-V1
+2026-10-10T23:51:52.5907836Z   PYTHONHASHSEED: 0
+2026-10-10T23:51:52.5909365Z ##[endgroup]
+2026-10-10T23:51:52.7193471Z ##[group]Installed versions
+2026-10-10T23:51:52.7214421Z Version 3.12.14 was not found in the local cache
+2026-10-10T23:51:53.5034439Z Version 3.12.14 is available for downloading
+2026-10-10T23:51:53.5035959Z Download from "https://github.com/actions/python-versions/releases/download/3.12.14-31661455385/python-3.12.14-linux-24.04-x64.tar.gz"
+2026-10-10T23:51:54.2148542Z Extract downloaded archive
+2026-10-10T23:51:54.2293315Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/ee796c75-4674-4e5a-97c2-7ddd04711574 -f /home/runner/work/_temp/20c0e0d9-3567-43b8-8b1b-01e575606b51
+2026-10-10T23:51:56.1584040Z Execute installation script
+2026-10-10T23:51:56.1686305Z Check if Python hostedtoolcache folder exist...
+2026-10-10T23:51:56.1687580Z Create Python 3.12.14 folder
+2026-10-10T23:51:56.1701149Z Copy Python binaries to hostedtoolcache folder
+2026-10-10T23:51:56.6640150Z Create additional symlinks (Required for the UsePythonVersion Azure Pipelines task and the setup-python GitHub Action)
+2026-10-10T23:51:56.6682589Z Upgrading pip...
+2026-10-10T23:51:58.4952474Z Collecting pip
+2026-10-10T23:51:58.5492787Z Downloading pip-26.2.1-py3-none-any.whl.metadata (4.6 kB)
+2026-10-10T23:51:58.5649207Z Downloading pip-26.2.1-py3-none-any.whl (1.8 MB)
+2026-10-10T23:51:58.6386069Z ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 35.8 MB/s eta 0:00:00
+2026-10-10T23:51:58.6386779Z 
+2026-10-10T23:51:58.6595314Z Installing collected packages: pip
+2026-10-10T23:51:58.6596254Z Attempting uninstall: pip
+2026-10-10T23:51:58.6621633Z Found existing installation: pip 25.0.1
+2026-10-10T23:51:58.7001971Z Uninstalling pip-25.0.1:
+2026-10-10T23:51:58.7064082Z Successfully uninstalled pip-25.0.1
+2026-10-10T23:51:59.6490078Z Successfully installed pip-26.2.1
+2026-10-10T23:51:59.7177391Z Create complete file
+2026-10-10T23:51:59.7217806Z Successfully set up CPython (3.12.14)
+2026-10-10T23:51:59.7218912Z ##[endgroup]
+2026-10-10T23:51:59.7399498Z ##[group]Run python q047_precursor_check_v1.py --program-id "$REQUESTED_PROGRAM_ID" --static
+2026-10-10T23:51:59.7400571Z [36;1mpython q047_precursor_check_v1.py --program-id "$REQUESTED_PROGRAM_ID" --static[0m
+2026-10-10T23:51:59.7662870Z shell: /usr/bin/bash -e {0}
+2026-10-10T23:51:59.7663305Z env:
+2026-10-10T23:51:59.7663588Z   CURRENT_Q: Q-047
+2026-10-10T23:51:59.7664142Z   PROGRAM_ID: Q047-PRECURSORCHECK-V1
+2026-10-10T23:51:59.7664531Z   PYTHONHASHSEED: 0
+2026-10-10T23:51:59.7664949Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-10T23:51:59.7665583Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-10T23:51:59.7666209Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-10T23:51:59.7666757Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-10T23:51:59.7667310Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-10T23:51:59.7667944Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-10T23:51:59.7668487Z   REQUESTED_PROGRAM_ID: Q047-PRECURSORCHECK-V1
+2026-10-10T23:51:59.7668919Z ##[endgroup]
+2026-10-10T23:51:59.8427944Z Traceback (most recent call last):
+2026-10-10T23:51:59.8440452Z   File "/home/runner/work/Bubbleverse/Bubbleverse/q047_precursor_check_v1.py", line 483, in <module>
+2026-10-10T23:51:59.8441742Z     if __name__=='__main__':main()
+2026-10-10T23:51:59.8442328Z                             ^^^^^^
+2026-10-10T23:51:59.8443451Z   File "/home/runner/work/Bubbleverse/Bubbleverse/q047_precursor_check_v1.py", line 448, in main
+2026-10-10T23:51:59.8444854Z     static=package_gate();old.write(out/'q047_precursor_static_v1.json',static)
+2026-10-10T23:51:59.8445551Z            ^^^^^^^^^^^^^^
+2026-10-10T23:51:59.8446413Z   File "/home/runner/work/Bubbleverse/Bubbleverse/q047_precursor_check_v1.py", line 303, in package_gate
+2026-10-10T23:51:59.8447840Z     if digest(root/'Q047_PRECURSOR_CONTRACT_V1.json')!=lock['contract_sha256']:raise ValueError('MATHEMATICAL_CONTRACT_CHANGED')
+2026-10-10T23:51:59.8448607Z        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-10T23:51:59.8449214Z   File "/home/runner/work/Bubbleverse/Bubbleverse/q047_precursor_check_v1.py", line 290, in <lambda>
+2026-10-10T23:51:59.8449857Z     digest=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+2026-10-10T23:51:59.8450258Z                                    ^^^^^^^^^^^^^^
+2026-10-10T23:51:59.8450824Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/pathlib.py", line 1019, in read_bytes
+2026-10-10T23:51:59.8451372Z     with self.open(mode='rb') as f:
+2026-10-10T23:51:59.8451660Z          ^^^^^^^^^^^^^^^^^^^^
+2026-10-10T23:51:59.8452146Z   File "/opt/hostedtoolcache/Python/3.12.14/x64/lib/python3.12/pathlib.py", line 1013, in open
+2026-10-10T23:51:59.8452756Z     return io.open(self, mode, buffering, encoding, errors, newline)
+2026-10-10T23:51:59.8453190Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-10-10T23:51:59.8454204Z FileNotFoundError: [Errno 2] No such file or directory: '/home/runner/work/Bubbleverse/Bubbleverse/Q047_PRECURSOR_CONTRACT_V1.json'
+2026-10-10T23:51:59.8532334Z ##[error]Process completed with exit code 1.
+2026-10-10T23:51:59.8652885Z ##[group]Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+2026-10-10T23:51:59.8653345Z with:
+2026-10-10T23:51:59.8653575Z   name: q047-precursor-v1-38096470600-technical
+2026-10-10T23:51:59.8654872Z   path: q047_precursor_results/**
+Q047_SAMLET_JOURNAL.md
+Q047_PRECURSOR_CONTRACT_V1.json
+Q047_PRECURSOR_EXECUTION_SPEC_V1.md
+Q047_EFFECTIVE_STATE_SCHEMA_V1.json
+q047_precursor_package_v1.json
+
+2026-10-10T23:51:59.8655650Z   retention-days: 30
+2026-10-10T23:51:59.8655878Z   if-no-files-found: error
+2026-10-10T23:51:59.8656116Z   compression-level: 6
+2026-10-10T23:51:59.8656333Z   overwrite: false
+2026-10-10T23:51:59.8656547Z   include-hidden-files: false
+2026-10-10T23:51:59.8656801Z env:
+2026-10-10T23:51:59.8656983Z   CURRENT_Q: Q-047
+2026-10-10T23:51:59.8657208Z   PROGRAM_ID: Q047-PRECURSORCHECK-V1
+2026-10-10T23:51:59.8657475Z   PYTHONHASHSEED: 0
+2026-10-10T23:51:59.8657769Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-10T23:51:59.8658466Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib/pkgconfig
+2026-10-10T23:51:59.8658901Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-10T23:51:59.8659281Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-10T23:51:59.8659674Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.14/x64
+2026-10-10T23:51:59.8660064Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.14/x64/lib
+2026-10-10T23:51:59.8660387Z ##[endgroup]
+2026-10-10T23:52:00.0519607Z (node:2415) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-10T23:52:00.0520990Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-10T23:52:00.0617863Z Multiple search paths detected. Calculating the least common ancestor of all paths
+2026-10-10T23:52:00.0622627Z The least common ancestor is /home/runner/work/Bubbleverse/Bubbleverse. This will be the root directory of the artifact
+2026-10-10T23:52:00.0624151Z With the provided path, there will be 5 files uploaded
+2026-10-10T23:52:00.0631317Z Artifact name is valid!
+2026-10-10T23:52:00.0632130Z Root directory input is valid!
+2026-10-10T23:52:00.4503059Z Beginning upload of artifact content to blob storage
+2026-10-10T23:52:00.5207162Z (node:2415) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-10-10T23:52:01.0462618Z Uploaded bytes 377825
+2026-10-10T23:52:01.1201076Z Finished uploading artifact content to blob storage!
+2026-10-10T23:52:01.1202253Z SHA256 digest of uploaded artifact zip is 61c6e8637442ad2d766ff1fd377b38ec134c5e52c7a7f09a07963a5b4f64572b
+2026-10-10T23:52:01.1203198Z Finalizing artifact upload
+2026-10-10T23:52:01.3787466Z Artifact q047-precursor-v1-38096470600-technical.zip successfully finalized. Artifact ID 11686610021
+2026-10-10T23:52:01.3789109Z Artifact q047-precursor-v1-38096470600-technical has been successfully uploaded! Final size is 377825 bytes. Artifact ID is 11686610021
+2026-10-10T23:52:01.3794803Z Artifact download URL: https://github.com/Morfindien/Bubbleverse/actions/runs/38096470600/artifacts/11686610021
+2026-10-10T23:52:01.3992340Z Post job cleanup.
+2026-10-10T23:52:01.4894937Z [command]/usr/bin/git version
+2026-10-10T23:52:01.4946297Z git version 2.55.0
+2026-10-10T23:52:01.4990693Z Temporarily overriding HOME='/home/runner/work/_temp/36a78570-a8a8-408e-8e67-3719bf9ce1a1' before making global git config changes
+2026-10-10T23:52:01.4992014Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-10T23:52:01.4999092Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Bubbleverse/Bubbleverse
+2026-10-10T23:52:01.5061317Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-10T23:52:01.5108227Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-10T23:52:01.5395216Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-10T23:52:01.5428330Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-10T23:52:01.5708371Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-10T23:52:01.5749911Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-10T23:52:01.6200151Z Cleaning up orphan processes
+2026-10-10T23:52:01.6531815Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@11d5960a326750d5838078e36cf38b85af677262, actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
