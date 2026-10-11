@@ -1,0 +1,130 @@
+name: Bubbleverse Q047 — approved four-case reconstruction V1
+
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q047-reconstruction-v1
+  cancel-in-progress: false
+env:
+  CURRENT_Q: Q-047
+  PROGRAM_ID: Q047-RECONSTRUCTION-V1
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  LC_ALL: C
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Identity, authorization, package, launcher, registry, README and journal
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          python q047_reconstruction_v1.py static --program-id "$REQUESTED_PROGRAM_ID"
+          python -m unittest -v test_q047_reconstruction_v1
+  capture:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        case: [camspec-lcdm, camspec-ede_n3, hillipop-lcdm, hillipop-ede_n3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Preserve expected case before cache acquisition
+        env:
+          CASE_ID: ${{ matrix.case }}
+        run: |
+          python - <<'PY'
+          import os,pathlib,q047_reconstruction_v1 as m
+          d=pathlib.Path('q047_stage')/os.environ['CASE_ID'];d.mkdir(parents=True)
+          m.write(d/'stage.json',dict(**m.base(),case=os.environ['CASE_ID'],native_processes_started=0,stage='CACHE_PENDING'))
+          PY
+      - name: Restore exact original nine-path cache; never build on miss
+        id: cache
+        timeout-minutes: 10
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            ~/.cache/pip
+            external/cobaya_packages
+            external/class_ede
+            external/hillipop
+            external/act_dr6_cmbonly
+            external/act_dr6_lenslike
+            external/cobaya_desi_dr2_source
+            external/bao_data_v2_6
+            external/PolyChordLite
+          key: q042-prod-v1-${{ runner.os }}-py311-cobaya356-q032-4dc873a-pc1222-pybobyqa150-pantheonplus
+          fail-on-cache-miss: true
+      - name: C instrumentation test against original headers; no CLASS execution
+        env:
+          Q047_TEST_HEADERS: ${{ github.workspace }}/external/class_ede
+        run: python -m unittest -v test_q047_reconstruction_v1.ReconstructionGates.test_actual_c_runtime_capture_and_observation_fp_restore
+      - name: One authorized reconstruction; original core; preserve disagreements
+        timeout-minutes: 25
+        env:
+          GH_TOKEN: ${{ github.token }}
+          Q047_CACHE_HIT: ${{ steps.cache.outputs.cache-hit }}
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+          CASE_ID: ${{ matrix.case }}
+        run: python q047_reconstruction_v1.py worker --program-id "$REQUESTED_PROGRAM_ID" --case "$CASE_ID" --directory "q047_reconstructed/$CASE_ID"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        timeout-minutes: 10
+        with:
+          name: q047-reconstruction-v1-${{ github.run_id }}-${{ matrix.case }}-raw
+          path: |
+            q047_reconstructed/
+            q047_stage/
+          if-no-files-found: error
+          retention-days: 30
+  collect:
+    needs: [static, capture]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q047-reconstruction-v1-${{ github.run_id }}-*-raw
+          merge-multiple: true
+          path: collected
+      - name: Failure-aware four-case collection; no numerical averaging or scientific PASS
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: python q047_reconstruction_v1.py finalize --program-id "$REQUESTED_PROGRAM_ID" --directory collected/q047_reconstructed --output q047_reconstruction_final_v1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q047-reconstruction-v1-${{ github.run_id }}-final
+          path: |
+            q047_reconstruction_final_v1.json
+            Q047_RECONSTRUCTION_CONTRACT_V1.json
+            Q047_SAMLET_JOURNAL.md
+          if-no-files-found: error
+          retention-days: 30

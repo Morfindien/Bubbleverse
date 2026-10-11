@@ -1,0 +1,176 @@
+{
+  "schema": "Q047_RECONSTRUCTION_CONTRACT_V1",
+  "q": "Q-047",
+  "case_id": "NOT_DOCUMENTED",
+  "program_id": "Q047-RECONSTRUCTION-V1",
+  "version": "v1",
+  "program_version": "v1",
+  "workflow_version": "v1",
+  "created_utc": "2026-10-11T11:20:13.263193+00:00",
+  "repository": "Morfindien/Bubbleverse",
+  "design_base_commit": "c2bd2a75525b205d02c45576372c81bc78bed4f3",
+  "question": "For each of the four frozen Q041 diagnostic FULL/start0 LCDM and n_scf=3 EDE configurations, does the qualified pre-cutoff helium-recombination trajectory reach q=xHeII=10^-6 at a finite first event with a strictly negative upper-branch rate and no competing switch or reset?",
+  "cases": [
+    "camspec-lcdm",
+    "camspec-ede_n3",
+    "hillipop-lcdm",
+    "hillipop-ede_n3"
+  ],
+  "authorization": {
+    "status": "USER_APPROVED",
+    "user_statement": "Den er godkendt",
+    "submitted_local": "2026-10-11T08:02:02+02:00",
+    "native_reconstruction": true,
+    "scope": "One bounded fresh input/shooting/background/thermodynamics observation for each frozen case; existing core only. Preserve original Q and all past admission limits.",
+    "github_writes_by_agent": false,
+    "github_dispatch_by_agent": false,
+    "production_or_spectra_likelihood_campaign": false,
+    "automatic_retries": false
+  },
+  "scientific_target_policy": {
+    "exact_question_unchanged": true,
+    "raw_origin": "NEW_RECONSTRUCTION",
+    "historical_export": false,
+    "amendment_kind": "Authorized acquisition annex; original precursor contract V1 preserved byte-identically.",
+    "reconstructed_ivp": "Effective binary64 fields and accepted initial state captured from the new original-core execution define a separately tagged candidate source-real IVP, subject to formal source/unit/error qualification.",
+    "original_case_admission": "Output equality alone cannot establish a unique historical internal state. Original PT01/PT03 remain UNRESOLVED until state equivalence or a complete validated inverse is proved.",
+    "no_silent_replacement": "A qualified reconstructed IVP can produce a scoped reconstruction answer only. Preserve the historical-target answer separately if equivalence is not established.",
+    "first_hit": "Unchanged M06/PT10 semantics, competing switches and strict negative upper-rate test; not performed by this acquisition campaign."
+  },
+  "frozen": {
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "core_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+    "collection_lock_sha256": "4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a",
+    "precursor_contract_v1_sha256": "bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc",
+    "requested_vectors": "All four original class_parameters from collection lock; no tuning or precision edit.",
+    "original_python": "3.11.16",
+    "platform": "Linux x86_64",
+    "threads": {
+      "OMP_NUM_THREADS": 1,
+      "OPENBLAS_NUM_THREADS": 1,
+      "MKL_NUM_THREADS": 1
+    },
+    "new_dynamic_environment": "Measured as new-run CPU/FP/library evidence, not claimed identical to the historical run."
+  },
+  "artifacts": {
+    "camspec-lcdm": {
+      "id": 11659485163,
+      "name": "q045-v2-38023210800-camspec-lcdm",
+      "bytes": 10193920,
+      "sha256": "a97a5e606092ba062739e1079f5f8269c9ce53f46ff06dd384d60a5ba2f01b05",
+      "expires_at_documented": "2026-11-09T04:14:35Z",
+      "control_status": "Reuse previously verified official artifact identity; availability rechecked by actual download at execution"
+    },
+    "camspec-ede_n3": {
+      "id": 11659590507,
+      "name": "q045-v2-38023210800-camspec-ede_n3",
+      "bytes": 12232036,
+      "sha256": "4db84e6b5206bc5d5b789c41666b6a5fff450fa25f39f6645861769a8d37a3e5",
+      "expires_at_documented": "2026-11-09T04:15:03Z",
+      "control_status": "Reuse previously verified official artifact identity; availability rechecked by actual download at execution"
+    },
+    "hillipop-lcdm": {
+      "id": 11659745278,
+      "name": "q045-v2-38023210800-hillipop-lcdm",
+      "bytes": 10192361,
+      "sha256": "711662a12f3c639e3c457cdd4074ac82d05a1dec07342f5b74fdde971bebb6f7",
+      "expires_at_documented": "2026-11-09T04:14:25Z",
+      "control_status": "Reuse previously verified official artifact identity; availability rechecked by actual download at execution"
+    },
+    "hillipop-ede_n3": {
+      "id": 11659110603,
+      "name": "q045-v2-38023210800-hillipop-ede_n3",
+      "bytes": 12217681,
+      "sha256": "cdc17dacb8e7d3cfaf46f67bfcb85342f29738a501b56812358d770617058044",
+      "expires_at_documented": "2026-11-09T04:14:51Z",
+      "control_status": "Reuse previously verified official artifact identity; availability rechecked by actual download at execution"
+    }
+  },
+  "limits": {
+    "max_native_processes": 4,
+    "max_native_processes_per_case": 1,
+    "native_seconds_per_case": 600,
+    "internal_initialization_entries_per_case_max": 2048,
+    "download_seconds_per_case": 240,
+    "observer_compile_seconds": 120,
+    "worker_job_minutes": 60,
+    "collector_job_minutes": 15,
+    "max_parallel": 4,
+    "checkpoint_resume": false,
+    "automatic_retry": false,
+    "run_attempt_required": "1"
+  },
+  "accounting": {
+    "inherited_ledger": {
+      "used": 16,
+      "limit": 52,
+      "remaining": 36
+    },
+    "new_scope_ledger": "At most four explicitly approved top-level capture processes. Record entry/exit and every internal initialization entry; never assume four shooting calls or a four-unit historical cost.",
+    "commensurability": "The prior native/theory ledger remains preserved; this diagnostic ledger is reported separately rather than silently defining its unit. This annex explicitly authorizes these four bounded captures without production evaluations.",
+    "full_cmb_or_likelihood_evaluations_max": 0,
+    "report_failed_or_interrupted_starts": true
+  },
+  "mandatory_software_tests": [
+    "six new-run FP checkpoints",
+    "reject FTZ/DAZ and wrong rounding",
+    "C instrument-only environment restoration",
+    "missing/modified/wrong-case branch rejection",
+    "missing required output rejection",
+    "unsafe member path refusal",
+    "forged scientific PASS refusal"
+  ],
+  "actual_result_tests": {
+    "identity": "Original core/source/input and archived table hashes before execution.",
+    "runtime": "Six measured FP checkpoints; CPU/XCR0 and named math symbol references. These do not prove every original-core relocation or every numerical call.",
+    "state": "Reuse unchanged V1 structural/effective/init/thermal/ncdm checks. Retain any failure and raw data.",
+    "reproduction": "All archived and new background/thermal output binary64 bits including signed zero; preserve nonmatching tables.",
+    "completeness": "Four immutable case reports and raw member hashes; missing/failed cases never become COMPLETE.",
+    "interpretation": "Always INSUFFICIENT_EVIDENCE/UNRESOLVED for historical first-hit; new actual data go to Result Ingestion & Routing."
+  },
+  "outputs": [
+    "accepted_initial_hex.json",
+    "effective_background_hex.json",
+    "thermal_starts_hex.jsonl",
+    "effective_precision.json",
+    "native_background.tsv",
+    "native_thermodynamics.tsv",
+    "runtime_control_v2.json",
+    "runtime_maps.txt",
+    "mapped_dependencies.json",
+    "math_dependencies/*",
+    "source_objects/*",
+    "native_data/*",
+    "observation_counters.json",
+    "initialization_progress.jsonl",
+    "worker_result.json",
+    "q047_reconstruction_final_v1.json"
+  ],
+  "return_route": "RESULT INGESTION & ROUTING ENGINE",
+  "stop": "Exactly one attempted capture per case; no retries. Preserve failures. Downstream formal qualification is necessary before first-hit inference; do not repeat successful acquisition without a new technical cause.",
+  "sources": [
+    "K-PROPOSED-Q047-SOURCE-001",
+    "K-PROPOSED-Q047-INPUTCODE-001",
+    "K-PROPOSED-Q047-BACKGROUNDCODE-001",
+    "I-PROPOSED-Q047-RUNTIME-RECOVERY-001",
+    "R-PROPOSED-Q047-RUNTIME-INGESTION-001"
+  ],
+  "current_github_limits_reference": {
+    "url": "https://docs.github.com/en/actions/reference/limits",
+    "checked_utc": "2026-10-11",
+    "github_hosted_job_hard_limit_hours": 6,
+    "worker_safe_limit_minutes": 60,
+    "plan_or_remaining_minutes": "NOT_VERIFIED"
+  },
+  "file_sha256": {
+    "q047_reconstruction_v1.py": "ee3d4f66313841da607688c9649417fa26c3d9ec917d84c835bcd537b5592b5e",
+    "q047_collect_state_v2.c": "623985971eded8be0cf40f8c1922707e50dd92a604937b2e088c07d0d84c6e37",
+    "test_q047_reconstruction_v1.py": "76e742eea5956747522de3f99ca53a6a8309cd39218c83da95c86bfdf5649036",
+    "q047_collection_v1.py": "f1c0e26b20a5a24fb8cd12cd667c28faa340065421c8c19b929598893330c953",
+    "q047_collect_state_v1.c": "e15c27c4d1cb28ca87a149fd80373c76bc486999b98ab7b2db2de0f28cdab1f7",
+    "q047_execution_v1.py": "e2aee4a0fb3fc5679e39f9ef59763ca23b3fb9facff12460955d378d1ab6b7f4",
+    "Q047_COLLECTION_LOCK_V1.json": "4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a",
+    "Q047_PRECURSOR_CONTRACT_V1.json": "bcd113dfd96ebba8a3e0af2b8761b679678cc00b9bafcebb414a824dcde619cc",
+    ".github/workflows/q047-reconstruction-v1.yml": "6c2e6c1e26bc0f9d0ee046323c25b00654f5ca560e49e85da44936fbd741cbb0"
+  }
+}
