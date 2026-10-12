@@ -1,3 +1,33 @@
+# Q048 verified prefix continuation V2
+
+PROGRAM_ID: **`Q048-RESUME-V2`**. This finite numerical component verifies and continues the existing **CONDITIONAL_SOURCE_REAL_PREFIX**. `FINAL_RESULT_GATE=UNRESOLVED`. Q-048 remains `PROPOSED_UNVERIFIED`, CASE `NOT_ASSIGNED`; Q047 remains closed inconclusive.
+
+The local continuation has run: Camspec EDE has356 background and251 thermal cells; Hillipop EDE has335 background and231 thermal cells. Both LCDM cases retain their35-cell thermal prefixes through the H transfer at z=2870. Camspec EDE stops at the background time budget; Hillipop EDE stops at comparison growth and thermal-tube closure. These are finite conditional component results, not physical model falsification or complete latch/reset histories.
+
+## Install individual files and start
+
+Place these files at repository root: `q048_resume_v2.py`, `q048_resume_config_v2.json`, `q048_resume_tests_v2.py`, `q048_resume_merge_v2.py`, `q048_resume_package_check_v2.py`, `q048_resume_package_v2.json`, all four shipped `*_checkpoint_v2.json`, the updated `bubbleverse_program_registry.json`, `README.md` and `Q047_SAMLET_JOURNAL.md`. Place `q048-resume-v2.yml` at **`.github/workflows/q048-resume-v2.yml`**. Preserve the exact installed dependencies `q047_math_v1.py`, `q047_certificate_v1.py`, `q047_precursor_check_v1.py`, `q048_prefix_v1.py`, `q048_prefix_config_v1.json` and `q048_prefix_final_v1.json`; their hashes and Git blobs are checked.
+
+The permanent launcher **`.github/workflows/00-bubbleverse-start.yml`**, display name **🚀 BUBBLEVERSE START**, remains unchanged. The canonical registry `bubbleverse_program_registry.json` preserves all57 existing entries and adds this candidate, giving58. The snapshots are based on commit `0208945bb167d1cb2ae3ea15038a8382a7598c15`; reconcile newer repository changes before installing. Remote installation and dispatch have not been performed.
+
+After installation: open **🚀 BUBBLEVERSE START**, paste **`Q048-RESUME-V2`**, select **Run workflow**. The first run continues the shipped local V2 checkpoints. Later runs search the last20 completed V2 runs for each case's newest retained artifact. An expired or invalid found checkpoint fails closed. If no retained artifact exists in that bounded window, the shipped checkpoint is used explicitly. No numerical state is invented and no automatic downstream run is dispatched. Runs are serialized to preserve a clear checkpoint lineage.
+
+## Proof, budgets and result gates
+
+Each case recomputes its carried background and thermal certificates before continuing from the verified endpoints and carried interval errors. V1 omitted proof domains are reconstructed from its exact pinned generation rule; V2 writes them explicitly. Coordinate fractions may have up to4096 characters without rounding; all reused mathematical source files remain byte-unchanged. Inputs, helium convention, phase boundaries, accepted `z_reio`, source commit, neutrino nodes, priors and scientific criteria are preserved. No native CLASS initialization, recompilation, tau shooting, likelihood evaluation or sampling occurs.
+
+Independent budgets are120seconds for checkpoint verification and180seconds each for background and thermal continuation, at most256 new cells per stage with at most10 halvings. Checkpoints are written atomically after verification, every8 accepted cells and at stage boundaries. Four independent case jobs have20-minute timeouts and a12-minute process safeguard; preflight and collection each have10-minute timeouts. Mandatory tests cover corrupted certificates, partitions, question/scope, exact coordinate roundtrip, endpoint consistency and incomplete/invalid collection. If future checkpoint verification exceeds its finite cap, the result stays unresolved and requires a specific verification design change; it does not authorize skipping checks.
+
+The collector requires four final, compatible case reports, retains all raw certificates and never averages unlike cases. `execution_status=COMPLETE` means four component reports exist. Background/thermal statuses may still be partial. `actual_event_redshifts`, `actual_xe_history_bounds` and `actual_tau_T_bounds` remain `NOT_COMPUTED`; `final_result_gate` remains `UNRESOLVED`.
+
+Outputs: per-case `*_checkpoint_v2.json` and `*_resume_v2.json`, collected `q048_resume_final_v2.json`. Current local revalidation is `q048_resume_local_validation_v2.json`. Full authoritative memory remains `Q047_SAMLET_JOURNAL.md`, including source IDs and exact raw result provenance. Return these to the **Result Ingestion & Routing Engine**. Hillipop's enclosure blockers need a mathematical/numerical change, not unchanged repeated launches; actual reference admission, the first cutoff event, post-event propagation and whole-history optical-depth comparison remain outstanding.
+
+---
+
+## Historical repository documentation — preserved below
+
+The following snapshots document their own earlier installation states and entry counts; the V2 instructions above describe the current candidate.
+
 # Q048 conditional source-real prefix V1 — prepared numerical component
 
 PROGRAM_ID: **`Q048-PREFIX-V1`**. This stage computes a controlled common-background/early-thermal **CONDITIONAL_SOURCE_REAL_PREFIX** from the captured inputs. It does not calculate the complete latch/reset histories or their Thomson-depth difference. Actual scientific `FINAL_RESULT_GATE` remains **UNRESOLVED**.

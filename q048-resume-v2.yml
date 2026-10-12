@@ -1,0 +1,139 @@
+name: Q048 verified prefix continuation V2
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered continuation identifier
+        required: true
+        type: string
+        default: Q048-RESUME-V2
+concurrency:
+  group: q048-resume-v2
+  cancel-in-progress: false
+permissions:
+  contents: read
+  actions: read
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    outputs:
+      previous_runs: ${{ steps.prior.outputs.previous_runs }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Package and finite certificate controls
+        env:
+          PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          test "$PROGRAM_ID" = Q048-RESUME-V2
+          python q048_resume_package_check_v2.py
+          python -m unittest q048_resume_tests_v2 -v
+      - name: Find most recent completed V2 run for genuine continuation
+        id: prior
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python - <<'PY'
+          import json,os,re,urllib.request
+          repo=os.environ['GITHUB_REPOSITORY']
+          if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+',repo):raise ValueError('REPO')
+          url=f'https://api.github.com/repos/{repo}/actions/workflows/q048-resume-v2.yml/runs?per_page=20&status=completed'
+          req=urllib.request.Request(url,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
+          data=json.load(urllib.request.urlopen(req,timeout=30))
+          runs=[r for r in data['workflow_runs'] if r['id']!=int(os.environ['GITHUB_RUN_ID'])]
+          previous=json.dumps([r['id'] for r in runs],separators=(',',':'))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:f.write('previous_runs='+previous+'\n')
+          print('Retained checkpoint candidate runs:',previous)
+          PY
+  continuation:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        case: [camspec-lcdm, camspec-ede_n3, hillipop-lcdm, hillipop-ede_n3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Locate this case's retained checkpoint
+        id: checkpoint
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PRIOR_RUNS: ${{ needs.preflight.outputs.previous_runs }}
+          CASE: ${{ matrix.case }}
+        run: |
+          python - <<'PY'
+          import json,os,urllib.request
+          runs=json.loads(os.environ['PRIOR_RUNS']);selected=0
+          if not isinstance(runs,list) or len(runs)>20 or any(type(r) is not int or r<=0 for r in runs):raise ValueError('RUN_IDS')
+          for previous in runs:
+              repo=os.environ['GITHUB_REPOSITORY']
+              url=f'https://api.github.com/repos/{repo}/actions/runs/{previous}/artifacts?per_page=100'
+              req=urllib.request.Request(url,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN']})
+              data=json.load(urllib.request.urlopen(req,timeout=30))
+              expected='q048-resume-v2-'+os.environ['CASE']+'-'+str(previous)
+              hits=[a for a in data['artifacts'] if a['name']==expected]
+              if len(hits)>1:raise ValueError('DUPLICATE_CHECKPOINT_ARTIFACT')
+              if hits and hits[0]['expired']:raise ValueError('CHECKPOINT_ARTIFACT_EXPIRED')
+              if hits:selected=previous;break
+          with open(os.environ['GITHUB_OUTPUT'],'a') as f:
+              f.write('exists='+str(bool(selected)).lower()+'\n')
+              f.write('run_id='+str(selected)+'\n')
+          PY
+      - uses: actions/download-artifact@v4
+        if: steps.checkpoint.outputs.exists == 'true'
+        with:
+          github-token: ${{ github.token }}
+          run-id: ${{ steps.checkpoint.outputs.run_id }}
+          name: q048-resume-v2-${{ matrix.case }}-${{ steps.checkpoint.outputs.run_id }}
+          path: prior
+      - name: Verify and continue this case; preserve atomic checkpoints
+        env:
+          CASE: ${{ matrix.case }}
+        run: |
+          args=()
+          checkpoint="prior/${CASE}_checkpoint_v2.json"
+          if test -f "$checkpoint"; then
+            args+=(--checkpoint "$checkpoint")
+          elif test -f "${CASE}_checkpoint_v2.json"; then
+            args+=(--checkpoint "${CASE}_checkpoint_v2.json")
+          else
+            echo "Missing shipped checkpoint; refusing to restart completed prefixes"
+            exit 2
+          fi
+          timeout --signal=TERM 720s python q048_resume_v2.py --case "$CASE" --out q048_resume_results "${args[@]}"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-resume-v2-${{ matrix.case }}-${{ github.run_id }}
+          path: q048_resume_results/*.json
+          if-no-files-found: error
+  collect:
+    needs: [preflight, continuation]
+    if: always() && needs.preflight.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q048-resume-v2-*-${{ github.run_id }}
+          path: collected
+      - name: Require all four final case reports; preserve partial science
+        run: python q048_resume_merge_v2.py --directory collected --out q048_resume_final_v2.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-resume-v2-final-${{ github.run_id }}
+          path: q048_resume_final_v2.json
+          if-no-files-found: error
