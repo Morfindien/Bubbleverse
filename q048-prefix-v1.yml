@@ -1,0 +1,74 @@
+name: Q048 conditional source-real prefix V1
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Exact registered program identifier
+        required: true
+        type: string
+        default: Q048-PREFIX-V1
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Freeze target and validate the installed package
+        env:
+          PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          test "$PROGRAM_ID" = Q048-PREFIX-V1
+          python q048_prefix_package_check_v1.py
+          python -m unittest q048_prefix_tests_v1 -v
+  prefix:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        case: [camspec-lcdm, camspec-ede_n3, hillipop-lcdm, hillipop-ede_n3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compute one finite prefix with a two-minute external safeguard
+        env:
+          CASE: ${{ matrix.case }}
+        run: timeout --signal=TERM 120s python q048_prefix_v1.py --program-id Q048-PREFIX-V1 --case "$CASE" --out q048_prefix_results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-prefix-v1-${{ matrix.case }}-${{ github.run_id }}
+          path: q048_prefix_results/*.json
+          if-no-files-found: error
+  collect:
+    needs: [preflight, prefix]
+    if: always() && needs.preflight.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q048-prefix-v1-*-${{ github.run_id }}
+          path: collected
+          merge-multiple: false
+      - name: Enforce four-job completeness and preserve raw certificates
+        run: python q048_prefix_merge_v1.py --directory collected --out q048_prefix_final_v1.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-prefix-v1-final-${{ github.run_id }}
+          path: q048_prefix_final_v1.json
+          if-no-files-found: error

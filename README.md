@@ -1,3 +1,31 @@
+# Q048 conditional source-real prefix V1 — prepared numerical component
+
+PROGRAM_ID: **`Q048-PREFIX-V1`**. This stage computes a controlled common-background/early-thermal **CONDITIONAL_SOURCE_REAL_PREFIX** from the captured inputs. It does not calculate the complete latch/reset histories or their Thomson-depth difference. Actual scientific `FINAL_RESULT_GATE` remains **UNRESOLVED**.
+
+The local computation has already run. Both LCDM references reach the H-mode transfer at z=2870; both EDE references retain a certified partial background prefix at the finite work cap. This is not physical model failure. An unchanged GitHub replay is optional reproducibility, not the missing scientific calculation.
+
+## Install individual files
+
+Place `q048_prefix_v1.py`, `q048_prefix_config_v1.json`, `q048_prefix_tests_v1.py`, `q048_prefix_merge_v1.py`, `q048_prefix_package_check_v1.py`, `q048_prefix_package_v1.json`, `Q047_SAMLET_JOURNAL.md`, the updated `bubbleverse_program_registry.json` and this `README.md` at repository root. Place `q048-prefix-v1.yml` at **`.github/workflows/q048-prefix-v1.yml`**.
+
+Reuse the existing root files `q047_math_v1.py`, `q047_certificate_v1.py` and `q047_precursor_check_v1.py` exactly. The package gate verifies their pinned Git blob identities. No new dependencies, CLASS compilation, native initialization, tau shooting, likelihood evaluation or sampling occurs. The degree32 trigonometric primitive uses an explicit rigorous remainder; the scientific source is unchanged.
+
+The permanent launcher is **`.github/workflows/00-bubbleverse-start.yml`**, display name **🚀 BUBBLEVERSE START**. It remains unchanged. The canonical registry is **`bubbleverse_program_registry.json`**; all 56 previous entries are preserved and one candidate is added. Remote installation and dispatch have not been performed by this engine. Check the registry base if the repository changes before installing this snapshot.
+
+After installation, for an optional replay: open **🚀 BUBBLEVERSE START**, paste **`Q048-PREFIX-V1`**, select **Run workflow**. No launch is needed to obtain the already preserved local results.
+
+## Computation and finite result gates
+
+Four independent case jobs use at most 160 cells per stage and a shared 60-second compute budget per case. Each numerical job has a 120-second process safeguard and a 10-minute workflow timeout, preserving setup/output time. A preflight job checks package/input/launcher/README consistency and finite reference/negative tests. The collection job requires all four identity-compatible results, refuses missing/duplicate cases and preserves raw certificates. Component completion is distinct from prefix completion and scientific validity.
+
+Both native tolerances and exported phase-H starts remain diagnostic evidence. No Boolean can certify actual source applicability. A closed residual/Jacobian tube yields a conditional continuous enclosure; a work/domain cap yields a preserved partial result. The output includes exact rational error endpoints, background forcing bounds, source branch checks, partial endpoints, source hashes, Q/CASE status and explicit missing scopes. Partial background computation is preserved for a future genuinely verified continuation; V1 has no resume CLI and must not be described as resumable.
+
+Results: per-case `*_prefix_v1.json`, collected `q048_prefix_final_v1.json`. That final container includes all raw certificates and keeps `actual_xe_history_bounds=NOT_COMPUTED`, `actual_tau_T_bounds=NOT_COMPUTED` and `final_result_gate=UNRESOLVED`. The full scientific state remains in `Q047_SAMLET_JOURNAL.md`; source IDs and frozen reionization information remain in the journal/config. Return all of these to the Result Ingestion & Routing Engine. Improve the EDE background enclosure/continuation and qualify the actual reference before implementing the shared first event and post-event comparison; do not repeat unchanged input checks.
+
+---
+
+## Existing repository documentation — retained
+
 # Q048 reconstruction metadata qualification V1
 
 Prepared target: **`Q048-INPUTCHECK-V1`**. This package audits the already captured four-case reconstruction from run `38140371059`; it performs no new CLASS initialization, compilation, sampling or likelihood evaluation. The local metadata audit has completed. The GitHub target is a reproducible replay after installation, not a prerequisite to repeating completed work.
