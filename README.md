@@ -1,57 +1,59 @@
-# Q048 verified prefix continuation V3
+# Bubbleverse — Q048 controlled prefix continuation V4
 
-Use **🚀 BUBBLEVERSE START** with **`Q048-RESUME-V3`** after installing the files below. This target implements the independently proved k11 continuation remedy for **Q-048 — PROPOSED_UNVERIFIED**, CASE **NOT_ASSIGNED**. Q047 remains closed inconclusive. Scientific `FINAL_RESULT_GATE=UNRESOLVED`; scope is `CONDITIONAL_SOURCE_REAL_PREFIX`.
+Use **🚀 BUBBLEVERSE START**, enter **`Q048-RESUME-V4`**, and press **Run workflow** after installing this package. The canonical launcher remains **`.github/workflows/00-bubbleverse-start.yml`**, registry **`bubbleverse_program_registry.json`**. The launcher performs an exact approved registry lookup; input is never shell code.
 
-## Installation
+Q: **Q-048 — PROPOSED_UNVERIFIED**. CASE: **NOT_ASSIGNED**. Q047 remains **CLOSED INCONCLUSIVE**. Scientific scope: **`CONDITIONAL_SOURCE_REAL_PREFIX`**. **`FINAL_RESULT_GATE=UNRESOLVED`**; actual first-event, complete latch/reset electron histories and optical-depth bounds remain **NOT_COMPUTED**. Program completion establishes only this finite conditional component.
 
-Install at repository root: `q048_resume_v3.py`, `q048_resume_config_v3.json`, `q048_resume_controls_v3.py`, `q048_resume_tests_v3.py`, `q048_resume_merge_v3.py`, `q048_resume_package_check_v3.py`, `q048_resume_package_v3.json`, `q048_resume_parent_v3.json`, `bubbleverse_program_registry.json`, `README.md`, and `Q047_SAMLET_JOURNAL.md`. Install `q048-resume-v3.yml` at **`.github/workflows/q048-resume-v3.yml`**. Upload every file individually.
+## Install the individual files
 
-The existing canonical launcher **`.github/workflows/00-bubbleverse-start.yml`** is unchanged. It resolves an exact PROGRAM_ID through **`bubbleverse_program_registry.json`**; user input is never executable code. The V3 registry retains the original V2 entry, changes its launcher status to `SUPERSEDED`, and identifies V3 as its successor. All other entries remain unchanged. Original V2 source/results remain available at commit `96eb8370bdd99ca27f05f472a0fc0294829acf09`; its original package checks require that historical installation state. Never silently overwrite V2 code or checkpoints.
+Place at repository root:
 
-Retain these installed dependencies byte-for-byte: `q047_math_v1.py`, `q047_certificate_v1.py`, `q047_precursor_check_v1.py`, `q048_prefix_v1.py`, `q048_prefix_config_v1.json`. The package checker validates their SHA256 hashes. No installation, new compilation, external CLASS fetch, sampler or likelihood work is required. This installation snapshot was prepared against commit `96eb8370bdd99ca27f05f472a0fc0294829acf09`; reconcile later repository changes before replacing registry or README.
+- `q048_resume_v4.py`, `q048_comparison_v4.py`, `q048_resume_config_v4.json`
+- `q048_resume_controls_v4.py`, `q048_resume_control_fixture_v4.json`, `q048_resume_tests_v4.py`
+- `q048_resume_merge_v4.py`, `q048_resume_package_check_v4.py`, `q048_resume_package_v4.json`
+- `q048_resume_parent_v4.json`, `bubbleverse_program_registry.json`, `README.md`, `Q047_SAMLET_JOURNAL.md`
 
-## Genuine checkpoint migration and continuation
+Place **`q048-resume-v4.yml`** at **`.github/workflows/q048-resume-v4.yml`**. Preserve the existing canonical launcher byte-for-byte. This package was prepared against **`fa85edc216985c02fe88bd5f0b5d03ba5cb3a7a5`**; reconcile newer repository changes before replacing registry/README. Remote installation and dispatch are not performed by the preparation workflow.
 
-The immutable `q048_resume_parent_v3.json` is the exact final artifact JSON from run `38205625445`, SHA256 `c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81`. Reconstructing each V2 checkpoint with its original serializer gives the exact recorded checkpoint hashes. Parents contain Camspec EDE **415 background / 310 thermal cells**, Hillipop EDE **335 / 231**, and **35 thermal cells** in each LCDM case. These are inherited values, not V3 results.
+Preserve installed frozen dependencies: `q047_math_v1.py`, `q047_certificate_v1.py`, `q047_precursor_check_v1.py`, `q048_prefix_v1.py`, `q048_prefix_config_v1.json`, `q048_resume_v3.py`, `q048_resume_controls_v3.py`. Their hashes are checked. No compile, native CLASS evaluation, solver replacement, re-shoot, refit, sampler or likelihood execution is introduced.
 
-First execution migrates those exact parents. Later executions search the latest20 completed V3 runs for each case's retained checkpoint. Invalid, duplicate or expired found artifacts fail closed. When no artifact exists in that bounded window, migration uses the explicitly pinned historical parent; the log identifies that fallback, and it may repeat already completed work. No newer state is silently claimed. To recover an older retained artifact outside this window, use the script's explicit `--checkpoint` option locally; no automatic unbounded search or dispatch occurs.
+## Numerical change and continuity
 
-Each case checks the complete conditional root initialization and every background and thermal cell before extension. Initial and carried intervals, predictors, whole-state forcing, source guards, modes, captured effective inputs and accepted `z_reio` remain unchanged. The step-subdivision change is maximum halving **10 → 11**. Coordinate values remain exact rational numbers. No new Q or physical model is created.
+The immutable parent is the exact raw final JSON from GitHub **run38230594450**, SHA256 **`12d7cfa0b863e76d0cf3760c532b2a40adbdc789d2b08f8a364a7e488c5c58b3`**. Exact V3 checkpoints reconstruct from it. Camspec EDE starts with424 background/319 thermal cells; Hillipop with340/232. Each LCDM case retains35 thermal cells.
 
-## Finite work and mandatory validation
+All carried source-real cells are recomputed before continuation, then the entire successor is recomputed after continuation and in collection. Original cells keep their exact predictor, box, certificate and original comparison method. New background cells use positive diagonal similarity with a freshly derived weight; initial radii and defects transform consistently and resulting bounds map back. Stored weights/flags do not count as evidence. The original50 comparison cap and halving schedule0..11 remain.
 
-Preflight runs package checks, regression tests and the three k11 controls, with independent positive-matrix/scalar comparisons and exact zero/nilpotent limits. Each of four case jobs has:
+Only new EDE **He1** thermal cells may use the prospective outer tube `[-2e-6,1/50]`. This requires the original interval proof, a separately checked constant supersolution, negative scalar Jacobian bound, correct phase/background coverage, positive temperature/beta and strict closure. No carried error is narrowed and a negative lower tube does not assert a negative physical state. Unknown proof/tube methods fail closed.
 
-- Full parent verification: up to **900 seconds**, retaining every proof check.
-- Background continuation: up to **180 seconds**, at most **64 new cells**.
-- Thermal continuation: up to **180 seconds**, at most **64 new cells**.
-- Full successor verification: up to **900 seconds**, including all carried and new cells.
+The three frozen finite controls are checked against the incoming exact mathematical evidence. Background alltime bounds also pass an independent positive-matrix series method; the thermal bound uses `R=max(r0,delta/(-L))`. Source evaluation is shared; this is not independent physical source admission. Scope assertions for all actual physical products are enforced as NOT_COMPUTED.
 
-The 900-second schedule replaces the old120-second guard: observed historical Camspec verification was116.61seconds before its59+59 additional cells. It gives a finite conservative margin; it does not prove that all future growing chains finish within that budget. A cap failure preserves partial checkpoints and requires a documented next design. Do not keep increasing limits or relax proof checks to force completion.
+First execution migrates the pinned V3 asset. Later executions search the last20 completed V4 runs for each case's retained V4 checkpoint. Found expired, duplicate, malformed or incompatible artifacts fail closed. A downloaded checkpoint must report the exact retained run selected by the workflow; its metadata run and record run must agree. If none exists in that bounded window, fallback to the pinned V3 asset is explicit in the log and may repeat previous work. An older retained checkpoint can be supplied using the script's `--checkpoint` option. V2 ancestral migration roots survive alongside exact V3 roots and immediate-parent hashes. Earlier V4 parent bytes are authenticated by the retrieved artifact/input path; hash pointers alone do not independently authenticate every historical link.
 
-Four independent matrix jobs, maximum parallelism4, are serialized between workflow runs. Each case has a40-minute process safeguard and50-minute job timeout; preflight/collection have25-minute job timeouts. The sum of stage budgets is36minutes per case, leaving time before the process safeguard. The official standard GitHub-hosted job limit was checked on2026-10-12 and is6hours: https://docs.github.com/en/actions/reference/limits . An individual expensive certificate may finish past a cooperative stage deadline; the external process safeguard protects the job and the last atomic checkpoint.
+## Jobs, checkpoints and finite tests
 
-Checkpoints are saved after parent verification, every8 accepted cells, at stage ends, before post-verification and after final validation. `RAW_CONTINUATION_DONE` is provisional. The collector independently recomputes each complete mathematical chain in up to4 processes, with900seconds per case and an18-minute whole-process safeguard. A25-minute collection job reserves setup/transfer time. Provisional checkpoints are retained as partial records with explicit incomplete-case reasons; completeness fails. The final collector requires all four `FINAL_CONDITIONAL_COMPONENT` checkpoints, compatible Q/config/source/run identities, unchanged inherited certificate prefixes and hashes bound to the fully recomputed scientific payload. Missing cases fail completeness. Cases are collected, never averaged.
+Four independent matrix workers, maximum parallelism4; workflow runs serialized. Each worker has900s preverification,180s background,180s thermal and900s postverification cooperative budgets:36minutes total. A40-minute process safeguard and50-minute job timeout reserve time for checkout and artifact transfer. Preflight and collection use25-minute job timeouts. Collection recomputes case proofs in up to4 parallel processes with a15-minute per-case limit and18-minute process safeguard.
 
-## Observed local V3 execution
+The current standard GitHub-hosted job limit was verified on2026-10-12 as6hours: https://docs.github.com/en/actions/reference/limits . Individual long certificate evaluations can pass a cooperative deadline; the process safeguard preserves the last atomic checkpoint. These are finite stages, not an automatic endless continuation chain. Rerun only for a concrete recovery/information reason; unchanged enclosure blockers need a mathematical change.
 
-The four-case finite campaign has already executed locally and passed complete before/after certificate verification. Camspec EDE added9 background and9 thermal cells (totals424/319); Hillipop EDE added5 background and1 thermal cell (340/232). Both LCDM cases retained35 revalidated thermal cells. Camspec now stops at COMPARISON_GROWTH_CAP with thermal BACKGROUND_COVERAGE_REQUIRED; Hillipop stops at COMPARISON_GROWTH_CAP and THERMAL_TUBE_NOT_CLOSED at its new endpoints. These are exact new finite blockers. Unchanged replay cannot resolve them.
+Mandatory tests: input/source/Q/scope pins; the three finite controls and independent comparison; exact predecessor/prefix preservation; rejected forged method/weight/certificate and unsupported physical-product claims; valid checkpoint/lineage; case completeness, duplicate/config incompatibility rejection and full merge proof recomputation; launcher/registry/README consistency. Partial reports remain provisional; missing jobs never produce a final scientific result.
 
-Local Camspec inherited verification took133.207seconds and successor verification133.289seconds. Hillipop took104.824/104.547seconds. Total per-case wall times were283.117seconds Camspec EDE,222.078seconds Hillipop EDE and8.380/8.035seconds LCDM in the observed local environment. These timings are measurements, not guaranteed GitHub runtimes. Local raw/validated conditional products and receipts are delivered; full scientific acceptance remains unresolved. Next work is source-preserving enclosure design at these new endpoints, not repeating the same finite target indefinitely.
+## Outputs and handoff
 
-## Outputs and scientific scope
+Per-case `*_checkpoint_v4.json`, `*_resume_v4.json` under `q048_resume_results/`; preflight `q048_resume_controls_v4.json`; collector `q048_resume_final_v4.json`. The collector retains raw records and a Q-bound job manifest. A COMPLETE execution may still contain partial scientific histories and retains an UNRESOLVED scientific gate.
 
-Outputs are per-case `*_checkpoint_v3.json` and `*_resume_v3.json`, preflight `q048_resume_controls_v3.json`, and collected `q048_resume_final_v3.json`. A job reporting success certifies only this finite conditional component. `actual_source_admission` and `final_result_gate` remain `UNRESOLVED`; actual first-event redshifts, complete `x_e(z)` differences and `tau_T(z)` bounds remain `NOT_COMPUTED`.
+Local preparation evidence: `q048_resume_final_v4.json`, individual checkpoints, `q048_resume_local_validation_v4.json` and `Q048_EXECUTION_REPORT_V4.md`. Local calculations used the separately preserved `q048_resume_executed_core_v4.py`; final `q048_resume_v4.py` additionally rejects unsupported result claims and hardens immediate-parent checking. The final collector rechecks all computed cells with the final validation code. The numerical algorithms are unchanged by this admission hardening. These evidence files are not installation prerequisites.
 
-Return the final JSON, controls and complete `Q047_SAMLET_JOURNAL.md` to the **Result Ingestion & Routing Engine**. Record exact new coverage and blockers. Never infer physical falsification from a work guard, a broad tube or a finite partial chain. Proceed to actual-source admission, event resolution and the coupled full-history calculation only when their prerequisites are met.
+Full authoritative memory: **`Q047_SAMLET_JOURNAL.md`**, including stable sources, claim mappings, technical failures and provenance. Return outputs plus that journal to the **RESULT INGESTION & ROUTING ENGINE**. No scientific closure or Motor14 routing is implied by this package.
+
+The registry preserves all previous entries, marks V3 SUPERSEDED and adds V4 as its successor. Other entries are unchanged. V3 remains the known-good historical reference at the frozen base commit.
 
 ---
 
-## Historical README snapshot — preserved unchanged
+## Preserved historical repository context
 
-The following V2/V1 sections document their earlier installation states; the V3 instructions above govern the current candidate.
+The following sections describe earlier stages. Their installation/start examples are historical; the active Q048 continuation is V4 above.
 
-# Q048 verified prefix continuation V2
+# Historical Q048 verified prefix continuation V2
 
 PROGRAM_ID: **`Q048-RESUME-V2`**. This finite numerical component verifies and continues the existing **CONDITIONAL_SOURCE_REAL_PREFIX**. `FINAL_RESULT_GATE=UNRESOLVED`. Q-048 remains `PROPOSED_UNVERIFIED`, CASE `NOT_ASSIGNED`; Q047 remains closed inconclusive.
 
@@ -81,7 +83,7 @@ Outputs: per-case `*_checkpoint_v2.json` and `*_resume_v2.json`, collected `q048
 
 The following snapshots document their own earlier installation states and entry counts; the V2 instructions above describe the current candidate.
 
-# Q048 conditional source-real prefix V1 — prepared numerical component
+# Historical Q048 conditional source-real prefix V1
 
 PROGRAM_ID: **`Q048-PREFIX-V1`**. This stage computes a controlled common-background/early-thermal **CONDITIONAL_SOURCE_REAL_PREFIX** from the captured inputs. It does not calculate the complete latch/reset histories or their Thomson-depth difference. Actual scientific `FINAL_RESULT_GATE` remains **UNRESOLVED**.
 
@@ -109,7 +111,7 @@ Results: per-case `*_prefix_v1.json`, collected `q048_prefix_final_v1.json`. Tha
 
 ## Existing repository documentation — retained
 
-# Q048 reconstruction metadata qualification V1
+# Historical Q048 reconstruction metadata qualification V1
 
 Prepared target: **`Q048-INPUTCHECK-V1`**. This package audits the already captured four-case reconstruction from run `38140371059`; it performs no new CLASS initialization, compilation, sampling or likelihood evaluation. The local metadata audit has completed. The GitHub target is a reproducible replay after installation, not a prerequisite to repeating completed work.
 

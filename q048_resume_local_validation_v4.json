@@ -1,0 +1,418 @@
+{
+  "schema": "Q048_RESUME_LOCAL_VALIDATION_V4",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "program_id": "Q048-RESUME-V4",
+  "version": "v4",
+  "result_id": "I-PROPOSED-Q048-RESUME-LOCAL-V4",
+  "created_utc": "2026-10-12T11:29:01.699637+00:00",
+  "created_copenhagen": "2026-10-12T13:29:01.699637+02:00",
+  "scope": "CONDITIONAL_SOURCE_REAL_PREFIX",
+  "repository": "Morfindien/Bubbleverse",
+  "repository_base_commit": "fa85edc216985c02fe88bd5f0b5d03ba5cb3a7a5",
+  "execution_commit": "LOCAL_NOT_INSTALLED",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+  "source_config_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "parent_raw_sha256": "12d7cfa0b863e76d0cf3760c532b2a40adbdc789d2b08f8a364a7e488c5c58b3",
+  "parent_run_id": "38230594450",
+  "parent_config_hash": "84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405",
+  "input_journal": {
+    "bytes": 12678574,
+    "sha256": "647ddf6e02fb2e2ac854045967f685c11cc3c51b00a1812afbc615314cc8d2b4"
+  },
+  "input_mathematics_receipt_sha256": "4af3f304788008cb3a8deefbca30979d09a9bb011dce5d7fdbbcd992586fb82c",
+  "input_evidence_pins": {
+    "Q048_NEW_ENDPOINT_CONTROLS_V1.json": "8f83af7a35877cdddafc21e5814fd551edabdf81589f0c0a420a4f963aab392b",
+    "q048_new_endpoint_controls_v1.py": "388d015f754b3e2c2a67184c4dbb81d93298efdb5384944303e656b7c58ab531",
+    "q048_new_endpoint_independent_v1.py": "90d2b5e0ffd6a9dd7ccfa64c4ed0cedb8ffd89c52ac26ce3d7c5b7769cae8358",
+    "Q048_NEW_ENDPOINT_INDEPENDENT_V1.json": "5df47e0088e772be0eb80e579dc19abae39acc78d7ea08d81ca91e06f014f256",
+    "Q048_NEW_ENDPOINT_MATHEMATICS_V1.json": "4af3f304788008cb3a8deefbca30979d09a9bb011dce5d7fdbbcd992586fb82c"
+  },
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "cpu_model": "NOT_DOCUMENTED",
+    "CPU_hours": "NOT_MEASURED",
+    "worker_wall_seconds": {
+      "camspec-lcdm": 7.46699467200051,
+      "hillipop-ede_n3": 229.15603912400002,
+      "hillipop-lcdm": 7.515312505000111,
+      "camspec-ede_n3": 296.83261872
+    },
+    "collector_wall_seconds": {
+      "camspec-lcdm": 3.872165022000445,
+      "hillipop-ede_n3": 116.80434599099954,
+      "hillipop-lcdm": 3.8640930370002025,
+      "camspec-ede_n3": 148.34235122000064
+    }
+  },
+  "executed_core": {
+    "file": "q048_resume_executed_core_v4.py",
+    "sha256": "653d4d1625fa1f4650b5d4c8f01070d210070e95c8fd26f1fd5ef8d8911a9f36"
+  },
+  "final_validation_program": {
+    "file": "q048_resume_v4.py",
+    "sha256": "474f9b2b1b082a9b54eb7ebc2cbf8cdff6e12f1d3a5958aae1ce9558efd95d17",
+    "delta": "Admission hardening only: NOT_COMPUTED assertions, frozen control/input fields, first-parent checking and retained artifact run binding. Numerical methods/inputs/cells unchanged; collector rechecked all four chains with the scope-hardened validation."
+  },
+  "cases": {
+    "camspec-lcdm": {
+      "checkpoint_file": "local-results/camspec-lcdm/camspec-lcdm_checkpoint_v4.json",
+      "checkpoint_sha256": "3d0d5a16f0816c13d920732db80bd4e6e3a987341e1fefce2a0bfdba138a2f9c",
+      "checkpoint_bytes": 176761,
+      "parent_checkpoint_sha256": "6282e5137d0bcab3320629818ff8b72e0e30f78bdf7c3a908d8a2029ef595ae4",
+      "parent_run_id": "38230594450",
+      "scientific_payload_sha256": "efed5b4b2e08ffc3898d0b885b55ab863471e1ae8360144128a8411a6a78e4a9",
+      "elapsed_seconds": 7.46699467200051,
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 4.059410136000224
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.307762544999605
+      },
+      "collector_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.872165022000445
+      },
+      "v3_parent_root": {
+        "program_id": "Q048-RESUME-V3",
+        "run_id": "38230594450",
+        "config_hash": "84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405",
+        "checkpoint_sha256": "6282e5137d0bcab3320629818ff8b72e0e30f78bdf7c3a908d8a2029ef595ae4",
+        "scientific_payload_sha256": "ce7993ef2b80ec35b132acb7dd98145f2bb843b38a735ba3e0ab7a50b716f17e"
+      },
+      "migration_root": {
+        "program_id": "Q048-RESUME-V2",
+        "config_hash": "04b8b65e7ccbbe9f8285d0f8a613f6871d804eb106c37b83c8d627265a4b0ad6",
+        "run_id": "38205625445",
+        "checkpoint_sha256": "34be67153091bd7b9bd6058ad26f736111d943350d150e8aea8027809cbd8c49"
+      },
+      "background_cells": 0,
+      "new_background_cells": 0,
+      "background_end_a": "1/2871",
+      "display_background_z": 2870.0,
+      "background_blocker": null,
+      "thermal_cells": 35,
+      "new_thermal_cells": 0,
+      "thermal_end_a": "1/2871",
+      "display_thermal_z": 2870.0,
+      "thermal_blocker": null
+    },
+    "hillipop-ede_n3": {
+      "checkpoint_file": "local-results/hillipop-ede_n3/hillipop-ede_n3_checkpoint_v4.json",
+      "checkpoint_sha256": "84329bdaff39bf5e538501c4775f70256df3f2eae6d85fd0862d9ad063e58a1e",
+      "checkpoint_bytes": 6090344,
+      "parent_checkpoint_sha256": "5931ca4084cad9fea35e73720eaec7263883273a463e5ee7de206850bcf4eec0",
+      "parent_run_id": "38230594450",
+      "scientific_payload_sha256": "a24b3ca75246d97e1b87c812656550fd8a51c2d65a434a820406d3351d5140a6",
+      "elapsed_seconds": 229.15603912400002,
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 340,
+        "thermal_cells": 232,
+        "elapsed_seconds": 106.01005046699993
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 342,
+        "thermal_cells": 234,
+        "elapsed_seconds": 110.95692880700062
+      },
+      "collector_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 342,
+        "thermal_cells": 234,
+        "elapsed_seconds": 116.80434599099954
+      },
+      "v3_parent_root": {
+        "program_id": "Q048-RESUME-V3",
+        "run_id": "38230594450",
+        "config_hash": "84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405",
+        "checkpoint_sha256": "5931ca4084cad9fea35e73720eaec7263883273a463e5ee7de206850bcf4eec0",
+        "scientific_payload_sha256": "ee258e24e0da60ea72115ea64deccf80b7cfdb55858a85f227762ebf96b69b55"
+      },
+      "migration_root": {
+        "program_id": "Q048-RESUME-V2",
+        "config_hash": "04b8b65e7ccbbe9f8285d0f8a613f6871d804eb106c37b83c8d627265a4b0ad6",
+        "run_id": "38205625445",
+        "checkpoint_sha256": "ed1b188d8ca46591571efc33f551a2a1642e31fc2ec1fc5e27329ed868dbc842"
+      },
+      "background_cells": 342,
+      "new_background_cells": 2,
+      "background_end_a": "1406653545556664437344908780583115843418707187578272352690344407150186490579318016675177931893954089570977676487155766886257229728789748353631959883800169759473227315047094859267177857281121081094039509155720704542294097371272182921697836287600848512307199717613365483958774616404734518073512269943646069927171098026270393828508623299403348759047652115864839492851888661913365100649760466203367585360175345724835587695842925228092229100717970957001124330691406057577443249280579918216606330741514846666121304252882499427731920408176687380113438675214589633488682096640332019887864589691162109375/7007633638148526148882038581406750390761216443412446291977799907383827279006166466410275185037269713857702420892257463216840325688861421700597725562540607820991820626544938964885789742934573051234675719608367080369971646951073508541706361452665182737481994418833154224178749365577594705171885023313618938070322809386258453711082732227045535821590257354762512372845863392976196785414812090561600822956372473083215113411073106680810793588858226516817681239862188227572934435033549318796391721021522862717003199803694214814962694483607913483210160875481117259242891162159597337086057461777477102731264",
+      "display_background_z": 4980.776543544948,
+      "background_blocker": "BACKGROUND_TUBE_NOT_CLOSED",
+      "thermal_cells": 234,
+      "new_thermal_cells": 2,
+      "thermal_end_a": "4650818764745626717820301988410038048797396063731011708110372276046315527076909488904607861333635347843025176245554435840613238425026239257230854266755073502395774717837080946016068290208926815899440217898074028371284434792920320361726146273256813920129060416869104238557796993852589139980656268904981220274629278170091972848841316235513927473705521272624145138853814669376865183740068076698468612446451514886115597835795121827935880180437474221494811072549193784335022511892108480446401908855200567545884119204297861659336935937457402356898228390491567552089691162109375/23186314741403598975944790941378166501633903963546171079785389729146769112962898895289498878984644779339098839938471655122333685680678398260291269160624836444577017233503954535729241917880311363490383137914861274921255128950712734788397408670521950919714209832229269791771351811195343521433399062351344722156320922220134647507093436286672888539484845152980307877955920545907395325548222694867051456609645215932758935244244579084816176470059329340736642337222850662358951938698298215645717772808920891115086440342006478637177469672403326343875446350241918444483542305006944256",
+      "display_thermal_z": 4984.426419356884,
+      "thermal_blocker": "ValueError:THERMAL_SUPERSOLUTION_NOT_CLOSED"
+    },
+    "hillipop-lcdm": {
+      "checkpoint_file": "local-results/hillipop-lcdm/hillipop-lcdm_checkpoint_v4.json",
+      "checkpoint_sha256": "5f5dbd326ecb0d374a7acffda61605dcde6b9a00273d6dd1e45b6f9f95debdd5",
+      "checkpoint_bytes": 176704,
+      "parent_checkpoint_sha256": "0d4c3030a23831f7ff597a596dc19c8376f4234a7f27006cd29c4ac9b7a95386",
+      "parent_run_id": "38230594450",
+      "scientific_payload_sha256": "ea325b28bb95ebf7654358abc4ad88e5e194787f6cc327e9f3ff4a13814710ea",
+      "elapsed_seconds": 7.515312505000111,
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.903396237000379
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.531112138000026
+      },
+      "collector_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.8640930370002025
+      },
+      "v3_parent_root": {
+        "program_id": "Q048-RESUME-V3",
+        "run_id": "38230594450",
+        "config_hash": "84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405",
+        "checkpoint_sha256": "0d4c3030a23831f7ff597a596dc19c8376f4234a7f27006cd29c4ac9b7a95386",
+        "scientific_payload_sha256": "3a62ccc4f18ee4db62eadadef6b02861ae6a87fa7e3edf636d5f259f32316644"
+      },
+      "migration_root": {
+        "program_id": "Q048-RESUME-V2",
+        "config_hash": "04b8b65e7ccbbe9f8285d0f8a613f6871d804eb106c37b83c8d627265a4b0ad6",
+        "run_id": "38205625445",
+        "checkpoint_sha256": "ebd624c8d1e2f1ef84e49e7d96763a43ff96625ae27d3ea3857990945ac4c653"
+      },
+      "background_cells": 0,
+      "new_background_cells": 0,
+      "background_end_a": "1/2871",
+      "display_background_z": 2870.0,
+      "background_blocker": null,
+      "thermal_cells": 35,
+      "new_thermal_cells": 0,
+      "thermal_end_a": "1/2871",
+      "display_thermal_z": 2870.0,
+      "thermal_blocker": null
+    },
+    "camspec-ede_n3": {
+      "checkpoint_file": "local-results/camspec-ede_n3/camspec-ede_n3_checkpoint_v4.json",
+      "checkpoint_sha256": "2c4ad5911b9c15cf1e2263b16f8f59d76f1bf4cc80ec85d158ce33f1492606bf",
+      "checkpoint_bytes": 8095122,
+      "parent_checkpoint_sha256": "997734ceacade4d8a231fa2d75680d3107e8c29e40bf757c11a3b871c507edae",
+      "parent_run_id": "38230594450",
+      "scientific_payload_sha256": "5f8ebf73d32abbb45acb9b8b43700b94d551a90aa406e4c38b1130e86ec3e83f",
+      "elapsed_seconds": 296.83261872,
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 424,
+        "thermal_cells": 319,
+        "elapsed_seconds": 140.06881121400056
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 427,
+        "thermal_cells": 319,
+        "elapsed_seconds": 143.37405249399944
+      },
+      "collector_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 427,
+        "thermal_cells": 319,
+        "elapsed_seconds": 148.34235122000064
+      },
+      "v3_parent_root": {
+        "program_id": "Q048-RESUME-V3",
+        "run_id": "38230594450",
+        "config_hash": "84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405",
+        "checkpoint_sha256": "997734ceacade4d8a231fa2d75680d3107e8c29e40bf757c11a3b871c507edae",
+        "scientific_payload_sha256": "f441bcd21260f20aeedc7639dfd401720a52c049d50cc71c33a41a2d910097bf"
+      },
+      "migration_root": {
+        "program_id": "Q048-RESUME-V2",
+        "config_hash": "04b8b65e7ccbbe9f8285d0f8a613f6871d804eb106c37b83c8d627265a4b0ad6",
+        "run_id": "38205625445",
+        "checkpoint_sha256": "594dcf3086e9f3aeb86153c0fa604441561f4653d5c3026706e59e156cedae42"
+      },
+      "background_cells": 427,
+      "new_background_cells": 3,
+      "background_end_a": "514031297015571212455159717563126630326510233576018313524190798162776782286645827406171329335824933758897187313129805149949411114719895169330141316445687665369245786889948534219315124480686768151715375078815574978533451158137573965746966946778893318686284675583597439933013326513776594077265780158185772438342688657541351479290615489079385736084430552023995779131423054500653439276849379439774201412915083166130047463191627966376439633086500203019176320992784277954273485003442914327260954048796905604071063295968858255123425488744916063781703862086595795186618766936123236984419280170044515315939211374649233449297241204430692228408933916778582560645521323696749794327566054213043247694715239026121973624990601904656206515549213781506607587145875954189681387647526711709684748704654763796522187993174278497487961203660233877599239349365234375/3135796038418887092250685542814240649107813124001609628547021993615221302295486956898872528165054699220382982921440129825563084018614114581674437942445143889391075205152313622957438154013962713229126805695636056823631208777117111903106008857680494273735412061967549031979911806324663019072500773056089567071189059658460534762706980140521758269893458113836452580677220736115581605815065097946844788402369209493766348904605309646620254467070189633142133420184643611903460805590858708800124119325118803731036835294284492750050985336602538745141715194876258799361942796125173174215800640300375177783206072479165037462390866666858409704117119530441736796908547403829096177925197749374244071471843247222451190435763682038689373163170271217877756281478189841605737326372524437152765250419022055552289634405544607096775770297580095337755188982111426052096",
+      "display_background_z": 6099.399054736732,
+      "background_blocker": "BACKGROUND_TUBE_NOT_CLOSED",
+      "thermal_cells": 319,
+      "new_thermal_cells": 0,
+      "thermal_end_a": "3737788119024025096989501866318608507552974100187794833434973693894054418139565511560957958611369190525053132376833073403375906759328626037026490758586024298100421341382519562613023808386492991972653866155112198559238179778418645492552464244995745042707785339145282994262176718845147655779560616980628233230716698837875382009785810117962440901576857368518712215721450142739217096170690757749589778379378909961198877303327362809321408290660782418093510313170600730427103193816382169504195220666164790135244464923628836979011272267517671510801936568762924753531027790817389567636050424455377017887324587714719089860412322048028645634255433087694709053819301091938970225572694464868610632849551269467845429282423162804653109969170213492107312235783095029992806246963584767817726160931180137323402712379305512513383291661739349365234375/22815919062260124281242937597666173308300590171723230949625009042321626492015544186134302640603380126561263626510045504441681871093272017472732389741905673067893623411890538576389649490112516746951782302462641796036268415461506169981337798946191427776178258223572258662751932616263096999846317143645789234660253421013916775429293776254939135614356623510222216869276749902314489051168967110765841705159758635954977572725367715222966613270329177853579555959620073640715132973788849695120909886646541444723238494001885503167075405774831151539850654043230015663444230421192865281888230240295344103529395015205700746900335555742337671866095621447615389456830943555026141824238568001413980320444121369091235031634013881839123301056463032858138876919679677241989246441317114201612750551568912164310238108777736539899893762031425251463625965568",
+      "display_thermal_z": 6103.123170100288,
+      "thermal_blocker": "ValueError:THERMAL_SUPERSOLUTION_NOT_CLOSED"
+    }
+  },
+  "raw_result": {
+    "file": "q048_resume_final_v4.json",
+    "bytes": 14795227,
+    "sha256": "b6088c253e6fe50f280286a4ceb7c9249adab0e3b4676e03cf293b867a9626bd"
+  },
+  "finite_controls": {
+    "file": "q048_resume_controls_v4.json",
+    "sha256": "ce8fe9d3d35e08b7aa4f84cade80b717c15b0723dd90bd11c6460c2f399a4fa0",
+    "gate": "PASS"
+  },
+  "tests": {
+    "regression_count": 14,
+    "regression_gate": "PASS",
+    "log": "q048_resume_tests_v4.log",
+    "red_control": "Replacing the weighted certifier by the original certifier recreates COMPARISON_GROWTH_CAP; weighted controls pass.",
+    "full_pre_post_collector": "PASS_ALL_FOUR",
+    "package_launcher_readme": "PASS_LOCAL_INSTALLATION",
+    "regression_log_sha256": "7e9e32358a68fd89b0601b1fc4431704991506e403922075f33afcc572ce770f",
+    "collector_log_sha256": "e4171d9b3331c524fb4c0a48b4e58de82fb2af6e7143b357ecc312fa5aa7ed3f"
+  },
+  "gates": {
+    "q_identity_gate": "PASS_PRESERVED",
+    "journal_continuity_gate": "PASS_BYTE_IDENTICAL_HISTORY",
+    "source_pin_gate": "PASS",
+    "parent_checkpoint_gate": "PASS_EXACT_RECONSTRUCTION",
+    "inherited_prefix_gate": "PASS_BYTE_IDENTICAL_CELLS",
+    "execution_status": "COMPLETE",
+    "job_completeness_gate": "PASS",
+    "merge_compatibility_gate": "PASS",
+    "tests_status": "COMPLETE_CONDITIONAL",
+    "launcher_gate": "PASS_LOCAL_INSTALLATION",
+    "readme_gate": "PASS_LOCAL_INSTALLATION",
+    "repository_consistency_gate": "PASS_LOCAL_INSTALLATION",
+    "final_result_gate": "UNRESOLVED"
+  },
+  "job_manifest": {
+    "q": "Q-048",
+    "program_id": "Q048-RESUME-V4",
+    "run_id": "LOCAL",
+    "expected_jobs": [
+      "camspec-lcdm",
+      "camspec-ede_n3",
+      "hillipop-lcdm",
+      "hillipop-ede_n3"
+    ],
+    "completed_jobs": [
+      "camspec-ede_n3",
+      "camspec-lcdm",
+      "hillipop-ede_n3",
+      "hillipop-lcdm"
+    ],
+    "failed_jobs": [],
+    "pending_jobs": []
+  },
+  "actual_products": {
+    "actual_source_admission": "UNRESOLVED",
+    "actual_first_event": "NOT_COMPUTED",
+    "actual_xe_history_bounds": "NOT_COMPUTED",
+    "actual_tau_T_bounds": "NOT_COMPUTED"
+  },
+  "sources": [
+    "K-PROPOSED-Q048-SOURCE-002",
+    "K-PROPOSED-Q048-INPUT-001",
+    "K-PROPOSED-Q048-MATH-REPO-004",
+    "I-PROPOSED-Q048-MATHEMATICS-003",
+    "K-PROPOSED-Q048-V3-PACKAGE-005",
+    "I-PROPOSED-Q048-RESUME-LOCAL-V3",
+    "K-PROPOSED-Q048-GITHUB-RUN-38230594450",
+    "I-PROPOSED-Q048-RESUME-GITHUB-38230594450",
+    "K-PROPOSED-Q048-MATH-REPO-006",
+    "I-PROPOSED-Q048-MATHEMATICS-004",
+    "K-PROPOSED-Q048-V4-PACKAGE-007",
+    "I-PROPOSED-Q048-RESUME-LOCAL-V4"
+  ],
+  "claim_to_source": {
+    "C-V4-EXEC-001": [
+      "I-PROPOSED-Q048-MATHEMATICS-004",
+      "K-PROPOSED-Q048-V4-PACKAGE-007"
+    ],
+    "C-V4-EXEC-002": [
+      "I-PROPOSED-Q048-RESUME-GITHUB-38230594450",
+      "I-PROPOSED-Q048-RESUME-LOCAL-V4"
+    ],
+    "C-V4-EXEC-003": [
+      "I-PROPOSED-Q048-RESUME-LOCAL-V4"
+    ],
+    "C-V4-EXEC-004": [
+      "K-PROPOSED-Q048-SOURCE-002",
+      "I-PROPOSED-Q048-RESUME-LOCAL-V4"
+    ]
+  },
+  "journal_effect": {
+    "KEEP": [
+      "complete Q/CASE/question/journal/source/claim state",
+      "Q047 CLOSED INCONCLUSIVE",
+      "all frozen physics/input/code",
+      "every predecessor certificate and carried uncertainty"
+    ],
+    "ADD": [
+      "finite implemented V4 methods",
+      "five background and two thermal successor cells",
+      "all local worker/collector/provenance evidence"
+    ],
+    "REFINE": [
+      "exact new source-domain tube/supersolution blockers"
+    ],
+    "UNCHANGED": [
+      "actual source unresolved",
+      "full latch/reset xe/tau products NOT_COMPUTED"
+    ]
+  },
+  "remote_actions": {
+    "read_only_inspection": "PERFORMED",
+    "installation": "NOT_PERFORMED",
+    "registration": "DELIVERED_LOCAL_REGISTRY_ONLY",
+    "dispatch": "NOT_PERFORMED"
+  },
+  "return_route": "RESULT INGESTION & ROUTING ENGINE",
+  "next_required_action": "Ingest the validated conditional component. New exact endpoint enclosure/supersolution failures require finite mathematics before unchanged reruns. Prepared first GitHub execution reproduces the local component from the pinned V3 asset; do not count reproduced cells as additional local progress.",
+  "package_file_sha256": "852c65e0ef4a08fd61fcbf206b94c5c65f9009c9a3a234cc77d4f88156c97f56",
+  "package_check": {
+    "q": "Q-048",
+    "program_id": "Q048-RESUME-V4",
+    "package_gate": "PASS",
+    "q_identity_gate": "PASS",
+    "journal_continuity_gate": "PASS",
+    "source_pin_gate": "PASS",
+    "launcher_gate": "PASS_LOCAL_INSTALLATION",
+    "readme_gate": "PASS_LOCAL_INSTALLATION",
+    "repository_consistency_gate": "PASS_LOCAL_INSTALLATION",
+    "remote_installation": "NOT_PERFORMED",
+    "registration_evidence": "ENTRY_PRESENT_IN_CHECKED_SNAPSHOT",
+    "final_result_gate": "UNRESOLVED"
+  },
+  "claims": {
+    "C-V4-EXEC-001": "Positive diagonal/background and independent He1 outer-tube methods implement the exact finite mathematical remedy with unchanged physics/error.",
+    "C-V4-EXEC-002": "All V3 cells are retained exactly and V4 adds three/two background and zero/two thermal cells at the respective EDE cases.",
+    "C-V4-EXEC-003": "All four local conditional chains passed root/cell recomputation before/after and in collection; execution/merge completeness passes.",
+    "C-V4-EXEC-004": "Actual source admission and complete reference/event/latch/reset electron-history/depth products remain unqualified or NOT_COMPUTED."
+  },
+  "current_file_pins": {
+    "q048_resume_v4.py": "474f9b2b1b082a9b54eb7ebc2cbf8cdff6e12f1d3a5958aae1ce9558efd95d17",
+    "q048_comparison_v4.py": "4d3199883e5984efea635cd3b2737f939e4a0081c40f704f972c61abb4c5a1f7",
+    "q048_resume_config_v4.json": "31ba2112b778aaabb82a39225222fcb4fabeea04278bcb4a904c3d99d1ea8b9e",
+    "q048_resume_controls_v4.py": "b3c3da500d6a9973fe1efd29b1ef96830540aac53cbf3fff1b2227173b66eca3",
+    "q048_resume_control_fixture_v4.json": "c758c86fdd7bb977fd8e807c829e31b31ad805e187e8c09e06477baee34062f7",
+    "q048_resume_tests_v4.py": "da4c8b2286437aa338faf11c90ac1f261e16d94ce8a5780fcaadab5406b0e815",
+    "q048_resume_merge_v4.py": "f75c71697c7335ace166ab845890f3d50795adeacb6376266cace0b7bb15c850",
+    "q048_resume_package_check_v4.py": "53fc779f6260279ca8173703d462d4c79dd01fba3f2546a7d1ce9b3723a54b9c",
+    "q048_resume_parent_v4.json": "12d7cfa0b863e76d0cf3760c532b2a40adbdc789d2b08f8a364a7e488c5c58b3",
+    "bubbleverse_program_registry.json": "c92a3a34abcff4211cafe53d664d42fcaa3ae4c0db5a97cc5e80c1b0b4d5687f",
+    "README.md": "20ddab7d33a8258c362f6c2790116c18fec0361da97abd501478296cee8adf9d",
+    ".github/workflows/q048-resume-v4.yml": "3844399b5326423ce8dc41421b169248224e44b48e80a2297fa07bf2fa5482b9"
+  }
+}
