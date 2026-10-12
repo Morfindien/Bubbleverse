@@ -1,0 +1,25 @@
+# Q017 repository index
+
+All launch methods and schemas are in [START_CODES.md](../../START_CODES.md). This index groups the question without relocating frozen runtime files. Source locks, old workflow paths and native cache/checkpoint contracts remain at their original locations. Archived code is evidence only; invoke the root canonical program or compatibility alias.
+
+- [.github/workflows/q017-planck-direction-localization-v1.yml](../../.github/workflows/q017-planck-direction-localization-v1.yml)
+- [.github/workflows/q017-planck-direction-localization-v2.yml](../../.github/workflows/q017-planck-direction-localization-v2.yml)
+- [.github/workflows/q017-planck-direction-localization-v3.yml](../../.github/workflows/q017-planck-direction-localization-v3.yml)
+- [q017_file_manifest_v1.json](../../q017_file_manifest_v1.json)
+- [q017_file_manifest_v2.json](../../q017_file_manifest_v2.json)
+- [q017_file_manifest_v3.json](../../q017_file_manifest_v3.json)
+- [q017_planck_direction_localization_v1.py](../../q017_planck_direction_localization_v1.py)
+- [q017_planck_direction_localization_v1_config.yml](../../q017_planck_direction_localization_v1_config.yml)
+- [q017_planck_direction_localization_v2.py](../../q017_planck_direction_localization_v2.py)
+- [q017_planck_direction_localization_v2_config.yml](../../q017_planck_direction_localization_v2_config.yml)
+- [q017_planck_direction_localization_v3.py](../../q017_planck_direction_localization_v3.py)
+- [q017_planck_direction_localization_v3_config.yml](../../q017_planck_direction_localization_v3_config.yml)
+- [q017_setup_v1.sh](../../q017_setup_v1.sh)
+- [q017_setup_v2.sh](../../q017_setup_v2.sh)
+- [q017_setup_v3.sh](../../q017_setup_v3.sh)
+- [q017_source_lock_v1.json](../../q017_source_lock_v1.json)
+- [q017_source_lock_v2.json](../../q017_source_lock_v2.json)
+- [q017_source_lock_v3.json](../../q017_source_lock_v3.json)
+- [q017_tests_v1.py](../../q017_tests_v1.py)
+- [q017_tests_v2.py](../../q017_tests_v2.py)
+- [q017_tests_v3.py](../../q017_tests_v3.py)

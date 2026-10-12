@@ -1,0 +1,120 @@
+[
+  {
+    "check": "default_preview",
+    "exit_code": 0,
+    "expected": 0,
+    "status": "PASS",
+    "stdout": "Bubbleverse_cleanup_24f380b.patch: OK\nPREVIEW_PASS: no files changed. Use --apply to perform the reviewed operation.\n",
+    "stderr": ""
+  },
+  {
+    "check": "wrong_repository_rejected",
+    "exit_code": 3,
+    "expected": 1,
+    "status": "PASS",
+    "stdout": "",
+    "stderr": "ERROR: origin does not identify Morfindien/Bubbleverse.\n"
+  },
+  {
+    "check": "wrong_head_rejected",
+    "exit_code": 4,
+    "expected": 1,
+    "status": "PASS",
+    "stdout": "Bubbleverse_cleanup_24f380b.patch: OK\n",
+    "stderr": "ERROR: HEAD differs from required BASE_SHA; review/rebase cleanup instead of resetting newer work.\n"
+  },
+  {
+    "check": "destination_collision_rejected",
+    "exit_code": 1,
+    "expected": 1,
+    "status": "PASS",
+    "stdout": "Bubbleverse_cleanup_24f380b.patch: OK\n",
+    "stderr": "error: tools/check_repository_layout.py: already exists in working directory\n"
+  },
+  {
+    "check": "apply_with_unrelated_staged_work",
+    "exit_code": 0,
+    "expected": 0,
+    "status": "PASS",
+    "stdout": "Bubbleverse_cleanup_24f380b.patch: OK\nAPPLIED: changes staged locally. Run the documented checks and review before committing.\n",
+    "stderr": ""
+  },
+  {
+    "check": "installed_check",
+    "command": [
+      "python",
+      "tools/check_repository_layout.py"
+    ],
+    "exit_code": 0,
+    "status": "PASS",
+    "stdout": "{\n  \"status\": \"PASS\",\n  \"errors\": [],\n  \"checked_files\": 1644,\n  \"catalog_entries\": 1015,\n  \"scope\": \"Layout, hashes, permissions, aliases, launch coverage and relative links only\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "check": "installed_check",
+    "command": [
+      "python",
+      "q048_package_check_v1.py"
+    ],
+    "exit_code": 0,
+    "status": "PASS",
+    "stdout": "{\n  \"q\": \"Q-048\",\n  \"program_id\": \"Q048-INPUTCHECK-V1\",\n  \"package_gate\": \"PASS\",\n  \"registry_preservation_gate\": \"PASS\",\n  \"launcher_gate\": \"PASS_LOCAL_RESOLVER\",\n  \"readme_gate\": \"PASS_LOCAL_CANDIDATE\",\n  \"repository_consistency_gate\": \"PASS_LOCAL_CANDIDATE\",\n  \"remote_installation\": \"NOT_PERFORMED\",\n  \"canonical_q_assignment\": \"UNVERIFIED\",\n  \"final_result_gate\": \"UNRESOLVED\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "check": "installed_check",
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "exit_code": 0,
+    "status": "PASS",
+    "stdout": "",
+    "stderr": "test_alias_redirect_to_archive_fails (test_repository_layout.LayoutTests.test_alias_redirect_to_archive_fails) ... ok\ntest_broken_readme_link_fails (test_repository_layout.LayoutTests.test_broken_readme_link_fails) ... ok\ntest_changed_scientific_input_fails (test_repository_layout.LayoutTests.test_changed_scientific_input_fails) ... ok\ntest_damaged_archive_fails (test_repository_layout.LayoutTests.test_damaged_archive_fails) ... ok\ntest_documentation_exception_cannot_change_scientific_lock (test_repository_layout.LayoutTests.test_documentation_exception_cannot_change_scientific_lock) ... ok\ntest_manifest_traversal_fails (test_repository_layout.LayoutTests.test_manifest_traversal_fails) ... ok\ntest_missing_start_record_fails (test_repository_layout.LayoutTests.test_missing_start_record_fails) ... ok\ntest_permission_change_fails (test_repository_layout.LayoutTests.test_permission_change_fails) ... ok\ntest_preserved_original_lock_cannot_be_rewritten (test_repository_layout.LayoutTests.test_preserved_original_lock_cannot_be_rewritten) ... ok\ntest_top_level_script_cannot_be_excluded_as_import_only (test_repository_layout.LayoutTests.test_top_level_script_cannot_be_excluded_as_import_only) ... ok\ntest_undocumented_entrypoint_fails (test_repository_layout.LayoutTests.test_undocumented_entrypoint_fails) ... ok\ntest_valid_archive_and_compatibility_alias (test_repository_layout.LayoutTests.test_valid_archive_and_compatibility_alias) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.024s\n\nOK\n"
+  },
+  {
+    "check": "repeat_application_is_noop",
+    "exit_code": 0,
+    "expected": 0,
+    "status": "PASS",
+    "stdout": "Bubbleverse_cleanup_24f380b.patch: OK\nALREADY_APPLIED: no files changed.\n",
+    "stderr": ""
+  },
+  {
+    "check": "reverse_rejects_overlapping_user_edit",
+    "exit_code": 1,
+    "expected": 1,
+    "status": "PASS",
+    "stdout": "Bubbleverse_cleanup_24f380b.patch: OK\n",
+    "stderr": "error: README.md: does not match index\n"
+  },
+  {
+    "check": "reverse_preview",
+    "exit_code": 0,
+    "expected": 0,
+    "status": "PASS",
+    "stdout": "Bubbleverse_cleanup_24f380b.patch: OK\nPREVIEW_PASS: no files changed. Use --apply to perform the reviewed operation.\n",
+    "stderr": ""
+  },
+  {
+    "check": "reverse_apply",
+    "exit_code": 0,
+    "expected": 0,
+    "status": "PASS",
+    "stdout": "Bubbleverse_cleanup_24f380b.patch: OK\nREVERSED: cleanup changes restored; unrelated work preserved.\n",
+    "stderr": ""
+  },
+  {
+    "check": "checksum_tampering_rejected",
+    "exit_code": 1,
+    "expected": 1,
+    "status": "PASS",
+    "stdout": "Bubbleverse_cleanup_24f380b.patch: FAILED\n",
+    "stderr": "sha256sum: WARNING: 1 computed checksum did NOT match\n"
+  }
+]

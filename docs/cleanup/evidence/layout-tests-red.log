@@ -1,0 +1,140 @@
+test_alias_redirect_to_archive_fails (test_repository_layout.LayoutTests.test_alias_redirect_to_archive_fails) ... FAIL
+test_broken_readme_link_fails (test_repository_layout.LayoutTests.test_broken_readme_link_fails) ... FAIL
+test_changed_scientific_input_fails (test_repository_layout.LayoutTests.test_changed_scientific_input_fails) ... FAIL
+test_damaged_archive_fails (test_repository_layout.LayoutTests.test_damaged_archive_fails) ... FAIL
+test_manifest_traversal_fails (test_repository_layout.LayoutTests.test_manifest_traversal_fails) ... FAIL
+test_missing_start_record_fails (test_repository_layout.LayoutTests.test_missing_start_record_fails) ... FAIL
+test_permission_change_fails (test_repository_layout.LayoutTests.test_permission_change_fails) ... FAIL
+test_undocumented_entrypoint_fails (test_repository_layout.LayoutTests.test_undocumented_entrypoint_fails) ... FAIL
+test_valid_archive_and_compatibility_alias (test_repository_layout.LayoutTests.test_valid_archive_and_compatibility_alias) ... FAIL
+
+======================================================================
+FAIL: test_alias_redirect_to_archive_fails (test_repository_layout.LayoutTests.test_alias_redirect_to_archive_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 65, in test_alias_redirect_to_archive_fails
+    result = self.run_fixture(mutate)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 41, in run_fixture
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 14, in module
+    self.assertTrue(VERIFIER.is_file(), 'Cleanup verifier is missing')
+AssertionError: False is not true : Cleanup verifier is missing
+
+======================================================================
+FAIL: test_broken_readme_link_fails (test_repository_layout.LayoutTests.test_broken_readme_link_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 80, in test_broken_readme_link_fails
+    result = self.run_fixture(lambda root, *_: (root / 'README.md').write_text('[Lost](missing.md)\n'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 41, in run_fixture
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 14, in module
+    self.assertTrue(VERIFIER.is_file(), 'Cleanup verifier is missing')
+AssertionError: False is not true : Cleanup verifier is missing
+
+======================================================================
+FAIL: test_changed_scientific_input_fails (test_repository_layout.LayoutTests.test_changed_scientific_input_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 53, in test_changed_scientific_input_fails
+    result = self.run_fixture(lambda root, *_: (root / 'input.json').write_text('changed'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 41, in run_fixture
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 14, in module
+    self.assertTrue(VERIFIER.is_file(), 'Cleanup verifier is missing')
+AssertionError: False is not true : Cleanup verifier is missing
+
+======================================================================
+FAIL: test_damaged_archive_fails (test_repository_layout.LayoutTests.test_damaged_archive_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 58, in test_damaged_archive_fails
+    result = self.run_fixture(lambda root, *_: (root / 'archive/alias.py').write_text('changed'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 41, in run_fixture
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 14, in module
+    self.assertTrue(VERIFIER.is_file(), 'Cleanup verifier is missing')
+AssertionError: False is not true : Cleanup verifier is missing
+
+======================================================================
+FAIL: test_manifest_traversal_fails (test_repository_layout.LayoutTests.test_manifest_traversal_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 72, in test_manifest_traversal_fails
+    result = self.run_fixture(mutate)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 41, in run_fixture
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 14, in module
+    self.assertTrue(VERIFIER.is_file(), 'Cleanup verifier is missing')
+AssertionError: False is not true : Cleanup verifier is missing
+
+======================================================================
+FAIL: test_missing_start_record_fails (test_repository_layout.LayoutTests.test_missing_start_record_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 84, in test_missing_start_record_fails
+    result = self.run_fixture(lambda root, *_: (root / 'START_CODES.md').write_text('empty\n'))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 41, in run_fixture
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 14, in module
+    self.assertTrue(VERIFIER.is_file(), 'Cleanup verifier is missing')
+AssertionError: False is not true : Cleanup verifier is missing
+
+======================================================================
+FAIL: test_permission_change_fails (test_repository_layout.LayoutTests.test_permission_change_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 88, in test_permission_change_fails
+    result = self.run_fixture(lambda root, *_: (root / 'input.json').chmod(0o755))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 41, in run_fixture
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 14, in module
+    self.assertTrue(VERIFIER.is_file(), 'Cleanup verifier is missing')
+AssertionError: False is not true : Cleanup verifier is missing
+
+======================================================================
+FAIL: test_undocumented_entrypoint_fails (test_repository_layout.LayoutTests.test_undocumented_entrypoint_fails)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 76, in test_undocumented_entrypoint_fails
+    result = self.run_fixture(lambda root, *_: (root / 'new_program.py').write_text("print('fixture')\n"))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 41, in run_fixture
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 14, in module
+    self.assertTrue(VERIFIER.is_file(), 'Cleanup verifier is missing')
+AssertionError: False is not true : Cleanup verifier is missing
+
+======================================================================
+FAIL: test_valid_archive_and_compatibility_alias (test_repository_layout.LayoutTests.test_valid_archive_and_compatibility_alias)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 50, in test_valid_archive_and_compatibility_alias
+    self.assertEqual(self.run_fixture()['status'], 'PASS')
+                     ^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 41, in run_fixture
+    module = self.module()
+             ^^^^^^^^^^^^^
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 14, in module
+    self.assertTrue(VERIFIER.is_file(), 'Cleanup verifier is missing')
+AssertionError: False is not true : Cleanup verifier is missing
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.001s
+
+FAILED (failures=9)

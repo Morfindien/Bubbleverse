@@ -1,3 +1,88 @@
+# Bubbleverse
+
+Scientific execution and reproducibility for [Bubbleverse](https://bubbleverse.dk). The scientific model is maintained separately in [Morfindien/bubbleverse-model](https://github.com/Morfindien/bubbleverse-model).
+
+**Start here: [all start commands](START_CODES.md).** The permanent launcher is `.github/workflows/00-bubbleverse-start.yml`; program identity and launch status come from `bubbleverse_program_registry.json`. The registry and launcher are byte-preserved by this cleanup.
+
+## Current documented stage
+
+The installed `Q048-INPUTCHECK-V1` package audits twenty pinned metadata files from four Q047 reconstruction cases. Its workflow is `.github/workflows/q048-input-check-v1.yml`, its contract is [Q048_INPUTCHECK_CONTRACT_V1.json](Q048_INPUTCHECK_CONTRACT_V1.json), and the accumulated journal is [Q047_SAMLET_JOURNAL.md](Q047_SAMLET_JOURNAL.md). Metadata replay uses zero new native processes or likelihood evaluations. **FINAL_RESULT_GATE=UNRESOLVED**; a metadata PASS establishes no continuous first-event or whole-history certificate.
+
+Earlier `Q047-PRECURSORCHECK-V1` material is preserved at `.github/workflows/q047-precursor-check-v1.yml`. Its source-real controls are **CONDITIONAL**. `Q047-CERTCHECK-V1` likewise remains a conditional checker. Registry ACTIVE flags can outlive completed stages. Read the historical execution record before requesting a new launch.
+
+## Repository layout
+
+| Location | Purpose |
+| --- | --- |
+| `START_CODES.md` | Every registered target, workflow, Python entry point, setup utility and archival exclusion |
+| `.github/workflows/` | GitHub-discovered workflows; original names, job IDs, inputs and artifact contracts |
+| `cases/Qxxx/README.md` | Navigation by question, with links to canonical files |
+| `archive/duplicates/Qxxx/` | Byte-identical downloaded copies, retained for recovery |
+| `archive/workflows/` | Unreferenced root workflow copies; not GitHub-discovered workflows |
+| `docs/install/history/` | Unreferenced historical installation notes |
+| `docs/history/` | Exact preceding README and Q048 documentation lock |
+| `docs/cleanup/` | Relocation map, dependency audit, complete launch catalog, report and verification |
+| `tools/` | Read-only maintenance checks |
+| `tests/` | Cleanup regression fixtures |
+| Root scientific files | Compatibility exception: frozen source paths, imports, numerical inputs, results and provenance |
+
+Scientific programs often derive their root from `Path(__file__).resolve().parent`, and manifests pin both paths and bytes. They remain at the root until their historical production environments can be qualified for migration. Downloaded executable copies retain a relative root symlink to the unchanged canonical root file; the archived copies must not be executed directly. Linux Git checkouts preserve these links. Check the layout gate after any checkout/transfer that might turn symlinks into plain text.
+
+Question navigation: [Q005](cases/Q005/README.md) · [Q006](cases/Q006/README.md) · [Q007](cases/Q007/README.md) · [Q008](cases/Q008/README.md) · [Q009](cases/Q009/README.md) · [Q010](cases/Q010/README.md) · [Q011](cases/Q011/README.md) · [Q012](cases/Q012/README.md) · [Q014](cases/Q014/README.md) · [Q015](cases/Q015/README.md) · [Q016](cases/Q016/README.md) · [Q017](cases/Q017/README.md) · [Q018](cases/Q018/README.md) · [Q019](cases/Q019/README.md) · [Q020](cases/Q020/README.md) · [Q021](cases/Q021/README.md) · [Q022](cases/Q022/README.md) · [Q023](cases/Q023/README.md) · [Q024](cases/Q024/README.md) · [Q025](cases/Q025/README.md) · [Q026](cases/Q026/README.md) · [Q027](cases/Q027/README.md) · [Q028](cases/Q028/README.md) · [Q030](cases/Q030/README.md) · [Q031](cases/Q031/README.md) · [Q032](cases/Q032/README.md) · [Q033](cases/Q033/README.md) · [Q034](cases/Q034/README.md) · [Q035](cases/Q035/README.md) · [Q036](cases/Q036/README.md) · [Q037](cases/Q037/README.md) · [Q038](cases/Q038/README.md) · [Q039](cases/Q039/README.md) · [Q040](cases/Q040/README.md) · [Q041](cases/Q041/README.md) · [Q042](cases/Q042/README.md) · [Q045](cases/Q045/README.md) · [Q047](cases/Q047/README.md) · [Q048](cases/Q048/README.md)
+
+## Runtime and setup
+
+There is no single root dependency manifest or installable Python package. The repository contains several historical numerical environments. Use the exact interpreter, dependency pins, setup script and native-source locks of the target workflow. Do not combine every requirements file or upgrade dependencies as a cleanup step.
+
+The current bounded Q048 metadata controls use Python 3.12 standard library. From the repository root:
+
+```bash
+python -m unittest -v q048_inputcheck_tests_v1
+python q048_package_check_v1.py
+```
+
+The package checker validates file locks, documentation context, the existing registry and the launcher's local Python resolver. It does not dispatch a GitHub job.
+
+Offline metadata replay requires the four pinned case directories and a fresh output path:
+
+```bash
+python q048_inputcheck_v1.py --input-root "$Q047_RECONSTRUCTED_INPUT_DIR" --output "$NEW_Q048_RECEIPT_PATH"
+```
+
+The exact twenty file identities are in the contract. No reconstruction is authorized by missing or expired artifacts.
+
+## Launching and outputs
+
+Open GitHub Actions, select **🚀 BUBBLEVERSE START**, enter the exact registered PROGRAM_ID, and inspect the dispatched child workflow's result. [START_CODES.md](START_CODES.md) lists copyable CLI commands, required arguments, statuses, outputs and workflow caps. Those commands document available interfaces; cleanup verification never launches production work.
+
+Current replay output: `q048_inputcheck_results/Q048_INPUTCHECK_RESULT_V1.json` in its workflow; offline `--output` chooses a new receipt. Other targets retain their original output and artifact locations. No inputs, results, journals, active checkpoints or resume state are rewritten or consumed by cleanup tests. Resume only with the original target's compatible version and source/state locks.
+
+## Verification
+
+```bash
+python tools/check_repository_layout.py
+python -m unittest discover -s tests -v
+```
+
+The layout gate checks preserved hashes/modes, archival byte equality, executable alias targets, launch coverage and documentation links. [VERIFICATION.md](docs/cleanup/VERIFICATION.md) records the actual baseline and post-cleanup results, including three pre-existing historical Q047 failures and one native-header skip. Syntax validation does not establish a successful numerical production campaign or a GitHub run.
+
+## Troubleshooting and history
+
+- A package hash mismatch is a hard gate failure; check its exact file identity before any scientific run.
+- A non-ACTIVE registry entry is rejected by the permanent launcher. Cleanup does not change scientific launch status.
+- Historical Q047 package checks can reject later registry revisions. The baseline failures are retained and named in the verification report.
+- Native builds require their pinned headers, sources, libraries and runner environment. The metadata quick start does not install those dependencies.
+- Archived setup notes describe older candidates. They are not current installation instructions.
+
+All preceding guidance, useful external links and execution history remain in the exact [previous README](docs/history/README_before_cleanup_24f380b.md). [Cleanup report](docs/cleanup/CLEANUP_REPORT.md), [installation and recovery](docs/cleanup/INSTALLATION.md), [relocation manifest](docs/cleanup/relocation_manifest.json) and [launch catalog](docs/cleanup/start_catalog.json) make the change reviewable.
+
+## Frozen documentation compatibility
+
+Some installed historical package gates inspect exact text in the root README. The following byte-preserved preceding documentation is historical context only; the current quick start and cleanup verification above take precedence. This keeps their identity/context checks compatible without changing scientific code or locks.
+
+<details>
+<summary>Expand preceding documentation and execution history</summary>
+
 # Q048 reconstruction metadata qualification V1
 
 Prepared target: **`Q048-INPUTCHECK-V1`**. This package audits the already captured four-case reconstruction from run `38140371059`; it performs no new CLASS initialization, compilation, sampling or likelihood evaluation. The local metadata audit has completed. The GitHub target is a reproducible replay after installation, not a prerequisite to repeating completed work.
@@ -643,3 +728,5 @@ agreement.
 
 Before launch, read `Q047_RECONSTRUCTION_INSTALLATION_V1.md`. The prepared files
 have not been remotely installed or executed by the authoring agent.
+
+</details>

@@ -1,0 +1,41 @@
+test_alias_redirect_to_archive_fails (test_repository_layout.LayoutTests.test_alias_redirect_to_archive_fails) ... ok
+test_broken_readme_link_fails (test_repository_layout.LayoutTests.test_broken_readme_link_fails) ... ok
+test_changed_scientific_input_fails (test_repository_layout.LayoutTests.test_changed_scientific_input_fails) ... ok
+test_damaged_archive_fails (test_repository_layout.LayoutTests.test_damaged_archive_fails) ... ok
+test_documentation_exception_cannot_change_scientific_lock (test_repository_layout.LayoutTests.test_documentation_exception_cannot_change_scientific_lock) ... FAIL
+test_manifest_traversal_fails (test_repository_layout.LayoutTests.test_manifest_traversal_fails) ... ok
+test_missing_start_record_fails (test_repository_layout.LayoutTests.test_missing_start_record_fails) ... ok
+test_permission_change_fails (test_repository_layout.LayoutTests.test_permission_change_fails) ... ok
+test_preserved_original_lock_cannot_be_rewritten (test_repository_layout.LayoutTests.test_preserved_original_lock_cannot_be_rewritten) ... FAIL
+test_top_level_script_cannot_be_excluded_as_import_only (test_repository_layout.LayoutTests.test_top_level_script_cannot_be_excluded_as_import_only) ... FAIL
+test_undocumented_entrypoint_fails (test_repository_layout.LayoutTests.test_undocumented_entrypoint_fails) ... ok
+test_valid_archive_and_compatibility_alias (test_repository_layout.LayoutTests.test_valid_archive_and_compatibility_alias) ... ok
+
+======================================================================
+FAIL: test_documentation_exception_cannot_change_scientific_lock (test_repository_layout.LayoutTests.test_documentation_exception_cannot_change_scientific_lock)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 116, in test_documentation_exception_cannot_change_scientific_lock
+    self.assertTrue(any('DOCUMENTATION_LOCK_CHANGE' in item for item in result['errors']))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_preserved_original_lock_cannot_be_rewritten (test_repository_layout.LayoutTests.test_preserved_original_lock_cannot_be_rewritten)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 120, in test_preserved_original_lock_cannot_be_rewritten
+    self.assertTrue(any('ORIGINAL_LOCK_HASH' in item for item in result['errors']))
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_top_level_script_cannot_be_excluded_as_import_only (test_repository_layout.LayoutTests.test_top_level_script_cannot_be_excluded_as_import_only)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/c460742dc1cf/Bubbleverse-cleanup/tests/test_repository_layout.py", line 108, in test_top_level_script_cannot_be_excluded_as_import_only
+    self.assertTrue(any('EXECUTABLE_COMMAND' in item for item in result['errors']))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.017s
+
+FAILED (failures=3)

@@ -1,0 +1,26 @@
+# Q015 repository index
+
+All launch methods and schemas are in [START_CODES.md](../../START_CODES.md). This index groups the question without relocating frozen runtime files. Source locks, old workflow paths and native cache/checkpoint contracts remain at their original locations. Archived code is evidence only; invoke the root canonical program or compatibility alias.
+
+- [.github/workflows/q015-cmb-attribution-v1.yml](../../.github/workflows/q015-cmb-attribution-v1.yml)
+- [.github/workflows/q015-cmb-attribution-v2.yml](../../.github/workflows/q015-cmb-attribution-v2.yml)
+- [.github/workflows/q015-cmb-attribution-v3.yml](../../.github/workflows/q015-cmb-attribution-v3.yml)
+- [q015_cmb_attribution_v1.py](../../q015_cmb_attribution_v1.py)
+- [q015_cmb_attribution_v1_config.yml](../../q015_cmb_attribution_v1_config.yml)
+- [q015_cmb_attribution_v2.py](../../q015_cmb_attribution_v2.py)
+- [q015_cmb_attribution_v2_config.yml](../../q015_cmb_attribution_v2_config.yml)
+- [q015_cmb_attribution_v3.py](../../q015_cmb_attribution_v3.py)
+- [q015_cmb_attribution_v3_config.yml](../../q015_cmb_attribution_v3_config.yml)
+- [q015_cmb_attribution_v3_result.json](../../q015_cmb_attribution_v3_result.json)
+- [q015_file_manifest_v1.json](../../q015_file_manifest_v1.json)
+- [q015_file_manifest_v2.json](../../q015_file_manifest_v2.json)
+- [q015_file_manifest_v3.json](../../q015_file_manifest_v3.json)
+- [q015_result_tests_v3.json](../../q015_result_tests_v3.json)
+- [q015_setup_v1.sh](../../q015_setup_v1.sh)
+- [q015_setup_v2.sh](../../q015_setup_v2.sh)
+- [q015_setup_v3.sh](../../q015_setup_v3.sh)
+- [q015_source_lock_v1.json](../../q015_source_lock_v1.json)
+- [q015_source_lock_v2.json](../../q015_source_lock_v2.json)
+- [q015_source_lock_v3.json](../../q015_source_lock_v3.json)
+- [q015_stage0_v1_result.json](../../q015_stage0_v1_result.json)
+- [q015_v2_failure_bridge_diagnostic.json](../../q015_v2_failure_bridge_diagnostic.json)
