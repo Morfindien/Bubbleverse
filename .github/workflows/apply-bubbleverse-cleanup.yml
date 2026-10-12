@@ -1,0 +1,232 @@
+name: "🧹 BUBBLEVERSE CLEANUP INSTALL"
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "preview = report only; apply = create cleanup branch and pull request"
+        required: true
+        default: preview
+        type: choice
+        options:
+          - preview
+          - apply
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bubbleverse-repository-cleanup
+  cancel-in-progress: false
+
+env:
+  BASE_SHA: 24f380ba4bc0129ac3bfcd1dcb105c597191b47a
+  PATCH_SHA256: 240c26b460e42f981fed57f368cd9ee4688ee15a41acdae7dd1f8c1911a859cf
+  PATCH_FILE: cleanup-installation/Bubbleverse_cleanup_24f380b.patch
+  RECEIPT_FILE: cleanup-installation/cleanup-receipt.json
+
+jobs:
+  cleanup:
+    if: github.repository == 'Morfindien/Bubbleverse'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      pull-requests: write
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout current default branch with complete history
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify snapshot and prepare cleanup locally
+        id: prepare
+        run: |
+          set -euo pipefail
+          [[ "$GITHUB_REPOSITORY" == 'Morfindien/Bubbleverse' ]] || {
+            echo 'REPOSITORY_GATE=FAIL'; exit 2;
+          }
+          [[ -f "$PATCH_FILE" && ! -L "$PATCH_FILE" ]] || {
+            echo 'PATCH_FILE_GATE=FAIL upload the patch to cleanup-installation/'; exit 2;
+          }
+          actual_sha="$(sha256sum -- "$PATCH_FILE" | cut -d ' ' -f 1)"
+          [[ "$actual_sha" == "$PATCH_SHA256" ]] || {
+            echo 'PATCH_CHECKSUM_GATE=FAIL'; exit 2;
+          }
+          mkdir -p "$RUNNER_TEMP/bubbleverse-cleanup"
+          git merge-base --is-ancestor "$BASE_SHA" HEAD || {
+            echo 'BASELINE_ANCESTRY_GATE=FAIL'; exit 2;
+          }
+          if [[ -f "$RECEIPT_FILE" ]]; then
+            python - <<'PY'
+          import json, os
+          from pathlib import Path
+          p = Path(os.environ['RECEIPT_FILE'])
+          if p.is_symlink(): raise SystemExit('RECEIPT_GATE=FAIL symlink')
+          receipt = json.loads(p.read_text())
+          if (receipt.get('base_sha') != os.environ['BASE_SHA'] or
+              receipt.get('patch_sha256') != os.environ['PATCH_SHA256']):
+              raise SystemExit('RECEIPT_GATE=FAIL identity')
+          PY
+            echo 'ALREADY_APPLIED: checking the installed layout; no new cleanup commit.'
+            echo 'changed=false' >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          # Uploads add files and commits. Every original tracked path must still
+          # match BASE_SHA; modifications/deletions/type changes are refused.
+          changed_originals="$(git diff --name-only --no-renames --diff-filter=MDT "$BASE_SHA" HEAD)"
+          [[ -z "$changed_originals" ]] || {
+            echo 'BASELINE_CHANGED_GATE=FAIL original files changed; regenerate/review the patch.'
+            printf '%s\n' "$changed_originals"
+            exit 2
+          }
+          git update-index --refresh
+          git apply --index --check "$PATCH_FILE"
+          export CLEANUP_UPLOAD_HEAD="$(git rev-parse HEAD)"
+          git apply --index "$PATCH_FILE"
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          receipt = {
+              'schema': 'BUBBLEVERSE_CLEANUP_INSTALL_V1',
+              'repository': 'Morfindien/Bubbleverse',
+              'base_sha': os.environ['BASE_SHA'],
+              'patch_sha256': os.environ['PATCH_SHA256'],
+              'upload_head': os.environ['CLEANUP_UPLOAD_HEAD'],
+              'run_id': os.environ['GITHUB_RUN_ID'],
+              'delivery': 'LOCAL_VALIDATION_CANDIDATE',
+              'production_jobs_started': 0
+          }
+          Path(os.environ['RECEIPT_FILE']).write_text(json.dumps(receipt, indent=2) + '\n')
+          PY
+          git add -- "$RECEIPT_FILE"
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+
+      - name: Include this maintenance workflow in the start registry
+        id: index
+        if: steps.prepare.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          source = '.github/workflows/apply-bubbleverse-cleanup.yml'
+          identifier = 'CLEANUP-ACTIONS-INSTALL-V1'
+          path = Path('docs/cleanup/start_catalog.json')
+          catalog = json.loads(path.read_text())
+          if any(e['id'] == identifier or e['source'] == source for e in catalog['entries']):
+              raise SystemExit('CLEANUP_INDEX_GATE=FAIL unexpected existing workflow record')
+          catalog['entries'].append({
+              'id': identifier, 'kind': 'workflow', 'source': source,
+              'status': 'ACTIVE', 'purpose': 'Manual repository cleanup installation; no scientific campaign',
+              'commands': [
+                  'gh workflow run apply-bubbleverse-cleanup.yml --repo Morfindien/Bubbleverse --ref main -f mode=preview',
+                  'gh workflow run apply-bubbleverse-cleanup.yml --repo Morfindien/Bubbleverse --ref main -f mode=apply'
+              ],
+              'working_directory': 'GitHub Actions default-branch checkout',
+              'inputs': {'mode': {'type': 'choice', 'default': 'preview', 'options': ['preview', 'apply']}},
+              'prerequisites': ['Uploaded checksum-pinned patch; unchanged original BASE_SHA files',
+                                'contents:write for publishing a cleanup branch; pull-requests:write for optional PR creation'],
+              'outputs': 'Validated cleanup patch/report artifact; apply publishes a branch, never merges it',
+              'cost': {'job_timeout_minutes': 20, 'new_native_evaluations': 0},
+              'verification': 'Local workflow-body tests PASS; GitHub execution reported per run'
+          })
+          path.write_text(json.dumps(catalog, indent=2, ensure_ascii=False) + '\n')
+          with Path('START_CODES.md').open('a') as stream:
+              stream.write('\n<!-- entry:' + identifier + ' -->\n## Cleanup installation workflow\n\n'
+                  'Source: [' + source + '](' + source + ')\n\n'
+                  'Upload the patch, then choose preview or apply. Apply creates a branch/PR; merge is manual.\n\n'
+                  '```bash\ngh workflow run apply-bubbleverse-cleanup.yml --repo Morfindien/Bubbleverse --ref main -f mode=preview\n'
+                  'gh workflow run apply-bubbleverse-cleanup.yml --repo Morfindien/Bubbleverse --ref main -f mode=apply\n```\n')
+          PY
+          git add -- START_CODES.md docs/cleanup/start_catalog.json
+
+      - name: Validate cleanup and current bounded program gates
+        id: validate
+        run: |
+          set -euo pipefail
+          report_dir="$RUNNER_TEMP/bubbleverse-cleanup"
+          mkdir -p "$report_dir"
+          python tools/check_repository_layout.py > "$report_dir/layout.json"
+          python -m unittest discover -s tests -v > "$report_dir/cleanup-tests.log" 2>&1
+          python -m unittest -v q048_inputcheck_tests_v1 > "$report_dir/q048-tests.log" 2>&1
+          python q048_package_check_v1.py > "$report_dir/q048-package.json"
+          python q047_reconstruction_v1.py static --program-id Q047-RECONSTRUCTION-V1 > "$report_dir/q047-static.json"
+          git diff --cached --check
+          [[ -z "$(git diff --cached --name-only -- .github/workflows)" ]] || {
+            echo 'WORKFLOW_WRITE_GATE=FAIL the installation must not rewrite workflows'; exit 2;
+          }
+          git diff --cached --binary --full-index > "$report_dir/validated-cleanup.patch"
+          git diff --cached --stat > "$report_dir/change-summary.txt"
+          cat > "$report_dir/verification-scope.txt" <<'TXT'
+          Local layout, twelve cleanup fixtures, Q048 metadata controls and package/launcher checks,
+          Q047 reconstruction static admission and staged diff checks completed.
+          No production campaign, CLASS build, cosmological evaluation or native process started.
+          Three baseline historical Q047 test issues and one native-header skip remain documented
+          in docs/cleanup/VERIFICATION.md; this workflow does not silently repair scientific locks.
+          Full historical production and live checkpoint/resume paths are not qualified here.
+          TXT
+          {
+            echo '## Cleanup candidate validation passed'
+            echo 'Preview creates an artifact only. Apply publishes a cleanup branch and attempts a pull request.'
+            echo 'No default-branch update or merge is performed by this workflow.'
+            echo 'Historical baseline limitations remain in docs/cleanup/VERIFICATION.md.'
+            echo '```text'
+            cat "$report_dir/change-summary.txt"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Preserve preview and validation evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bubbleverse-cleanup-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/bubbleverse-cleanup/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Publish reviewed cleanup branch and attempt pull request
+        id: publish
+        if: inputs.mode == 'apply' && steps.prepare.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          branch="bubbleverse-cleanup/actions-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
+          git -c user.name='github-actions[bot]' \
+            -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m 'Organize historical copies and preserve Bubbleverse launch compatibility'
+          git -c credential.helper= -c 'credential.helper=!gh auth git-credential' \
+            push origin "HEAD:refs/heads/$branch"
+          body="$RUNNER_TEMP/bubbleverse-cleanup/pull-request-body.md"
+          cat > "$body" <<'TXT'
+          Archives 96 verified historical copies/notes while preserving canonical scientific paths
+          and 73 compatibility aliases. Updates README and complete start documentation; the Q048
+          package lock changes only its README pin. Adds the maintenance workflow to the start index.
+
+          Validation: layout/hash/mode/link/coverage gates, twelve cleanup fixtures, Q048 metadata
+          controls and package/launcher gates, Q047 reconstruction static admission. No new production
+          work or scientific result is claimed. Three historical test issues and one native-header
+          skip remain documented. Review the complete diff before merging.
+          TXT
+          if pr_url="$(gh pr create --repo "$GITHUB_REPOSITORY" --base "$DEFAULT_BRANCH" \
+              --head "$branch" --title 'Bubbleverse repository cleanup and launch documentation' \
+              --body-file "$body" 2> "$RUNNER_TEMP/bubbleverse-cleanup/pr-create-error.txt")"; then
+            printf 'Pull request: %s\n' "$pr_url" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Branch published; automatic PR creation was unavailable. Open a PR manually from this branch.' >> "$GITHUB_STEP_SUMMARY"
+            cat "$RUNNER_TEMP/bubbleverse-cleanup/pr-create-error.txt"
+          fi
+          printf 'Cleanup branch: `%s`\nMerge after reviewing the diff; the default branch is unchanged.\n' "$branch" >> "$GITHUB_STEP_SUMMARY"
