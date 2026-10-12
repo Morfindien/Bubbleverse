@@ -1,3 +1,81 @@
+# Bubbleverse — Q048 source-root energy and He1 extension V6
+
+Install the individual files below, then open **🚀 BUBBLEVERSE START**, enter
+**Q048-STRUCTURAL-V6** and press **Run workflow**. Canonical launcher:
+`.github/workflows/00-bubbleverse-start.yml`; registry `bubbleverse_program_registry.json`.
+The exact-lookup launcher is unchanged. Unknown IDs and shell input fail closed.
+
+Q-048 is PROPOSED_UNVERIFIED; CASE NOT_ASSIGNED; Q047 CLOSED INCONCLUSIVE.
+Scope CONDITIONAL_SOURCE_REAL_STRUCTURAL_EXTENSION. FINAL_RESULT_GATE=UNRESOLVED:
+native/actual-source admission, common first cutoff and full xe/tau bounds remain NOT_COMPUTED.
+
+## Install
+
+At repository root:
+- `q048_structural_v6.py`, `q048_structural_runner_v6.py`, `q048_structural_tests_v6.py`
+- `q048_structural_config_v6.json`, `q048_structural_parent_v6.json`
+- `q048_structural_package_check_v6.py`, `q048_structural_package_v6.json`
+- `Q048_V5_STRUCTURAL_MATHEMATICS.json`, `Q048_V5_INDEPENDENT_REVIEW.json`, `Q048_V5_SYMBOLIC_CONTROL.json`
+- `bubbleverse_program_registry.json`, `README.md`, `Q047_SAMLET_JOURNAL.md`
+
+Workflow target: `.github/workflows/q048-structural-v6.yml`.
+Place `q048-structural-v6.yml` at that exact path.
+Retain every installed V5/V4/frozen backend dependency and the canonical launcher.
+Prepared against commit05ec5263fc4be2cee29892839d0f818ccba64c91; reconcile later
+repository changes before replacing registry/README snapshots. Local preparation
+has not installed files or dispatched a GitHub run.
+
+## Structural method and scientific boundaries
+
+The immutable official V5 parent is run38259814813, raw hash
+bf63e8698a2c0a3b6f518f691443ceec151398a21693aea523743dac5d76bfa5.
+All inherited certificates are reverified. Original records/cells/intervals stay
+unchanged, embedded in each new report. A separate structural extension derives
+E=X^2/2+V and dE/dln(a)=-3X^2 from the exact frozen source initial state, and
+proves a He1 invariant-domain/variable-coefficient enclosure from each untouched
+thermal endpoint to the next fixed phase boundary z4600. It uses an independent
+source-root energy background envelope beyond old cell coverage. No old background
+cell is extrapolated. No later He1f transition, helium cutoff, native solver or
+full history is qualified. Caps/methods/intervals are recomputed, not accepted
+from saved PASS fields. Independent rational exponential bounds verify endpoints.
+
+Hillipop's background guard is bounded through z2870. Camspec's current conservative
+guard only reaches approximatelyz3562.59; its full-transfer guard is not established.
+The bound threshold is not an actual event. Original source/effective inputs,
+accepted z_reio, initial errors and all older certificates remain fixed.
+
+## Jobs, checkpoints and result tests
+
+One finite launch: preflight, four independent workers, collector; max-parallel4.
+No automatic chaining or repeat-from-a-new-tiny-cell strategy. Each worker has
+900s preverification and900s postverification budgets, a35-minute process limit
+and40-minute job timeout. Collector has20-minute process/25-minute job limits.
+These are below GitHub's official6-hour hosted-job limit checked2026-10-12:
+https://docs.github.com/en/actions/reference/limits . Setup/transfer reserve is explicit.
+Atomic provisional/final `*_checkpoint_v6.json` preserve parent and new proof;
+they are completion evidence for this one-pass target, not an indefinite resume chain.
+Retry a failed independent worker only for a concrete technical recovery reason.
+
+Finite mandatory tests: exact pins/Q/root/run, energy positivity and source guard,
+original initial-state retention, phase boundary, invariant barriers, independent
+endpoint control, forged cap/method/endpoint rejection, preserved parent records,
+missing/duplicate/foreign-run collection rejection, launcher/registry/README and
+full unchanged journal tail. Collector recomputes inherited and extension proofs.
+Execution COMPLETE and conditional test PASS never upgrade the scientific gate.
+
+Outputs: `q048_structural_results/*_structural_v6.json` and `*_checkpoint_v6.json`;
+collector `q048_structural_final_v6.json` retains all four raw records and a job manifest.
+Full authoritative journal: `Q047_SAMLET_JOURNAL.md`, preserving sources/claims/failures.
+Return actual outputs and full journal to RESULT INGESTION & ROUTING ENGINE.
+V5 remains the frozen historical implementation; its launch preference is superseded.
+
+---
+
+## Preserved historical repository context
+
+The following incoming README is unchanged historical context. Active Q048 execution
+instructions are V6 above; old version launch examples are historical.
+
 # Bubbleverse — Q048 controlled prefix continuation V5
 
 After installing the individual files, open **🚀 BUBBLEVERSE START**, enter
