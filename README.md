@@ -1,3 +1,111 @@
+# Bubbleverse — Q048 controlled prefix continuation V5
+
+After installing the individual files, open **🚀 BUBBLEVERSE START**, enter
+**`Q048-RESUME-V5`**, and press **Run workflow**. Canonical launcher:
+**`.github/workflows/00-bubbleverse-start.yml`**; exact registry:
+**`bubbleverse_program_registry.json`**. The launcher is unchanged and performs
+an exact approved lookup; PROGRAM_ID is never shell code.
+
+Q **Q-048 — PROPOSED_UNVERIFIED**; CASE **NOT_ASSIGNED**; Q047 remains **CLOSED
+INCONCLUSIVE**. Scope **CONDITIONAL_SOURCE_REAL_PREFIX**. Scientific
+**FINAL_RESULT_GATE=UNRESOLVED**: actual-source equivalence, common first cutoff,
+complete latch/reset electron-history and optical-depth bounds are NOT_COMPUTED.
+
+## Install individual files
+
+Put at repository root:
+- `q048_resume_v5.py`, `q048_comparison_v5.py`, `q048_resume_config_v5.json`
+- `q048_resume_controls_v5.py`, `q048_resume_control_fixture_v5.json`, `q048_resume_tests_v5.py`
+- `q048_resume_merge_v5.py`, `q048_resume_package_check_v5.py`, `q048_resume_package_v5.json`
+- `q048_resume_parent_v5.json`, `bubbleverse_program_registry.json`, `README.md`, `Q047_SAMLET_JOURNAL.md`
+
+Put `q048-resume-v5.yml` at **`.github/workflows/q048-resume-v5.yml`**.
+Retain the current canonical launcher and all pinned V4/older dependency files.
+Preparation base **ab301e052743773b6734959f80fbd6540afee230**; reconcile later
+repository changes before installing the registry/README snapshots. Remote
+installation and dispatch are not performed by local preparation.
+
+## Minimum numerical change and exact continuity
+
+Pinned first parent: actual GitHub **run38249121532**, complete raw
+`q048_resume_parent_v5.json`, SHA256
+`7f1f805d39840592622df23f781b594548a4e355e80b656006a87c6eed013c08`.
+Camspec EDE starts427 background/319 thermal cells, Hillipop342/234; each LCDM
+retains35 thermal cells. No frozen source, effective input, accepted z_reio,
+initial radius, physical equation, old certificate or likelihood is changed.
+
+New background trials permit **k=0..12** instead of0..11, retaining the existing
+recomputed weighted certificate and strict H/latch/tube guards. New He1 cells
+in the approved outer tube use the explicit method
+`he1_outer_lower_finite_time_v1`. On normalized xi in[0,1], with recomputed
+lambda=-L>0 and full r0/defect delta, the independent rational radius is
+`U=r0+max(0,delta/lambda-r0)*min(1,lambda)`. Require strict closure, constant
+predictor, correct phase/coverage and positive temperature/beta. The ordinary
+primary signed scalar proof must close as well. Old stationary V4 markers keep
+old stationary admission semantics; unknown/domain-incompatible markers fail.
+These controls certify prospective local cells only; later cells need fresh proofs.
+
+Frozen dependencies include `q047_math_v1.py`, `q047_certificate_v1.py`,
+`q047_precursor_check_v1.py`, `q048_prefix_v1.py`, `q048_prefix_config_v1.json`,
+`q048_resume_v3.py`, `q048_resume_controls_v3.py`, `q048_resume_v4.py`,
+`q048_comparison_v4.py`, `q048_resume_config_v4.json`, `q048_resume_parent_v4.json`.
+All are already installed at the preparation base and checked byte for byte.
+No compile, native CLASS run, re-shoot/refit, sampler or likelihood evaluation.
+
+## Checkpoint, job and validation design
+
+Four independent case workers, maximum parallelism4, serialized campaign runs.
+Each has900s predecessor verification,180s background,180s thermal and900s
+successor verification;40-minute process safeguard and50-minute job timeout.
+Preflight/collector have25-minute timeouts. Collector recomputes all four cases
+in separate processes and refuses missing, duplicate or incompatible reports.
+These safe stages stay below GitHub's currently documented6-hour hosted job
+limit (verified2026-10-12): https://docs.github.com/en/actions/reference/limits .
+No automatic endless workflow chain or hypothesis-rescue retry is introduced.
+
+Before continuation every inherited cell is recomputed; after continuation the
+complete successor is recomputed, and collection repeats full admission.
+Atomic checkpoints preserve exact cursor/error/root/config/run lineage after
+verification, every8 new cells and at stage boundaries. Historical V3/V4 roots
+survive; the immediate V4 parent hash is exact. Later V5 runs search the last20
+completed runs for retained case checkpoints. Found expired/duplicate/wrong-run
+artifacts fail closed. If prior V5 runs exist but no retained case artifact is found in that bounded
+window, discovery fails closed. Only no previous V5 runs permits the pinned V4
+asset. Use CLI `--checkpoint` for an older authenticated retained checkpoint.
+The rooted parent-lineage list and its tail are bound in metadata and the proof
+payload. Historical hash pointers provide consistency, not an independent
+authentication of every past file; authenticated artifact retrieval supplies
+the input provenance.
+
+Mandatory finite tests: selected k12 and k7 controls with independent matrix
+Taylor/algebraic comparison; historical stationary failure; normalized-domain
+and method/weight/proof tamper rejection; frozen config/root/run identity;
+source guards; exact inherited prefix preservation; unsupported full-product
+claims rejected; incomplete/duplicate/config-incompatible merge rejected;
+launcher resolver, registry history, README paths and journal-tail preservation.
+Successful process execution is not physical confirmation.
+
+## Outputs and journal
+
+Per-case `*_checkpoint_v5.json`, `*_resume_v5.json` under `q048_resume_results/`;
+preflight `q048_resume_controls_v5.json`; collection `q048_resume_final_v5.json`
+with all raw certificates, job manifest, tests and missing scientific products.
+Local preparation results and detailed status are documented in
+`Q048_EXECUTION_REPORT_V5.md` and `q048_resume_local_validation_v5.json`.
+
+Full authoritative memory remains **`Q047_SAMLET_JOURNAL.md`**, preserving stable
+sources, claims, failures and complete prior journal. Return raw results plus
+journal/provenance to the **RESULT INGESTION & ROUTING ENGINE**.
+The registry adds V5, supersedes V4, and preserves every unrelated entry. V4 is
+retained as the frozen historical source/method implementation.
+
+---
+
+## Preserved historical repository context
+
+The following V4 and older snapshots are historical. Current Q048 continuation
+is V5 above; old method descriptions remain to document earlier certificates.
+
 # Bubbleverse — Q048 controlled prefix continuation V4
 
 Use **🚀 BUBBLEVERSE START**, enter **`Q048-RESUME-V4`**, and press **Run workflow** after installing this package. The canonical launcher remains **`.github/workflows/00-bubbleverse-start.yml`**, registry **`bubbleverse_program_registry.json`**. The launcher performs an exact approved registry lookup; input is never shell code.

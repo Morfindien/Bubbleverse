@@ -1,3 +1,1631 @@
+# BUBBLEVERSE — V5 FINAL INSTALLATION GATES
+
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED. CASE: NOT_ASSIGNED.
+PROGRAM_ID: Q048-RESUME-V5. Local package, source/Q/journal, safe launcher,
+registry/README and repository consistency checks have now PASSED.
+20 tests, four complete local jobs and final-code full collection have passed.
+Remote installation and dispatch remain NOT_PERFORMED. Scientific final gate
+remains UNRESOLVED; actual full-Q products remain NOT_COMPUTED.
+This updates only the provisional package-check wording in the preserved
+preparation handoff below. Complete incoming journal and all hashes survive.
+
+```json
+{
+  "q": "Q-048",
+  "program_id": "Q048-RESUME-V5",
+  "package_gate": "PASS",
+  "q_identity_gate": "PASS",
+  "journal_continuity_gate": "PASS",
+  "source_pin_gate": "PASS",
+  "launcher_gate": "PASS_LOCAL_INSTALLATION",
+  "readme_gate": "PASS_LOCAL_INSTALLATION",
+  "repository_consistency_gate": "PASS_LOCAL_INSTALLATION",
+  "remote_installation": "NOT_PERFORMED",
+  "registration_evidence": "ENTRY_PRESENT_IN_CHECKED_SNAPSHOT",
+  "final_result_gate": "UNRESOLVED"
+}
+```
+
+---
+
+# BUBBLEVERSE — Q048 EXECUTION PACKAGE V5
+
+Date/time: 2026-10-12T13:40:20.111987+00:00 UTC; 2026-10-12T15:40:20.111987+02:00 Europe/Copenhagen.
+
+## A. CURRENT Q
+
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED. CASE ID: NOT_ASSIGNED.
+Q047 remains CLOSED INCONCLUSIVE. Exact authoritative question:
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436.
+
+## B. RECOMMENDED CHATGPT SETTING
+
+Current Codex/Work with strong reasoning, High or equivalent if selectable.
+Reason: contained scientific-code patch, exact interval controls and autonomous
+file/repository/test orchestration. Actual main model picker/reasoning selector
+is NOT DOCUMENTED; no Astra/GPT-5.6 switch or invented catalog is claimed.
+Fallback: a genuinely available capable reasoning/code setup with pinned exact
+execution. Escalate for materially harder coupled source-admission proofs.
+
+## C. PLUGIN / CAPABILITY PLAN
+
+USE: read-only GitHub repository/commit/file inspection; local standard-library
+Python/exact interval computation; relevant fresh independent code review;
+file capability to preserve individual outputs. GitHub retrieval supplies
+underlying source/commit evidence, not another independent physical dataset.
+Official GitHub Actions limits were directly checked at
+https://docs.github.com/en/actions/reference/limits on2026-10-12.
+No broad literature search, external sampler/native CLASS/HPC provider or
+browser activity adds information to this finite proven-control patch.
+
+## D–H. EXECUTION DECISION, SCIENTIFIC REQUIREMENT, MEMORY AND MOTOR
+
+EXECUTION MODE: MODIFIED EXISTING PROGRAM + RELEVANT CAPABILITIES, orchestrated
+by the existing Execution-Mechanism / Numerical / HPC / Motor-Builder Engine.
+Existing motor sufficient: YES. No duplicate/new motor prompt is required.
+Actual programs are required to recompute and propagate exact numerical source
+certificates. A reasoning-only handoff cannot perform this genuine continuation.
+
+Requirement: pass the four proven prospective controls, preserving all V4
+prefix cells, physical equations/effective inputs/source/config/current errors,
+and re-admit the entire finite successor. Do not promote local source-model
+results into native CLASS equivalence or complete physical histories.
+
+KEEP the entire incoming journal, source register/claim map, failures,
+falsifications/anomalies and all Q freezes. ADD this actual local V5 result.
+SUPERSEDE only the previous instruction to build the demonstrated controls.
+Historical V4 stationary methods retain their exact admission semantics.
+Complete incoming journal bytes survive as an unchanged tail below the new
+handoff in Q047_SAMLET_JOURNAL.md; no parallel journal is created.
+
+## I. BUBBLEVERSE GITHUB SEARCH / FILE DECISIONS
+
+Connected repository Morfindien/Bubbleverse default snapshot
+ab301e052743773b6734959f80fbd6540afee230. Complete tree retrieved; V4 exists,
+V5 does not. Current canonical launcher, registry and README inspected.
+
+REUSE unchanged installed source: q047_math_v1.py, q047_certificate_v1.py,
+q047_precursor_check_v1.py, q048_prefix_v1.py, q048_prefix_config_v1.json,
+q048_resume_v3.py, q048_resume_controls_v3.py, q048_resume_v4.py,
+q048_comparison_v4.py, q048_resume_config_v4.json, q048_resume_parent_v4.json,
+.github/workflows/00-bubbleverse-start.yml. Exact hashes checked.
+PATCH into separately versioned V5 files: main continuation, comparison,
+controls, tests, collector, package gate, workflow/config/fixture/lock.
+CREATE exact V4-parent asset q048_resume_parent_v5.json from successful run.
+UPDATE registry, README and authoritative journal differentially.
+REFERENCE ONLY prior V3/V4 local/remote numerical results and math005 evidence.
+No old code/source/certificate or unrelated registry entry was deleted.
+
+## J. FROZEN NUMERICAL SPECIFICATION
+
+Model: inherited source-real conditional background equations and early thermal
+branches from CLASS_EDE source5a131c91d657dd9a7c6364cc45b038710f8d0d97.
+Data: four captured Q041 FULL/start0 effective configurations, source-input
+hashes and fixed accepted z_reio from source run38140371059; frozen config SHA
+2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b.
+No new observation, covariance, likelihood, nuisance parameter, prior, fit,
+seed, native initialization, re-shoot or sampler is introduced. These prior
+campaign specifications survive unchanged in the journal.
+
+Initial/boundary state: exact fully verified run38249121532 V4 checkpoints;
+Camspec EDE427/319, Hillipop342/234, LCDM0/35 each. Parent raw SHA256
+7f1f805d39840592622df23f781b594548a4e355e80b656006a87c6eed013c08.
+All inherited error intervals and source branches remain unchanged.
+
+Only new background halving cap11→12 changes. Existing weighted proof remains.
+New explicit He1 method he1_outer_lower_finite_time_v1 retains approved outer
+box[-2e-6,1/50], primary scalar certificate and source/coverage checks. With
+normalized xi in[0,1], constant predictor, lambda=-L>0 and recomputed r0,delta:
+U=r0+max(0,delta/lambda-r0)*min(1,lambda). Strict whole-cell closure and positive
+Tmat/beta are mandatory. Old stationary method delegates to byte-unchanged V4.
+Unknown markers, wrong phase/tube, nonconstant predictor, noncontractivity or
+unnormalized domain fail closed. Outward rational arithmetic is unchanged.
+
+## K–L. PROGRAM ID / START REGISTRATION
+
+PROGRAM_ID: Q048-RESUME-V5.
+LAUNCHER: 🚀 BUBBLEVERSE START.
+LAUNCHER FILE: .github/workflows/00-bubbleverse-start.yml (UNCHANGED).
+REGISTRY: bubbleverse_program_registry.json.
+TARGET: .github/workflows/q048-resume-v5.yml.
+REGISTERED: YES in the delivered checked installation snapshot; remote
+installation NOT_PERFORMED. V4 marked SUPERSEDED;59 unrelated entries unchanged.
+Local launcher gate: evaluated by q048_resume_package_check_v5.py after final
+file/lock construction. Remote readiness depends on installing these files.
+No GitHub commit/push/dispatch was performed by this engine.
+
+## M–N. RUNTIME AND JOB PLAN
+
+Measured local worker wall times: Camspec EDE304.5s, Hillipop243.0s, each LCDM~8s.
+These include complete predecessor/successor proof checks, not native physics
+sampling. Runtime depends on CPU and finite enclosure work; estimates are not
+guarantees. Expected standard-runner wall stage~5–15minutes plus setup and final
+collection; conservative maximum budget remains36minutes per worker.
+
+GitHub-hosted job hard limit:6hours, checked official documentation2026-10-12.
+Safe plan: one preflight, four independent case workers, one full collector;
+6 logical jobs, maximum parallel workers4, serialized campaign runs. Each
+worker900s preverification+180s background+180s thermal+900s postverification;
+40-minute process safeguard and50-minute job timeout. Preflight/collector25min,
+collector cases verified in up to4 processes with900s case caps and18min safeguard.
+Single-job risk LOW under the measured/control budget; hard safeguards remain.
+Checkpoints YES, merge YES, mandatory tests YES in preflight and post/collection.
+No MPI/GPU requirement, external paid HPC or automatic infinite chain.
+CPU-hours/memory not independently profiled; approximately0.25 CPU-hours for
+this preparation's finite numerical/check stages, platform dependent. Allow
+~1GB memory per worker and~150MB workspace as conservative planning allowances,
+not measured scientific input. Exact per-file sizes are in the package manifest.
+
+Atomic checkpoints after verified start, every8 accepted cells and each stage
+preserve exact errors/cursors/Q/PROGRAM_ID/config hash/root/run/parent lineage.
+Resume verifies all source cells. A rooted metadata/record parent-lineage list
+has an exact pinned V4 first node and immediate-parent-consistent tail, included
+in proof binding. Historical pointer consistency does not independently
+authenticate every earlier file; authenticated asset/artifact retrieval supplies
+input provenance. Later V5 artifacts are exact-case/run selected; missing,
+expired/duplicate/wrong-run artifacts fail closed. Root fallback is allowed only
+when no previous V5 runs exist. A CLI-supplied authenticated older checkpoint
+remains available; no secret restart from V4 after deleted artifacts.
+
+## O. FINITE MANDATORY TEST PLAN AND ACTUAL VALIDATION
+
+T001 source/config/Q/parent/hash freezes — PASS.
+T002 current-cursor k12/k7 source-reconstructed finite controls — PASS.
+T003 independent matrix-series/finite scalar/source guards — PASS.
+T004 original stationary failure and changed-before/passed-after control — PASS.
+T005 malformed method/weight/proof/domain/unsupported full-product rejection — PASS.
+T006 root/parent/run/lineage forgery rejection; actual genuine V5 resume — PASS.
+T007 complete source-chain checks before/after each worker — PASS.
+T008 completeness/duplicate/compatibility/raw preservation/full merge admission — PASS.
+T009 package/launcher/registry/README/journal continuity — final package gate below.
+
+20 targeted tests pass. Fresh independent review found2 Important provenance/
+resume defects; both were reproduced as failing tests and fixed, followed by
+the green suite. No remaining Critical/Important or deferred Minor finding.
+Do not count shared-source comparison controls as independent source admission.
+
+## ACTUAL COMPUTED RESULT
+
+| Case | Background cells | Thermal cells | New background / thermal | Current background / thermal blocker |
+|---|---:|---:|---:|---|
+| camspec-lcdm | 0 | 35 | 0 / 0 | None / None |
+| camspec-ede_n3 | 429 | 324 | 2 / 5 | BACKGROUND_TUBE_NOT_CLOSED / THERMAL_TUBE_NOT_CLOSED |
+| hillipop-lcdm | 0 | 35 | 0 / 0 | None / None |
+| hillipop-ede_n3 | 343 | 240 | 1 / 6 | BACKGROUND_TUBE_NOT_CLOSED / THERMAL_TUBE_NOT_CLOSED |
+
+Total14 new admitted conditional cells:3 background+11 thermal. Four jobs
+completed; complete collector recomputed every successor cell using final
+admission code. Scientific histories remain partial in EDE. The original stop
+states passed, but later strict tube closure fails; this is not model falsification.
+
+Displayed background/thermal endpoints: Camspec EDE z6098.654445/6103.092840;
+Hillipop EDE z4980.472499/4984.412570; LCDM transfer z2870. These are partition
+endpoints, not the requested first-cutoff event. Exact rational values are in
+raw checkpoints. No posterior/sigma interpretation is assigned to proof radii.
+
+Raw result q048_resume_final_v5.json retains full records/checkpoints and a
+Q-bound manifest. execution_status=COMPLETE, job_completeness_gate=PASS,
+merge_compatibility_gate=PASS, tests_status=COMPLETE_CONDITIONAL.
+ACTUAL_SOURCE_ADMISSION=UNRESOLVED.
+ACTUAL_FIRST_EVENT/COMPLETE_XE/COMPLETE_TAU_T_BOUNDS=NOT_COMPUTED.
+FINAL_RESULT_GATE=UNRESOLVED. No physical anomaly/falsification is established.
+
+## TECHNICAL EXECUTION PROVENANCE
+
+This actual local computation used the separately preserved numerical core
+q048_resume_executed_core_v5.py. Final q048_resume_v5.py additionally binds
+rooted parent lineage; numerical algorithms are identical. Actual parent
+provenance was added from the verified execution inputs without altering the
+mathematical records. The final collector recomputed every source cell using
+final code and rejected incompatible/missing data. Both exact code hashes and
+all raw/checkpoint/source/config hashes are in q048_resume_local_validation_v5.json.
+No claim is made that final hardening code itself performed the initial worker
+calculation. The20-test suite also exercises actual final-code V5 resume.
+Local metadata records LOCAL and LOCAL_NOT_INSTALLED honestly; no Git commit or
+remote run ID is invented. Later GitHub jobs record actual GITHUB_SHA/run/job.
+
+## P–Q. FILE DECISIONS / README
+
+README ACTION: UPDATE. FILE: README.md. New active V5 section documents only
+implemented target, source freezes, method, atomic checkpoints, strict artifact
+resume and actual conditional scope. Complete prior V4/older text survives as
+historical repository context. Canonical launcher unchanged; unrelated registry
+entries preserved. README_GATE and repository consistency are evaluated on the
+actual final installation snapshot, not asserted for the untouched remote tree.
+Full journal retained; SHA256 exact incoming tail is pinned by the package gate.
+
+## R–T. ACTUAL FILES / EXECUTION / EXPECTED OUTPUTS
+
+Install root files listed in README and package install_files; put only the
+workflow YAML at .github/workflows/q048-resume-v5.yml. Preserve existing pinned
+V4/older dependencies and canonical launcher. Individual files, never archives.
+OPEN 🚀 BUBBLEVERSE START → PASTE Q048-RESUME-V5 → PRESS Run workflow.
+Do this after installation. Current local numerical result already exists;
+a GitHub run adds installed-runtime reproducibility, not missing physical scope.
+
+Expected outputs: four *_checkpoint_v5.json and *_resume_v5.json, preflight
+q048_resume_controls_v5.json, collector q048_resume_final_v5.json. Successful
+component execution may still contain partial histories and unresolved science.
+
+## U–V. PASS/FAIL GATES AND RETURN TO BUBBLEVERSE
+
+Known actual gates: Q identity PASS, journal preservation PASS, source pins PASS,
+finite controls PASS,20 tests PASS, predecessor/successor source checks PASS,
+job completeness PASS, merge compatibility PASS, final-code collection PASS.
+Final launcher/README/repository gates are bound in final package-check output.
+SCIENTIFIC FINAL_RESULT_GATE=UNRESOLVED and Q_COMPLETION_GATE=NOT_YET_SATISFIED.
+
+RESULT-ID: I-PROPOSED-Q048-RESUME-LOCAL-V5.
+Source type: BUBBLEVERSE NUMERICAL RESULT + BUBBLEVERSE TECHNICAL EVIDENCE.
+New technical source: K-PROPOSED-Q048-V5-PACKAGE-008, individual versioned
+program/config/workflow/package and20 tests, with exact hashes and prepared
+repository base; not an external publication or installed remote commit.
+Preserve K-PROPOSED-Q048-SOURCE-002, K-PROPOSED-Q048-INPUT-001,
+K-PROPOSED-Q048-MATH-REPO-006, K-PROPOSED-Q048-V4-PACKAGE-007,
+K-PROPOSED-Q048-GITHUB-RUN-38249121532,
+I-PROPOSED-Q048-MATHEMATICS-005 and all earlier journal source/claim entries.
+URLs: https://github.com/Morfindien/Bubbleverse/tree/ab301e052743773b6734959f80fbd6540afee230
+and https://github.com/Morfindien/Bubbleverse/actions/runs/38249121532 .
+Relevant scientific source/dataset/likelihood/version fields remain exact in
+complete inherited journal and frozen input/source config; no new DOI is invented.
+
+Exactly one return engine: RESULT INGESTION & ROUTING ENGINE.
+Send Q/CASE/exact question, complete updated journal, raw V5 result, source IDs,
+code/config/checkpoint lineage, test status and explicit unresolved products.
+It must assess these later new EDE enclosure stops and actual-source qualification
+against the exact Q. Do not launch unchanged repetitions just to accumulate runs.
+Stop this builder now once final installation gates pass. Stop the whole Q only
+when its exact answer/bounds or documented irreducible uncertainty are sufficient;
+then route complete state directly to Motor14. No Report Writer destination.
+
+## W. START THIS
+
+START THIS: Q048-RESUME-V5
+
+
+## DIFFERENTIAL JOURNAL RECEIPT
+
+```json
+{
+  "schema": "Q048_V5_JOURNAL_DIFFERENTIAL",
+  "q": "Q-048",
+  "program_id": "Q048-RESUME-V5",
+  "result_id": "I-PROPOSED-Q048-RESUME-LOCAL-V5",
+  "created_utc": "2026-10-12T13:40:20.111987+00:00",
+  "scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "repository_base_commit": "ab301e052743773b6734959f80fbd6540afee230",
+  "config_hash": "04bb2a46d449de308e8746a1e614324395520ac2dd2fb3304b3bbc52dd5001fc",
+  "incoming_journal": {
+    "bytes": 12812668,
+    "sha256": "5ef466545bca12c4a812018bc97f8133ddc2e46b0845122a9109226da05755e7"
+  },
+  "local_validation_sha256": "12fd73b60fbe774478e2aa48fdc14bc6539752eb8a0f5c0338c448aaa0288e62",
+  "raw_result_sha256": "90f7ea8e1cda449a88e83a5b890853f43fa40cec7bc179ece3140f05f5199c24",
+  "cases": {
+    "camspec-lcdm": {
+      "checkpoint_sha256": "400605fd7300c9681002525cca19a2a522355e35606415a085533d8549908053",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background": 0,
+      "new_thermal": 0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "background_end_a": "1/2871",
+      "thermal_end_a": "1/2871",
+      "checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.8248025009997946
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.8798048040007416
+      },
+      "inherited_prefixes_preserved": true,
+      "source_input_hashes": {
+        "effective_background_hex.json": "f2342c737770aeef4718ef6b0cae2e1837d91ee72e0e618dfe49601450674308",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "7a087c87dd01367a1ea1dba21be57e26c1940d27c1d9fea8998478eaa8484df7"
+      },
+      "verified_payload_sha256": "7235d289fbb14dc3f667fb2f956a27cfe62abc3d6fc5e3cd3113e238e6d2dd79"
+    },
+    "camspec-ede_n3": {
+      "checkpoint_sha256": "e5e7b331fb3832cb7133ebfc942686b0a56633b82d005a8986fb212f56774d14",
+      "background_cells": 429,
+      "thermal_cells": 324,
+      "new_background": 2,
+      "new_thermal": 5,
+      "background_blocker": "BACKGROUND_TUBE_NOT_CLOSED",
+      "thermal_blocker": "THERMAL_TUBE_NOT_CLOSED",
+      "background_end_a": "138001069904218200768934621465673931893989372852489039199332998144093943811707246487391170832679348876993705835448477983202777241764121628296137478225337076426075385995072753323211292184984023426677557452618852516841288735549388788390299015335398956732066178698629243813360206670499040258469056852308353546775783565617759495746275799510649572656905520437652304230905189165868690182801036490547674254117804453338313961608809194993442430114383980966697907858963032910290433683438438098266817445287068633017511136931409031029583196883105093417460823330033169426215084111029693814461396803029549197855514285651889701743457843550370078082241062779843778072457963972516855552236727144829492556835542101793694892598042535024670998462932324066616764692586133491485075457268421932785779794309713674246572983643810663876259903215526492203935049474239349365234375/841758839495967475620826839997948211936991809104156625373010466298131018822602888017201192983859301450166350515156993426424226915302992335768026992623963954934306835025354856833591979464536311292657886568731462123493355103916634299113289304051502582675554160202159281601886208570544601571063442075663916513597219691630057907031100008403902259100621500204588057916466537111841817062179251237045944536013490230818699025662826795011706866704023338178981297460104412158792529326909506928332530827636678333715374235018152005088630272080215978809784102958737394380735623523775894099585887284123187819315991207913717330473975143953337296359504058560633498510125312644479578589207591743448921980840833228679418742367062696294591527409774160014690859675462244186003871421029423158245881657184376556236199855725655534363840029582168588513788170779256495104669515776",
+      "thermal_end_a": "33667169642645273588945654073507159417294121547708227708534115528577792445493309998241548362097746545295959320742996662950932349167901325945333107153847726029884205497817395813620093652726963725957425218667180020276041375122649484820293853401209555375752808297060463480750312702939144854904227261666357176539507367370501710314961410349500949670298069995925992337838201711095718738887317088650786582859536307777896434326914710568376214997443284855492062565480629332118330213075559381678706749961626167561294426556967122095044080619842817569129524945463534954373784430603714003198606791270841049003314166578103283968531162288643194690362384681945429704550352819182920910892888288118597411604388926198218407363552218177016145098354860798224134048048623909410268354369333218564234147243805427090170270047652842891616753462358246906660497188568115234375/205507529173820184477740927733874075179929640894569488616457633373567143267237033207324510005825024768107019168739500348248102274243894613224615964996084949935133504644862025594138666861459060374184054338069204619993494898417147045681955396496948872723523964893105293359835500139293115617935410663003885867577446213776869606208764650489233949975737670948385756327262338162070756118696106259044420052737668513383471441812213573000904996753911947797602855825220803749705207355202516339924934284090985921317230037846228516867341375019583979201607447011410496674984283086859349145406710762725387651200193165994559895135247837879232738369019545547029662722198562657343647116505759702990459467978719049970561216398208666087546759621526894534836635662954649459473601421149761513243623451461029432674853480401771370694296882222209128055124065131654417750163456",
+      "checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 427,
+        "thermal_cells": 319,
+        "elapsed_seconds": 139.27878837400021
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 429,
+        "thermal_cells": 324,
+        "elapsed_seconds": 141.42946954699983
+      },
+      "inherited_prefixes_preserved": true,
+      "source_input_hashes": {
+        "effective_background_hex.json": "4ef09d4ecd66b4a67ca404565fcd8815a6db89182d448403c6b71331dd87328b",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "d07772269b1e222b6e684b82dd34e39b626c9fd3678fea0430cf083da9656fc6"
+      },
+      "verified_payload_sha256": "479777b634f55740e5aa38d6a2b7f5a804cc6ba38140e43a4951ee893a22d294"
+    },
+    "hillipop-lcdm": {
+      "checkpoint_sha256": "c1b580d750a5c24ab75756d6f35901ba35bac049eef14a594edb5273620f51bc",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background": 0,
+      "new_thermal": 0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "background_end_a": "1/2871",
+      "thermal_end_a": "1/2871",
+      "checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 4.026133624000067
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.83585501700054
+      },
+      "inherited_prefixes_preserved": true,
+      "source_input_hashes": {
+        "effective_background_hex.json": "4228d94c84c085951704f212abe9a026a3e7428b9e456bbdd04bc2814df61a2e",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "c7f0756b21532af7716c7cd8c135d7edce00230d66e8eefcd2fe80e04925a787"
+      },
+      "verified_payload_sha256": "1b2bcb50ed79d59ee0592cfa255d341cd340117b2ec725091d0af58611fcdb68"
+    },
+    "hillipop-ede_n3": {
+      "checkpoint_sha256": "bfaf589cee5ba6e80745e99458d5b5d3a8c14a5d579fe6737dc31da273a5134a",
+      "background_cells": 343,
+      "thermal_cells": 240,
+      "new_background": 1,
+      "new_thermal": 6,
+      "background_blocker": "BACKGROUND_TUBE_NOT_CLOSED",
+      "thermal_blocker": "THERMAL_TUBE_NOT_CLOSED",
+      "background_end_a": "23048018343945946805896330369854353094415517268469992498831293111155805648142125703222790414082437757620469229242047240431324709106220026774259662696065781508968829557046649269092709191551168913725837357516483743925488785428294717172019047572339902874153467373094993454664522089791575078634498543026640855756698441160440402880113792760723869416995779918445395090378195725450487174146325238742177886126473039701431104396386329862291173815263954130463422158378688253406407639462301959979094729199720762624397570183479753123387515887975022723158692693391051144712056153451840145862661302089691162109375/114813069527425452423283320117768198402231770208869520047764273682576626139237031385665948631650626991844596463898746277344711896086305533142593135616665318539129989145312280000688779148240044871428926990063486244781615463646388363947317026040466353970904996558162398808944629605623311649536164221970332681344168908984458505602379484807914058900934776500429002716706625830522008132236281291761267883317206598995396418127021779858404042159853183251540889433902091920554957783589672039160081957216630582755380425583726015528348786419432054508915275783882625175435528800822842770817965453762184851149029376",
+      "thermal_end_a": "171585403644198671626503364495107574224531128231003709576748132230444938147926243922356638447377642410036429583550056405344017227564766443051661223040331620861111919211780085506932862904017215691109983768801996673139699220431482037648068051307291777858058657199781696265286325937421037772665861697423405211158611696731260306223681516075895018463522037261825795637512119703739515423226342083999206800907034862400162022248625368339957271046657993465976555000606263384545877529306807987447331413863166026346755730375631360303031222566495768161264797433719631047921438948833383619785308837890625/855424028094302508408451975269378709809718804127495885251196277756814853394307429981723045048494838117395315050324397365336953819441091516186245796208570290648415603826286494737034880729317999418295375928755747115475054559457215398157514825764792814634032521830219021506194990915233728658677371009963249276162452317658502650278653836309269509471466962251283248638411058712914646657081554023632912958541561655665907398812635092872411326764920229103720854475364773873649223026556313329637661257510115077759179663536891456904625791456044126368427841245253571684923237568310221812262873752133435392",
+      "checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 342,
+        "thermal_cells": 234,
+        "elapsed_seconds": 109.51033470700077
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 343,
+        "thermal_cells": 240,
+        "elapsed_seconds": 110.20334276899939
+      },
+      "inherited_prefixes_preserved": true,
+      "source_input_hashes": {
+        "effective_background_hex.json": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "7d4144e2615ccb36fa48867ee43b2ad342968469f1d1a2bc3f1088e1db2b884a"
+      },
+      "verified_payload_sha256": "487cf38840681c9818c58c565f81a9b4a59fdfe01f2e0a4489d97eb3b0608ef0"
+    }
+  },
+  "scope": "CONDITIONAL_SOURCE_REAL_PREFIX",
+  "execution_status": "COMPLETE",
+  "tests_status": "COMPLETE_CONDITIONAL",
+  "tests_count": 20,
+  "actual_source_admission": "UNRESOLVED",
+  "actual_products": "NOT_COMPUTED",
+  "final_result_gate": "UNRESOLVED",
+  "next_motor": "RESULT INGESTION & ROUTING ENGINE",
+  "journal_effect": {
+    "KEEP": "Complete prior journal/sources/frozen science/old cells/errors/limitations.",
+    "ADD": "Actual localV5 conditional cells and provenance/admission tests.",
+    "SUPERSEDE": "Previous build-controls instruction; V5 is prepared successor, remote unchanged.",
+    "UNRESOLVED": "Later EDE tube closure, actual-source admission and complete Q products."
+  },
+  "claims": {
+    "C-V5-001": "14 new conditional cells → exact V4 parent plus localV5 raw/validation and math005.",
+    "C-V5-002": "Old states/errors/source unchanged → source pins and exact inherited-prefix comparison.",
+    "C-V5-003": "Final full admission →20 tests and complete final-code collector recomputation.",
+    "C-V5-004": "Physical full-Q result absent → explicit raw unresolved/NOT_COMPUTED fields."
+  }
+}
+```
+
+---
+
+## COMPLETE UNCHANGED INCOMING AUTHORITATIVE JOURNAL
+
+# BUBBLEVERSE — OVERLEVERING
+
+STATUS: FORTSÆTTER.
+VALGT NÆSTE MOTOR: BUBBLEVERSE — AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE.
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED.
+CASE ID: NOT_ASSIGNED.
+RESULT ID: I-PROPOSED-Q048-MATHEMATICS-005.
+Date/time: 2026-10-12T13:10:36.551512+00:00 UTC; 2026-10-12T15:10:36.551512+02:00 Europe/Copenhagen.
+Q047 remains CLOSED INCONCLUSIVE. No new Q or CASE is assigned.
+
+## EXACT AUTHORITATIVE QUESTION
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436.
+
+## CHATGPT-SETUPVURDERING FOR NÆSTE TRIN
+
+Primary recommendation: current Codex/Work, strong reasoning with High or equivalent if selectable; autonomous focused code/verification workflow. Functional classes H+C+A. The current exact reasoning selector, context ceiling and user's alternative model picker are NOT DOCUMENTED; no switch is claimed. Available code/file execution and read-only connected GitHub materially serve this task. Fallback: an actually available capable reasoning/code setup with exact pinned interval execution. Upgrade only if source applicability or coupled enclosure arguments become substantially harder, or independent controls conflict. No prestige-based Astra/GPT selection and no maximum model requirement merely for this contained patch.
+Tools used: original current attachments; source-pinned exact rational/outward interval primitives; read-only GitHub primary source inspection; separate 200-term matrix-series and algebraic controls; focused independent mathematical/code review. The Systematic Debugging and Verification Before Completion skills structure diagnosis and evidence. No broad literature search, external symbolic service, native CLASS rerun, sampler, browser or HPC campaign is scientifically needed for this finite round. Review/tool retrieval is technical evidence, not another independent observational dataset.
+
+## SAMLET JOURNAL — differential integration and complete memory
+
+This handoff and compact machine receipt are prepended to the ENTIRE incoming authoritative journal, 12785965 bytes, SHA256 ac8a273222b50fab433b80a6be4026cbf44c2da0afd54263cab6615675fb0f8e, unchanged byte for byte. No separate mathematics journal/report is created. Its complete source register, claim mappings, prior results/failures/falsifications, exact question, source freezes and installation repair history remain recoverable below.
+KEEP all scientific state. ADD the four new prospective-cell controls and verification. REFINE the diagnosed stop causes. SUPERSEDE only the old next-task instruction to diagnose these V4 stops: this round has supplied the minimum tested remedies. No prior interval/checkpoint is narrowed, rewritten, appended as an admitted new cell or replaced. Original V4 remains a historically and currently registered executable with the same admission logic.
+
+## CURRENT RESULT — direct output, technical meaning, physical scope
+
+Classification: MATHEMATICAL_RESULT + VALIDATION_RESULT + SYSTEMATIC_TEST.
+Status: TECHNICALLY_VALIDATED_CONDITIONAL_LOCAL_DIAGNOSTICS.
+
+Finite exact analysis reconstructed each background trial k=0..11, one explicitly prospective k=12, and both thermal tubes at k=0..11 from the new GitHub V4 cursors. All four checkpoint hashes, full raw hash, incoming journal hash and14 relevant frozen source pins are checked. Original Camspec EDE cells427/319, Hillipop342/234 and LCDM0/35 each remain unchanged.
+
+| Case | Background extra halving k | Background strict slack (phi, X, frozen source normalization) | Thermal selected k | Old stationary slack (dimensionless w) | Independent finite-time slack (dimensionless w) |
+|---|---:|---|---:|---:|---:|
+| camspec-ede_n3 | 12 | 10.36982131, 4235.986015 | 7 | -1.435259834e-07 | 9.323174767e-08 |
+| hillipop-ede_n3 | 12 | 6.803307393, 2936.737642 | 7 | -2.027350143e-07 | 1.80064387e-07 |
+
+Displayed decimals are summaries only, not measured precision. All exact rational endpoints, predictor, defect, signed comparison matrix, inherited error, candidate domains, failed trials, source guards and independent margins are retained in Q048_V4_STOP_MATHEMATICS.json and Q048_V4_STOP_VERIFICATION.json. The second background component is X in the frozen source's units, not a temperature or an electron fraction. Thermal w is the dimensionless departure defined by T_mat=(1-w)T0/a; negative outer-domain values are enclosures, not observed negative temperatures.
+
+### Background result and rejected explanation
+
+At both k11 cursors the recomputed signed comparison matrices have positive diagonals and positive offdiagonals. Weighted scaling is correctly mapped and the initial uncertainty is retained. Refining only the comparison-time enclosure into2,4,8,16,32,64 slabs still fails: signed endpoint comparison growth already exceeds at least one legacy-tube margin. Removing negative diagonal damping is NOT the explanation here. This is a failure of this sufficient comparison/tube test, not proof that a physical solution fails or does not exist.
+At k12, one additional prospective halving, a1-a0=a0/16384, the existing weighted certificate closes both components without altering its source/predictor/tube construction. Independent shifted positive matrix Taylor series with200 terms and a rigorous geometric remainder also closes, and endpoint-error enclosures overlap. H is strictly positive and source ede_latch is below1/2 over the primary whole-state enclosure. Therefore no new background comparison formula or wider tube is required at these two tested cursors; the minimum demonstrated change is the permitted new-cell halving limit11→12. Future cells are not certified by this finding.
+
+### Thermal finite-time result and proof
+
+The original tube lower edge -10^-6 fails at the tested thermal states. With the already established He1 outer tube [-2×10^-6,1/50], the primary signed scalar interval certificate closes for k≥6, but V4's additional infinite-time constant radius R=max(r0,delta/lambda) fails. That guard remains active in unchanged V4.
+Let xi=(a-a0)/(a1-a0) lie in[0,1]; lambda=-L>0, r0 be the full inherited absolute error relative to the unchanged constant predictor, and delta the outward whole-cell defect bound. The scalar comparison is g'=-lambda g+delta, g(0)=r0. Its exact solution is
+
+    g(xi)=r0 exp(-lambda xi)+(delta/lambda)(1-exp(-lambda xi)).
+
+It is monotone toward delta/lambda, so a finite-time whole-cell radius is max(r0,g(1)). Independently, since 0≤1-exp(-lambda xi)≤min(1,lambda) on this normalized domain,
+
+    U=r0+max(0,delta/lambda-r0) min(1,lambda)
+
+is a rational whole-cell upper bound. It retains all inherited uncertainty and cannot be generalized to arbitrary unnormalized h without replacing lambda by lambda*h in the minimum. At k7 both cases close with U; k6 fails this independent algebraic check although the primary certificate closes, so k7 is the first tested halving meeting this chosen finite independent criterion. This does not assert no other proof could admit k6.
+Recomputed source fields on predictor±U satisfy T_mat>0 and beta>0 over the entire covered cell. A second independent augmented2×2 matrix-series evaluation verifies the finite-time endpoint and all-time bound, with positive slack. The current covering background cell's exact hash is preserved; no midpoint-only source background or narrowed background forcing is used.
+
+### What this establishes for physics
+
+All four proposed new cells are locally certifiable under the inherited conditional source model and full uncertainties. They are prospective evidence controls; they have NOT been appended to or admitted as successor checkpoints. This round does not execute a continued campaign, prove complete root-to-successor admission, qualify equivalence to the actual native CLASS history, compute the common first cutoff, or produce complete latch/reset x_e(z) or tau_T(z) difference bounds.
+ACTUAL_SOURCE_ADMISSION: UNRESOLVED.
+ACTUAL_FIRST_CUTOFF / COMPLETE_XE_BOUNDS / COMPLETE_TAU_T_BOUNDS: NOT_COMPUTED.
+FINAL_RESULT_GATE: UNRESOLVED.
+ANOMALY STATUS: no new physical anomaly established. All surprising/wide raw intervals and failures survive. No physical hypothesis is falsified or rescued.
+
+## SOURCE REGISTER AND CLAIM-TO-SOURCE MAP
+
+The COMPLETE authoritative source register and mappings remain in the unchanged full journal below. Active necessary evidence carried into this handoff:
+
+- K-PROPOSED-Q048-SOURCE-002: CLASS_EDE source5a131c91d657dd9a7c6364cc45b038710f8d0d97; original scientific equations, branches and inherited conditional applicability. External/source-method evidence already documented below; no new paper/DOI is assigned.
+- K-PROPOSED-Q048-INPUT-001: exact four reconstructed Q041 FULL/start0 effective configurations from run38140371059, fixed accepted z_reio, input/source hashes. Preserve all fields and source normalization in existing register.
+- K-PROPOSED-Q048-V4-PACKAGE-007: actual V4 method/verification source installed at ab301e052743773b6734959f80fbd6540afee230, Morfindien/Bubbleverse,2026. Relevant files q048_resume_v4.py and q048_comparison_v4.py. URL https://github.com/Morfindien/Bubbleverse/blob/ab301e052743773b6734959f80fbd6540afee230/q048_comparison_v4.py . Current connected GitHub retrieval directly returned this source; its method agrees with the source-pinned local file. This is internal technical code evidence.
+- K-PROPOSED-Q048-MATH-REPO-006 and I-PROPOSED-Q048-MATHEMATICS-004: predecessor proof machinery and old-cursor finite remedies, retained as historical scope, not reused as unverified new-cursor conclusions.
+- K-PROPOSED-Q048-GITHUB-RUN-38249121532 / I-PROPOSED-Q048-RESUME-GITHUB-38249121532: current exact stop states and successful run, https://github.com/Morfindien/Bubbleverse/actions/runs/38249121532 ; raw SHA2567f1f805d39840592622df23f781b594548a4e355e80b656006a87c6eed013c08. Four current checkpoint pins are carried in the machine receipt.
+- I-PROPOSED-Q048-MATHEMATICS-005 [ADD]: Bubbleverse-generated conditional finite mathematical controls and source/analytic independent checks, produced by q048_v4_stop_controls.py and q048_v4_stop_verify.py with artifact/source hashes below. Internal numerical/mathematical evidence, not an external publication or actual-source qualification.
+
+C-V4-MATH-001 baseline0..11 background failures → current run/cursors + package007 + mathematics005 exact trial evidence.
+C-V4-MATH-002 prospective k12 background strict closure/source guards → mathematics005 primary and200-term independent controls + frozen backend.
+C-V4-MATH-003 stationary thermal R failure versus finite-time k7 strict closure → mathematics005 reconstructed source, analytic comparison proof, augmented Taylor and source guards.
+C-V4-MATH-004 original uncertainties/input/Q/journal preserved → exact attached/current pins, source002/input001, journal byte-tail validation.
+C-V4-MATH-005 full-Q products remain absent → current run raw applicability/products fields and scoped mathematics005.
+
+## PROVENANCE AND FINITE VERIFICATION
+
+Upstream PROGRAM_ID: Q048-RESUME-V4. Run38249121532. Execution commitab301e052743773b6734959f80fbd6540afee230. Scientific source5a131c91d657dd9a7c6364cc45b038710f8d0d97. Source configuration SHA2562514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b. V4 configuration hashb2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada. Exact source/code/checkpoint/artifact pins accompany the result.
+Current instruments use the frozen exact Fraction/outward primitives; floating-point numbers occur solely in human-readable progress/table summaries. No seed/sampler/likelihood/native evaluation was introduced. Environment: Python local Codex workspace; hardware/OS details not scientifically required for these rational certificates and NOT DOCUMENTED here. No GitHub writes, branch/registry/launcher/README changes, new registered computational target or campaign run was performed. Existing repository documentation remains untouched.
+Finite mandatory checks COMPLETE: input/source/Q identity; fresh selected candidate reconstruction; original failed criteria reproduced; primary/independent k12 vector closure; mapped full r0/defect; endpoint overlap; background H/latch guards; k7 primary/analytic/Taylor scalar closure; positive T/beta; covering-background identity; exact zero/nilpotent matrix/integral limits; scalar decay/equilibrium/growth controls. Focused independent review found no critical or important scoped mathematical defect. These complement, and do not claim to rerun, the upstream full-chain admission performed in the documented successful V4 run.
+
+## Q-COMPLETION GATE AND NEXT TASK
+
+Q-COMPLETION_GATE: NOT_YET_SATISFIED. The central full-Q bounds and actual-source linkage remain absent, and these concrete proved local remedies make further material work possible. No Motor14 closure or Report Writer routing is justified.
+Exactly one next engine: the existing AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE.
+
+Minimum task:
+1. Search current connected repository versions/known-good V4 implementation and program registry. Patch/reuse, preserving all current/predessor cell methods and frozen science. Assign the next genuinely unused version/PROGRAM_ID only if an executable successor is built; this mathematical round does not reserve one.
+2. Permit new background trials through k12, using the existing recomputed weighted proof. Keep strict tube/H/latch guards and full inherited errors. Do not substitute slab refinement as a proven cure at these positive-diagonal stops.
+3. Introduce an explicit new-cell thermal finite-time method for the approved constant-predictor, contractive He1, normalized h=1 domain. Recompute L,delta,r0 and U from source and current state; require strict whole-cell closure and positive T/beta. Preserve historical stationary-method V4 cells/verification byte for byte; do not silently reinterpret their method markers. Tampered/stale error/method/domain metadata must fail.
+4. Independently reconstruct the four selected candidates from these exact V4 parents. Verify rejected-before/admitted-after scoped controls, analytic limits and malformed/tampered scope rejection. Perform genuine complete predecessor and successor chain/merge admission before treating any resumed result as a checkpoint. Continue only through explicitly verified prefixes; preserve successful cases. A local remedy does not guarantee later closure or actual-source qualification.
+5. If constructing a runnable successor, register exact target and version safely through the permanent launcher, inspect/update README in the same repository change, and define finite result tests before expensive execution. Do not dispatch a scientifically altered or unregistered target. Return actual results with journal/source/provenance to Result Ingestion & Routing.
+
+Frozen: exact Q/CASE/question, all four configs/source hashes, fixed z_reio, source branch/latch/helium normalization, physical equations, all predecessor cells/current errors, coverage, source guards and applicability limitation. Variable: only explicit new-cell halving work control and proved finite-time thermal admission method. No tuning, re-shoot, clipping or covariance/sampler changes.
+Success: a scoped minimum executable change genuinely admits/rechecks these prospective cells and its complete successor prefixes, with identity/launcher/repository/test consistency documented; or a precisely evidenced new material obstruction. Failure of admission is a technical/math failure under tested conditions, not physical falsification.
+Stop this mathematics round now: its four requested current-cursor remedies and necessary independent checks are established; more arbitrary comparisons do not alter this handoff. Stop the overall Q only when a defensible documented complete answer/bounds or irreducible uncertainty exists and further work cannot materially change that answer; then send the complete case directly to MOTOR14.
+
+## MACHINE-READABLE DIFFERENTIAL RECEIPT
+
+```json
+{
+  "schema": "Q048_MATHEMATICS_HANDOFF_V5_RECEIPT",
+  "result_id": "I-PROPOSED-Q048-MATHEMATICS-005",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "created_utc": "2026-10-12T13:10:36.551512+00:00",
+  "created_copenhagen": "2026-10-12T15:10:36.551512+02:00",
+  "upstream_program_id": "Q048-RESUME-V4",
+  "upstream_run_id": "38249121532",
+  "execution_commit": "ab301e052743773b6734959f80fbd6540afee230",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "incoming_journal": {
+    "bytes": 12785965,
+    "sha256": "ac8a273222b50fab433b80a6be4026cbf44c2da0afd54263cab6615675fb0f8e",
+    "preservation": "UNCHANGED_COMPLETE_BYTE_TAIL"
+  },
+  "artifacts_sha256": {
+    "q048_v4_stop_controls.py": "352bef5131e0a9f0d1e724ebc58ae2f260a1cbaed70f585d9d17290ca81dc845",
+    "q048_v4_stop_verify.py": "6df2d3a91c99dc8f2908d0fecd2154f95f692d28fda516791c571ca1fffd7e9d",
+    "Q048_V4_STOP_MATHEMATICS.json": "1ea7f22540334ae81513a84b2ab7adaa2a6adf75afac70903b24f1b65aece92a",
+    "Q048_V4_STOP_VERIFICATION.json": "b5e96f3fd6ee2363de4aec369f0ad02c25cc232741d119fd52dfe376364d02cf"
+  },
+  "input_sha256": {
+    "Q047_SAMLET_JOURNAL.md": "ac8a273222b50fab433b80a6be4026cbf44c2da0afd54263cab6615675fb0f8e",
+    "Q048_GITHUB_RAW_RUN38249121532.json": "7f1f805d39840592622df23f781b594548a4e355e80b656006a87c6eed013c08",
+    "camspec-ede_n3_checkpoint_v4.json": "cf7f80c9e4c8d5c09a03db835e2573f0167a077a2ebef2a49fcba250ac0ad5f1",
+    "hillipop-ede_n3_checkpoint_v4.json": "6503fe683052d474222bbe36fabc156f95ad520eab1225cc0222cc97f1322e8f",
+    "camspec-lcdm_checkpoint_v4.json": "33b28465f24eb8dbbc1fd19466f5ffeb9d5080e68ca2572045d5bce864b66a51",
+    "hillipop-lcdm_checkpoint_v4.json": "50e6509523eac0fc4f3bbc67ba5688ac4f2ac8ef6ac0438785c4773a8c6f6a8c"
+  },
+  "source_sha256": {
+    "q047_math_v1.py": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+    "q047_certificate_v1.py": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+    "q047_precursor_check_v1.py": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+    "q048_prefix_v1.py": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+    "q048_prefix_config_v1.json": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "q048_resume_v3.py": "9f32f96eebad5b531a1fd0b9e6a1e96b641d41621e1ab86b66daa7bfa04c7661",
+    "q048_resume_controls_v3.py": "6a92850beb5febe3848f4af6ff61adec519639c4e4480d134cf154b86f0fb2d9",
+    ".github/workflows/00-bubbleverse-start.yml": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
+    "q048_resume_v4.py": "474f9b2b1b082a9b54eb7ebc2cbf8cdff6e12f1d3a5958aae1ce9558efd95d17",
+    "q048_comparison_v4.py": "4d3199883e5984efea635cd3b2737f939e4a0081c40f704f972c61abb4c5a1f7",
+    "q048_resume_controls_v4.py": "b3c3da500d6a9973fe1efd29b1ef96830540aac53cbf3fff1b2227173b66eca3",
+    "q048_resume_tests_v4.py": "da4c8b2286437aa338faf11c90ac1f261e16d94ce8a5780fcaadab5406b0e815",
+    "q048_resume_merge_v4.py": "f75c71697c7335ace166ab845890f3d50795adeacb6376266cace0b7bb15c850",
+    "q048_resume_package_check_v4.py": "53fc779f6260279ca8173703d462d4c79dd01fba3f2546a7d1ce9b3723a54b9c"
+  },
+  "tests": {
+    "camspec-ede_n3": {
+      "gate": "PASS_CONDITIONAL_LOCAL_CELLS",
+      "background_halving": 12,
+      "thermal_halving": 7,
+      "background_independent_slack": [
+        "10369821311204424379739201370609794910614421187810997509253815469493241967150165874778637502537871370346763686767762445769/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "2117993007680204222361842205119222842648111975576344955129923836101200383063629991983745013454314477381271822182885053199447/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "thermal_independent_slack": "93231747671356839646027112684789675344185139658973178089443764972155005510521901355767086577260783480959152674672956654507303620633054989769290504161484137050713705096756293487814723096653447224787728939818535611803578656914952842089/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "thermal_augmented_series": {
+        "terms": 200,
+        "row_norm": "1",
+        "tail_upper": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "shift": "798550514859614821848398812253947227855632863230210059941781913595076042478894409694259678861918858014228413190085294779/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "thermal_taylor_upper": "1665264950841250888779102875833710566324822097031730379430853610583472423293878764823064259627493358634357972978461/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "thermal_taylor_slack": "385323306307471678811189107093686006097176090738075387900645314031066697511694389658960556060489908282819823160231/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "hillipop-ede_n3": {
+      "gate": "PASS_CONDITIONAL_LOCAL_CELLS",
+      "background_halving": 12,
+      "thermal_halving": 7,
+      "background_independent_slack": [
+        "3401653696632389116066439642307667973203847270068552939253973295201308519659839814614011337267067864776038462878093377469/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "2936737641755392238699105649180391066720301906277232963233109221423674045435073128435013838769495647937158330554389365686321/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "thermal_independent_slack": "9003219350262209629457557669794747617840517573382118378107357003459128459965102645197395101264810456698111110544594028444589380155618088162131921562566201419248654035183559181145852169287852438053140299347040966060814986596125962489/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "thermal_augmented_series": {
+        "terms": 200,
+        "row_norm": "1",
+        "tail_upper": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "shift": "94201263119535609466889222634578924935153102440640770003532215061719682816268203071709956544490492942530230259928860811/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "thermal_taylor_upper": "29099879375193351718415945618255332475199701989596923954264801055682989243548943966747551510695254733935800411211/15625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "thermal_taylor_slack": "43734635011741587260730893601664000942894842168539122783100640959656607763750209446557235027069928512082877428177/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "zero_limit": {
+      "gate": "PASS",
+      "series": {
+        "terms": 200,
+        "row_norm": "1",
+        "tail_upper": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "shift": "0"
+      }
+    },
+    "nilpotent_limit": {
+      "gate": "PASS",
+      "series": {
+        "terms": 200,
+        "row_norm": "2",
+        "tail_upper": "1/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "shift": "0"
+      }
+    },
+    "scalar_limits": {
+      "gate": "PASS",
+      "cases": [
+        "decay_zero_defect",
+        "stationary_equilibrium",
+        "growth_to_equilibrium"
+      ]
+    }
+  },
+  "local_gate": "PASS_CONDITIONAL_LOCAL_DIAGNOSTICS",
+  "actual_products": {
+    "source_admission": "UNRESOLVED",
+    "common_first_cutoff": "NOT_COMPUTED",
+    "complete_xe_difference_bounds": "NOT_COMPUTED",
+    "complete_tau_T_difference_bounds": "NOT_COMPUTED"
+  },
+  "final_result_gate": "UNRESOLVED",
+  "q_completion_gate": "NOT_YET_SATISFIED",
+  "next_engine": "AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE",
+  "journal_effect": {
+    "KEEP": "All prior journal, raw outputs, source IDs, frozen inputs, failures, hypothesis status and conditional applicability.",
+    "ADD": "Finite source-pinned local control result I-PROPOSED-Q048-MATHEMATICS-005 and its exact diagnostics/independent verification.",
+    "REFINE": "Current V4 stop mechanisms are reducible at these tested cursors.",
+    "SUPERSEDE": "A fresh mathematical diagnosis is now established; current next task is implementing/admitting the proved prospective controls.",
+    "UNCHANGED": "Original V4 executable/registered target and all scientific full-Q missing products."
+  }
+}
+```
+
+---
+
+## COMPLETE UNCHANGED INCOMING AUTHORITATIVE JOURNAL
+
+# BUBBLEVERSE — RESULT INGESTION & ROUTING HANDOFF
+
+STATUS: CONTINUES.
+CASE ID: NOT_ASSIGNED.
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED.
+PROGRAM_ID: Q048-RESUME-V4.
+RESULT ID: I-PROPOSED-Q048-RESUME-GITHUB-38249121532.
+Date/time: 2026-10-12T12:50:00.870355+00:00 UTC; 2026-10-12T14:50:00.870355+02:00 Europe/Copenhagen.
+
+## QUESTION — exact full authoritative wording
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436. Q047 remains CLOSED INCONCLUSIVE. No new Q/CASE is assigned.
+
+## RECOMMENDED CHATGPT EXECUTION PROFILE
+
+Available functional classes considered: general/high reasoning, bounded autonomous code/file workflows, read-only GitHub repository/run/source/artifact/log inspection and exact arithmetic; web/literature and connected computational capabilities are available if material. Runtime delegation metadata exposes several reasoning/code model alternatives, but it does not verify the user's main model picker or active reasoning setting. No model catalog, context capacity or switch is invented.
+Recommended primary setup: current Codex/Work with strong reasoning, High or equivalent if selectable. Style: autonomous bounded ingestion here; reasoning-heavy finite Mathematics Engine next. Functional classes C+E for retrieval/continuity, high-reasoning class C for consequential interpretation. Maximum/frontier mode is not required merely to parse this reproduced result. Fallback: strongest available capable reasoning/code setup with pinned exact interval execution. Escalate for difficult coupled source-admission/enclosure proofs or independent contradictions, not model prestige.
+Recommended tools: original attachments, exact rational/interval/code analysis, read-only GitHub primary source/provenance. No broad physics literature, new native CLASS run, sampler/HPC campaign, browser or unrelated plugin adds information to this finite verified-control bottleneck now. Shared evaluator limits remain explicit; plugin retrieval is not independent scientific confirmation.
+
+## SELECTED NEXT BUBBLEVERSE ENGINE
+
+**MATHEMATICS ENGINE — existing MATEMATIKMOTOREN.** Exactly one scientific next destination. Q is not closed; Motor14 routing is not justified. Report Writer is never the destination.
+
+## SAMLET JOURNAL — complete authoritative state
+
+The updated Q047_SAMLET_JOURNAL.md contains this handoff and machine-readable receipt, the preserved recent journal-repair note and the entire incoming journal. Incoming journal is 12718313bytes, SHA256 2566a225c01a352c874f50ae53e9f91f1f85857776bb394cee00d499f517adfa, exactly equal to the journal installed at this successful run's commit. Every earlier scientific/source/claim/failure/falsification state survives unchanged. The separate4464byte repair note is retained as historical technical memory; its old next-action instruction is superseded by the documented successful run. No parallel journal is created.
+
+KEEP the full journal, local V4 result, every predecessor error/certificate and all scientific freezes. ADD actual installed run38249121532, official jobs/artifacts/commit/runtime evidence and run-specific checkpoints. STRENGTHEN cross-runtime reproducibility. SUPERSEDE historical NOT_PERFORMED labels only for current execution-state assertions, and resolve JOURNAL_HISTORY as the active installation problem. LEAVE UNCHANGED the EDE mathematical blockers, actual-source limitation and missing whole-question products. No physical model/hypothesis is falsified or rescued.
+
+## NEW RESULT — three layers
+
+ORIGIN: GitHub Actions run38249121532, workflow .github/workflows/q048-resume-v4.yml, commit ab301e052743773b6734959f80fbd6540afee230.
+CLASS: RUN_SUCCESS + NUMERICAL_RESULT + PARTIAL_RESULT + REPRODUCTION_RESULT + VALIDATION_RESULT.
+STATUS: TECHNICALLY_VALIDATED_CONDITIONAL_AND_EXACTLY_REPRODUCED.
+
+### Direct output
+
+| Case | Background cells | Thermal cells | New background / thermal versus V3 | Current background / thermal blocker |
+|---|---:|---:|---:|---|
+| hillipop-ede_n3 | 342 | 234 | 2 / 2 | BACKGROUND_TUBE_NOT_CLOSED / ValueError:THERMAL_SUPERSOLUTION_NOT_CLOSED |
+| camspec-lcdm | 0 | 35 | 0 / 0 | None / None |
+| hillipop-lcdm | 0 | 35 | 0 / 0 | None / None |
+| camspec-ede_n3 | 427 | 319 | 3 / 0 | BACKGROUND_TUBE_NOT_CLOSED / ValueError:THERMAL_SUPERSOLUTION_NOT_CLOSED |
+
+All six jobs succeeded: preflight, four workers and collector. Four final reports complete; no pending/missing jobs. Four-way merge compatibility PASS. Official preflight has14 tests passing in5.354seconds and the independent finite-controls gate PASS. Workers fully rechecked predecessor and successor chains; collector recomputed all four. The uploaded archive's official digest/size and CRC pass. Each reconstructed individual checkpoint matches its official raw recorded hash and validates Q/source/config/parent/prefix/payload/run metadata.
+Displayed endpoints: Camspec EDE background z6099.399055 / thermal z6103.123170; Hillipop background z4980.776544 / thermal z4984.426419. LCDM thermal transfer z2870. Exact rational coordinates are preserved in raw/checkpoint/receipt files. These are partition endpoints, not requested first-cutoff events.
+
+### Technical interpretation
+
+Every source-initialization/input/root, background and thermal mathematical payload is exactly equal to the already fully validated local V4 result. The official independent-controls JSON is byte-identical to local controls. Runtime, run/commit/job metadata differ; mathematical information does not. This GitHub execution adds zero cells beyond the local result and must not be counted as another independent physical dataset.
+Compared with V3, the five background and two thermal new cells implement the proved finite weighted/tube remedy. Old immediate growth-cap/tube blockers are passed at those scoped states; later states still fail the specific prospective closure requirements. BACKGROUND_TUBE_NOT_CLOSED is a tube-comparison failure. THERMAL_SUPERSOLUTION_NOT_CLOSED means the additional constant R control did not close under the tested inputs/domain; it may be conservative. Neither is a nonexistence proof, physical instability or model falsification. The failed domains/criteria/raw intervals are retained.
+Numerical background model phi_u=X/H, X_u=-3X-V_phi/H and thermal source branches remain frozen. Positive diagonal scaling transforms r0/defect consistently; no start/current uncertainty is narrowed. The enlarged He1 outer tube is a proof enclosure, not a measured negative w or altered physical temperature. Full source applicability still has the inherited conditional limitation.
+
+### Physical interpretation / anomaly status
+
+No complete common-reference/source admission, shared first cutoff, post-event latch/reset electron history or cumulative optical-depth difference bound has been computed. No statement about the actual cutoff effect or cosmological model viability follows. ANOMALY STATUS: NO_NEW_PHYSICAL_ANOMALY_ESTABLISHED. Wide/unexpected deterministic intervals survive; they are not posterior sigmas or observations.
+ACTUAL SOURCE ADMISSION: UNRESOLVED.
+ACTUAL FIRST EVENT / COMPLETE xe / COMPLETE tau_T: NOT_COMPUTED.
+FINAL_RESULT_GATE: UNRESOLVED.
+
+## INTERNAL RESULT PROVENANCE
+
+Repository: Morfindien/Bubbleverse, branch main. Execution commit ab301e052743773b6734959f80fbd6540afee230. Scientific source commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97. Frozen source-config file SHA256 2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b; V4 config hash b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada. Source/input IDs and four captured effective configurations are unchanged; accepted z_reio remains fixed.
+Run URL https://github.com/Morfindien/Bubbleverse/actions/runs/38249121532 , workflow_dispatch, run-number3, attempt1, success. Created 2026-10-12T12:27:17Z; updated 2026-10-12T12:35:38Z. The8m21s metadata span is not CPU-hours. CPython3.12.15, ubuntu-24.04, preflight OSUbuntu24.04.5 LTS, runner2.337.0, image20261004.327.1. Exact action SHAs and job IDs/timestamps are recorded in the receipt. CPU model/CPU-hours NOT_DOCUMENTED/NOT_MEASURED. Compiler/likelihood/sampler/priors/seeds NOT_APPLICABLE; no native CLASS evaluation or refit.
+Pinned parent raw: run38230594450, SHA256 12d7cfa0b863e76d0cf3760c532b2a40adbdc789d2b08f8a364a7e488c5c58b3; V3 config hash 84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405. The earlier two V4 runs were preflight failures with no retained numerical checkpoint; this first computational V4 run explicitly migrated the pinned V3 asset. Exact V3 roots and earlier V2 migration roots survive. Current artifact/run identity is verified; isolated historical hash pointers alone do not authenticate every earlier producer.
+Final artifact11747337815: uploaded ZIP SHA256 7ddca9a364fa5b32066b64ac120ef77cddb2552b46a54dd15a0495fd84d4a8e0,2893694bytes. Extracted q048_resume_final_v4.json:14795364bytes, SHA256 7f1f805d39840592622df23f781b594548a4e355e80b656006a87c6eed013c08. Archives are not delivered; raw JSON and four exact checkpoints are individual files.
+Controls artifact11747726167: ZIP SHA25624a3e3e49281e82f74b1d56674b360c951b4060a860ca18d5b2a6aebc63f49e3. Member SHA256 ce8fe9d3d35e08b7aa4f84cade80b717c15b0723dd90bd11c6460c2f399a4fa0, byte-identical to local. Its official artifact size/digest/CRC pass.
+Warnings: Node20-targeting actions forced to Node24; punycode/url.parse/Buffer deprecation notices. Preserve as technical notices. No numerical discrepancy is demonstrated; unrelated action-version repair is unnecessary for this scientific routing.
+
+## WEB / PLUGIN / TOOL RESEARCH
+
+RESEARCH PERFORMED: YES — targeted primary GitHub technical provenance; no new physics literature search.
+CAPABILITIES: read-only run/jobs/tree/artifact/decoded-log retrieval; original archive extraction/hash/CRC; exact state comparison and checkpoint reconstruction/admission.
+QUESTIONS: Did installed V4 run? Did the corrected journal pass? Were all jobs/tests complete? Does official artifact equal upload? Which frozen code/input ran? Are mathematics/controls identical to local? What actually remains unresolved?
+NEW EVIDENCE: official successful installed run, all six jobs and14 tests, validated artifact/checkpoints, identical cross-runtime result. Project-generated evidence remains internal, not external observational confirmation.
+CONTRADICTORY EVIDENCE: current execution supersedes preparation NOT_PERFORMED and the old journal installation blocker; no mathematical payload conflict.
+LIMITATIONS: generic fetch rejected the job-log URL; the purpose-built decoded job-log capability succeeded. No result fabricated. Shared source evaluation does not become independent physical source admission.
+IMPACT: scientific local conclusion unchanged; provenance/reproducibility strengthened. No new expensive chain or unchanged full validation was launched by this ingestion; prior full checks plus exact complete payload/code/input identity suffice.
+
+## ACTIVE SOURCE REGISTER — stable IDs and underlying sources
+
+K-PROPOSED-Q048-SOURCE-002 — frozen mwt5345/class_ede source equations/units/branches at5a131c91d657dd9a7c6364cc45b038710f8d0d97; https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97 . External source-code evidence, not observation or actual-instance admission. Personal authors/publication/DOI not inferred.
+K-PROPOSED-Q048-INPUT-001 — four captured effective inputs and fixed accepted z_reio from run38140371059; https://github.com/Morfindien/Bubbleverse/actions/runs/38140371059 . Internal input evidence; complete fields/source hashes survive.
+K-PROPOSED-Q048-MATH-REPO-006 — pinned Q047/prefix/V3 proof backend atfa85edc216985c02fe88bd5f0b5d03ba5cb3a7a5. Exact50 guard, signed comparisons and source-domain functions; current copies match frozen installed pins. I-PROPOSED-Q048-MATHEMATICS-004 — scoped finite controls at the prior V3 stop states, not automatic admission of new endpoints.
+K-PROPOSED-Q048-V4-PACKAGE-007 — V4 implementation/config/tests/registry/workflow/current source at executed commit ab301e052743773b6734959f80fbd6540afee230; https://github.com/Morfindien/Bubbleverse/blob/ab301e052743773b6734959f80fbd6540afee230/q048_resume_v4.py and q048_comparison_v4.py. Internal technical code evidence.
+I-PROPOSED-Q048-RESUME-LOCAL-V4 — prior complete local conditional result427/319,342/234,35thermal eachLCDM, full pre/post/collector validation. Preserve its executed-core/final-admission-code distinction and original hashes.
+K-PROPOSED-Q048-GITHUB-RUN-38230594450 / I-PROPOSED-Q048-RESUME-GITHUB-38230594450 — exact successful V3 parent and checkpoint lineage, https://github.com/Morfindien/Bubbleverse/actions/runs/38230594450 .
+K-PROPOSED-Q048-GITHUB-RUN-38247800344 / I-PROPOSED-Q048-V4-JOURNAL-INSTALLATION-001 — observed JOURNAL_HISTORY preflight failure, old exact journal size/blob, local single-file repair reproduction. Historical technical evidence retained; current problem resolved. https://github.com/Morfindien/Bubbleverse/actions/runs/38247800344 .
+K-PROPOSED-Q048-GITHUB-RUN-38249121532 [ADD] — official successful run/job/log/tree/artifact evidence at ab301e052743773b6734959f80fbd6540afee230. Repository accountMorfindien,2026. https://github.com/Morfindien/Bubbleverse/actions/runs/38249121532 . Internal technical provenance.
+I-PROPOSED-Q048-RESUME-GITHUB-38249121532 [ADD] — run-specific exact mathematical reproduction, raw SHA256 7f1f805d39840592622df23f781b594548a4e355e80b656006a87c6eed013c08, complete four-case checkpoints and controls. Internal numerical result, not publication.
+All earlier full source fields/registers and rejected/falsified/superseded sources remain in the preserved authoritative journal. No new DOI/arXiv is invented.
+
+## CLAIM-TO-SOURCE MAP
+
+C-V4-INGEST-001 installed execution/all6jobs/14tests → K-PROPOSED-Q048-GITHUB-RUN-38249121532, package007 and official logs/tree.
+C-V4-INGEST-002 exact full mathematical/controls reproduction → I-PROPOSED-Q048-RESUME-GITHUB-38249121532, localV4, mathematics004, direct complete equality plus source/input pins.
+C-V4-INGEST-003 current later enclosure/supersolution failure → I-PROPOSED-Q048-RESUME-GITHUB-38249121532, current raw stop states, package007/Math-repo006 method definitions.
+C-V4-INGEST-004 full-Q products absent → I-PROPOSED-Q048-RESUME-GITHUB-38249121532 raw scope fields, source002 conditional limitation.
+C-V4-INGEST-005 stale-journal failure resolved → run38247800344 + journal-installation001 + successful current run/installed journal blob8c566870959e3ddd522191ba71a3673447808429.
+
+## WHAT CHANGED / DID NOT CHANGE / HISTORICAL MATERIAL
+
+Changed: actual installed successful execution/commit/job/artifact/checkpoint/runtime provenance, resolved journal installation and strengthened exact reproducibility.
+Unchanged: Q/CASE/exact question, journal/source/claim memory, frozen physics/input/config/source software, accepted z_reio, every local mathematical interval/certificate/initial uncertainty and current blockers. No added scientific cells beyond local V4, no averaging across configurations.
+Falsified/rejected/superseded: no new physical falsification. Q047 remains closed inconclusive. Earlier failed finite methods retain their tested domains; passing old finite weighted/tube controls does not resurrect invalid source-equivalence claims. Preparation NOT_PERFORMED and old upload instructions are historical, superseded for current execution only. Technical JOURNAL_HISTORY was an installation failure, not model failure.
+
+## OPEN UNCERTAINTIES / Q-COMPLETION GATE
+
+STATUS: NOT_YET_SATISFIED.
+The exact Q still needs admissible complete reference/source linkage, the continuous shared first cutoff event and full latch/reset electron-history/depth bounds for all four frozen configurations. Current barriers are finite chosen control failures, not a demonstrated irreducible impossibility or final physical exclusion. Unknown/inconclusive closure was considered; the documented absence of central products plus a concrete reducible enclosure bottleneck does not justify closing this exact Q as irreducibly unknowable.
+MATERIAL-REVERSAL TEST: a legal continued enclosure or a rigorous explicit obstruction could materially alter whether/how the complete bounds can be answered. A new finite mathematical task is material. An unchanged V4 rerun/reproduction or arbitrary additional validation is not, and is stopped.
+
+## ROUTING REASON / NEXT TASK
+
+Route only to the existing MATHEMATICS ENGINE. At the four exact saved EDE cursors, reconstruct the first failed prospective background/thermal controls from current V4 checkpoints and frozen code. The old V3 endpoint remedies are already passed; do not diagnose those again.
+1. For each background stop, evaluate the actual predictor/residual, signed/Metzler Jacobian, inherited r0, recomputed positive diagonal weight, shifted alltime comparison and source/H guards. Determine which strict tube inequality fails within the current0..11 halving schedule. Distinguish a coarse exp(N) whole-cell enclosure or legacy tube choice from a proved source-domain obstruction. Do not narrow predecessor errors.
+2. For each thermal stop, use only fully verified covering background cells and correct mode. Separate original fixed-tube closure, widened-tube primary signed-scalar interval proof and extra constant supersolution R=max(r0,delta/(-L)). Derive whether R is unnecessarily coarse for finite time or whether a legal prospective tube/predictor/forcing enclosure can close with all source/beta/temperature guards. Failure of that sufficient R control is not itself a physical invalidity claim.
+3. Produce a finite exact remedy or explicit mathematically justified obstruction at these NEW states, with a relevant independent comparison check. Identify the minimum justified downstream change and its effect on the full-Q path, including the still-unproved actual-source applicability. No new program/HPC campaign merely for activity.
+
+## FIXED / FROZEN ELEMENTS
+
+Exact Q/question/CASE; complete journal and stable source/claim history; class_ede source5a131c91d657dd9a7c6364cc45b038710f8d0d97; installed V4 code ab301e052743773b6734959f80fbd6540afee230; four effective input/source hashes; fixed accepted z_reio; helium normalization/epsilon; all source-initial/current intervals and predecessor cells; phase/coverage/positive-H/temperature/beta/source guards; actual-source limitation; raw/current checkpoint hashes. No re-shoot/refit, physics tuning, clipping or rescued hypothesis.
+
+## VARIABLE ELEMENTS
+
+Only explicitly proved new-cell comparison/alltime enclosure, prospective tube or predictor/partition design, preserving mapped uncertainty. The current code/work guard/halving schedule remains the comparison baseline; any later executable change needs new explicit version/registration after proof and repository search. No change is made by this ingestion.
+
+## SUCCESS / FAILURE / STOP
+
+SUCCESS: finite strict closure/source-domain controls at these new cursors with unchanged predecessor uncertainty and independently checkable math; or a precise proved obstruction under explicit assumptions, including what it does/does not establish for the full Q.
+FAILURE/FALSIFICATION: required inequalities or actual applicability fail; preserve exact raw bounds/provenance and scope. Numerical-control/program failure does not falsify a physical model. Do not move predefined criteria after viewing the result.
+STOP current ingestion: installed provenance, artifact integrity, exact state equivalence, journal effects and one material route are now established; no more identical validation is required.
+STOP the finite mathematical round when the minimum remedy/obstruction is established. Reassess the exact Q. Once a defensible documented complete answer/bounds or justified irreducible uncertainty exists and no task could materially reverse it, stop and route complete state directly to MOTOR14. Future interesting questions do not keep Q048 open.
+
+
+## Machine-readable ingestion receipt
+
+```json
+{
+  "schema": "Q048_RESULT_INGESTION_RUN38249121532_V1",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "program_id": "Q048-RESUME-V4",
+  "result_id": "I-PROPOSED-Q048-RESUME-GITHUB-38249121532",
+  "created_utc": "2026-10-12T12:50:00.870355+00:00",
+  "created_copenhagen": "2026-10-12T14:50:00.870355+02:00",
+  "classification": [
+    "RUN_SUCCESS",
+    "NUMERICAL_RESULT",
+    "PARTIAL_RESULT",
+    "REPRODUCTION_RESULT",
+    "VALIDATION_RESULT"
+  ],
+  "result_status": "TECHNICALLY_VALIDATED_CONDITIONAL_AND_EXACTLY_REPRODUCED",
+  "scope": "CONDITIONAL_SOURCE_REAL_PREFIX",
+  "run": {
+    "id": 38249121532,
+    "name": "Q048 verified prefix continuation V4",
+    "path": ".github/workflows/q048-resume-v4.yml",
+    "run_number": 3,
+    "run_attempt": 1,
+    "head_sha": "ab301e052743773b6734959f80fbd6540afee230",
+    "head_branch": "main",
+    "event": "workflow_dispatch",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-10-12T12:27:17Z",
+    "updated_at": "2026-10-12T12:35:38Z",
+    "run_started_at": "2026-10-12T12:27:17Z",
+    "html_url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38249121532"
+  },
+  "jobs": [
+    {
+      "id": 114810526499,
+      "name": "preflight",
+      "conclusion": "success",
+      "started_at": "2026-10-12T12:27:21Z",
+      "completed_at": "2026-10-12T12:27:44Z",
+      "runner_name": "GitHub Actions 1000005124",
+      "labels": [
+        "ubuntu-24.04"
+      ]
+    },
+    {
+      "id": 114810682129,
+      "name": "continuation (camspec-ede_n3)",
+      "conclusion": "success",
+      "started_at": "2026-10-12T12:27:46Z",
+      "completed_at": "2026-10-12T12:32:55Z",
+      "runner_name": "GitHub Actions 1000005126",
+      "labels": [
+        "ubuntu-24.04"
+      ]
+    },
+    {
+      "id": 114810682184,
+      "name": "continuation (hillipop-lcdm)",
+      "conclusion": "success",
+      "started_at": "2026-10-12T12:27:46Z",
+      "completed_at": "2026-10-12T12:28:07Z",
+      "runner_name": "GitHub Actions 1000005125",
+      "labels": [
+        "ubuntu-24.04"
+      ]
+    },
+    {
+      "id": 114810682192,
+      "name": "continuation (hillipop-ede_n3)",
+      "conclusion": "success",
+      "started_at": "2026-10-12T12:27:47Z",
+      "completed_at": "2026-10-12T12:32:24Z",
+      "runner_name": "GitHub Actions 1000005127",
+      "labels": [
+        "ubuntu-24.04"
+      ]
+    },
+    {
+      "id": 114810682220,
+      "name": "continuation (camspec-lcdm)",
+      "conclusion": "success",
+      "started_at": "2026-10-12T12:27:46Z",
+      "completed_at": "2026-10-12T12:28:06Z",
+      "runner_name": "GitHub Actions 1000005128",
+      "labels": [
+        "ubuntu-24.04"
+      ]
+    },
+    {
+      "id": 114812536790,
+      "name": "collect",
+      "conclusion": "success",
+      "started_at": "2026-10-12T12:32:58Z",
+      "completed_at": "2026-10-12T12:35:37Z",
+      "runner_name": "GitHub Actions 1000005129",
+      "labels": [
+        "ubuntu-24.04"
+      ]
+    }
+  ],
+  "job_manifest": {
+    "q": "Q-048",
+    "program_id": "Q048-RESUME-V4",
+    "run_id": "38249121532",
+    "expected_jobs": [
+      "camspec-lcdm",
+      "camspec-ede_n3",
+      "hillipop-lcdm",
+      "hillipop-ede_n3"
+    ],
+    "completed_jobs": [
+      "camspec-ede_n3",
+      "camspec-lcdm",
+      "hillipop-ede_n3",
+      "hillipop-lcdm"
+    ],
+    "failed_jobs": [],
+    "pending_jobs": []
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+  "source_config_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "installed_file_pins": {
+    "q048_resume_v4.py": {
+      "sha256": "474f9b2b1b082a9b54eb7ebc2cbf8cdff6e12f1d3a5958aae1ce9558efd95d17",
+      "git_blob_sha": "36dda498203025e78d39f0ed0b30b23a65ecd0be",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_comparison_v4.py": {
+      "sha256": "4d3199883e5984efea635cd3b2737f939e4a0081c40f704f972c61abb4c5a1f7",
+      "git_blob_sha": "460294fcde9e846364aacc40a5bc42887f461f6c",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_config_v4.json": {
+      "sha256": "31ba2112b778aaabb82a39225222fcb4fabeea04278bcb4a904c3d99d1ea8b9e",
+      "git_blob_sha": "f40983e341ca726bc805a04fe4d1ffe709ff5bd4",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_controls_v4.py": {
+      "sha256": "b3c3da500d6a9973fe1efd29b1ef96830540aac53cbf3fff1b2227173b66eca3",
+      "git_blob_sha": "0eda54b9daa75439ec61bba38d1476a7bd688ca1",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_control_fixture_v4.json": {
+      "sha256": "c758c86fdd7bb977fd8e807c829e31b31ad805e187e8c09e06477baee34062f7",
+      "git_blob_sha": "966a8bfec0ae7d4fcc357e3c5d90371eedbf3775",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_tests_v4.py": {
+      "sha256": "da4c8b2286437aa338faf11c90ac1f261e16d94ce8a5780fcaadab5406b0e815",
+      "git_blob_sha": "9801afcbd9b64cc3bf8919faca493eb8df69705a",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_merge_v4.py": {
+      "sha256": "f75c71697c7335ace166ab845890f3d50795adeacb6376266cace0b7bb15c850",
+      "git_blob_sha": "7bda5bab536840a0c037d929b4b3fc095470837c",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_package_check_v4.py": {
+      "sha256": "53fc779f6260279ca8173703d462d4c79dd01fba3f2546a7d1ce9b3723a54b9c",
+      "git_blob_sha": "fe1b811e00cbff21248fb8be70154e0f0ed547e8",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_parent_v4.json": {
+      "sha256": "12d7cfa0b863e76d0cf3760c532b2a40adbdc789d2b08f8a364a7e488c5c58b3",
+      "git_blob_sha": "dc604157b4a2baeda12d2139926f8fc567bbe9d0",
+      "matches_installed_frozen_tree": true
+    },
+    "bubbleverse_program_registry.json": {
+      "sha256": "c92a3a34abcff4211cafe53d664d42fcaa3ae4c0db5a97cc5e80c1b0b4d5687f",
+      "git_blob_sha": "862e2b87a9c8b9228e5040c4957b826e6285b198",
+      "matches_installed_frozen_tree": true
+    },
+    "README.md": {
+      "sha256": "20ddab7d33a8258c362f6c2790116c18fec0361da97abd501478296cee8adf9d",
+      "git_blob_sha": "218c518d3e6c3983767fe94791e22b603548bde4",
+      "matches_installed_frozen_tree": true
+    },
+    ".github/workflows/q048-resume-v4.yml": {
+      "sha256": "3844399b5326423ce8dc41421b169248224e44b48e80a2297fa07bf2fa5482b9",
+      "git_blob_sha": "1b51061e13d79ef546164f05482ac096d02a193c",
+      "matches_installed_frozen_tree": true
+    },
+    "q047_math_v1.py": {
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "git_blob_sha": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb",
+      "matches_installed_frozen_tree": true
+    },
+    "q047_certificate_v1.py": {
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "git_blob_sha": "00c8c5395e2b4070be33e768e83db33edb3ea2d1",
+      "matches_installed_frozen_tree": true
+    },
+    "q047_precursor_check_v1.py": {
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "git_blob_sha": "21cee458a6a4e931148405a7ffebeaf0a2d79749",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_prefix_v1.py": {
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "git_blob_sha": "288ebe6da1df592692f174be0f1d89478c1001aa",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_prefix_config_v1.json": {
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "git_blob_sha": "02c9525cbda1ad56c1251d06fc74dba2c1aec9ba",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_v3.py": {
+      "sha256": "9f32f96eebad5b531a1fd0b9e6a1e96b641d41621e1ab86b66daa7bfa04c7661",
+      "git_blob_sha": "3a115a02294d9596daac01d63f65fef67e92a95c",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_controls_v3.py": {
+      "sha256": "6a92850beb5febe3848f4af6ff61adec519639c4e4480d134cf154b86f0fb2d9",
+      "git_blob_sha": "d0aeb3cb84510438634fb853b43cc6945ffd0f95",
+      "matches_installed_frozen_tree": true
+    },
+    ".github/workflows/00-bubbleverse-start.yml": {
+      "sha256": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
+      "git_blob_sha": "7f22c617fb98d1508a0b22a42dd3735a74d8288e",
+      "matches_installed_frozen_tree": true
+    },
+    "q048_resume_package_v4.json": {
+      "sha256": "852c65e0ef4a08fd61fcbf206b94c5c65f9009c9a3a234cc77d4f88156c97f56",
+      "git_blob_sha": "d674a7d0401ed3b23ac888acde802bf1e83af590",
+      "matches_installed_frozen_tree": true
+    }
+  },
+  "cases": {
+    "hillipop-ede_n3": {
+      "exact_math_equal_to_local": true,
+      "scientific_payload_sha256": "a24b3ca75246d97e1b87c812656550fd8a51c2d65a434a820406d3351d5140a6",
+      "checkpoint_sha256": "6503fe683052d474222bbe36fabc156f95ad520eab1225cc0222cc97f1322e8f",
+      "checkpoint_bytes": 6090373,
+      "checkpoint_metadata": {
+        "q": "Q-048",
+        "case": "hillipop-ede_n3",
+        "program_id": "Q048-RESUME-V4",
+        "version": "v4",
+        "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "source_config_hash": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+        "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+        "parent_checkpoint_sha256": "5931ca4084cad9fea35e73720eaec7263883273a463e5ee7de206850bcf4eec0",
+        "run_id": "38249121532",
+        "job_id": "continuation",
+        "stage": "FINAL_CONDITIONAL_COMPONENT",
+        "background_end_a": "1406653545556664437344908780583115843418707187578272352690344407150186490579318016675177931893954089570977676487155766886257229728789748353631959883800169759473227315047094859267177857281121081094039509155720704542294097371272182921697836287600848512307199717613365483958774616404734518073512269943646069927171098026270393828508623299403348759047652115864839492851888661913365100649760466203367585360175345724835587695842925228092229100717970957001124330691406057577443249280579918216606330741514846666121304252882499427731920408176687380113438675214589633488682096640332019887864589691162109375/7007633638148526148882038581406750390761216443412446291977799907383827279006166466410275185037269713857702420892257463216840325688861421700597725562540607820991820626544938964885789742934573051234675719608367080369971646951073508541706361452665182737481994418833154224178749365577594705171885023313618938070322809386258453711082732227045535821590257354762512372845863392976196785414812090561600822956372473083215113411073106680810793588858226516817681239862188227572934435033549318796391721021522862717003199803694214814962694483607913483210160875481117259242891162159597337086057461777477102731264",
+        "thermal_end_a": "4650818764745626717820301988410038048797396063731011708110372276046315527076909488904607861333635347843025176245554435840613238425026239257230854266755073502395774717837080946016068290208926815899440217898074028371284434792920320361726146273256813920129060416869104238557796993852589139980656268904981220274629278170091972848841316235513927473705521272624145138853814669376865183740068076698468612446451514886115597835795121827935880180437474221494811072549193784335022511892108480446401908855200567545884119204297861659336935937457402356898228390491567552089691162109375/23186314741403598975944790941378166501633903963546171079785389729146769112962898895289498878984644779339098839938471655122333685680678398260291269160624836444577017233503954535729241917880311363490383137914861274921255128950712734788397408670521950919714209832229269791771351811195343521433399062351344722156320922220134647507093436286672888539484845152980307877955920545907395325548222694867051456609645215932758935244244579084816176470059329340736642337222850662358951938698298215645717772808920891115086440342006478637177469672403326343875446350241918444483542305006944256",
+        "migration_root": {
+          "program_id": "Q048-RESUME-V2",
+          "config_hash": "04b8b65e7ccbbe9f8285d0f8a613f6871d804eb106c37b83c8d627265a4b0ad6",
+          "run_id": "38205625445",
+          "checkpoint_sha256": "ed1b188d8ca46591571efc33f551a2a1642e31fc2ec1fc5e27329ed868dbc842"
+        },
+        "v3_parent_root": {
+          "program_id": "Q048-RESUME-V3",
+          "run_id": "38230594450",
+          "config_hash": "84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405",
+          "checkpoint_sha256": "5931ca4084cad9fea35e73720eaec7263883273a463e5ee7de206850bcf4eec0",
+          "scientific_payload_sha256": "ee258e24e0da60ea72115ea64deccf80b7cfdb55858a85f227762ebf96b69b55"
+        },
+        "verified_scientific_payload_sha256": "a24b3ca75246d97e1b87c812656550fd8a51c2d65a434a820406d3351d5140a6"
+      },
+      "actual_github_job_id": 114810682192,
+      "actual_github_job_name": "continuation (hillipop-ede_n3)",
+      "source_input_hashes": {
+        "effective_background_hex.json": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "7d4144e2615ccb36fa48867ee43b2ad342968469f1d1a2bc3f1088e1db2b884a"
+      },
+      "background_cells": 342,
+      "thermal_cells": 234,
+      "new_background_vs_v3": 2,
+      "new_thermal_vs_v3": 2,
+      "new_cells_vs_local": 0,
+      "background_end_a": "1406653545556664437344908780583115843418707187578272352690344407150186490579318016675177931893954089570977676487155766886257229728789748353631959883800169759473227315047094859267177857281121081094039509155720704542294097371272182921697836287600848512307199717613365483958774616404734518073512269943646069927171098026270393828508623299403348759047652115864839492851888661913365100649760466203367585360175345724835587695842925228092229100717970957001124330691406057577443249280579918216606330741514846666121304252882499427731920408176687380113438675214589633488682096640332019887864589691162109375/7007633638148526148882038581406750390761216443412446291977799907383827279006166466410275185037269713857702420892257463216840325688861421700597725562540607820991820626544938964885789742934573051234675719608367080369971646951073508541706361452665182737481994418833154224178749365577594705171885023313618938070322809386258453711082732227045535821590257354762512372845863392976196785414812090561600822956372473083215113411073106680810793588858226516817681239862188227572934435033549318796391721021522862717003199803694214814962694483607913483210160875481117259242891162159597337086057461777477102731264",
+      "thermal_end_a": "4650818764745626717820301988410038048797396063731011708110372276046315527076909488904607861333635347843025176245554435840613238425026239257230854266755073502395774717837080946016068290208926815899440217898074028371284434792920320361726146273256813920129060416869104238557796993852589139980656268904981220274629278170091972848841316235513927473705521272624145138853814669376865183740068076698468612446451514886115597835795121827935880180437474221494811072549193784335022511892108480446401908855200567545884119204297861659336935937457402356898228390491567552089691162109375/23186314741403598975944790941378166501633903963546171079785389729146769112962898895289498878984644779339098839938471655122333685680678398260291269160624836444577017233503954535729241917880311363490383137914861274921255128950712734788397408670521950919714209832229269791771351811195343521433399062351344722156320922220134647507093436286672888539484845152980307877955920545907395325548222694867051456609645215932758935244244579084816176470059329340736642337222850662358951938698298215645717772808920891115086440342006478637177469672403326343875446350241918444483542305006944256",
+      "display_background_z": 4980.776543544948,
+      "display_thermal_z": 4984.426419356884,
+      "background_blocker": "BACKGROUND_TUBE_NOT_CLOSED",
+      "thermal_blocker": "ValueError:THERMAL_SUPERSOLUTION_NOT_CLOSED",
+      "worker_pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 340,
+        "thermal_cells": 232,
+        "elapsed_seconds": 123.927646646
+      },
+      "worker_post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 342,
+        "thermal_cells": 234,
+        "elapsed_seconds": 124.77931591199999
+      },
+      "collector_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 342,
+        "thermal_cells": 234,
+        "elapsed_seconds": 112.427695756
+      },
+      "python": "3.12.15",
+      "elapsed_seconds": 262.36599222
+    },
+    "camspec-lcdm": {
+      "exact_math_equal_to_local": true,
+      "scientific_payload_sha256": "efed5b4b2e08ffc3898d0b885b55ab863471e1ae8360144128a8411a6a78e4a9",
+      "checkpoint_sha256": "33b28465f24eb8dbbc1fd19466f5ffeb9d5080e68ca2572045d5bce864b66a51",
+      "checkpoint_bytes": 176804,
+      "checkpoint_metadata": {
+        "q": "Q-048",
+        "case": "camspec-lcdm",
+        "program_id": "Q048-RESUME-V4",
+        "version": "v4",
+        "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "source_config_hash": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+        "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+        "parent_checkpoint_sha256": "6282e5137d0bcab3320629818ff8b72e0e30f78bdf7c3a908d8a2029ef595ae4",
+        "run_id": "38249121532",
+        "job_id": "continuation",
+        "stage": "FINAL_CONDITIONAL_COMPONENT",
+        "background_end_a": "1/2871",
+        "thermal_end_a": "1/2871",
+        "migration_root": {
+          "program_id": "Q048-RESUME-V2",
+          "config_hash": "04b8b65e7ccbbe9f8285d0f8a613f6871d804eb106c37b83c8d627265a4b0ad6",
+          "run_id": "38205625445",
+          "checkpoint_sha256": "34be67153091bd7b9bd6058ad26f736111d943350d150e8aea8027809cbd8c49"
+        },
+        "v3_parent_root": {
+          "program_id": "Q048-RESUME-V3",
+          "run_id": "38230594450",
+          "config_hash": "84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405",
+          "checkpoint_sha256": "6282e5137d0bcab3320629818ff8b72e0e30f78bdf7c3a908d8a2029ef595ae4",
+          "scientific_payload_sha256": "ce7993ef2b80ec35b132acb7dd98145f2bb843b38a735ba3e0ab7a50b716f17e"
+        },
+        "verified_scientific_payload_sha256": "efed5b4b2e08ffc3898d0b885b55ab863471e1ae8360144128a8411a6a78e4a9"
+      },
+      "actual_github_job_id": 114810682220,
+      "actual_github_job_name": "continuation (camspec-lcdm)",
+      "source_input_hashes": {
+        "effective_background_hex.json": "f2342c737770aeef4718ef6b0cae2e1837d91ee72e0e618dfe49601450674308",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "7a087c87dd01367a1ea1dba21be57e26c1940d27c1d9fea8998478eaa8484df7"
+      },
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background_vs_v3": 0,
+      "new_thermal_vs_v3": 0,
+      "new_cells_vs_local": 0,
+      "background_end_a": "1/2871",
+      "thermal_end_a": "1/2871",
+      "display_background_z": 2870.0,
+      "display_thermal_z": 2870.0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "worker_pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.8314613370000004
+      },
+      "worker_post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.7972250309999964
+      },
+      "collector_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 5.819126853
+      },
+      "python": "3.12.15",
+      "elapsed_seconds": 7.734426024999998
+    },
+    "hillipop-lcdm": {
+      "exact_math_equal_to_local": true,
+      "scientific_payload_sha256": "ea325b28bb95ebf7654358abc4ad88e5e194787f6cc327e9f3ff4a13814710ea",
+      "checkpoint_sha256": "50e6509523eac0fc4f3bbc67ba5688ac4f2ac8ef6ac0438785c4773a8c6f6a8c",
+      "checkpoint_bytes": 176744,
+      "checkpoint_metadata": {
+        "q": "Q-048",
+        "case": "hillipop-lcdm",
+        "program_id": "Q048-RESUME-V4",
+        "version": "v4",
+        "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "source_config_hash": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+        "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+        "parent_checkpoint_sha256": "0d4c3030a23831f7ff597a596dc19c8376f4234a7f27006cd29c4ac9b7a95386",
+        "run_id": "38249121532",
+        "job_id": "continuation",
+        "stage": "FINAL_CONDITIONAL_COMPONENT",
+        "background_end_a": "1/2871",
+        "thermal_end_a": "1/2871",
+        "migration_root": {
+          "program_id": "Q048-RESUME-V2",
+          "config_hash": "04b8b65e7ccbbe9f8285d0f8a613f6871d804eb106c37b83c8d627265a4b0ad6",
+          "run_id": "38205625445",
+          "checkpoint_sha256": "ebd624c8d1e2f1ef84e49e7d96763a43ff96625ae27d3ea3857990945ac4c653"
+        },
+        "v3_parent_root": {
+          "program_id": "Q048-RESUME-V3",
+          "run_id": "38230594450",
+          "config_hash": "84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405",
+          "checkpoint_sha256": "0d4c3030a23831f7ff597a596dc19c8376f4234a7f27006cd29c4ac9b7a95386",
+          "scientific_payload_sha256": "3a62ccc4f18ee4db62eadadef6b02861ae6a87fa7e3edf636d5f259f32316644"
+        },
+        "verified_scientific_payload_sha256": "ea325b28bb95ebf7654358abc4ad88e5e194787f6cc327e9f3ff4a13814710ea"
+      },
+      "actual_github_job_id": 114810682184,
+      "actual_github_job_name": "continuation (hillipop-lcdm)",
+      "source_input_hashes": {
+        "effective_background_hex.json": "4228d94c84c085951704f212abe9a026a3e7428b9e456bbdd04bc2814df61a2e",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "c7f0756b21532af7716c7cd8c135d7edce00230d66e8eefcd2fe80e04925a787"
+      },
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background_vs_v3": 0,
+      "new_thermal_vs_v3": 0,
+      "new_cells_vs_local": 0,
+      "background_end_a": "1/2871",
+      "thermal_end_a": "1/2871",
+      "display_background_z": 2870.0,
+      "display_thermal_z": 2870.0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "worker_pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.776399224000002
+      },
+      "worker_post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.760350368999994
+      },
+      "collector_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 5.825728727999994
+      },
+      "python": "3.12.15",
+      "elapsed_seconds": 7.601167375000003
+    },
+    "camspec-ede_n3": {
+      "exact_math_equal_to_local": true,
+      "scientific_payload_sha256": "5f8ebf73d32abbb45acb9b8b43700b94d551a90aa406e4c38b1130e86ec3e83f",
+      "checkpoint_sha256": "cf7f80c9e4c8d5c09a03db835e2573f0167a077a2ebef2a49fcba250ac0ad5f1",
+      "checkpoint_bytes": 8095158,
+      "checkpoint_metadata": {
+        "q": "Q-048",
+        "case": "camspec-ede_n3",
+        "program_id": "Q048-RESUME-V4",
+        "version": "v4",
+        "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "source_config_hash": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+        "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+        "parent_checkpoint_sha256": "997734ceacade4d8a231fa2d75680d3107e8c29e40bf757c11a3b871c507edae",
+        "run_id": "38249121532",
+        "job_id": "continuation",
+        "stage": "FINAL_CONDITIONAL_COMPONENT",
+        "background_end_a": "514031297015571212455159717563126630326510233576018313524190798162776782286645827406171329335824933758897187313129805149949411114719895169330141316445687665369245786889948534219315124480686768151715375078815574978533451158137573965746966946778893318686284675583597439933013326513776594077265780158185772438342688657541351479290615489079385736084430552023995779131423054500653439276849379439774201412915083166130047463191627966376439633086500203019176320992784277954273485003442914327260954048796905604071063295968858255123425488744916063781703862086595795186618766936123236984419280170044515315939211374649233449297241204430692228408933916778582560645521323696749794327566054213043247694715239026121973624990601904656206515549213781506607587145875954189681387647526711709684748704654763796522187993174278497487961203660233877599239349365234375/3135796038418887092250685542814240649107813124001609628547021993615221302295486956898872528165054699220382982921440129825563084018614114581674437942445143889391075205152313622957438154013962713229126805695636056823631208777117111903106008857680494273735412061967549031979911806324663019072500773056089567071189059658460534762706980140521758269893458113836452580677220736115581605815065097946844788402369209493766348904605309646620254467070189633142133420184643611903460805590858708800124119325118803731036835294284492750050985336602538745141715194876258799361942796125173174215800640300375177783206072479165037462390866666858409704117119530441736796908547403829096177925197749374244071471843247222451190435763682038689373163170271217877756281478189841605737326372524437152765250419022055552289634405544607096775770297580095337755188982111426052096",
+        "thermal_end_a": "3737788119024025096989501866318608507552974100187794833434973693894054418139565511560957958611369190525053132376833073403375906759328626037026490758586024298100421341382519562613023808386492991972653866155112198559238179778418645492552464244995745042707785339145282994262176718845147655779560616980628233230716698837875382009785810117962440901576857368518712215721450142739217096170690757749589778379378909961198877303327362809321408290660782418093510313170600730427103193816382169504195220666164790135244464923628836979011272267517671510801936568762924753531027790817389567636050424455377017887324587714719089860412322048028645634255433087694709053819301091938970225572694464868610632849551269467845429282423162804653109969170213492107312235783095029992806246963584767817726160931180137323402712379305512513383291661739349365234375/22815919062260124281242937597666173308300590171723230949625009042321626492015544186134302640603380126561263626510045504441681871093272017472732389741905673067893623411890538576389649490112516746951782302462641796036268415461506169981337798946191427776178258223572258662751932616263096999846317143645789234660253421013916775429293776254939135614356623510222216869276749902314489051168967110765841705159758635954977572725367715222966613270329177853579555959620073640715132973788849695120909886646541444723238494001885503167075405774831151539850654043230015663444230421192865281888230240295344103529395015205700746900335555742337671866095621447615389456830943555026141824238568001413980320444121369091235031634013881839123301056463032858138876919679677241989246441317114201612750551568912164310238108777736539899893762031425251463625965568",
+        "migration_root": {
+          "program_id": "Q048-RESUME-V2",
+          "config_hash": "04b8b65e7ccbbe9f8285d0f8a613f6871d804eb106c37b83c8d627265a4b0ad6",
+          "run_id": "38205625445",
+          "checkpoint_sha256": "594dcf3086e9f3aeb86153c0fa604441561f4653d5c3026706e59e156cedae42"
+        },
+        "v3_parent_root": {
+          "program_id": "Q048-RESUME-V3",
+          "run_id": "38230594450",
+          "config_hash": "84aff513a196393c268ea8cc2ddcaf70a5b29f189cbe33d34d9a8b8cdc5b5405",
+          "checkpoint_sha256": "997734ceacade4d8a231fa2d75680d3107e8c29e40bf757c11a3b871c507edae",
+          "scientific_payload_sha256": "f441bcd21260f20aeedc7639dfd401720a52c049d50cc71c33a41a2d910097bf"
+        },
+        "verified_scientific_payload_sha256": "5f8ebf73d32abbb45acb9b8b43700b94d551a90aa406e4c38b1130e86ec3e83f"
+      },
+      "actual_github_job_id": 114810682129,
+      "actual_github_job_name": "continuation (camspec-ede_n3)",
+      "source_input_hashes": {
+        "effective_background_hex.json": "4ef09d4ecd66b4a67ca404565fcd8815a6db89182d448403c6b71331dd87328b",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "d07772269b1e222b6e684b82dd34e39b626c9fd3678fea0430cf083da9656fc6"
+      },
+      "background_cells": 427,
+      "thermal_cells": 319,
+      "new_background_vs_v3": 3,
+      "new_thermal_vs_v3": 0,
+      "new_cells_vs_local": 0,
+      "background_end_a": "514031297015571212455159717563126630326510233576018313524190798162776782286645827406171329335824933758897187313129805149949411114719895169330141316445687665369245786889948534219315124480686768151715375078815574978533451158137573965746966946778893318686284675583597439933013326513776594077265780158185772438342688657541351479290615489079385736084430552023995779131423054500653439276849379439774201412915083166130047463191627966376439633086500203019176320992784277954273485003442914327260954048796905604071063295968858255123425488744916063781703862086595795186618766936123236984419280170044515315939211374649233449297241204430692228408933916778582560645521323696749794327566054213043247694715239026121973624990601904656206515549213781506607587145875954189681387647526711709684748704654763796522187993174278497487961203660233877599239349365234375/3135796038418887092250685542814240649107813124001609628547021993615221302295486956898872528165054699220382982921440129825563084018614114581674437942445143889391075205152313622957438154013962713229126805695636056823631208777117111903106008857680494273735412061967549031979911806324663019072500773056089567071189059658460534762706980140521758269893458113836452580677220736115581605815065097946844788402369209493766348904605309646620254467070189633142133420184643611903460805590858708800124119325118803731036835294284492750050985336602538745141715194876258799361942796125173174215800640300375177783206072479165037462390866666858409704117119530441736796908547403829096177925197749374244071471843247222451190435763682038689373163170271217877756281478189841605737326372524437152765250419022055552289634405544607096775770297580095337755188982111426052096",
+      "thermal_end_a": "3737788119024025096989501866318608507552974100187794833434973693894054418139565511560957958611369190525053132376833073403375906759328626037026490758586024298100421341382519562613023808386492991972653866155112198559238179778418645492552464244995745042707785339145282994262176718845147655779560616980628233230716698837875382009785810117962440901576857368518712215721450142739217096170690757749589778379378909961198877303327362809321408290660782418093510313170600730427103193816382169504195220666164790135244464923628836979011272267517671510801936568762924753531027790817389567636050424455377017887324587714719089860412322048028645634255433087694709053819301091938970225572694464868610632849551269467845429282423162804653109969170213492107312235783095029992806246963584767817726160931180137323402712379305512513383291661739349365234375/22815919062260124281242937597666173308300590171723230949625009042321626492015544186134302640603380126561263626510045504441681871093272017472732389741905673067893623411890538576389649490112516746951782302462641796036268415461506169981337798946191427776178258223572258662751932616263096999846317143645789234660253421013916775429293776254939135614356623510222216869276749902314489051168967110765841705159758635954977572725367715222966613270329177853579555959620073640715132973788849695120909886646541444723238494001885503167075405774831151539850654043230015663444230421192865281888230240295344103529395015205700746900335555742337671866095621447615389456830943555026141824238568001413980320444121369091235031634013881839123301056463032858138876919679677241989246441317114201612750551568912164310238108777736539899893762031425251463625965568",
+      "display_background_z": 6099.399054736732,
+      "display_thermal_z": 6103.123170100288,
+      "background_blocker": "BACKGROUND_TUBE_NOT_CLOSED",
+      "thermal_blocker": "ValueError:THERMAL_SUPERSOLUTION_NOT_CLOSED",
+      "worker_pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 424,
+        "thermal_cells": 319,
+        "elapsed_seconds": 141.763978587
+      },
+      "worker_post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 427,
+        "thermal_cells": 319,
+        "elapsed_seconds": 142.41211012900004
+      },
+      "collector_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 427,
+        "thermal_cells": 319,
+        "elapsed_seconds": 145.798602027
+      },
+      "python": "3.12.15",
+      "elapsed_seconds": 298.039177388
+    }
+  },
+  "artifacts": [
+    {
+      "id": 11747926128,
+      "name": "q048-resume-v4-camspec-lcdm-38249121532",
+      "size_in_bytes": 51268,
+      "digest": "sha256:8781f0d87766774d1665ae1f0e5508871a60d89c6814b99033222daa04a7b070",
+      "expired": false
+    },
+    {
+      "id": 11747911185,
+      "name": "q048-resume-v4-hillipop-lcdm-38249121532",
+      "size_in_bytes": 51771,
+      "digest": "sha256:528ad5a4d97c1331ebc9215f87ad6931e0af9f1c0b94c22b55b0cbc0e1b6bd77",
+      "expired": false
+    },
+    {
+      "id": 11747726167,
+      "name": "q048-resume-v4-controls-38249121532",
+      "size_in_bytes": 1726,
+      "digest": "sha256:24a3e3e49281e82f74b1d56674b360c951b4060a860ca18d5b2a6aebc63f49e3",
+      "expired": false
+    },
+    {
+      "id": 11747487107,
+      "name": "q048-resume-v4-hillipop-ede_n3-38249121532",
+      "size_in_bytes": 2429656,
+      "digest": "sha256:c1a66862232a3d1a60990309c78b0d2e563dd98cbd7d7b9d39aef6c8ad3b0a4d",
+      "expired": false
+    },
+    {
+      "id": 11747337815,
+      "name": "q048-resume-v4-final-38249121532",
+      "size_in_bytes": 2893694,
+      "digest": "sha256:7ddca9a364fa5b32066b64ac120ef77cddb2552b46a54dd15a0495fd84d4a8e0",
+      "expired": false
+    },
+    {
+      "id": 11746992129,
+      "name": "q048-resume-v4-camspec-ede_n3-38249121532",
+      "size_in_bytes": 3246461,
+      "digest": "sha256:dd80c8d8952c7be2675fd41c4b487310ff22178dc91939e2bac4f67e1bd88a8c",
+      "expired": false
+    }
+  ],
+  "input_archive": {
+    "filename": "q048-resume-v4-final-38249121532.zip",
+    "bytes": 2893694,
+    "sha256": "7ddca9a364fa5b32066b64ac120ef77cddb2552b46a54dd15a0495fd84d4a8e0",
+    "official_artifact_id": 11747337815,
+    "digest_and_crc_gate": "PASS"
+  },
+  "raw_member": {
+    "file": "Q048_GITHUB_RAW_RUN38249121532.json",
+    "bytes": 14795364,
+    "sha256": "7f1f805d39840592622df23f781b594548a4e355e80b656006a87c6eed013c08"
+  },
+  "controls": {
+    "file": "Q048_GITHUB_CONTROLS_RUN38249121532.json",
+    "sha256": "ce8fe9d3d35e08b7aa4f84cade80b717c15b0723dd90bd11c6460c2f399a4fa0",
+    "official_artifact_id": 11747726167,
+    "archive_sha256": "24a3e3e49281e82f74b1d56674b360c951b4060a860ca18d5b2a6aebc63f49e3",
+    "byte_identical_to_local": true
+  },
+  "input_files": {
+    "Q047_SAMLET_JOURNAL.md": {
+      "bytes": 12718313,
+      "sha256": "2566a225c01a352c874f50ae53e9f91f1f85857776bb394cee00d499f517adfa"
+    },
+    "Q048_EXECUTION_REPORT_V4.md": {
+      "bytes": 14712,
+      "sha256": "24f391c3c76669a3b2eb3daeacb7a59d6805f666aa71b2388e401af7d7f4b7a8"
+    },
+    "README.md": {
+      "bytes": 56172,
+      "sha256": "20ddab7d33a8258c362f6c2790116c18fec0361da97abd501478296cee8adf9d"
+    }
+  },
+  "prior_technical_note": {
+    "bytes": 4464,
+    "sha256": "b0ced040bf6700480066afdc67387bf32be7502a5709a2ec6142e1a87723dc0a",
+    "preserved_verbatim": true,
+    "present_instruction_status": "HISTORICAL_SUPERSEDED_BY_SUCCESSFUL_RUN"
+  },
+  "tests": {
+    "official_preflight_regressions": 14,
+    "preflight_test_seconds": 5.354,
+    "finite_controls": "PASS",
+    "worker_pre_post_and_collector": "PASS_ALL_FOUR",
+    "local_vs_github_exact_mathematics": "PASS_ALL_FOUR",
+    "extra_full_chain_recalculation_in_ingestion": "NOT_REQUIRED_NOT_PERFORMED"
+  },
+  "environment": {
+    "python": "CPython 3.12.15",
+    "runner_label": "ubuntu-24.04",
+    "preflight_os": "Ubuntu24.04.5 LTS",
+    "runner_version": "2.337.0",
+    "image_version": "20261004.327.1",
+    "action_shas": {
+      "actions/checkout@v4": "11d5960a326750d5838078e36cf38b85af677262",
+      "actions/setup-python@v5": "a26af69be951a213d495a4c3e4e4022e16d87065",
+      "actions/upload-artifact@v4": "ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "actions/download-artifact@v4": "d3f86a106a0bac45b974a628896c90dbdf5c8093"
+    },
+    "cpu_model": "NOT_DOCUMENTED",
+    "CPU_hours": "NOT_MEASURED",
+    "native_CLASS_evaluations": 0,
+    "likelihood_evaluations": 0,
+    "warnings": [
+      "Node20-targeting actions forced to Node24",
+      "punycode/url.parse/Buffer deprecation notices; no mathematical payload discrepancy demonstrated"
+    ]
+  },
+  "gates": {
+    "execution_status": "COMPLETE",
+    "tests_status": "COMPLETE_CONDITIONAL",
+    "job_completeness_gate": "PASS",
+    "merge_compatibility_gate": "PASS",
+    "artifact_digest_gate": "PASS",
+    "checkpoint_reconstruction_gate": "PASS",
+    "pinned_ancestry_gate": "PASS",
+    "journal_continuity_gate": "PASS_COMPLETE_INCOMING_PRESERVED",
+    "q_identity_gate": "PASS_PRESERVED",
+    "source_admission_gate": "UNRESOLVED",
+    "full_result_gate": "UNRESOLVED"
+  },
+  "actual_products": {
+    "actual_source_admission": "UNRESOLVED",
+    "actual_event_redshifts": "NOT_COMPUTED",
+    "actual_xe_history_bounds": "NOT_COMPUTED",
+    "actual_tau_T_bounds": "NOT_COMPUTED"
+  },
+  "sources": [
+    "K-PROPOSED-Q048-SOURCE-002",
+    "K-PROPOSED-Q048-INPUT-001",
+    "K-PROPOSED-Q048-MATH-REPO-006",
+    "I-PROPOSED-Q048-MATHEMATICS-004",
+    "K-PROPOSED-Q048-V4-PACKAGE-007",
+    "I-PROPOSED-Q048-RESUME-LOCAL-V4",
+    "K-PROPOSED-Q048-GITHUB-RUN-38230594450",
+    "I-PROPOSED-Q048-RESUME-GITHUB-38230594450",
+    "K-PROPOSED-Q048-GITHUB-RUN-38247800344",
+    "I-PROPOSED-Q048-V4-JOURNAL-INSTALLATION-001",
+    "K-PROPOSED-Q048-GITHUB-RUN-38249121532",
+    "I-PROPOSED-Q048-RESUME-GITHUB-38249121532"
+  ],
+  "claims": {
+    "C-V4-INGEST-001": "Installed V4 successfully completed all6 jobs and14 finite regressions under exact frozen code/input pins.",
+    "C-V4-INGEST-002": "All four complete mathematical payloads and finite controls exactly reproduce prior fully rechecked local V4 results.",
+    "C-V4-INGEST-003": "Both current EDE source-domain background tubes and prospective thermal constant supersolutions remain blocked at the saved endpoints.",
+    "C-V4-INGEST-004": "No full source/reference/first-event/latch/reset xe/tau qualification is established.",
+    "C-V4-INGEST-005": "Earlier JOURNAL_HISTORY installation failure is technically resolved by the correct canonical journal at the successful executed commit."
+  },
+  "claim_to_source": {
+    "C-V4-INGEST-001": [
+      "K-PROPOSED-Q048-GITHUB-RUN-38249121532",
+      "K-PROPOSED-Q048-V4-PACKAGE-007"
+    ],
+    "C-V4-INGEST-002": [
+      "I-PROPOSED-Q048-RESUME-GITHUB-38249121532",
+      "I-PROPOSED-Q048-RESUME-LOCAL-V4",
+      "I-PROPOSED-Q048-MATHEMATICS-004"
+    ],
+    "C-V4-INGEST-003": [
+      "I-PROPOSED-Q048-RESUME-GITHUB-38249121532",
+      "K-PROPOSED-Q048-MATH-REPO-006",
+      "K-PROPOSED-Q048-V4-PACKAGE-007"
+    ],
+    "C-V4-INGEST-004": [
+      "I-PROPOSED-Q048-RESUME-GITHUB-38249121532",
+      "K-PROPOSED-Q048-SOURCE-002"
+    ],
+    "C-V4-INGEST-005": [
+      "K-PROPOSED-Q048-GITHUB-RUN-38247800344",
+      "I-PROPOSED-Q048-V4-JOURNAL-INSTALLATION-001",
+      "K-PROPOSED-Q048-GITHUB-RUN-38249121532"
+    ]
+  },
+  "journal_effect": {
+    "KEEP": [
+      "exact Q/CASE/question/full journal/source/claim state",
+      "all local V4 math and certificates/errors",
+      "Q047 CLOSED INCONCLUSIVE",
+      "all scientific freezes"
+    ],
+    "ADD": [
+      "official installed successful run/job/artifact/code provenance",
+      "run-specific checkpoints",
+      "current reproduced result and controls"
+    ],
+    "STRENGTHEN": [
+      "cross-runtime conditional reproducibility"
+    ],
+    "SUPERSEDE": [
+      "historical NOT_PERFORMED for present remote execution assertions only",
+      "stale-journal failure as current active blocker"
+    ],
+    "UNCHANGED": [
+      "current EDE mathematical blockers",
+      "actual source admission/full physical products unresolved"
+    ]
+  },
+  "next_engine": "MATHEMATICS ENGINE — existing MATEMATIKMOTOREN",
+  "next_task": "Finite exact diagnosis of the two new BACKGROUND_TUBE_NOT_CLOSED states and both THERMAL_SUPERSOLUTION_NOT_CLOSED states, preserving every carried interval/source guard and separating sufficient-control failure from true source-domain obstruction.",
+  "q_completion_gate": "NOT_YET_SATISFIED",
+  "anomaly_status": "NO_NEW_PHYSICAL_ANOMALY_ESTABLISHED",
+  "research": {
+    "performed": "YES_TARGETED_PRIMARY_GITHUB_TECHNICAL_PROVENANCE",
+    "new_physics_literature": "NOT_REQUIRED",
+    "capabilities": [
+      "read-only GitHub run/jobs/tree/artifact/logs",
+      "exact local JSON/hash/checkpoint/state comparison"
+    ],
+    "tool_limitations": "Generic fetch rejected job-log URL; purpose-built decoded job-log tool successfully retrieved the logs. No result fabricated."
+  }
+}
+```
+
+---
+
+## PRESERVED HISTORICAL JOURNAL-REPAIR NOTE
+
+Its former next-action instruction is historical; successful run38249121532 resolves that installation problem.
+
+# Q048 V4 — TECHNICAL MEMORY UPDATE: JOURNAL INSTALLATION MISMATCH
+
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED. CASE ID: NOT_ASSIGNED.
+PROGRAM_ID: Q048-RESUME-V4. Q047 remains CLOSED INCONCLUSIVE.
+Date/time: 2026-10-12T12:25:30.062495+00:00 UTC; 2026-10-12T14:25:30.062495+02:00 Europe/Copenhagen.
+Exact scientific question: For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436.
+
+RESULT ID: I-PROPOSED-Q048-V4-JOURNAL-INSTALLATION-001.
+Classification: RUN_FAILURE + LOG_ONLY + BUBBLEVERSE TECHNICAL EVIDENCE.
+Failure class: CONTEXT. Gate: JOURNAL_HISTORY.
+Official run: https://github.com/Morfindien/Bubbleverse/actions/runs/38247800344 , Q048 V4 run-number2, failed preflight.
+Executed repository commit: 48dee1fa43488fcc09ad431dce8ab52132f53ebf.
+Primary tree: 263bf0e4934c71672415a511ba595c91890b5de0; complete/not truncated.
+Source ID: K-PROPOSED-Q048-GITHUB-RUN-38247800344.
+
+DIRECT OUTPUT: q048_resume_package_check_v4.py raised ValueError('JOURNAL_HISTORY') before the worker calculation stages. The installed canonical Q047_SAMLET_JOURNAL.md is12563849bytes with Git blob e1a4f2344adfda7f4862e2e6f4299517230579a7. This exactly matches the older preserved candidate journal, SHA256292e365049b87925a4eb6e730f4df16fcd02bc6bd41ee24c9fbce6612d8ddef9. It is shorter than the required historical tail12678574bytes, SHA256647ddf6e02fb2e2ac854045967f685c11cc3c51b00a1812afbc615314cc8d2b4. The correct previously delivered full V4 journal is12718313bytes, SHA2562566a225c01a352c874f50ae53e9f91f1f85857776bb394cee00d499f517adfa.
+
+KNOWN GOOD: all installed V4 program/config/package/workflow/registry/README and reused backend/launcher bytes match their delivered Git blobs/pins. Frozen numerical model/source/config unchanged.
+FAILED: running V4 against the older canonical journal.
+CAUSE: current journal installation did not replace the old repository file. No evidence of line-ending transformation or scientific/code failure is needed: exact size and blob identify the older version.
+FIX: replace repository-root Q047_SAMLET_JOURNAL.md with this complete correct updated journal. Retain strict history validation; no code, package lock, PROGRAM_ID or numerical test is weakened/changed.
+VERIFICATION: exact remote-file snapshot reproduced JOURNAL_HISTORY locally. Replacing only its journal with the delivered V4 journal made package/source/launcher/README/consistency gates PASS. The present added technical-memory header preserves that journal and the entire required historical tail unchanged; fresh package checking also verifies it.
+
+JOURNAL EFFECT: KEEP every scientific/journal/source/claim state; ADD this technical failure/cause/fix/reproduction. UPDATE remote execution state: V4 is installed and a dispatch occurred, but preflight failed because the canonical journal was stale. Historical preparation NOT_PERFORMED labels remain accurate for their preparation stage. No new numerical successor result was produced by this failed run. The validated local V4 result is unchanged. Actual-source admission and full xe/tau products remain UNRESOLVED/NOT_COMPUTED; FINAL_RESULT_GATE UNRESOLVED.
+Claim C-V4-JOURNAL-001 — installed journal is the older exact version → official run38247800344 + frozen repository tree/blob + local known-good history hashes.
+Claim C-V4-JOURNAL-002 — replacing only the journal resolves this preflight gate → local exact-snapshot reproduction and full package checker.
+
+NEXT ACTION: upload this file through Add file → Upload files as the exact repository-root filename Q047_SAMLET_JOURNAL.md. Commit it, then start a NEW Q048-RESUME-V4 workflow run at the new commit. Re-running the old failed run would retain its old checkout commit. GitHub access here remains read-only; remote replacement/dispatch not performed by this repair.
+
+---
+
+# PRESERVED COMPLETE V4 SAMLET JOURNAL — UNCHANGED
+
+Previous full journal bytes: 12718313. SHA256: 2566a225c01a352c874f50ae53e9f91f1f85857776bb394cee00d499f517adfa. Everything below this boundary is preserved verbatim.
+
 # BUBBLEVERSE — EXECUTION REPORT V4
 
 Date/time: 2026-10-12T11:29:01.699637+00:00 UTC; 2026-10-12T13:29:01.699637+02:00 Europe/Copenhagen.
