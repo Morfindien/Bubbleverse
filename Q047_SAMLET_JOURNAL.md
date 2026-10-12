@@ -1,3 +1,1208 @@
+# BUBBLEVERSE — Q048 V3 finite execution handoff
+
+STATUS: CONTINUES. CURRENT Q: Q-048 — PROPOSED_UNVERIFIED. CASE ID: NOT_ASSIGNED.
+PROGRAM_ID: Q048-RESUME-V3. RESULT ID: I-PROPOSED-Q048-RESUME-LOCAL-V3.
+Date/time: 2026-10-12T09:09:47.036713+00:00 UTC; 2026-10-12T11:09:47.036891+02:00 Europe/Copenhagen.
+SELECTED NEXT ENGINE: existing MATHEMATICS ENGINE, for the new finite source-real enclosure blockers.
+Q047 remains CLOSED INCONCLUSIVE. This execution did not assign a new Q or canonical CASE.
+
+## Exact scientific question — frozen
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436.
+
+## Execution decision and actual work
+
+Existing Numerical/HPC Engine + conventional exact Python computation + read-only GitHub/source retrieval + persistent file handling. No new motor, native CLASS initialization, data fit, likelihood evaluation, sampler or cloud/HPC service was required. Current Codex/Work with strong reasoning was sufficient for this bounded implementation. Astra Max was not required; user-picker settings and active reasoning labels were not independently inspected or changed.
+
+The mathematics handoff's minimal change was implemented as max_halvings10→11 in a new V3 target. Exact V2 records from run38205625445 were recovered from its official artifact; all four reconstructed checkpoint bytes reproduce their registered hashes. The supplied final parent JSON bytes are unmodified. Every carried background/thermal certificate and conditional root initialization was recomputed before continuation; the entire successor chain was recomputed afterward. Source code, source guards, initial uncertainty, carried uncertainty, phase transitions, effective inputs and accepted z_reio remain frozen. No positive diagonal scaling or wider thermal tube was introduced in V3.
+
+900seconds is a separate finite verification budget at each end, versus V2's120second guard. Local Camspec parent revalidation actually took133.207seconds, confirming that the former cap would not have admitted this larger chain on the observed environment. Background and thermal stages each retain180seconds and permit at most64 new cells. Checkpoints are atomic every8 accepted cells and at boundaries. The complete mathematical checks were preserved; stored PASS flags were never used as replacements.
+
+## Actual validated finite component result
+
+| Case | Total background cells | Total thermal cells | New background / thermal | Background / thermal blocker |
+|---|---:|---:|---:|---|
+| camspec-lcdm | 0 | 35 | 0 / 0 | none / none |
+| hillipop-lcdm | 0 | 35 | 0 / 0 | none / none |
+| camspec-ede_n3 | 424 | 319 | 9 / 9 | ValueError:COMPARISON_GROWTH_CAP / BACKGROUND_COVERAGE_REQUIRED |
+| hillipop-ede_n3 | 340 | 232 | 5 / 1 | ValueError:COMPARISON_GROWTH_CAP / THERMAL_TUBE_NOT_CLOSED |
+
+Pre- and post-verification gates PASS_CONDITIONAL_RECOMPUTED for all four cases. The three original k11 source-cell controls also pass the independent positive-matrix/scalar comparisons, and exact zero/nilpotent analytic-limit controls pass. Eleven regression tests pass; the unmodified V2's inability to extend the required background/thermal cells was reproduced before the patch. Code compiles; workflow YAML, embedded Python and shell syntax checks pass. Local completeness and merge compatibility PASS. Computational partiality remains explicit inside each EDE record.
+
+RAW/VALIDATED CONDITIONAL COMPONENT: q048_resume_final_v3.json, SHA256 22936632883273c586feb1bc291542276ed83e9c5d2c2eb4fa9f5043f4556649.
+Local execution receipt: q048_resume_local_validation_v3.json.
+Controls: q048_resume_controls_v3.json (delivered from the locally executed local-controls-v3.json).
+Full source initialization, all original/new certificates, predictors, exact endpoints and root/checkpoint metadata are preserved in the raw final JSON. Each successor checkpoint can be reconstructed byte-for-byte using the recorded metadata/record and original indented UTF8 serializer; checkpoint hashes are in the final result and receipt. The local run label is LOCAL, with code hashes and raw hashes defining its unique provenance; no GitHub execution commit is invented.
+
+SCIENTIFIC FINAL_RESULT_GATE: UNRESOLVED.
+ACTUAL SOURCE ADMISSION: UNRESOLVED.
+ACTUAL FIRST-EVENT REDSHIFTS: NOT_COMPUTED.
+ACTUAL COMPLETE x_e(z) DIFFERENCE BOUNDS: NOT_COMPUTED.
+ACTUAL tau_T(z) DIFFERENCE BOUNDS: NOT_COMPUTED.
+
+## Additional admission hardening and independent collection
+
+A focused code review identified and resolved three technical admission holes before delivery: V3 checkpoints now bind every pinned V2 background/thermal cell prefix to the immutable parent asset; collector acceptance recomputes all mathematical chains in up to4 independent processes instead of trusting flags or user-generated hashes; provisional interrupted chains produce explicit partial reports with failing completeness. Three negative regressions reproduced those holes before the corrections and now pass. The original locally generated cells are unchanged. The exact numerical-generation source is preserved as q048_resume_executed_core_v3.py; its executed hash is distinguished from the hardened validation/installation code hashes in the receipt. Eleven tests pass. Collector verification timings and whole-chain counts are in the refreshed receipt/raw JSON. Preflight/collection job limits are25minutes, collector process cap1080seconds, with900seconds per independently checked case. No new physical result or extra continuation was inferred from these fixes.
+
+## Differential journal effects
+
+KEEP the complete incoming journal below, 12545716bytes, SHA256 7a87387d182ba247372b7f5ef4b2370e1f26fb5f5ca396971938c22ab6127b35; no source register, rejected/falsified material, previous calculation or Q047 result was rewritten.
+ADD the exact V3 implementation, parent migration, source/registry protection, finite controls, complete pre/post certificate verification and observed successor coverage.
+STRENGTHEN the near-cap verification concern: Camspec's actual inherited chain requires more than120seconds on this local execution environment.
+ADD new exact stop locations after9/9 Camspec and5/1 Hillipop cells. REFINE their scope as finite numerical work/tube limitations, not physical falsifications or whole-history results.
+KEEP actual-instance linkage, full event semantics, downstream hydrogen/reionization coupling and optical-depth questions unresolved.
+UPDATE prepared repository routing: canonical registry adds Q048-RESUME-V3, marks V2 SUPERSEDED by V3, preserves all57 other entries exactly. V2 code/checkpoints/results are unmodified and recoverable at the pinned historical commit. README adds current V3 reality and retains the old README as labeled history. Canonical launcher stays unchanged. No remote write, installation or dispatch was performed.
+
+## Sources and provenance — no scientific zombies
+
+KEEP K-PROPOSED-Q048-SOURCE-002, K-PROPOSED-Q048-INPUT-001, K-PROPOSED-Q048-GITHUB-RUN-38205625445, K-PROPOSED-Q048-MATH-REPO-004, I-PROPOSED-Q048-MATHEMATICS-003 and every earlier source/claim mapping in the untouched journal.
+ADD K-PROPOSED-Q048-V3-PACKAGE-005 — Bubbleverse technical implementation prepared against Morfindien/Bubbleverse commit96eb8370bdd99ca27f05f472a0fc0294829acf09. Supports exact minimum-control change, source pins, launcher safety and finite work schedule; not a physical measurement or remotely installed commit.
+ADD I-PROPOSED-Q048-RESUME-LOCAL-V3 — Bubbleverse numerical result, exact local conditional prefix chain with independent local controls and full pre/post revalidation. Supports the finite new-cell counts and exact subsequent blockers, under inherited CONDITIONAL_SOURCE_REAL assumptions only.
+Underlying scientific source remains mwt5345/class_ede commit5a131c91d657dd9a7c6364cc45b038710f8d0d97; URL https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97 . Parent technical run URL https://github.com/Morfindien/Bubbleverse/actions/runs/38205625445 . Its raw JSON SHA256 remains c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81.
+Scientific software/input hashes survive in the result, config and package manifest. The independent series routines were reused from q048_independent_controls_v1.py, SHA2569b876d03c28a67917191ac5320a381a18010f38ff27a93817dbdb2547a9e093f, with source retrieval checked against the journal. GitHub-hosted job limits checked against official documentation https://docs.github.com/en/actions/reference/limits on2026-10-12. Unrelated plugins were not used.
+
+## Exact next task / return route / stop
+
+This minimal finite continuation requirement is complete. Return these results, controls, exact checkpoints and this complete journal to Result Ingestion & Routing, then the existing Mathematics Engine for source-preserving enclosure design at the new endpoints. Repeating unchanged V3 cannot remove the deterministic new blockers. Evaluate the already proved positive diagonal representation under the new matrices/errors where applicable, and the thermal closure at Hillipop's new endpoint. Do not silently increase halving caps, reset errors, treat wide tubes as observations, relax guards or claim the historical native path has been admitted. A new executable change requires a new target/config hash and verified controls.
+
+Q048 closes only when its exact full four-case question has a defensible documented answer, including actual-source admission and required complete histories/depth outputs or justified irreducible bounds. This local result is insufficient for closure or Motor14. No unchanged further numerical test is needed now. Prepared GitHub replay is optional; the local finite result is already computed and preserved.
+
+---
+
+## Machine-readable finite execution receipt
+
+```json
+{
+  "schema": "Q048_RESUME_LOCAL_VALIDATION_V3",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "program_id": "Q048-RESUME-V3",
+  "result_id": "I-PROPOSED-Q048-RESUME-LOCAL-V3",
+  "date_utc": "2026-10-12T09:07:47.973834+00:00",
+  "date_copenhagen": "2026-10-12T11:07:47.973995+02:00",
+  "execution_status": "COMPLETE",
+  "tests_status": "COMPLETE_CONDITIONAL",
+  "final_result_gate": "UNRESOLVED",
+  "actual_source_admission": "UNRESOLVED",
+  "native_evaluations": 0,
+  "likelihood_evaluations": 0,
+  "remote_installation": "NOT_PERFORMED",
+  "remote_dispatch": "NOT_PERFORMED",
+  "repository_base_commit": "96eb8370bdd99ca27f05f472a0fc0294829acf09",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "parent_artifact_sha256": "c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "cpu_count": 9,
+  "raw_results_file": "q048_resume_final_v3.json",
+  "cases": {
+    "camspec-lcdm": {
+      "parent_checkpoint_sha256": "34be67153091bd7b9bd6058ad26f736111d943350d150e8aea8027809cbd8c49",
+      "checkpoint_sha256": "bac9f5a2898f10675750d505ca7cd509b322a972a296400ef15e69f4f75f3c57",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background_cells": 0,
+      "new_thermal_cells": 0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 4.5425558499998715
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.748074322999855
+      },
+      "elapsed_seconds": 8.380118734999996,
+      "scientific_payload_sha256": "ce7993ef2b80ec35b132acb7dd98145f2bb843b38a735ba3e0ab7a50b716f17e"
+    },
+    "hillipop-lcdm": {
+      "parent_checkpoint_sha256": "ebd624c8d1e2f1ef84e49e7d96763a43ff96625ae27d3ea3857990945ac4c653",
+      "checkpoint_sha256": "c389631ee0c1e8553771892fb93030810a48faa05b28e48121b660086d255de0",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background_cells": 0,
+      "new_thermal_cells": 0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 4.303345128000046
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.6582584140001018
+      },
+      "elapsed_seconds": 8.035395348999828,
+      "scientific_payload_sha256": "3a62ccc4f18ee4db62eadadef6b02861ae6a87fa7e3edf636d5f259f32316644"
+    },
+    "camspec-ede_n3": {
+      "parent_checkpoint_sha256": "594dcf3086e9f3aeb86153c0fa604441561f4653d5c3026706e59e156cedae42",
+      "checkpoint_sha256": "fbb06e260232ff5d21302f2d660bf9e68be427134e1709c9f5925ef67fe35322",
+      "background_cells": 424,
+      "thermal_cells": 319,
+      "new_background_cells": 9,
+      "new_thermal_cells": 9,
+      "background_blocker": "ValueError:COMPARISON_GROWTH_CAP",
+      "thermal_blocker": "BACKGROUND_COVERAGE_REQUIRED",
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 415,
+        "thermal_cells": 310,
+        "elapsed_seconds": 133.20728854999993
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 424,
+        "thermal_cells": 319,
+        "elapsed_seconds": 133.28874944699987
+      },
+      "elapsed_seconds": 283.117425527,
+      "scientific_payload_sha256": "f441bcd21260f20aeedc7639dfd401720a52c049d50cc71c33a41a2d910097bf"
+    },
+    "hillipop-ede_n3": {
+      "parent_checkpoint_sha256": "ed1b188d8ca46591571efc33f551a2a1642e31fc2ec1fc5e27329ed868dbc842",
+      "checkpoint_sha256": "ef62538d820b1a099d21a02d3f83f53f2d44f1f2bcdd872291949ec95c7458dd",
+      "background_cells": 340,
+      "thermal_cells": 232,
+      "new_background_cells": 5,
+      "new_thermal_cells": 1,
+      "background_blocker": "ValueError:COMPARISON_GROWTH_CAP",
+      "thermal_blocker": "THERMAL_TUBE_NOT_CLOSED",
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 335,
+        "thermal_cells": 231,
+        "elapsed_seconds": 104.82358885899998
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 340,
+        "thermal_cells": 232,
+        "elapsed_seconds": 104.54748416000007
+      },
+      "elapsed_seconds": 222.07822727300004,
+      "scientific_payload_sha256": "ee258e24e0da60ea72115ea64deccf80b7cfdb55858a85f227762ebf96b69b55"
+    }
+  },
+  "controls_gate": "PASS",
+  "regression_tests": {
+    "tests": 11,
+    "status": "PASS",
+    "v2_failure_reproduced": true
+  },
+  "raw_results_sha256": "22936632883273c586feb1bc291542276ed83e9c5d2c2eb4fa9f5043f4556649",
+  "controls_file": "q048_resume_controls_v3.json",
+  "controls_sha256": "ff69a4ecfd92a3425e6407e2435790f1653dcf445578e7439307f15ab9e3d7b1",
+  "executed_code_hashes": {
+    "q048_resume_v3.py": "b1bac2a3cb89acd828e5b05b003706bbe13d0f8b3bd03b191a79d5b8126eb3e8",
+    "q048_resume_controls_v3.py": "6a92850beb5febe3848f4af6ff61adec519639c4e4480d134cf154b86f0fb2d9",
+    "q048_resume_merge_v3.py": "edd4bb3bdb0892c2ca575b305eee929f75fd5790f9ea136b27578c46e73a50cb",
+    "q048_resume_tests_v3.py": "6033ea4e3c9dbca51b2221fff52d7e05a028bb926c4bb8a650be4de99a90a000",
+    "q048_resume_config_v3.json": "aa0d10ebac4586d7d3c38d6315e2d6dddd5921b67e1424f87861fa5a87a4e60b"
+  },
+  "executed_core_file": "q048_resume_executed_core_v3.py",
+  "executed_core_sha256": "b1bac2a3cb89acd828e5b05b003706bbe13d0f8b3bd03b191a79d5b8126eb3e8",
+  "validation_code_hashes": {
+    "q048_resume_v3.py": "9f32f96eebad5b531a1fd0b9e6a1e96b641d41621e1ab86b66daa7bfa04c7661",
+    "q048_resume_controls_v3.py": "6a92850beb5febe3848f4af6ff61adec519639c4e4480d134cf154b86f0fb2d9",
+    "q048_resume_merge_v3.py": "bb634d19e4b7b9fcef39f6a68e4fbc04617914b213751fe4471f3292422a0b11",
+    "q048_resume_tests_v3.py": "38e3dde3f59557b2edb5ab85a33df502c6e4450ce6cbef4db45408b2b925d14e",
+    "q048_resume_config_v3.json": "aa0d10ebac4586d7d3c38d6315e2d6dddd5921b67e1424f87861fa5a87a4e60b"
+  },
+  "independent_review": "IMPORTANT_FINDINGS_FIXED_AND_RECHECKED",
+  "validation_date_utc": "2026-10-12T09:18:46.487658+00:00",
+  "merge_verification": {
+    "camspec-lcdm": {
+      "gate": "PASS_CONDITIONAL_RECOMPUTED",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "elapsed_seconds": 4.267030341999998
+    },
+    "camspec-ede_n3": {
+      "gate": "PASS_CONDITIONAL_RECOMPUTED",
+      "background_cells": 424,
+      "thermal_cells": 319,
+      "elapsed_seconds": 143.27783219499997
+    },
+    "hillipop-lcdm": {
+      "gate": "PASS_CONDITIONAL_RECOMPUTED",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "elapsed_seconds": 4.1066114760001255
+    },
+    "hillipop-ede_n3": {
+      "gate": "PASS_CONDITIONAL_RECOMPUTED",
+      "background_cells": 340,
+      "thermal_cells": 232,
+      "elapsed_seconds": 112.3978583290002
+    }
+  },
+  "installation_gates": {
+    "q": "Q-048",
+    "program_id": "Q048-RESUME-V3",
+    "package_gate": "PASS",
+    "q_identity_gate": "PASS",
+    "journal_continuity_gate": "PASS",
+    "source_pin_gate": "PASS",
+    "launcher_gate": "PASS_LOCAL_INSTALLATION",
+    "readme_gate": "PASS_LOCAL_INSTALLATION",
+    "repository_consistency_gate": "PASS_LOCAL_INSTALLATION",
+    "remote_installation": "NOT_PERFORMED",
+    "remote_registration": "NOT_PERFORMED",
+    "final_result_gate": "UNRESOLVED"
+  }
+}
+```
+
+---
+
+## Complete incoming SAMLET JOURNAL — preserved byte-for-byte
+
+# BUBBLEVERSE — OVERLEVERING
+
+STATUS: CONTINUES. CURRENT Q: Q-048 — PROPOSED_UNVERIFIED. CASE ID: NOT_ASSIGNED.
+Date/time: 2026-10-12T07:42:34.018161+00:00 UTC; 2026-10-12T09:42:34.018161+02:00 Europe/Copenhagen.
+VALGT NÆSTE MOTOR / SELECTED NEXT ENGINE: existing EXECUTION-MECHANISM / NUMERICAL / HPC ENGINE.
+RESULT ID: I-PROPOSED-Q048-MATHEMATICS-003.
+
+## Exact authoritative scientific question
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256 c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436. The local numerical-enclosure subtask is resolved; the exact full scientific Q is not yet resolved. Q047 stays CLOSED INCONCLUSIVE.
+
+## CHATGPT-SETUPVURDERING FOR NÆSTE TRIN
+
+Recommended primary setup: current Codex/Work with strong reasoning, exact Python and file/source access. Capability classes H/X+C/A. Recommended reasoning High/Extra High if available; active setting and user-picker alternatives are not independently verified. Model-name loyalty is not used. Focused code/reasoning is sufficient for the derived finite implementation; no multi-agent or maximum frontier mode was needed. Fallback: an available strong code-capable reasoning setup. Upgrade if full coupled history/admission proofs become substantially harder or independent checks disagree. Tools used: read-only GitHub source retrieval, original files, rational interval arithmetic and independent mathematical comparisons. No new physics literature search is needed to diagnose this pinned numerical guard; no GitHub write or dispatch occurred.
+
+## SAMLET JOURNAL — differential update
+
+KEEP the complete incoming12501690byte journal, SHA256d1c38936a1ef2a407031ab05cce00cccf294e061a3c5af807461a1f80729baca, appended unchanged below. All full source registers, claim/source maps, rejected/falsified/superseded state, four frozen configurations and prior results survive.
+ADD quantitative reconstruction of all eleven V2 background trials k=0…10 for both EDE endpoints and all eleven Hillipop thermal trials. Their recorded stops are reproduced with unchanged input cells/errors and source equations.
+ADD positive exact-real source-cell controls at k=11, using the unchanged proof checker and prospective boxes. This is one additional halving beyond V2's fixed maximum10, not an altered source equation or a reduced initial uncertainty.
+ADD independent vector/scalar comparisons confirming all three positive controls, exact analytic zero/nilpotent matrix limits and diagonal-similarity covariance controls.
+REFINE the interpretation: COMPARISON_GROWTH_CAP and THERMAL_TUBE_NOT_CLOSED are finite trial/guard limits here. They do not prove that the conditional source-real path cannot continue. A minimal, proved numerical continuation requirement now exists.
+KEEP actual-source admission UNRESOLVED, first-event/full electron-history/depth outputs NOT_COMPUTED, and scientific FINAL_RESULT_GATE UNRESOLVED. No new physical model was fitted, tuned, rejected or resurrected. Original checkpoints were not overwritten or silently extended.
+
+## Minimal mathematical model, variables and units
+
+The source states are phi (reduced-Planck normalized scalar, dimensionless) and X=phi_prime/a (source scalar derivative in inverse-Mpc units). H is the CLASS background inverse-Mpc expansion rate. a,u=ln a and cell coordinate xi=(a−a0)/(a1−a0) are dimensionless. w=1−T_b/T_gamma is dimensionless. Exact source equations remain
+
+phi_u=X/H,   X_u=−3X−V_phi/H,
+
+and on a cell, y_xi=Delta_a*F_u(a,y)/a. Thermal He1 remains w_u=1−(1+beta)w, with its original beta(a,w,background), source phase and carried state. No helium cutoff/reionization/input change occurs. All primitive source constants and captured field values remain fixed under the inherited exact-real/binary64-enclosure assumptions.
+
+For a predictor P(xi), initial box Y0 and prospective tube B, set r0_i=max|Y0_i−P_i(0)|, delta_i=sup|P_i'−F_i(P)|. The source Jacobian supplies signed diagonal bounds M_ii=sup J_ii and off-diagonal M_ij=sup|J_ij|, hence the nonnegative error majorant satisfies r'<=M r+delta while the tube is valid. The endpoint majorant is exp(Mh)r0+integral_0^h exp(Ms)ds*delta. Strict whole-cell closure keeps that proof inside the source domain. h=1 for the normalized xi cells here; the physical Delta_a is already included in the field. These are deterministic rigorous enclosures, not Gaussian errors, observed covariance, sigma significance or a posterior.
+
+## MATEMATISK HOVEDRESULTAT — exact finite controls
+
+At each first blocked EDE endpoint, nominal Delta_a=a0/4. V2 tries k=0…10 with Delta_a/2^k. Its comparison routine refuses max(M11+M12,M21+M22,0)*h>50. At the last allowed trial:
+
+| Case | k10 growth bound (display) | k11 growth bound (display) | k11 strict closure slack: phi / X (display) | Source EDE guard upper (display) |
+|---|---:|---:|---|---:|
+| Camspec EDE | 53.53923156 | 26.75426739 | 1.85237380 / 1111.02901717 | 0.15110896 |
+| Hillipop EDE | 53.09646128 | 26.53326856 | 3.94478896 / 1241.16283185 | 0.13382807 |
+
+k11 uses Delta_a=a0/8192. The existing exponential-comparison routine now remains inside its unchanged50 work guard, both closure components are strictly positive, H has a positive lower bound and both original EDE potential-fraction guard uppers are below1/2. Exact input/output intervals and inequalities are preserved in Q048_MINIMAL_CONTINUATION_CONTROLS_V1.json. Displayed values are rounded orientation; exact rational slacks are the proof values.
+
+Camspec carried background halfwidths remain approximately2.00531141 in phi and1171.28289364 in X. Hillipop remains4.67986861 and1383.30243560. They are broad enclosures and are not reduced to make the proof pass. Coordinate-normalized matrix row sums are numerical work diagnostics under the selected component units, not unit-invariant physical instability criteria.
+
+Hillipop thermal He1 uses the same fixed tube w∈[−10^-6,1/50] and the same carried initial-error radius approximately1.04807e-6. Its k10 strict closure slack is −6.57571265e-9 (FAIL); k11 gives +1.23927204e-8 (PASS) with the same tube and source checker. The independent scalar proof gives +1.15650821e-8 (PASS). Its source T_b lower bound is approximately13592.73K and remains positive. A separate prospective-domain control [−2e-6,1/50] closes the original k0 candidate with slack+7.59638023e-7, without removing any carried uncertainty. That enlargement is a mathematical tube choice, not a physical w value or an assertion that negative true w occurred. The minimal recommended change uses k11 and preserves the original tube.
+
+These computations certify particular immediate successor cells under the inherited CONDITIONAL_SOURCE_REAL assumptions. They do not claim a completed larger campaign or modify the415/310 and335/231 checkpoint partitions. Full actual x_e(z) and tau_T(z) differences remain absent.
+
+## Optional coordinate remedy — proved, not necessary for the minimal fix
+
+For a positive diagonal S=diag(1,s), B=S^-1 M S preserves the same comparison problem. Transform initial error and defect to S^-1 r0 and S^-1 delta and transform the resulting bounds back by S. Choose a positive rational s from the rigorously enclosed sqrt(M21/M12), balancing off-diagonal terms; this is a numerical coordinate choice, not physical parameter tuning.
+
+At k10 the resulting row-growth bounds are approximately0.12180453 Camspec and0.23924412 Hillipop, versus the original53.54/53.10. The interval exponential and integral remain valid under positive diagonal similarity. Source-preserving weighted controls close Camspec already at k8 and Hillipop at k9, with unchanged captured inputs and carried errors, positive-H/source guards retained. This offers a possible efficiency improvement if the minimal step-selection change is insufficient later; it is not required to prove the present obstruction removable. Scaling alone does not establish global convergence, actual-source applicability or physically stable EDE evolution.
+
+## Independent mathematical cross-checks and limits
+
+The vector comparison was independently evaluated as a positive-matrix Taylor series with a proved remainder, rather than the original eigenvalue formula. Embed M and the identity forcing block in C=[[M,I],[0,0]]. Pick sigma making C+sigma I nonnegative and evaluate exp(Ch)=exp(−sigma h)*sum_k((C+sigma I)h)^k/k!. With rho the nonnegative matrix infinity norm, after N=200 terms the remaining infinity norm is bounded by rho^(N+1)/(N+1)! divided by(1−rho/(N+2)). Outward rational interval operations retain rounding effects. The actual controls have rho within the finite51 work domain. The upper-right block gives the integral comparison directly. Both source-cell closures remain strictly positive and endpoint intervals overlap the original eigenformula results. Exact M=0 and nilpotent M controls recover the expected exponential and integral limits. Positive diagonal transformation also matches the original envelope within outward interval overlap on a separate signed-M control.
+
+For the thermal proof L<0, lambda=−L, R_eq=delta/lambda and 0<lambda h<1. The scalar majorant R(s)=R_eq+(r0−R_eq)exp(−lambda s) is monotone. If R_eq>=r0, exp(−x)>=1−x supplies R(s)<=r0+(R_eq−r0)lambda h throughout the cell; otherwise R(s)<=r0. This gives positive closure without any numerical exponential evaluation. Its successful k11 margin is smaller than the direct signed-exponential margin, as expected for a conservative independent bound. No data-driven covariance or statistical assumption enters either proof.
+
+## Provenance, sources and claim mapping
+
+Input run38205625445 and implementation commit96eb8370bdd99ca27f05f472a0fc0294829acf09 remain the provenance anchors; source class_ede5a131c91d657dd9a7c6364cc45b038710f8d0d97 is unchanged. All four attached checkpoint bytes/records/metadata match the full raw result and declared hashes; input raw JSON SHA256c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81. Checkpoint hashes and source/input/file hashes are explicitly in Q048_ENCLOSURE_MATHEMATICS_V1.json. No new native initialization, compilation, re-shoot, production, likelihood, sampler or GitHub run was performed.
+
+K-PROPOSED-Q048-SOURCE-002 — mwt5345/class_ede, source implementation at the frozen scientific commit; URL https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97 . Supports source equations/units/guards, not actual initialized-instance error admission. Original source register metadata remain unchanged.
+K-PROPOSED-Q048-INPUT-001 — four original captured reconstruction inputs from run38140371059. Supports fixed effective configurations/accepted z_reio; all exact hashes are preserved.
+K-PROPOSED-Q048-GITHUB-RUN-38205625445 — official technical run/commit/artifact evidence, https://github.com/Morfindien/Bubbleverse/actions/runs/38205625445 . Supports parent provenance and reported numerical stop locations.
+K-PROPOSED-Q048-MATH-REPO-004 [ADD] — Bubbleverse pinned proof/field code inspected read-only at96eb8370…cf09: q047_certificate_v1.py comparison_matrices, q047_precursor_check_v1.py certify_cell/thermal/ede_field, q048_resume_v2.py generation/halving controls. Author/repository Morfindien/Bubbleverse,2026; URLs https://github.com/Morfindien/Bubbleverse/blob/96eb8370bdd99ca27f05f472a0fc0294829acf09/q047_certificate_v1.py and corresponding precursor/resume paths. Retrieved code Git blobs and SHA256 match local frozen files. Supports the exact50 guard, signed/Metzler envelopes and V2 maximum10, not external scientific measurement.
+I-PROPOSED-Q048-MATHEMATICS-003 [ADD] — Bubbleverse local finite conditional cell computation, exact diagnostics, minimal/weighted/thermal and independent controls. Not a publication/observation. Supports the quantified next-cell success and its assumptions.
+
+Claim: all original allowed cells fail/guard → exact reconstructed diagnostics and pinned generation rules.
+Claim: one additional halving removes the three immediate obstructions → exact minimal and thermal control certificates, preserved r0/forcing/guards.
+Claim: independent verification → positive-matrix/scalar-tangent controls and analytic-limit/covariance gates.
+Claim: no full Q answer yet → retained conditional scope, absent actual admission/event/full history/depth products in the original raw result.
+Complete existing sources, metadata, rejected candidates and claim mappings survive in the unchanged journal below. No DOI/arXiv or external measurement is invented.
+
+## Evidence strength, physical meaning and conclusion-critical caveats
+
+STRONG for the finite conditional mathematical diagnosis: original failure reproduced, strict-positive successor controls and independent comparison methods pass. This is not evidence of new physics or a physical model failure. The inherited source assumptions and actual instance/linkage issues remain as documented in the full journal; these controls do not override them. Source-real boxes are conservative, deterministic uncertainty enclosures with explicit initial assumptions. A few successful cells do not prove complete-path convergence or first-event behavior. An arbitrary work guard cannot be used as a physical falsification criterion.
+
+## AKTUEL OVERLEVERING — precise next execution requirement
+
+Use the preserved run38205625445 checkpoints as genuine parents. Implement the minimum technical halving change from10 to at least11, retaining strict residual/Jacobian/tube, positive-H, phase and source-branch guards. Do not reset or narrow the carried errors. Reproduce the three explicit k11 cell controls before any longer continuation. Continue under finite, independently budgeted background/thermal stages and preserve partial outputs. Preserve complete certificate verification; use verified cell/chunk continuity and completeness gates or a documented sufficient verification schedule instead of skipping the120-second check. Only if needed, consider the separately proved positive diagonal similarity with transformed r0/defect and back-transformed errors. Register a new computational target/version when code/control changes, preserve old target/results, and update README/registry/launcher package coherently. GitHub access in this session remains read-only; any installation/run is a user-controlled later execution.
+
+The minimal required implementation is now numerical, not further speculative mathematics: consume these successful cell controls, preserve state/error lineage and extend the real finite certificate chain. No new scientific Q or motor is needed. Do not silently reuse an old configuration hash after changing the halving control. The old V2 target and all results must remain recoverable.
+
+### Verification continuity and runtime requirement
+
+Camspec's previous parent verification took116.61seconds on the observed runner, close to V2's120-second cap; its successor has59 additional background and59 thermal cells. That makes a future same-cap failure plausible, not already measured. Mathematical checks cannot be skipped to make resume work. If chunking is used, each cell certificate may be checked relative to its stored predecessor endpoint; all cells, exact predecessor/successor endpoint bindings, common config/source/Q and root initialization must then pass a complete-chain merge. The chain's validity follows by induction from the conditional initial box through every verified endpoint, not from stored PASS booleans. Thermal chunks must reference the fully verified covering background cells/whole-state enclosures. Missing cells/chunks fail scientific admission. Use measured costs to set finite verification scheduling or split jobs while preserving all checks; no arbitrary unchanged retry loop.
+
+### Fixed elements / success / failure / stop
+
+Fixed: exact Q/CASE and scientific question; physical equations/source commit; all four effective inputs and accepted reionization; initial and carried uncertainty; phase/mode/source guards; epsilon and q convention; all past failures and sources. Variable: numerical step subdivision and, if needed, explicitly proved coordinate/enclosure representation and verification scheduling.
+Success: new registered execution reproduces the specified three cells and preserves every prior certificate/input/error, then reports controlled further coverage or a new specific finite blocker. A completed reporting job must retain scientific UNRESOLVED until all required full products/admission pass.
+Failure: a later failed tube/source guard is recorded at its exact tested state with no lost partial results; it does not automatically reject the physics. Do not just increase caps or tune parameters until expectation is obtained.
+Stop this mathematical diagnosis now: the immediate mathematical obstruction has a verified minimal remedy and independently checked finite contract. Further unchanged reconstruction adds no material information. Q48 closes only when its exact complete four-case question has a defensible documented answer (including justified irreducible uncertainty), then goes to Motor14. This local success alone does not satisfy that closure gate.
+
+## Reproduction and technical result files
+
+The five supplied diagnostic scripts pin the exact source/code and two EDE checkpoint hashes. They are mathematical reproduction instruments, not a new GitHub/HPC campaign or launcher target. Run with Q048_SOURCE_DIR pointing to the installed frozen source files, Q048_INPUT_DIR to the supplied current checkpoints and Q048_OUTPUT_DIR to a separate result directory; order is diagnosis, minimal controls, thermal controls, weighted controls, independent controls. Default source/input is the working directory. Direct numerical assertions, the portable independent script and analytic controls were executed; no production code file was changed. Full formulas, fields and raw fractions accompany all controls. These scripts do not alter original checkpoints.
+
+---
+
+## Complete machine-readable mathematical result
+
+```json
+{
+  "schema": "Q048_ENCLOSURE_MATHEMATICS_V1",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "result_id": "I-PROPOSED-Q048-MATHEMATICS-003",
+  "date_utc": "2026-10-12T07:42:34.018161+00:00",
+  "date_copenhagen": "2026-10-12T09:42:34.018161+02:00",
+  "originating_engine": "MATHEMATICS ENGINE",
+  "selected_next_engine": "EXECUTION-MECHANISM / NUMERICAL / HPC ENGINE",
+  "scope": "CONDITIONAL_SOURCE_REAL_SINGLE_CELL_CONTROLS",
+  "scientific_source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "implementation_commit": "96eb8370bdd99ca27f05f472a0fc0294829acf09",
+  "source_pins": {
+    "q047_math_v1.py": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+    "q047_certificate_v1.py": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+    "q047_precursor_check_v1.py": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+    "q048_prefix_v1.py": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+    "q048_resume_v2.py": "e48a0250320560c68e218751186ec0ba45af916da6fce83ce546a40c1711386c",
+    "q048_prefix_config_v1.json": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+  },
+  "input_run_id": "38205625445",
+  "input_provenance": {
+    "journal_sha256": "d1c38936a1ef2a407031ab05cce00cccf294e061a3c5af807461a1f80729baca",
+    "journal_bytes": 12501690,
+    "raw_result_sha256": "c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81",
+    "ingestion_receipt_sha256": "4f875dbca45b4119e4c408d71e048c93be014c67a8994693c91f9a000c36251e",
+    "checkpoints": {
+      "camspec-lcdm": "34be67153091bd7b9bd6058ad26f736111d943350d150e8aea8027809cbd8c49",
+      "camspec-ede_n3": "594dcf3086e9f3aeb86153c0fa604441561f4653d5c3026706e59e156cedae42",
+      "hillipop-lcdm": "ebd624c8d1e2f1ef84e49e7d96763a43ff96625ae27d3ea3857990945ac4c653",
+      "hillipop-ede_n3": "ed1b188d8ca46591571efc33f551a2a1642e31fc2ec1fc5e27329ed868dbc842"
+    }
+  },
+  "background_summary": {
+    "camspec-ede_n3": {
+      "checkpoint_sha256": "594dcf3086e9f3aeb86153c0fa604441561f4653d5c3026706e59e156cedae42",
+      "old_k10_growth_bound": "26769615780303345761049865409671945117572091352219816279172846874048489632964921366151960376154113052555565150796552516953/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "new_k11_growth_bound": "334428342350478138437538171249562190769714177274403985661424453994179645907409924744382517068925577787707843306838644171/12500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "initial_error": [
+        "401062282349692201226478498842224811890386152489664296176429042189117974814001003239865107595270749090453224943093138617/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "585641446820923089059952966790694997145255034329471741396485828129060207861771330238869995969496356008385349051855479105917/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "closure_slack": [
+        "926186901816133769334527872762767765805610265438189712235612958749755245631630972280393579299257602168793193367503167259/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "555514508583195155798363565022721955562944065636097841091120065399081328454495956948687732777439426299990234426377860463877/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "a0": "22471294191521186296150216269282130209734816053960274061812292435367320050994861104848811344804283228354559226959907317598142317677912401251850457440308596733961073679865978236937187295345594977706078755300066529368872047944196170035560379755866026836045481338669758917622975250284545679807310596267492456544508765141949794820648472889801205272733084685547564806459780874045692062307188897672481168145974919238055841099934277571292310247102297554133694965924245057900595286358471612396448985924571075221978377218641803736859308597473547736216394361598945048396798214681400559455454610678114809082959792777966425618090945702842981592330179032407369403902630897994697558178893749820005273946420577368893953095787060768861926498059332451862108493380643350532076263359471113290055654942989349365234375/137318317908507236099180308122160545356893949408613863350317574402933346369149759977589127103981322214612889654832954480313026331709896998734478866409540610887189007470132304370241758909775377530448205387977035903544448300977167904126185039962087156378478085509013132834229050557857195775362761165394235171610870582095373427119162843431537933157729216202457257316682595507625022642647820572022345878172699486996399695396982878519104897547447696565723632318642472929578185734966300365549310066137578314428090217287887366284767804733598769833693624702744306881423822986962748981440853837256210364518750309970120077798566092187017634450006042855316163604451200291805028644382609484595861410159023172699400371708743956676132718699587803928354851954373313635190232505115804676153795260871547251988568735744",
+      "a1": "184107313311133079324358721894228492808357347930096525388428111922964453177800897032026311347981492489908903746482520653081580008735136303456410797808448333041343076659141959695226375510766459652345903242173445075119168688806799221101346191339810357867720628607721334812085036225581282754661295715219565696469160312807994668965572938386141274799502162828691198459324984701056355066482798638630638210619972513317391506131761536141597897854509123861017362855817339759379577181134957920364106541680010819293668844552332298016088315339100776602820919004580156781514967772884714783618539625285794630816689582229878925089019118143392548185961156812513577526174254947270557094159676492275303209443023790383348157713783388879285763798600110778106254886267610970909300825704146831185425980947911739349365234375/1124911660306491278124485084136739187563675233555364768565801569508829973456074833736410129235814991582108792052391563102724311709367476213632850873626956684387852349195323837401020488988879892729431698538307878121836120481604959470601707847369417985052492476489835584178004382169966147791771739466909574525836251808525299114960182013391158748428117739130529851938263822398464185488570946126007057433990754197474506304692083740828507320708691530266407995954319138239104497540843932594579948061799041551794915060022373304604817856377641122477618173564881361972623957909198839655963474634802875306137602539275223677325853427196048461414449503070750012247664232790466794654782336897809296672022717830753487845038030493090879231587023289781082947210226185299478384681908671907051890777059715088290355083214848",
+      "source_guard": [
+        "0",
+        "75554477589812438142062385306900917872635777219415017882286409282013697314690713567304270237623029607124860422353728061/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "positive_H": true,
+      "optional_weighted_first_closed_halving": 8,
+      "optional_weighted_closure_slack": [
+        "101735892461086621868318630604179581549822762373387868535307572749579993697904409202743615334456216164538193202698470903/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "546592843492633174519523807030912391708681001974847958951981858070439921982799704763712064518225667132006175976235862526889/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "optional_weighted_weight": "943256915353467369108958124292115249435041644376962683101787224180047677891040883472986250587984604126382641959006102099379/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "old_k10_weighted_growth_bound": "121804531408832230087364200565719506278850166449691287069934674350970747802649093039326647836496443452499845034225379135045945424001057963598505504313758996625145593383322287776220725911249287375682674180313673377737640468135709319317321881/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "independent_background_control": "PASS"
+    },
+    "hillipop-ede_n3": {
+      "checkpoint_sha256": "ed1b188d8ca46591571efc33f551a2a1642e31fc2ec1fc5e27329ed868dbc842",
+      "old_k10_growth_bound": "212385845110204662435970546344511482213836472452198569924412105987980502851510154922367366074339870452821826617794699947/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "new_k11_growth_bound": "26533268563724709323651565214423359826825613707340659465894604418284530760809789752536873749995901420402893106772234862237/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "initial_error": [
+        "1169967153224210910868833225348969613546629092207446299053080227161984321131128883556916338617225384728782442100524976973/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "11066419484798086090210033078198808601521042502435911916796816105956217083152842976939455349924886129483583563572152740369/8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "closure_slack": [
+        "986197241206948723896894394571067116080999501293533853434188464318120602271506779765220716543680834893026732907633363409/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "1241162831852908250369881649381617595562358082571251824174711446753515631918201429610220863791007283041483491710824910438091/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "a0": "567657605852023278142353471061886738532576109328818712084751895037997745279739959588015117946251110440989280635366097380765682707802543544151208869370813316537992764291112040280247563799454023666476286817780303719185211130589566747433924847217968255843898500777383649280824727676380952029861621982787894577643021868679601226515478608020740568009950112611271224075895846378233270321014045733976396002252107272807957748784953231775403415163856245757941056090466713576836630280984801714439388362651112845829869303588168150779560104657317509690983570180833339691162109375/2830360686206494015618260612961201965531482417425069711887864957171236463984728869053893906126055270915417338859676715713175498740317187287633211567459086480050905424011713200162260976303748945738572160389997714223786026483241300633349293050600824086879176004910799535128338844140056582206225471478435635028847768825700030213268241734212999089292583636838416489008291082264086343450710778182013117261919582023041862212432199595314474666755289226164140910305523762494989250329382106402065157813588975966197075237061337724264827840869546672836358197051015435117619910279168",
+      "a1": "4650818764745626717820301988410038048797396063731011708110372276046315527076909488904607861333635347843025176245554435840613238425026239257230854266755073502395774717837080946016068290208926815899440217898074028371284434792920320361726146273256813920129060416869104238557796993852589139980656268904981220274629278170091972848841316235513927473705521272624145138853814669376865183740068076698468612446451514886115597835795121827935880180437474221494811072549193784335022511892108480446401908855200567545884119204297861659336935937457402356898228390491567552089691162109375/23186314741403598975944790941378166501633903963546171079785389729146769112962898895289498878984644779339098839938471655122333685680678398260291269160624836444577017233503954535729241917880311363490383137914861274921255128950712734788397408670521950919714209832229269791771351811195343521433399062351344722156320922220134647507093436286672888539484845152980307877955920545907395325548222694867051456609645215932758935244244579084816176470059329340736642337222850662358951938698298215645717772808920891115086440342006478637177469672403326343875446350241918444483542305006944256",
+      "source_guard": [
+        "0",
+        "33457018058536816067353861531144632041335581498923915215847636888715947070896196519655119377768662611414119179028600381/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "positive_H": true,
+      "optional_weighted_first_closed_halving": 9,
+      "optional_weighted_closure_slack": [
+        "1210455538598228088886315482214563979222407170840773588583833684074438838305802080188814760142665719106400495082041587067/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "337411890198757172960264276108498680635755214631985779482339706798790939832629261882048840791332305617792651472966538234721/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "optional_weighted_weight": "467759612433375781375213997683750323997649926161854336232981707674210282814492669992417689048793078430272061798687267257869/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "old_k10_weighted_growth_bound": "478488232331689696579563993285046290350312180516904668889542320556557166148714237304390077141577100052644401210433872013247150871811011529160760887518108230243779158229661579494697378056392238662832553984334565196324999912783335142013550757/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "independent_background_control": "PASS"
+    }
+  },
+  "hillipop_thermal": {
+    "original_k10_slack": "-657571264985775274930197939213236065489376938236303352943056669157462196650498517134488738614260974739210264841/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "original_k10_closed": false,
+    "k11_slack": "3098180107302349790719680945088201702088596762011088577407935016805003905941209842274190427055616803668124095723/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "k11_closed": true,
+    "independent_k11_slack": "5782541026565943445499379450940080912009130015949886145760775215833340604844981696226514378772904226301821990111820195399326611126392424562342304273891607081681548821234343890672147720147038689728488040669379806711063872095205918353/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "independent_method": "exponential tangent e^-x >=1-x",
+    "initial_error_preserved": true,
+    "wider_lower_tube": "-1/500000",
+    "wider_tube_k0_slack": "379819011436899294350609911542738735205279643034602139414003528828210524674843217631333154064376937115655283966037/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "wider_tube_k0_closed": true,
+    "mode": "He1",
+    "a0": "290569892869267311160866733926738823376570072103309775080467095663808173177115571264311610604426252139285328985184260976413203267687631828471403498664293204593019560559286914476407620006032805490412922706558071097290803777922699944613448326853234996740981028215961057417678647820528519085252719093500019887036318340484996766168077986147551902471020480476706195114580718066793028448505142556296265756727120703805474009455116188644735806278039203651453102173124368996290863974532125914044839302635799184274017061173501977523018504311058674005607826984487473964691162109375/1449144671337724935996549433836135406352118997721635692486586858071673069560181180955593679936540298708693677496154478445145855355042399891268204322539052277786063577093997158483077619867519460218148946119678829682578445559419545924274838041907621932482138114514329361985709488199708970089587441396959045134770057638758415469193339767917055533717802822061269242372245034119212207846763918429190716038102825995797433452765286192801011029378708083796040146076428166397434496168643638477857360800557555694692902521375404914823591854525207896492215396890119902780221394062934016",
+    "a1": "595087211397586421864703089325218057461967616563451464770303537794074785339138801237354930647649018697662854944357489660576779118502977255175568380706926046219978492760177363297829884905014473298992488639175075051658498161506628644798414894590347638075780240790470304962419974349192185614951605134849728110787096870169552336174031562691345363529000017993474552266273588556070984668494386004154251918773569159613482971722000734210443201999710144272352565969103902292758738910571125964527579019337158299985977817305595690082818013098321652254441005425178445875644683837890625/2967848286899660668920933240496405312209139707333909898212529885330786446459251058597055856510034531755404651512124371855658711767126834977317282452559979064905858205888506180573342965488679854526769041653102243189920656505691230052914868309826809717723418858525346533346733031833003970743475079980972124436009078044177234880907959844694129733054060179581479408378357829876146601670172504942982586446034587639393143711263306122856470588167594155614290219164524884781945848153382171602651874919541874062731064363776829265558716118067625772016057132830965560893893415040888864768",
+    "Tmat_K": [
+      "1699091547422962661870961494951503576603928247631538183098974517624654237618475027719617479233101642986245254973186386780869/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "6796381523609808059617545898638031739434682264177463273069179624021081847503001007976462194356937172051313221978857090544187/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "xe_thermal": [
+      "4327740501497568939562826316645029957169306551711566790550029851735368951402784347611219873325447621593050828262603919/4000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "540967567174703694742552044645070597475152816899077460767261456400022659181623869187680363428386950115881775665140209369/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ]
+  },
+  "validation": {
+    "q": "Q-048",
+    "result_id": "I-PROPOSED-Q048-MATHEMATICS-003",
+    "checks": {
+      "ZERO_LIMIT": "PASS_EXACT_ANALYTIC_LIMIT",
+      "NILPOTENT_LIMIT": "PASS_EXACT_ANALYTIC_LIMIT",
+      "DIAGONAL_SIMILARITY_COVARIANCE": "PASS_WITH_OUTWARD_INTERVAL_OVERLAP",
+      "ALL_THREE_MINIMAL_CELLS": "PASS_WITH_INDEPENDENT_CHECKS",
+      "NEGATIVE_ORIGINAL_THERMAL_CONTROL": "FAIL_REPRODUCED_AS_EXPECTED",
+      "WIDER_THERMAL_DOMAIN_CONTROL": "PASS_WITH_NO_CARRIED_ERROR_REDUCTION"
+    },
+    "final_result_gate": "UNRESOLVED"
+  },
+  "new_execution_requirement": "Use the preserved run38205625445 checkpoints as genuine parents. Implement the minimum technical halving change from10 to at least11, retaining strict residual/Jacobian/tube, positive-H, phase and source-branch guards. Do not reset or narrow the carried errors. Reproduce the three explicit k11 cell controls before any longer continuation. Continue under finite, independently budgeted background/thermal stages and preserve partial outputs. Preserve complete certificate verification; use verified cell/chunk continuity and completeness gates or a documented sufficient verification schedule instead of skipping the120-second check. Only if needed, consider the separately proved positive diagonal similarity with transformed r0/defect and back-transformed errors. Register a new computational target/version when code/control changes, preserve old target/results, and update README/registry/launcher package coherently. GitHub access in this session remains read-only; any installation/run is a user-controlled later execution.",
+  "mathematical_subtask_status": "RESOLVED_LOCAL_OBSTRUCTION",
+  "q_completion_gate": "NOT_YET_SATISFIED",
+  "final_result_gate": "UNRESOLVED",
+  "actual_source_admission": "UNRESOLVED",
+  "actual_event_redshifts": "NOT_COMPUTED",
+  "actual_xe_history_bounds": "NOT_COMPUTED",
+  "actual_tau_T_bounds": "NOT_COMPUTED",
+  "native_evaluations": 0,
+  "likelihood_evaluations": 0,
+  "github_mutations_performed": false,
+  "input_checkpoints_modified": false,
+  "statistical_uncertainties": "NOT_APPLICABLE_DETERMINISTIC_INTERVAL_CONTROLS",
+  "new_source_ids": [
+    "K-PROPOSED-Q048-MATH-REPO-004",
+    "I-PROPOSED-Q048-MATHEMATICS-003"
+  ],
+  "journal_effect": {
+    "ADD": "quantitative failed-cell reconstruction and positive one-more-halving controls",
+    "REFINE": "three observed stops are finite method limits, not proved inability of the conditional source IVP to continue",
+    "KEEP": "all inherited source/assumption/error/provenance and Q047 closure",
+    "UNCHANGED": "global Q48 science gates and actual initialized-instance linkage"
+  },
+  "execution_setup": {
+    "recommended": "current Codex/Work with strong reasoning and exact Python/source access",
+    "classes": [
+      "H",
+      "X",
+      "C",
+      "A"
+    ],
+    "reasoning": "High/Extra High if available; current active label not verified",
+    "fallback": "available strong reasoning configuration with code and original files",
+    "upgrade_trigger": "full coupled comparison/admission derivation exceeds this focused method or source checks disagree",
+    "parallel_agents_used": false
+  },
+  "reproduction": {
+    "source_dir_environment": "Q048_SOURCE_DIR",
+    "input_dir_environment": "Q048_INPUT_DIR",
+    "output_dir_environment": "Q048_OUTPUT_DIR",
+    "scripts_in_order": [
+      "q048_enclosure_diagnosis_v1.py",
+      "q048_minimal_controls_v1.py",
+      "q048_thermal_controls_v1.py",
+      "q048_weighted_controls_v1.py",
+      "q048_independent_controls_v1.py"
+    ],
+    "frozen_input_pins_enforced": true
+  },
+  "evidence_files": {
+    "Q048_THERMAL_CLOSURE_CONTROLS_V1.json": {
+      "bytes": 27683,
+      "sha256": "3ff3cc0a642c7b4f83d4f299d41d7b6511d8b9535e83df3f5c7658cafd676751"
+    },
+    "Q048_WEIGHTED_CELL_CONTROLS_V1.json": {
+      "bytes": 245610,
+      "sha256": "10fb620e04764d6183b7384d8c3f9b06618f38f807ce4d540c93b68296abb5d9"
+    },
+    "q048_minimal_controls_v1.py": {
+      "bytes": 1500,
+      "sha256": "b4e2c30ad6efca98b7248aaeed66744727812204c0d302163c5995852d8a2920"
+    },
+    "Q048_ENCLOSURE_DIAGNOSTICS_V1.json": {
+      "bytes": 379633,
+      "sha256": "b8d437dffe9a91b6ecbf7e2b7615c67e5be415e4b5ca4306c612b25646a5ad7c"
+    },
+    "q048_enclosure_diagnosis_v1.py": {
+      "bytes": 5727,
+      "sha256": "a167fe30085cd3f7e2bf26d32e534d3eae9a50785f2c87f74b69b03212e1e58f"
+    },
+    "Q048_MINIMAL_CONTINUATION_CONTROLS_V1.json": {
+      "bytes": 51340,
+      "sha256": "235d2dbe47bb6334ef5c2e1d6922a04247fccd69d1c8990624dcb65a544dedb9"
+    },
+    "Q048_MATH_CONTROL_VALIDATION_V1.json": {
+      "bytes": 510,
+      "sha256": "69b0eb8646f66120ca7aa3a318f72e678245ae57e900357ec5ca6929beface98"
+    },
+    "q048_thermal_controls_v1.py": {
+      "bytes": 1757,
+      "sha256": "99923edb1bd0693c9e408f9aa2077a6a4d8572273da9e2e0078875160b7f693e"
+    },
+    "Q048_INDEPENDENT_CONTROLS_V1.json": {
+      "bytes": 17662,
+      "sha256": "6dbd6814c6016007d98363a7a19f63d062ebfb3b7ac86cd0d9f0227578663bce"
+    },
+    "q048_independent_controls_v1.py": {
+      "bytes": 4106,
+      "sha256": "9b876d03c28a67917191ac5320a381a18010f38ff27a93817dbdb2547a9e093f"
+    },
+    "q048_weighted_controls_v1.py": {
+      "bytes": 2998,
+      "sha256": "e6bc6276fb2ad1add3bb733b8f20bd75f0d140007b8a436912ed782afe34133f"
+    }
+  }
+}
+```
+
+---
+
+## COMPLETE RECEIVED SAMLET JOURNAL — unchanged authoritative history
+
+# BUBBLEVERSE — RESULT INGESTION & ROUTING HANDOFF
+
+STATUS: CONTINUES. CASE ID: NOT_ASSIGNED. CURRENT Q: Q-048 — PROPOSED_UNVERIFIED.
+Date/time: 2026-10-12T05:11:21.841923+00:00 UTC; 2026-10-12T07:11:21.841923+02:00 Europe/Copenhagen.
+PROGRAM_ID: Q048-RESUME-V2. RESULT ID: I-PROPOSED-Q048-RESUME-GITHUB-38205625445.
+
+## QUESTION — exact full authoritative wording
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436.
+
+## RECOMMENDED CHATGPT EXECUTION PROFILE
+
+AVAILABLE CONFIGURATIONS CONSIDERED: actual Codex/Work with file/Python execution, read-only connected GitHub and advertised reasoning/agent capabilities. User-selectable model catalog, current reasoning label, context/quota and comparative mathematical reliability are NOT VERIFIED. No model switch or agent delegation occurred.
+RECOMMENDED MODEL / MODE: current Codex/Work or an actually available strong mathematical reasoning configuration with code tools.
+RECOMMENDED REASONING LEVEL: High/Extra High if available; this is a recommendation, not a claim about the active setting.
+RECOMMENDED EXECUTION STYLE: focused mathematical and code-assisted diagnosis, capability classes C/E in the ingestion scheme.
+WHY: the next uncertainty is a coupled rigorous error-enclosure primitive, not a need for broader blind computation. Use stronger frontier reasoning only if that quantified derivation demands it.
+RECOMMENDED PLUGINS / TOOLS: original journal/files, exact rational/interval Python checks, pinned read-only repository/source retrieval. Literature search is optional only if a new external scientific uncertainty becomes decisive. No GitHub writes, dispatches, retries or production restarts are authorized/performed by this ingestion.
+
+## SELECTED NEXT BUBBLEVERSE ENGINE
+
+**MATHEMATICS ENGINE — existing MATEMATIKMOTOREN.** Exactly one destination. No new engine is invented. Motor14 is reserved for sufficiently documented completion of the exact Q. Report Writer is excluded.
+
+## SAMLET JOURNAL — differential update
+
+The complete received 12456897byte journal is the unchanged tail below, SHA2567fb4a47a96fdc6497b3f5bc8cab736b4699818ad97ebe581de6bff4a9219c1a9. All accumulated Q/case state, source registers and claim maps, active/rejected/falsified/superseded material, local/remote results and Q047 CLOSED INCONCLUSIVE status survive.
+ADD: verified remote continuation with59 new Camspec-EDE background cells and59 new thermal cells, all carried errors and certificates preserved.
+CONFIRM: exact source/question/input identities, all four checkpoint parents, common inherited numerical certificates, both conditional LCDM H transfers and conditional component reproducibility.
+REFINE: Camspec's previous time-budget stop is now followed by a concrete COMPARISON_GROWTH_CAP at a later retained endpoint. Hillipop repeats its comparison-growth and thermal-closure stops, with zero new cells. These method limits replace time-only continuation as the immediate numerical bottleneck.
+SUPERSEDE ONLY CURRENT INSTALLATION INTERPRETATION: Q048-RESUME-V2 is now observed installed/executed at96eb8370bdd99ca27f05f472a0fc0294829acf09. The package checker's literal remote_installation=NOT_PERFORMED is a hardcoded historical metadata value, not a runtime detector; preserve it but do not use it to deny the actual run. Our ingestion performed no GitHub mutation.
+KEEP: all previous raw results/commits/configurations as history. No physical hypothesis is newly falsified or rescued. No actual first event or complete x_e/tau_T bound was computed.
+
+## NEW RESULT — three layers
+
+RESULT CLASS: RUN_SUCCESS + NUMERICAL_RESULT + PARTIAL_RESULT + REPRODUCTION_RESULT.
+RESULT STATUS: TECHNICALLY_VALIDATED_CONDITIONAL_COMPONENT. Reproduction concerns the same source/method over carried covered intervals; it is not independent physical evidence.
+DIRECT OUTPUT: all six jobs succeed;10 preflight tests pass; all four final reports exist, compatible collection passes; scientific FINAL_RESULT_GATE remains UNRESOLVED.
+
+| Configuration | Background cells | Thermal cells | New background/thermal | Last covered z: background/thermal | Stop: background/thermal |
+|---|---:|---:|---|---|---|
+| camspec-lcdm | 0 | 35 | 0/0 | 2870.00 / 2870.00 | none / none |
+| hillipop-lcdm | 0 | 35 | 0/0 | 2870.00 / 2870.00 | none / none |
+| camspec-ede_n3 | 415 | 310 | 59/59 | 6109.83 / 6109.83 | ValueError:COMPARISON_GROWTH_CAP / BACKGROUND_COVERAGE_REQUIRED |
+| hillipop-ede_n3 | 335 | 231 | 0/0 | 4985.03 / 4986.25 | ValueError:COMPARISON_GROWTH_CAP / THERMAL_TUBE_NOT_CLOSED |
+
+The displayed redshifts are derived from exact rational scale factors z=1/a−1, for orientation only; they are dimensionless and are not statistical measurements. Exact a endpoints and interval/error boxes are in the raw result and receipt. Both LCDM thermal prefixes end at exactly a=1/2871, z=2870.
+TECHNICAL INTERPRETATION: verified continuation is real. Camspec advances from356/251 to415/310 cells; Hillipop remains335/231. A successful reporting job can preserve a partial prefix. Background and thermal enclosure stops are preserved separately, including the background cause when first_blocker displays only the downstream thermal cause.
+PHYSICAL INTERPRETATION: source-real conditional bounds do not yet admit the actual initialized source instance or give the complete event-resolved latch/reset electron histories or cumulative Thomson-depth difference. No EDE falsification, global event nonreach, improved cosmological fit or new physics follows.
+ANOMALY STATUS: no new candidate physical anomaly identified. The limits are numerical certification limitations; surprising values would remain preserved rather than filtered.
+
+## INTERNAL RESULT PROVENANCE
+
+Repository: Morfindien/Bubbleverse, https://github.com/Morfindien/Bubbleverse.
+Run: https://github.com/Morfindien/Bubbleverse/actions/runs/38205625445; workflow .github/workflows/q048-resume-v2.yml; branch main; commit 96eb8370bdd99ca27f05f472a0fc0294829acf09; workflow_dispatch attempt1, conclusion success.
+Started 2026-10-12T04:53:37Z; updated 2026-10-12T04:57:44Z (Europe/Copenhagen06:53:37–06:57:44).
+Scientific source mwt5345/class_ede remains commit5a131c91d657dd9a7c6364cc45b038710f8d0d97; reconstruction run38140371059 and fixed captured effective inputs/source hashes remain unchanged.
+Executed V2 program SHA256e48a0250320560c68e218751186ec0ba45af916da6fce83ce546a40c1711386c; config SHA25652b928efdca4bd4641609e5d5d228864150869157436307c6c3c50df7710321d. Executed code/config exactly match the delivered candidate; all reused source/backends match the pinned Git blobs. Incoming journal/README match the executed-commit snapshot; registry contains58 entries and correct V2 target. Permanent launcher Git blob7f22c617fb98d1508a0b22a42dd3735a74d8288e is unchanged.
+Python3.12.15. Preflight/collection Ubuntu24.04.5LTS, runner image20261004.327.1. CPU/GPU model NOT DOCUMENTED. Seeds/chains/sampler/likelihood/native compiler are not applicable to this pure conditional interval component; zero new native and likelihood evaluations. Actual source/binary/initialized-instance linkage remains UNRESOLVED.
+Job identities: 114668362715 preflight, 114668411759 continuation (hillipop-lcdm), 114668411760 continuation (camspec-ede_n3), 114668411772 continuation (hillipop-ede_n3), 114668411790 continuation (camspec-lcdm), 114669166047 collect. All succeeded.
+Final artifact11727470821, q048-resume-v2-final-38205625445,2801499bytes. ZIP SHA2561d98a70e46686333eebed4ca0c5111b6b2f6e8b5f8a4b0e5bcf2736583338ec0 matches GitHub's digest; CRC passes. Its single member q048_resume_final_v2.json has14364377bytes, SHA256c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81. It is delivered individually under a run-specific filename without changing its bytes.
+Reconstructed per-case checkpoints exactly reproduce their declared hashes. All parent checkpoints match local preserved parents and their hashes. New59+59 cells were recomputed with the frozen source proof backend, matching residual/Jacobian/error certificates, forcing and thermal outputs; inherited cells match exactly and all four reports recombine to the exact received final object. This finite validation supplies integrity and conditional correctness, not actual physical admission.
+Nonblocking warnings: Node action-runtime and punycode/Buffer/url.parse deprecations in technical logs. No speculative dependency change or extra rerun is introduced.
+
+## WEB / PLUGIN / TOOL RESEARCH
+
+RESEARCH PERFORMED: YES — primary technical verification and pinned code inspection, no new physics literature search.
+CAPABILITIES USED: read-only GitHub run/jobs/artifact/commit/log/file/tree access; strict local JSON/CRC/SHA and source-certificate comparison.
+QUESTIONS INVESTIGATED: actual run linkage, all job/test completion, program/config/backends and checkpoint identities, new versus inherited cells, scope and mathematical stop causes.
+NEW EXTERNAL EVIDENCE: GitHub technical provenance only. Underlying Bubbleverse numerical results remain internal evidence.
+NEW SOURCES: K-PROPOSED-Q048-GITHUB-RUN-38205625445 and I-PROPOSED-Q048-RESUME-GITHUB-38205625445.
+CONTRADICTORY EVIDENCE: no disagreement among common carried certificates; static installation wording is superseded for current state by observed execution.
+IMPACT: reliable new conditional coverage and a now-specific mathematical enclosure bottleneck; no new external measurement or scientific exclusion. Further unchanged reproduction or general literature search cannot supply the missing controlled histories.
+
+## ACTIVE SOURCE REGISTER
+
+- K-PROPOSED-Q048-SOURCE-002 — class_ede frozen source. Supports: Source-defined background/thermal/helium/phase and reionization semantics; not actual instance admission. URL: https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97
+- K-PROPOSED-Q048-INPUT-001 — Four requested FULL/start0 reconstruction inputs. Supports: Captured configurations, input identity and accepted z_reio; original source IDs/hash bindings retained. URL: https://github.com/Morfindien/Bubbleverse/actions/runs/38140371059
+- K-PROPOSED-Q048-REPO-002 — Observer and mathematical/certificate backend. Supports: Existing source/normalization and exact proof method; inherited commits/blobs remain fixed. URL: https://github.com/Morfindien/Bubbleverse
+- K-PROPOSED-Q048-REPO-003 — Source-real interval/precursor implementation. Supports: Frozen field and residual/Jacobian comparison definitions; inherited commits/blobs remain fixed. URL: https://github.com/Morfindien/Bubbleverse
+- I-PROPOSED-Q048-MATHEMATICS-002 — Conditional source/event derivation and arithmetic controls. Supports: Definition of the required full comparison; actual event certificate remains absent. 
+- I-PROPOSED-Q048-RESUME-LOCAL-V2-001 — Verified local V2 parents. Supports: Camspec356/251 and Hillipop335/231 exact carried cells/uncertainty; all four parent hashes. 
+- K-PROPOSED-Q048-GITHUB-RUN-38205625445 — Q048 verified prefix continuation V2. Supports: Run/job/test/installed package provenance and published archive digest; no external physical measurement. URL: https://github.com/Morfindien/Bubbleverse/actions/runs/38205625445
+- I-PROPOSED-Q048-RESUME-GITHUB-38205625445 — Current conditional continuation. Supports: New59/59 Camspec cells, zero Hillipop additions, preserved raw source certificates and explicit missing scientific products. 
+
+The complete original register, including precise original metadata/hashes/equations/source IDs and all earlier external publications, remains in the complete unchanged journal below. No DOI/arXiv/publication is invented or overwritten.
+
+## CLAIM-TO-SOURCE MAP
+
+{
+  "C-PROPOSED-Q048-RESUME-I01_RUN_INTEGRITY": [
+    "K-PROPOSED-Q048-GITHUB-RUN-38205625445",
+    "archive digest verification"
+  ],
+  "C-PROPOSED-Q048-RESUME-I02_NEW_CONDITIONAL_CELLS": [
+    "I-PROPOSED-Q048-RESUME-GITHUB-38205625445",
+    "new cell recomputation in ingestion receipt"
+  ],
+  "C-PROPOSED-Q048-RESUME-I03_CONTINUITY": [
+    "I-PROPOSED-Q048-RESUME-LOCAL-V2-001",
+    "four parent hashes and exact inherited-prefix comparisons"
+  ],
+  "C-PROPOSED-Q048-RESUME-I04_GROWTH_GUARD": [
+    "I-PROPOSED-Q048-RESUME-GITHUB-38205625445",
+    "q047_certificate_v1.py comparison_matrices at frozen executed commit"
+  ],
+  "C-PROPOSED-Q048-RESUME-I05_NO_FINAL_BOUNDS": [
+    "I-PROPOSED-Q048-RESUME-GITHUB-38205625445",
+    "I-PROPOSED-Q048-MATHEMATICS-002"
+  ],
+  "C-PROPOSED-Q048-RESUME-I06_INSTALLED": [
+    "K-PROPOSED-Q048-GITHUB-RUN-38205625445",
+    "observed commit/jobs; static label preserved as historical literal"
+  ]
+}
+
+## WHAT CHANGED / WHAT DID NOT CHANGE
+
+Changed: remote installation/execution observed;59/59 new Camspec-EDE cells accepted; both EDE backgrounds now report the comparison-growth guard; checkpoint preservation and source-real conditional continuation confirmed.
+Unchanged: proposed Q identity, unassigned CASE, exact question, four captured inputs, epsilon10^-6, q=fHe_CLASS*x_He, accepted z_reio, source commit, all carried uncertainty, conditional scope, Q047 closure and missing complete physical comparison.
+
+## FALSIFIED / REJECTED / SUPERSEDED MATERIAL
+
+No new physical falsification or resurrection. The tested V2 enclosure attempts are unsuccessful beyond their retained ends; those limits do not reject the physical model. Previous failed mathematical/numerical candidates remain failed in their documented tested domains. Historical time caps and local-installation states remain recoverable. Current installation interpretation alone is updated.
+
+## OPEN UNCERTAINTIES / Q-COMPLETION GATE
+
+STATUS: NOT YET SATISFIED. The exact Q requires complete four-case x_e(z) and cumulative tau_T(z) difference bounds. All actual event/history/depth outputs remain NOT_COMPUTED, with actual-source admission UNRESOLVED. A finite growth guard is not evidence that the scientific problem is fundamentally unresolvable. Source-real prefix completion, actual instance qualification, first cutoff/event-or-nonreach certification, coupled post-event history/output maps and depth propagation remain required as applicable. Technical Q/CASE assignment is preserved explicitly rather than guessed.
+
+## MATERIAL-REVERSAL TEST / ROUTING REASON
+
+A valid source-preserving enclosure/admission method could supply or invalidate a required common pre-event path and materially alter the requested bounds: YES. More unchanged V2 launches: NO expected information gain at the observed Hillipop stops; Camspec now also hits a mathematical guard instead of only a time budget. Mathematical diagnosis should precede additional expensive runs. Exactly one established Mathematics Engine is selected.
+
+## NEXT TASK
+
+Diagnose the first blocked EDE background cell in each case from its retained endpoint/error box and source Jacobian. Determine whether a justified change of error-comparison coordinates, predictor/enclosure construction or certified propagation can continue the frozen source-real problem beyond the current COMPARISON_GROWTH_CAP. Separately account for Hillipop THERMAL_TUBE_NOT_CLOSED. Preserve all carried errors and report explicit actual-reference assumptions. Return a finite proved continuation/admission requirement or a precisely documented limitation; do not rerun V2 unchanged or infer physical model failure from an enclosure guard.
+
+Pinned q047_certificate_v1.py comparison_matrices explicitly rejects max(M11+M12,M21+M22,0)*h>50 for its two-state Metzler comparison. This is an algorithmic guard on the comparison enclosure; it is not a physical instability test. Determine the actual failed-cell matrix, carried errors, source branch/domain and predictor defect before selecting a justified alternative. A new coordinate/comparison representation must preserve its invertible transformation and error bounds. Do not simply raise the cap, discard intervals, shrink initial errors or change the frozen physical equations to obtain PASS. Hillipop's thermal stop must be analyzed against its retained common-background forcing and carried w interval, without treating expected thermal physics as an output filter.
+
+## FIXED / FROZEN ELEMENTS
+
+Exact question/Q/CASE; scientific source commit; four captured effective inputs and hashes; q=fHe*x_He and epsilon10^-6; fixed accepted z_reio; source phase transitions, finite neutrino nodes and source guards; all retained background/thermal initial and endpoint error boxes; frozen likelihood/data/priors from prior state where applicable; all sources and tested/falsified state. No new native initialization, historical-trajectory identity claim or production restart is implied.
+
+## VARIABLE ELEMENTS
+
+Justified mathematical coordinates, signed/componentwise comparison, predictor/tube construction and certified propagation method. A technical verification scheduling change may be documented if necessary; frozen120-second verification cannot simply be skipped. The observed parent verification116.61seconds in Camspec is near that cap; next full415/310-cell revalidation may exceed it. This is a prospective execution limitation, not a measured future failure. More time cannot by itself resolve COMPARISON_GROWTH_CAP or THERMAL_TUBE_NOT_CLOSED.
+
+## SUCCESS CONDITION
+
+Source-preserving rigorous continuation/admission specification or a precisely proved limitation, with all carried errors, explicit assumptions, relevant finite reference controls and clear numerical versus physical scope. Return a concrete requirement to the existing execution layer only if actual numerical implementation is then needed. Reusing a Boolean PASS without a certificate fails this condition.
+
+## FAILURE / FALSIFICATION CONDITION
+
+A candidate enclosure that fails its fixed proof/closure controls is rejected under those tested conditions and retained as technical memory. A demonstrable algebra/source/domain error is corrected with provenance. The physical model is falsified only by an applicable scientific test, not by this computational guard.
+
+## STOP CONDITION
+
+Close CURRENT Q and send it directly to Motor14 only when a defensible answer to the exact full four-case electron-history/Thomson-depth question is documented, or when a documented material limitation makes further resolution reasonably unavailable. An implementation growth cap, elapsed-work cap, green workflow or completed mathematical subtask alone does not satisfy that condition. Stop this ingestion now because the raw result, provenance, newly added cells and routing are sufficiently verified; further identical reproduction would not change the routing.
+
+README inspected and retained unchanged: this ingestion changes scientific/technical memory, not repository functionality. No workflow/code/registry modification, GitHub write, new PROGRAM_ID or archive delivery occurs.
+
+---
+
+## Complete result-ingestion receipt — provenance and machine-readable state
+
+```json
+{
+  "schema": "Q048_RESUME_RESULT_INGESTION_RUN38205625445",
+  "status": "CONTINUES",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "program_id": "Q048-RESUME-V2",
+  "result_id": "I-PROPOSED-Q048-RESUME-GITHUB-38205625445",
+  "date_utc": "2026-10-12T05:11:21.841923+00:00",
+  "date_copenhagen": "2026-10-12T07:11:21.841923+02:00",
+  "result_class": [
+    "RUN_SUCCESS",
+    "NUMERICAL_RESULT",
+    "PARTIAL_RESULT",
+    "REPRODUCTION_RESULT"
+  ],
+  "result_status": "TECHNICALLY_VALIDATED_CONDITIONAL_COMPONENT",
+  "scope": "CONDITIONAL_SOURCE_REAL_PREFIX",
+  "final_result_gate": "UNRESOLVED",
+  "q_completion_gate": "NOT_YET_SATISFIED",
+  "selected_next_engine": "MATHEMATICS ENGINE",
+  "next_task": "Diagnose the first blocked EDE background cell in each case from its retained endpoint/error box and source Jacobian. Determine whether a justified change of error-comparison coordinates, predictor/enclosure construction or certified propagation can continue the frozen source-real problem beyond the current COMPARISON_GROWTH_CAP. Separately account for Hillipop THERMAL_TUBE_NOT_CLOSED. Preserve all carried errors and report explicit actual-reference assumptions. Return a finite proved continuation/admission requirement or a precisely documented limitation; do not rerun V2 unchanged or infer physical model failure from an enclosure guard.",
+  "stop_condition": "Close CURRENT Q and send it directly to Motor14 only when a defensible answer to the exact full four-case electron-history/Thomson-depth question is documented, or when a documented material limitation makes further resolution reasonably unavailable. An implementation growth cap, elapsed-work cap, green workflow or completed mathematical subtask alone does not satisfy that condition. Stop this ingestion now because the raw result, provenance, newly added cells and routing are sufficiently verified; further identical reproduction would not change the routing.",
+  "archive": {
+    "input_file": "q048-resume-v2-final-38205625445.zip",
+    "bytes": 2801499,
+    "sha256": "1d98a70e46686333eebed4ca0c5111b6b2f6e8b5f8a4b0e5bcf2736583338ec0",
+    "official_digest": "sha256:1d98a70e46686333eebed4ca0c5111b6b2f6e8b5f8a4b0e5bcf2736583338ec0",
+    "artifact_id": 11727470821,
+    "crc_check": "PASS",
+    "member_name": "q048_resume_final_v2.json"
+  },
+  "raw_result": {
+    "file": "Q048_RESUME_GITHUB_RAW_RUN38205625445.json",
+    "bytes": 14364377,
+    "sha256": "c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81",
+    "unchanged_member_bytes": true
+  },
+  "incoming_journal": {
+    "bytes": 12456897,
+    "sha256": "7fb4a47a96fdc6497b3f5bc8cab736b4699818ad97ebe581de6bff4a9219c1a9",
+    "library_file_id": "libfile_65e3c92026788191a95f6e77d342bad9"
+  },
+  "cases": {
+    "hillipop-lcdm": {
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "background_new_cells": 0,
+      "thermal_new_cells": 0,
+      "background_end_a": "1/2871",
+      "thermal_end_a": "1/2871",
+      "background_end_a_display": 0.00034831069313827936,
+      "thermal_end_a_display": 0.00034831069313827936,
+      "background_end_z_display": 2870.0,
+      "thermal_end_z_display": 2870.0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "parent_checkpoint_sha256": "2d295900f6ef333935223bde9ec02e5709373e3738c3608bcd39bdea690bef33",
+      "checkpoint_sha256": "ebd624c8d1e2f1ef84e49e7d96763a43ff96625ae27d3ea3857990945ac4c653",
+      "reported_checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 2.2960183710000024
+      },
+      "elapsed_seconds": 2.299703435000012,
+      "python": "3.12.15",
+      "source_input_hashes": {
+        "effective_background_hex.json": "4228d94c84c085951704f212abe9a026a3e7428b9e456bbdd04bc2814df61a2e",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "c7f0756b21532af7716c7cd8c135d7edce00230d66e8eefcd2fe80e04925a787"
+      }
+    },
+    "camspec-lcdm": {
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "background_new_cells": 0,
+      "thermal_new_cells": 0,
+      "background_end_a": "1/2871",
+      "thermal_end_a": "1/2871",
+      "background_end_a_display": 0.00034831069313827936,
+      "thermal_end_a_display": 0.00034831069313827936,
+      "background_end_z_display": 2870.0,
+      "thermal_end_z_display": 2870.0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "parent_checkpoint_sha256": "71ed9564c4538c50a038048b0a9fb3818f8c77a0ab7f780d230bb8921e6efa44",
+      "checkpoint_sha256": "34be67153091bd7b9bd6058ad26f736111d943350d150e8aea8027809cbd8c49",
+      "reported_checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.804877626000007
+      },
+      "elapsed_seconds": 3.8109072239999904,
+      "python": "3.12.15",
+      "source_input_hashes": {
+        "effective_background_hex.json": "f2342c737770aeef4718ef6b0cae2e1837d91ee72e0e618dfe49601450674308",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "7a087c87dd01367a1ea1dba21be57e26c1940d27c1d9fea8998478eaa8484df7"
+      }
+    },
+    "hillipop-ede_n3": {
+      "background_cells": 335,
+      "thermal_cells": 231,
+      "background_new_cells": 0,
+      "thermal_new_cells": 0,
+      "background_end_a": "567657605852023278142353471061886738532576109328818712084751895037997745279739959588015117946251110440989280635366097380765682707802543544151208869370813316537992764291112040280247563799454023666476286817780303719185211130589566747433924847217968255843898500777383649280824727676380952029861621982787894577643021868679601226515478608020740568009950112611271224075895846378233270321014045733976396002252107272807957748784953231775403415163856245757941056090466713576836630280984801714439388362651112845829869303588168150779560104657317509690983570180833339691162109375/2830360686206494015618260612961201965531482417425069711887864957171236463984728869053893906126055270915417338859676715713175498740317187287633211567459086480050905424011713200162260976303748945738572160389997714223786026483241300633349293050600824086879176004910799535128338844140056582206225471478435635028847768825700030213268241734212999089292583636838416489008291082264086343450710778182013117261919582023041862212432199595314474666755289226164140910305523762494989250329382106402065157813588975966197075237061337724264827840869546672836358197051015435117619910279168",
+      "thermal_end_a": "290569892869267311160866733926738823376570072103309775080467095663808173177115571264311610604426252139285328985184260976413203267687631828471403498664293204593019560559286914476407620006032805490412922706558071097290803777922699944613448326853234996740981028215961057417678647820528519085252719093500019887036318340484996766168077986147551902471020480476706195114580718066793028448505142556296265756727120703805474009455116188644735806278039203651453102173124368996290863974532125914044839302635799184274017061173501977523018504311058674005607826984487473964691162109375/1449144671337724935996549433836135406352118997721635692486586858071673069560181180955593679936540298708693677496154478445145855355042399891268204322539052277786063577093997158483077619867519460218148946119678829682578445559419545924274838041907621932482138114514329361985709488199708970089587441396959045134770057638758415469193339767917055533717802822061269242372245034119212207846763918429190716038102825995797433452765286192801011029378708083796040146076428166397434496168643638477857360800557555694692902521375404914823591854525207896492215396890119902780221394062934016",
+      "background_end_a_display": 0.0002005601648646588,
+      "thermal_end_a_display": 0.0002005113075432547,
+      "background_end_z_display": 4985.034991917842,
+      "thermal_end_z_display": 4986.249907510967,
+      "background_blocker": "ValueError:COMPARISON_GROWTH_CAP",
+      "thermal_blocker": "THERMAL_TUBE_NOT_CLOSED",
+      "parent_checkpoint_sha256": "81e59eee2514abc925a7034dbf4475a92267240e9b55a5bc2b24e82e0919d8ae",
+      "checkpoint_sha256": "ed1b188d8ca46591571efc33f551a2a1642e31fc2ec1fc5e27329ed868dbc842",
+      "reported_checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 335,
+        "thermal_cells": 231,
+        "elapsed_seconds": 94.94778544999998
+      },
+      "elapsed_seconds": 97.692485189,
+      "python": "3.12.15",
+      "source_input_hashes": {
+        "effective_background_hex.json": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "7d4144e2615ccb36fa48867ee43b2ad342968469f1d1a2bc3f1088e1db2b884a"
+      }
+    },
+    "camspec-ede_n3": {
+      "background_cells": 415,
+      "thermal_cells": 310,
+      "background_new_cells": 59,
+      "thermal_new_cells": 59,
+      "background_end_a": "22471294191521186296150216269282130209734816053960274061812292435367320050994861104848811344804283228354559226959907317598142317677912401251850457440308596733961073679865978236937187295345594977706078755300066529368872047944196170035560379755866026836045481338669758917622975250284545679807310596267492456544508765141949794820648472889801205272733084685547564806459780874045692062307188897672481168145974919238055841099934277571292310247102297554133694965924245057900595286358471612396448985924571075221978377218641803736859308597473547736216394361598945048396798214681400559455454610678114809082959792777966425618090945702842981592330179032407369403902630897994697558178893749820005273946420577368893953095787060768861926498059332451862108493380643350532076263359471113290055654942989349365234375/137318317908507236099180308122160545356893949408613863350317574402933346369149759977589127103981322214612889654832954480313026331709896998734478866409540610887189007470132304370241758909775377530448205387977035903544448300977167904126185039962087156378478085509013132834229050557857195775362761165394235171610870582095373427119162843431537933157729216202457257316682595507625022642647820572022345878172699486996399695396982878519104897547447696565723632318642472929578185734966300365549310066137578314428090217287887366284767804733598769833693624702744306881423822986962748981440853837256210364518750309970120077798566092187017634450006042855316163604451200291805028644382609484595861410159023172699400371708743956676132718699587803928354851954373313635190232505115804676153795260871547251988568735744",
+      "thermal_end_a": "22471294191521186296150216269282130209734816053960274061812292435367320050994861104848811344804283228354559226959907317598142317677912401251850457440308596733961073679865978236937187295345594977706078755300066529368872047944196170035560379755866026836045481338669758917622975250284545679807310596267492456544508765141949794820648472889801205272733084685547564806459780874045692062307188897672481168145974919238055841099934277571292310247102297554133694965924245057900595286358471612396448985924571075221978377218641803736859308597473547736216394361598945048396798214681400559455454610678114809082959792777966425618090945702842981592330179032407369403902630897994697558178893749820005273946420577368893953095787060768861926498059332451862108493380643350532076263359471113290055654942989349365234375/137318317908507236099180308122160545356893949408613863350317574402933346369149759977589127103981322214612889654832954480313026331709896998734478866409540610887189007470132304370241758909775377530448205387977035903544448300977167904126185039962087156378478085509013132834229050557857195775362761165394235171610870582095373427119162843431537933157729216202457257316682595507625022642647820572022345878172699486996399695396982878519104897547447696565723632318642472929578185734966300365549310066137578314428090217287887366284767804733598769833693624702744306881423822986962748981440853837256210364518750309970120077798566092187017634450006042855316163604451200291805028644382609484595861410159023172699400371708743956676132718699587803928354851954373313635190232505115804676153795260871547251988568735744",
+      "background_end_a_display": 0.0001636438206772487,
+      "thermal_end_a_display": 0.0001636438206772487,
+      "background_end_z_display": 6109.832635546191,
+      "thermal_end_z_display": 6109.832635546191,
+      "background_blocker": "ValueError:COMPARISON_GROWTH_CAP",
+      "thermal_blocker": "BACKGROUND_COVERAGE_REQUIRED",
+      "parent_checkpoint_sha256": "8575664e6de09aaccd86ff63f3c98fe11d5d013e50ecb3bcfe6160b74a92ba89",
+      "checkpoint_sha256": "594dcf3086e9f3aeb86153c0fa604441561f4653d5c3026706e59e156cedae42",
+      "reported_checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 356,
+        "thermal_cells": 251,
+        "elapsed_seconds": 116.61326867999999
+      },
+      "elapsed_seconds": 208.70310485199997,
+      "python": "3.12.15",
+      "source_input_hashes": {
+        "effective_background_hex.json": "4ef09d4ecd66b4a67ca404565fcd8815a6db89182d448403c6b71331dd87328b",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "d07772269b1e222b6e684b82dd34e39b626c9fd3678fea0430cf083da9656fc6"
+      }
+    }
+  },
+  "validation": {
+    "schema": "Q048_RESUME_INGESTION_CHECKS_V1",
+    "q": "Q-048",
+    "program_id": "Q048-RESUME-V2",
+    "run_id": "38205625445",
+    "raw_bytes": 14364377,
+    "raw_sha256": "c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81",
+    "checks": {
+      "camspec-lcdm": {
+        "gate": "PASS_CONDITIONAL_SCOPE",
+        "parent_hash": "MATCH",
+        "inherited_certificates": "EXACT_UNCHANGED",
+        "background_new_cells_recomputed": 0,
+        "thermal_new_cells_recomputed": 0,
+        "checkpoint_hash": "MATCH",
+        "elapsed_validation_seconds": 0.0017817269999795826
+      },
+      "camspec-ede_n3": {
+        "gate": "PASS_CONDITIONAL_SCOPE",
+        "parent_hash": "MATCH",
+        "inherited_certificates": "EXACT_UNCHANGED",
+        "background_new_cells_recomputed": 59,
+        "thermal_new_cells_recomputed": 59,
+        "checkpoint_hash": "MATCH",
+        "elapsed_validation_seconds": 18.382387579000124
+      },
+      "hillipop-lcdm": {
+        "gate": "PASS_CONDITIONAL_SCOPE",
+        "parent_hash": "MATCH",
+        "inherited_certificates": "EXACT_UNCHANGED",
+        "background_new_cells_recomputed": 0,
+        "thermal_new_cells_recomputed": 0,
+        "checkpoint_hash": "MATCH",
+        "elapsed_validation_seconds": 0.0026850780000131635
+      },
+      "hillipop-ede_n3": {
+        "gate": "PASS_CONDITIONAL_SCOPE",
+        "parent_hash": "MATCH",
+        "inherited_certificates": "EXACT_UNCHANGED",
+        "background_new_cells_recomputed": 0,
+        "thermal_new_cells_recomputed": 0,
+        "checkpoint_hash": "MATCH",
+        "elapsed_validation_seconds": 0.04090915300002962
+      }
+    },
+    "collection_exact_object_match": true,
+    "final_result_gate": "UNRESOLVED"
+  },
+  "execution_provenance": {
+    "repository": "Morfindien/Bubbleverse",
+    "run_id": 38205625445,
+    "run_url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38205625445",
+    "branch": "main",
+    "commit": "96eb8370bdd99ca27f05f472a0fc0294829acf09",
+    "workflow": ".github/workflows/q048-resume-v2.yml",
+    "attempt": 1,
+    "event": "workflow_dispatch",
+    "started_at": "2026-10-12T04:53:37Z",
+    "updated_at": "2026-10-12T04:57:44Z",
+    "conclusion": "success",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "source_run_id": "38140371059",
+    "jobs": [
+      {
+        "id": 114668362715,
+        "name": "preflight",
+        "conclusion": "success"
+      },
+      {
+        "id": 114668411759,
+        "name": "continuation (hillipop-lcdm)",
+        "conclusion": "success"
+      },
+      {
+        "id": 114668411760,
+        "name": "continuation (camspec-ede_n3)",
+        "conclusion": "success"
+      },
+      {
+        "id": 114668411772,
+        "name": "continuation (hillipop-ede_n3)",
+        "conclusion": "success"
+      },
+      {
+        "id": 114668411790,
+        "name": "continuation (camspec-lcdm)",
+        "conclusion": "success"
+      },
+      {
+        "id": 114669166047,
+        "name": "collect",
+        "conclusion": "success"
+      }
+    ],
+    "reported_tests": {
+      "suite": "q048_resume_tests_v2",
+      "count": 10,
+      "status": "PASS",
+      "seconds": 4.153
+    },
+    "runner": "ubuntu-24.04",
+    "operating_system": "Ubuntu24.04.5 LTS",
+    "runner_image_version": "20261004.327.1",
+    "cpu_gpu_model": "NOT_DOCUMENTED",
+    "program_sha256": "e48a0250320560c68e218751186ec0ba45af916da6fce83ce546a40c1711386c",
+    "config_sha256": "52b928efdca4bd4641609e5d5d228864150869157436307c6c3c50df7710321d",
+    "source_config_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "code_config_backends_match_prepared_and_executed_tree": true,
+    "readme_matches_attachment_and_executed_commit": true,
+    "registry_entries": 58
+  },
+  "anomaly_status": "NO_NEW_SCIENTIFIC_ANOMALY_IDENTIFIED",
+  "physical_interpretation": "No actual-source admission, first cutoff event, complete electron-history difference or Thomson-depth bound. No physical falsification or global event nonreach follows.",
+  "actual_event_redshifts": "NOT_COMPUTED",
+  "actual_xe_history_bounds": "NOT_COMPUTED",
+  "actual_tau_T_bounds": "NOT_COMPUTED",
+  "research": {
+    "performed": true,
+    "type": "PRIMARY_TECHNICAL_PROVENANCE_AND_CODE_INSPECTION",
+    "capabilities": [
+      "read-only connected GitHub",
+      "strict local JSON/hash/source-certificate comparison"
+    ],
+    "new_external_physical_evidence": null,
+    "broad_literature_search": "NOT_REQUIRED_FOR_CURRENT_ROUTING",
+    "new_source_id": "K-PROPOSED-Q048-GITHUB-RUN-38205625445"
+  },
+  "source_register": [
+    {
+      "id": "K-PROPOSED-Q048-SOURCE-002",
+      "type": "PRIMARY_IMPLEMENTATION",
+      "title": "class_ede frozen source",
+      "author": "mwt5345/class_ede repository",
+      "year": "NOT_DOCUMENTED",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "url": "https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "supports": "Source-defined background/thermal/helium/phase and reionization semantics; not actual instance admission"
+    },
+    {
+      "id": "K-PROPOSED-Q048-INPUT-001",
+      "type": "BUBBLEVERSE_TECHNICAL_EVIDENCE",
+      "title": "Four requested FULL/start0 reconstruction inputs",
+      "run_id": "38140371059",
+      "commit": "76d6b4a4b02ddd929899008f476e99da29c1f931",
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38140371059",
+      "supports": "Captured configurations, input identity and accepted z_reio; original source IDs/hash bindings retained"
+    },
+    {
+      "id": "K-PROPOSED-Q048-REPO-002",
+      "type": "BUBBLEVERSE_TECHNICAL_EVIDENCE",
+      "title": "Observer and mathematical/certificate backend",
+      "url": "https://github.com/Morfindien/Bubbleverse",
+      "supports": "Existing source/normalization and exact proof method; inherited commits/blobs remain fixed"
+    },
+    {
+      "id": "K-PROPOSED-Q048-REPO-003",
+      "type": "BUBBLEVERSE_TECHNICAL_EVIDENCE",
+      "title": "Source-real interval/precursor implementation",
+      "url": "https://github.com/Morfindien/Bubbleverse",
+      "supports": "Frozen field and residual/Jacobian comparison definitions; inherited commits/blobs remain fixed"
+    },
+    {
+      "id": "I-PROPOSED-Q048-MATHEMATICS-002",
+      "type": "BUBBLEVERSE_MATHEMATICAL_RESULT",
+      "title": "Conditional source/event derivation and arithmetic controls",
+      "supports": "Definition of the required full comparison; actual event certificate remains absent"
+    },
+    {
+      "id": "I-PROPOSED-Q048-RESUME-LOCAL-V2-001",
+      "type": "BUBBLEVERSE_NUMERICAL_RESULT",
+      "title": "Verified local V2 parents",
+      "supports": "Camspec356/251 and Hillipop335/231 exact carried cells/uncertainty; all four parent hashes"
+    },
+    {
+      "id": "K-PROPOSED-Q048-GITHUB-RUN-38205625445",
+      "type": "OFFICIAL_TECHNICAL_RECORD",
+      "title": "Q048 verified prefix continuation V2",
+      "author": "GitHub / Morfindien/Bubbleverse",
+      "year": 2026,
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38205625445",
+      "commit": "96eb8370bdd99ca27f05f472a0fc0294829acf09",
+      "artifact_id": 11727470821,
+      "supports": "Run/job/test/installed package provenance and published archive digest; no external physical measurement"
+    },
+    {
+      "id": "I-PROPOSED-Q048-RESUME-GITHUB-38205625445",
+      "type": "BUBBLEVERSE_NUMERICAL_RESULT",
+      "title": "Current conditional continuation",
+      "file": "Q048_RESUME_GITHUB_RAW_RUN38205625445.json",
+      "sha256": "c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81",
+      "supports": "New59/59 Camspec cells, zero Hillipop additions, preserved raw source certificates and explicit missing scientific products"
+    }
+  ],
+  "claim_to_source_map": {
+    "C-PROPOSED-Q048-RESUME-I01_RUN_INTEGRITY": [
+      "K-PROPOSED-Q048-GITHUB-RUN-38205625445",
+      "archive digest verification"
+    ],
+    "C-PROPOSED-Q048-RESUME-I02_NEW_CONDITIONAL_CELLS": [
+      "I-PROPOSED-Q048-RESUME-GITHUB-38205625445",
+      "new cell recomputation in ingestion receipt"
+    ],
+    "C-PROPOSED-Q048-RESUME-I03_CONTINUITY": [
+      "I-PROPOSED-Q048-RESUME-LOCAL-V2-001",
+      "four parent hashes and exact inherited-prefix comparisons"
+    ],
+    "C-PROPOSED-Q048-RESUME-I04_GROWTH_GUARD": [
+      "I-PROPOSED-Q048-RESUME-GITHUB-38205625445",
+      "q047_certificate_v1.py comparison_matrices at frozen executed commit"
+    ],
+    "C-PROPOSED-Q048-RESUME-I05_NO_FINAL_BOUNDS": [
+      "I-PROPOSED-Q048-RESUME-GITHUB-38205625445",
+      "I-PROPOSED-Q048-MATHEMATICS-002"
+    ],
+    "C-PROPOSED-Q048-RESUME-I06_INSTALLED": [
+      "K-PROPOSED-Q048-GITHUB-RUN-38205625445",
+      "observed commit/jobs; static label preserved as historical literal"
+    ]
+  },
+  "journal_effect": {
+    "ADD": "verified remote continuation and same-method replay of carried cells",
+    "CONFIRM": "all frozen inputs, certificates and Q/source identities",
+    "REFINE": "both EDE backgrounds now stop at comparison growth, beyond time-only explanation",
+    "SUPERSEDE": "installation-status interpretation only; no scientific result erased",
+    "UNCHANGED": "Q047 closure, proposed Q048/CASE, source assumptions and missing full scientific products"
+  },
+  "fixed_elements": [
+    "exact Q and CASE status",
+    "source commit and effective captured inputs",
+    "q=fHe_CLASS*x_He, cutoff10^-6",
+    "fixed accepted z_reio",
+    "all parent endpoint/error intervals",
+    "phase/mode definitions and source guards",
+    "all inherited tests/results/rejections/source IDs"
+  ],
+  "variable_elements": [
+    "rigorously justified numerical representation/comparison/predictor method with documented proof",
+    "finite verification scheduling, if retained checks require it"
+  ],
+  "success_condition": "A source-preserving, finite controlled continuation/admission specification or explicit verified mathematical obstruction, with interval/error propagation proof and a defined scientific scope.",
+  "failure_condition": "Failure of a candidate enclosure is recorded for that method and tested domain; source changes, dropped errors or fabricated actual admission are not accepted.",
+  "anti_loop": "No unchanged V2 rerun. Hillipop has zero new cells and repeats both documented blockers; Camspec adds cells but reaches the same class of numerical guard. No further identical reproduction during ingestion.",
+  "github_mutations_performed": false,
+  "readme_action": "UNCHANGED_INSPECTED_NO_REPOSITORY_FUNCTIONALITY_CHANGE",
+  "execution_setting": {
+    "recommended": "current Codex/Work with strong mathematical reasoning",
+    "reasoning_level": "High/Extra High if available; actual active label not verified",
+    "execution_style": "focused mathematical/code-assisted analysis",
+    "fallback": "available code-capable reasoning configuration with files and Python",
+    "upgrade_trigger": "coupled enclosure redesign exceeds focused reasoning capability; stronger frontier reasoning if available",
+    "parallel_agents_used": false,
+    "user_picker_catalog": "NOT_VERIFIED"
+  }
+}
+```
+
+---
+
+## COMPLETE RECEIVED SAMLET JOURNAL — unchanged authoritative history
+
 # BUBBLEVERSE — SAMLET JOURNAL — authoritative cumulative state
 
 Updated UTC: 2026-10-12T04:14:46.044546+00:00. Current Q: **Q-048 / PROPOSED_UNVERIFIED**. CASE: **NOT_ASSIGNED**. Q047 remains **CLOSED INCONCLUSIVE**. Execution target: **Q048-RESUME-V2**. Result ID: **I-PROPOSED-Q048-RESUME-LOCAL-V2-001**.

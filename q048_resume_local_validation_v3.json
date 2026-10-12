@@ -1,0 +1,190 @@
+{
+  "schema": "Q048_RESUME_LOCAL_VALIDATION_V3",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "program_id": "Q048-RESUME-V3",
+  "result_id": "I-PROPOSED-Q048-RESUME-LOCAL-V3",
+  "date_utc": "2026-10-12T09:07:47.973834+00:00",
+  "date_copenhagen": "2026-10-12T11:07:47.973995+02:00",
+  "execution_status": "COMPLETE",
+  "tests_status": "COMPLETE_CONDITIONAL",
+  "final_result_gate": "UNRESOLVED",
+  "actual_source_admission": "UNRESOLVED",
+  "native_evaluations": 0,
+  "likelihood_evaluations": 0,
+  "remote_installation": "NOT_PERFORMED",
+  "remote_dispatch": "NOT_PERFORMED",
+  "repository_base_commit": "96eb8370bdd99ca27f05f472a0fc0294829acf09",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "parent_artifact_sha256": "c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "cpu_count": 9,
+  "raw_results_file": "q048_resume_final_v3.json",
+  "cases": {
+    "camspec-lcdm": {
+      "parent_checkpoint_sha256": "34be67153091bd7b9bd6058ad26f736111d943350d150e8aea8027809cbd8c49",
+      "checkpoint_sha256": "bac9f5a2898f10675750d505ca7cd509b322a972a296400ef15e69f4f75f3c57",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background_cells": 0,
+      "new_thermal_cells": 0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 4.5425558499998715
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.748074322999855
+      },
+      "elapsed_seconds": 8.380118734999996,
+      "scientific_payload_sha256": "ce7993ef2b80ec35b132acb7dd98145f2bb843b38a735ba3e0ab7a50b716f17e"
+    },
+    "hillipop-lcdm": {
+      "parent_checkpoint_sha256": "ebd624c8d1e2f1ef84e49e7d96763a43ff96625ae27d3ea3857990945ac4c653",
+      "checkpoint_sha256": "c389631ee0c1e8553771892fb93030810a48faa05b28e48121b660086d255de0",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background_cells": 0,
+      "new_thermal_cells": 0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 4.303345128000046
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.6582584140001018
+      },
+      "elapsed_seconds": 8.035395348999828,
+      "scientific_payload_sha256": "3a62ccc4f18ee4db62eadadef6b02861ae6a87fa7e3edf636d5f259f32316644"
+    },
+    "camspec-ede_n3": {
+      "parent_checkpoint_sha256": "594dcf3086e9f3aeb86153c0fa604441561f4653d5c3026706e59e156cedae42",
+      "checkpoint_sha256": "fbb06e260232ff5d21302f2d660bf9e68be427134e1709c9f5925ef67fe35322",
+      "background_cells": 424,
+      "thermal_cells": 319,
+      "new_background_cells": 9,
+      "new_thermal_cells": 9,
+      "background_blocker": "ValueError:COMPARISON_GROWTH_CAP",
+      "thermal_blocker": "BACKGROUND_COVERAGE_REQUIRED",
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 415,
+        "thermal_cells": 310,
+        "elapsed_seconds": 133.20728854999993
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 424,
+        "thermal_cells": 319,
+        "elapsed_seconds": 133.28874944699987
+      },
+      "elapsed_seconds": 283.117425527,
+      "scientific_payload_sha256": "f441bcd21260f20aeedc7639dfd401720a52c049d50cc71c33a41a2d910097bf"
+    },
+    "hillipop-ede_n3": {
+      "parent_checkpoint_sha256": "ed1b188d8ca46591571efc33f551a2a1642e31fc2ec1fc5e27329ed868dbc842",
+      "checkpoint_sha256": "ef62538d820b1a099d21a02d3f83f53f2d44f1f2bcdd872291949ec95c7458dd",
+      "background_cells": 340,
+      "thermal_cells": 232,
+      "new_background_cells": 5,
+      "new_thermal_cells": 1,
+      "background_blocker": "ValueError:COMPARISON_GROWTH_CAP",
+      "thermal_blocker": "THERMAL_TUBE_NOT_CLOSED",
+      "pre_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 335,
+        "thermal_cells": 231,
+        "elapsed_seconds": 104.82358885899998
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 340,
+        "thermal_cells": 232,
+        "elapsed_seconds": 104.54748416000007
+      },
+      "elapsed_seconds": 222.07822727300004,
+      "scientific_payload_sha256": "ee258e24e0da60ea72115ea64deccf80b7cfdb55858a85f227762ebf96b69b55"
+    }
+  },
+  "controls_gate": "PASS",
+  "regression_tests": {
+    "tests": 11,
+    "status": "PASS",
+    "v2_failure_reproduced": true
+  },
+  "raw_results_sha256": "22936632883273c586feb1bc291542276ed83e9c5d2c2eb4fa9f5043f4556649",
+  "controls_file": "q048_resume_controls_v3.json",
+  "controls_sha256": "ff69a4ecfd92a3425e6407e2435790f1653dcf445578e7439307f15ab9e3d7b1",
+  "executed_code_hashes": {
+    "q048_resume_v3.py": "b1bac2a3cb89acd828e5b05b003706bbe13d0f8b3bd03b191a79d5b8126eb3e8",
+    "q048_resume_controls_v3.py": "6a92850beb5febe3848f4af6ff61adec519639c4e4480d134cf154b86f0fb2d9",
+    "q048_resume_merge_v3.py": "edd4bb3bdb0892c2ca575b305eee929f75fd5790f9ea136b27578c46e73a50cb",
+    "q048_resume_tests_v3.py": "6033ea4e3c9dbca51b2221fff52d7e05a028bb926c4bb8a650be4de99a90a000",
+    "q048_resume_config_v3.json": "aa0d10ebac4586d7d3c38d6315e2d6dddd5921b67e1424f87861fa5a87a4e60b"
+  },
+  "executed_core_file": "q048_resume_executed_core_v3.py",
+  "executed_core_sha256": "b1bac2a3cb89acd828e5b05b003706bbe13d0f8b3bd03b191a79d5b8126eb3e8",
+  "validation_code_hashes": {
+    "q048_resume_v3.py": "9f32f96eebad5b531a1fd0b9e6a1e96b641d41621e1ab86b66daa7bfa04c7661",
+    "q048_resume_controls_v3.py": "6a92850beb5febe3848f4af6ff61adec519639c4e4480d134cf154b86f0fb2d9",
+    "q048_resume_merge_v3.py": "bb634d19e4b7b9fcef39f6a68e4fbc04617914b213751fe4471f3292422a0b11",
+    "q048_resume_tests_v3.py": "38e3dde3f59557b2edb5ab85a33df502c6e4450ce6cbef4db45408b2b925d14e",
+    "q048_resume_config_v3.json": "aa0d10ebac4586d7d3c38d6315e2d6dddd5921b67e1424f87861fa5a87a4e60b"
+  },
+  "independent_review": "IMPORTANT_FINDINGS_FIXED_AND_RECHECKED",
+  "validation_date_utc": "2026-10-12T09:18:46.487658+00:00",
+  "merge_verification": {
+    "camspec-lcdm": {
+      "gate": "PASS_CONDITIONAL_RECOMPUTED",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "elapsed_seconds": 4.267030341999998
+    },
+    "camspec-ede_n3": {
+      "gate": "PASS_CONDITIONAL_RECOMPUTED",
+      "background_cells": 424,
+      "thermal_cells": 319,
+      "elapsed_seconds": 143.27783219499997
+    },
+    "hillipop-lcdm": {
+      "gate": "PASS_CONDITIONAL_RECOMPUTED",
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "elapsed_seconds": 4.1066114760001255
+    },
+    "hillipop-ede_n3": {
+      "gate": "PASS_CONDITIONAL_RECOMPUTED",
+      "background_cells": 340,
+      "thermal_cells": 232,
+      "elapsed_seconds": 112.3978583290002
+    }
+  },
+  "installation_gates": {
+    "q": "Q-048",
+    "program_id": "Q048-RESUME-V3",
+    "package_gate": "PASS",
+    "q_identity_gate": "PASS",
+    "journal_continuity_gate": "PASS",
+    "source_pin_gate": "PASS",
+    "launcher_gate": "PASS_LOCAL_INSTALLATION",
+    "readme_gate": "PASS_LOCAL_INSTALLATION",
+    "repository_consistency_gate": "PASS_LOCAL_INSTALLATION",
+    "remote_installation": "NOT_PERFORMED",
+    "remote_registration": "NOT_PERFORMED",
+    "final_result_gate": "UNRESOLVED"
+  }
+}

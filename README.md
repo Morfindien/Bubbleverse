@@ -1,3 +1,56 @@
+# Q048 verified prefix continuation V3
+
+Use **🚀 BUBBLEVERSE START** with **`Q048-RESUME-V3`** after installing the files below. This target implements the independently proved k11 continuation remedy for **Q-048 — PROPOSED_UNVERIFIED**, CASE **NOT_ASSIGNED**. Q047 remains closed inconclusive. Scientific `FINAL_RESULT_GATE=UNRESOLVED`; scope is `CONDITIONAL_SOURCE_REAL_PREFIX`.
+
+## Installation
+
+Install at repository root: `q048_resume_v3.py`, `q048_resume_config_v3.json`, `q048_resume_controls_v3.py`, `q048_resume_tests_v3.py`, `q048_resume_merge_v3.py`, `q048_resume_package_check_v3.py`, `q048_resume_package_v3.json`, `q048_resume_parent_v3.json`, `bubbleverse_program_registry.json`, `README.md`, and `Q047_SAMLET_JOURNAL.md`. Install `q048-resume-v3.yml` at **`.github/workflows/q048-resume-v3.yml`**. Upload every file individually.
+
+The existing canonical launcher **`.github/workflows/00-bubbleverse-start.yml`** is unchanged. It resolves an exact PROGRAM_ID through **`bubbleverse_program_registry.json`**; user input is never executable code. The V3 registry retains the original V2 entry, changes its launcher status to `SUPERSEDED`, and identifies V3 as its successor. All other entries remain unchanged. Original V2 source/results remain available at commit `96eb8370bdd99ca27f05f472a0fc0294829acf09`; its original package checks require that historical installation state. Never silently overwrite V2 code or checkpoints.
+
+Retain these installed dependencies byte-for-byte: `q047_math_v1.py`, `q047_certificate_v1.py`, `q047_precursor_check_v1.py`, `q048_prefix_v1.py`, `q048_prefix_config_v1.json`. The package checker validates their SHA256 hashes. No installation, new compilation, external CLASS fetch, sampler or likelihood work is required. This installation snapshot was prepared against commit `96eb8370bdd99ca27f05f472a0fc0294829acf09`; reconcile later repository changes before replacing registry or README.
+
+## Genuine checkpoint migration and continuation
+
+The immutable `q048_resume_parent_v3.json` is the exact final artifact JSON from run `38205625445`, SHA256 `c629c43f6c6cf4e233e0f974a75839ceb5da003d1389d2bd3fbb0b81b89e7b81`. Reconstructing each V2 checkpoint with its original serializer gives the exact recorded checkpoint hashes. Parents contain Camspec EDE **415 background / 310 thermal cells**, Hillipop EDE **335 / 231**, and **35 thermal cells** in each LCDM case. These are inherited values, not V3 results.
+
+First execution migrates those exact parents. Later executions search the latest20 completed V3 runs for each case's retained checkpoint. Invalid, duplicate or expired found artifacts fail closed. When no artifact exists in that bounded window, migration uses the explicitly pinned historical parent; the log identifies that fallback, and it may repeat already completed work. No newer state is silently claimed. To recover an older retained artifact outside this window, use the script's explicit `--checkpoint` option locally; no automatic unbounded search or dispatch occurs.
+
+Each case checks the complete conditional root initialization and every background and thermal cell before extension. Initial and carried intervals, predictors, whole-state forcing, source guards, modes, captured effective inputs and accepted `z_reio` remain unchanged. The step-subdivision change is maximum halving **10 → 11**. Coordinate values remain exact rational numbers. No new Q or physical model is created.
+
+## Finite work and mandatory validation
+
+Preflight runs package checks, regression tests and the three k11 controls, with independent positive-matrix/scalar comparisons and exact zero/nilpotent limits. Each of four case jobs has:
+
+- Full parent verification: up to **900 seconds**, retaining every proof check.
+- Background continuation: up to **180 seconds**, at most **64 new cells**.
+- Thermal continuation: up to **180 seconds**, at most **64 new cells**.
+- Full successor verification: up to **900 seconds**, including all carried and new cells.
+
+The 900-second schedule replaces the old120-second guard: observed historical Camspec verification was116.61seconds before its59+59 additional cells. It gives a finite conservative margin; it does not prove that all future growing chains finish within that budget. A cap failure preserves partial checkpoints and requires a documented next design. Do not keep increasing limits or relax proof checks to force completion.
+
+Four independent matrix jobs, maximum parallelism4, are serialized between workflow runs. Each case has a40-minute process safeguard and50-minute job timeout; preflight/collection have25-minute job timeouts. The sum of stage budgets is36minutes per case, leaving time before the process safeguard. The official standard GitHub-hosted job limit was checked on2026-10-12 and is6hours: https://docs.github.com/en/actions/reference/limits . An individual expensive certificate may finish past a cooperative stage deadline; the external process safeguard protects the job and the last atomic checkpoint.
+
+Checkpoints are saved after parent verification, every8 accepted cells, at stage ends, before post-verification and after final validation. `RAW_CONTINUATION_DONE` is provisional. The collector independently recomputes each complete mathematical chain in up to4 processes, with900seconds per case and an18-minute whole-process safeguard. A25-minute collection job reserves setup/transfer time. Provisional checkpoints are retained as partial records with explicit incomplete-case reasons; completeness fails. The final collector requires all four `FINAL_CONDITIONAL_COMPONENT` checkpoints, compatible Q/config/source/run identities, unchanged inherited certificate prefixes and hashes bound to the fully recomputed scientific payload. Missing cases fail completeness. Cases are collected, never averaged.
+
+## Observed local V3 execution
+
+The four-case finite campaign has already executed locally and passed complete before/after certificate verification. Camspec EDE added9 background and9 thermal cells (totals424/319); Hillipop EDE added5 background and1 thermal cell (340/232). Both LCDM cases retained35 revalidated thermal cells. Camspec now stops at COMPARISON_GROWTH_CAP with thermal BACKGROUND_COVERAGE_REQUIRED; Hillipop stops at COMPARISON_GROWTH_CAP and THERMAL_TUBE_NOT_CLOSED at its new endpoints. These are exact new finite blockers. Unchanged replay cannot resolve them.
+
+Local Camspec inherited verification took133.207seconds and successor verification133.289seconds. Hillipop took104.824/104.547seconds. Total per-case wall times were283.117seconds Camspec EDE,222.078seconds Hillipop EDE and8.380/8.035seconds LCDM in the observed local environment. These timings are measurements, not guaranteed GitHub runtimes. Local raw/validated conditional products and receipts are delivered; full scientific acceptance remains unresolved. Next work is source-preserving enclosure design at these new endpoints, not repeating the same finite target indefinitely.
+
+## Outputs and scientific scope
+
+Outputs are per-case `*_checkpoint_v3.json` and `*_resume_v3.json`, preflight `q048_resume_controls_v3.json`, and collected `q048_resume_final_v3.json`. A job reporting success certifies only this finite conditional component. `actual_source_admission` and `final_result_gate` remain `UNRESOLVED`; actual first-event redshifts, complete `x_e(z)` differences and `tau_T(z)` bounds remain `NOT_COMPUTED`.
+
+Return the final JSON, controls and complete `Q047_SAMLET_JOURNAL.md` to the **Result Ingestion & Routing Engine**. Record exact new coverage and blockers. Never infer physical falsification from a work guard, a broad tube or a finite partial chain. Proceed to actual-source admission, event resolution and the coupled full-history calculation only when their prerequisites are met.
+
+---
+
+## Historical README snapshot — preserved unchanged
+
+The following V2/V1 sections document their earlier installation states; the V3 instructions above govern the current candidate.
+
 # Q048 verified prefix continuation V2
 
 PROGRAM_ID: **`Q048-RESUME-V2`**. This finite numerical component verifies and continues the existing **CONDITIONAL_SOURCE_REAL_PREFIX**. `FINAL_RESULT_GATE=UNRESOLVED`. Q-048 remains `PROPOSED_UNVERIFIED`, CASE `NOT_ASSIGNED`; Q047 remains closed inconclusive.
