@@ -1,0 +1,21 @@
+{
+  "tool": "mcp__codex_apps__wolfram_wolframlanguageevaluator",
+  "code": "v=c mu^2 f^2 (1-Cos[phi s/f])^3+b0; vp=3 c mu^2 f s Sin[phi s/f] (1-Cos[phi s/f])^2; ws=w0 Exp[-b t]+(1-Exp[-b t])/b; ExportString[<|\"potential_derivative_residual\"->FullSimplify[D[v,phi]-vp],\"energy_residual\"->FullSimplify[x(-3x-vp/h)+D[v,phi]x/h+3x^2],\"scalar_ode_residual\"->FullSimplify[D[ws,t]-(1-b ws)],\"scalar_initial_residual\"->FullSimplify[(ws/.t->0)-w0]|>,\"RawJSON\"]",
+  "observed_result": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Out[1]= \"{\\n\\t\\\"potential_derivative_residual\\\":0,\\n\\t\\\"energy_residual\\\":0,\\n\\t\\\"scalar_ode_residual\\\":0,\\n\\t\\\"scalar_initial_residual\\\":0\\n}\""
+      }
+    ],
+    "isError": false
+  },
+  "residuals": {
+    "potential_derivative_residual": 0,
+    "energy_residual": 0,
+    "scalar_ode_residual": 0,
+    "scalar_initial_residual": 0
+  },
+  "domain": "Real source variables; f,h,b nonzero. Application additionally requires H>0 and b>0.",
+  "scope": "Independent symbolic identity control; not physical validation."
+}

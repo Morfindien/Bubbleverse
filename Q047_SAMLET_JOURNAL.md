@@ -1,3 +1,1436 @@
+# BUBBLEVERSE — EXECUTION & RETURN HANDOFF V6
+
+Date/time: 2026-10-12T17:40:25.116455+00:00 UTC; 2026-10-12T19:40:25.116455+02:00 Europe/Copenhagen.
+
+STATUS: LOCAL EXECUTION COMPLETE; CONDITIONAL TESTS COMPLETE; SCIENTIFIC QUESTION CONTINUES.
+
+## A–D. Identity, setup, capabilities and execution decision
+
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED. CASE ID: NOT_ASSIGNED. Q047 remains CLOSED INCONCLUSIVE.
+RECOMMENDED CHATGPT SETTING: current Codex/Work with strong mathematical/code reasoning, High or Extra High if actually selectable. Functional classes C+A+H. Exact active variant/reasoning label, model-picker availability and context limits are not documented. Fallback: a capable available reasoning/code setup with the same exact pinned backend. Escalate only for unresolved coupled source/native-admission proofs; no maximum mode is required for this finite implementation.
+Relevant capabilities used: connected GitHub read-only inspection of current repository/tree/README/registry/launcher, local exact Python execution, attached complete journal/proofs, independent code review, persistent artifact saving. Official GitHub limit documentation checked2026-10-12. No new paper search, model fit, native CLASS compilation, likelihood/sampler or GPU/HPC service is needed.
+EXECUTION MODE: PROGRAM + RELEVANT CAPABILITIES. Existing execution-builder engine is sufficient; no duplicate motor is created. Actual machine proof recomputation is required. The new program reuses frozen V5/source primitives and implements the already independently reviewed structural mathematics006.
+
+## E–G. Scientific requirement, complete journal and sources
+
+EXACT QUESTION:
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436.
+Immediate task: reverify exact official V5 parent; recompute an independent source-root energy certificate and untouched-start He1 invariant/VOC phase extension through z4600. Preserve all inherited cells/intervals and unresolved source-admission scope. No later phase or helium first-cutoff completion is claimed.
+Full memory is Q047_SAMLET_JOURNAL.md, updated by prepending this new result/provenance while retaining the complete incoming12923405-byte journal, SHA25668bd83936a9c7156f2e038d8a0108d3b22460e7e353e7a5af6f625ea82ee28f8, unchanged as its tail. Stable sources, claims, failed methods and Q047 closure survive.
+Sources retained:
+- K-PROPOSED-Q048-SOURCE-002: mwt5345/class_ede primary code, commit5a131c91d657dd9a7c6364cc45b038710f8d0d97; https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97 . Equations/branches/units, not native-instance error admission.
+- K-PROPOSED-Q048-INPUT-001: captured Q041 FULL/start0 effective inputs, run38140371059, source config2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b, fixed accepted z_reio.
+- K-PROPOSED-Q048-MATH-REPO-006 and K-PROPOSED-Q048-V5-PACKAGE-008: frozen exact backend/installed implementation.
+- K-PROPOSED-Q048-GITHUB-RUN-38259814813 and I-PROPOSED-Q048-RESUME-GITHUB-38259814813: exact official immutable V5 parent; https://github.com/Morfindien/Bubbleverse/actions/runs/38259814813 . Rawbf63e8698a2c0a3b6f518f691443ceec151398a21693aea523743dac5d76bfa5.
+- I-PROPOSED-Q048-MATHEMATICS-006: exact structural proof and independent symbolic/rational controls. Earlier mathematics005 and failures retain their tested historical scope.
+- I-PROPOSED-Q048-STRUCTURAL-LOCAL-V6 [ADD]: actual conditional extension/reverification result, q048_structural_final_v6.json. Internal mathematical/numerical evidence; no DOI/publication is invented.
+All full source metadata and existing claim mappings remain in the retained journal. New claim: material He1 phase extension -> math006 + source002 + input001 + full V5 parent verification + localV6. Admission limitation -> unchanged source_initialization and actual-product fields. No new physical dataset or anomaly.
+
+## H–J. Existing architecture, GitHub search and frozen numerics
+
+SELECTED MOTOR: current established Execution-Mechanism / Numerical / HPC / Motor-Builder Engine. Return route after this finite execution: Result Ingestion & Routing Engine.
+Current repository inspected: Morfindien/Bubbleverse, complete1733-path tree, not truncated, HEAD05ec5263fc4be2cee29892839d0f818ccba64c91. No V6/structural/energy target existed. Current registry, README and canonical launcher inspected. Twenty reused files match exact current Git blobs/SHA256 and incoming math pins. Repository HEAD rechecked before delivery and unchanged.
+REUSE: q047 exact source/proof modules, q048 prefix/config, V3/V4/V5 parent-validation/comparison modules and frozen raw assets. REFERENCE ONLY: older closure/halving methods, retained unchanged. CREATE: V6 kernel/runner/tests/config/parent/package/workflow. PATCH: current registry/README by differential change. Canonical launcher unchanged byte for byte. All untouched backend files remain installed dependencies; they are not rewritten or replaced by latest/main.
+MODEL: phi_u=X/H, X_u=-3X-V_phi/H, E_u=-3X² with same fixed constants in V/V_phi; positive-radiation source-root H envelope and source guard ve/(3H²)<1/2. He1: w_u=1-(1+beta(a,w))w, Tmat=(1-w)T0/a. Original conditional [L,U] retained; whole proof domain [L,0.02]; variable coefficients bounded over entire phase, one-sided endpoint at fixed He1->He1f boundaryz4600.
+DATA: same four captured source configs/finite native neutrino nodes, original exact binary64 values interpreted as conditional exact-real inputs. Physical parameters, source functions, accepted z_reio, cutoff normalization and historical certificates remain unchanged.
+LIKELIHOOD/PRIORS/SAMPLER/SEEDS: NOT_APPLICABLE. No fit/refit/shoot or new native evaluation.
+NUMERICS: standard-library Fraction/outward interval backend; fixed32 source-guard bisections; exact unchanged fixed phase endpoint1/4601; independent rational exp(-d)<=(1+d/64)^-64. Bounds serialized with the backend's outward rounding, not narrowed. No increased halving/cell caps or indefinite continuation.
+Units: phi,w,a,u,beta dimensionless; X,H source inverse-Mpc; E source inverse-Mpc²; Tmat kelvin. Displayed decimals are rounded summaries of exact rational enclosures, not measurements or statistical sigmas.
+
+## K–N. Program, launcher, runtime and jobs
+
+PROGRAM_ID: Q048-STRUCTURAL-V6.
+LAUNCHER: 🚀 BUBBLEVERSE START.
+LAUNCHER FILE: .github/workflows/00-bubbleverse-start.yml.
+REGISTRY: bubbleverse_program_registry.json.
+TARGET: .github/workflows/q048-structural-v6.yml.
+PROGRAM_ID REGISTERED: YES in the validated installable registry snapshot; remote installation NOT_PERFORMED. V5 launch preference superseded; its history/implementation retained. Every unrelated registry entry is preserved.
+LAUNCHER_GATE: PASS_LOCAL_INSTALLATION. Unknown, superseded and shell-injection IDs rejected. The launcher is byte-identical to the current installed source.
+Measured local workers: Camspec LCDM6.981s; Hillipop LCDM11.945s; Camspec EDE304.393s; Hillipop EDE256.193s. Final independent collector predecessor checks:4.271s,4.003s,141.331s,111.610s respectively. Local workers/collector run four independent cases in parallel; the sum of observed per-case worker and collector elapsed durations is roughly14minutes; this is not a measured CPU-hours total. No runner-specific GitHub runtime benchmark is invented.
+Estimated GitHub wall time: roughly10–20minutes under similar CPU performance; setup/artifact variance remains unmeasured. Published standard hosted hard limit6hours, official docs https://docs.github.com/en/actions/reference/limits . Safe targets: preflight15minutes; worker40-minute timeout/35-minute process limit with900s pre+900s post verifier budgets; collector25-minute timeout/20-minute process limit. Each job has reserve for checkout, setup and transfers. Single-job risk LOW under measurements, bounded safeguards remain.
+Execution strategy PARALLEL; six jobs: preflight, four workers, collector. max-parallel4. No automatic chain. Atomic provisional/final checkpoints preserve complete parent and new extension. This one-pass component is not a new long stateful resume campaign; no repeated unchanged launch is necessary. No automatic retries; recover only genuinely failed independent jobs for a concrete technical reason. Numerical collection is case-preserving, not averaging different cosmologies.
+
+## O–Q. Mandatory tests, file decisions and README
+
+35 tests pass:15 new V6 proof/provenance/collector tests and20 retained V5 controls. The independent reviewer also ran the15 finite new tests and source-free Saha coefficient control. Relevant tests cover original input/phase/beta/positive-H/barriers, independently recomputed endpoints, Camspec source-guard limitation, forged cap/method/endpoint/phase/source audit, unchanged parent, full-product rejection, missing/duplicate/foreign-run/config mismatch and retained V5 root behavior.
+A preliminary collection before all workers had finished correctly produced PARTIAL/FAIL/PROVISIONAL; it is retained as q048_structural_partial_collection_v6.json. Completed collection with the corrected final admission code is COMPLETE/PASS/COMPLETE_CONDITIONAL.
+Technical issues preserved: independent exact rational comparison denominators exceeded Python's serialization length limit; outward interval serialization fixed it without altering physical/inherited bounds. Baseline test first lacked the unchanged historical workflow in the staged snapshot; restored its exact Git-blob source and20 tests pass. Collector formerly skipped checkpoint verification after seeing a final report; three reproducing tests failed first, then pass after strict per-checkpoint duplicate/run/content checks and immutable source-audit validation. These are technical failures, not physical-model failures.
+The first final package check identified a missing literal full workflow path in the README. The install directory/filename were present, but the required canonical target reference was added explicitly; the final package check is rerun. This is a documentation-gate correction, not a numerical change.
+The mathematical kernel is identical during actual local worker computation and final verification. The worker executed runner is retained as q048_structural_executed_runner_v6.py. Final runner hardens admission only; unchanged actual proof payloads were fully reverified by it. Exact13 fields of each EDE phase agree with independently reviewed math006.
+README ACTION UPDATE; FILE README.md. Adds current V6 instructions/architecture/scope/runtime/results and retains the exact current incoming README as explicitly historical context. Important active paths validated. README_GATE PASS_LOCAL_INSTALLATION.
+FILE DECISIONS: reuse frozen dependencies/launcher; create14-file install package; update registry/README/full journal; retain incoming math/review/symbolic artifacts byte for byte. No archives. Individual exact installation paths are in q048_structural_package_v6.json; current incoming source/proof assets are included for installation.
+
+## R–U. Actual files, execution, outputs and gates
+
+All actual install files are delivered individually. Put all installation files at repository root, except q048-structural-v6.yml which belongs at .github/workflows/q048-structural-v6.yml. Use exact filenames, including README.md, bubbleverse_program_registry.json and Q047_SAMLET_JOURNAL.md; a download timestamp/suffix must not become the repository filename. Preserve every pinned installed old dependency.
+After installation: OPEN 🚀 BUBBLEVERSE START; PASTE Q048-STRUCTURAL-V6; PRESS Run workflow. Package preflight enforces exact source/config/parent/proof/launcher identity before expensive work.
+Expected outputs: per-case *_structural_v6.json and *_checkpoint_v6.json; q048_structural_final_v6.json with raw complete unchanged parents/new proofs and Q-bound job manifest. Four required final compatible cases plus full recomputation are required for COMPLETE_CONDITIONAL; partial CPs remain provisional, never scientific final results.
+ACTUAL COMPUTED LOCAL RESULT: both EDE remaining-He1 phase enclosures reachz4600, Camspec w approximately[2.191185386e-8,2.376226821e-7], Hillipop approximately[6.480435350e-8,1.287347809e-7]. LCDM retains original complete conditional prefix throughz2870. All four original records are unchanged and independently reverified. Energy Xcaps approximately94.46441105 and61.77530389 inverse-Mpc. Hillipop source-guard bound throughz2870 approximately0.47601244<1/2; Camspec guaranteed horizon approximatelyz3562.59028 and transfer bound0.67951946 does not establish its full-transfer guard. These are conservative deterministic source-model bounds, not physical event brackets/observations.
+Mandatory technical gates PASS_LOCAL: input/source/Q, inherited proof, extension/barrier/independent comparison, job completeness, merge compatibility and recomputation, journal continuity, launcher, README and repository consistency. Remote installation/dispatch NOT_PERFORMED. ACTUAL_SOURCE_ADMISSION UNRESOLVED. FINAL_RESULT_GATE UNRESOLVED. Common first-cutoff/full electron-history/full optical-depth differences NOT_COMPUTED.
+
+## V–W. Return to Bubbleverse and start
+
+Return CURRENT Q + exact question + full updated journal + stable sources/claim map + exact local result/provenance + independent review + test statuses. KEEP all old scientific state and errors; ADD localV6 implementation/conditional material phase progress; UNRESOLVED actual/full-Q qualification. No physical hypothesis falsified or rescued. The scientific completion gate is not satisfied; Motor14 closure is premature.
+Next engine: RESULT INGESTION & ROUTING ENGINE, to ingest this actual finite result and choose the single remaining material source/phase/admission task. Do not repeat unchanged V5/V6 simply for more validation. A new later-phase target requires a distinct demonstrated method/requirement and scope.
+
+START THIS: Q048-STRUCTURAL-V6
+
+## Local evidence receipt
+
+```json
+{
+  "schema": "Q048_STRUCTURAL_EXECUTION_JOURNAL_V6",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "result_id": "I-PROPOSED-Q048-STRUCTURAL-LOCAL-V6",
+  "program_id": "Q048-STRUCTURAL-V6",
+  "created_utc": "2026-10-12T17:40:25.116455+00:00",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "repository_base_commit": "05ec5263fc4be2cee29892839d0f818ccba64c91",
+  "parent_journal": {
+    "bytes": 12923405,
+    "sha256": "68bd83936a9c7156f2e038d8a0108d3b22460e7e353e7a5af6f625ea82ee28f8",
+    "retained_unchanged_tail": true
+  },
+  "evidence": {
+    "q048_structural_v6.py": {
+      "bytes": 10383,
+      "sha256": "f6974e16cadb0f7be8fa0e9d21fd6bb849367d7833bb7690f6b3e0afb2f05809"
+    },
+    "q048_structural_runner_v6.py": {
+      "bytes": 8396,
+      "sha256": "e60861a205f3f4e9010e9d053a3c7f9731d2b1e93e33c6be7cf731b3adb05e88"
+    },
+    "q048_structural_executed_runner_v6.py": {
+      "bytes": 7895,
+      "sha256": "4ddd55da0350b83f3ff0cf4b14c6e7b4fa08c86d9277e8d438d36ccd7510c56d"
+    },
+    "q048_structural_config_v6.json": {
+      "bytes": 3688,
+      "sha256": "585e10632bca1b3bd268b6b0268901da44616bfd9c5e8b6792a8e6116856b264"
+    },
+    "q048_structural_final_v6.json": {
+      "bytes": 15506224,
+      "sha256": "c0e289ae59fddb93aedc0bb7280c0d8d2c621e59a71d182d6360a600e7315aba"
+    },
+    "Q048_STRUCTURAL_REVIEW_V6.json": {
+      "bytes": 6741,
+      "sha256": "c3c4869d93294a6ea0ea6d97996f30d9952a1fb019032be73e61149f6f93ace9"
+    },
+    "q048_structural_partial_collection_v6.json": {
+      "bytes": 15504555,
+      "sha256": "1c80dbe4dc25f47c3c8b9f2ef21f13ed76cccbb142a79581ea44b5c4a7dde45f"
+    }
+  },
+  "execution_status": "COMPLETE_LOCAL",
+  "tests_status": "COMPLETE_CONDITIONAL",
+  "tests_passed": 35,
+  "job_completeness_gate": "PASS",
+  "merge_compatibility_gate": "PASS",
+  "remote_installation": "NOT_PERFORMED",
+  "actual_source_admission": "UNRESOLVED",
+  "final_result_gate": "UNRESOLVED",
+  "actual_full_history": "NOT_COMPUTED",
+  "next_engine": "RESULT INGESTION & ROUTING ENGINE"
+}
+```
+
+---
+
+<!-- COMPLETE INCOMING AUTHORITATIVE JOURNAL: unchanged byte tail begins below. -->
+
+# BUBBLEVERSE — OVERLEVERING
+
+STATUS: FORTSÆTTER / CONTINUES.
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED.
+CASE ID: NOT_ASSIGNED.
+RESULT ID: I-PROPOSED-Q048-MATHEMATICS-006.
+Date/time: 2026-10-12T15:06:22.519514+00:00 UTC; 2026-10-12T17:06:22.519514+02:00 Europe/Copenhagen.
+SELECTED NEXT ENGINE: Existing AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE. Exactly one destination. This finite mathematics stage is complete; the scientific Q remains unresolved.
+UPSTREAM PROGRAM_ID: Q048-RESUME-V5 — provenance only; no new campaign is registered or started here.
+
+## EXACT SCIENTIFIC QUESTION
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436. Q047 remains CLOSED INCONCLUSIVE. No canonical Q/CASE assignment is invented.
+
+## CHATGPT-SETUPVURDERING
+
+Primary: current Codex/Work with strong mathematical reasoning and exact code/file execution; High or Extra High if actually selectable. Capability classes H+C+A. Runtime identifies Codex as GPT-6 based; exact active variant, active reasoning label, user model-picker availability, context capacity and usage limits are NOT DOCUMENTED. Callable alternative agent identifiers exist, but no undocumented comparative mathematical benchmark or user access is inferred from their names. No model switch is needed for these finite controls.
+Reason: a bounded source-pinned ODE/enclosure proof, code inspection, exact rational arithmetic, independent symbolic control and focused review are sufficient. Maximum/frontier compute is not justified merely by a failed sufficient tube test.
+Fallback: an actually available strong reasoning/code setup able to preserve the frozen sources and run the exact outward arithmetic. Upgrade only if implementation exposes conflicting source-equivalence, coupled phase/event, or global enclosure proofs that cannot be resolved reliably here.
+Tools actually used: attached complete state, frozen installed Python source, exact rational/outward primitives, Wolfram Language evaluator for four symbolic identity residuals, and an independent focused reviewer with rational-only comparison controls. The Wolfram context search was insufficient/irrelevant and contributes NO scientific claim. SymPy was unavailable; no SymPy calculation is claimed. No broad physical literature, browser task, native CLASS run, sampler, fit, or HPC campaign was required for this finite diagnosis. No fresh GitHub retrieval is claimed; current source/commit provenance is supplied by the already verified installed-tree/run ingestion carried unchanged below.
+
+## SAMLET JOURNAL — differential update and continuity
+
+This is the ONE updated authoritative journal. The entire incoming journal is retained unchanged byte for byte at the end, including its source register, source-to-claim map, old runs, failures, rejected hypotheses, anomalies and provenance. Incoming bytes: 12897898; SHA256: 80b5d0226ff16539f13cb747427f9c87fe0cd4724140fb39c8e66d9f1dd203f0.
+KEEP all scientific input/model/likelihood/initial-state/reionization facts and predecessor certificates. ADD the independently derived source-root energy theorem, whole nominal He1 barrier controls and whole remaining-He1-phase enclosures. STRENGTHEN evidence that the new V5 blockage is a sufficient-enclosure-method limitation, with a finite structural remedy. SUPERSEDE only the proposed strategy of mechanically increasing the halving cap as the next preferred step; old successful local k12 controls retain their historical tested scope. UNRESOLVED actual-source admission, the common first cutoff event and full xe/tau products remain unchanged. No physical model is falsified, rescued or upgraded.
+
+## DIRECT OUTPUT — current NEW V5 stops and finite diagnosis
+
+The current inputs are the official V5 run38259814813 mathematical payload at executed commit05ec5263fc4be2cee29892839d0f818ccba64c91, with Camspec EDE429 background/324 thermal cells and Hillipop EDE343/240. Both LCDM cases remain0 background/35 thermal at transfer z2870; they were not recomputed or modified.
+
+At the NEW EDE cursors, all existing k0..12 background and thermal candidates fail the current V5 sufficient tests. Background k0..6 hit COMPARISON_GROWTH_CAP; k7..12 fail closure. Thermal finite slack at k12 is approximately -3.39513e-10 Camspec and -1.50356e-10 Hillipop. However the zero-step limiting slack is POSITIVE: thermal approximately3.24894e-9 and2.20816e-9, and both background components also have positive limit slack. Therefore the finite failures do NOT prove permanent local impossibility or that every further halving must fail. More halvings may eventually close a tiny local cell; this supplies no certificate of useful full-Q progression and does not fix inherited wrapping.
+
+The old background intervals span roughly +/-62 in phi and +/-12600 in X for Camspec, and +/-66 and +/-8700 for Hillipop. Those intervals are preserved exactly. The new source-root theorem supplies additional information about the SAME fixed-source trajectory, rather than assuming a smaller checkpoint IVP interval.
+
+## MATHEMATICAL RESULT 1 — independent source-root energy certificate
+
+Use the frozen source coordinate u=ln(a), scalar state phi and X=phi_prime/a:
+
+\[
+\phi_u=X/H,\qquad X_u=-3X-V_\phi/H.
+\]
+
+The fixed potential is
+
+\[
+V=Cm^2F^2[1-\cos(\phi S/F)]^3+V_{\rm floor},\quad
+C=4152.39,\quad S=2.435\times10^{27},\quad V_{\rm floor}=B(3.968\times10^{-8}).
+\]
+
+The potential and derivative must use the SAME fixed source constants. Their independent interval representatives are outward bounds on these constants; the theorem does not treat V and V_phi as independently chosen functions. Direct differentiation gives
+
+\[
+E=\tfrac12X^2+V,\qquad E_u=-3X^2\le0.
+\]
+
+The original captured exact-real source initial state has X_ini=0. From its outward E0 bound and nonnegative floor:
+
+\[
+V_{\rm floor}\le E(a)\le E_{0,\rm upper},\qquad
+|X|\le X_{\rm cap}=\sqrt{2(E_{0,\rm upper}-V_{\rm floor,lower})}.
+\]
+
+Radiation R=gamma+ur is positive; matter, Lambda and finite native-node neutrino weights/masses/factors are nonnegative; K=0 for both captured configurations. Consequently H>=sqrt(R)/a^2 and
+
+\[
+|\phi(a)-\phi_{\rm ini}|\le
+\frac{X_{\rm cap}(a^2-a_{\rm ini}^2)}{2\sqrt R}.
+\]
+
+phi is dimensionless in source reduced-Planck normalization; X,H use source inverse-Mpc units; E,V,base use source inverse-Mpc-squared normalization, not SI joules. a,u and beta are dimensionless. All decimals below are orientation only; exact outward rational endpoints are retained in Q048_V5_STRUCTURAL_MATHEMATICS.json.
+
+| Configuration | E0, approximately | Xcap, approximately | New source-root phi enclosure at current background cursor, approximately |
+|---|---:|---:|---|
+| camspec-ede_n3 | 4461.76247724 | 94.46441105 | [-0.40416297,0.86186844] |
+| hillipop-ede_n3 | 1908.09408537 | 61.77530389 | [-0.38513616,0.85619066] |
+
+The independently justified intersection is recorded alongside the untouched inherited interval. No checkpoint, inherited certificate, predecessor radius or source input is replaced. The intersection applies only to the linked source-initial trajectory satisfying both proofs; it does not certify a new smaller uncertainty set for arbitrary initial values in the inherited Cartesian box. Smooth potential, positive H and these bounds control existence on the finite fixed continuous-ODE domain a_ini..1/2871, subject to separately checked branch applicability.
+
+### Source background guard and its actual scope
+
+For base=R/a^4+matter/a^3+Lambda-K/a^2+finite-neutrino-rho, H^2=base+E/3 and ve=V-Vfloor<=E-Vfloor. Thus
+
+\[
+\frac{ve}{3H^2}\le
+\frac{E_{0,\rm upper}-V_{\rm floor,lower}}{3\,base_{\rm lower}+E_{0,\rm upper}}.
+\]
+
+The ratio is monotone increasing in E and decreasing in base. Each nonnegative finite-neutrino summand a^-4 q^2 weight sqrt(q^2+a^2 mass^2) has logarithmic derivative between -4 and -3; base is nonincreasing. An endpoint upper bound therefore controls the full preceding interval. This is the source guard ve/(3H^2)<1/2, not the helium cutoff q=1e-6.
+
+Hillipop: guard bound at a=1/2871 (z2870) is approximately0.4760124421<1/2. The whole fixed-background branch through transfer passes this conditional guard.
+Camspec: guard is certified through a=0.00028061587355566136, z approximately3562.59028208. A fixed32-step exact dyadic bisection brackets where this CONSERVATIVE UPPER BOUND reaches1/2; its upper bracket is a approximately0.00028061587363675876. At transfer the bound is approximately0.6795194575, so the full-transfer guard is NOT_ESTABLISHED_BY_THIS_BOUND. This does not establish actual guard failure. The bracket is neither a physical event bracket nor a proof of a solution crossing; tighter dissipated-energy information may improve it. Both guard horizons cover the next He1 phase boundary z4600.
+
+## MATHEMATICAL RESULT 2 — He1 invariant interval and variable-coefficient enclosure
+
+The frozen He1 equation is
+
+\[
+T_{\rm mat}=(1-w)T_0/a,\qquad w_u=1-(1+\beta(a,w))w,\qquad\beta>0.
+\]
+
+At the untouched inherited interval [L,U], L<0<U. On each whole available nominal cell, the evaluated source rate at L is strictly positive and at U strictly negative. With positive temperature and regular source coefficients, [L,U] is invariant. This whole-cell statement retains the complete initial uncertainty and avoids artificial symmetric expansion across the near -2e-6 outer boundary.
+
+For xi=(a-a0)/(a1-a0), write w_xi=c(xi)-d(xi)w, c=(a1-a0)/a>0, d=c(1+beta)>0. Beta may depend on the evolving w; variation of constants remains valid along the actual solution. With bounds c_min/max and d_min/max over the entire invariant domain, define J(d)=(1-exp(-d))/d. Since L<0<U,
+
+\[
+L e^{-d_{\min}}+c_{\min}J(d_{\max})\le w(1)
+\le Ue^{-d_{\min}}+c_{\max}J(d_{\min}).
+\]
+
+This is not a midpoint-frozen beta approximation. Source functions, equations, initial-state errors and parameters are unchanged. The independent reviewer also proves coarse endpoint inclusion using only rational arithmetic and exp(-d)<=(1+d/64)^(-64), without relying on the exponential evaluator.
+
+Nominal whole-cell endpoints, approximately: Camspec [5.05170920e-8,6.22801989e-7] at z6101.63326940; Hillipop [8.10388301e-8,8.30660931e-7] at z4983.81792108. These use exactly one previously verified available background cover, with its hash and domain retained. They are prospective conditional certificates, not newly appended campaign cells or claimed native execution.
+
+## MATHEMATICAL RESULT 3 — one whole remaining He1 phase, not tiny-cell progression
+
+A materially longer finite control uses the independent source-root energy envelope rather than extrapolating the existing background cell chain. Let b0 be the finite-node non-scalar background and use
+
+\[
+H^2=b_0.H^2+E/3,\qquad E\in[V_{\rm floor,lower},E_{0,\rm upper}].
+\]
+
+The exact same source rho_gamma and Hs drive the He1 beta. The whole proof domain [inherited L,0.02] contains the COMPLETE untouched initial [L,U]; widening a proof domain is not changing the physical initial state. Both boundary rates point inward over the full interval to the frozen next phase boundary a=1/4601, z4600. Temperatures, H and beta are strictly positive. The source background guard controls the entire interval for both configurations. The same variable-coefficient formula encloses the endpoint from the original [L,U].
+
+| Configuration | Whole remaining He1 phase, z start -> z end | Proved beta lower, approximately | Endpoint w enclosure at z4600, approximately |
+|---|---|---:|---|
+| camspec-ede_n3 | 6103.09284045 -> 4600 | 5583170.9533 | [2.19118539e-8,2.37622682e-7] |
+| hillipop-ede_n3 | 4984.41256964 -> 4600 | 8416914.6101 | [6.48043535e-8,1.28734781e-7] |
+
+Gate: PASS_CONDITIONAL_REMAINING_HE1_PHASE for both. The endpoint is on the He1 side of the fixed He1->He1f transition; no transition, later He1f/He2 model, helium cutoff event, full electron history or full optical depth is certified by this result. No uncomputed background cell is claimed to exist: the new proof is a separate analytic energy envelope. This finite phase-scale remedy is the material reason to stop increasing the halving cap and hand implementation to the existing builder.
+
+## VALIDATION, TOOLS AND UNCERTAINTY
+
+Finite tests completed: current journal/raw/all-four-checkpoint SHA pins; every used installed source/config pin; exact question/model validation; two exact source initial gates;26 background and26 thermal candidate diagnostics; two nominal whole-cell invariant/VOC proofs; two source-root energy/guard controls; two remaining-He1-phase controls; independent rational-only nominal/phase endpoint controls; four observed Wolfram symbolic residuals equal0. Assertions/gates support these specific domains. An additional independent analytic source-beta control uses the exact Saha range x in [1+fHe,1+2fHe], hence x/(1+fHe+x) in [1/2,(1+2fHe)/(2+3fHe)], without the Saha exponential evaluator. Its phase endpoints are positive interior enclosures and overlap the primary bounds; they remain separate controls and are not substituted for the reported interval. No previous campaign is replayed, no changed numerical result is promoted to a measurement, and no unchecked float is substituted for an outward endpoint.
+
+The previous ingestion already verified complete inherited mathematical payloads/certificate linkage. This stage pins those exact inputs and relies on that documented inherited premise; hashing alone is not mathematical validation. Independent review found no critical formula error and explicitly identified fixed shared constants, inherited conditional state validity, source-root intersection scope and guard-bound-versus-actual-event distinctions. Observed reviewer controls, source hashes and exact rational inequalities are preserved in Q048_V5_INDEPENDENT_REVIEW.json.
+
+Numerical uncertainty: exact outward arithmetic and explicit comparison domains, not posterior/statistical sigmas. Dominant remaining uncertainty: actual source-instance admission and the later complete source/history/event linkage; Camspec's global background guard beyond the current proved horizon needs a sharper bound or a documented obstruction. The energy and thermal certificates are deterministic conditional source-model results. No observational anomaly, new physical evidence or physical falsification arises from sufficient-tube failure.
+
+## SOURCES AND CLAIM-TO-SOURCE MAP
+
+KEEP the COMPLETE active external/internal registers and mappings in the unchanged incoming tail. Necessary entries carried forward:
+
+- K-PROPOSED-Q048-SOURCE-002: CLASS/class_ede contributors, pinned mwt5345/class_ede source5a131c91d657dd9a7c6364cc45b038710f8d0d97; https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97 . Supports fixed potential/background/thermal/branch equations and source unit conventions. Source-revision date/DOI/arXiv are not invented. External source code, not observation/native admission.
+- K-PROPOSED-Q048-INPUT-001: four Q041 FULL/start0 captured effective inputs from run38140371059, fixed accepted z_reio. Captured config SHA2562514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b. Internal captured-input evidence.
+- K-PROPOSED-Q048-MATH-REPO-006: frozen exact outward source-model/proof backend; current files match installed-tree pins in the receipt. Internal proof implementation.
+- K-PROPOSED-Q048-V5-PACKAGE-008: installed execution package at05ec5263fc4be2cee29892839d0f818ccba64c91; https://github.com/Morfindien/Bubbleverse/tree/05ec5263fc4be2cee29892839d0f818ccba64c91 . No repository changes here.
+- K-PROPOSED-Q048-GITHUB-RUN-38259814813 and I-PROPOSED-Q048-RESUME-GITHUB-38259814813: official run, all four checkpoint origins, exact local/raw reproduction; https://github.com/Morfindien/Bubbleverse/actions/runs/38259814813 . Raw SHA256bf63e8698a2c0a3b6f518f691443ceec151398a21693aea523743dac5d76bfa5.
+- I-PROPOSED-Q048-MATHEMATICS-005: previous old-V4-cursor finite controls retained with their tested scope.
+- I-PROPOSED-Q048-MATHEMATICS-006 [ADD]: present source-root energy, current-V5 small-step diagnosis and He1 finite local/phase certificates. This is Bubbleverse-generated mathematical/technical evidence, not a publication.
+
+C-MATH-V5-001 -> source002 + input001 + installed package008 + math006: exact energy identity and independently rooted energy/phi/X bounds.
+C-MATH-V5-002 -> source002 + exact finite-node guard proof + math006: conditional guard horizons; no claim of actual cutoff or actual Camspec guard failure.
+C-MATH-V5-003 -> current run/raw/checkpoint + backend006 + math006: finite V5 sufficient-test failures and positive zero-step limits, not permanent impossibility.
+C-MATH-V5-004 -> source002 + previously validated inherited coverage + math006 + independent review: nominal whole-cell invariant/VOC controls preserving initial state.
+C-MATH-V5-005 -> source002 + source-root energy/background envelope + untouched thermal state + math006 + independent review: full remaining He1 phase through fixed z4600.
+C-MATH-V5-006 -> current applicability fields + inherited source limitations: actual admission/cutoff/full-xe/full-tau remain unresolved/not computed.
+Wolfram evaluator code/output is a computational cross-check of identities, not a new independent scientific source or data point. Independent reviewer is a verification instrument, not a source publication.
+
+## EXACT NEXT TASK — one existing engine
+
+Route to the established Execution-Mechanism / Numerical / HPC / Motor-Builder Engine to implement the demonstrated structural proof mechanism. SEARCH -> REUSE -> PATCH; inspect the real repository and current registry before assigning any successor version or PROGRAM_ID. Do not assign a speculative next version here.
+
+1. Add a separately auditable source-root energy certificate with source/input/root hashes, shared-constant identity, original E0 bound, positivity and branch horizon. Preserve old checkpoints/old intervals. Any intersection must be explicit new-theorem information about the linked source trajectory; never silently shrink an inherited IVP uncertainty set.
+2. Add the He1 invariant-domain and variable-coefficient VOC mechanism. Recompute whole-domain coefficient/barrier bounds from the unchanged source and actual phase/input/initial-state bindings; do not accept saved PASS flags as proof. Carry the full original [L,U]. Verify the two nominal cases and the demonstrated phase-scale enclosure through z4600. This is a distinct method; retain the failed older sufficient checks as historical evidence.
+3. Use the finite energy background envelope legitimately where its proven branch guard covers the cell/phase. Do not claim an uncomputed old background cell or extrapolate a center. Hillipop's guard extends through transfer; Camspec's present guard does not. A sharper dissipative-energy proof is required before claiming the Camspec background beyond its proved horizon; old physical inputs/priors/criteria stay frozen.
+4. Preserve the native/actual source-admission boundary. A technically certified conditional source-real phase is not native CLASS equivalence, an actual first-cutoff event or a complete xe/tau result. Audit whether these essential admission gaps are removable with the captured exact input/source/runtime data; mark missing information explicitly and do not rescue them with a boolean.
+5. Only propose/register a new runnable campaign if the implementation and finite tests show material horizon gain using these structural controls. Do not replay V5, mechanically lift halvings, repeatedly reproduce identical payloads, or claim physical progress from another tiny cell. If the real repository changes, maintain canonical BUBBLEVERSE START, registry and README in the same change, with genuine compatibility/provenance/result gates. None of those repository files changed in this mathematics stage; no launcher/README PASS is newly asserted.
+
+Expected output: minimal auditable proof implementation plus finite result tests, original-state-preserving lineage, explicit source/horizon/admission gates and a concrete execution decision. A downstream motor receives this FULL journal and the individual exact evidence artifacts, not merely Q048 or the displayed numbers.
+
+SUCCESS: recomputed source-root and He1 barriers produce the demonstrated conditional phase-scale bounds with unchanged physical specification, preserved predecessor certificates and transparent source/admission scopes.
+FAILURE: a material identity/domain/initial-state/guard/binding premise fails; classify technical/proof failure and preserve evidence. This is not physical-model falsification.
+STOP: do not add tests once these finite mechanisms are independently verified. If implementation cannot deliver material progression, document the precise remaining obstruction instead of retrying. Close the scientific Q and route to MOTOR14 only when the exact full question has a defensible documented answer (including a justified inconclusive answer), with sources/provenance and central uncertainties retained. That scientific closure condition is NOT satisfied by this stage.
+
+## Q-COMPLETION AND RETURN STATE
+
+Q_COMPLETION_GATE: NOT_YET_SATISFIED.
+FINAL_RESULT_GATE: UNRESOLVED.
+ACTUAL_SOURCE_ADMISSION: UNRESOLVED.
+ACTUAL_COMMON_FIRST_CUTOFF: NOT_COMPUTED.
+ACTUAL_COMPLETE_XE_DIFFERENCE: NOT_COMPUTED.
+ACTUAL_COMPLETE_TAU_T_DIFFERENCE: NOT_COMPUTED.
+SCIENTIFIC ANOMALY: NONE ESTABLISHED BY THESE TECHNICAL RESULTS.
+MATERIAL_REVERSAL_TEST: PASS for structural implementation/source-admission audit because they can alter whether full controlled bounds are attainable. FAIL for unchanged V5 replay or arbitrary extra halving/reproduction alone.
+NEXT ENGINE: Existing Execution-Mechanism / Numerical / HPC / Motor-Builder Engine. Not Report Writer; not MOTOR14 prematurely.
+
+The original journal follows after the new technical receipt, unchanged and complete. Its earlier state is historical context subject only to the explicit differential updates above.
+
+## NEW TECHNICAL RECEIPT — evidence/provenance bindings
+
+```json
+{
+  "schema": "Q048_MATH006_JOURNAL_ADDITION_V1",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "result_id": "I-PROPOSED-Q048-MATHEMATICS-006",
+  "created_utc": "2026-10-12T15:06:22.519514+00:00",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "execution_commit": "05ec5263fc4be2cee29892839d0f818ccba64c91",
+  "input_journal": {
+    "bytes": 12897898,
+    "sha256": "80b5d0226ff16539f13cb747427f9c87fe0cd4724140fb39c8e66d9f1dd203f0",
+    "retained_as_unchanged_tail": true
+  },
+  "input_raw_sha256": "bf63e8698a2c0a3b6f518f691443ceec151398a21693aea523743dac5d76bfa5",
+  "input_receipt_sha256": "5ecafba8bde31074e0277a02085fe700e528a08872d409c3f65e6995f9a825f3",
+  "source_config_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "checkpoint_sha256": {
+    "camspec-lcdm": "2747bd758652c2ef82e58bbf024943378440deabe2a20c2c79cd520123e4c982",
+    "camspec-ede_n3": "05c75a5e4af0d453da987e6ddef11067c43db04ee63de83f84e2465987e9f4d3",
+    "hillipop-lcdm": "82a5a452e9bd721effe30d6b1932deb1d8ed6b036f32e7291a94f72b6d970620",
+    "hillipop-ede_n3": "4880bfd1d55dce81acb7d358c227cd09742426225366c0cf8ec7d6a4a2045efd"
+  },
+  "evidence_files": {
+    "q048_v5_structural_math.py": {
+      "bytes": 14230,
+      "sha256": "66437fcfa461c7a3028d058e7a4118bd6571ba8650a081e52db0e6d2a7ed9808"
+    },
+    "Q048_V5_STRUCTURAL_MATHEMATICS.json": {
+      "bytes": 216248,
+      "sha256": "a84e4f12e39e92384acbd10df7713f12c042174c39b53ca0746e064edf5a547b"
+    },
+    "Q048_V5_SYMBOLIC_CONTROL.json": {
+      "bytes": 1096,
+      "sha256": "f5a00a790df71d880b49abf156b312bc74f9a206b2b010fdb6ba083f16d4a3ac"
+    },
+    "Q048_V5_INDEPENDENT_REVIEW.json": {
+      "bytes": 38898,
+      "sha256": "00d37a248764e4ee2e098260f728b3c8c03f50b143a6729571697faea2c61eb9"
+    }
+  },
+  "gates": {
+    "q_identity": "PASS_PRESERVED_PROPOSED_STATUS",
+    "journal_continuity": "PASS_UNCHANGED_FULL_TAIL",
+    "source_pins": "PASS",
+    "energy_controls": "PASS_CONDITIONAL_SOURCE_ROOT",
+    "nominal_he1_controls": "PASS_CONDITIONAL",
+    "remaining_he1_phase_controls": "PASS_CONDITIONAL_TO_Z4600",
+    "independent_review": "PASS_CONDITIONAL_SOURCE_ODE_STRUCTURAL_CONTROLS",
+    "mandatory_finite_math_tests": "COMPLETE",
+    "q_completion": "NOT_YET_SATISFIED",
+    "actual_source_admission": "UNRESOLVED",
+    "final_result_gate": "UNRESOLVED"
+  },
+  "repository_changed": false,
+  "program_id_assigned": false,
+  "raw_checkpoints_changed": false,
+  "next_engine": "Existing Execution-Mechanism / Numerical / HPC / Motor-Builder Engine",
+  "journal_effect": [
+    "KEEP complete incoming state",
+    "ADD independently rooted energy theorem",
+    "ADD He1 nominal and remaining-phase proof",
+    "UNRESOLVED actual/full-Q qualification"
+  ]
+}
+```
+
+---
+
+<!-- ENTIRE INCOMING JOURNAL: unchanged byte tail begins immediately below. -->
+
+# BUBBLEVERSE — RESULT INGESTION & ROUTING HANDOFF
+
+STATUS: CONTINUES.
+CASE ID: NOT_ASSIGNED.
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED.
+PROGRAM_ID: Q048-RESUME-V5.
+RESULT ID: I-PROPOSED-Q048-RESUME-GITHUB-38259814813.
+Date/time: 2026-10-12T14:35:50.282121+00:00 UTC; 2026-10-12T16:35:50.282121+02:00 Europe/Copenhagen.
+
+## QUESTION — exact full authoritative wording
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436. Q047 remains CLOSED INCONCLUSIVE.
+No Q or CASE is silently assigned, narrowed or changed.
+
+## RECOMMENDED CHATGPT EXECUTION PROFILE
+
+Actually available functions considered: reasoning/code/file execution,
+read-only connected GitHub repository/run/jobs/tree/artifacts/decoded logs,
+web research and external computation if material. Model/mode examples are not
+assumed to exist in the user's main selector. Current active reasoning level,
+context ceiling and user model-picker availability are NOT DOCUMENTED.
+Primary recommendation: current Codex/Work with strong reasoning, High or
+comparable if selectable, bounded autonomous ingestion here; high-reasoning
+mathematical analysis next. Classes C+E here, C next. Fallback: an actually
+available capable reasoning/code setup with pinned exact interval arithmetic.
+Escalate only for difficult coupled enclosure/source-applicability proofs or
+independent contradictions. No frontier/max upgrade merely for parsing this
+exact reproduction, and no model-name prestige claim.
+Tools used: current attachments, exact state/hash checks, connected GitHub
+primary provenance. No broad physical literature, new native run, arbitrary
+sampler/HPC, browser or independent symbolic service adds material evidence to
+this documented enclosure bottleneck now. Plugin retrieval is not independent
+physical confirmation. Generic log retrieval was insufficient; the dedicated
+job-log capability succeeded. Full controls JSON was not downloaded; its PASS
+is directly documented in official logs, not claimed byte-equal here.
+
+## SELECTED NEXT BUBBLEVERSE ENGINE
+
+**MATHEMATICS ENGINE — existing MATEMATIKMOTOREN.** Exactly one destination.
+No Report Writer route. No Motor14 closure is justified by this execution alone.
+
+## SAMLET JOURNAL — complete updated authoritative state
+
+The updated Q047_SAMLET_JOURNAL.md contains this handoff/receipt followed by the
+ENTIRE incoming journal, 12842521 bytes, SHA256 0f35bb777e943edd68e6c843b07f713f4f8482851d90a9e066ece9ea096db387, unchanged
+byte for byte. That incoming journal is exactly the installed journal at this
+run's executed commit, verified against its Git blob. All prior source fields,
+claim links, hypotheses, failed methods, anomalies and provenance survive.
+No separate scientific journal is created.
+KEEP all earlier scientific state. ADD official installed V5 execution and
+run-specific outputs. STRENGTHEN exact cross-runtime reproducibility. SUPERSEDE
+prior remote NOT_PERFORMED text only as a current execution-state assertion;
+it remains correct historical preparation context. LEAVE UNCHANGED the local
+mathematical result, later EDE stops and missing actual/full-Q qualification.
+No physical hypothesis is falsified, rescued or upgraded.
+
+## NEW RESULT — three layers
+
+ORIGIN: GitHub Actions run38259814813, commit05ec5263fc4be2cee29892839d0f818ccba64c91.
+CLASS: RUN_SUCCESS + NUMERICAL_RESULT + PARTIAL_RESULT + REPRODUCTION_RESULT + VALIDATION_RESULT.
+STATUS: TECHNICALLY_VALIDATED_CONDITIONAL_AND_EXACTLY_REPRODUCED.
+
+### Direct output
+
+| Case | Background cells | Thermal cells | New background / thermal versus V4 | Current background / thermal blocker |
+|---|---:|---:|---:|---|
+| camspec-lcdm | 0 | 35 | 0 / 0 | None / None |
+| camspec-ede_n3 | 429 | 324 | 2 / 5 | BACKGROUND_TUBE_NOT_CLOSED / THERMAL_TUBE_NOT_CLOSED |
+| hillipop-lcdm | 0 | 35 | 0 / 0 | None / None |
+| hillipop-ede_n3 | 343 | 240 | 1 / 6 | BACKGROUND_TUBE_NOT_CLOSED / THERMAL_TUBE_NOT_CLOSED |
+
+All six jobs succeeded: preflight, four independent workers, collector.
+Twenty tests pass in27.068seconds; finite controls PASS. Official artifact
+digest/size exactly match the supplied ZIP; CRC and unique member checks pass.
+Four individual checkpoints reconstruct with exact recorded hashes and correct
+run/config/root/parent/payload binding. Missing/partial jobs: none.
+
+Source/cells/current errors, all background/thermal outputs, initialization,
+source hashes and V3/V4/rooted lineage payloads equal the already fully checked
+local V5 result in EVERY case. Complete mathematical payload equality is
+verified, not merely endpoint/table equality. All26 relevant installed files
+match the frozen execution tree, including source, main, method, tests, config,
+workflow, package, registry, canonical launcher, README and incoming journal.
+
+### Technical interpretation
+
+V5 passes the old-cursor k12 background and finite-time He1 barriers and admits
+14 cells relative to V4:3 background+11 thermal. These cells were ALREADY
+integrated as localV5; GitHub adds ZERO additional scientific cells beyond that
+local result. Its value is actual installed-runtime/source/provenance and exact
+reproducibility. It is not another independent physical dataset.
+Camspec EDE remains at429/324 and Hillipop343/240; later chosen background and
+thermal tubes fail to close. Both LCDM prefixes remain0/35 at the z2870 transfer.
+These are source/model-dependent enclosure controls, not measurements or
+posterior sigmas. Failure of a sufficient tube test does not prove a physical
+solution nonexistent, unstable or a hypothesis falsified.
+
+Displayed partition endpoints (not first-cutoff events): Camspec background/
+thermal z6098.654445/6103.092840; Hillipop z4980.472499/4984.412570. Exact rational
+coordinates/errors/source forcing are in raw/checkpoint files and the receipt.
+Old V4 stationary methods retain their semantics, new finite markers their
+normalized contractive constant-predictor restrictions, and full inherited
+uncertainty/source guards are preserved.
+
+### Physical interpretation and anomaly status
+
+No admissible actual-source linkage, shared first-cutoff event, complete
+latch/reset electron-fraction difference history or cumulative Thomson-depth
+difference bound has been produced. No physical model-viability conclusion or
+new physics inference follows from successful jobs or these local intervals.
+All surprising/wide bounds and all failures are retained.
+ANOMALY STATUS: NO_NEW_PHYSICAL_ANOMALY_ESTABLISHED.
+ACTUAL_SOURCE_ADMISSION: UNRESOLVED.
+ACTUAL_FIRST_CUTOFF / COMPLETE_XE / COMPLETE_TAU_T: NOT_COMPUTED.
+FINAL_RESULT_GATE: UNRESOLVED.
+
+## INTERNAL RESULT PROVENANCE
+
+Repository Morfindien/Bubbleverse; branch main; workflow .github/workflows/
+q048-resume-v5.yml; workflow ID382206773; run38259814813 attempt1,
+workflow_dispatch, successful official first V5 run. Actual commit
+05ec5263fc4be2cee29892839d0f818ccba64c91. Started2026-10-12T14:00:59Z, updated2026-10-12T14:10:15Z UTC.
+Scientific source commit5a131c91d657dd9a7c6364cc45b038710f8d0d97; effective config SHA256
+2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b;
+V5 config hash04bb2a46d449de308e8746a1e614324395520ac2dd2fb3304b3bbc52dd5001fc.
+Parent: actual V4 run38249121532; exact raw SHA256
+7f1f805d39840592622df23f781b594548a4e355e80b656006a87c6eed013c08.
+Per-case parent/checkpoint/root/input hashes and exact executed source inventory
+are in the attached machine receipt; full earlier lineage is retained.
+
+Python3.12.15; runner imageubuntu-24.04. EDE worker elapsed source-reported
+~312.1s Camspec/~246.1s Hillipop; LCDM~7.7s/~6.8s. CPU/GPU hardware details
+NOT_DOCUMENTED. No new seed, fit, likelihood, observation or native CLASS
+call. Any inherited likelihood/data/prior/version state survives unaltered.
+Logs report a Node20 action deprecation/forcedNode24 warning; preserve it as
+technical evidence. It is not a scientific failure: all jobs passed and exact
+mathematical output is unchanged. No environment upgrade is performed here.
+
+The actual remote run uses final installed V5 code with rooted lineage,
+whereas initial local numerical preparation retained an earlier numerical-core
+hash plus final admission. Their entire science payload is exactly equal;
+this run supplies final installed execution evidence without erasing that
+local provenance distinction. Historical pointer lists prove consistency,
+not independent authentication of every historical file; the pinned initial
+asset and authenticated current artifact retrieval supply input provenance.
+
+## WEB / PLUGIN / TOOL RESEARCH
+
+RESEARCH PERFORMED: YES — targeted primary technical retrieval/audit.
+Questions: did installed run succeed, which commit/source/config/journal did
+it execute, is supplied artifact official, are all jobs complete, did science
+change versus localV5, and do warnings alter interpretation?
+New evidence: official run/jobs/logs/artifact digest and executed-tree inventory.
+New external physical evidence: NONE. No broad literature review is needed to
+establish this exact reproduction. Contradictory evidence: none in these checks.
+Evidence impact: installation/execution and reproducibility strengthened;
+scientific enclosure/full-Q conclusions unchanged. No unsupported claims about
+plugin infallibility or physical independence.
+
+## ACTIVE SOURCE REGISTER
+
+Complete source metadata/register and all earlier claims survive in the full
+unchanged journal, not merely a reference to a missing previous engine.
+Necessary active entries carried here:
+
+- K-PROPOSED-Q048-SOURCE-002: frozen mwt5345/class_ede equations/units/branches,
+  commit5a131c91d657dd9a7c6364cc45b038710f8d0d97, https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97 .
+  External source-code evidence, not observation or actual-instance admission.
+  Personal authors, publication/DOI/arXiv not inferred.
+- K-PROPOSED-Q048-INPUT-001: exact four captured Q041 FULL/start0 effective
+  input/source hashes and fixed accepted z_reio from run38140371059; fields
+  preserved in current source config and each raw record. Internal evidence.
+- K-PROPOSED-Q048-MATH-REPO-006, I-PROPOSED-Q048-MATHEMATICS-005:
+  inherited exact proof primitives and old-V4-cursor remedies, retained with
+  tested scope. They do not prove closure at the new later V5 cursors.
+- K-PROPOSED-Q048-V5-PACKAGE-008: V5 code/config/method/workflow/20 tests;
+  https://github.com/Morfindien/Bubbleverse/tree/05ec5263fc4be2cee29892839d0f818ccba64c91 .
+  Current actual installed code hashes match prepared package. Internal code evidence.
+- I-PROPOSED-Q048-RESUME-LOCAL-V5: original admitted429/324,343/240 and35 thermal
+  LCDM each, executed-core/final-admission distinction and original exact hashes.
+- K-PROPOSED-Q048-GITHUB-RUN-38259814813 [ADD]: official successful run/job/log/tree/artifact evidence,
+  https://github.com/Morfindien/Bubbleverse/actions/runs/38259814813 , repository
+  accountMorfindien,2026, executed commit05ec5263fc4be2cee29892839d0f818ccba64c91.
+- I-PROPOSED-Q048-RESUME-GITHUB-38259814813 [ADD]: exact run-specific raw mathematical reproduction,
+  raw SHA256bf63e8698a2c0a3b6f518f691443ceec151398a21693aea523743dac5d76bfa5; internal numerical evidence, not publication.
+- Prior V4 run/source/installation-repair/V3 and all rejected or falsified
+  material remain in the complete journal with original IDs and provenance.
+
+## CLAIM-TO-SOURCE MAP
+
+C-V5-INGEST-001 — Official successful installed execution, all6jobs/20tests → K-PROPOSED-Q048-GITHUB-RUN-38259814813, package008, decoded logs/tree.
+C-V5-INGEST-002 — Complete exact local mathematical reproduction → I-PROPOSED-Q048-RESUME-GITHUB-38259814813, localV5, raw/source/config/cell equality.
+C-V5-INGEST-003 — Later EDE enclosure failure remains → I-PROPOSED-Q048-RESUME-GITHUB-38259814813, current checkpoint intervals and pinned V5 source; no physical falsification.
+C-V5-INGEST-004 — Full-Q scientific products absent → current raw applicability/product fields + source002 inherited limitation.
+C-V5-INGEST-005 — Journal continuity and installed documentation match → complete incoming byte tail and executed-tree blob inventory.
+
+## WHAT CHANGED / WHAT DID NOT CHANGE
+
+Changed: actual installed successful V5 execution, commit/run/job/platform and
+artifact/checkpoint provenance; remote NOT_PERFORMED current assertion resolved;
+exact installed-runtime reproducibility strengthened.
+Unchanged: Q/CASE/exact question, scientific equations/input/source/config,
+fixed z_reio, all localV5 cells/predictors/error intervals/source guards, previous
+failures/hypothesis statuses, full journal/source memory, later EDE tube barriers
+and actual/full-Q missing products. No averaging across configurations.
+
+## FALSIFIED / REJECTED / SUPERSEDED MATERIAL
+
+No new physical falsification. Q047 stays CLOSED INCONCLUSIVE. Earlier failed
+methods retain their tested-domain history. Old V4 constant-supersolution
+failures are passed at documented scoped states via a distinct finite method;
+they are not deleted or relabeled as generally valid. Previous remote dispatch/
+installation NOT_PERFORMED labels remain historical preparation facts, superseded
+only for current V5 execution status. Never resurrect failed source-equivalence
+claims or treat program/enclosure failures as model falsification.
+
+## OPEN UNCERTAINTIES / Q-COMPLETION GATE
+
+STATUS: NOT_YET_SATISFIED. The exact Q still lacks admissible complete reference/
+source linkage, a shared first cutoff and full xe/tau difference bounds for the
+four frozen configurations. Current certificates are conditional finite prefixes;
+these chosen tube failures do not establish an irreducible impossibility.
+A technically successful exact replay cannot close the physical question.
+Unknown/inconclusive closure remains legitimate once missing information is
+shown irreducible under the stated task; that has not been established here.
+
+## MATERIAL-REVERSAL TEST / ROUTING REASON
+
+A sound remedy or explicit obstruction for the later new enclosures could
+materially change whether the complete controlled bounds are attainable.
+It is a mathematical validity bottleneck; selected existing Mathematics Engine
+can examine it before another code/campaign build. An unchanged V5 replay,
+another identical reproduction or arbitrary extra validation cannot change
+these documented stops and is explicitly stopped. Mere extra halving/cell count
+is not a sufficient information-gain argument; assess useful full-Q progression.
+
+## NEXT TASK
+
+At the NEW V5 EDE cursors, diagnose whether inherited error/comparison wrapping or the prospective predictor/tube/forcing domain limits useful continuation. Derive a finite genuinely material enclosure remedy or a precise scoped obstruction with independent control; do not merely replay V5 or mechanically increase halvings. Preserve all frozen inputs and predecessor uncertainty. Assess whether any required source-applicability uncertainty is removable, and distinguish this from numerical tube closure.
+
+Use the exact NEW source-pinned cursors: Camspec429/324; Hillipop343/240.
+Do not repeat the old427/319 or342/234 controls or the already passed math005
+proofs. Separate background/thermal local-domain failure from unresolved actual
+source applicability and identify the single most material bottleneck to the
+full exact Q. Analyze inherited r0, recomputed defects/Jacobians, tube slack,
+background coverage/source forcing and the small-step limit. Determine whether
+shrinking steps only postpones the same error/enclosure growth or whether a
+new finite prospective proof/predictor/tube method genuinely changes the path.
+Do not prescribe a new campaign before a materially useful proof exists.
+
+## FIXED / FROZEN ELEMENTS
+
+Exact Q/CASE/question/full journal/source register and all scientific history;
+source5a131c91d657dd9a7c6364cc45b038710f8d0d97; executed V5 commit05ec5263fc4be2cee29892839d0f818ccba64c91;
+current four source/input/config/checkpoint hashes; fixed z_reio, source branches,
+helium normalization/epsilon; all predecessor/cursor errors; phase/coverage,
+positiveH/temperature/beta/latch guards and actual-source limitation. No refit,
+re-shoot, clipping, expectation filtering, new dataset or changed success criteria.
+
+## VARIABLE ELEMENTS
+
+Only explicitly proved prospective enclosure/comparison/predictor/partition
+methods retaining full inherited uncertainty. If a sharper state estimate is
+claimed necessary, first specify and prove what additional independent source
+certificate would justify it; do not silently narrow or replace old intervals.
+No implementation/PROGRAM_ID/version changes are made by this ingestion.
+
+## SUCCESS CONDITION
+
+Finite source-pinned mathematical remedy with a relevant independent check,
+preserving all inherited uncertainty and explaining material impact on the
+complete Q; or a precise proved obstruction with explicit assumptions/scope,
+including what it does and does not establish scientifically.
+
+## FAILURE / FALSIFICATION CONDITION
+
+Required closure/source-domain/applicability inequalities fail under their
+stated tested conditions. Preserve exact output/provenance and report scope.
+This does not physically falsify a model unless a valid scientific test does.
+No goalpost changes or favorable rerun filtering.
+
+## STOP CONDITION
+
+Stop this ingestion now: run/source/artifact identity, full exact local equality,
+journal effect and one material route are established; further identical checks
+add no scientific information. Stop the next finite math round when its material
+remedy/obstruction is documented. When the exact Q has a defensible documented
+complete answer/bounds or irreducible uncertainty and no remaining task is
+reasonably likely to materially reverse it, stop the investigation and send the
+complete journal, sources, claims, raw results/anomalies/provenance directly to
+MOTOR14. Interesting future questions do not keep this Q open.
+
+
+## MACHINE-READABLE DIFFERENTIAL INGESTION RECEIPT
+
+```json
+{
+  "schema": "Q048_RESULT_INGESTION_V5",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "program_id": "Q048-RESUME-V5",
+  "result_id": "I-PROPOSED-Q048-RESUME-GITHUB-38259814813",
+  "created_utc": "2026-10-12T14:35:50.282121+00:00",
+  "created_copenhagen": "2026-10-12T16:35:50.282121+02:00",
+  "classification": [
+    "RUN_SUCCESS",
+    "PARTIAL_RESULT",
+    "NUMERICAL_RESULT",
+    "REPRODUCTION_RESULT",
+    "VALIDATION_RESULT"
+  ],
+  "result_status": "TECHNICALLY_VALIDATED_CONDITIONAL_AND_EXACTLY_REPRODUCED",
+  "scope": "CONDITIONAL_SOURCE_REAL_PREFIX",
+  "run": {
+    "run_id": "38259814813",
+    "attempt": 1,
+    "branch": "main",
+    "event": "workflow_dispatch",
+    "workflow": ".github/workflows/q048-resume-v5.yml",
+    "workflow_id": 382206773,
+    "commit": "05ec5263fc4be2cee29892839d0f818ccba64c91",
+    "created_at": "2026-10-12T14:00:59Z",
+    "completed_at": "2026-10-12T14:10:15Z",
+    "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38259814813",
+    "conclusion": "success"
+  },
+  "jobs": [
+    {
+      "id": 114847143765,
+      "name": "preflight",
+      "conclusion": "success",
+      "runner": "GitHub Actions 1000005130",
+      "started_at": "2026-10-12T14:01:04Z",
+      "completed_at": "2026-10-12T14:01:54Z"
+    },
+    {
+      "id": 114847517950,
+      "name": "continuation (hillipop-lcdm)",
+      "conclusion": "success",
+      "runner": "GitHub Actions 1000005131",
+      "started_at": "2026-10-12T14:01:56Z",
+      "completed_at": "2026-10-12T14:02:19Z"
+    },
+    {
+      "id": 114847517993,
+      "name": "continuation (camspec-ede_n3)",
+      "conclusion": "success",
+      "runner": "GitHub Actions 1000005132",
+      "started_at": "2026-10-12T14:01:56Z",
+      "completed_at": "2026-10-12T14:07:22Z"
+    },
+    {
+      "id": 114847518089,
+      "name": "continuation (camspec-lcdm)",
+      "conclusion": "success",
+      "runner": "GitHub Actions 1000005134",
+      "started_at": "2026-10-12T14:01:56Z",
+      "completed_at": "2026-10-12T14:02:19Z"
+    },
+    {
+      "id": 114847518114,
+      "name": "continuation (hillipop-ede_n3)",
+      "conclusion": "success",
+      "runner": "GitHub Actions 1000005133",
+      "started_at": "2026-10-12T14:01:56Z",
+      "completed_at": "2026-10-12T14:06:17Z"
+    },
+    {
+      "id": 114849794034,
+      "name": "collect",
+      "conclusion": "success",
+      "runner": "GitHub Actions 1000005135",
+      "started_at": "2026-10-12T14:07:25Z",
+      "completed_at": "2026-10-12T14:10:14Z"
+    }
+  ],
+  "job_manifest": {
+    "q": "Q-048",
+    "program_id": "Q048-RESUME-V5",
+    "run_id": "38259814813",
+    "expected_jobs": [
+      "camspec-lcdm",
+      "camspec-ede_n3",
+      "hillipop-lcdm",
+      "hillipop-ede_n3"
+    ],
+    "completed_jobs": [
+      "camspec-ede_n3",
+      "camspec-lcdm",
+      "hillipop-ede_n3",
+      "hillipop-lcdm"
+    ],
+    "failed_jobs": [],
+    "pending_jobs": []
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "config_hash": "04bb2a46d449de308e8746a1e614324395520ac2dd2fb3304b3bbc52dd5001fc",
+  "installed_file_pins": {
+    ".github/workflows/00-bubbleverse-start.yml": {
+      "sha256": "3cd5b0642353c85d472f531e7c5490b56c307e2e274d38b866d1ad0dedebe288",
+      "git_blob_sha": "7f22c617fb98d1508a0b22a42dd3735a74d8288e",
+      "bytes": 3169,
+      "matches_executed_tree": true
+    },
+    "q048_prefix_v1.py": {
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "git_blob_sha": "288ebe6da1df592692f174be0f1d89478c1001aa",
+      "bytes": 17198,
+      "matches_executed_tree": true
+    },
+    "q048_resume_v5.py": {
+      "sha256": "d0624d2310f7db5f2c0ecad9c391fc0d4c59857ea6411471dde173dfc4529e2c",
+      "git_blob_sha": "93e8c397c2d94af34d2bdb2ae4fbaf9153a3fafd",
+      "bytes": 28275,
+      "matches_executed_tree": true
+    },
+    ".github/workflows/q048-resume-v5.yml": {
+      "sha256": "5c0535f1b5e65a65bc4928e14d842741f9ccbe7130decb8165e57e4fabcf500b",
+      "git_blob_sha": "d166bab152a5579098467c86788edc90bbb10909",
+      "bytes": 6401,
+      "matches_executed_tree": true
+    },
+    "bubbleverse_program_registry.json": {
+      "sha256": "8967be2ab05b6213ef0e5ff4c6c8cd0ea634984f5093dc1cf8527c47dd0d0bc3",
+      "git_blob_sha": "50a0f41f0c60e6a79dee5e6be0b562bdb2f0ac99",
+      "bytes": 109982,
+      "matches_executed_tree": true
+    },
+    "q048_resume_v3.py": {
+      "sha256": "9f32f96eebad5b531a1fd0b9e6a1e96b641d41621e1ab86b66daa7bfa04c7661",
+      "git_blob_sha": "3a115a02294d9596daac01d63f65fef67e92a95c",
+      "bytes": 21299,
+      "matches_executed_tree": true
+    },
+    "q048_resume_v4.py": {
+      "sha256": "474f9b2b1b082a9b54eb7ebc2cbf8cdff6e12f1d3a5958aae1ce9558efd95d17",
+      "git_blob_sha": "36dda498203025e78d39f0ed0b30b23a65ecd0be",
+      "bytes": 26206,
+      "matches_executed_tree": true
+    },
+    "q047_math_v1.py": {
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "git_blob_sha": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb",
+      "bytes": 12617,
+      "matches_executed_tree": true
+    },
+    "q048_comparison_v5.py": {
+      "sha256": "5b3f61dff8c901a7df461f7d5fa8f7bc310388e13936e395a4ae313d76291623",
+      "git_blob_sha": "8d5e33d562d4fb81a613c082e84e6e692449734f",
+      "bytes": 875,
+      "matches_executed_tree": true
+    },
+    "q048_resume_package_v5.json": {
+      "sha256": "0bccf4266cc9949dc480a80a7406699d33a2a7c239cd3fb0b8cd612049821096",
+      "git_blob_sha": "7860a5e3f868e4f3d106af38f8e16835e5e2fb79",
+      "bytes": 4230,
+      "matches_executed_tree": true
+    },
+    "q048_resume_controls_v3.py": {
+      "sha256": "6a92850beb5febe3848f4af6ff61adec519639c4e4480d134cf154b86f0fb2d9",
+      "git_blob_sha": "d0aeb3cb84510438634fb853b43cc6945ffd0f95",
+      "bytes": 6502,
+      "matches_executed_tree": true
+    },
+    "q048_resume_parent_v5.json": {
+      "sha256": "7f1f805d39840592622df23f781b594548a4e355e80b656006a87c6eed013c08",
+      "git_blob_sha": "fbaa5f41283444cd512acd5504623b4bc2dabdda",
+      "bytes": 14795364,
+      "matches_executed_tree": true
+    },
+    "q048_resume_package_check_v5.py": {
+      "sha256": "bdd99857a986802b37161ee6a7fefbaa077e4710fb220cce99c7067e73d07350",
+      "git_blob_sha": "fa3aa282d59547ecc4b096353dba473382ca249e",
+      "bytes": 4901,
+      "matches_executed_tree": true
+    },
+    "q048_resume_merge_v5.py": {
+      "sha256": "f5f8798664ee1ee75542f5dee20e8171dddb3a0691fc4e2104feadb0a1c8e7d9",
+      "git_blob_sha": "bd58c7810b3e78348d43453ce141cca80248c47c",
+      "bytes": 4455,
+      "matches_executed_tree": true
+    },
+    "README.md": {
+      "sha256": "d737879b1e59b635146fbd6dcdf3143408bfb3c296ef8d4973df0e5316040624",
+      "git_blob_sha": "89404393282f30443fd6667cb54d20d8c18b7e87",
+      "bytes": 62536,
+      "matches_executed_tree": true
+    },
+    "q048_prefix_config_v1.json": {
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "git_blob_sha": "02c9525cbda1ad56c1251d06fc74dba2c1aec9ba",
+      "bytes": 105567,
+      "matches_executed_tree": true
+    },
+    "q047_precursor_check_v1.py": {
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "git_blob_sha": "21cee458a6a4e931148405a7ffebeaf0a2d79749",
+      "bytes": 29808,
+      "matches_executed_tree": true
+    },
+    "q048_comparison_v4.py": {
+      "sha256": "4d3199883e5984efea635cd3b2737f939e4a0081c40f704f972c61abb4c5a1f7",
+      "git_blob_sha": "460294fcde9e846364aacc40a5bc42887f461f6c",
+      "bytes": 3294,
+      "matches_executed_tree": true
+    },
+    "q048_resume_tests_v5.py": {
+      "sha256": "2a1a4e178bb6e02f7f107d6ada2e15a6861d615a2443fa134921fcdccc5a27ad",
+      "git_blob_sha": "6523a5c60bd2af8b9891ff54eef734d1e8e80a5e",
+      "bytes": 11758,
+      "matches_executed_tree": true
+    },
+    "Q047_SAMLET_JOURNAL.md": {
+      "sha256": "0f35bb777e943edd68e6c843b07f713f4f8482851d90a9e066ece9ea096db387",
+      "git_blob_sha": "dbfe19a2b5023f511e955d6d99496911275773de",
+      "bytes": 12842521,
+      "matches_executed_tree": true
+    },
+    "q048_resume_controls_v5.py": {
+      "sha256": "4ce19dfa5e52bc56d99aa833d17ee42b7c6129fe61d8f684044945ced3323b87",
+      "git_blob_sha": "734b0010cda44d406f4072ad8dc15c063f02d2f0",
+      "bytes": 6073,
+      "matches_executed_tree": true
+    },
+    "q048_resume_config_v5.json": {
+      "sha256": "2083a2ceb5b6902574cf57c44cad9f34ceee38e22b97701d7dcfff192e4e9d4a",
+      "git_blob_sha": "9df9ed9510b68b2dd269f9a05410abd55f6633f5",
+      "bytes": 1374,
+      "matches_executed_tree": true
+    },
+    "q048_resume_control_fixture_v5.json": {
+      "sha256": "30a97030e17f052c5032d4b73da9940195f2eacdc4de389843e686c382ebdccc",
+      "git_blob_sha": "f164d29902ef8042cf19ef4e432aba0d21f12f5e",
+      "bytes": 69995,
+      "matches_executed_tree": true
+    },
+    "q048_resume_parent_v4.json": {
+      "sha256": "12d7cfa0b863e76d0cf3760c532b2a40adbdc789d2b08f8a364a7e488c5c58b3",
+      "git_blob_sha": "dc604157b4a2baeda12d2139926f8fc567bbe9d0",
+      "bytes": 14684625,
+      "matches_executed_tree": true
+    },
+    "q048_resume_config_v4.json": {
+      "sha256": "31ba2112b778aaabb82a39225222fcb4fabeea04278bcb4a904c3d99d1ea8b9e",
+      "git_blob_sha": "f40983e341ca726bc805a04fe4d1ffe709ff5bd4",
+      "bytes": 1374,
+      "matches_executed_tree": true
+    },
+    "q047_certificate_v1.py": {
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "git_blob_sha": "00c8c5395e2b4070be33e768e83db33edb3ea2d1",
+      "bytes": 15302,
+      "matches_executed_tree": true
+    }
+  },
+  "cases": {
+    "camspec-lcdm": {
+      "checkpoint_sha256": "2747bd758652c2ef82e58bbf024943378440deabe2a20c2c79cd520123e4c982",
+      "mathematical_payload_sha256": "4f429e3d3c27c0744a0fe486c2b95465ad551c41f8eeb07e4e4629af300a2320",
+      "complete_mathematical_payload_matches_local": true,
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background_versus_V4": 0,
+      "new_thermal_versus_V4": 0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "background_end_a": "1/2871",
+      "thermal_end_a": "1/2871",
+      "parent_checkpoint_sha256": "33b28465f24eb8dbbc1fd19466f5ffeb9d5080e68ca2572045d5bce864b66a51",
+      "lineage": [
+        {
+          "program_id": "Q048-RESUME-V4",
+          "run_id": "38249121532",
+          "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+          "checkpoint_sha256": "33b28465f24eb8dbbc1fd19466f5ffeb9d5080e68ca2572045d5bce864b66a51"
+        }
+      ],
+      "source_input_hashes": {
+        "effective_background_hex.json": "f2342c737770aeef4718ef6b0cae2e1837d91ee72e0e618dfe49601450674308",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "7a087c87dd01367a1ea1dba21be57e26c1940d27c1d9fea8998478eaa8484df7"
+      },
+      "checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.8276207990000017
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.7866491159999995
+      },
+      "merge_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 5.795735493999999
+      },
+      "python": "3.12.15",
+      "worker_elapsed_seconds": 7.73770339
+    },
+    "camspec-ede_n3": {
+      "checkpoint_sha256": "05c75a5e4af0d453da987e6ddef11067c43db04ee63de83f84e2465987e9f4d3",
+      "mathematical_payload_sha256": "0fe5d2cf1e7848b12b6867b2a7be1ce68ca363a63e717317f3d166a52e685d6b",
+      "complete_mathematical_payload_matches_local": true,
+      "background_cells": 429,
+      "thermal_cells": 324,
+      "new_background_versus_V4": 2,
+      "new_thermal_versus_V4": 5,
+      "background_blocker": "BACKGROUND_TUBE_NOT_CLOSED",
+      "thermal_blocker": "THERMAL_TUBE_NOT_CLOSED",
+      "background_end_a": "138001069904218200768934621465673931893989372852489039199332998144093943811707246487391170832679348876993705835448477983202777241764121628296137478225337076426075385995072753323211292184984023426677557452618852516841288735549388788390299015335398956732066178698629243813360206670499040258469056852308353546775783565617759495746275799510649572656905520437652304230905189165868690182801036490547674254117804453338313961608809194993442430114383980966697907858963032910290433683438438098266817445287068633017511136931409031029583196883105093417460823330033169426215084111029693814461396803029549197855514285651889701743457843550370078082241062779843778072457963972516855552236727144829492556835542101793694892598042535024670998462932324066616764692586133491485075457268421932785779794309713674246572983643810663876259903215526492203935049474239349365234375/841758839495967475620826839997948211936991809104156625373010466298131018822602888017201192983859301450166350515156993426424226915302992335768026992623963954934306835025354856833591979464536311292657886568731462123493355103916634299113289304051502582675554160202159281601886208570544601571063442075663916513597219691630057907031100008403902259100621500204588057916466537111841817062179251237045944536013490230818699025662826795011706866704023338178981297460104412158792529326909506928332530827636678333715374235018152005088630272080215978809784102958737394380735623523775894099585887284123187819315991207913717330473975143953337296359504058560633498510125312644479578589207591743448921980840833228679418742367062696294591527409774160014690859675462244186003871421029423158245881657184376556236199855725655534363840029582168588513788170779256495104669515776",
+      "thermal_end_a": "33667169642645273588945654073507159417294121547708227708534115528577792445493309998241548362097746545295959320742996662950932349167901325945333107153847726029884205497817395813620093652726963725957425218667180020276041375122649484820293853401209555375752808297060463480750312702939144854904227261666357176539507367370501710314961410349500949670298069995925992337838201711095718738887317088650786582859536307777896434326914710568376214997443284855492062565480629332118330213075559381678706749961626167561294426556967122095044080619842817569129524945463534954373784430603714003198606791270841049003314166578103283968531162288643194690362384681945429704550352819182920910892888288118597411604388926198218407363552218177016145098354860798224134048048623909410268354369333218564234147243805427090170270047652842891616753462358246906660497188568115234375/205507529173820184477740927733874075179929640894569488616457633373567143267237033207324510005825024768107019168739500348248102274243894613224615964996084949935133504644862025594138666861459060374184054338069204619993494898417147045681955396496948872723523964893105293359835500139293115617935410663003885867577446213776869606208764650489233949975737670948385756327262338162070756118696106259044420052737668513383471441812213573000904996753911947797602855825220803749705207355202516339924934284090985921317230037846228516867341375019583979201607447011410496674984283086859349145406710762725387651200193165994559895135247837879232738369019545547029662722198562657343647116505759702990459467978719049970561216398208666087546759621526894534836635662954649459473601421149761513243623451461029432674853480401771370694296882222209128055124065131654417750163456",
+      "parent_checkpoint_sha256": "cf7f80c9e4c8d5c09a03db835e2573f0167a077a2ebef2a49fcba250ac0ad5f1",
+      "lineage": [
+        {
+          "program_id": "Q048-RESUME-V4",
+          "run_id": "38249121532",
+          "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+          "checkpoint_sha256": "cf7f80c9e4c8d5c09a03db835e2573f0167a077a2ebef2a49fcba250ac0ad5f1"
+        }
+      ],
+      "source_input_hashes": {
+        "effective_background_hex.json": "4ef09d4ecd66b4a67ca404565fcd8815a6db89182d448403c6b71331dd87328b",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "d07772269b1e222b6e684b82dd34e39b626c9fd3678fea0430cf083da9656fc6"
+      },
+      "checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 427,
+        "thermal_cells": 319,
+        "elapsed_seconds": 143.173610589
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 429,
+        "thermal_cells": 324,
+        "elapsed_seconds": 144.44964707499997
+      },
+      "merge_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 429,
+        "thermal_cells": 324,
+        "elapsed_seconds": 148.121955953
+      },
+      "python": "3.12.15",
+      "worker_elapsed_seconds": 312.126585144
+    },
+    "hillipop-lcdm": {
+      "checkpoint_sha256": "82a5a452e9bd721effe30d6b1932deb1d8ed6b036f32e7291a94f72b6d970620",
+      "mathematical_payload_sha256": "f6dbbd795f59c668b09110be10d55cb1df43fcfae5c57162d847b235b0fdd5de",
+      "complete_mathematical_payload_matches_local": true,
+      "background_cells": 0,
+      "thermal_cells": 35,
+      "new_background_versus_V4": 0,
+      "new_thermal_versus_V4": 0,
+      "background_blocker": null,
+      "thermal_blocker": null,
+      "background_end_a": "1/2871",
+      "thermal_end_a": "1/2871",
+      "parent_checkpoint_sha256": "50e6509523eac0fc4f3bbc67ba5688ac4f2ac8ef6ac0438785c4773a8c6f6a8c",
+      "lineage": [
+        {
+          "program_id": "Q048-RESUME-V4",
+          "run_id": "38249121532",
+          "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+          "checkpoint_sha256": "50e6509523eac0fc4f3bbc67ba5688ac4f2ac8ef6ac0438785c4773a8c6f6a8c"
+        }
+      ],
+      "source_input_hashes": {
+        "effective_background_hex.json": "4228d94c84c085951704f212abe9a026a3e7428b9e456bbdd04bc2814df61a2e",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "c7f0756b21532af7716c7cd8c135d7edce00230d66e8eefcd2fe80e04925a787"
+      },
+      "checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.3194960390000006
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 3.325114636000002
+      },
+      "merge_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 0,
+        "thermal_cells": 35,
+        "elapsed_seconds": 5.790818582
+      },
+      "python": "3.12.15",
+      "worker_elapsed_seconds": 6.766061491999999
+    },
+    "hillipop-ede_n3": {
+      "checkpoint_sha256": "4880bfd1d55dce81acb7d358c227cd09742426225366c0cf8ec7d6a4a2045efd",
+      "mathematical_payload_sha256": "46f320e1f105709f96006d973e0e678e011bc0af7cf7d9ae089bd956aae7dd53",
+      "complete_mathematical_payload_matches_local": true,
+      "background_cells": 343,
+      "thermal_cells": 240,
+      "new_background_versus_V4": 1,
+      "new_thermal_versus_V4": 6,
+      "background_blocker": "BACKGROUND_TUBE_NOT_CLOSED",
+      "thermal_blocker": "THERMAL_TUBE_NOT_CLOSED",
+      "background_end_a": "23048018343945946805896330369854353094415517268469992498831293111155805648142125703222790414082437757620469229242047240431324709106220026774259662696065781508968829557046649269092709191551168913725837357516483743925488785428294717172019047572339902874153467373094993454664522089791575078634498543026640855756698441160440402880113792760723869416995779918445395090378195725450487174146325238742177886126473039701431104396386329862291173815263954130463422158378688253406407639462301959979094729199720762624397570183479753123387515887975022723158692693391051144712056153451840145862661302089691162109375/114813069527425452423283320117768198402231770208869520047764273682576626139237031385665948631650626991844596463898746277344711896086305533142593135616665318539129989145312280000688779148240044871428926990063486244781615463646388363947317026040466353970904996558162398808944629605623311649536164221970332681344168908984458505602379484807914058900934776500429002716706625830522008132236281291761267883317206598995396418127021779858404042159853183251540889433902091920554957783589672039160081957216630582755380425583726015528348786419432054508915275783882625175435528800822842770817965453762184851149029376",
+      "thermal_end_a": "171585403644198671626503364495107574224531128231003709576748132230444938147926243922356638447377642410036429583550056405344017227564766443051661223040331620861111919211780085506932862904017215691109983768801996673139699220431482037648068051307291777858058657199781696265286325937421037772665861697423405211158611696731260306223681516075895018463522037261825795637512119703739515423226342083999206800907034862400162022248625368339957271046657993465976555000606263384545877529306807987447331413863166026346755730375631360303031222566495768161264797433719631047921438948833383619785308837890625/855424028094302508408451975269378709809718804127495885251196277756814853394307429981723045048494838117395315050324397365336953819441091516186245796208570290648415603826286494737034880729317999418295375928755747115475054559457215398157514825764792814634032521830219021506194990915233728658677371009963249276162452317658502650278653836309269509471466962251283248638411058712914646657081554023632912958541561655665907398812635092872411326764920229103720854475364773873649223026556313329637661257510115077759179663536891456904625791456044126368427841245253571684923237568310221812262873752133435392",
+      "parent_checkpoint_sha256": "6503fe683052d474222bbe36fabc156f95ad520eab1225cc0222cc97f1322e8f",
+      "lineage": [
+        {
+          "program_id": "Q048-RESUME-V4",
+          "run_id": "38249121532",
+          "config_hash": "b2c5662fc30013d63a56c7fe9a60a1a36f5b1350c1ec4a608cb10f3a38754ada",
+          "checkpoint_sha256": "6503fe683052d474222bbe36fabc156f95ad520eab1225cc0222cc97f1322e8f"
+        }
+      ],
+      "source_input_hashes": {
+        "effective_background_hex.json": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146",
+        "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+        "thermal_starts_hex.jsonl": "7d4144e2615ccb36fa48867ee43b2ad342968469f1d1a2bc3f1088e1db2b884a"
+      },
+      "checkpoint_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 342,
+        "thermal_cells": 234,
+        "elapsed_seconds": 110.153673906
+      },
+      "post_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 343,
+        "thermal_cells": 240,
+        "elapsed_seconds": 111.52404476500001
+      },
+      "merge_verification": {
+        "gate": "PASS_CONDITIONAL_RECOMPUTED",
+        "background_cells": 343,
+        "thermal_cells": 240,
+        "elapsed_seconds": 114.73564034799999
+      },
+      "python": "3.12.15",
+      "worker_elapsed_seconds": 246.083625547
+    }
+  },
+  "artifacts": [
+    {
+      "id": 11752965019,
+      "node_id": "MDg6QXJ0aWZhY3QxMTc1Mjk2NTAxOQ==",
+      "name": "q048-resume-v5-final-38259814813",
+      "size_in_bytes": 2926130,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11752965019",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11752965019/zip",
+      "expired": false,
+      "digest": "sha256:fbc7320c034a1ece95738ffb63f3dcdd0c4877c8d1bd5bb3b857aa5c48cbd6b9",
+      "created_at": "2026-10-12T14:10:09Z",
+      "updated_at": "2026-10-12T14:10:09Z",
+      "expires_at": "2027-01-10T14:01:01Z",
+      "workflow_run": {
+        "id": 38259814813,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "05ec5263fc4be2cee29892839d0f818ccba64c91"
+      }
+    },
+    {
+      "id": 11751917997,
+      "node_id": "MDg6QXJ0aWZhY3QxMTc1MTkxNzk5Nw==",
+      "name": "q048-resume-v5-hillipop-ede_n3-38259814813",
+      "size_in_bytes": 2456198,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751917997",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751917997/zip",
+      "expired": false,
+      "digest": "sha256:10576fce9550543e635568a2f40e2c2efd887061f18743317f4c17e79c38461d",
+      "created_at": "2026-10-12T14:06:14Z",
+      "updated_at": "2026-10-12T14:06:14Z",
+      "expires_at": "2027-01-10T14:01:01Z",
+      "workflow_run": {
+        "id": 38259814813,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "05ec5263fc4be2cee29892839d0f818ccba64c91"
+      }
+    },
+    {
+      "id": 11751818154,
+      "node_id": "MDg6QXJ0aWZhY3QxMTc1MTgxODE1NA==",
+      "name": "q048-resume-v5-hillipop-lcdm-38259814813",
+      "size_in_bytes": 52337,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751818154",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751818154/zip",
+      "expired": false,
+      "digest": "sha256:155e8a21961bd55df09276526f8911b283fa96cd4e7935def968dc634b1ccf7f",
+      "created_at": "2026-10-12T14:02:15Z",
+      "updated_at": "2026-10-12T14:02:15Z",
+      "expires_at": "2027-01-10T14:01:01Z",
+      "workflow_run": {
+        "id": 38259814813,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "05ec5263fc4be2cee29892839d0f818ccba64c91"
+      }
+    },
+    {
+      "id": 11751583456,
+      "node_id": "MDg6QXJ0aWZhY3QxMTc1MTU4MzQ1Ng==",
+      "name": "q048-resume-v5-camspec-lcdm-38259814813",
+      "size_in_bytes": 51814,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751583456",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751583456/zip",
+      "expired": false,
+      "digest": "sha256:1c32cbf317755d5265a0fd2ad5e443ff40286a78623d8a0cd920aa7e1d066dd6",
+      "created_at": "2026-10-12T14:02:16Z",
+      "updated_at": "2026-10-12T14:02:16Z",
+      "expires_at": "2027-01-10T14:01:01Z",
+      "workflow_run": {
+        "id": 38259814813,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "05ec5263fc4be2cee29892839d0f818ccba64c91"
+      }
+    },
+    {
+      "id": 11751484653,
+      "node_id": "MDg6QXJ0aWZhY3QxMTc1MTQ4NDY1Mw==",
+      "name": "q048-resume-v5-camspec-ede_n3-38259814813",
+      "size_in_bytes": 3283268,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751484653",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751484653/zip",
+      "expired": false,
+      "digest": "sha256:0a79149adacb66e2ced70b34607da224ce03dcb81f332865918b11e1f0eb5666",
+      "created_at": "2026-10-12T14:07:20Z",
+      "updated_at": "2026-10-12T14:07:20Z",
+      "expires_at": "2027-01-10T14:01:01Z",
+      "workflow_run": {
+        "id": 38259814813,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "05ec5263fc4be2cee29892839d0f818ccba64c91"
+      }
+    },
+    {
+      "id": 11751353769,
+      "node_id": "MDg6QXJ0aWZhY3QxMTc1MTM1Mzc2OQ==",
+      "name": "q048-resume-v5-controls-38259814813",
+      "size_in_bytes": 2162,
+      "url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751353769",
+      "archive_download_url": "https://api.github.com/repos/Morfindien/Bubbleverse/actions/artifacts/11751353769/zip",
+      "expired": false,
+      "digest": "sha256:03647aae700806d1a20e7e477c68c900e51f290a185a4acbc0f5900b26826dbe",
+      "created_at": "2026-10-12T14:01:50Z",
+      "updated_at": "2026-10-12T14:01:50Z",
+      "expires_at": "2027-01-10T14:01:01Z",
+      "workflow_run": {
+        "id": 38259814813,
+        "repository_id": 1348235216,
+        "head_repository_id": 1348235216,
+        "head_branch": "main",
+        "head_sha": "05ec5263fc4be2cee29892839d0f818ccba64c91"
+      }
+    }
+  ],
+  "input_files": {
+    "Q047_SAMLET_JOURNAL.md": {
+      "bytes": 12842521,
+      "sha256": "0f35bb777e943edd68e6c843b07f713f4f8482851d90a9e066ece9ea096db387"
+    },
+    "README.md": {
+      "bytes": 62536,
+      "sha256": "d737879b1e59b635146fbd6dcdf3143408bfb3c296ef8d4973df0e5316040624"
+    },
+    "Q048_EXECUTION_REPORT_V5.md": {
+      "bytes": 15482,
+      "sha256": "53b34dc79aae04a1e2c52cbb82df247d04454092206bdfc79157eb20143bdc20"
+    },
+    "q048-resume-v5-final-38259814813.zip": {
+      "bytes": 2926130,
+      "sha256": "fbc7320c034a1ece95738ffb63f3dcdd0c4877c8d1bd5bb3b857aa5c48cbd6b9"
+    }
+  },
+  "raw_member": {
+    "name": "q048_resume_final_v5.json",
+    "bytes": 14947633,
+    "sha256": "bf63e8698a2c0a3b6f518f691443ceec151398a21693aea523743dac5d76bfa5"
+  },
+  "archive_integrity": {
+    "official_digest_size_match": "PASS",
+    "crc": "PASS",
+    "unique_expected_member": "PASS"
+  },
+  "gates": {
+    "q_identity": "PASS",
+    "journal_continuity": "PASS",
+    "installed_source_pins": "PASS",
+    "artifact_integrity": "PASS",
+    "checkpoint_metadata_lineage_binding": "PASS",
+    "full_local_math_equality": "PASS",
+    "job_completeness": "PASS",
+    "merge_compatibility": "PASS",
+    "reported_root_successor_collector_checks": "PASS_CONDITIONAL_RECOMPUTED",
+    "final_result": "UNRESOLVED"
+  },
+  "actual_products": {
+    "source_admission": "UNRESOLVED",
+    "shared_first_cutoff": "NOT_COMPUTED",
+    "complete_xe_difference_bounds": "NOT_COMPUTED",
+    "complete_tau_T_difference_bounds": "NOT_COMPUTED"
+  },
+  "validation": {
+    "preflight_tests": 20,
+    "test_seconds": 27.068,
+    "finite_controls_reported": "PASS",
+    "same_local_mathematical_payload": true,
+    "new_cells_versus_already_ingested_local": 0,
+    "new_source_chain_reexecution_by_ingestion": "NOT_REQUIRED_EXACT_PAYLOAD_REPRODUCTION",
+    "official_controls_json_downloaded": false
+  },
+  "environment": {
+    "python": "3.12.15",
+    "runner_image": "ubuntu-24.04",
+    "cpu_gpu_details": "NOT_DOCUMENTED",
+    "observed_warning": "GitHub logs report Node20 actions forced to Node24; all jobs pass and mathematical payload is unchanged."
+  },
+  "sources": [
+    {
+      "source_id": "K-PROPOSED-Q048-SOURCE-002",
+      "title": "Frozen CLASS_EDE source equations, units and branches",
+      "repository": "mwt5345/class_ede",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "url": "https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "type": "EXTERNAL_SOURCE_CODE",
+      "supports": "Scientific source model/branches and conditional applicability; not observational evidence or native-instance qualification.",
+      "authors": "NOT_DOCUMENTED"
+    },
+    {
+      "source_id": "K-PROPOSED-Q048-INPUT-001",
+      "title": "Q041 FULL/start0 captured effective configurations",
+      "run_id": "38140371059",
+      "repository": "Morfindien/Bubbleverse",
+      "type": "BUBBLEVERSE_TECHNICAL_EVIDENCE",
+      "supports": "Four frozen effective-input hashes and fixed accepted z_reio; complete source fields retained in journal/config."
+    },
+    {
+      "source_id": "K-PROPOSED-Q048-V5-PACKAGE-008",
+      "title": "Q048-RESUME-V5 versioned execution/admission package",
+      "repository": "Morfindien/Bubbleverse",
+      "commit": "05ec5263fc4be2cee29892839d0f818ccba64c91",
+      "url": "https://github.com/Morfindien/Bubbleverse/tree/05ec5263fc4be2cee29892839d0f818ccba64c91",
+      "type": "BUBBLEVERSE_TECHNICAL_EVIDENCE",
+      "supports": "Actual installed main/method/config/workflow, 20 tests, safe registry/launcher and source pins; all26 checked files match."
+    },
+    {
+      "source_id": "K-PROPOSED-Q048-GITHUB-RUN-38259814813",
+      "title": "Q048 verified prefix continuation V5 — run38259814813",
+      "repository": "Morfindien/Bubbleverse",
+      "commit": "05ec5263fc4be2cee29892839d0f818ccba64c91",
+      "year": 2026,
+      "url": "https://github.com/Morfindien/Bubbleverse/actions/runs/38259814813",
+      "type": "BUBBLEVERSE_TECHNICAL_EVIDENCE",
+      "retrieval": "Connected GitHub primary run/jobs/tree/artifacts/decoded logs, verified attachment digest and size.",
+      "supports": "All6jobs completed,20tests and finitecontrols passed; full root/successor/collector verification and retained artifact provenance."
+    },
+    {
+      "source_id": "I-PROPOSED-Q048-RESUME-GITHUB-38259814813",
+      "title": "GitHub V5 exact conditional mathematical reproduction",
+      "type": "BUBBLEVERSE_NUMERICAL_RESULT",
+      "raw_sha256": "bf63e8698a2c0a3b6f518f691443ceec151398a21693aea523743dac5d76bfa5",
+      "supports": "Four exact locally reproduced scientific payloads; conditional partial histories and explicit NOT_COMPUTED physical products."
+    },
+    {
+      "source_id": "I-PROPOSED-Q048-RESUME-LOCAL-V5",
+      "title": "Previous actual local V5 result",
+      "type": "BUBBLEVERSE_NUMERICAL_RESULT",
+      "supports": "Already admitted429/324,343/240 and35thermal eachLCDM; raw/cell equality reference, not another independent dataset."
+    },
+    {
+      "source_id": "I-PROPOSED-Q048-MATHEMATICS-005",
+      "title": "Finite exact old-V4-cursor k12 and finite-time He1 controls",
+      "type": "BUBBLEVERSE_MATHEMATICAL_RESULT",
+      "supports": "Remedies already passed in scoped states; current later V5 cursors are different."
+    }
+  ],
+  "claims": {
+    "C-V5-INGEST-001": "Official successful installed execution, all6jobs/20tests → K-PROPOSED-Q048-GITHUB-RUN-38259814813, package008, decoded logs/tree.",
+    "C-V5-INGEST-002": "Complete exact local mathematical reproduction → I-PROPOSED-Q048-RESUME-GITHUB-38259814813, localV5, raw/source/config/cell equality.",
+    "C-V5-INGEST-003": "Later EDE enclosure failure remains → I-PROPOSED-Q048-RESUME-GITHUB-38259814813, current checkpoint intervals and pinned V5 source; no physical falsification.",
+    "C-V5-INGEST-004": "Full-Q scientific products absent → current raw applicability/product fields + source002 inherited limitation.",
+    "C-V5-INGEST-005": "Journal continuity and installed documentation match → complete incoming byte tail and executed-tree blob inventory."
+  },
+  "journal_effect": {
+    "KEEP": "Entire incoming journal/source/claim/hypothesis/failure/freeze state.",
+    "ADD": "Actual installed GitHub V5 run and run-specific raw/checkpoint/provenance objects.",
+    "STRENGTHEN": "Cross-runtime reproducibility and installed-package evidence.",
+    "SUPERSEDE": "Prior remote NOT_PERFORMED assertions only for current V5 execution status.",
+    "UNCHANGED": "Already known conditional cells, later EDE blockers, missing full-Q products and actual-source limitation."
+  },
+  "q_completion_gate": "NOT_YET_SATISFIED",
+  "next_engine": "MATHEMATICS ENGINE",
+  "next_task": "At the NEW V5 EDE cursors, diagnose whether inherited error/comparison wrapping or the prospective predictor/tube/forcing domain limits useful continuation. Derive a finite genuinely material enclosure remedy or a precise scoped obstruction with independent control; do not merely replay V5 or mechanically increase halvings. Preserve all frozen inputs and predecessor uncertainty. Assess whether any required source-applicability uncertainty is removable, and distinguish this from numerical tube closure.",
+  "anomaly_status": "NO_NEW_PHYSICAL_ANOMALY_ESTABLISHED",
+  "research": {
+    "performed": true,
+    "capabilities": "Read-only connected GitHub primary provenance/repository inspection and local artifact/exact-state analysis.",
+    "new_external_physical_evidence": false,
+    "broad_literature": "NOT_NEEDED_FOR_CURRENT_CONTROL_BOTTLENECK",
+    "plugin_limitation": "Generic job-log fetch insufficient; dedicated decoded-job-log capability succeeded."
+  }
+}
+```
+
+---
+
+## COMPLETE UNCHANGED INCOMING AUTHORITATIVE JOURNAL
+
 # BUBBLEVERSE — V5 FINAL INSTALLATION GATES
 
 CURRENT Q: Q-048 — PROPOSED_UNVERIFIED. CASE: NOT_ASSIGNED.

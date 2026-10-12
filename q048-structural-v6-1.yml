@@ -1,0 +1,79 @@
+name: Q048 source-root energy and He1 structural extension V6
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered one-pass structural extension identifier
+        required: true
+        type: string
+        default: Q048-STRUCTURAL-V6
+concurrency:
+  group: q048-structural-v6
+  cancel-in-progress: false
+permissions:
+  contents: read
+  actions: read
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Package, launcher and finite result controls
+        env:
+          PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          test "$PROGRAM_ID" = Q048-STRUCTURAL-V6
+          python q048_structural_package_check_v6.py
+          timeout --signal=TERM 600s python -m unittest q048_structural_tests_v6 q048_resume_tests_v5 -v
+  extension:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        case: [camspec-lcdm, camspec-ede_n3, hillipop-lcdm, hillipop-ede_n3]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Reverify immutable V5 parent and compute one structural component
+        env:
+          CASE: ${{ matrix.case }}
+        run: timeout --signal=TERM 2100s python q048_structural_runner_v6.py --program-id Q048-STRUCTURAL-V6 --case "$CASE" --out q048_structural_results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-structural-v6-${{ matrix.case }}-${{ github.run_id }}
+          path: q048_structural_results/*.json
+          if-no-files-found: error
+  collect:
+    needs: [preflight, extension]
+    if: always() && needs.preflight.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q048-structural-v6-*-${{ github.run_id }}
+          path: collected
+      - name: Require all four compatible final reports and reverify results
+        env:
+          EXPECTED_RUN: ${{ github.run_id }}
+        run: timeout --signal=TERM 1200s python q048_structural_runner_v6.py --collect collected --expected-run "$EXPECTED_RUN" --out q048_structural_final_v6.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-structural-v6-final-${{ github.run_id }}
+          path: q048_structural_final_v6.json
+          if-no-files-found: error

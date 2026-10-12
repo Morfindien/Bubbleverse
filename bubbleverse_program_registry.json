@@ -2073,7 +2073,7 @@
       "q": "Q-048",
       "q_assignment": "PROPOSED_UNVERIFIED",
       "case_id": "NOT_ASSIGNED",
-      "status": "ACTIVE",
+      "status": "SUPERSEDED",
       "version": "v5",
       "program_version": "v5",
       "workflow_version": "v5",
@@ -2099,7 +2099,27 @@
       "result_location": "q048_resume_final_v5.json",
       "return_route": "RESULT INGESTION & ROUTING ENGINE",
       "execution_commit": "RECORDED_FROM_GITHUB_SHA_AT_RUN",
-      "program_id": "Q048-RESUME-V5"
+      "program_id": "Q048-RESUME-V5",
+      "superseded_by": "Q048-STRUCTURAL-V6"
+    },
+    "Q048-STRUCTURAL-V6": {
+      "q": "Q-048",
+      "program_id": "Q048-STRUCTURAL-V6",
+      "scientific_task": "One-pass recomputed source-root energy and He1 phase extension to z4600; preserved immutable V5 records, unresolved native/full-history admission.",
+      "workflow_path": ".github/workflows/q048-structural-v6.yml",
+      "workflow_id": "q048-structural-v6.yml",
+      "scientific_program": "q048_structural_runner_v6.py",
+      "version": "v6",
+      "program_version": "v6",
+      "workflow_version": "v6",
+      "status": "ACTIVE",
+      "target_ref": "main",
+      "created_date": "2026-10-12",
+      "supersedes": "Q048-RESUME-V5",
+      "config": "q048_structural_config_v6.json",
+      "result_location": "q048_structural_results",
+      "scientific_acceptance": false,
+      "repository_base_commit": "05ec5263fc4be2cee29892839d0f818ccba64c91"
     }
   },
   "registry_name": "Bubbleverse Program Registry",
