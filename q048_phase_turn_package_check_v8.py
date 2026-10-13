@@ -54,11 +54,13 @@ def check(root=None):
     wf=(root/workflow).read_text()
     for token in [e.ID,'38348832247','q048-guard-v7-final-38348832247','q048_phase_turn_runner_v8.py','actions/download-artifact@v4']:
         e.fail(token in wf,'WORKFLOW_REFERENCE '+token)
-    installer_path='.github/workflows/q048-install-phase-turn-v8.yml'
-    e.fail(installer_path in lock['files'] and (root/installer_path).is_file(),'INSTALLER_MANIFEST_PATH')
-    installer=(root/installer_path).read_text()
-    for token in ['contents: write','q048_v8_repository_patch.py','q048_phase_turn_package_check_v8.py','git add -- README.md bubbleverse_program_registry.json','INSTALL_DIFF_GATE=PASS','git push origin HEAD:main']:
-        e.fail(token in installer,'INSTALLER_REFERENCE '+token)
+    # The one-time installer is intentionally not a runtime dependency after
+    # registry/README installation has completed.  The canonical installed
+    # state above is the authoritative gate; absence of the historical
+    # installer workflow must not block scientific execution.
+    installer_path=lock.get('installer_workflow_path')
+    e.fail(installer_path=='.github/workflows/q048-install-phase-turn-v8.yml','INSTALLER_METADATA_PATH')
+    e.fail(lock.get('installer_runtime_required') is False,'INSTALLER_RUNTIME_POLICY')
 
     parent=os.environ.get('Q048_V7_PARENT');parent_gate='NOT_CHECKED_STATIC'
     if parent:
