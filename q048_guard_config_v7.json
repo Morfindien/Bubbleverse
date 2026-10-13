@@ -1,0 +1,76 @@
+{
+  "schema": "Q048_GUARD_CONTINUATION_CONFIG_V7",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "program_id": "Q048-GUARDCONT-V7",
+  "version": "v7",
+  "created_local": "2026-10-12T21:58:34+02:00",
+  "scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "repository_base_commit": "2bc190aeb1a2659fbc9bc0d402159c7768c6b15a",
+  "prior_program_id": "Q048-STRUCTURAL-V6",
+  "scope": "CONDITIONAL_SOURCE_REAL_GUARD_THERMAL_CONTINUATION",
+  "math_result_id": "I-PROPOSED-Q048-MATHEMATICS-007",
+  "math007_file": "Q048_MATHEMATICS_007.md",
+  "math007_sha256": "2e6f5f54cc179a0e12391da9d7421cc6f1d464fed8917d74c97229d0b714b84f",
+  "journal_file": "Q047_SAMLET_JOURNAL.md",
+  "journal_sha256": "422985ed72a7e41978d8367483d8b3451a5ae2056739441ab5b377e519ca0f35",
+  "reused_git_blob_sha1": {
+    "q048_structural_v6.py": "f9f993bdab44091d5d76c0ff2192b5300ad1924b",
+    "q048_structural_runner_v6.py": "045e0bd45cab0e8020eb8aaff1990c314c921f22",
+    "q048_structural_config_v6.json": "33a37b0023afb915659522acae6cbc7a7262b088",
+    ".github/workflows/00-bubbleverse-start.yml": "7f22c617fb98d1508a0b22a42dd3735a74d8288e"
+  },
+  "repository_mutable_base": {
+    "bubbleverse_program_registry.json_git_blob_sha1": "506349e0d5a8aa198849d31a3e0ee3804bf2e589",
+    "README.md_git_blob_sha1": "32b90d4927037fc4fe129e3931332277a269ec34"
+  },
+  "guard": {
+    "case": "camspec-ede_n3",
+    "target_a": "1/2871",
+    "milestones": [
+      "1/4601",
+      "1/3551",
+      "1/2871"
+    ],
+    "relative_step": "1/64",
+    "max_cells": 5000,
+    "max_halvings": 14,
+    "case_seconds": 5400,
+    "progress_every_cells": 100,
+    "phi_pad_floor": "1e-12",
+    "x_pad_floor": "1e-10",
+    "strict_source_ratio": "1/2",
+    "method": "source_root_correlated_interval_tube_direct_guard_v1"
+  },
+  "thermal": {
+    "cases": [
+      "camspec-ede_n3",
+      "hillipop-ede_n3"
+    ],
+    "start_a": "1/4601",
+    "switch_a": "1/3551",
+    "end_a": "1/2871",
+    "whole_w": [
+      "0",
+      "1/50"
+    ],
+    "hillipop_relative_step": "1/32",
+    "method": "sign_aware_positive_voc_v1",
+    "independent_method": "rational_bernoulli_voc_v1"
+  },
+  "retained_lcdm_cases": [
+    "camspec-lcdm",
+    "hillipop-lcdm"
+  ],
+  "actual_source_admission": "UNRESOLVED",
+  "actual_event_redshift": "NOT_COMPUTED",
+  "actual_xe_history_bounds": "NOT_COMPUTED",
+  "actual_tau_T_bounds": "NOT_COMPUTED",
+  "final_result_gate": "UNRESOLVED",
+  "return_route": "RESULT INGESTION & ROUTING ENGINE",
+  "incoming_journal_sha256": "b0b7db64fc6657ffc1a2d21e64d854d9c71a2f8e2fa2d8ed768e96292bde11a1",
+  "incoming_journal_bytes": 12971616
+}

@@ -1,3 +1,422 @@
+# BUBBLEVERSE — EXECUTION DESIGN & INSTALL HANDOFF V7
+
+STATUS: PREPARED FOR FINITE EXECUTION; SCIENTIFIC Q CONTINUES
+
+Date/time: 2026-10-12T21:58:34+02:00 Europe/Copenhagen
+
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED
+CASE ID: NOT_ASSIGNED
+PROGRAM_ID: Q048-GUARDCONT-V7
+
+## Exact scientific question
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436.
+
+## Execution decision
+
+Existing Execution-Mechanism / Numerical engine is sufficient. No new reasoning motor is created. A small successor program is required because Mathematics-007 reduced the next task to a finite validated interval computation that cannot be supplied by prose alone. No likelihood, MCMC, sampler, native CLASS capture, GPU or HPC campaign is authorized.
+
+REUSE/PATCH lineage: Q048-STRUCTURAL-V6 + the frozen Q047/Q048 rational/outward proof backend. V6 remains historical and is superseded for launch preference only after installation. The permanent launcher remains byte-identical.
+
+## New bounded executable target
+
+Q048-GUARDCONT-V7 performs only:
+
+1. Camspec EDE: source-root trajectory-correlated validated (phi,X) tubes with the exact source guard tested directly on every certified whole-state cell through a=1/2871, or a bounded scoped obstruction.
+2. Camspec and Hillipop EDE: sign-aware positive-w continuation from z=4600 through He1f to z=3550 and He2 to z=2870.
+3. Exact-real He1f/He2 Saha transition control at z=3550.
+4. Conditional source-real H-entry q enclosure at z=2870.
+5. Stop and return once to RESULT INGESTION & ROUTING ENGINE.
+
+It does NOT qualify native floating-point/source-instance identity, locate the shared q=1e-6 event, or compute complete latch/reset x_e or tau_T histories. FINAL_RESULT_GATE remains UNRESOLVED by construction.
+
+## Frozen provenance
+
+Repository base inspected read-only: Morfindien/Bubbleverse commit 2bc190aeb1a2659fbc9bc0d402159c7768c6b15a.
+Scientific source: mwt5345/class_ede commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97.
+Parent result: installed/reproduced Q048-STRUCTURAL-V6 / run 38293480870.
+Mathematics input: I-PROPOSED-Q048-MATHEMATICS-007.
+
+No remote repository mutation or workflow dispatch was performed during preparation.
+
+## Mandatory gates
+
+Q/source/config/journal pins; reused Git-blob identities; direct guard positive margin on every Camspec proof cell; recomputation of stored validated cells; sign-aware positive-w primary and independent rational controls; exact fixed phase boundaries; H-entry q recomputation; two-EDE job completeness; merge compatibility; registry/launcher/README consistency after differential installation. A bounded failure to prove the Camspec guard is preserved as UNRESOLVED_BOUNDED_OBSTRUCTION, not physical falsification.
+
+## Journal continuity
+
+The complete incoming Mathematics-007 journal follows unchanged byte-for-byte.
+Incoming bytes: 12971616
+Incoming SHA256: b0b7db64fc6657ffc1a2d21e64d854d9c71a2f8e2fa2d8ed768e96292bde11a1
+
+---
+
+# COMPLETE INCOMING AUTHORITATIVE JOURNAL — UNCHANGED TAIL
+
+# BUBBLEVERSE — MATHEMATICS ENGINE HANDOFF
+
+STATUS: CONTINUES
+
+Date and time: 2026-10-12T21:39:00+02:00 Europe/Copenhagen
+
+CASE ID: NOT_ASSIGNED
+
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED
+
+RESULT ID: I-PROPOSED-Q048-MATHEMATICS-007
+
+## QUESTION
+
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Q047 remains CLOSED INCONCLUSIVE. Q048 remains PROPOSED_UNVERIFIED. This result does not reopen historical-state identity/equivalence.
+
+## MATHEMATICS-ENGINE RESULT
+
+RESULT CLASS: MATHEMATICAL_RESULT; SOURCE_INSPECTION_RESULT; PARTIAL_RESULT; ROUTING_RESULT.
+
+RESULT STATUS: VALID CONDITIONAL PROOF DECOMPOSITION. FINAL_RESULT_GATE remains UNRESOLVED.
+
+The completed Q048-STRUCTURAL-V6 result is preserved unchanged. Its one-sided EDE He1 endpoints at z=4600 are positive w intervals. The four-configuration first cutoff, full x_e(z) difference and cumulative tau_T(z) difference remain NOT_COMPUTED.
+
+### 1. Exact source phase structure after z=4600
+
+Read-only inspection of mwt5345/class_ede at frozen commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97, source/thermodynamics.c, establishes the source-defined approximation sequence and state semantics.
+
+For brec, He1, He1f and He2, the evolved thermodynamic vector contains D_Tmat only. A dynamical x_He component is introduced only when the H approximation begins at z=2870. Therefore He1f 4600->3550 and He2 3550->2870 do not introduce a new helium ODE state. The dynamical continuation variable is the matter-temperature offset, equivalently dimensionless w defined by Tmat=(1-w)T0/a.
+
+At the He1->He1f boundary z=4600, the w/D_Tmat state transition is the identity; the analytic ionization branch changes and must be evaluated on the new side. At the He1f->He2 boundary z=3550, the two HeII->HeI Saha expressions are algebraically identical representations of the same positive root for identical Tmat, z, fHe and nH0.
+
+Define A=exp[(3/2)log(C_NR*Tmat/(1+z)^2)-Tion_HeI/Tmat]/nH0. Then the He2 source uses R=4A, while He1f uses r=1/R. The source expressions are
+
+x_He1f = 2(1+f)/(1-r+sqrt((1-r)^2+4r(1+f)))
+
+and
+
+x_He2 = (sqrt((R-1)^2+4(1+f)R)-(R-1))/2.
+
+Substitution R=1/r gives exact equality for r>0 and f>0. An independent Wolfram symbolic simplification returned exactly 0 for their difference under those assumptions. Thus z=3550 is not a source-real ionization-state discontinuity; it is a representation/approximation switch. This does not by itself qualify native binary64 equivalence or output-table smoothing.
+
+### 2. Correct sign-aware positive-w comparison
+
+For either non-brec phase, the source-real thermal equation can be written on a normalized interval xi in [0,1] as
+
+dw/dxi = c(xi) - d(xi) w,
+
+with c(xi)>0 and d(xi)=c(xi)(1+beta(xi))>0.
+
+Suppose
+
+0 < L <= w(0) <= U,
+
+c_min <= c(xi) <= c_max,
+
+d_min <= d(xi) <= d_max.
+
+Variation of constants gives
+
+w(1) = w(0) exp(-Integral_0^1 d) + Integral_0^1 exp(-Integral_s^1 d) c(s) ds.
+
+Therefore a valid sign-aware enclosure is
+
+L exp(-d_max) + c_min J(d_max) <= w(1)
+
+and
+
+w(1) <= U exp(-d_min) + c_max J(d_min),
+
+where J(d)=(1-exp(-d))/d and J(0)=1 by continuity.
+
+This proves the handoff warning: once L is positive, the lower homogeneous term uses L*exp(-d_max). Reusing L*exp(-d_min) as a lower term would be invalid. The old V6 L<0 independent-control formula must not be mechanically reused.
+
+### 3. Camspec guard reduced to one precise scalar proof obligation
+
+Frozen class_ede background.c applies the guard
+
+V_e/(3 rho_crit) < 1/2
+
+when the scalar field is present. For K=0 and the source variables used by the Q048 proof backend,
+
+3 rho_crit = 3 B(a) + E,
+
+E = X^2/2 + V_e + V_floor,
+
+dE/dln(a) = -3 X^2 <= 0.
+
+Hence the exact guard condition is equivalent to
+
+V_e < 3 B(a) + X^2/2 + V_floor.
+
+The V6 source-root certificate used the deliberately looser implication V_e<=E0-V_floor together with E<=E0. That sufficient bound is proven only to z~3562.590282 for Camspec and therefore cannot certify the fixed z=3550 phase boundary. Its failure beyond that point is a proof limitation, not a demonstrated source crossing.
+
+The finite remedy is now precise: construct a trajectory-correlated validated enclosure for (phi,X) for Camspec using the frozen source ODE and finite-node neutrino realization, and evaluate the guard directly cell by cell. The proof may use the existing rational interval/certificate machinery, but must recompute each guard from the certified whole-state tube. A direct guard certificate is preferred over further global E0-only bounding because the latter intentionally discards the phi-X correlation that makes the current cap loose.
+
+Hillipop does not share this blocker: its existing conservative source-root guard is already certified through z=2870.
+
+### 4. Scope of the next finite computation
+
+The next executable proof must be bounded and must not become a new fit, MCMC, native capture campaign or unchanged V6 replay.
+
+Required order:
+
+A. Preserve every frozen Q048 input, source commit, V5 parent, V6 endpoint and accepted z_reio.
+
+B. For Camspec EDE only, create a validated scalar trajectory/guard certificate sufficient to cover z=4600 -> 2870, or return a precise mathematical obstruction. The source guard must be checked directly on certified whole-state intervals.
+
+C. Continue both EDE w intervals from z=4600 through He1f to z=3550 and He2 to z=2870 using sign-correct interval propagation. The fixed boundary transition for w is identity. At z=3550 independently verify the exact He1f/He2 Saha identity.
+
+D. At z=2870 compute the conditional H-entry helium state q from the source-real Saha map using the certified w interval. Do not substitute captured midpoint hints.
+
+E. Stop and return to RESULT INGESTION & ROUTING. Do not automatically launch the later H/frec/cutoff/full-xe/tau stage in the same step unless a separately documented routing decision authorizes it.
+
+### 5. Scientific status after this mathematics pass
+
+[CALCULATED] The positive-w endpoint comparison formula is fixed and independently reason-checked.
+
+[CALCULATED] The exact-real He1f/He2 Saha transition at z=3550 is algebraically continuous for identical inputs.
+
+[FACT] In the frozen source, D_Tmat is the only evolved thermodynamic state in He1f/He2; dynamical helium evolution begins at the H phase at z=2870.
+
+[UNRESOLVED] Camspec continuous source guard to z=2870.
+
+[UNRESOLVED] Native floating-point/source-instance admission.
+
+[NOT COMPUTED] Shared first q=10^-6 cutoff event.
+
+[NOT COMPUTED] Complete latch-vs-reset x_e(z) difference bounds.
+
+[NOT COMPUTED] Complete cumulative Thomson optical-depth difference bounds.
+
+No physical anomaly, model falsification or Q048 closure is established here.
+
+## SOURCE / TOOL PROVENANCE
+
+K-PROPOSED-Q048-SOURCE-002: mwt5345/class_ede, frozen commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97. Read-only source inspection used source/thermodynamics.c approximation setup, vector initialization, ionization fractions, temperature derivative and output smoothing; source/background.c guard implementation.
+
+K-PROPOSED-Q048-GITHUB-RUN-38293480870 and the supplied V6 worker/final artifacts remain the numerical/provenance basis for the z=4600 endpoint intervals and existing guard horizons.
+
+Wolfram Language was used only as an independent symbolic check of the He1f/He2 algebraic identity. It supplied no physical input.
+
+A separate non-certified floating-point trajectory diagnostic was used only for orientation while assessing the Camspec proof strategy. It is NOT admitted as scientific evidence, supplies no bound, and does not alter any journal value or gate.
+
+## ROUTING
+
+SELECTED NEXT ENGINE: AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE.
+
+Reason: the mathematics has reduced the remaining upstream problem to a finite validated interval implementation. No HPC, sampling, likelihood or broad research is indicated. The next engine should first test whether the existing Q047/Q048 rational certificate machinery can implement the direct Camspec guard plus sign-aware thermal continuation without constructing a new general motor. If a tiny extension is required, it must have a new documented PROGRAM_ID/version and preserve all frozen inputs.
+
+SUCCESS CONDITION FOR NEXT ENGINE: finite validated guard+He1f/He2 continuation to z=2870 for both EDE configurations, or a precise scoped obstruction, with independent control and no upgrade of native/source admission claims.
+
+STOP CONDITION: return once that bounded proof result exists. Do not rerun unchanged V6.
+
+## JOURNAL CONTINUITY
+
+This header is prepended to the complete incoming authoritative journal. The incoming journal tail is preserved byte-for-byte.
+
+Incoming journal bytes: 12962468
+Incoming journal SHA256: 6f98b0378d48382c253f3dc2b9f781bd34a3c55965695b4356133420b57b6d5c
+
+---
+
+# BUBBLEVERSE — RESULT INGESTION & ROUTING HANDOFF
+
+STATUS: CONTINUES
+
+Date and time: 2026-10-12T19:19:43.412720+00:00 UTC; 2026-10-12T21:19:43.412720+02:00 Europe/Copenhagen
+
+CASE ID: NOT_ASSIGNED
+
+CURRENT Q: Q-048 — PROPOSED_UNVERIFIED
+
+QUESTION:
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256: c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436.
+Q047 remains CLOSED INCONCLUSIVE. This Q concerns four newly reconstructed captured configurations; it does not reopen the historical Q047 identity/equivalence question.
+
+## RECOMMENDED CHATGPT EXECUTION PROFILE
+
+AVAILABLE CONFIGURATIONS CONSIDERED: current Codex/Work orchestration, reasoning, file/code execution and connected read-only GitHub. The runtime advertises alternative reasoning/code agents, but their invocation is unnecessary for this bounded ingestion. No complete user-facing model picker, active variant, exact active reasoning label, context capacity or usage limits is verified. Historical names such as Astra Max and GPT-5.6 do not determine selection.
+
+RECOMMENDED MODEL / MODE: current capable Codex/Work reasoning setup for ingestion; a capable mathematical reasoning setup for the next existing Mathematics Engine.
+
+RECOMMENDED REASONING LEVEL: High or Extra High if actually selectable for the source/phase proof. The active reasoning selector is NOT DOCUMENTED.
+
+RECOMMENDED EXECUTION STYLE: focused source-aware mathematical analysis with exact computational checks only where they reduce the identified uncertainty. Functional ingestion classes B/C; next-task class C, with E only if the evidence workflow becomes materially larger.
+
+WHY: the next bottleneck is a finite admission and continuation proof, not additional infrastructure, fitting or a replay of an unchanged successful campaign.
+
+FALLBACK: the current available reasoning/code setup with the identical frozen source, complete journal and rational proof backend. UPGRADE TRIGGER: a concrete coupled admission proof remains beyond that setup, or independent checks expose a material mathematical conflict; use a stronger actually available reasoning configuration then.
+
+RECOMMENDED PLUGINS / TOOLS: supplied full journal/raw output, primary source/code, read-only GitHub for any missing exact source section, and bounded symbolic/rational checks. OPTIONAL: targeted primary-source research only if an explicit mathematical input is missing. No new native capture, likelihood, MCMC, GPU, HPC or broad literature campaign is justified by this ingestion.
+
+CAPABILITY LIMITATIONS: no model switch is claimed, no remote mutation is authorized, and no permanent conversational-memory guarantee substitutes for the saved complete journal.
+
+## SELECTED NEXT BUBBLEVERSE ENGINE
+
+**EXISTING MATHEMATICS ENGINE / MATEMATIKMOTOREN** — exactly one destination.
+
+Execution decision: existing motor plus source/proof inspection is sufficient for the next finite task. No new motor, executable campaign or PROGRAM_ID is created. Existing Q048-STRUCTURAL-V6 has completed its intended conditional scope. Do not rerun it unchanged.
+
+## SAMLET JOURNAL
+
+The authoritative complete updated file is `Q047_SAMLET_JOURNAL.md`. Its new head is this ingestion handoff; its tail retains the entire incoming journal byte for byte: 12,940,023 bytes, SHA256 a936b19ef14f2107c3b6c874a937602707dfec993f460eec2cec2562635ac36c. This preserves all prior sources, claim mappings, proofs, failures, frozen configurations, Q047 closure and Q048 proposed status. The historical filename is retained; it does not redefine CURRENT Q.
+
+Detailed run/job/artifact metadata, file pins, exact rational endpoints and checkpoint hashes are in `Q048_RESULT_INGESTION_RUN38293480870_V1.json`. Exact official raw bytes are `Q048_GITHUB_RAW_RUN38293480870.json`; all four complete worker records are also provided individually. The journal integrates their scientific meaning without duplicating the multi-megabyte raw output.
+
+## NEW RESULT
+
+RESULT ID: I-PROPOSED-Q048-STRUCTURAL-GITHUB-38293480870.
+
+ORIGIN: actual GitHub Actions run [38293480870](https://github.com/Morfindien/Bubbleverse/actions/runs/38293480870), Morfindien/Bubbleverse, workflow `.github/workflows/q048-structural-v6.yml`, PROGRAM_ID Q048-STRUCTURAL-V6.
+
+RESULT CLASS: RUN_SUCCESS; MATHEMATICAL_RESULT; NUMERICAL_RESULT; PARTIAL_RESULT; REPRODUCTION_RESULT; VALIDATION_RESULT.
+
+RESULT STATUS: TECHNICALLY VALIDATED AND EXACTLY REPRODUCED, **conditional source-real scope only**. FINAL_RESULT_GATE: UNRESOLVED.
+
+DIRECT OUTPUT: completed/success, attempt 1, workflow run number 2; all six jobs succeeded, including four required configurations and collection. Started 2026-10-12T18:49:13Z, last updated 18:58:10Z. Preflight: 35 tests in 40.380 seconds, OK. No failed, missing or pending configuration. Official pre-, post- and merge-verification gates passed conditionally.
+
+TECHNICAL INTERPRETATION: all four entire parent checkpoints, extension dictionaries, source audits and scientific invariant fields exactly equal the independently controlled local V6 results. The remaining report differences are execution identity, commit, Python/runtime and elapsed-time provenance. Thirty-six installed/reused assets match the executed Git tree exactly. This is installed cross-runtime reproduction of the same mathematics, not a new independent scientific dataset. No new interval-cell entries were added. The separate structural certificate extends the two EDE He1 enclosures to the one-sided endpoint at z=4600; inherited interval cells and endpoints remain untouched.
+
+For dimensionless w defined by Tmat=(1-w)T0/a, the controlled one-sided He1 bounds at a=1/4601 are:
+
+| Configuration | Approximate w interval at z=4600 | Existing background / thermal cells retained |
+| --- | --- | --- |
+| Camspec EDE n=3 | [2.1911853859492482e-8, 2.3762268206129193e-7] | 429 / 324 |
+| Hillipop EDE n=3 | [6.480435350335085e-8, 1.2873478090078438e-7] | 343 / 240 |
+| Camspec LCDM | Prior conditional H-entry certificate at z=2870 retained | 0 / 35 |
+| Hillipop LCDM | Prior conditional H-entry certificate at z=2870 retained | 0 / 35 |
+
+These displayed decimals are summaries; the raw report and receipt retain the exact rational bounds. No extra physical precision is inferred from their length.
+
+The structural method is `source_root_energy_he1_invariant_voc_v1`. It derives E=X²/2+V and dE/dln(a)=-3X²≤0 from the frozen source initial state. X caps are 94.46441104598442 for Camspec and 61.77530388850699 for Hillipop, in the source's inverse-Mpc convention. This supplies an independent conditional source-root H/energy envelope beyond old background-cell coverage; no old background cell is extrapolated.
+
+Hillipop's conservative whole-background guard bound through z=2870 is 0.4760124421073909<1/2. Camspec's proven safe guard horizon is a≈0.00028061587355566136, z≈3562.5902820787715. Its conservative bound at z=2870 is 0.6795194574954725, so the full-horizon guard is **NOT_ESTABLISHED_BY_THIS_BOUND**. That upper bound does not establish an actual guard crossing or physical failure. The source guard ve/(3H²)<1/2 is distinct from the helium cutoff q=xHeII=10^-6.
+
+PHYSICAL INTERPRETATION: no new physical conclusion beyond the prior conditional V6 mathematical result. Actual/native source admission remains UNRESOLVED; the shared first helium cutoff and complete x_e(z)/tau_T(z) difference bounds remain NOT_COMPUTED. The He1 endpoint alone does not qualify the transition, later He1f/He2 evolution, native floating-point instance or complete history. New native evaluations: 0. New likelihood evaluations: 0.
+
+ANOMALY STATUS: no new physical anomaly or falsification established. Preserve the Camspec bound insufficiency as an unresolved proof limitation, not an observed event.
+
+## INTERNAL RESULT PROVENANCE
+
+Scientific source: mwt5345/class_ede, frozen commit 5a131c91d657dd9a7c6364cc45b038710f8d0d97.
+
+Executed Bubbleverse commit: 2bc190aeb1a2659fbc9bc0d402159c7768c6b15a. Preparation base: 05ec5263fc4be2cee29892839d0f818ccba64c91. Branch: main. Trigger: workflow_dispatch; no dispatch or remote write was performed by this ingestion.
+
+V6 config canonical hash: 67cbd2b450975b827e3985e4a80526028a825e4134534d5d8d3e09144ec015fa. Captured source-config SHA256: 2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b. Immutable V5 parent: run38259814813, raw SHA256 bf63e8698a2c0a3b6f518f691443ceec151398a21693aea523743dac5d76bfa5.
+
+Final artifact ID: 11767910630. Uploaded archive SHA256 b5fb8b2f9bd72d7e34fab8d678b4c2127fcf2fd5d40212d552a6b6deefbf59ce matches the official digest and size. Exactly one unique member, CRC valid. Raw extracted member: 15,506,331 bytes, SHA256 7912ca59fec5471030a0cd1b55bee8d05bec0825b51c6754500c0aebb25cbe2a. The archive is not a delivered artifact.
+
+Separate worker archives were not downloaded. The four individual checkpoint files were reconstructed from complete authenticated final records using the exact source serializer. Their provenance is explicitly RECONSTRUCTED_FROM_AUTHENTICATED_FINAL_ARTIFACT_WITH_SOURCE_SERIALIZER, not separately downloaded original worker archives. Every complete record is preserved; hashes are in the receipt.
+
+Runtime reported Python 3.12.15, Ubuntu 24.04.5, runner 2.337.0. CPU model/count and original native compiler/FP error admission: NOT DOCUMENTED. Configuration execution times: Camspec EDE 291.859897841 s; Hillipop EDE 198.118684962 s; Camspec LCDM 7.932336303 s; Hillipop LCDM 7.901153380 s. Official log deprecation warnings for Node action targets, punycode, url.parse and Buffer remain preserved. No mathematical payload discrepancy was observed; these warnings do not require a new scientific campaign.
+
+KNOWN TECHNICAL FAILURE: prior V6 run [38293196860](https://github.com/Morfindien/Bubbleverse/actions/runs/38293196860), commit72d418575e3d8804d8a379a715ecc028fb24f8c4, stopped at preflight with `ValueError: README_REFERENCE Q048-STRUCTURAL-V6`. Extension and collection were skipped; no new structural worker computation occurred. The succeeding run at 2bc190aeb1a2659fbc9bc0d402159c7768c6b15a passed that gate. Classification: documentation/preflight validation failure, not model failure. This differs from the earlier local workflow-path issue; preserve both failures in their actual tested contexts.
+
+REPORTING LIMITATION: the package checker prints a hardcoded `remote_installation=NOT_PERFORMED` and local-installation labels even inside Actions. Official run/tree/log evidence establishes actual installation and execution. The current scientific state supersedes those stale stage assertions, while the original reports and pre-execution history remain preserved. No numerical file is changed to conceal this metadata limitation.
+
+## WEB / PLUGIN / TOOL RESEARCH
+
+RESEARCH PERFORMED: YES — targeted primary technical evidence only.
+
+CAPABILITIES USED: connected GitHub read-only run/jobs/artifacts/tree/log access, local archive/hash/source-pin and whole-payload comparison, supplied journal and fixed implementation/proof files. Questions: did the supplied result originate from the claimed installed run; were all jobs complete; do installed assets match; does the mathematics reproduce; what caused the preceding failed run?
+
+NEW EXTERNAL EVIDENCE: official technical run/tree/log/artifact metadata. NEW SOURCES: K-PROPOSED-Q048-GITHUB-RUN-38293480870. NEW INTERNAL RESULT: I-PROPOSED-Q048-STRUCTURAL-GITHUB-38293480870. No external physical dataset or publication added.
+
+CONTRADICTORY EVIDENCE: official execution contradicts only the hardcoded stage label and historical pre-installation status. It does not contradict the local mathematical payload. IMPACT ON INTERPRETATION: installation and exact cross-runtime reproduction established; scientific scope unchanged. IMPACT ON JOURNAL: differential ADD/STRENGTHEN/UPDATE below.
+
+Another full replay, native capture or broad source search has no identified material value for ingestion. Official pre/post/merge proof checks plus exact equality with the already independently controlled local payload provide the necessary finite verification.
+
+## ACTIVE SOURCE REGISTER
+
+The complete authoritative register, all source metadata and prior claim mappings remain in the unchanged incoming journal tail. The following are the active sources for this result; stable IDs retain their prior definitions.
+
+| ID | Evidence object and role |
+| --- | --- |
+| K-PROPOSED-Q048-SOURCE-002 | Primary native source, mwt5345/class_ede, commit5a131c91d657dd9a7c6364cc45b038710f8d0d97; [frozen tree](https://github.com/mwt5345/class_ede/tree/5a131c91d657dd9a7c6364cc45b038710f8d0d97). Equations, branch guards and units; not native-instance error admission. |
+| K-PROPOSED-Q048-INPUT-001 | Four captured Q041 FULL/start0 effective inputs from run38140371059; source-config hash2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b; fixed accepted z_reio. Full input provenance remains in the journal. |
+| K-PROPOSED-Q048-MATH-REPO-006 | Frozen exact mathematical backend, source-admission limitations and proof controls, with prior journal provenance preserved. |
+| K-PROPOSED-Q048-V5-PACKAGE-008 | Historical V5 backend/package evidence retained unchanged; not relabelled as V6. |
+| K-PROPOSED-Q048-GITHUB-RUN-38259814813 | Official immutable V5 parent [run](https://github.com/Morfindien/Bubbleverse/actions/runs/38259814813), raw hashbf63e8698a2c0a3b6f518f691443ceec151398a21693aea523743dac5d76bfa5. |
+| I-PROPOSED-Q048-MATHEMATICS-006 | Internal structural proof and independent symbolic/rational controls, not a publication. |
+| I-PROPOSED-Q048-STRUCTURAL-LOCAL-V6 | Prior local conditional V6 result, retained exactly. |
+| K-PROPOSED-Q048-GITHUB-RUN-38293480870 [ADD] | Official GitHub technical run/jobs/tree/artifact/log evidence, 2026-10-12, executed commit2bc190aeb1a2659fbc9bc0d402159c7768c6b15a. Supports execution identity, installation, completeness and recorded verification. No DOI/arXiv. |
+| I-PROPOSED-Q048-STRUCTURAL-GITHUB-38293480870 [ADD] | Bubbleverse-generated conditional mathematical/numerical result in authenticated raw JSON; exact worker records and source pins in receipt. No DOI/arXiv. |
+
+## CLAIM-TO-SOURCE MAP
+
+| New claim | Supporting evidence |
+| --- | --- |
+| C-V6-INGEST-001: installed V6 completed all required jobs | K-PROPOSED-Q048-GITHUB-RUN-38293480870; official six-job manifest/logs/artifact metadata |
+| C-V6-INGEST-002: entire mathematical payload and parent state reproduce exactly | I-PROPOSED-Q048-STRUCTURAL-GITHUB-38293480870; I-PROPOSED-Q048-STRUCTURAL-LOCAL-V6; receipt comparison |
+| C-V6-INGEST-003: conditional EDE He1 bounds reach one-sided z4600 | I-PROPOSED-Q048-MATHEMATICS-006; K-PROPOSED-Q048-SOURCE-002; K-PROPOSED-Q048-INPUT-001; both V6 results |
+| C-V6-INGEST-004: Camspec full guard not established by current bound | Same fixed source/proof/V6 results; exact energy guard in raw output |
+| C-V6-INGEST-005: complete first-event/x_e/tau answer remains unavailable | Same raw actual-product/admission fields, exact Q and preserved journal |
+| C-V6-INGEST-006: first V6 run failed only documentation preflight | Official prior run38293196860/job114957952121 log, current successful preflight; technical receipt |
+
+All earlier claim-to-source relationships remain unchanged and available in the complete journal.
+
+## WHAT CHANGED
+
+ADD: authenticated successful installed V6 run, all exact provenance, and prior failed README preflight. STRENGTHEN: cross-runtime mathematical reproducibility. UPDATE: current installation/execution status from pre-execution NOT_PERFORMED to observed COMPLETE; preserve historical preparation reports. README receives a differential status update in the delivered snapshot only. No remote repository write occurred.
+
+## WHAT DID NOT CHANGE
+
+Exact Q/proposed identity, CASE NOT_ASSIGNED, Q047 closure, four captured inputs, fixed accepted z_reio, frozen source/config/parent, all inherited cells/intervals, local V6 mathematical findings, unresolved admission/full-history status and prior failed scientific/technical approaches. Successful execution adds no independent physical evidence.
+
+## FALSIFIED / REJECTED / SUPERSEDED MATERIAL
+
+No new physical hypothesis is falsified. Historical failures remain in the complete journal and must not be resurrected without material new evidence. The stale current NOT_PERFORMED stage statement is superseded by observed execution; it remains preserved in original provenance. The README failure is technically resolved in the successful run. The old Q047 historical-identity route remains closed. A loose upper bound beyond 1/2 is not an observed source-guard violation.
+
+## OPEN UNCERTAINTIES
+
+Conclusion-critical: exact-source/admission premises for the new captured reference; sign-correct phase continuation and transition maps after the one-sided z4600 interval; Camspec guard coverage; common first cutoff; complete x_e(z) and tau_T(z) difference bounds. No native floating-point admission or full physical outcome is claimed by conditional source-real certificates.
+
+## Q-COMPLETION GATE
+
+STATUS: NOT YET SATISFIED. WHY: exact Q asks for complete four-configuration history differences. V6 proves a bounded conditional upstream component only. Concrete remaining phase/admission questions can materially change whether complete controlled bounds are feasible. Missing computed products alone are not called physical falsification.
+
+Technical gates: Q identity PASS with proposed status preserved; journal continuity PASS; official artifact identity PASS; installed source pins PASS; job completeness PASS; merge compatibility PASS; exact mathematical reproduction PASS; finite tests PASS_CONDITIONAL; final scientific result UNRESOLVED.
+
+## MATERIAL-REVERSAL TEST AND ROUTING REASON
+
+YES for a finite source/admission and next-phase proof: it can establish a valid continuation or a precise obstruction to the required controlled bounds. NO for another unchanged V6 replay, arbitrary cell refinement, repeated validation of identical output or a broad new research/HPC campaign. The existing Mathematics Engine best reduces the current proof bottleneck before any new execution design.
+
+## NEXT TASK
+
+1. State the explicit source/admission premises for the exact Q's newly reconstructed captured reference. Separate mathematically defined source-real trajectories from claims about native floating-point instances. Do not reopen Q047 historical-state/equivalence, boolean-gate or observer-neutrality claims.
+2. Start from the verified **one-sided He1 endpoint at z4600**, including the full positive w interval. Derive sign-aware controlled continuation through fixed He1f4600→3550 and He23550→2870, with exact source transition maps and relevant guards. Do not substitute a midpoint, captured phase hint or unqualified native value.
+3. The preceding V6 lower homogeneous formula was scoped to L<0. For a new positive L and nonnegative damping d∈[dmin,dmax], the lower homogeneous term must use L·exp(-dmax), not L·exp(-dmin). Derive the appropriate sign-aware enclosure or comparison for all continuation terms; do not mechanically reuse an inapplicable sign assumption.
+4. Camspec's proven horizon z3562.590282… stops before z3550. Derive an independently justified tighter dissipative-energy or trajectory-correlated guard, or identify a precise scoped obstruction. Never silently reduce E0, alter captured inputs/source/bounds, tune to an expected answer or interpret the present loose cap as an actual crossing.
+5. Produce a finite proof/remedy or obstruction, with a relevant independent mathematical check, before any new campaign/code. State what is proved conditionally, what satisfies admission, and what remains necessary for the shared cutoff/full histories. No arbitrary native capture, new fit, unchanged V6 dispatch or repeated cell halving.
+
+## FIXED / FROZEN ELEMENTS
+
+Exact Q and proposed identity; CASE NOT_ASSIGNED; Q047 CLOSED INCONCLUSIVE; four captured effective inputs; accepted z_reio; native source commit5a131c91d657dd9a7c6364cc45b038710f8d0d97; canonical captured and V6 config hashes; immutable V5 raw parent and every inherited cell/interval; exact verified V6 endpoint intervals; all source IDs, provenance and failure history. Predeclared physical criteria are not changed after results.
+
+## VARIABLE ELEMENTS
+
+Explicitly documented mathematical bounds, proof decomposition, sign-aware comparison method and a tighter justified guard estimate. New configurations/results receive distinct documented provenance if actually required. Neither historical source identity nor frozen science changes silently.
+
+## SUCCESS CONDITION
+
+A source-faithful, independently checked finite continuation/admission result or precise obstruction that materially resolves feasibility of the next required controlled bounds, with exact inputs, units, scope and uncertainty preserved. Completing conditional He1f/He2 alone does not automatically answer the full Q.
+
+## FAILURE / FALSIFICATION CONDITION
+
+A mathematically demonstrated incompatibility of a required premise, invalid continuation step or unavoidable scoped obstruction is recorded in its tested domain. A program failure, missing admission proof or insufficient upper cap is not physical model falsification. Unexpected credible output must remain preserved.
+
+## STOP CONDITION
+
+Stop this next mathematical task when its finite admission/continuation/guard remedy or obstruction is documented and further same-task checks cannot materially change it. Return once to Result Ingestion & Routing with full journal, sources and provenance. Close Q and route directly to MOTOR 14 only when the exact complete question has a defensible documented answer, including genuinely irreducible uncertainty where established, and no remaining credible task is reasonably likely to alter that answer. Current V6 ingestion does not meet that closure condition. REPORT WRITER is never a scientific routing destination.
+
+
+---
+
+# COMPLETE PRIOR JOURNAL — UNCHANGED HISTORICAL TAIL
+
 # BUBBLEVERSE — EXECUTION & RETURN HANDOFF V6
 
 Date/time: 2026-10-12T17:40:25.116455+00:00 UTC; 2026-10-12T19:40:25.116455+02:00 Europe/Copenhagen.

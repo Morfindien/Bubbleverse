@@ -1,0 +1,15 @@
+# Bubbleverse — Q048 direct guard + He1f/He2 continuation V7
+
+Current runnable target: **Q048-GUARDCONT-V7**. After installing the individual V7 files and applying the supplied differential repository patch, open **🚀 BUBBLEVERSE START**, paste `Q048-GUARDCONT-V7`, and press **Run workflow**. Canonical launcher remains `.github/workflows/00-bubbleverse-start.yml`; it is not modified.
+
+Q-048 remains **PROPOSED_UNVERIFIED**, CASE **NOT_ASSIGNED**, and Q047 remains **CLOSED INCONCLUSIVE**. Scope is `CONDITIONAL_SOURCE_REAL_GUARD_THERMAL_CONTINUATION`. `FINAL_RESULT_GATE=UNRESOLVED` by construction: V7 does not qualify native floating-point/source-instance identity, does not locate the shared `q=xHeII=1e-6` cutoff, and does not compute complete latch/reset `x_e(z)` or `tau_T(z)` histories.
+
+V7 reuses the frozen V6/V5/Q047 rational proof backend and source commit `5a131c91d657dd9a7c6364cc45b038710f8d0d97`. It adds exactly one bounded scientific computation: a source-root trajectory-correlated validated `(phi,X)` tube for **Camspec EDE n=3** with the source guard checked on every certified whole-state cell, followed by sign-correct positive-`w` propagation through He1f `4600→3550` and He2 `3550→2870` for both EDE configurations. At `z=2870` it reports the conditional source-real H-entry helium state `q`. Hillipop keeps the already-valid V6 full-transfer source-root guard.
+
+The Camspec guard proof uses the exact equivalent margin `3 B(a)+X^2/2+V_floor-V_e > 0`; a loose interval on the displayed ratio alone is diagnostic and is not allowed to override a proved positive equivalent margin. Thermal propagation uses Mathematics-007's sign rule: for positive lower `L`, the lower homogeneous factor is `L exp(-d_max)`. A separate rational Bernoulli comparison supplies an independent control without exponential evaluation.
+
+The computation is finite. Camspec uses fixed relative `a` step `1/64`, at most 5000 accepted cells, at most 14 halvings per attempted cell, and a 5400-second scientific work budget. A failure to close a tube or separate the direct guard returns a preserved `UNRESOLVED_BOUNDED_OBSTRUCTION`; it is not a source crossing or physical falsification. Hillipop thermal continuation uses fixed relative step `1/32`. No fit, likelihood, sampler, GPU, native CLASS capture, or HPC campaign is authorized.
+
+Workflow target: `.github/workflows/q048-guard-continuation-v7.yml`. Expected worker artifacts contain `camspec-ede_n3_guard_v7.json`, `hillipop-ede_n3_guard_v7.json`, their checkpoints/progress where applicable, and collector `q048_guard_final_v7.json`. Return the bounded result once to **RESULT INGESTION & ROUTING ENGINE**. Do not automatically start H/frec/cutoff/full-history execution from this workflow.
+
+Prepared from Mathematics result `I-PROPOSED-Q048-MATHEMATICS-007` and repository HEAD `2bc190aeb1a2659fbc9bc0d402159c7768c6b15a` at 2026-10-12T21:58:34+02:00. V6 remains preserved as historical provenance and is marked superseded only after the differential registry patch is applied.
