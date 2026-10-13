@@ -1,0 +1,117 @@
+name: Q048 phase-energy first-turn guard V8
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered bounded Q048 V8 proof identifier
+        required: true
+        type: string
+        default: Q048-PHASETURN-V8
+
+concurrency:
+  group: q048-phase-turn-v8
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download exact official V7 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-guard-v7-final-38348832247
+          path: v7_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38348832247
+      - name: Package, source, launcher, parent and proof controls
+        env:
+          PROGRAM_ID: ${{ inputs.program_id }}
+          Q048_V7_PARENT: v7_parent/q048_guard_final_v7.json
+        run: |
+          set -euo pipefail
+          test "$PROGRAM_ID" = Q048-PHASETURN-V8
+          python q048_v8_repository_patch.py
+          python q048_phase_turn_package_check_v8.py
+          timeout --signal=TERM 1200s python -m unittest q048_phase_turn_tests_v8 q048_guard_tests_v7 q048_structural_tests_v6 -v
+
+  camspec:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download exact official V7 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-guard-v7-final-38348832247
+          path: v7_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38348832247
+      - name: Compute and independently replay bounded phase-turn certificate
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM 3000s python q048_phase_turn_runner_v8.py \
+            --program-id Q048-PHASETURN-V8 \
+            --parent v7_parent/q048_guard_final_v7.json \
+            --out q048_phase_turn_results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-phase-turn-v8-camspec-${{ github.run_id }}
+          path: q048_phase_turn_results/*.json
+          if-no-files-found: error
+
+  collect:
+    needs: [preflight, camspec]
+    if: always() && needs.preflight.result == 'success' && needs.camspec.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download exact official V7 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-guard-v7-final-38348832247
+          path: v7_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38348832247
+      - uses: actions/download-artifact@v4
+        with:
+          name: q048-phase-turn-v8-camspec-${{ github.run_id }}
+          path: collected
+      - name: Strict completeness, binding and merge gates
+        env:
+          EXPECTED_RUN: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM 1200s python q048_phase_turn_runner_v8.py \
+            --program-id Q048-PHASETURN-V8 \
+            --parent v7_parent/q048_guard_final_v7.json \
+            --collect collected \
+            --expected-run "$EXPECTED_RUN" \
+            --out q048_phase_turn_final_v8.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-phase-turn-v8-final-${{ github.run_id }}
+          path: q048_phase_turn_final_v8.json
+          if-no-files-found: error

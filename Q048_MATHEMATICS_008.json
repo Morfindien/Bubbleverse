@@ -1,0 +1,92 @@
+{
+  "schema": "Q048_MATHEMATICS_008",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "result_id": "I-PROPOSED-Q048-MATHEMATICS-008",
+  "created_local": "2026-10-13T07:45:22+02:00",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "v7_run_id": 38348832247,
+  "v7_executed_commit": "c9ca98f232a0c753ce9a8c04437fc5d7ef699dab",
+  "status": "VALID_DISTINCT_PROOF_ARCHITECTURE_DERIVED_NOT_YET_EXECUTED",
+  "new_method": {
+    "name": "source_root_phase_energy_first_turn_guard_v1",
+    "variables": [
+      "theta=lambda*phi",
+      "e=X^2/2+U(theta)",
+      "r=abs(X) at turn",
+      "s=sign(X)"
+    ],
+    "identities": [
+      "e_u=-3*X^2=-6*(e-U)",
+      "theta_u=s*lambda*sqrt(2*(e-U))/H away from turns",
+      "r_u=-3*r-s*lambda*U_theta/H in turn chart",
+      "H^2=B0(a)+(e+f)/3",
+      "guard_margin=3*B0(a)+e+f-2*U"
+    ],
+    "post_anchor_lemma": "If certified e_* < 3*B_T_lower+f_lower at a_*<=a_T, then guard_margin>0 for all later a through a_T=1/2871.",
+    "transfer_threshold_approx": 2104.2930315314006
+  },
+  "v7_wrapping_diagnosis": {
+    "cell_1598_z_approx": 6749.438522368842,
+    "cell_1598_X_endpoint_approx": [
+      -111.928390517917,
+      -0.28777076201862517
+    ],
+    "cell_1599_z_approx": 6742.852728688483,
+    "cell_1599_X_endpoint_approx": [
+      -113.06580346487944,
+      0.9618802687286887
+    ],
+    "last_cell_index_zero_based": 1692,
+    "last_z_approx": 6443.320213542182,
+    "last_phi_endpoint_approx": [
+      -2795.8039646314996,
+      2795.9753416853073
+    ],
+    "last_X_endpoint_approx": [
+      -141180.37332728298,
+      141075.92804113805
+    ],
+    "last_guard_ratio_upper_diagnostic_approx": 0.12446519513962392,
+    "last_guard_margin_lower_approx": 32527.858968209515,
+    "first_rejected_cell_payload": "NOT_SERIALIZED_IN_FINAL_ARTIFACT"
+  },
+  "candidate_splice_diagnostic": {
+    "v7_cell_index_zero_based": 1509,
+    "z_approx": 8979.971066128892,
+    "phi_endpoint_approx": [
+      0.19158391360740232,
+      0.2001224931401942
+    ],
+    "X_endpoint_approx": [
+      -36.27373528433516,
+      -29.25794602261243
+    ],
+    "theta_approx": [
+      2.4474059153871233,
+      2.5564827666951175
+    ],
+    "kinetic_gap_rect_lower_float_diagnostic": 61.89755832692845,
+    "e_upper_float_diagnostic": 4221.503213429622,
+    "U_minus_pi_max_float_diagnostic": 4624.1294937418315,
+    "scientific_status": "DIAGNOSTIC_ONLY_EXACT_OUTWARD_RECOMPUTATION_REQUIRED"
+  },
+  "wolfram_symbolic_control": [
+    "-3*X^2",
+    "3*B+e+f-2*U",
+    "sqrt(2)*lambda*s*sqrt(e-U)/H",
+    "-6*e+6*U"
+  ],
+  "selected_next_engine": "AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE",
+  "final_result_gate": "UNRESOLVED",
+  "actual_source_admission": "UNRESOLVED",
+  "actual_event_redshift": "NOT_COMPUTED",
+  "actual_xe_history_bounds": "NOT_COMPUTED",
+  "actual_tau_T_bounds": "NOT_COMPUTED",
+  "incoming_journal_bytes": 12999343,
+  "incoming_journal_sha256": "4174ec43ca9e15bafdee9cea6ceef774791613b0f95af6bbd8b644ed2187c41d",
+  "updated_journal_bytes": 13019427,
+  "updated_journal_sha256": "7ce1ee5a77d7db81aa3e42e3a6fac2a09bc69c50ffec1be7f885d2742929bafb"
+}

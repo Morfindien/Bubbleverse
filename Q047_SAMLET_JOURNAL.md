@@ -1,3 +1,1009 @@
+# BUBBLEVERSE — OVERLEVERING
+
+STATUS:
+FORTSÆTTER
+
+VALGT NÆSTE MOTOR:
+AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE
+
+Date and time:
+2026-10-13T07:45:22+02:00 Europe/Copenhagen
+
+CASE ID:
+NOT_ASSIGNED
+
+CURRENT Q:
+Q-048 — PROPOSED_UNVERIFIED
+
+QUESTION:
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256:
+c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436
+
+Q047 remains CLOSED INCONCLUSIVE. This mathematics pass does not reopen historical-state identity/equivalence.
+
+---
+
+## CHATGPT-SETUPVURDERING FOR NÆSTE TRIN
+
+ANBEFALET PRIMÆRT SETUP:
+Current GPT-5.6 Sol with High reasoning is sufficient for the mathematical result derived here. For the next implementation, use a code/computational Work-style setup with strong reasoning and repository/file tooling; if GPT-6 Astra in Work is actually selectable and available, it is an appropriate option, but it is not required for scientific validity.
+
+KAPABILITETSKLASSE:
+H + C, with A useful but optional for implementation orchestration.
+
+REASONING-NIVEAU:
+High or strongest mathematically reliable available reasoning level.
+
+BEGRUNDELSE:
+The remaining task is now a sharply bounded validated implementation, not broad research. The decisive gain comes from changing the proof coordinates and certifying one event/energy anchor, not from larger sampling, likelihood work, or more brute-force Cartesian interval cells.
+
+FALLBACK:
+Strongest available reasoning model with exact file access, Python/rational computation and read-only repository inspection.
+
+UPGRADE-TRIGGER:
+Escalate to a stronger Work/frontier setup only if implementing the hybrid event certificate reveals a genuinely coupled proof/code problem that cannot be resolved in the bounded current architecture. Do not escalate merely for another replay.
+
+PLUGIN-/TOOLBEHOV:
+YES, bounded and specific.
+
+RELEVANTE TOOLS:
+- Attached authoritative journal and V7 final JSON.
+- Read-only GitHub inspection of the executed Bubbleverse proof code and frozen `mwt5345/class_ede` source.
+- Exact Python/rational arithmetic for implementation and independent replay.
+- Wolfram Language only as an independent symbolic algebra check.
+
+NOT REQUIRED:
+Broad literature search, likelihood evaluation, MCMC/nested sampling, GPU, HPC campaign, or a native CLASS recapture.
+
+---
+
+## SAMLET JOURNAL
+
+The authoritative updated journal is delivered as `Q047_SAMLET_JOURNAL.md`.
+
+Update rule:
+- This Mathematics-008 handoff is prepended.
+- The complete incoming journal is retained byte-for-byte as the historical tail.
+- Incoming journal bytes: 12999343
+- Incoming journal SHA256: 4174ec43ca9e15bafdee9cea6ceef774791613b0f95af6bbd8b644ed2187c41d
+
+No prior source, claim mapping, failed method, frozen configuration, Q047 closure, Q048 proposed status, or V7 provenance is deleted.
+
+---
+
+## AKTUEL OVERLEVERING
+
+RESULT ID:
+I-PROPOSED-Q048-MATHEMATICS-008
+
+RESULT CLASS:
+MATHEMATICAL_RESULT; SOURCE_INSPECTION_RESULT; METHOD_DERIVATION_RESULT; PARTIAL_RESULT; ROUTING_RESULT.
+
+RESULT STATUS:
+VALID DISTINCT PROOF ARCHITECTURE DERIVED; NOT YET EXECUTED AS A RIGOROUS NUMERICAL CERTIFICATE. FINAL_RESULT_GATE remains UNRESOLVED.
+
+### 1. Exact remaining mathematical bottleneck
+
+V7 is technically complete. Its Camspec branch stopped with `TRAJECTORY_TUBE_NOT_CLOSED` after 1693 accepted cells; it did not demonstrate a source-guard crossing. Every accepted V7 guard cell retained a positive equivalent guard margin, while the largest stored direct-ratio upper diagnostic remained approximately 0.124465 < 1/2.
+
+The important mathematical diagnosis is that the current state representation, not the guard inequality itself, is the active blocker.
+
+The V7 certificate propagates an axis-aligned Cartesian enclosure in `(phi,X)` through an oscillatory scalar system. Before the stop, the intervals undergo rapid wrapping:
+
+- accepted cell 1598: z≈6749.44, endpoint `X≈[-111.93,-0.288]`;
+- accepted cell 1599: z≈6742.85, endpoint `X≈[-113.07,+0.962]`, so the box begins to straddle the sign change;
+- accepted cell 1688: z≈6443.43, endpoint `phi≈[-152.73,+152.90]`, `X≈[-1.851e4,+1.841e4]`;
+- accepted cell 1692: z≈6443.32, endpoint `phi≈[-2795.80,+2795.98]`, `X≈[-1.412e5,+1.411e5]`.
+
+Despite this enclosure explosion, the stored guard ratio upper diagnostic at the final accepted cell is still only ≈0.124465 and the accepted guard margin remains positive. This is a source-faithful proof/enclosure failure, not evidence that the source guard is physically approached.
+
+The final V7 artifact does not serialize the complete first rejected cell/report after the last accepted prefix. Therefore its exact failed closure slack is NOT DOCUMENTED in the final artifact. The mechanism above is diagnosed from the accepted sequence plus the exact certificate construction; no rejected payload is invented.
+
+### 2. Frozen source equations
+
+For Camspec EDE n=3 at frozen source commit `5a131c91d657dd9a7c6364cc45b038710f8d0d97`, define
+
+`lambda = 2.435e27 / F`
+
+`A = 4152.39 m^2 F^2`
+
+`theta = lambda phi`
+
+`U(theta) = A (1-cos(theta))^3 = V_e`
+
+`f = V_floor = B_scf * 3.968e-8`
+
+`X = phi_prime/a`
+
+`e = E-f = X^2/2 + U(theta)`.
+
+The source-real scalar equations in `u=ln(a)` are
+
+`phi_u = X/H`
+
+`X_u = -3X - V_phi/H`
+
+with `V_phi = lambda U_theta`.
+
+For K=0,
+
+`H^2 = B0(a) + (e+f)/3`
+
+where `B0(a)` is the frozen non-scalar background contribution.
+
+The frozen source guard is
+
+`U/(3 H^2) < 1/2`.
+
+### 3. New exact phase-energy representation
+
+Differentiating `e=X^2/2+U` along the source equations gives the exact identity
+
+`e_u = -3 X^2 = -6(e-U) <= 0`.
+
+Thus `e` is monotone nonincreasing.
+
+For a fixed sign branch `s=sign(X)` away from a turning point,
+
+`X = s sqrt(2(e-U))`
+
+and
+
+`theta_u = s lambda sqrt(2(e-U))/H`
+
+`e_u = -6(e-U)`.
+
+The source guard is exactly equivalent to
+
+`G(a,theta,e) = 3 B0(a) + e + f - 2 U(theta) > 0`.
+
+This removes the unbounded Cartesian `phi x X` rectangle from the main proof state. The energy coordinate is dissipative, and the phase coordinate is periodic/bounded by event segmentation.
+
+### 4. Turning-point chart
+
+The square-root phase-energy chart is not used across `X=0`. Introduce
+
+`r=|X| >= 0`, `X=s r`.
+
+On a fixed sign branch,
+
+`theta_u = s lambda r/H`
+
+`r_u = -3r - s lambda U_theta/H`
+
+`e = r^2/2 + U(theta)`.
+
+This chart is regular at `r=0` and supplies the event direction.
+
+For `theta in (-pi,0)`, `U_theta<0`.
+
+On the descending branch `s=-1`,
+
+`r_u = -3r + lambda U_theta/H < 0`.
+
+Hence, once the descending trajectory is in `(-pi,0)`, `r` decreases strictly until a turn if it reaches zero. At the event `r=0`, the original equation gives
+
+`X_u = -lambda U_theta/H > 0`,
+
+so the crossing direction is fixed: the physical branch changes from `s=-1` to `s=+1`.
+
+This makes the sign change an event to certify, rather than a Cartesian interval that is allowed to straddle both signs and wrap.
+
+### 5. First-turn existence structure
+
+Suppose an admitted splice enclosure satisfies
+
+- `0 < theta < pi`,
+- `X<0`,
+- `e-U>0`,
+- and `e_upper < U(-pi)_lower = 8 A_lower`.
+
+Because `e` cannot increase, a continuing descending branch cannot reach `theta=-pi` without first reaching `e-U=0`: at `theta=-pi`, `U=8A` would exceed the available energy. Therefore at least one turning event must occur before the branch could reach `-pi` (unless an earlier turn occurs already, which is also acceptable).
+
+This is a structural existence statement, not yet an event-time certificate.
+
+### 6. New post-anchor guard lemma
+
+Let the required final transfer be
+
+`a_T = 1/2871`
+
+and let
+
+`B_T_lower` be the exact lower bound on the same frozen non-scalar background `B0(a_T)`.
+
+Since every non-scalar component used here is nonnegative and nonincreasing over the forward interval, for all `a <= a_T`,
+
+`B0(a) >= B_T_lower`.
+
+Also `U<=e` and `e` is nonincreasing.
+
+Therefore, if at any certified anchor `a_* <= a_T` we prove
+
+`e(a_*) <= e_*`
+
+with
+
+`e_* < 3 B_T_lower + f_lower`,
+
+then for every later `a in [a_*,a_T]`,
+
+`G = 3B0 + e + f - 2U`
+`  >= 3B0 + f - e`
+`  >= 3B_T_lower + f_lower - e_*`
+`  > 0`.
+
+So one sufficiently low certified energy anchor closes the source guard for the entire remaining interval without tracking scalar phase or further oscillations.
+
+Using the already preserved exact V6 Camspec `base_at_transfer` lower endpoint, the displayed orientation value of this threshold is approximately
+
+`3 B_T_lower + f_lower ≈ 2104.2930315`
+
+in the source's inverse-Mpc-squared energy convention.
+
+This displayed decimal is orientation only; the next executable must use the exact rational V6 base and frozen source-constant intervals.
+
+### 7. Why the first turning point is the preferred anchor
+
+At a turning point, `X=0`, hence
+
+`e_turn = U(theta_turn)`.
+
+This removes the kinetic-energy dependency exactly and is therefore the natural place to obtain a tight scalar-energy upper bound.
+
+The prior V6 source-root energy certificate already establishes the source guard through approximately
+
+`z=3562.590282`.
+
+Consequently, the highest-value executable target is:
+
+1. start from a rigorously admitted V7 accepted state before the Cartesian wrapping regime;
+2. certify the first scalar turning event with the phase-energy/event chart;
+3. preferably show that the event occurs while still inside the independent V6 safe-guard horizon;
+4. prove `e_turn_upper < 3 B_T_lower + f_lower`.
+
+If all four hold, then:
+- V6 independently covers the source guard before the turn;
+- the new post-anchor lemma covers it from the turn to z=2870;
+- no full `(phi,X)` tube is needed after the turn.
+
+If the turn is later than the V6 safe horizon, the phase-energy cells may instead evaluate the exact margin `G>0` directly only across the finite bridge to the turn. The method must not revert to the old Cartesian tube.
+
+### 8. Rigorously admitted splice source
+
+A splice must come only from an already accepted V7 cell, never a midpoint or native hint.
+
+A strong diagnostic candidate is zero-based V7 accepted cell 1509:
+
+- endpoint z≈8979.9711;
+- certified endpoint `phi≈[0.1915839,0.2001225]`;
+- certified endpoint `X≈[-36.2737,-29.2579]`, strictly negative.
+
+Using ordinary floating evaluation only for orientation, the transformed candidate is approximately
+
+- `theta≈[2.44741,2.55648]`, within `(0,pi)`;
+- a conservative axis-aligned transformed kinetic-gap diagnostic `e_lower-U_upper≈61.9 >0`;
+- transformed `e_upper≈4221.5 < 8A≈4624.1`.
+
+These transformed decimals are explicitly NON-CERTIFIED DIAGNOSTICS. They select a promising proof splice only. The next executable must recompute `theta`, `U`, `e`, all inequalities and source constants with exact outward arithmetic before accepting the splice. If this particular cell fails the exact transformed gate, nearby already-accepted cells may be searched under a predeclared mathematical slack criterion; no new source trajectory may be invented.
+
+### 9. Independent symbolic control
+
+Wolfram Language was used only as an independent algebra check. Under positive-domain assumptions it simplified the four central expressions to
+
+`{-3 X^2, 3 B + e + f - 2 U, sqrt(2) lambda s sqrt(e-U)/H, -6e+6U}`.
+
+This independently confirms:
+- cancellation in the energy derivative;
+- the guard-margin transformation;
+- the signed phase equation;
+- `e_u=-6(e-U)`.
+
+Wolfram supplied no physical parameter, trajectory, event location or guard verdict.
+
+### 10. What has and has not been proved in Mathematics-008
+
+[BEREGNET / PROVED]
+- The phase-energy change of variables is source-equivalent away from turns.
+- The hybrid `r=|X|` event chart is source-equivalent on each fixed-sign branch.
+- `e_u=-3X^2<=0`.
+- The transformed exact source guard is `3B0+e+f-2U>0`.
+- A sufficiently low certified energy anchor below `3B_T+f` proves the source guard for the complete remaining interval.
+- A low-energy turning event is therefore a mathematically sufficient target.
+- The V7 failure mode is consistent with Cartesian interval wrapping and does not require treating the guard as approached or violated.
+
+[NOT YET PROVED]
+- The exact transformed splice gate for candidate cell 1509.
+- The first-turn event bracket/time.
+- The exact first-turn energy bound.
+- `e_turn_upper < 3B_T_lower+f_lower`.
+- The Camspec source guard through z=2870.
+- Camspec He1f/He2 continuation and H-entry q.
+- Native floating-point/source-instance admission.
+- Shared first `q=1e-6` cutoff.
+- Complete latch/reset `x_e(z)` and `tau_T(z)` difference bounds.
+
+No physical anomaly or model falsification is established.
+
+### 11. Minimal new executable proof target
+
+The next motor should implement one bounded successor method, conceptually:
+
+`source_root_phase_energy_first_turn_guard_v1`
+
+This is a method name, NOT a pre-authorized PROGRAM_ID. The Execution-Mechanism motor must decide whether a new documented program/version is needed.
+
+Required gates:
+
+A. Reverify the entire chosen V7 splice cell from its stored certificate and frozen source.
+
+B. Transform the endpoint outward to `(theta,e)` and prove:
+- sign `X<0`;
+- `0<theta<pi`;
+- positive kinetic gap;
+- `e_upper<8A_lower`.
+
+C. Propagate a validated phase-energy branch without Cartesian `(phi,X)` wrapping.
+
+D. Use the smooth `(theta,r,s)` chart to bracket/recompute the first `r=0` turning event and its crossing direction.
+
+E. Compute exact outward `e_turn`.
+
+F. Compare `e_turn_upper` to the exact transfer threshold `3B_T_lower+f_lower`.
+
+G. If the event is within the inherited V6 guard horizon and the threshold passes, combine:
+- inherited V6 guard before the event;
+- Mathematics-008 energy-anchor lemma after the event.
+
+H. If the event lies outside the V6 safe horizon, require exact transformed guard margin `G>0` on every finite bridge cell up to the event before applying the post-anchor lemma.
+
+I. Only after full Camspec guard coverage is established, continue the already-defined positive-w He1f/He2 thermal calculation to z=2870. Use the Mathematics-007 sign rule and Saha transition control. H bounds may use the source-root energy envelope before the turn and the tightened post-turn energy cap afterward; use phase-energy cells only where a tighter background bound is actually required.
+
+J. Return Camspec conditional H-entry q or a precise bounded obstruction.
+
+K. STOP. Do not launch H/frec/cutoff/full-xe/tau work in the same target.
+
+### 12. Success condition
+
+SUCCESS if the bounded executable produces either:
+
+1. a fully recomputed conditional Camspec source-guard certificate through z=2870 plus He1f/He2 continuation and conditional H-entry q,
+
+or
+
+2. a precise obstruction tied specifically to the new phase-energy/first-turn proof, with the exact failed inequality/event gate preserved.
+
+A technical inability to certify the new sufficient bound is not model falsification.
+
+### 13. Failure/falsification semantics
+
+- `TRAJECTORY_TUBE_NOT_CLOSED` from V7 remains a method obstruction, not a physical result.
+- Failure of the new phase-energy certificate is another proof-method result unless the exact admitted source guard itself is shown nonpositive.
+- A conditional physical/source guard failure exists only if `G<=0` is rigorously established on an admitted source-real trajectory.
+- Native/historical source-instance claims remain separately unresolved.
+
+### 14. Stop condition
+
+Stop the next execution when the finite first-turn/energy-anchor method either:
+- proves the Camspec guard and reaches conditional H-entry, or
+- returns one precise bounded obstruction that cannot be repaired without changing the mathematical method or adding genuinely new source/native evidence.
+
+Return once to RESULT INGESTION & ROUTING.
+
+Do not rerun V7 unchanged.
+Do not increase Cartesian halving/cell counts as a substitute for the new coordinates.
+Do not start the shared cutoff/full-history stage automatically.
+
+---
+
+## KILDER TIL NÆSTE MOTOR
+
+### K-PROPOSED-Q048-SOURCE-002 — frozen primary code source
+Repository: `mwt5345/class_ede`
+Commit: `5a131c91d657dd9a7c6364cc45b038710f8d0d97`
+Relevant source: `source/background.c`
+Relevant because:
+- defines EDE `V_e_scf`, `V_scf`, `dV_scf`;
+- defines scalar source units;
+- applies the source guard `V_e_scf / rho_crit / 3 < 0.5`.
+DOI/arXiv: not required for this code-provenance claim; no invented bibliography.
+
+### K-PROPOSED-Q048-INPUT-001 — frozen captured effective inputs
+Origin: run 38140371059
+Relevant because:
+- supplies the four Q041 FULL/start0 reconstructed configurations;
+- contains Camspec EDE F, m, B, initial phi/X, finite-node ncdm realization and fixed accepted z_reio.
+External publication metadata: NOT APPLICABLE; internal captured input evidence.
+
+### K-PROPOSED-Q048-GITHUB-RUN-38293480870 — V6 official execution
+Role:
+- source-root energy certificate;
+- exact Camspec transfer-base lower bound;
+- independent safe guard horizon through z≈3562.590282;
+- verified z=4600 thermal endpoint.
+
+### I-PROPOSED-Q048-MATHEMATICS-007 — prior mathematics
+Role:
+- sign-aware positive-w formula;
+- exact-real He1f/He2 Saha identity;
+- exact direct-guard reformulation;
+- V7 finite task definition.
+
+### K-PROPOSED-Q048-GITHUB-RUN-38348832247 — V7 official execution
+Executed commit:
+`c9ca98f232a0c753ce9a8c04437fc5d7ef699dab`
+Role:
+- accepted Camspec source-real prefix/cells;
+- bounded Cartesian tube obstruction;
+- successful Hillipop H-entry continuation;
+- technical execution provenance.
+
+### I-PROPOSED-Q048-GUARDCONT-GITHUB-38348832247 — V7 internal numerical result
+Role:
+- 1693 accepted Camspec guard cells;
+- final `TRAJECTORY_TUBE_NOT_CLOSED`;
+- positive accepted guard margins;
+- Hillipop H-entry q.
+
+### I-PROPOSED-Q048-MATHEMATICS-008 — this result
+Role:
+- Cartesian-wrapping diagnosis;
+- phase-energy and turn-event equations;
+- post-anchor guard lemma;
+- bounded next executable target.
+
+---
+
+## TOOL- OG PLUGINPROVENIENS
+
+Tool: Files
+Function: recovered the authoritative updated journal, V7 final result and ingestion handoff.
+Underlying data: user-supplied Bubbleverse files.
+Role: primary internal evidence retrieval.
+
+Tool: GitHub connector, read-only
+Function: inspected the exact V7 proof backend at executed Bubbleverse commit and frozen `class_ede` source.
+Underlying objects:
+- `Morfindien/Bubbleverse` at `c9ca98f232a0c753ce9a8c04437fc5d7ef699dab`;
+- `mwt5345/class_ede` at `5a131c91d657dd9a7c6364cc45b038710f8d0d97`.
+Role: code/source provenance; no repository write.
+
+Tool: exact/local Python analysis
+Function: inspected accepted V7 cells and computed orientation-only transformed diagnostics.
+Underlying data: supplied `q048_guard_final_v7.json`.
+Role: method diagnosis and candidate-splice selection. Float diagnostics are explicitly not admitted as certificates.
+
+Tool: Wolfram Language
+Function: independent symbolic simplification of the phase-energy algebra.
+Underlying data: equations already derived from the frozen source.
+Result: exact algebraic cross-check only; no physical input.
+
+No broad external literature search was scientifically necessary.
+
+---
+
+## HOVEDSPØRGSMÅL STATUS
+
+Q048 is NOT answered yet.
+
+The new mathematics materially changes the route: the Camspec obstruction is no longer best attacked by extending the same Cartesian tube. A finite source-equivalent first-turn/energy-anchor certificate now exists as a distinct implementable proof architecture.
+
+Therefore the Mathematics Engine is no longer the best next motor for the immediate uncertainty.
+
+ROUTE:
+AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE.
+
+The next motor must implement and validate the bounded phase-energy first-turn certificate before any later Q048 cutoff/full-history work is authorized.
+
+
+---
+
+# COMPLETE INCOMING AUTHORITATIVE JOURNAL — UNCHANGED TAIL
+
+# BUBBLEVERSE — RESULT INGESTION & ROUTING HANDOFF
+
+STATUS:
+CONTINUES
+
+Date and time:
+2026-10-13T07:15:00+02:00 Europe/Copenhagen
+
+CASE ID:
+NOT_ASSIGNED
+
+CURRENT Q:
+Q-048 — PROPOSED_UNVERIFIED
+
+QUESTION:
+For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Question SHA256:
+c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436
+
+Q047 remains CLOSED INCONCLUSIVE. This ingestion does not reopen Q047 historical-state identity/equivalence.
+
+---
+
+## RECOMMENDED CHATGPT EXECUTION PROFILE
+
+AVAILABLE CONFIGURATIONS CONSIDERED:
+- Current chat runtime: GPT-5.6 Sol, High reasoning.
+- Current connected capabilities used here: Files, exact local Python inspection, read-only GitHub connector, web access for current OpenAI capability documentation.
+- Current OpenAI documentation indicates GPT-6 Astra is available in ChatGPT Work/Codex on Plus, subject to current product availability/usage rules.
+
+RECOMMENDED MODEL / MODE:
+For this ingestion: current GPT-5.6 Sol High is sufficient.
+For the selected next Mathematics Engine task: GPT-6 Astra in ChatGPT Work if actually selectable and available; fallback GPT-5.6 Sol High.
+
+RECOMMENDED REASONING LEVEL:
+High / strongest available mathematically reliable reasoning within the selected mode. No escalation is justified merely for formatting or replay.
+
+RECOMMENDED EXECUTION STYLE:
+Reasoning-heavy, source-pinned mathematical diagnosis first. Do not launch another numerical campaign until a genuinely different proof mechanism is derived.
+
+WHY:
+V7 has produced a technically complete bounded result. The remaining bottleneck is not missing compute capacity; it is a repeated interval/tube-closure validity problem in the Camspec source-real guard proof. More unchanged cell refinement is explicitly low-information.
+
+RECOMMENDED PLUGINS / TOOLS:
+- Attached complete journal and V7 final artifact.
+- Connected GitHub read-only inspection for exact executed commit/run/log/artifact provenance.
+- Exact Python/rational inspection of the supplied final JSON.
+- Frozen mwt5345/class_ede source and existing Bubbleverse proof code when the Mathematics Engine inspects the obstruction.
+
+OPTIONAL PLUGINS / TOOLS:
+- Symbolic algebra only if it materially proves a new inequality or change of variables.
+- No broad literature search, likelihood tooling, MCMC, nested sampling, GPU or HPC is currently indicated.
+
+CAPABILITY LIMITATIONS:
+No model switch was performed in this ingestion. No remote repository write was performed. The current result does not qualify native floating-point/source-instance identity.
+
+---
+
+## SELECTED NEXT BUBBLEVERSE ENGINE
+
+**EXISTING MATHEMATICS ENGINE / MATEMATIKMOTOREN**
+
+Exactly one destination.
+
+The next task is not "rerun V7" and not "halve more cells." It is to determine whether the Camspec guard can be certified by a mathematically distinct source-faithful bound, or whether the current frozen information entails a precise irreducible obstruction.
+
+---
+
+## SAMLET JOURNAL
+
+The authoritative updated journal is `Q047_SAMLET_JOURNAL.md` delivered with this ingestion.
+
+Update method:
+- This ingestion handoff is prepended.
+- The complete incoming journal is retained byte-for-byte as the historical tail.
+- Incoming journal bytes: 12975059
+- Incoming journal SHA256: 422985ed72a7e41978d8367483d8b3451a5ae2056739441ab5b377e519ca0f35
+
+No prior source, claim mapping, failed method, frozen configuration, Q047 closure, Q048 proposed status or historical provenance is deleted.
+
+---
+
+## NEW RESULT
+
+RESULT ID:
+I-PROPOSED-Q048-GUARDCONT-GITHUB-38348832247
+
+ORIGIN:
+Official GitHub Actions run 38348832247, repository `Morfindien/Bubbleverse`, workflow `.github/workflows/q048-guard-continuation-v7.yml`, PROGRAM_ID `Q048-GUARDCONT-V7`, executed commit `c9ca98f232a0c753ce9a8c04437fc5d7ef699dab`, trigger `workflow_dispatch`.
+
+RESULT CLASS:
+RUN_SUCCESS; MATHEMATICAL_RESULT; NUMERICAL_RESULT; PARTIAL_RESULT; VALIDATION_RESULT; BOUNDED_OBSTRUCTION_RESULT.
+
+RESULT STATUS:
+TECHNICALLY VALIDATED; SCIENTIFICALLY PARTIAL/CONDITIONAL. FINAL_RESULT_GATE=UNRESOLVED.
+
+DIRECT OUTPUT:
+- Run status: completed / success.
+- Four jobs completed successfully: preflight, Camspec EDE worker, Hillipop EDE worker, collector.
+- Preflight: 27 tests, all passed.
+- Final job completeness gate: PASS.
+- Merge compatibility gate: PASS.
+- Final full replay/collector completed successfully.
+- `guard_continuation_gate=UNRESOLVED`.
+- `thermal_h_entry_gate=UNRESOLVED`.
+- `final_result_gate=UNRESOLVED`.
+- `actual_source_admission=UNRESOLVED`.
+- shared first `q=xHeII=1e-6` event: NOT_COMPUTED.
+- complete latch/reset `x_e(z)` bounds: NOT_COMPUTED.
+- complete latch/reset `tau_T(z)` bounds: NOT_COMPUTED.
+
+CAMSPEC EDE:
+- Guard method: `source_root_correlated_interval_tube_direct_guard_v1`.
+- Status: `UNRESOLVED_BOUNDED_OBSTRUCTION`.
+- Accepted certified guard cells: 1693.
+- Attempts: 2526.
+- Last certified scale factor: exact rational retained in raw artifact.
+- Approximate last certified redshift: z=6443.320213542182.
+- Blocker: `TRAJECTORY_TUBE_NOT_CLOSED`.
+- Minimum lower bound of the accepted equivalent guard margin across certified cells: approximately 32527.8589682 in the proof's source units; exact rational retained.
+- Maximum upper bound of the displayed direct guard-ratio diagnostic across accepted cells: approximately 0.124465195139624, below 1/2; exact rational retained.
+- Thermal continuation: `UNRESOLVED_GUARD_INCOMPLETE`.
+- H-entry q: NOT_COMPUTED.
+
+HILLIPOP EDE:
+- Inherited V6 source-root guard retained.
+- Guard status: `PASS_CONDITIONAL_DIRECT_GUARD_NOT_REQUIRED`.
+- Thermal continuation through He1f and He2: `PASS_CONDITIONAL_TO_H_ENTRY`.
+- Saha transition control: `PASS_SOURCE_REAL_SAHA_IDENTITY_CONTROL`.
+- H-entry q at z=2870: approximately [0.081450026889631516, 0.081451260472451562]; exact rational bounds retained.
+- Endpoint w at z=2870: approximately [2.3484319111899051e-07, 4.3480308660392769e-07]; exact rational bounds retained.
+- Thermal cells: 16.
+
+RETAINED LCDM:
+- Camspec LCDM conditional H-entry q retained: approximately [0.08145979083260943, 0.081469694452438846].
+- Hillipop LCDM conditional H-entry q retained: approximately [0.081445698533814267, 0.081455592545481306].
+- No LCDM result is upgraded beyond its prior conditional scope.
+
+TECHNICAL INTERPRETATION:
+V7 successfully executed the finite test it was designed to perform. For Camspec, the direct guard was not shown to fail. Every accepted cell passed the equivalent positive-margin acceptance test; the computation stopped because the validated trajectory tube ceased to close. This is a proof/enclosure obstruction, not a demonstrated source-guard crossing. Hillipop successfully reached conditional H-entry.
+
+The Camspec obstruction is material because it prevents source-faithful thermal continuation in V7, but it does not falsify the EDE configuration and does not establish that the guard is physically approached. It also repeats the broader historical pattern that interval/tube closure, rather than an observed physical violation, limits the Camspec continuation.
+
+PHYSICAL INTERPRETATION:
+No new physical anomaly, source crossing, cosmological model falsification or complete Q048 answer is established. The exact Q still lacks the shared first cutoff and complete four-configuration `x_e(z)` and `tau_T(z)` difference bounds. Hillipop's conditional H-entry result is a valid partial component only.
+
+ANOMALY STATUS:
+NO_NEW_PHYSICAL_ANOMALY_ESTABLISHED.
+Preserve the Camspec tube-closure obstruction as a mathematical/computational proof limitation.
+
+---
+
+## INTERNAL RESULT PROVENANCE
+
+Repository:
+Morfindien/Bubbleverse
+
+Branch:
+main
+
+Workflow:
+`.github/workflows/q048-guard-continuation-v7.yml`
+
+PROGRAM_ID:
+Q048-GUARDCONT-V7
+
+GitHub run:
+38348832247
+
+Run number:
+5
+
+Executed commit:
+c9ca98f232a0c753ce9a8c04437fc5d7ef699dab
+
+Source commit:
+5a131c91d657dd9a7c6364cc45b038710f8d0d97
+
+V7 config hash:
+7a76fcb14f256e616494af38a41024b89d6d25e395a08cebe21fc51a750307bf
+
+Question SHA256:
+c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436
+
+Runtime:
+GitHub-hosted Ubuntu 24.04; CPython 3.12.15. Runner image metadata is preserved in official job logs.
+
+Worker elapsed times recorded in result:
+- Camspec EDE: 686.579357817 s.
+- Hillipop EDE: 1.205451196 s.
+
+Final artifact:
+- Official artifact name: `q048-guard-v7-final-38348832247`
+- Official artifact ID: 11790726097
+- ZIP size: 7010521 bytes
+- ZIP SHA256: db158565a5704ed0698fdc3ff694e841403ccecd290378f37c4ecb8e54d885be
+- Uploaded supplied ZIP matches the official GitHub digest exactly.
+- Unique member: `q048_guard_final_v7.json`
+- Raw member size: 34644129 bytes
+- Raw member SHA256: 5abb2eafe2c47dd4cfa61acf29f7995368992d79d3f1e2b579b15f5bee58b310
+- ZIP CRC validation: PASS.
+
+Historical V7 technical failures retained as technical, not physical:
+- V7 attempt #1: workflow/package path mismatch at preflight.
+- V7 attempt #2: overly strict unit-test equality versus outward-rounded rational bound.
+- V7 attempt #3: inherited `COMPARISON_GROWTH_CAP` was not initially converted into an adaptive refinement request.
+- V7 attempt #4, GitHub run 38347236249: both EDE workers succeeded, collector failed on inherited 32,000,000-byte checkpoint loader cap; this was a collector-size limitation, not a scientific failure.
+- V7 attempt #5, run 38348832247: final technical success after bounded V7-specific collector loading.
+
+Unknown or unavailable provenance fields remain:
+CPU model/count, native CLASS compiler/FP exception state and any unrecorded machine-level details: NOT DOCUMENTED.
+
+---
+
+## WEB / PLUGIN / TOOL RESEARCH
+
+RESEARCH PERFORMED:
+YES — targeted technical verification only; no broad physical-literature campaign.
+
+CAPABILITIES USED:
+- Connected GitHub read-only run/jobs/artifacts/log inspection.
+- Attached Files/journal retrieval.
+- Exact local Python ZIP/JSON/hash/rational inspection.
+- Official OpenAI documentation to verify current model/capability availability for routing.
+
+QUESTIONS INVESTIGATED:
+1. Did the supplied final artifact originate from the claimed successful V7 run?
+2. Did all required jobs complete?
+3. Does the supplied ZIP match the official GitHub artifact digest?
+4. What exactly stopped Camspec?
+5. Did Hillipop reach H-entry?
+6. Does another unchanged execution have meaningful expected information gain?
+7. Which currently available ChatGPT capability class best fits the next task?
+
+NEW EXTERNAL EVIDENCE:
+Official GitHub technical metadata confirms successful run 38348832247, all four jobs successful, executed commit `c9ca98f232a0c753ce9a8c04437fc5d7ef699dab`, and final artifact digest `db158565a5704ed0698fdc3ff694e841403ccecd290378f37c4ecb8e54d885be`.
+
+NEW SOURCES:
+- `K-PROPOSED-Q048-GITHUB-RUN-38348832247` — official GitHub run/jobs/log/artifact technical evidence.
+- `I-PROPOSED-Q048-GUARDCONT-GITHUB-38348832247` — Bubbleverse-generated V7 final mathematical/numerical result, internal evidence.
+
+No new external cosmology publication or physical dataset is added.
+
+CONTRADICTORY EVIDENCE:
+None materially scientific. The successful final run supersedes the earlier pre-execution and failed technical-attempt statuses but does not contradict their historical facts.
+
+IMPACT ON INTERPRETATION:
+The Camspec problem is now more sharply localized: the direct guard itself remained separated on every accepted V7 cell, while the correlated interval tube failed to close before the required horizon. Hillipop's next-phase conditional continuation is established.
+
+IMPACT ON JOURNAL:
+ADD successful V7 execution/provenance and bounded obstruction; STRENGTHEN Hillipop continuation; REFINE Camspec bottleneck from generic guard uncertainty to trajectory-tube proof obstruction; leave full-Q status UNRESOLVED.
+
+---
+
+## ACTIVE SOURCE REGISTER
+
+`K-PROPOSED-Q048-SOURCE-002`
+- Primary scientific/code source.
+- Repository: `mwt5345/class_ede`.
+- Frozen commit: `5a131c91d657dd9a7c6364cc45b038710f8d0d97`.
+- Role: source equations, thermodynamic phase structure and source guard.
+- Evidence class: official/frozen source code for this Bubbleverse reconstruction; not external observational evidence.
+
+`K-PROPOSED-Q048-INPUT-001`
+- Four captured Q041 FULL/start0 effective inputs reconstructed from run 38140371059.
+- Includes fixed accepted z_reio and captured source configuration.
+- Role: frozen input definition for Q048.
+
+`K-PROPOSED-Q048-GITHUB-RUN-38259814813`
+- Official immutable V5 parent execution evidence.
+- Role: historical exact conditional parent/provenance.
+
+`K-PROPOSED-Q048-GITHUB-RUN-38293480870`
+- Official V6 execution evidence.
+- Role: verified z=4600 EDE endpoint and structural/energy provenance.
+
+`I-PROPOSED-Q048-MATHEMATICS-007`
+- Internal mathematical/source-inspection result.
+- Role: positive-w sign rule, He1f/He2 exact-real identity, direct guard reformulation and finite V7 task definition.
+- Not an external publication.
+
+`K-PROPOSED-Q048-GITHUB-RUN-38348832247` [ADD]
+- Official GitHub Actions technical evidence for V7 final run.
+- Executed commit: `c9ca98f232a0c753ce9a8c04437fc5d7ef699dab`.
+- Role: run identity, job completion, logs and artifact digest.
+
+`I-PROPOSED-Q048-GUARDCONT-GITHUB-38348832247` [ADD]
+- Internal Bubbleverse V7 mathematical/numerical result.
+- Role: Camspec bounded obstruction, Hillipop conditional H-entry and preserved unresolved full-Q fields.
+
+The complete historical source register remains in the unchanged incoming journal tail.
+
+---
+
+## CLAIM-TO-SOURCE MAP
+
+`C-V7-INGEST-001`
+Successful installed V7 execution completed all required jobs and collection.
+→ `K-PROPOSED-Q048-GITHUB-RUN-38348832247`.
+
+`C-V7-INGEST-002`
+The supplied final ZIP is the official run artifact.
+→ official artifact ID 11790726097; SHA256 `db158565a5704ed0698fdc3ff694e841403ccecd290378f37c4ecb8e54d885be`; supplied ZIP exact digest match.
+
+`C-V7-INGEST-003`
+Camspec certified 1693 accepted direct-guard cells before a `TRAJECTORY_TUBE_NOT_CLOSED` obstruction at approximately z=6443.320213542182.
+→ `I-PROPOSED-Q048-GUARDCONT-GITHUB-38348832247`; `K-PROPOSED-Q048-SOURCE-002`; `I-PROPOSED-Q048-MATHEMATICS-007`.
+
+`C-V7-INGEST-004`
+No Camspec source-guard crossing is established by V7; accepted cells satisfy the equivalent positive-margin test, and the maximum displayed ratio upper diagnostic is approximately 0.124465195139624<1/2.
+→ same V7 result and frozen source guard.
+
+`C-V7-INGEST-005`
+Hillipop EDE reaches conditional source-real H-entry at z=2870 with q approximately [0.081450026889631516, 0.081451260472451562] and passes the source-real Saha transition control.
+→ `I-PROPOSED-Q048-GUARDCONT-GITHUB-38348832247`; `I-PROPOSED-Q048-MATHEMATICS-007`; `K-PROPOSED-Q048-SOURCE-002`.
+
+`C-V7-INGEST-006`
+The exact shared first cutoff and complete latch/reset `x_e(z)` and `tau_T(z)` bounds remain unavailable.
+→ V7 final raw product fields; exact Q; preserved journal.
+
+`C-V7-INGEST-007`
+The Camspec stop is a proof/enclosure obstruction, not physical falsification.
+→ V7 blocker semantics; V7 acceptance cells; historical V5/V6 tube/guard limitations; frozen source.
+
+All prior claim-to-source mappings survive unchanged in the historical journal tail.
+
+---
+
+## WHAT CHANGED
+
+- V7 moved from planned/not-computed to officially executed and collected successfully.
+- Hillipop EDE now has a controlled conditional He1f/He2 continuation and H-entry q at z=2870.
+- Camspec guard uncertainty is refined: the tested direct guard remains separated on every accepted V7 cell, but the correlated trajectory certificate stops because the tube cannot close.
+- The Camspec obstruction is now an explicit finite bounded result rather than an unexecuted proof proposal.
+- V7 technical repair history is preserved without upgrading any repair into scientific evidence.
+
+---
+
+## WHAT DID NOT CHANGE
+
+- Exact Q, CASE NOT_ASSIGNED and Q048 PROPOSED_UNVERIFIED status.
+- Q047 CLOSED INCONCLUSIVE.
+- Frozen four captured configurations and fixed accepted z_reio.
+- Frozen class_ede source commit.
+- V5/V6 parent results and all prior failures.
+- Native/source-instance admission remains UNRESOLVED.
+- Shared first q=1e-6 cutoff remains NOT_COMPUTED.
+- Complete four-configuration latch/reset x_e(z) and tau_T(z) bounds remain NOT_COMPUTED.
+- No physical anomaly or model falsification is established.
+
+---
+
+## FALSIFIED / REJECTED / SUPERSEDED MATERIAL
+
+No new physical hypothesis is falsified.
+
+SUPERSEDED CURRENT STATUS:
+- "V7 not yet computed" is superseded by successful official run 38348832247, but retained historically.
+- Failed V7 attempts #1-#4 are superseded as current technical state by run #5; they remain historical provenance.
+
+REJECTED AS NEXT STEP:
+- Unchanged V7 rerun.
+- More arbitrary step halving/cell-count increase using the same closure mechanism.
+- Another reproduction of the same final artifact.
+- Broad HPC/likelihood/MCMC campaign.
+- Treating `TRAJECTORY_TUBE_NOT_CLOSED` as a physical source crossing.
+
+Historical rejected/falsified material remains unchanged in the journal tail.
+
+---
+
+## OPEN UNCERTAINTIES
+
+1. Camspec: can a mathematically distinct source-faithful bound certify the source guard through z=2870 without the current trajectory-tube wrapping failure?
+2. If not, can the obstruction be proven irreducible under the frozen captured information, rather than merely method-specific?
+3. Native floating-point/source-instance admission remains unresolved.
+4. Camspec He1f/He2 continuation and H-entry q remain uncomputed because V7 correctly refused to continue without guard certification.
+5. Shared first q=1e-6 cutoff remains uncomputed.
+6. Complete latch/reset x_e(z) differences remain uncomputed.
+7. Complete cumulative tau_T(z) differences remain uncomputed.
+
+---
+
+## Q-COMPLETION GATE
+
+STATUS:
+NOT YET SATISFIED
+
+WHY:
+The exact Q asks for rigorously controlled complete-history difference bounds for four configurations. V7 supplies a valid Hillipop conditional component and a precise Camspec proof obstruction, but it does not establish that the Camspec obstruction is irreducible under the frozen source information. A genuinely different mathematical certificate could still materially alter feasibility of the exact Q.
+
+UNKNOWN/INCONCLUSIVE closure is allowed, but the current evidence does not yet justify saying no material route remains.
+
+---
+
+## MATERIAL-REVERSAL TEST
+
+YES — one bounded mathematical task can still materially change the answer:
+
+Determine whether the Camspec direct-guard requirement can be certified with a mathematically distinct non-wrapping bound, or whether the frozen information provably cannot support such a certificate.
+
+NO — another run of the same V7 tube method, more arbitrary halvings, another validation replay, or more compute with unchanged mathematics is not reasonably likely to change the Q.
+
+---
+
+## ROUTING REASON
+
+The bottleneck is now mathematical validity, not execution availability.
+
+V7 has already exhausted the intended finite direct trajectory-tube experiment and returned the allowed scoped obstruction. The next information gain comes from changing the proof representation, not from increasing the same numerical budget.
+
+Historical V5 also ended in tube-closure barriers, so mechanically retrying a related enclosure method would violate the anti-loop rule. The selected Mathematics Engine must explicitly diagnose the dependence/wrapping source and either produce a distinct proof route or establish a precise irreducibility statement.
+
+---
+
+## NEXT TASK
+
+For Camspec EDE only:
+
+1. Ingest the exact V7 final result and inspect the last accepted cell plus first rejected `TRAJECTORY_TUBE_NOT_CLOSED` attempt. Preserve every frozen input/source/parent state.
+2. Diagnose which term causes non-closure: state scaling, predictor remainder, interval dependency in the Jacobian/comparison matrix, potential derivative enclosure, background forcing width, or another explicit mathematical mechanism.
+3. Do **not** authorize more unchanged step-halving as the remedy.
+4. Derive and test on paper/exact arithmetic at least one genuinely different certificate. Priority candidate:
+   - use `E = X^2/2 + V_e + V_floor` and `dE/dln(a) = -3X^2`,
+   - rewrite the exact guard margin as `3B(a) + X^2 + 2V_floor - E`,
+   - determine whether a rigorous lower bound on accumulated dissipation `∫3X^2 dln(a)` or another phase-space/Lyapunov inequality can tighten E enough without enclosing the full correlated `(phi,X)` tube.
+5. Alternatively, derive a validated change of variables / monotonic phase-space bound / source-faithful splice that removes the identified wrapping mechanism. Any splice must have a rigorously admitted state enclosure; do not invent a midpoint state at the V6 safe horizon.
+6. If no distinct certificate can be derived from the frozen information, state exactly what missing mathematical/source state prevents it and whether that obstruction is irreducible without new native/source evidence.
+7. Stop after one finite remedy or one precise irreducibility result and return to Result Ingestion & Routing. Do not build/dispatch a new executable until the mathematics identifies a materially different method.
+
+---
+
+## FIXED / FROZEN ELEMENTS
+
+- Q-048 exact wording and question SHA256.
+- CASE NOT_ASSIGNED.
+- Q047 CLOSED INCONCLUSIVE.
+- Four Q041 FULL/start0 captured configurations.
+- Fixed accepted z_reio.
+- `mwt5345/class_ede` commit `5a131c91d657dd9a7c6364cc45b038710f8d0d97`.
+- V5/V6 parent provenance and endpoint intervals.
+- V7 official raw result and all 1693 accepted Camspec guard cells.
+- V7 Hillipop H-entry result.
+- Source guard definition and Mathematics-007 sign-aware thermal rule.
+- No silent source, configuration, bound or acceptance-criterion changes.
+
+---
+
+## VARIABLE ELEMENTS
+
+Only the mathematical proof representation used to bound the Camspec guard may change.
+
+Eligible changes include a rigorously derived dissipation inequality, transformed state, Lyapunov/phase-space bound, or other source-equivalent enclosure with explicit provenance.
+
+Any executable implementation must receive a new documented program/version only after the Mathematics Engine establishes the distinct method.
+
+---
+
+## SUCCESS CONDITION
+
+One of:
+
+A. A mathematically distinct, source-faithful and independently checkable certificate is derived that is capable of covering the missing Camspec guard horizon through z=2870 without relying on the failed V7 tube-closure mechanism.
+
+or
+
+B. A precise proof shows that the frozen information is insufficient for such a certificate and identifies the minimum additional source/native information required, making the obstruction genuinely irreducible under current Q048 inputs.
+
+Either outcome must preserve exact scope and must not claim a physical guard crossing unless one is actually proved.
+
+---
+
+## FAILURE / FALSIFICATION CONDITION
+
+Failure of another sufficient bound or proof representation is a mathematical-method failure, not EDE/model falsification.
+
+A physical/source guard failure exists only if the exact frozen source guard is rigorously shown to be violated on an admitted trajectory.
+
+An unexpected mathematical result is preserved, not normalized away.
+
+---
+
+## STOP CONDITION
+
+Stop the Mathematics task when one genuinely distinct guard remedy or one precise irreducibility obstruction is documented and further same-method checks cannot materially alter it.
+
+Return once to Result Ingestion & Routing.
+
+Do not rerun V7 unchanged.
+
+Do not start H/frec/cutoff/full-xe/tau work unless Camspec's required upstream admission is resolved or the case is formally closed as irreducibly inconclusive.
+
+Route Q048 directly to MOTOR 14 only when the exact question has a defensible documented answer — including an honestly established irreducible inconclusive answer — and no credible remaining task is reasonably likely to alter that answer.
+
+REPORT WRITER is never a scientific routing destination.
+
+
+---
+
+# COMPLETE PRIOR JOURNAL — UNCHANGED BYTE TAIL
+
 # BUBBLEVERSE — EXECUTION DESIGN & INSTALL HANDOFF V7
 
 STATUS: PREPARED FOR FINITE EXECUTION; SCIENTIFIC Q CONTINUES
