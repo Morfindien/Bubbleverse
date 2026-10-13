@@ -1,0 +1,54 @@
+name: 🔧 INSTALL Q048 THRESHOLD V9
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: q048-install-threshold-v9
+  cancel-in-progress: false
+
+jobs:
+  install:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Apply exact V8 -> V9 registry and README patch
+        run: |
+          set -euo pipefail
+          python q048_v9_repository_patch.py
+      - name: Refuse unrelated mutable-file changes
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import subprocess
+          allowed={'README.md','bubbleverse_program_registry.json'}
+          rows=subprocess.check_output(['git','status','--porcelain'],text=True).splitlines()
+          changed={r[3:] for r in rows if r.strip()}
+          bad=changed-allowed
+          if bad:
+              raise SystemExit('INSTALLER_UNRELATED_CHANGE '+','.join(sorted(bad)))
+          print('INSTALLER_DIFF_GATE=PASS changed='+','.join(sorted(changed)))
+          PY
+      - name: Commit canonical registration
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md bubbleverse_program_registry.json
+          if git diff --cached --quiet; then
+            echo "INSTALLER_COMMIT_GATE=PASS_ALREADY_INSTALLED"
+          else
+            git commit -m "Install Q048-THRESHOLD-V9"
+            git push
+          fi
+      - name: Verify installed state
+        run: |
+          set -euo pipefail
+          python q048_v9_repository_patch.py --verify-only

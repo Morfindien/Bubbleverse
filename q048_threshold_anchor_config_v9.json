@@ -1,0 +1,99 @@
+{
+  "schema": "Q048_THRESHOLD_ANCHOR_CONFIG_V9",
+  "q": "Q-048",
+  "q_assignment": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "program_id": "Q048-THRESHOLD-V9",
+  "version": "v9",
+  "created_local": "2026-10-13T12:35:19+02:00",
+  "scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "repository_base_commit": "cf7b9fe835cd97cc01dbee99cd8f0ed69a399beb",
+  "scope": "CONDITIONAL_SOURCE_REAL_THRESHOLD_ANCHOR_GUARD_THERMAL",
+  "math_result_id": "I-PROPOSED-Q048-MATHEMATICS-009",
+  "math009_md": "Q048_MATHEMATICS_009.md",
+  "math009_md_sha256": "ba29714829ddbf2b38739a5ce7f1fad89c08b2b0962bcb70da87fa5c0d293fdb",
+  "math009_json": "Q048_MATHEMATICS_009.json",
+  "math009_json_sha256": "07ce725e16226a882e3ad6f870cb65bb85faa51e98ade0878ec05095b041bec5",
+  "journal_file": "Q047_SAMLET_JOURNAL.md",
+  "journal_sha256": "22a5dd7b50ac626baa42064475737bd54fb0d30ddae82029c57e9642dc6ba369",
+  "reused_git_blob_sha1": {
+    "q048_phase_turn_v8.py": "4c58dc3c611bb68435d35027f8ab97d83e8f9c92",
+    "q048_phase_turn_config_v8.json": "a2db5a0c5b1b18a16084cd84321498ad41dc5659",
+    "q048_guard_continuation_v7.py": "8a9262bb00d4f63a6c37c42041d7d33f3cbd8138",
+    "q048_guard_config_v7.json": "8e8344bc98dcee7a1dbb8f5c0540381ce50b4846",
+    "q048_structural_v6.py": "f9f993bdab44091d5d76c0ff2192b5300ad1924b",
+    "q048_structural_config_v6.json": "33a37b0023afb915659522acae6cbc7a7262b088",
+    "q048_prefix_v1.py": "288ebe6da1df592692f174be0f1d89478c1001aa",
+    "q047_precursor_check_v1.py": "21cee458a6a4e931148405a7ffebeaf0a2d79749",
+    "q047_math_v1.py": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb",
+    ".github/workflows/00-bubbleverse-start.yml": "7f22c617fb98d1508a0b22a42dd3735a74d8288e"
+  },
+  "parent_v6": {
+    "run_id": 38293480870,
+    "artifact_name": "q048-structural-v6-final-38293480870",
+    "artifact_id": 11767910630,
+    "artifact_digest": "sha256:b5fb8b2f9bd72d7e34fab8d678b4c2127fcf2fd5d40212d552a6b6deefbf59ce",
+    "raw_file": "q048_structural_final_v6.json",
+    "raw_sha256": "7912ca59fec5471030a0cd1b55bee8d05bec0825b51c6754500c0aebb25cbe2a",
+    "executed_commit": "2bc190aeb1a2659fbc9bc0d402159c7768c6b15a",
+    "config_hash": "67cbd2b450975b827e3985e4a80526028a825e4134534d5d8d3e09144ec015fa"
+  },
+  "parent_v7": {
+    "run_id": 38348832247,
+    "artifact_name": "q048-guard-v7-final-38348832247",
+    "artifact_id": 11790726097,
+    "artifact_digest": "sha256:db158565a5704ed0698fdc3ff694e841403ccecd290378f37c4ecb8e54d885be",
+    "raw_file": "q048_guard_final_v7.json",
+    "raw_sha256": "5abb2eafe2c47dd4cfa61acf29f7995368992d79d3f1e2b579b15f5bee58b310",
+    "executed_commit": "c9ca98f232a0c753ce9a8c04437fc5d7ef699dab",
+    "config_hash": "7a76fcb14f256e616494af38a41024b89d6d25e395a08cebe21fc51a750307bf"
+  },
+  "parent_v8": {
+    "run_id": 38361759433,
+    "artifact_name": "q048-phase-turn-v8-final-38361759433",
+    "artifact_id": 11794459807,
+    "artifact_digest": "sha256:a1d6339f9938b3e103ed48608b6f9981ab55463126b137351b780e6ce7598743",
+    "raw_file": "q048_phase_turn_final_v8.json",
+    "raw_sha256": "25064b9fb1356824baff5b99534a649306684834d458b87de475b39571c50155",
+    "executed_commit": "cf7b9fe835cd97cc01dbee99cd8f0ed69a399beb",
+    "config_hash": "725fcae4c763378d49d471f6161131c688bfec348c19da09f8047614ca0bab58"
+  },
+  "witness": {
+    "v7_splice_cell_zero_based": 1509,
+    "v8_cell_zero_based": 27,
+    "theta_upper_below": "2"
+  },
+  "certificate": {
+    "method": "source_root_phase_threshold_anchor_v1",
+    "energy_bins": 32,
+    "energy_phase_start": "21/10",
+    "energy_phase_end": "-1",
+    "timing_bins": 32,
+    "timing_phase_low": "-1",
+    "timing_phase_high": "2",
+    "log_series_terms": 24,
+    "refinement_bins": 64,
+    "post_anchor_threshold": "T=3*B_transfer_lower+f_lower",
+    "exact_turn_required_for_guard_closure": false
+  },
+  "thermal": {
+    "start_a": "1/4601",
+    "switch_a": "1/3551",
+    "end_a": "1/2871",
+    "relative_step": "1/32",
+    "whole_w": [
+      "0",
+      "1/50"
+    ],
+    "method": "sign_aware_positive_voc_v1_with_v6_pre_anchor_and_math009_post_anchor_energy_caps",
+    "independent_method": "rational_bernoulli_voc_v1"
+  },
+  "actual_source_admission": "UNRESOLVED",
+  "actual_event_redshift": "NOT_COMPUTED",
+  "actual_xe_history_bounds": "NOT_COMPUTED",
+  "actual_tau_T_bounds": "NOT_COMPUTED",
+  "final_result_gate": "UNRESOLVED",
+  "return_route": "RESULT INGESTION & ROUTING ENGINE"
+}

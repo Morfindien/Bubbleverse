@@ -1,0 +1,171 @@
+name: Q048 correlation-preserving threshold anchor V9
+
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Registered bounded Q048 V9 proof identifier
+        required: true
+        type: string
+        default: Q048-THRESHOLD-V9
+
+concurrency:
+  group: q048-threshold-anchor-v9
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download exact official V6 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-structural-v6-final-38293480870
+          path: v6_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38293480870
+      - name: Download exact official V7 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-guard-v7-final-38348832247
+          path: v7_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38348832247
+      - name: Download exact official V8 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-phase-turn-v8-final-38361759433
+          path: v8_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38361759433
+      - name: Package, registry, launcher, parents and finite-certificate controls
+        env:
+          PROGRAM_ID: ${{ inputs.program_id }}
+          Q048_V6_PARENT: v6_parent/q048_structural_final_v6.json
+          Q048_V7_PARENT: v7_parent/q048_guard_final_v7.json
+          Q048_V8_PARENT: v8_parent/q048_phase_turn_final_v8.json
+        run: |
+          set -euo pipefail
+          test "$PROGRAM_ID" = Q048-THRESHOLD-V9
+          python q048_v9_repository_patch.py --verify-only
+          python q048_threshold_anchor_package_check_v9.py
+          timeout --signal=TERM 1200s python -m unittest q048_threshold_anchor_tests_v9 -v
+
+  camspec:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download exact official V6 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-structural-v6-final-38293480870
+          path: v6_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38293480870
+      - name: Download exact official V7 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-guard-v7-final-38348832247
+          path: v7_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38348832247
+      - name: Download exact official V8 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-phase-turn-v8-final-38361759433
+          path: v8_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38361759433
+      - name: Compute and independently replay finite Mathematics-009 certificate
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM 1200s python q048_threshold_anchor_runner_v9.py \
+            --program-id Q048-THRESHOLD-V9 \
+            --v6-parent v6_parent/q048_structural_final_v6.json \
+            --v7-parent v7_parent/q048_guard_final_v7.json \
+            --v8-parent v8_parent/q048_phase_turn_final_v8.json \
+            --out q048_threshold_anchor_results
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-threshold-anchor-v9-camspec-${{ github.run_id }}
+          path: q048_threshold_anchor_results/*.json
+          if-no-files-found: warn
+
+  collect:
+    needs: [preflight, camspec]
+    if: always() && needs.preflight.result == 'success' && needs.camspec.result == 'success'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Download exact official V6 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-structural-v6-final-38293480870
+          path: v6_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38293480870
+      - name: Download exact official V7 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-guard-v7-final-38348832247
+          path: v7_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38348832247
+      - name: Download exact official V8 parent
+        uses: actions/download-artifact@v4
+        with:
+          name: q048-phase-turn-v8-final-38361759433
+          path: v8_parent
+          github-token: ${{ github.token }}
+          repository: ${{ github.repository }}
+          run-id: 38361759433
+      - uses: actions/download-artifact@v4
+        with:
+          name: q048-threshold-anchor-v9-camspec-${{ github.run_id }}
+          path: collected
+      - name: Strict completeness, binding and merge gates
+        env:
+          EXPECTED_RUN: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM 900s python q048_threshold_anchor_runner_v9.py \
+            --program-id Q048-THRESHOLD-V9 \
+            --v6-parent v6_parent/q048_structural_final_v6.json \
+            --v7-parent v7_parent/q048_guard_final_v7.json \
+            --v8-parent v8_parent/q048_phase_turn_final_v8.json \
+            --collect collected \
+            --expected-run "$EXPECTED_RUN" \
+            --out q048_threshold_anchor_final_v9.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q048-threshold-anchor-v9-final-${{ github.run_id }}
+          path: q048_threshold_anchor_final_v9.json
+          if-no-files-found: error
