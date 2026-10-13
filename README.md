@@ -1,3 +1,45 @@
+# Bubbleverse — Q048 phase-energy first-turn guard V8
+
+Current runnable target: **Q048-PHASETURN-V8**. The inspected remote registry still predates V7, so installation is deliberately two-stage and fail-closed: upload the individual V8 package files, run **🔧 INSTALL Q048 PHASE-TURN V8** once (`.github/workflows/q048-install-phase-turn-v8.yml`), then use the permanent **🚀 BUBBLEVERSE START** normally. The installer may change only `bubbleverse_program_registry.json` and `README.md`; it refuses unrelated mutable-base changes. After installation, paste `Q048-PHASETURN-V8` into **🚀 BUBBLEVERSE START** and press **Run workflow**. The permanent launcher remains `.github/workflows/00-bubbleverse-start.yml` and is not modified.
+
+Q-048 remains **PROPOSED_UNVERIFIED**, CASE **NOT_ASSIGNED**, while Q047 remains **CLOSED INCONCLUSIVE**. V8 has the bounded scope `CONDITIONAL_SOURCE_REAL_PHASE_ENERGY_TURN_GUARD_THERMAL`. `FINAL_RESULT_GATE=UNRESOLVED` by construction: V8 does not qualify native floating-point/source-instance identity, does not locate the shared helium `q=xHeII=1e-6` cutoff, and does not compute complete latch/reset `x_e(z)` or `tau_T(z)` histories.
+
+V8 is a materially new executable successor to V7, not a larger V7 replay. Official V7 run `38348832247` remains frozen parent evidence. V7 established a valid Camspec prefix but stopped with `TRAJECTORY_TUBE_NOT_CLOSED` after 1693 accepted Cartesian `(phi,X)` cells; it did not establish source-guard failure. Mathematics-008 diagnosed oscillatory interval wrapping and derived a phase-energy first-turn certificate.
+
+The V8 implementation re-verifies accepted V7 Camspec cell 1509 against the frozen source and exact official V7 artifact, then uses the globally smooth source-equivalent coordinates `theta=lambda*phi` and signed `y=-X`. Before the first scalar turn `y>0`; the turn is the unique certified `y=0` crossing; after it `y<0`. Every V8 phase cell must retain a positive exact source-guard margin. The event bracket is accepted only while `dy/du<0` throughout, proving unique crossing direction. At the turn the kinetic term vanishes, so `e_turn=U(theta_turn)`.
+
+The post-anchor gate is the Mathematics-008 inequality `e_turn_upper < 3*B_transfer_lower + V_floor_lower`, using the exact V6 transfer-base lower endpoint. If it passes, monotone scalar energy proves the source guard for every later scale factor through `z=2870`, eliminating any need to propagate further oscillatory scalar tubes. Camspec thermal evolution is then recomputed from `z=4600` through He1f and He2 using the established sign-aware positive-w method: the V6 initial energy cap is used before the completed turn bracket and the tighter turn-energy cap afterward.
+
+The parent V7 artifact is downloaded by exact workflow run ID `38348832247` and verified by raw SHA256 before use. No new native CLASS capture, fit, likelihood, sampler, GPU or HPC campaign is authorized. A failure to certify the new sufficient bound returns a precise `UNRESOLVED_BOUNDED_OBSTRUCTION`; it is not a physical EDE falsification unless an admitted source-real guard margin itself is rigorously shown nonpositive.
+
+Workflow target: `.github/workflows/q048-phase-turn-v8.yml`. Expected outputs are `camspec-ede_n3_phase_turn_v8.json` and collector `q048_phase_turn_final_v8.json`. Return the bounded result once to **RESULT INGESTION & ROUTING ENGINE**. Do not automatically start H/frec/shared-cutoff/full-history execution.
+
+Prepared from Mathematics result `I-PROPOSED-Q048-MATHEMATICS-008`, official V7 run `38348832247`, frozen source commit `5a131c91d657dd9a7c6364cc45b038710f8d0d97`, and inspected Bubbleverse repository HEAD `c9ca98f232a0c753ce9a8c04437fc5d7ef699dab` on 2026-10-13.
+
+---
+
+## Preserved historical repository context
+
+# Bubbleverse — Q048 direct guard + He1f/He2 continuation V7
+
+Current runnable target: **Q048-GUARDCONT-V7**. After installing the individual V7 files and applying the supplied differential repository patch, open **🚀 BUBBLEVERSE START**, paste `Q048-GUARDCONT-V7`, and press **Run workflow**. Canonical launcher remains `.github/workflows/00-bubbleverse-start.yml`; it is not modified.
+
+Q-048 remains **PROPOSED_UNVERIFIED**, CASE **NOT_ASSIGNED**, and Q047 remains **CLOSED INCONCLUSIVE**. Scope is `CONDITIONAL_SOURCE_REAL_GUARD_THERMAL_CONTINUATION`. `FINAL_RESULT_GATE=UNRESOLVED` by construction: V7 does not qualify native floating-point/source-instance identity, does not locate the shared `q=xHeII=1e-6` cutoff, and does not compute complete latch/reset `x_e(z)` or `tau_T(z)` histories.
+
+V7 reuses the frozen V6/V5/Q047 rational proof backend and source commit `5a131c91d657dd9a7c6364cc45b038710f8d0d97`. It adds exactly one bounded scientific computation: a source-root trajectory-correlated validated `(phi,X)` tube for **Camspec EDE n=3** with the source guard checked on every certified whole-state cell, followed by sign-correct positive-`w` propagation through He1f `4600→3550` and He2 `3550→2870` for both EDE configurations. At `z=2870` it reports the conditional source-real H-entry helium state `q`. Hillipop keeps the already-valid V6 full-transfer source-root guard.
+
+The Camspec guard proof uses the exact equivalent margin `3 B(a)+X^2/2+V_floor-V_e > 0`; a loose interval on the displayed ratio alone is diagnostic and is not allowed to override a proved positive equivalent margin. Thermal propagation uses Mathematics-007's sign rule: for positive lower `L`, the lower homogeneous factor is `L exp(-d_max)`. A separate rational Bernoulli comparison supplies an independent control without exponential evaluation.
+
+The computation is finite. Camspec uses fixed relative `a` step `1/64`, at most 5000 accepted cells, at most 14 halvings per attempted cell, and a 5400-second scientific work budget. A failure to close a tube or separate the direct guard returns a preserved `UNRESOLVED_BOUNDED_OBSTRUCTION`; it is not a source crossing or physical falsification. Hillipop thermal continuation uses fixed relative step `1/32`. No fit, likelihood, sampler, GPU, native CLASS capture, or HPC campaign is authorized.
+
+Workflow target: `.github/workflows/q048-guard-continuation-v7.yml`. Expected worker artifacts contain `camspec-ede_n3_guard_v7.json`, `hillipop-ede_n3_guard_v7.json`, their checkpoints/progress where applicable, and collector `q048_guard_final_v7.json`. Return the bounded result once to **RESULT INGESTION & ROUTING ENGINE**. Do not automatically start H/frec/cutoff/full-history execution from this workflow.
+
+Prepared from Mathematics result `I-PROPOSED-Q048-MATHEMATICS-007` and repository HEAD `2bc190aeb1a2659fbc9bc0d402159c7768c6b15a` at 2026-10-12T21:58:34+02:00. V6 remains preserved as historical provenance and is marked superseded only after the differential registry patch is applied.
+
+---
+
+## Preserved historical repository context
+
 # Bubbleverse — Q048 source-root energy and He1 extension V6
 
 Install the individual files below, then open **🚀 BUBBLEVERSE START**, enter
