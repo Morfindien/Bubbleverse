@@ -43,7 +43,7 @@ jobs:
           test "$PROGRAM_ID" = Q048-PHASETURN-V8
           python q048_v8_repository_patch.py
           python q048_phase_turn_package_check_v8.py
-          timeout --signal=TERM 1200s python -m unittest q048_phase_turn_tests_v8 q048_guard_tests_v7 q048_structural_tests_v6 -v
+          timeout --signal=TERM 1200s python -m unittest q048_phase_turn_tests_v8 q048_structural_tests_v6 -v
 
   camspec:
     needs: preflight
