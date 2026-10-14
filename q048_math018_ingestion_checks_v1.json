@@ -1,0 +1,56 @@
+{
+  "schema": "bubbleverse.ingestion_checks",
+  "schema_version": "1.0",
+  "verified_at_utc": "2026-10-14T02:01:19Z",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "input_hashes": {
+    "input_journal": "563298c6afbff955ce5a1d427167827363f64e3dbacc1915bb2f2b69c3a619c5",
+    "mathematics_result": "694ef628b1fe945e28f776d5c0d1d01811b70c3996134921994178649cdd87ad",
+    "mathematics_prepared_ingestion_handoff_v1": "9da5dc2d35ca5dadbd653df41cd2b67f7927bfb517b0b8e7b15c48cd1d3f82cb",
+    "frozen_spec": "e0527a197d78f4efd8813eba69cc36c47680cf671847d3d75f25942975f9aaf4",
+    "math018_files_manifest": "030ab9ffd9aa207ec70fc2eeab53fd82360b3edb27e0621f6ab1923ac3883608",
+    "result_ingestion_prompt": "16c50b7a3bae55000e12078d939f60f6f0a7f3363d1d16330db9917ab6e4fb86",
+    "q048_math018_scaled_exp_config_v1.json": "84af54b9170c5a847cbe4ea537ead2e91760ad73f4f14150e9a2b3986cc86ebc",
+    "q048_math018_scaled_exp_certificate_v1.py": "259661498766bc095066bd4644d397a35b044552c4b4f32d5e665c716e16ee5c",
+    "q048_math018_scaled_exp_result_v1.json": "4ae73f72b200d68912e481b5cf062f2dea32b1f97fad9b19bc896abc5fc96155",
+    "q048_math018_scaled_exp_validation_v1.json": "209f6ec577c046645d98e12677ab088c1615397387b17344be79b15970dfb649",
+    "q048_math018_scaled_exp_reproduction_v1.log": "46cb69ac71cded22135ace2fa9f25fde551affa8aaface4d91c385a6bbf7f4a4",
+    "q048_math018_run_manifest_v1.json": "59d56d40c15fef761655a981418d5637e535b5dfd9657c2b8bdb329317171001",
+    "q048_math018_scaled_exp_run_v1.log": "adf26f1a493aebb989999eb531a9afd23ab3921496eba590dfa7b4275b07f81e"
+  },
+  "machine_result": {
+    "check_summary": {
+      "passed": 18,
+      "total": 18
+    },
+    "decision": "PASS_SUBCOMPONENT",
+    "all_frozen_acceptance_checks_pass": true,
+    "interpretation": {
+      "arithmetic_subcomponent": "QUALIFIED",
+      "exact_Q048": "UNRESOLVED",
+      "full_P3": "NOT_QUALIFIED_BY_THIS_RESULT_ALONE",
+      "physical_claim": "NO_PHYSICAL_RESULT"
+    }
+  },
+  "checks": {
+    "input_journal_hash_matches_math_handoff": true,
+    "math_result_hash_matches_manifest": true,
+    "math_handoff_v1_hash_matches_manifest": true,
+    "frozen_spec_hash_matches_manifest": true,
+    "result_json_hash_matches_manifest": true,
+    "validation_json_hash_matches_manifest": true,
+    "reproduction_log_hash_matches_manifest": true,
+    "run_manifest_hash_matches_manifest": true,
+    "18_of_18_pass": true,
+    "validation_true": true,
+    "decision_pass_subcomponent": true,
+    "journal_prefix_preserved": true,
+    "single_new_ingestion_receipt": true,
+    "q048_not_closed": true,
+    "full_p3_not_promoted": true,
+    "selected_exactly_one_next_engine": true
+  },
+  "journal_output_sha256": "33f5eedf88ac1c6c7efb3f87c65916456cd5f8bf93c8dba667271c0c7f69e73a",
+  "manual_contract_check": true,
+  "installed_schema_validator_claimed": false
+}

@@ -1,0 +1,66 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.0.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.0.0",
+  "handoff_id": "LOCAL-Q048-MATH018-INGESTION-HANDOFF-V2",
+  "created_at_utc": "2026-10-14T02:01:19Z",
+  "case_id": "NOT_ASSIGNED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048 operational boundary; historical global/scalar assignment remains NOT_DOCUMENTED where recorded",
+  "evidence_cutoff": "Q048 with documented Q041/Q047 dependencies; no Q049+",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "UNRESOLVED / NO_SCIENTIFIC_RESULT",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-MATH018-SCALED-EXP-INTERVAL-V1"
+  ],
+  "source_state_version": "Q047_SAMLET_JOURNAL_MATH018_APPENDED_V1",
+  "target_state_version": "Q047_SAMLET_JOURNAL_MATH018_INGESTED_V1",
+  "selected_next_engine_id": "AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE",
+  "engine_registry_ref": "historically documented supplied role; global registry ID NOT_DOCUMENTED",
+  "execution_profile_ref": "q048_math018_ingestion_execution_profile_v1.json",
+  "journal_ref": {
+    "file": "Q047_SAMLET_JOURNAL_MATH018_INGESTED_V1.md",
+    "sha256": "33f5eedf88ac1c6c7efb3f87c65916456cd5f8bf93c8dba667271c0c7f69e73a"
+  },
+  "source_register_ref": "retained in full journal; no new external source",
+  "claim_evidence_map_ref": "retained in full journal; affected local claims described in handoff",
+  "result_provenance_ref": "Q048_MATHEMATICS_018_V1 + MATH018 JSON/log/manifest artifacts",
+  "anomaly_tension_registry_ref": "retained; no new physical anomaly",
+  "completed_task_ledger_ref": "journal route/task history + this ingestion receipt",
+  "route_history_ref": "journal + Q048_MATH018_RESULT_INGESTION_HANDOFF_V2.md",
+  "integrity_manifest_ref": "Q048_MATH018_INGESTION_FILES_V1.md",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "MATH018 scoped arithmetic PASS ingested",
+    "specific R0 absolute-1e-120 blocker resolved for new arithmetic candidate",
+    "remaining P3 bottleneck moved to full operator admission under changed arithmetic"
+  ],
+  "frozen_configuration_refs": [
+    "Q048_MATH018_FROZEN_SPEC_V1",
+    "q048_math018_scaled_exp_config_v1.json"
+  ],
+  "open_material_uncertainties": [
+    "full Alpha/R/SWIFT/denominator operator admission under scaled arithmetic",
+    "later coupled-state/common-event/first-hit requirements",
+    "complete four-case x_e(z) and tau_T(z) difference bounds",
+    "native P6 where native claims are required"
+  ],
+  "missing_information": [
+    "global engine registry machine ID",
+    "canonical CURRENT_STATE writeback"
+  ],
+  "next_task": "LOCAL-Q048-P3-SCALED-ARITHMETIC-FULL-OPERATOR-ADMISSION-BUILDER-V1",
+  "success_condition": "bounded full changed-arithmetic P3 operator admission with serialized recoverable transforms and explicit checks",
+  "failure_or_falsification_condition": "first material unresolved arithmetic/operator/admission inequality or required input/provenance gap; no physical falsification implied",
+  "stop_condition": "stop at P3 operator-admission success or first material obstruction; return to Result Ingestion",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "exact Q048 still lacks full P3 and complete event/history/optical-depth bounds",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "routine prepared handoff allowed; paid/native/remote execution, scope change and model promotion remain gated"
+}
