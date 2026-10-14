@@ -1,0 +1,81 @@
+{
+  "schema": "Q048_FIRSTHIT_BUILDER_RUN_MANIFEST_V1",
+  "created_utc": "2026-10-14T04:18:02.770882+00:00",
+  "task_id": "LOCAL-Q048-E1E3-COMMON-FIRST-HIT-LOCALIZATION-BUILDER-V1",
+  "result_id": "LOCAL-Q048-BUILDER-FIRSTHIT-LOCALIZATION-V1",
+  "program_id": "Q048-FIRSTHIT-V1",
+  "program_registry_status": "LOCAL_UNREGISTERED; read-only registry search found no FIRSTHIT/E1E3 target",
+  "engine_prompt": {
+    "path": "/mnt/data/Bubbleverse_Execution_HPC_Motor_Builder_v2.0.0-5.md",
+    "sha256": "2663bdb4d82ac4ec24bb60b06706f7e3087c52ea130885b442b5b38c9c6944b1"
+  },
+  "incoming_journal": {
+    "path": "/mnt/data/Q047_SAMLET_JOURNAL_MATH019_INGESTED_V1-1.md",
+    "sha256": "c5606c404c20b3e5d82fef6ed78256b7308317a9c145da2b74554a16b5fabc90"
+  },
+  "incoming_handoff": {
+    "path": "/mnt/data/Q048_MATH019_INGESTION_HANDOFF_V1-1.md",
+    "sha256": "d107c633037514cbbf4dae0f38d2476a59e40208e1b52ff775fcafffeb1bc02d"
+  },
+  "execution": {
+    "status": "COMPLETE",
+    "python": "3.13.5",
+    "mandatory_tests": "PASS",
+    "validator": "VALIDATED_BOUNDED_LOCALIZATION_OBSTRUCTION",
+    "validator_passed": 32,
+    "validator_total": 32,
+    "native_evaluations": 0,
+    "paid_remote_compute": false,
+    "repository_mutation": false
+  },
+  "repository_read_only_check": {
+    "repository": "Morfindien/Bubbleverse",
+    "default_branch": "main",
+    "registry_path": "bubbleverse_program_registry.json",
+    "registry_blob_sha": "4620a0565e686ef29716d30039725946b1c62e37",
+    "firsthit_or_E1E3_existing_target_found": false,
+    "new_program_id_registered": false
+  },
+  "artifacts": {
+    "Q048_FIRSTHIT_BUILDER_FROZEN_SPEC_V1.md": {
+      "bytes": 3319,
+      "sha256": "c5596cd8047cbce7c76e39e41805793b49c77a273cc05849c6cd7572a88be741"
+    },
+    "q048_firsthit_builder_config_v1.json": {
+      "bytes": 3139,
+      "sha256": "70fef791edd99f967036bd34cc07d6c52edc581d88226b6763e9531340d403e9"
+    },
+    "q048_firsthit_builder_v1.py": {
+      "bytes": 9522,
+      "sha256": "485b4ba49887e1f68e27bc76e9cf4e075ac6f57ad344bc75209e96ec8a4e3106"
+    },
+    "q048_firsthit_builder_tests_v1.py": {
+      "bytes": 1384,
+      "sha256": "4685e4d77c33b18a25b70b60e38ed83bb676fd1e9ab75f40a81f9aa7f96fbce3"
+    },
+    "q048_firsthit_builder_result_v1.json": {
+      "bytes": 23884,
+      "sha256": "c87a12ec6a05b52641fd391b56885ca08de9db8bcf3707c6a4bbc140b6f9b80b"
+    },
+    "q048_firsthit_builder_validation_v1.json": {
+      "bytes": 2123,
+      "sha256": "273b75346fb9cae3ca29afb82b5fe5b334dacc36cd301c649922235b81bbe0cc"
+    },
+    "q048_firsthit_builder_run_v1.log": {
+      "bytes": 1343,
+      "sha256": "c451738bf323c8e12fd32495da16dabe16d8aae6c4fe900e9dbca83082652501"
+    },
+    "Q048_BUILDER_FIRSTHIT_RESULT_V1.md": {
+      "bytes": 7597,
+      "sha256": "377368f266ae2f539240dc3457e03a2e458af7144854a10cd2ee2e20c452e25b"
+    },
+    "Q048_BUILDER_FIRSTHIT_RESULT_INGESTION_HANDOFF_V1.md": {
+      "bytes": 2258,
+      "sha256": "647f5a2bff5e638444fa1596c8b02bd29fca6a94651921191f30cfd0dfb705e2"
+    },
+    "Q047_SAMLET_JOURNAL_BUILDER_FIRSTHIT_APPENDED_V1.md": {
+      "bytes": 13489460,
+      "sha256": "78220ddeb511e6762b713d12c4dd809a9a1535a91dad184ee15ef8316ef8fc13"
+    }
+  }
+}

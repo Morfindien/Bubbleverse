@@ -1,0 +1,71 @@
+{
+  "schema": "Q048_FIRSTHIT_BUILDER_CONFIG_V1",
+  "prepared_utc": "2026-10-14T04:16:22.732965+00:00",
+  "task_id": "LOCAL-Q048-E1E3-COMMON-FIRST-HIT-LOCALIZATION-BUILDER-V1",
+  "result_id": "LOCAL-Q048-BUILDER-FIRSTHIT-LOCALIZATION-V1",
+  "program_id": "Q048-FIRSTHIT-V1",
+  "program_registry_status": "LOCAL_UNREGISTERED; read-only registry search found no FIRSTHIT/E1E3 target",
+  "q": "Q048",
+  "epsilon": "1/1000000",
+  "h_entry_z": 2870,
+  "frec_entry_z": 1600,
+  "math019_post_frec_stop_z": 1599,
+  "source_root": "/mnt/data/q048_state_tube_inputs",
+  "inputs": {
+    "captured_config": {
+      "path": "/mnt/data/q048_state_tube_inputs/q048_prefix_config_v1.json",
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    "p2p4_result": {
+      "path": "/mnt/data/q048_state_tube_inputs/q048_p2p4_state_tube_result_v1.json",
+      "sha256": "d50c4d05af2e9269f6f64074759567e3caa78c54195e50a4824c5428d4a012be"
+    },
+    "math019_result": {
+      "path": "/mnt/data/q048_math019_delivery/q048_math019_frec_boundary_result_v1.json",
+      "sha256": "73e3d44f2c11668d75c97256a886d9f301f8b3aee145458485fc23592b39cf58"
+    },
+    "q047_math": {
+      "path": "/mnt/data/q048_state_tube_inputs/q047_math_v1.py",
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    "q048_prefix": {
+      "path": "/mnt/data/q048_state_tube_inputs/q048_prefix_v1.py",
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516"
+    },
+    "q047_precursor": {
+      "path": "/mnt/data/q048_state_tube_inputs/q047_precursor_check_v1.py",
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5"
+    },
+    "helium_source": {
+      "path": "/mnt/data/q048_state_tube_inputs/helium.c",
+      "sha256": "cc113cdc4b2d4ffa0762ab82d5485816bbbb3bbf63cd3441be5206c4c3bf6587"
+    },
+    "hydrogen_source": {
+      "path": "/mnt/data/q048_state_tube_inputs/hydrogen.c",
+      "sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616"
+    },
+    "wrap_hyrec_source": {
+      "path": "/mnt/data/q048_state_tube_inputs/wrap_hyrec.c",
+      "sha256": "4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd"
+    },
+    "incoming_journal": {
+      "path": "/mnt/data/Q047_SAMLET_JOURNAL_MATH019_INGESTED_V1-1.md",
+      "sha256": "c5606c404c20b3e5d82fef6ed78256b7308317a9c145da2b74554a16b5fabc90"
+    },
+    "ingestion_handoff": {
+      "path": "/mnt/data/Q048_MATH019_INGESTION_HANDOFF_V1-1.md",
+      "sha256": "d107c633037514cbbf4dae0f38d2476a59e40208e1b52ff775fcafffeb1bc02d"
+    }
+  },
+  "identity": {
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "captured_config_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+  },
+  "decision": {
+    "success": "ALL_FOUR_E1_E2_E3_CERTIFIED",
+    "bounded_obstruction": "SOURCE_REAL_FREC_Q_ENDPOINT_CORRELATION_NOT_SERIALIZED",
+    "native_diagnostic_not_admissible_without_P6": true,
+    "post_event_histories_forbidden": true
+  }
+}
