@@ -1,0 +1,210 @@
+{
+  "artifact_type": "BUBBLEVERSE_INGESTION_INTEGRITY_MANIFEST",
+  "created_at_utc": "2026-10-14T07:17:17.361588+00:00",
+  "dispatch": "NOT_PERFORMED",
+  "global_registry_writeback": "NOT_PERFORMED",
+  "hash_algorithm": "SHA-256",
+  "incoming_journal": {
+    "bytes": 13510570,
+    "sha256": "5db610f0aa67814eca6d74640cfe1d1a300e84a2015ff8012b295b18f154cccf"
+  },
+  "incoming_journal_name": "Q047_SAMLET_JOURNAL_MATH021_APPENDED_V1-1.md",
+  "ingestion_outputs": {
+    "Q047_SAMLET_JOURNAL_MATH021_INGESTED_V1.md": {
+      "bytes": 13516180,
+      "sha256": "47cb80c302e7dfb1d7931c3f0f489f2bcee5c51222055a31b2fe5286e9cef746"
+    },
+    "Q048_MATH021_INGESTION_HANDOFF_V1.md": {
+      "bytes": 6819,
+      "sha256": "ac7beaaf6f41a1a5463fafbf5cf33c83e0a3fe8bbc23760fded75cb84cdbc353"
+    },
+    "q048_math021_ingestion_checks_v1.json": {
+      "bytes": 7134,
+      "sha256": "22d9dbccd5ea72b37d7b2a17313aea5ac94be31c1997b2591ddb941af1f9b3d8"
+    },
+    "q048_math021_ingestion_envelope_v1.json": {
+      "bytes": 8114,
+      "sha256": "75c5e5d62f711fbea6569ce569dfbfe44e11b1f7b14a9d9cea29ae73da9d4649"
+    }
+  },
+  "receipt_id": "LOCAL-Q048-MATH021-INGESTION-RECEIPT-V1",
+  "recursive_exclusions": [
+    "q048_math021_ingestion_integrity_v1.json excludes its own hash",
+    "Q048_MATH021_INGESTION_FILES_V1.md excludes its own hash"
+  ],
+  "repository_writeback": "NOT_PERFORMED",
+  "source_artifacts": {
+    "Q047_SAMLET_JOURNAL_MATH021_APPENDED_V1.md": {
+      "bytes": 13510570,
+      "sha256": "5db610f0aa67814eca6d74640cfe1d1a300e84a2015ff8012b295b18f154cccf"
+    },
+    "Q048_MATH021_RESULT_INGESTION_HANDOFF_V1.md": {
+      "bytes": 4096,
+      "sha256": "7892045566b87e2d1da5f4663617311776b3717e61241b1bc4317373ba9e0416"
+    },
+    "Q048_MATHEMATICS_021_V1.md": {
+      "bytes": 8719,
+      "sha256": "462ff2394482d8313f5f0a78f63a116d2e6b3237220dd056ed502f454dc695f1"
+    },
+    "q048_math021_branch_independent_scalar_enclosure_v1.json": {
+      "bytes": 12647,
+      "sha256": "1ec40de297bd092a95802df6aae1f248355af5e6871018c84fe00fc921ba3ce4"
+    },
+    "q048_math021_certificate_spec_v1.json": {
+      "bytes": 9833,
+      "sha256": "3318e3cd20b521eb0f959a3b6bb422c7b66b997ef1c61134f9038fe9d0a1f476"
+    },
+    "q048_math021_decimal_control_v1.py": {
+      "bytes": 3637,
+      "sha256": "1e53a31985ed911d03f1904bbf074d080467ccdbdabcc78074f471cd6c7d74d8"
+    },
+    "q048_math021_independent_decimal_control_v1.json": {
+      "bytes": 2973,
+      "sha256": "2dd6f51b63db76e8e9abb80fcea1872e40fe290f2198b133267ccbd77bb5a95f"
+    },
+    "q048_math021_provenance_v1.json": {
+      "bytes": 2993,
+      "sha256": "778ea889dd1375fae78147915c881959a2b9673fe7d65745e70885280ed23090"
+    },
+    "q048_math021_scalar_enclosure_audit_v1.py": {
+      "bytes": 15348,
+      "sha256": "fe0a3bcdbf0841760955834311f886b41ed41a48bdea2f689eb7fd2c2bf6deee"
+    },
+    "q048_math021_validation_v1.json": {
+      "bytes": 7202,
+      "sha256": "80d1496a79712359aa097bd035f147ce7f8748f556cd3f12c2db2c568697a7cd"
+    }
+  },
+  "source_manifest_checks": [
+    {
+      "artifact": "Q048_MATHEMATICS_021_V1.md",
+      "expected": {
+        "bytes": 8719,
+        "sha256": "462ff2394482d8313f5f0a78f63a116d2e6b3237220dd056ed502f454dc695f1"
+      },
+      "observed": {
+        "bytes": 8719,
+        "sha256": "462ff2394482d8313f5f0a78f63a116d2e6b3237220dd056ed502f454dc695f1"
+      },
+      "pass": true
+    },
+    {
+      "artifact": "q048_math021_branch_independent_scalar_enclosure_v1.json",
+      "expected": {
+        "bytes": 12647,
+        "sha256": "1ec40de297bd092a95802df6aae1f248355af5e6871018c84fe00fc921ba3ce4"
+      },
+      "observed": {
+        "bytes": 12647,
+        "sha256": "1ec40de297bd092a95802df6aae1f248355af5e6871018c84fe00fc921ba3ce4"
+      },
+      "pass": true
+    },
+    {
+      "artifact": "q048_math021_validation_v1.json",
+      "expected": {
+        "bytes": 7202,
+        "sha256": "80d1496a79712359aa097bd035f147ce7f8748f556cd3f12c2db2c568697a7cd"
+      },
+      "observed": {
+        "bytes": 7202,
+        "sha256": "80d1496a79712359aa097bd035f147ce7f8748f556cd3f12c2db2c568697a7cd"
+      },
+      "pass": true
+    },
+    {
+      "artifact": "q048_math021_certificate_spec_v1.json",
+      "expected": {
+        "bytes": 9833,
+        "sha256": "3318e3cd20b521eb0f959a3b6bb422c7b66b997ef1c61134f9038fe9d0a1f476"
+      },
+      "observed": {
+        "bytes": 9833,
+        "sha256": "3318e3cd20b521eb0f959a3b6bb422c7b66b997ef1c61134f9038fe9d0a1f476"
+      },
+      "pass": true
+    },
+    {
+      "artifact": "q048_math021_provenance_v1.json",
+      "expected": {
+        "bytes": 2993,
+        "sha256": "778ea889dd1375fae78147915c881959a2b9673fe7d65745e70885280ed23090"
+      },
+      "observed": {
+        "bytes": 2993,
+        "sha256": "778ea889dd1375fae78147915c881959a2b9673fe7d65745e70885280ed23090"
+      },
+      "pass": true
+    },
+    {
+      "artifact": "q048_math021_scalar_enclosure_audit_v1.py",
+      "expected": {
+        "bytes": 15348,
+        "sha256": "fe0a3bcdbf0841760955834311f886b41ed41a48bdea2f689eb7fd2c2bf6deee"
+      },
+      "observed": {
+        "bytes": 15348,
+        "sha256": "fe0a3bcdbf0841760955834311f886b41ed41a48bdea2f689eb7fd2c2bf6deee"
+      },
+      "pass": true
+    },
+    {
+      "artifact": "q048_math021_independent_decimal_control_v1.json",
+      "expected": {
+        "bytes": 2973,
+        "sha256": "2dd6f51b63db76e8e9abb80fcea1872e40fe290f2198b133267ccbd77bb5a95f"
+      },
+      "observed": {
+        "bytes": 2973,
+        "sha256": "2dd6f51b63db76e8e9abb80fcea1872e40fe290f2198b133267ccbd77bb5a95f"
+      },
+      "pass": true
+    },
+    {
+      "artifact": "q048_math021_decimal_control_v1.py",
+      "expected": {
+        "bytes": 3637,
+        "sha256": "1e53a31985ed911d03f1904bbf074d080467ccdbdabcc78074f471cd6c7d74d8"
+      },
+      "observed": {
+        "bytes": 3637,
+        "sha256": "1e53a31985ed911d03f1904bbf074d080467ccdbdabcc78074f471cd6c7d74d8"
+      },
+      "pass": true
+    },
+    {
+      "artifact": "Q048_MATH021_RESULT_INGESTION_HANDOFF_V1.md",
+      "expected": {
+        "bytes": 4096,
+        "sha256": "7892045566b87e2d1da5f4663617311776b3717e61241b1bc4317373ba9e0416"
+      },
+      "observed": {
+        "bytes": 4096,
+        "sha256": "7892045566b87e2d1da5f4663617311776b3717e61241b1bc4317373ba9e0416"
+      },
+      "pass": true
+    },
+    {
+      "artifact": "Q047_SAMLET_JOURNAL_MATH021_APPENDED_V1.md",
+      "expected": {
+        "bytes": 13510570,
+        "sha256": "5db610f0aa67814eca6d74640cfe1d1a300e84a2015ff8012b295b18f154cccf"
+      },
+      "observed": {
+        "bytes": 13510570,
+        "sha256": "5db610f0aa67814eca6d74640cfe1d1a300e84a2015ff8012b295b18f154cccf"
+      },
+      "pass": true
+    }
+  ],
+  "tail_identity": {
+    "incoming_bytes": 13510570,
+    "pass": true,
+    "prefix_bytes": 5610
+  },
+  "updated_journal": {
+    "bytes": 13516180,
+    "sha256": "47cb80c302e7dfb1d7931c3f0f489f2bcee5c51222055a31b2fe5286e9cef746"
+  },
+  "updated_journal_name": "Q047_SAMLET_JOURNAL_MATH021_INGESTED_V1.md"
+}
