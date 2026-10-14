@@ -1,0 +1,66 @@
+{
+  "schema": "LOCAL_Q048_MATH020_CERTIFICATE_SPEC_V1",
+  "designed_at_utc": "2026-10-14T05:03:19.575116+00:00",
+  "result_id": "LOCAL-Q048-MATH020-H-EVENT-ORDER-COMPARISON-V1",
+  "status": "MATHEMATICAL_COMPARISON_EXECUTED; local event-state implementation SPECIFIED_NOT_EXECUTED",
+  "required_pins": {
+    "question": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "source": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "p2p4": "d50c4d05af2e9269f6f64074759567e3caa78c54195e50a4824c5428d4a012be",
+    "math019": "73e3d44f2c11668d75c97256a886d9f301f8b3aee145458485fc23592b39cf58",
+    "backend": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+  },
+  "fixed_endpoints": {
+    "H_entry": "1/2871",
+    "E1_bridge_start": "1/1951",
+    "E1_bridge_end": "1/1946",
+    "upper_comparison_start": "1/1801",
+    "frec_entry": "1/1601"
+  },
+  "physical_definition": "q=xHeII=fHe*x_He; epsilon=1/1000000; u=ln(a); w=1-Tb/Tgamma; h is CLASS matter-temperature Saha root",
+  "core_identities": [
+    "e_u=-3X^2; e=X^2/2+U>=0; (a^6 e)_u=6a^6 U>=0",
+    "e(a)<=E_b*(a_b/a)^6 for a<=a_b",
+    "D=(f-q)s-q(h+q); q_u=K D",
+    "h(h+q)=rH(1-h); neutral h=h(h+q)/rH",
+    "pesc=[E(1-A B)+A C]/tau",
+    "pesc >= [E(1-B)+A C]/tau; discarded term E B (1-A)/tau >=0",
+    "K_upper_face <= 50.94*y2s/Hmin+1.7989e9*y2p*(E+C)/(tau*Hmin) evaluated at x=f-qface_max, N=Nmax, H=Hmin",
+    "K_lower_face uses x=f, N=Nmin, H=Hcap after the discarded-term lower bound",
+    "Qeq=f*s_upper/h_lower; lambda=K_lower*h_lower",
+    "Q_next=Qeq+max(Q_prev-Qeq,0)*exp(-lambda*Delta_u)",
+    "Delta_u_lower=(a1-a0)/a1; Delta_u_upper=(a1-a0)/a0",
+    "Lower prefix L=c*r_s(a), where r_s solves (f-r_s)s=r_s(1+r_s), c=min(1,q_H_lower/r_s_H_upper)",
+    "Bridge lower L0-M*(u-u0), M=K_upper*max(0,-D_lower)",
+    "For q>=0.99epsilon, D<=f*s(1945)_upper-0.99epsilon*(h(1600)_lower+0.99epsilon)<0"
+  ],
+  "verification_layers": [
+    "Original source/input SHA256 and scope checks",
+    "Analytical comparison/invariant-strip/monotonicity proof",
+    "16-cell primary and 32-cell same-method control",
+    "Independent positive-Taylor proof of each exponential upper and independent recurrence control",
+    "Complete unchanged incoming journal tail"
+  ],
+  "next_local_event_state_task": {
+    "task_id": "LOCAL-Q048-H-FIRST-HIT-LOCAL-E3-EVENT-PAYLOAD-BUILDER-V1",
+    "proposal_only": true,
+    "route_now": "RESULT INGESTION & ROUTING ENGINE",
+    "possible_downstream_engine": "Existing Execution/HPC/Motor Builder, after ingestion selects it",
+    "objective": "Export a local Math010 E1–E3 bracket and coupled source-real event-state packet entirely in H mode, reusing the proven root window and continuous E1 barriers.",
+    "allowed_domain": "a in (1/1946,1/1601); exact first event cannot coincide with H→frec boundary under this component",
+    "required_fields": [
+      "case/source/config/question pins",
+      "rational u/a bracket endpoints and connected prefix/cell coverage or cited analytic prefix theorem",
+      "q(u_minus)>epsilon and q(u_plus)<epsilon, with retained outward q/w/background enclosures",
+      "whole local bracket tube q_u<=-nu<0; may keep q in [0.99epsilon,1.01epsilon] using validated flow",
+      "event q=epsilon; correlated w, algebraic h, T_b, background/scalar state and finite errors",
+      "one common event for latch/reset within each case; do not impose one same event time across all four cases"
+    ],
+    "algorithm": "Use the frozen two-state H flow with the positive escape rewrite and validated residual/face barriers. Recover existing fine state records first. Use uniform tube face inequalities or componentwise validated defect bounds; do not assume F_q<0 from D_q<0. If an actual-state packet is absent, initialize from an explicitly proven outer set containing the admitted H state; label widening and preserve background linkage.",
+    "acceptance": "All four local certificates and linked event-state packets, or the first exact source/correlation/bracket obstruction. Mathematical first-root/order proof remains preserved even if a numerical method fails.",
+    "stop": "Local event payload/certificate obtained, or first exact material implementation obstruction. Return before full latch/reset histories.",
+    "no_repeat": "No P3/P2P4/Math015–019/V9/FIRSTHIT replay; no further EDE guard or frec-order proof; no native P6, recapture/refit/likelihood or full history."
+  },
+  "schema_validation": "Local typed/field checks only; not a deployed common schema"
+}
