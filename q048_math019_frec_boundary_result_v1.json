@@ -1,0 +1,135 @@
+{
+  "schema": "Q048_MATH019_FREC_BOUNDARY_CLOSURE_RESULT_V1",
+  "q": "Q048",
+  "task_id": "LOCAL-Q048-P2P4-FREC-BOUNDARY-CLOSURE-MATH-V1",
+  "result_id": "LOCAL-Q048-MATH019-FREC-BOUNDARY-CLOSURE-V1",
+  "prepared_utc": "2026-10-14T03:54:30.457141+00:00",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "captured_config_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "source_real_only": true,
+  "native_P6": "UNRESOLVED",
+  "q_complete": false,
+  "first_discriminator": {
+    "status": "NOT_CERTIFIED_BY_EXISTING_H_STRIP_DECAY_BOUND",
+    "basis": "Retained Math011/Math010 sufficient decay bound has q(z=1600) upper about 0.07852 > epsilon=1e-6; this fails to prove cutoff-before-boundary and does not prove nonreachability.",
+    "scientific_effect": "METHOD_INSUFFICIENT_ONLY"
+  },
+  "second_discriminator": {
+    "status": "PASS_EXPLICIT_POST_FREC_EDE_INTERVAL",
+    "a_interval": [
+      "1/1601",
+      "1/1600"
+    ],
+    "z_interval": [
+      1600,
+      1599
+    ],
+    "delta_u": "ln(1601/1600)",
+    "delta_u_display": 0.000624804768842178,
+    "background_transport_factor_exact": "6553600000000/6569999366401",
+    "theorem": [
+      "For every admitted positive background component in the retained EDE source, d ln B_i / d u >= -4, hence B0(a)>=B0(a0)*(a0/a)^4.",
+      "Scalar energy obeys e_u=-3 X^2<=0, hence e(a)<=E_boundary.",
+      "With positive floor omitted conservatively and U<=e, G=3B0+e+floor-2U >= 3B0-e.",
+      "Therefore G on the new cell is bounded below by 3*B0_boundary_lower*(1600/1601)^4-E_boundary_upper."
+    ],
+    "ede_constructions": {
+      "camspec-ede_n3:primary": {
+        "case": "camspec-ede_n3",
+        "construction": "primary",
+        "input_final_cell_a1": "1/1601",
+        "boundary_B0_lower_exact": "97366560979/1000000000",
+        "boundary_E_upper_exact": "165722310139/1000000000",
+        "extension_B0_lower_exact": "3190507470159872/32849996832005",
+        "extension_G_lower_exact": "825509009484183181760261/6569999366401000000000",
+        "extension_G_lower_display": 125.64826318033441,
+        "pass": true,
+        "phase_domain": "retained central-well / |theta|<=107/50; persists because e_u=-3X^2<=0"
+      },
+      "camspec-ede_n3:control": {
+        "case": "camspec-ede_n3",
+        "construction": "control",
+        "input_final_cell_a1": "1/1601",
+        "boundary_B0_lower_exact": "46603392483/500000000",
+        "boundary_E_upper_exact": "33582147471/200000000",
+        "extension_B0_lower_exact": "3054199929765888/32849996832005",
+        "extension_G_lower_exact": "145869303965051615478129/1313999873280200000000",
+        "extension_G_lower_display": 111.0116575589244,
+        "pass": true,
+        "phase_domain": "retained central-well / |theta|<=107/50; persists because e_u=-3X^2<=0"
+      },
+      "hillipop-ede_n3:primary": {
+        "case": "hillipop-ede_n3",
+        "construction": "primary",
+        "input_final_cell_a1": "1/1601",
+        "boundary_B0_lower_exact": "48570827646177957977/500000000000000000",
+        "boundary_E_upper_exact": "124770110918973773753/500000000000000000",
+        "extension_B0_lower_exact": "6217065938710778621056/64160150062509765625",
+        "extension_G_lower_exact": "135201778502535410787855676127047/3284999683200500000000000000000",
+        "extension_G_lower_display": 41.157318581781844,
+        "pass": true,
+        "phase_domain": "|theta|<2, n>=15/4; persists because e_u=-3X^2<=0 and boundary energy is below retained wall"
+      },
+      "hillipop-ede_n3:control": {
+        "case": "hillipop-ede_n3",
+        "construction": "control",
+        "input_final_cell_a1": "1/1601",
+        "boundary_B0_lower_exact": "19431273904526772603/200000000000000000",
+        "boundary_E_upper_exact": "126977712077236637717/500000000000000000",
+        "extension_B0_lower_exact": "1243601529889713446592/12832030012501953125",
+        "extension_G_lower_exact": "120842487060806611607022420853483/3284999683200500000000000000000",
+        "extension_G_lower_display": 36.78614877157995,
+        "pass": true,
+        "phase_domain": "|theta|<2, n>=15/4; persists because e_u=-3X^2<=0 and boundary energy is below retained wall"
+      }
+    },
+    "radiation_side_domain": {
+      "Tgamma_K_interval": [
+        "153432009804978575/35184372088832",
+        "9825785907910827943/2251799813685248"
+      ],
+      "Tgamma_display": [
+        4360.799999999999,
+        4363.5255
+      ],
+      "TR_eV_interval": [
+        "52887050226754539537049/140737488355328000000000",
+        "15619258024345283955059457391967675/41538374868278621028243970633760768"
+      ],
+      "TR_display": [
+        0.37578509354399997,
+        0.376019959227465
+      ],
+      "TR_declared_source_domain": [
+        0.004,
+        0.4
+      ],
+      "fit_temperature_declared_domain_K": [
+        1775,
+        4415
+      ],
+      "radiation_identity_preserved": true
+    },
+    "scope": "Explicit nonzero EDE scalar/background guard-state continuation only. It removes the exact-boundary obstruction and permits the next piecewise frec first-hit localization to start; it is not a completed q/h/w frec trajectory or first-event certificate."
+  },
+  "status": "PASS_BOUNDED_MATHEMATICAL_COMPONENT",
+  "stop_reason": "SUCCESS_SECOND_DISCRIMINATOR_EXPLICIT_POST_FREC_INTERVAL",
+  "next_engine": "RESULT INGESTION & ROUTING ENGINE",
+  "limitations": [
+    "No E1-E3 first event has been localized.",
+    "No post-event latch/reset histories were run.",
+    "No native P6 qualification is claimed.",
+    "The new cell certifies the EDE scalar/background side and radiation-temperature source domain, not a complete post-frec thermal/hydrogen state tube.",
+    "Q048 remains open."
+  ],
+  "input_hashes": {
+    "motor": "60e53cc6a2f725b960537e88d63fd51643d99076b47f6d5d28268dec5b78d1d1",
+    "journal": "9888845c76835112b88535d0ba732d74e4a83c9e9e0038020ebc492a52786bd5",
+    "handoff": "13da4228fe40fac9d4094afea8d66c3fab8662577deec2c5cab841419a42b8c6",
+    "builder_raw": "d50c4d05af2e9269f6f64074759567e3caa78c54195e50a4824c5428d4a012be",
+    "math015_raw": "8c8b212f20cb5567e4517b4d783c536c7c9564052107193bb6fa46eda2bd0342",
+    "math017_raw": "90a6c1df71b50bcbad0f3f7c01d99acf8bc4caae5b1b72e100bd5f9dcd677281",
+    "math017_config": "68ce126774c7c9f105c451b268f285ae6f15ee90209e1cb9d7dae79da799226d"
+  }
+}
