@@ -1,0 +1,43 @@
+{
+  "schema": "Q048_MATH019_INGESTION_INTEGRITY_V1",
+  "created_at_utc": "2026-10-14T04:00:17.552172+00:00",
+  "checks": {
+    "prompt_version_2_0_0": true,
+    "prompt_hash_computed": true,
+    "journal_hash_matches_manifest": true,
+    "result_hash_matches_manifest": true,
+    "handoff_hash_matches_manifest": true,
+    "raw_hash_matches_manifest": true,
+    "validation_hash_matches_manifest": true,
+    "manifest_duplicate_byte_identical": true,
+    "no_prior_ingestion_receipt": true,
+    "specialist_result_present_once": true,
+    "question_hash_match": true,
+    "source_commit_match": true,
+    "captured_config_match": true,
+    "math019_validation_all_pass": true,
+    "math019_boundary_component_pass": true,
+    "math019_second_discriminator_pass": true,
+    "q048_not_closed": true,
+    "native_p6_unresolved": true,
+    "no_q049_integration": true,
+    "builder_engine_verified_in_journal": true
+  },
+  "passed": 20,
+  "total": 20,
+  "decision": "PASS",
+  "input_hashes": {
+    "result_ingestion_prompt": "16c50b7a3bae55000e12078d939f60f6f0a7f3363d1d16330db9917ab6e4fb86",
+    "incoming_journal": "f4d7fb95b430c9435f7a63a929e92f741b0ae7a87e46ada586e336b83ca347bf",
+    "math019_result_markdown": "5aa58f60aff42332a9935663e4e2f927ec57ed6235f71f9393e862dc262db960",
+    "math019_result_handoff": "af3f1f652d0796878d89d0a60296c923552bc42be8b4e413e971c59f0fe48793",
+    "math019_manifest": "b8749d7c8270a482257aaff3e2cf78beaff27766c5c0846a04b02a9992125ad6",
+    "math019_raw": "73e3d44f2c11668d75c97256a886d9f301f8b3aee145458485fc23592b39cf58",
+    "math019_validation": "33091b0ca8803fa6860f53fe2ed4971e73b9cc45390c8e694d20b2eed4164a43",
+    "math019_run_manifest": "21fe3c561ec01cf561c4bbb5b85a7ec0cbabbe875aba62cdea0aa0bff248f9df"
+  },
+  "duplicate_notes": {
+    "manifest_copy_2": "BYTE_IDENTICAL_DUPLICATE; zero additional evidence count",
+    "scientific_result": "NEW; ingestion receipt absent from incoming journal"
+  }
+}
