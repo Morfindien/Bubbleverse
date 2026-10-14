@@ -1,0 +1,34 @@
+{
+  "all_frozen_acceptance_checks_pass": true,
+  "check_summary": {
+    "passed": 18,
+    "total": 18
+  },
+  "checks": {
+    "binary64_parse_above_exact_decimal": true,
+    "control_inverse_lower_strict": true,
+    "control_inverse_upper_strict": true,
+    "control_positive_lower_endpoint": true,
+    "control_positive_upper_endpoint": true,
+    "control_range_guard_lower": true,
+    "control_range_guard_upper": true,
+    "input_union_lower_is_exact_decimal": true,
+    "primary_inverse_lower_strict": true,
+    "primary_inverse_upper_strict": true,
+    "primary_positive_lower_endpoint": true,
+    "primary_positive_upper_endpoint": true,
+    "primary_range_guard_lower": true,
+    "primary_range_guard_upper": true,
+    "reciprocal_roundtrip_contains_original": true,
+    "scaled_reciprocal_positive": true,
+    "scaled_unit_product_identity": true,
+    "scaled_unit_product_positive": true
+  },
+  "decision": "PASS_SUBCOMPONENT",
+  "notes": [
+    "No Decimal value participates in proof decisions; Decimal is display only.",
+    "All decision inequalities use exact integers/rationals and outward fixed-point bounds.",
+    "This stops at the frozen R0 arithmetic discriminator; full P3 is not promoted."
+  ],
+  "result_sha256": "4ae73f72b200d68912e481b5cf062f2dea32b1f97fad9b19bc896abc5fc96155"
+}

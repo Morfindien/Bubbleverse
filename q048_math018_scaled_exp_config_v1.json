@@ -1,0 +1,35 @@
+{
+  "schema": "bubbleverse.math.local_config",
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "result_id": "LOCAL-Q048-MATH018-SCALED-EXP-INTERVAL-V1",
+  "task_id": "LOCAL-Q048-P3-SCALED-EXP-INTERVAL-ADMISSION-MATH-V1",
+  "target_q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "input_journal_sha256": "22d07ec895a812630b8fa8b7dfe59d45ce662ab68c51b1d2be4daef12591fb77",
+  "input_handoff_sha256": "5a5b535470a8a9158cdbd82570738aa4bb1e9afb68358edb8e2edfb52e9fe2fd",
+  "mathematics_prompt_sha256": "60e53cc6a2f725b960537e88d63fd51643d99076b47f6d5d28268dec5b78d1d1",
+  "input_token": "1.7280364e-270",
+  "input_semantics": "union of exact decimal token and exact Python binary64 parse",
+  "fixed_binary_exponent": -897,
+  "primary_scale_bits": 384,
+  "control_scale_bits": 448,
+  "log_terms": 140,
+  "primary_exp_terms": 100,
+  "control_halvings": 8,
+  "control_exp_terms": 40,
+  "log_slack_bits": 180,
+  "max_proofcells": 512,
+  "max_scientific_compute_seconds": 180,
+  "acceptance_criteria_frozen_before_compute": [
+    "strictly positive primary and control exp lower bounds",
+    "primary exp_upper(log_lower) < exact union rate lower",
+    "primary exp_lower(log_upper) > exact union rate upper",
+    "independent halving+squaring control proves the same two strict inverse-log inequalities",
+    "scaled product by positive unit preserves strict positivity",
+    "scaled reciprocal is finite and strictly positive and reciprocal-roundtrip encloses the original interval"
+  ],
+  "rejection_criteria_frozen_before_compute": [
+    "first unresolved range-reduction, remainder, rounding, inverse-control, positivity, product, or reciprocal inequality"
+  ],
+  "scope": "exact R_inf.dat token0 discriminator and reusable scaled interval arithmetic subcomponent only; no full P3 qualification"
+}
