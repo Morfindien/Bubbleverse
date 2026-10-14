@@ -1,0 +1,73 @@
+{
+  "arithmetic": {
+    "argument_cap": 4096,
+    "control_exp_terms": 40,
+    "control_halvings": 8,
+    "control_scale_bits": 448,
+    "log_slack_bits": 180,
+    "log_terms": 140,
+    "primary_exp_terms": 100,
+    "table_log_scale_bits": 384
+  },
+  "budget_proofcells": 512,
+  "budget_seconds": 180,
+  "candidate_id": "LOCAL-Q048-P3-ARITHMETIC-CANDIDATE-V2",
+  "case_id": "NOT_ASSIGNED",
+  "current_q": "Q048",
+  "frozen_at_europe_copenhagen": "2026-10-14T04:15:00.470408+02:00",
+  "frozen_at_utc": "2026-10-14T02:15:00.470408+00:00",
+  "inputs": {
+    "math018/Q048_MATH018_FROZEN_SPEC_V1.md": {
+      "bytes": 2699,
+      "sha256": "e0527a197d78f4efd8813eba69cc36c47680cf671847d3d75f25942975f9aaf4"
+    },
+    "math018/q048_math018_scaled_exp_config_v1.json": {
+      "bytes": 1851,
+      "sha256": "84af54b9170c5a847cbe4ea537ead2e91760ad73f4f14150e9a2b3986cc86ebc"
+    },
+    "math018/q048_math018_scaled_exp_result_v1.json": {
+      "bytes": 8565,
+      "sha256": "4ae73f72b200d68912e481b5cf062f2dea32b1f97fad9b19bc896abc5fc96155"
+    },
+    "p3deps/Alpha_inf.dat": {
+      "bytes": 272000,
+      "sha256": "357101049c9382e90e5e1e896961407d3b465b61b78de9750b852c05ea4d1023"
+    },
+    "p3deps/R_inf.dat": {
+      "bytes": 1700,
+      "sha256": "ce914f4b552ba55ba00f7916f36b0986f19adfdb638e5aefae91f7b2d05a8112"
+    },
+    "p3deps/fit_swift.dat": {
+      "bytes": 17797,
+      "sha256": "46a644d7d2633b8f13080f9062df9b72a2e5adfa956d70d32ad1d7f4ec0a4641"
+    },
+    "p3deps/q048_builder_admission_result_v1.json": {
+      "bytes": 46577,
+      "sha256": "1d3b3d37cca1370bc687a7de819a8cf0a3b2adb92d054ee7513141987caf6530"
+    },
+    "p3deps/q048_prefix_config_v1.json": {
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    "p3deps/two_photon_tables.dat": {
+      "bytes": 25191,
+      "sha256": "93d23871e21c40f5b72a6ef9acf3eb7be054735c8aee9401e455736c1d9d8cf9"
+    }
+  },
+  "no_repeat": [
+    "unmodified P3 V1 arithmetic",
+    "P4 transfer",
+    "threshold",
+    "capture/refit",
+    "tau shooting",
+    "full histories"
+  ],
+  "planned_proofcells": 30,
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "result_id": "LOCAL-Q048-BUILDER-P3-SCALED-OPERATOR-ADMISSION-V2",
+  "schema": "bubbleverse.builder.local_execution_freeze",
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "stop": "PASS bounded P3 operator admission or first new material obstruction",
+  "table_node_transforms": 16100,
+  "task_id": "LOCAL-Q048-P3-SCALED-ARITHMETIC-FULL-OPERATOR-ADMISSION-BUILDER-V1"
+}

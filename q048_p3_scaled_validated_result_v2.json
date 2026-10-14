@@ -1,0 +1,136 @@
+{
+  "schema": "bubbleverse.builder.validated_result",
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "prepared_at_utc": "2026-10-14T02:22:34.008660+00:00",
+  "prepared_at_europe_copenhagen": "2026-10-14T04:22:34.008660+02:00",
+  "current_q": "Q048",
+  "case_id": "NOT_ASSIGNED",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-P3-SCALED-ARITHMETIC-FULL-OPERATOR-ADMISSION-BUILDER-V1",
+  "result_id": "LOCAL-Q048-BUILDER-P3-SCALED-OPERATOR-ADMISSION-V2",
+  "candidate_id": "LOCAL-Q048-P3-ARITHMETIC-CANDIDATE-V2",
+  "scope": "BOUNDED_CONDITIONAL_SOURCE_REAL_P3_V2_OPERATOR_ADMISSION",
+  "execution_status": "PASS_BOUNDED_COMPONENT",
+  "technical_state": "PASS_WITHIN_FROZEN_V2_OPERATOR_SCOPE",
+  "scientific_state_exact_q048": "NO_SCIENTIFIC_RESULT_UNRESOLVED",
+  "stop_reason": "BOUNDED_P3_V2_OPERATOR_ADMISSION_QUALIFIED",
+  "reproduction_run": {
+    "start_utc": "2026-10-14T02:17:56.543807+00:00",
+    "end_utc": "2026-10-14T02:18:03.410529+00:00",
+    "start_europe_copenhagen": "2026-10-14T04:17:56.543807+02:00",
+    "end_europe_copenhagen": "2026-10-14T04:18:03.410529+02:00",
+    "proof_compute_seconds": 6.865667803999941,
+    "within_compute_cap": true
+  },
+  "checks": {
+    "recorded_execution_checks_passed": 551,
+    "recorded_execution_checks_total": 551,
+    "frozen_tests_passed": 8,
+    "frozen_tests_total": 8,
+    "independent_validator_checks_passed": 20,
+    "independent_validator_checks_total": 20,
+    "proofcells": 30,
+    "table_node_transforms": 16100,
+    "inverse_control_records": 130
+  },
+  "serialized_transform_checkpoint": {
+    "file": "q048_p3_scaled_transformed_log_tables_v2.json",
+    "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+    "alpha_nodes": 16000,
+    "r_nodes": 100,
+    "total": 16100
+  },
+  "atomic_global_admission": {
+    "Alpha_channel_0": {
+      "operator_log_lower": "-3.49683251030733850531E+1",
+      "operator_log_upper": "-2.03375934377768240812E+1",
+      "primary_rate_lower": "6.50802730420567786425E-16",
+      "primary_rate_upper": "1.47060282118645511377E-9",
+      "control_rate_lower": "6.50802730420567786425E-16",
+      "control_rate_upper": "1.47060282118645511377E-9"
+    },
+    "Alpha_channel_1": {
+      "operator_log_lower": "-3.60337801646458052121E+1",
+      "operator_log_upper": "-1.61563891087255949220E+1",
+      "primary_rate_lower": "2.24247759374287865990E-16",
+      "primary_rate_upper": "9.62430466750181250388E-8",
+      "control_rate_lower": "2.24247759374287865990E-16",
+      "control_rate_upper": "9.62430466750181250388E-8"
+    },
+    "Alpha_channel_2": {
+      "operator_log_lower": "-3.77354441449562493238E+1",
+      "operator_log_upper": "-2.06380271401544460986E+1",
+      "primary_rate_lower": "4.08982603918083195656E-17",
+      "primary_rate_upper": "1.08897697098750319553E-9",
+      "control_rate_lower": "4.08982603918083195656E-17",
+      "control_rate_upper": "1.08897697098750319553E-9"
+    },
+    "Alpha_channel_3": {
+      "operator_log_lower": "-3.91856373701608058307E+1",
+      "operator_log_upper": "-1.69623546719308472988E+1",
+      "primary_rate_lower": "9.59166319249062074167E-18",
+      "primary_rate_upper": "4.29875769157618045767E-8",
+      "control_rate_lower": "9.59166319249062074167E-18",
+      "control_rate_upper": "4.29875769157618045767E-8"
+    },
+    "Alpha_eq_0": {
+      "operator_log_lower": "-3.06979174735597287503E+1",
+      "operator_log_upper": "-2.58334504936695125037E+1",
+      "primary_rate_lower": "4.65654533300522875070E-14",
+      "primary_rate_upper": "6.03496842320968875472E-12",
+      "control_rate_lower": "4.65654533300522875070E-14",
+      "control_rate_upper": "6.03496842320968875472E-12"
+    },
+    "Alpha_eq_1": {
+      "operator_log_lower": "-3.02216455687179612743E+1",
+      "operator_log_upper": "-2.36540973685490215904E+1",
+      "primary_rate_lower": "7.49732082356951720071E-14",
+      "primary_rate_upper": "5.33526552759301270175E-11",
+      "control_rate_lower": "7.49732082356951720071E-14",
+      "control_rate_upper": "5.33526552759301270175E-11"
+    },
+    "R2p2s": {
+      "operator_log_lower": "-9.36837914326997314047E+2",
+      "operator_log_upper": "3.25909785487321877793E+2",
+      "primary_rate_lower": "1.36918890118023879787E-407",
+      "primary_rate_upper": "3.47393297795444419999E+141",
+      "control_rate_lower": "1.36918890118023879787E-407",
+      "control_rate_upper": "3.47393297795444419999E+141"
+    }
+  },
+  "swift_denominator_lower_bounds": {
+    "camspec-lcdm": {
+      "primary_denominator_lower": "7.78240303027152801616E-1",
+      "control_denominator_lower": "6.75134923997823586695E-1"
+    },
+    "camspec-ede_n3": {
+      "primary_denominator_lower": "7.78240303027152801616E-1",
+      "control_denominator_lower": "6.75134923997823586695E-1"
+    },
+    "hillipop-lcdm": {
+      "primary_denominator_lower": "7.78667276901143346755E-1",
+      "control_denominator_lower": "6.74562422046362567970E-1"
+    },
+    "hillipop-ede_n3": {
+      "primary_denominator_lower": "7.78667276901143346755E-1",
+      "control_denominator_lower": "6.74562422046362567970E-1"
+    }
+  },
+  "native_P6": "UNRESOLVED",
+  "x_e_tau_T_first_event": "UNRESOLVED",
+  "limitations": [
+    "Conditional source-real operator admission only; not native parser/libm/P6.",
+    "Caller must still prove actual TR/ratio state domains, radiation identity and active branch over the later state tube.",
+    "No complete Beta/C-factor/Jacobian, closed hydrogen/thermal denominator tube, hybrid first event E1-E3 or complete histories.",
+    "Full post-frec P4 and native P6 remain open; no physical theory confirmation/falsification or model promotion."
+  ],
+  "provenance_note": "The post-display-patch first final run log is preserved, but its full raw JSON was overwritten by the deterministic reproduction because both runs used the same local raw result path. The retained raw JSON is the reproduction run. The transformed checkpoint SHA256 is identical across the two final runs.",
+  "next_engine": "RESULT INGESTION & ROUTING ENGINE",
+  "no_claims": [
+    "No native P6 qualification",
+    "No complete first-event certificate",
+    "No complete x_e(z) or tau_T(z) difference bounds",
+    "No accepted-model promotion",
+    "No Q048 closure"
+  ]
+}

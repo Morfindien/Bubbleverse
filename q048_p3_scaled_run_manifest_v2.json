@@ -1,0 +1,159 @@
+{
+  "schema": "bubbleverse.builder.run_manifest",
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "prepared_at_utc": "2026-10-14T02:22:34.008660+00:00",
+  "prepared_at_europe_copenhagen": "2026-10-14T04:22:34.008660+02:00",
+  "identity": {
+    "current_q": "Q048",
+    "case_id": "NOT_ASSIGNED",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "task_id": "LOCAL-Q048-P3-SCALED-ARITHMETIC-FULL-OPERATOR-ADMISSION-BUILDER-V1",
+    "result_id": "LOCAL-Q048-BUILDER-P3-SCALED-OPERATOR-ADMISSION-V2",
+    "candidate_id": "LOCAL-Q048-P3-ARITHMETIC-CANDIDATE-V2",
+    "engine": "AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE",
+    "prompt_version": "2.0.0"
+  },
+  "input_state": {
+    "journal": {
+      "file": "Q047_SAMLET_JOURNAL_MATH018_INGESTED_V1-1.md",
+      "sha256": "33f5eedf88ac1c6c7efb3f87c65916456cd5f8bf93c8dba667271c0c7f69e73a"
+    },
+    "ingestion_handoff": {
+      "file": "Q048_MATH018_RESULT_INGESTION_HANDOFF_V2-1.md",
+      "sha256": "6e7e45ae0f7e59ff1e6331b00f759d474c21b7e0f336e6424343ae79c4d1d997"
+    },
+    "ingestion_manifest": {
+      "file": "Q048_MATH018_INGESTION_FILES_V1-1.md",
+      "sha256": "75ea230bf12afe299a3f347b5a8e05bf61dc2cd3c065f709356257fd39ab2235"
+    },
+    "builder_prompt": {
+      "file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.0.0-3.md",
+      "sha256": "2663bdb4d82ac4ec24bb60b06706f7e3087c52ea130885b442b5b38c9c6944b1"
+    }
+  },
+  "freeze": {
+    "spec_sha256": "4108c339d4e6ae69aa8096bfe44bcdbc53f3e26a2461751a323fead780c5fd0f",
+    "config_sha256": "cba637c080bfbe5c4b729224f0cddc7c38ca8ea62663f91f7a3c03dd0ba4ea8d",
+    "arithmetic_sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+    "kernel_sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+    "runner_sha256": "8f60113b39f329c67374a9823bb0d6b0741a1b4be4bfa6d12c3456e387a753d4",
+    "test_sha256": "054bc8ac0011319721b539d235567c2922052c07b1218dc783913414a7b96158",
+    "validator_sha256": "70d027edadfe34513c26fb1ba9ce2af108138e80e0923c8af9bd697d0507e03d"
+  },
+  "pre_execution_tests": {
+    "passed": 8,
+    "total": 8,
+    "log_sha256": "77d2c7925fbede3b2aea2d11a3a036ec33777889d6be4e603ec8d1911f98ffb5"
+  },
+  "first_final_run_after_display_fix": {
+    "log_file": "q048_p3_scaled_run_v2.log",
+    "log_sha256": "2fd8f0196571b24fc4f1d2da9c98c0dae4844a26a66d7a54b6c4527895b8b1b7",
+    "full_raw_json_preserved": false,
+    "reason": "Subsequent deterministic reproduction reused the same raw-result output path."
+  },
+  "retained_reproduction_run": {
+    "start_utc": "2026-10-14T02:17:56.543807+00:00",
+    "end_utc": "2026-10-14T02:18:03.410529+00:00",
+    "start_europe_copenhagen": "2026-10-14T04:17:56.543807+02:00",
+    "end_europe_copenhagen": "2026-10-14T04:18:03.410529+02:00",
+    "proof_compute_seconds": 6.865667803999941,
+    "python": "3.13.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "log_sha256": "1be9c51be81d998cfcaef6def9b8dabd0ee8996bd97fdb778c2a4ce3159a7e10",
+    "raw_result_sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+    "transformed_tables_sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb"
+  },
+  "result": {
+    "status": "PASS_BOUNDED_COMPONENT",
+    "stop_reason": "BOUNDED_P3_V2_OPERATOR_ADMISSION_QUALIFIED",
+    "execution_checks": {
+      "passed": 551,
+      "total": 551
+    },
+    "proofcells": 30,
+    "table_node_transforms": 16100,
+    "inverse_control_records": 130,
+    "within_compute_cap": true,
+    "native_P6": "UNRESOLVED",
+    "x_e_tau_T_first_event": "UNRESOLVED"
+  },
+  "validation": {
+    "passed": 20,
+    "total": 20,
+    "decision": "PASS_BOUNDED_COMPONENT",
+    "json_sha256": "dc1ab6c9f7fb922fb3bc64aa1f74b899bd5b68077d883285e080711223b4dc63",
+    "log_sha256": "2e07672d49f1ebb2de2d319e6a01341d1f334a1c0583a7f0e5eb773ad923fb49"
+  },
+  "display_only_revision": {
+    "issue": "A binary64 display conversion rendered an exact positive ~1e-407 lower as 0.0.",
+    "fix": "Display-only rendering changed to Decimal scientific notation.",
+    "frozen_scientific_criteria_changed": false,
+    "proof_arithmetic_changed": false,
+    "decision_changed": false
+  },
+  "artifacts": {
+    "Q048_P3_SCALED_FROZEN_SPEC_V2.md": {
+      "sha256": "4108c339d4e6ae69aa8096bfe44bcdbc53f3e26a2461751a323fead780c5fd0f",
+      "bytes": 4038
+    },
+    "q048_p3_scaled_config_v2.json": {
+      "sha256": "cba637c080bfbe5c4b729224f0cddc7c38ca8ea62663f91f7a3c03dd0ba4ea8d",
+      "bytes": 2591
+    },
+    "q048_p3_scaled_arithmetic_v2.py": {
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "bytes": 5988
+    },
+    "q048_p3_scaled_kernel_v2.py": {
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "bytes": 15855
+    },
+    "run_q048_p3_scaled_v2.py": {
+      "sha256": "8f60113b39f329c67374a9823bb0d6b0741a1b4be4bfa6d12c3456e387a753d4",
+      "bytes": 10042
+    },
+    "test_q048_p3_scaled_v2.py": {
+      "sha256": "054bc8ac0011319721b539d235567c2922052c07b1218dc783913414a7b96158",
+      "bytes": 2751
+    },
+    "verify_q048_p3_scaled_v2.py": {
+      "sha256": "70d027edadfe34513c26fb1ba9ce2af108138e80e0923c8af9bd697d0507e03d",
+      "bytes": 3845
+    },
+    "q048_p3_scaled_tests_v2.log": {
+      "sha256": "77d2c7925fbede3b2aea2d11a3a036ec33777889d6be4e603ec8d1911f98ffb5",
+      "bytes": 774
+    },
+    "q048_p3_scaled_run_v2.log": {
+      "sha256": "2fd8f0196571b24fc4f1d2da9c98c0dae4844a26a66d7a54b6c4527895b8b1b7",
+      "bytes": 333
+    },
+    "q048_p3_scaled_reproduction_v2.log": {
+      "sha256": "1be9c51be81d998cfcaef6def9b8dabd0ee8996bd97fdb778c2a4ce3159a7e10",
+      "bytes": 334
+    },
+    "q048_p3_scaled_raw_result_v2.json": {
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+      "bytes": 699697
+    },
+    "q048_p3_scaled_transformed_log_tables_v2.json": {
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+      "bytes": 3958952
+    },
+    "q048_p3_scaled_validation_v2.json": {
+      "sha256": "dc1ab6c9f7fb922fb3bc64aa1f74b899bd5b68077d883285e080711223b4dc63",
+      "bytes": 1967
+    },
+    "q048_p3_scaled_validation_v2.log": {
+      "sha256": "2e07672d49f1ebb2de2d319e6a01341d1f334a1c0583a7f0e5eb773ad923fb49",
+      "bytes": 264
+    }
+  },
+  "limitations": [
+    "Conditional source-real operator admission only; not native parser/libm/P6.",
+    "Caller must still prove actual TR/ratio state domains, radiation identity and active branch over the later state tube.",
+    "No complete Beta/C-factor/Jacobian, closed hydrogen/thermal denominator tube, hybrid first event E1-E3 or complete histories.",
+    "Full post-frec P4 and native P6 remain open; no physical theory confirmation/falsification or model promotion."
+  ],
+  "next_engine": "RESULT INGESTION & ROUTING ENGINE"
+}
