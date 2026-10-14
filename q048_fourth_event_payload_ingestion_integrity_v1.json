@@ -1,0 +1,65 @@
+{
+  "checked_at_utc": "2026-10-14T08:27:23.273506+00:00",
+  "engine_prompt_duplicate_copies": {
+    "byte_identical": true,
+    "count": 2,
+    "sha256": "16c50b7a3bae55000e12078d939f60f6f0a7f3363d1d16330db9917ab6e4fb86"
+  },
+  "incoming_journal": {
+    "bytes": 13519292,
+    "sha256": "460cca73c6452789827ffc4ccc548648c298a49c95b73068ca6732d95394b626"
+  },
+  "journal_exact_incoming_tail": true,
+  "output_journal": {
+    "bytes": 13528588,
+    "sha256": "60aba34de12527d02d486e8f01130d2d4f9ccaaa48f88d47f781b6956876124c"
+  },
+  "outputs": {
+    "Q047_SAMLET_JOURNAL_FOURTH_EVENT_PAYLOAD_INGESTED_V1.md": {
+      "bytes": 13528588,
+      "sha256": "60aba34de12527d02d486e8f01130d2d4f9ccaaa48f88d47f781b6956876124c"
+    },
+    "Q048_FOURTH_EVENT_PAYLOAD_INGESTION_HANDOFF_V1.md": {
+      "bytes": 8032,
+      "sha256": "37a944e8062cebd081cbec04e395746d3c69c2ad45224448e55f582d9c52c461"
+    },
+    "q048_fourth_event_payload_ingestion_checks_v1.json": {
+      "bytes": 4185,
+      "sha256": "83b305ad2a47f2159a579a2b46bd9224f8a950e0db0187951b99f0d002f312ed"
+    },
+    "q048_fourth_event_payload_ingestion_envelope_v1.json": {
+      "bytes": 13414,
+      "sha256": "d68dcd78bc6840036f84822c62fa0aabe5a9a05cd10415560b0cae7fa24101aa"
+    },
+    "q048_fourth_event_payload_ingestion_revalidation_v1.json": {
+      "bytes": 2556,
+      "sha256": "c042e853c5ed5b769c4f7f04ed840cc7095d837b08adbd8948a499648b66b3cd"
+    }
+  },
+  "schema": "Q048_FOURTH_EVENT_PAYLOAD_INGESTION_INTEGRITY_V1",
+  "source_manifest_exact_matches": 17,
+  "source_manifest_file": {
+    "bytes": 4572,
+    "sha256": "3ed7a73d351fbf1fe48786f73956ef72cb52e1aaf46ffe142e7a0a82c6400e7d"
+  },
+  "source_manifest_mismatches": [
+    {
+      "artifact": "q048_hillipop_ede_fourth_event_payload_validation_v1.json",
+      "expected": {
+        "bytes": 11008,
+        "sha256": "1dc20461a9284ca67ba92ca127ef8a6991d248be3eda144e6369ea304f76f8ce"
+      },
+      "observed": {
+        "bytes": 11008,
+        "sha256": "5c21174952de16f709eee265fa82c37352c49303c63feceef58b5504bf2a12ad"
+      },
+      "pass": false
+    }
+  ],
+  "source_manifest_rows": 18,
+  "status": "PASS_WITH_LINKED_VALIDATION_HASH_CORRECTION",
+  "validation_revalidation": {
+    "bytes": 2556,
+    "sha256": "c042e853c5ed5b769c4f7f04ed840cc7095d837b08adbd8948a499648b66b3cd"
+  }
+}

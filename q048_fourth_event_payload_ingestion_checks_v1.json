@@ -1,0 +1,170 @@
+{
+  "artifact_type": "BUBBLEVERSE_INGESTION_CHECKS",
+  "checked_at_utc": "2026-10-14T08:27:23.273506+00:00",
+  "checks": [
+    {
+      "detail": "16c50b7a3bae55000e12078d939f60f6f0a7f3363d1d16330db9917ab6e4fb86",
+      "id": "prompt_copies_identical",
+      "pass": true
+    },
+    {
+      "detail": "Q048 within Q048",
+      "id": "current_q_within_target",
+      "pass": true
+    },
+    {
+      "detail": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+      "id": "question_hash_raw",
+      "pass": true
+    },
+    {
+      "detail": "absent in input journal",
+      "id": "receipt_idempotent",
+      "pass": true
+    },
+    {
+      "detail": "50653972df498bd09e0bac2093190a3cdacb447e46809992c5967f6fd225cc7c",
+      "id": "raw_manifest_match",
+      "pass": true
+    },
+    {
+      "detail": "1337a14b0b4183b73222ec0739f8fd853e9b06676004fb8e535992c003444ff8",
+      "id": "composition_manifest_match",
+      "pass": true
+    },
+    {
+      "detail": "17/18; validation is sole mismatch",
+      "id": "source_manifest_17_exact",
+      "pass": true
+    },
+    {
+      "detail": "1dc20461a9284ca67ba92ca127ef8a6991d248be3eda144e6369ea304f76f8ce reported vs 5c21174952de16f709eee265fa82c37352c49303c63feceef58b5504bf2a12ad accessible",
+      "id": "validation_is_sole_mismatch",
+      "pass": true
+    },
+    {
+      "detail": "raw/spec/validator current hashes",
+      "id": "accessible_validation_bindings",
+      "pass": true
+    },
+    {
+      "detail": "155/155",
+      "id": "accessible_validation_155",
+      "pass": true
+    },
+    {
+      "detail": "155/155",
+      "id": "fresh_revalidation_155",
+      "pass": true
+    },
+    {
+      "detail": "only validated_at_utc differs",
+      "id": "semantic_equal_except_time",
+      "pass": true
+    },
+    {
+      "detail": "writes now() into validation artifact",
+      "id": "validator_timestamp_nondeterminism",
+      "pass": true
+    },
+    {
+      "detail": "PASS: all-four E1/E2/whole-E3 and conservative linked event-state acceptance",
+      "id": "legacy_all_four_acceptance",
+      "pass": true
+    },
+    {
+      "detail": "camspec-ede_n3,camspec-lcdm,hillipop-ede_n3,hillipop-lcdm",
+      "id": "all_four_case_set",
+      "pass": true
+    },
+    {
+      "detail": "threshold bracket",
+      "id": "camspec-ede_n3:E2",
+      "pass": true
+    },
+    {
+      "detail": "positive whole tube",
+      "id": "camspec-ede_n3:E3",
+      "pass": true
+    },
+    {
+      "detail": "connected",
+      "id": "camspec-ede_n3:E1",
+      "pass": true
+    },
+    {
+      "detail": "threshold bracket",
+      "id": "camspec-lcdm:E2",
+      "pass": true
+    },
+    {
+      "detail": "positive whole tube",
+      "id": "camspec-lcdm:E3",
+      "pass": true
+    },
+    {
+      "detail": "connected",
+      "id": "camspec-lcdm:E1",
+      "pass": true
+    },
+    {
+      "detail": "threshold bracket",
+      "id": "hillipop-ede_n3:E2",
+      "pass": true
+    },
+    {
+      "detail": "positive whole tube",
+      "id": "hillipop-ede_n3:E3",
+      "pass": true
+    },
+    {
+      "detail": "connected",
+      "id": "hillipop-ede_n3:E1",
+      "pass": true
+    },
+    {
+      "detail": "threshold bracket",
+      "id": "hillipop-lcdm:E2",
+      "pass": true
+    },
+    {
+      "detail": "positive whole tube",
+      "id": "hillipop-lcdm:E3",
+      "pass": true
+    },
+    {
+      "detail": "connected",
+      "id": "hillipop-lcdm:E1",
+      "pass": true
+    },
+    {
+      "detail": "460cca73c6452789827ffc4ccc548648c298a49c95b73068ca6732d95394b626",
+      "id": "journal_exact_tail",
+      "pass": true
+    },
+    {
+      "detail": "LOCAL-Q048-PAIRED-LATCH-RESET-COMPLETE-HISTORY-BOUNDS-BUILDER-V1",
+      "id": "handoff_single_next_task",
+      "pass": true
+    },
+    {
+      "detail": "paired bounds missing",
+      "id": "completion_gate_open",
+      "pass": true
+    },
+    {
+      "detail": "prepared only",
+      "id": "no_false_dispatch",
+      "pass": true
+    },
+    {
+      "detail": "technical only",
+      "id": "revalidation_not_independent",
+      "pass": true
+    }
+  ],
+  "checks_passed": 32,
+  "checks_total": 32,
+  "receipt_id": "LOCAL-Q048-FOURTH-EVENT-PAYLOAD-INGESTION-RECEIPT-V1",
+  "status": "PASS"
+}

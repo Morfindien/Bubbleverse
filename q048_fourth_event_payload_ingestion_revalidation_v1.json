@@ -1,0 +1,32 @@
+{
+  "accessible_validation": {
+    "checks_passed": 155,
+    "checks_total": 155,
+    "status": "PASS_VALIDATED_FOURTH_PACKET_AND_REFERENCED_ALL_FOUR_COMPOSITION",
+    "validated_at_utc": "2026-10-14T08:10:09.072668+00:00"
+  },
+  "accessible_validation_sha256": "5c21174952de16f709eee265fa82c37352c49303c63feceef58b5504bf2a12ad",
+  "created_at_utc": "2026-10-14T08:27:23.273506+00:00",
+  "evidence_independence": "NOT_INDEPENDENT_SCIENTIFIC_EVIDENCE; same validator/equations/source inputs, used only as technical/provenance recovery.",
+  "fresh_isolated_rerun": {
+    "checks_passed": 155,
+    "checks_total": 155,
+    "status": "PASS_VALIDATED_FOURTH_PACKET_AND_REFERENCED_ALL_FOUR_COMPOSITION",
+    "stdout": "PASS_VALIDATED_FOURTH_PACKET_AND_REFERENCED_ALL_FOUR_COMPOSITION 155 155",
+    "validated_at_utc": "2026-10-14T08:27:23.906259+00:00"
+  },
+  "fresh_isolated_rerun_sha256": "f01dd0f1790673bfd3e8482c1a8b42bd287e778f8d197b8d8269abfb472f890f",
+  "historical_binding_disposition": "PRESERVE reported 1dc20461a9284ca67ba92ca127ef8a6991d248be3eda144e6369ea304f76f8ce as historical REPORTED hash; mark exact bytes NOT_RECOVERED in this ingestion; bind current assessment to accessible/fresh computed hashes above.",
+  "interpretation": "The supplied package reports a validation-file hash that no longer matches accessible bytes. The validator output embeds current time, so rerunning overwrites the file with a new byte hash. Current accessible validation and a fresh isolated rerun are identical in all semantic fields except validated_at_utc and both pass 155/155. This revalidation restores technical confidence without pretending to recover the historical reported validation bytes.",
+  "legacy_all_four_acceptance_stdout": "PASS: all-four E1/E2/whole-E3 and conservative linked event-state acceptance",
+  "raw_sha256": "50653972df498bd09e0bac2093190a3cdacb447e46809992c5967f6fd225cc7c",
+  "reported_hash_matches_accessible_bytes": false,
+  "reported_validation_sha256": "1dc20461a9284ca67ba92ca127ef8a6991d248be3eda144e6369ea304f76f8ce",
+  "schema": "Q048_FOURTH_EVENT_PAYLOAD_INGESTION_REVALIDATION_V1",
+  "semantic_equal_excluding_validated_at_utc": true,
+  "source_result_id": "LOCAL-Q048-HILLIPOP-EDE-FOURTH-EVENT-PAYLOAD-CERTIFICATE-V1",
+  "spec_sha256": "dcabff633b4caf007f7e15f7971ee1da63b9921a4e132ed22c87af4954dbb10c",
+  "status": "PASS_LINKED_REVALIDATION_WITH_STALE_REPORTED_VALIDATION_HASH",
+  "validator_has_runtime_timestamp_output": true,
+  "validator_sha256": "2e508c78464d616a1ff961a9d2962f6a4790792d7186d3b07bc7271dd4c08560"
+}
