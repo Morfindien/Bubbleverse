@@ -1,0 +1,367 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "q": "Q048",
+  "prompt_id": "BUBBLEVERSE.MATHEMATICS",
+  "prompt_version": "2.1.0",
+  "record_id": "LOCAL-Q048-POST-FREC-GUARD-ENERGY-CONTINUATION-V4",
+  "prepared_at_utc": "2026-10-15T16:20:36.280886+00:00",
+  "main_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "authorized_q_range": "Q048 plus documented earlier dependencies; no Q049+",
+  "workflow_state": "READY_FOR_HANDOFF",
+  "scientific_state": "SUPPORTED_WITHIN_TESTED_DOMAIN",
+  "technical_state": "PASS",
+  "status_scope": "New conditional source-real guard component only; Q048 ACTIVE/UNRESOLVED; native P6 UNRESOLVED; Q047 CLOSED INCONCLUSIVE unchanged",
+  "journal_ref": {
+    "base": "Q047_SAMLET_JOURNAL_POST_EVENT_FREC_V4_INGESTED_V1-1.md",
+    "base_sha256": "c2df5883e31b18979af73d0a809a5eb449a599cb9e3277e94ac974922b7ee7f1",
+    "previous_append": "inputs/Q048_MATHEMATICS_JOURNAL_APPEND_V1.md",
+    "new_append": "Q048_MATHEMATICS_JOURNAL_APPEND_V4.md",
+    "logical_order": [
+      "base",
+      "previous_append",
+      "new_append"
+    ],
+    "completeness": "COMPLETE_AVAILABLE_BASE_WITH_REFERENCED_APPEND_SEQUENCE",
+    "canonical_pointer_updated": false
+  },
+  "input_references": [
+    {
+      "name": "Bubbleverse_Matematikmotor_2.1.0-1.md",
+      "bytes": 56414,
+      "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+      "read_status": "FULL_TEXT_READ; prompt recognized as operator prompt, not scientific case data"
+    },
+    {
+      "name": "Q048_MATHEMATICS_2-1-0_OVERLEVERING_V1-1.md",
+      "bytes": 5119,
+      "sha256": "90a3bb2cb99b26d1f79734c88db13cafffd10ba495a19d067cfbc326a580caea",
+      "read_status": "FULL_TEXT_READ; prompt recognized as operator prompt, not scientific case data"
+    },
+    {
+      "name": "Q048_MATHEMATICS_2-1-0_OVERLEVERING_V1.md",
+      "bytes": 5119,
+      "sha256": "90a3bb2cb99b26d1f79734c88db13cafffd10ba495a19d067cfbc326a580caea",
+      "read_status": "FULL_TEXT_READ; prompt recognized as operator prompt, not scientific case data"
+    },
+    {
+      "name": "Q048_MATHEMATICS_GITHUB_MEMORY_UPDATE_V1.json",
+      "bytes": 1725,
+      "sha256": "a6b320c71fcfafac5ef1fc67a0c677d0c8c5f9ad449c80b64c5645419129eec0",
+      "read_status": "FULL_TEXT_READ; prompt recognized as operator prompt, not scientific case data"
+    },
+    {
+      "name": "Q048_MATHEMATICS_JOURNAL_APPEND_V1.md",
+      "bytes": 806,
+      "sha256": "29ef3d06471e49d9d86a1aba9cee1cb52269963e80ca47ff4701ce8619358460",
+      "read_status": "FULL_TEXT_READ; prompt recognized as operator prompt, not scientific case data"
+    }
+  ],
+  "new_information": [
+    "Original journal and Math017/019/021/V4/source bytes recovered and pinned",
+    "New time-evolved energy/Y continuation from a=1/1601 to 1/1521; target cell guard strictly positive in both paths",
+    "66 whole-cell certificates verified; 5 arithmetic unit tests; 5 semantic mutations rejected",
+    "Prior failed loose negative sufficient bound preserved; blocker resolved by new bound, not historical rewrite"
+  ],
+  "claims": [
+    {
+      "id": "LOCAL-Q048-GUARD-V4-C01",
+      "claim": "Original prerequisite recovery resolved",
+      "evidence": [
+        "q048_guard_recovery_manifest_v4.json"
+      ],
+      "status": "VERIFIED_ARTIFACT_RECOVERY"
+    },
+    {
+      "id": "LOCAL-Q048-GUARD-V4-C02",
+      "claim": "G>0 on the entire connected new bridge, including target a=[1/1531,1/1521]",
+      "domain": {
+        "a_anchor": "1/1601",
+        "a_end": "1/1521",
+        "target_a": [
+          "1/1531",
+          "1/1521"
+        ],
+        "case": "hillipop-ede_n3; common background for both interventions"
+      },
+      "G_lower": {
+        "primary": "2359638303536060883/500000000000000000",
+        "control": "1151458149355139863/1000000000000000000",
+        "unit": "Mpc^-2",
+        "uncertainty_type": "deterministic outward enclosure; no observational confidence level"
+      },
+      "evidence": [
+        "q048_guard_result_v4.json",
+        "q048_guard_validation_v4.json"
+      ],
+      "provenance_class": "INFERRED / BEREGNET",
+      "source_semantics": "CONDITIONAL_SOURCE_REAL"
+    },
+    {
+      "id": "LOCAL-Q048-GUARD-V4-C03",
+      "claim": "New certificate verified by separate arithmetic paths and producer-free verifier",
+      "evidence": [
+        "q048_guard_validation_v4.json",
+        "q048_guard_validation_v4.log"
+      ],
+      "limitations": "shared equations, captured inputs and historical admission premises; not independent physical evidence"
+    }
+  ],
+  "completed_tests_do_not_repeat": [
+    "Historical all-four events and payloads",
+    "P2/P4/Math015-021 admitted domains",
+    "P3 campaigns",
+    "All four H-to-frec tubes and 55 frec cells",
+    "This new connected 33-cell guard continuation in each path; repeat only for changed inputs, concrete error or justified independent verification"
+  ],
+  "resolved_blockers": [
+    "LOCAL-Q048-MATH-SCALAR-PROOF-ARTIFACT-RECOVERY-V1",
+    "POST_FREC_GUARD_MARGIN_NOT_SEPARATED_BEYOND_RETAINED_EXTENSION for the specified z1530->1520 guard component"
+  ],
+  "blockers": [
+    {
+      "id": "LOCAL-Q048-POST-GUARD-PAIRED-HISTORY-CONTINUATION-V4",
+      "description": "Complete post-frec/reio paired thermal/hydrogen histories and derived xe/tau bounds still absent; this is downstream of the now-proved guard component"
+    }
+  ],
+  "next_engine": "RESULT INGESTION & ROUTING ENGINE 2.0.0",
+  "next_task": "Verify pins and family compatibility; append this component once; reconcile held downstream state-tube task using the 55 existing cells. Do not launch Motor14 or declare Q048 closed.",
+  "resume_condition": "Ingest new raw/validation/manifest and complete base plus V1/V4 append sequence; no new input required for ingestion",
+  "expected_output_artifact": "One versioned ingestion receipt with bounded guard admission and exact downstream routing",
+  "dispatch_state": "PREPARED_NOT_DISPATCHED",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "capture_hash_status": "REPORTED_IN_INHERITED_ADMISSION; full capture not rehashed here; required extracted-state hash verified",
+  "related_q": [
+    "Q041",
+    "Q047",
+    "Q048"
+  ],
+  "github_read_state": "VERIFIED",
+  "github_write_state": "READY_FOR_MANUAL_UPLOAD",
+  "repository": "Morfindien/Bubbleverse",
+  "branch": "main",
+  "read_commit": "bc674008fecfb2800fe9107d357e02363ad56a96",
+  "proposed_new_destination": "Q048/mathematics/20261015T161053Z-guard-v4/",
+  "destination_exists": false,
+  "write_attempts": [
+    {
+      "operation": "git/trees create",
+      "http_status": 403,
+      "message": "Resource not accessible by integration"
+    },
+    {
+      "operation": "contents create_file",
+      "http_status": 403,
+      "message": "Resource not accessible by integration"
+    }
+  ],
+  "github_commit": null,
+  "upload_verified": false,
+  "index_updates_proposed": [
+    "Link the new append as successor to base + preserved V1 append in Q048 authoritative journal stream",
+    "Current Q048 view: mark recovery and target-cell guard blockers resolved within new component scope",
+    "Point the existing held continuation task to this new bounded guard; retain all old records and 55 cells",
+    "Keep Q048 open, native P6 unresolved and accepted model unchanged; no launcher/program registry replacement"
+  ],
+  "formal_shared_schema_validation": false,
+  "local_contract_validation": "status axes, references, Q firewall, hashes, 66 certificates and mutation checks verified",
+  "reproducibility_grade": "R2 for new component",
+  "run_manifest_ref": "q048_guard_run_manifest_v4.json",
+  "model_diff": {
+    "new_claim": "conditional guard beyond retained scalar extension through z1520",
+    "accepted_model_change": "NONE",
+    "integration": "PENDING_INGESTION"
+  },
+  "delivery_files": [
+    {
+      "name": "Q047_SAMLET_JOURNAL_POST_EVENT_FREC_V4_INGESTED_V1-1.md",
+      "bytes": 13568533,
+      "sha256": "c2df5883e31b18979af73d0a809a5eb449a599cb9e3277e94ac974922b7ee7f1",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/Q047_SAMLET_JOURNAL_POST_EVENT_FREC_V4_INGESTED_V1-1.md",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "Q048_GUARD_FILES_V4.md",
+      "bytes": 6260,
+      "sha256": "e784f3ecc9a03e9eef9b1831feaabb6e69967190f9b67fa7198927f56314289e",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/Q048_GUARD_FILES_V4.md",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "Q048_GUARD_TEST_CONTRACT_V4.md",
+      "bytes": 2711,
+      "sha256": "e0938f4292af77332b8e26f70dbe4514a3a568ced1645a4f0fb213b089595155",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/Q048_GUARD_TEST_CONTRACT_V4.md",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "Q048_MATHEMATICS_2-1-0_GUARD_ANALYSIS_V4.md",
+      "bytes": 16414,
+      "sha256": "6a23b15873db4b65d50e1f200801c21b6545e714beb57de270b303025d375693",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/Q048_MATHEMATICS_2-1-0_GUARD_ANALYSIS_V4.md",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "Q048_MATHEMATICS_JOURNAL_APPEND_V4.md",
+      "bytes": 5464,
+      "sha256": "97252674c3efa1e3a21eda7ab1a6903bd8a79151653290831885a6a0fe054adb",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/Q048_MATHEMATICS_JOURNAL_APPEND_V4.md",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "inputs/Q048_MATHEMATICS_JOURNAL_APPEND_V1.md",
+      "bytes": 806,
+      "sha256": "29ef3d06471e49d9d86a1aba9cee1cb52269963e80ca47ff4701ce8619358460",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/inputs/Q048_MATHEMATICS_JOURNAL_APPEND_V1.md",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "inputs/background.c",
+      "bytes": 122355,
+      "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/inputs/background.c",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "inputs/q048_full_tube_reuse_result_v4.json",
+      "bytes": 943733,
+      "sha256": "3940aa031028d53edfb31661dc62d5c24246ff9a7320d1e9a159e400db5bf830",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/inputs/q048_full_tube_reuse_result_v4.json",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "inputs/q048_math015_weighted_virial_v1.py",
+      "bytes": 13076,
+      "sha256": "d50abd6f9e5c1864aa981f4e1ec6ed3bb95759b157c4091584cb9c89c6e542af",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/inputs/q048_math015_weighted_virial_v1.py",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "inputs/q048_math017_result_v1.json",
+      "bytes": 56890,
+      "sha256": "90a6c1df71b50bcbad0f3f7c01d99acf8bc4caae5b1b72e100bd5f9dcd677281",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/inputs/q048_math017_result_v1.json",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "inputs/q048_math017_target_checkpoint_v1.json",
+      "bytes": 1385,
+      "sha256": "f8af9b7fa2f394c37c929b8c29251d0c276fbc4126817937ceb0da9d99409a67",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/inputs/q048_math017_target_checkpoint_v1.json",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "inputs/q048_math019_frec_boundary_result_v1.json",
+      "bytes": 6462,
+      "sha256": "73e3d44f2c11668d75c97256a886d9f301f8b3aee145458485fc23592b39cf58",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/inputs/q048_math019_frec_boundary_result_v1.json",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "inputs/q048_math021_branch_independent_scalar_enclosure_v1.json",
+      "bytes": 12647,
+      "sha256": "1ec40de297bd092a95802df6aae1f248355af5e6871018c84fe00fc921ba3ce4",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/inputs/q048_math021_branch_independent_scalar_enclosure_v1.json",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "inputs/state_objects_extracted.json",
+      "bytes": 26196,
+      "sha256": "16090ea51f3104da3ce42f1877a81676863e40900e1c75828d3bc65fb6cfe864",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/inputs/state_objects_extracted.json",
+      "role": "unchanged_input_or_journal_base"
+    },
+    {
+      "name": "q048_guard_certificate_v4.py",
+      "bytes": 7437,
+      "sha256": "504a8b031fc4280db599f77566f1b1300073824f04c6fc06b92a896f35988cb5",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_certificate_v4.py",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_config_v4.json",
+      "bytes": 1776,
+      "sha256": "53c9760c06debb2b54113824d37c632c6ec14cb535b26f08ede629cdd230f2e9",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_config_v4.json",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_execution_v4.log",
+      "bytes": 872,
+      "sha256": "a3f3184ecd164d0bbc33c43276b6d5683be7d8e0671b8593f0bb2104574bbc2d",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_execution_v4.log",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_recovery_manifest_v4.json",
+      "bytes": 4636,
+      "sha256": "f73b5a36dcd4e215eede9b8b942de4aa5bd9a4723aff79f9c5bc01f59a392380",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_recovery_manifest_v4.json",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_result_v4.json",
+      "bytes": 48347,
+      "sha256": "0a014f7c9283a37f6ee5082d3004c7121c6cffe74d75662d7a0275042b98c989",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_result_v4.json",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_run_manifest_v4.json",
+      "bytes": 7568,
+      "sha256": "ec8137937d23079d1c2778b770f98daa620fc2da0f6ea35ba2df5fa2c126ec32",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_run_manifest_v4.json",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_tests_green_v4.log",
+      "bytes": 103,
+      "sha256": "d03ce458f2a6cd2b4f27522f3aacad03ce1872c028853507c3ad02ca621bdcad",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_tests_green_v4.log",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_tests_red_v4.log",
+      "bytes": 3054,
+      "sha256": "6e1e4fedbca9fe3c1eafbb6861a1b5f585833a24333b26bb697ff6eec72b1960",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_tests_red_v4.log",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_tests_v4.py",
+      "bytes": 1312,
+      "sha256": "01445fbad528242f1712131cc0fb2f0063cd194cfb467b4725917826e28c7687",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_tests_v4.py",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_validation_v4.json",
+      "bytes": 892,
+      "sha256": "09713779558a998548953ae71c8adafb9ea9d08db386d9f896c46ec1aac1b338",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_validation_v4.json",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_validation_v4.log",
+      "bytes": 892,
+      "sha256": "09713779558a998548953ae71c8adafb9ea9d08db386d9f896c46ec1aac1b338",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_validation_v4.log",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_verification_note_v4.md",
+      "bytes": 649,
+      "sha256": "88d480c34d923969fe774f14ed79713f40db4c99f0280105cb9ba12548cfbabd",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_verification_note_v4.md",
+      "role": "new_support_or_result"
+    },
+    {
+      "name": "q048_guard_verify_v4.py",
+      "bytes": 6580,
+      "sha256": "0cb2be53404c4a75f63eb57d5c89257697e2cfc424cc7c4e1c76f1fa80e6e701",
+      "destination": "Q048/mathematics/20261015T161053Z-guard-v4/q048_guard_verify_v4.py",
+      "role": "new_support_or_result"
+    }
+  ]
+}
