@@ -1,0 +1,100 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-FREC-V7-INGESTION-RECEIPT-V1",
+  "created_at_utc": "2026-10-15T19:34:13.665505+00:00",
+  "case_id": "NOT_ASSIGNED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": "Q048 and documented earlier dependencies; no Q049+",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "UNRESOLVED",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7"
+  ],
+  "source_state_version": "Q047_SAMLET_JOURNAL_FREC_RESUME_V7_APPENDED_V1-1.md",
+  "target_state_version": "Q047_SAMLET_JOURNAL_FREC_RESUME_V7_INGESTED_V1.md",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS",
+  "engine_registry_ref": "Q048_MATHEMATICS_GUARD_RESUME_V6.md@c4bda05dad1285734a3f3c0dddd0a39d246413b5",
+  "execution_profile_ref": "q048_frec_v7_ingestion_execution_profile_v1.json",
+  "journal_ref": "Q047_SAMLET_JOURNAL_FREC_RESUME_V7_INGESTED_V1.md",
+  "source_register_ref": "preserved inside complete journal",
+  "claim_evidence_map_ref": "q048_frec_v7_ingestion_state_delta_v1.json",
+  "result_provenance_ref": "q048_frec_v7_ingestion_evidence_manifest_v1.json",
+  "anomaly_tension_registry_ref": "preserved inside complete journal",
+  "completed_task_ledger_ref": "preserved inside complete journal + state delta",
+  "route_history_ref": "preserved inside complete journal + state delta",
+  "integrity_manifest_ref": "q048_frec_v7_ingestion_evidence_manifest_v1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "two new accepted Hillipop-EDE cells ingested once",
+    "active guard blocker refined to z1490->1480",
+    "same-Q Mathematics task prepared"
+  ],
+  "frozen_configuration_refs": [
+    "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "6bb270b39b45dd230bb8770fe032843411b7fdd605dc874c7f67d9ac8f5d9588"
+  ],
+  "open_material_uncertainties": [
+    "strict connected guard on a=[1/1491,1/1481]",
+    "complete a=1 paired histories",
+    "final Delta x_e(z) and observer-normalized cumulative Delta tau_T(z)",
+    "native P6"
+  ],
+  "missing_information": [],
+  "next_task": {
+    "task_id": "LOCAL-Q048-POST-V7-HILLIPOP-EDE-GUARD-MATH-V1",
+    "task_fingerprint": "0c8c3a9f3eaed734ca355cfa9075aa348a90740017e0e3b94bf37b6f3d85b7c6",
+    "objective": "prove or precisely fail connected strict-positive source guard on hillipop-ede_n3 a=[1/1491,1/1481] without replay"
+  },
+  "success_condition": "linked source-faithful strict-positive whole-cell guard certificate with certified premises/error and composable endpoint",
+  "failure_or_falsification_condition": "first exact unresolved/nonpositive inequality/premise or indispensable missing checkpoint; failed sufficient bound is METHOD_INSUFFICIENT",
+  "stop_condition": "target certificate, exact material obstruction, or budget checkpoint; then return once to Result Ingestion 2.1.0",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "full histories/final difference bounds absent",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "No new gate for bounded same-Q local mathematics; new Q/model promotion/paid resources remain gated.",
+  "output_file_refs": [
+    "Q048_FREC_V7_INGESTION_HANDOFF_V1.md",
+    "Q047_SAMLET_JOURNAL_FREC_RESUME_V7_INGESTED_V1.md",
+    "Q048_FREC_V7_INGESTION_APPEND_V1.md",
+    "q048_frec_v7_ingestion_envelope_v1.json",
+    "q048_frec_v7_ingestion_state_delta_v1.json",
+    "q048_frec_v7_ingestion_evidence_manifest_v1.json",
+    "q048_frec_v7_ingestion_execution_profile_v1.json",
+    "q048_frec_v7_ingestion_journal_checks_v1.json",
+    "q048_frec_v7_ingestion_contract_checks_v1.json",
+    "q048_frec_v7_ingestion_checkpoint_v1.json",
+    "Q048_FREC_V7_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+    "q048_frec_v7_ingestion_output_manifest_v1.json",
+    "Q048_FREC_V7_INGESTION_FILES_V1.md"
+  ],
+  "output_manifest_ref": "q048_frec_v7_ingestion_output_manifest_v1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "main",
+    "base_commit_sha": "c4bda05dad1285734a3f3c0dddd0a39d246413b5",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_FREC_RESUME_V7_APPENDED_V1.md",
+    "current_state_path": null,
+    "index_refs": [
+      "Q048_FREC_RESUME_FILES_V7.md"
+    ],
+    "cross_reference_refs": [
+      "Q048_FREC_RESUME_REPORT_V7.md",
+      "Q048_MATHEMATICS_GUARD_RESUME_V6.md"
+    ],
+    "memory_update_ref": "Q048_FREC_V7_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+    "target_paths_status": "PROPOSED",
+    "sync_status": "USER_UPLOAD_PENDING"
+  }
+}

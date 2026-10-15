@@ -1,0 +1,205 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "handoff_id": "LOCAL-Q048-FREC-V7-INGESTION-RECEIPT-V1",
+  "created_at_utc": "2026-10-15T19:34:13.665505+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "repository": "Morfindien/Bubbleverse",
+  "base_commit": "c4bda05dad1285734a3f3c0dddd0a39d246413b5",
+  "manifest_hash_convention": "This manifest excludes its own hash.",
+  "files": [
+    {
+      "name": "Q048_FREC_V7_INGESTION_HANDOFF_V1.md",
+      "role": "primary continuation handoff",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048_FREC_V7_INGESTION_HANDOFF_V1.md",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 8253,
+      "sha256": "d5eb0b6f9dff2673db94b653b560a5f9761b944fffc8f3b237ddea139195ffff"
+    },
+    {
+      "name": "Q047_SAMLET_JOURNAL_FREC_RESUME_V7_INGESTED_V1.md",
+      "role": "complete journal successor",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q047_SAMLET_JOURNAL_FREC_RESUME_V7_INGESTED_V1.md",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE_NEW_VERSION",
+      "bytes": 13621076,
+      "sha256": "6d1a9bd9f396c17a4abfb6b31c12e5c918c059b9ab815a6f9fd7c2b66d4c3d35"
+    },
+    {
+      "name": "Q048_FREC_V7_INGESTION_APPEND_V1.md",
+      "role": "ingestion receipt append",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048_FREC_V7_INGESTION_APPEND_V1.md",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 7578,
+      "sha256": "60698dd38b8e8f9948a36e3045318ef539865fd9aa15e0d273e223f1e1d2c147"
+    },
+    {
+      "name": "q048_frec_v7_ingestion_envelope_v1.json",
+      "role": "machine-readable handoff",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048/ingestion/frec-resume-v7-v1/q048_frec_v7_ingestion_envelope_v1.json",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 5411,
+      "sha256": "3817e83a2a92cd53e0180f60a0bfff71265728d17f0c9e462b40ff320c6cf1a0"
+    },
+    {
+      "name": "q048_frec_v7_ingestion_state_delta_v1.json",
+      "role": "state/claim/route delta",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048/ingestion/frec-resume-v7-v1/q048_frec_v7_ingestion_state_delta_v1.json",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 2921,
+      "sha256": "6cd988b64eabe4bd05d0f85c2f8fcd107e91adbae1baef39e43e86d98083bcb8"
+    },
+    {
+      "name": "q048_frec_v7_ingestion_evidence_manifest_v1.json",
+      "role": "evidence/provenance manifest",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048/ingestion/frec-resume-v7-v1/q048_frec_v7_ingestion_evidence_manifest_v1.json",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 3332,
+      "sha256": "63a7f97f1cb00c1447bbe1515d69e89c173d21fd14624323f8ed57d4a1a0326b"
+    },
+    {
+      "name": "q048_frec_v7_ingestion_execution_profile_v1.json",
+      "role": "execution profile",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048/ingestion/frec-resume-v7-v1/q048_frec_v7_ingestion_execution_profile_v1.json",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 1168,
+      "sha256": "dff76f680d05dee40c239055d90788579fd538be5b914dc8b4f4387312685234"
+    },
+    {
+      "name": "q048_frec_v7_ingestion_journal_checks_v1.json",
+      "role": "journal checks",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048/ingestion/frec-resume-v7-v1/q048_frec_v7_ingestion_journal_checks_v1.json",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 837,
+      "sha256": "c5e87b7b35f97b555d05fee153037f855f01e020ab93672cef59a576a0d1e545"
+    },
+    {
+      "name": "q048_frec_v7_ingestion_contract_checks_v1.json",
+      "role": "contract checks",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048/ingestion/frec-resume-v7-v1/q048_frec_v7_ingestion_contract_checks_v1.json",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 1281,
+      "sha256": "e4a60c7095c197b033f1d277bf7d9fac7b56328e33106f149917df37b00b5c31"
+    },
+    {
+      "name": "q048_frec_v7_ingestion_checkpoint_v1.json",
+      "role": "routing checkpoint",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048/ingestion/frec-resume-v7-v1/q048_frec_v7_ingestion_checkpoint_v1.json",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 1305,
+      "sha256": "32a6fd82d7f1e611ecbea286d90f05f319b30c24985d590168b0d8cf1e29f235"
+    },
+    {
+      "name": "Q048_FREC_V7_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+      "role": "GitHub memory update",
+      "q": "Q048",
+      "version": "V1",
+      "intended_repository_path": "Q048/ingestion/frec-resume-v7-v1/Q048_FREC_V7_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+      "dependencies": [
+        "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+        "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca"
+      ],
+      "status": "CREATE",
+      "bytes": 4979,
+      "sha256": "ebf01e2b97006c7a056323ccccd82f78881539f4d10bb2a48f8c09726af325bf"
+    }
+  ],
+  "reused_verified_origin": [
+    {
+      "name": "Q048_FREC_RESUME_REPORT_V7.md",
+      "sha256": "b3db2b33c2eec107f1510a6913a3faf11b11d3140d19f2c891d9b3ba821b3843",
+      "github": "VERIFIED"
+    },
+    {
+      "name": "Q048_FREC_RESUME_FILES_V7.md",
+      "sha256": "171b4fc170f348040efd0c0943ccb5ba6b0add4c38df0fdf5276a147696de562",
+      "github": "VERIFIED"
+    },
+    {
+      "name": "Q047_SAMLET_JOURNAL_FREC_RESUME_V7_APPENDED_V1.md",
+      "sha256": "f90ef9a2ada592f7cb4a951aef7a638973bc55f4e8a73fcf15e69d71597265ca",
+      "github": "VERIFIED"
+    },
+    {
+      "name": "Q048_FREC_RESUME_JOURNAL_APPEND_V7.md",
+      "sha256": "72fed4cc9298a18d5356a371873d44401a1c9362c5407c0fb9f977a1a9bf7a62",
+      "github": "VERIFIED"
+    },
+    {
+      "name": "q048_frec_resume_result_v7.json",
+      "sha256": "6bb270b39b45dd230bb8770fe032843411b7fdd605dc874c7f67d9ac8f5d9588",
+      "github": "VERIFIED"
+    },
+    {
+      "name": "q048_frec_resume_validation_v7.json",
+      "sha256": "20b61324d46fe631ea20881eb87d778d45448d8cd6a210421b1efcbca857eea0",
+      "github": "VERIFIED"
+    },
+    {
+      "name": "q048_frec_resume_checkpoint_v7.json",
+      "sha256": "9cf758ea0651b793a05172b32d042b4fb0a1032b7693e5f05da10310d4f454cb",
+      "github": "VERIFIED"
+    }
+  ],
+  "github_sync": "USER_UPLOAD_PENDING",
+  "scientific_dispatch": "PREPARED_NOT_DISPATCHED"
+}

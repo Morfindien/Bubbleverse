@@ -1,0 +1,84 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "handoff_id": "LOCAL-Q048-FREC-V7-INGESTION-RECEIPT-V1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "journal_effect": [
+    {
+      "effect": "ADD",
+      "object": "two Hillipop-EDE paired frec cells z1510->1500 and z1500->1490",
+      "evidence": "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7"
+    },
+    {
+      "effect": "ADD",
+      "object": "guard obstruction z1490->1480",
+      "id": "POST_GUARD_V6_FORWARD_ENERGY_GUARD_NOT_SEPARATED_Z1490_1480"
+    },
+    {
+      "effect": "REFINE",
+      "object": "active routing bottleneck",
+      "old": "z1510->1500 guard",
+      "new": "z1490->1480 connected guard/energy certificate"
+    },
+    {
+      "effect": "KEEP",
+      "object": "historical statuses, Q047 closure, source/capture, accepted z_reio, native-P6 unresolved"
+    }
+  ],
+  "claims": [
+    {
+      "claim_id": "LOCAL-Q048-FREC-V7-INGEST-C01",
+      "statement": "Conditional source-real paired frec prefix contains 59 connected accepted cells through Hillipop-EDE z1490.",
+      "role": "SUPPORTS",
+      "evidence": [
+        "q048_frec_resume_result_v7.json",
+        "q048_frec_resume_validation_v7.json",
+        "q048_frec_resume_checkpoint_v7.json"
+      ]
+    },
+    {
+      "claim_id": "LOCAL-Q048-FREC-V7-INGEST-C02",
+      "statement": "Current sufficient whole-cell guard fails on Hillipop-EDE z1490->1480 by -3.6970442404 Mpc^-2.",
+      "role": "LIMITS",
+      "evidence": [
+        "q048_frec_resume_result_v7.json",
+        "Q048_FREC_RESUME_REPORT_V7-1.md"
+      ],
+      "interpretation": "METHOD_INSUFFICIENT_NOT_PHYSICAL_CROSSING"
+    },
+    {
+      "claim_id": "LOCAL-Q048-FREC-V7-INGEST-C03",
+      "statement": "Exact Q048 remains unresolved because full histories and final Delta x_e/Delta tau_T bounds are absent.",
+      "role": "LIMITS",
+      "evidence": [
+        "q048_frec_resume_result_v7.json",
+        "Q048_FREC_RESUME_REPORT_V7-1.md"
+      ]
+    }
+  ],
+  "blocker": {
+    "id": "POST_GUARD_V6_FORWARD_ENERGY_GUARD_NOT_SEPARATED_Z1490_1480",
+    "state": "ACTIVE",
+    "target_a": [
+      "1/1491",
+      "1/1481"
+    ],
+    "target_z": [
+      1490,
+      1480
+    ],
+    "exact_margin": "-3697044240434026225503882005685408551495784882532012243815178071267535040872366692177743210546138923920324621597146499271/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "units": "Mpc^-2"
+  },
+  "routing": {
+    "selected_next_engine": "BUBBLEVERSE.MATHEMATICS",
+    "prompt_version": "2.1.0",
+    "next_task_id": "LOCAL-Q048-POST-V7-HILLIPOP-EDE-GUARD-MATH-V1",
+    "task_fingerprint": "0c8c3a9f3eaed734ca355cfa9075aa348a90740017e0e3b94bf37b6f3d85b7c6",
+    "status": "PREPARED_NOT_DISPATCHED"
+  },
+  "completion": {
+    "q_complete": false,
+    "reason": "complete four-case histories/final difference bounds/native P6 remain absent"
+  }
+}
