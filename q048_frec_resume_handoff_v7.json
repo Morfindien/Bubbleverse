@@ -1,0 +1,81 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_lifecycle": "ACTIVE/UNRESOLVED",
+  "result_id": "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+  "run_id": "LOCAL-Q048-FREC-RESUME-V7-2026-10-15T19:20:39.523958+00:00",
+  "task_id": "LOCAL-Q048-POST-EVENT-FREC-REIO-STATE-TUBE-CONSTRUCTION-BUILDER-V1",
+  "resume_revision": "GUARD_V6_INGESTED_V1",
+  "workflow_state": "READY_FOR_RESULT_INGESTION",
+  "technical_state": "PASS",
+  "scientific_state": "SUPPORTED_WITHIN_TESTED_DOMAIN_PARTIAL",
+  "q_complete": false,
+  "retained_accepted_cells": 57,
+  "new_accepted_cells": 2,
+  "total_accepted_cells": 59,
+  "new_acceptances": [
+    {
+      "case": "hillipop-ede_n3",
+      "z": [
+        1510,
+        1500
+      ],
+      "status": "PASS_PAIRED_FREC_INVARIANT_TUBE",
+      "admitted_G_lower": "2451017155065588641/1000000000000000000"
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "z": [
+        1500,
+        1490
+      ],
+      "status": "PASS_PAIRED_FREC_INVARIANT_TUBE",
+      "admitted_G_lower": "135983821361490512461906816093477900567196575825938327905727004482800072110040383824842166391801720943640149397500826467/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "blocker": {
+    "code": "NEW_WHOLE_CELL_GUARD_NOT_SEPARATED",
+    "inequality": "3*B0_lower-E_forward_upper+floor_lower>0",
+    "margin": "-3697044240434026225503882005685408551495784882532012243815178071267535040872366692177743210546138923920324621597146499271/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "method_insufficient_not_physical_falsification": true,
+    "case": "hillipop-ede_n3",
+    "z": [
+      1490,
+      1480
+    ],
+    "a": {
+      "lo": "1/1491",
+      "hi": "1/1481",
+      "display_lo": 0.0006706908115358819,
+      "display_hi": 0.0006752194463200541
+    },
+    "attempted_cell_index": 2
+  },
+  "blocker_id": "POST_GUARD_V6_FORWARD_ENERGY_GUARD_NOT_SEPARATED_Z1490_1480",
+  "blocker_interpretation": "METHOD_INSUFFICIENT; negative sufficient lower bound does not certify a reachable source crossing or physical falsification",
+  "next_action_for_ingestion": "Ingest this bounded Builder result once. If material, prepare exactly one same-Q mathematics obligation to derive a sharper source-correlated energy/phase/guard certificate for hillipop-ede_n3 a=[1/1491,1/1481] from the V6/V7 connected endpoint state. Do not replay 59 accepted cells.",
+  "return_route": "RESULT INGESTION & ROUTING ENGINE 2.1.0",
+  "no_repeat": [
+    "57 retained cells",
+    "two new V7 accepted cells",
+    "V6 target guard",
+    "old V4/V5 guard attempts",
+    "events/P3/P2P4/Math015-021",
+    "refit/recapture/z_reio/tau shooting/likelihood/native P6 reassurance"
+  ],
+  "frozen": {
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "accepted_z_reio": "FIXED as captured",
+    "no_q049_plus": true
+  },
+  "files": {
+    "raw_result": "q048_frec_resume_result_v7.json",
+    "validation": "q048_frec_resume_validation_v7.json",
+    "checkpoint": "q048_frec_resume_checkpoint_v7.json",
+    "report": "Q048_FREC_RESUME_REPORT_V7.md",
+    "journal_append": "Q048_FREC_RESUME_JOURNAL_APPEND_V7.md"
+  }
+}

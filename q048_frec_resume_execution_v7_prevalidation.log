@@ -1,0 +1,41 @@
+{
+  "status": "PARTIAL_WITH_EXACT_NEW_OBSTRUCTION",
+  "new_accepted_cells": 2,
+  "retained_cells": 57,
+  "total_accepted_cells_in_chain": 59,
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 1490
+  },
+  "blocker": {
+    "code": "NEW_WHOLE_CELL_GUARD_NOT_SEPARATED",
+    "inequality": "3*B0_lower-E_forward_upper+floor_lower>0",
+    "margin": "-3697044240434026225503882005685408551495784882532012243815178071267535040872366692177743210546138923920324621597146499271/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "method_insufficient_not_physical_falsification": true,
+    "case": "hillipop-ede_n3",
+    "z": [
+      1490,
+      1480
+    ],
+    "a": {
+      "lo": "1/1491",
+      "hi": "1/1481",
+      "display_lo": 0.0006706908115358819,
+      "display_hi": 0.0006752194463200541
+    },
+    "attempted_cell_index": 2
+  },
+  "execution": {
+    "start_utc": "2026-10-15T19:20:02.077160+00:00",
+    "end_utc": "2026-10-15T19:20:02.367109+00:00",
+    "elapsed_seconds": 0.2899792359999651,
+    "initialization_and_pin_seconds": 0.22389343699995834,
+    "python": "3.13.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "peak_rss_kib": 116000,
+    "backend": "LOCAL_RUNTIME",
+    "native_or_paid_runs": 0
+  }
+}
