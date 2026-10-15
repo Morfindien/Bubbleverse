@@ -1,0 +1,782 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_type": "SCIENTIFIC_CASE_EXECUTION",
+  "prompt_version": "2.2.0",
+  "previous_routed_prompt_version": "2.1.0",
+  "prompt_compatibility": "workflow/file/backend update only; scientific specification and inputs unchanged",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "result_id": "LOCAL-Q048-POST-FREC-STATE-TUBE-RESUME-V5",
+  "run_id": "LOCAL-Q048-FREC-RESUME-V5-2026-10-15T16:57:32.549593+00:00",
+  "program_id": "Q048-FREC-RESUME-V5",
+  "program_registry_status": "LOCAL_UNREGISTERED; unused ID verified in read canonical registry",
+  "execution_status": "PARTIAL",
+  "result_validation_status": "VALIDATED within new-cell and exact obstruction scope",
+  "scientific_outcome": "INCONCLUSIVE for exact Q; conditional new prefix supported",
+  "case_lifecycle": "ACTIVE/UNRESOLVED",
+  "case_id": "NOT_ASSIGNED",
+  "registered_state_preserved": "PROPOSED_UNVERIFIED",
+  "q047_status_preserved": "CLOSED INCONCLUSIVE",
+  "new_information": [
+    "Two new Hillipop-EDE paired invariant-tube cells1530->1520 and1520->1510 constructed and validated",
+    "Old55 accepted frec cells and4 H->frec tubes reused without replay; total57 accepted frec cells",
+    "First new exact sufficient guard obstruction1510->1500 identified using guardV4 endpoint energy, not old target cell",
+    "31 frozen original input bytepins recovered;6 new unit tests,88 result/dependency checks,6 mutation rejections"
+  ],
+  "new_cells": [
+    {
+      "case": "hillipop-ede_n3",
+      "z": [
+        1530,
+        1520
+      ],
+      "a": {
+        "lo": "1/1531",
+        "hi": "1/1521",
+        "display_lo": 0.0006531678641410843,
+        "display_hi": 0.0006574621959237344
+      },
+      "G_lower": "1189639465894314326516139589771055608278168066962270908821351349957611396591492284057322500887657213494932125200909296683/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "G_units": "Mpc^-2",
+      "status": "PASS_PAIRED_FREC_INVARIANT_TUBE",
+      "uncertainty_type": "deterministic outward source-real enclosure"
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "z": [
+        1520,
+        1510
+      ],
+      "a": {
+        "lo": "1/1521",
+        "hi": "1/1511",
+        "display_lo": 0.0006574621959237344,
+        "display_hi": 0.0006618133686300463
+      },
+      "G_lower": "905556109643886608697820310359622539135852032404568398220504367194960033379690447486660358849189581695671090855627928727/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "G_units": "Mpc^-2",
+      "status": "PASS_PAIRED_FREC_INVARIANT_TUBE",
+      "uncertainty_type": "deterministic outward source-real enclosure"
+    },
+    {
+      "case": "hillipop-ede_n3",
+      "z": [
+        1510,
+        1500
+      ],
+      "a": {
+        "lo": "1/1511",
+        "hi": "1/1501",
+        "display_lo": 0.0006618133686300463,
+        "display_hi": 0.0006662225183211193
+      },
+      "G_lower": "-798512849551195819977683716074295760202173953672310262348421111138814829658471791758174137452875439005335939777295536603/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "G_units": "Mpc^-2",
+      "status": "UNRESOLVED_NEW_GUARD_WITH_MONOTONE_ENDPOINT_CAP",
+      "uncertainty_type": "deterministic outward source-real enclosure"
+    }
+  ],
+  "parent_ref": {
+    "raw": "parent/q048_full_tube_reuse_result_v4.json",
+    "sha256": "3940aa031028d53edfb31661dc62d5c24246ff9a7320d1e9a159e400db5bf830",
+    "unchanged": true,
+    "accepted_cells": 55
+  },
+  "guard_ref": {
+    "raw": "guard/q048_guard_result_v4.json",
+    "sha256": "0a014f7c9283a37f6ee5082d3004c7121c6cffe74d75662d7a0275042b98c989",
+    "unchanged": true,
+    "target_interval": [
+      "1/1531",
+      "1/1521"
+    ]
+  },
+  "final_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 1510
+  },
+  "new_total_accepted_cells": 57,
+  "journal": {
+    "original_file": "Q047_SAMLET_JOURNAL_Q048_GUARD_V4_INGESTED_V1.md",
+    "original_bytes": 13581550,
+    "original_sha256": "1e4ff97e2c5da744dde5d863a6850b099921216f00792ac31d259b6f770f5603",
+    "new_file": "Q047_SAMLET_JOURNAL_FREC_RESUME_V5_APPENDED_V1.md",
+    "new_bytes": 13588081,
+    "new_sha256": "d884baf411c31cbd3a930766eff09543d30b56efebc343f7c295c87fc5679479",
+    "append_file": "Q048_FREC_RESUME_JOURNAL_APPEND_V5.md",
+    "append_sha256": "674d8f9829edcd0170bb30df09ac37c522ed5f4efd9ad2329cf8e18784cdbc8a",
+    "append_start": 13581552,
+    "exact_original_prefix": true,
+    "new_append_heading_count": 1
+  },
+  "new_append": "Q048_FREC_RESUME_JOURNAL_APPEND_V5.md",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "capture_hash_status": "COMPUTED exact full retained capture/config bytes in this run",
+  "compute_backend": "LOCAL_RUNTIME",
+  "github_worthwhile": "NO",
+  "backend_decision_ref": "q048_frec_resume_backend_v5.json",
+  "execution": {
+    "start_utc": "2026-10-15T16:57:32.549593+00:00",
+    "end_utc": "2026-10-15T16:57:32.754676+00:00",
+    "elapsed_seconds": 0.20510523500024647,
+    "initialization_and_pin_seconds": 0.13533065199999328,
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "peak_rss_kib": 37000,
+    "backend": "LOCAL_RUNTIME",
+    "native_or_paid_runs": 0
+  },
+  "validation": {
+    "checks_total": 88,
+    "checks_passed": 88,
+    "unit_tests_passed": 6,
+    "semantic_mutation_rejections": 6,
+    "origin_campaign_replays": 0,
+    "shared_premises": "source inputs, physics and qualified P3 atomic interpolation arithmetic; no independent cosmological replication"
+  },
+  "blocker": {
+    "code": "POST_V4_ENDPOINT_MONOTONE_ENERGY_GUARD_NOT_SEPARATED",
+    "inequality": "3*B0_lower-E_guard_endpoint_upper+floor_lower>0",
+    "margin": "-798512849551195819977683716074295760202173953672310262348421111138814829658471791758174137452875439005335939777295536603/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "method_insufficient_not_physical_falsification": true,
+    "case": "hillipop-ede_n3",
+    "z": [
+      1510,
+      1500
+    ],
+    "a": {
+      "lo": "1/1511",
+      "hi": "1/1501",
+      "display_lo": 0.0006618133686300463,
+      "display_hi": 0.0006662225183211193
+    },
+    "attempted_cell_index": 2
+  },
+  "blocker_interpretation": "METHOD_INSUFFICIENT for new cell only; no reachable source crossing or physical falsification",
+  "next_engine": "RESULT INGESTION & ROUTING ENGINE",
+  "next_engine_prompt_version": "2.1.0",
+  "next_task": "Ingest two new cells and exact checkpoint once; retain55+2 lineage; assess precise new1510->1500 guard obligation before choosing further bounded math/execution",
+  "resume_condition": "Compatible linked source-correlated guard/energy/phase certificate for a=[1/1511,1/1501], with bridge from a qualified retained scalar/Y/energy anchor; or exact documented impossibility; do not independently restart scalar components",
+  "expected_next_artifact": "versioned ingestion receipt and one material nonduplicate next task; if math selected, exact new-cell guard certificate or precise obstruction",
+  "no_repeat": [
+    "old55 frec cells and4 H->frec tubes",
+    "all4 events and completed Math/P3/P2P4 campaigns",
+    "old H/theta wall failed sufficient methods",
+    "unchanged guardV4 proof",
+    "these2 newly accepted cells without concrete defect or changed input",
+    "refit/recapture/z_reio/tau shooting/likelihood/native-P6 reassurance"
+  ],
+  "native_P6": "UNRESOLVED",
+  "complete_a1_certificate": false,
+  "final_delta_xe_bounds_computed": false,
+  "final_delta_tau_bounds_computed": false,
+  "physical_falsification": false,
+  "accepted_model_change": false,
+  "q_complete": false,
+  "model_diff": "ADD two conditional invariant cells and new exact method obstruction; accepted model and physical hypotheses unchanged",
+  "termination_gate": "PASS for bounded Builder first-obstruction stop, not Q closure",
+  "memory_backend": "GITHUB",
+  "repository": "Morfindien/Bubbleverse",
+  "branch": "main",
+  "read_commit": "e8bc3ecf8797d125dee7257165981ab753f0d1d3",
+  "memory_read_status": "VERIFIED for focused pinned repository records",
+  "memory_write_status": "FILES_READY_FOR_MANUAL_UPLOAD",
+  "github_read_state": "VERIFIED",
+  "github_write_state": "READY_FOR_MANUAL_UPLOAD",
+  "sync_status": "USER_UPLOAD_PENDING",
+  "github_commit": null,
+  "github_pr_url": null,
+  "proposed_destination": "Q048/builder/frec-resume-v5/",
+  "target_paths_status": "PROPOSED",
+  "new_repository_writes": false,
+  "write_access_limit": "Earlier same-session403 on Git-tree and contents APIs; no changed write permission observed, no repeated attempt",
+  "index_updates_proposed": [
+    "Link full new appended journal and BuilderV5 raw/validation/checkpoint from existing Q048 journal/index; preserve every original version",
+    "Update derived coverage to57cells and Hillipop-EDE frontier1510; keep other frontiers1440",
+    "Resolve old target1530->1520 construction obligation; track new specific1510->1500 sufficient-guard obstruction without physical-falsification label",
+    "Do not register a workflow or alter canonical launcher for an already locally completed result",
+    "Optional README integration link only after coherent upload; do not present unregistered PROGRAM_ID as runnable Actions target",
+    "No CURRENT_STATE path invented; advance an existing pointer only after successfully saved coherent package and state-conflict check"
+  ],
+  "delivery_files": [
+    {
+      "name": "Q048_FREC_RESUME_REPORT_V5.md",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 12039,
+      "sha256": "dfb118b4dd651663a6b969a0df5891662a0b2432ae798d728d7be0c15442c98e",
+      "proposed_destination": "Q048/builder/frec-resume-v5/Q048_FREC_RESUME_REPORT_V5.md"
+    },
+    {
+      "name": "README_Q048_FREC_RESUME_V5.md",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 2173,
+      "sha256": "ed4b02161bdc0e3db5134f6bb262fe4ee8cefbf3fdb1d2ad481ff50bbae069df",
+      "proposed_destination": "Q048/builder/frec-resume-v5/README_Q048_FREC_RESUME_V5.md"
+    },
+    {
+      "name": "Q048_FREC_RESUME_JOURNAL_APPEND_V5.md",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 6529,
+      "sha256": "674d8f9829edcd0170bb30df09ac37c522ed5f4efd9ad2329cf8e18784cdbc8a",
+      "proposed_destination": "Q048/builder/frec-resume-v5/Q048_FREC_RESUME_JOURNAL_APPEND_V5.md"
+    },
+    {
+      "name": "Q047_SAMLET_JOURNAL_FREC_RESUME_V5_APPENDED_V1.md",
+      "role": "complete_updated_journal",
+      "classification": "CREATE",
+      "bytes": 13588081,
+      "sha256": "d884baf411c31cbd3a930766eff09543d30b56efebc343f7c295c87fc5679479",
+      "proposed_destination": "Q048/builder/frec-resume-v5/Q047_SAMLET_JOURNAL_FREC_RESUME_V5_APPENDED_V1.md"
+    },
+    {
+      "name": "q048_frec_resume_v5.py",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 10772,
+      "sha256": "3dfdb6ba74c5d1073e8bfe9a0f0445c9022a30db9728c091742c1204eacded22",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_v5.py"
+    },
+    {
+      "name": "q048_frec_resume_spec_v5.json",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 8690,
+      "sha256": "f27671d5d4eaf02b36930e5ca92bc856285820a8a5242c0756128753c3050105",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_spec_v5.json"
+    },
+    {
+      "name": "q048_frec_resume_tests_v5.py",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 1684,
+      "sha256": "d8ef89e5ce6ee04160ada524540fc11e601cab074c4ae9ca7c323f11a4faff13",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_tests_v5.py"
+    },
+    {
+      "name": "q048_frec_resume_tests_red_stub_api_v5.log",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 3727,
+      "sha256": "470e4236e77d803a8321a2d2e9bc19fa930cc214b6062628b6cd5495690a5dca",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_tests_red_stub_api_v5.log"
+    },
+    {
+      "name": "q048_frec_resume_tests_red_v5.log",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 3770,
+      "sha256": "defb8af87804aaa24d283f4976a3a2184dcf376a4a7ae39ee3da5dd23838d577",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_tests_red_v5.log"
+    },
+    {
+      "name": "q048_frec_resume_tests_green_v5.log",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 104,
+      "sha256": "c57bdec5f19166a93690118c71d5c3ee68b3bfc2827da2e950a0cdc421d4bd4f",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_tests_green_v5.log"
+    },
+    {
+      "name": "q048_frec_resume_execution_v5.log",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 1941,
+      "sha256": "ae847a316d24c8ea54fce566c6cb10606ba10814538609d6a4e0eb950d79b099",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_execution_v5.log"
+    },
+    {
+      "name": "q048_frec_resume_result_v5.json",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 39314,
+      "sha256": "29969674a1ceec9b46eaff00580ac25f07202e99248d7c0fbbffde76a47ff36f",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_result_v5.json"
+    },
+    {
+      "name": "q048_frec_resume_validate_v5.py",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 7638,
+      "sha256": "a74f92f22341caee7087ae5a78cc5f9251e83a3b52c4e43b990224a8250b08de",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_validate_v5.py"
+    },
+    {
+      "name": "q048_frec_resume_validation_v5.json",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 7657,
+      "sha256": "f1d85e0560994fd5fa6568aecd7a35d699937d04eb815a5df693835eff944473",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_validation_v5.json"
+    },
+    {
+      "name": "q048_frec_resume_validation_v5.log",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 368,
+      "sha256": "4d3276cfddfa95e86839404b122f680468a655d30750a3af174477232b8d82a2",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_validation_v5.log"
+    },
+    {
+      "name": "q048_frec_resume_checkpoint_v5.json",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 925,
+      "sha256": "bc8272c6592eb09ff78d45438fb40ba47481853bdedd1f6a1dd67d7d5741161b",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_checkpoint_v5.json"
+    },
+    {
+      "name": "q048_frec_resume_backend_v5.json",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 1825,
+      "sha256": "eed58218cdb1c81fa80474d2ff931c584cb54020e640b8f3fb311cf7a9cc8717",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_backend_v5.json"
+    },
+    {
+      "name": "q048_frec_resume_recovery_v5.json",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 24294,
+      "sha256": "bed72d77f298c24b34f78cb459a0d880b3b5a42c4c05a9b95748df9e075dcbd9",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_recovery_v5.json"
+    },
+    {
+      "name": "q048_frec_resume_run_manifest_v5.json",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 5877,
+      "sha256": "0d42e0870e570198a163534e2772b482a56a7f2d0808e362c7d2abc4d100bd5c",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_run_manifest_v5.json"
+    },
+    {
+      "name": "q048_frec_resume_journal_checks_v5.json",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 608,
+      "sha256": "1cf370e15a274abb63f7539f0db61fc8841c4d804b8a6807e2387757b0c3daa6",
+      "proposed_destination": "Q048/builder/frec-resume-v5/q048_frec_resume_journal_checks_v5.json"
+    },
+    {
+      "name": "Q048_FREC_RESUME_FILES_V5.md",
+      "role": "new_result_code_validation_or_provenance",
+      "classification": "CREATE",
+      "bytes": 11540,
+      "sha256": "ed0246fafd5813c3a10479c90e3bbe81c16c88f83cb73e1e518dcec13fb4b178",
+      "proposed_destination": "Q048/builder/frec-resume-v5/Q048_FREC_RESUME_FILES_V5.md"
+    }
+  ],
+  "reused_inputs": [
+    {
+      "relative_path": "guard/q048_guard_config_v4.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/guard/q048_guard_config_v4.json",
+      "bytes": 1776,
+      "sha256": "53c9760c06debb2b54113824d37c632c6ec14cb535b26f08ede629cdd230f2e9",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "library_file_id": "libfile_c54e6e341cb08191b159b05d6f942f24",
+      "file_id": "file_00000000c30481fdbc3e3971abdb7bb0"
+    },
+    {
+      "relative_path": "guard/q048_guard_result_v4.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/guard/q048_guard_result_v4.json",
+      "bytes": 48347,
+      "sha256": "0a014f7c9283a37f6ee5082d3004c7121c6cffe74d75662d7a0275042b98c989",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "library_file_id": "libfile_ecb6ebf3d80c8191919c84f138550ab6",
+      "file_id": "file_00000000df3c81f793d9d8f1492ed37f"
+    },
+    {
+      "relative_path": "guard/q048_guard_validation_v4.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/guard/q048_guard_validation_v4.json",
+      "bytes": 892,
+      "sha256": "09713779558a998548953ae71c8adafb9ea9d08db386d9f896c46ec1aac1b338",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "library_file_id": "libfile_b16c8707d79081919c79e65131223d82",
+      "file_id": "file_00000000945481f5806e460591540ad6"
+    },
+    {
+      "relative_path": "parent/q048_full_tube_reuse_result_v4.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/parent/q048_full_tube_reuse_result_v4.json",
+      "bytes": 943733,
+      "sha256": "3940aa031028d53edfb31661dc62d5c24246ff9a7320d1e9a159e400db5bf830",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/q048_full_tube_reuse_result_v4.json",
+      "library_file_id": "libfile_f90b346046288191852c5fdf511ab2a9",
+      "file_id": "file_000000009b0c81f8b349dbf40f172a96"
+    },
+    {
+      "relative_path": "q048_full_tube_dependency_addendum_v4.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/q048_full_tube_dependency_addendum_v4.json",
+      "bytes": 636,
+      "sha256": "4cc5da0b78eeb4c20001e6b845493c5189b0a2f02c65f0a9ca01af689405aa03",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/q048_full_tube_dependency_addendum_v4.json",
+      "library_file_id": "libfile_a4855af962ec8191ad97e2a0e3b8a344",
+      "file_id": "file_00000000ced881f7868a9331f2d753e9"
+    },
+    {
+      "relative_path": "q048_full_tube_reuse_spec_v4.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/q048_full_tube_reuse_spec_v4.json",
+      "bytes": 3785,
+      "sha256": "bc5c65c71b35a37251b5f3374233ac8c2addcdc1ab3356c51f0f1559293178b7",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/q048_full_tube_reuse_spec_v4.json",
+      "library_file_id": "libfile_d95b1f41838081919a763a7a5853c908",
+      "file_id": "file_000000007cf881f4835bf2d315b328ef"
+    },
+    {
+      "relative_path": "q048_full_tube_reuse_v1.py",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/q048_full_tube_reuse_v1.py",
+      "bytes": 10171,
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/q048_full_tube_reuse_v1.py",
+      "library_file_id": "libfile_57cdd19492f08191a831fd9c1a46430b",
+      "file_id": "file_00000000b9d081f59d5416f7ab0cdcfb"
+    },
+    {
+      "relative_path": "q048_full_tube_reuse_validation_v4.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/q048_full_tube_reuse_validation_v4.json",
+      "bytes": 61335,
+      "sha256": "6a8ef7d4cbc5b45c02d990b13a6df6803bf97219b24a520454220082293d8944",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/q048_full_tube_reuse_validation_v4.json",
+      "library_file_id": "libfile_12444142fa648191b5da28a1dd8caaa5",
+      "file_id": "file_000000006a148230b082e4502c422fd1"
+    },
+    {
+      "relative_path": "q048_full_tube_reuse_validator_v4.py",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/q048_full_tube_reuse_validator_v4.py",
+      "bytes": 6433,
+      "sha256": "f4910b33657e1017267d4a0c7b38c83cab1bbc44d92366752f2751dce5d2b257",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/q048_full_tube_reuse_validator_v4.py",
+      "library_file_id": "libfile_e4d724768d38819185c781624f35af86",
+      "file_id": "file_00000000628481fdaa8cd2bc4c96b44a"
+    },
+    {
+      "relative_path": "q048_post_event_frec_checkpoint_v4.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/q048_post_event_frec_checkpoint_v4.json",
+      "bytes": 4069,
+      "sha256": "f491d911f72b85708befaf7844ced368221436beed1befea366203fd78d96b7b",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/q048_post_event_frec_checkpoint_v4.json",
+      "library_file_id": "libfile_ab8cdf7ad3688191bdcce0393a0f6284",
+      "file_id": "file_0000000083e881fb9d4a439c0c0019b9"
+    },
+    {
+      "relative_path": "q048_post_event_frec_provenance_v4.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/q048_post_event_frec_provenance_v4.json",
+      "bytes": 2563,
+      "sha256": "94d513c8f8d5acba364c0ce6b7a6ad5f950c0d90bf5d2eaff9334fcf5b937423",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/q048_post_event_frec_provenance_v4.json",
+      "library_file_id": "libfile_725fdfc38ca8819188938ea320295a16",
+      "file_id": "file_000000004c6881f9884f769d325ff9b0"
+    },
+    {
+      "relative_path": "q048_post_event_state_tube_v1.py",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/q048_post_event_state_tube_v1.py",
+      "bytes": 14492,
+      "sha256": "437e753b60d3aaac7a09247a2d7b50f611bccca7d02144cfa8412725eb671aa4",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/q048_post_event_state_tube_v1.py",
+      "library_file_id": "libfile_8077cc575cf8819196f7aeeb0c803d25",
+      "file_id": "file_00000000ef2081f8bc9a11010b41276b"
+    },
+    {
+      "relative_path": "source_code/external/HyRec2020/hydrogen.c",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/source_code/external/HyRec2020/hydrogen.c",
+      "bytes": 46627,
+      "sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/source_code/external/HyRec2020/hydrogen.c",
+      "library_file_id": "libfile_9b3163781c4c8191bae30c1705da42ab",
+      "file_id": "file_0000000015b481fba24aae1514a9022a"
+    },
+    {
+      "relative_path": "source_code/source/background.c",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/source_code/source/background.c",
+      "bytes": 122355,
+      "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/source_code/source/background.c",
+      "library_file_id": "libfile_9ad8537769508191a1ad05d4299c0df6",
+      "file_id": "file_000000007e2081fbb9020d90d8b3a64e"
+    },
+    {
+      "relative_path": "source_code/source/thermodynamics.c",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/source_code/source/thermodynamics.c",
+      "bytes": 208514,
+      "sha256": "d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/source_code/source/thermodynamics.c",
+      "library_file_id": "libfile_da5bece870a08191aad6bf70fc18022f",
+      "file_id": "file_00000000258481f6b93402ae299df1a5"
+    },
+    {
+      "relative_path": "sources/fit_swift.dat",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/fit_swift.dat",
+      "bytes": 17797,
+      "sha256": "46a644d7d2633b8f13080f9062df9b72a2e5adfa956d70d32ad1d7f4ec0a4641",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/fit_swift.dat",
+      "library_file_id": "libfile_6d864c298aac8191a84884abf2de2fa6",
+      "file_id": "file_00000000ee84820e8bb6e7b46b3a6c31"
+    },
+    {
+      "relative_path": "sources/hydrogen.h",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/hydrogen.h",
+      "bytes": 11868,
+      "sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/hydrogen.h",
+      "library_file_id": "libfile_c7960d47e1288191872e876251a196bd",
+      "file_id": "file_00000000ceec81fda57aef41076dc465"
+    },
+    {
+      "relative_path": "sources/q047_certificate_v1.py",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q047_certificate_v1.py",
+      "bytes": 15302,
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q047_certificate_v1.py",
+      "library_file_id": "libfile_c1e5a21d1ef88191930f47c087348adc",
+      "file_id": "file_000000007af881fb9f70e8ba53e5d6f3"
+    },
+    {
+      "relative_path": "sources/q047_precursor_check_v1.py",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q047_precursor_check_v1.py",
+      "bytes": 29808,
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q047_precursor_check_v1.py",
+      "library_file_id": "libfile_3c2b6e7f28148191aa629b8fedc34273",
+      "file_id": "file_00000000c76481fdb9467d386d7dbc28"
+    },
+    {
+      "relative_path": "sources/q048_h_event_payload_four_case_composition_v1.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_h_event_payload_four_case_composition_v1.json",
+      "bytes": 250160,
+      "sha256": "1337a14b0b4183b73222ec0739f8fd853e9b06676004fb8e535992c003444ff8",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_h_event_payload_four_case_composition_v1.json",
+      "library_file_id": "libfile_7ef1a3a3f72881918dcfbd111931bf41",
+      "file_id": "file_00000000d4a081f5aa8f10e1e8c98b4e"
+    },
+    {
+      "relative_path": "sources/q048_math019_frec_boundary_result_v1.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_math019_frec_boundary_result_v1.json",
+      "bytes": 6462,
+      "sha256": "73e3d44f2c11668d75c97256a886d9f301f8b3aee145458485fc23592b39cf58",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_math019_frec_boundary_result_v1.json",
+      "library_file_id": "libfile_0e963c5fa7908191b1f56928f8392b10",
+      "file_id": "file_0000000038a481f5a1dd77c989c3ed59"
+    },
+    {
+      "relative_path": "sources/q048_math021_branch_independent_scalar_enclosure_v1.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_math021_branch_independent_scalar_enclosure_v1.json",
+      "bytes": 12647,
+      "sha256": "1ec40de297bd092a95802df6aae1f248355af5e6871018c84fe00fc921ba3ce4",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_math021_branch_independent_scalar_enclosure_v1.json",
+      "library_file_id": "libfile_31ceab9a67208191abbd8507bf0e4381",
+      "file_id": "file_0000000025c881fba14ff743fde31ebd"
+    },
+    {
+      "relative_path": "sources/q048_p2p4_state_tube_result_v1.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_p2p4_state_tube_result_v1.json",
+      "bytes": 31066,
+      "sha256": "d50c4d05af2e9269f6f64074759567e3caa78c54195e50a4824c5428d4a012be",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_p2p4_state_tube_result_v1.json",
+      "library_file_id": "libfile_57d734ff0cf4819194cd5541fe9c80cf",
+      "file_id": "file_000000000cd481fdad12be0a82955180"
+    },
+    {
+      "relative_path": "sources/q048_p3_scaled_arithmetic_v2.py",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_p3_scaled_arithmetic_v2.py",
+      "bytes": 5988,
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_p3_scaled_arithmetic_v2.py",
+      "library_file_id": "libfile_6da652d006388191ad8685a8148d3658",
+      "file_id": "file_0000000069808230907bc07d75afa7c2"
+    },
+    {
+      "relative_path": "sources/q048_p3_scaled_config_v2.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_p3_scaled_config_v2.json",
+      "bytes": 2591,
+      "sha256": "cba637c080bfbe5c4b729224f0cddc7c38ca8ea62663f91f7a3c03dd0ba4ea8d",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_p3_scaled_config_v2.json",
+      "library_file_id": "libfile_e65e7764613881919e433263f74006a9",
+      "file_id": "file_00000000a95c82308b1a7d2b7b5186ef"
+    },
+    {
+      "relative_path": "sources/q048_p3_scaled_kernel_v2.py",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_p3_scaled_kernel_v2.py",
+      "bytes": 15855,
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_p3_scaled_kernel_v2.py",
+      "library_file_id": "libfile_5f88d1f685b48191b6747b4051cb25f6",
+      "file_id": "file_0000000078448230a40deb0f2bebc865"
+    },
+    {
+      "relative_path": "sources/q048_p3_scaled_raw_result_v2.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_p3_scaled_raw_result_v2.json",
+      "bytes": 699697,
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_p3_scaled_raw_result_v2.json",
+      "library_file_id": "libfile_766386e06a708191aa00596c9e3b3e0f",
+      "file_id": "file_00000000528082309fd51643092e86f2"
+    },
+    {
+      "relative_path": "sources/q048_p3_scaled_transformed_log_tables_v2.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_p3_scaled_transformed_log_tables_v2.json",
+      "bytes": 3958952,
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_p3_scaled_transformed_log_tables_v2.json",
+      "library_file_id": "libfile_9749dee109788191ba48d73956def137",
+      "file_id": "file_000000001d748230b353cf694d916ef7"
+    },
+    {
+      "relative_path": "sources/q048_prefix_config_v1.json",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_prefix_config_v1.json",
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_prefix_config_v1.json",
+      "library_file_id": "libfile_2ba2df96a1f88191b6cae1ba530178e5",
+      "file_id": "file_00000000f8c081fdac52ba719ecfc5fc"
+    },
+    {
+      "relative_path": "sources/q048_prefix_v1.py",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/q048_prefix_v1.py",
+      "bytes": 17198,
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/q048_prefix_v1.py",
+      "library_file_id": "libfile_ed7631e28a448191ae44659f3f558cea",
+      "file_id": "file_0000000067e8820ea043a52d6b941e20"
+    },
+    {
+      "relative_path": "sources/source/q047_math_v1.py",
+      "local_path": "/workspace/scratch/b06de8f86a6b/builder_v5/sources/source/q047_math_v1.py",
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "classification": "REUSE_UNCHANGED",
+      "hash_status": "COMPUTED",
+      "access_status": "LOCAL_EXACT_BYTES_VERIFIED",
+      "role": "frozen recovered dependency, not re-executed campaign",
+      "original_path": "/workspace/scratch/89cc8f10cc58/tube_final/sources/source/q047_math_v1.py",
+      "library_file_id": "libfile_55786098df94819181885729a4d62528",
+      "file_id": "file_0000000037f481fd9f80f378b0495ba6"
+    }
+  ],
+  "reused_input_persistence": "Already saved originals with actual Library identities; no archive or new duplicate science run",
+  "run_manifest_ref": "q048_frec_resume_run_manifest_v5.json",
+  "formal_global_schema_validation": false,
+  "dispatch": "PREPARED_NOT_DISPATCHED"
+}
