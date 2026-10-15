@@ -1,0 +1,331 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "q": "Q048",
+  "target_q": "Q048",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "created_at_utc": "2026-10-15T17:16:43.989723+00:00",
+  "handoff_id": "LOCAL-Q048-FREC-V5-INGESTION-RECEIPT-V1",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "input_journal": {
+    "path": "Q047_SAMLET_JOURNAL_FREC_RESUME_V5_APPENDED_V1.md",
+    "sha256": "d884baf411c31cbd3a930766eff09543d30b56efebc343f7c295c87fc5679479",
+    "bytes": 13588081,
+    "repo_commit": "5564fdcd4e71c8f2fd31c9f7489e861d6a71006b"
+  },
+  "new_journal": {
+    "file": "Q047_SAMLET_JOURNAL_FREC_RESUME_V5_INGESTED_V1.md",
+    "sha256": "19f9bec56f668bdaf83e448c83206e18821ac9e985bae7052a5cc8d5a6c67da8",
+    "bytes": 13594397,
+    "append": "Q048_FREC_V5_INGESTION_APPEND_V1.md",
+    "historical_prefix_unchanged": true
+  },
+  "case_id": "NOT_ASSIGNED",
+  "case_lifecycle": "ACTIVE/UNRESOLVED",
+  "registered_state_preserved": "PROPOSED_UNVERIFIED",
+  "q047_status_preserved": "CLOSED INCONCLUSIVE",
+  "workflow_state": "READY_FOR_HANDOFF",
+  "scientific_state": "SUPPORTED_WITHIN_TESTED_DOMAIN",
+  "technical_state": "PASS",
+  "exact_q_resolved": false,
+  "origin_result_id": "LOCAL-Q048-POST-FREC-STATE-TUBE-RESUME-V5",
+  "origin_run_id": "LOCAL-Q048-FREC-RESUME-V5-2026-10-15T16:57:32.549593+00:00",
+  "origin_result_sha256": "29969674a1ceec9b46eaff00580ac25f07202e99248d7c0fbbffde76a47ff36f",
+  "ingestion_state": "NEW",
+  "receipt_kind": "NEW_INGESTION_RECEIPT_FOR_ALREADY_JOURNALED_RESULT",
+  "additional_independent_evidence_count": 0,
+  "what_changed": [
+    "Two new conditional Hillipop-EDE frec cells1530->1520,1520->1510; total57 with old55 reused; current frontier1510, others1440",
+    "New sufficient-bound obstruction on1510->1500 with G_lower=-1.5970256991023917 Mpc^-2; constant endpoint energy does not separate sign"
+  ],
+  "claim_refs": [
+    "LOCAL-Q048-FREC-V5-INGEST-C01",
+    "LOCAL-Q048-FREC-V5-INGEST-C02",
+    "LOCAL-Q048-FREC-V5-INGEST-C03"
+  ],
+  "claim_map_ref": "q048_frec_v5_ingestion_state_delta_v1.json",
+  "decisive_values": {
+    "new_cell_G_lower_Mpc_minus2": [
+      4.758557863577257,
+      3.6222244385755467
+    ],
+    "failed_sufficient_G_lower_Mpc_minus2": -1.5970256991023917,
+    "interval": [
+      "1/1511",
+      "1/1501"
+    ],
+    "total_accepted_frec_cells": 57,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1510
+    },
+    "uncertainty": "Deterministic outward enclosures, not observations, confidence intervals or independent samples; exact raw operands retained"
+  },
+  "completed_tests_do_not_repeat": {
+    "origin_unit_green": 6,
+    "origin_validator_pass": 88,
+    "origin_semantic_mutations_rejected": 6,
+    "reexecuted_in_intake": false,
+    "source_real_prefix_cells": 57,
+    "H_to_frec_tubes": 4,
+    "no_repeat": [
+      "All55 original and2 new frec cells;4 H-to-frec tubes",
+      "Unchanged original guardV4 bridge/old target proof",
+      "All-four event localization; Math015-021/P2P4/P3 campaigns",
+      "Old H loose guard/theta wall; Cartesian restart",
+      "Refit,recapture,z_reio/tau shooting,likelihood,nativeP6 reassurance"
+    ]
+  },
+  "blocker": {
+    "code": "POST_V4_ENDPOINT_MONOTONE_ENERGY_GUARD_NOT_SEPARATED",
+    "inequality": "3*B0_lower-E_guard_endpoint_upper+floor_lower>0",
+    "margin": "-798512849551195819977683716074295760202173953672310262348421111138814829658471791758174137452875439005335939777295536603/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "method_insufficient_not_physical_falsification": true,
+    "case": "hillipop-ede_n3",
+    "z": [
+      1510,
+      1500
+    ],
+    "a": {
+      "lo": "1/1511",
+      "hi": "1/1501",
+      "display_lo": 0.0006618133686300463,
+      "display_hi": 0.0006662225183211193
+    },
+    "attempted_cell_index": 2
+  },
+  "next_engine": "BUBBLEVERSE.MATHEMATICS",
+  "next_engine_prompt_version": "2.1.0",
+  "next_task": {
+    "task_id": "LOCAL-Q048-POST-V5-HILLIPOP-EDE-GUARD-MATH-V1",
+    "owner": "BUBBLEVERSE.MATHEMATICS",
+    "prompt_version": "2.1.0",
+    "status": "DESIGNED_NOT_EXECUTED",
+    "objective": "Prove or bound the strict source guard G=3B0+e+floor-2U>0 throughout hillipop-ede_n3 a=[1/1511,1/1501] (z1510->1500), with a connected compatible inherited scalar/Y/energy family.",
+    "blocker_id": "POST_V4_ENDPOINT_MONOTONE_ENERGY_GUARD_NOT_SEPARATED",
+    "equations": [
+      "H^2=B0+(e+floor)/3",
+      "G=3B0+e+floor-2U",
+      "e_u=-3X^2<=0",
+      "Retained optional comparison: Y=e+(24/23)V, V=HXtheta/lambda; Y_u+(90/23)Y<=(1152/529)|V|"
+    ],
+    "units": {
+      "a": "dimensionless",
+      "u": "ln(a), dimensionless",
+      "theta": "dimensionless",
+      "G_B0_e_U_floor_E_Y_V": "Mpc^-2",
+      "H_X": "Mpc^-1"
+    },
+    "target_a": [
+      "1/1511",
+      "1/1501"
+    ],
+    "target_z": [
+      1510,
+      1500
+    ],
+    "starting_object": "Prefer verified guardV4 primary endpoint at a=1/1521: linked last_E,last_Y,Vbar and existing whole-cell lineage. If not sufficient, a stronger compatible retained anchor may be used with an explicit reason. No independent component/branch restart.",
+    "bridge_requirement": "Certify whatever new connected bridge from a=1/1521 to1/1511 and the full target cell is needed. The two already accepted hydrogen/thermal cells are reused, not recomputed.",
+    "frozen": [
+      "Exact Q048/question hash/TARGET_Q and documented earlier dependencies",
+      "Source/capture/four configurations/accepted z_reio",
+      "Common first event, L/R jump maps and common background",
+      "Math010 output/observer/smoothing and P3/P4 domains",
+      "All57 accepted frec cells,4 H-to-frec tubes and all prior evidence"
+    ],
+    "permitted_changes": [
+      "A sharper valid energy decay or joint phase/Y/energy enclosure",
+      "Necessary new bridge partition/validated numerical method selected and frozen before output inspection",
+      "New separately versioned certificate and diagnostics; no patch of original records"
+    ],
+    "success": "At least one independently checked, outward/exact, linked strict-positive whole-cell guard certificate on the entire target cell with all source/denominator/domain premises qualified. A deterministic positive lower margin must exceed the certified numerical error; no arbitrary extra epsilon.",
+    "failure_or_falsification": "Return the first exact unresolved/nonpositive required inequality or demonstrated premise/implementation gap with interval, operands and error bounds. Failed sufficient bounds are METHOD_INSUFFICIENT. A physical crossing requires a certified reachable source trajectory, never merely an outer-set witness.",
+    "inconclusive": "Valid explored methods cannot determine the guard sign within the frozen budget; retain partial proof/checkpoint. Missing indispensable bytes or authority is BLOCKED, not scientific failure.",
+    "stop": "Stop at the target certificate, first exact new material obstruction, or frozen budget limit; return once to Result Ingestion2.1.0. Do not run downstream full-history Builder or Motor14.",
+    "budget": "Next math task maximum120 seconds new local science and128 new propagation cells per arithmetic path; at most two paths. Freeze precision/partition before execution. No paid run. Full-history compute cost UNKNOWN.",
+    "expected_output": "New linked source-correlated guard certificate (or exact obstruction/checkpoint), raw outputs/config/code/diagnostics/producer-free or alternative-method check, journal append and GitHub-memory-update.",
+    "expected_information_gain": "Remove or precisely locate the next necessary source-domain admission barrier for complete paired x_e/tau_T bounds.",
+    "no_repeat": [
+      "All55 original and2 new frec cells;4 H-to-frec tubes",
+      "Unchanged original guardV4 bridge/old target proof",
+      "All-four event localization; Math015-021/P2P4/P3 campaigns",
+      "Old H loose guard/theta wall; Cartesian restart",
+      "Refit,recapture,z_reio/tau shooting,likelihood,nativeP6 reassurance"
+    ],
+    "resume_condition": "Compatible verified new whole-cell certificate or exact documented new obstruction linked to this target and inherited checkpoint. Ingestion assesses any later Builder resumption.",
+    "task_fingerprint_sha256": "5744e7a58549a073c1594037f69a378daa6f61030641128e853f85f18c85b172"
+  },
+  "resume_condition": "Compatible verified new whole-cell certificate or exact documented new obstruction linked to this target and inherited checkpoint. Ingestion assesses any later Builder resumption.",
+  "model_diff": "Two conditional cells and exact new method obstacle; accepted model unchanged; no Q048 closure",
+  "related_Qs": "Q048 and documented earlier dependencies; Q047 CLOSED INCONCLUSIVE; no Q049+",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "evidence_manifest_ref": "q048_frec_v5_ingestion_evidence_manifest_v1.json",
+  "new_files": [
+    {
+      "name": "Q048_FREC_V5_INGESTION_HANDOFF_V1.md",
+      "role": "Primær overlevering med én ny matematisk opgave",
+      "bytes": 13759,
+      "sha256": "66130f7072e31cbf95283305c3a66d850b615d4ae30fbb45b13a58b83cdb74a3",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/Q048_FREC_V5_INGESTION_HANDOFF_V1.md"
+    },
+    {
+      "name": "Q047_SAMLET_JOURNAL_FREC_RESUME_V5_INGESTED_V1.md",
+      "role": "Komplet kumulativ journal med én receipt",
+      "bytes": 13594397,
+      "sha256": "19f9bec56f668bdaf83e448c83206e18821ac9e985bae7052a5cc8d5a6c67da8",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/Q047_SAMLET_JOURNAL_FREC_RESUME_V5_INGESTED_V1.md"
+    },
+    {
+      "name": "Q048_FREC_V5_INGESTION_APPEND_V1.md",
+      "role": "Ny receipt; ingen dubleret science",
+      "bytes": 6314,
+      "sha256": "3880ac8c74576489541f007792fe4323e2fafd3d1713ee88278f27a5cbd44daf",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/Q048_FREC_V5_INGESTION_APPEND_V1.md"
+    },
+    {
+      "name": "q048_frec_v5_ingestion_envelope_v1.json",
+      "role": "Fallback maskinkontrakt",
+      "bytes": 13272,
+      "sha256": "f179a3569af6747396e37356cbfacec2593f4bf4b270ed93dc6bbcdb0d181083",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/q048_frec_v5_ingestion_envelope_v1.json"
+    },
+    {
+      "name": "q048_frec_v5_ingestion_evidence_manifest_v1.json",
+      "role": "Originale filidentiteter, hashes og repository-verifikation",
+      "bytes": 61874,
+      "sha256": "5e0b3a8dd12782eb79fde7cfce2e3831458671f8b57b24d04aee254618533579",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/q048_frec_v5_ingestion_evidence_manifest_v1.json"
+    },
+    {
+      "name": "q048_frec_v5_ingestion_state_delta_v1.json",
+      "role": "Journalrefereret state/claim/source/routing-addendum",
+      "bytes": 9594,
+      "sha256": "0075a15e277272db42a4dabb9abdfdf9769a7d3bdb2b471cc65301614e43e2d5",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/q048_frec_v5_ingestion_state_delta_v1.json"
+    },
+    {
+      "name": "q048_frec_v5_ingestion_execution_profile_v1.json",
+      "role": "Faktisk setup og næste-trins budget",
+      "bytes": 2221,
+      "sha256": "c893ca22de52d3e965c6a208ec5363ed027db60434c8d7d9b6582d7c112620d6",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/q048_frec_v5_ingestion_execution_profile_v1.json"
+    },
+    {
+      "name": "q048_frec_v5_ingestion_journal_checks_v1.json",
+      "role": "Byteidentisk journalprefix og count-kontrol",
+      "bytes": 947,
+      "sha256": "396a0f1cb9dd55aa980c92f06e4577769d4351829436213b91a2975723dfffc1",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/q048_frec_v5_ingestion_journal_checks_v1.json"
+    },
+    {
+      "name": "q048_frec_v5_ingestion_contract_checks_v1.json",
+      "role": "Udført lokal kontraktkontrol",
+      "bytes": 5454,
+      "sha256": "e5adfd90b22e18c56936409f1831c2883fd91651bc93b103047111abac1c3576",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/q048_frec_v5_ingestion_contract_checks_v1.json"
+    },
+    {
+      "name": "Q048_FREC_V5_INGESTION_FILES_V1.md",
+      "role": "Alle leverede og nødvendige genbrugte filer",
+      "bytes": 13471,
+      "sha256": "96b77381becf5d9becdc45547784094fe12d83c863de83c053ca5db7d8e4a7e9",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/Q048_FREC_V5_INGESTION_FILES_V1.md"
+    },
+    {
+      "name": "q048_frec_v5_ingestion_checkpoint_v1.json",
+      "role": "Genoptagelsescheckpoint",
+      "bytes": 2078,
+      "sha256": "f10bef1b3cf3b3c15b0825b156daae33dfaba5161b586ece3d95c2d3ad2aaccb",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/q048_frec_v5_ingestion_checkpoint_v1.json"
+    },
+    {
+      "name": "Q048_MATHEMATICS_ROUTE_EVIDENCE_V5.md",
+      "role": "Uændret pinned eksisterende motorrolle-reference",
+      "bytes": 10307,
+      "sha256": "b9329ee7bca834195efb39400b11449b9ddbaafe20641ec80628daaab7603ff3",
+      "hash_status": "COMPUTED",
+      "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/Q048_MATHEMATICS_ROUTE_EVIDENCE_V5.md"
+    }
+  ],
+  "manifest_self_hash": "OMITTED_TO_AVOID_CIRCULAR_HASHES",
+  "repository": "Morfindien/Bubbleverse",
+  "branch": "main",
+  "base_commit": "5564fdcd4e71c8f2fd31c9f7489e861d6a71006b",
+  "github_read_state": "VERIFIED",
+  "github_write_state": "READY_FOR_MANUAL_UPLOAD",
+  "github_raw_artifact_completeness": "PARTIAL; actual individually saved original records are linked for recovery",
+  "sync_status": "USER_UPLOAD_PENDING",
+  "writeback_status": "PENDING",
+  "new_commit_sha": null,
+  "new_commit_url": null,
+  "new_pr_url": null,
+  "dispatch": "PREPARED_NOT_DISPATCHED",
+  "target_paths_status": "PROPOSED",
+  "proposed_destination": "Q048/ingestion/frec-resume-v5-v1/",
+  "observed_upload_of_previous_package": {
+    "commit": "5564fdcd4e71c8f2fd31c9f7489e861d6a71006b",
+    "matched_original_files": [
+      {
+        "path": "Q047_SAMLET_JOURNAL_FREC_RESUME_V5_APPENDED_V1.md",
+        "git_blob_sha1_computed": "019474e3dde1c00f97bd3301a305b5d4dbf2f661",
+        "matches_pinned_tree": true,
+        "sha256": "d884baf411c31cbd3a930766eff09543d30b56efebc343f7c295c87fc5679479",
+        "bytes": 13588081
+      },
+      {
+        "path": "Q048_FREC_RESUME_REPORT_V5.md",
+        "git_blob_sha1_computed": "ed44dadf3047db576849c06f32263375193ad33e",
+        "matches_pinned_tree": true,
+        "sha256": "dfb118b4dd651663a6b969a0df5891662a0b2432ae798d728d7be0c15442c98e",
+        "bytes": 12039
+      },
+      {
+        "path": "Q048_FREC_RESUME_FILES_V5.md",
+        "git_blob_sha1_computed": "cadb9f2a143207d55ce86b59c93989dee8fa0092",
+        "matches_pinned_tree": true,
+        "sha256": "ed0246fafd5813c3a10479c90e3bbe81c16c88f83cb73e1e518dcec13fb4b178",
+        "bytes": 11540
+      },
+      {
+        "path": "Q048_FREC_RESUME_GITHUB_MEMORY_UPDATE_V5.json",
+        "git_blob_sha1_computed": "b09cbfe6de57105ffd29e943205a6f78976b5a98",
+        "matches_pinned_tree": true,
+        "sha256": "e7b3698e831581b04a289a0a584b5a29883f95a6c57ebde81aeab7d61ed5eb70",
+        "bytes": 40117
+      }
+    ],
+    "attribution": "Existing Jim upload observed; no assistant upload claim; original pending status retained historically"
+  },
+  "write_limit": "Earlier same-session403 Resource not accessible by integration for tree and contents writes; no changed write permission observed; unchanged failure not retried",
+  "index_status_updates_proposed": [
+    "Append the new receipt; link the new full journal version from existing Q048 journal/index without replacing any historic bytes",
+    "Retain derived coverage57/three1440/HillipopEDE1510; mark new1510->1500 guard obligation and new math task as pending",
+    "Keep origin event counted once; attach receipt/claims/route references rather than count attachment/GitHub copies as new support",
+    "Add raw/validation/checkpoint/source references from exact individually saved original objects if uploading them; preserve original relative layout",
+    "Advance an existing CURRENT_STATE pointer only after coherent upload and fresh conflict check; no path invented",
+    "No new program/workflow registration needed for ingestion; no newQ/modelpromotion"
+  ],
+  "upload_instructions": [
+    "Read repository HEAD and resolve intervening journal changes before upload",
+    "Upload these13 new files under the proposed destination or established operator-selected Q048 layout; preserve old rootfiles unchanged",
+    "Verify uploaded hashes and references, then update only existing verified Q048 indexes/status pointers with new paths",
+    "Record actual commit URL after upload; until then sync remains USER_UPLOAD_PENDING",
+    "If raw dependencies are also uploaded use their original relative paths and byte hashes in evidence manifest; do not claim paths exist before upload"
+  ],
+  "operator_gate": "No new gate for this same-Q routine bounded proof preparation/execution; new Q, model promotion or paid/expanded campaign still subject to Jim gate"
+}
