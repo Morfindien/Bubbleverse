@@ -1,0 +1,85 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "prompt_id": "BUBBLEVERSE.MATHEMATICS",
+  "prompt_version": "2.1.0",
+  "task_id": "LOCAL-Q048-POST-V7-HILLIPOP-EDE-GUARD-MATH-V1",
+  "result_id": "LOCAL-Q048-POST-V7-GUARD-CONTINUATION-V8",
+  "q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "parent_handoff": "LOCAL-Q048-FREC-V7-INGESTION-RECEIPT-V1",
+  "parent_builder_result": "LOCAL-Q048-POST-GUARD-V6-FREC-STATE-TUBE-RESUME-V7",
+  "parent_math_result": "LOCAL-Q048-POST-V5-GUARD-CONTINUATION-V6",
+  "frozen_at_utc": "2026-10-15T19:58:52.289819+00:00",
+  "anchor_a": "1/1501",
+  "target_a0": "1/1491",
+  "target_a1": "1/1481",
+  "nodes": [
+    "1/1501",
+    "1/1491",
+    "1/1481"
+  ],
+  "paths": [
+    "EXACT_SERIES_PRIMARY",
+    "RATIONAL_BERNOULLI_CONTROL"
+  ],
+  "anchors": {
+    "primary": {
+      "E_upper": "228974875344472782947/1000000000000000000",
+      "Y_upper": "44737219425564793091/250000000000000000",
+      "Vbar": "1917663242951521739/40000000000000000",
+      "equilibrium_upper": "13340266037923629489/500000000000000000"
+    },
+    "control": {
+      "E_upper": "114550353055786370743/500000000000000000",
+      "Y_upper": "179074708469359130903/1000000000000000000",
+      "Vbar": "1917663242951521739/40000000000000000",
+      "equilibrium_upper": "13340266037923629489/500000000000000000"
+    }
+  },
+  "alpha": "24/23",
+  "kappa": "90/23",
+  "beta": "1152/529",
+  "whole_cell_guard": "3*B0_lower(right)-E_upper(left)>0; nonnegative floor omitted conservatively, so this proves G=3B0+e+floor-2U>0 because U<=e<=E_upper",
+  "primary_B0": "positive q^3 neutrino lower, exact Fraction rounded down to 1e-18",
+  "control_B0": "actual 11 finite-neutrino nodes using independent exact sqrt bisection and rounded down to 1e-18",
+  "primary_decay": "outward exact log/exp interval, inherited V6 comparison; maximize affine endpoint bound",
+  "control_decay": "1/(1+kappa*(right-left)/right), from ln(r)>=(r-1)/r and exp(x)>=1+x",
+  "precision": "Exact Fraction; outward 1e-18 result grid. Primary 40-term log/exp bounds. Control 112-step exact sqrt bisection. Producer-free validator uses independent 60-term log/exp and 140-step sqrt checks.",
+  "success": "Both connected paths have strict positive whole-cell guard on bridge 1500->1490 and target 1490->1480, with correct V6/V7 lineage, target G margin exceeding outward arithmetic error, and producer-free validation PASS.",
+  "failure": "First nonpositive/unresolved whole-cell bound or exact premise/lineage gap; METHOD_INSUFFICIENT, not physical falsification. Preserve successful prior rows.",
+  "stop": "Target certificate, precise new material obstruction, or 120 s budget checkpoint; return once to Result Ingestion & Routing Engine 2.1.0. Do not launch Builder or Motor 14.",
+  "max_seconds_total": 120,
+  "max_cells_per_path": 2,
+  "max_paths": 2,
+  "adaptive_refinement": false,
+  "old_science_reexecute": false,
+  "paid_or_hpc_authorized": false,
+  "retained_frec_cells": 59,
+  "retained_H_to_frec_tubes": 4,
+  "input_hashes": {
+    "q048_guard_resume_result_v6.json": "6e5e442b0c8f3cf4fb926cd4624e03b4e9a29678a391202361c29dead53041e9",
+    "q048_guard_resume_checkpoint_v6.json": "0fb1ecfd340281a4fd16ed20c84ea4531470d0a1649cb6f99b585cf14bf8fbca",
+    "q048_guard_resume_validation_v6.json": "f50b9b4a808394e2dac5318dc520a02671ba8be7123eadaa29da7d3bb5871b11",
+    "q048_frec_resume_result_v7.json": "6bb270b39b45dd230bb8770fe032843411b7fdd605dc874c7f67d9ac8f5d9588",
+    "q048_frec_resume_checkpoint_v7.json": "9cf758ea0651b793a05172b32d042b4fb0a1032b7693e5f05da10310d4f454cb",
+    "q048_frec_resume_validation_v7.json": "20b61324d46fe631ea20881eb87d778d45448d8cd6a210421b1efcbca857eea0",
+    "q048_math015_weighted_virial_v1.py": "d50abd6f9e5c1864aa981f4e1ec6ed3bb95759b157c4091584cb9c89c6e542af",
+    "state_objects_extracted.json": "16090ea51f3104da3ce42f1877a81676863e40900e1c75828d3bc65fb6cfe864",
+    "Q048_FREC_V7_INGESTION_HANDOFF_V1.md": "d5eb0b6f9dff2673db94b653b560a5f9761b944fffc8f3b237ddea139195ffff",
+    "Bubbleverse_Matematikmotor_2.1.0.md": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+  },
+  "incoming_journal": {
+    "path": "Q047_SAMLET_JOURNAL_FREC_RESUME_V7_INGESTED_V1-1.md",
+    "bytes": 13621076,
+    "sha256": "6d1a9bd9f396c17a4abfb6b31c12e5c918c059b9ab815a6f9fd7c2b66d4c3d35"
+  },
+  "github_read": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "observed_head": "64cde02ccb7bf5ccf078c70075101003c21853e6"
+  }
+}

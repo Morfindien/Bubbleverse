@@ -1,0 +1,87 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "q": "Q048",
+  "task_id": "LOCAL-Q048-POST-V7-HILLIPOP-EDE-GUARD-MATH-V1",
+  "all_pass": true,
+  "input_count": 10,
+  "inputs": [
+    {
+      "file": "q048_guard_resume_result_v6.json",
+      "bytes": 8787,
+      "expected_sha256": "6e5e442b0c8f3cf4fb926cd4624e03b4e9a29678a391202361c29dead53041e9",
+      "computed_sha256": "6e5e442b0c8f3cf4fb926cd4624e03b4e9a29678a391202361c29dead53041e9",
+      "pass": true
+    },
+    {
+      "file": "q048_guard_resume_checkpoint_v6.json",
+      "bytes": 2000,
+      "expected_sha256": "0fb1ecfd340281a4fd16ed20c84ea4531470d0a1649cb6f99b585cf14bf8fbca",
+      "computed_sha256": "0fb1ecfd340281a4fd16ed20c84ea4531470d0a1649cb6f99b585cf14bf8fbca",
+      "pass": true
+    },
+    {
+      "file": "q048_guard_resume_validation_v6.json",
+      "bytes": 3317,
+      "expected_sha256": "f50b9b4a808394e2dac5318dc520a02671ba8be7123eadaa29da7d3bb5871b11",
+      "computed_sha256": "f50b9b4a808394e2dac5318dc520a02671ba8be7123eadaa29da7d3bb5871b11",
+      "pass": true
+    },
+    {
+      "file": "q048_frec_resume_result_v7.json",
+      "bytes": 41447,
+      "expected_sha256": "6bb270b39b45dd230bb8770fe032843411b7fdd605dc874c7f67d9ac8f5d9588",
+      "computed_sha256": "6bb270b39b45dd230bb8770fe032843411b7fdd605dc874c7f67d9ac8f5d9588",
+      "pass": true
+    },
+    {
+      "file": "q048_frec_resume_checkpoint_v7.json",
+      "bytes": 960,
+      "expected_sha256": "9cf758ea0651b793a05172b32d042b4fb0a1032b7693e5f05da10310d4f454cb",
+      "computed_sha256": "9cf758ea0651b793a05172b32d042b4fb0a1032b7693e5f05da10310d4f454cb",
+      "pass": true
+    },
+    {
+      "file": "q048_frec_resume_validation_v7.json",
+      "bytes": 9061,
+      "expected_sha256": "20b61324d46fe631ea20881eb87d778d45448d8cd6a210421b1efcbca857eea0",
+      "computed_sha256": "20b61324d46fe631ea20881eb87d778d45448d8cd6a210421b1efcbca857eea0",
+      "pass": true
+    },
+    {
+      "file": "q048_math015_weighted_virial_v1.py",
+      "bytes": 13076,
+      "expected_sha256": "d50abd6f9e5c1864aa981f4e1ec6ed3bb95759b157c4091584cb9c89c6e542af",
+      "computed_sha256": "d50abd6f9e5c1864aa981f4e1ec6ed3bb95759b157c4091584cb9c89c6e542af",
+      "pass": true
+    },
+    {
+      "file": "state_objects_extracted.json",
+      "bytes": 26196,
+      "expected_sha256": "16090ea51f3104da3ce42f1877a81676863e40900e1c75828d3bc65fb6cfe864",
+      "computed_sha256": "16090ea51f3104da3ce42f1877a81676863e40900e1c75828d3bc65fb6cfe864",
+      "pass": true
+    },
+    {
+      "file": "Q048_FREC_V7_INGESTION_HANDOFF_V1.md",
+      "bytes": 8253,
+      "expected_sha256": "d5eb0b6f9dff2673db94b653b560a5f9761b944fffc8f3b237ddea139195ffff",
+      "computed_sha256": "d5eb0b6f9dff2673db94b653b560a5f9761b944fffc8f3b237ddea139195ffff",
+      "pass": true
+    },
+    {
+      "file": "Bubbleverse_Matematikmotor_2.1.0.md",
+      "bytes": 56414,
+      "expected_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+      "computed_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+      "pass": true
+    }
+  ],
+  "incoming_journal": {
+    "path": "/mnt/data/Q047_SAMLET_JOURNAL_FREC_RESUME_V7_INGESTED_V1-1.md",
+    "bytes": 13621076,
+    "computed_sha256": "6d1a9bd9f396c17a4abfb6b31c12e5c918c059b9ab815a6f9fd7c2b66d4c3d35",
+    "expected_sha256": "6d1a9bd9f396c17a4abfb6b31c12e5c918c059b9ab815a6f9fd7c2b66d4c3d35"
+  },
+  "target_q_firewall": "PASS_Q048_NO_Q049_PLUS",
+  "parent_linkage": "V6 raw/validation and V7 raw/checkpoint/validation hashes verified before science execution"
+}
