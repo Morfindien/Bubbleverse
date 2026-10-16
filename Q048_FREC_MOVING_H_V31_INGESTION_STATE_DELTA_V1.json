@@ -1,0 +1,43 @@
+{
+  "schema_version": "Q048_FREC_MOVING_H_V31_INGESTION_STATE_DELTA_V1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "verified_at_utc": "2026-10-16T17:38:05+00:00",
+  "before": {
+    "actual_cells": 77,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1310
+    },
+    "source": "incoming V30-ingested state"
+  },
+  "after": {
+    "actual_cells": 78,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1300
+    },
+    "scientific_state": "INCONCLUSIVE",
+    "workflow_state": "ACTIVE"
+  },
+  "delta": {
+    "accepted_actual_cells": 1,
+    "hillipop_ede_frontier": -10,
+    "other_frontiers_change": 0,
+    "physical_reset": false,
+    "accepted_model_change": false
+  },
+  "next": {
+    "engine": "BUBBLEVERSE.MATHEMATICS 2.1.0",
+    "cell_z": [
+      1300,
+      1290
+    ],
+    "actual_must_remain": "78/frontier1300",
+    "task_fingerprint": "69c8022d500c24a2ac774470a634f8afe3455b7d6f7e1ea08b2f00ac119eda3a"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "schema_status": "UNVALIDATED_LOCAL_TASK_CONTRACT; Mathematics must perform compatibility/preflight validation",
+  "task_id": "LOCAL-Q048-POST-V31-MOVING-H-DOMAIN-1300-1290-MATH-V1",
+  "task_fingerprint": "69c8022d500c24a2ac774470a634f8afe3455b7d6f7e1ea08b2f00ac119eda3a",
+  "fingerprint_method": "SHA256 canonical JSON of fingerprint_basis, sorted keys and compact separators",
+  "fingerprint_basis": {
+    "task_type": "MATHEMATICAL_RESULT",
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "engine_version": "2.1.0",
+    "engine_prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "cell_z": [
+      1300,
+      1290
+    ],
+    "cell_a": [
+      "1/1301",
+      "1/1291"
+    ],
+    "parent_actual_checkpoint_sha256": "13760f29fe0a58893d74d4439f4da79f01c0ed0b485cf5ce49daf8ccee09d35e",
+    "parent_actual_count": 78,
+    "parent_frontier": 1300,
+    "initial_lower_projection": "2410964556877887/1000000000000000000",
+    "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_row_sha256": "be53b88834b3695cee1ac3b8bb051efdd786b012699a0ca7a7690cc17c1455d2",
+    "guard_control_row_sha256": "d24539ab2afe0c18d1237dfc096094c3835c6d310108111dbcf8d7f4c56ba536",
+    "previous_math_checkpoint_sha256": "47a513e2d55fe6611694b80692149fcc9b8f9c60636dacf625fb695575647b19",
+    "max_new_math_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0"
+  },
+  "task_type": "MATHEMATICAL_RESULT",
+  "created_at_utc": "2026-10-16T17:38:05+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "verification": "Exact 2.1.0 prompt bytes SHA-256 verified."
+  },
+  "purpose": "Construct and independently validate exactly one connected moving-h proof cell for Hillipop-EDE 1300→1290 using accepted V31 actual parent and V12 committed row15. Do not create an actual consumer cell.",
+  "case": "hillipop-ede_n3",
+  "cell_z": [
+    1300,
+    1290
+  ],
+  "cell_a": [
+    "1/1301",
+    "1/1291"
+  ],
+  "initial_actual_state": {
+    "total_accepted_paired_cells": 78,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1300
+    },
+    "accepted_checkpoint_sha256": "13760f29fe0a58893d74d4439f4da79f01c0ed0b485cf5ce49daf8ccee09d35e",
+    "scalar_endpoint": {
+      "a1": "1/1301",
+      "E_right": "138237514241195513189/1000000000000000000",
+      "Y_right": "55244678050614504443/500000000000000000",
+      "Vbar": "26591984884134566623/1000000000000000000"
+    },
+    "moving_invariant_endpoint": {
+      "a": "1/1301",
+      "lower_projection": "2410964556877887/1000000000000000000",
+      "physical_state_reset": false
+    }
+  },
+  "guard_binding": {
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "primary_row_index": 15,
+    "primary_row_sha256": "be53b88834b3695cee1ac3b8bb051efdd786b012699a0ca7a7690cc17c1455d2",
+    "control_row_index": 15,
+    "control_row_sha256": "d24539ab2afe0c18d1237dfc096094c3835c6d310108111dbcf8d7f4c56ba536",
+    "primary": {
+      "accepted": true,
+      "committed": true,
+      "a0": "1/1301",
+      "a1": "1/1291",
+      "z0": 1300,
+      "z1": 1290,
+      "E_input_left": "138237514241195513189/1000000000000000000",
+      "Y_left": "55244678050614504443/500000000000000000",
+      "V_previous": "26591984884134566623/1000000000000000000",
+      "E_safe_left": "137534021964761079449/1000000000000000000",
+      "V_admitted": "6479451196471225239/250000000000000000",
+      "G_lower": "1762211358673009383/200000000000000000",
+      "derivative_lower": "48491117047723873187/500000000000000000",
+      "E_right": "33669207343547571471/250000000000000000",
+      "Y_right": "107632163510658215321/1000000000000000000"
+    },
+    "control": {
+      "accepted": true,
+      "committed": true,
+      "a0": "1/1301",
+      "a1": "1/1291",
+      "z0": 1300,
+      "z1": 1290,
+      "E_input_left": "27876808742943567307/200000000000000000",
+      "Y_left": "111474282214970572427/1000000000000000000",
+      "V_previous": "26746854770591128103/1000000000000000000",
+      "E_safe_left": "69342636831436443407/500000000000000000",
+      "V_admitted": "26077200137573051287/1000000000000000000",
+      "G_lower": "3830952818733454061/500000000000000000",
+      "derivative_lower": "93588597937841917067/1000000000000000000",
+      "E_right": "67927044934176598417/500000000000000000",
+      "Y_right": "108643098420450882447/1000000000000000000"
+    },
+    "control_role": "Conservative aligned guard only; never replace primary actual scalar state."
+  },
+  "prior_proof_lineage": {
+    "v30_accepted_checkpoint_sha256": "47a513e2d55fe6611694b80692149fcc9b8f9c60636dacf625fb695575647b19",
+    "v30_contract_sha256": "c1eebe578660807028cb043ca7aefffc66cea2ac0180783946c5284e62c8417b",
+    "v30_spec_sha256": "715e66ec6c70c94257691d48933049fc728b3caabd2ab896dbb7141ef6aef862",
+    "producer_pattern_sha256": "172baaea76a12f62cf50e1054e66a9aec3b5474dbef5c986756f7f2ab3461fe0",
+    "verifier_pattern_sha256": "ba11ca8d6c10afa56e0a2d8e696f7940c8cfdab2c96daf440c9f5ed621fac9fe",
+    "rule": "Reuse V30 theorem/implementation pattern only. Version all cell/parent/row/domain/hash/schema pins and compute the 1300→1290 K/lower freshly. Do not copy V30 K or h_min as new evidence."
+  },
+  "acceptance_criteria": [
+    "V31 accepted checkpoint is PASS actual78/frontier1300 and V31 raw/validation/postaccept/transition/package hashes agree.",
+    "V12 row15 primary/control are accepted+committed with positive guards; primary E/Y/V glues exactly to V31 endpoint.",
+    "Compute a fresh new-cell K and a strictly positive connected whole-cell lower for q_L=1e-6 and q_R=0 on a=[1/1301,1/1291].",
+    "Rebind source/C/upper-h/thermal to the same new domain; use Hs LOWER in the negative-rate comparison and E_safe_left only for thermal upper-H qualification.",
+    "No reset of lower projection to 1/2 and no reuse of V30 K/h_min as new evidence.",
+    "A separate producer-free verifier must PASS before accepted math checkpoint is written.",
+    "Actual state remains exactly78/frontier1300 throughout Mathematics."
+  ],
+  "failure_or_falsification_condition": "Stop at first exact binding/domain/rate/source/C/upper-h/thermal/comparison obstruction. A failed sufficient bound is METHOD_INSUFFICIENT unless independent evidence proves physical contradiction.",
+  "science_budget_seconds": 300,
+  "max_new_math_proof_cells": 1,
+  "max_new_actual_cells": 0,
+  "forbidden": [
+    "actualconsumer",
+    "below1290continuation",
+    "V31consumerreplay",
+    "V30proofreplay_for_reassurance",
+    "V12guardregeneration",
+    "resetto1/2",
+    "oldcellK_or_h_min_substitution",
+    "subdivision_or_tuning_campaign",
+    "refit",
+    "recapture",
+    "native_P6",
+    "HPC_or_paidrun",
+    "Q049+",
+    "accepted_model_promotion"
+  ],
+  "compute_backend_preference": "LOCAL_RUNTIME/exact-rational Python if bounded workload fits; no HPC/paid benefit established.",
+  "return_route": "Return exactly once to BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0; no automatic continuation.",
+  "input_refs": {
+    "parent_actual_raw": {
+      "filename": "evidence/q048_frec_moving_h_result_v31.json",
+      "sha256": "bcac71fd716d51422a7975899ed69e3b967a2a0a6e6143a37cff53c1fbb655ad"
+    },
+    "parent_actual_validation": {
+      "filename": "evidence/q048_frec_moving_h_validation_v31.json",
+      "sha256": "22ecffc94279779a62e1bdfb52ca23d437a8c53158aeec5ce091660b3cb710c8"
+    },
+    "parent_actual_checkpoint": {
+      "filename": "evidence/q048_frec_moving_h_accepted_checkpoint_v31.json",
+      "sha256": "13760f29fe0a58893d74d4439f4da79f01c0ed0b485cf5ce49daf8ccee09d35e"
+    },
+    "parent_actual_postaccept": {
+      "filename": "evidence/q048_frec_moving_h_postaccept_validation_v31.json",
+      "sha256": "0ddc94c7551c8e82558b8afe7746a97609ecd1626a0cf8ad5086509f113adffa"
+    },
+    "parent_actual_transition": {
+      "filename": "evidence/q048_frec_moving_h_transition_validation_v31.json",
+      "sha256": "c9c7f66fa52624dcb5d87e81887d9e3e55786215c4d342abcbb06dee396187bf"
+    },
+    "parent_actual_package": {
+      "filename": "evidence/q048_frec_moving_h_package_validation_v31.json",
+      "sha256": "ea70afdaa6aedf7d24ecca0afa3428d9b4b22b6fce7fbb6fe9a97efefb223dbd"
+    },
+    "guard_raw": {
+      "filename": "evidence/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    "guard_validation": {
+      "filename": "evidence/q048_guard_local_v_validation_v12.json",
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554"
+    },
+    "math_prompt": {
+      "filename": "evidence/Bubbleverse_Matematikmotor_2.1.0.md",
+      "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+    }
+  }
+}

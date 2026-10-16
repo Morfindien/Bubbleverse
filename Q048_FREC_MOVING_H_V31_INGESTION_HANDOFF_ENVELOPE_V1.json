@@ -1,0 +1,34 @@
+{
+  "schema_version": "BUBBLEVERSE_HANDOFF_ENVELOPE_V1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "created_at_utc": "2026-10-16T17:38:05+00:00",
+  "from_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0",
+  "to_engine": "BUBBLEVERSE.MATHEMATICS 2.1.0",
+  "status": "READY_FOR_HANDOFF",
+  "scientific_state": "INCONCLUSIVE",
+  "receipt_id": "LOCAL-Q048-FREC-MOVING-H-V31-INGESTION-RECEIPT-V1",
+  "task_id": "LOCAL-Q048-POST-V31-MOVING-H-DOMAIN-1300-1290-MATH-V1",
+  "task_fingerprint": "69c8022d500c24a2ac774470a634f8afe3455b7d6f7e1ea08b2f00ac119eda3a",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "state": {
+    "actual_cells": 78,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1300
+    },
+    "native_P6": "UNRESOLVED",
+    "q_complete": false
+  },
+  "required_files": [
+    "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V31_INGESTED_V1.md",
+    "Q048_FREC_MOVING_H_V31_INGESTION_HANDOFF_TO_MATHEMATICS_V1.md",
+    "Q048_FREC_MOVING_H_V31_NEXT_MATHEMATICS_TASK_V1.json",
+    "evidence/Bubbleverse_Matematikmotor_2.1.0.md",
+    "evidence/q048_frec_moving_h_accepted_checkpoint_v31.json",
+    "evidence/q048_guard_local_v_result_v12.json"
+  ],
+  "stop_after": "one validated math proof cell 1300→1290 or first exact obstruction; return to Result Ingestion"
+}
