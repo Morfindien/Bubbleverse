@@ -1,0 +1,65 @@
+{
+  "schema_version": "Q048_MOVING_ACTUAL_ACCEPTED_CHECKPOINT_V27",
+  "q": "Q048",
+  "source_result": "q048_frec_moving_h_result_v27.json",
+  "source_result_sha256": "e128b3ab5b0ad9e7ab1d861d35b0d3e35f45e3a2da07c128fc09f34c10516d38",
+  "parent_checkpoint_sha256": "df16530b9ccb7aa7d2752103b76aa846a1ec9c77fddcf2c0f0ed81c13a3b2e9e",
+  "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 1320
+  },
+  "new_accepted_cells": 1,
+  "retained_prior_accepted_cells": 75,
+  "total_accepted_cells_in_chain": 76,
+  "linked_scalar_endpoint": {
+    "a1": "1/1321",
+    "E_right": "145558115152839369247/1000000000000000000",
+    "Y_right": "23272834626295280593/200000000000000000",
+    "Vbar": "13988763885236421343/500000000000000000"
+  },
+  "linked_invariant_state": {
+    "schema_version": "Q048_MOVING_INVARIANT_STATE_V27",
+    "kind": "COMMON_EPS_SOURCE_SIGN_RICCATI_GLUED_V26",
+    "proof_cell_a": [
+      "1/1331",
+      "1/1321"
+    ],
+    "parent_endpoint_a": "1/1331",
+    "parent_endpoint_lower_projection": "3620985402636757/1000000000000000000",
+    "K_upper": "6116778248889377942413/1000000000000000000",
+    "epsilon": "1/1000000",
+    "endpoint_a": "1/1321",
+    "endpoint_lower_projection": "1550450091764323/500000000000000000",
+    "upper_h": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "physical_state_reset": false,
+    "interpretation": "Validated/corrected V26 outer lower projection consumed by one actual paired-frec admission; not a measured h/xe value or independent restart.",
+    "proof_result_sha256": "89ffa3bc5e46801169d3a11b5843758904e54a8b629ac0e6dcb7f2f37a30d93b",
+    "proof_validation_sha256": "091a33d8b8b2b8709a5fa8e3fcd46c5fc00b9ff3afc7994ea87f8b7cd407adb2",
+    "proof_checkpoint_sha256": "fb1050e2e7d02d4d881ea252bcd0fa48701537368db9cd66cd1b186e1f84dbfe",
+    "parent_checkpoint_sha256": "df16530b9ccb7aa7d2752103b76aa846a1ec9c77fddcf2c0f0ed81c13a3b2e9e",
+    "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_row_sha256": "c1adf02f470649309387d759ed508ef0ef626d00c7ebae57061d8f46e6dd9daa",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "continuation_below1320_authorized": false
+  },
+  "stop_reason": "ONE_CELL_SCOPE_EXHAUSTED",
+  "complete_a1": false,
+  "resume_condition": "Return exactly once to Result Ingestion & Routing2.1.0. No continuation below1320 authorized by this one-cell Builder run.",
+  "math_raw_sha256": "89ffa3bc5e46801169d3a11b5843758904e54a8b629ac0e6dcb7f2f37a30d93b",
+  "math_validation_sha256": "091a33d8b8b2b8709a5fa8e3fcd46c5fc00b9ff3afc7994ea87f8b7cd407adb2",
+  "admission_state": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION",
+  "math_checkpoint_sha256": "fb1050e2e7d02d4d881ea252bcd0fa48701537368db9cd66cd1b186e1f84dbfe",
+  "technical_state": "PASS",
+  "validation": "q048_frec_moving_h_validation_v27.json",
+  "validation_sha256": "0dbc7a848183d0cc24a4fcad14fdcd3d2da58c8281afeab787c3657553c6ba11",
+  "candidate_checkpoint_sha256": "8c95941b7e7e6b492a20814cb3133d6f860301c22c935f4aa57d02d693031529"
+}
