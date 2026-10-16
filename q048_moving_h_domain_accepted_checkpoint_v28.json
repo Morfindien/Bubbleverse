@@ -1,0 +1,65 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_ACCEPTED_CHECKPOINT_V28",
+  "q": "Q048",
+  "target_q": "Q048",
+  "source_result": "q048_moving_h_domain_result_v28.json",
+  "source_result_sha256": "2447b554c7c68a94988c7dc5524eaf5418e09451e3db6c79e834eb7a2b7821b9",
+  "validation": "q048_moving_h_domain_validation_v28.json",
+  "validation_sha256": "98af01e0b9966e3f52a375a0f3691f716903793bea99d161f088d9bd5013fd9e",
+  "candidate_checkpoint_sha256": "707f24df3fc36c3a5200ca9ebdfd553b6055b5319358f6f11e0fd59055df57ba",
+  "transition_validation_sha256": "1a2f37b3ebdfaf8aa36aa9b262e56c5e323df79688ab9dd208cc373c072f3e3c",
+  "validation_state": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION",
+  "technical_state": "PASS",
+  "checks": "82/82",
+  "mutation_rejections": "20/20",
+  "transition_checks": "5/5",
+  "accepted_at_utc": "2026-10-16T16:12:44.239079+00:00",
+  "proof_cell_a": [
+    "1/1321",
+    "1/1311"
+  ],
+  "proof_cell_z": [
+    1320,
+    1310
+  ],
+  "parent_actual_checkpoint_sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+  "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "guard_primary_row_sha256": "c3fe09a8da35ebddf82e904a0d5a203d794fab908701b352efaa7a43764c5eb6",
+  "guard_control_row_sha256": "d143be5b31a329597c6d10cf4761be49c0514f510bc43981ec8a9fcf29b6e4d0",
+  "comparison": {
+    "kind": "COMMON_EPS_SOURCE_SIGN_RICCATI_CONTINUATION",
+    "parent_endpoint_a": "1/1321",
+    "parent_lower_projection": "1550450091764323/500000000000000000",
+    "K_upper": "3027395738921693080237/500000000000000000",
+    "epsilon": "1/1000000",
+    "endpoint_primary_lower": "2713614571102405487264046772618392163025279047299292454435345750404892774847417716527337668442848855035259535400497487/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "endpoint_control_lower": "101627309689150154590528512627828267015449/37468826001218059471487372171732984551000000",
+    "whole_cell_h_min": "169519772393333/62500000000000000",
+    "upper_h": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "physical_state_reset": false
+  },
+  "actual_state_unchanged": {
+    "total_actual_paired_cells": 76,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1320
+    },
+    "actual_scalar_endpoint": {
+      "a1": "1/1321",
+      "E_right": "145558115152839369247/1000000000000000000",
+      "Y_right": "23272834626295280593/200000000000000000",
+      "Vbar": "13988763885236421343/500000000000000000"
+    }
+  },
+  "new_math_proof_cells": 1,
+  "new_actual_paired_cells": 0,
+  "q_complete": false,
+  "native_P6": "UNRESOLVED",
+  "resume_rule": "Return exactly once to Result Ingestion & Routing 2.1.0. Ingest V28 without changing actual76/frontier1320. No automatic consumer; a later consumer needs separate authorization and validation of exactly1320->1310 with this proof and V12row13."
+}

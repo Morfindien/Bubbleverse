@@ -1,0 +1,58 @@
+{
+  "schema_version": "BUBBLEVERSE_HANDOFF_ENVELOPE_2.1.0",
+  "sender": {
+    "engine": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0"
+  },
+  "receiver": {
+    "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+    "version": "2.1.0"
+  },
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "task_id": "LOCAL-Q048-POST-V27-MOVING-H-DOMAIN-1320-1310-MATH-V1",
+  "task_fingerprint": "dddf998f98396763cac94046187ab7eb1fabb04fcf271cbba8466d98da30fdcd",
+  "result_id": "LOCAL-Q048-POST-V27-MOVING-H-DOMAIN-V28",
+  "status": {
+    "workflow": "READY_FOR_HANDOFF",
+    "scientific": "INCONCLUSIVE",
+    "technical": "PASS"
+  },
+  "accepted_state": {
+    "new_math_proof_cells": 1,
+    "new_actual_cells": 0,
+    "actual_count": 76,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1320
+    },
+    "proof_cell_z": [
+      1320,
+      1310
+    ],
+    "proof_cell_a": [
+      "1/1321",
+      "1/1311"
+    ]
+  },
+  "artifacts": {
+    "raw_sha256": "2447b554c7c68a94988c7dc5524eaf5418e09451e3db6c79e834eb7a2b7821b9",
+    "validation_sha256": "98af01e0b9966e3f52a375a0f3691f716903793bea99d161f088d9bd5013fd9e",
+    "accepted_checkpoint_sha256": "405462169669a6f81440b934dc61cffa26ed3f27778a4a4c991e4f05b5cb648b",
+    "postaccept_sha256": "7c0993cff66c5930030c978e5698becb198a81883446003edf034dc04c9c72ec"
+  },
+  "stop": {
+    "no_continuation_below1310": true,
+    "automatic_actual_consumer": false
+  },
+  "required_next_action": "Ingest V28 exactly once, preserve actual76/frontier1320, then select at most one materially necessary next specialist.",
+  "github": {
+    "repository": "Morfindien/Bubbleverse",
+    "read_commit": "04c32883f5444c5dfcd20be5a5b294c40f5d382f",
+    "write_status": "FILES_READY_FOR_MANUAL_UPLOAD"
+  }
+}
