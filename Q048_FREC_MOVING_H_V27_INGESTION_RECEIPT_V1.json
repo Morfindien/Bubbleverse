@@ -1,0 +1,80 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_receipt",
+  "schema_version": "2.1.0",
+  "receipt_id": "LOCAL-Q048-FREC-MOVING-H-V27-INGESTION-RECEIPT-V1",
+  "created_at_utc": "2026-10-16T16:01:53.528501+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "prompt_resolution": {
+    "uploaded_prompt_version": "2.0.0",
+    "uploaded_prompt_sha256": "16c50b7a3bae55000e12078d939f60f6f0a7f3363d1d16330db9917ab6e4fb86",
+    "execution_authority_version": "2.1.0",
+    "execution_authority_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+    "reason": "V27 return route explicitly requires 2.1.0 and exact 2.1.0 bytes are present in the V27 package; 2.1.0 preserves 2.0 field meanings and adds required file/GitHub-memory delivery."
+  },
+  "origin_result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V27",
+  "origin_run_id": "LOCAL-Q048-FREC-MOVING-H-V27-2026-10-16T15:42:27.208541+00:00",
+  "origin_task_id": "LOCAL-Q048-POST-V26-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "origin_task_fingerprint": "e88f9bb69725ba71cdfae9eb3c89169759521a1aca69365ed4565ecede471d1e",
+  "ingestion_state": "NEW",
+  "duplicate_check": {
+    "origin_result_occurrences_in_supplied_journal": 1,
+    "prior_ingestion_receipt_occurrences_in_supplied_journal": 0,
+    "github_receipt_search_hits": 0,
+    "receipt_adds_independent_evidence": false
+  },
+  "verified_artifacts": {
+    "raw": "e128b3ab5b0ad9e7ab1d861d35b0d3e35f45e3a2da07c128fc09f34c10516d38",
+    "validation": "0dbc7a848183d0cc24a4fcad14fdcd3d2da58c8281afeab787c3657553c6ba11",
+    "accepted_checkpoint": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+    "postaccept": "5b547abe533a8e0893019bfa9ba1f7fcaf69a1425688386c2bfc64b24141b1e3",
+    "transition": "35c0f2a5c9535d130fe6518a4525495ce91c4c47979116753cf5530d1bf6d662",
+    "package_validation": "ca80c1a20b750ab74815898003fa7f26f5390514045e19ff4f4432e704814e34",
+    "candidate": "8c95941b7e7e6b492a20814cb3133d6f860301c22c935f4aa57d02d693031529",
+    "spec": "c5439742a62e56fe9ccd834692af845bacc6546d46c44809220d497eaffe97ed",
+    "journal": "954123d63f55bd7da1e73906f17834aef6ecd9997e25461e9e7caffe003aa81e"
+  },
+  "direct_output": {
+    "new_actual_paired_cells": 1,
+    "actual_total": 76,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1320
+    },
+    "accepted_cell_z": [
+      1330,
+      1320
+    ],
+    "accepted_cell_a": [
+      "1/1331",
+      "1/1321"
+    ],
+    "endpoint": {
+      "a1": "1/1321",
+      "E_right": "145558115152839369247/1000000000000000000",
+      "Y_right": "23272834626295280593/200000000000000000",
+      "Vbar": "13988763885236421343/500000000000000000"
+    },
+    "moving_lower_projection": "1550450091764323/500000000000000000"
+  },
+  "technical_interpretation": "ACCEPT V27 as exactly one validated actual conditional source-real paired-frec admission. Producer raw PENDING_VALIDATION is historical producer state; verifier, accepted checkpoint, transition and postaccept establish final PASS.",
+  "physical_interpretation": "No complete four-case Delta x_e(z) histories or observer-normalized cumulative Delta tau_T bounds; Native P6 unresolved; no physical falsification, model promotion or Q048 closure.",
+  "selected_next_engine": "BUBBLEVERSE.MATHEMATICS 2.1.0",
+  "next_task_id": "LOCAL-Q048-POST-V27-MOVING-H-DOMAIN-1320-1310-MATH-V1",
+  "next_task_fingerprint": "dddf998f98396763cac94046187ab7eb1fabb04fcf271cbba8466d98da30fdcd",
+  "repository": {
+    "name": "Morfindien/Bubbleverse",
+    "previous_builder_read_commit": "2e2594b271313a7ef65437dd4d4999261580a4bf",
+    "verified_current_main": "98fdbb090c2b3e61eb724a368bdfc5e58132a7c5",
+    "source_freshness": "VERIFIED",
+    "origin_v27_files_present": true,
+    "ingestion_receipt_present": false,
+    "sync_status": "USER_UPLOAD_PENDING",
+    "write_performed": false
+  }
+}

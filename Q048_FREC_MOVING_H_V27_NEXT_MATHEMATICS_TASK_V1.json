@@ -1,0 +1,220 @@
+{
+  "schema_status": "UNVALIDATED_LOCAL_TASK_CONTRACT; Mathematics must perform compatibility/preflight validation",
+  "task_id": "LOCAL-Q048-POST-V27-MOVING-H-DOMAIN-1320-1310-MATH-V1",
+  "task_fingerprint": "dddf998f98396763cac94046187ab7eb1fabb04fcf271cbba8466d98da30fdcd",
+  "fingerprint_method": "SHA256 canonical JSON of fingerprint_basis, sorted keys and compact separators",
+  "fingerprint_basis": {
+    "task_type": "MATHEMATICAL_RESULT",
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "engine_version": "2.1.0",
+    "engine_prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "cell_z": [
+      1320,
+      1310
+    ],
+    "cell_a": [
+      "1/1321",
+      "1/1311"
+    ],
+    "parent_actual_checkpoint_sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+    "parent_actual_count": 76,
+    "parent_frontier": 1320,
+    "initial_lower_projection": "1550450091764323/500000000000000000",
+    "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_row_sha256": "c3fe09a8da35ebddf82e904a0d5a203d794fab908701b352efaa7a43764c5eb6",
+    "guard_control_row_sha256": "d143be5b31a329597c6d10cf4761be49c0514f510bc43981ec8a9fcf29b6e4d0",
+    "previous_math_checkpoint_sha256": "fb1050e2e7d02d4d881ea252bcd0fa48701537368db9cd66cd1b186e1f84dbfe",
+    "max_new_math_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0"
+  },
+  "task_type": "MATHEMATICAL_RESULT",
+  "created_at_utc": "2026-10-16T16:01:53.528501+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "verification": "Exact 2.1.0 prompt bytes recovered and SHA-256 verified."
+  },
+  "purpose": "Construct and independently validate exactly one connected moving-h proof cell for Hillipop-EDE 1320→1310 using accepted V27 actual parent and V12 committed row13. Do not create an actual consumer cell.",
+  "case": "hillipop-ede_n3",
+  "cell_z": [
+    1320,
+    1310
+  ],
+  "cell_a": [
+    "1/1321",
+    "1/1311"
+  ],
+  "initial_actual_state": {
+    "total_accepted_paired_cells": 76,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1320
+    },
+    "accepted_checkpoint_sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+    "scalar_endpoint": {
+      "a1": "1/1321",
+      "E_right": "145558115152839369247/1000000000000000000",
+      "Y_right": "23272834626295280593/200000000000000000",
+      "Vbar": "13988763885236421343/500000000000000000"
+    },
+    "moving_invariant_endpoint": {
+      "a": "1/1321",
+      "lower_projection": "1550450091764323/500000000000000000",
+      "physical_state_reset": false
+    }
+  },
+  "guard_binding": {
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "primary_row_index": 13,
+    "primary_row_sha256": "c3fe09a8da35ebddf82e904a0d5a203d794fab908701b352efaa7a43764c5eb6",
+    "control_row_index": 13,
+    "control_row_sha256": "d143be5b31a329597c6d10cf4761be49c0514f510bc43981ec8a9fcf29b6e4d0",
+    "primary": {
+      "accepted": true,
+      "committed": true,
+      "a0": "1/1321",
+      "a1": "1/1311",
+      "E_input_left": "145558115152839369247/1000000000000000000",
+      "Y_left": "23272834626295280593/200000000000000000",
+      "V_previous": "13988763885236421343/500000000000000000",
+      "E_safe_left": "72414355119950140891/500000000000000000",
+      "V_admitted": "27278514728906217199/1000000000000000000",
+      "G_lower": "9025376845467635547/1000000000000000000",
+      "derivative_lower": "50877805072724838137/500000000000000000",
+      "E_right": "70932185071436793743/500000000000000000",
+      "Y_right": "113399833034449708669/1000000000000000000"
+    },
+    "control": {
+      "accepted": true,
+      "committed": true,
+      "a0": "1/1321",
+      "a1": "1/1311",
+      "E_input_left": "73318937512098500857/500000000000000000",
+      "Y_left": "11729255628991809287/100000000000000000",
+      "V_previous": "1124903884814024839/40000000000000000",
+      "E_safe_left": "145913715406495184629/1000000000000000000",
+      "V_admitted": "27428610820053046269/1000000000000000000",
+      "G_lower": "496271471210379421/62500000000000000",
+      "derivative_lower": "98566582928004148453/1000000000000000000",
+      "E_right": "114382728377110113/800000000000000",
+      "Y_right": "114357251354810549491/1000000000000000000"
+    },
+    "control_role": "Conservative aligned guard only; never replace primary actual scalar state."
+  },
+  "prior_proof_lineage": {
+    "v26_raw_sha256": "89ffa3bc5e46801169d3a11b5843758904e54a8b629ac0e6dcb7f2f37a30d93b",
+    "v26_validation_sha256": "091a33d8b8b2b8709a5fa8e3fcd46c5fc00b9ff3afc7994ea87f8b7cd407adb2",
+    "v26_accepted_checkpoint_sha256": "fb1050e2e7d02d4d881ea252bcd0fa48701537368db9cd66cd1b186e1f84dbfe",
+    "v26_postaccept_sha256": "111ee7913e57871338bd9a16332ea28af15a121fec43573118247a8939760416",
+    "v26_contract_sha256": "72fa6bebcdf906c32e1d3e0283f4d3cd4a564911373cfdd0ca596b0ff7d0f892",
+    "v26_spec_sha256": "81f01545349251e6d08c52821b508fc4943dd70ba7d9fcdc6be67a09780a630b",
+    "producer_pattern_sha256": "5cad3e6d7f6c34f7afaa7cc2b35374db5a8eff46bc33e4b6a3b6896a3ac8af96",
+    "verifier_pattern_sha256": "a513a0533b9c75e7c380dd7aeb43597543090c4247f7493c333d59eaed536b58",
+    "rule": "Reuse theorem/implementation pattern only. Version all cell/parent/row/domain/hash/schema pins; compute new-cell quantities freshly. Do not copy V26 K or whole-cell lower as V28 proof."
+  },
+  "acceptance_criteria": [
+    "V27 accepted checkpoint is PASS actual76/frontier1320 and all V27 raw/validation/postaccept/transition hashes agree.",
+    "V12 row13 primary/control are accepted+committed with positive guards; primary E/Y/V glues exactly to V27 endpoint.",
+    "Compute a fresh new-cell K and a strictly positive connected whole-cell lower for q_L=1e-6 and q_R=0 on a=[1/1321,1/1311].",
+    "Rebind source/C/upper-h/thermal to the same new domain; use Hs LOWER in the negative-rate comparison and E_safe_left only for thermal upper-H qualification.",
+    "No reset of lower projection to 1/2 and no reuse of old-cell K/h_min as new evidence.",
+    "A separate producer-free verifier must PASS before accepted math checkpoint is written.",
+    "Actual state remains exactly76/frontier1320 throughout Mathematics."
+  ],
+  "failure_or_falsification_condition": "Stop at first exact binding/domain/rate/source/C/upper-h/thermal/comparison obstruction. A failed sufficient bound is METHOD_INSUFFICIENT unless independent evidence proves physical contradiction.",
+  "science_budget_seconds": 300,
+  "max_new_math_proof_cells": 1,
+  "max_new_actual_cells": 0,
+  "forbidden": [
+    "actualconsumer",
+    "below1310continuation",
+    "V27consumerreplay",
+    "V26proofreplay_for_reassurance",
+    "V12guardregeneration",
+    "resetto1/2",
+    "oldcellK_or_h_min_substitution",
+    "subdivision_or_tuning_campaign",
+    "refit",
+    "recapture",
+    "native_P6",
+    "HPC_or_paidrun",
+    "Q049+",
+    "accepted_model_promotion"
+  ],
+  "compute_backend_preference": "LOCAL_RUNTIME/exact-rational Python if bounded workload fits; no HPC/paid benefit established.",
+  "return_route": "Return exactly once to BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0; no automatic continuation.",
+  "input_refs": {
+    "parent_actual_raw": {
+      "filename": "q048_frec_moving_h_result_v27.json",
+      "sha256": "e128b3ab5b0ad9e7ab1d861d35b0d3e35f45e3a2da07c128fc09f34c10516d38"
+    },
+    "parent_actual_validation": {
+      "filename": "q048_frec_moving_h_validation_v27.json",
+      "sha256": "0dbc7a848183d0cc24a4fcad14fdcd3d2da58c8281afeab787c3657553c6ba11"
+    },
+    "parent_actual_checkpoint": {
+      "filename": "q048_frec_moving_h_accepted_checkpoint_v27.json",
+      "sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4"
+    },
+    "parent_actual_postaccept": {
+      "filename": "q048_frec_moving_h_postaccept_validation_v27.json",
+      "sha256": "5b547abe533a8e0893019bfa9ba1f7fcaf69a1425688386c2bfc64b24141b1e3"
+    },
+    "guard_raw": {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    "guard_validation": {
+      "filename": "q048_guard_local_v_validation_v12.json",
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554"
+    },
+    "math_prompt": {
+      "filename": "Bubbleverse_Matematikmotor_2.1.0.md",
+      "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+    },
+    "prior_producer_pattern": {
+      "filename": "q048_moving_h_domain_v26.py",
+      "sha256": "5cad3e6d7f6c34f7afaa7cc2b35374db5a8eff46bc33e4b6a3b6896a3ac8af96"
+    },
+    "prior_verifier_pattern": {
+      "filename": "q048_moving_h_domain_verify_v26.py",
+      "sha256": "a513a0533b9c75e7c380dd7aeb43597543090c4247f7493c333d59eaed536b58"
+    },
+    "prior_spec_pattern": {
+      "filename": "q048_moving_h_domain_spec_v26.json",
+      "sha256": "81f01545349251e6d08c52821b508fc4943dd70ba7d9fcdc6be67a09780a630b"
+    },
+    "prior_contract": {
+      "filename": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V26.md",
+      "sha256": "72fa6bebcdf906c32e1d3e0283f4d3cd4a564911373cfdd0ca596b0ff7d0f892"
+    }
+  },
+  "expected_outputs": [
+    "Versioned V28 one-cell moving-h proof producer/spec and producer-free verifier",
+    "Raw mathematical result",
+    "Candidate math checkpoint",
+    "Validation + mutation evidence",
+    "Accepted math checkpoint only after PASS",
+    "Postaccept audit",
+    "Full appended journal and return handoff"
+  ],
+  "stop_condition": "One validated proof cell OR first exact obstruction OR 300s executed science; then return once. No actual consumer and no automatic continuation."
+}
