@@ -1,0 +1,130 @@
+{
+  "schema_status": "UNVALIDATED_LOCAL_TASK_CONTRACT; Mathematics engine must perform compatibility/preflight validation",
+  "task_id": "LOCAL-Q048-POST-V17-MOVING-H-DOMAIN-1370-1360-MATH-V1",
+  "task_fingerprint": "879eda6fff356d392dd7271edf50c559158851c335a611d1854d9802aceef053",
+  "task_type": "MATHEMATICAL_PROOF_DOMAIN_EXTENSION",
+  "created_at_utc": "2026-10-16T05:46:28.335526+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "origin_result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V17",
+  "parent_ingestion_receipt": "LOCAL-Q048-FREC-MOVING-H-V17-INGESTION-RECEIPT-V1",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "git_blob": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "verification": "LOCAL_PROMPT_BYTE_VERIFIED_AND_REPOSITORY_PROMPT_OBSERVED_AT 5d38ea102dd9fb2366c897ecf0424307d314151d"
+  },
+  "purpose": "Construct and independently validate exactly one new connected moving-h proof-domain cell for Hillipop-EDE 1370→1360. Reuse the qualified Riccati theorem lineage but recompute the new-cell K/source/rate/thermal domain from the accepted V17 actual endpoint and committed V12 row8. This task is math-only and must not advance actual paired-frec coverage.",
+  "case": "hillipop-ede_n3",
+  "cell_z": [
+    1370,
+    1360
+  ],
+  "cell_a": [
+    "1/1371",
+    "1/1361"
+  ],
+  "initial_actual_state": {
+    "total_accepted_paired_cells": 71,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1370
+    },
+    "accepted_checkpoint_sha256": "20eedde76e12d8337d2856264abb2a1c9de4d5e11930a697ed06d0080889c2ce",
+    "scalar_endpoint": {
+      "a": "1/1371",
+      "E_right": "82527736379536298057/500000000000000000",
+      "Y_right": "66007103382050520379/500000000000000000",
+      "Vbar": "1979034161157150451/62500000000000000"
+    },
+    "moving_invariant_endpoint": {
+      "a": "1/1371",
+      "lower_projection": "10774707685364977/1000000000000000000",
+      "physical_state_reset": false
+    }
+  },
+  "theorem_lineage": {
+    "v14_result_sha256": "7035c9b1b9646873a668c6e8a7cba56d62d944262a011ff8c69cc51e447ff578",
+    "v14_validation_sha256": "70d9d40d2accb9bb93f2874c3b8bbb9491d58ab9cd0d29c5ad26fdb2cd04ecb7",
+    "v14_proof_contract_sha256": "8f9102ef83dd4e7c7f903a7ef41c0a6fe83be65794a240f5caab7e2a24f8481d",
+    "v16_previous_cell_raw_sha256": "73763bb47f0fa39b908cc446ea69143d124d8efc100086cd5e3367e0e50e1bc0",
+    "v16_previous_cell_validation_sha256": "e1d74abdd7a40b9bd4e80f8006de155bf1ee55085db8daf0cebbbc1d9e66ff91",
+    "v16_previous_cell_accepted_checkpoint_sha256": "2b6f763f8f608b72e9a4aaee625eaad08ca7af0ca6724f4bb9fd49d1e75c03cc",
+    "rule": "Reuse theorem/method lineage only. V16 K and V16 h_min are cell-specific and must not be copied as the new-cell K/h_min."
+  },
+  "guard_binding": {
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row_index": 8,
+    "primary_row_sha256": "dc4ac3a9307655b19e6866df2de3db3a611d5ad125ac6b017069ee237977c2c1",
+    "control_row_index": 8,
+    "control_row_sha256": "448b4c843f69190fe64371a032c8f189ccd372a4e3a6fc441937eab4fe53dc89",
+    "primary": {
+      "accepted": true,
+      "committed": true,
+      "a0": "1/1371",
+      "a1": "1/1361",
+      "E_input_left": "82527736379536298057/500000000000000000",
+      "Y_left": "66007103382050520379/500000000000000000",
+      "V_previous": "1979034161157150451/62500000000000000",
+      "E_safe_left": "10266176903631569913/62500000000000000",
+      "V_admitted": "30901097706753907939/1000000000000000000",
+      "G_lower": "382587872658728587/40000000000000000",
+      "derivative_lower": "114486537095265838733/1000000000000000000",
+      "E_right": "8050821440704072213/50000000000000000",
+      "Y_right": "12877180512007736641/100000000000000000"
+    },
+    "control": {
+      "accepted": true,
+      "committed": true,
+      "a0": "1/1371",
+      "a1": "1/1361",
+      "E_input_left": "10370986662338259861/62500000000000000",
+      "Y_left": "8298343746154024201/62500000000000000",
+      "V_previous": "15890262357412473393/500000000000000000",
+      "E_safe_left": "165145782482138971079/1000000000000000000",
+      "V_admitted": "7755859359422035717/250000000000000000",
+      "G_lower": "4335977308146905779/500000000000000000",
+      "derivative_lower": "174856218002524571/1562500000000000",
+      "E_right": "161940483733221074239/1000000000000000000",
+      "Y_right": "16196025148693311297/125000000000000000"
+    },
+    "control_role": "Independent conservative guard track only; it does not replace the primary actual scalar state.",
+    "binding_rule": "Primary row8 E_input/Y/V_previous must glue exactly to the accepted V17 actual endpoint."
+  },
+  "required_mathematics": [
+    "Use the V17 connected moving lower projection as the new comparison initial lower; never reset to 1/2.",
+    "Recompute a fresh K_upper for row8/new source-rate domain; do not substitute V16 or V14 K.",
+    "Prove a strictly positive connected whole-cell lower comparison on a=[1/1371,1/1361] for both q<=epsilon branches, with epsilon=1e-6.",
+    "Bind fresh source/C/upper-h/thermal obligations to the same row8 domain and frozen source/capture.",
+    "Provide a producer-free independently implemented verifier or comparably independent exact-rational control appropriate to the result.",
+    "Serialize raw result, candidate/accepted math checkpoint only after validation, provenance, and exact hashes."
+  ],
+  "success_condition": "One independently validated mathematical proof-domain cell 1370→1360 is established and linked to V17 plus V12 row8. Actual count remains 71/frontier1370 during Mathematics.",
+  "failure_or_falsification_condition": "Return the first exact binding/domain/rate/source/C/upper-h/thermal/comparison obstruction. A failed sufficient bound is METHOD_INSUFFICIENT unless separate evidence establishes a physical contradiction.",
+  "science_budget_seconds": 300,
+  "max_new_mathematical_proof_cells": 1,
+  "max_new_actual_cells": 0,
+  "forbidden": [
+    "actual paired-frec consumer execution",
+    "continuation below z=1360",
+    "reset moving lower to 1/2",
+    "reuse V16 or V14 cell K without fresh row8 qualification",
+    "regenerate V12 guard as new science",
+    "count guard/proof cells as actual coverage",
+    "subdivision/tuning/general method-search campaign",
+    "refit/recapture/likelihood/native/P6/HPC/paid compute unless a new bounded necessity is proven",
+    "Q049+ scientific input",
+    "accepted-model promotion"
+  ],
+  "compute_preference": "LOCAL_RUNTIME if exact-rational producer+verifier fit the 300 s bounded task; no GitHub Actions benefit is currently evidenced.",
+  "return_route": "Return exactly once to BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0 after one validated proof-domain cell or first exact obstruction. No automatic actual consumer."
+}
