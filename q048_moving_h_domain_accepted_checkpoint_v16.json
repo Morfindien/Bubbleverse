@@ -1,0 +1,61 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_ACCEPTED_CHECKPOINT_V16",
+  "q": "Q048",
+  "target_q": "Q048",
+  "source_result": "q048_moving_h_domain_result_v16.json",
+  "source_result_sha256": "73763bb47f0fa39b908cc446ea69143d124d8efc100086cd5e3367e0e50e1bc0",
+  "validation": "q048_moving_h_domain_validation_v16.json",
+  "validation_sha256": "e1d74abdd7a40b9bd4e80f8006de155bf1ee55085db8daf0cebbbc1d9e66ff91",
+  "validation_state": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION",
+  "technical_state": "PASS",
+  "checks": "43/43",
+  "mutation_rejections": "12/12",
+  "proof_cell_a": [
+    "1/1381",
+    "1/1371"
+  ],
+  "proof_cell_z": [
+    1380,
+    1370
+  ],
+  "parent_actual_checkpoint_sha256": "be854ef0d1b6fe5435c1066c3b659c519804c7f95331d1b46667c5306cc7c57c",
+  "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "guard_primary_row_sha256": "adbef49b27eaf5d5dcd3a4dd4e683c09a4a87f7181ac43aaee0f14fefb0b6bda",
+  "guard_control_row_sha256": "cc40adcbeff5dbbe74136bde34916dcf4a374cc7bc8f08906c9905f7eff06072",
+  "comparison": {
+    "kind": "COMMON_EPS_SOURCE_SIGN_RICCATI_CONTINUATION",
+    "parent_endpoint_a": "1/1381",
+    "parent_lower_projection": "10535292182867437/500000000000000000",
+    "K_upper": "6216964748839156953643/1000000000000000000",
+    "epsilon": "1/1000000",
+    "endpoint_primary_lower": "2698492403725562444511862250173710502966932756605710781618332295142625503921068338126595089865957097976825003665275461/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "endpoint_control_lower": "1444323060731006005110919975173890576777009/134047540119607589080024826109423222991000000",
+    "whole_cell_h_min": "10774707685364977/1000000000000000000",
+    "upper_h": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "physical_state_reset": false
+  },
+  "actual_state_unchanged": {
+    "total_actual_paired_cells": 70,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1380
+    },
+    "actual_scalar_endpoint": {
+      "a1": "1/1381",
+      "E_right": "169165772229251076109/1000000000000000000",
+      "Y_right": "135313982398088263573/1000000000000000000",
+      "Vbar": "32441298588197695347/1000000000000000000"
+    }
+  },
+  "new_math_proof_cells": 1,
+  "new_actual_paired_cells": 0,
+  "q_complete": false,
+  "native_P6": "UNRESOLVED",
+  "resume_rule": "Return exactly once to Result Ingestion & Routing Engine 2.1.0. Ingest V16 once without changing actual count/frontier. Any later actual consumer must bind this accepted V16 proof cell and V12 row7 scalar guard; no automatic dispatch."
+}

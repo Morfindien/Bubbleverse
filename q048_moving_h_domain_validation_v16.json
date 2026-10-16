@@ -1,0 +1,241 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_VALIDATION_V16",
+  "q": "Q048",
+  "result_sha256": "73763bb47f0fa39b908cc446ea69143d124d8efc100086cd5e3367e0e50e1bc0",
+  "parent_checkpoint_sha256": "be854ef0d1b6fe5435c1066c3b659c519804c7f95331d1b46667c5306cc7c57c",
+  "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "status": "PASS",
+  "technical_state": "PASS",
+  "checks_total": 43,
+  "checks_passed": 43,
+  "checks": [
+    {
+      "name": "identity_q",
+      "pass": true
+    },
+    {
+      "name": "task",
+      "pass": true
+    },
+    {
+      "name": "source_identity",
+      "pass": true
+    },
+    {
+      "name": "parent_hash",
+      "pass": true
+    },
+    {
+      "name": "guard_hash",
+      "pass": true
+    },
+    {
+      "name": "row_hashes",
+      "pass": true
+    },
+    {
+      "name": "row_domain",
+      "pass": true
+    },
+    {
+      "name": "row_committed",
+      "pass": true
+    },
+    {
+      "name": "row_margins",
+      "pass": true
+    },
+    {
+      "name": "scalar_glue",
+      "pass": true
+    },
+    {
+      "name": "parent_projection_glue",
+      "pass": true
+    },
+    {
+      "name": "no_reset",
+      "pass": true
+    },
+    {
+      "name": "epsilon",
+      "pass": true
+    },
+    {
+      "name": "H_role",
+      "pass": true
+    },
+    {
+      "name": "K_exact_record",
+      "pass": true
+    },
+    {
+      "name": "K_outward",
+      "pass": true
+    },
+    {
+      "name": "control_log",
+      "pass": true
+    },
+    {
+      "name": "control_x",
+      "pass": true
+    },
+    {
+      "name": "control_lower",
+      "pass": true
+    },
+    {
+      "name": "hmin_control",
+      "pass": true
+    },
+    {
+      "name": "primary_not_limiting",
+      "pass": true
+    },
+    {
+      "name": "h_domain",
+      "pass": true
+    },
+    {
+      "name": "w_domain",
+      "pass": true
+    },
+    {
+      "name": "source_domains",
+      "pass": true
+    },
+    {
+      "name": "positive_atomic",
+      "pass": true
+    },
+    {
+      "name": "C_positive",
+      "pass": true
+    },
+    {
+      "name": "C_le1_proof",
+      "pass": true
+    },
+    {
+      "name": "L_q",
+      "pass": true
+    },
+    {
+      "name": "L_upperH",
+      "pass": true
+    },
+    {
+      "name": "L_thermal_beta",
+      "pass": true
+    },
+    {
+      "name": "L_thermal_den",
+      "pass": true
+    },
+    {
+      "name": "L_thermal_faces",
+      "pass": true
+    },
+    {
+      "name": "L_admitted",
+      "pass": true
+    },
+    {
+      "name": "R_q",
+      "pass": true
+    },
+    {
+      "name": "R_upperH",
+      "pass": true
+    },
+    {
+      "name": "R_thermal_beta",
+      "pass": true
+    },
+    {
+      "name": "R_thermal_den",
+      "pass": true
+    },
+    {
+      "name": "R_thermal_faces",
+      "pass": true
+    },
+    {
+      "name": "R_admitted",
+      "pass": true
+    },
+    {
+      "name": "status",
+      "pass": true
+    },
+    {
+      "name": "math_only",
+      "pass": true
+    },
+    {
+      "name": "frontier_fixed",
+      "pass": true
+    },
+    {
+      "name": "no_overclaim",
+      "pass": true
+    }
+  ],
+  "mutation_tests_total": 12,
+  "mutation_rejections": 12,
+  "mutations": [
+    {
+      "name": "K_UNDERESTIMATE",
+      "rejected": true
+    },
+    {
+      "name": "RESET_LOWER_TO_HALF",
+      "rejected": true
+    },
+    {
+      "name": "ADVANCE_ACTUAL71",
+      "rejected": true
+    },
+    {
+      "name": "ADVANCE_FRONTIER1370",
+      "rejected": true
+    },
+    {
+      "name": "FORGE_Q_COMPLETE",
+      "rejected": true
+    },
+    {
+      "name": "SOURCE_RESET",
+      "rejected": true
+    },
+    {
+      "name": "WRONG_H_ROLE",
+      "rejected": true
+    },
+    {
+      "name": "WRONG_EPS",
+      "rejected": true
+    },
+    {
+      "name": "FORGE_CONTROL",
+      "rejected": true
+    },
+    {
+      "name": "L_UPPER_FACE_FAIL",
+      "rejected": true
+    },
+    {
+      "name": "R_THERMAL_FAIL",
+      "rejected": true
+    },
+    {
+      "name": "OVERCLAIM_ACTUAL_CELL",
+      "rejected": true
+    }
+  ],
+  "independence_note": "Producer-free verifier reads serialized result/parent/guard only. K/control/hmin checks use Python Fraction exact arithmetic; it does not import or execute the producer or Bubbleverse interval modules. Primary exp path is non-limiting; acceptance is independently covered by the exact rational control lower, which is smaller and determines hmin.",
+  "validated_utc": "2026-10-16T04:40:11.514271+00:00",
+  "elapsed_seconds": 0.0725045560000126,
+  "python": "3.13.5"
+}
