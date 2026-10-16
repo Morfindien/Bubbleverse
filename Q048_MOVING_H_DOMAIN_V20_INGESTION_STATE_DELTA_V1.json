@@ -1,0 +1,171 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_V20_INGESTION_STATE_DELTA_V1",
+  "receipt_id": "LOCAL-Q048-MOVING-H-DOMAIN-V20-INGESTION-RECEIPT-V1",
+  "created_at_utc": "2026-10-16T06:45:02.394479+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_lifecycle": "ACTIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "origin_result_id": "LOCAL-Q048-POST-V19-MOVING-H-DOMAIN-V20",
+  "origin_task_id": "LOCAL-Q048-POST-V19-MOVING-H-DOMAIN-1360-1350-MATH-V1",
+  "origin_hashes": {
+    "raw": "8cb670e447919c1a2db93b2b81aa92ad6b8489ae19f27f4092df810e00769684",
+    "validation": "0597d73dbe1558e88820b9b0552957420d6cf1ca971b0ed0622a323ea252e47c",
+    "accepted_checkpoint": "13bb7d324a5250b9fc2e592aad370a40b89338b0ea6a379219ab22378bc6440e",
+    "candidate_checkpoint": "98bc848364eb3312f60e472d9b695c1e656a94f5afd005738dac4a06e72e05d0",
+    "result_markdown": "81b43d04ede3ad660a00a1579939adba5a8f988efccc6f3198cc4f3574244988",
+    "journal_append": "77d9b092a141e39cc17943405183194062d43b4371f972a2109e5b6cd840874a",
+    "complete_v20_journal": "47132f0a6050fbe521641dfbd6eb77aa2cb6ef1ad23455717cdf15e809ddd6c9",
+    "origin_output_manifest": "89b032094a50c5e3898b9461e281458e0d58347ad9a83aa9e4a9cacee97c9464"
+  },
+  "classification": {
+    "result_class": "MATHEMATICAL_RESULT",
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED",
+    "reproducibility": "NOT_ASSESSED_BY_NEW_RERUN",
+    "robustness": "VALIDATED_WITH_RECORDED_CONTROLS",
+    "scientific_effect": "SUPPORTS_PARTIAL_PROOF_DOMAIN_ONLY",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "before": {
+    "actual_paired_cells": 72,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1360
+    }
+  },
+  "after": {
+    "case_lifecycle": "ACTIVE",
+    "epistemic_status": "INCONCLUSIVE",
+    "actual_paired_cells": 72,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1360
+    },
+    "validated_math_proof_cell": [
+      1360,
+      1350
+    ],
+    "q_complete": false,
+    "native_P6": "UNRESOLVED",
+    "selected_next_engine": "BUBBLEVERSE.EXECUTION_HPC_BUILDER 2.2.0",
+    "next_task": "LOCAL-Q048-POST-V20-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1"
+  },
+  "repository_observation": {
+    "head": "ba986110e8fadb6ecfcd5581e61e5b43e102c61a",
+    "v20_present_by_latest_commit": [
+      "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V20_APPENDED_V1-1.md",
+      "Q048_MOVING_H_DOMAIN_V20_FILES-1.md",
+      "Q048_MOVING_H_DOMAIN_V20_GITHUB_MEMORY_UPDATE.json",
+      "Q048_MOVING_H_DOMAIN_V20_HANDOFF_TO_INGESTION.md",
+      "Q048_MOVING_H_DOMAIN_V20_JOURNAL_APPEND-1.md",
+      "Q048_MOVING_H_DOMAIN_V20_RESULT-1.md",
+      "Q048_MOVING_H_DOMAIN_V20_UPLOAD_INSTRUCTIONS.md",
+      "q048_moving_h_domain_accepted_checkpoint_v20.json",
+      "q048_moving_h_domain_output_manifest_v20.json",
+      "q048_moving_h_domain_result_v20.json",
+      "q048_moving_h_domain_validation_v20.json"
+    ],
+    "v20_support_missing_at_latest_commit": [
+      "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V20.md",
+      "q048_moving_h_domain_candidate_checkpoint_v20.json",
+      "q048_moving_h_domain_evidence_manifest_v20.json",
+      "q048_moving_h_domain_execution_diagnostic_v20.json",
+      "q048_moving_h_domain_execution_v20.log",
+      "q048_moving_h_domain_run_manifest_v20.json",
+      "q048_moving_h_domain_spec_v20.json",
+      "q048_moving_h_domain_v20.py",
+      "q048_moving_h_domain_validation_v20.log",
+      "q048_moving_h_domain_verify_v20.py"
+    ],
+    "canonical_names_observed_only_as_suffixed_aliases": [
+      "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V20_APPENDED_V1.md",
+      "Q048_MOVING_H_DOMAIN_V20_FILES.md",
+      "Q048_MOVING_H_DOMAIN_V20_JOURNAL_APPEND.md",
+      "Q048_MOVING_H_DOMAIN_V20_RESULT.md"
+    ],
+    "note": "Scientific intake uses supplied local exact bytes; repository naming/presence gaps require append-only reconciliation but do not invalidate the hash-bound V20 result."
+  },
+  "proposed_new_paths": [
+    {
+      "path": "Q048_MOVING_H_DOMAIN_V20_INGESTION_RESULT_V1.md",
+      "role": "ingestion output",
+      "operation": "ADD"
+    },
+    {
+      "path": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V20_INGESTED_V1.md",
+      "role": "ingestion output",
+      "operation": "ADD"
+    },
+    {
+      "path": "Q048_MOVING_H_DOMAIN_V20_INGESTION_STATE_DELTA_V1.json",
+      "role": "ingestion output",
+      "operation": "ADD"
+    },
+    {
+      "path": "Q048_MOVING_H_DOMAIN_V20_NEXT_BUILDER_TASK_V1.json",
+      "role": "ingestion output",
+      "operation": "ADD"
+    },
+    {
+      "path": "Q048_MOVING_H_DOMAIN_V20_INGESTION_HANDOFF_TO_BUILDER_V1.md",
+      "role": "ingestion output",
+      "operation": "ADD"
+    },
+    {
+      "path": "Q048_MOVING_H_DOMAIN_V20_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "role": "ingestion output",
+      "operation": "ADD"
+    },
+    {
+      "path": "Q048_MOVING_H_DOMAIN_V20_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+      "role": "ingestion output",
+      "operation": "ADD"
+    },
+    {
+      "path": "Q048_MOVING_H_DOMAIN_V20_INGESTION_UPLOAD_INSTRUCTIONS_V1.md",
+      "role": "ingestion output",
+      "operation": "ADD"
+    },
+    {
+      "path": "Q048_MOVING_H_DOMAIN_V20_INGESTION_FILES_V1.md",
+      "role": "ingestion output",
+      "operation": "ADD"
+    },
+    {
+      "path": "Q048_MOVING_H_DOMAIN_V20_INGESTION_OUTPUT_MANIFEST_V1.json",
+      "role": "ingestion output",
+      "operation": "ADD"
+    }
+  ],
+  "journal_update": {
+    "new_complete_version": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V20_INGESTED_V1.md",
+    "parent_journal": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V20_APPENDED_V1.md",
+    "parent_sha256": "47132f0a6050fbe521641dfbd6eb77aa2cb6ef1ad23455717cdf15e809ddd6c9",
+    "preservation": "Exact parent bytes retained as prefix; one ingestion receipt appended."
+  },
+  "route_update": {
+    "completed_event": "LOCAL-Q048-MOVING-H-DOMAIN-V20-INGESTION-RECEIPT-V1",
+    "next_engine": "BUBBLEVERSE.EXECUTION_HPC_BUILDER 2.2.0",
+    "next_task_id": "LOCAL-Q048-POST-V20-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+    "task_fingerprint": "44e203623d1c8f9f61121e7ea8b39a8299f90a024372b265968d2844445fa70e",
+    "dispatch_status": "PREPARED_NOT_DISPATCHED"
+  },
+  "claims_changed": [
+    "Validated mathematical proof-domain coverage now includes1360→1350."
+  ],
+  "claims_unchanged": [
+    "Actual paired-frec count remains72/frontier1360 until separate consumer validation.",
+    "Q048 remains ACTIVE/INCONCLUSIVE.",
+    "No native P6 qualification, physical falsification, accepted-model change, Motor14 route or Q049+ access."
+  ],
+  "current_state_pointer": {
+    "update_performed": false,
+    "reason": "No write was attempted; reconcile V20 repository aliases/missing support and ingestion outputs before mutable pointer changes."
+  }
+}
