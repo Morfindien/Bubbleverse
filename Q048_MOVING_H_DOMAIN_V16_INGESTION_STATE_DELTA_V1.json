@@ -1,0 +1,104 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_V16_INGESTION_STATE_DELTA_V1",
+  "receipt_id": "LOCAL-Q048-MOVING-H-DOMAIN-V16-INGESTION-RECEIPT-V1",
+  "created_at_utc": "2026-10-16T05:18:51.294435+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_lifecycle": "ACTIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "origin_result_id": "LOCAL-Q048-POST-V15-MOVING-H-DOMAIN-V16",
+  "origin_task_id": "LOCAL-Q048-POST-V15-MOVING-H-DOMAIN-1380-1370-MATH-V1",
+  "origin_hashes": {
+    "raw": "73763bb47f0fa39b908cc446ea69143d124d8efc100086cd5e3367e0e50e1bc0",
+    "validation": "e1d74abdd7a40b9bd4e80f8006de155bf1ee55085db8daf0cebbbc1d9e66ff91",
+    "accepted_checkpoint": "2b6f763f8f608b72e9a4aaee625eaad08ca7af0ca6724f4bb9fd49d1e75c03cc",
+    "journal_append": "e731712d0970d445da3e2ecaf7bdd51b3ddbbe41c7dd32902f4abf4270c22bdf",
+    "handoff": "da26815d5277cf5b3f36517b6bdb1c32ff8bfe0fc521603894efffcc6f0200a2",
+    "overlevering": "ea2d30d8c9fd23eed7fc9ef4f2856f2e3678b98a0e251777342b511d1c2695a5"
+  },
+  "classification": {
+    "result_class": "MATHEMATICAL_RESULT",
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED",
+    "reproducibility": "NOT_ASSESSED",
+    "robustness": "ROBUST_WITHIN_TESTED_DOMAIN",
+    "scientific_effect": "NO_MATERIAL_CHANGE_TO_PHYSICAL_Q_ANSWER",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "what_changed": [
+    {
+      "effect": "ADDS",
+      "item": "one validated moving-h mathematical proof-domain cell Hillipop-EDE 1380→1370"
+    },
+    {
+      "effect": "REFINES",
+      "item": "the next actual-consumer domain now has a certified connected lower projection and newly qualified K/source/rate/thermal domain"
+    },
+    {
+      "effect": "LEAVES_UNCHANGED",
+      "item": "actual paired-frec count 70 and Hillipop-EDE actual frontier 1380"
+    },
+    {
+      "effect": "LEAVES_UNCHANGED",
+      "item": "other three actual frontiers 1440, accepted model, native P6 unresolved, Q048 ACTIVE/INCONCLUSIVE"
+    }
+  ],
+  "claim_result_map": [
+    {
+      "claim": "V16 math proof cell 1380→1370 is technically valid within certified domain",
+      "role": "SUPPORTS",
+      "result_sha256": "73763bb47f0fa39b908cc446ea69143d124d8efc100086cd5e3367e0e50e1bc0",
+      "validation_sha256": "e1d74abdd7a40b9bd4e80f8006de155bf1ee55085db8daf0cebbbc1d9e66ff91"
+    },
+    {
+      "claim": "V16 does not itself advance actual paired-frec coverage",
+      "role": "LIMITS",
+      "checkpoint_sha256": "2b6f763f8f608b72e9a4aaee625eaad08ca7af0ca6724f4bb9fd49d1e75c03cc"
+    },
+    {
+      "claim": "Q048 final four-case delta_xe/delta_tau bounds remain unresolved",
+      "role": "LIMITS",
+      "reason": "No actual consumer for 1380→1370 and no complete continuation to accepted z_reio/a=1"
+    }
+  ],
+  "actual_state": {
+    "count": 70,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1380
+    }
+  },
+  "completion_gate": {
+    "satisfied": false,
+    "reason": "Exact Q still lacks complete accepted four-case x_e(z)/tau_T(z) bounds; the V16 result is math-only and actual consumer admission is still required."
+  },
+  "single_material_bottleneck": "ACTUAL_CONSUMER_NOT_YET_RUN_FOR_V16_PROOF_CELL",
+  "selected_next_engine": {
+    "id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "version": "2.2.0",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "reason": "Builder is the verified specialist for genuine paired-frec actual-consumer execution; new V16 proof removes the prior mathematical blocker without repeating V15 work."
+  },
+  "next_task": {
+    "task_id": "LOCAL-Q048-POST-V16-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+    "fingerprint": "e42ef2459d96d319a862aa09a5d92ebe6227840a1ca68606190a287a1ea8002d",
+    "file": "Q048_MOVING_H_DOMAIN_V16_NEXT_BUILDER_TASK_V1.json"
+  },
+  "repository_read": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "verified_head": "f8206311aa6f67b7a446322e1d016defada8c777",
+    "prior_receipt_head": "62e40606d902faa25ec3f79199d9182a5b99c312",
+    "ahead_by": 2,
+    "v16_paths_observed_on_main": true,
+    "source_freshness": "VERIFIED"
+  },
+  "repository_write": {
+    "attempted": false,
+    "status": "USER_UPLOAD_PENDING",
+    "reason": "Historical 403/write restriction and explicit no-unchanged-retry instruction preserved; no verified permission change."
+  }
+}
