@@ -1,0 +1,43 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_manual_contract_check",
+  "version": "V26_INGESTION_V1",
+  "created_at_utc": "2026-10-16T14:52:33.709313+00:00",
+  "method": "MANUAL CONTRACT CHECK + direct SHA-256/JSON/canonical-row checks; no scientific producer/verifier re-execution",
+  "checks_total": 25,
+  "checks_passed": 25,
+  "status": "PASS",
+  "checks": {
+    "source_journal_contains_origin_once": true,
+    "no_prior_receipt": true,
+    "origin_append_exact_tail_once": true,
+    "current_raw_hash": true,
+    "current_validation_hash": true,
+    "current_candidate_hash": true,
+    "accepted_checkpoint_hash": true,
+    "correction_hash": true,
+    "postaccept_hash": true,
+    "corrected_contract_hash": true,
+    "draft_contract_preserved": true,
+    "spec_hash": true,
+    "validation_pass_85_85": true,
+    "mutations_20_20": true,
+    "postaccept_12_12": true,
+    "correction_payload_unchanged": true,
+    "correction_no_producer_replay": true,
+    "parent_v25_chain": true,
+    "guard_v12_chain": true,
+    "primary_row12_hash": true,
+    "control_row12_hash": true,
+    "primary_glues_v25_endpoint": true,
+    "actual_unchanged_75_1330": true,
+    "builder_prompt_hash": true,
+    "next_task_fingerprint_recomputes": true
+  },
+  "science_reexecuted": false,
+  "repository_read": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "b1819ddc2e459a214e80fd450160d3d613867249",
+    "source_freshness": "VERIFIED",
+    "write_performed": false
+  }
+}

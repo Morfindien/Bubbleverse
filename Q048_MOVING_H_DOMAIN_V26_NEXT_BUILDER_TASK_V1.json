@@ -1,0 +1,317 @@
+{
+  "schema_status": "UNVALIDATED_LOCAL_TASK_CONTRACT; Builder must perform compatibility/preflight validation",
+  "task_id": "LOCAL-Q048-POST-V26-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "task_fingerprint": "e88f9bb69725ba71cdfae9eb3c89169759521a1aca69365ed4565ecede471d1e",
+  "fingerprint_method": "SHA256 of canonical JSON of fingerprint_basis, sorted keys and compact separators.",
+  "fingerprint_basis": {
+    "task_type": "SCIENTIFIC_CASE_EXECUTION",
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "engine_version": "2.2.0",
+    "engine_prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "cell_z": [
+      1330,
+      1320
+    ],
+    "cell_a": [
+      "1/1331",
+      "1/1321"
+    ],
+    "parent_actual_checkpoint_sha256": "df16530b9ccb7aa7d2752103b76aa846a1ec9c77fddcf2c0f0ed81c13a3b2e9e",
+    "proof_raw_sha256": "89ffa3bc5e46801169d3a11b5843758904e54a8b629ac0e6dcb7f2f37a30d93b",
+    "proof_validation_sha256": "091a33d8b8b2b8709a5fa8e3fcd46c5fc00b9ff3afc7994ea87f8b7cd407adb2",
+    "proof_accepted_checkpoint_sha256": "fb1050e2e7d02d4d881ea252bcd0fa48701537368db9cd66cd1b186e1f84dbfe",
+    "proof_postaccept_sha256": "111ee7913e57871338bd9a16332ea28af15a121fec43573118247a8939760416",
+    "proof_metadata_correction_sha256": "44be99598708e9bdc1b4eecf810072ab0474b481fd039a3e7224aad5829dde3f",
+    "proof_contract_sha256": "72fa6bebcdf906c32e1d3e0283f4d3cd4a564911373cfdd0ca596b0ff7d0f892",
+    "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_row_sha256": "c1adf02f470649309387d759ed508ef0ef626d00c7ebae57061d8f46e6dd9daa",
+    "guard_control_row_sha256": "9213700f42a13c4ef5365bd7568584acaef2d7255a19f8355b158bffa73fc27c",
+    "max_new_actual_cells": 1,
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0"
+  },
+  "task_type": "SCIENTIFIC_CASE_EXECUTION",
+  "created_at_utc": "2026-10-16T14:52:33.709313+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "origin_result_id": "LOCAL-Q048-POST-V25-MOVING-H-DOMAIN-V26",
+  "parent_ingestion_receipt": "LOCAL-Q048-MOVING-H-DOMAIN-V26-INGESTION-RECEIPT-V1",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "version": "2.2.0",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "verification": "Exact Builder 2.2.0 prompt bytes recovered from Library and SHA-256 verified; no global launcher or program registry installation claimed."
+  },
+  "purpose": "Version and execute exactly one actual paired-frec consumer for Hillipop-EDE 1330→1320 using accepted/corrected V26 proof, accepted V25 actual parent and V12 committed row12. Do not count the math proof as an actual admission.",
+  "case": "hillipop-ede_n3",
+  "cell_z": [
+    1330,
+    1320
+  ],
+  "cell_a": [
+    "1/1331",
+    "1/1321"
+  ],
+  "initial_actual_state": {
+    "total_accepted_paired_cells": 75,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1330
+    },
+    "accepted_checkpoint_sha256": "df16530b9ccb7aa7d2752103b76aa846a1ec9c77fddcf2c0f0ed81c13a3b2e9e",
+    "scalar_endpoint": {
+      "a1": "1/1331",
+      "E_right": "29863893931952388777/200000000000000000",
+      "Y_right": "119382957034292939453/1000000000000000000",
+      "Vbar": "28689157932741129247/1000000000000000000"
+    },
+    "moving_invariant_endpoint": {
+      "a": "1/1331",
+      "lower_projection": "3620985402636757/1000000000000000000",
+      "physical_state_reset": false
+    }
+  },
+  "proof_binding": {
+    "raw_sha256": "89ffa3bc5e46801169d3a11b5843758904e54a8b629ac0e6dcb7f2f37a30d93b",
+    "validation_sha256": "091a33d8b8b2b8709a5fa8e3fcd46c5fc00b9ff3afc7994ea87f8b7cd407adb2",
+    "candidate_checkpoint_sha256": "198f46ec0fc4f1350a38d037df033568e7783a8be24973ff8fb35e76bd2ca952",
+    "accepted_checkpoint_sha256": "fb1050e2e7d02d4d881ea252bcd0fa48701537368db9cd66cd1b186e1f84dbfe",
+    "postaccept_sha256": "111ee7913e57871338bd9a16332ea28af15a121fec43573118247a8939760416",
+    "metadata_correction_sha256": "44be99598708e9bdc1b4eecf810072ab0474b481fd039a3e7224aad5829dde3f",
+    "corrected_contract_sha256": "72fa6bebcdf906c32e1d3e0283f4d3cd4a564911373cfdd0ca596b0ff7d0f892",
+    "preserved_draft_contract_sha256": "f6c79dcba659222bf970686b4a942f536c59ba34e6ae921c31f16bf0f305c277",
+    "spec_sha256": "81f01545349251e6d08c52821b508fc4943dd70ba7d9fcdc6be67a09780a630b",
+    "metadata_revision": "V26-METADATA-REVISION2",
+    "scientific_payload_unchanged": true,
+    "producer_reexecuted_for_correction": false,
+    "status": "PASS_NEW_MOVING_H_DOMAIN_PROOF_CELL",
+    "validation": "PASS85/85;20/20 fast-contract mutation rejections; transition5/5 documented",
+    "postaccept": "PASS12/12",
+    "K_upper": "6116778248889377942413/1000000000000000000",
+    "epsilon": "1/1000000",
+    "initial_lower": "3620985402636757/1000000000000000000",
+    "whole_cell_h_min": "1550450091764323/500000000000000000",
+    "upper_h": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "physical_state_reset": false,
+    "rule": "Consume only the corrected/accepted V26 proof identity. Preserve the pre-correction drafts as history; do not substitute old-cell K/h_min, reset ell to 1/2, or rerun the completed Mathematics producer/verifier."
+  },
+  "guard_binding": {
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "primary_row_index": 12,
+    "primary_row_sha256": "c1adf02f470649309387d759ed508ef0ef626d00c7ebae57061d8f46e6dd9daa",
+    "control_row_index": 12,
+    "control_row_sha256": "9213700f42a13c4ef5365bd7568584acaef2d7255a19f8355b158bffa73fc27c",
+    "primary": {
+      "accepted": true,
+      "committed": true,
+      "a0": "1/1331",
+      "a1": "1/1321",
+      "E_input_left": "29863893931952388777/200000000000000000",
+      "Y_left": "119382957034292939453/1000000000000000000",
+      "V_previous": "28689157932741129247/1000000000000000000",
+      "E_safe_left": "29715379811131181147/200000000000000000",
+      "V_admitted": "13988763885236421343/500000000000000000",
+      "G_lower": "4566406142545651671/500000000000000000",
+      "derivative_lower": "104209334835265703231/1000000000000000000",
+      "E_right": "145558115152839369247/1000000000000000000",
+      "Y_right": "23272834626295280593/200000000000000000"
+    },
+    "control": {
+      "accepted": true,
+      "committed": true,
+      "a0": "1/1331",
+      "a1": "1/1321",
+      "E_input_left": "37590781098790550571/250000000000000000",
+      "Y_left": "7517546821145703999/62500000000000000",
+      "V_previous": "28828942954462982537/1000000000000000000",
+      "E_safe_left": "37406516968152543207/250000000000000000",
+      "V_admitted": "1124903884814024839/40000000000000000",
+      "G_lower": "1010314193572168007/125000000000000000",
+      "derivative_lower": "50565444270598904193/500000000000000000",
+      "E_right": "73318937512098500857/500000000000000000",
+      "Y_right": "11729255628991809287/100000000000000000"
+    },
+    "control_role": "Conservative aligned guard only; never replace the primary actual scalar state."
+  },
+  "candidate_state_if_and_only_if_consumer_validation_passes": {
+    "total_accepted_paired_cells": 76,
+    "hillipop_ede_frontier": 1320,
+    "a1": "1/1321",
+    "E_right": "145558115152839369247/1000000000000000000",
+    "Y_right": "23272834626295280593/200000000000000000",
+    "Vbar_candidate_from_primary_V_admitted": "13988763885236421343/500000000000000000",
+    "moving_invariant_endpoint_lower_projection": "1550450091764323/500000000000000000",
+    "note": "CANDIDATE ONLY: actual76/frontier1320 does not exist in this ingestion."
+  },
+  "acceptance_criteria": [
+    "Exact Q/source/capture, V25 parent, corrected V26 proof/checkpoint/correction and V12 row12 hashes agree; both guard tracks are accepted+committed with positive guards.",
+    "Use V26 metadata revision 2 raw/validation/candidate identities. Preserve metadata_draft_v1 originals but do not consume their stale frontier prose as current scope.",
+    "V26 proof validation is PASS85/85 with20/20 fast-contract mutation rejections, transition5/5 and postaccept12/12; accepted checkpoint must be bound.",
+    "Admit both q branches on the SAME V26-certified source/C/upper-h/thermal domain. Use positive ordinary-background Hs LOWER in the negative-rate comparison; E_safe_left only for thermal upper-H qualification.",
+    "Primary row12 E/Y/V glue exactly to the V25 actual endpoint. Control never replaces primary; no physical or auxiliary reset.",
+    "A separate producer-free actual-consumer verifier must PASS before an accepted actual checkpoint is written; preserve mutation and postaccept evidence.",
+    "Accept exactly one actual cell75→76 and frontier1330→1320 only after validation; all other frontiers remain1440."
+  ],
+  "failure_or_falsification_condition": "Stop at the first exact binding, admission or validation obstruction, keeping actual75/frontier1330 unchanged. A failed sufficient bound is METHOD/EXECUTION_INSUFFICIENCY unless separate evidence establishes a physical contradiction.",
+  "science_budget_seconds": 300,
+  "max_new_actual_cells": 1,
+  "forbidden": [
+    "below1320continuation",
+    "resetto1/2",
+    "oldcellK/h_minsubstitution",
+    "V26Mathproducer/verifierreplay",
+    "V12guardregeneration",
+    "proofcountedasactual",
+    "subdivision/tuningcampaign",
+    "refit/recapture/native/P6/HPC/paidrun",
+    "Q049+",
+    "acceptedmodelpromotion"
+  ],
+  "reuse_guidance": {
+    "prior_consumer_result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V25",
+    "prior_consumer_checkpoint_sha256": "df16530b9ccb7aa7d2752103b76aa846a1ec9c77fddcf2c0f0ed81c13a3b2e9e",
+    "producer_sha256": "e8d80078e3b6be64529ff2d9c816fffe1148e6a2a03fed7735be84135648e8e4",
+    "verifier_sha256": "e8c6757886c155e69aec7b4904963db621d6c9e2b700348f8b17823b1d02ace0",
+    "spec_sha256": "e617cef5dcff7dc8c7cc65383814335e50f52dbc0ee29af4d0e25258ff7cdfcb",
+    "rule": "Inspect and version the V25 implementation. Update ALL parent/proof/row/count/domain/hash/schema/filename pins in producer, verifier and spec. V26 proof uses metadata revision 2 and correction lineage. Parent V25 validation remains98/98+20/20 with transition5/5 and postaccept10/10; V26 proof is85/85+20/20, transition5/5, postaccept12/12. Do not execute historical producers/verifiers."
+  },
+  "compute_backend_preference": "LOCAL_RUNTIME if the complete validated workload estimate fits; no Actions/HPC/paid benefit is evidenced by the prior one-cell consumer.",
+  "return_route": "Return exactly once to Result Ingestion & Routing2.1.0; no automatic continuation.",
+  "input_refs": {
+    "proof_raw": {
+      "filename": "q048_moving_h_domain_result_v26.json",
+      "sha256": "89ffa3bc5e46801169d3a11b5843758904e54a8b629ac0e6dcb7f2f37a30d93b",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000eedc820e8a7c95b82e9a006c"
+    },
+    "proof_validation": {
+      "filename": "q048_moving_h_domain_validation_v26.json",
+      "sha256": "091a33d8b8b2b8709a5fa8e3fcd46c5fc00b9ff3afc7994ea87f8b7cd407adb2",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_0000000018fc8210b845419a01498627"
+    },
+    "proof_candidate": {
+      "filename": "q048_moving_h_domain_candidate_checkpoint_v26.json",
+      "sha256": "198f46ec0fc4f1350a38d037df033568e7783a8be24973ff8fb35e76bd2ca952",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_0000000015788230826d32fb2966f3aa"
+    },
+    "proof_checkpoint": {
+      "filename": "q048_moving_h_domain_accepted_checkpoint_v26.json",
+      "sha256": "fb1050e2e7d02d4d881ea252bcd0fa48701537368db9cd66cd1b186e1f84dbfe",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000f6dc81fd93de8b2778f57733"
+    },
+    "proof_correction": {
+      "filename": "q048_moving_h_domain_metadata_correction_v26.json",
+      "sha256": "44be99598708e9bdc1b4eecf810072ab0474b481fd039a3e7224aad5829dde3f",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000cfc081f8808c976a6d813877"
+    },
+    "proof_postaccept": {
+      "filename": "q048_moving_h_domain_postaccept_validation_v26.json",
+      "sha256": "111ee7913e57871338bd9a16332ea28af15a121fec43573118247a8939760416",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000f300821096493ec0c5f91801"
+    },
+    "proof_spec": {
+      "filename": "q048_moving_h_domain_spec_v26.json",
+      "sha256": "81f01545349251e6d08c52821b508fc4943dd70ba7d9fcdc6be67a09780a630b",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000f71881fdbcdec0f58f6a9059"
+    },
+    "proof_contract": {
+      "filename": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V26.md",
+      "sha256": "72fa6bebcdf906c32e1d3e0283f4d3cd4a564911373cfdd0ca596b0ff7d0f892",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000c50882309de7f11c1b0bc2eb"
+    },
+    "parent_actual_raw": {
+      "filename": "q048_frec_moving_h_result_v25.json",
+      "sha256": "d9b24b0ea9dfa7b254bc3281e19254b46a9ed8c30f8c326b07a9af141f0a16d2",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000e72c81fd9960d7742354d101"
+    },
+    "parent_actual_validation": {
+      "filename": "q048_frec_moving_h_validation_v25.json",
+      "sha256": "734838c8c5d0ea55f6e4490016160eba87310632519bb1a36d2dc5f7c43cc72f",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000585081fd9ffa218ce0a3429d"
+    },
+    "parent_actual_checkpoint": {
+      "filename": "q048_frec_moving_h_accepted_checkpoint_v25.json",
+      "sha256": "df16530b9ccb7aa7d2752103b76aa846a1ec9c77fddcf2c0f0ed81c13a3b2e9e",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_0000000080388230a49b0d51d9d36edf"
+    },
+    "parent_actual_postaccept": {
+      "filename": "q048_frec_moving_h_postaccept_validation_v25.json",
+      "sha256": "e562f8612f971528f2aec3d9c5e6ca42bfe4dbd50a33c063b8a8cb2c78baea62",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000f77081f68572898191496326"
+    },
+    "guard_raw": {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000e6fc81f4b0e1036dd3ffc443"
+    },
+    "guard_validation": {
+      "filename": "q048_guard_local_v_validation_v12.json",
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000992c81fd888870bbe79c0229"
+    },
+    "builder_prompt": {
+      "filename": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0.md",
+      "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000f1d88210a3b9d23ac8424817"
+    },
+    "consumer_pattern": {
+      "filename": "q048_frec_moving_h_v25.py",
+      "sha256": "e8d80078e3b6be64529ff2d9c816fffe1148e6a2a03fed7735be84135648e8e4",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_00000000d92881fdad7f3a304aa7866b"
+    },
+    "verifier_pattern": {
+      "filename": "q048_frec_moving_h_verify_v25.py",
+      "sha256": "e8c6757886c155e69aec7b4904963db621d6c9e2b700348f8b17823b1d02ace0",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_000000001f8481fda87d56168c6ab82e"
+    },
+    "spec_pattern": {
+      "filename": "q048_frec_moving_h_spec_v25.json",
+      "sha256": "e617cef5dcff7dc8c7cc65383814335e50f52dbc0ee29af4d0e25258ff7cdfcb",
+      "access": "VERIFIED_LIBRARY_BYTES",
+      "library_file_id": "file_000000000a1481f59c711eb8b0439924"
+    }
+  },
+  "expected_outputs": [
+    "Versioned V27 one-cell consumer/spec and producer-free verifier",
+    "Raw actual-consumer result",
+    "Candidate checkpoint",
+    "Validation and mutation evidence",
+    "Accepted actual checkpoint only after PASS",
+    "Postaccept audit",
+    "Full appended journal, run manifest and return handoff"
+  ],
+  "stop_condition": "Stop at one independently validated actual cell OR the first exact obstruction OR300s executed science, then return once. No automatic continuation."
+}
