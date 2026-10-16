@@ -1,0 +1,34 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_EXECUTION_DIAGNOSTIC_V18",
+  "q": "Q048",
+  "task_id": "LOCAL-Q048-POST-V17-MOVING-H-DOMAIN-1370-1360-MATH-V1",
+  "final_result_sha256": "fcbe51cee49799c2126806a8e25776861ad1ff16cde7b6b93651a8930e522e64",
+  "final_validation_sha256": "e968009f0ad717f333821d1d0f08fcc1bb6744d76bb831cf040d3ed1ba12f88c",
+  "events": [
+    {
+      "order": 1,
+      "type": "PRODUCER_LOGGING_FAILURE_AFTER_RESULT_SERIALIZATION",
+      "detail": "Diagnostic print treated interval beta as a mapping; science result/candidate files had already serialized. No scientific obstruction inferred.",
+      "action": "Changed logging conversion only and reran same frozen producer."
+    },
+    {
+      "order": 2,
+      "type": "PRODUCER_LOGGING_SERIALIZATION_FAILURE_AFTER_RESULT_SERIALIZATION",
+      "detail": "Diagnostic JSON print still contained a Fraction in thermal margin. No mathematical input/method changed.",
+      "action": "Stringified logging-only field and reran same frozen producer."
+    },
+    {
+      "order": 3,
+      "type": "VERIFIER_SCHEMA_CHECK_DEFECT",
+      "detail": "Verifier referenced retained_frontiers field absent from the local spec.",
+      "action": "Changed verifier to use actual_count_must_remain/actual_frontier_must_remain; producer result unchanged."
+    },
+    {
+      "order": 4,
+      "type": "VERIFIER_MUTATION_CONTRACT_GAP",
+      "detail": "All 77 substantive checks passed, but first mutation sweep rejected 19/20 because the fast mutation contract omitted explicit thermal-face margin checking.",
+      "action": "Added thermal-face margin to mutation contract; final verifier passed 77/77 and rejected 20/20."
+    }
+  ],
+  "interpretation": "These are implementation/validation diagnostics, not independent science and not physical evidence. Final accepted result is the last producer output bound to the final PASS validation."
+}

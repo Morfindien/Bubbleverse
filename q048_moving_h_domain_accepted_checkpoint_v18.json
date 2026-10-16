@@ -1,0 +1,62 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_ACCEPTED_CHECKPOINT_V18",
+  "q": "Q048",
+  "target_q": "Q048",
+  "source_result": "q048_moving_h_domain_result_v18.json",
+  "source_result_sha256": "fcbe51cee49799c2126806a8e25776861ad1ff16cde7b6b93651a8930e522e64",
+  "validation": "q048_moving_h_domain_validation_v18.json",
+  "validation_sha256": "e968009f0ad717f333821d1d0f08fcc1bb6744d76bb831cf040d3ed1ba12f88c",
+  "candidate_checkpoint_sha256": "a94beb5261698dc785a15ca5a5cc2cb3cd919b9038e872e322487caf4d96c6e7",
+  "validation_state": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION",
+  "technical_state": "PASS",
+  "checks": "77/77",
+  "mutation_rejections": "20/20",
+  "proof_cell_a": [
+    "1/1371",
+    "1/1361"
+  ],
+  "proof_cell_z": [
+    1370,
+    1360
+  ],
+  "parent_actual_checkpoint_sha256": "20eedde76e12d8337d2856264abb2a1c9de4d5e11930a697ed06d0080889c2ce",
+  "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "guard_primary_row_sha256": "dc4ac3a9307655b19e6866df2de3db3a611d5ad125ac6b017069ee237977c2c1",
+  "guard_control_row_sha256": "448b4c843f69190fe64371a032c8f189ccd372a4e3a6fc441937eab4fe53dc89",
+  "comparison": {
+    "kind": "COMMON_EPS_SOURCE_SIGN_RICCATI_CONTINUATION",
+    "parent_endpoint_a": "1/1371",
+    "parent_lower_projection": "10774707685364977/1000000000000000000",
+    "K_upper": "153909731601391365359/25000000000000000",
+    "epsilon": "1/1000000",
+    "endpoint_primary_lower": "7252469004803282520723291065082380162887353789830422904376856779429346055262636027169108800336938529481477815982510627/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "endpoint_control_lower": "36659284567086396270086863058899730368257/5060832367937972413136941100269631743000000",
+    "whole_cell_h_min": "3621863154303919/500000000000000000",
+    "upper_h": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "physical_state_reset": false
+  },
+  "actual_state_unchanged": {
+    "total_actual_paired_cells": 71,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1370
+    },
+    "actual_scalar_endpoint": {
+      "a1": "1/1371",
+      "E_right": "82527736379536298057/500000000000000000",
+      "Y_right": "66007103382050520379/500000000000000000",
+      "Vbar": "1979034161157150451/62500000000000000"
+    }
+  },
+  "new_math_proof_cells": 1,
+  "new_actual_paired_cells": 0,
+  "q_complete": false,
+  "native_P6": "UNRESOLVED",
+  "resume_rule": "Return exactly once to Result Ingestion & Routing Engine 2.1.0. Ingest V18 once without changing actual count/frontier. Any later actual consumer for 1370→1360 must bind this accepted V18 proof plus V12 row8 and require independent validation; no automatic dispatch."
+}
