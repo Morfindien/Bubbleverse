@@ -1,0 +1,106 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-MOVING-H-DOMAIN-V28-INGESTION-HANDOFF-V1",
+  "created_at_utc": "2026-10-16T16:22:26+00:00",
+  "case_id": "NOT_ASSIGNED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": "TARGET_Q Q048; no Q049+ scientific content",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-POST-V27-MOVING-H-DOMAIN-V28"
+  ],
+  "source_state_version": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V28_APPENDED_V1",
+  "target_state_version": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V28_INGESTED_V1",
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER 2.2.0",
+  "engine_registry_ref": {
+    "evidence": "verified Builder prompt bytes in Library + prior journal architecture",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "launcher": "NOT_VERIFIED"
+  },
+  "execution_profile_ref": "GENERAL REASONING ingestion complete; Builder execution should use reasoning + local Python preflight and separate verifier",
+  "journal_ref": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V28_INGESTED_V1.md",
+  "source_register_ref": "preserved in complete journal",
+  "claim_evidence_map_ref": "preserved in complete journal + Q048_MOVING_H_DOMAIN_V28_INGESTION_STATE_DELTA_V1.json",
+  "result_provenance_ref": "Q048_MOVING_H_DOMAIN_V28_INGESTION_RECEIPT_V1.json",
+  "anomaly_tension_registry_ref": "preserved in complete journal",
+  "completed_task_ledger_ref": "preserved journal + state delta",
+  "route_history_ref": "preserved journal + state delta",
+  "integrity_manifest_ref": "Q048_MOVING_H_DOMAIN_V28_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "V28 proofcell1320→1310 ingested once",
+    "active bottleneck moves to one actual consumer1320→1310",
+    "no actual state advancement during ingestion",
+    "repository V28 origin sync observed PARTIAL; missing raw/candidate recovered into evidence package"
+  ],
+  "frozen_configuration_refs": [
+    "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+    "405462169669a6f81440b934dc61cffa26ed3f27778a4a4c991e4f05b5cb648b",
+    "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+  ],
+  "open_material_uncertainties": [
+    "complete four-case Δx_e(z) histories absent",
+    "cumulative observer-normalized Δtau_T bounds absent",
+    "Native P6 unresolved",
+    "proofcell has not yet been consumed as an actual cell"
+  ],
+  "missing_information": [],
+  "next_task": "LOCAL-Q048-POST-V28-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "success_condition": "one independently validated actual paired-frec cell1320→1310; actual76→77/frontier1310 only after PASS",
+  "failure_or_falsification_condition": "first exact binding/admission/validation obstruction; preserve76/1320",
+  "stop_condition": "one accepted actual cell OR first obstruction OR300s executed science; no below1310 continuation",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "complete four-case histories and cumulative optical-depth difference bounds remain absent",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "No new approval required for bounded reversible one-cell task; no model promotion/Q049+/paid compute authorized.",
+  "output_file_refs": [
+    "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V28_INGESTED_V1.md",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_RESULT_V1.md",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_HANDOFF_TO_BUILDER_V1.md",
+    "Q048_MOVING_H_DOMAIN_V28_NEXT_BUILDER_TASK_V1.json",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_RECEIPT_V1.json",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_STATE_DELTA_V1.json",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_JOURNAL_APPEND_V1.md",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_HANDOFF_ENVELOPE_V1.json",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_VALIDATION_V1.json",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_UPLOAD_INSTRUCTIONS_V1.md",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "Q048_MOVING_H_DOMAIN_V28_INGESTION_FILES_V1.md"
+  ],
+  "output_manifest_ref": "Q048_MOVING_H_DOMAIN_V28_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "main",
+    "base_commit_sha": "ef75d9442a7b5f020ad25578524464fe8e96287f",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V28_INGESTED_V1.md",
+    "current_state_path": null,
+    "index_refs": [
+      "Q048_MOVING_H_DOMAIN_V28_INGESTION_STATE_DELTA_V1.json"
+    ],
+    "cross_reference_refs": [
+      "Q048_MOVING_H_DOMAIN_V28_INGESTION_RECEIPT_V1.json",
+      "LOCAL-Q048-POST-V28-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1"
+    ],
+    "memory_update_ref": "Q048_MOVING_H_DOMAIN_V28_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+    "target_paths_status": "PROPOSED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_MOVING_H_DOMAIN_V28_INGESTION_UPLOAD_INSTRUCTIONS_V1.md"
+  }
+}

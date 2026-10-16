@@ -1,0 +1,290 @@
+{
+  "schema_status": "UNVALIDATED_LOCAL_TASK_CONTRACT; Builder must perform compatibility/preflight validation",
+  "task_id": "LOCAL-Q048-POST-V28-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "task_fingerprint": "b3107127230c0962d1a4293c313c6f4b088a7ab9a0901c9b29999d0ec7243c11",
+  "fingerprint_method": "SHA256 of canonical JSON of fingerprint_basis, sorted keys and compact separators.",
+  "fingerprint_basis": {
+    "task_type": "SCIENTIFIC_CASE_EXECUTION",
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "engine_version": "2.2.0",
+    "engine_prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "cell_z": [
+      1320,
+      1310
+    ],
+    "cell_a": [
+      "1/1321",
+      "1/1311"
+    ],
+    "parent_actual_checkpoint_sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+    "proof_raw_sha256": "2447b554c7c68a94988c7dc5524eaf5418e09451e3db6c79e834eb7a2b7821b9",
+    "proof_validation_sha256": "98af01e0b9966e3f52a375a0f3691f716903793bea99d161f088d9bd5013fd9e",
+    "proof_candidate_checkpoint_sha256": "707f24df3fc36c3a5200ca9ebdfd553b6055b5319358f6f11e0fd59055df57ba",
+    "proof_accepted_checkpoint_sha256": "405462169669a6f81440b934dc61cffa26ed3f27778a4a4c991e4f05b5cb648b",
+    "proof_postaccept_sha256": "7c0993cff66c5930030c978e5698becb198a81883446003edf034dc04c9c72ec",
+    "proof_transition_sha256": "1a2f37b3ebdfaf8aa36aa9b262e56c5e323df79688ab9dd208cc373c072f3e3c",
+    "proof_spec_sha256": "e413848a72aed13e14374abb3bbffadf36cdb5da8e693813dab38db27ceab6d2",
+    "proof_contract_sha256": "4026c200425f622d682dfbfaef701c65e14078188d2e5110e4a35acdede8b3c6",
+    "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_row_sha256": "c3fe09a8da35ebddf82e904a0d5a203d794fab908701b352efaa7a43764c5eb6",
+    "guard_control_row_sha256": "d143be5b31a329597c6d10cf4761be49c0514f510bc43981ec8a9fcf29b6e4d0",
+    "max_new_actual_cells": 1,
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0"
+  },
+  "task_type": "SCIENTIFIC_CASE_EXECUTION",
+  "created_at_utc": "2026-10-16T16:22:26+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "origin_result_id": "LOCAL-Q048-POST-V27-MOVING-H-DOMAIN-V28",
+  "parent_ingestion_receipt": "LOCAL-Q048-MOVING-H-DOMAIN-V28-INGESTION-RECEIPT-V1",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "version": "2.2.0",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "verification": "Exact Builder 2.2.0 prompt bytes recovered from Library and SHA-256 verified; no global launcher or program registry installation claimed."
+  },
+  "purpose": "Version and execute exactly one actual paired-frec consumer for Hillipop-EDE 1320→1310 using accepted V28 proof, accepted V27 actual parent and V12 committed row13. Do not count the math proof as an actual admission.",
+  "case": "hillipop-ede_n3",
+  "cell_z": [
+    1320,
+    1310
+  ],
+  "cell_a": [
+    "1/1321",
+    "1/1311"
+  ],
+  "initial_actual_state": {
+    "total_accepted_paired_cells": 76,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1320
+    },
+    "accepted_checkpoint_sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+    "scalar_endpoint": {
+      "a1": "1/1321",
+      "E_right": "145558115152839369247/1000000000000000000",
+      "Y_right": "23272834626295280593/200000000000000000",
+      "Vbar": "13988763885236421343/500000000000000000"
+    },
+    "moving_invariant_endpoint": {
+      "a": "1/1321",
+      "lower_projection": "1550450091764323/500000000000000000",
+      "physical_state_reset": false
+    }
+  },
+  "proof_binding": {
+    "raw_sha256": "2447b554c7c68a94988c7dc5524eaf5418e09451e3db6c79e834eb7a2b7821b9",
+    "validation_sha256": "98af01e0b9966e3f52a375a0f3691f716903793bea99d161f088d9bd5013fd9e",
+    "candidate_checkpoint_sha256": "707f24df3fc36c3a5200ca9ebdfd553b6055b5319358f6f11e0fd59055df57ba",
+    "accepted_checkpoint_sha256": "405462169669a6f81440b934dc61cffa26ed3f27778a4a4c991e4f05b5cb648b",
+    "postaccept_sha256": "7c0993cff66c5930030c978e5698becb198a81883446003edf034dc04c9c72ec",
+    "transition_sha256": "1a2f37b3ebdfaf8aa36aa9b262e56c5e323df79688ab9dd208cc373c072f3e3c",
+    "spec_sha256": "e413848a72aed13e14374abb3bbffadf36cdb5da8e693813dab38db27ceab6d2",
+    "contract_sha256": "4026c200425f622d682dfbfaef701c65e14078188d2e5110e4a35acdede8b3c6",
+    "package_validation_sha256": "388ab901e8c95a6a6d50285e8386a3c4557c5e6ba954eebae5171e653266aa2a",
+    "status": "PASS_NEW_MOVING_H_DOMAIN_PROOF_CELL",
+    "validation": "PASS82/82;20/20 semantic mutation rejections; transition5/5",
+    "postaccept": "PASS13/13",
+    "package_audit": "PASS31/31",
+    "K_upper": "3027395738921693080237/500000000000000000",
+    "epsilon": "1/1000000",
+    "initial_lower": "1550450091764323/500000000000000000",
+    "whole_cell_h_min": "169519772393333/62500000000000000",
+    "physical_state_reset": false,
+    "new_math_proof_cells": 1,
+    "new_actual_paired_cells": 0
+  },
+  "guard_binding": {
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "row_index": 13,
+    "primary_row_sha256": "c3fe09a8da35ebddf82e904a0d5a203d794fab908701b352efaa7a43764c5eb6",
+    "control_row_sha256": "d143be5b31a329597c6d10cf4761be49c0514f510bc43981ec8a9fcf29b6e4d0",
+    "primary": {
+      "a0": "1/1321",
+      "a1": "1/1311",
+      "z0": 1320,
+      "z1": 1310,
+      "E_input_left": "145558115152839369247/1000000000000000000",
+      "Y_left": "23272834626295280593/200000000000000000",
+      "V_previous": "13988763885236421343/500000000000000000",
+      "E_safe_left": "72414355119950140891/500000000000000000",
+      "V_admitted": "27278514728906217199/1000000000000000000",
+      "G_lower": "9025376845467635547/1000000000000000000",
+      "derivative_lower": "50877805072724838137/500000000000000000",
+      "E_right": "70932185071436793743/500000000000000000",
+      "Y_right": "113399833034449708669/1000000000000000000",
+      "accepted": true,
+      "committed": true
+    },
+    "control_role": "CONSERVATIVE_ALIGNED_GUARD_TRACK_NOT_PRIMARY_ACTUAL_STATE",
+    "rule": "Primary is the scalar track and glues exactly to V27 actual endpoint; control remains guard evidence only."
+  },
+  "candidate_after_success": {
+    "total_accepted_paired_cells": 77,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1310
+    },
+    "scalar_endpoint_expected_from_row13_primary": {
+      "a1": "1/1311",
+      "E_right": "70932185071436793743/500000000000000000",
+      "Y_right": "113399833034449708669/1000000000000000000",
+      "Vbar": "27278514728906217199/1000000000000000000"
+    },
+    "moving_lower_expected_conservative": "169519772393333/62500000000000000",
+    "status": "CANDIDATE_ONLY_UNTIL_SEPARATE_CONSUMER_VERIFIER_PASS"
+  },
+  "requirements": [
+    "Preflight exact Q/TARGET_Q/source/capture and task fingerprint before science.",
+    "Start from accepted V27 actual76/frontier1320 checkpoint; do not count V28 math proof as actual.",
+    "Consume exactly the V28 proof-domain cell1320→1310 and V12 committed row13 primary/control; primary must glue to V27 actual scalar endpoint.",
+    "Reevaluate source/background/atomic/C/upper-h/thermal consumer binding on the same V28 domain for both q_L=1e-6 and q_R=0.",
+    "Preserve inherited connected lower; no physical reset to1/2 and no substitution of V26 K/h_min.",
+    "A separate producer-free actual-consumer verifier must PASS before writing an accepted actual checkpoint.",
+    "Accept exactly one actual cell76→77 and frontier1320→1310 only after validation; all other frontiers remain1440."
+  ],
+  "success_condition": "Separate consumer + producer-free verifier accepts both q branches on the V28-certified source/C/upper-h/thermal domain, writes one accepted actual checkpoint, and updates only Hillipop-EDE 76→77/frontier1320→1310.",
+  "failure_or_falsification_condition": "Stop at the first exact binding, admission or validation obstruction, keeping actual76/frontier1320 unchanged. A failed sufficient bound is METHOD/EXECUTION_INSUFFICIENCY unless separate evidence establishes a physical contradiction.",
+  "science_budget_seconds": 300,
+  "max_new_actual_cells": 1,
+  "forbidden": [
+    "below1310continuation",
+    "resetto1/2",
+    "V26_oldcellK/h_minsubstitution",
+    "V28Mathproducer/verifierreplay",
+    "V12guardregeneration",
+    "proofcountedasactual",
+    "subdivision/tuningcampaign",
+    "refit/recapture/native/P6/HPC/paidrun",
+    "Q049+",
+    "acceptedmodelpromotion"
+  ],
+  "reuse_guidance": {
+    "prior_consumer_result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V27",
+    "prior_consumer_checkpoint_sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+    "producer_sha256": "158c9030801cdb48d7593eb41d460838d6ddcaced19c1d5b7ec5fe93874f1b6d",
+    "verifier_sha256": "f87492fb3baf51e8edfe65dd5969b82250d81f45b28073426d9f3d3283ff72b8",
+    "spec_sha256": "c5439742a62e56fe9ccd834692af845bacc6546d46c44809220d497eaffe97ed",
+    "rule": "Inspect and version the V27 implementation. Update ALL parent/proof/row/count/domain/hash/schema/filename pins in producer, verifier and spec. V28 proof is82/82+20/20, transition5/5, postaccept13/13, package31/31. Do not execute historical producers/verifiers."
+  },
+  "compute_backend_preference": "LOCAL_RUNTIME if preflight confirms the bounded one-cell workload; prior V27 consumer and V28 proof do not justify Actions/HPC/paid compute.",
+  "return_route": "Return exactly once to Result Ingestion & Routing2.1.0; no automatic continuation.",
+  "input_refs": {
+    "proof_raw": {
+      "filename": "evidence/q048_moving_h_domain_result_v28.json",
+      "sha256": "2447b554c7c68a94988c7dc5524eaf5418e09451e3db6c79e834eb7a2b7821b9",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES; origin raw currently missing from repository main"
+    },
+    "proof_validation": {
+      "filename": "evidence/q048_moving_h_domain_validation_v28.json",
+      "sha256": "98af01e0b9966e3f52a375a0f3691f716903793bea99d161f088d9bd5013fd9e",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES + VERIFIED_REPOSITORY"
+    },
+    "proof_candidate": {
+      "filename": "evidence/q048_moving_h_domain_candidate_checkpoint_v28.json",
+      "sha256": "707f24df3fc36c3a5200ca9ebdfd553b6055b5319358f6f11e0fd59055df57ba",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES; origin candidate currently missing from repository main"
+    },
+    "proof_checkpoint": {
+      "filename": "evidence/q048_moving_h_domain_accepted_checkpoint_v28.json",
+      "sha256": "405462169669a6f81440b934dc61cffa26ed3f27778a4a4c991e4f05b5cb648b",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES + VERIFIED_REPOSITORY"
+    },
+    "proof_postaccept": {
+      "filename": "evidence/q048_moving_h_domain_postaccept_validation_v28.json",
+      "sha256": "7c0993cff66c5930030c978e5698becb198a81883446003edf034dc04c9c72ec",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES + VERIFIED_REPOSITORY"
+    },
+    "proof_transition": {
+      "filename": "evidence/q048_moving_h_domain_transition_validation_v28.json",
+      "sha256": "1a2f37b3ebdfaf8aa36aa9b262e56c5e323df79688ab9dd208cc373c072f3e3c",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES + VERIFIED_REPOSITORY"
+    },
+    "proof_spec": {
+      "filename": "evidence/q048_moving_h_domain_spec_v28.json",
+      "sha256": "e413848a72aed13e14374abb3bbffadf36cdb5da8e693813dab38db27ceab6d2",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES + VERIFIED_REPOSITORY"
+    },
+    "proof_contract": {
+      "filename": "evidence/Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V28.md",
+      "sha256": "4026c200425f622d682dfbfaef701c65e14078188d2e5110e4a35acdede8b3c6",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES; repository copy exists under suffixed upload name"
+    },
+    "parent_actual_raw": {
+      "filename": "q048_frec_moving_h_result_v27.json",
+      "sha256": "e128b3ab5b0ad9e7ab1d861d35b0d3e35f45e3a2da07c128fc09f34c10516d38",
+      "access": "VERIFIED_REPOSITORY_AND_LOCAL_RUNTIME"
+    },
+    "parent_actual_validation": {
+      "filename": "q048_frec_moving_h_validation_v27.json",
+      "sha256": "0dbc7a848183d0cc24a4fcad14fdcd3d2da58c8281afeab787c3657553c6ba11",
+      "access": "VERIFIED_REPOSITORY_AND_LOCAL_RUNTIME"
+    },
+    "parent_actual_checkpoint": {
+      "filename": "q048_frec_moving_h_accepted_checkpoint_v27.json",
+      "sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+      "access": "VERIFIED_REPOSITORY_AND_LOCAL_RUNTIME"
+    },
+    "parent_actual_postaccept": {
+      "filename": "q048_frec_moving_h_postaccept_validation_v27.json",
+      "sha256": "5b547abe533a8e0893019bfa9ba1f7fcaf69a1425688386c2bfc64b24141b1e3",
+      "access": "VERIFIED_REPOSITORY_AND_LOCAL_RUNTIME"
+    },
+    "guard_raw": {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "access": "VERIFIED_RETAINED_PROJECT_EVIDENCE"
+    },
+    "guard_validation": {
+      "filename": "q048_guard_local_v_validation_v12.json",
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+      "access": "VERIFIED_RETAINED_PROJECT_EVIDENCE"
+    },
+    "builder_prompt": {
+      "filename": "evidence/Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0.md",
+      "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+      "access": "PACKAGED_VERIFIED_LIBRARY_BYTES"
+    },
+    "consumer_pattern": {
+      "filename": "evidence/q048_frec_moving_h_v27.py",
+      "sha256": "158c9030801cdb48d7593eb41d460838d6ddcaced19c1d5b7ec5fe93874f1b6d",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES"
+    },
+    "verifier_pattern": {
+      "filename": "evidence/q048_frec_moving_h_verify_v27.py",
+      "sha256": "f87492fb3baf51e8edfe65dd5969b82250d81f45b28073426d9f3d3283ff72b8",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES"
+    },
+    "spec_pattern": {
+      "filename": "evidence/q048_frec_moving_h_spec_v27.json",
+      "sha256": "c5439742a62e56fe9ccd834692af845bacc6546d46c44809220d497eaffe97ed",
+      "access": "PACKAGED_VERIFIED_LOCAL_BYTES"
+    }
+  },
+  "expected_outputs": [
+    "Versioned V29 one-cell consumer/spec and producer-free verifier",
+    "Raw actual-consumer result",
+    "Candidate checkpoint",
+    "Validation and mutation evidence",
+    "Accepted actual checkpoint only after PASS",
+    "Postaccept audit",
+    "Full appended journal, run manifest and return handoff"
+  ],
+  "stop_condition": "Stop at one independently validated actual cell OR the first exact obstruction OR300s executed science, then return once. No automatic continuation."
+}

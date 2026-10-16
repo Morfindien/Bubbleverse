@@ -1,0 +1,68 @@
+{
+  "schema_id": "bubbleverse.q_state_delta",
+  "version": "V28_INGESTION_V1",
+  "created_at_utc": "2026-10-16T16:22:26+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "adds": [
+    {
+      "type": "INGESTION_RECEIPT",
+      "id": "LOCAL-Q048-MOVING-H-DOMAIN-V28-INGESTION-RECEIPT-V1"
+    },
+    {
+      "type": "ACCEPTED_MATH_PROOF_REFERENCE",
+      "origin_result_id": "LOCAL-Q048-POST-V27-MOVING-H-DOMAIN-V28",
+      "cell_z": [
+        1320,
+        1310
+      ],
+      "cell_a": [
+        "1/1321",
+        "1/1311"
+      ],
+      "technical_state": "PASS"
+    }
+  ],
+  "supersedes_active_view": [
+    {
+      "old": "V28 proof result pending ingestion",
+      "new": "V28 proof ingested once; actual consumer1320→1310 is next material obligation"
+    }
+  ],
+  "unchanged": {
+    "case_lifecycle": "ACTIVE",
+    "epistemic_status": "INCONCLUSIVE",
+    "actual_total": 76,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1320
+    },
+    "native_P6": "UNRESOLVED",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+  },
+  "next_action": {
+    "engine": "BUBBLEVERSE.EXECUTION_HPC_BUILDER 2.2.0",
+    "task_id": "LOCAL-Q048-POST-V28-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+    "task_fingerprint": "b3107127230c0962d1a4293c313c6f4b088a7ab9a0901c9b29999d0ec7243c11",
+    "max_new_actual_cells": 1,
+    "stop_frontier": 1310
+  },
+  "no_repeat": [
+    "V28 Mathematics producer/verifier",
+    "V27 actual consumer",
+    "V12 guard generation",
+    "V26 proof",
+    "history/event/P3 campaigns"
+  ],
+  "forbidden_scope": [
+    "Q049+",
+    "below1310 continuation in this task",
+    "model promotion",
+    "native/P6 reassurance run",
+    "HPC/paid run absent new justification"
+  ]
+}

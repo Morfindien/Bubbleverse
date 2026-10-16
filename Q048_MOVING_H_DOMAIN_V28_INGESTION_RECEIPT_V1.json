@@ -1,0 +1,88 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_receipt",
+  "schema_version": "2.1.0",
+  "receipt_id": "LOCAL-Q048-MOVING-H-DOMAIN-V28-INGESTION-RECEIPT-V1",
+  "created_at_utc": "2026-10-16T16:22:26+00:00",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "origin_result_id": "LOCAL-Q048-POST-V27-MOVING-H-DOMAIN-V28",
+  "origin_run_id": "LOCAL-Q048-MOVING-H-DOMAIN-V28-2026-10-16T16:10:23.813942+00:00",
+  "origin_task_id": "LOCAL-Q048-POST-V27-MOVING-H-DOMAIN-1320-1310-MATH-V1",
+  "origin_task_fingerprint": "dddf998f98396763cac94046187ab7eb1fabb04fcf271cbba8466d98da30fdcd",
+  "ingestion_state": "NEW",
+  "duplicate_check": {
+    "origin_result_occurrences_in_supplied_journal": 1,
+    "prior_ingestion_receipt_occurrences": 0,
+    "evidence_count_increment": 0
+  },
+  "verified_artifacts": {
+    "proof_raw": "2447b554c7c68a94988c7dc5524eaf5418e09451e3db6c79e834eb7a2b7821b9",
+    "proof_validation": "98af01e0b9966e3f52a375a0f3691f716903793bea99d161f088d9bd5013fd9e",
+    "proof_candidate": "707f24df3fc36c3a5200ca9ebdfd553b6055b5319358f6f11e0fd59055df57ba",
+    "proof_checkpoint": "405462169669a6f81440b934dc61cffa26ed3f27778a4a4c991e4f05b5cb648b",
+    "proof_postaccept": "7c0993cff66c5930030c978e5698becb198a81883446003edf034dc04c9c72ec",
+    "proof_transition": "1a2f37b3ebdfaf8aa36aa9b262e56c5e323df79688ab9dd208cc373c072f3e3c",
+    "proof_spec": "e413848a72aed13e14374abb3bbffadf36cdb5da8e693813dab38db27ceab6d2",
+    "proof_contract": "4026c200425f622d682dfbfaef701c65e14078188d2e5110e4a35acdede8b3c6",
+    "proof_package_validation": "388ab901e8c95a6a6d50285e8386a3c4557c5e6ba954eebae5171e653266aa2a",
+    "parent_raw": "e128b3ab5b0ad9e7ab1d861d35b0d3e35f45e3a2da07c128fc09f34c10516d38",
+    "parent_validation": "0dbc7a848183d0cc24a4fcad14fdcd3d2da58c8281afeab787c3657553c6ba11",
+    "parent_checkpoint": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+    "parent_postaccept": "5b547abe533a8e0893019bfa9ba1f7fcaf69a1425688386c2bfc64b24141b1e3",
+    "parent_transition": "35c0f2a5c9535d130fe6518a4525495ce91c4c47979116753cf5530d1bf6d662",
+    "pattern_producer": "158c9030801cdb48d7593eb41d460838d6ddcaced19c1d5b7ec5fe93874f1b6d",
+    "pattern_verifier": "f87492fb3baf51e8edfe65dd5969b82250d81f45b28073426d9f3d3283ff72b8",
+    "pattern_spec": "c5439742a62e56fe9ccd834692af845bacc6546d46c44809220d497eaffe97ed",
+    "builder_prompt": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "guard_raw": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_validation": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "guard_primary_row": "c3fe09a8da35ebddf82e904a0d5a203d794fab908701b352efaa7a43764c5eb6",
+    "guard_control_row": "d143be5b31a329597c6d10cf4761be49c0514f510bc43981ec8a9fcf29b6e4d0"
+  },
+  "row_bindings": {
+    "primary_row13_sha256": "c3fe09a8da35ebddf82e904a0d5a203d794fab908701b352efaa7a43764c5eb6",
+    "control_row13_sha256": "d143be5b31a329597c6d10cf4761be49c0514f510bc43981ec8a9fcf29b6e4d0"
+  },
+  "direct_output": {
+    "new_math_proof_cells": 1,
+    "new_actual_paired_cells": 0,
+    "actual_total": 76,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1320
+    },
+    "proof_cell_z": [
+      1320,
+      1310
+    ],
+    "proof_cell_a": [
+      "1/1321",
+      "1/1311"
+    ],
+    "K_upper": "3027395738921693080237/500000000000000000",
+    "whole_cell_h_min": "169519772393333/62500000000000000"
+  },
+  "technical_interpretation": "ACCEPT bounded conditional source-real mathematical proof cell after independent validation. Raw PENDING_VALIDATION is immutable producer state; validation+accepted checkpoint+transition+postaccept establish final technical PASS.",
+  "physical_interpretation": "No complete four-case Δx_e(z) histories or cumulative observer-normalized Δtau_T bounds; no native P6 qualification, physical falsification or accepted-model promotion. Q048 remains ACTIVE/INCONCLUSIVE.",
+  "selected_next_engine": "BUBBLEVERSE.EXECUTION_HPC_BUILDER 2.2.0",
+  "next_task_id": "LOCAL-Q048-POST-V28-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "next_task_fingerprint": "b3107127230c0962d1a4293c313c6f4b088a7ab9a0901c9b29999d0ec7243c11",
+  "repository": {
+    "name": "Morfindien/Bubbleverse",
+    "verified_base_commit": "ef75d9442a7b5f020ad25578524464fe8e96287f",
+    "source_freshness": "VERIFIED",
+    "origin_v28_sync_status": "PARTIAL",
+    "ingestion_sync_status": "USER_UPLOAD_PENDING",
+    "write_performed": false,
+    "material_origin_gap": [
+      "q048_moving_h_domain_result_v28.json",
+      "q048_moving_h_domain_candidate_checkpoint_v28.json"
+    ],
+    "gap_recovery": "Original bytes recovered from current validated runtime and packaged under evidence/; scientific ingestion is not blocked."
+  }
+}
