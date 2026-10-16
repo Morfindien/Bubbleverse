@@ -1,0 +1,66 @@
+{
+  "schema_version": "Q048_MOVING_ACTUAL_ACCEPTED_CHECKPOINT_V29",
+  "q": "Q048",
+  "source_result": "q048_frec_moving_h_result_v29.json",
+  "source_result_sha256": "4fe7ee084e31c796fdc1665cd2ec982c8ea04c706582f09d9d39094df21780ed",
+  "parent_checkpoint_sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+  "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 1310
+  },
+  "new_accepted_cells": 1,
+  "retained_prior_accepted_cells": 76,
+  "total_accepted_cells_in_chain": 77,
+  "linked_scalar_endpoint": {
+    "a1": "1/1311",
+    "E_right": "70932185071436793743/500000000000000000",
+    "Y_right": "113399833034449708669/1000000000000000000",
+    "Vbar": "27278514728906217199/1000000000000000000"
+  },
+  "linked_invariant_state": {
+    "schema_version": "Q048_MOVING_INVARIANT_STATE_V29",
+    "kind": "COMMON_EPS_SOURCE_SIGN_RICCATI_GLUED_V28",
+    "proof_cell_a": [
+      "1/1321",
+      "1/1311"
+    ],
+    "parent_endpoint_a": "1/1321",
+    "parent_endpoint_lower_projection": "1550450091764323/500000000000000000",
+    "K_upper": "3027395738921693080237/500000000000000000",
+    "epsilon": "1/1000000",
+    "endpoint_a": "1/1311",
+    "endpoint_lower_projection": "169519772393333/62500000000000000",
+    "upper_h": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "physical_state_reset": false,
+    "interpretation": "Validated V28 outer lower projection consumed by one actual paired-frec admission; not a measured h/xe value or independent restart.",
+    "proof_result_sha256": "2447b554c7c68a94988c7dc5524eaf5418e09451e3db6c79e834eb7a2b7821b9",
+    "proof_validation_sha256": "98af01e0b9966e3f52a375a0f3691f716903793bea99d161f088d9bd5013fd9e",
+    "proof_checkpoint_sha256": "405462169669a6f81440b934dc61cffa26ed3f27778a4a4c991e4f05b5cb648b",
+    "parent_checkpoint_sha256": "a7f01cc307579d42268cdad82bd3857d73796b0fcfe46e821ef699b11ef8e0f4",
+    "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_row_sha256": "c3fe09a8da35ebddf82e904a0d5a203d794fab908701b352efaa7a43764c5eb6",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "continuation_below1310_authorized": false
+  },
+  "stop_reason": "ONE_CELL_SCOPE_EXHAUSTED",
+  "complete_a1": false,
+  "resume_condition": "Return exactly once to Result Ingestion & Routing2.1.0. No continuation below1310 authorized by this one-cell Builder run.",
+  "math_raw_sha256": "2447b554c7c68a94988c7dc5524eaf5418e09451e3db6c79e834eb7a2b7821b9",
+  "math_validation_sha256": "98af01e0b9966e3f52a375a0f3691f716903793bea99d161f088d9bd5013fd9e",
+  "admission_state": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION",
+  "math_checkpoint_sha256": "405462169669a6f81440b934dc61cffa26ed3f27778a4a4c991e4f05b5cb648b",
+  "technical_state": "PASS",
+  "validation": "q048_frec_moving_h_validation_v29.json",
+  "validation_sha256": "71b373f6c5316d8d0f4498a922b60c7656188492e3d6809a1f3bd18a936b4311",
+  "candidate_checkpoint_sha256": "df92c59046fdaba53aedc29a47b7dd90faf3a339cf49c84fe7559e25573af51b",
+  "transition_validation_sha256": "8a21d16dc4ccadae27315253b391dfb3a3c785e1247900146710d46a5d8fe6f0"
+}

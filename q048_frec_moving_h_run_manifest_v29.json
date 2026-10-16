@@ -1,0 +1,66 @@
+{
+  "schema_version": "Q048_FREC_MOVING_H_RUN_MANIFEST_V29",
+  "q": "Q048",
+  "target_q": "Q048",
+  "program_id": "Q048-FREC-MOVING-H-V29",
+  "program_registry_status": "LOCAL_UNREGISTERED",
+  "run_id": "LOCAL-Q048-FREC-MOVING-H-V29-2026-10-16T16:38:07.915897+00:00",
+  "task_id": "LOCAL-Q048-POST-V28-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "task_fingerprint": "b3107127230c0962d1a4293c313c6f4b088a7ab9a0901c9b29999d0ec7243c11",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "incoming_journal": {
+    "name": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V28_INGESTED_V1.md",
+    "sha256": "597a64c3376143afaf57ac71d02840870ba0cac3f620d610c7f45c6483e41cac",
+    "bytes": 13845660
+  },
+  "spec": {
+    "file": "q048_frec_moving_h_spec_v29.json",
+    "sha256": "dca3d7678f807945dacfb31b3d66543d2aec4951452abc37a3731ba4ac4ccd1c"
+  },
+  "producer": {
+    "file": "q048_frec_moving_h_v29.py",
+    "sha256": "c8d2bc2ed4a5d133641ce3ca79089a7f1ddccb8ad3271b7872a089dc519b1f88"
+  },
+  "verifier": {
+    "file": "q048_frec_moving_h_verify_v29.py",
+    "sha256": "7af2e9ae12da008caf319ee112d3e6d18ada837e930d35872e0ae959b54ebb92"
+  },
+  "result": {
+    "file": "q048_frec_moving_h_result_v29.json",
+    "sha256": "4fe7ee084e31c796fdc1665cd2ec982c8ea04c706582f09d9d39094df21780ed"
+  },
+  "validation": {
+    "file": "q048_frec_moving_h_validation_v29.json",
+    "sha256": "71b373f6c5316d8d0f4498a922b60c7656188492e3d6809a1f3bd18a936b4311"
+  },
+  "accepted_checkpoint": {
+    "file": "q048_frec_moving_h_accepted_checkpoint_v29.json",
+    "sha256": "a8a43580295c62b345382ccb38434c71bd1eda988df61dcb88e083fd515b679f"
+  },
+  "backend_decision": "q048_frec_moving_h_backend_decision_v29.json",
+  "repository_read": {
+    "repo": "Morfindien/Bubbleverse",
+    "commit": "ef75d9442a7b5f020ad25578524464fe8e96287f",
+    "write_performed": false
+  },
+  "execution": {
+    "start_utc": "2026-10-16T16:38:07.915897+00:00",
+    "end_utc": "2026-10-16T16:38:08.942330+00:00",
+    "elapsed_seconds": 1.0264975669997511,
+    "python": "3.13.5",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "peak_rss_kib": 116812,
+    "backend": "LOCAL_RUNTIME",
+    "native_or_paid_runs": 0
+  },
+  "mandatory_tests": {
+    "producer_free_verifier": "110/110 PASS;20/20 mutations rejected",
+    "transition": "5/5 PASS; V27 baseline rejected by CELL_IDENTITY",
+    "postaccept": "10/10 PASS"
+  },
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0",
+  "created_utc": "2026-10-16T16:41:24.409788+00:00"
+}
