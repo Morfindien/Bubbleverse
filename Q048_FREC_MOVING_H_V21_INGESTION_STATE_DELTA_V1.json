@@ -1,0 +1,104 @@
+{
+  "schema_version": "Q048_V21_INGESTION_STATE_DELTA_V1",
+  "created_at_utc": "2026-10-16T07:00:44.841149+00:00",
+  "receipt_id": "LOCAL-Q048-FREC-MOVING-H-V21-INGESTION-RECEIPT-V1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_ASSIGNED",
+  "case_lifecycle": "ACTIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "origin": {
+    "result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V21",
+    "raw_sha256": "cee9b6915b8e09d53cf47c560d6ed1e3a11adb1982c74487d026e032a805b713",
+    "validation_sha256": "304923d3e865b36e0ae227ef10e7cbf9c750377ab00d54fd48be6080b2edb387",
+    "accepted_checkpoint_sha256": "9f5f81d18bbd2ab897496f89a06762897cf32160b52cc2552409e7bc728237ce",
+    "postaccept_sha256": "750e774ef29742e36ad41c0583b02a24a43015d1cb2ca5f71dce56ee50143fb7",
+    "ingestion_state": "NEW"
+  },
+  "journal_effects": [
+    {
+      "effect": "ADDS",
+      "item": "one validated actual paired-frec Hillipop-EDE cell 1360\u21921350",
+      "evidence": [
+        "cee9b6915b8e09d53cf47c560d6ed1e3a11adb1982c74487d026e032a805b713",
+        "304923d3e865b36e0ae227ef10e7cbf9c750377ab00d54fd48be6080b2edb387",
+        "9f5f81d18bbd2ab897496f89a06762897cf32160b52cc2552409e7bc728237ce",
+        "750e774ef29742e36ad41c0583b02a24a43015d1cb2ca5f71dce56ee50143fb7"
+      ]
+    },
+    {
+      "effect": "UPDATES",
+      "item": "accepted actual total 72\u219273; Hillipop-EDE frontier1360\u21921350; scalar/moving endpoints to a=1/1351"
+    },
+    {
+      "effect": "KEEPS",
+      "item": "other three frontiers1440; Q047 CLOSED INCONCLUSIVE; source/capture/z_reio; native P6 unresolved; accepted model unchanged"
+    },
+    {
+      "effect": "REFINES",
+      "item": "next material bottleneck to moving-h proof-domain 1350\u21921340 using V12 row10"
+    }
+  ],
+  "status_axes": {
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED",
+    "reproducibility": "NOT_ASSESSED_BY_NEW_RERUN_IN_INGESTION",
+    "robustness": "ROBUST_WITHIN_TESTED_DOMAIN",
+    "scientific_effect": "SUPPORTS_PARTIAL_SOURCE_REAL_CONTINUATION; EXACT_Q_UNRESOLVED",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "three_layer": {
+    "direct": "one actual cell accepted; actual73/frontier1350",
+    "technical": "93/93 verifier PASS, 20/20 mutations rejected, 10/10 post-accept audit",
+    "physical": "no complete four-case x_e/tau_T difference bounds or model/native-P6 conclusion"
+  },
+  "current_actual_state": {
+    "total_accepted_paired_cells": 73,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1350
+    },
+    "scalar_endpoint": {
+      "a1": "1/1351",
+      "E_right": "78523950131564397523/500000000000000000",
+      "Y_right": "125586187875196687421/1000000000000000000",
+      "Vbar": "1507540385255080157/50000000000000000"
+    },
+    "moving_lower_projection": "1091819689592919/200000000000000000",
+    "accepted_checkpoint_sha256": "9f5f81d18bbd2ab897496f89a06762897cf32160b52cc2552409e7bc728237ce"
+  },
+  "completion_gate": {
+    "satisfied": false,
+    "reason": "Complete accepted four-case histories and final Delta x_e(z)/Delta tau_T(z) bounds remain absent."
+  },
+  "next_bottleneck": {
+    "code": "MOVING_H_PROOF_DOMAIN_NOT_YET_ESTABLISHED_FOR_1350_1340",
+    "cell_z": [
+      1350,
+      1340
+    ],
+    "cell_a": [
+      "1/1351",
+      "1/1341"
+    ],
+    "guard_primary_row_index": 10,
+    "guard_primary_row_sha256": "ea470f56091bf7628ce08ca645c1f7abecd619085e64d3123a5b68f37a974dec",
+    "guard_control_row_sha256": "9f4a2be1d490e0502261b451771385b420df1d963e7ac17cc41377273ec7ec99"
+  },
+  "selected_next_engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+  },
+  "next_task_id": "LOCAL-Q048-POST-V21-MOVING-H-DOMAIN-1350-1340-MATH-V1",
+  "next_task_fingerprint": "b623e15089a8f95d3a4e1de107cacf639e74258a6ac862a98c0124d4fba1c668",
+  "repository": {
+    "repository": "Morfindien/Bubbleverse",
+    "observed_main_commit": "9da3c6cffbbec4a6793855ef32288b08da407727",
+    "source_freshness": "VERIFIED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "write_attempted": false
+  }
+}
