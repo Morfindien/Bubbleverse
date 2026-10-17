@@ -1,0 +1,15 @@
+# Q048 V39 ingestion — handoff to Mathematics 2.1.0
+
+STATUS CONTINUES; CASE ACTIVE; SCIENTIFIC INCONCLUSIVE. V39 receipt `LOCAL-Q048-FREC-MOVING-H-V39-INGESTION-RECEIPT-V1` is NEW and accepted exactly once. CURRENT_Q/TARGET_Q Q048/Q048.
+
+**Current state:** actual82/frontier1260; other three frontiers1440. Accepted V39 checkpoint `91d5bbc23598cae85822594ebe792be7f327cf1fab68d925c5d73d8f79cde982`. Endpoint a=1/1261, E=124384655189196758137/1000000000000000000, Y=99374531088165747637/1000000000000000000, Vbar=11984017798410692531/500000000000000000; inherited connected lower for the next proof=`1659609633545201/1000000000000000000`.
+
+**Next engine:** BUBBLEVERSE.MATHEMATICS2.1.0, prompt SHA256 `3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b`. Task `LOCAL-Q048-POST-V39-MOVING-H-DOMAIN-1260-1250-MATH-V1`; fingerprint `b47d3d896377dc93ca02a2e9c11132597af34cc79fa9fa021f7477d43f7a602c`; proposed result V40. Prove and independently validate exactly one connected moving-h domain cell **1260→1250**, a=[1/1261,1/1251]. No actual consumer in Mathematics.
+
+V12 row19 is recovered from exact immutable raw bytes SHA256 `90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5` with validation `51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554`. Primary SHA256 `ec9e51787aa6ac1dd388b21f22fe007841fea15fd12c4d69fa611ad671b68be7` and control `fb20d014f98f4c32a671b314cee84f3ef40ee8dc28573b7e56dbc553b438e424` are accepted+committed whole-cell guards. Primary left E/Y/V exactly equals V39 endpoint; control is guard-only. Use row19 primary safety quantities only where the established theorem requires them; never substitute control for primary state or reset the connected lower.
+
+Use V38 Mathematics only as implementation/theorem pattern; mint fresh V40 code/spec and direct bindings. Preserve V38 initial verifier failure and R1 corrected verifier provenance. Hash-bind V39 raw/checkpoint/validation/transition/postaccept/spec/current verifier. The V39 delivery-audit R1 is metadata provenance only, not a science repair. Syntaxcheck fresh entrypoints before execution. Require a separate producer-free verifier with explicit semantic mutation rejection, meaningful transition checks, guarded acceptance and postaccept before accepted proof checkpoint.
+
+Stop after one validated proof cell, first precise obstruction or300s executed science. Sufficient-bound failure is METHOD_INSUFFICIENT absent independent physical contradiction. No below1250 continuation, V39 consumer replay, V38 proof replay for reassurance, V12 guard regeneration, reset, tuning/subdivision, refit/recapture/native/P6/HPC/paidrun, Q049+ or model promotion. Return exactly once to Result Ingestion & Routing2.1.0.
+
+Repository source freshness: VERIFIED at `63189dff989f8bd544bff74fb9bdecfef3a182b9`. Eleven central V39 artifacts are present; remaining support files and these new ingestion files remain pending upload. Full task: `Q048_FREC_MOVING_H_V39_NEXT_MATHEMATICS_TASK_V1.json`. Full journal: `Q047_SAMLET_JOURNAL_FREC_MOVING_H_V39_INGESTED_V1.md`.

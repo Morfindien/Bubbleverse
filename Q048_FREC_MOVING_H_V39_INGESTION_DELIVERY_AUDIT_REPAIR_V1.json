@@ -1,0 +1,11 @@
+{
+  "cause": "Audit counted textual receipt-ID occurrences. The receipt ID appears in the receipt heading and in the explicit no-prior-receipt statement; this is not duplicate ingestion.",
+  "failed_check": "receipt_once",
+  "journal_science_changed": false,
+  "repair": "Replace raw occurrence count with: incoming journal contains zero receipt IDs; new journal prefix before unchanged incoming marker contains the canonical receipt heading exactly once.",
+  "schema": "bubbleverse.q048.v39_ingestion.delivery_audit_repair.v1",
+  "science_changed": false,
+  "state_changed": false,
+  "status": "METADATA_AUDIT_REPAIR_ONLY",
+  "task_changed": false
+}

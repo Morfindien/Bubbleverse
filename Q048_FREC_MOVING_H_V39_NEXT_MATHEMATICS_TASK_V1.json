@@ -1,0 +1,226 @@
+{
+  "acceptance_criteria": [
+    "Hash-bind V39 accepted parent raw/checkpoint/validation/transition/postaccept/spec and active verifier",
+    "Bind V12 row19 primary/control accepted+committed whole-cell guards; primary a/E/Y/V must glue exactly to V39 endpoint",
+    "Compute fresh cell-specific K and strictly positive connected whole-cell lower on [1/1261,1/1251] for q_L=1e-6 and q_R=0",
+    "Bind source/C/upper-h/thermal to the same new domain; use primary state and established thermal/source safety quantities only in their documented roles",
+    "Inherit lower 1659609633545201/1000000000000000000 without reset or old-K substitution",
+    "Syntaxcheck fresh producer/verifier/acceptance before freeze, then require a separate producer-free verifier and explicit semantic mutation tests before accepted math checkpoint",
+    "Preserve V38 R1 verifier provenance; do not pretend the initial failed verifier never existed",
+    "Actual remains82/frontier1260; one new math proof cell, zero new actual cells"
+  ],
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "case": "hillipop-ede_n3",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "case_id": "NOT_ASSIGNED",
+  "cell_a": [
+    "1/1261",
+    "1/1251"
+  ],
+  "cell_z": [
+    1260,
+    1250
+  ],
+  "compute_backend_preference": "LOCAL_RUNTIME exact-rational Python; recent proof/consumer timings remain far below300s. No reassurance pilot, Actions, HPC or paid run unless a concrete runtime blocker appears.",
+  "created_at_utc": "2026-10-17T08:43:35.369136+00:00",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "verification": "Exact retained prompt bytes available; no installed launcher asserted.",
+    "version": "2.1.0"
+  },
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "failure_or_falsification_condition": "First precise binding/domain/rate/source/C/upper-h/thermal/comparison obstruction; sufficient-bound failure is METHOD_INSUFFICIENT without independent physical contradiction",
+  "fingerprint_basis": {
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "cell_a": [
+      "1/1261",
+      "1/1251"
+    ],
+    "cell_z": [
+      1260,
+      1250
+    ],
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "engine_prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "engine_version": "2.1.0",
+    "guard_control_row_sha256": "fb20d014f98f4c32a671b314cee84f3ef40ee8dc28573b7e56dbc553b438e424",
+    "guard_primary_row_sha256": "ec9e51787aa6ac1dd388b21f22fe007841fea15fd12c4d69fa611ad671b68be7",
+    "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_row_index": 19,
+    "guard_validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "initial_lower_projection": "1659609633545201/1000000000000000000",
+    "max_new_actual_cells": 0,
+    "max_new_math_proof_cells": 1,
+    "parent_active_verifier_sha256": "f157451dac9a20e62c3d1ceba0cf20d2c41dbf434946f9e70bce6a71a9fe3430",
+    "parent_actual_checkpoint_sha256": "91d5bbc23598cae85822594ebe792be7f327cf1fab68d925c5d73d8f79cde982",
+    "parent_actual_count": 82,
+    "parent_actual_postaccept_sha256": "cb5b0c600fbd2fa2e1db046edb6e242c551ecae6ba827e2fc0cb1d109684415a",
+    "parent_actual_raw_sha256": "7d7830c7dfded45e9afc07d4b64e51c289581754759ea23a1b141f051c30acf4",
+    "parent_actual_transition_sha256": "0d21e803ec2f1103c805bd5d3986e505d05f80ad58321779ea12d4cf13e440a1",
+    "parent_actual_validation_sha256": "a67ff9a35c8173134c7a6b54e7f0b858bcf23ad373c204a9f41c99a4ff81617b",
+    "parent_frontier": 1260,
+    "previous_math_active_verifier_sha256": "93343699119d3016084627d23fe64a7818d8e6bbf18da1ffa40b126979a2d019",
+    "previous_math_checkpoint_sha256": "2b38c31c39a9caf9696a71b264153f6adc018170d611dbd3909fb38c7355f0de",
+    "previous_math_repair_manifest_sha256": "1a435368fb6f6a5dc205e2e9a4827e4ea312ca364f5b0d7a17796055cba46f75",
+    "q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "result_version_on_execution": "V40",
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.1.0",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "target_q": "Q048",
+    "task_type": "MATHEMATICAL_RESULT"
+  },
+  "fingerprint_method": "SHA256 canonical JSON of fingerprint_basis; sortedkeys, compactseparators",
+  "forbidden": [
+    "actualconsumer",
+    "below1250continuation",
+    "V39consumerreplay",
+    "V38proofreplay_for_reassurance",
+    "V12guardregeneration",
+    "resetto1/2",
+    "oldcellK_or_h_min_substitution",
+    "subdivision_or_tuning_campaign",
+    "refit",
+    "recapture",
+    "native_P6",
+    "HPC_or_paidrun",
+    "Q049+",
+    "accepted_model_promotion"
+  ],
+  "guard_binding": {
+    "control": {
+      "E_input_left": "15705486147170977763/125000000000000000",
+      "E_right": "477987426471933693/3906250000000000",
+      "E_safe_left": "62497147214996277491/500000000000000000",
+      "G_lower": "7127426511096537957/1000000000000000000",
+      "V_admitted": "734907338915486819/31250000000000000",
+      "V_previous": "24139563144863542533/1000000000000000000",
+      "Y_left": "10045477980881456033/100000000000000000",
+      "Y_right": "24456316638909257689/250000000000000000",
+      "a0": "1/1261",
+      "a1": "1/1251",
+      "accepted": true,
+      "committed": true,
+      "derivative_lower": "84214402747436928923/1000000000000000000",
+      "index": 19,
+      "role": "NEW_FORWARD_GUARD_CELL",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "whole_cell_qualified": true,
+      "z0": 1260,
+      "z1": 1250
+    },
+    "control_role": "Conservative aligned guard only; no primary actual-state substitution. Guard right projections are not actual endpoints.",
+    "control_row_index": 19,
+    "control_row_sha256": "fb20d014f98f4c32a671b314cee84f3ef40ee8dc28573b7e56dbc553b438e424",
+    "primary": {
+      "E_input_left": "124384655189196758137/1000000000000000000",
+      "E_right": "121081520392610443809/1000000000000000000",
+      "E_safe_left": "123731327085861679751/1000000000000000000",
+      "G_lower": "4192165580396133969/500000000000000000",
+      "V_admitted": "11670964748895967471/500000000000000000",
+      "V_previous": "11984017798410692531/500000000000000000",
+      "Y_left": "99374531088165747637/1000000000000000000",
+      "Y_right": "19344944878982902339/200000000000000000",
+      "a0": "1/1261",
+      "a1": "1/1251",
+      "accepted": true,
+      "committed": true,
+      "derivative_lower": "2198846746889758447/25000000000000000",
+      "index": 19,
+      "role": "NEW_FORWARD_GUARD_CELL",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "whole_cell_qualified": true,
+      "z0": 1260,
+      "z1": 1250
+    },
+    "primary_row_index": 19,
+    "primary_row_sha256": "ec9e51787aa6ac1dd388b21f22fe007841fea15fd12c4d69fa611ad671b68be7",
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554"
+  },
+  "initial_actual_state": {
+    "accepted_checkpoint_sha256": "91d5bbc23598cae85822594ebe792be7f327cf1fab68d925c5d73d8f79cde982",
+    "active_verifier_sha256": "f157451dac9a20e62c3d1ceba0cf20d2c41dbf434946f9e70bce6a71a9fe3430",
+    "frontiers": {
+      "camspec-ede_n3": 1440,
+      "camspec-lcdm": 1440,
+      "hillipop-ede_n3": 1260,
+      "hillipop-lcdm": 1440
+    },
+    "moving_invariant_endpoint": {
+      "a": "1/1261",
+      "lower_projection": "1659609633545201/1000000000000000000",
+      "physical_state_reset": false
+    },
+    "postaccept_sha256": "cb5b0c600fbd2fa2e1db046edb6e242c551ecae6ba827e2fc0cb1d109684415a",
+    "raw_sha256": "7d7830c7dfded45e9afc07d4b64e51c289581754759ea23a1b141f051c30acf4",
+    "scalar_endpoint": {
+      "E_right": "124384655189196758137/1000000000000000000",
+      "Vbar": "11984017798410692531/500000000000000000",
+      "Y_right": "99374531088165747637/1000000000000000000",
+      "a1": "1/1261"
+    },
+    "total_accepted_paired_cells": 82,
+    "transition_sha256": "0d21e803ec2f1103c805bd5d3986e505d05f80ad58321779ea12d4cf13e440a1",
+    "validation_sha256": "a67ff9a35c8173134c7a6b54e7f0b858bcf23ad373c204a9f41c99a4ff81617b"
+  },
+  "input_recovery": {
+    "math_prompt": {
+      "path": "/mnt/data/Bubbleverse_Matematikmotor_2.1.0-27.md",
+      "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+    },
+    "v12_guard_raw": {
+      "path": "/mnt/data/q048_v12_recovered/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    "v12_guard_validation": {
+      "path": "/mnt/data/q048_v12_recovered/q048_guard_local_v_validation_v12.json",
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554"
+    },
+    "v39_compute_package": {
+      "output_manifest_sha256": "ce780494fc9b0ac9203c04b72e480fa83d0a18e17a7cddd921e58d8e3e5ff950",
+      "path": "/mnt/data/q048_v39"
+    }
+  },
+  "journal_ref": {
+    "completeness": "COMPLETE_SUPPLIED_HISTORY_PRESERVED_BYTE_IDENTICALLY",
+    "filename": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V39_INGESTED_V1.md",
+    "incoming_sha256": "53b669089d103b4ac3a16d16afefbfb8427465b32dbdc750089b619c3509096c",
+    "sha256": "975c2af4c2d5bc8e7d2d466cc21cc8e6d15656f777125b7616023131d151fbfa"
+  },
+  "max_new_actual_cells": 0,
+  "max_new_math_proof_cells": 1,
+  "new_engine_dispatched": false,
+  "parent_delivery_provenance": {
+    "meaning": "metadata audit predicate only; no V39 science repair and no producer rerun",
+    "v39_delivery_audit_repair_r1_sha256": "7843b11a5af226d5b501738d5190e24031038a08faf968709d2ca34ca1c49e95",
+    "v39_final_delivery_validation_sha256": "06fe45bc486cf257e7968204e9d9ea07529b8baa96997fcdc3ec092921fb8ff9",
+    "v39_initial_delivery_audit_sha256": "1dff0c0eb90a71a4bdb277edc014bc01b1af129cc10dd34c9e6f5cf5320d9cb9"
+  },
+  "previous_math_lineage": {
+    "compatibility_rule": "Use V38 producer/verifier/spec/contract only as implementation/theorem lineage; mint fresh V40 code/spec and rebind every version/cell/parent/row/hash/schema/status pin. Preserve V38 initial-verifier failure + R1 repair; active validator is corrected verifier.",
+    "v38_accepted_checkpoint_sha256": "2b38c31c39a9caf9696a71b264153f6adc018170d611dbd3909fb38c7355f0de",
+    "v38_active_verifier_sha256": "93343699119d3016084627d23fe64a7818d8e6bbf18da1ffa40b126979a2d019",
+    "v38_initial_failed_verifier_sha256": "3d69af486427ebd9b3daf67d72c3397d0ab640fe09755982276be4bd89feb80c",
+    "v38_postaccept_sha256": "3bb1c9ccc75ecb0d50cdcdd9777179e94fd13003d58fb135777ca22c5f13efbc",
+    "v38_producer_sha256": "643548ff126448fc715f7da73f3f529dba0e85bafb5697a473695b8d7eaca21e",
+    "v38_raw_sha256": "6cffa31f2938f2934bf8206f6cca9b5f89ef71c4f3ad6b774943d7a20d7bdd66",
+    "v38_repair_manifest_sha256": "1a435368fb6f6a5dc205e2e9a4827e4ea312ca364f5b0d7a17796055cba46f75",
+    "v38_spec_sha256": "daa90bba7a82d5749e330e8276c5a960f38b8831c4257dbb2df0bab019f42b88",
+    "v38_transition_sha256": "4f770b8660cbcddc28a75c66b40e065bd806b8677888e48982982507f05be642",
+    "v38_validation_sha256": "d24e0aa962358e6edeae92067b272bcf20d04ffa56c25379672118b4875f1f0e"
+  },
+  "purpose": "Construct and independently validate exactly one connected moving-h proof1260->1250 from accepted V39 actual parent and V12 row19; no actual consumer.",
+  "q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "result_version_on_execution": "V40",
+  "return_route": "Return exactly once to BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0 after one validated proof cell, first precise obstruction or300s executed science; no automatic actual consumer.",
+  "schema_status": "UNVALIDATED_LOCAL_TASK_CONTRACT; Mathematics must perform current compatibility/preflight checks",
+  "science_budget_seconds": 300,
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "target_q": "Q048",
+  "task_fingerprint": "b47d3d896377dc93ca02a2e9c11132597af34cc79fa9fa021f7477d43f7a602c",
+  "task_id": "LOCAL-Q048-POST-V39-MOVING-H-DOMAIN-1260-1250-MATH-V1",
+  "task_type": "MATHEMATICAL_RESULT"
+}
