@@ -1,0 +1,71 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_ACCEPTED_CHECKPOINT_V40",
+  "q": "Q048",
+  "target_q": "Q048",
+  "checkpoint_kind": "ACCEPTED_MATHEMATICAL_PROOF",
+  "source_result": "q048_moving_h_domain_result_v40.json",
+  "source_result_sha256": "1d1e53c75d011c339030ea52e03a6f1ce382a8ea611942659e232217ebd1b840",
+  "validation": "q048_moving_h_domain_validation_v40.json",
+  "validation_sha256": "1fba6f12b92b295ccade9f15cd09ea86fdc88447274df872da7d6e8ac512b046",
+  "candidate_checkpoint_sha256": "730c51ed4a09d92fadf01835ebdb9028b3b8415291336fdcf948fe297572cc9e",
+  "transition_validation_sha256": "026b50286a2856f6b084ad32827523b649f50fbd53902f2f41eb9f39619727cc",
+  "validation_state": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION",
+  "technical_state": "PASS",
+  "checks": "88/88",
+  "mutation_rejections": "24/24",
+  "transition_checks": "10/10",
+  "accepted_at_utc": "2026-10-17T08:51:51.309691+00:00",
+  "proof_cell_a": [
+    "1/1261",
+    "1/1251"
+  ],
+  "proof_cell_z": [
+    1260,
+    1250
+  ],
+  "parent_actual_checkpoint_sha256": "91d5bbc23598cae85822594ebe792be7f327cf1fab68d925c5d73d8f79cde982",
+  "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "guard_primary_row_sha256": "ec9e51787aa6ac1dd388b21f22fe007841fea15fd12c4d69fa611ad671b68be7",
+  "guard_control_row_sha256": "fb20d014f98f4c32a671b314cee84f3ef40ee8dc28573b7e56dbc553b438e424",
+  "comparison": {
+    "kind": "COMMON_EPS_SOURCE_SIGN_RICCATI_CONTINUATION",
+    "parent_endpoint_a": "1/1261",
+    "parent_lower_projection": "1659609633545201/1000000000000000000",
+    "K_upper": "367396019592242151407/62500000000000000",
+    "epsilon": "1/1000000",
+    "endpoint_primary_lower": "1539923471992643497112379516495491274806014797182270735067032658593291862820660630054679106426865390180171966347699981/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "endpoint_control_lower": "12975463088308098872266178588283179752193/8428483973441446483821411716820247807000000",
+    "whole_cell_h_min": "769738848006023/500000000000000000",
+    "upper_h": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "physical_state_reset": false
+  },
+  "actual_state_unchanged": {
+    "total_actual_paired_cells": 82,
+    "frontiers": {
+      "camspec-ede_n3": 1440,
+      "camspec-lcdm": 1440,
+      "hillipop-ede_n3": 1260,
+      "hillipop-lcdm": 1440
+    },
+    "actual_scalar_endpoint": {
+      "E_right": "124384655189196758137/1000000000000000000",
+      "Vbar": "11984017798410692531/500000000000000000",
+      "Y_right": "99374531088165747637/1000000000000000000",
+      "a1": "1/1261"
+    }
+  },
+  "previous_math_provenance": {
+    "v38_initial_failed_verifier_sha256": "3d69af486427ebd9b3daf67d72c3397d0ab640fe09755982276be4bd89feb80c",
+    "v38_active_verifier_sha256": "93343699119d3016084627d23fe64a7818d8e6bbf18da1ffa40b126979a2d019",
+    "v38_repair_manifest_sha256": "1a435368fb6f6a5dc205e2e9a4827e4ea312ca364f5b0d7a17796055cba46f75"
+  },
+  "new_math_proof_cells": 1,
+  "new_actual_paired_cells": 0,
+  "q_complete": false,
+  "native_P6": "UNRESOLVED",
+  "resume_rule": "Return exactly once to Result Ingestion & Routing2.1.0. Ingest V40 once with actual82/frontier1260 unchanged. No automatic consumer or below1250 continuation."
+}
