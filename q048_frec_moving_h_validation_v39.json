@@ -1,0 +1,197 @@
+{
+  "checks_passed": 83,
+  "checks_total": 83,
+  "elapsed_seconds": 0.0037063499999021587,
+  "failed_predicates": [],
+  "mutations": [
+    {
+      "failed_predicates": [
+        "version"
+      ],
+      "mutation": "wrong_version",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "cell_z_from"
+      ],
+      "mutation": "wrong_z_from",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "cell_z_to"
+      ],
+      "mutation": "wrong_z_to",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "count_after"
+      ],
+      "mutation": "wrong_count_83",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "count_after"
+      ],
+      "mutation": "wrong_frontier",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "pin_parent_sha256"
+      ],
+      "mutation": "wrong_parent",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "pin_parent_active_validator_sha256"
+      ],
+      "mutation": "wrong_parent_validator",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "pin_proof_accepted_checkpoint_sha256"
+      ],
+      "mutation": "wrong_proof",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "pin_proof_active_verifier_sha256"
+      ],
+      "mutation": "wrong_proof_validator",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "pin_proof_verifier_repair_manifest_sha256"
+      ],
+      "mutation": "wrong_proof_repair",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "pin_row18_primary_sha256"
+      ],
+      "mutation": "wrong_row_primary",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "pin_row18_control_sha256"
+      ],
+      "mutation": "wrong_row_control",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "num_K_upper"
+      ],
+      "mutation": "wrong_K",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "num_inherited_lower"
+      ],
+      "mutation": "wrong_inherited",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "num_connected_lower",
+        "recompute_round"
+      ],
+      "mutation": "wrong_lower",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "num_epsilon"
+      ],
+      "mutation": "wrong_eps",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "num_upper_h"
+      ],
+      "mutation": "wrong_upper_h",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "two_branches",
+        "branch_q_R_present",
+        "branch_q_R_q",
+        "branch_q_R_z_from",
+        "branch_q_R_z_to",
+        "branch_q_R_a_left",
+        "branch_q_R_a_right",
+        "branch_q_R_source_pass",
+        "branch_q_R_C_pass",
+        "branch_q_R_upper_h_pass",
+        "branch_q_R_thermal_pass",
+        "branch_q_R_domain",
+        "branch_q_R_admitted"
+      ],
+      "mutation": "missing_R",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "branch_q_L_q"
+      ],
+      "mutation": "wrong_qL",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "branch_q_L_source_pass"
+      ],
+      "mutation": "source_fail",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "branch_q_R_thermal_pass"
+      ],
+      "mutation": "thermal_fail",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "endpoint_E",
+        "endpoint_is_primary_row18_right"
+      ],
+      "mutation": "wrong_endpoint_E",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "endpoint_Vbar",
+        "endpoint_is_primary_row18_right"
+      ],
+      "mutation": "wrong_endpoint_V",
+      "rejected": true
+    },
+    {
+      "failed_predicates": [
+        "spec_sha"
+      ],
+      "mutation": "wrong_spec_hash",
+      "rejected": true
+    }
+  ],
+  "mutations_rejected": 24,
+  "mutations_total": 24,
+  "schema": "bubbleverse.validation.v1",
+  "status": "PASS",
+  "target": "Q048-FREC-MOVING-H-V39",
+  "verifier_imports_current_producer": false
+}
