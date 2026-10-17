@@ -1,0 +1,99 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_V40_RECOVERY_INGESTION_EVIDENCE_V1",
+  "created_at_utc": "2026-10-17T09:25:14Z",
+  "q": "Q048",
+  "target_q": "Q048",
+  "incoming_recovery": {
+    "task_id": "LOCAL-Q048-POST-V40-MISSING-ARTIFACT-RECOVERY-V1",
+    "task_fingerprint": "88619c698a53610c21013d75efaccc55fe0684ed571be8d08138337f6fe56a52",
+    "outcome": "BLOCKED_ORIGINAL_BYTES_UNAVAILABLE",
+    "ingestion_state": "NEW_RECOVERY_EVENT",
+    "scientific_evidence_increment": 0,
+    "actual_cell_increment": 0,
+    "proof_cell_increment": 0
+  },
+  "transport_hash_checks": {
+    "result": true,
+    "handoff": true,
+    "files": true
+  },
+  "repository": {
+    "name": "Morfindien/Bubbleverse",
+    "observed_main_head": "99f9bea2374bf840a6bbd45d5c75c57ba09b7905",
+    "recovery_package_commit": "99f9bea2374bf840a6bbd45d5c75c57ba09b7905",
+    "source_freshness": "VERIFIED",
+    "ingestion_package_sync": "USER_UPLOAD_PENDING"
+  },
+  "preserved_state": {
+    "actual_count": 82,
+    "actual_frontier": 1260,
+    "other_frontiers": [
+      1440,
+      1440,
+      1440
+    ],
+    "v40_proof_cell_z": [
+      1260,
+      1250
+    ],
+    "v40_accepted_checkpoint_sha256": "3e50e4a858d74382bd518577309edd4768c3e7b5246a03c963ac055ebe9fea48",
+    "v40_validation_sha256": "1fba6f12b92b295ccade9f15cd09ea86fdc88447274df872da7d6e8ac512b046",
+    "v40_checks": "88/88",
+    "v40_semantic_mutations_rejected": "24/24",
+    "actual83": false,
+    "q_complete": false,
+    "native_P6": "UNRESOLVED"
+  },
+  "missing_required_artifacts": [
+    {
+      "filename": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V40.md",
+      "bytes": 1688,
+      "sha256": "7a9a049cdccaba9ba72cb791523a3ed24dc158182a95eddfa9bd858898ae9d8f",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_acceptance_validation_v40.json",
+      "bytes": 624,
+      "sha256": "6481d40090e3dc93fc480b210ed74c14fbf212603f4a5cb115f5e77582f4d7d0",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_postaccept_validation_v40.json",
+      "bytes": 680,
+      "sha256": "5af961528c29ebdacdb314b52289a796962900ae4a7ebbd448e7788d4cf2950e",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_result_v40.json",
+      "bytes": 35226,
+      "sha256": "1d1e53c75d011c339030ea52e03a6f1ce382a8ea611942659e232217ebd1b840",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_spec_v40.json",
+      "bytes": 7877,
+      "sha256": "d50d1da0d305ec318bf67f83e8b994064017d7d93f920108e0dccb2bb5c1a8fa",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_transition_validation_v40.json",
+      "bytes": 469,
+      "sha256": "026b50286a2856f6b084ad32827523b649f50fbd53902f2f41eb9f39619727cc",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_verify_v40.py",
+      "bytes": 17796,
+      "sha256": "759474c3e662d42ca6a0455ab1d23af8fbfa93d1162c77e77b1a38534ead6388",
+      "status": "NOT_RECOVERED"
+    }
+  ],
+  "materiality_no_repeat": {
+    "builder_recovery_task_completed": true,
+    "repeat_builder_search_materially_useful_without_new_bytes": false,
+    "repeat_ingestion_materially_useful_without_new_bytes": false,
+    "only_material_change": "Receipt of genuine external/original candidate bytes followed by SHA256 match"
+  },
+  "selected_next_scientific_engine": null,
+  "disposition": "BLOCKED"
+}

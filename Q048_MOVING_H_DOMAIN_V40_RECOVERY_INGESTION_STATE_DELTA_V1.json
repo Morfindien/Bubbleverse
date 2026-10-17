@@ -1,0 +1,31 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_V40_RECOVERY_INGESTION_STATE_DELTA_V1",
+  "created_at_utc": "2026-10-17T09:25:14Z",
+  "q": "Q048",
+  "before": {
+    "workflow": "BLOCKED_MISSING_STATE",
+    "actual_count": 82,
+    "actual_frontier": 1260,
+    "recovery_task": "LOCAL-Q048-POST-V40-MISSING-ARTIFACT-RECOVERY-V1",
+    "recovery_status": "PREPARED_NOT_YET_INGESTED"
+  },
+  "after": {
+    "workflow": "BLOCKED_MISSING_STATE",
+    "case_lifecycle": "ACTIVE",
+    "epistemic_status": "INCONCLUSIVE",
+    "disposition": "BLOCKED",
+    "actual_count": 82,
+    "actual_frontier": 1260,
+    "other_frontiers": [
+      1440,
+      1440,
+      1440
+    ],
+    "recovery_task_status": "INGESTED_ONCE_BLOCKED",
+    "selected_next_engine_id": null,
+    "next_recovery_requirement": "External/original bytes for seven frozen V40 artifacts, SHA256 verified"
+  },
+  "scientific_delta": "NO_MATERIAL_SCIENTIFIC_CHANGE",
+  "provenance_delta": "ADDS repository-backed recovery-failure receipt and anti-repeat checkpoint",
+  "blocker_cleared": false
+}
