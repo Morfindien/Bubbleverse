@@ -1,0 +1,123 @@
+{
+  "CURRENT_Q": "Q048",
+  "NativeP6": "UNRESOLVED",
+  "TARGET_Q": "Q048",
+  "accepted_actual": {
+    "count": 87,
+    "frontier": 1210
+  },
+  "actual_before": {
+    "count": 86,
+    "frontier": 1220
+  },
+  "admission_mode": "CONSUME_ACCEPTED_V48_DOMAIN_CERTIFICATE_WITH_FRESH_ROW23_CONSUMER_REBIND_AND_RATIONAL_LOWER_RECHECK",
+  "branches": [
+    {
+      "C_pass": true,
+      "a_left": "1/1221",
+      "a_right": "1/1211",
+      "current_consumer_admitted": true,
+      "domain_bound_to_current_cell": true,
+      "guard_domain_recheck_pass": true,
+      "name": "q_L",
+      "proof_branch_admitted": true,
+      "q": "1/1000000",
+      "source_pass": true,
+      "thermal_pass": true,
+      "upper_h_pass": true,
+      "z_from": 1220,
+      "z_to": 1210
+    },
+    {
+      "C_pass": true,
+      "a_left": "1/1221",
+      "a_right": "1/1211",
+      "current_consumer_admitted": true,
+      "domain_bound_to_current_cell": true,
+      "guard_domain_recheck_pass": true,
+      "name": "q_R",
+      "proof_branch_admitted": true,
+      "q": "0/1",
+      "source_pass": true,
+      "thermal_pass": true,
+      "upper_h_pass": true,
+      "z_from": 1220,
+      "z_to": 1210
+    }
+  ],
+  "builder_prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+  "candidate_actual_after": {
+    "count": 87,
+    "frontier": 1210
+  },
+  "candidate_sha256": "c8d56c24e4b2af2badaa1a23531a429bcd1246820bdca21221c0e87af8337281",
+  "cell": {
+    "a_left": "1/1221",
+    "a_right": "1/1211",
+    "z_from": 1220,
+    "z_to": 1210
+  },
+  "checkpoint_kind": "ACCEPTED_ACTUAL",
+  "endpoint": {
+    "E": "3390253475701603239/31250000000000000",
+    "Vbar": "1047654908572658767/50000000000000000",
+    "Y": "43312004391337038603/500000000000000000",
+    "a": "1/1211"
+  },
+  "guard_recheck": {
+    "central_well_energy_wall": true,
+    "coercivity": true,
+    "control_admitted": true,
+    "future_cap_positive": true,
+    "positive_H_and_background": true,
+    "positive_source": true,
+    "primary_admitted": true
+  },
+  "no_native_trajectory_claim": true,
+  "no_new_proof_cell": true,
+  "no_physical_reset": true,
+  "numerics": {
+    "K_upper": "5816558165764726841579/1000000000000000000",
+    "connected_lower": "1191179766507407/1000000000000000000",
+    "connected_lower_exact_control": "30601266522213224024143752615502440612051/25689881059630075856247384497559387949000000",
+    "epsilon": "1/1000000",
+    "exp_upper": "121100000000000000000000000/121094183441834235273158421",
+    "inherited_lower": "252706328681031/200000000000000000",
+    "u_upper_r_minus_1": "10/1211",
+    "x_upper": "5816558165764726841579/121100000000000000000000000"
+  },
+  "other_frontiers": [
+    1440,
+    1440,
+    1440
+  ],
+  "parent_sha256": "dfbace0c3952ab87f39cb28bcb81c9746f4334065694d7ff989e985aa5834855",
+  "producer_sha256": "2e46f8d1508fe87b1b9919eb95716f9062caf130ba31186cdb56957df2db62fc",
+  "proof_acceptance_sha256": "d57ffa8312762220f0545b4af0be2b97e584081384225c78d7c0e6b33172ba6d",
+  "proof_accepted_checkpoint_sha256": "3bcd2de8ecf27a90805b823b166e4ce3b5d6412a85f8ca5af9a309c152d76bf5",
+  "proof_postaccept_sha256": "d49d2714b9dfd97ffd2a7e4847d10ad7f418351f6d85e4d5352861faa303d003",
+  "proof_result_sha256": "66bd90cf1033468ca36959e78a2b437adddabf04f1853bcb48b5632dd27da020",
+  "proof_transition_sha256": "7aaa99aa750c672f3cedbf70e7819d08258ec59d67adec958dc747c98866ce02",
+  "proof_validation_sha256": "aa73bc8e90153047596aad72240cd7bfb36dbaf7c2006f260ea0d31095e0adda",
+  "q_complete": false,
+  "result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V49",
+  "row23_control_sha256": "f52af1e4db88d31607b2638551b5e967f99b0eff02444cdbc2609cf4bb0850e2",
+  "row23_primary_sha256": "ab0947b5838c3e4e56743317cae31ac165300e693aa374e74352e47ad6f8a215",
+  "run_id": "LOCAL-Q048-FREC-MOVING-H-V49-2026-10-17T12:29:32Z",
+  "runtime": {
+    "elapsed_seconds": 0.001769080000002532,
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+    "python": "3.13.5"
+  },
+  "schema": "bubbleverse.q048.frec_moving_h.actual_consumer.v1",
+  "scientific_scope": "CONDITIONAL_SOURCE_REAL_ACTUAL_ADMISSION_ONLY",
+  "spec_sha256": "74c739452302b3223d91a6cf39d685a9333ee10e9bb9ce3bcce8954b253fc986",
+  "status": "VALIDATED",
+  "stop": "ONE_CANDIDATE_ACTUAL_CELL_ONLY_NO_CONTINUATION_BELOW_1210",
+  "task_fingerprint": "01b8489b746373a2b7cadad7fcfbc3da8dcd9907e3bef2edb095e63941c24e6c",
+  "task_id": "LOCAL-Q048-POST-V48-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "task_json_sha256": "322a438690621bc4b972dda8ceb2c96fb7c84d5addf2a2a215731840e78d0232",
+  "transition_validation_sha256": "996d906e135be0f886931bd62fff16184cb59a43d489df5e6998f7282c0da684",
+  "validation_sha256": "cc47b039b8455b57ef6c0ebdf8f649a72191d7371a2eefdd77162e0b7644118d",
+  "version": "V49"
+}
