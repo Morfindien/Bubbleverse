@@ -1,0 +1,94 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_V40_RECOVERY_EVIDENCE_V1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-POST-V40-MISSING-ARTIFACT-RECOVERY-V1",
+  "task_fingerprint": "88619c698a53610c21013d75efaccc55fe0684ed571be8d08138337f6fe56a52",
+  "engine": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+  "outcome": "BLOCKED_ORIGINAL_BYTES_UNAVAILABLE",
+  "science_reexecuted": false,
+  "historical_files_reconstructed": false,
+  "current_actual_state": {
+    "count": 82,
+    "frontier": 1260,
+    "other_frontiers": [
+      1440,
+      1440,
+      1440
+    ]
+  },
+  "v40_proof": {
+    "cell_z": [
+      1260,
+      1250
+    ],
+    "accepted_checkpoint_sha256": "3e50e4a858d74382bd518577309edd4768c3e7b5246a03c963ac055ebe9fea48",
+    "validation_sha256": "1fba6f12b92b295ccade9f15cd09ea86fdc88447274df872da7d6e8ac512b046",
+    "checks": "88/88",
+    "semantic_mutations_rejected": "24/24"
+  },
+  "searches": {
+    "chatgpt_library": "SEVEN_EXACT_ORIGINALS_NOT_PRESENT_AS_STANDALONE_FILES_IN_ACCESSIBLE_INVENTORY",
+    "current_runtime_filesystem": "SEVEN_EXACT_FILENAMES_NOT_FOUND_UNDER_/mnt/data",
+    "github_repository": "Morfindien/Bubbleverse",
+    "github_main_head": "fe20e547b5cf81938aa84591a79c0f6b00f06fe8",
+    "github_exact_path_commit_history": {
+      "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V40.md": [],
+      "q048_moving_h_domain_acceptance_validation_v40.json": [],
+      "q048_moving_h_domain_postaccept_validation_v40.json": [],
+      "q048_moving_h_domain_result_v40.json": [],
+      "q048_moving_h_domain_spec_v40.json": [],
+      "q048_moving_h_domain_transition_validation_v40.json": [],
+      "q048_moving_h_domain_verify_v40.py": []
+    },
+    "historical_origin_sandbox": "/mnt/data/q048_v40 — NOT_ACCESSIBLE_IN_CURRENT_RUNTIME"
+  },
+  "missing_required_artifacts": [
+    {
+      "filename": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V40.md",
+      "bytes": 1688,
+      "sha256": "7a9a049cdccaba9ba72cb791523a3ed24dc158182a95eddfa9bd858898ae9d8f",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_acceptance_validation_v40.json",
+      "bytes": 624,
+      "sha256": "6481d40090e3dc93fc480b210ed74c14fbf212603f4a5cb115f5e77582f4d7d0",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_postaccept_validation_v40.json",
+      "bytes": 680,
+      "sha256": "5af961528c29ebdacdb314b52289a796962900ae4a7ebbd448e7788d4cf2950e",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_result_v40.json",
+      "bytes": 35226,
+      "sha256": "1d1e53c75d011c339030ea52e03a6f1ce382a8ea611942659e232217ebd1b840",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_spec_v40.json",
+      "bytes": 7877,
+      "sha256": "d50d1da0d305ec318bf67f83e8b994064017d7d93f920108e0dccb2bb5c1a8fa",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_transition_validation_v40.json",
+      "bytes": 469,
+      "sha256": "026b50286a2856f6b084ad32827523b649f50fbd53902f2f41eb9f39619727cc",
+      "status": "NOT_RECOVERED"
+    },
+    {
+      "filename": "q048_moving_h_domain_verify_v40.py",
+      "bytes": 17796,
+      "sha256": "759474c3e662d42ca6a0455ab1d23af8fbfa93d1162c77e77b1a38534ead6388",
+      "status": "NOT_RECOVERED"
+    }
+  ],
+  "blocker": "Only the originating ephemeral sandbox or an external copy/download of the seven original byte streams can satisfy byte-identical recovery. Neither is accessible in this runtime.",
+  "stop_condition_satisfied": "PRECISE_REMAINING_ORIGINAL_ARTIFACT_ACCESS_BLOCKER_DOCUMENTED",
+  "next_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "actual_consumer_authorized": false
+}
