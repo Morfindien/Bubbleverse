@@ -1,0 +1,15 @@
+# Q048 V36 — overlevering til Execution/HPC/Builder2.2.0
+
+STATUS CONTINUES; CASE ACTIVE; SCIENTIFIC INCONCLUSIVE; V36TECHNICAL PASS. CURRENT_Q/TARGET_Q Q048/Q048.
+
+RECEIPT `LOCAL-Q048-MOVING-H-DOMAIN-V36-INGESTION-RECEIPT-V1`. TASK `LOCAL-Q048-POST-V36-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1`. FINGERPRINT `17a523e59880d3a945465b3cd58b93401479d4079a8e76fc6ca956a4c834c3f5`.
+
+**Konsumér og validér præcis én actual paired-frec-celle1280→1270**, a=[1/1281,1/1271]. Start fra V35acceptedactualparent `4792f96146cd63059f35112b0a328fbe60266e622fb2a8f7277ab13c16e17b2d` med **80/frontier1280**. Konsumér V36raw`d123075b3c10402e8ed1b9d64419f84454c7b5fe7a94ce8d92f737eef8b75375`, validation`b6b3ef4b18cffcbd49468b36204509d615dafe8ddd533e1fdae1458f6cfe8422`, acceptedmathcheckpoint`88e3578c806b9513bba33f2aff94d50f9b2133f4720be1784f92d298001f8e81`. Proof er ikke actual. Ingen ny science er kørt i ingestion.
+
+V12row17primary`6936aa24d1c3897e39589839d9be758a42bb2168974ec8bb7a2b078a21df5e71` og control`f2f65e71dace643b1e2594bce374f839778b93c32a5106abc1b701a653b6e2a0` er committed. Primary gluer eksakt til V35a/E/Y/V; control erstatter aldrig primarystate. Inheritedlower=1967989331776669/1000000000000000000; konsumér K=60049558888530648049/10000000000000000 og lower=900243978831707/500000000000000000. Ingen fysisk reset.
+
+**Candidate81/frontier1270 er endnu ikke accepteret.** Kun efter separat producer-free current-consumerverifierPASS,20 eksplicitte semantiske mutationer, meningsfulde transitiontests, guarded acceptance og postaccept kan den bliveactual. Endpoint ved succes: a=1/1271,E=31937778021754948473/250000000000000000,Y=20415065046373924557/200000000000000000,Vbar=2460596240285224731/100000000000000000. Bevar tidligere80celler og øvrige trefronter1440. Bind source/C/upper-h/thermal for beggeqgrene til samme accepterede V36-domæne.
+
+Læs [fuld task](Q048_MOVING_H_DOMAIN_V36_NEXT_BUILDER_TASK_V1.json), [komplet journal](Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V36_INGESTED_V1.md), [resultat](Q048_MOVING_H_DOMAIN_V36_INGESTION_RESULT_V1.md) og [artifactrefs](Q048_MOVING_H_DOMAIN_V36_INGESTION_ARTIFACT_REFS_V1.json). Brug aktive V35R1-verifier/acceptance som mønstre; failedoriginal er kun provenance. Frisk V37-kode skal have direkte code/specbinding; bind parentR1-repair særskilt, uden at opfinde en currentrepairmanifest. Syntaxcheck alle nye entrypoints før freeze/execution. Rebind version/cell/parent/proof/row/hash/schema/count-pins. COUNT81 er gyldigcandidate; brug eksempelvis82 som forkert-count-mutation. Reject serializedV35 uden at køre historisk science. Currentverifier må ikke importere currentconsumer.
+
+Stop efter én valideretactualcelle, første præcise obstruction eller300s samlet executed science. Ingen fortsættelse under1270, V36proofreplay, V35consumerreplay, V12guardregen, reset, subdivision/tuning, refit/recapture/native/P6/HPC/paidrun, Q049+ eller modelpromotion. Sufficient-boundfailure=METHOD_INSUFFICIENT uden uafhængig fysisk modstrid. Returnér én gang til Result Ingestion & Routing2.1.0. Handoff PREPARED/COMPLETE; Builder er ikke startet her. GitHub USER_UPLOAD_PENDING.
