@@ -1,0 +1,101 @@
+{
+  "task_id": "LOCAL-Q048-POST-V42-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "task_fingerprint": "d4b1816686e836dad34170696c1a038d56a203b48295d582af3e1722eb2ef4a6",
+  "fingerprint_method": "SHA256 canonical JSON fingerprint_basis",
+  "fingerprint_basis": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "engine_version": "2.2.0",
+    "task_type": "ACTUAL_CONSUMER_ONE_CELL",
+    "result_version_on_execution": "V43",
+    "cell_z": [
+      1250,
+      1240
+    ],
+    "parent_actual_count": 83,
+    "parent_actual_frontier": 1250,
+    "parent_actual_checkpoint_sha256": "1ca4e859701637116a5ef08c3d56082b21b09f0afe5cbdb725647a54b136ce73",
+    "proof_checkpoint_sha256": "93301e81bd0d32378dd234f3407f687c76bb701bd0ef70936ec69a2ee5111fb4",
+    "proof_result_sha256": "baad74a1e49fc16cdfdb7aab0ba17602182f0bb799228c2984aadb415f09d8d7",
+    "proof_validation_sha256": "94e99cceb984cc6a8bc13d1c758362fb8937dfe4e7760b58e73aa07e73629562",
+    "guard_row_index": 20,
+    "guard_primary_row_sha256": "b63efda74dd901bc67d4d5a450430189e4466c76309f247a301045b710ddfdd1",
+    "guard_control_row_sha256": "824476f61c10b8b8dd6aac51439c3db4c981906075ee19387b109ee7691f8621",
+    "max_new_actual_cells": 1,
+    "max_new_math_proof_cells": 0,
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+  },
+  "q": "Q048",
+  "target_q": "Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "version": "2.2.0",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1"
+  },
+  "initial_actual_state": {
+    "count": 83,
+    "frontier": 1250,
+    "accepted_checkpoint_sha256": "1ca4e859701637116a5ef08c3d56082b21b09f0afe5cbdb725647a54b136ce73",
+    "endpoint": {
+      "a": "1/1251",
+      "E": "121081520392610443809/1000000000000000000",
+      "Y": "19344944878982902339/200000000000000000",
+      "Vbar": "11670964748895967471/500000000000000000"
+    },
+    "connected_lower": "769738848006023/500000000000000000",
+    "other_frontiers": [
+      1440,
+      1440,
+      1440
+    ]
+  },
+  "proof": {
+    "accepted_checkpoint_sha256": "93301e81bd0d32378dd234f3407f687c76bb701bd0ef70936ec69a2ee5111fb4",
+    "result_sha256": "baad74a1e49fc16cdfdb7aab0ba17602182f0bb799228c2984aadb415f09d8d7",
+    "validation_sha256": "94e99cceb984cc6a8bc13d1c758362fb8937dfe4e7760b58e73aa07e73629562",
+    "cell_z": [
+      1250,
+      1240
+    ],
+    "K_upper": "2907622519872114268983/500000000000000000",
+    "whole_cell_lower": "143582657773163/100000000000000000",
+    "branches_admitted": {
+      "L": true,
+      "R": true
+    }
+  },
+  "guard_binding": {
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "row_index": 20,
+    "primary_row_sha256": "b63efda74dd901bc67d4d5a450430189e4466c76309f247a301045b710ddfdd1",
+    "control_row_sha256": "824476f61c10b8b8dd6aac51439c3db4c981906075ee19387b109ee7691f8621"
+  },
+  "success_condition": "Accept exactly one actual paired-frec cell 1250->1240, state83->84/frontier1250->1240, endpoint from V12 row20 primary, after fresh consumer-domain recheck.",
+  "stop_condition": "Stop after one validated actual cell or first precise obstruction; no below1240 continuation.",
+  "forbidden": [
+    "proof_replay",
+    "V12_guard_regeneration",
+    "historical_V40_reconstruction",
+    "below1240",
+    "reset",
+    "tuning_subdivision",
+    "refit_recapture",
+    "native_P6",
+    "HPC_paid",
+    "Q049+",
+    "model_promotion"
+  ],
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+}
