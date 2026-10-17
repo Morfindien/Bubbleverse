@@ -1,0 +1,66 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_ACCEPTED_CHECKPOINT_V38",
+  "q": "Q048",
+  "target_q": "Q048",
+  "checkpoint_kind": "ACCEPTED_MATHEMATICAL_PROOF",
+  "source_result": "q048_moving_h_domain_result_v38.json",
+  "source_result_sha256": "6cffa31f2938f2934bf8206f6cca9b5f89ef71c4f3ad6b774943d7a20d7bdd66",
+  "validation": "q048_moving_h_domain_validation_v38.json",
+  "validation_sha256": "d24e0aa962358e6edeae92067b272bcf20d04ffa56c25379672118b4875f1f0e",
+  "candidate_checkpoint_sha256": "317e3588d34982faa51e0baaea55030f7437776d9c9ebf53b27d0e48fcdb1e65",
+  "transition_validation_sha256": "4f770b8660cbcddc28a75c66b40e065bd806b8677888e48982982507f05be642",
+  "validation_state": "ACCEPTED_AFTER_INDEPENDENT_VALIDATION",
+  "technical_state": "PASS",
+  "checks": "83/83",
+  "mutation_rejections": "20/20",
+  "transition_checks": "10/10",
+  "accepted_at_utc": "2026-10-17T08:09:26.488939+00:00",
+  "proof_cell_a": [
+    "1/1271",
+    "1/1261"
+  ],
+  "proof_cell_z": [
+    1270,
+    1260
+  ],
+  "parent_actual_checkpoint_sha256": "af2809f604a97d8f77648b9a91ee7ce0fd511b02283e1ce5e31e5d974ccd03a1",
+  "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "guard_primary_row_sha256": "b7ead4c587b46cce5949d4732f48b8686930076bfe486830c09094e75282d48c",
+  "guard_control_row_sha256": "0b5a9873628d37b3e71ae165fe0a464e15424f382af5b1bd860cbb9a64124186",
+  "comparison": {
+    "kind": "COMMON_EPS_SOURCE_SIGN_RICCATI_CONTINUATION",
+    "parent_endpoint_a": "1/1271",
+    "parent_lower_projection": "900243978831707/500000000000000000",
+    "K_upper": "59415737090398406981/10000000000000000",
+    "epsilon": "1/1000000",
+    "endpoint_primary_lower": "1660125037256648423411524285595890313656657599452879318821322036703379266452195100394845641224367652475573965442099613/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "endpoint_control_lower": "1135154168647219048108046317601707053433/683988659563478891953682398292946567000000",
+    "whole_cell_h_min": "1659609633545201/1000000000000000000",
+    "upper_h": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "physical_state_reset": false
+  },
+  "actual_state_unchanged": {
+    "total_actual_paired_cells": 81,
+    "frontiers": {
+      "camspec-ede_n3": 1440,
+      "camspec-lcdm": 1440,
+      "hillipop-ede_n3": 1270,
+      "hillipop-lcdm": 1440
+    },
+    "actual_scalar_endpoint": {
+      "E_right": "31937778021754948473/250000000000000000",
+      "Vbar": "2460596240285224731/100000000000000000",
+      "Y_right": "20415065046373924557/200000000000000000",
+      "a1": "1/1271"
+    }
+  },
+  "new_math_proof_cells": 1,
+  "new_actual_paired_cells": 0,
+  "q_complete": false,
+  "native_P6": "UNRESOLVED",
+  "resume_rule": "Return exactly once to Result Ingestion & Routing 2.1.0. Ingest V38 once with actual81/frontier1270 unchanged. No automatic consumer or below1260 continuation."
+}
