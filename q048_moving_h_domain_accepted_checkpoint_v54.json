@@ -1,0 +1,81 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_ACCEPTED_CHECKPOINT_V54",
+  "q": "Q048",
+  "target_q": "Q048",
+  "source_result": "q048_moving_h_domain_result_v54.json",
+  "source_result_sha256": "74387beac1785d082c646067ac3109851677465b3048d070568b9467625abed7",
+  "mathematical_cell_status": "PASS_NEW_MOVING_H_DOMAIN_PROOF_CELL",
+  "technical_state": "PASS",
+  "proof_cell_a": [
+    "1/1191",
+    "1/1181"
+  ],
+  "proof_cell_z": [
+    1190,
+    1180
+  ],
+  "parent_actual_checkpoint_sha256": "cf29cc981ee5f7c138dd4492e321d0e15954502147d716136f82ad12dcfbd49c",
+  "actual_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 1190
+  },
+  "actual_scalar_endpoint": {
+    "E": "102553088047447642031/1000000000000000000",
+    "Vbar": "9913111055761003607/500000000000000000",
+    "Y": "81864856278902938851/1000000000000000000",
+    "a": "1/1191"
+  },
+  "total_actual_paired_cells": 89,
+  "new_actual_paired_cells": 0,
+  "new_mathematical_proof_cells": 1,
+  "comparison_start_lower": "1069246295923101/1000000000000000000",
+  "comparison_endpoint_lower": "508699162758351/500000000000000000",
+  "comparison_K_upper": "5623234918627853710049/1000000000000000000",
+  "physical_state_reset": false,
+  "stop": {
+    "code": "ONE_NEW_MOVING_H_PROOF_DOMAIN_CELL_PENDING_INDEPENDENT_VALIDATION",
+    "no_continuation_below1180": true
+  },
+  "resume_rule": "Candidate only until producer-free validation PASS. Actual paired count/frontier remain 89/1190. Return to Result Ingestion after acceptance; no automatic consumer or below1180 continuation.",
+  "adapter_correction": {
+    "kind": "NONSCIENTIFIC_CANDIDATE_METADATA_CORRECTION",
+    "field": "proof_cell_a",
+    "from": [
+      "1/1201",
+      "1/1191"
+    ],
+    "to": [
+      "1/1191",
+      "1/1181"
+    ],
+    "basis": "task cell_a + result z/a interval; no scientific arithmetic rerun",
+    "original_candidate_sha256": "15ef13175e286fa75b737b499f9e87f07ddeedd615c46327807900a067384fb2",
+    "executed_producer_sha256": "7f27f6a6c3b93f39bfa0f5303a106980e471346b97605cb9a95b8131d9493149"
+  },
+  "checkpoint_kind": "ACCEPTED_MATHEMATICAL_PROOF",
+  "status": "VALIDATED",
+  "validation_sha256": "0e0c3ad99501fc7e8067cbdb21ae66f2a93e7bf53ce3773b10765806a7570de6",
+  "transition_validation_sha256": "245a6a2bc21eb580ced5c82f09a1b357981f8e36d77132ebcac0a2415ced1c5f",
+  "acceptance_validation_sha256": "2c6fdc7fe922e688e0a15704854391ec8298d728756afa3e29e382c3733edc92",
+  "validator_sha256": "f6d9af0a26339d06ff588157553ebb6d5fc4e25d6f61ee56342d49215776dcac",
+  "accepted_at_utc": "2026-10-17T15:13:00.419436+00:00",
+  "accepted_proof_cell": {
+    "z": [
+      1190,
+      1180
+    ],
+    "a": [
+      "1/1191",
+      "1/1181"
+    ]
+  },
+  "actual_state_unchanged": {
+    "count": 89,
+    "frontier": 1190
+  },
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED",
+  "historical_v40_originals_recovered": false
+}

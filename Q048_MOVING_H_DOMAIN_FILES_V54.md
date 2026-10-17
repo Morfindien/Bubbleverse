@@ -1,0 +1,27 @@
+# Q048 V54 files
+
+- `Q048_MOVING_H_DOMAIN_V54_RESULT.md` — SHA256 `ade625644db297be90ba6869ac4cb0d3d18360232261345cabd1c4e9cae512b1` — 2229 bytes
+- `Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V54_APPENDED_V1.md` — SHA256 `65d240ad2e721aa622698c8be171b041c8f3e7cbb2f49d8d8eed91be8c853d4d` — 14051634 bytes
+- `Q048_MOVING_H_DOMAIN_V54_HANDOFF_TO_INGESTION.md` — SHA256 `e1295fee3b38d009d53664a0e27a1cdd9710c858f0c0c92766c92f36fd951a28` — 1773 bytes
+- `Q048_MOVING_H_DOMAIN_V54_JOURNAL_APPEND.md` — SHA256 `94ad65159c732fbabcd8de30cee56ceeecc86ab0521053c8c547a979130df365` — 4433 bytes
+- `Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V54.md` — SHA256 `ff5bafd5fee159e1768c3fbac8c997761df1ff221649a0c1f333d32a15987cc9` — 1090 bytes
+- `q048_moving_h_domain_spec_v54.json` — SHA256 `cf3f169bb6dde102a985e4fcb0cdd13381c065ba7ce9bf5921d39bdfeb34ef68` — 5423 bytes
+- `q048_moving_h_domain_result_v54.json` — SHA256 `74387beac1785d082c646067ac3109851677465b3048d070568b9467625abed7` — 34290 bytes
+- `q048_moving_h_domain_candidate_checkpoint_v54.json` — SHA256 `b2b9af15ea90b618c7bea944650d0b94e8ba37ea1fef4ad0242b39af5e538286` — 2121 bytes
+- `q048_moving_h_domain_validation_v54.json` — SHA256 `0e0c3ad99501fc7e8067cbdb21ae66f2a93e7bf53ce3773b10765806a7570de6` — 8895 bytes
+- `q048_moving_h_domain_transition_validation_v54.json` — SHA256 `245a6a2bc21eb580ced5c82f09a1b357981f8e36d77132ebcac0a2415ced1c5f` — 505 bytes
+- `q048_moving_h_domain_acceptance_validation_v54.json` — SHA256 `2c6fdc7fe922e688e0a15704854391ec8298d728756afa3e29e382c3733edc92` — 533 bytes
+- `q048_moving_h_domain_accepted_checkpoint_v54.json` — SHA256 `690a92ec097585c1c9ab46e69fe5ff0fd05d6667050c0e1cc123676fcb04d1f4` — 2917 bytes
+- `q048_moving_h_domain_postaccept_validation_v54.json` — SHA256 `6605ccc7c686c17eabf7cb96d82ec7dcfe2793bf1eb157bcce75bf22d4fe2d4d` — 826 bytes
+- `q048_moving_h_domain_input_pin_audit_v54.json` — SHA256 `c96b0429c70af2e28890bad95694302d8fb9b991019f245a1160f076b6a59bd7` — 7855 bytes
+- `q048_moving_h_domain_state_delta_v54.json` — SHA256 `19a86157c3d6db29e2bc870c88a901707d6e4ae461acad5a7a98beef8f7e22e8` — 980 bytes
+- `q048_moving_h_domain_v54_executed.py` — SHA256 `7f27f6a6c3b93f39bfa0f5303a106980e471346b97605cb9a95b8131d9493149` — 14954 bytes
+- `q048_moving_h_domain_v54.py` — SHA256 `ab1c4114e41a45ccdd0f1a719653610210377b77c36b6a93d8f4897196155fa0` — 14954 bytes
+- `q048_moving_h_domain_verify_v54.py` — SHA256 `f6d9af0a26339d06ff588157553ebb6d5fc4e25d6f61ee56342d49215776dcac` — 18178 bytes
+- `test_q048_v54_transition.py` — SHA256 `6ceb3bd95c9851b98d0651e7e57e54d2a7d5d4ef32f785358da079e7e98a8a46` — 2710 bytes
+- `q048_moving_h_domain_accept_v54.py` — SHA256 `78f67b981019465ebdb3993ee193ea93979fd48f0164d5259d6874b86ed1b96a` — 3712 bytes
+- `q048_moving_h_domain_postaccept_v54.py` — SHA256 `6a97042197292d0b1053c75fecb9c547c5969f8ed03e65479b7ee9a2813c1e31` — 3321 bytes
+- `q048_moving_h_domain_candidate_checkpoint_v54_initial_fail.json` — SHA256 `15ef13175e286fa75b737b499f9e87f07ddeedd615c46327807900a067384fb2` — 1618 bytes
+- `q048_moving_h_domain_validation_v54_initial_fail.json` — SHA256 `dea51f0bd102fa3d21e85ec2f314280720e561039084fcfa713ed002e44ed6c5` — 9238 bytes
+- `q048_moving_h_domain_validation_v54_r2_fail.json` — SHA256 `0baae2ba156f3fc15acd830d9757e382011468b846ebf64a30baf24919ff73a5` — 8895 bytes
+- `Q048_MOVING_H_DOMAIN_V54_GITHUB_MEMORY_UPDATE_V1.json` — SHA256 `713bcc4f8a3dd9340802b79d22df0ec392704ee9aa1a4d7e5d5f49094c51b029` — 983 bytes
