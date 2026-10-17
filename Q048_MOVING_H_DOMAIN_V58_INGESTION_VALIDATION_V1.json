@@ -1,0 +1,114 @@
+{
+  "schema_version": "Q048_V58_INGESTION_VALIDATION_V1",
+  "generated_utc": "2026-10-17T16:23:16.641255+00:00",
+  "scientific_reexecution": false,
+  "method": "contract/provenance/state validation only",
+  "checks": [
+    {
+      "check": "input_hashes_match_uploaded_and_retained_bytes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "exact_q_hash_is_canonical_64_char",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "v58_accepted_checkpoint_bound",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "actual_state_frozen_at_91_1170_during_ingestion",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "guard_row28_primary_interval",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "guard_row28_control_interval",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "primary_glues_to_actual_endpoint",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "candidate_endpoint_matches_primary",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "proof_lower_carried",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "task_fingerprint_recomputes",
+      "status": "PASS",
+      "detail": "3dcb65dd87a6a851050234428239f8f0e61b0d7d08d2fc5d8ce8a238d24c8750"
+    },
+    {
+      "check": "exactly_one_actual_cell_authorized",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "no_below1160_continuation",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "completion_gate_remains_open",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "journal_preserves_full_incoming_bytes",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "github_base_is_read_verified_no_write",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "selected_engine_builder_2_2_0",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "V58_math_replay_forbidden",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "NativeP6_forbidden_in_next_builder_task",
+      "status": "PASS",
+      "detail": ""
+    },
+    {
+      "check": "all_core_files_exist_nonempty",
+      "status": "PASS",
+      "detail": ""
+    }
+  ],
+  "pass_count": 19,
+  "total_count": 19,
+  "status": "PASS",
+  "task_fingerprint": "3dcb65dd87a6a851050234428239f8f0e61b0d7d08d2fc5d8ce8a238d24c8750",
+  "output_manifest_sha256": "c25e5d6ad9f937e0859036f18e6c224ba1686a5f7fc0ee009afccd45bb0a9771",
+  "preserved_initial_validator_failure": {
+    "filename": "Q048_MOVING_H_DOMAIN_V58_INGESTION_VALIDATION_V1_INITIAL_FAIL.json",
+    "sha256": "91434212ad092955ddcaf392ef4339f12496eb084b3fcdcb1005e8ede52b1ed8",
+    "status": "TECHNICAL_METADATA_ADAPTER_FAIL",
+    "reason": "First packaging attempt carried the known historical 61-character malformed question hash into the local QUESTION_SHA variable. The validator correctly rejected it. Metadata was corrected to the V58 canonical 64-character question hash; no proof arithmetic or actual consumer was executed or rerun."
+  }
+}
