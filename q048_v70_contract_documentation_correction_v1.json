@@ -1,0 +1,27 @@
+{
+  "correction_id": "LOCAL-Q048-V70-CONTRACT-PROSE-CORRECTION-V1",
+  "created_at_utc": "2026-10-18T13:18:01.966800+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "documentation_only": true,
+  "original_contract": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md",
+  "original_contract_sha256": "5d5911af4838867ffc8c9e891be2fb803cebc3e513d735c6b43d807c4593ade8",
+  "original_result": "q048_moving_h_domain_result_v70.json",
+  "original_result_sha256": "aef324df514ab7ee7d07e312ed850090401a2a3cc3c9bf55735c2832b0823e1b",
+  "task_fingerprint": "3d375399f3cbd79a9983a0e2d23ab9160baddd58c96ab0244956bc1d9d18612d",
+  "old_incorrect_prose": "Actual forbliver96/frontier1120; primary row34 glues to V67R1 endpoint.",
+  "correct_current_actual": {
+    "count": 97,
+    "frontier": 1110
+  },
+  "correct_parent": "Accepted V69 actual checkpoint; row34 glues to its a/E/Y/V endpoint.",
+  "correct_proof_cell": [
+    1110,
+    1100
+  ],
+  "root_cause": "Contract prose copied from V68 used forbliver96 (without actual prefix), which the pre-freeze literal replacement did not cover; V67R1 parent prose was also retained. Appended V70 section and authoritative task, metadata gates, producer code and raw output consistently used V69 actual97/frontier1110.",
+  "scientific_impact": "NONE: code reads task/parent/capture, never the prose for initial values. Numerical inputs, criteria, code, raw result, spec hashes and exact Q remain unchanged.",
+  "preservation": "Original frozen contract/spec/code/raw bytes are not edited; current interpretation adds this separately identified correction.",
+  "regression_check": "check_documentation_binding_v70.py; RED observed before correction, GREEN required before acceptance",
+  "producer_reexecutions": 0
+}

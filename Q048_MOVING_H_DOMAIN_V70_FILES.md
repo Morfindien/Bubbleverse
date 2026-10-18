@@ -1,0 +1,38 @@
+# Q048 V70 — alle individuelle filer
+
+Én proofcelle1110→1100 accepteret; actual97/frontier1110 uændret. Næste: Result Ingestion2.1.0. Den gamle kontraktprosa er korrigeret i et særskilt tillæg; både original og correction skal bevares. Upload alle nye V70-filer til repo-roden som nye versioner. USER_UPLOAD_PENDING; ingen GitHub-write/dispatch udført. Ingen arkiver.
+
+- [Q048_MOVING_H_DOMAIN_V70_RESULT.md](sandbox:/workspace/scratch/3415d88c213e/v70/output/Q048_MOVING_H_DOMAIN_V70_RESULT.md)
+- [Q048_MOVING_H_DOMAIN_V70_HANDOFF_TO_INGESTION.md](sandbox:/workspace/scratch/3415d88c213e/v70/output/Q048_MOVING_H_DOMAIN_V70_HANDOFF_TO_INGESTION.md)
+- [Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V70_APPENDED_V1.md](sandbox:/workspace/scratch/3415d88c213e/v70/output/Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V70_APPENDED_V1.md)
+- [q048_moving_h_domain_result_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_result_v70.json)
+- [q048_moving_h_domain_accepted_checkpoint_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_accepted_checkpoint_v70.json)
+- [q048_moving_h_domain_validation_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_validation_v70.json)
+- [q048_moving_h_domain_transition_validation_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_transition_validation_v70.json)
+- [q048_moving_h_domain_acceptance_validation_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_acceptance_validation_v70.json)
+- [q048_moving_h_domain_postaccept_validation_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_postaccept_validation_v70.json)
+- [q048_v70_contract_documentation_correction_v1.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_v70_contract_documentation_correction_v1.json)
+- [Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md](sandbox:/workspace/scratch/3415d88c213e/v70/output/Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md)
+- [Q048_MOVING_H_DOMAIN_V70_GITHUB_MEMORY_UPDATE.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/Q048_MOVING_H_DOMAIN_V70_GITHUB_MEMORY_UPDATE.json)
+- [Q048_MOVING_H_DOMAIN_V70_REPOSITORY_EVIDENCE.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/Q048_MOVING_H_DOMAIN_V70_REPOSITORY_EVIDENCE.json)
+- [Q048_MOVING_H_DOMAIN_V70_REUSE_DIFF.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/Q048_MOVING_H_DOMAIN_V70_REUSE_DIFF.json)
+- [check_documentation_binding_v70.py](sandbox:/workspace/scratch/3415d88c213e/v70/output/check_documentation_binding_v70.py)
+- [q048_documentation_binding_green_v70.log](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_documentation_binding_green_v70.log)
+- [q048_documentation_binding_red_v70.log](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_documentation_binding_red_v70.log)
+- [q048_moving_h_comparison_v70.py](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_comparison_v70.py)
+- [q048_moving_h_contract_v70.py](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_contract_v70.py)
+- [q048_moving_h_domain_accept_v70.py](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_accept_v70.py)
+- [q048_moving_h_domain_acceptance_v70.log](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_acceptance_v70.log)
+- [q048_moving_h_domain_candidate_checkpoint_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_candidate_checkpoint_v70.json)
+- [q048_moving_h_domain_delivery_validation_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_delivery_validation_v70.json)
+- [q048_moving_h_domain_execution_v70.log](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_execution_v70.log)
+- [q048_moving_h_domain_producer_invocation_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_producer_invocation_v70.json)
+- [q048_moving_h_domain_spec_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_spec_v70.json)
+- [q048_moving_h_domain_v70.py](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_v70.py)
+- [q048_moving_h_domain_verification_v70.log](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_verification_v70.log)
+- [q048_moving_h_domain_verifier_invocation_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_verifier_invocation_v70.json)
+- [q048_moving_h_domain_verify_v70.py](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_verify_v70.py)
+- [q048_moving_h_domain_output_manifest_v70.json](sandbox:/workspace/scratch/3415d88c213e/v70/output/q048_moving_h_domain_output_manifest_v70.json)
+- [Q048_MOVING_H_DOMAIN_V70_FILES.md](sandbox:/workspace/scratch/3415d88c213e/v70/output/Q048_MOVING_H_DOMAIN_V70_FILES.md)
+
+Spec/memoryupdate indeholder eksakte inputhashes, source/claim-/task-/routedeltaer, reproduktionslayout og begrænsninger.
