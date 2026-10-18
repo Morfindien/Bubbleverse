@@ -1,0 +1,51 @@
+{
+  "schema": "bubbleverse.q048.frec_moving_h.verifier_failure.v79",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-POST-V78-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "task_fingerprint": "427ed488dfd2155f6fc51cb8ab244c86d93bebbbe609b705f07c0821cf4c9cf3",
+  "execution_fingerprint": "79fd668347a635309ab8ea8305844dca7b4dacd52e6ef16a7539c85403cec2f3",
+  "attempt_kind": "PRODUCER_FREE_VERIFIER",
+  "status": "FAILED_TECHNICAL_CONTRACT_OBSTRUCTION",
+  "science_candidate_status": "UNACCEPTED",
+  "observed_exception_type": "KeyError",
+  "observed_exception_key": "contract_markdown_sha256",
+  "observed_failure_location": "q048_frec_moving_h_verify_v79.py line evaluating s['contract_markdown_sha256']",
+  "cause": "Frozen V79 spec omitted contract_markdown_sha256 while frozen verifier requires it. Failure occurred after the one science producer completed.",
+  "integrity_consequence": "Do not patch frozen spec or verifier in-place after producer. No transition/acceptance/postaccept is permitted for this attempt.",
+  "producer_result_sha256": "c6e9e2aedaa3b6a1d42ccdcebd9d254eafa2048c7ebe140fa24bc6021b617abf",
+  "candidate_checkpoint_sha256": "fb7e04256d23cdad6b015113817fd8aca6381d90fa3179b1f81ea8af602c6f19",
+  "spec_sha256": "994bb641bee1f27428d1ee8657fa92b31592fe330fc5aaf1111e1190e6eabc58",
+  "verifier_sha256": "03d44d6cefca762c36204b23a2aa13712550cd4ba48df50b87c72f01355909da",
+  "producer_sha256": "13579bebcdde1283bad2d62a27987f86fa8fb46fd30eefba158e82b330e6cba5",
+  "verifier_output_created": false,
+  "transition_executed": false,
+  "acceptance_executed": false,
+  "postaccept_executed": false,
+  "actual102_promoted": false,
+  "actual_state_retained": {
+    "count": 101,
+    "frontier": 1070,
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v77.json",
+    "accepted_checkpoint_sha256": "8cc99e7fd68fd7a67ba6dbef247362e5811b397f7a2c4e0607ba1f6857154ae2",
+    "endpoint": {
+      "a": "1/1071",
+      "E": "71659661861302702229/1000000000000000000",
+      "Y": "7138373741647196083/125000000000000000",
+      "Vbar": "13946310597786586333/1000000000000000000"
+    },
+    "connected_lower": "656570878294307/1000000000000000000",
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1070
+    },
+    "other_frontiers": [
+      1440,
+      1440,
+      1440
+    ]
+  },
+  "recorded_at_utc": "2026-10-18T16:47:41.808120+00:00"
+}

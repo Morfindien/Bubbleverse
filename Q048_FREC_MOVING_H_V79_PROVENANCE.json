@@ -1,0 +1,82 @@
+{
+  "schema": "bubbleverse.q048.frec_moving_h.provenance.v79",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-POST-V78-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "task_fingerprint": "427ed488dfd2155f6fc51cb8ab244c86d93bebbbe609b705f07c0821cf4c9cf3",
+  "execution_fingerprint": "79fd668347a635309ab8ea8305844dca7b4dacd52e6ef16a7539c85403cec2f3",
+  "builder_prompt": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-59.md",
+  "builder_prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+  "repository": {
+    "reference": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "observed_commit": "b2123f62955b05b536e24bf745f8b96bb1162dd7",
+    "source_freshness": "VERIFIED",
+    "write_performed": false
+  },
+  "parent_actual_checkpoint": {
+    "file": "q048_frec_moving_h_accepted_checkpoint_v77.json",
+    "sha256": "8cc99e7fd68fd7a67ba6dbef247362e5811b397f7a2c4e0607ba1f6857154ae2"
+  },
+  "proof_checkpoint": {
+    "file": "q048_moving_h_domain_accepted_checkpoint_v78.json",
+    "sha256": "e3a225d070079455aa4ddcde05f5450325ce3db04ddff19b643dccf64ce9bb8b"
+  },
+  "producer": {
+    "file": "q048_frec_moving_h_v79.py",
+    "sha256": "13579bebcdde1283bad2d62a27987f86fa8fb46fd30eefba158e82b330e6cba5",
+    "execution_count": 1,
+    "result_sha256": "c6e9e2aedaa3b6a1d42ccdcebd9d254eafa2048c7ebe140fa24bc6021b617abf"
+  },
+  "verifier": {
+    "file": "q048_frec_moving_h_verify_v79.py",
+    "sha256": "03d44d6cefca762c36204b23a2aa13712550cd4ba48df50b87c72f01355909da",
+    "execution_count": 1,
+    "status": "FAILED_TECHNICAL_CONTRACT_OBSTRUCTION",
+    "failure_sha256": "df9cadf9c9e7db8c16e0f24f1f74e79e7c201358267958806b6a1b209398378d"
+  },
+  "acceptor": {
+    "file": "q048_frec_moving_h_accept_v79.py",
+    "sha256": "a43068b8adf3c8b4af67f4c46e129d47e278cd8f4b154e18d23ec02946309f55",
+    "executed": false
+  },
+  "technical_events": [
+    {
+      "phase": "PRE_EXECUTION",
+      "event": "missing inputs/source/q047_math_v1.py import path",
+      "science_executed": false,
+      "resolution": "byte-identical helper restored and fingerprint refrozen"
+    },
+    {
+      "phase": "POST_PRODUCER_VERIFICATION",
+      "event": "KeyError contract_markdown_sha256",
+      "science_executed_before_event": true,
+      "resolution": "none in V79; stop and preserve"
+    }
+  ],
+  "science_budget_seconds": 300,
+  "new_science_producers": 1,
+  "new_actual_accepted": 0,
+  "new_proof_cells": 0,
+  "actual_state_retained": {
+    "count": 101,
+    "frontier": 1070
+  },
+  "candidate_state_unaccepted": {
+    "count": 102,
+    "frontier": 1060,
+    "endpoint": {
+      "a": "1/1061",
+      "E": "69428213521057062921/1000000000000000000",
+      "Y": "55319914129638982179/1000000000000000000",
+      "Vbar": "13520453583442327377/1000000000000000000"
+    },
+    "connected_lower": "317712567170961/500000000000000000",
+    "other_frontiers": [
+      1440,
+      1440,
+      1440
+    ]
+  },
+  "created_at_utc": "2026-10-18T16:47:41.812176+00:00"
+}
