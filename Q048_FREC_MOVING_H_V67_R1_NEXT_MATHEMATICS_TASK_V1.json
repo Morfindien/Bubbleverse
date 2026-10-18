@@ -1,0 +1,476 @@
+{
+  "schema": "bubbleverse.q048.moving_h_math_task.v1",
+  "task_id": "LOCAL-Q048-POST-V67-R1-MOVING-H-DOMAIN-1120-1110-MATH-V1",
+  "registration": "LOCAL_PROVISIONAL_NOT_REGISTERED",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_type": "MATHEMATICAL_RESULT",
+  "result_version_on_execution": "V68",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "architecture_evidence_commit": "3a3a852a2bcacecef4b1c5764a2bdd6d03bccdc0"
+  },
+  "fingerprint_basis": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "task_type": "MATHEMATICAL_RESULT",
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "engine_version": "2.1.0",
+    "engine_prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "parent_actual_checkpoint_sha256": "a9d1f05a2afe2c3bad8ec87ef59b6228dbe3dac8f51e95a3662d814e3a463840",
+    "parent_actual_count": 96,
+    "parent_frontier": 1120,
+    "parent_result_sha256": "8947102b6f105ed8edbff33cd806b236bf3bfdc08bae81c74e6a4b9c6d5b4fab",
+    "parent_validation_sha256": "2e02474d061df05fded16c3ad82779f64a140a4ad3b1184c70702c048ec53a0a",
+    "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "guard_row_index": 33,
+    "guard_primary_row_sha256": "a96b38c6513244de71570533524a2bca5718c30473cf81ca8f8384cc88b17a8b",
+    "guard_control_row_sha256": "3525937cf384a57919fa524602a97c9c6839c97b7ccac885e313638db76c5b5b",
+    "cell_z": [
+      1120,
+      1110
+    ],
+    "initial_lower_projection": "784060120186783/1000000000000000000",
+    "method": "fresh cell-specific moving-H proof, inherited connected lower; producer-free verifier and semantic mutations",
+    "criteria_version": "ONE_PROOF_CELL_NO_ACTUAL_V1",
+    "method_code_version": "TO_BE_FROZEN_BEFORE_EXECUTION; no scientific execution in ingestion",
+    "evidence_boundary": "Q001-Q048; external date cutoff NOT_DOCUMENTED",
+    "max_new_actual_cells": 0,
+    "max_new_math_proof_cells": 1,
+    "science_budget_seconds": 300,
+    "result_version_on_execution": "V68",
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+  },
+  "task_fingerprint": "6142c0ca0310f203e5f909a6ce1d3149e972289f2b95f529549266b5efa6f05d",
+  "fingerprint_method": "SHA256 UTF-8 canonical JSON (sorted keys, compact separators, ensure_ascii=false) of fingerprint_basis; planning identity, not an executed-code fingerprint",
+  "execution_fingerprint_requirement": "Freeze actual source/code/dependency hashes before numerical execution; link any execution fingerprint to this planning fingerprint without overwriting it.",
+  "cell_z": [
+    1120,
+    1110
+  ],
+  "cell_a": [
+    "1/1121",
+    "1/1111"
+  ],
+  "initial_actual_state": {
+    "total_accepted_paired_cells": 96,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1120
+    },
+    "accepted_checkpoint_sha256": "a9d1f05a2afe2c3bad8ec87ef59b6228dbe3dac8f51e95a3662d814e3a463840",
+    "scalar_endpoint": {
+      "a": "1/1121",
+      "E_right": "3343399168594049707/40000000000000000",
+      "Y_right": "4166283102228018009/62500000000000000",
+      "Vbar": "4054816045017374523/250000000000000000"
+    },
+    "moving_invariant_endpoint": {
+      "a": "1/1121",
+      "lower_projection": "784060120186783/1000000000000000000",
+      "physical_state_reset": false
+    }
+  },
+  "parent_schema_adapter": {
+    "source_schema": "bubbleverse.q048.frec_moving_h.accepted_checkpoint.v67.r1",
+    "mappings": {
+      "accepted_actual.count": "initial_actual_state.total_accepted_paired_cells",
+      "endpoint.E": "initial_actual_state.scalar_endpoint.E_right",
+      "endpoint.Y": "initial_actual_state.scalar_endpoint.Y_right",
+      "endpoint.Vbar": "initial_actual_state.scalar_endpoint.Vbar",
+      "endpoint.a": "initial_actual_state.scalar_endpoint.a",
+      "connected_lower": "initial_actual_state.moving_invariant_endpoint.lower_projection"
+    },
+    "rule": "Read original checkpoint using these mappings. Never rewrite its bytes or require a stale V65 field layout."
+  },
+  "guard_binding": {
+    "primary": {
+      "a0": "1/1121",
+      "a1": "1/1111",
+      "z0": 1120,
+      "z1": 1110,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "3029972941545955269/100000000000000000",
+        "H_upper_left": "953295183085188559/125000000000000000",
+        "X_upper_left": "3232355550037217879/250000000000000000",
+        "V_candidate_upper": "7872554004669602547/500000000000000000",
+        "retained_Vbar": "4054816045017374523/250000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "3343399168594049707/40000000000000000",
+      "Y_left": "4166283102228018009/62500000000000000",
+      "V_previous": "4054816045017374523/250000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "16618041511687404779/200000000000000000",
+      "V_local": "7872554004669602547/500000000000000000",
+      "V_admitted": "7872554004669602547/500000000000000000",
+      "equilibrium_upper": "8762494892153992401/1000000000000000000",
+      "amplitude": "57898034743494295743/1000000000000000000",
+      "constant_energy_part": "579419974743682747479/23000000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "965544248816223399/1000000000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "61292112647363463759/1000000000000000000",
+      "raw_G_lower": "2468749760515335274270133957560485602018319650475764780672135563973773684927673949897983049902929258905194240348306216557137/357451076169534149049180990855527478822202858385593671910333483391958388477758363664384000000000000000000000000000000000000",
+      "G_lower": "3453269447347307859/500000000000000000",
+      "Y_right_candidate": "64665609356496795791/1000000000000000000",
+      "E_right_candidate": "40547643639642765771/500000000000000000",
+      "endpoint_energy_envelope": "81095287279285531541/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1111/1121",
+      "R_at_left": "7850748587798556642226326015633714281611939261137097628535951126950556750973698184143691184433997/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "35014198576460427776047245782945377099511822142570025725/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "193108849763244679/200000000000000000",
+        "upper": "965544248816223399/1000000000000000000",
+        "log_lower": "1792126686505983/200000000000000000",
+        "log_upper": "2240158358132479/250000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "40547643639642765771/500000000000000000",
+      "Y_right": "64665609356496795791/1000000000000000000",
+      "index": 33,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control": {
+      "a0": "1/1121",
+      "a1": "1/1111",
+      "z0": 1120,
+      "z1": 1110,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "3029972941545955269/100000000000000000",
+        "H_upper_left": "1531648951209775251/200000000000000000",
+        "X_upper_left": "13042005204382056959/1000000000000000000",
+        "V_candidate_upper": "3987151716198300321/250000000000000000",
+        "retained_Vbar": "8210973676085540703/500000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "1700938997511286593/20000000000000000",
+      "Y_left": "33955502406214644091/500000000000000000",
+      "V_previous": "8210973676085540703/500000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "342195141090188678617421824811/1000000000000000000000000000000",
+        "36880015757951617573771269421/50000000000000000000000000000",
+        "838805354430568961596428155633/500000000000000000000000000000",
+        "776869028096355913616015772653/250000000000000000000000000000",
+        "503934265174465018469672324733/100000000000000000000000000000",
+        "1879156867066126905420035813167/250000000000000000000000000000",
+        "424428970499441585655798553927/40000000000000000000000000000",
+        "1443512204422484557067759900543/100000000000000000000000000000",
+        "9590748720284577696490259973279/500000000000000000000000000000",
+        "3152464653623661945466583775507/125000000000000000000000000000",
+        "33498704473614897909415139967381/1000000000000000000000000000000"
+      ],
+      "E_safe_left": "42276514683498053457/500000000000000000",
+      "V_local": "3987151716198300321/250000000000000000",
+      "V_admitted": "3987151716198300321/250000000000000000",
+      "equilibrium_upper": "2218936607275575831/250000000000000000",
+      "amplitude": "29517629191663492429/500000000000000000",
+      "constant_energy_part": "146727183156097451817/5750000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "25783/26683",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "2846275093173195373/50000000000000000",
+      "raw_G_lower": "203450150852870695782692824372397910530492449232364185248337748126572065760279610210152271790846270339258375941995360623/37257293224342498824528501480461092646143901837120296670247766942764162811531353193971712000000000000000000000000000000",
+      "G_lower": "5460679862807212807/1000000000000000000",
+      "Y_right_candidate": "65919784464455136611/1000000000000000000",
+      "E_right_candidate": "82561809019021955343/1000000000000000000",
+      "endpoint_energy_envelope": "82561809019021955343/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1111/1121",
+      "R_at_left": "446696782459219132895260952885575431183192519210086324684110478056420203080498591468159315748247032714394450778009/60708402882054033466233184588234965832575213720379360039119137804340758912662765568000000000000000000000000000000",
+      "M_at_left": "35014198576460427776047245782945377099511822142570025725/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "82561809019021955343/1000000000000000000",
+      "Y_right": "65919784464455136611/1000000000000000000",
+      "index": 33,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "primary_row_index": 33,
+    "control_row_index": 33,
+    "primary_row_sha256": "a96b38c6513244de71570533524a2bca5718c30473cf81ca8f8384cc88b17a8b",
+    "control_row_sha256": "3525937cf384a57919fa524602a97c9c6839c97b7ccac885e313638db76c5b5b",
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "control_role": "Conservative aligned guard only; never replace the primary actual scalar state."
+  },
+  "input_artifacts": {
+    "q048_frec_moving_h_accepted_checkpoint_v67_r1.json": {
+      "path": "q048_frec_moving_h_accepted_checkpoint_v67_r1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/output/q048_frec_moving_h_accepted_checkpoint_v67_r1.json",
+      "sha256": "a9d1f05a2afe2c3bad8ec87ef59b6228dbe3dac8f51e95a3662d814e3a463840",
+      "bytes": 2759,
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "origin": "INTERNAL_AI_ASSISTED",
+      "hash_status": "COMPUTED"
+    },
+    "q048_frec_moving_h_result_v67_r1.json": {
+      "path": "q048_frec_moving_h_result_v67_r1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/output/q048_frec_moving_h_result_v67_r1.json",
+      "sha256": "8947102b6f105ed8edbff33cd806b236bf3bfdc08bae81c74e6a4b9c6d5b4fab",
+      "bytes": 26717,
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "origin": "INTERNAL_AI_ASSISTED",
+      "hash_status": "COMPUTED"
+    },
+    "q048_frec_moving_h_validation_v67_r1.json": {
+      "path": "q048_frec_moving_h_validation_v67_r1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/output/q048_frec_moving_h_validation_v67_r1.json",
+      "sha256": "2e02474d061df05fded16c3ad82779f64a140a4ad3b1184c70702c048ec53a0a",
+      "bytes": 7694,
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "origin": "INTERNAL_AI_ASSISTED",
+      "hash_status": "COMPUTED"
+    },
+    "q048_frec_moving_h_spec_v67_r1.json": {
+      "path": "q048_frec_moving_h_spec_v67_r1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/output/q048_frec_moving_h_spec_v67_r1.json",
+      "sha256": "dedce7c1a4ad5d1eb03caea345cf846f6eadbf0756a3e89f182aed631801785d",
+      "bytes": 6390,
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "origin": "INTERNAL_AI_ASSISTED",
+      "hash_status": "COMPUTED"
+    },
+    "q048_frec_moving_h_transition_validation_v67_r1.json": {
+      "path": "q048_frec_moving_h_transition_validation_v67_r1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/output/q048_frec_moving_h_transition_validation_v67_r1.json",
+      "sha256": "70eccb3b7a2fbaca82621f2001a3ca83d929131b585205f9adbd44adc3ae29fd",
+      "bytes": 845,
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "origin": "INTERNAL_AI_ASSISTED",
+      "hash_status": "COMPUTED"
+    },
+    "q048_frec_moving_h_acceptance_validation_v67_r1.json": {
+      "path": "q048_frec_moving_h_acceptance_validation_v67_r1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/output/q048_frec_moving_h_acceptance_validation_v67_r1.json",
+      "sha256": "edd179140781b15355ba6c5f6924ccd63041f35e44d060b51a42b88dc3c59433",
+      "bytes": 996,
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "origin": "INTERNAL_AI_ASSISTED",
+      "hash_status": "COMPUTED"
+    },
+    "q048_frec_moving_h_postaccept_validation_v67_r1.json": {
+      "path": "q048_frec_moving_h_postaccept_validation_v67_r1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/output/q048_frec_moving_h_postaccept_validation_v67_r1.json",
+      "sha256": "5c8b125cc46baf89ad60d6d9c82c34fd292e2483203c42b8bc5ffcedb97fd202",
+      "bytes": 1400,
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "origin": "INTERNAL_AI_ASSISTED",
+      "hash_status": "COMPUTED"
+    },
+    "q048_frec_moving_h_delivery_validation_v67_r1.json": {
+      "path": "q048_frec_moving_h_delivery_validation_v67_r1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/output/q048_frec_moving_h_delivery_validation_v67_r1.json",
+      "sha256": "499ffe7c23b823c92a773ccb87821aa3b178ebd9ec0c3ff1d9d7311806438307",
+      "bytes": 4636,
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "origin": "INTERNAL_AI_ASSISTED",
+      "hash_status": "COMPUTED"
+    },
+    "q048_guard_local_v_result_v12.json": {
+      "path": "q048_guard_local_v_result_v12.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/inputs/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "access": "VERIFIED_LOCAL_BYTES; established immutable dependency"
+    },
+    "q048_guard_local_v_validation_v12.json": {
+      "path": "q048_guard_local_v_validation_v12.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/inputs/q048_guard_local_v_validation_v12.json",
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+      "access": "VERIFIED_LOCAL_BYTES; established immutable dependency"
+    }
+  },
+  "source_dependency_pins": {
+    "inputs/Bubbleverse/Q048/P3_Ingestion_V1/q048_prefix_config_v1.json": {
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    "inputs/Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md": {
+      "bytes": 79322,
+      "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1"
+    },
+    "inputs/Q048_MOVING_H_DOMAIN_V66_NEXT_BUILDER_TASK_V1.json": {
+      "bytes": 15214,
+      "sha256": "f52d8e2e8327bcb0f75c9ca53f69968cdd4cc7063274136141b82ffdec3ae104"
+    },
+    "inputs/q047_certificate_v1.py": {
+      "bytes": 15302,
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240"
+    },
+    "inputs/q047_math_v1.py": {
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    "inputs/q047_precursor_check_v1.py": {
+      "bytes": 29808,
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5"
+    },
+    "inputs/q048_frec_moving_h_accepted_checkpoint_v65.json": {
+      "bytes": 5182,
+      "sha256": "a246f558a87499ac2ec3e336ad647d270753ac5ba2b740117232cf7396e82d9b"
+    },
+    "inputs/q048_full_tube_reuse_v1.py": {
+      "bytes": 10171,
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc"
+    },
+    "inputs/q048_guard_local_v_result_v12.json": {
+      "bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    "inputs/q048_guard_local_v_validation_v12.json": {
+      "bytes": 206698,
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554"
+    },
+    "inputs/q048_moving_h_domain_accepted_checkpoint_v66.json": {
+      "bytes": 2268,
+      "sha256": "8b5abe08fc65430ba0dfb49bc2314b7026807a076570dfd2324293fcdb5bd6ed"
+    },
+    "inputs/q048_moving_h_domain_delivery_validation_v66.json": {
+      "bytes": 2353,
+      "sha256": "ada1bf378e77169efbc242bcca09db68ae0ad7e4ae97c1e6e35042957296b0cd"
+    },
+    "inputs/q048_moving_h_domain_validation_v66.json": {
+      "bytes": 9067,
+      "sha256": "3412492e29f26f8b5dccbef067c9c54ed20ea56cc61996fdfc065229fc622808"
+    },
+    "inputs/q048_moving_h_domain_verifier_adapter_event_v66.json": {
+      "bytes": 822,
+      "sha256": "45be6ec841823af2519e35e5e47ac027a1e8f9f4c5046d3fda60ba253eb73cba"
+    },
+    "inputs/q048_p3_scaled_arithmetic_v2.py": {
+      "bytes": 5988,
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa"
+    },
+    "inputs/q048_p3_scaled_kernel_v2.py": {
+      "bytes": 15855,
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd"
+    },
+    "inputs/q048_p3_scaled_raw_result_v2.json": {
+      "bytes": 699697,
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c"
+    },
+    "inputs/q048_p3_scaled_transformed_log_tables_v2.json": {
+      "bytes": 3958952,
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb"
+    },
+    "inputs/q048_post_event_state_tube_v1.py": {
+      "bytes": 12423,
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b"
+    },
+    "inputs/q048_prefix_config_v1.json": {
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    "inputs/q048_prefix_v1.py": {
+      "bytes": 17198,
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516"
+    },
+    "inputs/source/q047_math_v1.py": {
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    }
+  },
+  "source_pin_rule": "Reuse immutable source/capture/helper bytes by their original pins; do not rerun the old guard or prior proof producers. Old task/parent pins are provenance, not a demand to replay them.",
+  "theorem_lineage": {
+    "previous_proof_accepted_checkpoint_sha256": "8b5abe08fc65430ba0dfb49bc2314b7026807a076570dfd2324293fcdb5bd6ed",
+    "previous_proof_validation_sha256": "3412492e29f26f8b5dccbef067c9c54ed20ea56cc61996fdfc065229fc622808",
+    "previous_actual_checkpoint_sha256": "a9d1f05a2afe2c3bad8ec87ef59b6228dbe3dac8f51e95a3662d814e3a463840",
+    "rule": "Conditional inherited theorem/method lineage only. Recompute current-cell K and positive connected whole-cell lower. Previous K is not a certificate for this interval."
+  },
+  "acceptance_criteria": [
+    "Bind accepted V67 R1 checkpoint, rawresult and hash-bound validation chain; current actual96/frontier1120.",
+    "Bind exact committed V12 row33 primary/control and exact primary a/E/Y/V scalar glue.",
+    "Fresh source/C/upper-h/thermal qualification and cell-specific K for both q_L=1e-6 and q_R=0 on [1/1121,1/1111].",
+    "Inherit connected lower 784060120186783/1000000000000000000 without any reset; prove strictly positive whole-cell continuation.",
+    "Separate producer-free verifier plus semantic mutation tests and hash-bound accepted mathematical checkpoint; disclose shared helper dependencies.",
+    "Actual remains96/frontier1120, other frontiers1440; at most one new proof cell and zero new actual cells."
+  ],
+  "missing_historical_evidence": {
+    "files": [
+      "q048_moving_h_domain_result_v66.json",
+      "q048_moving_h_domain_transition_validation_v66.json",
+      "q048_moving_h_domain_acceptance_validation_v66.json",
+      "q048_moving_h_domain_postaccept_validation_v66.json"
+    ],
+    "impact": "V66 archival reproducibility remains incomplete. They are not claimed recovered; no synthetic reconstruction. Do not reimpose the superseded V31 serialization requirement. Any new indispensable missing dependency must identify the exact mathematical obligation and why available evidence cannot satisfy it."
+  },
+  "compute_backend_preference": "LOCAL_RUNTIME exact rational Python; one adjacent cell; no paid/HPC/Actions run.",
+  "science_budget_seconds": 300,
+  "max_new_actual_cells": 0,
+  "max_new_math_proof_cells": 1,
+  "forbidden": [
+    "actualconsumer",
+    "below1110continuation",
+    "V67consumerreplay",
+    "V66proofreplay_for_reassurance",
+    "V12guardregeneration",
+    "physical_or_lower_reset",
+    "oldcell_K_substitution",
+    "subdivision_or_tuning_campaign",
+    "refit",
+    "recapture",
+    "native_P6",
+    "HPC_or_paidrun",
+    "later-Q scientific access",
+    "accepted_model_promotion"
+  ],
+  "success_condition": "One validated fresh proof-domain cell1120→1110; actual96/frontier1120 unchanged.",
+  "failure_or_falsification_condition": "First precisely evidenced failure of a required inequality or indispensable dependency; distinguishes technical/proof obstruction from physical falsification.",
+  "stop_condition": "Stop after one validated proof, first precise obstruction, or 300 science seconds, whichever comes first; return once to Result Ingestion. No actual consumer and no below1110 continuation.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "scientific_dispatch": "NOT_EXECUTED"
+}
