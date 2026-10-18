@@ -1,0 +1,20 @@
+{
+  "schema": "bubbleverse.q048.v76.preaccept_acceptor_supersession.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "attempt": "ACCEPTOR_R1",
+  "status": "REJECTED_BEFORE_ACCEPTANCE",
+  "failure_class": "SOFTWARE_BUG / VALIDATION_CONTRACT",
+  "observed_failure": "Frozen acceptor referenced q048_moving_h_domain_accepted_checkpoint_v72.json while current task theorem lineage is accepted V74 proof.",
+  "science_result_written": true,
+  "science_result_sha256": "8c6bcd5f7dfd85a04a3de0d6a42a0af95dc72c2f8661b1c7fa76d8641b18d306",
+  "science_validation_sha256": "d1a89746ca58e3b2188515ca231eecfc33c783253086fc34414bc38e96fd05c2",
+  "science_reexecuted": false,
+  "transition_written_before_failure": true,
+  "transition_sha256": "33dce1fb31de3347154bd861afeaf7e41a1a2189ea57f7223940d9a5f7e21da5",
+  "accepted_checkpoint_written": false,
+  "scientific_effect": "NONE; producer/verifier remain unchanged and valid.",
+  "r1_acceptor_sha256": "c54b469a5926e91c13f497131bac7bc0a048f87b19a0ed79892de4756db1f241",
+  "repair": "Separate R2 acceptor changes only theorem-lineage filename V72\u2192V74 and reuses/verifies existing transition; no producer/verifier/spec/task changes.",
+  "created_at_utc": "2026-10-18T15:48:25.647879+00:00"
+}
