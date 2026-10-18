@@ -1,0 +1,36 @@
+# Q048 V69 — alle individuelle filer
+
+Actual97/frontier1110 accepteret. Andre frontiers1440. Næste: Result Ingestion2.1.0. Upload alle nye V69-filer herunder til repo-roden som nye versioner; bevar alle ældre journaler/evidens. USER_UPLOAD_PENDING; ingen GitHub-write/dispatch udført. Ingen arkiver.
+
+- [Q048_FREC_MOVING_H_V69_RESULT.md](sandbox:/workspace/scratch/3415d88c213e/v69/output/Q048_FREC_MOVING_H_V69_RESULT.md)
+- [Q048_FREC_MOVING_H_V69_HANDOFF_TO_INGESTION.md](sandbox:/workspace/scratch/3415d88c213e/v69/output/Q048_FREC_MOVING_H_V69_HANDOFF_TO_INGESTION.md)
+- [Q047_SAMLET_JOURNAL_FREC_MOVING_H_V69_APPENDED_V1.md](sandbox:/workspace/scratch/3415d88c213e/v69/output/Q047_SAMLET_JOURNAL_FREC_MOVING_H_V69_APPENDED_V1.md)
+- [q048_frec_moving_h_result_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_result_v69.json)
+- [q048_frec_moving_h_accepted_checkpoint_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_accepted_checkpoint_v69.json)
+- [q048_frec_moving_h_validation_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_validation_v69.json)
+- [q048_frec_moving_h_transition_validation_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_transition_validation_v69.json)
+- [q048_frec_moving_h_acceptance_validation_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_acceptance_validation_v69.json)
+- [q048_frec_moving_h_postaccept_validation_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_postaccept_validation_v69.json)
+- [Q048_FREC_MOVING_H_V69_GITHUB_MEMORY_UPDATE.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/Q048_FREC_MOVING_H_V69_GITHUB_MEMORY_UPDATE.json)
+- [Q048_FREC_MOVING_H_V69_REPOSITORY_EVIDENCE.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/Q048_FREC_MOVING_H_V69_REPOSITORY_EVIDENCE.json)
+- [Q048_FREC_MOVING_H_V69_REUSE_DIFF.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/Q048_FREC_MOVING_H_V69_REUSE_DIFF.json)
+- [Q048_V69_CONSUMER_CONTRACT.md](sandbox:/workspace/scratch/3415d88c213e/v69/output/Q048_V69_CONSUMER_CONTRACT.md)
+- [q048_frec_moving_h_accept_v69.py](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_accept_v69.py)
+- [q048_frec_moving_h_acceptance_v69.log](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_acceptance_v69.log)
+- [q048_frec_moving_h_candidate_checkpoint_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_candidate_checkpoint_v69.json)
+- [q048_frec_moving_h_delivery_validation_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_delivery_validation_v69.json)
+- [q048_frec_moving_h_execution_v69.log](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_execution_v69.log)
+- [q048_frec_moving_h_producer_invocation_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_producer_invocation_v69.json)
+- [q048_frec_moving_h_spec_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_spec_v69.json)
+- [q048_frec_moving_h_v69.py](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_v69.py)
+- [q048_frec_moving_h_verification_v69.log](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_verification_v69.log)
+- [q048_frec_moving_h_verifier_invocation_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_verifier_invocation_v69.json)
+- [q048_frec_moving_h_verify_v69.py](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_verify_v69.py)
+- [q048_parent_contract_green_v69.log](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_parent_contract_green_v69.log)
+- [q048_parent_contract_red_v69.log](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_parent_contract_red_v69.log)
+- [q048_v69_consumer_contract.py](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_v69_consumer_contract.py)
+- [test_parent_contract_v69.py](sandbox:/workspace/scratch/3415d88c213e/v69/output/test_parent_contract_v69.py)
+- [q048_frec_moving_h_output_manifest_v69.json](sandbox:/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_output_manifest_v69.json)
+- [Q048_FREC_MOVING_H_V69_FILES.md](sandbox:/workspace/scratch/3415d88c213e/v69/output/Q048_FREC_MOVING_H_V69_FILES.md)
+
+Spec og memoryupdate indeholder præcise originale inputhashes, reproduktionslayout, source/claim-/task-/routedeltaer og konkrete begrænsninger.
