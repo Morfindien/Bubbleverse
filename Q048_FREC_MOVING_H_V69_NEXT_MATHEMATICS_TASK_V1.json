@@ -1,0 +1,438 @@
+{
+  "schema": "bubbleverse.q048.moving_h_math_task.v1",
+  "task_id": "LOCAL-Q048-POST-V69-MOVING-H-DOMAIN-1110-1100-MATH-V1",
+  "registration": "LOCAL_PROVISIONAL_NOT_REGISTERED",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_type": "MATHEMATICAL_RESULT",
+  "result_version_on_execution": "V70",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_local_path": "/workspace/scratch/3415d88c213e/v67_ingestion/recovered/Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "repository_commit": "c0d7cff97484ac8706e1289adc28ea08e1341ac0"
+  },
+  "fingerprint_basis": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "task_type": "MATHEMATICAL_RESULT",
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "engine_version": "2.1.0",
+    "engine_prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "parent_actual_checkpoint_sha256": "2b554fde93d4e8da0ab62817e839325220966361443435134365d8b560928b3a",
+    "parent_actual_count": 97,
+    "parent_frontier": 1110,
+    "parent_result_sha256": "bf4e585e666b2628bcb5018f14a15e4cf0ef2a7358eab04a2b95e10631a45f81",
+    "parent_validation_sha256": "5d0b7e1f0be0444a2df8540b85cce72426fc64c66c40365aca9bc69a3093c98d",
+    "cell_z": [
+      1110,
+      1100
+    ],
+    "initial_lower_projection": "754570109734061/1000000000000000000",
+    "guard_raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "guard_row_index": 34,
+    "guard_primary_row_sha256": "e6fadb788fe8dd0d828db3209dce024cb5ec03ec8278437b9937faeba179f2ce",
+    "guard_control_row_sha256": "e3838edd0c8f224b42cb891834cbf0d8a8394fd33121a47c482b559412bb1edd",
+    "method": "fresh cell-specific moving-H proof; inherited connected lower; producer-free verifier and semantic mutations",
+    "criteria_version": "ONE_PROOF_CELL_NO_ACTUAL_V1",
+    "method_code_version": "TO_BE_FROZEN_BEFORE_EXECUTION; no science run in ingestion",
+    "evidence_boundary": "Q001-Q048; external cutoff NOT_DOCUMENTED",
+    "max_new_actual_cells": 0,
+    "max_new_math_proof_cells": 1,
+    "science_budget_seconds": 300,
+    "result_version_on_execution": "V70",
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+  },
+  "task_fingerprint": "3d375399f3cbd79a9983a0e2d23ab9160baddd58c96ab0244956bc1d9d18612d",
+  "fingerprint_method": "SHA256 canonical UTF-8 JSON(sorted keys, compact separators, ensure_ascii=false) of fingerprint_basis; planning identity",
+  "execution_fingerprint_requirement": "Freeze actual source/code/input hashes before numerical execution; link an execution fingerprint to this unchanged planning fingerprint.",
+  "cell_z": [
+    1110,
+    1100
+  ],
+  "cell_a": [
+    "1/1111",
+    "1/1101"
+  ],
+  "initial_actual_state": {
+    "total_accepted_paired_cells": 97,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1110
+    },
+    "accepted_checkpoint_sha256": "2b554fde93d4e8da0ab62817e839325220966361443435134365d8b560928b3a",
+    "scalar_endpoint": {
+      "a": "1/1111",
+      "E_right": "40547643639642765771/500000000000000000",
+      "Y_right": "64665609356496795791/1000000000000000000",
+      "Vbar": "7872554004669602547/500000000000000000"
+    },
+    "moving_invariant_endpoint": {
+      "a": "1/1111",
+      "lower_projection": "754570109734061/1000000000000000000",
+      "physical_state_reset": false
+    }
+  },
+  "parent_schema_adapter": {
+    "source_schema": "bubbleverse.q048.frec_moving_h.accepted_checkpoint.v69",
+    "mappings": {
+      "accepted_actual.count": "initial_actual_state.total_accepted_paired_cells",
+      "endpoint.E": "initial_actual_state.scalar_endpoint.E_right",
+      "endpoint.Y": "initial_actual_state.scalar_endpoint.Y_right",
+      "endpoint.Vbar": "initial_actual_state.scalar_endpoint.Vbar",
+      "endpoint.a": "initial_actual_state.scalar_endpoint.a",
+      "connected_lower": "initial_actual_state.moving_invariant_endpoint.lower_projection"
+    },
+    "rule": "Read original checkpoint through explicit mappings. Do not rewrite bytes or require stale field layouts."
+  },
+  "guard_binding": {
+    "primary": {
+      "a0": "1/1111",
+      "a1": "1/1101",
+      "z0": 1110,
+      "z1": 1100,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "7358057506262258037/250000000000000000",
+        "H_upper_left": "3757126311681353547/500000000000000000",
+        "X_upper_left": "12735406336610193259/1000000000000000000",
+        "V_candidate_upper": "15280857970487995643/1000000000000000000",
+        "retained_Vbar": "7872554004669602547/500000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "40547643639642765771/500000000000000000",
+      "Y_left": "64665609356496795791/1000000000000000000",
+      "V_previous": "7872554004669602547/500000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "80610852456136443419/1000000000000000000",
+      "V_local": "15280857970487995643/1000000000000000000",
+      "V_admitted": "15280857970487995643/1000000000000000000",
+      "equilibrium_upper": "4252064826570572701/500000000000000000",
+      "amplitude": "56161479703355650389/1000000000000000000",
+      "constant_energy_part": "281167786656979119839/11500000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "15081846690177549/15625000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "3728422638355856017/62500000000000000",
+      "raw_G_lower": "2431348063509327456973396814295348626196070477054784349877715627688529311117463312317542327085742924888013790422349454231489/357451076169534149049180990855527478822202858385593671910333483391958388477758363664384000000000000000000000000000000000000",
+      "G_lower": "6801904443997735721/1000000000000000000",
+      "Y_right_candidate": "15678333641757734547/250000000000000000",
+      "E_right_candidate": "9832322208333823227/125000000000000000",
+      "endpoint_energy_envelope": "15731715533334117163/200000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1101/1111",
+      "R_at_left": "7574341031124850674346466094357380024044698881821428286214270684653185468142036962510361295639917/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "34085489045781003884103728178828805044563877499581206475/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "965238188171363131/1000000000000000000",
+        "upper": "15081846690177549/15625000000000000",
+        "log_lower": "9041652916950031/1000000000000000000",
+        "log_upper": "565103307309377/62500000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "9832322208333823227/125000000000000000",
+      "Y_right": "15678333641757734547/250000000000000000",
+      "index": 34,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control": {
+      "a0": "1/1111",
+      "a1": "1/1101",
+      "z0": 1110,
+      "z1": 1100,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "7358057506262258037/250000000000000000",
+        "H_upper_left": "1509342016477716251/200000000000000000",
+        "X_upper_left": "3212510875838048337/250000000000000000",
+        "V_candidate_upper": "7742503492824099513/500000000000000000",
+        "retained_Vbar": "3987151716198300321/250000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "82561809019021955343/1000000000000000000",
+      "Y_left": "65919784464455136611/1000000000000000000",
+      "V_previous": "3987151716198300321/250000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "344860568179514042852222007717/1000000000000000000000000000000",
+        "2955362642579260776179609447/4000000000000000000000000000",
+        "1678156425183580073332611206827/1000000000000000000000000000000",
+        "3107770758267956491269341074997/1000000000000000000000000000000",
+        "503952434844719901871033292803/100000000000000000000000000000",
+        "7516749283670958294701998993051/1000000000000000000000000000000",
+        "10610810556758106262035126665477/1000000000000000000000000000000",
+        "14435185476070802726726577433739/1000000000000000000000000000000",
+        "2397693147066898778812794135703/125000000000000000000000000000",
+        "1260987676790577200293029732563/50000000000000000000000000000",
+        "33498731807450355142823538137757/1000000000000000000000000000000"
+      ],
+      "E_safe_left": "82078052623392387769/1000000000000000000",
+      "V_local": "7742503492824099513/500000000000000000",
+      "V_admitted": "7742503492824099513/500000000000000000",
+      "equilibrium_upper": "1723548603619973457/200000000000000000",
+      "amplitude": "28651020723177634663/500000000000000000",
+      "constant_energy_part": "569848257071853724179/23000000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "25553/26453",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "55273560974760746157/1000000000000000000",
+      "raw_G_lower": "28241781607964783112997717531304688929922338142124972073181784776367222274427715243873880423299873909644534848109346367/5276592253299490426784589704855618525269939850934212836520118100539885742411909594873856000000000000000000000000000000",
+      "G_lower": "5352276668773297289/1000000000000000000",
+      "Y_right_candidate": "31985109838893735803/500000000000000000",
+      "E_right_candidate": "20032121959181180691/250000000000000000",
+      "endpoint_energy_envelope": "80128487836724722763/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1101/1111",
+      "R_at_left": "430976992914016985837517360969279574309827307655829585835750142820794470261466280060361784079300591198009773878497/60708402882054033466233184588234965832575213720379360039119137804340758912662765568000000000000000000000000000000",
+      "M_at_left": "34085489045781003884103728178828805044563877499581206475/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "20032121959181180691/250000000000000000",
+      "Y_right": "31985109838893735803/500000000000000000",
+      "index": 34,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "primary_row_index": 34,
+    "control_row_index": 34,
+    "primary_row_sha256": "e6fadb788fe8dd0d828db3209dce024cb5ec03ec8278437b9937faeba179f2ce",
+    "control_row_sha256": "e3838edd0c8f224b42cb891834cbf0d8a8394fd33121a47c482b559412bb1edd",
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "control_role": "Conservative aligned guard only; never replace primary actual scalar state."
+  },
+  "input_artifacts": {
+    "q048_frec_moving_h_accepted_checkpoint_v69.json": {
+      "filename": "q048_frec_moving_h_accepted_checkpoint_v69.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_accepted_checkpoint_v69.json",
+      "bytes": 2952,
+      "sha256": "2b554fde93d4e8da0ab62817e839325220966361443435134365d8b560928b3a",
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE"
+    },
+    "q048_frec_moving_h_result_v69.json": {
+      "filename": "q048_frec_moving_h_result_v69.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_result_v69.json",
+      "bytes": 26818,
+      "sha256": "bf4e585e666b2628bcb5018f14a15e4cf0ef2a7358eab04a2b95e10631a45f81",
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE"
+    },
+    "q048_frec_moving_h_validation_v69.json": {
+      "filename": "q048_frec_moving_h_validation_v69.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_validation_v69.json",
+      "bytes": 9104,
+      "sha256": "5d0b7e1f0be0444a2df8540b85cce72426fc64c66c40365aca9bc69a3093c98d",
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE"
+    },
+    "q048_frec_moving_h_spec_v69.json": {
+      "filename": "q048_frec_moving_h_spec_v69.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_spec_v69.json",
+      "bytes": 15851,
+      "sha256": "ba264eb10d02287c1184fc513476e60051eb88d9a21d4251848840bb97f21e13",
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE"
+    },
+    "q048_frec_moving_h_candidate_checkpoint_v69.json": {
+      "filename": "q048_frec_moving_h_candidate_checkpoint_v69.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_candidate_checkpoint_v69.json",
+      "bytes": 1132,
+      "sha256": "80acaa27ad20d52988ecfd0bed9b6244a675eee96cd9f900abcc7d8f0f0d817e",
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE"
+    },
+    "q048_frec_moving_h_transition_validation_v69.json": {
+      "filename": "q048_frec_moving_h_transition_validation_v69.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_transition_validation_v69.json",
+      "bytes": 1086,
+      "sha256": "b25ef7337290776a5d437641a89052a05b478b9523c68d4387b69534db46ad83",
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE"
+    },
+    "q048_frec_moving_h_acceptance_validation_v69.json": {
+      "filename": "q048_frec_moving_h_acceptance_validation_v69.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_acceptance_validation_v69.json",
+      "bytes": 1072,
+      "sha256": "d70b1994d64bfc0f56ba7cdda09ae6fe26c0a215254a0c2fc2ae2d84deab240d",
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE"
+    },
+    "q048_frec_moving_h_postaccept_validation_v69.json": {
+      "filename": "q048_frec_moving_h_postaccept_validation_v69.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/output/q048_frec_moving_h_postaccept_validation_v69.json",
+      "bytes": 1472,
+      "sha256": "715595a382cc0eb8cce115a2a192f05f35366530f38c74c2bcd7c13379010a08",
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; prior individual delivery",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE"
+    },
+    "q048_guard_local_v_result_v12.json": {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/inputs/q048_guard_local_v_result_v12.json",
+      "bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "access": "VERIFIED_LOCAL_BYTES; original immutable dependency"
+    },
+    "q048_guard_local_v_validation_v12.json": {
+      "filename": "q048_guard_local_v_validation_v12.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v69/inputs/q048_guard_local_v_validation_v12.json",
+      "bytes": 206698,
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+      "access": "VERIFIED_LOCAL_BYTES; original immutable dependency"
+    }
+  },
+  "source_dependency_pins": {
+    "inputs/q047_certificate_v1.py": {
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "bytes": 15302
+    },
+    "inputs/q047_math_v1.py": {
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "bytes": 12617
+    },
+    "inputs/q047_precursor_check_v1.py": {
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "bytes": 29808
+    },
+    "inputs/q048_full_tube_reuse_v1.py": {
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+      "bytes": 10171
+    },
+    "inputs/q048_p3_scaled_arithmetic_v2.py": {
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "bytes": 5988
+    },
+    "inputs/q048_p3_scaled_kernel_v2.py": {
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "bytes": 15855
+    },
+    "inputs/q048_p3_scaled_raw_result_v2.json": {
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+      "bytes": 699697
+    },
+    "inputs/q048_p3_scaled_transformed_log_tables_v2.json": {
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+      "bytes": 3958952
+    },
+    "inputs/q048_post_event_state_tube_v1.py": {
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+      "bytes": 12423
+    },
+    "inputs/q048_prefix_config_v1.json": {
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "bytes": 105567
+    },
+    "inputs/q048_prefix_v1.py": {
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "bytes": 17198
+    },
+    "inputs/source/q047_math_v1.py": {
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "bytes": 12617
+    }
+  },
+  "theorem_lineage": {
+    "previous_proof_accepted_checkpoint_sha256": "9af6a444575c9d5abd684acfad3cf06d47734ab2d4fa5f71b5a2d8a79dd04b42",
+    "previous_proof_validation_sha256": "fe4329024bdc570f1337ee15f307bc0b5d84a74f1057e4f7a43ba472ff590f9b",
+    "previous_actual_checkpoint_sha256": "2b554fde93d4e8da0ab62817e839325220966361443435134365d8b560928b3a",
+    "rule": "Conditional inherited theorem/method lineage only; recompute current-cell K and positive connected lower. Previous K does not certify the next interval."
+  },
+  "acceptance_criteria": [
+    "Hash-bind accepted V69 actual parent, rawresult, verifier, transition, acceptance and postaccept outputs.",
+    "Bind exact committed V12 row34 primary/control; primary a/E/Y/V must glue exactly to V69 endpoint.",
+    "Compute fresh source/C/upper-h/thermal qualification, cell-specific K and strictly positive connected whole-cell lower on [1/1111,1/1101] for q_L=10^-6 and q_R=0.",
+    "Inherit lower754570109734061/1000000000000000000 without physical or auxiliary reset and without old-K substitution.",
+    "Require separate producer-free verifier, semantic mutations and hash-bound accepted mathematical checkpoint; disclose shared helper dependencies.",
+    "Actual remains97/frontier1110; other frontiers1440; at most one new proof cell and zero actual consumers."
+  ],
+  "missing_historical_evidence": {
+    "files": [
+      "q048_moving_h_domain_result_v66.json",
+      "q048_moving_h_domain_transition_validation_v66.json",
+      "q048_moving_h_domain_acceptance_validation_v66.json",
+      "q048_moving_h_domain_postaccept_validation_v66.json"
+    ],
+    "impact": "Earlier V66 archival reproducibility remains incomplete. Current V69 raw/checkpoint/validation chain is available. Do not fabricate historical bytes or reimpose superseded array-serialization requirements; identify any new indispensable missing dependency by the exact mathematical obligation."
+  },
+  "compute_backend_preference": "LOCAL_RUNTIME exact rational Python; one adjacent cell, no paid/HPC/Actions run.",
+  "science_budget_seconds": 300,
+  "max_new_actual_cells": 0,
+  "max_new_math_proof_cells": 1,
+  "forbidden": [
+    "actualconsumer",
+    "below1100continuation",
+    "V69consumerreplay",
+    "V68proofreplay_for_reassurance",
+    "V12guardregeneration",
+    "physical_or_auxiliary_reset",
+    "oldcell_K_substitution",
+    "subdivision_or_tuning_campaign",
+    "refit",
+    "recapture",
+    "native_P6",
+    "paid_or_HPC_execution",
+    "later-Q scientific access",
+    "accepted_model_promotion"
+  ],
+  "success_condition": "One validated moving-H proof-domain cell1110→1100; actual97/frontier1110 unchanged.",
+  "failure_or_falsification_condition": "First precise required inequality failure or indispensable dependency gap; method obstruction is not physical falsification.",
+  "stop_condition": "Stop after one validated proof, first precise obstruction or300 science seconds, whichever first. No actual consumer and no below1100 continuation; return exactly once to Result Ingestion2.1.0.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "scientific_dispatch": "NOT_EXECUTED"
+}
