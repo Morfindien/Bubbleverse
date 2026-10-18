@@ -1,0 +1,419 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-V67-PREEXEC-BLOCKER-INGESTION-RECEIPT-V1",
+  "created_at_utc": "2026-10-18T05:56:03.329503+00:00",
+  "case_id": "NOT_ASSIGNED",
+  "case": "hillipop-ede_n3",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "evidence_cutoff": "NOT_DOCUMENTED; no cutoff invented",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "BLOCKED",
+  "blocker": "BLOCKED_MISSING_EXECUTION_EVIDENCE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW_BLOCKER_RECEIPT_IN_ACCESSIBLE_STATE",
+  "origin_result": "V67_PREEXEC_BLOCKED_R1",
+  "actual_state": {
+    "count": 95,
+    "frontier": 1130
+  },
+  "other_frontiers": [
+    1440,
+    1440,
+    1440
+  ],
+  "NativeP6": "UNRESOLVED",
+  "scientific_producer_executions": 0,
+  "scientific_validation_executions": 0,
+  "new_actual_cells": 0,
+  "new_proof_cells": 0,
+  "q_complete": false,
+  "selected_next_engine_id": null,
+  "selected_next_engine_reason": "Blocked artifact recovery is not a new scientific engine; no unchanged task rerouted.",
+  "next_task": {
+    "schema": "bubbleverse.q048.preexec_recovery.v1",
+    "q": "Q048",
+    "target_q": "Q048",
+    "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "created_at_utc": "2026-10-18T05:24:45.075523+00:00",
+    "recovery_id": "LOCAL-Q048-V67-RECOVER-V66-ORIGINAL-EXECUTION-EVIDENCE-V1",
+    "parent_task_id": "LOCAL-Q048-POST-V66-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+    "parent_task_fingerprint": "a4e7771034c2af9276b71579d396831b6c70097e115ac6f1698ccc1a257be4f8",
+    "disposition": "BLOCKED_MISSING_EXECUTION_EVIDENCE",
+    "actual_state": {
+      "count": 95,
+      "frontier": 1130
+    },
+    "files_to_recover": [
+      {
+        "filename": "q048_moving_h_domain_result_v66.json",
+        "sha256": "b235c513bc53750cf18a61de6576267ee49ceb2c839bbb25358e4bf087492669",
+        "hash_status": "REPORTED_UPSTREAM_NOT_COMPUTED_HERE",
+        "bytes_reported": 34079,
+        "reason": "Primary blocker: reusable consumer compares newly computed source/C/upper-h/thermal certificates to original proof fields."
+      },
+      {
+        "filename": "q048_moving_h_domain_transition_validation_v66.json",
+        "sha256": "df49f10c8c87f68a62b9740c8fcad9ac0f9a09f52582b60ffef4760de52ccf88",
+        "hash_status": "REPORTED_UPSTREAM_NOT_COMPUTED_HERE",
+        "bytes_reported": 512,
+        "reason": "Proof transition evidence referenced by accepted checkpoint."
+      },
+      {
+        "filename": "q048_moving_h_domain_acceptance_validation_v66.json",
+        "sha256": "614609f0fcb6f2065b633be6bade6a8f87896cff1076012d8b70c02298b61ad0",
+        "hash_status": "REPORTED_UPSTREAM_NOT_COMPUTED_HERE",
+        "bytes_reported": 547,
+        "reason": "Proof acceptance evidence referenced by accepted checkpoint."
+      },
+      {
+        "filename": "q048_moving_h_domain_postaccept_validation_v66.json",
+        "sha256": "c02aa2485aef257302476da035f16779767057ba5ddcfd1e1bd1b25855568c92",
+        "hash_status": "REPORTED_UPSTREAM_NOT_COMPUTED_HERE",
+        "bytes_reported": 794,
+        "reason": "Reported 18/18 must be tied to original bytes; hash reported in original V66 file index, not computed here."
+      }
+    ],
+    "first_blocker": "q048_moving_h_domain_result_v66.json",
+    "hash_algorithm": "SHA256_EXACT_BYTES",
+    "no_regeneration": true,
+    "resume_condition": "All listed original bytes match their reported pins; then audit remaining dependencies and freeze original one-cell spec before any scientific producer. Preserve original task unchanged.",
+    "success_condition": "Original evidence becomes readable and hashverified, without adding a scientific cell.",
+    "stop_condition": "If any exact original remains unavailable or mismatches, remain BLOCKED and preserve actual95/frontier1130.",
+    "scientific_scope_unchanged": true,
+    "no_q_completion_claim": true,
+    "search_evidence_ref": "Q048_FREC_MOVING_H_V67_PREEXEC_RECOVERY_EVIDENCE_V1.json",
+    "journal_ref": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V67_PREEXEC_BLOCKED_V1.md"
+  },
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Complete four-case histories and cumulative optical-depth bounds absent; execution evidence missing.",
+  "journal_ref": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V67_PREEXEC_INGESTED_V1.md",
+  "source_register_ref": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V67_PREEXEC_INGESTED_V1.md; inherited full bytes, historical links not re-fetched",
+  "claim_map": {
+    "V66_conditional_proof": "LEAVES_UNCHANGED",
+    "actual95_frontier1130": "LEAVES_UNCHANGED",
+    "technical_blocker": "ADDS"
+  },
+  "completed_task_ledger": [
+    {
+      "id": "LOCAL-Q048-POST-V66-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+      "fingerprint": "a4e7771034c2af9276b71579d396831b6c70097e115ac6f1698ccc1a257be4f8",
+      "status": "NOT_EXECUTED_BLOCKED_BEFORE_SCIENCE"
+    },
+    {
+      "id": "LOCAL-Q048-V67-PREEXEC-BLOCKER-INGESTION-RECEIPT-V1",
+      "status": "BLOCKER_INGESTION_COMPLETE_ONLY"
+    }
+  ],
+  "route_history": [
+    {
+      "from": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+      "to": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "kind": "PREEXEC_BLOCKER_RECEIPT"
+    },
+    {
+      "to": null,
+      "kind": "ARTIFACT_RECOVERY_PENDING_NO_DISPATCH"
+    }
+  ],
+  "idempotency": {
+    "origin_result_sha256": "cf5c5bf424a9051fe9176a2c373e4f87126826e92a3bda3e08c3fc4646ca4aa5",
+    "origin_task_sha256": "818c9bfcaf058fc82e0de44c8688ebb70040873d0b4b0ef4341f4845a405ab32",
+    "rule": "Same incoming hashes without new original bytes: duplicate receipt only; no new evidence/task."
+  },
+  "inputs": [
+    {
+      "filename": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.1.0-83.md",
+      "size_bytes": 78131,
+      "sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+      "access": "READ_LOCAL_OPERATOR_SUPPLIED"
+    },
+    {
+      "filename": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V67_PREEXEC_BLOCKED_V1.md",
+      "size_bytes": 14113902,
+      "sha256": "f9ad5761cc825ee9c3ef8bf09169864aef32b927d06947088bac66d1f0a035af",
+      "access": "READ_LOCAL_OPERATOR_SUPPLIED"
+    },
+    {
+      "filename": "Q048_FREC_MOVING_H_V67_PREEXEC_RECOVERY_TASK_V1.json",
+      "size_bytes": 3357,
+      "sha256": "818c9bfcaf058fc82e0de44c8688ebb70040873d0b4b0ef4341f4845a405ab32",
+      "access": "READ_LOCAL_OPERATOR_SUPPLIED"
+    },
+    {
+      "filename": "Q048_FREC_MOVING_H_V67_PREEXEC_FILES_V1.md",
+      "size_bytes": 1170,
+      "sha256": "0c9ad4d122690a15bd3b481a64550439fd55ea384c50a71f544d1ab00403af13",
+      "access": "READ_LOCAL_OPERATOR_SUPPLIED"
+    },
+    {
+      "filename": "Q048_FREC_MOVING_H_V67_PREEXEC_RESULT_V1.md",
+      "size_bytes": 6523,
+      "sha256": "cf5c5bf424a9051fe9176a2c373e4f87126826e92a3bda3e08c3fc4646ca4aa5",
+      "access": "READ_LOCAL_OPERATOR_SUPPLIED"
+    }
+  ],
+  "checks": [
+    {
+      "check": "prompt_same_verified_contract",
+      "pass": true
+    },
+    {
+      "check": "q_firewall",
+      "pass": true
+    },
+    {
+      "check": "exact_question_hash",
+      "pass": true
+    },
+    {
+      "check": "actual95_1130",
+      "pass": true
+    },
+    {
+      "check": "four_original_files",
+      "pass": true
+    },
+    {
+      "check": "no_new_receipt_in_journal",
+      "pass": true
+    },
+    {
+      "check": "repo_tree_complete",
+      "pass": true
+    },
+    {
+      "check": "supplied_journal_matches_repository_blob",
+      "pass": true
+    },
+    {
+      "check": "no_existing_ingestion_path",
+      "pass": true
+    },
+    {
+      "check": "originals_absent_from_current_repository",
+      "pass": true
+    },
+    {
+      "check": "incremental_listing_complete",
+      "pass": true
+    },
+    {
+      "check": "no_new_originals_in_incremental_listing",
+      "pass": true
+    },
+    {
+      "check": "journal_history_bytes_preserved",
+      "pass": true
+    }
+  ],
+  "checks_passed": 13,
+  "checks_total": 13,
+  "validation_scope": "Transport, scope, identity, journal preservation and metadata freshness only; missing files remain missing.",
+  "retrieval_evidence": {
+    "base_commit": "d23a017aeb5074b5f3c77fee1c5cb38caaf39c37",
+    "tree_sha": "31e4c0facce4bbf0d8604412f3b114d74fd11e9b",
+    "tree_entries": 2797,
+    "tree_truncated": false,
+    "matching_repository_paths": [
+      {
+        "path": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V67_PREEXEC_BLOCKED_V1.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "efda7b9ee0c7c087175ead5c583ecfc7def01449",
+        "size": 14113902,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/efda7b9ee0c7c087175ead5c583ecfc7def01449"
+      },
+      {
+        "path": "q048_moving_h_domain_accepted_checkpoint_v66.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4ca221c7b8f6912665791174797bcad4985d26fe",
+        "size": 2268,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/4ca221c7b8f6912665791174797bcad4985d26fe"
+      },
+      {
+        "path": "q048_moving_h_domain_delivery_validation_v66.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a580a00d96da91ee80e4268d1ccba236e937c081",
+        "size": 2353,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/a580a00d96da91ee80e4268d1ccba236e937c081"
+      },
+      {
+        "path": "q048_moving_h_domain_validation_v66.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "4637951e0a5b391098899edea60431ad4ddc5390",
+        "size": 9067,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/4637951e0a5b391098899edea60431ad4ddc5390"
+      },
+      {
+        "path": "q048_moving_h_domain_verifier_adapter_event_v66.json",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "31eff7307c56fbd49ec0749bc195b79645e088d7",
+        "size": 822,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/31eff7307c56fbd49ec0749bc195b79645e088d7"
+      }
+    ],
+    "library_incremental_listing": {
+      "surface": "library",
+      "items": [
+        {
+          "id": "file_00000000c7e88243a34070f1d7a956db",
+          "kind": "file",
+          "name": "Q048_FREC_MOVING_H_V67_PREEXEC_RECOVERY_TASK_V1(1).json",
+          "path": "/Q048_FREC_MOVING_H_V67_PREEXEC_RECOVERY_TASK_V1(1).json",
+          "file_id": "file_00000000c7e88243a34070f1d7a956db",
+          "library_file_id": "libfile_1e1f24889de88191bfe134adbcf46d55",
+          "library_artifact_type": null,
+          "version_id": null,
+          "mime_type": "application/json",
+          "size_bytes": 3357,
+          "created_at": "2026-10-18T05:53:05.791900Z",
+          "modified_at": "2026-10-18T05:53:05.791900Z",
+          "model_generated": false,
+          "surface": "library"
+        },
+        {
+          "id": "file_000000000be881fda11fdda2bfe89ac0",
+          "kind": "file",
+          "name": "Q048_FREC_MOVING_H_V67_PREEXEC_OUTPUT_MANIFEST_V1.json",
+          "path": "/Q048_FREC_MOVING_H_V67_PREEXEC_OUTPUT_MANIFEST_V1.json",
+          "file_id": "file_000000000be881fda11fdda2bfe89ac0",
+          "library_file_id": "libfile_2b65b3cec8b081919a2db46185c99441",
+          "library_artifact_type": "other",
+          "version_id": null,
+          "mime_type": "application/json",
+          "size_bytes": 2763,
+          "created_at": "2026-10-18T05:27:02.087593Z",
+          "modified_at": "2026-10-18T05:27:02.087593Z",
+          "model_generated": true,
+          "surface": "library"
+        },
+        {
+          "id": "file_00000000ef1081fdb613cbf64cda7883",
+          "kind": "file",
+          "name": "q048_frec_moving_h_preexec_validation_v67_r1.json",
+          "path": "/q048_frec_moving_h_preexec_validation_v67_r1.json",
+          "file_id": "file_00000000ef1081fdb613cbf64cda7883",
+          "library_file_id": "libfile_ce4191619f408191bb784af68c360e7b",
+          "library_artifact_type": "other",
+          "version_id": null,
+          "mime_type": "application/json",
+          "size_bytes": 5286,
+          "created_at": "2026-10-18T05:27:02.068107Z",
+          "modified_at": "2026-10-18T05:27:02.068107Z",
+          "model_generated": true,
+          "surface": "library"
+        },
+        {
+          "id": "file_000000003408823086def2aac470f521",
+          "kind": "file",
+          "name": "Q048_FREC_MOVING_H_V67_PREEXEC_GITHUB_MEMORY_UPDATE_V1.json",
+          "path": "/Q048_FREC_MOVING_H_V67_PREEXEC_GITHUB_MEMORY_UPDATE_V1.json",
+          "file_id": "file_000000003408823086def2aac470f521",
+          "library_file_id": "libfile_e6075ecc7f308191a643d89ad06508cb",
+          "library_artifact_type": "other",
+          "version_id": null,
+          "mime_type": "application/json",
+          "size_bytes": 1164,
+          "created_at": "2026-10-18T05:27:02.060594Z",
+          "modified_at": "2026-10-18T05:27:02.060594Z",
+          "model_generated": true,
+          "surface": "library"
+        },
+        {
+          "id": "file_0000000076fc82308016b3a2bbe14836",
+          "kind": "file",
+          "name": "Q048_FREC_MOVING_H_V67_PREEXEC_RECOVERY_EVIDENCE_V1.json",
+          "path": "/Q048_FREC_MOVING_H_V67_PREEXEC_RECOVERY_EVIDENCE_V1.json",
+          "file_id": "file_0000000076fc82308016b3a2bbe14836",
+          "library_file_id": "libfile_e664512a229481918aa5c7a652744a92",
+          "library_artifact_type": "other",
+          "version_id": null,
+          "mime_type": "application/json",
+          "size_bytes": 12171,
+          "created_at": "2026-10-18T05:27:02.058842Z",
+          "modified_at": "2026-10-18T05:27:02.058842Z",
+          "model_generated": true,
+          "surface": "library"
+        },
+        {
+          "id": "file_0000000018308230b8c4433f3a74a360",
+          "kind": "file",
+          "name": "Q048_FREC_MOVING_H_V67_PREEXEC_RECOVERY_TASK_V1.json",
+          "path": "/Q048_FREC_MOVING_H_V67_PREEXEC_RECOVERY_TASK_V1.json",
+          "file_id": "file_0000000018308230b8c4433f3a74a360",
+          "library_file_id": "libfile_9f7aa52c22f08191acb8c33ba382d3f0",
+          "library_artifact_type": "other",
+          "version_id": null,
+          "mime_type": "application/json",
+          "size_bytes": 3357,
+          "created_at": "2026-10-18T05:27:02.056085Z",
+          "modified_at": "2026-10-18T05:27:02.056085Z",
+          "model_generated": true,
+          "surface": "library"
+        }
+      ],
+      "next_cursor": null,
+      "warnings": [],
+      "external_connectors_accessed": false
+    }
+  },
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "base_commit": "d23a017aeb5074b5f3c77fee1c5cb38caaf39c37",
+    "source_freshness": "VERIFIED_TARGETED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "target_paths_status": "PROPOSED_NEW_ROOT_VERSIONED_FILES",
+    "commit_sha": null,
+    "memory_update": {
+      "journal_ref": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V67_PREEXEC_INGESTED_V1.md",
+      "case_index_delta": {
+        "q": "Q048",
+        "case_lifecycle": "ACTIVE",
+        "epistemic": "INCONCLUSIVE",
+        "execution": "BLOCKED",
+        "actual_count": 95,
+        "actual_frontier": 1130,
+        "next_action": "LOCAL-Q048-V67-RECOVER-V66-ORIGINAL-EXECUTION-EVIDENCE-V1"
+      },
+      "task_index_delta": {
+        "task_id": "LOCAL-Q048-POST-V66-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+        "status": "BLOCKED_NOT_EXECUTED",
+        "no_replay": true
+      },
+      "global_current_state_write": "NOT_APPLIED"
+    }
+  },
+  "output_manifest": {
+    "convention": "This JSON excludes its own hash; other outputs have exact SHA256. Existing recovery task is referenced by its input hash.",
+    "files": [
+      {
+        "filename": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V67_PREEXEC_INGESTED_V1.md",
+        "intended_repository_path": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V67_PREEXEC_INGESTED_V1.md",
+        "size_bytes": 14121516,
+        "sha256": "256bc0959a9a8dd4ea2832dd4a5e24befe14ee887f3d04302e19e006c1a3aa0c",
+        "mutation": "NEW_VERSIONED_FILE"
+      },
+      {
+        "filename": "Q048_FREC_MOVING_H_V67_PREEXEC_INGESTION_RESULT_V1.md",
+        "intended_repository_path": "Q048_FREC_MOVING_H_V67_PREEXEC_INGESTION_RESULT_V1.md",
+        "size_bytes": 7551,
+        "sha256": "e86d81a5a9a2ebff95439f65bd18207a92ddac57a3748a47c2eb2b302502a7b2",
+        "mutation": "NEW_VERSIONED_FILE"
+      }
+    ]
+  },
+  "handoff_completeness": "COMPLETE_BLOCKER_CONTEXT; SCIENTIFIC_EXECUTION_HANDOFF_INCOMPLETE",
+  "delivery_status": "PREPARED",
+  "writeback_status": "PENDING",
+  "dispatch_status": "NOT_SENT"
+}

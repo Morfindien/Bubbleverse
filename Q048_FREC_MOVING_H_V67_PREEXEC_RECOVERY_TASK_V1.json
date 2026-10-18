@@ -1,0 +1,56 @@
+{
+  "schema": "bubbleverse.q048.preexec_recovery.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "created_at_utc": "2026-10-18T05:24:45.075523+00:00",
+  "recovery_id": "LOCAL-Q048-V67-RECOVER-V66-ORIGINAL-EXECUTION-EVIDENCE-V1",
+  "parent_task_id": "LOCAL-Q048-POST-V66-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "parent_task_fingerprint": "a4e7771034c2af9276b71579d396831b6c70097e115ac6f1698ccc1a257be4f8",
+  "disposition": "BLOCKED_MISSING_EXECUTION_EVIDENCE",
+  "actual_state": {
+    "count": 95,
+    "frontier": 1130
+  },
+  "files_to_recover": [
+    {
+      "filename": "q048_moving_h_domain_result_v66.json",
+      "sha256": "b235c513bc53750cf18a61de6576267ee49ceb2c839bbb25358e4bf087492669",
+      "hash_status": "REPORTED_UPSTREAM_NOT_COMPUTED_HERE",
+      "bytes_reported": 34079,
+      "reason": "Primary blocker: reusable consumer compares newly computed source/C/upper-h/thermal certificates to original proof fields."
+    },
+    {
+      "filename": "q048_moving_h_domain_transition_validation_v66.json",
+      "sha256": "df49f10c8c87f68a62b9740c8fcad9ac0f9a09f52582b60ffef4760de52ccf88",
+      "hash_status": "REPORTED_UPSTREAM_NOT_COMPUTED_HERE",
+      "bytes_reported": 512,
+      "reason": "Proof transition evidence referenced by accepted checkpoint."
+    },
+    {
+      "filename": "q048_moving_h_domain_acceptance_validation_v66.json",
+      "sha256": "614609f0fcb6f2065b633be6bade6a8f87896cff1076012d8b70c02298b61ad0",
+      "hash_status": "REPORTED_UPSTREAM_NOT_COMPUTED_HERE",
+      "bytes_reported": 547,
+      "reason": "Proof acceptance evidence referenced by accepted checkpoint."
+    },
+    {
+      "filename": "q048_moving_h_domain_postaccept_validation_v66.json",
+      "sha256": "c02aa2485aef257302476da035f16779767057ba5ddcfd1e1bd1b25855568c92",
+      "hash_status": "REPORTED_UPSTREAM_NOT_COMPUTED_HERE",
+      "bytes_reported": 794,
+      "reason": "Reported 18/18 must be tied to original bytes; hash reported in original V66 file index, not computed here."
+    }
+  ],
+  "first_blocker": "q048_moving_h_domain_result_v66.json",
+  "hash_algorithm": "SHA256_EXACT_BYTES",
+  "no_regeneration": true,
+  "resume_condition": "All listed original bytes match their reported pins; then audit remaining dependencies and freeze original one-cell spec before any scientific producer. Preserve original task unchanged.",
+  "success_condition": "Original evidence becomes readable and hashverified, without adding a scientific cell.",
+  "stop_condition": "If any exact original remains unavailable or mismatches, remain BLOCKED and preserve actual95/frontier1130.",
+  "scientific_scope_unchanged": true,
+  "no_q_completion_claim": true,
+  "search_evidence_ref": "Q048_FREC_MOVING_H_V67_PREEXEC_RECOVERY_EVIDENCE_V1.json",
+  "journal_ref": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V67_PREEXEC_BLOCKED_V1.md"
+}
