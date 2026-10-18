@@ -1,0 +1,36 @@
+# Q048 V68 — alle individuelle filer
+
+Én proofcelle1120→1110 accepteret. Actual96/frontier1120 uændret. Næste er Result Ingestion2.1.0. Upload alle nye V68-filer herunder til repo-roden; bevar tidligere journaler og evidens. GitHub USER_UPLOAD_PENDING. Ingen arkiver.
+
+- [Q048_MOVING_H_DOMAIN_V68_RESULT.md](sandbox:/workspace/scratch/3415d88c213e/v68/output/Q048_MOVING_H_DOMAIN_V68_RESULT.md)
+- [Q048_MOVING_H_DOMAIN_V68_HANDOFF_TO_INGESTION.md](sandbox:/workspace/scratch/3415d88c213e/v68/output/Q048_MOVING_H_DOMAIN_V68_HANDOFF_TO_INGESTION.md)
+- [Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V68_APPENDED_V1.md](sandbox:/workspace/scratch/3415d88c213e/v68/output/Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V68_APPENDED_V1.md)
+- [q048_moving_h_domain_result_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_result_v68.json)
+- [q048_moving_h_domain_accepted_checkpoint_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_accepted_checkpoint_v68.json)
+- [q048_moving_h_domain_validation_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_validation_v68.json)
+- [q048_moving_h_domain_transition_validation_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_transition_validation_v68.json)
+- [q048_moving_h_domain_acceptance_validation_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_acceptance_validation_v68.json)
+- [q048_moving_h_domain_postaccept_validation_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_postaccept_validation_v68.json)
+- [Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V68.md](sandbox:/workspace/scratch/3415d88c213e/v68/output/Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V68.md)
+- [Q048_MOVING_H_DOMAIN_V68_GITHUB_MEMORY_UPDATE.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/Q048_MOVING_H_DOMAIN_V68_GITHUB_MEMORY_UPDATE.json)
+- [q048_comparison_tests_green_v68.log](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_comparison_tests_green_v68.log)
+- [q048_comparison_tests_red_initial_v68.log](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_comparison_tests_red_initial_v68.log)
+- [q048_comparison_tests_red_v68.log](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_comparison_tests_red_v68.log)
+- [q048_moving_h_comparison_v68.py](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_comparison_v68.py)
+- [q048_moving_h_contract_v68.py](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_contract_v68.py)
+- [q048_moving_h_domain_accept_v68.py](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_accept_v68.py)
+- [q048_moving_h_domain_acceptance_v68.log](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_acceptance_v68.log)
+- [q048_moving_h_domain_candidate_checkpoint_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_candidate_checkpoint_v68.json)
+- [q048_moving_h_domain_delivery_validation_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_delivery_validation_v68.json)
+- [q048_moving_h_domain_execution_v68.log](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_execution_v68.log)
+- [q048_moving_h_domain_producer_invocation_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_producer_invocation_v68.json)
+- [q048_moving_h_domain_spec_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_spec_v68.json)
+- [q048_moving_h_domain_v68.py](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_v68.py)
+- [q048_moving_h_domain_verification_v68.log](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_verification_v68.log)
+- [q048_moving_h_domain_verifier_invocation_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_verifier_invocation_v68.json)
+- [q048_moving_h_domain_verify_v68.py](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_verify_v68.py)
+- [test_comparison_v68.py](sandbox:/workspace/scratch/3415d88c213e/v68/output/test_comparison_v68.py)
+- [q048_moving_h_domain_output_manifest_v68.json](sandbox:/workspace/scratch/3415d88c213e/v68/output/q048_moving_h_domain_output_manifest_v68.json)
+- [Q048_MOVING_H_DOMAIN_V68_FILES.md](sandbox:/workspace/scratch/3415d88c213e/v68/output/Q048_MOVING_H_DOMAIN_V68_FILES.md)
+
+Spec og memoryupdate angiver eksakt inputlayout og provenance. Et manifest omfatter alle øvrige filer bortset fra sig selv og dette linkindeks. De oprindelige afhængigheder ændres ikke.

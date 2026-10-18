@@ -1,0 +1,15 @@
+# Q048 V68 → Result Ingestion2.1.0
+
+**Én matematisk proofcelle1120→1110 accepteret. Actual96/frontier1120 uændret; øvrige frontiers1440.** Q048/Q048 ACTIVE/INCONCLUSIVE. Ingen actualconsumer eller below1110-fortsættelse.
+
+EXACT FULL QUESTION: For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?
+
+Komplet journal `Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V68_APPENDED_V1.md`; resultat `Q048_MOVING_H_DOMAIN_V68_RESULT.md`; alle individuelle filer `Q048_MOVING_H_DOMAIN_V68_FILES.md`. Accepted proof checkpoint `q048_moving_h_domain_accepted_checkpoint_v68.json`, SHA256 `9af6a444575c9d5abd684acfad3cf06d47734ab2d4fa5f71b5a2d8a79dd04b42`. Rawresult `q048_moving_h_domain_result_v68.json`, SHA256 `14d904cdc20e8baff94e2e8b6ae4b9258c1b8b02834b4cd989464521b982dcd2`. Verifier `q048_moving_h_domain_validation_v68.json`, SHA256 `fe4329024bdc570f1337ee15f307bc0b5d84a74f1057e4f7a43ba472ff590f9b`. Transition, acceptance, postaccept og producer/verifier/acceptorkode medleveres individuelt.
+
+Frisk K_upper `55305057942887199111/10000000000000000`. Arvet lower `784060120186783/1000000000000000000`; ny strikt positiv whole-cell lower `754570109734061/1000000000000000000`. Primær row33 a/E/Y/V limer præcist til accepted V67R1-parent `a9d1f05a2afe2c3bad8ec87ef59b6228dbe3dac8f51e95a3662d814e3a463840`. Control er kun guard; ingen reset. Verifier109/109, mutationer33/33, transition13/13, acceptance8/8, postaccept15/15 PASS.
+
+Indtag én gang med task `LOCAL-Q048-POST-V67-R1-MOVING-H-DOMAIN-1120-1110-MATH-V1` / `6142c0ca0310f203e5f909a6ce1d3149e972289f2b95f529549266b5efa6f05d`, executionfingerprint `45581b45905611c21a94d06bb1c75883ebe811c55dab8608c600b75e2c31eafb`. Reassess exact-Q completion og vælg kun et nyt materielt behov, hvis Q stadig er åben. Ingen replay af V68/V67/V66 eller guard for beroligelse. Ingen ny actualcelle er accepteret her.
+
+Betinget source-real proofdomæne under den fastholdte theorem/source/interpolation-lineage. De fire historiske V66 raw/transition/acceptance/postaccept-originaler er fortsat ikke gendannet; fuld historisk reproducerbarhed er derfor ikke certificeret. Verifieren deler pinned source-/intervalhelpers med produceren; den er producer-free, men ikke metodisk uafhængig eller ny fysisk evidens. Den rationale lower-formel er implementeret separat i verifieren. Complete four-case histories/Δtau bounds mangler fortsat; NativeP6 UNRESOLVED, q_complete=false, ingen accepted-model-change eller senere Q.
+
+GitHub read-base `1bf23692473b0280a5b2a0fc67cc1bdf4f8ffae1`; nye V68-filer USER_UPLOAD_PENDING. Handoff PREPARED, ikke SENT. Upload som nye versionsnavne i repo-roden og bevar historikken. Stop V68 her og returnér én gang til Result Ingestion.
