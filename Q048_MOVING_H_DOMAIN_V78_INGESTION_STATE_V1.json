@@ -1,0 +1,189 @@
+{
+  "schema": "bubbleverse.q048.v78.ingestion_state.v1",
+  "created_at_utc": "2026-10-18T16:34:53.591157+00:00",
+  "prompt_id": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+  "prompt_version": "2.1.0",
+  "prompt_file": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.1.0-97.md",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "incoming_result": {
+    "result_id": "LOCAL-Q048-MOVING-H-DOMAIN-V78",
+    "run_id": "LOCAL-Q048-MOVING-H-DOMAIN-V78-2026-10-18T16:27:25.784275+00:00",
+    "task_id": "LOCAL-Q048-POST-V77-MOVING-H-DOMAIN-1070-1060-MATH-V1",
+    "task_fingerprint": "ea3ae5ebaac73718d15ab8ca76822102fd5612e8db9d395b65b86d5d55c38644",
+    "execution_fingerprint": "7f670e75c229fb8e9fa07acc5f84aad34cf9e096fdb47c38713d946b6d7b680b",
+    "class": "MATHEMATICAL_RESULT",
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED",
+    "reproducibility": "REPRODUCED_WITH_SHARED_METHOD_DEPENDENCIES",
+    "robustness": "ROBUST_WITHIN_TESTED_DOMAIN",
+    "scientific_effect": "SUPPORTS_CONDITIONAL_PROOF_CELL_ONLY",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "accepted_proof": {
+    "cell_z": [
+      1070,
+      1060
+    ],
+    "cell_a": [
+      "1/1071",
+      "1/1061"
+    ],
+    "K_upper": "5369197930665494437521/1000000000000000000",
+    "comparison_start_lower": "656570878294307/1000000000000000000",
+    "whole_cell_lower": "317712567170961/500000000000000000",
+    "accepted_checkpoint_sha256": "e3a225d070079455aa4ddcde05f5450325ce3db04ddff19b643dccf64ce9bb8b",
+    "raw_sha256": "5ef0efb0fc23db86f43a2ca5bdd89ad7f893db07c0d9df9d1b7e4e647c62b302",
+    "validation_sha256": "f65f804bbcc55b9661259816c0940b3eec2e8651007a6eb0877ec88544b9d8fc",
+    "transition_sha256": "7080e662bd0f58234a36d4ddbf62d07fd59d59c8740ea13557ab151ac2ef7ea3",
+    "acceptance_sha256": "3d0352da5130c42fadbe3f94b4423adb9c83b067579d9fb0dd01e54dbcbdb4c7",
+    "postaccept_sha256": "579b5bf4495330d346271cd51c6050fe4d8bcff3e015588328c50ac046cfc4e8",
+    "delivery_sha256": "e3944ec50a7d382814bf952f5e6e545961637a38c921e42f8977474cbdcb3373",
+    "new_math_proof_cells": 1,
+    "new_actual_cells": 0
+  },
+  "accepted_actual": {
+    "count": 101,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1070
+    },
+    "scalar_endpoint": {
+      "a": "1/1071",
+      "E": "71659661861302702229/1000000000000000000",
+      "Y": "7138373741647196083/125000000000000000",
+      "Vbar": "13946310597786586333/1000000000000000000"
+    },
+    "connected_lower": "656570878294307/1000000000000000000",
+    "accepted_checkpoint_sha256": "8cc99e7fd68fd7a67ba6dbef247362e5811b397f7a2c4e0607ba1f6857154ae2"
+  },
+  "candidate_next_actual": {
+    "status": "NOT_YET_COMPUTED_NOT_ACCEPTED",
+    "cell_z": [
+      1070,
+      1060
+    ],
+    "cell_a": [
+      "1/1071",
+      "1/1061"
+    ],
+    "count": 102,
+    "frontier": 1060,
+    "endpoint": {
+      "a": "1/1061",
+      "E": "69428213521057062921/1000000000000000000",
+      "Y": "55319914129638982179/1000000000000000000",
+      "Vbar": "13520453583442327377/1000000000000000000"
+    },
+    "connected_lower": "317712567170961/500000000000000000",
+    "guard_row_index": 38
+  },
+  "claim_evidence_map": [
+    {
+      "claim": "conditional proof1070→1060 is accepted",
+      "role": "SUPPORTS",
+      "evidence": [
+        "q048_moving_h_domain_accepted_checkpoint_v78.json",
+        "q048_moving_h_domain_validation_v78.json",
+        "q048_moving_h_domain_transition_validation_v78.json",
+        "q048_moving_h_domain_acceptance_validation_v78.json",
+        "q048_moving_h_domain_postaccept_validation_v78.json"
+      ]
+    },
+    {
+      "claim": "actual102/frontier1060 is accepted",
+      "role": "DOES_NOT_SUPPORT",
+      "evidence": [
+        "q048_moving_h_domain_accepted_checkpoint_v78.json"
+      ],
+      "reason": "V78 adds one proof cell only; next actual consumer is not yet executed."
+    },
+    {
+      "claim": "Q048 complete four-case x_e/tau bounds exist",
+      "role": "DOES_NOT_SUPPORT",
+      "evidence": [
+        "q048_moving_h_domain_accepted_checkpoint_v78.json"
+      ],
+      "reason": "q_complete=false; complete_a1_certificate=false; final delta bounds remain absent."
+    }
+  ],
+  "completion_gate": {
+    "satisfied": false,
+    "reason": "Exact Q still requires complete electron-fraction histories and cumulative Thomson optical-depth difference bounds for all four configurations. V78 supplies one conditional theorem cell only; the newly accepted proof now makes one actual consumer1070→1060 the single material next obligation."
+  },
+  "next_engine": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "version": "2.2.0",
+    "prompt_path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "prompt_git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a"
+  },
+  "next_task_ref": "Q048_MOVING_H_DOMAIN_V78_NEXT_BUILDER_TASK_V1.json",
+  "next_task_fingerprint": "427ed488dfd2155f6fc51cb8ab244c86d93bebbbe609b705f07c0821cf4c9cf3",
+  "no_repeat": [
+    "V78 science proof/validation",
+    "V77 actual consumer/validation",
+    "V12 guard regeneration",
+    "historical diagnostics"
+  ],
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "accepted_model_change": false,
+  "motor14_selected": false,
+  "scientific_execution_during_ingestion": {
+    "producer_runs": 0,
+    "verifier_runs": 0,
+    "new_science_cells": 0
+  },
+  "journal": {
+    "source": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V78_APPENDED_V1.md",
+    "source_sha256": "8dc7095de91d45879fd0093ec0121f4992c2f43704546fc5d6ac9fd70a68a13d",
+    "source_bytes": 14244278,
+    "target": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V78_INGESTED_V1.md",
+    "target_sha256": "1a8d0f9be93b782952eef58a455aeb69f6298efe3ebd44778bdf9886579db710",
+    "target_bytes": 14245808,
+    "prior_bytes_preserved_as_exact_suffix": true,
+    "prefix_bytes": 1530
+  },
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit_sha": "b6057029c4e1d9c2f5951fc69eeb70f6f8ff5c52",
+    "tree_sha": "a0741a68d6c20cb9c62c0bc70de885f8a460b7b5",
+    "source_freshness": "VERIFIED",
+    "v78_core_repo_present": true,
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "memory_update": {
+      "q_index": "Keep Q048 ACTIVE/INCONCLUSIVE; actual101/frontier1070; accepted proof1070→1060; next one actual consumer1070→1060",
+      "result_index": "Add one V78 ingestion event; do not count ingestion as independent scientific support",
+      "task_route": "Mark V78 proof completed/no-repeat; prepare exactly one Builder actual-consumer task V79",
+      "current_state": "Advance only after coherent manual upload and fresh pointer/path/schema verification"
+    }
+  },
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "None for bounded continuation; no new Q/model promotion/paid compute.",
+  "next_task_status": "PREPARED_NOT_EXECUTED",
+  "validation": {
+    "file": "Q048_MOVING_H_DOMAIN_V78_INGESTION_VALIDATION_V1.json",
+    "sha256": "e10d32955fe0ef1d76431431c8431987f268b09aac4f570f1166547578a45149",
+    "checks_passed": 65,
+    "checks_total": 65,
+    "status": "PASS"
+  }
+}
