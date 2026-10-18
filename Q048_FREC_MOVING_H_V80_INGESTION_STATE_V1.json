@@ -1,0 +1,941 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-V80-ACCEPTED-INGESTION-V1",
+  "created_at_utc": "2026-10-18T17:34:08.342274+00:00",
+  "local_time": "2026-10-18T19:34:08.342274+02:00",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "configuration": "hillipop-ede_n3",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "evidence_cutoff": "Q001-Q048; external source-date boundary NOT_DOCUMENTED",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "idempotence_scope": "No matching event marker in complete incoming journal; no matching ingestion/newV81 paths in inspected complete repository tree. Not a global registry registration claim.",
+  "new_result_ids": [
+    "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V80"
+  ],
+  "source_state_version": "V80_APPENDED_V1",
+  "target_state_version": "V80_INGESTED_V1",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS",
+  "engine_registry_ref": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "git_blob_sha1": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "commit": "08b0283c9d5d431f3028d469947c7c65f95cff26",
+    "access": "FULL_PROMPT_BYTES_FETCHED_AND_HASHED",
+    "compatibility": "Existing mathematical engine; new contract preserves Q/source/scientific method. Historical engine prompt hashes are unchanged in prior records; do not substitute a historical hash for these observed bytes."
+  },
+  "execution_profile_ref": "Q048_FREC_MOVING_H_V80_INGESTION_RESULT_V1.md",
+  "journal_ref": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V80_INGESTED_V1.md",
+  "source_register_ref": {
+    "complete_inherited_register": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V80_INGESTED_V1.md",
+    "new_internal_refs": [
+      {
+        "filename": "q048_frec_moving_h_result_v80.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_result_v80.json",
+        "library_file_id": "libfile_73dcb474f2488191a27d78b4d3b581ac",
+        "sha256": "fb8f8b9f3621eace4c90c1d925046b9e5f99500332aa55d7b2336c4aac092cd0",
+        "bytes": 27926,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "q048_frec_moving_h_result_v80.json"
+      },
+      {
+        "filename": "q048_frec_moving_h_accepted_checkpoint_v80.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_accepted_checkpoint_v80.json",
+        "library_file_id": "libfile_f2b10b13637c8191bd740b7a00d481db",
+        "sha256": "7a4a5a8b4a594cba36bed82c4489ba628fae5ef51688e47fc3c9242ea7979fe0",
+        "bytes": 6678,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "q048_frec_moving_h_accepted_checkpoint_v80.json"
+      },
+      {
+        "filename": "q048_frec_moving_h_validation_v80.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_validation_v80.json",
+        "library_file_id": "libfile_2f9aa41ba9848191a04cff40926c25f0",
+        "sha256": "9bede04b0f4e92bc575f9443d9634e9a567d44a81a44ac88ed9255d4f7f52a17",
+        "bytes": 14364,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "q048_frec_moving_h_validation_v80.json"
+      },
+      {
+        "filename": "q048_frec_moving_h_transition_validation_v80.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_transition_validation_v80.json",
+        "library_file_id": "libfile_8a9569438f64819192658d483db7a329",
+        "sha256": "b00b876f749fb0532a42705ec3f3158f2a0d49d08aaef859e22dec4e0ba2b2d5",
+        "bytes": 8435,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "q048_frec_moving_h_transition_validation_v80.json"
+      },
+      {
+        "filename": "q048_frec_moving_h_acceptance_validation_v80.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_acceptance_validation_v80.json",
+        "library_file_id": "libfile_0a437c89b7c8819189b6bcc384c55740",
+        "sha256": "461b08fcb1d47721b82eef11c7e19aca2f61b6db26d395a7b54c88e684cd88c8",
+        "bytes": 958,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "q048_frec_moving_h_acceptance_validation_v80.json"
+      },
+      {
+        "filename": "q048_frec_moving_h_postaccept_validation_v80.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_postaccept_validation_v80.json",
+        "library_file_id": "libfile_20cfd9717a7c81918dd28c72373412b1",
+        "sha256": "b5d7db7e86f3340d985f9442c6a09e5212b9d30ace36a2054a131a47ca9aac12",
+        "bytes": 1655,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "q048_frec_moving_h_postaccept_validation_v80.json"
+      },
+      {
+        "filename": "q048_frec_moving_h_spec_v80.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_spec_v80.json",
+        "library_file_id": "libfile_9a35089562b481918ab263fb67ee5d92",
+        "sha256": "60e9bccc52eb30bbde49c247e97752562987ceb54ab2c4ac815b9564babed96b",
+        "bytes": 17491,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "q048_frec_moving_h_spec_v80.json"
+      },
+      {
+        "filename": "q048_frec_moving_h_output_manifest_v80.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_output_manifest_v80.json",
+        "library_file_id": "libfile_7b101e2fee288191af60197e886195e7",
+        "sha256": "83b6a1cdd0c8b873c1bf67e91a1eadbef2d4a787cc9d03ec039da559c5c1574c",
+        "bytes": 18359,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "q048_frec_moving_h_output_manifest_v80.json"
+      },
+      {
+        "filename": "q048_frec_moving_h_delivery_validation_v80.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_delivery_validation_v80.json",
+        "library_file_id": "libfile_7642c4afda7081918db7eb2fdf108ab2",
+        "sha256": "9605ea7872ba79295c644f969a8ec8dfa823d9384e19c1b5c89e0ea8edb641f0",
+        "bytes": 14208,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "q048_frec_moving_h_delivery_validation_v80.json"
+      },
+      {
+        "filename": "Q048_FREC_MOVING_H_V80_GATES_PROVENANCE.json",
+        "local_path": "/workspace/scratch/ad1a1974b1bd/v80/Q048_FREC_MOVING_H_V80_GATES_PROVENANCE.json",
+        "library_file_id": "libfile_ea36619d44248191812fea32d91cc1ef",
+        "sha256": "cb851b445171c07252356a05e581885319ff51ecc34329651a60f8c2a23a511c",
+        "bytes": 29462,
+        "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+        "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+        "proposed_repository_path": "Q048_FREC_MOVING_H_V80_GATES_PROVENANCE.json"
+      }
+    ],
+    "upstream_input_map": [
+      {
+        "local_execution_path": "inputs/Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-119.md",
+        "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+        "bytes": 79322,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": null,
+        "commit": null,
+        "access": "VERIFIED_OPERATOR_SUPPLIED_BYTES",
+        "delivered_path": "/workspace/scratch/ad1a1974b1bd/upload/Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-119.md",
+        "repository_equivalent": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+        "equivalent_git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a"
+      },
+      {
+        "local_execution_path": "inputs/Q047_SAMLET_JOURNAL_FREC_MOVING_H_V79_INGESTED_V1.md",
+        "sha256": "bb79621638ec922c24d565c751bcfd7be6ef012949ed145eba898545b6005571",
+        "bytes": 14251233,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V79_INGESTED_V1.md",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "3ddd9580513dff1d3cf8e6cfc7789fb7165f1979"
+      },
+      {
+        "local_execution_path": "inputs/Q048_FREC_MOVING_H_V79_INGESTION_HANDOFF_TO_BUILDER_V1.md",
+        "sha256": "208994b63cc83fbf73867c9a9cc5a3b9b06947df7417f1e517ed3ceca1fb67c9",
+        "bytes": 4759,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "Q048_FREC_MOVING_H_V79_INGESTION_HANDOFF_TO_BUILDER_V1.md",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "7245fc787c79f9c595b5182512574c24f3741590"
+      },
+      {
+        "local_execution_path": "inputs/Q048_FREC_MOVING_H_V79_INGESTION_STATE_V1.json",
+        "sha256": "6fc31cc59deb7364a0e158ca31a2b77cb075d9702c557c911d4fd24230d4b736",
+        "bytes": 28644,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": null,
+        "commit": null,
+        "access": "VERIFIED_SUPPLIED_PRIOR_DELIVERABLE",
+        "library_file_id": "libfile_5f313b680b3c81918276cf5385cdbafc",
+        "delivered_path": "/workspace/scratch/ad1a1974b1bd/delivery/Q048_FREC_MOVING_H_V79_INGESTION_STATE_V1.json"
+      },
+      {
+        "local_execution_path": "inputs/Q048_FREC_MOVING_H_V79_NEXT_BUILDER_REPAIR_TASK_V1.json",
+        "sha256": "5a739f40fa5c86cf605f8b0bcd97d844fb5e7e7f78ac3cd49471de0f30edecd8",
+        "bytes": 21100,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": null,
+        "commit": null,
+        "access": "VERIFIED_SUPPLIED_PRIOR_DELIVERABLE",
+        "library_file_id": "libfile_f6ee3048f1988191a036646ec05fc0e0",
+        "delivered_path": "/workspace/scratch/ad1a1974b1bd/delivery/Q048_FREC_MOVING_H_V79_NEXT_BUILDER_REPAIR_TASK_V1.json"
+      },
+      {
+        "local_execution_path": "inputs/q047_certificate_v1.py",
+        "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+        "bytes": 15302,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q047_certificate_v1.py",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "00c8c5395e2b4070be33e768e83db33edb3ea2d1"
+      },
+      {
+        "local_execution_path": "inputs/q047_math_v1.py",
+        "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+        "bytes": 12617,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q047_math_v1.py",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb"
+      },
+      {
+        "local_execution_path": "inputs/q047_precursor_check_v1.py",
+        "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+        "bytes": 29808,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q047_precursor_check_v1.py",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "21cee458a6a4e931148405a7ffebeaf0a2d79749"
+      },
+      {
+        "local_execution_path": "inputs/q048_frec_moving_h_accepted_checkpoint_v77.json",
+        "sha256": "8cc99e7fd68fd7a67ba6dbef247362e5811b397f7a2c4e0607ba1f6857154ae2",
+        "bytes": 3424,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_frec_moving_h_accepted_checkpoint_v77.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "eaa588c3ac43639601b307036a7aed256a8411df"
+      },
+      {
+        "local_execution_path": "inputs/q048_frec_moving_h_candidate_rejection_v79.json",
+        "sha256": "79639d6d12d4bea9513a8e9c9c062de5bc18cdfd74d551b8a13d03bb9998c4f7",
+        "bytes": 1181,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_frec_moving_h_candidate_rejection_v79.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "2cf28ee2c25657369463f41cf6d0ad8bf208fa5b"
+      },
+      {
+        "local_execution_path": "inputs/q048_frec_moving_h_delivery_validation_v77.json",
+        "sha256": "10abe03104353c07422ba18c14cb29720b431cd63066309d9f8b7daffc3b121f",
+        "bytes": 3860,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_frec_moving_h_delivery_validation_v77.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "d8bbac077203d9c6a8b30b787ad677b437ff8745"
+      },
+      {
+        "local_execution_path": "inputs/q048_frec_moving_h_result_v77.json",
+        "sha256": "c03cca28039df697858ce28e795cfd6130aebcb70ead023454567399f2ec57b2",
+        "bytes": 27164,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_frec_moving_h_result_v77.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "9d9cc02e277c0cf120dfa48ad6eebb8947d71e14"
+      },
+      {
+        "local_execution_path": "inputs/q048_frec_moving_h_spec_v79.json",
+        "sha256": "994bb641bee1f27428d1ee8657fa92b31592fe330fc5aaf1111e1190e6eabc58",
+        "bytes": 19129,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_frec_moving_h_spec_v79.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "69f13530ee2965ec8b58840a8b36e01d944e4c5f"
+      },
+      {
+        "local_execution_path": "inputs/q048_frec_moving_h_validation_v77.json",
+        "sha256": "953d530fe0e79ee2ee1e82766d79fa0861f608f4cf510b2b9b447eb6f05e0b88",
+        "bytes": 9498,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_frec_moving_h_validation_v77.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "0397c7ced54e3baeeb183c78daf387f85b2ad00f"
+      },
+      {
+        "local_execution_path": "inputs/q048_frec_moving_h_verifier_failure_v79.json",
+        "sha256": "df9cadf9c9e7db8c16e0f24f1f74e79e7c201358267958806b6a1b209398378d",
+        "bytes": 2448,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_frec_moving_h_verifier_failure_v79.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "31fb2f934ad21472c00ae7af7bea03459ea08448"
+      },
+      {
+        "local_execution_path": "inputs/q048_full_tube_reuse_v1.py",
+        "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+        "bytes": 10171,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": null,
+        "commit": null,
+        "access": "RECOVERED_ORIGINAL_BYTES_PRIOR_HASH_MATCH",
+        "library_file_id": "libfile_57cdd19492f08191a831fd9c1a46430b",
+        "delivered_path": "/workspace/scratch/ad1a1974b1bd/v80/recovered/q048_full_tube_reuse_v1.py"
+      },
+      {
+        "local_execution_path": "inputs/q048_guard_local_v_result_v12.json",
+        "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+        "bytes": 1198030,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": null,
+        "commit": null,
+        "access": "RECOVERED_ORIGINAL_BYTES_PRIOR_HASH_MATCH",
+        "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+        "delivered_path": "/workspace/scratch/ad1a1974b1bd/v80/recovered/q048_guard_local_v_result_v12.json"
+      },
+      {
+        "local_execution_path": "inputs/q048_guard_local_v_validation_v12.json",
+        "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+        "bytes": 206698,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": null,
+        "commit": null,
+        "access": "RECOVERED_ORIGINAL_BYTES_PRIOR_HASH_MATCH",
+        "library_file_id": "libfile_83b95a8e9f4081919b059ab66ad2bfce",
+        "delivered_path": "/workspace/scratch/ad1a1974b1bd/v80/recovered/q048_guard_local_v_validation_v12.json"
+      },
+      {
+        "local_execution_path": "inputs/q048_moving_h_domain_accepted_checkpoint_v78.json",
+        "sha256": "e3a225d070079455aa4ddcde05f5450325ce3db04ddff19b643dccf64ce9bb8b",
+        "bytes": 2906,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_moving_h_domain_accepted_checkpoint_v78.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "54cf8575febf71882ef38a1bc4d90745791bfa00"
+      },
+      {
+        "local_execution_path": "inputs/q048_moving_h_domain_delivery_validation_v78.json",
+        "sha256": "e3944ec50a7d382814bf952f5e6e545961637a38c921e42f8977474cbdcb3373",
+        "bytes": 2915,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_moving_h_domain_delivery_validation_v78.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "4d0fab9b54b19920e2c2ab7da50a449c372c2cde"
+      },
+      {
+        "local_execution_path": "inputs/q048_moving_h_domain_result_v78.json",
+        "sha256": "5ef0efb0fc23db86f43a2ca5bdd89ad7f893db07c0d9df9d1b7e4e647c62b302",
+        "bytes": 29305,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_moving_h_domain_result_v78.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "9946634789b3cdabc3d9f3e6a41b89cf4ea0053a"
+      },
+      {
+        "local_execution_path": "inputs/q048_moving_h_domain_validation_v78.json",
+        "sha256": "f65f804bbcc55b9661259816c0940b3eec2e8651007a6eb0877ec88544b9d8fc",
+        "bytes": 13049,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_moving_h_domain_validation_v78.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "4fafd4b81146e98e5caf98e43228057e2ddb1665"
+      },
+      {
+        "local_execution_path": "inputs/q048_p3_scaled_arithmetic_v2.py",
+        "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+        "bytes": 5988,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_p3_scaled_arithmetic_v2.py",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "f483ce212be4dea63df8183194a2c04b0bbdae70"
+      },
+      {
+        "local_execution_path": "inputs/q048_p3_scaled_kernel_v2.py",
+        "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+        "bytes": 15855,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_p3_scaled_kernel_v2.py",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "5ec4b6bb325a01d11960f1587d41eaab6eb7de9e"
+      },
+      {
+        "local_execution_path": "inputs/q048_p3_scaled_raw_result_v2.json",
+        "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+        "bytes": 699697,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_p3_scaled_raw_result_v2.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "dad8be5d063ae6639199cf30e46f7cf36416189f"
+      },
+      {
+        "local_execution_path": "inputs/q048_p3_scaled_transformed_log_tables_v2.json",
+        "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+        "bytes": 3958952,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_p3_scaled_transformed_log_tables_v2.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "6c30d62dde9205e383a6dbce89287f4e300648e7"
+      },
+      {
+        "local_execution_path": "inputs/q048_post_event_state_tube_v1.py",
+        "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+        "bytes": 12423,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": null,
+        "commit": null,
+        "access": "RECOVERED_ORIGINAL_BYTES_PRIOR_HASH_MATCH",
+        "library_file_id": "libfile_38e3ebdeca4c81918568140a6731e83b",
+        "delivered_path": "/workspace/scratch/ad1a1974b1bd/v80/recovered/q048_post_event_state_tube_v1.py"
+      },
+      {
+        "local_execution_path": "inputs/q048_prefix_config_v1.json",
+        "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+        "bytes": 105567,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_prefix_config_v1.json",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "02c9525cbda1ad56c1251d06fc74dba2c1aec9ba"
+      },
+      {
+        "local_execution_path": "inputs/q048_prefix_v1.py",
+        "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+        "bytes": 17198,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q048_prefix_v1.py",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "288ebe6da1df592692f174be0f1d89478c1001aa"
+      },
+      {
+        "local_execution_path": "inputs/source/q047_math_v1.py",
+        "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+        "bytes": 12617,
+        "hash_status": "COMPUTED_AND_VERIFIED",
+        "classification": "REUSE",
+        "repository_path": "q047_math_v1.py",
+        "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+        "access": "VERIFIED_GIT_BYTES",
+        "git_blob_sha1": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb"
+      }
+    ]
+  },
+  "claim_evidence_map_ref": "Q048_FREC_MOVING_H_V80_INGESTION_STATE_V1.json#claim_evidence_map",
+  "result_provenance_ref": [
+    {
+      "filename": "q048_frec_moving_h_result_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_result_v80.json",
+      "library_file_id": "libfile_73dcb474f2488191a27d78b4d3b581ac",
+      "sha256": "fb8f8b9f3621eace4c90c1d925046b9e5f99500332aa55d7b2336c4aac092cd0",
+      "bytes": 27926,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_result_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_accepted_checkpoint_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_accepted_checkpoint_v80.json",
+      "library_file_id": "libfile_f2b10b13637c8191bd740b7a00d481db",
+      "sha256": "7a4a5a8b4a594cba36bed82c4489ba628fae5ef51688e47fc3c9242ea7979fe0",
+      "bytes": 6678,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_accepted_checkpoint_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_validation_v80.json",
+      "library_file_id": "libfile_2f9aa41ba9848191a04cff40926c25f0",
+      "sha256": "9bede04b0f4e92bc575f9443d9634e9a567d44a81a44ac88ed9255d4f7f52a17",
+      "bytes": 14364,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_validation_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_transition_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_transition_validation_v80.json",
+      "library_file_id": "libfile_8a9569438f64819192658d483db7a329",
+      "sha256": "b00b876f749fb0532a42705ec3f3158f2a0d49d08aaef859e22dec4e0ba2b2d5",
+      "bytes": 8435,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_transition_validation_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_acceptance_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_acceptance_validation_v80.json",
+      "library_file_id": "libfile_0a437c89b7c8819189b6bcc384c55740",
+      "sha256": "461b08fcb1d47721b82eef11c7e19aca2f61b6db26d395a7b54c88e684cd88c8",
+      "bytes": 958,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_acceptance_validation_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_postaccept_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_postaccept_validation_v80.json",
+      "library_file_id": "libfile_20cfd9717a7c81918dd28c72373412b1",
+      "sha256": "b5d7db7e86f3340d985f9442c6a09e5212b9d30ace36a2054a131a47ca9aac12",
+      "bytes": 1655,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_postaccept_validation_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_spec_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_spec_v80.json",
+      "library_file_id": "libfile_9a35089562b481918ab263fb67ee5d92",
+      "sha256": "60e9bccc52eb30bbde49c247e97752562987ceb54ab2c4ac815b9564babed96b",
+      "bytes": 17491,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_spec_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_output_manifest_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_output_manifest_v80.json",
+      "library_file_id": "libfile_7b101e2fee288191af60197e886195e7",
+      "sha256": "83b6a1cdd0c8b873c1bf67e91a1eadbef2d4a787cc9d03ec039da559c5c1574c",
+      "bytes": 18359,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_output_manifest_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_delivery_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_delivery_validation_v80.json",
+      "library_file_id": "libfile_7642c4afda7081918db7eb2fdf108ab2",
+      "sha256": "9605ea7872ba79295c644f969a8ec8dfa823d9384e19c1b5c89e0ea8edb641f0",
+      "bytes": 14208,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_delivery_validation_v80.json"
+    },
+    {
+      "filename": "Q048_FREC_MOVING_H_V80_GATES_PROVENANCE.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/Q048_FREC_MOVING_H_V80_GATES_PROVENANCE.json",
+      "library_file_id": "libfile_ea36619d44248191812fea32d91cc1ef",
+      "sha256": "cb851b445171c07252356a05e581885319ff51ecc34329651a60f8c2a23a511c",
+      "bytes": 29462,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "Q048_FREC_MOVING_H_V80_GATES_PROVENANCE.json"
+    }
+  ],
+  "anomaly_tension_registry_ref": "Q048_FREC_MOVING_H_V80_INGESTION_STATE_V1.json#anomaly_history",
+  "completed_task_ledger_ref": "Q048_FREC_MOVING_H_V80_INGESTION_STATE_V1.json#task_ledger",
+  "route_history_ref": "Q048_FREC_MOVING_H_V80_INGESTION_STATE_V1.json#route_history",
+  "integrity_manifest_ref": "Q048_FREC_MOVING_H_V80_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "incoming_result": {
+    "result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V80",
+    "run_id": "LOCAL-Q048-FREC-MOVING-H-V80-2026-10-18T17:20:07.045320+00:00",
+    "task_id": "LOCAL-Q048-POST-V79-VERIFIER-CONTRACT-REPAIR-ONE-CELL-V1",
+    "task_fingerprint": "a8bb1be3198e94a7b0e466507f0e38ffc65b32ff3ad5c6f29ae363b17fb7351b",
+    "execution_fingerprint": "316e2f20d019cb8ada2be3b8c177f9d901d8162f62b412484c0ea519cab58ae5",
+    "class": "NUMERICAL_RESULT_VALIDATED_CONDITIONAL_ACTUAL_ADMISSION",
+    "origin": "INTERNAL_AI_ASSISTED",
+    "claim_basis": "OBSERVED_ARCHIVED_COMPUTATION",
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED",
+    "reproducibility": "CURRENT_BYTES_AND_PROVENANCE_VERIFIED_NO_RERUN; old ancillary gaps remain",
+    "robustness": "SEMANTIC_MUTATIONS_REJECTED_NOT_FULL_PHYSICAL_ROBUSTNESS",
+    "scientific_effect": "SUPPORTS_ONE_CONDITIONAL_PARTIAL_HISTORY_CELL",
+    "anomaly": "NO_NEW_SCIENTIFIC_ANOMALY_IDENTIFIED"
+  },
+  "accepted_actual": {
+    "count": 102,
+    "frontier": 1060,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1060
+    },
+    "endpoint": {
+      "a": "1/1061",
+      "E": "69428213521057062921/1000000000000000000",
+      "Y": "55319914129638982179/1000000000000000000",
+      "Vbar": "13520453583442327377/1000000000000000000"
+    },
+    "connected_lower": "317712567170961/500000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v80.json",
+    "accepted_checkpoint_sha256": "7a4a5a8b4a594cba36bed82c4489ba628fae5ef51688e47fc3c9242ea7979fe0"
+  },
+  "accepted_proof_coverage": {
+    "last_accepted_proof": "V78",
+    "cell_z": [
+      1070,
+      1060
+    ],
+    "does_not_cover": [
+      1060,
+      1050
+    ]
+  },
+  "new_science_delta_from_original_V80": {
+    "accepted_actual_cells": 1,
+    "proof_cells": 0
+  },
+  "science_delta_from_ingestion": {
+    "accepted_actual_cells": 0,
+    "proof_cells": 0,
+    "producer_runs": 0,
+    "verifier_runs": 0
+  },
+  "candidate_next_actual": {
+    "status": "NOT_COMPUTED_NOT_ACCEPTED_NOT_AUTHORIZED_BY_NEXT_TASK",
+    "count": 103,
+    "frontier": 1050
+  },
+  "what_changed": [
+    "ADDS one V80 ingestion event",
+    "CONFIRMS accepted actual102/frontier1060",
+    "ADDS one distinct next proof task1060→1050; no new numerical proof values"
+  ],
+  "frozen_configuration_refs": {
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "accepted_z_reio": "PRESERVED_HASH_PINNED_CAPTURE",
+    "V80_spec_sha256": "60e9bccc52eb30bbde49c247e97752562987ceb54ab2c4ac815b9564babed96b",
+    "V80_execution_fingerprint": "316e2f20d019cb8ada2be3b8c177f9d901d8162f62b412484c0ea519cab58ae5",
+    "new_task_fingerprint": "36fb5bbea7997c4aebb029180d483b2307145c3867ba6d3ee7f70ae162e803fd"
+  },
+  "claim_evidence_map": [
+    {
+      "claim": "V80 accepted actual1070→1060, total102/frontier1060",
+      "role": "SUPPORTS",
+      "evidence": [
+        "q048_frec_moving_h_accepted_checkpoint_v80.json",
+        "q048_frec_moving_h_validation_v80.json",
+        "q048_frec_moving_h_acceptance_validation_v80.json",
+        "q048_frec_moving_h_postaccept_validation_v80.json"
+      ]
+    },
+    {
+      "claim": "V79 raw itself is accepted",
+      "role": "DOES_NOT_SUPPORT",
+      "reason": "V79 frozen original remains a stopped technical-obstruction attempt."
+    },
+    {
+      "claim": "complete four-case x_e/tau difference bounds established",
+      "role": "DOES_NOT_SUPPORT",
+      "reason": "Only a partial-history actual cell; no final bounds."
+    },
+    {
+      "claim": "next1060→1050 proof already accepted",
+      "role": "DOES_NOT_SUPPORT",
+      "reason": "Guard row39 is a background guard, not the new coupled moving-H source/C/thermal/lower proof."
+    }
+  ],
+  "anomaly_history": [
+    {
+      "id": "LOCAL-Q048-V79-SPEC-VERIFIER-CONTRACT-DEFECT",
+      "status": "ORIGINAL_FAILURE_PRESERVED; V80 separately corrected successor accepted",
+      "scientific_falsification": false
+    },
+    {
+      "id": "LOCAL-Q048-V80-PREEXEC-H-DIVISOR-ADAPTER-CORRECTION",
+      "status": "UNEXECUTED_DRAFT_PRESERVED; no science under discarded identity",
+      "reference": "q048_frec_moving_h_preexec_repair_v80.json"
+    }
+  ],
+  "task_ledger": [
+    {
+      "task_id": "LOCAL-Q048-POST-V79-VERIFIER-CONTRACT-REPAIR-ONE-CELL-V1",
+      "fingerprint": "a8bb1be3198e94a7b0e466507f0e38ffc65b32ff3ad5c6f29ae363b17fb7351b",
+      "status": "COMPLETED_ACCEPTED_V80",
+      "producer_runs": 1,
+      "new_actual_accepted": 1,
+      "repeat_authorized": false
+    },
+    {
+      "task_id": "LOCAL-Q048-POST-V80-MOVING-H-DOMAIN-1060-1050-MATH-V1",
+      "fingerprint": "36fb5bbea7997c4aebb029180d483b2307145c3867ba6d3ee7f70ae162e803fd",
+      "status": "PREPARED_NOT_EXECUTED",
+      "distinct_uncertainty": "New proof domain1060→1050 beyond accepted actual frontier"
+    }
+  ],
+  "route_history": [
+    {
+      "from": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+      "to": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "event": "ACCEPTED_V80_RECEIVED"
+    },
+    {
+      "from": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "to": "BUBBLEVERSE.MATHEMATICS2.1.0",
+      "event": "NEW_PROOF1060_TO1050_PREPARED_NOT_SENT",
+      "material_change": "New accepted V80 endpoint/lower makes the next distinct one-cell proof possible; no replay of prior proof or consumer."
+    }
+  ],
+  "open_material_uncertainties": [
+    "Fresh whole-cell moving-H proof1060→1050 with new K and lower not yet established",
+    "Full four-case histories and cumulative optical-depth difference bounds remain unfinished",
+    "NativeP6 UNRESOLVED"
+  ],
+  "missing_information": {
+    "inherited_historical_gaps": [
+      {
+        "path": "q048_frec_moving_h_acceptance_validation_v77.json",
+        "sha256": "86d0d9bde071e70127f5ef6e127ba6a99a3df124f4df8f64caec391de32e7547",
+        "bytes": 1146,
+        "availability": "NOT_RECOVERED",
+        "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+        "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+      },
+      {
+        "path": "q048_frec_moving_h_postaccept_validation_v77.json",
+        "sha256": "7a7425eb829f5ae5258b2259c92dba3297799e949338f3fcc8c960b546bb75d9",
+        "bytes": 1363,
+        "availability": "NOT_RECOVERED",
+        "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+        "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+      },
+      {
+        "path": "q048_frec_moving_h_preflight_v77.json",
+        "sha256": "1427420a392a04902a11490c78a420bd70a437c663d5fb10ee7aed252777385c",
+        "bytes": 5819,
+        "availability": "NOT_RECOVERED",
+        "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+        "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+      },
+      {
+        "path": "q048_frec_moving_h_transition_validation_v77.json",
+        "sha256": "942939e91fe094d979558e4f0f54fa0b9dda8c62a32ad0669b0b3f0bc5c480ca",
+        "bytes": 1152,
+        "availability": "NOT_RECOVERED",
+        "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+        "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+      },
+      {
+        "path": "q048_moving_h_domain_acceptance_validation_v78.json",
+        "sha256": "3d0352da5130c42fadbe3f94b4423adb9c83b067579d9fb0dd01e54dbcbdb4c7",
+        "bytes": 980,
+        "availability": "NOT_RECOVERED",
+        "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+        "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+      },
+      {
+        "path": "q048_moving_h_domain_postaccept_validation_v78.json",
+        "sha256": "579b5bf4495330d346271cd51c6050fe4d8bcff3e015588328c50ac046cfc4e8",
+        "bytes": 1372,
+        "availability": "NOT_RECOVERED",
+        "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+        "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+      },
+      {
+        "path": "q048_moving_h_domain_preflight_v78.json",
+        "sha256": "a4521f049787e1508d2e45ad7899673b76f3f0189d4c127cd8e125b07eaab275",
+        "bytes": 5855,
+        "availability": "NOT_RECOVERED",
+        "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+        "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+      },
+      {
+        "path": "q048_moving_h_domain_transition_validation_v78.json",
+        "sha256": "7080e662bd0f58234a36d4ddbf62d07fd59d59c8740ea13557ab151ac2ef7ea3",
+        "bytes": 1191,
+        "availability": "NOT_RECOVERED",
+        "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+        "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+      }
+    ],
+    "policy": "Current V80 acceptance/evidence complete and verified; preserve old archival gaps without re-generating them or creating a recovery loop. If a missing item becomes a specific new material input, reassess only that item."
+  },
+  "next_task": "Q048_FREC_MOVING_H_V80_NEXT_MATHEMATICS_TASK_V1.json",
+  "success_condition": "Exactly one accepted conditional moving-H proof1060→1050 with positive connected whole-cell lower, fresh sufficient K and all frozen source/sign/C/thermal/rational-control/verification/acceptance checks PASS. Actual remains102/frontier1060.",
+  "failure_or_falsification_condition": "First precise hash/interface/source-domain/guard-glue/positivity/lower-bound/verifier/acceptance obstruction; preserve raw/rejected attempt and unchanged actual state. A sufficient-method or technical failure is not physical falsification.",
+  "stop_condition": "STOP after one accepted proof, first precise obstruction, or300 science seconds; no below1050 continuation and no actual consumer.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "The exact question needs complete x_e(z) and cumulative tau_T(z) latch/reset difference bounds across all four configurations. One partial-history conditional cell does not supply those complete bounds.",
+  "handoff_completeness": "COMPLETE",
+  "handoff_completeness_scope": "Bounded mathematical continuation with complete supplied journal, all material current input references and explicit inherited archival gaps. Not a claim of full-Q resolution.",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "None for one bounded proof; no newQ/model promotion/paid compute/scope expansion.",
+  "output_file_refs": [
+    "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V80_INGESTED_V1.md",
+    "Q048_FREC_MOVING_H_V80_INGESTION_RESULT_V1.md",
+    "Q048_FREC_MOVING_H_V80_INGESTION_HANDOFF_TO_MATHEMATICS_V1.md",
+    "Q048_FREC_MOVING_H_V80_NEXT_MATHEMATICS_TASK_V1.json",
+    "Q048_FREC_MOVING_H_V80_INGESTION_STATE_V1.json",
+    "Q048_FREC_MOVING_H_V80_INGESTION_VALIDATION_V1.json",
+    "Q048_FREC_MOVING_H_V80_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "Q048_FREC_MOVING_H_V80_INGESTION_FILES_V1.md"
+  ],
+  "output_manifest_ref": "Q048_FREC_MOVING_H_V80_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit_sha": "08b0283c9d5d431f3028d469947c7c65f95cff26",
+    "tree_sha": "b680820e51e3f3ab510c0dfa596906a93192bd0b",
+    "source_freshness": "VERIFIED_AT_INSPECTION",
+    "repository_segment_id": "NOT_DOCUMENTED",
+    "journal_path": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V80_INGESTED_V1.md",
+    "current_state_path": "NOT_VERIFIED_NO_POINTER_WRITE",
+    "target_paths_status": "PROPOSED_NEW_VERSIONED_ROOT_FILES_USING_OBSERVED_CONVENTIONS",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "incoming_V80_core_markdown": "PRESENT_MATCHES_SUPPLIED_BYTES",
+    "incoming_V80_machine_evidence": "ABSENT_AT_INSPECTED_PATHS; actual locally retained and individually available with persistent file identities",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "memory_update_ref": "Q048_FREC_MOVING_H_V80_INGESTION_STATE_V1.json#repository_memory",
+    "upload_instructions_ref": "Q048_FREC_MOVING_H_V80_INGESTION_FILES_V1.md",
+    "proposed_updates": {
+      "q_index": "Q048 ACTIVE/INCONCLUSIVE; actual102/frontier1060; next Mathematics proof1060→1050",
+      "result_index": "Ingest V80 once, not a second support/cell count",
+      "task_route_ledger": "V80 repaired consumer complete/no-repeat; one distinct new proof prepared",
+      "anomaly_index": "Preserve V79 failed attempt and V80 preexecution draft correction",
+      "current_state": "Advance only after coherent machine-evidence + new ingestion upload and actual existing pointer-schema verification"
+    },
+    "write_decision": "No default-branch mutation attempted. Canonical CURRENT_STATE/index paths and branch/write workflow not verified; deliver upload-ready new versioned files."
+  },
+  "journal_integrity": {
+    "source_file": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V80_APPENDED_V1.md",
+    "source_sha256": "f062a072268a32fc844a8b4ee9f6c36db052089e1ceea72b6dccd4c26aee6086",
+    "source_bytes": 14256202,
+    "target_file": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V80_INGESTED_V1.md",
+    "target_sha256": "5f6771261f38fab1d60b93ded67a21c7a7d8a03f94efd32eeb2cbe15175088c8",
+    "target_bytes": 14260478,
+    "exact_prior_suffix": true,
+    "semantic_read": "RELEVANT_SECTIONS_ONLY_COMPLETE_BYTES_RETAINED"
+  },
+  "external_scientific_research": {
+    "performed": false,
+    "reason": "No new external scientific evidence needed for accepted-result integration; GitHub used to verify source freshness and existing mathematical engine."
+  },
+  "tool_evidence": {
+    "repository_ref": {
+      "repository": "Morfindien/Bubbleverse",
+      "head": "08b0283c9d5d431f3028d469947c7c65f95cff26",
+      "tree": "b680820e51e3f3ab510c0dfa596906a93192bd0b",
+      "truncated": false,
+      "total_entries": 3015,
+      "selected_entries": [
+        {
+          "path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+          "size": 56414,
+          "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/d3bc042e9610d4c417bfb75ad67468edf44db707"
+        },
+        {
+          "path": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V80_APPENDED_V1.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "b772fe58312b7f6b8088620610478441b5f89b48",
+          "size": 14256202,
+          "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/b772fe58312b7f6b8088620610478441b5f89b48"
+        },
+        {
+          "path": "Q048_FREC_MOVING_H_V80_FILES.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f16ceffb293d4c946d4103836b53b4480dc3cfae",
+          "size": 11956,
+          "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/f16ceffb293d4c946d4103836b53b4480dc3cfae"
+        },
+        {
+          "path": "Q048_FREC_MOVING_H_V80_HANDOFF_TO_INGESTION.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "6aaa940c11f46c25076b9d7ed0f790fc91aa2617",
+          "size": 3615,
+          "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/6aaa940c11f46c25076b9d7ed0f790fc91aa2617"
+        },
+        {
+          "path": "Q048_FREC_MOVING_H_V80_RESULT.md",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "63fb0839b47f74087009360b1da3190a9356aa65",
+          "size": 4054,
+          "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/63fb0839b47f74087009360b1da3190a9356aa65"
+        },
+        {
+          "path": "q048_frec_moving_h_v31.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "f017fe6f4b9495b43d05d1237d69a39c046a215c",
+          "size": 21123,
+          "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/f017fe6f4b9495b43d05d1237d69a39c046a215c"
+        },
+        {
+          "path": "q048_moving_h_domain_v54_executed.py",
+          "mode": "100644",
+          "type": "blob",
+          "sha": "876ebdee7a6f03571dd5b7dff3d4743eae5cacdb",
+          "size": 14954,
+          "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/876ebdee7a6f03571dd5b7dff3d4743eae5cacdb"
+        }
+      ]
+    },
+    "original_manifests_checked": 36,
+    "science_execution_in_ingestion": false,
+    "guard_row_check": "Metadata/hash/glue only; no source/guard/theorem regeneration."
+  }
+}

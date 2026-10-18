@@ -1,0 +1,665 @@
+{
+  "schema": "bubbleverse.q048.moving_h_domain_task.v1",
+  "task_id": "LOCAL-Q048-POST-V80-MOVING-H-DOMAIN-1060-1050-MATH-V1",
+  "registration": "LOCAL_PROVISIONAL_NOT_GLOBALLY_REGISTERED",
+  "created_at_utc": "2026-10-18T17:34:08.342274+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_type": "FRESH_MOVING_H_DOMAIN_PROOF_ONE_CELL",
+  "fingerprint_basis": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "task_type": "FRESH_MOVING_H_DOMAIN_PROOF_ONE_CELL",
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "engine_version": "2.1.0",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "parent_accepted_actual_count": 102,
+    "parent_accepted_frontier": 1060,
+    "parent_checkpoint_sha256": "7a4a5a8b4a594cba36bed82c4489ba628fae5ef51688e47fc3c9242ea7979fe0",
+    "parent_raw_sha256": "fb8f8b9f3621eace4c90c1d925046b9e5f99500332aa55d7b2336c4aac092cd0",
+    "parent_validation_sha256": "9bede04b0f4e92bc575f9443d9634e9a567d44a81a44ac88ed9255d4f7f52a17",
+    "cell_z": [
+      1060,
+      1050
+    ],
+    "cell_a": [
+      "1/1061",
+      "1/1051"
+    ],
+    "initial_connected_lower": "317712567170961/500000000000000000",
+    "epsilon": "1/1000000",
+    "h_upper": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "previous_K_upper": "5369197930665494437521/1000000000000000000",
+    "guard_primary_row_sha256": "5a21b64415f2e1db220404088fca6c1a0daf26667d150a6f8a813da93ef00473",
+    "guard_control_row_sha256": "f403649690cd963edbd518ee20824fc2a559608a566964eb10beea3832202474",
+    "guard_row_index": 39,
+    "max_new_math_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "science_budget_seconds": 300,
+    "criteria_version": "ONE_FRESH_SOURCE_REAL_MOVING_H_PROOF_FROM_ACCEPTED_ACTUAL_V1",
+    "method_code_identity": "New code/spec/input hashes must be frozen before execution; reuse verified helpers and compatible implementation, never silently reuse old K or rewrite prior runs.",
+    "result_version_on_execution": "V81",
+    "evidence_boundary": "Q001-Q048; external source-date cutoff NOT_DOCUMENTED",
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+  },
+  "task_fingerprint": "36fb5bbea7997c4aebb029180d483b2307145c3867ba6d3ee7f70ae162e803fd",
+  "fingerprint_method": "SHA256 sorted compact UTF-8 JSON ensure_ascii=false of fingerprint_basis; planning identity only.",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "git_blob_sha1": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "commit": "08b0283c9d5d431f3028d469947c7c65f95cff26",
+    "access": "FULL_PROMPT_BYTES_FETCHED_AND_HASHED",
+    "compatibility": "Existing mathematical engine; new contract preserves Q/source/scientific method. Historical engine prompt hashes are unchanged in prior records; do not substitute a historical hash for these observed bytes."
+  },
+  "initial_actual_state": {
+    "count": 102,
+    "frontier": 1060,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1060
+    },
+    "endpoint": {
+      "a": "1/1061",
+      "E": "69428213521057062921/1000000000000000000",
+      "Y": "55319914129638982179/1000000000000000000",
+      "Vbar": "13520453583442327377/1000000000000000000"
+    },
+    "connected_lower": "317712567170961/500000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v80.json",
+    "accepted_checkpoint_sha256": "7a4a5a8b4a594cba36bed82c4489ba628fae5ef51688e47fc3c9242ea7979fe0"
+  },
+  "accepted_actual_state_must_remain": {
+    "count": 102,
+    "frontier": 1060,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1060
+    },
+    "endpoint": {
+      "a": "1/1061",
+      "E": "69428213521057062921/1000000000000000000",
+      "Y": "55319914129638982179/1000000000000000000",
+      "Vbar": "13520453583442327377/1000000000000000000"
+    },
+    "connected_lower": "317712567170961/500000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v80.json",
+    "accepted_checkpoint_sha256": "7a4a5a8b4a594cba36bed82c4489ba628fae5ef51688e47fc3c9242ea7979fe0"
+  },
+  "new_mathematical_domain": {
+    "z": [
+      1060,
+      1050
+    ],
+    "a": [
+      "1/1061",
+      "1/1051"
+    ],
+    "h0": "317712567170961/500000000000000000",
+    "epsilon": "1/1000000",
+    "h_upper": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "previous_cell_K_upper": "5369197930665494437521/1000000000000000000",
+    "new_K_upper": "NOT_YET_COMPUTED",
+    "new_connected_lower": "NOT_YET_COMPUTED",
+    "common_q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "ordinary_H_lower_recipe": "sqrt(point(B0.lo))*c/Mpc from the whole-cell positive ordinary-background bound, exactly as the retained theorem implementation.",
+    "log_control_upper": "10/1051",
+    "comparison_rule": "Fresh source-sign common-epsilon Riccati comparison glued to accepted V80 lower. Compute independent outward endpoint and exact-rational Bernoulli control; conservative positive whole-cell lower must be bounded by both. No reset to1/2, no old-cell K substitution, no new physical initial state."
+  },
+  "guard_binding": {
+    "raw": "q048_guard_local_v_result_v12.json",
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "raw_library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+    "validation": "q048_guard_local_v_validation_v12.json",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "validation_library_file_id": "libfile_83b95a8e9f4081919b059ab66ad2bfce",
+    "row_index": 39,
+    "primary": {
+      "a0": "1/1061",
+      "a1": "1/1051",
+      "z0": 1060,
+      "z1": 1050,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "25356640871881837563/1000000000000000000",
+        "H_upper_left": "3482074767594385487/500000000000000000",
+        "X_upper_left": "2356747139954680211/200000000000000000",
+        "V_candidate_upper": "13103889500447770877/1000000000000000000",
+        "retained_Vbar": "13520453583442327377/1000000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "69428213521057062921/1000000000000000000",
+      "Y_left": "55319914129638982179/1000000000000000000",
+      "V_previous": "13520453583442327377/1000000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "68993537956193177877/1000000000000000000",
+      "V_local": "13103889500447770877/1000000000000000000",
+      "V_admitted": "13103889500447770877/1000000000000000000",
+      "equilibrium_upper": "3646299687081118853/500000000000000000",
+      "amplitude": "48027314755476744473/1000000000000000000",
+      "constant_energy_part": "241111566808238984143/11500000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "120452818003760691/125000000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "51949720814504453351/1000000000000000000",
+      "raw_G_lower": "2245172417755016043661377845853520288267987940867687678167707816744570656882656486378405590434903079900656038612811601264929/357451076169534149049180990855527478822202858385593671910333483391958388477758363664384000000000000000000000000000000000000",
+      "G_lower": "3140531064858455651/500000000000000000",
+      "Y_right_candidate": "53572802601768403271/1000000000000000000",
+      "E_right_candidate": "67246426428322598969/1000000000000000000",
+      "endpoint_energy_envelope": "67246426428322598969/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1051/1061",
+      "R_at_left": "6300139341920122960432017346259164126453788150486960887583673099376145010502541090134698780395517/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "29687491618325910025775234143034686621412858822090385225/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "963622544030085523/1000000000000000000",
+        "upper": "120452818003760691/125000000000000000",
+        "log_lower": "9469767737032009/1000000000000000000",
+        "log_upper": "946976773703201/100000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "67246426428322598969/1000000000000000000",
+      "Y_right": "53572802601768403271/1000000000000000000",
+      "index": 39,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "primary_row_sha256": "5a21b64415f2e1db220404088fca6c1a0daf26667d150a6f8a813da93ef00473",
+    "control": {
+      "a0": "1/1061",
+      "a1": "1/1051",
+      "z0": 1060,
+      "z1": 1050,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "25356640871881837563/1000000000000000000",
+        "H_upper_left": "6999298995660041621/1000000000000000000",
+        "X_upper_left": "1190803397438805937/100000000000000000",
+        "V_candidate_upper": "6654474372254359497/500000000000000000",
+        "retained_Vbar": "3431407361123595887/250000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "70900636567590140497/1000000000000000000",
+      "Y_left": "2828912031275452231/50000000000000000",
+      "V_previous": "3431407361123595887/250000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "358992222823285425388865335049/1000000000000000000000000000000",
+        "372770749383777806289760276837/500000000000000000000000000000",
+        "1681117364120494397448886971107/1000000000000000000000000000000",
+        "3109370626108746049418196678771/1000000000000000000000000000000",
+        "78757986114087161069250698293/15625000000000000000000000000",
+        "3758705441975014979977337287909/500000000000000000000000000000",
+        "165801238247744391338792878863/15625000000000000000000000000",
+        "14435529998345331058775090808187/1000000000000000000000000000000",
+        "4795451112538989591800462088833/250000000000000000000000000000",
+        "25219950733727482482129115120671/1000000000000000000000000000000",
+        "4187360033690769234409918482497/125000000000000000000000000000"
+      ],
+      "E_safe_left": "70465839315431186179/1000000000000000000",
+      "V_local": "6654474372254359497/500000000000000000",
+      "V_admitted": "6654474372254359497/500000000000000000",
+      "equilibrium_upper": "115729989082684513/15625000000000000",
+      "amplitude": "12292880331054308947/250000000000000000",
+      "constant_energy_part": "30610582112370053687/1437500000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "24403/25303",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "11886706642333222123/250000000000000000",
+      "raw_G_lower": "4265316535519065700495885972530751729137033183585713670898631742221477387061034722581714771146163976172207862386657603/883260212921652595057756505040762870765449113840886394565153137721359678091085925371084800000000000000000000000000000",
+      "G_lower": "482905996796825039/100000000000000000",
+      "Y_right_candidate": "27414631730535111327/500000000000000000",
+      "E_right_candidate": "68716862150992364213/1000000000000000000",
+      "endpoint_energy_envelope": "68716862150992364213/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1051/1061",
+      "R_at_left": "8962722108368838341798091703143466592053951112323988252997933388151141365978895667531020441041051916055236773489/1517710072051350836655829614705874145814380343009484000977978445108518972816569139200000000000000000000000000000",
+      "M_at_left": "29687491618325910025775234143034686621412858822090385225/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "68716862150992364213/1000000000000000000",
+      "Y_right": "27414631730535111327/500000000000000000",
+      "index": 39,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control_row_sha256": "f403649690cd963edbd518ee20824fc2a559608a566964eb10beea3832202474",
+    "control_role": "GUARD_ONLY_CONSERVATIVE_TRACK_NOT_ACTUAL_PRIMARY_STATE",
+    "glue_rule": "Primary a/E/Y/V_previous must exactly match accepted V80 endpoint. Control is not reset to primary and is not an independent restart."
+  },
+  "parent_evidence_refs": [
+    {
+      "filename": "q048_frec_moving_h_result_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_result_v80.json",
+      "library_file_id": "libfile_73dcb474f2488191a27d78b4d3b581ac",
+      "sha256": "fb8f8b9f3621eace4c90c1d925046b9e5f99500332aa55d7b2336c4aac092cd0",
+      "bytes": 27926,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_result_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_accepted_checkpoint_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_accepted_checkpoint_v80.json",
+      "library_file_id": "libfile_f2b10b13637c8191bd740b7a00d481db",
+      "sha256": "7a4a5a8b4a594cba36bed82c4489ba628fae5ef51688e47fc3c9242ea7979fe0",
+      "bytes": 6678,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_accepted_checkpoint_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_validation_v80.json",
+      "library_file_id": "libfile_2f9aa41ba9848191a04cff40926c25f0",
+      "sha256": "9bede04b0f4e92bc575f9443d9634e9a567d44a81a44ac88ed9255d4f7f52a17",
+      "bytes": 14364,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_validation_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_transition_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_transition_validation_v80.json",
+      "library_file_id": "libfile_8a9569438f64819192658d483db7a329",
+      "sha256": "b00b876f749fb0532a42705ec3f3158f2a0d49d08aaef859e22dec4e0ba2b2d5",
+      "bytes": 8435,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_transition_validation_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_acceptance_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_acceptance_validation_v80.json",
+      "library_file_id": "libfile_0a437c89b7c8819189b6bcc384c55740",
+      "sha256": "461b08fcb1d47721b82eef11c7e19aca2f61b6db26d395a7b54c88e684cd88c8",
+      "bytes": 958,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_acceptance_validation_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_postaccept_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_postaccept_validation_v80.json",
+      "library_file_id": "libfile_20cfd9717a7c81918dd28c72373412b1",
+      "sha256": "b5d7db7e86f3340d985f9442c6a09e5212b9d30ace36a2054a131a47ca9aac12",
+      "bytes": 1655,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_postaccept_validation_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_spec_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_spec_v80.json",
+      "library_file_id": "libfile_9a35089562b481918ab263fb67ee5d92",
+      "sha256": "60e9bccc52eb30bbde49c247e97752562987ceb54ab2c4ac815b9564babed96b",
+      "bytes": 17491,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_spec_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_output_manifest_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_output_manifest_v80.json",
+      "library_file_id": "libfile_7b101e2fee288191af60197e886195e7",
+      "sha256": "83b6a1cdd0c8b873c1bf67e91a1eadbef2d4a787cc9d03ec039da559c5c1574c",
+      "bytes": 18359,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_output_manifest_v80.json"
+    },
+    {
+      "filename": "q048_frec_moving_h_delivery_validation_v80.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/q048_frec_moving_h_delivery_validation_v80.json",
+      "library_file_id": "libfile_7642c4afda7081918db7eb2fdf108ab2",
+      "sha256": "9605ea7872ba79295c644f969a8ec8dfa823d9384e19c1b5c89e0ea8edb641f0",
+      "bytes": 14208,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "q048_frec_moving_h_delivery_validation_v80.json"
+    },
+    {
+      "filename": "Q048_FREC_MOVING_H_V80_GATES_PROVENANCE.json",
+      "local_path": "/workspace/scratch/ad1a1974b1bd/v80/Q048_FREC_MOVING_H_V80_GATES_PROVENANCE.json",
+      "library_file_id": "libfile_ea36619d44248191812fea32d91cc1ef",
+      "sha256": "cb851b445171c07252356a05e581885319ff51ecc34329651a60f8c2a23a511c",
+      "bytes": 29462,
+      "access": "VERIFIED_CURRENT_LOCAL_BYTES_PREVIOUSLY_SAVED_IN_LIBRARY",
+      "github_status": "NOT_PRESENT_AT_INSPECTED_CURRENT_PATH",
+      "proposed_repository_path": "Q048_FREC_MOVING_H_V80_GATES_PROVENANCE.json"
+    }
+  ],
+  "scientific_input_refs": [
+    {
+      "local_execution_path": "inputs/q047_certificate_v1.py",
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "bytes": 15302,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q047_certificate_v1.py",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "00c8c5395e2b4070be33e768e83db33edb3ea2d1"
+    },
+    {
+      "local_execution_path": "inputs/q047_math_v1.py",
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "bytes": 12617,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q047_math_v1.py",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb"
+    },
+    {
+      "local_execution_path": "inputs/q047_precursor_check_v1.py",
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "bytes": 29808,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q047_precursor_check_v1.py",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "21cee458a6a4e931148405a7ffebeaf0a2d79749"
+    },
+    {
+      "local_execution_path": "inputs/q048_full_tube_reuse_v1.py",
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+      "bytes": 10171,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": null,
+      "commit": null,
+      "access": "RECOVERED_ORIGINAL_BYTES_PRIOR_HASH_MATCH",
+      "library_file_id": "libfile_57cdd19492f08191a831fd9c1a46430b",
+      "delivered_path": "/workspace/scratch/ad1a1974b1bd/v80/recovered/q048_full_tube_reuse_v1.py"
+    },
+    {
+      "local_execution_path": "inputs/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "bytes": 1198030,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": null,
+      "commit": null,
+      "access": "RECOVERED_ORIGINAL_BYTES_PRIOR_HASH_MATCH",
+      "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+      "delivered_path": "/workspace/scratch/ad1a1974b1bd/v80/recovered/q048_guard_local_v_result_v12.json"
+    },
+    {
+      "local_execution_path": "inputs/q048_guard_local_v_validation_v12.json",
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+      "bytes": 206698,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": null,
+      "commit": null,
+      "access": "RECOVERED_ORIGINAL_BYTES_PRIOR_HASH_MATCH",
+      "library_file_id": "libfile_83b95a8e9f4081919b059ab66ad2bfce",
+      "delivered_path": "/workspace/scratch/ad1a1974b1bd/v80/recovered/q048_guard_local_v_validation_v12.json"
+    },
+    {
+      "local_execution_path": "inputs/q048_p3_scaled_arithmetic_v2.py",
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "bytes": 5988,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q048_p3_scaled_arithmetic_v2.py",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "f483ce212be4dea63df8183194a2c04b0bbdae70"
+    },
+    {
+      "local_execution_path": "inputs/q048_p3_scaled_kernel_v2.py",
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "bytes": 15855,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q048_p3_scaled_kernel_v2.py",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "5ec4b6bb325a01d11960f1587d41eaab6eb7de9e"
+    },
+    {
+      "local_execution_path": "inputs/q048_p3_scaled_raw_result_v2.json",
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+      "bytes": 699697,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q048_p3_scaled_raw_result_v2.json",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "dad8be5d063ae6639199cf30e46f7cf36416189f"
+    },
+    {
+      "local_execution_path": "inputs/q048_p3_scaled_transformed_log_tables_v2.json",
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+      "bytes": 3958952,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q048_p3_scaled_transformed_log_tables_v2.json",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "6c30d62dde9205e383a6dbce89287f4e300648e7"
+    },
+    {
+      "local_execution_path": "inputs/q048_post_event_state_tube_v1.py",
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+      "bytes": 12423,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": null,
+      "commit": null,
+      "access": "RECOVERED_ORIGINAL_BYTES_PRIOR_HASH_MATCH",
+      "library_file_id": "libfile_38e3ebdeca4c81918568140a6731e83b",
+      "delivered_path": "/workspace/scratch/ad1a1974b1bd/v80/recovered/q048_post_event_state_tube_v1.py"
+    },
+    {
+      "local_execution_path": "inputs/q048_prefix_config_v1.json",
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "bytes": 105567,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q048_prefix_config_v1.json",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "02c9525cbda1ad56c1251d06fc74dba2c1aec9ba"
+    },
+    {
+      "local_execution_path": "inputs/q048_prefix_v1.py",
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "bytes": 17198,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q048_prefix_v1.py",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "288ebe6da1df592692f174be0f1d89478c1001aa"
+    },
+    {
+      "local_execution_path": "inputs/source/q047_math_v1.py",
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "bytes": 12617,
+      "hash_status": "COMPUTED_AND_VERIFIED",
+      "classification": "REUSE",
+      "repository_path": "q047_math_v1.py",
+      "commit": "0c90f126f177f2ff615f795c7b69a68bec993f9d",
+      "access": "VERIFIED_GIT_BYTES",
+      "git_blob_sha1": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb"
+    }
+  ],
+  "implementation_reuse_hints": [
+    {
+      "path": "q048_moving_h_domain_v54_executed.py",
+      "commit": "08b0283c9d5d431f3028d469947c7c65f95cff26",
+      "git_blob_sha1": "876ebdee7a6f03571dd5b7dff3d4743eae5cacdb",
+      "role": "REFERENCE_ONLY_PREVIOUS_SAME_FAMILY; fetch full code, inspect and rebind under new identity before use; never execute old main as new evidence."
+    }
+  ],
+  "required_work": [
+    "Recover supplied V80 acceptance chain, full journal and pinned science inputs; preserve historical gaps without rerunning old work.",
+    "Inspect/reuse existing compatible mathematical functions. Freeze new contract/spec/code/input hashes and execution identity before one fresh proof producer; contract_markdown_sha256 must exist and all producer/verifier/acceptor fields/imports must be checked before science.",
+    "Compute fresh whole-cell source domains and ordinary H lower on1060→1050, atomic-rate positivity and new sufficient K. Do not replace it by V78 K without new-domain evidence.",
+    "Propagate the common-epsilon comparison from the accepted V80 connected lower using outward exact-rational controls; establish a positive conservative whole-cell lower and source/C/upper-h/thermal gates for both fixed-q branches.",
+    "Use a producer-free verifier, at least24 nontrivial semantic rejection mutations (including missing/wrong spec/contract hash, reset, K substitution, branch/sign/domain corruption), hash-bound transition/acceptance and postaccept before accepting a proof checkpoint.",
+    "Leave actual count/frontiers/endpoint unchanged at102/1060; exactly one proof cell maximum. Deliver original code/contract/spec/raw/checkpoint/validations/logs/invocations plus full journal successor as individual files. Return once to Result Ingestion."
+  ],
+  "materiality": "New whole-cell proof determines whether controlled partial-history continuation remains admissible beyond the newly accepted actual1060 endpoint. The previous V78 proof covers1070→1060 only; V80 supplied a new accepted starting state. This is a distinct missing proof, not repetition of the consumer or its validation.",
+  "no_repeat": [
+    "V80 producer/verifier/acceptor",
+    "V78 proof/producer/verifier",
+    "V79 failed original attempt",
+    "V12 guard regeneration",
+    "historical diagnostics or missing-log reconstruction"
+  ],
+  "success_condition": "Exactly one accepted conditional moving-H proof1060→1050 with positive connected whole-cell lower, fresh sufficient K and all frozen source/sign/C/thermal/rational-control/verification/acceptance checks PASS. Actual remains102/frontier1060.",
+  "failure_condition": "First precise hash/interface/source-domain/guard-glue/positivity/lower-bound/verifier/acceptance obstruction; preserve raw/rejected attempt and unchanged actual state. A sufficient-method or technical failure is not physical falsification.",
+  "stop_condition": "STOP after one accepted proof, first precise obstruction, or300 science seconds; no below1050 continuation and no actual consumer.",
+  "budget": {
+    "backend_recommendation": "LOCAL_RUNTIME",
+    "science_seconds": 300,
+    "github_actions": "NOT_WORTHWHILE_FOR_ONE_BOUNDED_CELL",
+    "estimate_basis": "Same-family V78 proof and V80 consumer are bounded local exact-rational work; no new HPC workload demonstrated. Actual next duration NOT_YET_MEASURED."
+  },
+  "forbidden": [
+    "actual consumer or promotion to103/frontier1050",
+    "below1050 continuation",
+    "physical/auxiliary reset",
+    "recapture/refit/tuning/subdivision",
+    "NativeP6",
+    "new Q or accepted-model promotion",
+    "paid compute or workflow campaign",
+    "closing Q048 inside Mathematics",
+    "archives in delivery; use individual files"
+  ],
+  "historical_provenance_gaps": [
+    {
+      "path": "q048_frec_moving_h_acceptance_validation_v77.json",
+      "sha256": "86d0d9bde071e70127f5ef6e127ba6a99a3df124f4df8f64caec391de32e7547",
+      "bytes": 1146,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_frec_moving_h_postaccept_validation_v77.json",
+      "sha256": "7a7425eb829f5ae5258b2259c92dba3297799e949338f3fcc8c960b546bb75d9",
+      "bytes": 1363,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_frec_moving_h_preflight_v77.json",
+      "sha256": "1427420a392a04902a11490c78a420bd70a437c663d5fb10ee7aed252777385c",
+      "bytes": 5819,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_frec_moving_h_transition_validation_v77.json",
+      "sha256": "942939e91fe094d979558e4f0f54fa0b9dda8c62a32ad0669b0b3f0bc5c480ca",
+      "bytes": 1152,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_moving_h_domain_acceptance_validation_v78.json",
+      "sha256": "3d0352da5130c42fadbe3f94b4423adb9c83b067579d9fb0dd01e54dbcbdb4c7",
+      "bytes": 980,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_moving_h_domain_postaccept_validation_v78.json",
+      "sha256": "579b5bf4495330d346271cd51c6050fe4d8bcff3e015588328c50ac046cfc4e8",
+      "bytes": 1372,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_moving_h_domain_preflight_v78.json",
+      "sha256": "a4521f049787e1508d2e45ad7899673b76f3f0189d4c127cd8e125b07eaab275",
+      "bytes": 5855,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_moving_h_domain_transition_validation_v78.json",
+      "sha256": "7080e662bd0f58234a36d4ddbf62d07fd59d59c8740ea13557ab151ac2ef7ea3",
+      "bytes": 1191,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    }
+  ],
+  "gap_policy": "Preserve eight unavailable old ancillary originals with reported hashes. Verified current V80 acceptance chain and required scientific inputs are sufficient for this route; do not manufacture originals, silently clear gaps, or add a recovery/rerun loop without new material evidence.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "scientific_dispatch": "PREPARED_NOT_EXECUTED",
+  "actual103_frontier1050_status": "NOT_ACCEPTED_NOT_AUTHORIZED_BY_THIS_PROOF_TASK"
+}
