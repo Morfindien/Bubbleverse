@@ -1,0 +1,911 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "handoff_id": "LOCAL-Q048-V72-PROOF-INGESTION-V1",
+  "created_at_utc": "2026-10-18T14:22:25.798637+00:00",
+  "created_at_local": "2026-10-18T16:22:25.798637+02:00",
+  "case_id": "NOT_ASSIGNED",
+  "case": "hillipop-ede_n3",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "evidence_cutoff": "NOT_DOCUMENTED; no external cutoff invented",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW_IN_ACCESSIBLE_JOURNAL_AND_TARGETED_REPO",
+  "new_result_ids": [
+    "LOCAL-Q048-MOVING-H-DOMAIN-V72"
+  ],
+  "origin_run_id": "LOCAL-Q048-MOVING-H-DOMAIN-V72-2026-10-18T14:08:22.786936+00:00",
+  "source_state_version": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_APPENDED_V1.md",
+  "target_state_version": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_INGESTED_V1.md",
+  "actual_state": {
+    "count": 98,
+    "frontier": 1100
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 1100
+  },
+  "accepted_proof_cell": [
+    1100,
+    1090
+  ],
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "scientific_producer_executions_this_ingestion": 0,
+  "scientific_verifier_executions_this_ingestion": 0,
+  "new_actual_cells_this_ingestion": 0,
+  "new_proof_cells_this_ingestion": 0,
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+  "engine_registry_ref": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "version": "2.2.0",
+    "prompt_path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+    "prompt_local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/inputs/Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "repository_commit": "4ef8036494c2741989377f9fcc6bdfcac05987f5",
+    "status": "Existing engine bytes verified, no global registry installation claimed"
+  },
+  "execution_profile_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_STATE_V1.json#/execution_profile",
+  "execution_profile": {
+    "inventory_basis": "Fresh GitHub branch/tree and current local original files/Python/hash tools; relevant recent capability inventory reused",
+    "verified_at_utc": "2026-10-18T14:22:25.798637+00:00",
+    "current_observed_runtime": "Existing Codex runtime; model/reasoning selectable settings NOT_VERIFIED",
+    "recommended_functional_class": "GENERAL REASONING for ingestion; H/C for bounded consumer and validation next",
+    "execution_style": "One frozen exact-rational local consumer, producer-free verification and immutable evidence",
+    "required_tools": [
+      "Local file/Python/hash",
+      "GitHub read"
+    ],
+    "optional_tools": "No new external scientific search needed",
+    "unverified": [
+      "GitHub write permissions: prior403, no observed change",
+      "Model switching controls"
+    ],
+    "switch_status": "NOT_REQUIRED; none executed",
+    "budget": "Zero science in ingestion; next task300science seconds, no paid/HPC",
+    "reason": "V72 newly supplies the accepted moving-H theorem for1100→1090, while the actual remains at1100. One fresh actual consumer can now determine whether both q branches meet current source/C/upper-h/thermal and connected-lower admission conditions on that same interval. This consumes a new certificate and supplies required partial-history evidence; it neither repeats the completed proof nor by itself answers the full four-case Q. Do not convert this one task into an automatic continuation campaign."
+  },
+  "journal_ref": {
+    "path": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_INGESTED_V1.md",
+    "sha256": "6c3055c4b58a4d555bc8de48b5f9ae98fa18b7080ea4c6eb44423fc08f36be09",
+    "bytes": 14218453,
+    "access": "VERIFIED_LOCAL_BYTES",
+    "scope": "Q001-Q048"
+  },
+  "journal_preservation": {
+    "source_path": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_APPENDED_V1.md",
+    "source_sha256": "68f45e44bd384e2c8af82836c9d52a15e902c3d2244154218706a8f244d272ba",
+    "source_bytes": 14212586,
+    "new_prefix_bytes": 5867,
+    "method": "Complete incoming journal bytes preserved unchanged as suffix",
+    "semantic_read": "Relevant excerpts/metadata only; all inherited registers/history retained, not all re-read or re-fetched"
+  },
+  "source_register_ref": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_INGESTED_V1.md (all inherited registers) plus source_register_extension",
+  "claim_evidence_map_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_STATE_V1.json#/claim_evidence_map",
+  "result_provenance_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_STATE_V1.json#/input_artifacts",
+  "anomaly_tension_registry_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_STATE_V1.json#/anomalies",
+  "completed_task_ledger_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_STATE_V1.json#/completed_task_ledger",
+  "route_history_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_STATE_V1.json#/route_history",
+  "integrity_manifest_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "input_artifacts": {
+    "q048_moving_h_domain_accepted_checkpoint_v72.json": {
+      "filename": "q048_moving_h_domain_accepted_checkpoint_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_accepted_checkpoint_v72.json",
+      "sha256": "a468a7f755502fb9000a84a1103c5395e5aed745fc4174475c89e5e5b0c851a1",
+      "bytes": 3123,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_result_v72.json": {
+      "filename": "q048_moving_h_domain_result_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_result_v72.json",
+      "sha256": "1cf2432eeadaab1747a39cd4889413a1cdcecb009a4749e1780684aca975cb56",
+      "bytes": 29548,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_validation_v72.json": {
+      "filename": "q048_moving_h_domain_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_validation_v72.json",
+      "sha256": "cd964e49b03822a217da8430f4bef7f16c1ee15dfcf9a84330a134ef023f18c5",
+      "bytes": 12576,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_spec_v72.json": {
+      "filename": "q048_moving_h_domain_spec_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_spec_v72.json",
+      "sha256": "8c9e6da35d672e3998e6709d9a1f468fc73c00324701692108b7d57d0defaa3c",
+      "bytes": 17398,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_candidate_checkpoint_v72.json": {
+      "filename": "q048_moving_h_domain_candidate_checkpoint_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_candidate_checkpoint_v72.json",
+      "sha256": "055b92f0919a27a4b897b7535ff920ca52707e5cb2652c20e30b78ee79a5201e",
+      "bytes": 1499,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_transition_validation_v72.json": {
+      "filename": "q048_moving_h_domain_transition_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_transition_validation_v72.json",
+      "sha256": "4f68b25feb5c1ae3463bb532be6de98e9baa213e75a7248b6af558031d0a24e9",
+      "bytes": 1193,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_acceptance_validation_v72.json": {
+      "filename": "q048_moving_h_domain_acceptance_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_acceptance_validation_v72.json",
+      "sha256": "46f699472c1f10b0ea94f79eafb1e9c3a6a821349512d13719b28edac8589405",
+      "bytes": 844,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_postaccept_validation_v72.json": {
+      "filename": "q048_moving_h_domain_postaccept_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_postaccept_validation_v72.json",
+      "sha256": "8d9ee13b1dd732aa55d5d1e5e8346d358e2886a2f5f74114e2de7397e36a737a",
+      "bytes": 1238,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_delivery_validation_v72.json": {
+      "filename": "q048_moving_h_domain_delivery_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_delivery_validation_v72.json",
+      "sha256": "49673d13884c67d48340a8b78ce933792e29ad7016fe70b03e147bc8e34476b8",
+      "bytes": 10271,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_preflight_v72.json": {
+      "filename": "q048_moving_h_domain_preflight_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_preflight_v72.json",
+      "sha256": "f32bc30b2fb9d94bf24a48777cb066144ef73236ecbf27bcd7d2b1fe2193f15d",
+      "bytes": 3658,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V72.md": {
+      "filename": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V72.md",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V72.md",
+      "sha256": "bde5d981f48082cced017cd91e5b42ec8d1225e9fc26100414d18063bcb4d311",
+      "bytes": 4340,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_output_manifest_v72.json": {
+      "filename": "q048_moving_h_domain_output_manifest_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_output_manifest_v72.json",
+      "sha256": "faf223e5f5f478dc4acca7566f5b9a3dcfd087450f50fc433d05c6153442a26b",
+      "bytes": 17002,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "Q048_MOVING_H_DOMAIN_V72_PROVENANCE.json": {
+      "filename": "Q048_MOVING_H_DOMAIN_V72_PROVENANCE.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/Q048_MOVING_H_DOMAIN_V72_PROVENANCE.json",
+      "sha256": "633bdd8d9cbc0f84fab668d895c6e7cd411f45dd2eeb9c4422ea34acf5c51ded",
+      "bytes": 33714,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_accepted_checkpoint_v71.json": {
+      "filename": "q048_frec_moving_h_accepted_checkpoint_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_accepted_checkpoint_v71.json",
+      "sha256": "30bc63d42b81b764e62d3b83e8b2c4403b1fa9f18bbc5c4e9bedc8de4cd6c44b",
+      "bytes": 2961,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_result_v71.json": {
+      "filename": "q048_frec_moving_h_result_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_result_v71.json",
+      "sha256": "88d3cbd319eadb5cec109eff754e669b10bc230fc2e7f154d0f06cdf1c782236",
+      "bytes": 26996,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_validation_v71.json": {
+      "filename": "q048_frec_moving_h_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_validation_v71.json",
+      "sha256": "2e1d32100f86a244b8d696371faa9dbdc831c6a7b0c3eac527b9be5049eb6ee3",
+      "bytes": 8851,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_spec_v71.json": {
+      "filename": "q048_frec_moving_h_spec_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_spec_v71.json",
+      "sha256": "06b9b488a9317a1db7c978e29600d4685ace48e5180202bb4fd2ac954841353b",
+      "bytes": 14986,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_transition_validation_v71.json": {
+      "filename": "q048_frec_moving_h_transition_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_transition_validation_v71.json",
+      "sha256": "86609fa7f957623bbe07b7dbb52323cb6b6ab43e95472dad410b424de48c4b33",
+      "bytes": 1086,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_acceptance_validation_v71.json": {
+      "filename": "q048_frec_moving_h_acceptance_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_acceptance_validation_v71.json",
+      "sha256": "3fbdfac282e4e6c55f06094add31f90a157ec5ae22c016f7c65b600621750cc0",
+      "bytes": 1072,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_postaccept_validation_v71.json": {
+      "filename": "q048_frec_moving_h_postaccept_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_postaccept_validation_v71.json",
+      "sha256": "cfa7e32272a020b7f92913b546210ff4fa10f48b374b3be69d85932914f73ab3",
+      "bytes": 1472,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_delivery_validation_v71.json": {
+      "filename": "q048_frec_moving_h_delivery_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_delivery_validation_v71.json",
+      "sha256": "5030bd48af610eb80311b7e3e15078ac9060125b86d2935360922acdf871da1e",
+      "bytes": 9667,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_guard_local_v_result_v12.json": {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "bytes": 1198030,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_guard_local_v_validation_v12.json": {
+      "filename": "q048_guard_local_v_validation_v12.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_guard_local_v_validation_v12.json",
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+      "bytes": 206698,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_preexecution_supersession_v71.json": {
+      "filename": "q048_preexecution_supersession_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_preexecution_supersession_v71.json",
+      "sha256": "d3a2cca56221f5ca90bcc9c9cb9bb95cda39f306021c25ee2e01ee7d1fef4639",
+      "bytes": 1703,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_unexecuted_draft_spec_v71.json": {
+      "filename": "q048_frec_moving_h_unexecuted_draft_spec_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_unexecuted_draft_spec_v71.json",
+      "sha256": "2da3237aa147fa3fb822fee1b795631752f7c50351193b3814408fb85761505a",
+      "bytes": 14986,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_unexecuted_draft_producer_v71.py": {
+      "filename": "q048_frec_moving_h_unexecuted_draft_producer_v71.py",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_unexecuted_draft_producer_v71.py",
+      "sha256": "ddcd058ba020cb25486533f71ae05bcf62e86cf10f01c35d7d08ce8bf563301b",
+      "bytes": 6962,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_unexecuted_draft_verifier_v71.py": {
+      "filename": "q048_frec_moving_h_unexecuted_draft_verifier_v71.py",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_unexecuted_draft_verifier_v71.py",
+      "sha256": "5ad44830e263be6812f026446048cd306cff5e98b284ad09c7649cd3c49a88f5",
+      "bytes": 8968,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_v70_contract_documentation_correction_v1.json": {
+      "filename": "q048_v70_contract_documentation_correction_v1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_v70_contract_documentation_correction_v1.json",
+      "sha256": "c52a2435cd5e9a37606659be488ade065d5659485be17f415ef8099d59d3a6bb",
+      "bytes": 1735,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md": {
+      "filename": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md",
+      "sha256": "5d5911af4838867ffc8c9e891be2fb803cebc3e513d735c6b43d807c4593ade8",
+      "bytes": 4168,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_result_v70.json": {
+      "filename": "q048_moving_h_domain_result_v70.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_moving_h_domain_result_v70.json",
+      "sha256": "aef324df514ab7ee7d07e312ed850090401a2a3cc3c9bf55735c2832b0823e1b",
+      "bytes": 29553,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_accepted_checkpoint_v70.json": {
+      "filename": "q048_moving_h_domain_accepted_checkpoint_v70.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_moving_h_domain_accepted_checkpoint_v70.json",
+      "sha256": "ee5e590c5c882c3a2d7929e5c81d1b9b5dfc653812091aee0bcd8de78814ac06",
+      "bytes": 3126,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    }
+  },
+  "repository_evidence": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit": "4ef8036494c2741989377f9fcc6bdfcac05987f5",
+    "tree": "8d3987541c4f59b88e7b84f8f4627e15268808a6",
+    "truncated": false,
+    "verified_at_utc": "2026-10-18T14:17:32.020Z",
+    "entries": [
+      {
+        "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+        "size": 79322,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a"
+      },
+      {
+        "path": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_APPENDED_V1.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9197284a6229d5c9cb2a16b0a22f8eece18c95ad",
+        "size": 14212586,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/9197284a6229d5c9cb2a16b0a22f8eece18c95ad"
+      },
+      {
+        "path": "Q048_MOVING_H_DOMAIN_V72_FILES.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a35e44696c5fedbedd3e3843f3def099e4986072",
+        "size": 18289,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/a35e44696c5fedbedd3e3843f3def099e4986072"
+      },
+      {
+        "path": "Q048_MOVING_H_DOMAIN_V72_HANDOFF_TO_INGESTION.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbca655e3f9cfdf3d4ea8c4682d33d2251812e0a",
+        "size": 4785,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/dbca655e3f9cfdf3d4ea8c4682d33d2251812e0a"
+      },
+      {
+        "path": "Q048_MOVING_H_DOMAIN_V72_RESULT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "de8f810a388ab7171b8c6735edd3831e293f1fa9",
+        "size": 12125,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/de8f810a388ab7171b8c6735edd3831e293f1fa9"
+      }
+    ],
+    "prior_ingestion_absent": true,
+    "v73_absent": true,
+    "verified_local_blobs": [
+      {
+        "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+        "size": 79322,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+        "local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/inputs/Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+        "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+        "status": "EXACT_GIT_BLOB_MATCH"
+      },
+      {
+        "path": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_APPENDED_V1.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "9197284a6229d5c9cb2a16b0a22f8eece18c95ad",
+        "size": 14212586,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/9197284a6229d5c9cb2a16b0a22f8eece18c95ad",
+        "local_path": "/workspace/scratch/3415d88c213e/v72/output/Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_APPENDED_V1.md",
+        "sha256": "68f45e44bd384e2c8af82836c9d52a15e902c3d2244154218706a8f244d272ba",
+        "status": "EXACT_GIT_BLOB_MATCH"
+      },
+      {
+        "path": "Q048_MOVING_H_DOMAIN_V72_FILES.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "a35e44696c5fedbedd3e3843f3def099e4986072",
+        "size": 18289,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/a35e44696c5fedbedd3e3843f3def099e4986072",
+        "local_path": "/workspace/scratch/3415d88c213e/v72/output/Q048_MOVING_H_DOMAIN_V72_FILES.md",
+        "sha256": "ec971117531f32fbeb0289ebf0e1e2447a335f18e51fc2a70946e46ede8cebca",
+        "status": "EXACT_GIT_BLOB_MATCH"
+      },
+      {
+        "path": "Q048_MOVING_H_DOMAIN_V72_HANDOFF_TO_INGESTION.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "dbca655e3f9cfdf3d4ea8c4682d33d2251812e0a",
+        "size": 4785,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/dbca655e3f9cfdf3d4ea8c4682d33d2251812e0a",
+        "local_path": "/workspace/scratch/3415d88c213e/v72/output/Q048_MOVING_H_DOMAIN_V72_HANDOFF_TO_INGESTION.md",
+        "sha256": "7ff8ff6c2d089fa2f01cced43f9131094975ad83790160ebc0cfd5ad537372e6",
+        "status": "EXACT_GIT_BLOB_MATCH"
+      },
+      {
+        "path": "Q048_MOVING_H_DOMAIN_V72_RESULT.md",
+        "mode": "100644",
+        "type": "blob",
+        "sha": "de8f810a388ab7171b8c6735edd3831e293f1fa9",
+        "size": 12125,
+        "url": "https://api.github.com/repos/Morfindien/Bubbleverse/git/blobs/de8f810a388ab7171b8c6735edd3831e293f1fa9",
+        "local_path": "/workspace/scratch/3415d88c213e/v72/output/Q048_MOVING_H_DOMAIN_V72_RESULT.md",
+        "sha256": "1cd4805630f0100167c3247f5cb536acda9010e6b9700eb74f3b453e0e249f47",
+        "status": "EXACT_GIT_BLOB_MATCH"
+      }
+    ]
+  },
+  "provenance_addenda": {
+    "v70_documentation_correction": {
+      "file": "q048_v70_contract_documentation_correction_v1.json",
+      "sha256": "c52a2435cd5e9a37606659be488ade065d5659485be17f415ef8099d59d3a6bb",
+      "original_contract": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md",
+      "original_contract_sha256": "5d5911af4838867ffc8c9e891be2fb803cebc3e513d735c6b43d807c4593ade8",
+      "original_raw_sha256": "aef324df514ab7ee7d07e312ed850090401a2a3cc3c9bf55735c2832b0823e1b",
+      "scope": "DOCUMENTATION_ONLY; task/code/raw/spec and numerical criteria unchanged",
+      "correct_current_actual": {
+        "count": 97,
+        "frontier": 1110
+      },
+      "rule": "Ingest correction as provenance, never the erroneous frozen96/frontier1120/V67R1 prose as active state. Preserve original bytes; no rerun of completed documentation test."
+    },
+    "v71_unexecuted_draft_supersession": {
+      "file": "q048_preexecution_supersession_v71.json",
+      "sha256": "d3a2cca56221f5ca90bcc9c9cb9bb95cda39f306021c25ee2e01ee7d1fef4639",
+      "final_parent_execution_fingerprint": "eba587408c923c840a632f612318353ba7b0b6c15eafd83a5651f54b8f22cf4b",
+      "rejected_execution_fingerprint": "9e5939dc0f443c83d476dbeb4e13603b66112cf87295fc9f80ab5d7c22517e48",
+      "science_under_rejected_spec": 0,
+      "rule": "Retain rejected bytes as history, use only final parent spec/code; do not replay old draft or diagnostic tests."
+    }
+  },
+  "documentation_correction_scope": "HISTORICAL_V70_ONLY: its97/frontier1110 state describes the V70 proof parent, not current V73. Bind it to original V70 contract/raw/task; never compare that historical state or rawhash to current V72 proof/actual98. Preserve the original bytes.",
+  "source_register_extension": [
+    {
+      "id": "LOCAL-Q048-MOVING-H-DOMAIN-V72",
+      "origin": "INTERNAL_AI_ASSISTED_COMPUTATION",
+      "basis": "OBSERVED original existing local artifacts; no science recomputation",
+      "role": "SUPPORTS conditional proof-domain1100→1090",
+      "artifacts": [
+        "q048_moving_h_domain_accepted_checkpoint_v72.json",
+        "q048_moving_h_domain_result_v72.json",
+        "q048_moving_h_domain_validation_v72.json"
+      ]
+    },
+    {
+      "id": "LOCAL-Q048-V72-PROOF-INGESTION-V1",
+      "origin": "INTERNAL_METADATA_INTERPRETATION",
+      "role": "CONTEXT: integration is not independent scientific support",
+      "artifact": "Q048_MOVING_H_DOMAIN_V72_INGESTION_STATE_V1.json"
+    }
+  ],
+  "claim_evidence_map": [
+    {
+      "claim": "Conditional positive whole-cell proof1100→1090",
+      "relation": "SUPPORTS",
+      "evidence": [
+        "q048_moving_h_domain_accepted_checkpoint_v72.json",
+        "q048_moving_h_domain_result_v72.json",
+        "q048_moving_h_domain_validation_v72.json"
+      ],
+      "limits": "Conditional source-real proof/admission only. Shared pinned source/rate/interval helpers and theorem lineage do not establish method independence or independent physical evidence. Complete four-case x_e histories and cumulative tau_T differences remain absent; NativeP6 UNRESOLVED. Four V66 archive originals remain unavailable and are not reconstructed."
+    },
+    {
+      "claim": "Actual remains98/frontier1100",
+      "relation": "CONFIRMS",
+      "evidence": [
+        "q048_moving_h_domain_accepted_checkpoint_v72.json",
+        "q048_frec_moving_h_accepted_checkpoint_v71.json"
+      ]
+    },
+    {
+      "claim": "Full four-case histories and cumulative tau differences established",
+      "relation": "LIMITS",
+      "evidence": [
+        "q048_moving_h_domain_accepted_checkpoint_v72.json",
+        "q048_moving_h_domain_result_v72.json"
+      ],
+      "reason": "New bounded proof alone is insufficient."
+    },
+    {
+      "claim": "V70 correction97/frontier1110 is current V73 state",
+      "relation": "CONTRADICTS",
+      "evidence": [
+        "q048_v70_contract_documentation_correction_v1.json",
+        "q048_frec_moving_h_accepted_checkpoint_v71.json",
+        "q048_moving_h_domain_accepted_checkpoint_v72.json"
+      ],
+      "reason": "97/1110 is explicitly historical V70 context; current accepted actual98/1100 is unchanged by V72 proof."
+    }
+  ],
+  "what_changed": [
+    {
+      "effect": "ADDS",
+      "item": "Once-only ingestion of V72 proof and one prepared V73 consumer task."
+    },
+    {
+      "effect": "LEAVES_UNCHANGED",
+      "item": "Actual98/frontier1100; exactQ/model/source/capture/z_reio; other frontiers1440; Q047 status; NativeP6; all historical records."
+    }
+  ],
+  "anomalies": [
+    {
+      "item": "V70 stale contract prose",
+      "status": "EXPLAINED_DOCUMENTATION_ONLY_CORRECTION",
+      "evidence": "q048_v70_contract_documentation_correction_v1.json",
+      "original_preserved": true,
+      "scientific_impact": "NONE; unchanged inputs/code/criteria/raw; no extra producer run"
+    },
+    {
+      "item": "V66 historical archive gap",
+      "status": "UNRESOLVED",
+      "files": [
+        "q048_moving_h_domain_result_v66.json",
+        "q048_moving_h_domain_transition_validation_v66.json",
+        "q048_moving_h_domain_acceptance_validation_v66.json",
+        "q048_moving_h_domain_postaccept_validation_v66.json"
+      ],
+      "rule": "No fabrication or revival of superseded serialization gate"
+    },
+    {
+      "item": "V70 raw/checkpoint/validators not yet in repo snapshot",
+      "status": "ORIGINAL_LOCAL_EVIDENCE_AVAILABLE; REPO_SYNC_SEPARATE",
+      "impact": "Current verified local originals available and individually delivered"
+    },
+    {
+      "item": "V71 unexecuted draft constant text replacement",
+      "status": "EXPLAINED_PREEXECUTION_TECHNICAL_DEFECT",
+      "evidence": "q048_preexecution_supersession_v71.json",
+      "original_preserved": true,
+      "science_impact": "No science under rejected spec; corrected literal identical to V69, final fingerprint distinct; not a physical anomaly."
+    },
+    {
+      "item": "V71 raw/checkpoint/validators absent from current repo tree",
+      "status": "SYNC_PENDING_NOT_MISSING_EVIDENCE",
+      "impact": "All original local bytes verified; individually delivered; no science blocker."
+    },
+    {
+      "item": "V72 raw/checkpoint/validation absent from current targeted repo tree",
+      "status": "SYNC_PENDING_NOT_MISSING_EVIDENCE",
+      "impact": "Original local bytes verified and previously individually delivered; no science blocker."
+    }
+  ],
+  "completed_task_ledger": [
+    {
+      "task_id": "LOCAL-Q048-POST-V69-MOVING-H-DOMAIN-1110-1100-MATH-V1",
+      "task_fingerprint": "3d375399f3cbd79a9983a0e2d23ab9160baddd58c96ab0244956bc1d9d18612d",
+      "execution_fingerprint": "194969eeeeca508bf04bf1911db7dd32db9da521c7aaa2c6e0e237b6bea3e0fd",
+      "result_id": "LOCAL-Q048-MOVING-H-DOMAIN-V70",
+      "status": "COMPLETED_ACCEPTED_PROOF_V70_WITH_DOCUMENTATION_ADDENDUM",
+      "no_repeat": true
+    },
+    {
+      "task_id": "LOCAL-Q048-V70-PROOF-AND-CORRECTION-INGESTION-V1",
+      "status": "STRUCTURAL_INGESTION_COMPLETE",
+      "science_executed": false
+    },
+    {
+      "task_id": "LOCAL-Q048-POST-V70-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+      "task_fingerprint": "e3cc634064f5f42ec519c8ab174f2ff520e4f73901f824835bb6ba893174bb4b",
+      "execution_fingerprint": "eba587408c923c840a632f612318353ba7b0b6c15eafd83a5651f54b8f22cf4b",
+      "result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V71",
+      "run_id": "LOCAL-Q048-FREC-MOVING-H-V71-2026-10-18T13:42:21.350842+00:00",
+      "status": "COMPLETED_ACCEPTED_ACTUAL_V71",
+      "no_repeat": true
+    },
+    {
+      "task_id": "LOCAL-Q048-V71-ACTUAL-INGESTION-V1",
+      "status": "STRUCTURAL_INGESTION_COMPLETE",
+      "science_executed": false
+    },
+    {
+      "task_id": "LOCAL-Q048-POST-V71-MOVING-H-DOMAIN-1100-1090-MATH-V1",
+      "task_fingerprint": "efad0f79179be51f2720b5df061baff8df40950a3191e3e8f290090d46dfc10c",
+      "execution_fingerprint": "db558f203d3e8863f8416923a3e634631e906a01c6a5c5ea5756739007be6be2",
+      "result_id": "LOCAL-Q048-MOVING-H-DOMAIN-V72",
+      "run_id": "LOCAL-Q048-MOVING-H-DOMAIN-V72-2026-10-18T14:08:22.786936+00:00",
+      "status": "COMPLETED_ACCEPTED_PROOF_V72",
+      "no_repeat": true
+    },
+    {
+      "task_id": "LOCAL-Q048-V72-PROOF-INGESTION-V1",
+      "status": "STRUCTURAL_INGESTION_COMPLETE",
+      "science_executed": false
+    }
+  ],
+  "route_history": [
+    {
+      "from": "BUBBLEVERSE.MATHEMATICS2.1.0",
+      "to": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "result": "LOCAL-Q048-MOVING-H-DOMAIN-V70"
+    },
+    {
+      "from": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "to": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+      "task_id": "LOCAL-Q048-POST-V70-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+      "state": "PREPARED_NOT_DISPATCHED",
+      "materiality": "V70 provides the previously absent accepted proof-domain certificate for1110→1100. Actual is still at1110, so applying that certificate in one fresh source-real consumer is a new obligation. The discriminating result is whether both q branches pass current source/C/upper-h/thermal and connected-lower rechecks. It supplies necessary partial-history evidence without replaying the completed proof or old consumer; it does not itself complete the four-case Q."
+    },
+    {
+      "from": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+      "to": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "result": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V71",
+      "state": "INGESTED_LOCALLY_NEW_VERSION"
+    },
+    {
+      "from": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "to": "BUBBLEVERSE.MATHEMATICS2.1.0",
+      "task_id": "LOCAL-Q048-POST-V71-MOVING-H-DOMAIN-1100-1090-MATH-V1",
+      "state": "PREPARED_NOT_DISPATCHED",
+      "materiality": "V71 newly accepts the actual source endpoint and connected lower at1100. The available accepted V70 proof covers1110→1100 only and supplies no fresh rate/domain/K bound for1100→1090. One cell-specific theorem at the new endpoint is needed before admitting any further actual history. Its discriminating outcome is a verified strictly positive connected whole-cell lower with fresh source/C/upper-h/thermal conditions, or a precise failed inequality. Old K reuse, old proof replay, and guard-only admission do not discharge that obligation. This is one bounded information gain, not permission for an automatic multi-cell campaign or a claim that the entire Q must follow this route."
+    },
+    {
+      "from": "BUBBLEVERSE.MATHEMATICS2.1.0",
+      "to": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "result": "LOCAL-Q048-MOVING-H-DOMAIN-V72",
+      "state": "INGESTED_NEW_LOCAL_VERSION"
+    },
+    {
+      "from": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "to": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+      "task_id": "LOCAL-Q048-POST-V72-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+      "state": "PREPARED_NOT_DISPATCHED",
+      "materiality": "V72 newly supplies the accepted moving-H theorem for1100→1090, while the actual remains at1100. One fresh actual consumer can now determine whether both q branches meet current source/C/upper-h/thermal and connected-lower admission conditions on that same interval. This consumes a new certificate and supplies required partial-history evidence; it neither repeats the completed proof nor by itself answers the full four-case Q. Do not convert this one task into an automatic continuation campaign."
+    }
+  ],
+  "frozen_configuration_refs": {
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "accepted_z_reio": "FIXED_UNCHANGED in original capture",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436"
+  },
+  "open_material_uncertainties": [
+    "New actual admission1100→1090 under accepted V72 theorem",
+    "Complete four-case electron histories and cumulative Thomson-depth differences"
+  ],
+  "missing_information": [
+    "q048_moving_h_domain_result_v66.json",
+    "q048_moving_h_domain_transition_validation_v66.json",
+    "q048_moving_h_domain_acceptance_validation_v66.json",
+    "q048_moving_h_domain_postaccept_validation_v66.json"
+  ],
+  "next_task": {
+    "path": "Q048_MOVING_H_DOMAIN_V72_NEXT_BUILDER_TASK_V1.json",
+    "sha256": "dcd4e88db1d020d23c5eb08823479d33dec755abf4ce6f26fadcde32847f6a5e",
+    "task_id": "LOCAL-Q048-POST-V72-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+    "task_fingerprint": "eadb12fa9fb736445ed1de6274b7b4fd0974f8fb8cdb2aa02ac463edf5164490"
+  },
+  "success_condition": "Exactly one validated actual-consumer cell1100→1090; candidate99/frontier1090 accepted only after all gates; other frontiers1440.",
+  "failure_or_falsification_condition": "First precise source/domain/lower inequality failure or indispensable input gap; technical/method obstruction is not physical falsification. Preserve outputs without tuning.",
+  "stop_condition": "Stop after one accepted actual cell, first precise obstruction or300 science seconds. No below1090 continuation, no new proof, no automatic next task. Return exactly once to Result Ingestion2.1.0.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "ExactQ requests controlled differences across complete electron histories and cumulative Thomson optical depth for four configurations. One additional conditional proof cell does not supply these full bounds. Actual remains98/frontier1100; consuming the newly accepted same-cell certificate is a distinct still-unperformed material obligation.",
+  "completion_and_materiality_review": {
+    "satisfied": false,
+    "reason": "ExactQ requests controlled differences across complete electron histories and cumulative Thomson optical depth for four configurations. One additional conditional proof cell does not supply these full bounds. Actual remains98/frontier1100; consuming the newly accepted same-cell certificate is a distinct still-unperformed material obligation.",
+    "selected_task_materiality": "V72 newly supplies the accepted moving-H theorem for1100→1090, while the actual remains at1100. One fresh actual consumer can now determine whether both q branches meet current source/C/upper-h/thermal and connected-lower admission conditions on that same interval. This consumes a new certificate and supplies required partial-history evidence; it neither repeats the completed proof nor by itself answers the full four-case Q. Do not convert this one task into an automatic continuation campaign.",
+    "alternatives_considered": [
+      {
+        "route": "MOTOR14",
+        "decision": "Not eligible: complete histories/tau differences not established; no justified closure."
+      },
+      {
+        "route": "Replay V72 proof or V71 actual",
+        "decision": "Rejected: original accepted evidence already suffices for its bounded role; no new reason for replay."
+      },
+      {
+        "route": "Skip actual admission using guard or proof alone",
+        "decision": "Rejected: current-cell fresh source/branch admission and separately accepted actual transition would remain unperformed."
+      },
+      {
+        "route": "Larger campaign",
+        "decision": "Not selected: only one certificate/consumer pair is currently authorized and reviewable; no automatic below1090 continuation."
+      },
+      {
+        "route": "External scientific search",
+        "decision": "No external evidence substitutes for this fixed-input internal admission; not needed for this ingestion decision."
+      }
+    ]
+  },
+  "handoff_completeness": "COMPLETE",
+  "handoff_completeness_scope": "Bounded new consumer from currently available original evidence; not full-Q answer or full V66 archive reproduction.",
+  "writeback_status": "PENDING_GITHUB; coherent new local version saved",
+  "delivery_status": "PREPARED",
+  "operator_gate": "Routine bounded workflow already authorized; no newQ/model/paid/external dispatch.",
+  "status_axes": {
+    "execution": "SUCCESS for origin V72; zero science now",
+    "technical_validity": "TECHNICALLY_VALIDATED for conditional proof-domain",
+    "reproducibility": "Origin R2 for documented local V72; no independent new reproduction; V66 archive UNRESOLVED",
+    "robustness": "NOT_ASSESSED beyond original finite interval/semantic checks",
+    "scientific_effect": "SUPPORTS bounded conditional proof; full-Q UNRESOLVED",
+    "anomaly": "No new physical anomaly; known technical provenance preserved"
+  },
+  "interpretation_layers": {
+    "direct": "Accepted proof1100→1090, one proof/zero actual; original verifier123/123 and33/33mutations.",
+    "technical": "Positive connected lower and fresh K/domain certificate under fixed source/capture/helpers; exact accepted chain verified structurally.",
+    "physical": "Conditional source-real proof/admission only. Shared pinned source/rate/interval helpers and theorem lineage do not establish method independence or independent physical evidence. Complete four-case x_e histories and cumulative tau_T differences remain absent; NativeP6 UNRESOLVED. Four V66 archive originals remain unavailable and are not reconstructed."
+  },
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "EXISTING_REPOSITORY",
+    "base_commit_sha": "4ef8036494c2741989377f9fcc6bdfcac05987f5",
+    "source_freshness": "VERIFIED",
+    "source_freshness_scope": "Full tree metadata and exact incoming four core blobs plus Builderprompt",
+    "journal_path": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_INGESTED_V1.md",
+    "current_state_path": "EXISTING_GLOBAL_POINTER_NOT_MUTATED; verify actual path/schema/base before pointer write",
+    "index_refs": [
+      "Q048_MOVING_H_DOMAIN_V72_INGESTION_FILES_V1.md"
+    ],
+    "cross_reference_refs": [
+      "Q048_MOVING_H_DOMAIN_V72_INGESTION_RESULT_V1.md",
+      "Q048_MOVING_H_DOMAIN_V72_INGESTION_HANDOFF_TO_BUILDER_V1.md",
+      "Q048_MOVING_H_DOMAIN_V72_NEXT_BUILDER_TASK_V1.json"
+    ],
+    "memory_update_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_STATE_V1.json#/proposed_memory_update",
+    "target_paths_status": "PROPOSED_NEW_VERSIONS_AT_VERIFIED_ROOT",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_RESULT_V1.md#filer-og-github"
+  },
+  "proposed_memory_update": {
+    "apply_status": "NOT_APPLIED",
+    "expected_base_commit": "4ef8036494c2741989377f9fcc6bdfcac05987f5",
+    "q_index_delta": {
+      "q": "Q048",
+      "lifecycle": "ACTIVE",
+      "epistemic_status": "INCONCLUSIVE",
+      "actual_count": 98,
+      "frontier": 1100,
+      "accepted_proof_through": 1090,
+      "journal": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_INGESTED_V1.md",
+      "next_task": "LOCAL-Q048-POST-V72-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1"
+    },
+    "result_index_delta": {
+      "result_id": "LOCAL-Q048-MOVING-H-DOMAIN-V72",
+      "run_id": "LOCAL-Q048-MOVING-H-DOMAIN-V72-2026-10-18T14:08:22.786936+00:00",
+      "status": "ACCEPTED_MATHEMATICAL_PROOF_V72",
+      "raw": "q048_moving_h_domain_result_v72.json",
+      "accepted": "q048_moving_h_domain_accepted_checkpoint_v72.json",
+      "validation": "q048_moving_h_domain_validation_v72.json"
+    },
+    "completed_task_delta": [
+      {
+        "task_id": "LOCAL-Q048-POST-V71-MOVING-H-DOMAIN-1100-1090-MATH-V1",
+        "task_fingerprint": "efad0f79179be51f2720b5df061baff8df40950a3191e3e8f290090d46dfc10c",
+        "execution_fingerprint": "db558f203d3e8863f8416923a3e634631e906a01c6a5c5ea5756739007be6be2",
+        "result_id": "LOCAL-Q048-MOVING-H-DOMAIN-V72",
+        "run_id": "LOCAL-Q048-MOVING-H-DOMAIN-V72-2026-10-18T14:08:22.786936+00:00",
+        "status": "COMPLETED_ACCEPTED_PROOF_V72",
+        "no_repeat": true
+      },
+      {
+        "task_id": "LOCAL-Q048-V72-PROOF-INGESTION-V1",
+        "status": "STRUCTURAL_INGESTION_COMPLETE",
+        "science_executed": false
+      }
+    ],
+    "route_delta": {
+      "from": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+      "to": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+      "task_id": "LOCAL-Q048-POST-V72-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+      "state": "PREPARED_NOT_DISPATCHED",
+      "materiality": "V72 newly supplies the accepted moving-H theorem for1100→1090, while the actual remains at1100. One fresh actual consumer can now determine whether both q branches meet current source/C/upper-h/thermal and connected-lower admission conditions on that same interval. This consumes a new certificate and supplies required partial-history evidence; it neither repeats the completed proof nor by itself answers the full four-case Q. Do not convert this one task into an automatic continuation campaign."
+    },
+    "claim_source_delta": [
+      {
+        "claim": "Conditional positive whole-cell proof1100→1090",
+        "relation": "SUPPORTS",
+        "evidence": [
+          "q048_moving_h_domain_accepted_checkpoint_v72.json",
+          "q048_moving_h_domain_result_v72.json",
+          "q048_moving_h_domain_validation_v72.json"
+        ],
+        "limits": "Conditional source-real proof/admission only. Shared pinned source/rate/interval helpers and theorem lineage do not establish method independence or independent physical evidence. Complete four-case x_e histories and cumulative tau_T differences remain absent; NativeP6 UNRESOLVED. Four V66 archive originals remain unavailable and are not reconstructed."
+      },
+      {
+        "claim": "Actual remains98/frontier1100",
+        "relation": "CONFIRMS",
+        "evidence": [
+          "q048_moving_h_domain_accepted_checkpoint_v72.json",
+          "q048_frec_moving_h_accepted_checkpoint_v71.json"
+        ]
+      },
+      {
+        "claim": "Full four-case histories and cumulative tau differences established",
+        "relation": "LIMITS",
+        "evidence": [
+          "q048_moving_h_domain_accepted_checkpoint_v72.json",
+          "q048_moving_h_domain_result_v72.json"
+        ],
+        "reason": "New bounded proof alone is insufficient."
+      },
+      {
+        "claim": "V70 correction97/frontier1110 is current V73 state",
+        "relation": "CONTRADICTS",
+        "evidence": [
+          "q048_v70_contract_documentation_correction_v1.json",
+          "q048_frec_moving_h_accepted_checkpoint_v71.json",
+          "q048_moving_h_domain_accepted_checkpoint_v72.json"
+        ],
+        "reason": "97/1110 is explicitly historical V70 context; current accepted actual98/1100 is unchanged by V72 proof."
+      }
+    ],
+    "anomaly_delta": "No new physical anomaly; historical addenda preserved and repo-sync gap distinguished from evidence gap.",
+    "current_state_delta": "Proposed pointer advance only after coherent upload and fresh actual canonical path/schema/base read. No competing global pointer.",
+    "upload_instructions": "Upload all eight new ingestion files at repository root as new versions, preserve earlier records; upload still-absent immutable original numerical evidence via index links. No science replay or fabricated V66 originals."
+  },
+  "tool_research": {
+    "performed": [
+      "Fresh read-only GitHub branch/tree metadata",
+      "Local original-byte/hash/field contract inspection"
+    ],
+    "new_external_scientific_research": false,
+    "reason": "Frozen-input evidence/route decision, no external source needed",
+    "model_switch_executed": false
+  },
+  "output_file_refs": [
+    "Q048_MOVING_H_DOMAIN_V72_INGESTION_RESULT_V1.md",
+    "Q048_MOVING_H_DOMAIN_V72_INGESTION_HANDOFF_TO_BUILDER_V1.md",
+    "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V72_INGESTED_V1.md",
+    "Q048_MOVING_H_DOMAIN_V72_NEXT_BUILDER_TASK_V1.json",
+    "Q048_MOVING_H_DOMAIN_V72_INGESTION_STATE_V1.json",
+    "Q048_MOVING_H_DOMAIN_V72_INGESTION_VALIDATION_V1.json",
+    "Q048_MOVING_H_DOMAIN_V72_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "Q048_MOVING_H_DOMAIN_V72_INGESTION_FILES_V1.md"
+  ],
+  "output_manifest_ref": "Q048_MOVING_H_DOMAIN_V72_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "validation_scope": "Executed structural/hash/contract ingestion checks only; no scientific producer/verifier or historical diagnostic replay, no installed global schema validator claimed."
+}

@@ -1,0 +1,733 @@
+{
+  "schema": "bubbleverse.q048.actual_consumer_task.v1",
+  "task_id": "LOCAL-Q048-POST-V72-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "registration": "LOCAL_PROVISIONAL_NOT_GLOBALLY_REGISTERED",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_type": "ACTUAL_CONSUMER_ONE_CELL",
+  "result_version_on_execution": "V73",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "version": "2.2.0",
+    "prompt_path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+    "prompt_local_path": "/workspace/scratch/3415d88c213e/v67_contract_repair/inputs/Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "repository_commit": "4ef8036494c2741989377f9fcc6bdfcac05987f5",
+    "status": "Existing engine bytes verified, no global registry installation claimed"
+  },
+  "fingerprint_basis": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "task_type": "ACTUAL_CONSUMER_ONE_CELL",
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "engine_version": "2.2.0",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "cell_z": [
+      1100,
+      1090
+    ],
+    "parent_actual_count": 98,
+    "parent_actual_frontier": 1100,
+    "parent_actual_checkpoint_sha256": "30bc63d42b81b764e62d3b83e8b2c4403b1fa9f18bbc5c4e9bedc8de4cd6c44b",
+    "proof_accepted_checkpoint_sha256": "a468a7f755502fb9000a84a1103c5395e5aed745fc4174475c89e5e5b0c851a1",
+    "proof_raw_sha256": "1cf2432eeadaab1747a39cd4889413a1cdcecb009a4749e1780684aca975cb56",
+    "proof_validation_sha256": "cd964e49b03822a217da8430f4bef7f16c1ee15dfcf9a84330a134ef023f18c5",
+    "historical_v70_documentation_correction_sha256": "c52a2435cd5e9a37606659be488ade065d5659485be17f415ef8099d59d3a6bb",
+    "v71_unexecuted_draft_supersession_sha256": "d3a2cca56221f5ca90bcc9c9cb9bb95cda39f306021c25ee2e01ee7d1fef4639",
+    "guard_row_index": 35,
+    "guard_primary_row_sha256": "3d5d4b909590bd7614615c32c812503be1a0d2d923e0beda163f8935e20c5f7b",
+    "guard_control_row_sha256": "eefc2acf3deff4283f6e9a68c4587967efe61182b34b720a83fd17802a054f99",
+    "max_new_actual_cells": 1,
+    "max_new_math_proof_cells": 0,
+    "criteria_version": "ONE_CONSUMER_FRESH_SOURCE_AND_CONNECTED_LOWER_V1",
+    "method_code_version": "Adapt pinned V71 accepted-certificate consumer; concrete V73 code hashes TO_BE_FROZEN_BEFORE_EXECUTION",
+    "result_version_on_execution": "V73",
+    "science_budget_seconds": 300,
+    "evidence_boundary": "Q001-Q048; external cutoff NOT_DOCUMENTED",
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+  },
+  "task_fingerprint": "eadb12fa9fb736445ed1de6274b7b4fd0974f8fb8cdb2aa02ac463edf5164490",
+  "fingerprint_method": "SHA256 canonical sorted compact UTF-8 JSON ensure_ascii=false of fingerprint_basis; planning identity only",
+  "execution_fingerprint_requirement": "Bind the unchanged planning fingerprint to actual new code/spec/input hashes before the one new producer.",
+  "initial_actual_state": {
+    "count": 98,
+    "frontier": 1100,
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v71.json",
+    "accepted_checkpoint_sha256": "30bc63d42b81b764e62d3b83e8b2c4403b1fa9f18bbc5c4e9bedc8de4cd6c44b",
+    "endpoint": {
+      "a": "1/1101",
+      "E": "9832322208333823227/125000000000000000",
+      "Y": "15678333641757734547/250000000000000000",
+      "Vbar": "15280857970487995643/1000000000000000000"
+    },
+    "connected_lower": "181825173747167/250000000000000000",
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1100
+    },
+    "other_frontiers": [
+      1440,
+      1440,
+      1440
+    ]
+  },
+  "candidate_success_state": {
+    "count": 99,
+    "frontier": 1090,
+    "endpoint": {
+      "a": "1/1091",
+      "E": "76274181002023646167/1000000000000000000",
+      "Y": "15200791231838939509/250000000000000000",
+      "Vbar": "7413195202445029729/500000000000000000"
+    },
+    "connected_lower": "702011125688817/1000000000000000000",
+    "other_frontiers": [
+      1440,
+      1440,
+      1440
+    ]
+  },
+  "proof": {
+    "accepted_checkpoint": "q048_moving_h_domain_accepted_checkpoint_v72.json",
+    "accepted_checkpoint_sha256": "a468a7f755502fb9000a84a1103c5395e5aed745fc4174475c89e5e5b0c851a1",
+    "result": "q048_moving_h_domain_result_v72.json",
+    "result_sha256": "1cf2432eeadaab1747a39cd4889413a1cdcecb009a4749e1780684aca975cb56",
+    "validation": "q048_moving_h_domain_validation_v72.json",
+    "validation_sha256": "cd964e49b03822a217da8430f4bef7f16c1ee15dfcf9a84330a134ef023f18c5",
+    "cell_z": [
+      1100,
+      1090
+    ],
+    "cell_a": [
+      "1/1101",
+      "1/1091"
+    ],
+    "K_upper": "168632005355020195097/31250000000000000",
+    "whole_cell_lower": "702011125688817/1000000000000000000",
+    "comparison_start_lower": "181825173747167/250000000000000000",
+    "transition_validation": "q048_moving_h_domain_transition_validation_v72.json",
+    "transition_validation_sha256": "4f68b25feb5c1ae3463bb532be6de98e9baa213e75a7248b6af558031d0a24e9",
+    "acceptance_validation": "q048_moving_h_domain_acceptance_validation_v72.json",
+    "acceptance_validation_sha256": "46f699472c1f10b0ea94f79eafb1e9c3a6a821349512d13719b28edac8589405",
+    "postaccept_validation": "q048_moving_h_domain_postaccept_validation_v72.json",
+    "postaccept_validation_sha256": "8d9ee13b1dd732aa55d5d1e5e8346d358e2886a2f5f74114e2de7397e36a737a",
+    "delivery_validation": "q048_moving_h_domain_delivery_validation_v72.json",
+    "delivery_validation_sha256": "49673d13884c67d48340a8b78ce933792e29ad7016fe70b03e147bc8e34476b8"
+  },
+  "guard_binding": {
+    "primary": {
+      "a0": "1/1101",
+      "a1": "1/1091",
+      "z0": 1100,
+      "z1": 1090,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "571649702276878961/20000000000000000",
+        "H_upper_left": "1850709509873340547/250000000000000000",
+        "X_upper_left": "6271306788328513347/500000000000000000",
+        "V_candidate_upper": "7413195202445029729/500000000000000000",
+        "retained_Vbar": "15280857970487995643/1000000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "9832322208333823227/125000000000000000",
+      "Y_left": "15678333641757734547/250000000000000000",
+      "V_previous": "15280857970487995643/1000000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "78184350641698826319/1000000000000000000",
+      "V_local": "7413195202445029729/500000000000000000",
+      "V_admitted": "7413195202445029729/500000000000000000",
+      "equilibrium_upper": "8251208573156207003/1000000000000000000",
+      "amplitude": "10892425198774946237/200000000000000000",
+      "constant_energy_part": "545611166899954188061/23000000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "241231660512619293/250000000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "58050189089773537657/1000000000000000000",
+      "raw_G_lower": "478799605436010217454851007215290041117071811879148895675833048152046571873585472649252794997138380187286067166223801404749/71490215233906829809836198171105495764440571677118734382066696678391677695551672732876800000000000000000000000000000000000",
+      "G_lower": "1674353629617141379/250000000000000000",
+      "Y_right_candidate": "15200791231838939509/250000000000000000",
+      "E_right_candidate": "76274181002023646167/1000000000000000000",
+      "endpoint_energy_envelope": "38137090501011823083/500000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1091/1101",
+      "R_at_left": "7305297306036460901843060908057320830124234178968805315287278058678940503016097569048905763518237/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "33173348376384397510723422443348752406385750696927072225/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "964926642050477167/1000000000000000000",
+        "upper": "241231660512619293/250000000000000000",
+        "log_lower": "1140518861201143/125000000000000000",
+        "log_upper": "1824830177921829/200000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "76274181002023646167/1000000000000000000",
+      "Y_right": "15200791231838939509/250000000000000000",
+      "index": 35,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "primary_row_sha256": "3d5d4b909590bd7614615c32c812503be1a0d2d923e0beda163f8935e20c5f7b",
+    "control": {
+      "a0": "1/1101",
+      "a1": "1/1091",
+      "z0": 1100,
+      "z1": 1090,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "571649702276878961/20000000000000000",
+        "H_upper_left": "929482223939545671/125000000000000000",
+        "X_upper_left": "2531852884141963297/200000000000000000",
+        "V_candidate_upper": "117429907413074199/7812500000000000",
+        "retained_Vbar": "7742503492824099513/500000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "20032121959181180691/250000000000000000",
+      "Y_left": "31985109838893735803/500000000000000000",
+      "V_previous": "7742503492824099513/500000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "347577665784479640735642598443/1000000000000000000000000000000",
+        "370056395732176591934334324127/500000000000000000000000000000",
+        "209839611729560867355301858481/125000000000000000000000000000",
+        "3108073439964454803164155776021/1000000000000000000000000000000",
+        "157490969113792734812250620967/31250000000000000000000000000",
+        "3758437215646782452789298655771/500000000000000000000000000000",
+        "2652724803076031989544772408027/250000000000000000000000000000",
+        "14435250643852102429505469187103/1000000000000000000000000000000",
+        "19181594218983142495000474731523/1000000000000000000000000000000",
+        "25219790836352032799196791180983/1000000000000000000000000000000",
+        "33498759889431029917136582175307/1000000000000000000000000000000"
+      ],
+      "E_safe_left": "79654770789655468969/1000000000000000000",
+      "V_local": "117429907413074199/7812500000000000",
+      "V_admitted": "117429907413074199/7812500000000000",
+      "equilibrium_upper": "4182546963164799297/500000000000000000",
+      "amplitude": "13901281437864468253/250000000000000000",
+      "constant_energy_part": "55314183587854470699/2300000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "8441/8741",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "53657933542013245699/1000000000000000000",
+      "raw_G_lower": "12803422116556413521648523057218767680774485159967999065003486957263019110392266222248534979641223976535235877296472947/2440999888123357810030383625834504447175683738397245536068925764319615838815692075617484800000000000000000000000000000",
+      "G_lower": "5245154733046584523/1000000000000000000",
+      "Y_right_candidate": "62061795272635044893/1000000000000000000",
+      "E_right_candidate": "4859146649031440141/62500000000000000",
+      "endpoint_energy_envelope": "15549269276900608451/200000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1091/1101",
+      "R_at_left": "83135171970849390493714911201006158746713379425687030740795072817720974763598982502723293208422328393799169556363/12141680576410806693246636917646993166515042744075872007823827560868151782532553113600000000000000000000000000000",
+      "M_at_left": "33173348376384397510723422443348752406385750696927072225/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "4859146649031440141/62500000000000000",
+      "Y_right": "62061795272635044893/1000000000000000000",
+      "index": 35,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control_row_sha256": "eefc2acf3deff4283f6e9a68c4587967efe61182b34b720a83fd17802a054f99",
+    "primary_row_index": 35,
+    "control_row_index": 35,
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "control_role": "Conservative aligned guard only; never replace primary actual scalar state."
+  },
+  "input_artifacts": {
+    "q048_moving_h_domain_accepted_checkpoint_v72.json": {
+      "filename": "q048_moving_h_domain_accepted_checkpoint_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_accepted_checkpoint_v72.json",
+      "sha256": "a468a7f755502fb9000a84a1103c5395e5aed745fc4174475c89e5e5b0c851a1",
+      "bytes": 3123,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_result_v72.json": {
+      "filename": "q048_moving_h_domain_result_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_result_v72.json",
+      "sha256": "1cf2432eeadaab1747a39cd4889413a1cdcecb009a4749e1780684aca975cb56",
+      "bytes": 29548,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_validation_v72.json": {
+      "filename": "q048_moving_h_domain_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_validation_v72.json",
+      "sha256": "cd964e49b03822a217da8430f4bef7f16c1ee15dfcf9a84330a134ef023f18c5",
+      "bytes": 12576,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_spec_v72.json": {
+      "filename": "q048_moving_h_domain_spec_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_spec_v72.json",
+      "sha256": "8c9e6da35d672e3998e6709d9a1f468fc73c00324701692108b7d57d0defaa3c",
+      "bytes": 17398,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_candidate_checkpoint_v72.json": {
+      "filename": "q048_moving_h_domain_candidate_checkpoint_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_candidate_checkpoint_v72.json",
+      "sha256": "055b92f0919a27a4b897b7535ff920ca52707e5cb2652c20e30b78ee79a5201e",
+      "bytes": 1499,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_transition_validation_v72.json": {
+      "filename": "q048_moving_h_domain_transition_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_transition_validation_v72.json",
+      "sha256": "4f68b25feb5c1ae3463bb532be6de98e9baa213e75a7248b6af558031d0a24e9",
+      "bytes": 1193,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_acceptance_validation_v72.json": {
+      "filename": "q048_moving_h_domain_acceptance_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_acceptance_validation_v72.json",
+      "sha256": "46f699472c1f10b0ea94f79eafb1e9c3a6a821349512d13719b28edac8589405",
+      "bytes": 844,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_postaccept_validation_v72.json": {
+      "filename": "q048_moving_h_domain_postaccept_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_postaccept_validation_v72.json",
+      "sha256": "8d9ee13b1dd732aa55d5d1e5e8346d358e2886a2f5f74114e2de7397e36a737a",
+      "bytes": 1238,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_delivery_validation_v72.json": {
+      "filename": "q048_moving_h_domain_delivery_validation_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_delivery_validation_v72.json",
+      "sha256": "49673d13884c67d48340a8b78ce933792e29ad7016fe70b03e147bc8e34476b8",
+      "bytes": 10271,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_preflight_v72.json": {
+      "filename": "q048_moving_h_domain_preflight_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_preflight_v72.json",
+      "sha256": "f32bc30b2fb9d94bf24a48777cb066144ef73236ecbf27bcd7d2b1fe2193f15d",
+      "bytes": 3658,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V72.md": {
+      "filename": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V72.md",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V72.md",
+      "sha256": "bde5d981f48082cced017cd91e5b42ec8d1225e9fc26100414d18063bcb4d311",
+      "bytes": 4340,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_output_manifest_v72.json": {
+      "filename": "q048_moving_h_domain_output_manifest_v72.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/q048_moving_h_domain_output_manifest_v72.json",
+      "sha256": "faf223e5f5f478dc4acca7566f5b9a3dcfd087450f50fc433d05c6153442a26b",
+      "bytes": 17002,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "Q048_MOVING_H_DOMAIN_V72_PROVENANCE.json": {
+      "filename": "Q048_MOVING_H_DOMAIN_V72_PROVENANCE.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/output/Q048_MOVING_H_DOMAIN_V72_PROVENANCE.json",
+      "sha256": "633bdd8d9cbc0f84fab668d895c6e7cd411f45dd2eeb9c4422ea34acf5c51ded",
+      "bytes": 33714,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_accepted_checkpoint_v71.json": {
+      "filename": "q048_frec_moving_h_accepted_checkpoint_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_accepted_checkpoint_v71.json",
+      "sha256": "30bc63d42b81b764e62d3b83e8b2c4403b1fa9f18bbc5c4e9bedc8de4cd6c44b",
+      "bytes": 2961,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_result_v71.json": {
+      "filename": "q048_frec_moving_h_result_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_result_v71.json",
+      "sha256": "88d3cbd319eadb5cec109eff754e669b10bc230fc2e7f154d0f06cdf1c782236",
+      "bytes": 26996,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_validation_v71.json": {
+      "filename": "q048_frec_moving_h_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_validation_v71.json",
+      "sha256": "2e1d32100f86a244b8d696371faa9dbdc831c6a7b0c3eac527b9be5049eb6ee3",
+      "bytes": 8851,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_spec_v71.json": {
+      "filename": "q048_frec_moving_h_spec_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_spec_v71.json",
+      "sha256": "06b9b488a9317a1db7c978e29600d4685ace48e5180202bb4fd2ac954841353b",
+      "bytes": 14986,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_transition_validation_v71.json": {
+      "filename": "q048_frec_moving_h_transition_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_transition_validation_v71.json",
+      "sha256": "86609fa7f957623bbe07b7dbb52323cb6b6ab43e95472dad410b424de48c4b33",
+      "bytes": 1086,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_acceptance_validation_v71.json": {
+      "filename": "q048_frec_moving_h_acceptance_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_acceptance_validation_v71.json",
+      "sha256": "3fbdfac282e4e6c55f06094add31f90a157ec5ae22c016f7c65b600621750cc0",
+      "bytes": 1072,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_postaccept_validation_v71.json": {
+      "filename": "q048_frec_moving_h_postaccept_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_postaccept_validation_v71.json",
+      "sha256": "cfa7e32272a020b7f92913b546210ff4fa10f48b374b3be69d85932914f73ab3",
+      "bytes": 1472,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_delivery_validation_v71.json": {
+      "filename": "q048_frec_moving_h_delivery_validation_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_delivery_validation_v71.json",
+      "sha256": "5030bd48af610eb80311b7e3e15078ac9060125b86d2935360922acdf871da1e",
+      "bytes": 9667,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_guard_local_v_result_v12.json": {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "bytes": 1198030,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_guard_local_v_validation_v12.json": {
+      "filename": "q048_guard_local_v_validation_v12.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_guard_local_v_validation_v12.json",
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+      "bytes": 206698,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_preexecution_supersession_v71.json": {
+      "filename": "q048_preexecution_supersession_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_preexecution_supersession_v71.json",
+      "sha256": "d3a2cca56221f5ca90bcc9c9cb9bb95cda39f306021c25ee2e01ee7d1fef4639",
+      "bytes": 1703,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_unexecuted_draft_spec_v71.json": {
+      "filename": "q048_frec_moving_h_unexecuted_draft_spec_v71.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_unexecuted_draft_spec_v71.json",
+      "sha256": "2da3237aa147fa3fb822fee1b795631752f7c50351193b3814408fb85761505a",
+      "bytes": 14986,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_unexecuted_draft_producer_v71.py": {
+      "filename": "q048_frec_moving_h_unexecuted_draft_producer_v71.py",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_unexecuted_draft_producer_v71.py",
+      "sha256": "ddcd058ba020cb25486533f71ae05bcf62e86cf10f01c35d7d08ce8bf563301b",
+      "bytes": 6962,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_frec_moving_h_unexecuted_draft_verifier_v71.py": {
+      "filename": "q048_frec_moving_h_unexecuted_draft_verifier_v71.py",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_frec_moving_h_unexecuted_draft_verifier_v71.py",
+      "sha256": "5ad44830e263be6812f026446048cd306cff5e98b284ad09c7649cd3c49a88f5",
+      "bytes": 8968,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_v70_contract_documentation_correction_v1.json": {
+      "filename": "q048_v70_contract_documentation_correction_v1.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_v70_contract_documentation_correction_v1.json",
+      "sha256": "c52a2435cd5e9a37606659be488ade065d5659485be17f415ef8099d59d3a6bb",
+      "bytes": 1735,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md": {
+      "filename": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md",
+      "sha256": "5d5911af4838867ffc8c9e891be2fb803cebc3e513d735c6b43d807c4593ade8",
+      "bytes": 4168,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_result_v70.json": {
+      "filename": "q048_moving_h_domain_result_v70.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_moving_h_domain_result_v70.json",
+      "sha256": "aef324df514ab7ee7d07e312ed850090401a2a3cc3c9bf55735c2832b0823e1b",
+      "bytes": 29553,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    },
+    "q048_moving_h_domain_accepted_checkpoint_v70.json": {
+      "filename": "q048_moving_h_domain_accepted_checkpoint_v70.json",
+      "local_path": "/workspace/scratch/3415d88c213e/v72/inputs/q048_moving_h_domain_accepted_checkpoint_v70.json",
+      "sha256": "ee5e590c5c882c3a2d7929e5c81d1b9b5dfc653812091aee0bcd8de78814ac06",
+      "bytes": 3126,
+      "hash_status": "COMPUTED_EXACT_BYTES",
+      "access": "VERIFIED_LOCAL_BYTES; previously individually delivered",
+      "repository_status": "NOT_IN_CURRENT_TARGETED_TREE; local evidence available"
+    }
+  },
+  "input_pins": {
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "parent_checkpoint_sha256": "30bc63d42b81b764e62d3b83e8b2c4403b1fa9f18bbc5c4e9bedc8de4cd6c44b",
+    "proof_checkpoint_sha256": "a468a7f755502fb9000a84a1103c5395e5aed745fc4174475c89e5e5b0c851a1",
+    "proof_raw_sha256": "1cf2432eeadaab1747a39cd4889413a1cdcecb009a4749e1780684aca975cb56",
+    "proof_validation_sha256": "cd964e49b03822a217da8430f4bef7f16c1ee15dfcf9a84330a134ef023f18c5",
+    "historical_v70_documentation_correction_sha256": "c52a2435cd5e9a37606659be488ade065d5659485be17f415ef8099d59d3a6bb",
+    "v71_unexecuted_draft_supersession_sha256": "d3a2cca56221f5ca90bcc9c9cb9bb95cda39f306021c25ee2e01ee7d1fef4639"
+  },
+  "source_dependency_pins": {
+    "inputs/q047_certificate_v1.py": {
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "bytes": 15302
+    },
+    "inputs/q047_math_v1.py": {
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "bytes": 12617
+    },
+    "inputs/q047_precursor_check_v1.py": {
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "bytes": 29808
+    },
+    "inputs/q048_full_tube_reuse_v1.py": {
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+      "bytes": 10171
+    },
+    "inputs/q048_p3_scaled_arithmetic_v2.py": {
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "bytes": 5988
+    },
+    "inputs/q048_p3_scaled_kernel_v2.py": {
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "bytes": 15855
+    },
+    "inputs/q048_p3_scaled_raw_result_v2.json": {
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+      "bytes": 699697
+    },
+    "inputs/q048_p3_scaled_transformed_log_tables_v2.json": {
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+      "bytes": 3958952
+    },
+    "inputs/q048_post_event_state_tube_v1.py": {
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+      "bytes": 12423
+    },
+    "inputs/q048_prefix_config_v1.json": {
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "bytes": 105567
+    },
+    "inputs/q048_prefix_v1.py": {
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "bytes": 17198
+    },
+    "inputs/source/q047_math_v1.py": {
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "bytes": 12617
+    }
+  },
+  "provenance_addenda": {
+    "v70_documentation_correction": {
+      "file": "q048_v70_contract_documentation_correction_v1.json",
+      "sha256": "c52a2435cd5e9a37606659be488ade065d5659485be17f415ef8099d59d3a6bb",
+      "original_contract": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md",
+      "original_contract_sha256": "5d5911af4838867ffc8c9e891be2fb803cebc3e513d735c6b43d807c4593ade8",
+      "original_raw_sha256": "aef324df514ab7ee7d07e312ed850090401a2a3cc3c9bf55735c2832b0823e1b",
+      "scope": "DOCUMENTATION_ONLY; task/code/raw/spec and numerical criteria unchanged",
+      "correct_current_actual": {
+        "count": 97,
+        "frontier": 1110
+      },
+      "rule": "Ingest correction as provenance, never the erroneous frozen96/frontier1120/V67R1 prose as active state. Preserve original bytes; no rerun of completed documentation test."
+    },
+    "v71_unexecuted_draft_supersession": {
+      "file": "q048_preexecution_supersession_v71.json",
+      "sha256": "d3a2cca56221f5ca90bcc9c9cb9bb95cda39f306021c25ee2e01ee7d1fef4639",
+      "final_parent_execution_fingerprint": "eba587408c923c840a632f612318353ba7b0b6c15eafd83a5651f54b8f22cf4b",
+      "rejected_execution_fingerprint": "9e5939dc0f443c83d476dbeb4e13603b66112cf87295fc9f80ab5d7c22517e48",
+      "science_under_rejected_spec": 0,
+      "rule": "Retain rejected bytes as history, use only final parent spec/code; do not replay old draft or diagnostic tests."
+    }
+  },
+  "documentation_correction": {
+    "file": "q048_v70_contract_documentation_correction_v1.json",
+    "sha256": "c52a2435cd5e9a37606659be488ade065d5659485be17f415ef8099d59d3a6bb",
+    "original_contract": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V70.md",
+    "original_contract_sha256": "5d5911af4838867ffc8c9e891be2fb803cebc3e513d735c6b43d807c4593ade8",
+    "original_raw_sha256": "aef324df514ab7ee7d07e312ed850090401a2a3cc3c9bf55735c2832b0823e1b",
+    "scope": "DOCUMENTATION_ONLY; task/code/raw/spec and numerical criteria unchanged",
+    "correct_current_actual": {
+      "count": 97,
+      "frontier": 1110
+    },
+    "rule": "Ingest correction as provenance, never the erroneous frozen96/frontier1120/V67R1 prose as active state. Preserve original bytes; no rerun of completed documentation test."
+  },
+  "documentation_correction_scope": "HISTORICAL_V70_ONLY: its97/frontier1110 state describes the V70 proof parent, not current V73. Bind it to original V70 contract/raw/task; never compare that historical state or rawhash to current V72 proof/actual98. Preserve the original bytes.",
+  "narrative_preflight": "Generate new V73 prose from bound task: current98/frontier1100, candidate99/frontier1090, one actual-consumer1100→1090, zero new proofs, primary row35. Reject stale parent/candidate/cell text before science. Compare all physical numeric constant literals with pinned V71 source and helper hashes; use token/field-aware rebinding, never broad numeric text replacement. Preserve historical V70 correction and V71 rejected draft; do not replay old diagnostics.",
+  "validation_expectations": {
+    "proof_V72": {
+      "checks": 123,
+      "semantic_mutations": 33,
+      "transition": 13,
+      "acceptance": 8,
+      "postaccept": 15,
+      "delivery": 100,
+      "preflight": 35
+    },
+    "parent_actual_V71": {
+      "checks": 89,
+      "semantic_mutations": 24,
+      "transition": 12,
+      "acceptance": 13,
+      "postaccept": 19,
+      "delivery": 96
+    },
+    "rule": "These are immutable observed upstream counts. Rebind metadata validation to these reports rather than old V70/V69 count assumptions; do not alter the original reports."
+  },
+  "implementation_reuse": {
+    "reference_consumer": "/workspace/scratch/3415d88c213e/v71/output/q048_frec_moving_h_v71.py",
+    "reference_consumer_sha256": "848331cbf5bd91d52c094d86a42be7ce5e9bdf8fbb4da41b5c0e3a9f6f51ea66",
+    "reference_verifier": "/workspace/scratch/3415d88c213e/v71/output/q048_frec_moving_h_verify_v71.py",
+    "reference_verifier_sha256": "77c73fce9fb109ab3fe5eaf63bd681185eda728ca2a1dbe0cc55a1f697177658",
+    "reference_contract": "/workspace/scratch/3415d88c213e/v71/output/q048_v71_consumer_contract.py",
+    "reference_contract_sha256": "aa213a0620154c33800f71a7bc4120c24a7573b58c417ea64fa2ff5e462f4177",
+    "reference_acceptor": "/workspace/scratch/3415d88c213e/v71/output/q048_frec_moving_h_accept_v71.py",
+    "reference_acceptor_sha256": "b72e6df67efe0268ede506186ae19cc5727f03c55ad799bcf4199f3b561f1937",
+    "rule": "Reuse the V71 method/helpers, create separate V73 identities and freeze before science. New proof is V72 and parent V71. Rebind proof validation counts123/33, parent89/24 and historical addendum scopes explicitly. Do not use the old contract unchanged or run any historical main."
+  },
+  "acceptance_criteria": [
+    "Hash-bind exactQ/source/capture, accepted V71 actual98/frontier1100 and complete V72 proof/raw/verifier/transition/acceptance/postaccept evidence.",
+    "Use exactly committed primary V12 row35 endpoint; control remains guard-only. Scalar a/E/Y/V glue must be exact, no resets.",
+    "Recompute fresh source/C/upper-h/thermal conditions for q_L=10^-6 and q_R=0. Consume accepted V72 K/lower and independently check the exact-rational connected lower for delta=10/1091; do not rerun V72 proof.",
+    "Accept candidate99/frontier1090 only after producer-free verifier and at least24 nontrivial semantic mutations. Disclosure: shared source/rate/interval helpers/method are not method-independent or physical evidence.",
+    "Require hash-bound transition/acceptance/postaccept and separate raw/candidate/accepted files; retain actual98/frontier1100 until all gates pass."
+  ],
+  "budget": {
+    "maximum_new_actual_cells": 1,
+    "maximum_new_math_proof_cells": 0,
+    "science_seconds": 300,
+    "native_or_paid_runs": 0
+  },
+  "compute_backend_preference": "LOCAL_RUNTIME exact rational Python. Prior V71 consumer+verifier≈0.608s, V72 proof+verifier≈0.487s, not V73 measurements. Existing runtime/pinned inputs observed; external queue/setup/transfer unmeasured, no evidenced benefit. No paid/HPC/Actions.",
+  "forbidden": [
+    "below1090continuation",
+    "new_mathematical_proof",
+    "V72proof_or_verifier_replay",
+    "V71consumer_or_verifier_replay",
+    "V12guardregeneration",
+    "old_prose_or_draft_diagnostic_test_replay",
+    "physical_or_auxiliary_reset",
+    "refit",
+    "recapture",
+    "tuning_or_subdivision_campaign",
+    "native_P6",
+    "paid_or_HPC_execution",
+    "later-Q_scientific_access",
+    "accepted_model_promotion"
+  ],
+  "historical_archive_gap": {
+    "files": [
+      "q048_moving_h_domain_result_v66.json",
+      "q048_moving_h_domain_transition_validation_v66.json",
+      "q048_moving_h_domain_acceptance_validation_v66.json",
+      "q048_moving_h_domain_postaccept_validation_v66.json"
+    ],
+    "impact": "V66 archival reproducibility remains incomplete. Current V72 and V71 original evidence is available locally; do not fabricate missing bytes or revive superseded serialized-array requirements. Unsynced repo evidence is not missing local evidence."
+  },
+  "materiality": "V72 newly supplies the accepted moving-H theorem for1100→1090, while the actual remains at1100. One fresh actual consumer can now determine whether both q branches meet current source/C/upper-h/thermal and connected-lower admission conditions on that same interval. This consumes a new certificate and supplies required partial-history evidence; it neither repeats the completed proof nor by itself answers the full four-case Q. Do not convert this one task into an automatic continuation campaign.",
+  "success_condition": "Exactly one validated actual-consumer cell1100→1090; candidate99/frontier1090 accepted only after all gates; other frontiers1440.",
+  "failure_or_falsification_condition": "First precise source/domain/lower inequality failure or indispensable input gap; technical/method obstruction is not physical falsification. Preserve outputs without tuning.",
+  "stop_condition": "Stop after one accepted actual cell, first precise obstruction or300 science seconds. No below1090 continuation, no new proof, no automatic next task. Return exactly once to Result Ingestion2.1.0.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "dispatch_status": "NOT_EXECUTED"
+}
