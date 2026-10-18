@@ -1,0 +1,14 @@
+{
+  "schema_version": "Q048_MOVING_H_DOMAIN_VERIFIER_ADAPTER_EVENT_V66",
+  "status": "RESOLVED_BEFORE_ACCEPTANCE",
+  "scientific_effect": "NONE",
+  "scientific_producer_reexecuted": false,
+  "initial_validation_sha256": "761c38ce515f93c7b0977b317f1289027bb42fbe75a4690a46bd5a74ea1add59",
+  "initial_checks": "86/86",
+  "initial_mutations": "22/24",
+  "cause": "Two transformed semantic mutation fixtures (wrong_z and wrong_count) accidentally equaled the correct V66 values; verifier logic, producer bytes and science checks were otherwise green.",
+  "fix": "Verifier-only adapter patch changed wrong_z to [1120,1110] and wrong_count to 96; producer was not rerun.",
+  "final_validation_sha256": "3412492e29f26f8b5dccbef067c9c54ed20ea56cc61996fdfc065229fc622808",
+  "final_checks": "86/86",
+  "final_mutations": "24/24"
+}
