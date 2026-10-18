@@ -1,0 +1,305 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "handoff_id": "LOCAL-Q048-V73-ACTUAL-INGESTION-V1",
+  "created_at_utc": "2026-10-18T15:03:35+00:00",
+  "created_at_local": "2026-10-18T17:03:35+02:00",
+  "case_id": "NOT_ASSIGNED",
+  "case": "hillipop-ede_n3",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "evidence_cutoff": "NOT_DOCUMENTED; no external cutoff invented",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V73"
+  ],
+  "origin_run_id": "LOCAL-Q048-FREC-MOVING-H-V73-2026-10-18T14:51:04.780139+00:00",
+  "source_state_version": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V73_APPENDED_V1.md",
+  "target_state_version": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V73_INGESTED_V1.md",
+  "actual_state": {
+    "count": 99,
+    "frontier": 1090
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 1090
+  },
+  "accepted_actual_cell": [
+    1100,
+    1090
+  ],
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "scientific_producer_executions_this_ingestion": 0,
+  "scientific_verifier_executions_this_ingestion": 0,
+  "new_actual_cells_this_ingestion": 0,
+  "new_proof_cells_this_ingestion": 0,
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS",
+  "engine_registry_ref": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "prompt_git_blob_sha1": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "repository_commit": "d5df2b81526ea3db12b7a590bcf47302b280ba8b",
+    "status": "Existing engine blob verified on current main; SHA256 inherited from prior exact same Git blob; no registry mutation claimed"
+  },
+  "execution_profile": {
+    "inventory_basis": "Current local exact V73 bytes + V12 row36 + current GitHub main/tree read; no new external scientific search",
+    "verified_at_utc": "2026-10-18T15:03:35+00:00",
+    "current_observed_runtime": "ChatGPT reasoning runtime with local file/Python/hash and GitHub connector read; selectable model/reasoning controls not used",
+    "recommended_functional_class": "GENERAL REASONING for ingestion; H/C for one bounded mathematical proof next",
+    "execution_style": "One fresh exact-rational proof cell, producer-free verification and immutable evidence",
+    "required_tools": [
+      "Local file/Python/hash",
+      "GitHub read"
+    ],
+    "optional_tools": "No new external scientific research needed",
+    "switch_status": "NOT_REQUIRED; none executed",
+    "budget": "Zero science in ingestion; next task300 science seconds; no paid/HPC",
+    "reason": "V73 newly accepts the actual source endpoint and connected lower at1090. The accepted V72 proof covers1100→1090 only and supplies no fresh rate/domain/K bound for1090→1080. One cell-specific theorem at the new endpoint is therefore the next material obligation before any further actual history can be admitted. Its discriminating outcome is a verified strictly positive connected whole-cell lower with fresh source/C/upper-h/thermal conditions, or a precise failed inequality. Old K reuse, V72 proof replay and guard-only admission do not discharge that obligation. This is one bounded information gain, not permission for an automatic multi-cell campaign or a claim that Q048 must run to z=0."
+  },
+  "journal_ref": {
+    "path": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V73_INGESTED_V1.md",
+    "sha256": "1f444d61ee02bfa6f99cf201b1199aedbca7779cdf333f615c06819148ddc2a6",
+    "bytes": 14222669,
+    "access": "VERIFIED_LOCAL_BYTES",
+    "scope": "Q001-Q048"
+  },
+  "journal_preservation": {
+    "source_path": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V73_APPENDED_V1.md",
+    "source_sha256": "8187d394a7711eb018d095690f1fa171e21a782abdceec14a2b1bb8a683e0240",
+    "source_bytes": 14219873,
+    "method": "Complete incoming journal bytes preserved unchanged as suffix",
+    "semantic_read": "Relevant current sections and machine evidence inspected; inherited full history preserved without claiming full reread",
+    "new_prefix_bytes": 2796
+  },
+  "input_artifacts": {
+    "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V73_APPENDED_V1.md": {
+      "sha256": "8187d394a7711eb018d095690f1fa171e21a782abdceec14a2b1bb8a683e0240",
+      "bytes": 14219873,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "Q048_FREC_MOVING_H_V73_RESULT.md": {
+      "sha256": "1ce48a4cf6f7d1e05e6689002801909aa9e81f19f912b2b6ba4ae18e1d398062",
+      "bytes": 2960,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "Q048_FREC_MOVING_H_V73_HANDOFF_TO_INGESTION.md": {
+      "sha256": "fef03b03451a95d1b83bb816927c64af103d3d83bbdeac72ea46df73a0d35b1a",
+      "bytes": 2376,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "Q048_FREC_MOVING_H_V73_PROVENANCE.json": {
+      "sha256": "60c85d173fe8d7d63b36edfbd34e57c07a342d9b45bcab47158fee188723a205",
+      "bytes": 3324,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "Q048_FREC_MOVING_H_V73_GITHUB_MEMORY_UPDATE.json": {
+      "sha256": "8bbbc6c62a9e570848fa404263d3bd34a6b46f52c61858ed3bd9fc92cf3e5960",
+      "bytes": 1587,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "Q048_FREC_MOVING_H_V73_RESULT_ENVELOPE.json": {
+      "sha256": "bc452537f8bb9881f6f5648c222a854b863836d8de9d6fd7d820153a1a68050e",
+      "bytes": 2266,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "Q048_FREC_MOVING_H_V73_GATES.json": {
+      "sha256": "6ff8a673c6ecc6194e1bc718d0e85964d8dd453224d5d2767f5e53537f3a495b",
+      "bytes": 2190,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "Q048_FREC_MOVING_H_V73_FILES.md": {
+      "sha256": "5256952fb5e64013bee9466546ac6bf717ec34795bea9f4631ca98c3c00daaf2",
+      "bytes": 5799,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_frec_moving_h_accepted_checkpoint_v73.json": {
+      "sha256": "29a0927c258e5191474d2398ca40e3908564fd4efda53c4bd03b2666defd579d",
+      "bytes": 3627,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_frec_moving_h_result_v73.json": {
+      "sha256": "da8e54dd1c54ad879e05e9633ae67e3b90df9c4a76e1ef9b4527900f0cc48062",
+      "bytes": 27336,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_frec_moving_h_validation_v73.json": {
+      "sha256": "d64e760a5c6d55322a70cc832d55c25ec837815c3c47c13a354831bc370e3965",
+      "bytes": 8650,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_frec_moving_h_transition_validation_v73.json": {
+      "sha256": "03bd2b67ca61252c730fc804dc45ff5de7008d9e21928319da3419b279a0083b",
+      "bytes": 1151,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_frec_moving_h_acceptance_validation_v73.json": {
+      "sha256": "2799737f8dea2b8ef42dd93178e8ca00d1f653ada50bee3ce040afbb6cd1cb62",
+      "bytes": 1146,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_frec_moving_h_postaccept_validation_v73.json": {
+      "sha256": "837200ec00ba717dd01ca0b0ae04985c2cbc9aebaf16471a1b7ad30ecd741a1b",
+      "bytes": 1362,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_frec_moving_h_delivery_validation_v73.json": {
+      "sha256": "9f329db482b69614f1f92e0f6fff1a046d907be1740dafb1b0d976045f283729",
+      "bytes": 1174,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_frec_moving_h_spec_v73.json": {
+      "sha256": "5d24bedebac67902fc16b02edc5b85dbd2d1fcd0754089bcf272e93a42baf08f",
+      "bytes": 12294,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_v73_preaccept_supersession.json": {
+      "sha256": "e3ea3f62b254f2d9043df48b50248cc7e8e441a8e24ca5ba341e59196c922522",
+      "bytes": 1434,
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "q048_frec_moving_h_output_manifest_v73.json": {
+      "sha256": "53a16ae9f7a2e378e9f3bce298701320fa876742a8aad48c7a0fff629323e1b3",
+      "bytes": 9112,
+      "access": "VERIFIED_LOCAL_BYTES"
+    }
+  },
+  "source_register_extension": [
+    {
+      "id": "INTERNAL-V73-ACTUAL-ACCEPTED",
+      "origin": "INTERNAL",
+      "role": "SUPPORTS conditional actual admission on1100→1090 only",
+      "accepted_checkpoint_sha256": "29a0927c258e5191474d2398ca40e3908564fd4efda53c4bd03b2666defd579d",
+      "raw_sha256": "da8e54dd1c54ad879e05e9633ae67e3b90df9c4a76e1ef9b4527900f0cc48062",
+      "validation_sha256": "d64e760a5c6d55322a70cc832d55c25ec837815c3c47c13a354831bc370e3965",
+      "limitations": "Shared method/helpers; not independent physical evidence; does not supply complete four-case histories/tau bounds."
+    },
+    {
+      "id": "INTERNAL-V73-R1-SUPERSESSION",
+      "origin": "INTERNAL",
+      "role": "CONTEXT technical rejected attempt",
+      "sha256": "e3ea3f62b254f2d9043df48b50248cc7e8e441a8e24ca5ba341e59196c922522",
+      "limitations": "Rejected before acceptance; must not be counted as independent scientific support."
+    }
+  ],
+  "claim_evidence_map": [
+    {
+      "claim": "actual99/frontier1090 is accepted for hillipop-ede_n3 conditional moving-H path",
+      "role": "SUPPORTS",
+      "evidence": [
+        "q048_frec_moving_h_accepted_checkpoint_v73.json",
+        "q048_frec_moving_h_validation_v73.json",
+        "q048_frec_moving_h_transition_validation_v73.json",
+        "q048_frec_moving_h_acceptance_validation_v73.json",
+        "q048_frec_moving_h_postaccept_validation_v73.json"
+      ]
+    },
+    {
+      "claim": "Q048 exact full four-case x_e/tau bounds are complete",
+      "role": "DOES_NOT_SUPPORT",
+      "evidence": [
+        "Q048_FREC_MOVING_H_V73_RESULT.md"
+      ],
+      "reason": "V73 explicitly leaves complete histories/tau bounds absent and Q complete false."
+    },
+    {
+      "claim": "R1 is an independent supporting run",
+      "role": "CONTRADICTS",
+      "evidence": [
+        "q048_v73_preaccept_supersession.json"
+      ],
+      "reason": "R1 rejected before acceptance due validation-contract software bug."
+    }
+  ],
+  "completed_task_ledger": [
+    {
+      "task_id": "LOCAL-Q048-POST-V72-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+      "task_fingerprint": "eadb12fa9fb736445ed1de6274b7b4fd0974f8fb8cdb2aa02ac463edf5164490",
+      "execution_fingerprint": "07b2812748f6fad4c483e93cf0bfdce442d1c2929a6330b74c5914561fef2670",
+      "result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V73",
+      "status": "COMPLETED_ACCEPTED_ACTUAL_V73",
+      "no_repeat": true
+    },
+    {
+      "task_id": "LOCAL-Q048-POST-V73-MOVING-H-DOMAIN-1090-1080-MATH-V1",
+      "task_fingerprint": "851485af74d5d83a5664a5aabbb48431a831f33a503d3a0599adbee68632fdca",
+      "status": "PREPARED_NOT_EXECUTED",
+      "no_repeat": false
+    }
+  ],
+  "route_history": [
+    {
+      "from": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+      "to": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+      "artifact": "Q048_FREC_MOVING_H_V73_HANDOFF_TO_INGESTION.md",
+      "status": "INGESTED_ONCE"
+    },
+    {
+      "from": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+      "to": "BUBBLEVERSE.MATHEMATICS",
+      "task_id": "LOCAL-Q048-POST-V73-MOVING-H-DOMAIN-1090-1080-MATH-V1",
+      "status": "PREPARED_NOT_SENT"
+    }
+  ],
+  "anomalies": [
+    {
+      "id": "V73-R1-VALIDATION-CONTRACT-BUG",
+      "status": "EXPLAINED",
+      "scope": "technical only",
+      "evidence": "q048_v73_preaccept_supersession.json",
+      "impact": "R1 not accepted; R2 accepted after verifier contract correction. No physical anomaly claim."
+    },
+    {
+      "id": "V66-ARCHIVE-GAP",
+      "status": "UNRESOLVED_HISTORICAL_PROVENANCE",
+      "scope": "archival reproducibility",
+      "files": [
+        "q048_moving_h_domain_result_v66.json",
+        "q048_moving_h_domain_transition_validation_v66.json",
+        "q048_moving_h_domain_acceptance_validation_v66.json",
+        "q048_moving_h_domain_postaccept_validation_v66.json"
+      ],
+      "impact": "Do not reconstruct missing bytes; not a blocker for current locally available V73/V12 evidence."
+    }
+  ],
+  "completion_gate": {
+    "satisfied": false,
+    "reason": "Exact Q requires rigorously controlled complete four-case electron-fraction histories and cumulative Thomson optical-depth differences. V73 adds one conditional actual cell only; complete histories/tau bounds remain absent. A fresh theorem for1090→1080 is material before any further actual continuation."
+  },
+  "next_task_ref": "Q048_FREC_MOVING_H_V73_NEXT_MATHEMATICS_TASK_V1.json",
+  "next_task_fingerprint": "851485af74d5d83a5664a5aabbb48431a831f33a503d3a0599adbee68632fdca",
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit_sha": "d5df2b81526ea3db12b7a590bcf47302b280ba8b",
+    "tree_sha": "99490692a763c874834f7bec10f41c5c884cbad1",
+    "source_freshness": "VERIFIED",
+    "target_paths_status": "PROPOSED_FOR_NEW_INGESTION_FILES",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "read_evidence": "Current main/tree observed; key V73 local bytes match current Git blob SHAs; math prompt blob present unchanged. No repository mutation performed.",
+    "memory_update": {
+      "q_index": "Keep Q048 ACTIVE/INCONCLUSIVE; actual99/frontier1090; next one proof1090→1080",
+      "result_index": "Add one ingestion event for accepted V73; keep R1 supersession technical-only",
+      "task_route": "Mark V73 consumer completed/no-repeat; prepare exactly one Mathematics task V74",
+      "current_state": "Advance only after coherent manual upload and fresh pointer/path/schema verification"
+    }
+  },
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "None for this bounded continuation; no new Q/model promotion/paid compute."
+}
