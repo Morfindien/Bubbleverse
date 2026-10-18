@@ -1,0 +1,21 @@
+{
+  "schema": "bubbleverse.q048.v73.preaccept_supersession.v1",
+  "q": "Q048",
+  "task_id": "LOCAL-Q048-POST-V72-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "r1_status": "REJECTED_BEFORE_ACCEPTANCE",
+  "r1_result_sha256": "eac92531358696531a85e49cf68d903d094efa02db1b226a598810cf687599ee",
+  "r1_candidate_sha256": "8f4edf721bfc378ec21743fa9afc9a677db8e0a1c5ee4ad3af5792d32ae11c8a",
+  "r1_validation_sha256": "e932b7ab112acbd66e159057f69e19da9de40778a5675a51fce552f940feb515",
+  "r1_spec_sha256": "993e685f263e036bb6029a1b60c6d529187299a976180f8f7c185618868443d9",
+  "r1_verifier_sha256": "1512b89a162dad55336aa646d036822c8eaf9c1fdd8ed36f873e639081665eff",
+  "failure_class": "SOFTWARE_BUG / VALIDATION_CONTRACT",
+  "failure_detail": [
+    "Verifier expected shortened actual_before {count,frontier} instead of the frozen complete initial_actual_state object.",
+    "Verifier expected obsolete return-route spelling with a space before 2.1.0."
+  ],
+  "science_interpretation": "No physical/source/domain inequality failed. R1 produced no accepted checkpoint and was not promoted.",
+  "repeat_reason": "Verifier contract bug corrected; verifier refrozen before R2 producer. Re-execution justified by changed validation implementation, not reassurance.",
+  "r2_execution_fingerprint": "07b2812748f6fad4c483e93cf0bfdce442d1c2929a6330b74c5914561fef2670",
+  "history_preserved": true,
+  "created_at_utc": "2026-10-18T14:52:28.218217+00:00"
+}

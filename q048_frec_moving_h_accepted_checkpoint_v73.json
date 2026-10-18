@@ -1,0 +1,85 @@
+{
+  "schema": "bubbleverse.q048.frec_moving_h.accepted_checkpoint.v73",
+  "q": "Q048",
+  "target_q": "Q048",
+  "status": "VALIDATED",
+  "technical_state": "PASS",
+  "checkpoint_kind": "ACCEPTED_ACTUAL",
+  "scientific_scope": "CONDITIONAL_SOURCE_REAL_ACTUAL_ADMISSION_ONLY",
+  "actual_before": {
+    "count": 98,
+    "frontier": 1100,
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v71.json",
+    "accepted_checkpoint_sha256": "30bc63d42b81b764e62d3b83e8b2c4403b1fa9f18bbc5c4e9bedc8de4cd6c44b",
+    "endpoint": {
+      "a": "1/1101",
+      "E": "9832322208333823227/125000000000000000",
+      "Y": "15678333641757734547/250000000000000000",
+      "Vbar": "15280857970487995643/1000000000000000000"
+    },
+    "connected_lower": "181825173747167/250000000000000000",
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1100
+    },
+    "other_frontiers": [
+      1440,
+      1440,
+      1440
+    ]
+  },
+  "accepted_actual": {
+    "count": 99,
+    "frontier": 1090
+  },
+  "other_frontiers": [
+    1440,
+    1440,
+    1440
+  ],
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 1090
+  },
+  "endpoint": {
+    "a": "1/1091",
+    "E": "76274181002023646167/1000000000000000000",
+    "Y": "15200791231838939509/250000000000000000",
+    "Vbar": "7413195202445029729/500000000000000000"
+  },
+  "connected_lower": "702011125688817/1000000000000000000",
+  "K_upper": "168632005355020195097/31250000000000000",
+  "candidate_checkpoint_sha256": "174bf992f76d5d3a2c89d56d090523fbe01e03b6de9695a3cffee0c6bc35db53",
+  "parent_sha256": "30bc63d42b81b764e62d3b83e8b2c4403b1fa9f18bbc5c4e9bedc8de4cd6c44b",
+  "proof_accepted_checkpoint_sha256": "a468a7f755502fb9000a84a1103c5395e5aed745fc4174475c89e5e5b0c851a1",
+  "proof_validation_sha256": "cd964e49b03822a217da8430f4bef7f16c1ee15dfcf9a84330a134ef023f18c5",
+  "source_result_sha256": "da8e54dd1c54ad879e05e9633ae67e3b90df9c4a76e1ef9b4527900f0cc48062",
+  "validation_sha256": "d64e760a5c6d55322a70cc832d55c25ec837815c3c47c13a354831bc370e3965",
+  "transition_validation_sha256": "03bd2b67ca61252c730fc804dc45ff5de7008d9e21928319da3419b279a0083b",
+  "acceptance_validation_sha256": "2799737f8dea2b8ef42dd93178e8ca00d1f653ada50bee3ce040afbb6cd1cb62",
+  "task_id": "LOCAL-Q048-POST-V72-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+  "task_fingerprint": "eadb12fa9fb736445ed1de6274b7b4fd0974f8fb8cdb2aa02ac463edf5164490",
+  "execution_fingerprint": "07b2812748f6fad4c483e93cf0bfdce442d1c2929a6330b74c5914561fef2670",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "no_physical_reset": true,
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED",
+  "no_native_trajectory_claim": true,
+  "accepted_at_utc": "2026-10-18T14:51:06.953086+00:00",
+  "technical_adapter_revision": "V73: V71 consumer method rebound to accepted V72 proof/row35 and V71 parent; fresh code frozen before execution",
+  "missing_historical_evidence": [
+    "q048_moving_h_domain_result_v66.json",
+    "q048_moving_h_domain_transition_validation_v66.json",
+    "q048_moving_h_domain_acceptance_validation_v66.json",
+    "q048_moving_h_domain_postaccept_validation_v66.json"
+  ],
+  "resume_rule": "Return exactly once to Result Ingestion2.1.0; actual99/frontier1090; no below1090 continuation in this Builder task."
+}
