@@ -1,0 +1,255 @@
+{
+  "schema": "bubbleverse.q048.v76.ingestion_state.v1",
+  "created_at_utc": "2026-10-18T15:56:42+00:00",
+  "prompt_id": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+  "prompt_version": "2.1.0",
+  "prompt_file": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.1.0-102.md",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "incoming_result": {
+    "result_id": "LOCAL-Q048-MOVING-H-DOMAIN-V76",
+    "run_id": "LOCAL-Q048-MOVING-H-DOMAIN-V76-2026-10-18T15:47:31.953491+00:00",
+    "task_id": "LOCAL-Q048-POST-V75-MOVING-H-DOMAIN-1080-1070-MATH-V1",
+    "task_fingerprint": "3e6a72f68ef10b8aaf45a6f7db5c7b624b8361108affde106fa443219389ad19",
+    "execution_fingerprint": "4d31cacc3e0bf38aebec6853d180b46122a8f6b4dd2fde9bb4cf081e82ede3de",
+    "class": "MATHEMATICAL_RESULT",
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED",
+    "reproducibility": "REPRODUCED_WITH_SHARED_METHOD_DEPENDENCIES",
+    "robustness": "ROBUST_WITHIN_TESTED_DOMAIN",
+    "scientific_effect": "SUPPORTS_CONDITIONAL_PROOF_CELL_ONLY",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "accepted_proof": {
+    "cell_z": [
+      1080,
+      1070
+    ],
+    "cell_a": [
+      "1/1081",
+      "1/1071"
+    ],
+    "accepted_checkpoint_sha256": "c26b01d351e6c7321dcebce1019b44dd3b7998d55a0fd4d5873757df4271b6e9",
+    "raw_sha256": "8c6bcd5f7dfd85a04a3de0d6a42a0af95dc72c2f8661b1c7fa76d8641b18d306",
+    "validation_sha256": "d1a89746ca58e3b2188515ca231eecfc33c783253086fc34414bc38e96fd05c2",
+    "transition_sha256": "33dce1fb31de3347154bd861afeaf7e41a1a2189ea57f7223940d9a5f7e21da5",
+    "acceptance_sha256": "71bfa36210ca5ac72609bb3ab43ea478c6ce24866a1df5d0ee1527689e53fdf8",
+    "postaccept_sha256": "92a265739d532c3efc36c73a87fb1d54ed1bf6b651bb9a75f4b8babf44367ead",
+    "delivery_sha256": "041cf532ec862d27aa7b432ddc70e1e46e6d73752ce4b1687ceb59e51c27ef4f",
+    "K_upper": "5262694813308365771353/1000000000000000000",
+    "comparison_start_lower": "339247127885099/500000000000000000",
+    "whole_cell_lower": "656570878294307/1000000000000000000",
+    "new_math_proof_cells": 1,
+    "new_actual_cells": 0
+  },
+  "accepted_actual": {
+    "count": 100,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1080
+    },
+    "scalar_endpoint": {
+      "a": "1/1081",
+      "E": "18485357619136918837/250000000000000000",
+      "Y": "58934562134304345179/1000000000000000000",
+      "Vbar": "2876316432263304949/200000000000000000"
+    },
+    "connected_lower": "339247127885099/500000000000000000",
+    "parent_checkpoint_sha256": "1f8bf1334581495b684e43e106c8392f170d62bc202daa8f848ed7257515adb3"
+  },
+  "candidate_next_actual": {
+    "status": "NOT_YET_COMPUTED_NOT_ACCEPTED",
+    "count": 101,
+    "frontier": 1070,
+    "endpoint": {
+      "a": "1/1071",
+      "E": "71659661861302702229/1000000000000000000",
+      "Y": "7138373741647196083/125000000000000000",
+      "Vbar": "13946310597786586333/1000000000000000000"
+    },
+    "connected_lower": "656570878294307/1000000000000000000"
+  },
+  "superseded_material": [
+    {
+      "file": "q048_v76_preaccept_acceptor_supersession.json",
+      "sha256": "c8c2ffcb0599134851baff1a5d79a0c5fcca460a0bc4098587a159888d0cb3d4",
+      "status": "REJECTED_BEFORE_ACCEPTANCE",
+      "effect": "Technical validation-contract defect only; producer/verifier not rerun; not independent science."
+    }
+  ],
+  "source_register_extension": [
+    {
+      "id": "INTERNAL-V76-PROOF-ACCEPTED",
+      "origin": "INTERNAL",
+      "role": "SUPPORTS conditional proof1080→1070 only",
+      "accepted_checkpoint_sha256": "c26b01d351e6c7321dcebce1019b44dd3b7998d55a0fd4d5873757df4271b6e9",
+      "limitations": "Does not itself create actual101/frontier1070 or complete four-case histories/tau bounds."
+    },
+    {
+      "id": "INTERNAL-V76-ACCEPTOR-R1",
+      "origin": "INTERNAL",
+      "role": "CONTEXT technical rejected acceptance attempt",
+      "sha256": "c8c2ffcb0599134851baff1a5d79a0c5fcca460a0bc4098587a159888d0cb3d4",
+      "limitations": "Not independent scientific support."
+    }
+  ],
+  "claim_evidence_map": [
+    {
+      "claim": "conditional moving-H proof coverage exists for1080→1070",
+      "role": "SUPPORTS",
+      "evidence": [
+        "q048_moving_h_domain_accepted_checkpoint_v76.json",
+        "q048_moving_h_domain_validation_v76.json",
+        "q048_moving_h_domain_transition_validation_v76.json",
+        "q048_moving_h_domain_acceptance_validation_v76.json",
+        "q048_moving_h_domain_postaccept_validation_v76.json"
+      ]
+    },
+    {
+      "claim": "actual101/frontier1070 is accepted",
+      "role": "DOES_NOT_SUPPORT",
+      "evidence": [
+        "q048_moving_h_domain_accepted_checkpoint_v76.json"
+      ],
+      "reason": "Proof checkpoint explicitly retains actual100/frontier1080 and zero new actual cells."
+    },
+    {
+      "claim": "Q048 exact full four-case x_e/tau bounds are complete",
+      "role": "DOES_NOT_SUPPORT",
+      "evidence": [
+        "q048_moving_h_domain_result_v76.json"
+      ],
+      "reason": "q_complete, complete_a1_certificate, final_delta_xe_bounds_computed and final_delta_tau_bounds_computed are false."
+    }
+  ],
+  "completed_task_ledger": [
+    {
+      "task_id": "LOCAL-Q048-POST-V75-MOVING-H-DOMAIN-1080-1070-MATH-V1",
+      "task_fingerprint": "3e6a72f68ef10b8aaf45a6f7db5c7b624b8361108affde106fa443219389ad19",
+      "execution_fingerprint": "4d31cacc3e0bf38aebec6853d180b46122a8f6b4dd2fde9bb4cf081e82ede3de",
+      "result_id": "LOCAL-Q048-MOVING-H-DOMAIN-V76",
+      "status": "COMPLETED_ACCEPTED_PROOF_V76",
+      "no_repeat": true
+    },
+    {
+      "task_id": "LOCAL-Q048-POST-V76-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+      "task_fingerprint": "18cd852f617101f2ea1353a38beaeb2e1f7dd560df244d8b936c9916d3cfb1c1",
+      "status": "PREPARED_NOT_EXECUTED",
+      "no_repeat": false
+    }
+  ],
+  "route_history": [
+    {
+      "from": "BUBBLEVERSE.MATHEMATICS",
+      "to": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+      "artifact": "Q048_MOVING_H_DOMAIN_V76_HANDOFF_TO_INGESTION.md",
+      "status": "INGESTED_ONCE"
+    },
+    {
+      "from": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+      "to": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+      "task_id": "LOCAL-Q048-POST-V76-MOVING-H-ACTUAL-CONSUMER-ONE-CELL-V1",
+      "status": "PREPARED_NOT_SENT"
+    }
+  ],
+  "anomalies": [
+    {
+      "id": "V76-ACCEPTOR-R1-STALE-THEOREM-REF",
+      "status": "EXPLAINED",
+      "scope": "technical only",
+      "evidence": "q048_v76_preaccept_acceptor_supersession.json",
+      "impact": "No accepted R1 checkpoint and no science rerun; R2 changed only theorem-lineage filename."
+    },
+    {
+      "id": "V66-ARCHIVE-GAP",
+      "status": "UNRESOLVED_HISTORICAL_PROVENANCE",
+      "scope": "archival reproducibility",
+      "files": [
+        "q048_moving_h_domain_result_v66.json",
+        "q048_moving_h_domain_transition_validation_v66.json",
+        "q048_moving_h_domain_acceptance_validation_v66.json",
+        "q048_moving_h_domain_postaccept_validation_v66.json"
+      ],
+      "impact": "Do not reconstruct missing bytes; not a current blocker."
+    }
+  ],
+  "completion_gate": {
+    "satisfied": false,
+    "reason": "Exact Q requires rigorously controlled complete electron-fraction histories and cumulative Thomson optical-depth difference bounds for all four configurations. V76 adds one conditional theorem cell only; complete histories/final delta_xe/delta_tau bounds remain absent. The accepted theorem now makes one actual consumer1080→1070 the single material next obligation."
+  },
+  "next_engine": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "version": "2.2.0",
+    "prompt_path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38-1.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "prompt_git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a"
+  },
+  "next_task_ref": "Q048_MOVING_H_DOMAIN_V76_NEXT_BUILDER_TASK_V1.json",
+  "next_task_fingerprint": "18cd852f617101f2ea1353a38beaeb2e1f7dd560df244d8b936c9916d3cfb1c1",
+  "no_repeat": [
+    "V76 science proof/validation",
+    "V75 actual consumer/validation",
+    "V12 guard regeneration",
+    "V76 acceptor R1 as scientific support",
+    "historical diagnostics"
+  ],
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "accepted_model_change": false,
+  "motor14_selected": false,
+  "scientific_execution_during_ingestion": {
+    "producer_runs": 0,
+    "verifier_runs": 0,
+    "new_science_cells": 0
+  },
+  "journal": {
+    "source": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V76_APPENDED_V1.md",
+    "source_sha256": "12cc1e72888a0775179989377ebc5c7888222449024e7335a2698744570a5217",
+    "source_bytes": 14235740,
+    "target": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V76_INGESTED_V1.md",
+    "target_sha256": "09ba195aa975b013fb8a0329359f6aac343df52392ca4e2eeedc601099533699",
+    "target_bytes": 14238353,
+    "prior_bytes_preserved_as_exact_suffix": true,
+    "prefix_bytes": 2613
+  },
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit_sha": "5747558fa664afa6719d045c4b75bc661e13213d",
+    "tree_sha": "df1c645daeb2c710497aa1ae5051853dc5fbde3b",
+    "source_freshness": "VERIFIED",
+    "v76_core_repo_byte_match": true,
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "memory_update": {
+      "q_index": "Keep Q048 ACTIVE/INCONCLUSIVE; actual100/frontier1080; accepted proof1080→1070; next one actual consumer1080→1070",
+      "result_index": "Add one V76 ingestion event; preserve acceptor R1 technical supersession",
+      "task_route": "Mark V76 proof completed/no-repeat; prepare exactly one Builder actual-consumer task V77",
+      "current_state": "Advance only after coherent manual upload and fresh pointer/path/schema verification"
+    }
+  },
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "None for bounded continuation; no new Q/model promotion/paid compute.",
+  "validation": {
+    "file": "Q048_MOVING_H_DOMAIN_V76_INGESTION_VALIDATION_V1.json",
+    "sha256": "6616d1993a4c77e043038bc8edba96d47a9e6b92ed7afc5f1f6585fa97257980",
+    "checks_passed": 65,
+    "checks_total": 65,
+    "status": "PASS"
+  }
+}
