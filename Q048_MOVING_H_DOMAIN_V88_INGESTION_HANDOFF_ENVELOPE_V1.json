@@ -1,0 +1,63 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-V88-ACCEPTED-PROOF-INGESTION-V1-TO-BUILDER",
+  "created_at_utc": "2026-10-19T07:59:03.999523+00:00",
+  "case_id": null,
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": "Q001–Q048; external source-date cutoff NOT_DOCUMENTED",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-V88-ACCEPTED-PROOF-INGESTION-V1"
+  ],
+  "source_state_version": "V88_MATHEMATICS_ACCEPTED_PROOF",
+  "target_state_version": "V88_INGESTED_V1",
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+  "engine_registry_ref": "EXISTING_PROMPT_SHA256:49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+  "execution_profile_ref": "HIGH_REASONING + LOCAL_RUNTIME recommended for bounded consumer; selectable model settings NOT_VERIFIED",
+  "journal_ref": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V88_INGESTED_V1.md",
+  "source_register_ref": "Q048_MOVING_H_DOMAIN_V88_INGESTION_STATE_V1.json",
+  "claim_evidence_map_ref": "Q048_MOVING_H_DOMAIN_V88_INGESTION_STATE_V1.json",
+  "result_provenance_ref": "Q048_MOVING_H_DOMAIN_V88_INGESTION_STATE_V1.json",
+  "anomaly_tension_registry_ref": "Q048_MOVING_H_DOMAIN_V88_INGESTION_STATE_V1.json",
+  "completed_task_ledger_ref": "Q048_MOVING_H_DOMAIN_V88_INGESTION_STATE_V1.json",
+  "route_history_ref": "Q048_MOVING_H_DOMAIN_V88_INGESTION_STATE_V1.json",
+  "integrity_manifest_ref": "Q048_MOVING_H_DOMAIN_V88_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "Accepted V88 mathematical proof1030→1020 documented in ingestion state",
+    "Repository base reconciled to current HEAD after Jim upload",
+    "Exactly one next Builder consumer task prepared"
+  ],
+  "frozen_configuration_refs": [
+    "3384168d6578663d252b9cb5114b4862976fa515d88b2fca811849783d0e5f27",
+    "9e86d0326910f4f3d977e054360c379e1d36d1cd0cba11f455526bee23c63aab",
+    "d3d108a72bef7c924f934a6c7910c6629c9645eaed8b36ac69d40a8054f80c25"
+  ],
+  "open_material_uncertainties": [
+    "complete four-case x_e histories missing",
+    "cumulative tau_T difference bounds missing",
+    "NativeP6 unresolved"
+  ],
+  "missing_information": [
+    "Raw V88 machine artifact bytes not in supplied seven-file GitHub commit; hashes are preserved. Recover exact bytes only if Builder preflight requires them."
+  ],
+  "next_task": "LOCAL-Q048-POST-V88-ACTUAL-CONSUMER-1030-1020-V1",
+  "success_condition": "Exactly one accepted actual consumer for 1030→1020 with current actual becoming106/frontier1020 and endpoint matching committed primary row42 under the accepted V88 proof.",
+  "failure_or_falsification_condition": "First precise obstruction, failed gate, missing required exact artifact, hash/layout/state mismatch or validation failure; preserve current actual105/frontier1030.",
+  "stop_condition": "first obstruction OR one accepted consumer OR 300 science seconds; no below1020",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Complete four-case histories and cumulative optical-depth difference bounds are absent.",
+  "handoff_completeness": "COMPLETE_FOR_ROUTE_WITH_EXPLICIT_PREFLIGHT_ARTIFACT_GATE",
+  "repository_source_freshness": "VERIFIED",
+  "github_sync": "USER_UPLOAD_PENDING_FOR_NEW_INGESTION_FILES",
+  "scientific_handoff": "PREPARED_NOT_SENT"
+}

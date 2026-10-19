@@ -1,0 +1,187 @@
+{
+  "schema": "Q048_MOVING_H_DOMAIN_V88_INGESTION_VALIDATION_V1",
+  "created_at_utc": "2026-10-19T07:59:03.999523+00:00",
+  "status": "PASS",
+  "checks_total": 33,
+  "checks_passed": 33,
+  "checks": [
+    {
+      "check": "engine_prompt_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "builder_prompt_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "incoming_journal_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "incoming_result_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "incoming_handoff_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "incoming_files_index_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "incoming_manifest_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "incoming_delivery_validation_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "accepted_checkpoint_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "accepted_checkpoint_validated",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "proof_cell_exact",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "actual_not_promoted",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "one_new_math_proof",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "delivery_11_of_11",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "duplicate_event_absent",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "journal_exact_suffix",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "question_hash",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "task_fingerprint_recomputes",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "planned_parent_state_105_1030",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "planned_success_state_106_1020",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "no_new_proof_in_next_task",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "max_one_actual_cell",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "repo_head_read_verified",
+      "pass": true,
+      "source": "GITHUB_CONNECTOR",
+      "detail": "efeb33b025fee37c6d0c4d9e3ac83214d69101f0"
+    },
+    {
+      "check": "repo_seven_core_files_exact_blob_match",
+      "pass": true,
+      "source": "GITHUB_CONNECTOR+LOCAL_GIT_BLOB",
+      "detail": "journal,result,handoff,file-index,manifest,delivery-validation,accepted checkpoint"
+    },
+    {
+      "check": "builder_alias_blob_verified",
+      "pass": true,
+      "source": "GITHUB_CONNECTOR",
+      "detail": "...-38.md and ...-38-1.md -> e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a"
+    },
+    {
+      "check": "manifest_file_Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V88_INGESTED_V1.md",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "manifest_file_Q048_MOVING_H_DOMAIN_V88_INGESTION_RESULT_V1.md",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "manifest_file_Q048_MOVING_H_DOMAIN_V88_INGESTION_STATE_V1.json",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "manifest_file_Q048_MOVING_H_DOMAIN_V88_NEXT_BUILDER_TASK_V1.json",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "manifest_file_Q048_MOVING_H_DOMAIN_V88_INGESTION_HANDOFF_TO_BUILDER_V1.md",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "manifest_file_Q048_MOVING_H_DOMAIN_V88_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "manifest_file_Q048_MOVING_H_DOMAIN_V88_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+      "pass": true,
+      "source": "LOCAL"
+    },
+    {
+      "check": "manifest_file_Q048_MOVING_H_DOMAIN_V88_INGESTION_FILES_V1.md",
+      "pass": true,
+      "source": "LOCAL"
+    }
+  ],
+  "manifest_sha256": "1144a472f0336739a5598b1aaf46523b59c2706a701513cdee9cd669a9917e69",
+  "journal_sha256": "1a773d0b9b6f74c1ac9e98950b07ff29e2dac1b2578a01766baf90cf3ecc503e",
+  "incoming_journal_sha256": "9e24edb47cabf5328af7f363e602fb605ecb9225aec88a63a626b5de051d70bf",
+  "incoming_journal_preserved_byteidentical_suffix": true,
+  "repository_source_freshness": "VERIFIED",
+  "repository_base_commit": "efeb33b025fee37c6d0c4d9e3ac83214d69101f0",
+  "github_write_state": "READY_FOR_MANUAL_UPLOAD",
+  "return_route": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+  "prepared_not_sent": true,
+  "artifact_access_note": "Accepted checkpoint/core delivery supplied and repository-verified. Raw/validator/transition/acceptance/postaccept bytes are hash-addressed by the checkpoint/manifest but were not present in the seven-file GitHub V88 upload observed at HEAD. Do not reconstruct them; recover exact bytes if a downstream preflight requires them."
+}

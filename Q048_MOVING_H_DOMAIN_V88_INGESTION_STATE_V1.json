@@ -1,0 +1,166 @@
+{
+  "schema": "bubbleverse.q048.v88.accepted_proof_ingestion_state.local.v1",
+  "created_at_utc": "2026-10-19T07:59:03.999523+00:00",
+  "created_at_local": "2026-10-19T09:59:03.999523+02:00",
+  "event_id": "LOCAL-Q048-V88-ACCEPTED-PROOF-INGESTION-V1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "ingestion_state": "NEW",
+  "duplicate_check": "EVENT_ID_ABSENT_FROM_INCOMING_JOURNAL",
+  "workflow_state": "READY_FOR_HANDOFF",
+  "case_lifecycle": "ACTIVE",
+  "scientific_state": "INCONCLUSIVE",
+  "technical_state": "PASS",
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "incoming": {
+    "journal": {
+      "filename": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V88_APPENDED_V1.md",
+      "sha256": "9e24edb47cabf5328af7f363e602fb605ecb9225aec88a63a626b5de051d70bf",
+      "bytes": 14331718
+    },
+    "result": {
+      "filename": "Q048_MOVING_H_DOMAIN_V88_RESULT.md",
+      "sha256": "b47c0baf835aa7f42ebe92ca9268f4db4c05b2afdc27ff1395dfff2bc6a04e94",
+      "bytes": 4989
+    },
+    "handoff": {
+      "filename": "Q048_MOVING_H_DOMAIN_V88_HANDOFF_TO_INGESTION.md",
+      "sha256": "83d3e44100e72cf95a9019ee2c108824ea866b522b8a7e544228b2fb6f66c02c",
+      "bytes": 3464
+    },
+    "files_index": {
+      "filename": "Q048_MOVING_H_DOMAIN_V88_FILES.md",
+      "sha256": "17e456cb2420f3ff9faae7a01565d103f74e075011eabfab81e91a6d20e1965b",
+      "bytes": 3502
+    },
+    "manifest": {
+      "filename": "Q048_MOVING_H_DOMAIN_V88_OUTPUT_MANIFEST.json",
+      "sha256": "6d8b9f1af8b5f0e7e333597b3ee8940e4aae05b9a0b32db6990cfdfdfd89d87e",
+      "bytes": 5582
+    },
+    "delivery_validation": {
+      "filename": "Q048_MOVING_H_DOMAIN_V88_DELIVERY_VALIDATION.json",
+      "sha256": "8239ca59e3c59f98169ee2b8aec49281fab41f10643695ff404a0c53e83bd71e",
+      "bytes": 1409
+    },
+    "accepted_checkpoint": {
+      "filename": "q048_moving_h_domain_accepted_checkpoint_v88.json",
+      "sha256": "3384168d6578663d252b9cb5114b4862976fa515d88b2fca811849783d0e5f27",
+      "bytes": 6283
+    }
+  },
+  "repository_basis": {
+    "repository": "Morfindien/Bubbleverse",
+    "head_commit": "efeb33b025fee37c6d0c4d9e3ac83214d69101f0",
+    "head_tree": "d59f19c25aafa2e198b520338ea27e7fefc349ad",
+    "verified_at_utc": "2026-10-19T07:59:03.999523+00:00",
+    "verification": "GitHub connector read; commit changed exactly the seven supplied V88 core files; local Git blob SHA matched repository blob SHA for all seven.",
+    "source_freshness": "VERIFIED"
+  },
+  "current_actual_authority": {
+    "count": 105,
+    "frontier": 1030,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1030
+    },
+    "endpoint": {
+      "a": "1/1031",
+      "E": "15757303249921163049/250000000000000000",
+      "Y": "50196354320893086329/1000000000000000000",
+      "Vbar": "12298156233841917289/1000000000000000000"
+    },
+    "connected_lower": "72472555723359/125000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v87.json",
+    "accepted_checkpoint_sha256": "8f52b0df530c8baa878c3ce4a19c4e474ace716d97052bad74397cb74cebc18d"
+  },
+  "accepted_math_proof": {
+    "checkpoint": "q048_moving_h_domain_accepted_checkpoint_v88.json",
+    "checkpoint_sha256": "3384168d6578663d252b9cb5114b4862976fa515d88b2fca811849783d0e5f27",
+    "raw": "q048_moving_h_domain_result_v88.json",
+    "raw_sha256": "86e1b4c9bed23d1d8ce2bd3485d43a4474916a0c4ffa27c89516a90594e59741",
+    "validation": "q048_moving_h_domain_validation_v88.json",
+    "validation_sha256": "da73b3ea33ba3c55d2bef4420b3a907c20ba712335bb7bbbed55aa52de6bb073",
+    "transition": "q048_moving_h_domain_transition_validation_v88.json",
+    "transition_sha256": "5eca5324c5de79a86a96aa73744238550c6d32a01da133f243a2f0276f79120e",
+    "acceptance": "q048_moving_h_domain_acceptance_validation_v88.json",
+    "acceptance_sha256": "08686732ec043501cce9a1c89e7dcacea904aea39593af7572adf163b053f7c8",
+    "postaccept": "q048_moving_h_domain_postaccept_validation_v88.json",
+    "postaccept_sha256": "9f223edf87e5ef74ded818986e85fb7d23b4a74065ae3bf45799f7b842483e0c",
+    "spec_sha256": "9e86d0326910f4f3d977e054360c379e1d36d1cd0cba11f455526bee23c63aab",
+    "execution_fingerprint": "95e322cda7c57336a37c0e1bb3c0f97f3db58dcf09f8355f3a1617efe5b4ef71",
+    "cell_z": [
+      1030,
+      1020
+    ],
+    "cell_a": [
+      "1/1031",
+      "1/1021"
+    ],
+    "initial_lower": "72472555723359/125000000000000000",
+    "whole_cell_lower": "563445113766083/1000000000000000000",
+    "K_upper": "1274114432364259590793/250000000000000000",
+    "status": "ACCEPTED_MATHEMATICAL_PROOF_ONLY",
+    "availability_note": "Accepted checkpoint/core delivery supplied and repository-verified. Raw/validator/transition/acceptance/postaccept bytes are hash-addressed by the checkpoint/manifest but were not present in the seven-file GitHub V88 upload observed at HEAD. Do not reconstruct them; recover exact bytes if a downstream preflight requires them."
+  },
+  "guard_binding": {
+    "row_index": 42,
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "primary_row_sha256": "4e40e42043bbaf6468001d7ffb75160d02fc3700e1f714463b0dcbfccfbd06fd",
+    "control_row_sha256": "fff963e51d5364ab21264e6134dd8ffb699d1ae70bada1d9b1d36946d8ff5d64",
+    "left": {
+      "a": "1/1031",
+      "E": "15757303249921163049/250000000000000000",
+      "Y": "50196354320893086329/1000000000000000000",
+      "Vbar": "12298156233841917289/1000000000000000000"
+    },
+    "right_candidate": {
+      "a": "1/1021",
+      "E": "60992481776499366803/1000000000000000000",
+      "Y": "24282981898453037871/500000000000000000",
+      "Vbar": "5954373198555118633/500000000000000000"
+    },
+    "control_role": "GUARD_ONLY_CONSERVATIVE_TRACK_NOT_ACTUAL_PRIMARY_STATE",
+    "glue_rule": "Primary a/E/Y/V_previous exactly match accepted V87 actual endpoint; no reset. Control remains guard-only."
+  },
+  "scientific_effect": {
+    "adds": "One documentary ingestion receipt for the existing accepted V88 conditional proof1030→1020.",
+    "confirms": "Accepted mathematical proof is available for the next cell while actual remains105/frontier1030.",
+    "does_not_add": [
+      "new science",
+      "new proof",
+      "new actual cell",
+      "independent R3 support",
+      "native x_e history",
+      "physical confirmation"
+    ],
+    "completion_gate": "NOT_SATISFIED",
+    "missing": [
+      "complete four-case x_e(z) histories",
+      "cumulative tau_T(z) difference bounds"
+    ]
+  },
+  "historical_preservation": [
+    "Q047 closure",
+    "V79 failure",
+    "8 ancillary gaps",
+    "V81 red-log gap",
+    "11 unavailable V84 originals",
+    "documented later prefreeze corrections"
+  ],
+  "selected_next_engine": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+  "selected_next_task_id": "LOCAL-Q048-POST-V88-ACTUAL-CONSUMER-1030-1020-V1",
+  "next_task_fingerprint": "d3d108a72bef7c924f934a6c7910c6629c9645eaed8b36ac69d40a8054f80c25",
+  "artifact_access_gap": "Accepted checkpoint/core delivery supplied and repository-verified. Raw/validator/transition/acceptance/postaccept bytes are hash-addressed by the checkpoint/manifest but were not present in the seven-file GitHub V88 upload observed at HEAD. Do not reconstruct them; recover exact bytes if a downstream preflight requires them.",
+  "github_write_state": "READY_FOR_MANUAL_UPLOAD",
+  "scientific_handoff": "PREPARED_NOT_SENT"
+}
