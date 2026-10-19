@@ -1,0 +1,293 @@
+{
+  "schema_id": "bubbleverse.q048.next_mathematics_task",
+  "schema_version": "2.1.0",
+  "created_at_utc": "2026-10-19T15:38:48.403796+00:00",
+  "task_id": "LOCAL-Q048-POST-V101-MOVING-H-DOMAIN-970-960-MATH-V1",
+  "registration": "LOCAL_ID_NOT_GLOBALLY_REGISTERED",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "case_id": "NOT_ASSIGNED/PROPOSED_UNVERIFIED (preserved historical field; exact Q identifies this continuing case)",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "engine_prompt_ref": {
+    "path": "Bubbleverse_Matematikmotor_2.1.0-121.md",
+    "bytes": 56414,
+    "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "hash_status": "COMPUTED"
+  },
+  "objective": "Establish one fresh moving-H full-domain proof for hillipop-ede_n3 on z=970→960 from accepted V101 actual111/frontier970, or identify the first precise obstruction. No actual advancement.",
+  "cell_z": [
+    970,
+    960
+  ],
+  "cell_a": [
+    "1/971",
+    "1/961"
+  ],
+  "parent_checkpoint": {
+    "path": "q048_frec_moving_h_accepted_checkpoint_v101.json",
+    "bytes": 1718,
+    "sha256": "270e615ae9ee8455ce5ddb1c0d28ff24efa478db1db0e09c55ce8015bf434686",
+    "hash_status": "COMPUTED"
+  },
+  "parent_actual": {
+    "count": 111,
+    "frontier": 970
+  },
+  "parent_endpoint": {
+    "a": "1/971",
+    "E": "2575086164999170119/50000000000000000",
+    "Y": "40971463401285721027/1000000000000000000",
+    "Vbar": "10091499069585277963/1000000000000000000"
+  },
+  "parent_connected_lower": "492108035315773/1000000000000000000",
+  "parent_K_upper_historical_only": "5080670052472740707779/1000000000000000000",
+  "inherited_mathematical_method": {
+    "reference": {
+      "path": "q048_v100_refined_thermal_proof.py",
+      "bytes": 5124,
+      "sha256": "61c4ecbba5b0ad93eb0eacf0fdaa4b1e7277c4347db2caf429a6eaa141746157",
+      "hash_status": "COMPUTED"
+    },
+    "accepted_reference_cell_only": [
+      980,
+      970
+    ],
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "epsilon": "1/1000000",
+    "h_upper": "99999/100000",
+    "explicit_environment_requirement": "Freeze WHI=1/50 or an equivalent exact explicit parameter. The reference script default WHI=0.01 is NOT the accepted V100 domain. Do not execute the old script unchanged; it hardcodes parent V97, row47 and 980→970.",
+    "parent_domain_containment": "Verify inherited thermal enclosure at new-cell boundary; no physical state reset."
+  },
+  "guard_binding": {
+    "source": {
+      "path": "q048_guard_local_v_result_v12.json",
+      "bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "hash_status": "COMPUTED"
+    },
+    "read_scope": "ROW48_METADATA_ONLY; no guard rerun",
+    "primary": {
+      "a0": "1/971",
+      "a1": "1/961",
+      "z0": 970,
+      "z1": 960,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "476307225149896993/25000000000000000",
+        "H_upper_left": "1504566593371371227/250000000000000000",
+        "X_upper_left": "10149061365464631221/1000000000000000000",
+        "V_candidate_upper": "4876592093839665491/500000000000000000",
+        "retained_Vbar": "10091499069585277963/1000000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "2575086164999170119/50000000000000000",
+      "Y_left": "40971463401285721027/1000000000000000000",
+      "V_previous": "10091499069585277963/1000000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "51148699075385892487/1000000000000000000",
+      "V_local": "4876592093839665491/500000000000000000",
+      "V_admitted": "4876592093839665491/500000000000000000",
+      "equilibrium_upper": "169620594568336191/31250000000000000",
+      "amplitude": "7108720875019792583/200000000000000000",
+      "constant_energy_part": "22432323631662461259/1437500000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "480150713083526059/500000000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "19976857468620129809/500000000000000000",
+      "raw_G_lower": "382946889393454567798114666118626183746332649737047186310125303050942737442130931756389576428028004257712450164677714247229/71490215233906829809836198171105495764440571677118734382066696678391677695551672732876800000000000000000000000000000000000",
+      "G_lower": "5356633605599051319/1000000000000000000",
+      "Y_right_candidate": "39560432998711765483/1000000000000000000",
+      "E_right_candidate": "49737668672811936943/1000000000000000000",
+      "endpoint_energy_envelope": "49737668672811936943/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "961/971",
+      "R_at_left": "4419422668745054785065170543469266445733173475234707393043482828978968057265922554730043588084797/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "22755429778384513067937565909762961187066215945730411975/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "960301426167052113/1000000000000000000",
+        "upper": "480150713083526059/500000000000000000",
+        "log_lower": "10352059321032419/1000000000000000000",
+        "log_upper": "517602966051621/50000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "49737668672811936943/1000000000000000000",
+      "Y_right": "39560432998711765483/1000000000000000000",
+      "index": 48,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control": {
+      "a0": "1/971",
+      "a1": "1/961",
+      "z0": 970,
+      "z1": 960,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "476307225149896993/25000000000000000",
+        "H_upper_left": "3028749285951107009/500000000000000000",
+        "X_upper_left": "5144074247087472731/500000000000000000",
+        "V_candidate_upper": "4975648473906812489/500000000000000000",
+        "retained_Vbar": "10290861913125832863/1000000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "52922999719097098903/1000000000000000000",
+      "Y_left": "42184709027139708089/1000000000000000000",
+      "V_previous": "10290861913125832863/1000000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "388334277084414390779370297099/1000000000000000000000000000000",
+        "190026350326679109902870700281/250000000000000000000000000000",
+        "1687626643146673677922223792849/1000000000000000000000000000000",
+        "97277961241886115123420644769/31250000000000000000000000000",
+        "1260671456949275485698025468901/250000000000000000000000000000",
+        "7518869229667546367794874162961/1000000000000000000000000000000",
+        "10612312442191044465024835581579/1000000000000000000000000000000",
+        "3609072374134375691094825810547/250000000000000000000000000000",
+        "19182376027456400574906265301589/1000000000000000000000000000000",
+        "5044077093409070619634683039687/200000000000000000000000000000",
+        "33499207563862756468846065138687/1000000000000000000000000000000"
+      ],
+      "E_safe_left": "2628433552982044099/50000000000000000",
+      "V_local": "4975648473906812489/500000000000000000",
+      "V_admitted": "4975648473906812489/500000000000000000",
+      "equilibrium_upper": "221524523360025043/40000000000000000",
+      "amplitude": "18323297971569541007/500000000000000000",
+      "constant_energy_part": "366207727679541399197/23000000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "22333/23233",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "35699607649626899277/1000000000000000000",
+      "raw_G_lower": "128481352954802613247810713216604311169219940967706188948733077232044836964139098241080411912418161729295226648399955511/32440081455651511268982898283384648107329058628408194451143663357989723591811562746150912000000000000000000000000000000",
+      "G_lower": "3960574301591939527/1000000000000000000",
+      "Y_right_candidate": "40765093120936240013/1000000000000000000",
+      "E_right_candidate": "3196815947089838369/62500000000000000",
+      "endpoint_energy_envelope": "51149055153437413903/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "961/971",
+      "R_at_left": "251538369599514674538474501740221056657650162315068720594426282546999103259790137890204992318130833036474325639963/60708402882054033466233184588234965832575213720379360039119137804340758912662765568000000000000000000000000000000",
+      "M_at_left": "22755429778384513067937565909762961187066215945730411975/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "3196815947089838369/62500000000000000",
+      "Y_right": "40765093120936240013/1000000000000000000",
+      "index": 48,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "primary_row_sha256": "98b31afe3cc6371533b59edf6ef673c0da6219122d145a8ca997276c270301cf",
+    "row_hash_convention": "UTF-8 json.dumps(row, sort_keys=True, separators=(comma,colon)), ensure_ascii default true, no final newline",
+    "control_role": "GUARD_ONLY_NOT_PRIMARY_ACTUAL_STATE",
+    "exact_left_glue_verified": true
+  },
+  "required_dependency_recovery_before_freeze": [
+    "q048_prefix_config_v1.json and its original capture",
+    "q048_p3_scaled_raw_result_v2.json",
+    "q048_p3_scaled_transformed_log_tables_v2.json",
+    "q048_full_tube_reuse_v1.py and its transitive helpers; match original V98/V100 pins, do not reconstruct historical bytes"
+  ],
+  "dependency_pin_recovery": "Recover exact pinned identities from q048_moving_h_domain_spec_v98.json, V100 records and full journal; code paths /mnt/data are historical layout only. Reconcile input identity before freeze. Missing required bytes means BLOCKED_PRE_PRODUCER.",
+  "frozen": [
+    "exact Q and TARGET_Q",
+    "captured effective inputs and accepted z_reio",
+    "original first-event latch q=xHeII=1e-6 versus reset q=0",
+    "accepted V101 physical endpoint and connected lower",
+    "source-real primary/control semantics",
+    "cell endpoints and source/atomic/C-factor/H/thermal strict gates",
+    "other three actual frontiers remain1440",
+    "historical V98 failure and V100/V101 records"
+  ],
+  "permitted_changes": [
+    "new versioned mathematical producer/verifier/spec for exactly970→960",
+    "new cell-dependent source/atomic/thermal enclosures and fresh K/lower",
+    "retain V100 thermal proof geometry explicitly; any further geometry change requires a separately identified justification before freeze, preserving physical inputs and success criteria"
+  ],
+  "required_gates": [
+    "exact parent/row48 no-reset glue",
+    "all source-domain checks",
+    "atomic coefficient positivity",
+    "C-factor positivity",
+    "both upper-H barrier terms for L and R",
+    "positive thermal denominator and beta; both thermal-face predicates for L and R",
+    "fresh valid K_upper and strictly positive connected_lower",
+    "independent mathematical verification appropriate to the claimed proof; metadata booleans alone are insufficient"
+  ],
+  "success_condition": "Exactly one accepted, auditable proof970→960; independent verification PASS; actual stays111/frontier970.",
+  "failure_condition": "First failed unchanged gate with signed interval margin, or invalid parent/domain/source binding; preserve it, no tuning/rerun to force passage.",
+  "inconclusive_condition": "Missing exact dependency, invalid proof premise, or time/resource cap; preserve partial work and report the narrow blocker.",
+  "stop_condition": "Stop on first precise obstruction, one accepted proof, or 300 seconds of science computation. Return exactly once to Result Ingestion2.1.0.",
+  "budget": {
+    "local_science_seconds": 300,
+    "paid_compute_authorized": false,
+    "automatic_retry_count": 0
+  },
+  "prohibitions": [
+    "no V98/V100/V101 science replay",
+    "no consumer or actual112/frontier960 claim",
+    "no below960 continuation",
+    "no physical recapture/refit/reset",
+    "no subdividing merely to force acceptance",
+    "no NativeP6, native-trajectory identity or independent physical confirmation claim",
+    "no new Q/model promotion/closure"
+  ],
+  "anti_loop_reason": "V101 is newly accepted parent111/frontier970; V100 proved only980→970. The next cell changes domain and initial lower, so its full-domain proof is a distinct prerequisite; consumer/revalidation of980→970 would repeat completed work.",
+  "next_task_status": "PREPARED_NOT_EXECUTED",
+  "execution_profile": {
+    "inventory_basis_utc": "2026-10-19T15:38:48.403796+00:00",
+    "observed_runtime": "Codex API agent with local execution, supplied files, Library retrieval and GitHub tools",
+    "current_functional_class": "GENERAL REASONING",
+    "recommended_next_functional_class": "HIGH REASONING, mathematics-capable with exact interval computation",
+    "selectable_model_catalog": "NOT VERIFIED",
+    "reasoning_setting": "NOT EXPOSED",
+    "switch_status": "NOT REQUIRED for ingestion; next recommendation only",
+    "style": "One bounded proof task; source-pin recovery and freeze precede any science",
+    "required_tools": [
+      "files",
+      "exact arithmetic/local execution for next engine",
+      "GitHub/Library reads as needed"
+    ],
+    "optional_tools": [],
+    "budget_limits": "subscription/usage limits NOT VERIFIED; next task local science cap 300 seconds, no paid/HPC dispatch"
+  },
+  "planning_fingerprint": "c37c7707146198167af2ae16b6d931c5fcdec7beb3c0b3f3f40ccb823b3b6266",
+  "execution_fingerprint": "NOT_ASSIGNED_UNTIL_EXACT_DEPENDENCIES_CODE_SPEC_AND_FREEZE_EXIST"
+}
