@@ -1,0 +1,74 @@
+{
+  "schema": "bubbleverse.q048.frec_moving_h.failure.v84",
+  "q": "Q048",
+  "target_q": "Q048",
+  "status": "FAILED_TECHNICAL_PRE_SCIENCE_IMPORT_OBSTRUCTION",
+  "technical_state": "FAIL",
+  "scientific_effect": "NONE",
+  "task_id": "LOCAL-Q048-POST-V83-ACTUAL-CONSUMER-1050-1040-V1",
+  "task_fingerprint": "b79b8119a29a44d414a22a18dab6028d4576bd3bcf5778255c43c0f9dec78f70",
+  "execution_fingerprint": "f749da1e837af92507a00384964c988c415689325b897843c217503247eb5cac",
+  "failure_stage": "FROZEN_PRODUCER_PROCESS_IMPORT_BEFORE_MAIN",
+  "failure_class": "INPUT_LAYOUT_INTERFACE_PATH_MISMATCH",
+  "command": "python q048_frec_moving_h_v84.py",
+  "error": "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/data/q048_v84_run/inputs/source/q047_math_v1.py'",
+  "trace_summary": [
+    "q048_frec_moving_h_v84.py imports inputs/q048_full_tube_reuse_v1.py",
+    "q048_full_tube_reuse_v1.py imports q048_p3_scaled_kernel_v2.py",
+    "q048_p3_scaled_kernel_v2.py executes importlib loader for inputs/source/q047_math_v1.py",
+    "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/data/q048_v84_run/inputs/source/q047_math_v1.py'"
+  ],
+  "expected_path": "inputs/source/q047_math_v1.py",
+  "frozen_available_equivalent_path": "inputs/q047_math_v1.py",
+  "expected_file_content_sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+  "available_equivalent_content_sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+  "content_bytes_match_expected": true,
+  "producer_process_started": true,
+  "producer_main_entered": false,
+  "producer_invocation_artifact_created": false,
+  "science_producer_executed": false,
+  "new_actual_cells_computed": 0,
+  "new_actual_cells_accepted": 0,
+  "new_mathematical_proof_cells": 0,
+  "raw_result_created": false,
+  "candidate_checkpoint_created": false,
+  "verifier_executed": false,
+  "acceptor_executed": false,
+  "post_freeze_patch_performed": false,
+  "retry_performed": false,
+  "actual_retained": {
+    "count": 103,
+    "frontier": 1050,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1050
+    },
+    "endpoint": {
+      "a": "1/1051",
+      "E": "67246426428322598969/1000000000000000000",
+      "Y": "53572802601768403271/1000000000000000000",
+      "Vbar": "13103889500447770877/1000000000000000000"
+    },
+    "connected_lower": "153915644805927/250000000000000000"
+  },
+  "accepted_v83_proof_retained": {
+    "checkpoint_sha256": "4f879ff361c78030d414cde776a38ad874c292ef1b56dce4b3e83fd9ef005b08",
+    "proof_cell_z": [
+      1050,
+      1040
+    ],
+    "K_upper": "5232419035167843791429/1000000000000000000",
+    "whole_cell_lower": "119430514969841/200000000000000000"
+  },
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED",
+  "complete_histories": false,
+  "delta_tau_bounds": false,
+  "accepted_model_change": false,
+  "interpretation": "Technical input-layout/import obstruction only. It is not a scientific falsification, not a failed V83 proof, and not evidence against the physical model.",
+  "stop_rule_applied": "First precise interface obstruction after freeze; preserve failure and do not patch/retry this V84 execution identity.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "recorded_at_utc": "2026-10-18T18:56:20.814254+00:00"
+}

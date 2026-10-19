@@ -1,0 +1,76 @@
+{
+  "schema": "bubbleverse.q048.frec_moving_h.gates_provenance.v84",
+  "q": "Q048",
+  "status": "TECHNICAL_FAILURE_PRE_SCIENCE",
+  "technical_validity": "FAILED_AT_FROZEN_IMPORT_INTERFACE",
+  "task_id": "LOCAL-Q048-POST-V83-ACTUAL-CONSUMER-1050-1040-V1",
+  "execution_fingerprint": "f749da1e837af92507a00384964c988c415689325b897843c217503247eb5cac",
+  "pre_science": {
+    "contract_regressions": "7/7 PASS",
+    "metadata_contract": "103/103 PASS",
+    "verifier_preflight": "PASS",
+    "acceptor_preflight": "PASS",
+    "compile": "PASS",
+    "frozen_pins": "5 code + 31 inputs byte/hash verified"
+  },
+  "producer": {
+    "process_attempted": 1,
+    "main_entered": false,
+    "science_executed": false,
+    "failure_class": "INPUT_LAYOUT_INTERFACE_PATH_MISMATCH",
+    "error": "FileNotFoundError: [Errno 2] No such file or directory: '/mnt/data/q048_v84_run/inputs/source/q047_math_v1.py'"
+  },
+  "transition": {
+    "attempted": false,
+    "reason": "No raw candidate exists"
+  },
+  "acceptance": {
+    "attempted": false,
+    "reason": "No validated candidate exists"
+  },
+  "actual_before": {
+    "count": 103,
+    "frontier": 1050,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1050
+    },
+    "endpoint": {
+      "a": "1/1051",
+      "E": "67246426428322598969/1000000000000000000",
+      "Y": "53572802601768403271/1000000000000000000",
+      "Vbar": "13103889500447770877/1000000000000000000"
+    },
+    "connected_lower": "153915644805927/250000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v82.json",
+    "accepted_checkpoint_sha256": "2232d8e8b8a6456b26e2720c3511f2b3d1390ee32286b07046ead9940059ad9d"
+  },
+  "actual_after": {
+    "count": 103,
+    "frontier": 1050,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1050
+    },
+    "endpoint": {
+      "a": "1/1051",
+      "E": "67246426428322598969/1000000000000000000",
+      "Y": "53572802601768403271/1000000000000000000",
+      "Vbar": "13103889500447770877/1000000000000000000"
+    },
+    "connected_lower": "153915644805927/250000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v82.json",
+    "accepted_checkpoint_sha256": "2232d8e8b8a6456b26e2720c3511f2b3d1390ee32286b07046ead9940059ad9d"
+  },
+  "proof_reexecuted": false,
+  "guard_regenerated": false,
+  "parent_consumer_reexecuted": false,
+  "scientific_claim_effect": "NONE; V83 proof remains accepted, Q048 remains ACTIVE/INCONCLUSIVE.",
+  "stop_policy": "Applied immediately; no patch/retry after frozen execution attempt.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "timestamp_utc": "2026-10-18T18:56:20.814254+00:00"
+}
