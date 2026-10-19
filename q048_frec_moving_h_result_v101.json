@@ -1,0 +1,71 @@
+{
+  "schema": "bubbleverse.q048.frec_moving_h.actual_consumer.v101.raw.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "status": "PENDING_VALIDATION",
+  "scientific_state": "INCONCLUSIVE",
+  "technical_state": "PENDING_VALIDATION",
+  "task_id": "LOCAL-Q048-V101-ACTUAL-CONSUMER-980-970-V1",
+  "cell_z": [
+    980,
+    970
+  ],
+  "cell_a": [
+    "1/981",
+    "1/971"
+  ],
+  "parent": {
+    "count": 110,
+    "frontier": 980,
+    "sha256": "be53c4e56133bfce66108a5bc81e9ba8ce49334c2cfee4cef21306c652663da8"
+  },
+  "consumed_proof": {
+    "record": "Q048_V100_MATHEMATICAL_PROOF_ACCEPTANCE_V1",
+    "sha256": "f656241001cd54f6505e1a79705cfe51dc04bd25954f205c9f0525c18e762df6",
+    "independent_verification_sha256": "9e9ca61068b7045cae4e51f9cb5d0e5cb62c1cfab0b10eeb4be8f65ef90da8e6",
+    "raw_gate_sha256": "5efd0103b8d08b723c408a98099275a0ca1cb9dd8cce1f25fb8ce0c705986a2d"
+  },
+  "consumer_checks": {
+    "proof_accepted": true,
+    "independent_verification_pass": true,
+    "source_all": true,
+    "atomic_positive": true,
+    "c_factor_positive": true,
+    "L_branch": true,
+    "R_branch": true,
+    "row47_glue_exact": true,
+    "source_state_reset": false,
+    "primary_row_committed": true,
+    "connected_lower_positive": true,
+    "K_positive": true
+  },
+  "candidate_actual": {
+    "count": 111,
+    "frontier": 970,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 970
+    },
+    "endpoint": {
+      "a": "1/971",
+      "E": "2575086164999170119/50000000000000000",
+      "Y": "40971463401285721027/1000000000000000000",
+      "Vbar": "10091499069585277963/1000000000000000000"
+    },
+    "connected_lower": "492108035315773/1000000000000000000",
+    "K_upper": "5080670052472740707779/1000000000000000000"
+  },
+  "guard_binding": {
+    "index": 47,
+    "primary_row_sha256": "01e9f92295d60287f74a2760c1d38da42d2d37098a4d0dd32d1782dbf757b5ea",
+    "control_role": "GUARD_ONLY_NOT_PRIMARY_ACTUAL_STATE",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+  },
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "no_physical_reset": true,
+  "no_native_trajectory_claim": true,
+  "claim_firewall": "Conditional source-real actual admission using accepted V100 proof; not native-trajectory identity or independent physical confirmation."
+}
