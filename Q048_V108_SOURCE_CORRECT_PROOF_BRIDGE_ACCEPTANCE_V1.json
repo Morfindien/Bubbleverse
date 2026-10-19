@@ -1,0 +1,92 @@
+{
+  "schema": "bubbleverse.q048.v108.source_correct_proof_bridge.acceptance.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V108-SOURCE-CORRECT-PROOF-BRIDGE-970-960-V1",
+  "status": "ACCEPTED",
+  "technical_state": "PASS",
+  "scientific_state": "INCONCLUSIVE",
+  "accepted_at_utc": "2026-10-19T19:35:11.116928+00:00",
+  "proof_bridge_cell_z": [
+    970,
+    960
+  ],
+  "proof_bridge_cell_a": [
+    "1/971",
+    "1/961"
+  ],
+  "parent_authority": {
+    "record": "Q048_V107_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "3876328fa6acfd5a79c01505526de8e2b6d384b06241685eb359fa5635747e24",
+    "accepted_actual": {
+      "count": 111,
+      "frontier": 970
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 970
+    },
+    "endpoint": {
+      "a": "1/971",
+      "E": "2575086164999170119/50000000000000000",
+      "Y": "40971463401285721027/1000000000000000000",
+      "Vbar": "10091499069585277963/1000000000000000000"
+    },
+    "connected_lower": "492108035315773/1000000000000000000",
+    "K_upper": "5080670052472740707779/1000000000000000000",
+    "correct_saha_fact": "3.016103031869581e21"
+  },
+  "retained_theorem": {
+    "historical_v102_acceptance_sha256": "26d742b146e9caf6420e17987c557125a61e219d7b0a9565791b774e4630ce6f",
+    "historical_v102_raw_sha256": "807aac41864cbb4af3149e80aa38ce642be081ab657af34bbdfb4fccf1d24845",
+    "historical_v102_validation_sha256": "08b4d6ff805b99b40b58d63547730a98c0ae3a115bf94a6b6b1c8be140c9f0ae",
+    "historical_v102_spec_sha256": "c54bc8ac547c66349f6797bd15b98fd4b9bb98915bd5e0004b630bf3f2149d63",
+    "historical_v102_freeze_sha256": "a4be9ad22c1dc76542a0350174d560b26619cb6f1054be8c512584ac04047d5c",
+    "K_upper": "1001919080623370229873/200000000000000000",
+    "connected_lower": "479774678212513/1000000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "source_saha_factor": "3.016103031869581e21",
+    "historical_scope": "ONE_FORWARD_CELL_CONDITIONAL_ON_V101_PARENT_PREMISE",
+    "new_scope": "SOURCE_CORRECT_REANALYSIS_LINEAGE_ON_V107_PARENT"
+  },
+  "binding_basis": {
+    "exact_parent_fields": [
+      "accepted_actual",
+      "frontiers",
+      "endpoint",
+      "connected_lower",
+      "K_upper"
+    ],
+    "historical_implementation_parent_dependencies": [
+      "accepted_actual",
+      "endpoint",
+      "connected_lower"
+    ],
+    "guard_row_index": 48,
+    "source_state_reset": false,
+    "v102_validation_checks_retained": 29,
+    "v102_validation_checks_passed": 29,
+    "source_coefficient_audit_sha256": "c147db8aaa3596c0a7bd1e6bf36b51e235a48808b6a65fd8f74229d8fc08abe1",
+    "historical_open_precondition_disposition": "SUPERSEDED_ONLY_FOR_NEW_V104_TO_V107_REANALYSIS_LINEAGE_BY_SOURCE_CORRECT_PARENT; HISTORICAL_V102_STATUS_UNCHANGED"
+  },
+  "raw_sha256": "df25316ce4a19f9177d99d3d256754dc640773f4ac9d0420d02c2f8e7412e928",
+  "verification_sha256": "c201bbdf75f7529f3c3f3d03a6c75df2197542d63fcad2d86d60c740e1ab7c8b",
+  "new_source_correct_proof_bridge_cells": 1,
+  "new_full_theorem_recomputations": 0,
+  "new_actual_cells": 0,
+  "actual_state_unchanged": {
+    "count": 111,
+    "frontier": 970
+  },
+  "historical_v101_v102_modified": false,
+  "consumer_authorization": "NOT_GRANTED",
+  "below960_authorization": "NOT_GRANTED",
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED",
+  "claim": "Source-correct proof bridge 970->960 accepted for the V104->V107 reassessment lineage. Historical V102 theorem content is rebound to the exact-equal V107 numerical parent state; historical execution identity is not transferred."
+}

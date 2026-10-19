@@ -1,0 +1,139 @@
+{
+  "schema": "bubbleverse.q048.v108.source_correct_proof_bridge.raw.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V108-SOURCE-CORRECT-PROOF-BRIDGE-970-960-V1",
+  "task_fingerprint": "97f34c36077fedbe1949fcd39b325aba48c1e55f43908c1c71bb8f43ca8fbeaa",
+  "created_at_utc": "2026-10-19T19:35:09.152750+00:00",
+  "status": "CANDIDATE_SOURCE_CORRECT_PROOF_BRIDGE",
+  "scientific_state": "INCONCLUSIVE",
+  "technical_state": "PENDING_VERIFICATION",
+  "proof_bridge_cell_z": [
+    970,
+    960
+  ],
+  "proof_bridge_cell_a": [
+    "1/971",
+    "1/961"
+  ],
+  "parent_authority": {
+    "record": "Q048_V107_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "3876328fa6acfd5a79c01505526de8e2b6d384b06241685eb359fa5635747e24",
+    "accepted_actual": {
+      "count": 111,
+      "frontier": 970
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 970
+    },
+    "endpoint": {
+      "a": "1/971",
+      "E": "2575086164999170119/50000000000000000",
+      "Y": "40971463401285721027/1000000000000000000",
+      "Vbar": "10091499069585277963/1000000000000000000"
+    },
+    "connected_lower": "492108035315773/1000000000000000000",
+    "K_upper": "5080670052472740707779/1000000000000000000",
+    "correct_saha_fact": "3.016103031869581e21"
+  },
+  "historical_parent_reference": {
+    "record": "q048_frec_moving_h_accepted_checkpoint_v101.json",
+    "sha256": "270e615ae9ee8455ce5ddb1c0d28ff24efa478db1db0e09c55ce8015bf434686",
+    "role": "REFERENCE_ONLY_NUMERICAL_PARENT_EQUIVALENCE",
+    "identity_transferred": false
+  },
+  "retained_theorem": {
+    "historical_v102_acceptance_sha256": "26d742b146e9caf6420e17987c557125a61e219d7b0a9565791b774e4630ce6f",
+    "historical_v102_raw_sha256": "807aac41864cbb4af3149e80aa38ce642be081ab657af34bbdfb4fccf1d24845",
+    "historical_v102_validation_sha256": "08b4d6ff805b99b40b58d63547730a98c0ae3a115bf94a6b6b1c8be140c9f0ae",
+    "historical_v102_spec_sha256": "c54bc8ac547c66349f6797bd15b98fd4b9bb98915bd5e0004b630bf3f2149d63",
+    "historical_v102_freeze_sha256": "a4be9ad22c1dc76542a0350174d560b26619cb6f1054be8c512584ac04047d5c",
+    "K_upper": "1001919080623370229873/200000000000000000",
+    "connected_lower": "479774678212513/1000000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "source_saha_factor": "3.016103031869581e21",
+    "historical_scope": "ONE_FORWARD_CELL_CONDITIONAL_ON_V101_PARENT_PREMISE",
+    "new_scope": "SOURCE_CORRECT_REANALYSIS_LINEAGE_ON_V107_PARENT"
+  },
+  "binding_basis": {
+    "exact_parent_fields": [
+      "accepted_actual",
+      "frontiers",
+      "endpoint",
+      "connected_lower",
+      "K_upper"
+    ],
+    "historical_implementation_parent_dependencies": [
+      "accepted_actual",
+      "endpoint",
+      "connected_lower"
+    ],
+    "guard_row_index": 48,
+    "source_state_reset": false,
+    "v102_validation_checks_retained": 29,
+    "v102_validation_checks_passed": 29,
+    "source_coefficient_audit_sha256": "c147db8aaa3596c0a7bd1e6bf36b51e235a48808b6a65fd8f74229d8fc08abe1",
+    "historical_open_precondition_disposition": "SUPERSEDED_ONLY_FOR_NEW_V104_TO_V107_REANALYSIS_LINEAGE_BY_SOURCE_CORRECT_PARENT; HISTORICAL_V102_STATUS_UNCHANGED"
+  },
+  "checks": {
+    "q_target_identity": true,
+    "v107_validated": true,
+    "parent_actual_exact": true,
+    "parent_frontiers_exact": true,
+    "parent_endpoint_exact": true,
+    "parent_lower_exact": true,
+    "parent_K_exact": true,
+    "identity_distinct": true,
+    "v107_source_correct": true,
+    "v107_no_reset": true,
+    "v102_accepted": true,
+    "v102_cell_exact": true,
+    "v102_parent_pin_historical_v101": true,
+    "v102_zero_actual": true,
+    "v102_correct_saha_acceptance": true,
+    "v102_correct_saha_raw": true,
+    "v102_correct_saha_executable": true,
+    "v100_bad_literal_not_executable_local": true,
+    "v102_source_all": true,
+    "v102_atomic_positive": true,
+    "v102_C_positive": true,
+    "v102_branches_admitted": true,
+    "v102_validation_29_29": true,
+    "guard_row48": true,
+    "guard_no_reset_glue": true,
+    "guard_domain": true,
+    "background_recompute": true,
+    "atomic_recompute": true,
+    "K_recompute": true,
+    "riccati_lower_recompute": true,
+    "C_factor_recompute": true,
+    "thermal_L": true,
+    "thermal_R": true,
+    "h0_transfer_exact": true,
+    "theorem_bounds_retained": true,
+    "thermal_domain_retained": true,
+    "historical_status_not_modified": true,
+    "zero_actual_cells_v108": true,
+    "no_below960": true
+  },
+  "new_source_correct_proof_bridge_cells": 1,
+  "new_full_theorem_recomputations": 0,
+  "new_actual_cells": 0,
+  "actual_state_unchanged": {
+    "count": 111,
+    "frontier": 970
+  },
+  "historical_v101_v102_modified": false,
+  "consumer_authorization": "NOT_GRANTED_BY_MATHEMATICS_RUN",
+  "below960_authorization": "NOT_GRANTED",
+  "no_native_trajectory_claim": true,
+  "independence_limit": "Bridge verifier checks binding/provenance logic and retained theorem invariants; it is not an independent physical replication because V108 reuses V102 theorem inputs and enclosures.",
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED"
+}

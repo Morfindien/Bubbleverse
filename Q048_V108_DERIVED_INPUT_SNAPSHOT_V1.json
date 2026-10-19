@@ -1,0 +1,47 @@
+{
+  "schema": "bubbleverse.q048.v108.derived_input_snapshot.v1",
+  "created_at_utc": "2026-10-19T19:36:14.798219+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "parent_comparison": {
+    "v107_sha256": "3876328fa6acfd5a79c01505526de8e2b6d384b06241685eb359fa5635747e24",
+    "historical_v101_sha256": "270e615ae9ee8455ce5ddb1c0d28ff24efa478db1db0e09c55ce8015bf434686",
+    "identity_distinct": true,
+    "accepted_actual_equal": true,
+    "frontiers_equal": true,
+    "endpoint_equal": true,
+    "connected_lower_equal": true,
+    "K_upper_equal": true,
+    "v107_source_correct": true
+  },
+  "v102_theorem": {
+    "acceptance_sha256": "26d742b146e9caf6420e17987c557125a61e219d7b0a9565791b774e4630ce6f",
+    "raw_sha256": "807aac41864cbb4af3149e80aa38ce642be081ab657af34bbdfb4fccf1d24845",
+    "validation_sha256": "08b4d6ff805b99b40b58d63547730a98c0ae3a115bf94a6b6b1c8be140c9f0ae",
+    "cell_z": [
+      970,
+      960
+    ],
+    "cell_a": [
+      "1/971",
+      "1/961"
+    ],
+    "K_upper": "1001919080623370229873/200000000000000000",
+    "connected_lower": "479774678212513/1000000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "source_saha_factor": "3.016103031869581e21",
+    "historical_scope": "ONE_FORWARD_CELL_CONDITIONAL_ON_V101_PARENT_PREMISE",
+    "historical_parent_sha256": "270e615ae9ee8455ce5ddb1c0d28ff24efa478db1db0e09c55ce8015bf434686",
+    "historical_validation": {
+      "checks_total": 29,
+      "checks_passed": 29,
+      "verification_pass": true
+    }
+  },
+  "bridge_basis": "V102 implementation parent dependence is accepted_actual + endpoint glue + connected_lower/h0; V107 equals V101 exactly on those values, and additionally on all frontiers and K_upper. V102 locally used the correct source coefficient and its 29/29 theorem verifier passed.",
+  "claim_limit": "Numerical parent equivalence permits a new reanalysis-lineage theorem bridge; it does not transfer historical V101/V102 execution identity or establish native trajectory identity."
+}

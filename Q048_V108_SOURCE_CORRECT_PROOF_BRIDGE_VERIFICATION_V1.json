@@ -1,0 +1,109 @@
+{
+  "schema": "bubbleverse.q048.v108.source_correct_proof_bridge.verification.v1",
+  "status": "PASS",
+  "verification_pass": true,
+  "raw_sha256": "df25316ce4a19f9177d99d3d256754dc640773f4ac9d0420d02c2f8e7412e928",
+  "checks_total": 40,
+  "checks_passed": 40,
+  "checks": {
+    "identity": true,
+    "raw_candidate": true,
+    "v107_pin": true,
+    "v101_pin": true,
+    "distinct_identity": true,
+    "parent_actual": true,
+    "parent_frontiers": true,
+    "parent_endpoint": true,
+    "parent_lower": true,
+    "parent_K": true,
+    "source_correct_parent": true,
+    "v102_acceptance_pin": true,
+    "v102_raw_pin": true,
+    "v102_validation_pin": true,
+    "v102_accepted": true,
+    "bounds_exact": true,
+    "thermal_domain": true,
+    "correct_saha_records": true,
+    "correct_saha_code": true,
+    "bad_literal_not_executable": true,
+    "source_all": true,
+    "atomic_positive": true,
+    "C_positive": true,
+    "branches": true,
+    "historical_verifier": true,
+    "guard_row48": true,
+    "no_reset_glue": true,
+    "guard_domain": true,
+    "background": true,
+    "atomic_recompute": true,
+    "K_recompute": true,
+    "riccati": true,
+    "C_recompute": true,
+    "thermal_L": true,
+    "thermal_R": true,
+    "scope_new_only": true,
+    "zero_actual": true,
+    "one_bridge_no_recompute": true,
+    "history_firewall": true,
+    "stop": true
+  },
+  "semantic_mutations_total": 16,
+  "semantic_mutations_rejected": 16,
+  "mutations": [
+    {
+      "swap_parent_to_v101": true
+    },
+    {
+      "wrong_frontier": true
+    },
+    {
+      "wrong_count": true
+    },
+    {
+      "wrong_endpoint_a": true
+    },
+    {
+      "wrong_lower": true
+    },
+    {
+      "wrong_parent_K_as_new_K": true
+    },
+    {
+      "bad_saha": true
+    },
+    {
+      "reset_true": true
+    },
+    {
+      "wrong_row": true
+    },
+    {
+      "wrong_cell": true
+    },
+    {
+      "drop_L": true
+    },
+    {
+      "drop_R": true
+    },
+    {
+      "actual_promotion": true
+    },
+    {
+      "full_recompute_claim": true
+    },
+    {
+      "history_relabel": true
+    },
+    {
+      "below960": true
+    }
+  ],
+  "independence_scope": "Separate bridge/binding verifier with independent invariant composition. Shares historical V102 theorem bytes, inputs and enclosures; not an independent physical or native-trajectory replication.",
+  "actual_state_unchanged": {
+    "count": 111,
+    "frontier": 970
+  },
+  "new_actual_cells": 0,
+  "q_complete": false
+}
