@@ -1,0 +1,53 @@
+{
+  "validation_id": "Q048_V96_FULL_RECOVERY_INGESTION_VALIDATION_V1",
+  "created_at_utc": "2026-10-19T17:32:58.634515+00:00",
+  "manual_contract_check": "PASS",
+  "checks": {
+    "current_q_target_q_match": true,
+    "exact_question_preserved": true,
+    "inventory_rows_67": true,
+    "inventory_exact_hash_match_39": true,
+    "inventory_not_recovered_28": true,
+    "critical_result_missing": true,
+    "critical_recomputation_missing": true,
+    "no_new_science_claimed": true,
+    "no_repeat_recovery_route": true,
+    "selected_next_engine_is_null_for_blocked_disposition": true,
+    "completion_gate_unsatisfied": true,
+    "historical_state_preserved": true,
+    "incoming_journal_preserved_as_exact_tail": true,
+    "github_write_not_claimed": true,
+    "missing_recovery_receipt_disclosed": true,
+    "missing_recovery_audit_disclosed": true
+  },
+  "input_files": {
+    "Bubbleverse_Result_Ingestion_Routing_Engine_v2.1.0-138.md": {
+      "bytes": 78131,
+      "sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c"
+    },
+    "Q048_V96_FULL_RECOVERY_RESULT_AND_HANDOFF_V1-1.md": {
+      "bytes": 6547,
+      "sha256": "226583c108a0de0679da21a62b5563d8fa846e192cfcb16961ec67b2b7f54dbb"
+    },
+    "Q047_SAMLET_JOURNAL_Q048_V96_FULL_RECOVERY_SEARCH_APPENDED_V1-1.md": {
+      "bytes": 14462713,
+      "sha256": "00d2c595c21ce37cbb855fc848b9a99ddf5119629a387e9dd0ab511de023102f"
+    },
+    "Q048_V96_FULL_RECOVERY_INVENTORY_V1-1.csv": {
+      "bytes": 11160,
+      "sha256": "52d237ea38aadbe5e3b13a127a59fe7dda0bb2c0053e66bcdde7d617b2f8f24a"
+    }
+  },
+  "output_journal": {
+    "bytes": 14466710,
+    "sha256": "331adee70a8f7fb6796b3da465c124d17cecfb47267f5b9cc4c97eb96bc08bbf"
+  },
+  "limitations": [
+    "Q048_V96_FULL_RECOVERY_RECEIPT_V1.json not supplied in this ingestion run",
+    "Q048_V96_FULL_RECOVERY_SEARCH_AUDIT_V1.json not supplied in this ingestion run",
+    "Repository state not independently refreshed; incoming pinned base used as OFFLINE_SNAPSHOT"
+  ],
+  "scientific_state": "INCONCLUSIVE",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "BLOCKED"
+}

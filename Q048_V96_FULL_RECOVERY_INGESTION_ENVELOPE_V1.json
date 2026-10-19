@@ -1,0 +1,100 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-V96-FULL-RECOVERY-INGESTION-V1",
+  "created_at_utc": "2026-10-19T17:32:58.634515+00:00",
+  "case_id": "NOT_ASSIGNED/PROPOSED_UNVERIFIED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048 (authorized Q001-Q048)",
+  "evidence_cutoff": "TARGET_Q firewall Q001-Q048; recovery event dated 2026-10-19",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "BLOCKED",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "Q048_V96_FULL_RECOVERY_INGESTION_RESULT_V1"
+  ],
+  "source_state_version": "Q048 V96 full original recovery search V1",
+  "target_state_version": "Q048 V96 full-recovery ingestion blocker checkpoint V1",
+  "selected_next_engine_id": null,
+  "engine_registry_ref": null,
+  "execution_profile_ref": "Q048_V96_FULL_RECOVERY_INGESTION_RESULT_V1.md",
+  "journal_ref": {
+    "path": "Q047_SAMLET_JOURNAL_Q048_V96_FULL_RECOVERY_INGESTED_V1.md",
+    "bytes": 14466710,
+    "sha256": "331adee70a8f7fb6796b3da465c124d17cecfb47267f5b9cc4c97eb96bc08bbf"
+  },
+  "source_register_ref": "preserved in cumulative journal; no new external source record",
+  "claim_evidence_map_ref": "preserved in cumulative journal; no claim-strength increase",
+  "result_provenance_ref": "Q048_V96_FULL_RECOVERY_INGESTION_RESULT_V1.md",
+  "anomaly_tension_registry_ref": "unchanged; no new anomaly claim",
+  "completed_task_ledger_ref": "mark LOCAL-Q048-V96-FULL-ORIGINAL-RECOVERY-20261019-V1 completed; do not repeat unchanged recovery",
+  "route_history_ref": "Result Ingestion -> BLOCKED/CHECKPOINT; no scientific engine dispatched",
+  "integrity_manifest_ref": "Q048_V96_FULL_RECOVERY_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "Recovery event ingested once",
+    "Completed recovery added to no-repeat ledger",
+    "Blocker checkpoint formalized"
+  ],
+  "frozen_configuration_refs": [
+    "actual111/frontier970",
+    "other3frontiers1440",
+    "V102970->960 conditional proof",
+    "historical V96-V103 records immutable"
+  ],
+  "open_material_uncertainties": [
+    "Missing original q048_moving_h_domain_result_v96.json or semantically complete original q048_moving_h_domain_verifier_recomputation_v96.json",
+    "NativeP6 unresolved",
+    "Complete four-case x_e(z)/tau_T(z) bounds unresolved"
+  ],
+  "missing_information": [
+    {
+      "path": "Q048_V96_FULL_RECOVERY_RECEIPT_V1.json",
+      "impact": "detailed recovery receipt not independently revalidated in this ingestion"
+    },
+    {
+      "path": "Q048_V96_FULL_RECOVERY_SEARCH_AUDIT_V1.json",
+      "impact": "detailed search audit not independently revalidated in this ingestion"
+    }
+  ],
+  "next_task": "No engine task. Resume only on new original evidence/location/version, or separately authorized new versioned mathematical reconstruction.",
+  "success_condition": "A matching original critical V96 artifact is recovered with verified identity and sufficient semantics, or a separately authorized reconstruction produces a new explicitly non-original analysis suitable for fresh evaluation.",
+  "failure_or_falsification_condition": "Unchanged sources with no new material remain blocked; absence is not physical falsification.",
+  "stop_condition": "Do not repeat the completed full recovery search with unchanged sources.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Material parent-chain V96 evidence remains unavailable; exact Q048 complete-history bounds are unresolved.",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "Separate Jim authorization required before any new mathematical reconstruction or scope change.",
+  "output_file_refs": [
+    "Q048_V96_FULL_RECOVERY_INGESTION_RESULT_V1.md",
+    "Q048_V96_FULL_RECOVERY_INGESTION_HANDOFF_BLOCKED_V1.md",
+    "Q047_SAMLET_JOURNAL_Q048_V96_FULL_RECOVERY_INGESTED_V1.md",
+    "Q048_V96_FULL_RECOVERY_INGESTION_ENVELOPE_V1.json",
+    "Q048_V96_FULL_RECOVERY_INGESTION_VALIDATION_V1.json",
+    "Q048_V96_FULL_RECOVERY_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "Q048_V96_FULL_RECOVERY_INGESTION_OUTPUT_MANIFEST_V1.json"
+  ],
+  "output_manifest_ref": "Q048_V96_FULL_RECOVERY_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "Morfindien/Bubbleverse",
+    "repository_segment_id": "current segment as incoming recovery record; not independently rediscovered",
+    "base_commit_sha": "3b2aeffc3092d228bbf91efbe654eda646bfb514",
+    "source_freshness": "OFFLINE_SNAPSHOT",
+    "journal_path": "target path follows existing root naming convention; exact canonical CURRENT_STATE path unresolved",
+    "current_state_path": null,
+    "index_refs": [],
+    "cross_reference_refs": [],
+    "memory_update_ref": "Q048_V96_FULL_RECOVERY_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "target_paths_status": "PROPOSED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V96_FULL_RECOVERY_INGESTION_GITHUB_MEMORY_UPDATE_V1.md"
+  }
+}
