@@ -1,0 +1,83 @@
+{
+  "schema": "bubbleverse.q048.v105.source_correct_actual_consumer.spec.v1",
+  "created_at_utc": "2026-10-19T18:27:38.007444+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V105-SOURCE-CORRECT-ACTUAL-CONSUMER-990-980-V1",
+  "program_id": "Q048-V105-SOURCE-CORRECT-CONSUMER-V1",
+  "program_registration_status": "LOCAL_ALLOCATED_NOT_REGISTERED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "spec_origin": "UPSTREAM_V105_HANDOFF_FROZEN_BEFORE_IMPLEMENTATION",
+  "upstream_handoff_sha256": "3673b2d01fefa29eebc3d8c6a4506d8196cf9bf9cd4016e8fd79aec01e9d7fef",
+  "required_cell": {
+    "z": [
+      990,
+      980
+    ],
+    "a": [
+      "1/991",
+      "1/981"
+    ]
+  },
+  "required_parent": {
+    "sha256": "b80dea63f9040b5d1aef01cd6a86e00a9f0ab35ba886eca4c09c9e9289ea3668",
+    "count": 109,
+    "frontier": 990,
+    "endpoint": {
+      "a": "1/991",
+      "E": "55162016731242447343/1000000000000000000",
+      "Y": "43899848634223684893/1000000000000000000",
+      "Vbar": "5396455546488157007/500000000000000000"
+    }
+  },
+  "required_theorem": {
+    "sha256": "4cac1a8fb598001c6907163752a7a9bf6005de649546fade84658bdb0627b691",
+    "correct_saha_fact": "3.016103031869581e21",
+    "K_upper": "2493577725162681856783/500000000000000000",
+    "connected_lower": "50514140794199/100000000000000000",
+    "verification": "PASS_15_OF_15"
+  },
+  "required_guard": {
+    "index": 46,
+    "primary_row_sha256": "cbbe0c68a50fcf51e9adf8ddf99c25ef73817b48ff2fadc95015413fbc40dfcb",
+    "control_row_sha256": "11f6f9055e77d32895a8a7bf5b8709c79f23cfd04d5756730c3d56fd6320a55e",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "control_role": "GUARD_ONLY_CONSERVATIVE_TRACK_NOT_ACTUAL_PRIMARY_STATE"
+  },
+  "success": {
+    "accepted_actual": {
+      "count": 110,
+      "frontier": 980
+    },
+    "endpoint": {
+      "a": "1/981",
+      "E": "13327406922059142279/250000000000000000",
+      "Y": "1696710572528996873/40000000000000000",
+      "Vbar": "10438035734386161987/1000000000000000000"
+    },
+    "one_new_actual_cell": true,
+    "zero_new_proof_cells": true,
+    "no_reset": true
+  },
+  "stop": {
+    "max_new_actual_cells": 1,
+    "max_new_proof_cells": 0,
+    "no_below980": true,
+    "return_once": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+  },
+  "compute_backend": "LOCAL_RUNTIME",
+  "github_worthwhile": "NO",
+  "estimate_basis": "EXTRAPOLATED_FROM_SMALL_JSON_HASH_CONSUMER_AND_V101_REFERENCE; no numerical ODE/proof solve",
+  "local_total_estimate": "sub-second to a few seconds plus file packaging",
+  "github_total_estimate": "not measured; checkout/dispatch/integration overhead dominates this tiny serial task",
+  "github_worthwhile_gate": "PASS",
+  "implementation_reference": {
+    "repository": "Morfindien/Bubbleverse",
+    "commit": "4edc78cd37985d7c36f81f7ae690ac3466737c99",
+    "reference_program": "q048_v101_actual_consumer.py",
+    "reference_sha": "c7524b8996fd1ed16522b3b1fdfca378b7866786",
+    "use": "REFERENCE_ONLY_PATTERN_FOR_FRESH_CONSUMER"
+  },
+  "historical_v97_role": "REFERENCE_ONLY_NOT_AUTHORITY_NOT_REPLAY"
+}

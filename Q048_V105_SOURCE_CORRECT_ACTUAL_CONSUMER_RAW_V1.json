@@ -1,0 +1,83 @@
+{
+  "schema": "bubbleverse.q048.v105.source_correct_actual_consumer.raw.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "task_id": "LOCAL-Q048-V105-SOURCE-CORRECT-ACTUAL-CONSUMER-990-980-V1",
+  "result_id": "LOCAL-Q048-V105-SOURCE-CORRECT-ACTUAL-CONSUMER-990-980",
+  "created_at_utc": "2026-10-19T18:26:09.699711+00:00",
+  "status": "PENDING_VALIDATION",
+  "technical_state": "PENDING_VALIDATION",
+  "scientific_state": "INCONCLUSIVE",
+  "lineage": "NEW_REANALYSIS_LINEAGE_NOT_HISTORICAL_V97_REPLAY",
+  "cell_z": [
+    990,
+    980
+  ],
+  "cell_a": [
+    "1/991",
+    "1/981"
+  ],
+  "parent_actual": {
+    "count": 109,
+    "frontier": 990,
+    "sha256": "b80dea63f9040b5d1aef01cd6a86e00a9f0ab35ba886eca4c09c9e9289ea3668"
+  },
+  "consumed_theorem": {
+    "checkpoint": "Q048_V104_V96_LINK_REANALYSIS_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "4cac1a8fb598001c6907163752a7a9bf6005de649546fade84658bdb0627b691",
+    "raw_sha256": "1e7d64d7f22981e09bf937dad54e0387344453591f4d527f133deb7a33c9c7e9",
+    "verification_sha256": "1c0b460cc1138b38b4aecb8e736460afd12cecf38739642ffaa35173e4ef6c6a",
+    "correct_saha_fact": "3.016103031869581e21",
+    "K_upper": "2493577725162681856783/500000000000000000",
+    "connected_lower": "50514140794199/100000000000000000"
+  },
+  "guard_binding": {
+    "index": 46,
+    "primary_row_sha256": "cbbe0c68a50fcf51e9adf8ddf99c25ef73817b48ff2fadc95015413fbc40dfcb",
+    "control_row_sha256": "11f6f9055e77d32895a8a7bf5b8709c79f23cfd04d5756730c3d56fd6320a55e",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "control_role": "GUARD_ONLY_CONSERVATIVE_TRACK_NOT_ACTUAL_PRIMARY_STATE"
+  },
+  "consumer_checks": {
+    "theorem_accepted": true,
+    "source_correct_prefactor": true,
+    "verification_15_of_15": true,
+    "parent_exact": true,
+    "row46_hash_exact": true,
+    "row46_glue_exact": true,
+    "source_state_reset": false,
+    "primary_row_committed": true,
+    "connected_lower_positive": true,
+    "K_positive": true
+  },
+  "candidate_actual": {
+    "count": 110,
+    "frontier": 980,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 980
+    },
+    "endpoint": {
+      "a": "1/981",
+      "E": "13327406922059142279/250000000000000000",
+      "Y": "1696710572528996873/40000000000000000",
+      "Vbar": "10438035734386161987/1000000000000000000"
+    },
+    "connected_lower": "50514140794199/100000000000000000",
+    "K_upper": "2493577725162681856783/500000000000000000"
+  },
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "historical_v97_replayed": false,
+  "historical_record_modified": false,
+  "no_physical_reset": true,
+  "no_native_trajectory_claim": true,
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED",
+  "claim_firewall": "Conditional source-real actual admission using fresh source-correct V104 theorem and exact historical row46 guard. This is current reassessment lineage, not historical V97 execution identity or full Q048 closure."
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "bubbleverse.q048.v105.source_correct_actual_consumer.validation.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "status": "PASS",
+  "technical_state": "PASS",
+  "result_sha256": "44dab2e08cef62c251463192579faafbdd0037c87f02094e005d3d617b6b2aff",
+  "checks_total": 23,
+  "checks_passed": 23,
+  "checks": {
+    "identity": true,
+    "parent_hash": true,
+    "parent_state": true,
+    "theorem_hash": true,
+    "theorem_cell": true,
+    "source_correct": true,
+    "theorem_verification": true,
+    "theorem_zero_actual": true,
+    "row46_hash": true,
+    "control_hash": true,
+    "row46_cell": true,
+    "glue_E": true,
+    "glue_Y": true,
+    "glue_V": true,
+    "no_reset": true,
+    "row_committed": true,
+    "actual_count": true,
+    "actual_frontier": true,
+    "endpoint": true,
+    "lower": true,
+    "K": true,
+    "history_firewall": true,
+    "q_firewall": true
+  },
+  "semantic_mutations_total": 12,
+  "semantic_mutations_rejected": 12,
+  "mutations": [
+    {
+      "name": "wrong_parent_count",
+      "rejected": true
+    },
+    {
+      "name": "wrong_parent_frontier",
+      "rejected": true
+    },
+    {
+      "name": "wrong_cell",
+      "rejected": true
+    },
+    {
+      "name": "wrong_saha",
+      "rejected": true
+    },
+    {
+      "name": "old_parent_lower",
+      "rejected": true
+    },
+    {
+      "name": "old_parent_K",
+      "rejected": true
+    },
+    {
+      "name": "synthetic_endpoint",
+      "rejected": true
+    },
+    {
+      "name": "control_as_actual",
+      "rejected": true
+    },
+    {
+      "name": "reset_true",
+      "rejected": true
+    },
+    {
+      "name": "historical_replay",
+      "rejected": true
+    },
+    {
+      "name": "extra_actual",
+      "rejected": true
+    },
+    {
+      "name": "below980",
+      "rejected": true
+    }
+  ],
+  "producer_imported_or_executed": false,
+  "verification_scope": "Separate consumer-level semantic recomputation from pinned V104 theorem, exact V95 parent and exact row46 guard. Does not rerun the V104 proof and is not independent physical evidence."
+}
