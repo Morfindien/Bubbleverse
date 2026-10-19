@@ -1,0 +1,41 @@
+{
+  "schema": "bubbleverse.q048.source_coefficient_audit.v102",
+  "created_at_utc": "2026-10-19T15:51:48.929235+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "status": "AUTHORITATIVE_VALUE_RECOVERED_FORWARD_CORRECTION_ONLY",
+  "source_repository": "mwt5345/class_ede",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "source_files": {
+    "hydrogen.c": {
+      "bytes": 46627,
+      "sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616"
+    },
+    "hydrogen.h": {
+      "bytes": 11868,
+      "sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+    }
+  },
+  "source_location": "external/HyRec2020/hydrogen.c:SAHA_FACT and s/Beta assignments; hydrogen.h:EI,kBoltz",
+  "SAHA_FACT_fsR1_meR1": "3.016103031869581e21",
+  "units": "eV^(-3/2) cm^(-3)",
+  "V100_literal": "3.016101031869581e21",
+  "V100_producer_sha256": "61c4ecbba5b0ad93eb0eacf0fdaa4b1e7277c4347db2caf429a6eaa141746157",
+  "V100_literal_is_covered_by_const_rounding": false,
+  "relative_literal_discrepancy": "2000000000/3016103031869581",
+  "applies_to": [
+    "Saha equilibrium s",
+    "photoionization Beta coefficients"
+  ],
+  "V102_resolution": "Use authoritative pinned-source constant, with decimal/binary64 enclosure, in a new forward proof. Physical source/captured inputs unchanged. Historical V100 remains byte-identical.",
+  "upstream_source_binding_status": "OPEN_DISCREPANCY_NOT_RETROSPECTIVELY_REVALIDATED",
+  "no_old_science_replay": true,
+  "effect_on_recorded_V101_actual": "Record preserved111/frontier970; not silently revoked or requalified. V101 bound is a conditional parent premise of V102.",
+  "what_is_not_established": [
+    "No finding that all prior bound conclusions are numerically invalid",
+    "No repaired or revalidated V100 proof",
+    "No independently restored complete source-real parent chain"
+  ],
+  "consumer_gate": "Result Ingestion must explicitly resolve or bound the upstream discrepancy before authorizing another actual consumer.",
+  "mathematical_note": "K and the positive Riccati lower formula do not directly depend on this Saha factor, but whole-domain H/C gates do; formula independence alone does not repair historical admission."
+}
