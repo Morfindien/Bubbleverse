@@ -1,0 +1,70 @@
+{
+  "schema": "bubbleverse.q048.v105.ingestion_state.v1",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "created_at_utc": "2026-10-19T18:35:08.869511+00:00",
+  "created_at_local": "2026-10-19T20:35:08.869511+02:00",
+  "timezone": "Europe/Copenhagen",
+  "q": "Q048",
+  "target_q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "ingestion_event_id": "LOCAL-Q048-V105-SOURCE-CORRECT-ACTUAL-INGESTION-V1",
+  "ingestion_state": "NEW",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "incoming_result": {
+    "task_id": "LOCAL-Q048-V105-SOURCE-CORRECT-ACTUAL-CONSUMER-990-980-V1",
+    "checkpoint_sha256": "cedaef00bab86ac24bb876ae475e5dff15f8b97a0a55f83d9ba12d25da07b098",
+    "raw_sha256": "44dab2e08cef62c251463192579faafbdd0037c87f02094e005d3d617b6b2aff",
+    "validation_sha256": "751834b4b6fc7e8934c74d82afbeb1b01a2c6aed6133dc372f6bd8a77879b85d",
+    "postaccept_sha256": "72feefbb45b2470d400121c9a229ce4246518ddc4b566529bb0fd33fa7567d66",
+    "accepted_actual": {
+      "count": 110,
+      "frontier": 980
+    },
+    "endpoint": {
+      "a": "1/981",
+      "E": "13327406922059142279/250000000000000000",
+      "Y": "1696710572528996873/40000000000000000",
+      "Vbar": "10438035734386161987/1000000000000000000"
+    },
+    "K_upper": "2493577725162681856783/500000000000000000",
+    "connected_lower": "50514140794199/100000000000000000",
+    "correct_saha_fact": "3.016103031869581e21"
+  },
+  "scientific_effect": "STRENGTHENS_SOURCE_CORRECT_LINEAGE_TO_ACTUAL110_FRONTIER980",
+  "historical_firewall": {
+    "v97_unchanged": true,
+    "v100_unchanged": true,
+    "v101_unchanged": true,
+    "output_match_not_identity": true
+  },
+  "prior_source_audit": {
+    "v103_certificate_sha256": "3f26ed2bed293b2489f36dd59f63b6ea623365fea0d24216ed7cfaadb4207edb",
+    "v103_validation_sha256": "8ce6e107ab9f7cd71a61056953a0c520b1e11ab5ceef4c9713a965632ea05a55",
+    "v100_local_transfer": "ADMISSIBLE_UNDER_CORRECT_SOURCE_CONDITIONAL_ON_V97",
+    "former_parent_blocker": "V96_SOURCE_QUALIFIED_PARENT_MISSING",
+    "current_assessment": "FORMER_BLOCKER_SUPERSEDED_FOR_NEW_REANALYSIS_LINEAGE_BY_V104_V105; HISTORICAL V96 GAP REMAINS HISTORICAL"
+  },
+  "completion_gate": {
+    "satisfied": false,
+    "reason": "NativeP6 and complete four-case x_e/tau bounds unresolved; source-correct 980->970 lineage not yet separately established."
+  },
+  "selected_next_engine": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "task_id": "LOCAL-Q048-V106-SOURCE-CORRECT-PROOF-BRIDGE-980-970-V1",
+    "task_fingerprint": "baba4158ce40821351a73bf8e94622628deffb1e2e12a439e6883012f203b8e2"
+  },
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "base_commit_sha": "bf462ddc667fc826c4aa80940411cea3585f3835",
+    "source_freshness": "VERIFIED",
+    "v105_sync_status": "PUSHED_BY_USER_UPLOAD_OBSERVED",
+    "new_ingestion_sync_status": "USER_UPLOAD_PENDING"
+  },
+  "delivery_status": "PREPARED",
+  "writeback_status": "PENDING_USER_UPLOAD"
+}

@@ -1,0 +1,41 @@
+{
+  "schema": "bubbleverse.q048.v105.ingestion_evidence_audit.v1",
+  "created_at_utc": "2026-10-19T18:35:08.869511+00:00",
+  "q": "Q048",
+  "status": "PASS",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "incoming_byte_pins": {
+    "Q048_V105_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json": "cedaef00bab86ac24bb876ae475e5dff15f8b97a0a55f83d9ba12d25da07b098",
+    "Q048_V105_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json": "44dab2e08cef62c251463192579faafbdd0037c87f02094e005d3d617b6b2aff",
+    "Q048_V105_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json": "751834b4b6fc7e8934c74d82afbeb1b01a2c6aed6133dc372f6bd8a77879b85d",
+    "Q048_V105_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json": "72feefbb45b2470d400121c9a229ce4246518ddc4b566529bb0fd33fa7567d66"
+  },
+  "historical_reference_pins": {
+    "Q048_V100_MATHEMATICAL_PROOF_ACCEPTANCE_V1.json": "f656241001cd54f6505e1a79705cfe51dc04bd25954f205c9f0525c18e762df6",
+    "V100_FULL_GATE_W002_RAW.json": "5efd0103b8d08b723c408a98099275a0ca1cb9dd8cce1f25fb8ce0c705986a2d",
+    "Q048_V100_REFINED_THERMAL_INDEPENDENT_VERIFICATION_V1.json": "9e9ca61068b7045cae4e51f9cb5d0e5cb62c1cfab0b10eeb4be8f65ef90da8e6",
+    "Q048_SAHA_PARENT_SOURCE_ADMISSIBILITY_CERTIFICATE_V1.json": "3f26ed2bed293b2489f36dd59f63b6ea623365fea0d24216ed7cfaadb4207edb",
+    "Q048_SAHA_PARENT_SOURCE_ADMISSIBILITY_VALIDATION_V1.json": "8ce6e107ab9f7cd71a61056953a0c520b1e11ab5ceef4c9713a965632ea05a55",
+    "q048_frec_moving_h_accepted_checkpoint_v97.json": "be53c4e56133bfce66108a5bc81e9ba8ce49334c2cfee4cef21306c652663da8"
+  },
+  "observations": {
+    "v105_validated": true,
+    "v105_parent_source_correct": true,
+    "v105_matches_historical_v97_numerically": true,
+    "numerical_match_is_identity_equivalence": false,
+    "v103_local_v100_source_transfer_passed_conditional_on_v97": true,
+    "v103_former_material_blocker_was_missing_upstream_source_qualified_parent": true,
+    "v104_v105_supply_new_source_qualified_parent": true,
+    "historical_v100_v101_can_be_relabelled_without_new_bridge": false,
+    "new_bridge_is_material_nonduplicate_task": true
+  },
+  "repository_verification": {
+    "repository": "Morfindien/Bubbleverse",
+    "commit_sha": "bf462ddc667fc826c4aa80940411cea3585f3835",
+    "commit_time_utc": "2026-10-19T18:30:10Z",
+    "v105_result_present": true,
+    "v105_handoff_present": true,
+    "v105_checkpoint_present": true
+  },
+  "claim_strength_limit": "This ingestion establishes a source-correct actual110/frontier980 current reassessment lineage and a justified next bridge task only; it does not establish source-correct actual111/frontier970, NativeP6, full histories, tau bounds, or Q048 closure."
+}

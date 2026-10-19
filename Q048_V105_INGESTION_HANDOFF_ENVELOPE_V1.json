@@ -1,0 +1,122 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-V105-INGESTION-TO-V106-MATHEMATICS-V1",
+  "created_at_utc": "2026-10-19T18:35:08.869511+00:00",
+  "case_id": "NOT_ASSIGNED/PROPOSED_UNVERIFIED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": "Q048",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-V105-SOURCE-CORRECT-ACTUAL-CONSUMER-990-980"
+  ],
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V105_INGESTED_SOURCE_CORRECT_V1.md",
+  "result_provenance_ref": "Q048_V105_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "route_history_ref": "Q048_V105_INGESTION_JOURNAL_APPEND_V1.md",
+  "what_changed": [
+    "New source-correct reanalysis-lineage actual110/frontier980 accepted",
+    "Former V103 upstream parent-source blocker resolved for the new reanalysis lineage",
+    "V100/V101 historical identities remain unchanged"
+  ],
+  "frozen_configuration_refs": [
+    "Q048_V105_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "Q048_V100_MATHEMATICAL_PROOF_ACCEPTANCE_V1.json",
+    "Q048_SAHA_PARENT_SOURCE_ADMISSIBILITY_CERTIFICATE_V1.json"
+  ],
+  "open_material_uncertainties": [
+    "Source-correct theorem/actual lineage for 980->970 not yet separately established",
+    "NativeP6 unresolved",
+    "Complete four-case x_e(z) and cumulative tau_T(z) bounds unresolved"
+  ],
+  "missing_information": [],
+  "next_task": {
+    "task_id": "LOCAL-Q048-V106-SOURCE-CORRECT-PROOF-BRIDGE-980-970-V1",
+    "q": "Q048",
+    "target_q": "Q048",
+    "objective": "Create one separately versioned source-correct mathematical bridge for 980->970 by binding the already validated V100/V103 local theorem content to the new V105 source-qualified actual110/frontier980 parent; do not rewrite V100/V101 or rerun completed work unnecessarily.",
+    "parent_checkpoint": "Q048_V105_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "parent_sha256": "cedaef00bab86ac24bb876ae475e5dff15f8b97a0a55f83d9ba12d25da07b098",
+    "cell_z": [
+      980,
+      970
+    ],
+    "cell_a": [
+      "1/981",
+      "1/971"
+    ],
+    "correct_saha_fact": "3.016103031869581e21",
+    "historical_reference": {
+      "v100_acceptance_sha256": "f656241001cd54f6505e1a79705cfe51dc04bd25954f205c9f0525c18e762df6",
+      "v100_raw_sha256": "5efd0103b8d08b723c408a98099275a0ca1cb9dd8cce1f25fb8ce0c705986a2d",
+      "v100_independent_verification_sha256": "9e9ca61068b7045cae4e51f9cb5d0e5cb62c1cfab0b10eeb4be8f65ef90da8e6",
+      "v103_source_certificate_sha256": "3f26ed2bed293b2489f36dd59f63b6ea623365fea0d24216ed7cfaadb4207edb",
+      "v103_source_validation_sha256": "8ce6e107ab9f7cd71a61056953a0c520b1e11ab5ceef4c9713a965632ea05a55",
+      "historical_v97_checkpoint_sha256": "be53c4e56133bfce66108a5bc81e9ba8ce49334c2cfee4cef21306c652663da8"
+    },
+    "frozen": {
+      "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+      "accepted_z_reio": "UNCHANGED",
+      "latch_reset_definition": "UNCHANGED",
+      "captured_effective_inputs": "UNCHANGED",
+      "thermal_domain": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "historical_records_immutable": true
+    },
+    "required_checks": [
+      "V105 parent endpoint equals the numerical V97 parent values actually required by V100, while identity remains distinct",
+      "V103 corrected-source transfer applies to the V100 980->970 source/H/C premises under the V105 parent",
+      "all retained atomic/C/thermal/comparison premises used for V100 remain applicable with no physical state reset",
+      "new theorem record is source-correct and separately versioned; historical V100/V101 stay unchanged",
+      "separate verifier recomputes the bridge/binding logic without importing the bridge producer"
+    ],
+    "success_condition": "One new V106 source-correct accepted mathematical proof bridge for exactly 980->970, zero new actual cells, full source-qualified parent chain through V105, verification PASS.",
+    "failure_condition": "Any required parent numerical binding, source transfer, domain premise, guard glue, or verification check fails.",
+    "stop_condition": "Stop after one accepted/failed 980->970 proof bridge. No actual consumer and no below970 work in this task.",
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+  },
+  "success_condition": "One new V106 source-correct accepted mathematical proof bridge for exactly 980->970, zero new actual cells, full source-qualified parent chain through V105, verification PASS.",
+  "failure_or_falsification_condition": "Any required parent numerical binding, source transfer, domain premise, guard glue, or verification check fails.",
+  "stop_condition": "Stop after one accepted/failed 980->970 proof bridge. No actual consumer and no below970 work in this task.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Q048 final requested bounds remain unresolved.",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "NOT_REQUIRED_WITHIN_EXISTING_AUTHORIZATION",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "base_commit_sha": "bf462ddc667fc826c4aa80940411cea3585f3835",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V105_INGESTED_SOURCE_CORRECT_V1.md",
+    "memory_update_ref": "Q048_V105_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "target_paths_status": "PROPOSED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V105_INGESTION_UPLOAD_INSTRUCTIONS_V1.md"
+  },
+  "output_file_refs": [
+    "Q048_V105_INGESTION_RESULT_V1.md",
+    "Q048_V105_INGESTION_STATE_V1.json",
+    "Q048_V105_INGESTION_EVIDENCE_AUDIT_V1.json",
+    "Q048_V106_HANDOFF_TO_MATHEMATICS_SOURCE_CORRECT_PROOF_BRIDGE_V1.md",
+    "Q048_V105_INGESTION_HANDOFF_ENVELOPE_V1.json",
+    "Q048_V105_INGESTION_JOURNAL_APPEND_V1.md",
+    "Q048_V105_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "Q048_V105_INGESTION_UPLOAD_INSTRUCTIONS_V1.md",
+    "Q047_SAMLET_JOURNAL_Q048_V105_INGESTED_SOURCE_CORRECT_V1.md",
+    "Q048_V105_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "Q048_V105_INGESTION_VALIDATION_V1.json"
+  ],
+  "output_manifest_ref": "Q048_V105_INGESTION_OUTPUT_MANIFEST_V1.json"
+}
