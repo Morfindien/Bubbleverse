@@ -1,0 +1,47 @@
+{
+  "schema": "bubbleverse.q048.v98.exact_artifact_recovery_task.v1",
+  "created_utc": "2026-10-19T14:36:08.595871+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-POST-V98-EXACT-ARTIFACT-RECOVERY-V1",
+  "task_class": "PROVENANCE_ARTIFACT_RECOVERY",
+  "scientific_execution_authorized": false,
+  "authoritative_actual": {
+    "count": 110,
+    "frontier": 980
+  },
+  "required_artifacts": [
+    {
+      "path": "q048_moving_h_domain_v98.py",
+      "bytes": 10159,
+      "sha256": "86dbe97e9c9e98ab485cec297fdc139685deebf64e8af931906e4e49a71dc5ee"
+    },
+    {
+      "path": "q048_v98_proof_contract.py",
+      "bytes": 11156,
+      "sha256": "2903d956fb8df31adf66af8ffcd084b79b0e95c979fcbcb6bb029202a9643613"
+    },
+    {
+      "path": "q048_moving_h_domain_spec_v98.json",
+      "bytes": 17775,
+      "sha256": "843b9d93b8bd135b3b40e5191232c0d63b5227bc61d85ded0bde02261e5341a5"
+    },
+    {
+      "path": "q048_moving_h_domain_freeze_v98.json",
+      "bytes": 5744,
+      "sha256": "be088f8b6bfe8dbfb1cc25bfc8c257e4b320c860a1a380bd1b4d1f4f2cbd8b84"
+    }
+  ],
+  "authority": "Q048_MOVING_H_DOMAIN_V98_OUTPUT_MANIFEST.json recovered from Morfindien/Bubbleverse at repository search ref 089e166e0d8916f117b3b097352926e0e41ddd56",
+  "success": "Recover exact bytes matching every listed byte count and SHA256; then return them to Result Ingestion for routing to Mathematics diagnostic.",
+  "failure": "If exact bytes cannot be recovered from authorized project storage/history, preserve BLOCKED_MISSING_STATE; do not reconstruct substitutes.",
+  "forbidden": [
+    "No V98 retry or patch",
+    "No new proof or actual cell",
+    "No physics/criteria changes",
+    "No source reconstruction from later/earlier producer families",
+    "No hash-equivalence claim without exact bytes"
+  ],
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "github_write_state": "READY_FOR_MANUAL_UPLOAD"
+}
