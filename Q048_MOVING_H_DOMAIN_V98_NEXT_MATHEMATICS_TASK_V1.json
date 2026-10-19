@@ -1,0 +1,49 @@
+{
+  "schema": "bubbleverse.q048.v98.ingestion.next_mathematics_task.v1",
+  "created_utc": "2026-10-19T14:25:04.897514+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "status": "CONTINUE",
+  "case_lifecycle": "ACTIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "selected_next_engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "task_id": "LOCAL-Q048-POST-V98-DIAGNOSE-UPPER-H-THERMAL-L-980-970-MATH-V1",
+  "prior_failed_task": "LOCAL-Q048-POST-V97-MOVING-H-DOMAIN-980-970-MATH-V1",
+  "prior_obstruction": "NEW_CELL_UPPER_H_THERMAL:L",
+  "classification": "MATHEMATICAL_DOMAIN_ADMISSIBILITY_OBSTRUCTION",
+  "authoritative_actual": {
+    "count": 110,
+    "frontier": 980
+  },
+  "new_accepted_proofs": 0,
+  "new_actual_cells": 0,
+  "objective": "Resolve exactly why the L-branch upper-h/thermal admission fails on the frozen 980→970 cell and prove either admissibility or non-admissibility under unchanged accepted V97 state and physical criteria.",
+  "frozen": [
+    "accepted V97 actual checkpoint and endpoint/lower/K state",
+    "physical inputs and captured effective inputs",
+    "q=xHeII=1e-6 latch/reset comparison definition",
+    "accepted z_reio",
+    "cell 980→970",
+    "guard semantics and scientific acceptance criteria"
+  ],
+  "permitted": [
+    "derive sharper mathematically valid upper-h/thermal bounds",
+    "inspect the exact inequality terms and provenance already authorized through Q048",
+    "produce a source-real lemma/certificate or a rigorous non-admissibility diagnosis"
+  ],
+  "forbidden": [
+    "retry V98 unchanged",
+    "postfreeze patch V98",
+    "change physical inputs or accepted state",
+    "relax acceptance criteria",
+    "reset/refit/recapture/tune",
+    "subdivide merely to force passage",
+    "run Builder/HPC consumer without an accepted proof",
+    "claim proof980→970 or actual111/frontier970 without acceptance"
+  ],
+  "success_condition": "Auditable proof that the L upper-h/thermal condition is satisfied for 980→970 under unchanged criteria, OR auditable proof that it is not satisfied under those criteria.",
+  "failure_condition": "A first precise missing lemma/input/authority prevents the diagnosis.",
+  "stop_condition": "Stop after the first decisive diagnosis/certificate or first precise blocker and return once to Result Ingestion.",
+  "completion_gate_satisfied": false,
+  "github_sync": "USER_UPLOAD_PENDING"
+}
