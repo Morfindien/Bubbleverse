@@ -1,0 +1,166 @@
+{
+  "schema": "Q048_FREC_MOVING_H_V91_BLOCKER_INGESTION_STATE_V1",
+  "created_at_utc": "2026-10-19T09:52:41.433875+00:00",
+  "created_at_local": "2026-10-19T11:52:41.434773+02:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "incoming_blocker": {
+    "event": "LOCAL-Q048-V91-PREIMPLEMENTATION-BLOCKED",
+    "status": "BLOCKED_PRE_PRODUCER",
+    "scientific_execution": "NOT_EXECUTED",
+    "result_sha256": "6316f11ca3639fbd1aee97cec957cb25053d4da7d4ea99218d0913bf857799eb",
+    "handoff_sha256": "210f60f87d618134b22900978eb4bac0764aa9b07e5951cff337d766445cd2ce",
+    "contract_sha256": "f8fe23f09eb04a8b6e40dae1231f8e5c0d9d5558af70d162e87f15726a9d1bd3",
+    "blocker_state_sha256": "9af8032fd8a4aba9bacf31f0b837c7a822985829c2bdd1478d05b7bc4ba91857",
+    "execution_counts": {
+      "new_code_files": 0,
+      "producer_runs": 0,
+      "science_calls": 0,
+      "verifier_runs": 0,
+      "acceptor_runs": 0,
+      "new_actual_cells": 0,
+      "new_math_proofs": 0
+    }
+  },
+  "actual_authority": {
+    "count": 106,
+    "frontier": 1020,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1020
+    },
+    "endpoint": {
+      "a": "1/1021",
+      "E": "60992481776499366803/1000000000000000000",
+      "Y": "24282981898453037871/500000000000000000",
+      "Vbar": "5954373198555118633/500000000000000000"
+    },
+    "connected_lower": "563445113766083/1000000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v89.json",
+    "accepted_checkpoint_sha256": "96b2b93050581d5b3c82e5023acacb30e9a723008d5067bf88fc3a880a235158"
+  },
+  "accepted_v90_proof": {
+    "checkpoint": "q048_moving_h_domain_accepted_checkpoint_v90.json",
+    "checkpoint_sha256": "4a87612b9adf4da5a75c2df1afe69170e6c492b831a3cfcc1e9dad47a27ad511",
+    "raw": "q048_moving_h_domain_result_v90.json",
+    "raw_sha256": "6ef8d202917ab1f94ffb6483c6fa72cb6136dd7552d0cc5cf2f1352342b62a0e",
+    "validation": "q048_moving_h_domain_validation_v90.json",
+    "validation_sha256": "cb815bc0fd72fffe59e6b46db582a9c7790de91f1fc6ae468c56aed5628c946b",
+    "transition": "q048_moving_h_domain_transition_validation_v90.json",
+    "transition_sha256": "65008dffc51b1bcc146a25575d0b39de157b1e3b98700f7db250276e0a480f74",
+    "acceptance": "q048_moving_h_domain_acceptance_validation_v90.json",
+    "acceptance_sha256": "92b53b0791df10c0708c6446d10fc1263c732fb668c1d8c703152c6d20720c59",
+    "postaccept": "q048_moving_h_domain_postaccept_validation_v90.json",
+    "postaccept_sha256": "5160c19cc2f0a1aa0c80aaac5e9106fc9d65381f03d527516f4991e550929c81",
+    "spec_sha256": "cdac544e3e44de61c43e9318d5f03cc0c7d0939f0cb95bae028a5b98219eacd7",
+    "execution_fingerprint": "4288a871e508ebdc92130434fe91c1b69f62416330e5c638987320fd3d4fb743",
+    "cell_z": [
+      1020,
+      1010
+    ],
+    "cell_a": [
+      "1/1021",
+      "1/1011"
+    ],
+    "initial_lower": "563445113766083/1000000000000000000",
+    "whole_cell_lower": "273780565158891/500000000000000000",
+    "K_upper": "5195578764739343429817/1000000000000000000",
+    "status": "ACCEPTED_MATHEMATICAL_PROOF_ONLY",
+    "availability_note": "All exact V90 proof bytes required by a downstream preflight are present in the supplied local V90 package and hash-verified. Repository upload is partial; do not substitute or reconstruct missing repo copies."
+  },
+  "blocker_assessment": {
+    "original_blocker_fact": "Eight exact V89 source/test bytes required by V1 are unavailable; historical V89 source must not be reconstructed.",
+    "scientific_materiality": "NOT_A_SCIENTIFIC_EVIDENCE_DEPENDENCY_FOR_THE_NEW_CELL_IF_A_SEPARATELY_VERSIONED_FRESH_IMPLEMENTATION_IS_USED",
+    "reproducibility_impact": "Historical V89 exact-code reproducibility remains limited and explicitly preserved as a provenance gap.",
+    "resolution": "Do not resume blocked V1. Create V2/V91R1 configuration using exact V87 source/test family as reference-only and fresh current-task validation.",
+    "basis": "Result Ingestion2.1.0 permits justified changes as new configurations with reason/diff and permits same-engine routing after a material configuration change."
+  },
+  "recovered_reference": {
+    "schema": "Q048_FREC_MOVING_H_V91_RECOVERY_REFERENCE_V87_MAP_V1",
+    "created_at_utc": "2026-10-19T09:52:41.433875+00:00",
+    "q": "Q048",
+    "purpose": "Exact implementation-reference recovery for separately versioned V91R1; not reconstruction of V89 source.",
+    "reference_files": {
+      "q048_frec_moving_h_v87.py": {
+        "sha256": "52afe960775c6d4f146dbba1a1ba17f02b2f02cab0ecb48df321ea5b172344e8",
+        "bytes": 8453,
+        "local_delivery_path": "reference_v87/q048_frec_moving_h_v87.py",
+        "verification": "COMPUTED_EXACT_RAW_BYTES_MATCH"
+      },
+      "q048_frec_moving_h_verify_v87.py": {
+        "sha256": "be7a390f91dc6f1bfa07a90e0d4f31d1e731c7e54ae9fc8765b3d44a36fb9972",
+        "bytes": 13214,
+        "local_delivery_path": "reference_v87/q048_frec_moving_h_verify_v87.py",
+        "verification": "COMPUTED_EXACT_RAW_BYTES_MATCH"
+      },
+      "q048_frec_moving_h_accept_v87.py": {
+        "sha256": "572bd4acfb5166962e126eb2f04483c2c88381e6a6783b4f54d5e5904344f903",
+        "bytes": 7219,
+        "local_delivery_path": "reference_v87/q048_frec_moving_h_accept_v87.py",
+        "verification": "COMPUTED_EXACT_RAW_BYTES_MATCH"
+      },
+      "q048_v87_consumer_contract.py": {
+        "sha256": "68ae7b054fd472fca8f3fa51c3005c9d87e03e745caf92d354c5971cbce2db8d",
+        "bytes": 8624,
+        "local_delivery_path": "reference_v87/q048_v87_consumer_contract.py",
+        "verification": "COMPUTED_EXACT_RAW_BYTES_MATCH"
+      },
+      "q048_v87_import_probe.py": {
+        "sha256": "755d43c04f43679b180e1f05e84e4216353d216089631bcf04362dc24077a1cc",
+        "bytes": 2326,
+        "local_delivery_path": "reference_v87/q048_v87_import_probe.py",
+        "verification": "COMPUTED_EXACT_RAW_BYTES_MATCH"
+      },
+      "q048_v87_freeze_and_execute.py": {
+        "sha256": "a3f4b4dd7d91f864f1d67a4d7294c60846793f25360b37e2a1b759e4dc66ac50",
+        "bytes": 6203,
+        "local_delivery_path": "reference_v87/q048_v87_freeze_and_execute.py",
+        "verification": "COMPUTED_EXACT_RAW_BYTES_MATCH"
+      },
+      "test_q048_v87_contract.py": {
+        "sha256": "fc9d848c4efc60eff927a0afa930fb5cf76ace860a8fefb5bea0b024d3438ca7",
+        "bytes": 2809,
+        "local_delivery_path": "reference_v87/test_q048_v87_contract.py",
+        "verification": "COMPUTED_EXACT_RAW_BYTES_MATCH"
+      },
+      "test_q048_v87_import_layout.py": {
+        "sha256": "0dc2a2537de489d4d11649ac19f3acae34921e6a72e992178e0a3b9a6991252f",
+        "bytes": 2374,
+        "local_delivery_path": "reference_v87/test_q048_v87_import_layout.py",
+        "verification": "COMPUTED_EXACT_RAW_BYTES_MATCH"
+      }
+    },
+    "all_verified": true,
+    "v89_source_recovered": false,
+    "historical_v89_source_gap_preserved": true
+  },
+  "selected_next_engine": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+  "selected_next_task_id": "LOCAL-Q048-POST-V91-BLOCKER-RECOVERY-ACTUAL-CONSUMER-1020-1010-V2",
+  "next_task_fingerprint": "254cb9f9bcbd334215b33f112005901c6d7d01751022cb41bb0fa53b8e0b37fb",
+  "q_completion_gate": "NOT_SATISFIED",
+  "open_material_uncertainties": [
+    "complete four-case x_e(z) histories missing",
+    "cumulative tau_T(z) difference bounds missing",
+    "NativeP6 unresolved"
+  ],
+  "scientific_effect": "NO_NEW_SCIENCE_AT_INGESTION; blocker preserved; route repaired through a new versioned implementation configuration only.",
+  "repository_basis": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "head_commit": "13c45b5eb4e9d8b896dd64adbce792b1eb4380d2",
+    "head_tree": "7140500120dd5f07cb4166cdfe4c02bdeac30a94",
+    "verified_at_utc": "2026-10-19T09:52:41.433875+00:00",
+    "source_freshness": "VERIFIED",
+    "v91_blocker_bundle_on_head": true,
+    "v89_reference_code_on_head": false,
+    "v87_reference_source": "ChatGPT Library exact raw bytes; all eight SHA-256/byte pins verified locally for this ingestion."
+  },
+  "github_write_state": "READY_FOR_MANUAL_UPLOAD",
+  "scientific_handoff": "PREPARED_NOT_SENT"
+}
