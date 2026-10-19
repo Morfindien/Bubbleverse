@@ -1,0 +1,91 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-V90-ACCEPTED-PROOF-INGESTION-V1-TO-BUILDER",
+  "created_at_utc": "2026-10-19T09:28:00.180260+00:00",
+  "case_id": null,
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": "external source-date cutoff NOT_DOCUMENTED",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-V90-MOVING-H-DOMAIN-ACCEPTED"
+  ],
+  "source_state_version": "V90_MATHEMATICS_ACCEPTED",
+  "target_state_version": "V90_INGESTED_V1",
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER2.2.0",
+  "engine_registry_ref": "EXISTING_PROMPT_SHA256:49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+  "execution_profile_ref": "HIGH_REASONING + LOCAL_RUNTIME recommended for bounded consumer; current runtime observed GPT-5.6 Sol; no model switch required",
+  "journal_ref": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V90_INGESTED_V1.md",
+  "source_register_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+  "claim_evidence_map_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+  "result_provenance_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+  "anomaly_tension_registry_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+  "completed_task_ledger_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+  "route_history_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+  "integrity_manifest_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "Accepted V90 mathematical proof1020→1010 documented in ingestion state",
+    "Repository base reconciled to current HEAD after Jim upload",
+    "Exactly one next Builder consumer task prepared"
+  ],
+  "frozen_configuration_refs": [
+    "4a87612b9adf4da5a75c2df1afe69170e6c492b831a3cfcc1e9dad47a27ad511",
+    "cdac544e3e44de61c43e9318d5f03cc0c7d0939f0cb95bae028a5b98219eacd7",
+    "99ea8ea12ee521c24e1c16cb81c038e6ada1282cd40379da4f05527b89806a2b"
+  ],
+  "open_material_uncertainties": [
+    "complete four-case x_e histories missing",
+    "cumulative tau_T difference bounds missing",
+    "NativeP6 unresolved"
+  ],
+  "missing_information": [
+    "Repository copy is missing some V90 machine artifacts, but exact supplied local V90 bytes are available and hash-verified; downstream must stage those exact bytes if required."
+  ],
+  "next_task": "LOCAL-Q048-POST-V90-ACTUAL-CONSUMER-1020-1010-V1",
+  "success_condition": "Exactly one accepted actual consumer for 1020→1010 with current actual becoming107/frontier1010 and endpoint matching committed primary row43 under the accepted V90 proof.",
+  "failure_or_falsification_condition": "First precise obstruction, failed gate, missing required exact artifact, hash/layout/state mismatch or validation failure; preserve current actual106/frontier1020.",
+  "stop_condition": "first obstruction OR one accepted consumer OR 300 science seconds; no below1010",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Complete four-case histories and cumulative optical-depth difference bounds are absent.",
+  "handoff_completeness": "COMPLETE_FOR_ROUTE_WITH_EXACT_LOCAL_V90_ARTIFACTS",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "No additional gate for bounded reversible local consumer; no paid compute/Actions/new Q/model promotion authorized.",
+  "output_file_refs": [
+    "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V90_INGESTED_V1.md",
+    "Q048_MOVING_H_DOMAIN_V90_INGESTION_RESULT_V1.md",
+    "Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+    "Q048_MOVING_H_DOMAIN_V90_NEXT_BUILDER_TASK_V1.json",
+    "Q048_MOVING_H_DOMAIN_V90_INGESTION_HANDOFF_TO_BUILDER_V1.md",
+    "Q048_MOVING_H_DOMAIN_V90_INGESTION_HANDOFF_ENVELOPE_V1.json",
+    "Q048_MOVING_H_DOMAIN_V90_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+    "Q048_MOVING_H_DOMAIN_V90_INGESTION_FILES_V1.md",
+    "Q048_MOVING_H_DOMAIN_V90_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "Q048_MOVING_H_DOMAIN_V90_INGESTION_VALIDATION_V1.json"
+  ],
+  "output_manifest_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "primary",
+    "base_commit_sha": "b103127165b881219f8f8c1721dd5ebb89438be9",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V90_APPENDED_V1.md",
+    "current_state_path": null,
+    "index_refs": [],
+    "cross_reference_refs": [],
+    "memory_update_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+    "target_paths_status": "VERIFIED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_MOVING_H_DOMAIN_V90_INGESTION_FILES_V1.md"
+  }
+}
