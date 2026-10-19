@@ -1,0 +1,42 @@
+{
+  "schema": "Q048_V99_EXACT_PRIMITIVE_RECOVERY_VALIDATION_V1",
+  "q": "Q048",
+  "status": "PASS_EXACT_RECOVERY_AND_HYDROGEN_REGRESSION",
+  "historical_file": {
+    "path": "q048_full_tube_reuse_v1.py",
+    "bytes": 10171,
+    "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+    "exact_match": true
+  },
+  "recovered_functions": {
+    "hydrogen_barrier_term": "alpha*h*(h+q)-alpha_eq*s*(1-h)",
+    "thermal_certificate": "beta=8*sigma*(gamma/a**4)*rhoJ/(3*me*c*Hs)*(h+q)/(1+fHe+h+q); faces=thermal_faces(beta.lo,beta.hi,-1e-6,1e-2); denominator=1+fHe+h+q"
+  },
+  "thermal_face_rule": {
+    "lower": "1-(1+beta_lo)*w_lo",
+    "upper_margin": "(1+beta_lo)*w_hi-1",
+    "admitted": "lower>0 and upper_margin>0",
+    "for_w_hi_0.01": "requires beta_lo > 99"
+  },
+  "hydrogen_regression": {
+    "datasets": [
+      "q048_moving_h_domain_result_v90.json",
+      "q048_moving_h_domain_result_v92.json"
+    ],
+    "branches": [
+      "L",
+      "R"
+    ],
+    "levels_per_branch": 2,
+    "checks": 8,
+    "containment_checks_passed": 8,
+    "status": "PASS",
+    "note": "Exact rational formula intervals are contained by archived outward-rounded interval certificates."
+  },
+  "authoritative_state_unchanged": {
+    "actual_count": 110,
+    "frontier": 980,
+    "q_complete": false
+  },
+  "next_step": "Evaluate V98 980->970 exact thermal beta and five split L-gate predicates using pinned V98 inputs; this report itself authorizes no actual advance."
+}
