@@ -1,0 +1,477 @@
+{
+  "schema": "bubbleverse.q048.single_moving_h_proof_task.local.v1",
+  "task_id": "LOCAL-Q048-POST-V91R1-MOVING-H-DOMAIN-1010-1000-MATH-V1",
+  "registration": "LOCAL_PROVISIONAL_NOT_GLOBALLY_REGISTERED",
+  "created_at_utc": "2026-10-19T10:20:46.106063+00:00",
+  "created_at_local": "2026-10-19T12:20:46.106063+02:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case": "hillipop-ede_n3",
+  "case_id": "NOT_ASSIGNED",
+  "case_assignment_status": "PROPOSED_UNVERIFIED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_type": "FRESH_MOVING_H_DOMAIN_PROOF_ONE_CELL",
+  "fingerprint_basis": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "task_id": "LOCAL-Q048-POST-V91R1-MOVING-H-DOMAIN-1010-1000-MATH-V1",
+    "task_type": "FRESH_MOVING_H_DOMAIN_PROOF_ONE_CELL",
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "engine_version": "2.1.0",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "parent_accepted_actual_count": 107,
+    "parent_accepted_frontier": 1010,
+    "parent_checkpoint_sha256": "1c89a4cd49a5b0e773fec7d874ea787350bcc07121e0d23681fc2da47517a8be",
+    "parent_raw_sha256": "b9763f93ade4adb1f2424a6fc61942e7f5f77cbbfbe8cf92fe27be05584cfea7",
+    "parent_validation_sha256": "175ee287667f0bbf3a4e2464f614728e20a3f11c60466bfe32c6aa809d66ce73",
+    "parent_orchestration_sha256": "5c216231e6ff18d67b868c78aba1f62369d4b59c855ab282601b3e79ecf7a5ab",
+    "cell_z": [
+      1010,
+      1000
+    ],
+    "cell_a": [
+      "1/1011",
+      "1/1001"
+    ],
+    "initial_connected_lower": "273780565158891/500000000000000000",
+    "epsilon": "1/1000000",
+    "h_upper": "99999/100000",
+    "w_domain": [
+      "-1/1000000",
+      "1/100"
+    ],
+    "previous_K_upper": "5195578764739343429817/1000000000000000000",
+    "guard_primary_row_sha256": "976ca44aee1ef97aa8480011b1ace4e0c691f39287bb8213530c5583d108a76c",
+    "guard_control_row_sha256": "904d638c4fe698e0ca92a34720939110e202e5c502ce7e473bb883614e91cb57",
+    "guard_row_index": 44,
+    "max_new_math_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "science_budget_seconds": 300,
+    "criteria_version": "FRESH_SOURCE_REAL_MOVING_H_ONE_CELL_V91R1_LINEAGE_V1",
+    "result_version_on_execution": "V92_PROPOSED_UNUSED_AT_VERIFIED_REPO_HEAD",
+    "evidence_boundary": "Q001–Q048; external source-date cutoff NOT_DOCUMENTED",
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+    "required_math_layout": "inputs/source/q047_math_v1.py",
+    "required_math_sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+    "current_source_Saha_Beta_prefactor": "3.016101031869581e21",
+    "budget_scope": "whole ordered chain including final pin checks"
+  },
+  "task_fingerprint": "05f22a5747b13f1c861d0b5aada266a4819704e75c89f276e2786bb91cb475b2",
+  "fingerprint_method": "SHA256 sorted compact UTF-8 JSON ensure_ascii=false of fingerprint_basis; planning identity only.",
+  "execution_fingerprint": null,
+  "execution_fingerprint_status": "NOT_YET_CREATED_MUST_FREEZE_FRESH_V92_IDENTITY",
+  "engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "verified_commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+    "access": "EXACT_REPOSITORY_BYTES_HASH_VERIFIED",
+    "deployment": "EXISTING_PROMPT_NO_NEW_ENGINE_REGISTRATION"
+  },
+  "initial_actual_state": {
+    "count": 107,
+    "frontier": 1010,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1010
+    },
+    "endpoint": {
+      "a": "1/1011",
+      "E": "11800560411137753481/200000000000000000",
+      "Y": "23486715015949958209/500000000000000000",
+      "Vbar": "11528148189464315529/1000000000000000000"
+    },
+    "connected_lower": "273780565158891/500000000000000000",
+    "K_upper": "5195578764739343429817/1000000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v91r1.json",
+    "accepted_checkpoint_sha256": "1c89a4cd49a5b0e773fec7d874ea787350bcc07121e0d23681fc2da47517a8be"
+  },
+  "accepted_actual_state_must_remain": {
+    "count": 107,
+    "frontier": 1010,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1010
+    },
+    "endpoint": {
+      "a": "1/1011",
+      "E": "11800560411137753481/200000000000000000",
+      "Y": "23486715015949958209/500000000000000000",
+      "Vbar": "11528148189464315529/1000000000000000000"
+    },
+    "connected_lower": "273780565158891/500000000000000000",
+    "K_upper": "5195578764739343429817/1000000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v91r1.json",
+    "accepted_checkpoint_sha256": "1c89a4cd49a5b0e773fec7d874ea787350bcc07121e0d23681fc2da47517a8be"
+  },
+  "new_mathematical_domain": {
+    "cell_z": [
+      1010,
+      1000
+    ],
+    "cell_a": [
+      "1/1011",
+      "1/1001"
+    ],
+    "initial_lower": "273780565158891/500000000000000000",
+    "new_K_upper": "NOT_YET_COMPUTED",
+    "new_connected_lower": "NOT_YET_COMPUTED",
+    "proof_status": "NOT_COMPUTED_NOT_ACCEPTED",
+    "max_new_proofs": 1,
+    "max_new_actual_cells": 0,
+    "guard_right_endpoint_role": "COMMITTED_SCALAR_GUARD_ONLY_NOT_ACTUAL1000_OR_NEW_COUPLED_PROOF"
+  },
+  "guard_binding": {
+    "row_index": 44,
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "read_scope": "NEXT_ROW44_METADATA_ONLY_NO_GUARD_OR_SCIENTIFIC_REPLAY",
+    "primary": {
+      "a0": "1/1011",
+      "a1": "1/1001",
+      "z0": 1010,
+      "z1": 1000,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "21697585439043004381/1000000000000000000",
+        "H_upper_left": "3215788634243098713/500000000000000000",
+        "X_upper_left": "5431519219136058963/500000000000000000",
+        "V_candidate_upper": "2789060646887862917/250000000000000000",
+        "retained_Vbar": "11528148189464315529/1000000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "11800560411137753481/200000000000000000",
+      "Y_left": "23486715015949958209/500000000000000000",
+      "V_previous": "11528148189464315529/1000000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "3663420415312317711/62500000000000000",
+      "V_local": "2789060646887862917/250000000000000000",
+      "V_admitted": "2789060646887862917/250000000000000000",
+      "equilibrium_upper": "6208691526985155711/1000000000000000000",
+      "amplitude": "40764738504914760707/1000000000000000000",
+      "constant_energy_part": "82109945444378684277/4600000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "961849416032445973/1000000000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "11250816046072605693/250000000000000000",
+      "raw_G_lower": "2060705169639823547989458965191986138469932230142301777347224229358226670456500200521894123321267310868901717966311097598801/357451076169534149049180990855527478822202858385593671910333483391958388477758363664384000000000000000000000000000000000000",
+      "G_lower": "288249960207485753/50000000000000000",
+      "Y_right_candidate": "5677278931581597879/125000000000000000",
+      "E_right_candidate": "5705952806574994999/100000000000000000",
+      "endpoint_energy_envelope": "5705952806574994999/100000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1001/1011",
+      "R_at_left": "5193895909664822939387905338508621641028149006415013771238348679543447796993843561429626679961117/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "25685073889814771774907761543409494867766266980672938975/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "961849416032445969/1000000000000000000",
+        "upper": "961849416032445973/1000000000000000000",
+        "log_lower": "994043970525083/100000000000000000",
+        "log_upper": "9940439705250831/1000000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "5705952806574994999/100000000000000000",
+      "Y_right": "5677278931581597879/125000000000000000",
+      "index": 44,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "primary_row_sha256": "976ca44aee1ef97aa8480011b1ace4e0c691f39287bb8213530c5583d108a76c",
+    "control": {
+      "a0": "1/1011",
+      "a1": "1/1001",
+      "z0": 1010,
+      "z1": 1000,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "21697585439043004381/1000000000000000000",
+        "H_upper_left": "3234558646225652583/500000000000000000",
+        "X_upper_left": "439838803943958193/40000000000000000",
+        "V_candidate_upper": "1419834517436710089/125000000000000000",
+        "retained_Vbar": "11731366281124800207/1000000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "60455679204641154141/1000000000000000000",
+      "Y_left": "48214253519989188707/1000000000000000000",
+      "V_previous": "11731366281124800207/1000000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "23413236645627175556970010753/62500000000000000000000000000",
+        "94148378636659000522062847783/125000000000000000000000000000",
+        "1684521940004705069348518499751/1000000000000000000000000000000",
+        "124448506716104370689444195407/40000000000000000000000000000",
+        "5041647631237673892134221607087/1000000000000000000000000000000",
+        "1879543245255016522820609776617/250000000000000000000000000000",
+        "10611819158390400849540000115519/1000000000000000000000000000000",
+        "902245430049423557435697707637/62500000000000000000000000000",
+        "19182103131263597305137858604067/1000000000000000000000000000000",
+        "12610088952759722287856518823477/500000000000000000000000000000",
+        "4187381412288103570006840611943/125000000000000000000000000000"
+      ],
+      "E_safe_left": "7508348142976085203/125000000000000000",
+      "V_local": "1419834517436710089/125000000000000000",
+      "V_admitted": "1419834517436710089/125000000000000000",
+      "equilibrium_upper": "6321350199370396223/1000000000000000000",
+      "amplitude": "10473225830154698121/250000000000000000",
+      "constant_energy_part": "417999281933367450217/23000000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "7751/8051",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "10164015737116969553/250000000000000000",
+      "raw_G_lower": "6092146931294796225201050589943540968056795764882875585734767800181007551816664859516974468882942088883277463195545773/1405194635859823942380349686219654166014431256280475904565476013080398918766812786065408000000000000000000000000000000",
+      "G_lower": "2167723522359973661/500000000000000000",
+      "Y_right_candidate": "11663305306584502563/250000000000000000",
+      "E_right_candidate": "58505752850157503169/1000000000000000000",
+      "endpoint_energy_envelope": "58505752850157503169/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "1001/1011",
+      "R_at_left": "36948734458241166464390774673503867182425313598274982097654102871459502142672251095310533546385219775955576214947/7588550360256754183279148073529370729071901715047420004889892225542594864082845696000000000000000000000000000000",
+      "M_at_left": "25685073889814771774907761543409494867766266980672938975/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "58505752850157503169/1000000000000000000",
+      "Y_right": "11663305306584502563/250000000000000000",
+      "index": 44,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control_row_sha256": "904d638c4fe698e0ca92a34720939110e202e5c502ce7e473bb883614e91cb57",
+    "control_role": "GUARD_ONLY_CONSERVATIVE_TRACK_NOT_ACTUAL_PRIMARY_STATE",
+    "glue_rule": "Primary row44 a/E/Y/V_previous exactly equal accepted V91R1 endpoint; no reset. Guard admission does not substitute for fresh coupled-domain proof."
+  },
+  "reference_code_pins": {
+    "q048_v90_proof_contract.py": {
+      "sha256": "8fddc247a926905e2c37ccd3e0a1cc8e8ce516ba270def5142f83a28b80df69e",
+      "bytes": 6225,
+      "repository_path": "q048_v90_proof_contract.py",
+      "repository_commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+      "role": "EXACT_V90_IMPLEMENTATION_REFERENCE_ONLY_NOT_NEW_PROOF",
+      "access": "VERIFIED_EXACT_CURRENT_REPOSITORY_BYTES"
+    },
+    "q048_moving_h_domain_v90.py": {
+      "sha256": "8ca2d233068ba179dd57e1751925c81a7281625d76c09782185b733a4bda8327",
+      "bytes": 10077,
+      "repository_path": "q048_moving_h_domain_v90.py",
+      "repository_commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+      "role": "EXACT_V90_IMPLEMENTATION_REFERENCE_ONLY_NOT_NEW_PROOF",
+      "access": "VERIFIED_EXACT_CURRENT_REPOSITORY_BYTES"
+    },
+    "q048_moving_h_domain_verify_v90.py": {
+      "sha256": "e4f758dde5cbafb43e38750b57caae3893d2fdc536f0b9a6b273b6a45175463f",
+      "bytes": 18058,
+      "repository_path": "q048_moving_h_domain_verify_v90.py",
+      "repository_commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+      "role": "EXACT_V90_IMPLEMENTATION_REFERENCE_ONLY_NOT_NEW_PROOF",
+      "access": "VERIFIED_EXACT_CURRENT_REPOSITORY_BYTES"
+    },
+    "q048_moving_h_domain_accept_v90.py": {
+      "sha256": "677eb53949afbc83709a7c1842a4ef21045ca461923e10f9c59ff82b10f27d96",
+      "bytes": 7412,
+      "repository_path": "q048_moving_h_domain_accept_v90.py",
+      "repository_commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+      "role": "EXACT_V90_IMPLEMENTATION_REFERENCE_ONLY_NOT_NEW_PROOF",
+      "access": "VERIFIED_EXACT_CURRENT_REPOSITORY_BYTES"
+    },
+    "q048_v90_import_probe.py": {
+      "sha256": "218d8ac8499de82b2253842e749c4b833f266956dc63f56cc09b6efdf0ebf975",
+      "bytes": 2244,
+      "repository_path": "q048_v90_import_probe.py",
+      "repository_commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+      "role": "EXACT_V90_IMPLEMENTATION_REFERENCE_ONLY_NOT_NEW_PROOF",
+      "access": "VERIFIED_EXACT_CURRENT_REPOSITORY_BYTES"
+    },
+    "q048_v90_freeze_and_execute.py": {
+      "sha256": "cd3ebb05e3fb1d3036902c34da06f69903c0b512ce0c40df34d9c9afb5108e3f",
+      "bytes": 3842,
+      "repository_path": "q048_v90_freeze_and_execute.py",
+      "repository_commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+      "role": "EXACT_V90_IMPLEMENTATION_REFERENCE_ONLY_NOT_NEW_PROOF",
+      "access": "VERIFIED_EXACT_CURRENT_REPOSITORY_BYTES"
+    },
+    "test_q048_moving_h_v90.py": {
+      "sha256": "846864b473dc00635bffdedfe590dfdfe6d45e7e1926e2cefd4ce743fd025d4c",
+      "bytes": 3049,
+      "repository_path": "test_q048_moving_h_v90.py",
+      "repository_commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+      "role": "EXACT_V90_IMPLEMENTATION_REFERENCE_ONLY_NOT_NEW_PROOF",
+      "access": "VERIFIED_EXACT_CURRENT_REPOSITORY_BYTES"
+    },
+    "test_q048_v90_layout.py": {
+      "sha256": "cbf1180ac960ff169dd26c5457d4a35dd866c90e68831d3e4b161addbaf03980",
+      "bytes": 1031,
+      "repository_path": "test_q048_v90_layout.py",
+      "repository_commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+      "role": "EXACT_V90_IMPLEMENTATION_REFERENCE_ONLY_NOT_NEW_PROOF",
+      "access": "VERIFIED_EXACT_CURRENT_REPOSITORY_BYTES"
+    }
+  },
+  "inherited_verified_pins": {
+    "inputs/q048_guard_local_v_result_v12.json": {
+      "bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    "inputs/q048_guard_local_v_validation_v12.json": {
+      "bytes": 206698,
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554"
+    },
+    "inputs/q048_prefix_config_v1.json": {
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    "inputs/q048_p3_scaled_raw_result_v2.json": {
+      "bytes": 699697,
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c"
+    },
+    "inputs/q048_p3_scaled_transformed_log_tables_v2.json": {
+      "bytes": 3958952,
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb"
+    },
+    "inputs/q048_full_tube_reuse_v1.py": {
+      "bytes": 10171,
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc"
+    },
+    "inputs/q048_post_event_state_tube_v1.py": {
+      "bytes": 12423,
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b"
+    },
+    "inputs/q048_p3_scaled_kernel_v2.py": {
+      "bytes": 15855,
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd"
+    },
+    "inputs/q048_p3_scaled_arithmetic_v2.py": {
+      "bytes": 5988,
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa"
+    },
+    "inputs/q048_prefix_v1.py": {
+      "bytes": 17198,
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516"
+    },
+    "inputs/q047_math_v1.py": {
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    "inputs/q047_certificate_v1.py": {
+      "bytes": 15302,
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240"
+    },
+    "inputs/q047_precursor_check_v1.py": {
+      "bytes": 29808,
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5"
+    },
+    "inputs/source/q047_math_v1.py": {
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    }
+  },
+  "parent_evidence_refs": {
+    "accepted_checkpoint_sha256": "1c89a4cd49a5b0e773fec7d874ea787350bcc07121e0d23681fc2da47517a8be",
+    "raw_sha256": "b9763f93ade4adb1f2424a6fc61942e7f5f77cbbfbe8cf92fe27be05584cfea7",
+    "validation_sha256": "175ee287667f0bbf3a4e2464f614728e20a3f11c60466bfe32c6aa809d66ce73",
+    "orchestration_sha256": "5c216231e6ff18d67b868c78aba1f62369d4b59c855ab282601b3e79ecf7a5ab",
+    "evidence_index": "Q048_FREC_MOVING_H_V91R1_INGESTION_CONTEXT_INDEX_V1.json"
+  },
+  "required_work": [
+    "Recover the complete updated journal and exact accepted V91R1 parent107/frontier1010 with final successful orchestration; all prior V91/V89 failures remain historical.",
+    "Write a new V92 scientific contract and preimplementation spec before implementation. Freeze parent107/1010, exact row44 and a=[1/1011,1/1001]. No actual consumer is authorized.",
+    "Inspect exact hash-pinned V90 source family as implementation reference only; build a fresh V92 revision with new contract/code/input/spec/task/execution identities. No historical producer/verifier/acceptor main replay.",
+    "Use exact source/capture/rate/helpers/guard bytes. Preserve accepted V90/V91R1 Saha/Beta literal3.016101031869581e21; do not inherit the differing V87 reference literal3.016103031869581e21. This is current accepted-method semantics, not new source/native equivalence evidence.",
+    "Exercise actual transitive import of the new producer in final cwd with flat inputs/q047_math_v1.py and nested inputs/source/q047_math_v1.py; invoke zero scientific entrypoints and create zero science outputs. Run finite metadata/layout tests before freeze.",
+    "On1010→1000 recompute source/background/ordinary-H divisor, atomic positivity and sufficient fresh K; never substitute historical K. Propagate accepted connected lower from a=1/1011 using outward log/exp primary and independent exact-rational control du<=10/1001; require positive whole-cell lower, L/R source/C/upper-h/thermal gates.",
+    "Use producer-free verifier with fresh source/coefficient recomputation, alternative interval algebra and at least24 meaningful mutations. Valid parent107/frontier1010; wrong parent108/frontier1000 and stale106/1020. Valid cell[1010,1000]; wrong[1010,990], stale[1020,1010]. Wrong row44 and altered parent/proof/source pins must be rejected.",
+    "Hash-bind pending raw/candidate, transition, validation, accepted mathematical checkpoint, acceptance and postaccept. Final successful bounded orchestration is required for accepted authority; intermediate accepted files alone do not override a failed final pin/budget gate.",
+    "Freeze once before at most one producer. Stop first precise obstruction, one accepted proof or300science seconds including final pin checks. No postfreeze patch/retry, actual consumer, below1000, reset/refit/recapture/tuning/subdivision, automatic later task, new Q, model promotion or Q closure. Return exactly once to Result Ingestion2.1.0."
+  ],
+  "materiality": "New accepted actual107/frontier1010 supplies a new initial state. Accepted V90 proof ends1010. No accepted coupled-domain proof1010→1000 is present in verified case state. A new sufficient K/positive glued lower and source/branch certificate is required before later actual continuation; this is a distinct parent/domain, not a retry.",
+  "no_repeat": [
+    "No V91R1 consumer replay",
+    "No accepted V90 proof replay",
+    "No V12 guard regeneration",
+    "No equivalent source research",
+    "No actual promotion in Mathematics",
+    "No below1000 or multicell work"
+  ],
+  "success_condition": "One fresh1010→1000 conditional mathematical proof with all frozen gates/producer-free source recomputation>=24 mutations/hash-bound acceptance/final budget checks PASS; actual remains107/frontier1010,0newactual.",
+  "failure_condition": "First exact hash/interface/source/guard/glue/domain/lower/sign/verifier/acceptance/budget obstruction: preserve107/frontier1010 and all partial evidence. Method/technical failure is not physical falsification.",
+  "stop_condition": "One accepted proof OR first obstruction OR300science seconds. No actualconsumer or below1000. Return once to Result Ingestion2.1.0.",
+  "budget": {
+    "backend_recommendation": "LOCAL_RUNTIME",
+    "science_seconds": 300,
+    "deadline_scope": "whole ordered chain including final pin checks",
+    "github_actions": "NOT_WORTHWHILE_FOR_ONE_BOUNDED_SERIAL_PROOF",
+    "estimate_basis": "Prior accepted V90 producer0.286515s on another environment; V91R1 consumer wholechain0.758778s. V92 duration unmeasured; preparation/delivery separate. No paid/native or Actions campaign."
+  },
+  "forbidden": [
+    "actual consumer or promotion108/frontier1000",
+    "V90/V91R1/V89 scientific mains replay",
+    "V12guard regeneration",
+    "below1000 or multicell proof",
+    "reset/refit/recapture/tuning/subdivision",
+    "postfreeze patch/retry",
+    "new Q or accepted-model promotion or Q closure",
+    "NativeP6 or paid/Actions campaign",
+    "reconstruct missing historical bytes"
+  ],
+  "gap_policy": "Every current new scientific dependency must be exact accessible hash-verified before producer; retain historical V89 source gap without reconstruction. Optional old ancillary gaps do not silently become absent current inputs.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "scientific_dispatch": "PREPARED_NOT_SENT",
+  "actual107_frontier1010_status": "ACCEPTED_V91R1_INGESTED_WITH_THIS_EVENT",
+  "actual108_frontier1000_status": "NOT_COMPUTED_NOT_AUTHORIZED_BY_THIS_PROOF_TASK",
+  "new_proof_status": "NOT_COMPUTED_NOT_ACCEPTED",
+  "repository_basis": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "commit": "135daa790e997c2f68f36eb3d0f26b1e252b1c65",
+    "tree": "acbbf6af14a37d091597a8d7f6dc8aca4c708a76",
+    "freshness": "VERIFIED",
+    "v92_filename_identity": "UNUSED_IN_COMPLETE_TREE_AT_HEAD"
+  },
+  "journal_ref": {
+    "path": "Q047_SAMLET_JOURNAL_FREC_MOVING_H_V91R1_INGESTED_V1.md",
+    "sha256": "8a59f35453ecdefdf777114062808363c5c7f8f5ffb344fde3846c4f9f9d2ba5",
+    "bytes": 14363023,
+    "history_relation": "PARENT_EXACT_BYTE_PREFIX_PLUS_NEW_APPEND"
+  }
+}
