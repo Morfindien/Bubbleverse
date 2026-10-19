@@ -1,0 +1,347 @@
+{
+  "schema": "bubbleverse.q048.moving_h.domain.spec.v90",
+  "q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "task_id": "LOCAL-Q048-POST-V89-MOVING-H-DOMAIN-1020-1010-MATH-V1",
+  "task_fingerprint": "fabe82fad1c1a3007cc97e8037d854e6c451259b00942ebb01c91bb12eee3745",
+  "program_id": "LOCAL-Q048-V90-FRESH-MOVING-H-PROOF-NOT_REGISTERED",
+  "contract_markdown_path": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V90.md",
+  "contract_markdown_sha256": "a388b5053d8210d534f05a61b15e07de332beb1c7cd17cf5a11cfc4ff72a1dc3",
+  "input_pins": {
+    "inputs/Q048_FREC_MOVING_H_V89_NEXT_MATHEMATICS_TASK_V1.json": {
+      "bytes": 28303,
+      "sha256": "6070389b7765aa892bbbf02dd821ee442c21c75c942b7046f75d121285a4beec"
+    },
+    "inputs/q048_frec_moving_h_accepted_checkpoint_v89.json": {
+      "bytes": 7115,
+      "sha256": "96b2b93050581d5b3c82e5023acacb30e9a723008d5067bf88fc3a880a235158"
+    },
+    "inputs/q048_guard_local_v_result_v12.json": {
+      "bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    "inputs/q048_guard_local_v_validation_v12.json": {
+      "bytes": 206698,
+      "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554"
+    },
+    "inputs/q048_prefix_config_v1.json": {
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    "inputs/q048_p3_scaled_raw_result_v2.json": {
+      "bytes": 699697,
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c"
+    },
+    "inputs/q048_p3_scaled_transformed_log_tables_v2.json": {
+      "bytes": 3958952,
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb"
+    },
+    "inputs/q048_full_tube_reuse_v1.py": {
+      "bytes": 10171,
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc"
+    },
+    "inputs/q048_post_event_state_tube_v1.py": {
+      "bytes": 12423,
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b"
+    },
+    "inputs/q048_p3_scaled_kernel_v2.py": {
+      "bytes": 15855,
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd"
+    },
+    "inputs/q048_p3_scaled_arithmetic_v2.py": {
+      "bytes": 5988,
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa"
+    },
+    "inputs/q048_prefix_v1.py": {
+      "bytes": 17198,
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516"
+    },
+    "inputs/q047_math_v1.py": {
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    "inputs/q047_certificate_v1.py": {
+      "bytes": 15302,
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240"
+    },
+    "inputs/q047_precursor_check_v1.py": {
+      "bytes": 29808,
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5"
+    },
+    "inputs/source/q047_math_v1.py": {
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    "inputs/Bubbleverse_Matematikmotor_2.1.0-46.md": {
+      "bytes": 56414,
+      "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+    }
+  },
+  "code_pins": {
+    "q048_v90_proof_contract.py": {
+      "bytes": 6225,
+      "sha256": "8fddc247a926905e2c37ccd3e0a1cc8e8ce516ba270def5142f83a28b80df69e"
+    },
+    "q048_moving_h_domain_v90.py": {
+      "bytes": 10077,
+      "sha256": "8ca2d233068ba179dd57e1751925c81a7281625d76c09782185b733a4bda8327"
+    },
+    "q048_moving_h_domain_verify_v90.py": {
+      "bytes": 18058,
+      "sha256": "e4f758dde5cbafb43e38750b57caae3893d2fdc536f0b9a6b273b6a45175463f"
+    },
+    "q048_moving_h_domain_accept_v90.py": {
+      "bytes": 7412,
+      "sha256": "677eb53949afbc83709a7c1842a4ef21045ca461923e10f9c59ff82b10f27d96"
+    },
+    "q048_v90_import_probe.py": {
+      "bytes": 2244,
+      "sha256": "218d8ac8499de82b2253842e749c4b833f266956dc63f56cc09b6efdf0ebf975"
+    },
+    "q048_v90_freeze_and_execute.py": {
+      "bytes": 3842,
+      "sha256": "cd3ebb05e3fb1d3036902c34da06f69903c0b512ce0c40df34d9c9afb5108e3f"
+    },
+    "test_q048_moving_h_v90.py": {
+      "bytes": 3049,
+      "sha256": "846864b473dc00635bffdedfe590dfdfe6d45e7e1926e2cefd4ce743fd025d4c"
+    },
+    "test_q048_v90_layout.py": {
+      "bytes": 1031,
+      "sha256": "cbf1180ac960ff169dd26c5457d4a35dd866c90e68831d3e4b161addbaf03980"
+    }
+  },
+  "execution_fingerprint_basis": {
+    "input_pins": {
+      "inputs/Q048_FREC_MOVING_H_V89_NEXT_MATHEMATICS_TASK_V1.json": {
+        "bytes": 28303,
+        "sha256": "6070389b7765aa892bbbf02dd821ee442c21c75c942b7046f75d121285a4beec"
+      },
+      "inputs/q048_frec_moving_h_accepted_checkpoint_v89.json": {
+        "bytes": 7115,
+        "sha256": "96b2b93050581d5b3c82e5023acacb30e9a723008d5067bf88fc3a880a235158"
+      },
+      "inputs/q048_guard_local_v_result_v12.json": {
+        "bytes": 1198030,
+        "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+      },
+      "inputs/q048_guard_local_v_validation_v12.json": {
+        "bytes": 206698,
+        "sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554"
+      },
+      "inputs/q048_prefix_config_v1.json": {
+        "bytes": 105567,
+        "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+      },
+      "inputs/q048_p3_scaled_raw_result_v2.json": {
+        "bytes": 699697,
+        "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c"
+      },
+      "inputs/q048_p3_scaled_transformed_log_tables_v2.json": {
+        "bytes": 3958952,
+        "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb"
+      },
+      "inputs/q048_full_tube_reuse_v1.py": {
+        "bytes": 10171,
+        "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc"
+      },
+      "inputs/q048_post_event_state_tube_v1.py": {
+        "bytes": 12423,
+        "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b"
+      },
+      "inputs/q048_p3_scaled_kernel_v2.py": {
+        "bytes": 15855,
+        "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd"
+      },
+      "inputs/q048_p3_scaled_arithmetic_v2.py": {
+        "bytes": 5988,
+        "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa"
+      },
+      "inputs/q048_prefix_v1.py": {
+        "bytes": 17198,
+        "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516"
+      },
+      "inputs/q047_math_v1.py": {
+        "bytes": 12617,
+        "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+      },
+      "inputs/q047_certificate_v1.py": {
+        "bytes": 15302,
+        "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240"
+      },
+      "inputs/q047_precursor_check_v1.py": {
+        "bytes": 29808,
+        "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5"
+      },
+      "inputs/source/q047_math_v1.py": {
+        "bytes": 12617,
+        "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+      },
+      "inputs/Bubbleverse_Matematikmotor_2.1.0-46.md": {
+        "bytes": 56414,
+        "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+      }
+    },
+    "code_pins": {
+      "q048_v90_proof_contract.py": {
+        "bytes": 6225,
+        "sha256": "8fddc247a926905e2c37ccd3e0a1cc8e8ce516ba270def5142f83a28b80df69e"
+      },
+      "q048_moving_h_domain_v90.py": {
+        "bytes": 10077,
+        "sha256": "8ca2d233068ba179dd57e1751925c81a7281625d76c09782185b733a4bda8327"
+      },
+      "q048_moving_h_domain_verify_v90.py": {
+        "bytes": 18058,
+        "sha256": "e4f758dde5cbafb43e38750b57caae3893d2fdc536f0b9a6b273b6a45175463f"
+      },
+      "q048_moving_h_domain_accept_v90.py": {
+        "bytes": 7412,
+        "sha256": "677eb53949afbc83709a7c1842a4ef21045ca461923e10f9c59ff82b10f27d96"
+      },
+      "q048_v90_import_probe.py": {
+        "bytes": 2244,
+        "sha256": "218d8ac8499de82b2253842e749c4b833f266956dc63f56cc09b6efdf0ebf975"
+      },
+      "q048_v90_freeze_and_execute.py": {
+        "bytes": 3842,
+        "sha256": "cd3ebb05e3fb1d3036902c34da06f69903c0b512ce0c40df34d9c9afb5108e3f"
+      },
+      "test_q048_moving_h_v90.py": {
+        "bytes": 3049,
+        "sha256": "846864b473dc00635bffdedfe590dfdfe6d45e7e1926e2cefd4ce743fd025d4c"
+      },
+      "test_q048_v90_layout.py": {
+        "bytes": 1031,
+        "sha256": "cbf1180ac960ff169dd26c5457d4a35dd866c90e68831d3e4b161addbaf03980"
+      }
+    },
+    "contract_markdown_path": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V90.md",
+    "contract_markdown_sha256": "a388b5053d8210d534f05a61b15e07de332beb1c7cd17cf5a11cfc4ff72a1dc3",
+    "task_fingerprint": "fabe82fad1c1a3007cc97e8037d854e6c451259b00942ebb01c91bb12eee3745",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "science_budget_seconds": 300,
+    "parent_raw_sha256_inherited": "7bc860409d0a208008999da84b44587ba7740a6750450a367fe4b9e4f75307e7",
+    "parent_validation_sha256_inherited": "efe4abfb468ea6e35944728fbd4369086d06f19e1de69ce3dcbdddeb89069967",
+    "cell_z": [
+      1020,
+      1010
+    ],
+    "cell_a": [
+      "1/1021",
+      "1/1011"
+    ],
+    "max_new_math_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "actual_must_remain": [
+      106,
+      1020
+    ],
+    "guard_row_index": 43,
+    "preimplementation_spec_sha256": "358eb6910326978a8912e30ce7195fab5568b1adfa65e9fafa105ecf552d6c89"
+  },
+  "execution_fingerprint": "4288a871e508ebdc92130434fe91c1b69f62416330e5c638987320fd3d4fb743",
+  "science_budget_seconds": 300,
+  "parent_raw_sha256_inherited": "7bc860409d0a208008999da84b44587ba7740a6750450a367fe4b9e4f75307e7",
+  "parent_validation_sha256_inherited": "efe4abfb468ea6e35944728fbd4369086d06f19e1de69ce3dcbdddeb89069967",
+  "historical_provenance_gaps": [
+    {
+      "path": "q048_frec_moving_h_acceptance_validation_v77.json",
+      "sha256": "86d0d9bde071e70127f5ef6e127ba6a99a3df124f4df8f64caec391de32e7547",
+      "bytes": 1146,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_frec_moving_h_postaccept_validation_v77.json",
+      "sha256": "7a7425eb829f5ae5258b2259c92dba3297799e949338f3fcc8c960b546bb75d9",
+      "bytes": 1363,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_frec_moving_h_preflight_v77.json",
+      "sha256": "1427420a392a04902a11490c78a420bd70a437c663d5fb10ee7aed252777385c",
+      "bytes": 5819,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_frec_moving_h_transition_validation_v77.json",
+      "sha256": "942939e91fe094d979558e4f0f54fa0b9dda8c62a32ad0669b0b3f0bc5c480ca",
+      "bytes": 1152,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_moving_h_domain_acceptance_validation_v78.json",
+      "sha256": "3d0352da5130c42fadbe3f94b4423adb9c83b067579d9fb0dd01e54dbcbdb4c7",
+      "bytes": 980,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_moving_h_domain_postaccept_validation_v78.json",
+      "sha256": "579b5bf4495330d346271cd51c6050fe4d8bcff3e015588328c50ac046cfc4e8",
+      "bytes": 1372,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_moving_h_domain_preflight_v78.json",
+      "sha256": "a4521f049787e1508d2e45ad7899673b76f3f0189d4c127cd8e125b07eaab275",
+      "bytes": 5855,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    },
+    {
+      "path": "q048_moving_h_domain_transition_validation_v78.json",
+      "sha256": "7080e662bd0f58234a36d4ddbf62d07fd59d59c8740ea13557ab151ac2ef7ea3",
+      "bytes": 1191,
+      "availability": "NOT_RECOVERED",
+      "role": "HISTORICAL_ANCILLARY_LOG_OR_PREFLIGHT; current accepted checkpoint/raw/main-verifier bytes available and verified",
+      "hash_status": "REPORTED_IN_V79_FROZEN_SPEC"
+    }
+  ],
+  "actual_must_remain": {
+    "count": 106,
+    "frontier": 1020,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1020
+    },
+    "endpoint": {
+      "a": "1/1021",
+      "E": "60992481776499366803/1000000000000000000",
+      "Y": "24282981898453037871/500000000000000000",
+      "Vbar": "5954373198555118633/500000000000000000"
+    },
+    "connected_lower": "563445113766083/1000000000000000000",
+    "K_upper": "1274114432364259590793/250000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v89.json",
+    "accepted_checkpoint_sha256": "96b2b93050581d5b3c82e5023acacb30e9a723008d5067bf88fc3a880a235158"
+  },
+  "cell_z": [
+    1020,
+    1010
+  ],
+  "cell_a": [
+    "1/1021",
+    "1/1011"
+  ],
+  "guard_row_index": 43,
+  "source_note": "V90 consumes accepted V89 checkpoint/task and exact pinned source/guard bytes. Parent raw/validation hashes are inherited provenance only; bytes not consumed or reconstructed."
+}

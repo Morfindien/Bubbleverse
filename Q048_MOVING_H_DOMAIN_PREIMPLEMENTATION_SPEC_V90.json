@@ -1,0 +1,91 @@
+{
+  "schema": "bubbleverse.q048.moving_h.preimplementation.v90",
+  "created_at_utc": "2026-10-19T09:01:19.482243+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "task_id": "LOCAL-Q048-POST-V89-MOVING-H-DOMAIN-1020-1010-MATH-V1",
+  "task_fingerprint": "fabe82fad1c1a3007cc97e8037d854e6c451259b00942ebb01c91bb12eee3745",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "actual_must_remain": {
+    "count": 106,
+    "frontier": 1020,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1020
+    },
+    "endpoint": {
+      "a": "1/1021",
+      "E": "60992481776499366803/1000000000000000000",
+      "Y": "24282981898453037871/500000000000000000",
+      "Vbar": "5954373198555118633/500000000000000000"
+    },
+    "connected_lower": "563445113766083/1000000000000000000",
+    "K_upper": "1274114432364259590793/250000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v89.json",
+    "accepted_checkpoint_sha256": "96b2b93050581d5b3c82e5023acacb30e9a723008d5067bf88fc3a880a235158"
+  },
+  "proof_cell_z": [
+    1020,
+    1010
+  ],
+  "proof_cell_a": [
+    "1/1021",
+    "1/1011"
+  ],
+  "guard_row_index": 43,
+  "guard_primary_row_sha256": "b8027c12855303ffc33130edf153afddf122745d0ad1f00cb381f60d58d4f828",
+  "guard_control_row_sha256": "37ba71d2f6a8c5191859e5e090730a1e88486867784e930364217f3b4b61092c",
+  "initial_connected_lower": "563445113766083/1000000000000000000",
+  "epsilon": "1/1000000",
+  "h_upper": "99999/100000",
+  "w_domain": [
+    "-1/1000000",
+    "1/100"
+  ],
+  "rational_du_upper": "10/1011",
+  "science_budget_seconds": 300,
+  "max_new_math_proof_cells": 1,
+  "max_new_actual_cells": 0,
+  "required_validation": [
+    "fresh_source_background_atomic_C_upper_h_thermal",
+    "fresh_K",
+    "primary_outward_log_exp",
+    "independent_exact_rational_control",
+    "alternate_interval_crosscheck",
+    "producer_free_verifier_ge24_mutations",
+    "hash_bound_transition_acceptance_postaccept"
+  ],
+  "forbidden": [
+    "any actual consumer or promotion to107/frontier1010 during this mathematics task",
+    "replay of V89 consumer or V88 proof producer/verifier/acceptor mains",
+    "V12guard regeneration",
+    "below1010 or multicell work",
+    "physical/auxiliary reset,refit,recapture,tuning or subdivision",
+    "NativeP6",
+    "newQ,accepted-model promotion or Q048closure",
+    "paidcompute/GitHubActions campaign",
+    "postfreeze scientific edits/retries",
+    "reconstruction of missing historical logs/artifacts",
+    "archives replacing individual delivery"
+  ],
+  "planned_code_files": [
+    "q048_v90_proof_contract.py",
+    "q048_moving_h_domain_v90.py",
+    "q048_moving_h_domain_verify_v90.py",
+    "q048_moving_h_domain_accept_v90.py",
+    "q048_v90_import_probe.py",
+    "q048_v90_freeze_and_execute.py",
+    "test_q048_moving_h_v90.py",
+    "test_q048_v90_layout.py"
+  ],
+  "contract_markdown": "Q048_MOVING_H_DOMAIN_PROOF_CONTRACT_V90.md",
+  "contract_markdown_sha256": "a388b5053d8210d534f05a61b15e07de332beb1c7cd17cf5a11cfc4ff72a1dc3",
+  "parent_raw_sha256_inherited_not_consumed": "7bc860409d0a208008999da84b44587ba7740a6750450a367fe4b9e4f75307e7",
+  "parent_validation_sha256_inherited_not_consumed": "efe4abfb468ea6e35944728fbd4369086d06f19e1de69ce3dcbdddeb89069967",
+  "implementation_status": "NOT_WRITTEN_AT_TIME_OF_THIS_SPEC"
+}
