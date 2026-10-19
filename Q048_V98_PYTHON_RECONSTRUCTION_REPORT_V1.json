@@ -1,0 +1,53 @@
+{
+  "schema": "bubbleverse.q048.v98.reconstruction.v1",
+  "status": "RECONSTRUCTED_NON_AUTHORITATIVE_DIAGNOSTIC_ONLY",
+  "historical_originals_recovered": false,
+  "authoritative_scientific_state": {
+    "actual_count": 110,
+    "frontier": 980,
+    "q048": "ACTIVE_INCONCLUSIVE"
+  },
+  "historical_expected": {
+    "q048_moving_h_domain_v98.py": {
+      "bytes": 10159,
+      "sha256": "86dbe97e9c9e98ab485cec297fdc139685deebf64e8af931906e4e49a71dc5ee"
+    },
+    "q048_v98_proof_contract.py": {
+      "bytes": 11156,
+      "sha256": "2903d956fb8df31adf66af8ffcd084b79b0e95c979fcbcb6bb029202a9643613"
+    }
+  },
+  "reconstructed_outputs": {
+    "q048_moving_h_domain_v98_RECONSTRUCTED_DIAGNOSTIC_ONLY.py": {
+      "bytes": 10405,
+      "sha256": "428c12488c846b7b53422fb24b2dc58f908b5e0a489c3a4b347ae2fb0ca4318f"
+    },
+    "q048_v98_proof_contract_RECONSTRUCTED_DIAGNOSTIC_ONLY.py": {
+      "bytes": 9754,
+      "sha256": "3987c5c03eb109cf10504ae2420e105e87ba7f7991de6f29e65089bd4b3e59fe"
+    }
+  },
+  "evidence": {
+    "producer_family": "q048_moving_h_domain_v92.py",
+    "proof_contract_family": "q048_v92_proof_contract.py",
+    "v98_traceback": [
+      "producer line 53 composite require",
+      "producer line 62 proof_cell(s) + SCIENCE_BUDGET",
+      "producer line 68 main()",
+      "proof-contract historical line 28 raises ValueError(label)"
+    ],
+    "composite_gate": [
+      "upper_h_face_terms[0].lo > 0",
+      "upper_h_face_terms[1].lo > 0",
+      "thermal.thermal_denominator.lo > 0",
+      "thermal.beta.lo > 0",
+      "thermal.faces.admitted == true"
+    ]
+  },
+  "limitations": [
+    "No byte-identity claim.",
+    "Reconstructed hashes must not replace historical hashes.",
+    "Unknown V98-only proof-contract code intentionally not fabricated.",
+    "Diagnostic only unless separately re-qualified."
+  ]
+}
