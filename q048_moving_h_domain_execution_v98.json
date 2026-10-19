@@ -1,0 +1,34 @@
+{
+  "status": "FAIL",
+  "failure": "ValueError:FIRST_STAGE_FAILURE:q048_moving_h_domain_v98.py",
+  "spec_sha256": "843b9d93b8bd135b3b40e5191232c0d63b5227bc61d85ded0bde02261e5341a5",
+  "execution_fingerprint": "4c3f43797151031e0d6233e9b90f969e05af252cfb6d50158968f3f9d26dd2ac",
+  "stages": [
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "q048_moving_h_domain_v98.py"
+      ],
+      "cwd": "/mnt/data/q048_v98_work",
+      "start_utc": "2026-10-19T14:13:39.898391+00:00",
+      "end_utc": "2026-10-19T14:13:40.786954+00:00",
+      "elapsed_seconds": 0.8885833389995241,
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/mnt/data/q048_v98_work/q048_moving_h_domain_v98.py\", line 68, in <module>\n    if __name__=='__main__':main()\n                            ~~~~^^\n  File \"/mnt/data/q048_v98_work/q048_moving_h_domain_v98.py\", line 62, in main\n    start=time.monotonic();stamp=datetime.now(timezone.utc).isoformat();r=proof_cell(s);elapsed=time.monotonic()-start;require(elapsed<300,'SCIENCE_BUDGET')\n                                                                          ~~~~~~~~~~^^^\n  File \"/mnt/data/q048_v98_work/q048_moving_h_domain_v98.py\", line 53, in proof_cell\n    require(admitted,'NEW_CELL_UPPER_H_THERMAL:'+label)\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/mnt/data/q048_v98_work/q048_v98_proof_contract.py\", line 28, in require\n    if not ok: raise ValueError(label)\n               ^^^^^^^^^^^^^^^^^^^^^^^\nValueError: NEW_CELL_UPPER_H_THERMAL:L\n"
+    }
+  ],
+  "elapsed_seconds": 0.8989650800012896,
+  "budget_seconds": 300,
+  "producer_invocations": 1,
+  "actual_consumer_invocations": 0,
+  "stop_reason": "FIRST_PRECISE_OBSTRUCTION",
+  "actual_unchanged": {
+    "count": 110,
+    "frontier": 980
+  },
+  "end_utc": "2026-10-19T14:13:40.786999+00:00",
+  "postfreeze_edits": false,
+  "retries": 0
+}
