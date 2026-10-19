@@ -1,0 +1,193 @@
+{
+  "schema": "bubbleverse.q048.single_actual_consumer_preimplementation.v1",
+  "version": "V91",
+  "created_at_utc": "2026-10-19T09:36:51.119942+00:00",
+  "created_at_local": "2026-10-19T11:36:51.119942+02:00",
+  "status": "BLOCKED_MISSING_EXACT_V89_REFERENCE_CODE",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-POST-V90-ACTUAL-CONSUMER-1020-1010-V1",
+  "task_fingerprint": "99ea8ea12ee521c24e1c16cb81c038e6ada1282cd40379da4f05527b89806a2b",
+  "engine": {
+    "id": "BUBBLEVERSE.EXECUTION_HPC_BUILDER",
+    "version": "2.2.0",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1"
+  },
+  "parent_actual": {
+    "count": 106,
+    "frontier": 1020,
+    "checkpoint_sha256": "96b2b93050581d5b3c82e5023acacb30e9a723008d5067bf88fc3a880a235158"
+  },
+  "accepted_proof": {
+    "cell_z": [
+      1020,
+      1010
+    ],
+    "checkpoint_sha256": "4a87612b9adf4da5a75c2df1afe69170e6c492b831a3cfcc1e9dad47a27ad511",
+    "proof_artifacts_verified": {
+      "checkpoint": {
+        "path": "/mnt/data/q048_v90/q048_moving_h_domain_accepted_checkpoint_v90.json",
+        "bytes": 6283,
+        "sha256": "4a87612b9adf4da5a75c2df1afe69170e6c492b831a3cfcc1e9dad47a27ad511"
+      },
+      "raw": {
+        "path": "/mnt/data/q048_v90/q048_moving_h_domain_result_v90.json",
+        "bytes": 41058,
+        "sha256": "6ef8d202917ab1f94ffb6483c6fa72cb6136dd7552d0cc5cf2f1352342b62a0e"
+      },
+      "validation": {
+        "path": "/mnt/data/q048_v90/q048_moving_h_domain_validation_v90.json",
+        "bytes": 16000,
+        "sha256": "cb815bc0fd72fffe59e6b46db582a9c7790de91f1fc6ae468c56aed5628c946b"
+      },
+      "transition": {
+        "path": "/mnt/data/q048_v90/q048_moving_h_domain_transition_validation_v90.json",
+        "bytes": 8590,
+        "sha256": "65008dffc51b1bcc146a25575d0b39de157b1e3b98700f7db250276e0a480f74"
+      },
+      "acceptance": {
+        "path": "/mnt/data/q048_v90/q048_moving_h_domain_acceptance_validation_v90.json",
+        "bytes": 817,
+        "sha256": "92b53b0791df10c0708c6446d10fc1263c732fb668c1d8c703152c6d20720c59"
+      },
+      "postaccept": {
+        "path": "/mnt/data/q048_v90/q048_moving_h_domain_postaccept_validation_v90.json",
+        "bytes": 1632,
+        "sha256": "5160c19cc2f0a1aa0c80aaac5e9106fc9d65381f03d527516f4991e550929c81"
+      }
+    }
+  },
+  "candidate_success": {
+    "count": 107,
+    "frontier": 1010,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1010
+    },
+    "endpoint": {
+      "a": "1/1011",
+      "E": "11800560411137753481/200000000000000000",
+      "Y": "23486715015949958209/500000000000000000",
+      "Vbar": "11528148189464315529/1000000000000000000"
+    },
+    "connected_lower": "273780565158891/500000000000000000",
+    "K_upper": "5195578764739343429817/1000000000000000000",
+    "status": "PLANNED_GUARD_ENDPOINT_NOT_CONSUMER_COMPUTED_NOT_ACCEPTED"
+  },
+  "guard_binding": {
+    "row_index": 43,
+    "raw_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "validation_sha256": "51e4dfd3ef7a429b459af73b125d251e789bb0ac9244ef7630d5a44d4d99b554",
+    "primary_row_sha256": "b8027c12855303ffc33130edf153afddf122745d0ad1f00cb381f60d58d4f828",
+    "control_row_sha256": "37ba71d2f6a8c5191859e5e090730a1e88486867784e930364217f3b4b61092c",
+    "left": {
+      "a": "1/1021",
+      "E": "60992481776499366803/1000000000000000000",
+      "Y": "24282981898453037871/500000000000000000",
+      "Vbar": "5954373198555118633/500000000000000000"
+    },
+    "right_candidate": {
+      "a": "1/1011",
+      "E": "11800560411137753481/200000000000000000",
+      "Y": "23486715015949958209/500000000000000000",
+      "Vbar": "11528148189464315529/1000000000000000000"
+    },
+    "control_role": "GUARD_ONLY_CONSERVATIVE_TRACK_NOT_ACTUAL_PRIMARY_STATE",
+    "glue_rule": "Primary a/E/Y/V_previous exactly match accepted V89 actual endpoint; no reset. Control remains guard-only."
+  },
+  "reference_code_gate": {
+    "required": true,
+    "status": "FAIL",
+    "missing_exact_files": [
+      {
+        "filename": "q048_v89_consumer_contract.py",
+        "required_sha256": "7beaf870119397cf1da06f048d1af370c3d37fb0b54c987c69fb221c51db9128",
+        "required_bytes": 8336,
+        "github_current_head": "ABSENT",
+        "github_history_for_exact_path": "NO_COMMITS_OBSERVED",
+        "library_recent_listing": "ABSENT"
+      },
+      {
+        "filename": "q048_frec_moving_h_v89.py",
+        "required_sha256": "cf38e5383f167076daf95e368fe234367b22450c6591218c95b6dfe4b8b94626",
+        "required_bytes": 9977,
+        "github_current_head": "ABSENT",
+        "github_history_for_exact_path": "NO_COMMITS_OBSERVED",
+        "library_recent_listing": "ABSENT"
+      },
+      {
+        "filename": "q048_frec_moving_h_verify_v89.py",
+        "required_sha256": "2fa9dc331dcf3354d3a61ee51116fc5643b1592b4ab48bea19bb60a12d90f1fc",
+        "required_bytes": 17241,
+        "github_current_head": "ABSENT",
+        "github_history_for_exact_path": "NO_COMMITS_OBSERVED",
+        "library_recent_listing": "ABSENT"
+      },
+      {
+        "filename": "q048_frec_moving_h_accept_v89.py",
+        "required_sha256": "8096ed4d6b8d5fd12500ed6cf8c5a19141750a479708825c2ae15b6e5ddcbc9c",
+        "required_bytes": 7600,
+        "github_current_head": "ABSENT",
+        "github_history_for_exact_path": "NO_COMMITS_OBSERVED",
+        "library_recent_listing": "ABSENT"
+      },
+      {
+        "filename": "q048_v89_import_probe.py",
+        "required_sha256": "12165a7977cca925914a05c4391304c1afb0d1bf836a803c7266673a8d24c06d",
+        "required_bytes": 2194,
+        "github_current_head": "ABSENT",
+        "github_history_for_exact_path": "NO_COMMITS_OBSERVED",
+        "library_recent_listing": "ABSENT"
+      },
+      {
+        "filename": "q048_v89_freeze_and_execute.py",
+        "required_sha256": "c1875c7863d877ff5fd7d9b0d7f7af9b09b7cc46bd210d98dd41de9f65e50376",
+        "required_bytes": 6484,
+        "github_current_head": "ABSENT",
+        "github_history_for_exact_path": "NO_COMMITS_OBSERVED",
+        "library_recent_listing": "ABSENT"
+      },
+      {
+        "filename": "test_q048_v89_contract.py",
+        "required_sha256": "46dd84d1512d0e5fb4ef35032b4380ee936c67c7f52abdcf485e20b5895c051b",
+        "required_bytes": 2118,
+        "github_current_head": "ABSENT",
+        "github_history_for_exact_path": "NO_COMMITS_OBSERVED",
+        "library_recent_listing": "ABSENT"
+      },
+      {
+        "filename": "test_q048_v89_import_layout.py",
+        "required_sha256": "4a48dba54e9d699e04cfbc6e2f19e5f8aa345fc56156036f27fc0e487d52aece",
+        "required_bytes": 2035,
+        "github_current_head": "ABSENT",
+        "github_history_for_exact_path": "NO_COMMITS_OBSERVED",
+        "library_recent_listing": "ABSENT"
+      }
+    ],
+    "reconstruction_forbidden": true
+  },
+  "execution": {
+    "v91_code_written": false,
+    "producer_runs": 0,
+    "science_verifier_runs": 0,
+    "acceptor_runs": 0,
+    "actual_cells_added": 0,
+    "new_proofs": 0,
+    "freeze_started": false
+  },
+  "stop_reason": "FIRST_PREIMPLEMENTATION_OBSTRUCTION: exact accepted V89 reference code bytes unavailable",
+  "resume_condition": "All eight V89 reference files recovered exactly by SHA256+byte length; then continue preflight before freeze.",
+  "repository_basis": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "head_commit": "ebdb1ac0d2f9754043e384f17489f73f241240d8",
+    "tree": "9719bc9413d1d244984f5d1653ab5e69937de9f7",
+    "head_commit_time_utc": "2026-10-19T09:31:43Z",
+    "source_freshness": "VERIFIED",
+    "v90_ingestion_bundle_on_head": true,
+    "v89_reference_code_on_head": false,
+    "v89_exact_path_commit_history": "EMPTY_FOR_CHECKED_CORE_PATHS"
+  }
+}
