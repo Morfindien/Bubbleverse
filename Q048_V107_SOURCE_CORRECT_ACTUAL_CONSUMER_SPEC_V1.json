@@ -1,0 +1,64 @@
+{
+  "schema": "bubbleverse.q048.v107.source_correct_actual_consumer.spec.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_type": "SCIENTIFIC_CASE_EXECUTION",
+  "task_id": "LOCAL-Q048-V107-SOURCE-CORRECT-ACTUAL-CONSUMER-980-970-V1",
+  "task_fingerprint": "4314813e9da301880e9c8fd9e3246921710be110cd2d19f457e814c21150cd3d",
+  "program_id": "Q048-V107-SOURCE-CORRECT-CONSUMER-V1",
+  "program_registration": "LOCAL_NOT_REGISTERED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-139.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1"
+  },
+  "repository": {
+    "repository": "Morfindien/Bubbleverse",
+    "base_commit": "f3ef8c56b3e6c9721e8a81775143557f894e7fa6",
+    "base_commit_time_utc": "2026-10-19T19:11:52Z",
+    "source_freshness": "VERIFIED",
+    "program_id_search": "NO_EXISTING_V107_TARGET_FOUND"
+  },
+  "frozen": {
+    "parent_checkpoint": "Q048_V105_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "parent_sha256": "cedaef00bab86ac24bb876ae475e5dff15f8b97a0a55f83d9ba12d25da07b098",
+    "theorem_acceptance": "Q048_V106_SOURCE_CORRECT_PROOF_BRIDGE_ACCEPTANCE_V1.json",
+    "theorem_sha256": "5294bed5e3d32d71e396d933a5387c8c8f7538e1bc55c432b0b151fc0e9f9fe3",
+    "theorem_raw_sha256": "e7b526416746e83005d353e4d6107c405cbb05646520f9fb0fea8b8756baef11",
+    "theorem_verification_sha256": "e0793a3c8b543c5e8d6646c4df43d7f226759cced2aa471f1baeec1d708e2375",
+    "cell_z": [
+      980,
+      970
+    ],
+    "cell_a": [
+      "1/981",
+      "1/971"
+    ],
+    "guard_row_index": 47,
+    "guard_row_sha256": "01e9f92295d60287f74a2760c1d38da42d2d37098a4d0dd32d1782dbf757b5ea",
+    "correct_saha_fact": "3.016103031869581e21",
+    "K_upper": "5080670052472740707779/1000000000000000000",
+    "connected_lower": "492108035315773/1000000000000000000",
+    "historical_v101_role": "REFERENCE_ONLY",
+    "max_new_actual_cells": 1,
+    "max_new_proof_cells": 0,
+    "below970_forbidden": true,
+    "physical_reset_forbidden": true
+  },
+  "success_condition": "Exactly one validated source-correct reanalysis-lineage actual111/frontier970 with endpoint equal to committed row47 primary, exact V105 parent/V106 theorem pins, no reset, zero proof cells, postaccept PASS.",
+  "rejection_condition": "Any authority hash, glue, cell, theorem, source-correct, verifier, or postaccept invariant fails.",
+  "stop_condition": "Stop after this one 980->970 actual cell; no below970 work; return exactly once to Result Ingestion 2.1.0.",
+  "compute_decision": {
+    "compute_backend": "LOCAL_RUNTIME",
+    "github_worthwhile": "NO",
+    "estimate_basis": "DIRECT_LOCAL_EXECUTION_IS_TINY_SERIAL_HASH_JSON_CONSUMER; actual execution completed successfully in current runtime. GitHub queue/setup timing not measured and not needed to decide because a new unregistered target/workflow would add integration/dispatch work without scientific benefit.",
+    "local_execution_start_utc": "2026-10-19T19:18:30.183812072Z",
+    "local_execution_end_utc": "2026-10-19T19:18:32.509912789Z",
+    "github_total_estimate": "UNMEASURED; strictly additional registration/workflow/dispatch overhead for this one-shot task",
+    "github_benefit": "NONE_MATERIAL_FOR_THIS_TASK",
+    "github_worthwhile_gate": "PASS"
+  }
+}

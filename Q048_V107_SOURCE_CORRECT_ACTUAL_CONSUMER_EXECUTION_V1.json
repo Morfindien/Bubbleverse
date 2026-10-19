@@ -1,0 +1,28 @@
+{
+  "schema": "bubbleverse.q048.v107.source_correct_actual_consumer.execution.v1",
+  "q": "Q048",
+  "task_id": "LOCAL-Q048-V107-SOURCE-CORRECT-ACTUAL-CONSUMER-980-970-V1",
+  "program_id": "Q048-V107-SOURCE-CORRECT-CONSUMER-V1",
+  "backend": "LOCAL_RUNTIME",
+  "github_actions_used": false,
+  "commands": [
+    "python q048_v107_actual_consumer.py",
+    "python q048_v107_verify.py",
+    "python q048_v107_accept.py"
+  ],
+  "execution_start_utc": "2026-10-19T19:18:30.183812072Z",
+  "execution_end_utc": "2026-10-19T19:18:32.509912789Z",
+  "created_local_display": "2026-10-19T21:19:30+02:00",
+  "python_runtime": "container Python 3",
+  "result_sha256": "2a597c387551c309ca11adaf1f534e3a24adfee1e1771589c5fe84079a4dfaa8",
+  "validation_sha256": "265e19fd47a64d9f58c22fea87f87095d89fdba7916557413cf11a248ba5cc92",
+  "accepted_checkpoint_sha256": "3876328fa6acfd5a79c01505526de8e2b6d384b06241685eb359fa5635747e24",
+  "postaccept_sha256": "4af51a9d952413ad91f5780f62111b975c06bfa34a66a1740e0d74743192fe69",
+  "execution_status": "COMPLETE",
+  "result_validation_status": "VALIDATED",
+  "scientific_outcome": "INCONCLUSIVE",
+  "case_lifecycle": "OPEN",
+  "final_result_gate": "PASS_FOR_ONE_CELL_CONSUMER_ONLY",
+  "termination_gate": "PASS",
+  "no_below970": true
+}
