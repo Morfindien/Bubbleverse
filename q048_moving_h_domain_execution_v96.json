@@ -1,0 +1,62 @@
+{
+  "status": "PASS_ONE_ACCEPTED_PROOF_STOP",
+  "failure": null,
+  "spec_sha256": "8379a03329d15e8e598ec8523a051aa6aed2b360a76bfc61311ab8043b788d61",
+  "execution_fingerprint": "b5f36a58a4cdec91e6608b9c68c3fb4bf56d25135ecd991798b2c1fd9863930c",
+  "stages": [
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "q048_moving_h_domain_v96.py"
+      ],
+      "cwd": "/mnt/data/q048_v96_work",
+      "start_utc": "2026-10-19T13:23:18.929696+00:00",
+      "end_utc": "2026-10-19T13:23:19.829659+00:00",
+      "elapsed_seconds": 0.8999847429995498,
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"PASS_NEW_MOVING_H_DOMAIN_PROOF_CELL\",\n  \"K_upper\": \"2493577725162681856783/500000000000000000\",\n  \"connected_lower\": \"50514140794199/100000000000000000\",\n  \"actual_count\": 109,\n  \"actual_frontier\": 990,\n  \"elapsed_seconds\": 0.2370275129997026\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "q048_moving_h_domain_verify_v96.py"
+      ],
+      "cwd": "/mnt/data/q048_v96_work",
+      "start_utc": "2026-10-19T13:23:19.855650+00:00",
+      "end_utc": "2026-10-19T13:23:20.977303+00:00",
+      "elapsed_seconds": 1.1216761810001117,
+      "exit_code": 0,
+      "stdout": "{\"status\": \"PASS\", \"checks\": \"108/108\", \"mutations\": \"52/52\", \"failed\": [], \"unrejected\": []}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-B",
+        "q048_moving_h_domain_accept_v96.py"
+      ],
+      "cwd": "/mnt/data/q048_v96_work",
+      "start_utc": "2026-10-19T13:23:21.003974+00:00",
+      "end_utc": "2026-10-19T13:23:21.721995+00:00",
+      "elapsed_seconds": 0.7180465179999374,
+      "exit_code": 0,
+      "stdout": "{\"status\": \"PASS\", \"proof\": [990, 980], \"actual_unchanged\": [109, 990], \"postaccept\": \"17/17\"}\n",
+      "stderr": ""
+    }
+  ],
+  "elapsed_seconds": 2.82683730700046,
+  "budget_seconds": 300,
+  "producer_invocations": 1,
+  "actual_consumer_invocations": 0,
+  "stop_reason": "ONE_ACCEPTED_PROOF",
+  "actual_unchanged": {
+    "count": 109,
+    "frontier": 990
+  },
+  "end_utc": "2026-10-19T13:23:21.745939+00:00",
+  "postfreeze_edits": false,
+  "retries": 0
+}
