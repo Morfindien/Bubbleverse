@@ -1,0 +1,464 @@
+{
+  "schema": "bubbleverse.q048.saha_parent_source_admissibility_certificate.v103",
+  "task_id": "LOCAL-Q048-POST-V102-SAHA-PARENT-SOURCE-ADMISSIBILITY-AUDIT-V1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "status": "BLOCKED_MISSING_MATERIAL_EVIDENCE",
+  "technical_state": "PASS",
+  "local_V100_transfer_status": "ADMISSIBLE_UNDER_CORRECT_SOURCE_CONDITIONAL_ON_V97",
+  "full_parent_source_certificate": "NOT_ESTABLISHED",
+  "checks": {
+    "exact_question": true,
+    "V101_parent_V97": true,
+    "V101_consumes_V100": true,
+    "V101_recorded_bound_matches_V100": true,
+    "V97_uses_V96": true,
+    "V97_V96_same_V95_parent": true,
+    "V96_raw_pin_consistent": true,
+    "V96_recomputation_pin_consistent": true,
+    "retained_A_and_Aeq_positive": true,
+    "retained_H_positive": true,
+    "Saha_interval_positive": true,
+    "capture_source_identity": true,
+    "unchanged_source_flags": true,
+    "SWIFT_domain_retained": true,
+    "retained_fit_denominator_positive": true,
+    "capture_nH_positive": true,
+    "pinned_source_SAHA_literal": true,
+    "pinned_source_positive_R_definition": true,
+    "C_complements_exact_positive_polynomials": true,
+    "L_new_source_upper_H": true,
+    "L_unchanged_thermal_faces": true,
+    "R_new_source_upper_H": true,
+    "R_unchanged_thermal_faces": true,
+    "retained_comparison_positive": true,
+    "V101_primary_endpoint_no_reset": true
+  },
+  "checks_total": 25,
+  "checks_passed": 25,
+  "coefficient_transfer": {
+    "old_literal": "3.016101031869581e21",
+    "true_literal": "3.016103031869581e21",
+    "old_interval": [
+      "3016101031869581000000",
+      "3016101031869581099008"
+    ],
+    "true_interval": [
+      "3016103031869580771328",
+      "3016103031869581000000"
+    ],
+    "ratio_interval": [
+      "5752759994258081/5752756179560816",
+      "3016103031869581/3016101031869581"
+    ],
+    "old_Saha_interval": [
+      "11758280604359972260812805663174760355513347396145379328945641696890980199027685584489050331057758393792290430923/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "22612133032515797679518203223574543464748334692061292712285438241089416083365342491334680009377814177282025329463/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "correct_source_Saha_interval": [
+      "67642566262022779213607468343051230102092207560880448220857649397126325223187948389604379798892046789615703680671163001165038763/2876378089780408000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "68200522996409200191125739224250269875827868997547838217159672194154980262183133695656537500656836141489856968107208770372765003/1508050515934790500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "argument": "If S_old encloses c_old*Z, c_old>0,Z>0, then S_new is enclosed by S_old*[c_new.lo/c_old.hi,c_new.hi/c_old.lo]. No old source evaluation is rerun."
+  },
+  "details": {
+    "C_factors": {
+      "variables": [
+        "Beta0",
+        "Beta1",
+        "R2p2s",
+        "L2s",
+        "fitted_RLya"
+      ],
+      "polynomials": {
+        "D": [
+          {
+            "powers": [
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": 3
+          },
+          {
+            "powers": [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "powers": [
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        "Ns": [
+          {
+            "powers": [
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": 3
+          },
+          {
+            "powers": [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        "Np": [
+          {
+            "powers": [
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              0,
+              1,
+              0,
+              1
+            ],
+            "coefficient": 3
+          },
+          {
+            "powers": [
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "coefficient": 1
+          }
+        ],
+        "ds": [
+          {
+            "powers": [
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "powers": [
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        "dp": [
+          {
+            "powers": [
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "powers": [
+              1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        "gs": [
+          {
+            "powers": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 3
+          },
+          {
+            "powers": [
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ],
+        "gp": [
+          {
+            "powers": [
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "coefficient": 1
+          },
+          {
+            "powers": [
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "coefficient": 1
+          }
+        ]
+      },
+      "identity": "D=Ns+ds=Np+dp; all terms positive, hence0<Cs=N_s/D<1 and0<Cp=N_p/D<1",
+      "source_premises": "Beta_i>0 because Alpha_eq_i>0,SAHA_FACT>0,TR>0; R=exp(finite interpolant)>0; L>0; P=RLya/(1+DK_K)>0 from H,n,(1-h),fit>0. Source/capture unchanged.",
+      "independence": "Symbolic positivity, not old C-PASS boolean."
+    },
+    "L": {
+      "q": "1/1000000",
+      "correct_source_H_upper_margins": [
+        "216559253944074018635975481780290598943759314785652770194232605270941879365395825539092440158038420963049773407751633703249556139451380163360606873163758462936737737683125670073039526367265612541397365753241121367369374250730366587069361325361775876043371/1306664363354891440909038680085318061580509839988372730200148502673363710052743562611532483652036259203420382539458650128043717574989733387304960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "1331682578567516029461638921660955667066870890935538983442172775899386651651150747572454685701654222828614204453365619641130806504386579649365412072693652716530075212219817684701043450957385329596017405672251153179422469093078584028814614111294520141370509/3266660908387228602272596700213295153951274599970931825500371256683409275131858906528831209130090648008550956348646625320109293937474333468262400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "thermal_lower_margin": "100009726438777464786593105358934318307845748374556514179382433883832873223866184227320969161471807888094498778109940026202733/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "thermal_upper_margin": "4726438777464786593105358934318307845748374556514179382433883832873223866184227320969161471807888094498778109940026202733/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "thermal_source_factor_independent": true
+    },
+    "R": {
+      "q": "0",
+      "correct_source_H_upper_margins": [
+        "216559037382871023588060344287396425386459429939349232738874802928346632826329918693462825231057333373268182143290241574638869106632630706002831873163758462936737737683125670073039526367265612541397365753241121367369374250730366587069361325361775876043371/1306664363354891440909038680085318061580509839988372730200148502673363710052743562611532483652036259203420382539458650128043717574989733387304960000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "1331681246872952209849551104693818029322733226616122988489872836946376957839534351547898264278250897454795246831387876058700848551873053313772912072693652716530075212219817684701043450957385329596017405672251153179422469093078584028814614111294520141370509/3266660908387228602272596700213295153951274599970931825500371256683409275131858906528831209130090648008550956348646625320109293937474333468262400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "thermal_lower_margin": "1000097069214251182180705966196352771278911313524164968788828982875514046693821285724061161981562959745426024447017942899372687/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "thermal_upper_margin": "47069214251182180705966196352771278911313524164968788828982875514046693821285724061161981562959745426024447017942899372687/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "thermal_source_factor_independent": true
+    }
+  },
+  "comparison_argument": "h_u=-n/H sum_i C_i*(Alpha_i*h*(h+q)-Alpha_eq_i*s*(1-h)). Positive s and0<C_i<1 imply h_u>=-n/H sum_i Alpha_i*h*(h+epsilon)>=-K*h*(h+epsilon). Retained K/h0/lower/thermal domain unchanged; statement conditional on V97.",
+  "unchanged_accepted_bounds": {
+    "V101_actual": {
+      "count": 111,
+      "frontier": 970
+    },
+    "V100_K_upper": "5080670052472740707779/1000000000000000000",
+    "V100_connected_lower": "492108035315773/1000000000000000000",
+    "V102_scope": "ONE_FORWARD_CELL_CONDITIONAL_ON_V101_PARENT_PREMISE"
+  },
+  "first_material_gap": {
+    "path": "q048_moving_h_domain_result_v96.json",
+    "bytes": 41305,
+    "sha256": "a2757a2804d7e43629f0361b9664deaadb8f93d0c4af1d47707ad87f189c81b0",
+    "role": "original atomic/H/C/source-domain interval enclosures for V96proof990\u2192980, directly used by accepted V97 parent",
+    "equivalent_alternative": {
+      "path": "q048_moving_h_domain_verifier_recomputation_v96.json",
+      "bytes": 25507,
+      "sha256": "95b3fd1d38e441377155c5b2645cf95d9f168c9b09fe2962cd67b277ec0be57a",
+      "accept_only_if": "complete source/input/domain semantics and enclosures are present and exact pins match"
+    }
+  },
+  "missing_material_evidence": [
+    {
+      "path": "q048_moving_h_domain_result_v96.json",
+      "bytes": 41305,
+      "sha256": "a2757a2804d7e43629f0361b9664deaadb8f93d0c4af1d47707ad87f189c81b0",
+      "role": "original atomic/H/C/source-domain interval enclosures for V96proof990\u2192980, directly used by accepted V97 parent",
+      "equivalent_alternative": {
+        "path": "q048_moving_h_domain_verifier_recomputation_v96.json",
+        "bytes": 25507,
+        "sha256": "95b3fd1d38e441377155c5b2645cf95d9f168c9b09fe2962cd67b277ec0be57a",
+        "accept_only_if": "complete source/input/domain semantics and enclosures are present and exact pins match"
+      }
+    }
+  ],
+  "stop_reason": "FIRST_PRECISE_MISSING_ANCESTOR_ENCLOSURES; do not infer V96 source semantics/inequalities from checkpoint or PASS flags.",
+  "not_claimed": [
+    "No invalidation of original V96/V100/V101 acceptance history",
+    "No full-parent admissibility repair",
+    "No source-qualified ancestor anchor reached",
+    "No physical falsification",
+    "No new proof/actual cell or next consumer authorization"
+  ],
+  "new_mathematical_proof_cells": 0,
+  "new_actual_cells": 0,
+  "scientific_state": "INCONCLUSIVE",
+  "q_complete": false,
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "consumer_authorization": "NOT_GRANTED"
+}
