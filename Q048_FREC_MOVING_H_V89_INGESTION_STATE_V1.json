@@ -1,0 +1,151 @@
+{
+  "schema": "LOCAL_Q048_V89_INGESTION_STATE_V1",
+  "event_id": "LOCAL-Q048-V89-ACCEPTED-CONSUMER-INGESTION-V1",
+  "created_at_utc": "2026-10-19T08:47:08.072705+00:00",
+  "created_at_local": "2026-10-19T10:47:08.072705+02:00",
+  "ingestion_state": "NEW",
+  "duplicate_check": {
+    "status": "NEW_INGESTION_OF_EXISTING_ACCEPTED_CONSUMER",
+    "origin_result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V89",
+    "origin_run_id": "LOCAL-Q048-FREC-MOVING-H-V89-2026-10-19T08:13:06.621784+00:00",
+    "raw_sha256": "7bc860409d0a208008999da84b44587ba7740a6750450a367fe4b9e4f75307e7",
+    "origin_execution_fingerprint": "777140325284b98b4e9b3a80ef3ff5156dce9b4d679c60f4d01f3491c46425b5",
+    "same_event_in_incoming_journal": false,
+    "new_independent_support_from_transport": 0,
+    "new_actual_cells_computed_by_ingestion": 0,
+    "new_proofs_computed_by_ingestion": 0
+  },
+  "scope": {
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "authorized_q_range": "Q001–Q048",
+    "case_id": "NOT_ASSIGNED",
+    "case_assignment_status": "PROPOSED_UNVERIFIED",
+    "configuration": "hillipop-ede_n3",
+    "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "external_source_date_cutoff": "NOT_DOCUMENTED"
+  },
+  "result_id": "LOCAL-Q048-FREC-MOVING-H-ACTUAL-CONSUMER-V89",
+  "run_id": "LOCAL-Q048-FREC-MOVING-H-V89-2026-10-19T08:13:06.621784+00:00",
+  "origin_execution_fingerprint": "777140325284b98b4e9b3a80ef3ff5156dce9b4d679c60f4d01f3491c46425b5",
+  "origin_task_id": "LOCAL-Q048-POST-V88-ACTUAL-CONSUMER-1030-1020-V1",
+  "classification": [
+    "RUN_SUCCESS",
+    "NUMERICAL_RESULT",
+    "VALIDATION_RESULT"
+  ],
+  "axes": {
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED",
+    "reproducibility": "DOCUMENTED_ORIGINAL_EXECUTION_NOT_RERUN_HERE",
+    "robustness": "CONDITIONAL_ACCEPTED_DOMAIN_ONLY",
+    "scientific_effect": "SUPPORTS_PARTIAL_CONTROLLED_HISTORY_ADMISSION",
+    "anomaly": "NONE_IDENTIFIED_NEW;ALL_HISTORICAL_RECORDS_PRESERVED"
+  },
+  "actual_state": {
+    "count": 106,
+    "frontier": 1020,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1020
+    },
+    "endpoint": {
+      "a": "1/1021",
+      "E": "60992481776499366803/1000000000000000000",
+      "Y": "24282981898453037871/500000000000000000",
+      "Vbar": "5954373198555118633/500000000000000000"
+    },
+    "connected_lower": "563445113766083/1000000000000000000",
+    "K_upper": "1274114432364259590793/250000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v89.json",
+    "accepted_checkpoint_sha256": "96b2b93050581d5b3c82e5023acacb30e9a723008d5067bf88fc3a880a235158"
+  },
+  "new_actual_cells_added_by_ingestion": 0,
+  "new_proofs_computed_by_ingestion": 0,
+  "one_existing_actual_admission_integrated": 1,
+  "science_producers_executed_by_ingestion": 0,
+  "scientific_verifiers_executed_by_ingestion": 0,
+  "acceptors_executed_by_ingestion": 0,
+  "original_chain_summary": {
+    "preflight_metadata": "116/116",
+    "regression_tests": "12/12",
+    "actual_transitive_import": "PASS_NO_SCIENCE_NO_OUTPUT",
+    "verifier": "118/118",
+    "semantic_mutations": "40/40",
+    "postaccept": "22/22",
+    "producer_seconds": 0.291220967,
+    "science_chain_seconds": 12.303696529,
+    "producer_attempts": 1,
+    "retries": 0,
+    "postfreeze_edits": false,
+    "delivery_validation": "15/15 PASS"
+  },
+  "three_layer_interpretation": {
+    "direct": "Saved V89 accepted actual106/frontier1020 from one1030→1020 consumer;0newproof.",
+    "technical": "Conditional source-real actual admission under exact state-glue,pinned source/capture,V88 proof authority and fresh consumer gates.",
+    "physical": "No complete four-case x_e histories,cumulative tau_T-differencebounds,native trajectory or independent physical confirmation."
+  },
+  "repository": {
+    "repository": "Morfindien/Bubbleverse",
+    "head": "0540b6223e13cf7ff5181e089399f2a3012b8945",
+    "tree": "989e59f347cf3aac6602b2247bc6cfd6f62c904b",
+    "source_freshness": "VERIFIED",
+    "v89_core_files_verified": 10,
+    "git_blob_match": true,
+    "write_state_for_new_ingestion": "USER_UPLOAD_PENDING"
+  },
+  "proof_history": {
+    "accepted_v88_proof_checkpoint_sha256": "3384168d6578663d252b9cb5114b4862976fa515d88b2fca811849783d0e5f27",
+    "cell_z": [
+      1030,
+      1020
+    ],
+    "current_actual_consumed_through": 1020
+  },
+  "next_route": {
+    "engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+    "task_id": "LOCAL-Q048-POST-V89-MOVING-H-DOMAIN-1020-1010-MATH-V1",
+    "task_fingerprint": "fabe82fad1c1a3007cc97e8037d854e6c451259b00942ebb01c91bb12eee3745",
+    "cell_z": [
+      1020,
+      1010
+    ],
+    "actual_must_remain": [
+      106,
+      1020
+    ],
+    "dispatch": "PREPARED_NOT_SENT"
+  },
+  "completion": {
+    "q_complete": false,
+    "completion_gate": "NOT_SATISFIED",
+    "reason": "Complete four-case x_e histories and cumulative tau_T difference bounds remain missing.",
+    "NativeP6": "UNRESOLVED",
+    "evidence_strength": "R2_SHARED_SOURCE_RATE_INTERVAL_THEOREM_LINEAGE_NOT_R3"
+  },
+  "historical_preservation": {
+    "Q047_closure": true,
+    "V79_failure": true,
+    "ancillary_gaps": 8,
+    "V81_red_log_gap": true,
+    "unavailable_V84_originals": 11,
+    "later_documented_corrections": "PRESERVED",
+    "historical_reconstruction": "NOT_ATTEMPTED"
+  },
+  "input_integrity": {
+    "ingestion_prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+    "incoming_journal_sha256": "703e2af81d3332e64f05a288fae2aa379cfe8383eaec6e3a5bf96a3d6dba8369",
+    "accepted_checkpoint_sha256": "96b2b93050581d5b3c82e5023acacb30e9a723008d5067bf88fc3a880a235158",
+    "raw_sha256": "7bc860409d0a208008999da84b44587ba7740a6750450a367fe4b9e4f75307e7",
+    "validation_sha256": "efe4abfb468ea6e35944728fbd4369086d06f19e1de69ce3dcbdddeb89069967",
+    "transition_sha256": "07c3bd4e0bc13db1add66cfc27853de1eabb3e9d8a388d293946c38726ee5cb7",
+    "acceptance_sha256": "79c9acb21812c56033647186822523e246a2a30bd4c1b7b13946c140d9a528f9",
+    "postaccept_sha256": "b18ab1b2e211372d4cddf4da1a0b8af3dca6cb69a6757a3f9786e496346ab6c3",
+    "guard_primary_row43_sha256": "b8027c12855303ffc33130edf153afddf122745d0ad1f00cb381f60d58d4f828",
+    "guard_control_row43_sha256": "37ba71d2f6a8c5191859e5e090730a1e88486867784e930364217f3b4b61092c",
+    "math_prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+  }
+}
