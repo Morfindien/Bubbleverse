@@ -1,0 +1,59 @@
+{
+  "schema": "bubbleverse.q048.v107.ingestion_evidence_audit.v1",
+  "created_at_utc": "2026-10-19T19:28:03.076328+00:00",
+  "q": "Q048",
+  "status": "PASS",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "incoming_byte_pins": {
+    "Q048_V107_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json": "3876328fa6acfd5a79c01505526de8e2b6d384b06241685eb359fa5635747e24",
+    "Q048_V107_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json": "2a597c387551c309ca11adaf1f534e3a24adfee1e1771589c5fe84079a4dfaa8",
+    "Q048_V107_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json": "265e19fd47a64d9f58c22fea87f87095d89fdba7916557413cf11a248ba5cc92",
+    "Q048_V107_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json": "4af51a9d952413ad91f5780f62111b975c06bfa34a66a1740e0d74743192fe69"
+  },
+  "historical_reference_pins": {
+    "q048_frec_moving_h_accepted_checkpoint_v101.json": "270e615ae9ee8455ce5ddb1c0d28ff24efa478db1db0e09c55ce8015bf434686",
+    "q048_moving_h_domain_accepted_proof_v102.json": "26d742b146e9caf6420e17987c557125a61e219d7b0a9565791b774e4630ce6f",
+    "v102_raw_sha256": "807aac41864cbb4af3149e80aa38ce642be081ab657af34bbdfb4fccf1d24845",
+    "v102_validation_sha256": "08b4d6ff805b99b40b58d63547730a98c0ae3a115bf94a6b6b1c8be140c9f0ae",
+    "v102_freeze_sha256": "a4be9ad22c1dc76542a0350174d560b26619cb6f1054be8c512584ac04047d5c",
+    "v102_spec_sha256": "c54bc8ac547c66349f6797bd15b98fd4b9bb98915bd5e0004b630bf3f2149d63"
+  },
+  "observations": {
+    "v107_validated": true,
+    "v107_is_source_correct_actual111_frontier970": true,
+    "v107_matches_historical_v101_numerically": true,
+    "numerical_match_is_identity_equivalence": false,
+    "matching_fields": {
+      "accepted_actual": true,
+      "frontiers": true,
+      "endpoint": true,
+      "connected_lower": true,
+      "K_upper": true
+    },
+    "v102_proof_cell_970_960_accepted": true,
+    "v102_uses_correct_saha_factor": true,
+    "v102_scope_is_conditional_on_historical_v101": true,
+    "old_v102_parent_source_precondition_resolved_for_new_lineage_by_v104_v107": true,
+    "historical_v102_can_be_relabelled_without_new_bridge": false,
+    "full_v102_rerun_required_now": false,
+    "new_v108_bridge_is_material_nonduplicate_task": true
+  },
+  "repository_verification": {
+    "repository": "Morfindien/Bubbleverse",
+    "commit_sha": "0a5c39da6d80cd0bc57efd122cbcf6f020a65d23",
+    "commit_time_utc": "2026-10-19T19:21:40Z",
+    "v107_files_present": true,
+    "v102_acceptance_present": true,
+    "some_v102_supporting_root_files_not_verified_at_current_commit": true,
+    "library_supporting_records_available": true
+  },
+  "next_engine_verification": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "git_blob_sha1": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "prompt_sha256_reported_verified_historical": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "verified_file_present_at_commit": "0a5c39da6d80cd0bc57efd122cbcf6f020a65d23"
+  },
+  "claim_strength_limit": "This ingestion establishes source-correct actual111/frontier970 and justifies one parent/theorem bridge task for 970->960. It does not establish source-correct theorem authority on V107 for 970->960, actual112/frontier960, NativeP6, complete histories, tau bounds, or Q048 closure."
+}
