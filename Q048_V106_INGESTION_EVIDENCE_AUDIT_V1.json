@@ -1,0 +1,47 @@
+{
+  "schema": "bubbleverse.q048.v106.ingestion_evidence_audit.v1",
+  "created_at_utc": "2026-10-19T18:50:29.562561Z",
+  "q": "Q048",
+  "status": "PASS",
+  "incoming_byte_pins": {
+    "Q048_V106_SOURCE_CORRECT_PROOF_BRIDGE_ACCEPTANCE_V1.json": "5294bed5e3d32d71e396d933a5387c8c8f7538e1bc55c432b0b151fc0e9f9fe3",
+    "Q048_V106_SOURCE_CORRECT_PROOF_BRIDGE_RAW_V1.json": "e7b526416746e83005d353e4d6107c405cbb05646520f9fb0fea8b8756baef11",
+    "Q048_V106_SOURCE_CORRECT_PROOF_BRIDGE_VERIFICATION_V1.json": "e0793a3c8b543c5e8d6646c4df43d7f226759cced2aa471f1baeec1d708e2375",
+    "Q048_V106_HANDOFF_TO_INGESTION_V1.md": "39946a4c42b0d91d0c7256c138f951d76d51e571031bc41f4d5ccc2d5d6c943d"
+  },
+  "observations": {
+    "v106_acceptance_accepted": true,
+    "v106_verifier_checks": "36/36 PASS",
+    "v106_semantic_mutations": "12/12 rejected",
+    "v106_parent_is_v105_source_correct_actual110_frontier980": true,
+    "v106_new_actual_cells": 0,
+    "source_correct_actual111_frontier970_exists": false,
+    "historical_v101_actual111_frontier970_exists": true,
+    "historical_v101_can_be_relabelled_as_new_lineage": false,
+    "new_v107_consumer_is_material_nonduplicate_task": true
+  },
+  "historical_reference": {
+    "v101_checkpoint_sha256": "270e615ae9ee8455ce5ddb1c0d28ff24efa478db1db0e09c55ce8015bf434686",
+    "v101_consumer_git_blob_sha1": "c7524b8996fd1ed16522b3b1fdfca378b7866786",
+    "expected_endpoint_from_committed_row47": {
+      "a": "1/971",
+      "E": "2575086164999170119/50000000000000000",
+      "Y": "40971463401285721027/1000000000000000000",
+      "Vbar": "10091499069585277963/1000000000000000000"
+    },
+    "note": "Reference/cross-check only; historical execution identity is not transferred."
+  },
+  "repository_verification": {
+    "repository": "Morfindien/Bubbleverse",
+    "commit_sha": "8fc2c0bd636f94867e9b12c655369c9d45687e6b",
+    "commit_time_utc": "2026-10-19T18:46:59Z",
+    "v106_files_present": true
+  },
+  "next_engine_verification": {
+    "prompt_path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+    "prompt_version": "2.2.0",
+    "git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "verified_at_commit": "8fc2c0bd636f94867e9b12c655369c9d45687e6b"
+  },
+  "claim_strength_limit": "Ingestion establishes an accepted source-correct theorem bridge and a justified one-cell consumer task only; it does not establish source-correct actual111/frontier970, NativeP6, complete histories, tau bounds, or Q048 closure."
+}

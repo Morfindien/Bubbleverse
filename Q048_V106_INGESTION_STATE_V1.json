@@ -1,0 +1,57 @@
+{
+  "schema": "bubbleverse.q048.v106.ingestion.state.v1",
+  "created_at_utc": "2026-10-19T18:50:29.562561Z",
+  "q": "Q048",
+  "target_q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "disposition": "CONTINUE",
+  "current_reassessment_lineage": {
+    "accepted_actual": {
+      "count": 110,
+      "frontier": 980
+    },
+    "parent_checkpoint_sha256": "cedaef00bab86ac24bb876ae475e5dff15f8b97a0a55f83d9ba12d25da07b098",
+    "accepted_proof_bridge": {
+      "cell_z": [
+        980,
+        970
+      ],
+      "sha256": "5294bed5e3d32d71e396d933a5387c8c8f7538e1bc55c432b0b151fc0e9f9fe3",
+      "K_upper": "5080670052472740707779/1000000000000000000",
+      "connected_lower": "492108035315773/1000000000000000000",
+      "correct_saha_fact": "3.016103031869581e21"
+    },
+    "new_actual_cells_from_v106": 0
+  },
+  "historical_state_preserved": {
+    "V97": true,
+    "V100": true,
+    "V101": true,
+    "V96_provenance_gap": "HISTORICAL_NOT_ACTIVE_BLOCKER_FOR_NEW_LINEAGE"
+  },
+  "open_material_uncertainties": [
+    "Source-correct actual consumer 980->970 not yet executed",
+    "NativeP6 unresolved",
+    "Complete four-case x_e(z) and cumulative tau_T(z) bounds unresolved"
+  ],
+  "completion_gate_satisfied": false,
+  "selected_next_engine": {
+    "name": "BUBBLEVERSE — AUTONOMOUS EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER ENGINE",
+    "prompt_version": "2.2.0",
+    "prompt_path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+    "git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a"
+  },
+  "next_task_id": "LOCAL-Q048-V107-SOURCE-CORRECT-ACTUAL-CONSUMER-980-970-V1",
+  "next_task_fingerprint": "4314813e9da301880e9c8fd9e3246921710be110cd2d19f457e814c21150cd3d",
+  "consumer_authorization": "GRANTED_BY_INGESTION_FOR_EXACTLY_ONE_CELL_980_TO_970",
+  "below970_authorization": "NOT_GRANTED",
+  "repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit_sha": "8fc2c0bd636f94867e9b12c655369c9d45687e6b",
+    "source_freshness": "VERIFIED",
+    "sync_status": "USER_UPLOAD_PENDING_FOR_NEW_INGESTION_FILES"
+  }
+}
