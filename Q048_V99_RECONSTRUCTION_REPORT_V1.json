@@ -1,0 +1,34 @@
+{
+  "schema": "bubbleverse.q048.v99.full_tube_reconstruction_report.v1",
+  "q": "Q048",
+  "status": "PARTIAL_RECONSTRUCTION_BLOCKED_ON_NUMERICAL_BODIES",
+  "purpose": "fresh V99 diagnostic implementation; not historical V98 replay",
+  "authoritative_state_before": {"actual_count": 110, "frontier": 980, "scientific_state": "INCONCLUSIVE"},
+  "historical_missing_dependency": {
+    "path": "q048_full_tube_reuse_v1.py",
+    "bytes": 10171,
+    "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+    "recovered_exact_bytes": false
+  },
+  "recovered_gate": {
+    "label": "NEW_CELL_UPPER_H_THERMAL:L",
+    "subpredicates": [
+      "upper_h_face_terms[0].lo > 0",
+      "upper_h_face_terms[1].lo > 0",
+      "thermal.thermal_denominator.lo > 0",
+      "thermal.beta.lo > 0",
+      "thermal.faces.admitted == true"
+    ]
+  },
+  "recovered_accepted_verifier_identities": {
+    "lower_face_inward_lower": "1 + (1 + beta.lo) * 1/1000000",
+    "upper_face_inward_margin": "(1 + beta.lo) * 1/100 - 1"
+  },
+  "dependency_recovery": {
+    "q047_math_v1.py": {"expected_sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d", "repository_content_found": true},
+    "q048_p3_scaled_kernel_v2.py": {"expected_sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd", "repository_content_found": true},
+    "q048_full_tube_reuse_v1.py": {"expected_sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc", "repository_content_found": false}
+  },
+  "scientific_guardrail": "No numerical body was invented. The reconstructed primitive module fails closed until a separately derived implementation passes regression against accepted historical cells.",
+  "next_required_step": "derive numerical hydrogen_barrier_term and thermal_certificate from preserved theorem/source lineage, then regression-test on accepted cells before any 980->970 diagnostic"
+}
