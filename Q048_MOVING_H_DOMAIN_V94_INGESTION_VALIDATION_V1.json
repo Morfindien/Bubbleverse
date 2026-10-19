@@ -1,0 +1,102 @@
+{
+  "schema": "bubbleverse.q048.v94.ingestion.validation.v1",
+  "created_at_utc": "2026-10-19T12:27:45.885464+00:00",
+  "q": "Q048",
+  "status": "PASS",
+  "checks_total": 21,
+  "checks_passed": 21,
+  "checks": [
+    {
+      "check": "journal_prefix_exact",
+      "pass": true
+    },
+    {
+      "check": "audit_pass",
+      "pass": true
+    },
+    {
+      "check": "task_fingerprint",
+      "pass": true
+    },
+    {
+      "check": "state_actual108_1000",
+      "pass": true
+    },
+    {
+      "check": "planned_not_accepted",
+      "pass": true
+    },
+    {
+      "check": "completion_not_satisfied",
+      "pass": true
+    },
+    {
+      "check": "selected_builder",
+      "pass": true
+    },
+    {
+      "check": "repo_base",
+      "pass": true
+    },
+    {
+      "check": "output:Q047_SAMLET_JOURNAL_MOVING_H_DOMAIN_V94_INGESTED_V1.md",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_INGESTION_RESULT_V1.md",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_INGESTION_HANDOFF_TO_BUILDER_V1.md",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_NEXT_BUILDER_TASK_V1.json",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_INGESTION_STATE_V1.json",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_INGESTION_CONTEXT_INDEX_V1.json",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_INGESTION_JOURNAL_APPEND_V1.md",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+      "pass": true
+    },
+    {
+      "check": "output:Q048_MOVING_H_DOMAIN_V94_INGESTION_UPLOAD_INSTRUCTIONS_V1.md",
+      "pass": true
+    },
+    {
+      "check": "output_manifest_entries_match",
+      "pass": true
+    },
+    {
+      "check": "manifest_excludes_recursive_validation",
+      "pass": true
+    }
+  ],
+  "manifest_sha256": "48c269b5726723cb281da7dcaf0ee55f6f4da0d2811177e46bef742082015be7",
+  "journal_sha256": "6bc11bdb5d017bb8fa9c41aef0743eca004eebc08bf68944a329f83385e56599",
+  "task_sha256": "b68ac83e4a48324bbba0960e6b1a5426874d2d2dc6c23bf0032c7de014c885b8",
+  "next_task_fingerprint": "fbd0b82348edc976b60c33e6655d8c2416d0ace993f312ad5b387465aeaada1e",
+  "method": "File/hash/serialized chain/scope invariants only; no science execution",
+  "scientific_dispatch": "PREPARED_NOT_SENT",
+  "github_sync": "USER_UPLOAD_PENDING",
+  "manifest_hash_exclusion_note": "Output manifest excludes itself and this validation file to avoid recursive two-file hashing; validation hashes the manifest."
+}
