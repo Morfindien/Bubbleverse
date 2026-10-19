@@ -1,0 +1,122 @@
+{
+  "schema": "Q048_FREC_MOVING_H_V89_GATES_PROVENANCE_V1",
+  "q": "Q048",
+  "status": "PASS",
+  "actual_before": {
+    "count": 105,
+    "frontier": 1030,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 1030
+    },
+    "endpoint": {
+      "a": "1/1031",
+      "E": "15757303249921163049/250000000000000000",
+      "Y": "50196354320893086329/1000000000000000000",
+      "Vbar": "12298156233841917289/1000000000000000000"
+    },
+    "connected_lower": "72472555723359/125000000000000000",
+    "accepted_checkpoint": "q048_frec_moving_h_accepted_checkpoint_v87.json",
+    "accepted_checkpoint_sha256": "8f52b0df530c8baa878c3ce4a19c4e474ace716d97052bad74397cb74cebc18d"
+  },
+  "accepted_actual": {
+    "count": 106,
+    "frontier": 1020
+  },
+  "cell_z": [
+    1030,
+    1020
+  ],
+  "source_domain_checks": {
+    "model4": true,
+    "fixed_flags": true,
+    "above900": true,
+    "TR": true,
+    "Tgamma": true,
+    "ratio": true,
+    "fit_positive": true,
+    "positive_H": true,
+    "guard_admitted": true,
+    "proof_checkpoint_validated": true
+  },
+  "K_upper": "1274114432364259590793/250000000000000000",
+  "K_required": "40544378905695260782730526901504969292239740277746383366570954143331315373994427198319485416798246120062449443967603232883990848168967754353854437732129044422280751718060597724021641513071335867537483329597879438494949201133624830183665069/7955403744713240233543530871630913580592926264738451290800521043029011217495369738257710166615808819160843745950087787687340254531699353950416140373708444699342799494344515340574996604680491725071643097533988566654305494962563509649408",
+  "lower_recheck": {
+    "initial": "72472555723359/125000000000000000",
+    "accepted_lower": "563445113766083/1000000000000000000",
+    "epsilon": "1/1000000",
+    "du_upper": "10/1021",
+    "x": "1274114432364259590793/25525000000000000000000000",
+    "exp_upper": "25525000000000000000000000/25523725885567635740409207",
+    "rational_control_lower": "1849769646509541020275091398360548566313/3282963329197454724908601639451433687000000"
+  },
+  "branch_admission": {
+    "L": {
+      "admitted": true,
+      "q": "1/1000000"
+    },
+    "R": {
+      "admitted": true,
+      "q": "0"
+    }
+  },
+  "guard_primary_sha256": "4e40e42043bbaf6468001d7ffb75160d02fc3700e1f714463b0dcbfccfbd06fd",
+  "guard_control_sha256": "fff963e51d5364ab21264e6134dd8ffb699d1ae70bada1d9b1d36946d8ff5d64",
+  "proof_authority": {
+    "checkpoint_sha256": "3384168d6578663d252b9cb5114b4862976fa515d88b2fca811849783d0e5f27",
+    "proof_cell_z": [
+      1030,
+      1020
+    ],
+    "proof_cell_a": [
+      "1/1031",
+      "1/1021"
+    ],
+    "preserved_raw_sha256": "86e1b4c9bed23d1d8ce2bd3485d43a4474916a0c4ffa27c89516a90594e59741",
+    "preserved_validation_sha256": "da73b3ea33ba3c55d2bef4420b3a907c20ba712335bb7bbbed55aa52de6bb073",
+    "preserved_transition_sha256": "5eca5324c5de79a86a96aa73744238550c6d32a01da133f243a2f0276f79120e",
+    "raw_bytes_required": false,
+    "raw_bytes_reconstructed": false
+  },
+  "validation": {
+    "checks_total": 118,
+    "checks_passed": 118,
+    "mutations_total": 40,
+    "mutations_rejected": 40
+  },
+  "postaccept": {
+    "checks_total": 22,
+    "checks_passed": 22
+  },
+  "orchestration": {
+    "schema": "bubbleverse.q048.frec_moving_h.orchestration.v89",
+    "status": "COMPLETE_ONE_ACCEPTED_CELL_STOP",
+    "stages": [
+      {
+        "stage": "producer",
+        "exit_code": 0,
+        "wall_seconds": 1.2849464729999909
+      },
+      {
+        "stage": "verifier",
+        "exit_code": 0,
+        "wall_seconds": 9.925906399999803
+      },
+      {
+        "stage": "acceptor",
+        "exit_code": 0,
+        "wall_seconds": 0.9844290460000593
+      }
+    ],
+    "science_chain_seconds": 12.303696529000035,
+    "science_budget_seconds": 300,
+    "producer_process_attempts": 1,
+    "frozen_pins_unchanged": true,
+    "postfreeze_patch": false,
+    "retry": false,
+    "failure": null,
+    "timestamp_utc": "2026-10-19T08:13:18.177927+00:00"
+  }
+}
