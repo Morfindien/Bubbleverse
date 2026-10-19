@@ -1,0 +1,75 @@
+{
+  "schema": "bubbleverse.q048.v106.derived_input_snapshot.v1",
+  "status": "DERIVED_SELECTION_NOT_ORIGINAL_BYTES",
+  "q": "Q048",
+  "target_q": "Q048",
+  "repository": "Morfindien/Bubbleverse",
+  "repository_commit": "0d3cd7685b82c256defe9ea267309a9a87ede93a",
+  "retrieval_method": "GitHub connector fetch_file plus exact Library materializations where listed",
+  "v100_raw": {
+    "path": "V100_FULL_GATE_W002_RAW.json",
+    "sha256_expected": "5efd0103b8d08b723c408a98099275a0ca1cb9dd8cce1f25fb8ce0c705986a2d",
+    "git_blob_sha1": "4c3668cd4bac240cdf0f4933cf8fe9ad12116c8c",
+    "selected": {
+      "source_all": true,
+      "atomic_positive": true,
+      "c_positive": true,
+      "cell_z": [
+        980,
+        970
+      ],
+      "actual_state_unchanged": {
+        "count": 110,
+        "frontier": 980
+      },
+      "guard_primary_index": 47,
+      "h0": "50514140794199/100000000000000000",
+      "K_upper": "5080670052472740707779/1000000000000000000",
+      "hmin": "492108035315773/1000000000000000000",
+      "L_admitted": true,
+      "R_admitted": true
+    }
+  },
+  "v103_certificate": {
+    "path": "Q048_SAHA_PARENT_SOURCE_ADMISSIBILITY_CERTIFICATE_V1.json",
+    "sha256_expected": "3f26ed2bed293b2489f36dd59f63b6ea623365fea0d24216ed7cfaadb4207edb",
+    "git_blob_sha1": "f08fe251522dc65264a795753b4b0ca449adf5c6",
+    "selected": {
+      "technical_state": "PASS",
+      "local_V100_transfer_status": "ADMISSIBLE_UNDER_CORRECT_SOURCE_CONDITIONAL_ON_V97",
+      "checks_total": 25,
+      "checks_passed": 25,
+      "true_literal": "3.016103031869581e21",
+      "retained_comparison_positive": true,
+      "C_complements_exact_positive_polynomials": true,
+      "L_new_source_upper_H": true,
+      "R_new_source_upper_H": true,
+      "L_unchanged_thermal_faces": true,
+      "R_unchanged_thermal_faces": true,
+      "V101_primary_endpoint_no_reset": true
+    }
+  },
+  "v97_next_math_task": {
+    "path": "Q048_FREC_MOVING_H_V97_NEXT_MATHEMATICS_TASK_V1.json",
+    "sha256_expected": "9eddfede6d81fa9b260805e051a2213fb6790ef84e1baf0096ca2e94c4e8245c",
+    "git_blob_sha1": "9c07390f3cfae92b6ac4422805f23e7564cebf5b",
+    "row47": {
+      "index": 47,
+      "z0": 980,
+      "z1": 970,
+      "a0": "1/981",
+      "a1": "1/971",
+      "E_input_left": "13327406922059142279/250000000000000000",
+      "Y_left": "1696710572528996873/40000000000000000",
+      "V_previous": "10438035734386161987/1000000000000000000",
+      "source_state_reset": false,
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "committed": true,
+      "primary_row_sha256": "01e9f92295d60287f74a2760c1d38da42d2d37098a4d0dd32d1782dbf757b5ea"
+    }
+  },
+  "note": "Selected fields are a derived audit snapshot for V106. It does not replace the pinned historical files and is not claimed byte-identical to them.",
+  "repository_commit_time_utc": "2026-10-19T18:37:29Z",
+  "repository_freshness_note": "V105 ingestion/V106 handoff observed uploaded in this commit during V106 run; scientific selected fields unchanged."
+}
