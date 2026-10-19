@@ -1,0 +1,102 @@
+{
+  "schema_id": "bubbleverse.q048.original_material_recovery_task",
+  "schema_version": "2.1.0",
+  "schema_registration": "LOCAL_CONTRACT_NOT_INSTALLED_SCHEMA",
+  "task_id": "LOCAL-Q048-V96-ORIGINAL-MATERIAL-RECOVERY-V1",
+  "registration": "LOCAL_ID_NOT_GLOBALLY_REGISTERED",
+  "created_at_utc": "2026-10-19T16:33:08.828136+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "status": "BLOCKED_AWAITING_ORIGINAL_MATERIAL_OR_NEW_LOCATION",
+  "task_type": "INPUT_CLARIFICATION_ORIGINAL_EVIDENCE_RECOVERY_ONLY",
+  "selected_next_engine_id": null,
+  "engine_selection_reason": "No scientific engine is dispatched while decisive original evidence is absent; input recovery is a function, not a newly invented engine",
+  "objective": "Recover one exact original V96 raw record, or semantically complete original verifier recomputation, sufficient for a later separately routed source-admissibility audit",
+  "minimum_original": {
+    "path": "q048_moving_h_domain_result_v96.json",
+    "bytes": 41305,
+    "sha256": "a2757a2804d7e43629f0361b9664deaadb8f93d0c4af1d47707ad87f189c81b0",
+    "role": "original atomic/H/C/source-domain interval enclosures for V96proof990→980, directly used by accepted V97 parent",
+    "equivalent_alternative": {
+      "path": "q048_moving_h_domain_verifier_recomputation_v96.json",
+      "bytes": 25507,
+      "sha256": "95b3fd1d38e441377155c5b2645cf95d9f168c9b09fe2962cd67b277ec0be57a",
+      "accept_only_if": "complete source/input/domain semantics and enclosures are present and exact pins match"
+    }
+  },
+  "execution_precondition": "New original bytes or a documented previously uninspected original location; do not repeat the same exhausted queries merely because the engine changed",
+  "source_lineage": [
+    "V101actual111/frontier970",
+    "V100 proof980→970 conditional on V97",
+    "V97actual110/frontier980",
+    "V96 proof990→980 on V95 parent"
+  ],
+  "frozen": [
+    "Exact Q and Q001–Q048 firewall",
+    "All historical code/raw/checkpoints/acceptances",
+    "Captured effective inputs, source commit and accepted z_reio",
+    "Strict original gate inequalities",
+    "Actual111/frontier970 and other three frontiers1440",
+    "V102 proof970→960 remains conditional"
+  ],
+  "allowed": [
+    "Read-only retrieval of the pinned original bytes",
+    "Byte count and SHA256 comparison",
+    "Inspect recovered content for presence of necessary source/input/domain semantics and interval enclosures",
+    "Record original location/version and recovery receipt"
+  ],
+  "prohibited": [
+    "No old producer/verifier/consumer main replay",
+    "No new V100/V102/source-admissibility run in this recovery task",
+    "No generated substitute presented as original evidence",
+    "No new proof or actual cell; no112/frontier960 or below960",
+    "No recapture/refit/reset or relaxed criteria",
+    "No consumer authorization, accepted-model promotion, new Q or closure"
+  ],
+  "success_condition": "Original raw matches41305bytes/a2757a2804d7e43629f0361b9664deaadb8f93d0c4af1d47707ad87f189c81b0, or alternative matches25507bytes/95b3fd1d38e441377155c5b2645cf95d9f168c9b09fe2962cd67b277ec0be57a and carries full required semantics/enclosures; return one provenance receipt to Ingestion",
+  "failure_condition": "Hash/bytes mismatch or incomplete semantics; preserve as a nonmatching candidate, do not replace historical evidence",
+  "inconclusive_condition": "No new original material/location or complete semantics unavailable; remain BLOCKED without scientific falsification",
+  "stop_condition": "One matching material receipt, first exact mismatch/incomplete required premise, or no new location; no automatic scientific continuation",
+  "expected_output": "One recovery receipt with computed pins, original location/version, completeness assessment and exact remaining gaps",
+  "return_to": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "after_recovery": "Ingestion may separately select the required upstream source-admissibility analysis; recovery success alone is not a parent proof",
+  "science_seconds": 0,
+  "automatic_identical_query_retries": 0,
+  "paid_or_HPC_dispatch_authorized": false,
+  "new_actual_cells": 0,
+  "new_mathematical_proof_cells": 0,
+  "consumer_authorization": "NOT_GRANTED",
+  "already_attempted_ref": "Q048_V103_INGESTION_REPOSITORY_AUDIT_V1.json and evidence/Q048_V103_RECOVERY_ATTEMPTS_V1.json",
+  "execution_profile": {
+    "verified_at_utc": "2026-10-19T16:33:08.828136+00:00",
+    "inventory_basis": "Recent same-session runtime inventory reused; current Python/file/repository reads observed",
+    "current_observed_runtime": "Codex API agent; exact model/reasoning controls not exposed",
+    "relevant_configurations_considered": [
+      "Available agent with local Python/files and repository connector",
+      "Stronger reasoning/HPC offers no substitute for missing original bytes"
+    ],
+    "recommended_model_or_functional_class": "GENERAL REASONING / bounded provenance recovery",
+    "recommended_reasoning_level": "NOT VERIFIED; no selectable setting exposed",
+    "recommended_execution_style": "Read-only exact-file recovery when new bytes or a documented new location exists; no science replay",
+    "task_specific_reason": "The first material gap is original V96 numerical/source evidence, not compute capacity",
+    "required_tools_plugins": [
+      "File byte/SHA256 inspection",
+      "Read access to a documented original artifact location"
+    ],
+    "optional_tools_plugins": [
+      "GitHub/Library reads if evidence location or version changes"
+    ],
+    "unavailable_or_unverified_capabilities": [
+      "GitHub write previously403; no changed rights verified",
+      "Recovery-engine registry identity not independently verified",
+      "Subscription limits and exact model catalog not verified"
+    ],
+    "actual_selected_setup": "Existing available agent; Python3.12.14 stdlib; no switch",
+    "switch_status": "NOT REQUIRED",
+    "known_budget_or_usage_limits": "This ingestion0science; next recovery0science,0automatic retries of exhausted identical queries; no paid/HPC dispatch"
+  },
+  "planning_fingerprint": "42ba17bc576ba13010571d326d17766e0e884c098f2385299e7e5af671ae9a3c"
+}
