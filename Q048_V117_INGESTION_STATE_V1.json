@@ -1,0 +1,180 @@
+{
+  "schema": "bubbleverse.q048.v117.ingestion.state.v1",
+  "created_at_utc": "2026-10-20T11:47:43.919672+00:00",
+  "created_at_local": "2026-10-20T13:47:43.919672+02:00",
+  "q": "Q048",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "case_id": "Q048; separate CASE ID NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "disposition": "CONTINUE",
+  "ingestion_state": "NEW",
+  "ingestion_event_id": "LOCAL-Q048-V117-SOURCE-CORRECT-ACTUAL-INGESTION-V1",
+  "idempotency_key": "e8213f68c8a20304134848ab154bfe7b8ffa59a7dc66286a5d85a3afc610e239",
+  "accepted_actual": {
+    "count": 116,
+    "frontier": 920
+  },
+  "accepted_state_scope": "Validated V117 source bytes at pinned GitHub base; this ingestion integration pending",
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 920
+  },
+  "endpoint": {
+    "a": "1/921",
+    "E": "21553673409627471439/500000000000000000",
+    "Y": "133823577632185643/3906250000000000",
+    "Vbar": "2119955747339110627/250000000000000000"
+  },
+  "connected_lower": "54513832861587/125000000000000000",
+  "K_upper": "1220855076846709617829/250000000000000000",
+  "accepted_checkpoint": {
+    "record": "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "e47af0c2bce1ddd0e8bb1cd31ebfd5566a88c62646bb59400426ea6d84d6ba12",
+    "bytes": 2615,
+    "library_file_id": "libfile_a2629b0fef288191a5614f991e8583b0",
+    "library_version": "0",
+    "github_source_status": "GITHUB_BYTE_VERIFIED",
+    "intended_repository_relative_path": "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "repository_commit": "a6d337bee55ec442e4b718c3fc50929690b84932",
+    "accepted_actual": {
+      "count": 116,
+      "frontier": 920
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 920
+    },
+    "endpoint": {
+      "a": "1/921",
+      "E": "21553673409627471439/500000000000000000",
+      "Y": "133823577632185643/3906250000000000",
+      "Vbar": "2119955747339110627/250000000000000000"
+    },
+    "connected_lower": "54513832861587/125000000000000000",
+    "K_upper": "1220855076846709617829/250000000000000000",
+    "correct_saha_fact": "3.016103031869581e21"
+  },
+  "source_journal": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+    "sha256": "8d3350841d480186983e1ef0802170df516170434c503589968e19b7e90c4567",
+    "bytes": 14541951,
+    "library_file_id": "libfile_103dbc0d065881918249e480033913c0",
+    "github_source_status": "GITHUB_BYTE_VERIFIED",
+    "repository_commit": "a6d337bee55ec442e4b718c3fc50929690b84932"
+  },
+  "journal_successor": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V117_INGESTED_SOURCE_CORRECT_V1.md",
+    "sha256": "4ce34cc13cbbbe74283d670c01317b33ea255133d93183fcd1e7b08feff177b9",
+    "bytes": 14545533,
+    "preservation": "Complete incoming exact prefix plus one ingestion receipt"
+  },
+  "execution_profile": {
+    "inventory_time_utc": "2026-10-20T11:47:43.919672+00:00",
+    "observed_runtime": {
+      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]"
+    },
+    "recommended_functional_class": "GENERAL_REASONING for ingestion; HIGH_REASONING plus exact interval arithmetic for next proof",
+    "selectable_models_and_settings": "NOT_VERIFIED; no switch performed",
+    "execution_style": "Serial integration and finite exact-byte/JSON/contract checks; no scientific programs rerun",
+    "required_tools": [
+      "Local original files/hash/JSON",
+      "GitHub read",
+      "File persistence"
+    ],
+    "optional_tools": [
+      "Focused Library title duplicate lookup"
+    ],
+    "external_new_science_research": "NOT_NEEDED: literature cannot substitute for this cell-specific theorem",
+    "observed_write_limit": "Earlier same-session GitHub branch-create403; unchanged access not retried",
+    "known_budget": "No paid compute and zero scientific cells in ingestion; next proof at most300science seconds",
+    "switch_status": "NOT_REQUIRED"
+  },
+  "classification": [
+    "RUN_SUCCESS",
+    "VALIDATION_RESULT",
+    "BOUNDED_ACTUAL_ADMISSION"
+  ],
+  "status_axes": {
+    "execution": "SUCCESS for source V117; ingestion science NOT_EXECUTED",
+    "technical_validity": "TECHNICALLY_VALIDATED within exact admission contract",
+    "reproducibility": "No new independent replication; original separate verifier/postaccept reused",
+    "robustness": "Semantic controls only; wider physical robustness NOT_ASSESSED",
+    "scientific_effect": "Bounded construction progress; full exact-Q answer UNRESOLVED",
+    "anomaly": "NONE_IDENTIFIED_WITHIN_INGESTION_SCOPE"
+  },
+  "completed_task": {
+    "task_id": "LOCAL-Q048-V117-SOURCE-CORRECT-ACTUAL-CONSUMER-930-920-V1",
+    "fingerprint": "1befbb323eea6f78d76783b307b2ddb8d00f704aa190638022bfeba7ed218fed",
+    "status": "COMPLETED_VALIDATED_INGESTED_ONCE",
+    "ingestion_does_not_increment_actual_count": true
+  },
+  "route_history_append": {
+    "from": "V117 Builder2.2.0",
+    "via": "Result Ingestion2.1.0",
+    "to": "BUBBLEVERSE.MATHEMATICS",
+    "task_id": "LOCAL-Q048-V118-SOURCE-CORRECT-NEW-PROOF-920-910-V1",
+    "task_fingerprint": "f9b5dbe5db52d9ececb6170f52db6fd00d66b6ee2489873cdaefdd67b053a7ac",
+    "delivery": "PREPARED_NOT_SENT"
+  },
+  "selected_next_engine": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "git_blob_sha1": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "repository_commit": "a6d337bee55ec442e4b718c3fc50929690b84932",
+    "identity_basis": "Existing Mathematics prompt and established engine identity; no launcher deployment asserted"
+  },
+  "next_task_id": "LOCAL-Q048-V118-SOURCE-CORRECT-NEW-PROOF-920-910-V1",
+  "next_task": "Q048_V118_NEXT_MATHEMATICS_TASK_V1.json",
+  "next_task_fingerprint": "f9b5dbe5db52d9ececb6170f52db6fd00d66b6ee2489873cdaefdd67b053a7ac",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "One branch reaches920,other3frontiers1440; full four-case histories/tau and NativeP6 remain unestablished. Fresh920->910 source/atomic/C/lower/upper-h/thermal evidence is required before later admission.",
+  "q_complete": false,
+  "open_material_uncertainties": [
+    "Fresh920->910 source-correct certificate",
+    "Complete four-configuration xe(z)/tau_T(z) bounds",
+    "NativeP6/native trajectory identity unresolved"
+  ],
+  "consumer_authorization": "NOT_GRANTED",
+  "below910_authorization": "NOT_GRANTED",
+  "claim_evidence_map_ref": "Q048_V117_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "source_register_ref": "Q047_SAMLET_JOURNAL_Q048_V117_INGESTED_SOURCE_CORRECT_V1.md",
+  "scientific_execution_in_ingestion": {
+    "new_actual_cells": 0,
+    "new_proof_cells": 0,
+    "historical_science_reruns": 0,
+    "next_task_dispatched": false
+  },
+  "repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit_sha": "a6d337bee55ec442e4b718c3fc50929690b84932",
+    "source_freshness": "VERIFIED_AT_PINNED_BASE",
+    "repository_observed_actual": {
+      "count": 116,
+      "frontier": 920
+    },
+    "pending_validated_working_actual": {
+      "count": 116,
+      "frontier": 920
+    },
+    "v117_source_sync": "ALL20_GITHUB_BYTE_VERIFIED",
+    "v115_ancestry_sync": "ALL20_USER_UPLOAD_PENDING",
+    "new_ingestion_sync": "USER_UPLOAD_PENDING",
+    "canonical_pointer_writeback": "PENDING; local integration is not a remote write"
+  },
+  "scientific_handoff": {
+    "status": "PREPARED",
+    "completeness": "COMPLETE_CONTEXT_WITH_EXPLICIT_LIBRARY_SOURCE_RECOVERY",
+    "execution": "NOT_EXECUTED"
+  }
+}
