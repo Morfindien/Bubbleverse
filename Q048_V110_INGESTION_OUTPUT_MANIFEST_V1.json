@@ -1,0 +1,190 @@
+{
+  "schema": "bubbleverse.q048.v110.ingestion.output_manifest.v1",
+  "created_at_utc": "2026-10-20T06:09:50.732853+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "ingestion_event_id": "LOCAL-Q048-V110-SOURCE-CORRECT-PROOF-INGESTION-V1",
+  "idempotency_key": "a78001ec2082bbf31a956b16b0e5c2f1c4534c8fa939ba8021e98a53ae28d80d",
+  "repository": "Morfindien/Bubbleverse",
+  "base_commit": "791175b674a830ade5fe00703c956f67f976e8eb",
+  "source_freshness": "VERIFIED",
+  "prior_V110_source_status": "ALL18_PRESENT_AND_BYTE_EQUIVALENT",
+  "new_ingestion_sync": "USER_UPLOAD_PENDING",
+  "hash_algorithm": "SHA256 exact raw bytes, no normalization",
+  "row_hash_convention": "UTF8 json.dumps(sort_keys=True,separators=comma/colon,ensure_ascii=False)",
+  "self_hash_policy": "Manifest excludes its own recursive hash; its filename is still delivered",
+  "files": [
+    {
+      "filename": "Q048_V110_INGESTION_RESULT_V1.md",
+      "role": "Ingestion disposition and one-engine next route",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V110_INGESTION_RESULT_V1.md",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 9096,
+      "sha256": "eec612b3e970ecda7c022e11bd5a28c7a35168b0edb568a1d0156040a7c30aaa"
+    },
+    {
+      "filename": "Q048_V110_INGESTION_STATE_V1.json",
+      "role": "Versioned current ingestion snapshot; canonical GitHub write pending",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V110_INGESTION_STATE_V1.json",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 6345,
+      "sha256": "3779a5a6ebfc71b213548338c8f14013edd2207505db4017562b12504ba0eccb"
+    },
+    {
+      "filename": "Q048_V110_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "role": "Evidence/provenance/source and claim map",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V110_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 10214,
+      "sha256": "dc51eeb58c17db4898d8eb5fda98ffbbebadb49a57404483d27efe45f7b1b9ab"
+    },
+    {
+      "filename": "Q048_V110_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "role": "Machine-readable2.1.0 handoff envelope",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V110_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 8559,
+      "sha256": "d9581212b5df9870400d7433c467c83bfb747e2870ceaf3a8ae3bb1d15d5858e"
+    },
+    {
+      "filename": "Q048_V110_INGESTION_JOURNAL_APPEND_V1.md",
+      "role": "One idempotent journal event",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V110_INGESTION_JOURNAL_APPEND_V1.md",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 3051,
+      "sha256": "f55c0677e6eab3d6e404e316cef3aaeaa55c600d0b3a6541602c666679f9eb6d"
+    },
+    {
+      "filename": "Q047_SAMLET_JOURNAL_Q048_V110_INGESTED_SOURCE_CORRECT_V1.md",
+      "role": "Complete preserved journal successor",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q047_SAMLET_JOURNAL_Q048_V110_INGESTED_SOURCE_CORRECT_V1.md",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 14499987,
+      "sha256": "3bbf0f3e8d9a3b66e2bbba566796d302f5ea8e4165fa35bdfa6dea8bb2102500"
+    },
+    {
+      "filename": "Q048_V110_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+      "role": "Proposed index/memory deltas and exact upload/apply instructions",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V110_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 4113,
+      "sha256": "b4bcf8b05decf596d7da2e7a5ac885254f5579b0ef84f0ddb97664f0ce5e45b5"
+    },
+    {
+      "filename": "Q048_V110_INGESTION_VALIDATION_V1.json",
+      "role": "Finite ingestion contract/delivery validation",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V110_INGESTION_VALIDATION_V1.json",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 1469,
+      "sha256": "c2c9fc7ac83ff3eacd35c13aa564fb4bea34bbdd9c9eee84995257428ead9601"
+    },
+    {
+      "filename": "Q048_V111_NEXT_BUILDER_TASK_V1.json",
+      "role": "Bounded V111 Builder task with authority hashes and primary guard row",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V111_NEXT_BUILDER_TASK_V1.json",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 12771,
+      "sha256": "e11e68fac4e2e0e2b0736a88218052fa70a8aed76b6cbac9a118dcd9e9461eb7"
+    },
+    {
+      "filename": "Q048_V111_HANDOFF_TO_BUILDER_SOURCE_CORRECT_ACTUAL_CONSUMER_V1.md",
+      "role": "Human-readable V111 Builder handoff",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V111_HANDOFF_TO_BUILDER_SOURCE_CORRECT_ACTUAL_CONSUMER_V1.md",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 6810,
+      "sha256": "f5c1e560bc83565679348bbc9e065b8b260774d68877a6e60722124ac8da820c"
+    }
+  ],
+  "source_journal": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V110_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+    "sha256": "e167ec3668c341376cc7c4ee3c38d442bff59e55e319f3341eb8d410cc5e9359",
+    "bytes": 14496936
+  },
+  "source_theorem": {
+    "filename": "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+    "sha256": "524aa47cec3698015824722380adc9e08359c41e4d4f5ec7dda404dadf1d111f"
+  },
+  "source_actual_parent": {
+    "filename": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba"
+  },
+  "next_task": {
+    "task_id": "LOCAL-Q048-V111-SOURCE-CORRECT-ACTUAL-CONSUMER-960-950-V1",
+    "task_fingerprint": "c48637d6aff6dd94883e58ace9ed8ca1a748c92863d9c7a17e5ead825bfebf8f",
+    "file": "Q048_V111_NEXT_BUILDER_TASK_V1.json",
+    "status": "PREPARED_NOT_EXECUTED"
+  },
+  "case_lifecycle": "ACTIVE",
+  "scientific_state": "INCONCLUSIVE",
+  "closure_gate": "NOT_SATISFIED"
+}

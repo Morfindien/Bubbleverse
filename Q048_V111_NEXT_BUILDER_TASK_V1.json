@@ -1,0 +1,233 @@
+{
+  "schema": "bubbleverse.q048.v111.next_builder_task.v1",
+  "created_at_utc": "2026-10-20T06:09:50.732853+00:00",
+  "q": "Q048",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "case_id": "NOT_DOCUMENTED_SEPARATELY_FROM_Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-V111-SOURCE-CORRECT-ACTUAL-CONSUMER-960-950-V1",
+  "task_fingerprint": "c48637d6aff6dd94883e58ace9ed8ca1a748c92863d9c7a17e5ead825bfebf8f",
+  "task_definition_for_fingerprint": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "task_id": "LOCAL-Q048-V111-SOURCE-CORRECT-ACTUAL-CONSUMER-960-950-V1",
+    "objective": "Exactly one source-correct actual consumer960->950",
+    "parent_sha256": "37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba",
+    "theorem_acceptance_sha256": "524aa47cec3698015824722380adc9e08359c41e4d4f5ec7dda404dadf1d111f",
+    "theorem_raw_sha256": "8883c3d7d01660ee0d6a9f602220e41ef9e5b232079d87dda1a1cde68d4b6642",
+    "theorem_verification_sha256": "093f4fda4fc617db3e518626f4f89a1e392070f300db38c7f6178707c0d53a7d",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row49_sha256": "5213279b9cf078f3854fb16c6669f761a86a39c19bd5c6ef872519a66d6a08ee",
+    "cell_z": [
+      960,
+      950
+    ],
+    "cell_a": [
+      "1/961",
+      "1/951"
+    ],
+    "max_new_actual_cells": 1,
+    "max_new_proof_cells": 0,
+    "criteria": "Exact parent/theorem/source/no-reset glue; canonical endpoint/bounds; separate validation and postaccept; stop950 then return once"
+  },
+  "selected_engine": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "repository_commit": "791175b674a830ade5fe00703c956f67f976e8eb",
+    "role": "Bounded actual-consumer admission with source/theorem/parent binding and separate validation; choose smallest sufficient compute mechanism"
+  },
+  "status": "PREPARED_NOT_EXECUTED",
+  "objective": "Exactly one new source-correct reassessment-lineage actual consumer960->950; expected actual113/frontier950 only after validation/acceptance",
+  "parent_authority": {
+    "record": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba",
+    "accepted_actual": {
+      "count": 112,
+      "frontier": 960
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 960
+    },
+    "endpoint": {
+      "a": "1/961",
+      "E": "49737668672811936943/1000000000000000000",
+      "Y": "39560432998711765483/1000000000000000000",
+      "Vbar": "4876592093839665491/500000000000000000"
+    },
+    "connected_lower": "479774678212513/1000000000000000000",
+    "K_upper": "1001919080623370229873/200000000000000000",
+    "correct_saha_fact": "3.016103031869581e21"
+  },
+  "theorem_authority": {
+    "record": "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+    "sha256": "524aa47cec3698015824722380adc9e08359c41e4d4f5ec7dda404dadf1d111f",
+    "schema": "bubbleverse.q048.v110.source_correct_proof.acceptance.v1",
+    "raw_record": "Q048_V110_SOURCE_CORRECT_PROOF_RAW_V1.json",
+    "raw_sha256": "8883c3d7d01660ee0d6a9f602220e41ef9e5b232079d87dda1a1cde68d4b6642",
+    "verification_record": "Q048_V110_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+    "verification_sha256": "093f4fda4fc617db3e518626f4f89a1e392070f300db38c7f6178707c0d53a7d",
+    "postaccept_record": "Q048_V110_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+    "postaccept_sha256": "0b1310f78c05826c09feaf8d4cbfd08047e115273cb852e160776e2f8d03c99d",
+    "spec_record": "Q048_V110_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+    "spec_sha256": "adc656a9e3defeeb4d33f70d78599bc215e2182b1530b2ab0fcabbbabe69d0ce",
+    "freeze_record": "Q048_V110_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+    "freeze_sha256": "a5411e446e7adf8eb7d2b625b963568b53270f6f571ed923c889ec735c54b5a6",
+    "proof_cell_z": [
+      960,
+      950
+    ],
+    "proof_cell_a": [
+      "1/961",
+      "1/951"
+    ],
+    "K_upper": "4938757978740257564629/1000000000000000000",
+    "connected_lower": "93617401567469/200000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "source_saha_factor": "3.016103031869581e21",
+    "historical_math_consumer_authorization": "NOT_GRANTED_PRESERVED"
+  },
+  "theorem_schema_binding_note": "V110 is a fresh-proof acceptance, not V108 bridge schema. Bind proof_cell_z/proof_cell_a, parent_checkpoint_sha256 and flat K_upper/connected_lower explicitly. Do not assume proof_bridge_cell or retained_theorem fields exist.",
+  "guard": {
+    "source_record": "q048_guard_local_v_result_v12.json",
+    "source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+    "primary_index": 49,
+    "primary_row_sha256": "5213279b9cf078f3854fb16c6669f761a86a39c19bd5c6ef872519a66d6a08ee",
+    "primary": {
+      "a0": "1/961",
+      "a1": "1/951",
+      "z0": 960,
+      "z1": 950,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "9214188928597114011/500000000000000000",
+        "H_upper_left": "5916722131752286647/1000000000000000000",
+        "X_upper_left": "1246716545982033973/125000000000000000",
+        "V_candidate_upper": "9422974711250420253/1000000000000000000",
+        "retained_Vbar": "4876592093839665491/500000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "49737668672811936943/1000000000000000000",
+      "Y_left": "39560432998711765483/1000000000000000000",
+      "V_previous": "4876592093839665491/500000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "49393102262625247487/1000000000000000000",
+      "V_local": "9422974711250420253/1000000000000000000",
+      "V_admitted": "9422974711250420253/1000000000000000000",
+      "equilibrium_upper": "2622045137043595201/500000000000000000",
+      "amplitude": "34316342724624575081/1000000000000000000",
+      "constant_energy_part": "173382734687007732659/11500000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "38395784071268531/40000000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "4844774722786976409/125000000000000000",
+      "raw_G_lower": "75140350940280163295311460487684003811800001912619899993929817319603885744312646934449819011865238118496245886163318273401/14298043046781365961967239634221099152888114335423746876413339335678335539110334546575360000000000000000000000000000000000",
+      "G_lower": "1313822295373404543/250000000000000000",
+      "Y_right_candidate": "37289221101899893/976562500000000",
+      "E_right_candidate": "12004207918064743109/250000000000000000",
+      "endpoint_energy_envelope": "9603366334451794487/200000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "951/961",
+      "R_at_left": "4240159270532626793805157083226515512824834447767389149123887588400350733661518992283486798336717/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "22059594027121106774882035100209171033883082803035117725/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "95989460178171327/100000000000000000",
+        "upper": "38395784071268531/40000000000000000",
+        "log_lower": "5230173212451093/500000000000000000",
+        "log_upper": "10460346424902187/1000000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "12004207918064743109/250000000000000000",
+      "Y_right": "37289221101899893/976562500000000",
+      "index": 49,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control_row_sha256": "9383f8ec3d8e84b13314e26b4ba56ad35145693ad5c2c1bdb78a3f8431529838",
+    "control_role": "GUARD_ONLY_NOT_AN_ADDITIONAL_ACTUAL_CELL"
+  },
+  "cell_z": [
+    960,
+    950
+  ],
+  "cell_a": [
+    "1/961",
+    "1/951"
+  ],
+  "expected_actual_after": {
+    "count": 113,
+    "frontier": 950
+  },
+  "expected_endpoint_crosscheck_only": {
+    "a": "1/951",
+    "E": "12004207918064743109/250000000000000000",
+    "Y": "37289221101899893/976562500000000",
+    "Vbar": "9422974711250420253/1000000000000000000"
+  },
+  "theorem_K_to_bind_if_all_checks_pass": "4938757978740257564629/1000000000000000000",
+  "theorem_lower_to_bind_if_all_checks_pass": "93617401567469/200000000000000000",
+  "max_new_actual_cells": 1,
+  "max_new_proof_cells": 0,
+  "max_full_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "consumer_authorization": "GRANTED_BY_THIS_INGESTION_FOR_EXACTLY_ONE_CELL_960_TO_950",
+  "below950_authorization": "NOT_GRANTED",
+  "required_behavior": [
+    "Freeze exact V109 parent, V110 accepted theorem/raw/verifier and committed primary row49 before execution",
+    "Verify all byte hashes, Q/source/scopes, exact primary row left a/E/Y/V glue and source_state_reset=false before the single admission",
+    "Consume V110 theorem once; endpoint values must come from the committed primary row; supplied endpoint is a cross-check only",
+    "Use separate validation and postaccept checks including real semantic mutations for wrong parent/theorem/schema/row/reset/cell/endpoint/K/lower/below950/extra cell",
+    "Write a separately versioned V111 raw result and accepted actual checkpoint only if all gates pass",
+    "Preserve V101/V102/V108/V109/V110 source/history unchanged; zero proof cells; no reset/refit/recapture/tuning",
+    "Stop one cell or first precise blocker; return exactly once to Result Ingestion2.1.0"
+  ],
+  "success_condition": "One validated and accepted source-correct reassessment actual113/frontier950, exactly one actual cell, zero proof cells, exact parent/theorem/row/schema/glue and postaccept PASS",
+  "failure_condition": "First material hash, parent/theorem/schema, source/reset/glue, endpoint, verifier or postaccept invariant failure; preserve it without retuning or historical relabel",
+  "stop_condition": "One accepted actual cell or first exact blocker; no below950; then one return to ingestion",
+  "forbidden": [
+    "V110 theorem rerun/reproof",
+    "old science replay/relabel",
+    "physical reset/refit/recapture/tuning",
+    "changing the exact question, captures or accepted z_reio",
+    "below950",
+    "extra actual or proof cells",
+    "NativeP6 or complete histories claim",
+    "accepted-model/Q change or Q closure"
+  ],
+  "resource_policy": "Use smallest adequate local/direct mechanism if available; choose GitHub compute only on measured/qualified workload benefit. No paid resources or speculative infrastructure authorized.",
+  "source_repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "791175b674a830ade5fe00703c956f67f976e8eb",
+    "all18_V110_source_artifacts": "VERIFIED_PRESENT_AND_BYTE_EQUIVALENT"
+  },
+  "preparation_is_not_dispatch": true
+}
