@@ -1,0 +1,192 @@
+{
+  "schema": "bubbleverse.q048.v121.ingestion.output_manifest.v1",
+  "created_at_utc": "2026-10-20T15:17:53.780715+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "ingestion_event_id": "LOCAL-Q048-V121-SOURCE-CORRECT-ACTUAL-INGESTION-V1",
+  "idempotency_key": "c0002655da46ac4f58ee419fdb90b5d1f42d18b048fa3897564e780c314b0f34",
+  "repository": "Morfindien/Bubbleverse",
+  "base_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+  "source_freshness": "VERIFIED_AT_BASE",
+  "source_V121_sync": "19_GITHUB_BYTE_VERIFIED;FULL_V121_PRODUCER_JOURNAL_SAVED_LOCAL_VERIFIED_UPLOAD_PENDING",
+  "new_ingestion_sync": "USER_UPLOAD_PENDING",
+  "hash_algorithm": "SHA256 exact bytes without normalization",
+  "row_fingerprint_hash_convention": "UTF8 sorted compact JSON ensure_ascii=False",
+  "self_hash_policy": "All other deliverables inventoried;own recursive hash excluded",
+  "files": [
+    {
+      "filename": "Q048_V121_INGESTION_RESULT_V1.md",
+      "role": "Ingestion disposition and evidence-limited interpretation",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V121_INGESTION_RESULT_V1.md",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 9503,
+      "sha256": "14b7ba7309de019fe28bd8bee1b91dc8faa7715b45e4e7719b906f9987caebde"
+    },
+    {
+      "filename": "Q048_V121_INGESTION_STATE_V1.json",
+      "role": "Versioned current ingestion snapshot",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V121_INGESTION_STATE_V1.json",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 21583,
+      "sha256": "8784a1c8fa819395165d8fe0d617f038a42e5b6bc9430a06b6661916ed365cea"
+    },
+    {
+      "filename": "Q048_V121_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "role": "Evidence/source/claim/provenance and recovery maps",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V121_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 66567,
+      "sha256": "866f7dff29dc07595e457983487d4cb645170f9809785953b964aac6f1c4f518"
+    },
+    {
+      "filename": "Q048_V121_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "role": "Machine-readable2.1.0 handoff",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V121_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 12040,
+      "sha256": "2245c8fbe270b5e56cb8232a3756e25c350f4520fbdfe0dd0aac9ed416fc40d3"
+    },
+    {
+      "filename": "Q048_V121_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+      "role": "Proposed GitHub memory deltas and exact upload instructions",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V121_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 4439,
+      "sha256": "af363703a8a96bebd12c64a7de376a043cd91c3cd82cc9d5cb9fca7cf3632d28"
+    },
+    {
+      "filename": "Q048_V121_INGESTION_JOURNAL_APPEND_V1.md",
+      "role": "One idempotent ingestion journal event",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V121_INGESTION_JOURNAL_APPEND_V1.md",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 3365,
+      "sha256": "513849281a0f36d7b479a81c33d2148b33960d93156dcbbc9ec06a5e5916e8b0"
+    },
+    {
+      "filename": "Q048_V121_INGESTION_VALIDATION_V1.json",
+      "role": "Finite ingestion contract checks",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V121_INGESTION_VALIDATION_V1.json",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 1474,
+      "sha256": "1e2feb20d343adb169903cf72724e2db794b2a1cc3f9ef0b935979817f1c5b35"
+    },
+    {
+      "filename": "Q047_SAMLET_JOURNAL_Q048_V121_INGESTED_SOURCE_CORRECT_V1.md",
+      "role": "Complete exact-prefix journal successor",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q047_SAMLET_JOURNAL_Q048_V121_INGESTED_SOURCE_CORRECT_V1.md",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 14574579,
+      "sha256": "01afaf70c903bfe67f6a5d163146c8dbd0ef6b721bf9f240f78308a22398386a"
+    },
+    {
+      "filename": "Q048_V122_NEXT_MATHEMATICS_TASK_V1.json",
+      "role": "One bounded low-z source-dispatch diagnostic;zero proof/actual",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V122_NEXT_MATHEMATICS_TASK_V1.json",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 42133,
+      "sha256": "2ccfb0a34de8a3c2123c2304fdef0c58e170f280f28c3a9b791f1f3ae199ec00"
+    },
+    {
+      "filename": "Q048_V122_HANDOFF_TO_MATHEMATICS_LOW_Z_DISPATCH_DIAGNOSTIC_900_890_V1.md",
+      "role": "Human Mathematics diagnostic handoff",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V122_HANDOFF_TO_MATHEMATICS_LOW_Z_DISPATCH_DIAGNOSTIC_900_890_V1.md",
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "dependencies": [
+        "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "bytes": 6990,
+      "sha256": "2ad71e53e3e009361b6487b78151a62272c0c1a2df2f5557f2246c4efc1f5b4f"
+    }
+  ],
+  "source_journal": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+    "local_path": "v121_output/Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+    "bytes": 14571214,
+    "sha256": "edd8a51e292c8d2063568667e0e142ac786058d1a2e8319d706d3ce7a6f06034",
+    "git_blob_sha1": "4c4c9254c6342a1bc29643c89dafa5fd333f14b5",
+    "repository_matches": [],
+    "repository_commit": null,
+    "library_file_id": "libfile_d2ac1991594c81919818ea1c7f535a5c",
+    "library_version": "0"
+  },
+  "source_checkpoint": {
+    "filename": "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "local_path": "v121_output/Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "bytes": 3253,
+    "sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+    "git_blob_sha1": "c534b4ecf8dcb67997456d9def323618460ced26",
+    "repository_matches": [
+      "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+    ],
+    "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+    "library_file_id": "libfile_98953816fd048191af6f00aa3b7fdf0d",
+    "library_version": "0"
+  },
+  "next_task": {
+    "task_id": "LOCAL-Q048-V122-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+    "task_fingerprint": "3a65e574aafe20c4ec790539ea06c99ccff72fa7ba3240f02242a07c9e45ea6a",
+    "file": "Q048_V122_NEXT_MATHEMATICS_TASK_V1.json",
+    "status": "PREPARED_NOT_EXECUTED"
+  },
+  "scientific_handoff": "PREPARED/COMPLETE;NOT_SENT_NOT_EXECUTED",
+  "case_lifecycle": "ACTIVE",
+  "scientific_state": "INCONCLUSIVE",
+  "closure_gate": "NOT_SATISFIED"
+}

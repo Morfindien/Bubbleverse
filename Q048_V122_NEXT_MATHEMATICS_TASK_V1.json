@@ -1,0 +1,736 @@
+{
+  "schema": "bubbleverse.q048.v122.next_mathematics_diagnostic_task.v1",
+  "created_at_utc": "2026-10-20T15:17:53.780715+00:00",
+  "q": "Q048",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "case_id": "Q048;separate CASE ID NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-V122-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+  "task_fingerprint": "3a65e574aafe20c4ec790539ea06c99ccff72fa7ba3240f02242a07c9e45ea6a",
+  "task_definition_for_fingerprint": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "task_id": "LOCAL-Q048-V122-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+    "objective": "Determine rigorous source-dispatch applicability/branch coverage for the candidate900->890 tube before any new connected-cell theorem",
+    "parent_checkpoint_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+    "accepted_actual_must_remain": {
+      "count": 118,
+      "frontier": 900
+    },
+    "candidate_cell_z": [
+      900,
+      890
+    ],
+    "candidate_cell_a": [
+      "1/901",
+      "1/891"
+    ],
+    "primary_row55_sha256": "3fdf1ba40f681d85e806a1dbb079b2d1fc714f874961c6efadb5519cc5159adc",
+    "control_row55_sha256": "19728658e3fd9765fc6b341c627d14d932b20ecae2e4ee31887468f9dcedbc71",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "method_reference_hashes": {
+      "q048_v120_proof.py": "466758d4176e70ee2c25a97611a30866fa6a6303b65681411b1c5ca9dfb46b94",
+      "q048_v120_verify.py": "8288577f2d1bac0be891df486e2b8357ccc41cbb2096ac23ef9506e8b41efb65",
+      "q048_v120_accept.py": "0b0c081fcb8775b289cb888059b4ae5302b2fbb92eee461a7350cd694719ebe8",
+      "q048_v120_run.py": "d13be195efee68ca723b5a23a883a363d33547f072f736d1348460542f9d95b7",
+      "test_q048_v120_binding.py": "dc2918b4ced054c41bcdfd800d2793482c43b2a723d3f10ca3a6a9cd79baf1ea",
+      "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json": "cd0a6cdb8b2c1ecb202a2fb9e6c5b73075ac958cf3ee705645b3ad24d749ed13",
+      "Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json": "57c70bc2bbbf4e9a2c41b09ada81c8b0382297e39bea4a4ef53121bd291ef27d"
+    },
+    "helper_hashes": {
+      "inputs/q047_certificate_v1.py": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "inputs/q047_math_v1.py": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "inputs/q047_precursor_check_v1.py": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "inputs/q048_full_tube_reuse_v1.py": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+      "inputs/q048_p3_scaled_arithmetic_v2.py": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "inputs/q048_p3_scaled_kernel_v2.py": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "inputs/q048_p3_scaled_raw_result_v2.json": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+      "inputs/q048_p3_scaled_transformed_log_tables_v2.json": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+      "inputs/q048_post_event_state_tube_v1.py": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+      "inputs/q048_prefix_config_v1.json": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "inputs/q048_prefix_v1.py": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "inputs/source/hydrogen.c": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+      "inputs/source/hydrogen.h": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52",
+      "inputs/source/q047_math_v1.py": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    "initial_h0": "83379887432219/200000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "epsilon": "1/1000000",
+    "hmax": "99999/100000",
+    "source_branch_contract": {
+      "id": "LOCAL-Q048-V122-LOW-Z-DISPATCH-DIAGNOSTIC-CONTRACT-V1",
+      "status": "SOURCE_TEXT_OBSERVED;NEW_DOMAIN_DIAGNOSTIC_NOT_EXECUTED",
+      "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "hydrogen_c_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+      "hydrogen_h_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52",
+      "source_function": "rec_dxHIIdlna",
+      "candidate_cell_z": [
+        900,
+        890
+      ],
+      "candidate_cell_a": [
+        "1/901",
+        "1/891"
+      ],
+      "exact900_behavior": "Pion initialized1;z<900 block inactive;then captured SWIFT temperature/fit gates still apply",
+      "below900_behavior": {
+        "predicate": "if (z < 900.)",
+        "RLya": "LYA_FACT(1.,1.) *H/nH/(1.-xHII)",
+        "four_betaB": "SAHA_FACT(1.,1.) *TR*sqrt(TR) *exp(-0.25*EI/TR) *alphaB_PPB(TR,1.,1.)",
+        "Pion": "four_betaB/(3.*RLya + L2s1s + four_betaB)",
+        "low_probability_test": "Pion < PION_MAX",
+        "PION_MAX": "1e-2",
+        "below_threshold_dispatch": "rec_HMLA_dxHIIdlna",
+        "otherwise_for_captured_model4": "SWIFT path subject to TR/kBoltz/fsR/fsR/meR >= fit->swift_func[0][0];otherwise HMLA",
+        "equality_at_threshold": "Strict < is false;take the otherwise path,then temperature/model gate"
+      },
+      "auxiliary_functions": [
+        "alphaB_PPB",
+        "SAHA_FACT",
+        "LYA_FACT",
+        "rec_HMLA_dxHIIdlna",
+        "rec_swift_hyrec_dxHIIdlna"
+      ],
+      "new_certificate_needed": "The V120/V121 z>=900 certificate is historical authority only;cannot qualify any nonempty z<900 interval. Determine source-aware branch coverage or a precise obstruction before any fresh below900 theorem.",
+      "tube_obligations": [
+        "Use exact captured H/nH/TR inputs,source units and fixed flags;both L(q=1e-6) and R(q=0)",
+        "h=1-xHII;accepted connected_lower is left-face h0 only,not an established lower bound over900->890",
+        "Do not infer branch selection from a native trajectory,point sample,guard qualification or unsigned numerical fit",
+        "Treat exact900 separately from the z<900 interior;respect strict Pion<PION_MAX and subsequent temperature gate",
+        "If no certified whole-cell lower h is available,report symbolic branch conditions and the missing closure obligation;do not substitute h0 or old-cell lower as whole-cell authority",
+        "A mixed or unresolved branch cover is a valid diagnostic outcome;no assumption that SWIFT-only reuse must succeed"
+      ],
+      "proposed_algebraic_reduction_to_verify": {
+        "status": "PROPOSED_DIAGNOSTIC_AID;not an executed interval certificate",
+        "definitions": "A=LYA_FACT(1,1)*H/nH>0;B=four_betaB>0;h=1-xHII>0",
+        "candidate_equivalence": "For z<900 and positive denominator,Pion<1/100 iff h*(99*B-L2s1s)<3*A",
+        "obligation": "Verify source literals,units,strict equality and denominator positivity independently;then enclose reachable branch conditions without claiming a new connected-cell theorem"
+      },
+      "mandatory_controls": [
+        "Exact900 leaves z<900 block inactive",
+        "A point/interval strictly below900 does not inherit Pion=1 from V120",
+        "Threshold equality is not classified as Pion<PION_MAX",
+        "Changed hydrogen.c/h hash or wrong captured model is rejected",
+        "Missing positivity/whole-cell h premise produces explicit unresolved status",
+        "Intervals straddling the Pion threshold retain every possible branch rather than selecting by midpoint"
+      ],
+      "preservation": "All14 helper/source bytes and historical code/results unchanged;new versioned diagnostic only"
+    },
+    "max_new_proof_cells": 0,
+    "max_new_actual_cells": 0,
+    "max_full_connected_theorems": 0,
+    "science_budget_seconds": 300,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false,
+    "criteria": "Source-faithful dispatch classification or first precise missing premise;separate verification and real frozen boundary controls;no full K/Riccati/H/thermal theorem or actual admission",
+    "new_code_identity": "NOT_YET_FROZEN;Mathematics must freeze any new diagnostic code/spec before execution",
+    "evidence_boundary": "Q001-Q048;original capture/fixed accepted z_reio unchanged"
+  },
+  "status": "PREPARED_NOT_EXECUTED",
+  "selected_engine": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "git_blob_sha1": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+    "identity_basis": "Existing repository Mathematics prompt;verified bytes and established engine role;no launcher deployment asserted"
+  },
+  "objective": "Determine rigorous source-dispatch applicability/branch coverage for the candidate900->890 tube before any new connected-cell theorem",
+  "materiality": "V121 newly reaches900. Immediately below900 the pinned source computes Pion and can select HMLA before SWIFT;the accepted z>=900 certificate cannot establish the next-cell source equation. A rigorous dispatch diagnostic supplies the missing applicability decision or exact obstruction.",
+  "parent_authority": {
+    "filename": "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "local_path": "v121_output/Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "bytes": 3253,
+    "sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+    "git_blob_sha1": "c534b4ecf8dcb67997456d9def323618460ced26",
+    "repository_matches": [
+      "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+    ],
+    "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+    "library_file_id": "libfile_98953816fd048191af6f00aa3b7fdf0d",
+    "library_version": "0",
+    "record": "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "accepted_actual": {
+      "count": 118,
+      "frontier": 900
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 900
+    },
+    "endpoint": {
+      "a": "1/901",
+      "E": "10009745397581786717/250000000000000000",
+      "Y": "1987905512933907887/62500000000000000",
+      "Vbar": "3944736412871797407/500000000000000000"
+    },
+    "connected_lower": "83379887432219/200000000000000000",
+    "K_upper": "1184837959588125278027/250000000000000000",
+    "correct_saha_fact": "3.016103031869581e21"
+  },
+  "source_journal": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+    "local_path": "v121_output/Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+    "bytes": 14571214,
+    "sha256": "edd8a51e292c8d2063568667e0e142ac786058d1a2e8319d706d3ce7a6f06034",
+    "git_blob_sha1": "4c4c9254c6342a1bc29643c89dafa5fd333f14b5",
+    "repository_matches": [],
+    "repository_commit": null,
+    "library_file_id": "libfile_d2ac1991594c81919818ea1c7f535a5c",
+    "library_version": "0"
+  },
+  "candidate_cell_z": [
+    900,
+    890
+  ],
+  "candidate_cell_a": [
+    "1/901",
+    "1/891"
+  ],
+  "actual_must_remain": {
+    "count": 118,
+    "frontier": 900
+  },
+  "h0_left_face_only": "83379887432219/200000000000000000",
+  "new_K_upper": "NOT_REQUESTED_NOT_COMPUTED",
+  "new_connected_lower": "NOT_REQUESTED_NOT_COMPUTED",
+  "thermal_domain": [
+    "-1/1000000",
+    "1/50"
+  ],
+  "epsilon": "1/1000000",
+  "hmax": "99999/100000",
+  "source_saha_factor": "3.016103031869581e21",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "source_branch_contract": {
+    "id": "LOCAL-Q048-V122-LOW-Z-DISPATCH-DIAGNOSTIC-CONTRACT-V1",
+    "status": "SOURCE_TEXT_OBSERVED;NEW_DOMAIN_DIAGNOSTIC_NOT_EXECUTED",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "hydrogen_c_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+    "hydrogen_h_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52",
+    "source_function": "rec_dxHIIdlna",
+    "candidate_cell_z": [
+      900,
+      890
+    ],
+    "candidate_cell_a": [
+      "1/901",
+      "1/891"
+    ],
+    "exact900_behavior": "Pion initialized1;z<900 block inactive;then captured SWIFT temperature/fit gates still apply",
+    "below900_behavior": {
+      "predicate": "if (z < 900.)",
+      "RLya": "LYA_FACT(1.,1.) *H/nH/(1.-xHII)",
+      "four_betaB": "SAHA_FACT(1.,1.) *TR*sqrt(TR) *exp(-0.25*EI/TR) *alphaB_PPB(TR,1.,1.)",
+      "Pion": "four_betaB/(3.*RLya + L2s1s + four_betaB)",
+      "low_probability_test": "Pion < PION_MAX",
+      "PION_MAX": "1e-2",
+      "below_threshold_dispatch": "rec_HMLA_dxHIIdlna",
+      "otherwise_for_captured_model4": "SWIFT path subject to TR/kBoltz/fsR/fsR/meR >= fit->swift_func[0][0];otherwise HMLA",
+      "equality_at_threshold": "Strict < is false;take the otherwise path,then temperature/model gate"
+    },
+    "auxiliary_functions": [
+      "alphaB_PPB",
+      "SAHA_FACT",
+      "LYA_FACT",
+      "rec_HMLA_dxHIIdlna",
+      "rec_swift_hyrec_dxHIIdlna"
+    ],
+    "new_certificate_needed": "The V120/V121 z>=900 certificate is historical authority only;cannot qualify any nonempty z<900 interval. Determine source-aware branch coverage or a precise obstruction before any fresh below900 theorem.",
+    "tube_obligations": [
+      "Use exact captured H/nH/TR inputs,source units and fixed flags;both L(q=1e-6) and R(q=0)",
+      "h=1-xHII;accepted connected_lower is left-face h0 only,not an established lower bound over900->890",
+      "Do not infer branch selection from a native trajectory,point sample,guard qualification or unsigned numerical fit",
+      "Treat exact900 separately from the z<900 interior;respect strict Pion<PION_MAX and subsequent temperature gate",
+      "If no certified whole-cell lower h is available,report symbolic branch conditions and the missing closure obligation;do not substitute h0 or old-cell lower as whole-cell authority",
+      "A mixed or unresolved branch cover is a valid diagnostic outcome;no assumption that SWIFT-only reuse must succeed"
+    ],
+    "proposed_algebraic_reduction_to_verify": {
+      "status": "PROPOSED_DIAGNOSTIC_AID;not an executed interval certificate",
+      "definitions": "A=LYA_FACT(1,1)*H/nH>0;B=four_betaB>0;h=1-xHII>0",
+      "candidate_equivalence": "For z<900 and positive denominator,Pion<1/100 iff h*(99*B-L2s1s)<3*A",
+      "obligation": "Verify source literals,units,strict equality and denominator positivity independently;then enclose reachable branch conditions without claiming a new connected-cell theorem"
+    },
+    "mandatory_controls": [
+      "Exact900 leaves z<900 block inactive",
+      "A point/interval strictly below900 does not inherit Pion=1 from V120",
+      "Threshold equality is not classified as Pion<PION_MAX",
+      "Changed hydrogen.c/h hash or wrong captured model is rejected",
+      "Missing positivity/whole-cell h premise produces explicit unresolved status",
+      "Intervals straddling the Pion threshold retain every possible branch rather than selecting by midpoint"
+    ],
+    "preservation": "All14 helper/source bytes and historical code/results unchanged;new versioned diagnostic only"
+  },
+  "guard": {
+    "source_record": "q048_guard_local_v_result_v12.json",
+    "source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+    "row_index": 55,
+    "primary_row_sha256": "3fdf1ba40f681d85e806a1dbb079b2d1fc714f874961c6efadb5519cc5159adc",
+    "control_row_sha256": "19728658e3fd9765fc6b341c627d14d932b20ecae2e4ee31887468f9dcedbc71",
+    "primary": {
+      "a0": "1/901",
+      "a1": "1/891",
+      "z0": 900,
+      "z1": 890,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "14983386511808295069/1000000000000000000",
+        "H_upper_left": "5322566462226638427/1000000000000000000",
+        "X_upper_left": "4474314561490237181/500000000000000000",
+        "V_candidate_upper": "7605482013235264227/1000000000000000000",
+        "retained_Vbar": "3944736412871797407/500000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "10009745397581786717/250000000000000000",
+      "Y_left": "1987905512933907887/62500000000000000",
+      "V_previous": "3944736412871797407/500000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "39742643351188019299/1000000000000000000",
+      "V_local": "7605482013235264227/1000000000000000000",
+      "V_admitted": "7605482013235264227/1000000000000000000",
+      "equilibrium_upper": "4232616076930929657/1000000000000000000",
+      "amplitude": "5514774426002319307/200000000000000000",
+      "constant_energy_part": "279881738087057723559/23000000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "239316777759484201/250000000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "8028773121962363721/250000000000000000",
+      "raw_G_lower": "332774524214384801918292371320642094581082786731130751134317932692624957552644133370309402966881674190388053277614196552173/71490215233906829809836198171105495764440571677118734382066696678391677695551672732876800000000000000000000000000000000000",
+      "G_lower": "1163706540557995143/250000000000000000",
+      "Y_right_candidate": "7657044247739152913/250000000000000000",
+      "E_right_candidate": "38564332135202104759/1000000000000000000",
+      "endpoint_energy_envelope": "19282166067601052379/500000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "891/901",
+      "R_at_left": "3276331092253389326234368300725903939993828486287915300214006497586944984149323929530607638368637/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "18180328473725686307842328700969973367675604911469237225/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "957267111037936799/1000000000000000000",
+        "upper": "239316777759484201/250000000000000000",
+        "log_lower": "2790207534382151/250000000000000000",
+        "log_upper": "2232166027505721/200000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "38564332135202104759/1000000000000000000",
+      "Y_right": "7657044247739152913/250000000000000000",
+      "index": 55,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control": {
+      "a0": "1/901",
+      "a1": "1/891",
+      "z0": 900,
+      "z1": 890,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "14983386511808295069/1000000000000000000",
+        "H_upper_left": "5364280339125403309/1000000000000000000",
+        "X_upper_left": "9096851216333025393/1000000000000000000",
+        "V_candidate_upper": "1948012358869873033/250000000000000000",
+        "retained_Vbar": "4038981936966073529/500000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "41376351026049821771/1000000000000000000",
+      "Y_left": "8236792832877982297/250000000000000000",
+      "V_previous": "4038981936966073529/500000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "207720744395430860830854250823/500000000000000000000000000000",
+        "4839406685554838463650002001/6250000000000000000000000000",
+        "423517399768637251919537513001/250000000000000000000000000000",
+        "124655698017020046315315930049/40000000000000000000000000000",
+        "5044845733787688004105358539763/1000000000000000000000000000000",
+        "3760158993071022225741769631981/500000000000000000000000000000",
+        "265333473541472127692756610469/25000000000000000000000000000",
+        "90231525668798852309696681543/6250000000000000000000000000",
+        "9591471969653355721791303831097/500000000000000000000000000000",
+        "1008832696715329540397051511241/40000000000000000000000000000",
+        "33499532765795552330895258974571/1000000000000000000000000000000"
+      ],
+      "E_safe_left": "8215601105011149413/200000000000000000",
+      "V_local": "1948012358869873033/250000000000000000",
+      "V_admitted": "1948012358869873033/250000000000000000",
+      "equilibrium_upper": "867288980644673907/200000000000000000",
+      "amplitude": "28610726428288559653/1000000000000000000",
+      "constant_energy_part": "286747419225645310473/23000000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "20723/21623",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "28110857317292605361/1000000000000000000",
+      "raw_G_lower": "14427945427539757052929120731773858630226355984970898084132321360026708559280373794693526524783760733158883505546865731/4313149899561292915675469065440329617506971209191792392699297383584997898467951505309696000000000000000000000000000000",
+      "G_lower": "3345106421876800279/1000000000000000000",
+      "Y_right_candidate": "3175632576033958013/100000000000000000",
+      "E_right_candidate": "39887159953883398007/1000000000000000000",
+      "endpoint_energy_envelope": "39887159953883398007/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "891/901",
+      "R_at_left": "186515227692570595040334572136493499563842282555880620995989610010060628429039585069630107670709493326599745568631/60708402882054033466233184588234965832575213720379360039119137804340758912662765568000000000000000000000000000000",
+      "M_at_left": "18180328473725686307842328700969973367675604911469237225/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "39887159953883398007/1000000000000000000",
+      "Y_right": "3175632576033958013/100000000000000000",
+      "index": 55,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control_role": "GUARD_ONLY_NOT_A_SECOND_ACTUAL_CELL",
+    "qualification_limit": "Candidate source/background guard only;not proof,not actual119,not a low-z recombination dispatch certificate"
+  },
+  "helper_input_recovery_map": [
+    {
+      "target_relative_path": "inputs/q047_certificate_v1.py",
+      "bytes": 15302,
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q047_certificate_v1.py",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "00c8c5395e2b4070be33e768e83db33edb3ea2d1"
+    },
+    {
+      "target_relative_path": "inputs/q047_math_v1.py",
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q047_math_v1.py",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb"
+    },
+    {
+      "target_relative_path": "inputs/q047_precursor_check_v1.py",
+      "bytes": 29808,
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q047_precursor_check_v1.py",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "21cee458a6a4e931148405a7ffebeaf0a2d79749"
+    },
+    {
+      "target_relative_path": "inputs/q048_full_tube_reuse_v1.py",
+      "bytes": 10171,
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_full_tube_reuse_v1.py",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "437f64b601d7aa81d66394abe465ac8f760f9f60"
+    },
+    {
+      "target_relative_path": "inputs/q048_p3_scaled_arithmetic_v2.py",
+      "bytes": 5988,
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_p3_scaled_arithmetic_v2.py",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "f483ce212be4dea63df8183194a2c04b0bbdae70"
+    },
+    {
+      "target_relative_path": "inputs/q048_p3_scaled_kernel_v2.py",
+      "bytes": 15855,
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_p3_scaled_kernel_v2.py",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "5ec4b6bb325a01d11960f1587d41eaab6eb7de9e"
+    },
+    {
+      "target_relative_path": "inputs/q048_p3_scaled_raw_result_v2.json",
+      "bytes": 699697,
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_p3_scaled_raw_result_v2.json",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "dad8be5d063ae6639199cf30e46f7cf36416189f"
+    },
+    {
+      "target_relative_path": "inputs/q048_p3_scaled_transformed_log_tables_v2.json",
+      "bytes": 3958952,
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_p3_scaled_transformed_log_tables_v2.json",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "6c30d62dde9205e383a6dbce89287f4e300648e7"
+    },
+    {
+      "target_relative_path": "inputs/q048_post_event_state_tube_v1.py",
+      "bytes": 12423,
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "library_file_id": "libfile_38e3ebdeca4c81918568140a6731e83b"
+    },
+    {
+      "target_relative_path": "inputs/q048_prefix_config_v1.json",
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_prefix_config_v1.json",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "02c9525cbda1ad56c1251d06fc74dba2c1aec9ba"
+    },
+    {
+      "target_relative_path": "inputs/q048_prefix_v1.py",
+      "bytes": 17198,
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_prefix_v1.py",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "288ebe6da1df592692f174be0f1d89478c1001aa"
+    },
+    {
+      "target_relative_path": "inputs/source/hydrogen.c",
+      "bytes": 46627,
+      "sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "source_repository": "mwt5345/class_ede",
+      "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "source_path": "external/HyRec2020/hydrogen.c",
+      "source_url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/hydrogen.c",
+      "origin_basis": "Pinned original source location recovered from complete journal; exact local source bytes verified; not refetched in ingestion"
+    },
+    {
+      "target_relative_path": "inputs/source/hydrogen.h",
+      "bytes": 11868,
+      "sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "source_repository": "mwt5345/class_ede",
+      "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "source_path": "external/HyRec2020/hydrogen.h",
+      "source_url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/hydrogen.h",
+      "origin_basis": "Pinned original source location recovered from complete journal; exact local source bytes verified; not refetched in ingestion"
+    },
+    {
+      "target_relative_path": "inputs/source/q047_math_v1.py",
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED;no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q047_math_v1.py",
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "git_blob_sha1": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb"
+    }
+  ],
+  "method_references": [
+    {
+      "filename": "q048_v120_proof.py",
+      "local_path": "v120_output/q048_v120_proof.py",
+      "bytes": 10547,
+      "sha256": "466758d4176e70ee2c25a97611a30866fa6a6303b65681411b1c5ca9dfb46b94",
+      "git_blob_sha1": "3e9b8c77b8c368ef1f11058705564052f05e6605",
+      "repository_matches": [
+        "q048_v120_proof.py"
+      ],
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "library_file_id": "libfile_4c0b018b67a4819181d25723f3798498",
+      "library_version": "0",
+      "role": "READ_ONLY_METHOD_REFERENCE;V120 qualified z>=900 only;do not execute old main or extend its certificate below900"
+    },
+    {
+      "filename": "q048_v120_verify.py",
+      "local_path": "v120_output/q048_v120_verify.py",
+      "bytes": 13244,
+      "sha256": "8288577f2d1bac0be891df486e2b8357ccc41cbb2096ac23ef9506e8b41efb65",
+      "git_blob_sha1": "9f909bedd9d3d60c52317e1beadbd9a7897e7f34",
+      "repository_matches": [
+        "q048_v120_verify.py"
+      ],
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "library_file_id": "libfile_9d3f0312d03481919b462db64dd797a0",
+      "library_version": "0",
+      "role": "READ_ONLY_METHOD_REFERENCE;V120 qualified z>=900 only;do not execute old main or extend its certificate below900"
+    },
+    {
+      "filename": "q048_v120_accept.py",
+      "local_path": "v120_output/q048_v120_accept.py",
+      "bytes": 5148,
+      "sha256": "0b0c081fcb8775b289cb888059b4ae5302b2fbb92eee461a7350cd694719ebe8",
+      "git_blob_sha1": "50c06f46ec2fedfb186df188116646c7ba5c20b3",
+      "repository_matches": [
+        "q048_v120_accept.py"
+      ],
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "library_file_id": "libfile_aedfd95fb4448191b051a51db8ab43a4",
+      "library_version": "0",
+      "role": "READ_ONLY_METHOD_REFERENCE;V120 qualified z>=900 only;do not execute old main or extend its certificate below900"
+    },
+    {
+      "filename": "q048_v120_run.py",
+      "local_path": "v120_output/q048_v120_run.py",
+      "bytes": 6082,
+      "sha256": "d13be195efee68ca723b5a23a883a363d33547f072f736d1348460542f9d95b7",
+      "git_blob_sha1": "a22f1a61296d6526e5b27014e20f69ff34d05cda",
+      "repository_matches": [
+        "q048_v120_run.py"
+      ],
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "library_file_id": "libfile_06e833fd2d9c8191b48a4f9b1619bbd7",
+      "library_version": "0",
+      "role": "READ_ONLY_METHOD_REFERENCE;V120 qualified z>=900 only;do not execute old main or extend its certificate below900"
+    },
+    {
+      "filename": "test_q048_v120_binding.py",
+      "local_path": "v120_output/test_q048_v120_binding.py",
+      "bytes": 4111,
+      "sha256": "dc2918b4ced054c41bcdfd800d2793482c43b2a723d3f10ca3a6a9cd79baf1ea",
+      "git_blob_sha1": "30042585c0a382ee9cd883321b470c214e93dda8",
+      "repository_matches": [
+        "test_q048_v120_binding.py"
+      ],
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "library_file_id": "libfile_91a90bab7858819186ec1c6fc95ce322",
+      "library_version": "0",
+      "role": "READ_ONLY_METHOD_REFERENCE;V120 qualified z>=900 only;do not execute old main or extend its certificate below900"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+      "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+      "bytes": 17854,
+      "sha256": "cd0a6cdb8b2c1ecb202a2fb9e6c5b73075ac958cf3ee705645b3ad24d749ed13",
+      "git_blob_sha1": "e93b342066a4d8ea510bf0e1999ec4663512a43c",
+      "repository_matches": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json"
+      ],
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "library_file_id": "libfile_8e98bc775d808191a66f2f89235de136",
+      "library_version": "0",
+      "role": "READ_ONLY_METHOD_REFERENCE;V120 qualified z>=900 only;do not execute old main or extend its certificate below900"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+      "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+      "bytes": 4368,
+      "sha256": "57c70bc2bbbf4e9a2c41b09ada81c8b0382297e39bea4a4ef53121bd291ef27d",
+      "git_blob_sha1": "2916ef7cfdb76b41c465e519c00c681d4ebdffc7",
+      "repository_matches": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json"
+      ],
+      "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+      "library_file_id": "libfile_2395aeb6e68481918edaf6f3130ae128",
+      "library_version": "0",
+      "role": "READ_ONLY_METHOD_REFERENCE;V120 qualified z>=900 only;do not execute old main or extend its certificate below900"
+    }
+  ],
+  "numerics": {
+    "representation": "Exact rational interval arithmetic, rounded outward as specified by pinned helpers",
+    "constants": "Pinned q047_math C and exact source literals; HyRec n converts m^-3 to cm^-3 with1e-6",
+    "TR": "eV with pinned8.617343e-5 eV/K",
+    "H": "s^-1; c/Mpc conversion from pinned constants",
+    "a_h_w_q": "dimensionless",
+    "K_coordinate": "u=ln(a); comparison h_u>=-K*h*(h+epsilon)",
+    "lower_rounding": "floor(min(primary exponential lower, rational dual lower)*1e18)/1e18",
+    "K_rounding": "ceil(exact_K*1e18)/1e18"
+  },
+  "required_behavior": [
+    "Recover exact V121 checkpoint and full ingestion journal;verify all bytes and Q048 firewall",
+    "Read actual low-z Pion/alphaB_PPB/HMLA/SWIFT source and all captured flags/units;do not silently extend z>=900 qualifier",
+    "Separate exact900 endpoint from the z<900 interior;derive source-faithful conditions and rigorous branch cover or precise missing-premise obstruction for both L/R",
+    "Treat parent connected_lower as initial h0 only;do not assume an unproved900->890 lower;use symbolic conditions or explicitly valid conservative enclosures where needed",
+    "Before execution freeze new diagnostic inputs/code/criteria and all six mandatory source-branch controls;preserve14 helper bytes",
+    "Use a separate checker with real non-no-op semantic fixtures;preserve signed margins,branch thresholds,domain and exact failure/missing premises",
+    "Do not calculate/accept a fresh connected K/Riccati/H/thermal cell theorem or consume any next actual;diagnostic result is source applicability only",
+    "Return once to Result Ingestion2.1.0 after one diagnostic or first blocker;actual remains118/frontier900"
+  ],
+  "max_new_proof_cells": 0,
+  "max_new_actual_cells": 0,
+  "max_full_connected_theorems": 0,
+  "diagnostic_runs": 1,
+  "science_budget_seconds": 300,
+  "retry_count": 0,
+  "postfreeze_edits_allowed": false,
+  "success_condition": "One separately checked,source-faithful low-z applicability/branch-coverage diagnostic with exact900/threshold/positivity controls;may conclude SWIFT-only justified,mixed/HMLA coverage required,or precise unresolved premise;zero accepted proof/actual cells",
+  "failure_condition": "First hash/source/model/unit/domain/threshold/verification failure or missing exact dependency;preserve it without tuning or forced branch selection",
+  "stop_condition": "One diagnostic,first precise blocker or300science seconds;return once;no full connected theorem or actual admission",
+  "consumer_authorization": "NOT_GRANTED",
+  "connected_cell_proof_authorization": "NOT_GRANTED",
+  "below890_authorization": "NOT_GRANTED",
+  "below900_authorization": "SOURCE_DISPATCH_DIAGNOSTIC_ONLY_ON_CANDIDATE_900_TO_890;NO_CONNECTED_PROOF_OR_ACTUAL",
+  "forbidden": [
+    "V121 consumer or V120 proof replay",
+    "Treating Pion=1 or the V120 z>=900 certificate as a below900 certificate",
+    "Reusing initial h0 as an unproved whole-cell lower",
+    "Forcing SWIFT-only dispatch by midpoint/expected behavior or dropping HMLA when reachable",
+    "Changing original captured inputs,z_reio,source thresholds,helper bytes or historical results",
+    "New connected-cell K/Riccati/H/thermal proof or accepted proof cell",
+    "Any actual consumer/actual119 claim",
+    "Below890 work",
+    "Postfreeze edits,retries or subdivision merely to force a pass",
+    "NativeP6/full histories claim,model/Q promotion or Q closure"
+  ],
+  "preparation_is_not_dispatch": true,
+  "repository_base": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+  "source_sync_status": "19_GITHUB_BYTE_VERIFIED;FULL_V121_PRODUCER_JOURNAL_SAVED_LOCAL_VERIFIED_UPLOAD_PENDING",
+  "full_ingested_journal": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V121_INGESTED_SOURCE_CORRECT_V1.md",
+    "sha256": "01afaf70c903bfe67f6a5d163146c8dbd0ef6b721bf9f240f78308a22398386a",
+    "role": "Complete state supplied with this task;exact incoming prefix plus one ingestion receipt"
+  },
+  "new_authorization_inputs": [
+    {
+      "filename": "Q048_V121_INGESTION_STATE_V1.json",
+      "role": "NEW_INGESTION_DIAGNOSTIC_AUTHORIZATION;hash in manifest"
+    },
+    {
+      "filename": "Q048_V122_NEXT_MATHEMATICS_TASK_V1.json",
+      "role": "THIS_TASK;hash in envelope/manifest"
+    }
+  ]
+}

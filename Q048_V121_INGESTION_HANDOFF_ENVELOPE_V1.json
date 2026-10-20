@@ -1,0 +1,224 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "handoff_id": "LOCAL-Q048-V121-INGESTION-TO-V122-MATHEMATICS-DIAGNOSTIC-V1",
+  "created_at_utc": "2026-10-20T15:17:53.780715+00:00",
+  "case_id": "Q048;separate CASE ID NOT_DOCUMENTED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": {
+    "authorized_bubbleverse": "Q001–Q048",
+    "external_publication_cutoff": "NOT_DEFINED;none invented",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97"
+  },
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "ingestion_event_id": "LOCAL-Q048-V121-SOURCE-CORRECT-ACTUAL-INGESTION-V1",
+  "idempotency_key": "c0002655da46ac4f58ee419fdb90b5d1f42d18b048fa3897564e780c314b0f34",
+  "new_result_ids": [
+    "LOCAL-Q048-V121-SOURCE-CORRECT-ACTUAL-CONSUMER-910-900-V1"
+  ],
+  "source_state_version": {
+    "journal": "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+    "journal_sha256": "edd8a51e292c8d2063568667e0e142ac786058d1a2e8319d706d3ce7a6f06034",
+    "checkpoint": "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "checkpoint_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a"
+  },
+  "target_state_version": "Q048_V121_INGESTION_STATE_V1.json",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS",
+  "engine_registry_ref": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "git_blob_sha1": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "repository_commit": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+    "identity_basis": "Existing repository Mathematics prompt;verified bytes and established engine role;no launcher deployment asserted"
+  },
+  "execution_profile_ref": {
+    "file": "Q048_V121_INGESTION_STATE_V1.json",
+    "section": "execution_profile"
+  },
+  "journal_ref": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V121_INGESTED_SOURCE_CORRECT_V1.md",
+    "sha256": "01afaf70c903bfe67f6a5d163146c8dbd0ef6b721bf9f240f78308a22398386a",
+    "incoming_filename": "Q047_SAMLET_JOURNAL_Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+    "incoming_sha256": "edd8a51e292c8d2063568667e0e142ac786058d1a2e8319d706d3ce7a6f06034",
+    "incoming_prefix_bytes": 14571214
+  },
+  "source_register_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V121_INGESTED_SOURCE_CORRECT_V1.md",
+    "role": "Complete preserved source/claim/history register;new bounded source finding in audit"
+  },
+  "claim_evidence_map_ref": "Q048_V121_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "result_provenance_ref": {
+    "source_manifest": "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+    "file": "Q048_V121_INGESTION_EVIDENCE_AUDIT_V1.json"
+  },
+  "anomaly_tension_registry_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V121_INGESTED_SOURCE_CORRECT_V1.md",
+    "effect": "LEAVES_UNCHANGED"
+  },
+  "completed_task_ledger_ref": {
+    "file": "Q048_V121_INGESTION_STATE_V1.json",
+    "section": "completed_task"
+  },
+  "route_history_ref": {
+    "file": "Q048_V121_INGESTION_STATE_V1.json",
+    "section": "route_history_append"
+  },
+  "integrity_manifest_ref": "Q048_V121_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "V121 actual118/frontier900 ingested once",
+    "New low-z source-dispatch applicability diagnostic prepared;0newcells",
+    "Historical z>=900 certificate preserved"
+  ],
+  "frozen_configuration_refs": [
+    {
+      "file": "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+      "sha256": "9d8ede2d16482462e97ec426b29a7f8c7be7aa68646b3d6cb577774cb0ffb045"
+    },
+    {
+      "file": "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+      "sha256": "eb61d93909a5a859fa055d9695e07e94e635cf17cab0f37fb5eb373eaa297926"
+    }
+  ],
+  "open_material_uncertainties": [
+    "Low-z Pion/HMLA/SWIFT branch coverage on candidate900->890",
+    "No new900->890 connected theorem or actual119",
+    "NativeP6 and complete four-case xe/tau bounds unresolved"
+  ],
+  "missing_information": [
+    "Separate CASE ID/shared core not documented;scope identity and standalone contract unaffected"
+  ],
+  "next_task": {
+    "file": "Q048_V122_NEXT_MATHEMATICS_TASK_V1.json",
+    "sha256": "2ccfb0a34de8a3c2123c2304fdef0c58e170f280f28c3a9b791f1f3ae199ec00",
+    "task_id": "LOCAL-Q048-V122-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+    "task_fingerprint": "3a65e574aafe20c4ec790539ea06c99ccff72fa7ba3240f02242a07c9e45ea6a"
+  },
+  "success_condition": "One separately checked,source-faithful low-z applicability/branch-coverage diagnostic with exact900/threshold/positivity controls;may conclude SWIFT-only justified,mixed/HMLA coverage required,or precise unresolved premise;zero accepted proof/actual cells",
+  "failure_or_falsification_condition": "First hash/source/model/unit/domain/threshold/verification failure or missing exact dependency;preserve it without tuning or forced branch selection",
+  "stop_condition": "One diagnostic,first precise blocker or300science seconds;return once;no full connected theorem or actual admission",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Complete four-case xe/tau and NativeP6 unresolved;next-cell low-z source applicability also unqualified",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": {
+    "same_Q_source_diagnostic": "WITHIN_EXISTING_SCOPE",
+    "new_Q_model_promotion_paid_compute": "NOT_REQUESTED_NOT_AUTHORIZED"
+  },
+  "output_file_refs": [
+    "Q048_V121_INGESTION_RESULT_V1.md",
+    "Q048_V121_INGESTION_STATE_V1.json",
+    "Q048_V121_INGESTION_EVIDENCE_AUDIT_V1.json",
+    "Q048_V121_INGESTION_HANDOFF_ENVELOPE_V1.json",
+    "Q048_V121_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "Q048_V121_INGESTION_JOURNAL_APPEND_V1.md",
+    "Q048_V121_INGESTION_VALIDATION_V1.json",
+    "Q048_V121_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "Q047_SAMLET_JOURNAL_Q048_V121_INGESTED_SOURCE_CORRECT_V1.md",
+    "Q048_V122_NEXT_MATHEMATICS_TASK_V1.json",
+    "Q048_V122_HANDOFF_TO_MATHEMATICS_LOW_Z_DISPATCH_DIAGNOSTIC_900_890_V1.md"
+  ],
+  "output_manifest_ref": "Q048_V121_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "NOT_DOCUMENTED_SEPARATELY",
+    "base_commit_sha": "2c0a4edb105c64c0256e3c9b7741f0e24bffefac",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V121_INGESTED_SOURCE_CORRECT_V1.md",
+    "current_state_path": "Q048_V121_INGESTION_STATE_V1.json",
+    "index_refs": [
+      "Q048_V121_INGESTION_GITHUB_MEMORY_UPDATE_V1.md"
+    ],
+    "cross_reference_refs": [
+      "Q048_V121_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "Q048_V122_NEXT_MATHEMATICS_TASK_V1.json",
+      "Q048_V122_HANDOFF_TO_MATHEMATICS_LOW_Z_DISPATCH_DIAGNOSTIC_900_890_V1.md"
+    ],
+    "memory_update_ref": "Q048_V121_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "target_paths_status": "PROPOSED_NEW_FILES_UNDER_VERIFIED_ROOT_CONVENTION",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V121_INGESTION_GITHUB_MEMORY_UPDATE_V1.md"
+  },
+  "scientific_execution_in_ingestion": {
+    "new_actual_cells": 0,
+    "new_proof_cells": 0,
+    "historical_science_reruns": 0,
+    "next_task_dispatched": false
+  },
+  "authorization_distinction": {
+    "historical_stop900": "PRESERVED_UNCHANGED",
+    "new_ingestion": "ONE_SOURCE_DISPATCH_DIAGNOSTIC900_TO890_ONLY;0CONNECTED_PROOF_OR_ACTUAL"
+  },
+  "source_branch_contract": {
+    "id": "LOCAL-Q048-V122-LOW-Z-DISPATCH-DIAGNOSTIC-CONTRACT-V1",
+    "status": "SOURCE_TEXT_OBSERVED;NEW_DOMAIN_DIAGNOSTIC_NOT_EXECUTED",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "hydrogen_c_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+    "hydrogen_h_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52",
+    "source_function": "rec_dxHIIdlna",
+    "candidate_cell_z": [
+      900,
+      890
+    ],
+    "candidate_cell_a": [
+      "1/901",
+      "1/891"
+    ],
+    "exact900_behavior": "Pion initialized1;z<900 block inactive;then captured SWIFT temperature/fit gates still apply",
+    "below900_behavior": {
+      "predicate": "if (z < 900.)",
+      "RLya": "LYA_FACT(1.,1.) *H/nH/(1.-xHII)",
+      "four_betaB": "SAHA_FACT(1.,1.) *TR*sqrt(TR) *exp(-0.25*EI/TR) *alphaB_PPB(TR,1.,1.)",
+      "Pion": "four_betaB/(3.*RLya + L2s1s + four_betaB)",
+      "low_probability_test": "Pion < PION_MAX",
+      "PION_MAX": "1e-2",
+      "below_threshold_dispatch": "rec_HMLA_dxHIIdlna",
+      "otherwise_for_captured_model4": "SWIFT path subject to TR/kBoltz/fsR/fsR/meR >= fit->swift_func[0][0];otherwise HMLA",
+      "equality_at_threshold": "Strict < is false;take the otherwise path,then temperature/model gate"
+    },
+    "auxiliary_functions": [
+      "alphaB_PPB",
+      "SAHA_FACT",
+      "LYA_FACT",
+      "rec_HMLA_dxHIIdlna",
+      "rec_swift_hyrec_dxHIIdlna"
+    ],
+    "new_certificate_needed": "The V120/V121 z>=900 certificate is historical authority only;cannot qualify any nonempty z<900 interval. Determine source-aware branch coverage or a precise obstruction before any fresh below900 theorem.",
+    "tube_obligations": [
+      "Use exact captured H/nH/TR inputs,source units and fixed flags;both L(q=1e-6) and R(q=0)",
+      "h=1-xHII;accepted connected_lower is left-face h0 only,not an established lower bound over900->890",
+      "Do not infer branch selection from a native trajectory,point sample,guard qualification or unsigned numerical fit",
+      "Treat exact900 separately from the z<900 interior;respect strict Pion<PION_MAX and subsequent temperature gate",
+      "If no certified whole-cell lower h is available,report symbolic branch conditions and the missing closure obligation;do not substitute h0 or old-cell lower as whole-cell authority",
+      "A mixed or unresolved branch cover is a valid diagnostic outcome;no assumption that SWIFT-only reuse must succeed"
+    ],
+    "proposed_algebraic_reduction_to_verify": {
+      "status": "PROPOSED_DIAGNOSTIC_AID;not an executed interval certificate",
+      "definitions": "A=LYA_FACT(1,1)*H/nH>0;B=four_betaB>0;h=1-xHII>0",
+      "candidate_equivalence": "For z<900 and positive denominator,Pion<1/100 iff h*(99*B-L2s1s)<3*A",
+      "obligation": "Verify source literals,units,strict equality and denominator positivity independently;then enclose reachable branch conditions without claiming a new connected-cell theorem"
+    },
+    "mandatory_controls": [
+      "Exact900 leaves z<900 block inactive",
+      "A point/interval strictly below900 does not inherit Pion=1 from V120",
+      "Threshold equality is not classified as Pion<PION_MAX",
+      "Changed hydrogen.c/h hash or wrong captured model is rejected",
+      "Missing positivity/whole-cell h premise produces explicit unresolved status",
+      "Intervals straddling the Pion threshold retain every possible branch rather than selecting by midpoint"
+    ],
+    "preservation": "All14 helper/source bytes and historical code/results unchanged;new versioned diagnostic only"
+  }
+}
