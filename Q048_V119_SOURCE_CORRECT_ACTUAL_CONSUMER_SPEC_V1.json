@@ -1,0 +1,284 @@
+{
+  "schema": "bubbleverse.q048.v119.source_correct_actual_consumer.spec.v1",
+  "created_at_utc": "2026-10-20T12:10:32.082891+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_type": "SCIENTIFIC_CASE_EXECUTION",
+  "task_id": "LOCAL-Q048-V119-SOURCE-CORRECT-ACTUAL-CONSUMER-920-910-V1",
+  "task_fingerprint": "312bd6f751819eece72b369268d61f795f7b53801f0b17c8f85915ca8480c7f0",
+  "program_id": "Q048-V119-SOURCE-CORRECT-CONSUMER-V1",
+  "program_registration": "LOCAL_NOT_REGISTERED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-69.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "core_version": "NOT_AVAILABLE_IN_SCOPED_EVIDENCE"
+  },
+  "repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "0da3df952b52940393e61f2937e0676b42fc021a",
+    "source_freshness": "VERIFIED_AT_BASE",
+    "version_check": "Fresh untruncated tree has V119 task/handoff only;19 V118 proof,10 V118 ingestion and20 V117 parent/method files Git-verified. Complete V118 ingested journal plus20 older V115 ancestry originals remain saved/local byte-verified but absent from GitHub.",
+    "parent_recovery": {
+      "record": "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "e47af0c2bce1ddd0e8bb1cd31ebfd5566a88c62646bb59400426ea6d84d6ba12",
+      "accepted_actual": {
+        "count": 116,
+        "frontier": 920
+      },
+      "frontiers": {
+        "camspec-lcdm": 1440,
+        "camspec-ede_n3": 1440,
+        "hillipop-lcdm": 1440,
+        "hillipop-ede_n3": 920
+      },
+      "endpoint": {
+        "a": "1/921",
+        "E": "21553673409627471439/500000000000000000",
+        "Y": "133823577632185643/3906250000000000",
+        "Vbar": "2119955747339110627/250000000000000000"
+      },
+      "connected_lower": "54513832861587/125000000000000000",
+      "K_upper": "1220855076846709617829/250000000000000000",
+      "correct_saha_fact": "3.016103031869581e21",
+      "repository_relative_paths": [
+        "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+      "library_file_id": "libfile_a2629b0fef288191a5614f991e8583b0",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    "method_references": [
+      {
+        "filename": "q048_v117_actual_consumer.py",
+        "sha256": "5038ae35ea70b27dbd6d7f27e77083e2923706d71236de718ea0bdf72350e5d5",
+        "bytes": 7850,
+        "repository_relative_paths": [
+          "q048_v117_actual_consumer.py"
+        ],
+        "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+        "library_file_id": "libfile_af32d41cd83c8191a03802e3737e0384",
+        "source_sync": "GITHUB_BYTE_VERIFIED",
+        "git_blob_sha1": "8d2148cc0d865c7e814f5120f3b0fd9a44598005",
+        "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+      },
+      {
+        "filename": "q048_v117_verify.py",
+        "sha256": "6e3913083492861e943cb988aff933df9790c5f4897a81bfa5593ea04f450a37",
+        "bytes": 13348,
+        "repository_relative_paths": [
+          "q048_v117_verify.py"
+        ],
+        "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+        "library_file_id": "libfile_e89abe24d784819182cd31339e9a105c",
+        "source_sync": "GITHUB_BYTE_VERIFIED",
+        "git_blob_sha1": "863897d67ced011f82332684824e484f5a8ddcb3",
+        "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+      },
+      {
+        "filename": "q048_v117_accept.py",
+        "sha256": "22ace89b5204fdf94be2b79dd185dcac44d82fbcc01972fb3bf632bab3e14fa5",
+        "bytes": 3130,
+        "repository_relative_paths": [
+          "q048_v117_accept.py"
+        ],
+        "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+        "library_file_id": "libfile_e52c243c3fe88191bd3edeb811e5053d",
+        "source_sync": "GITHUB_BYTE_VERIFIED",
+        "git_blob_sha1": "a042d108c18ae08efeeac2003c2fc47bb5ce5c28",
+        "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+      },
+      {
+        "filename": "q048_v117_postaccept.py",
+        "sha256": "31a422fd403ae107729596d8e09066ff9e5550dc5d7612b305ddc04e857724a3",
+        "bytes": 5554,
+        "repository_relative_paths": [
+          "q048_v117_postaccept.py"
+        ],
+        "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+        "library_file_id": "libfile_57ee72084ae08191bd9ed39477f58735",
+        "source_sync": "GITHUB_BYTE_VERIFIED",
+        "git_blob_sha1": "c3a340b43c863538634d0e5656b67f6870e68366",
+        "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+      },
+      {
+        "filename": "q048_v117_run.py",
+        "sha256": "11f3a94093d93e791e933a14d10e14614a29b525af48f21d32ae09d205742172",
+        "bytes": 2963,
+        "repository_relative_paths": [
+          "q048_v117_run.py"
+        ],
+        "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+        "library_file_id": "libfile_c499f0030e808191bfc8767e355cb69c",
+        "source_sync": "GITHUB_BYTE_VERIFIED",
+        "git_blob_sha1": "4dd0ca2da9d224559a6fd7f79c1276bad09f0c18",
+        "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+      },
+      {
+        "filename": "test_q048_v117_contract.py",
+        "sha256": "3dbf70f4ee44f9b788c1f9c854440dc19c899d26691ce415d4ee613204565589",
+        "bytes": 5736,
+        "repository_relative_paths": [
+          "test_q048_v117_contract.py"
+        ],
+        "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+        "library_file_id": "libfile_71c50e747edc8191b308434fa2ed6b1e",
+        "source_sync": "GITHUB_BYTE_VERIFIED",
+        "git_blob_sha1": "b0f95d1a1a83591ef55a1b484be85a87b0791026",
+        "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+      },
+      {
+        "filename": "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+        "sha256": "18a1de0fb7ce8f746f31979ffe876bdc2e824b186119b7dee2c80ae7ad129e3a",
+        "bytes": 13554,
+        "repository_relative_paths": [
+          "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json"
+        ],
+        "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+        "library_file_id": "libfile_0e0fd430097c8191b723296bb3a7f8fb",
+        "source_sync": "GITHUB_BYTE_VERIFIED",
+        "git_blob_sha1": "9b246dc1ac404cec8da704f85e94011ae0ce5eca",
+        "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+      },
+      {
+        "filename": "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+        "sha256": "db607c538b92dbab4198e07469d8e6be0a75d285037af1f9c446398295fb2ec1",
+        "bytes": 2973,
+        "repository_relative_paths": [
+          "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json"
+        ],
+        "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+        "library_file_id": "libfile_43b107e1e6708191abac3f12f53c539c",
+        "source_sync": "GITHUB_BYTE_VERIFIED",
+        "git_blob_sha1": "9cdc776b405130c395740fd25b8ede92230bd202",
+        "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+      }
+    ],
+    "program_id_check": "New local ID absent from unchanged verified canonical program registry;no registration performed",
+    "source_audit": {
+      "file": "v119_repository_equivalence.json",
+      "sha256": "72f2eea4174da193dda6b2bcd860c16d47e5c82902fd8ba17e26a932bfc9b684"
+    }
+  },
+  "input_hashes": {
+    "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json": "e47af0c2bce1ddd0e8bb1cd31ebfd5566a88c62646bb59400426ea6d84d6ba12",
+    "Q048_V118_INGESTION_STATE_V1.json": "fb57aac1069f976716e7a4df2222ff8114b762bf4ba918a992d5c64b2696431c",
+    "Q048_V118_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json": "653a4814568ff73845f570db80179bd612161db3ece11c9215261e847750e39d",
+    "Q048_V118_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json": "39710e001e439111d3aa6d7827ab764a9c88437b03afbb667c62dc2ab025849f",
+    "Q048_V118_SOURCE_CORRECT_PROOF_RAW_V1.json": "694ced95801447d77706c811ca25defd4d6c3c173ea7f21a37fd5f090190ab14",
+    "Q048_V118_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json": "ea5cbd0d31911bc0264ec39a5384ac99d0dda6f94eaf411142f14d8aceeb5358",
+    "Q048_V119_NEXT_BUILDER_TASK_V1.json": "a9a82ed66901ac5d7527d3fcaf731beb2f8abbc8ac9ed473366e007e9b1b8567",
+    "q048_guard_local_v_result_v12.json": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+  },
+  "actual_before": {
+    "count": 116,
+    "frontier": 920
+  },
+  "actual_after": {
+    "count": 117,
+    "frontier": 910
+  },
+  "cell_z": [
+    920,
+    910
+  ],
+  "cell_a": [
+    "1/921",
+    "1/911"
+  ],
+  "source_row_path": [
+    "evaluators",
+    0,
+    "rows",
+    53
+  ],
+  "row_sha256": "f12ec63fe0122530723bc79730eeda5bade6646b06c75a95e0ddacbd9d5e4629",
+  "correct_saha_fact": "3.016103031869581e21",
+  "retained_theorem": {
+    "K_upper": "1202814173580219054419/250000000000000000",
+    "connected_lower": "426269669916063/1000000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ]
+  },
+  "theorem_schema": "bubbleverse.q048.v118.source_correct_proof.acceptance.v1",
+  "endpoint_crosscheck": {
+    "a": "1/911",
+    "E": "41553114742782417797/1000000000000000000",
+    "Y": "33016542108247500469/1000000000000000000",
+    "Vbar": "8180882108095962439/1000000000000000000"
+  },
+  "max_new_actual_cells": 1,
+  "max_new_proof_cells": 0,
+  "max_full_theorem_recomputations": 0,
+  "stop": "One accepted actual cell or first exact blocker; no below910; then one return to ingestion",
+  "mandatory_tests": [
+    "All8 exact source input byte pins",
+    "Fresh-proof V118 schema and exact V117 parent binding",
+    "row53 canonical hash and left a/E/Y/V no-reset glue",
+    "Qualified committed primary row;guard-only control",
+    "Exact endpoint/accepted theorem K and lower",
+    "Separate raw verifier with25 result mutations plus1 theorem-schema authority mutation (26total);no no-op fixtures",
+    "Wrong raw-result and wrong V118 theorem-acceptance schema frozen with base suite",
+    "Separate checkpoint readback with8 actual non-no-op controls",
+    "All original source and full incoming journal bytes preserved"
+  ],
+  "compute_decision": {
+    "compute_backend": "LOCAL_RUNTIME",
+    "github_worthwhile": "NO",
+    "github_worthwhile_gate": "PASS",
+    "local_validated_run_estimate_seconds": [
+      1,
+      10
+    ],
+    "estimate_basis": "MEASURED_SAME_ENVIRONMENT prior V117 four-phase admission 0.172223445s,same26+8 controls with changed parent/theorem/row;no solver or proof execution.",
+    "preparation_and_delivery_estimate": "UNMEASURED;minutes for serial review/verification/file preservation,separate from measured science",
+    "github_total_estimate": "UNMEASURED;workflow/registration/queue/operator overhead offers no measured workload benefit",
+    "other_compute": "NOT_NEEDED;no paid commitment",
+    "resources": {
+      "dependencies": "Python standard-library JSON/hash/Fraction",
+      "concurrency": "One process per serial phase;no GPU",
+      "exact_input_json_bytes": 1282863,
+      "incoming_journal_bytes": 14552000,
+      "RAM": "UNMEASURED"
+    },
+    "resource_budget": "One admission;four phases at most60seconds each and300science seconds total;26raw/authority plus8checkpoint controls;0retry;no postfreeze edits",
+    "reassess_if": "Exact authority/dependency/budget/validation obstruction;stop,no backend retry"
+  },
+  "journal_input": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V118_INGESTED_SOURCE_CORRECT_V1.md",
+    "bytes": 14552000,
+    "sha256": "e1cd13ff6704e7d6965d774310f5be1bd9a59ce6f51a67745292384a8b43ab0c"
+  },
+  "handoff_input": {
+    "filename": "Q048_V119_HANDOFF_TO_BUILDER_SOURCE_CORRECT_ACTUAL_CONSUMER_V1.md",
+    "sha256": "d3ee5463ec3bdee2686eaed71cde39c0e317d378da93ad3228f7a7696f2c39a2"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "arithmetic": "Exact string/Fraction equality;no floating solver",
+    "dependencies": "Python standard library only"
+  },
+  "hash_conventions": {
+    "files": "SHA256 exact raw bytes without normalization",
+    "row": "SHA256 UTF8 sorted compact JSON ensure_ascii=False"
+  },
+  "forbidden": [
+    "V118 theorem rerun/reproof",
+    "old science replay/relabel",
+    "physical reset/refit/recapture/tuning",
+    "changing the exact question, captures or accepted z_reio",
+    "below910",
+    "extra actual or proof cells",
+    "NativeP6 or complete histories claim",
+    "accepted-model/Q change or Q closure"
+  ],
+  "science_budget_seconds": 300,
+  "retry_count": 0,
+  "postfreeze_edits_allowed": false
+}
