@@ -1,0 +1,711 @@
+{
+  "schema": "bubbleverse.q048.v117.next_builder_task.v1",
+  "created_at_utc": "2026-10-20T11:28:02.834732+00:00",
+  "q": "Q048",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "case_id": "NOT_DOCUMENTED_SEPARATELY_FROM_Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-V117-SOURCE-CORRECT-ACTUAL-CONSUMER-930-920-V1",
+  "task_fingerprint": "1befbb323eea6f78d76783b307b2ddb8d00f704aa190638022bfeba7ed218fed",
+  "task_definition_for_fingerprint": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "task_id": "LOCAL-Q048-V117-SOURCE-CORRECT-ACTUAL-CONSUMER-930-920-V1",
+    "objective": "Exactly one source-correct actual consumer930->920",
+    "parent_sha256": "0b69e1f1d37f213d833a23016e5bcbc9874bb0967584625828fcb5351a7e887a",
+    "theorem_acceptance_sha256": "5c5e44f868c1c75ab453c5529139d4619af61dfa5374d986c5085c2799606929",
+    "theorem_raw_sha256": "c51eef3334fe9c237afe2735eca93d0538611b98d5023707bc9e544dda2d871f",
+    "theorem_verification_sha256": "58bd7305ee69d3552922f0dba72e680d211ca7ca41d49cbc287105b3d8edf282",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row52_sha256": "7b1b3f0656c9b2c92e8cdcd032b0fdc130846692fadb03613b05b127734034d3",
+    "cell_z": [
+      930,
+      920
+    ],
+    "cell_a": [
+      "1/931",
+      "1/921"
+    ],
+    "max_new_actual_cells": 1,
+    "max_new_proof_cells": 0,
+    "criteria": "Exact parent/theorem/source/no-reset glue; canonical endpoint/bounds; separate validation and postaccept; stop920 then return once; 300 science seconds, zero retries, no postfreeze edits",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "theorem_postaccept_sha256": "d455ac922a3855cf935bbe1e482b8754c099c2a3991002af238d01cb01f6cc8d",
+    "theorem_spec_sha256": "73bd857f5c6bfa252a0890eba992af2d99782f70db9d30c5b8dd5ec4d9b5d9ad",
+    "theorem_freeze_sha256": "dea21814361024ab00bde7aa0c9c44735624c6385e86775b2d55cd8a3dfa2c22",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "method_reference_hashes": {
+      "q048_v115_actual_consumer.py": "629863945467da08eb243036d7765116a915652f1a3c7cf349bac9e1c97a00ae",
+      "q048_v115_verify.py": "bd45b82a784e3ac32db9e984baad3b625db689a96294c402dfd20cb771eed97e",
+      "q048_v115_accept.py": "481b311e267552bfd67c0b3eba263d6164134b698e9496ca6ee58872546d946d",
+      "q048_v115_postaccept.py": "6690c757a6d5c08f9edbc476cabb409aaaa3832386ceece30f13afbc7519e09c",
+      "q048_v115_run.py": "48ef8f3979dff7246ff8c5378debf9864893a09fddc96146703ba9d58f19cfee",
+      "test_q048_v115_contract.py": "ef3f1cc7b848a9b60d6e504c14bf3d4a5ee3606dc0d90bb6b00349a93957cda1",
+      "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json": "79df80f0b1c1d47e50418cca050b2e8a19ffcc25ce715e753277bace6f97b6cd",
+      "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json": "04dfd15015d276bcdec0c1eceae36a382a5c091481fee75a872511435eb96835"
+    },
+    "new_code_identity": "NOT_YET_FROZEN; Builder must version and freeze V117 source/spec before admission",
+    "science_budget_seconds": 300,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "selected_engine": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "repository_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+    "role": "Bounded actual-consumer admission with source/theorem/parent binding and separate validation; choose smallest sufficient compute mechanism"
+  },
+  "status": "PREPARED_NOT_EXECUTED",
+  "objective": "Exactly one new source-correct reassessment-lineage actual consumer930->920; expected actual116/frontier920 only after validation/acceptance",
+  "parent_authority": {
+    "record": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "0b69e1f1d37f213d833a23016e5bcbc9874bb0967584625828fcb5351a7e887a",
+    "accepted_actual": {
+      "count": 115,
+      "frontier": 930
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 930
+    },
+    "endpoint": {
+      "a": "1/931",
+      "E": "22351147953825389271/500000000000000000",
+      "Y": "7106773794579442473/200000000000000000",
+      "Vbar": "8786409145805500919/1000000000000000000"
+    },
+    "connected_lower": "89291638472793/200000000000000000",
+    "K_upper": "38382440913912560363/8000000000000000",
+    "correct_saha_fact": "3.016103031869581e21",
+    "repository_relative_paths": [],
+    "repository_commit": null,
+    "library_file_id": "libfile_67cb086ce87081919ef581ff499e551f",
+    "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+  },
+  "theorem_authority": {
+    "record": "Q048_V116_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+    "sha256": "5c5e44f868c1c75ab453c5529139d4619af61dfa5374d986c5085c2799606929",
+    "schema": "bubbleverse.q048.v116.source_correct_proof.acceptance.v1",
+    "raw_record": "Q048_V116_SOURCE_CORRECT_PROOF_RAW_V1.json",
+    "raw_sha256": "c51eef3334fe9c237afe2735eca93d0538611b98d5023707bc9e544dda2d871f",
+    "verification_record": "Q048_V116_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+    "verification_sha256": "58bd7305ee69d3552922f0dba72e680d211ca7ca41d49cbc287105b3d8edf282",
+    "postaccept_record": "Q048_V116_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+    "postaccept_sha256": "d455ac922a3855cf935bbe1e482b8754c099c2a3991002af238d01cb01f6cc8d",
+    "spec_record": "Q048_V116_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+    "spec_sha256": "73bd857f5c6bfa252a0890eba992af2d99782f70db9d30c5b8dd5ec4d9b5d9ad",
+    "freeze_record": "Q048_V116_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+    "freeze_sha256": "dea21814361024ab00bde7aa0c9c44735624c6385e86775b2d55cd8a3dfa2c22",
+    "proof_cell_z": [
+      930,
+      920
+    ],
+    "proof_cell_a": [
+      "1/931",
+      "1/921"
+    ],
+    "K_upper": "1220855076846709617829/250000000000000000",
+    "connected_lower": "54513832861587/125000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "source_saha_factor": "3.016103031869581e21",
+    "historical_math_consumer_authorization": "NOT_GRANTED_PRESERVED",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+  },
+  "theorem_schema_binding_note": "V116 is a fresh-proof acceptance, not V108 bridge schema. Bind proof_cell_z/proof_cell_a, parent_checkpoint_sha256 and flat K_upper/connected_lower explicitly. Do not assume proof_bridge_cell or retained_theorem fields exist.",
+  "guard": {
+    "source_record": "q048_guard_local_v_result_v12.json",
+    "source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+    "primary_index": 52,
+    "primary_row_sha256": "7b1b3f0656c9b2c92e8cdcd032b0fdc130846692fadb03613b05b127734034d3",
+    "primary": {
+      "a0": "1/931",
+      "a1": "1/921",
+      "z0": 930,
+      "z1": 920,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "8321570189953208571/500000000000000000",
+        "H_upper_left": "351024759402584621/62500000000000000",
+        "X_upper_left": "4727700070205954729/500000000000000000",
+        "V_candidate_upper": "2119955747339110627/250000000000000000",
+        "retained_Vbar": "8786409145805500919/1000000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "22351147953825389271/500000000000000000",
+      "Y_left": "7106773794579442473/200000000000000000",
+      "V_previous": "8786409145805500919/1000000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "8876475983662526127/200000000000000000",
+      "V_local": "2119955747339110627/250000000000000000",
+      "V_admitted": "2119955747339110627/250000000000000000",
+      "equilibrium_upper": "294950364847180609/62500000000000000",
+      "amplitude": "30814663135342322621/1000000000000000000",
+      "constant_energy_part": "19503592875519817769/1437500000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "59913907517304417/62500000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "35325474777881718461/1000000000000000000",
+      "raw_G_lower": "1770568922294084097628885881769178506227977841977659858026714686670245406763504031424359652348117502309674519371966056588817/357451076169534149049180990855527478822202858385593671910333483391958388477758363664384000000000000000000000000000000000000",
+      "G_lower": "619164775382550363/125000000000000000",
+      "Y_right_candidate": "133823577632185643/3906250000000000",
+      "E_right_candidate": "21553673409627471439/500000000000000000",
+      "endpoint_energy_envelope": "43107346819254942877/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "921/931",
+      "R_at_left": "3734971938996428936107702530381924886479060008573021926645717627179358319733968994210021066774877/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "20057481282516678274917018872999384895147343999392444975/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "239655630069217667/250000000000000000",
+        "upper": "59913907517304417/62500000000000000",
+        "log_lower": "431969640870409/40000000000000000",
+        "log_upper": "5399620510880113/500000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "21553673409627471439/500000000000000000",
+      "Y_right": "133823577632185643/3906250000000000",
+      "index": 52,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control_row_sha256": "365747d0c067200ff8579e451ad9d209ed034f4a737be953438785e7ca4db6ce",
+    "control_role": "GUARD_ONLY_NOT_AN_ADDITIONAL_ACTUAL_CELL",
+    "control": {
+      "a0": "1/931",
+      "a1": "1/921",
+      "z0": 930,
+      "z1": 920,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "8321570189953208571/500000000000000000",
+        "H_upper_left": "5657121888001325457/1000000000000000000",
+        "X_upper_left": "479998244364937459/50000000000000000",
+        "V_candidate_upper": "1734380243301643149/200000000000000000",
+        "retained_Vbar": "224503596542495237/25000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "46079662918684443013/1000000000000000000",
+      "Y_left": "1468363120780776977/40000000000000000",
+      "V_previous": "224503596542495237/25000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "100825120946931647603882652821/250000000000000000000000000000",
+        "47991209748520615160061120219/62500000000000000000000000000",
+        "845566593492678412259351296899/500000000000000000000000000000",
+        "3114797193186693868611140270969/1000000000000000000000000000000",
+        "1260965109730699558526589555993/250000000000000000000000000000",
+        "1879914264373281560748653181231/250000000000000000000000000000",
+        "10612870636173211644944341755337/1000000000000000000000000000000",
+        "2887339967494674947951455829317/200000000000000000000000000000",
+        "3836536968820703227445165155753/200000000000000000000000000000",
+        "5044124070146638226569791625929/200000000000000000000000000000",
+        "33499384399959120063840580189459/1000000000000000000000000000000"
+      ],
+      "E_safe_left": "45758018419354084333/1000000000000000000",
+      "V_local": "1734380243301643149/200000000000000000",
+      "V_admitted": "1734380243301643149/200000000000000000",
+      "equilibrium_upper": "965220309315697057/200000000000000000",
+      "amplitude": "1594148823647046957/50000000000000000",
+      "constant_energy_part": "63825192953500467887/4600000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "21413/22313",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "31201879962970288387/1000000000000000000",
+      "raw_G_lower": "112243634923141528502163438741735191815448970826198922502861739834018216669018819157362544531546298091737008900597801987/31155491650667247920837404097497596230311767106084967192715902402049873133219618626732032000000000000000000000000000000",
+      "G_lower": "720538364033408793/200000000000000000",
+      "Y_right_candidate": "35423070811808814233/1000000000000000000",
+      "E_right_candidate": "44472011211643474141/1000000000000000000",
+      "endpoint_energy_envelope": "44472011211643474141/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "921/931",
+      "R_at_left": "212605189483349667396406181456602409200376224061836222327632369012237914326088291769434108750905106411323219740511/60708402882054033466233184588234965832575213720379360039119137804340758912662765568000000000000000000000000000000",
+      "M_at_left": "20057481282516678274917018872999384895147343999392444975/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "44472011211643474141/1000000000000000000",
+      "Y_right": "35423070811808814233/1000000000000000000",
+      "index": 52,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    }
+  },
+  "cell_z": [
+    930,
+    920
+  ],
+  "cell_a": [
+    "1/931",
+    "1/921"
+  ],
+  "expected_actual_after": {
+    "count": 116,
+    "frontier": 920
+  },
+  "expected_endpoint_crosscheck_only": {
+    "a": "1/921",
+    "E": "21553673409627471439/500000000000000000",
+    "Y": "133823577632185643/3906250000000000",
+    "Vbar": "2119955747339110627/250000000000000000"
+  },
+  "theorem_K_to_bind_if_all_checks_pass": "1220855076846709617829/250000000000000000",
+  "theorem_lower_to_bind_if_all_checks_pass": "54513832861587/125000000000000000",
+  "max_new_actual_cells": 1,
+  "max_new_proof_cells": 0,
+  "max_full_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "consumer_authorization": "GRANTED_BY_THIS_INGESTION_FOR_EXACTLY_ONE_CELL_930_TO_920",
+  "below920_authorization": "NOT_GRANTED",
+  "required_behavior": [
+    "Freeze exact V115 parent, V116 accepted theorem/raw/verifier and committed primary row52 before execution",
+    "Verify all byte hashes, Q/source/scopes, exact primary row left a/E/Y/V glue and source_state_reset=false before the single admission",
+    "Consume V116 theorem once; endpoint values must come from the committed primary row; supplied endpoint is a cross-check only",
+    "Use separate validation and postaccept checks including real semantic mutations for wrong parent/theorem/schema/row/reset/cell/endpoint/K/lower/below920/extra cell",
+    "Write a separately versioned V117 raw result and accepted actual checkpoint only if all gates pass",
+    "Preserve V101/V102/V108/V115/V116 source/history unchanged; zero proof cells; no reset/refit/recapture/tuning",
+    "Stop one cell or first precise blocker; return exactly once to Result Ingestion2.1.0",
+    "Before freeze adapt V115 methods to V117, current V115 parent actual115/frontier930, accepted V116 fresh-proof schema, row52 and STOP920; replace V113 historical parent, V114 theorem/state and V115 task pins. Freeze both wrong-schema controls with base suite."
+  ],
+  "success_condition": "One validated and accepted source-correct reassessment actual116/frontier920, exactly one actual cell, zero proof cells, exact parent/theorem/row/schema/glue and postaccept PASS",
+  "failure_condition": "First material hash, parent/theorem/schema, source/reset/glue, endpoint, verifier or postaccept invariant failure; preserve it without retuning or historical relabel",
+  "stop_condition": "One accepted actual cell or first exact blocker; no below920; then one return to ingestion",
+  "forbidden": [
+    "V116 theorem rerun/reproof",
+    "old science replay/relabel",
+    "physical reset/refit/recapture/tuning",
+    "changing the exact question, captures or accepted z_reio",
+    "below920",
+    "extra actual or proof cells",
+    "NativeP6 or complete histories claim",
+    "accepted-model/Q change or Q closure"
+  ],
+  "resource_policy": "Use smallest adequate local/direct mechanism if available; choose GitHub compute only on measured/qualified workload benefit. Finite300 science-second budget, zero retries and no postfreeze edits. No paid resources or speculative infrastructure authorized.",
+  "source_repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+    "all19_V116_source_artifacts": "VERIFIED_PRESENT_AND_BYTE_EQUIVALENT",
+    "pending_parent_source_files": [
+      {
+        "filename": "Q047_SAMLET_JOURNAL_Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "sha256": "2872e91fd10dd5295afe2624e6e8b9a3716ffa372f5dcc4c2764f20bfcea3aa3",
+        "bytes": 14528824,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_5face9fe9c788191a17da67e3f574b44",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_HANDOFF_TO_INGESTION_V1.md",
+        "sha256": "b6790581be0f6f844391001c1b1e2c13eb9607bd1afbd790367e0b47c0948377",
+        "bytes": 5322,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_06931b084d1c8191ab247cc765632616",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "sha256": "0b69e1f1d37f213d833a23016e5bcbc9874bb0967584625828fcb5351a7e887a",
+        "bytes": 2615,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_67cb086ce87081919ef581ff499e551f",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_DELIVERY_VALIDATION_V1.json",
+        "sha256": "acf6be7f5c951871d0df94a71566253803a74f48e7bd8f6dce1e30286eaac058",
+        "bytes": 1523,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_78614aafa5d0819184d5a7d1b5d90e2b",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_EXECUTION_V1.json",
+        "sha256": "ddda2d17a85320a6a634b971273a9777aef9896e84d2743b8b1352f17d8a35a2",
+        "bytes": 3044,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_1bdf115f05bc8191883ea6b09be92973",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+        "sha256": "04dfd15015d276bcdec0c1eceae36a382a5c091481fee75a872511435eb96835",
+        "bytes": 2899,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_e3bfac6420e48191a9125edb1f081821",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_JOURNAL_APPEND_V1.md",
+        "sha256": "2dbd63aa453a62affd3a393500a99cf74f026f996142b4b880237bb54bd700b1",
+        "bytes": 3174,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_9674d7c161e08191a7567bb9f24e1e0c",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+        "sha256": "091b165f05ed0ea6eba881fdf4263aa0d7161d0927bb30b8c7035f8cb6daddfb",
+        "bytes": 1653,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_6835727ac9548191a9ae20081d5c59fb",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json",
+        "sha256": "c09d1c850da942a6cf7e1d66ef5d032b3be6cd8212bddb64797acb281353e341",
+        "bytes": 4462,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_081925449ec8819191a42861a1a1ff9f",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RESULT_V1.md",
+        "sha256": "af02ad7b9b970c0cb0c94e83e6be35d6836e6b0cdfe747b0e4d855db14ba7b6c",
+        "bytes": 11247,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_ef3435cff41c819196831457df1d821d",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+        "sha256": "79df80f0b1c1d47e50418cca050b2e8a19ffcc25ce715e753277bace6f97b6cd",
+        "bytes": 7032,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_8fef8352141c819180fc90f50d2bf4a3",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json",
+        "sha256": "b29bd8531a6445af38e57ae062e0efa410d85e2b8b50454fc9572d9922409bb3",
+        "bytes": 5221,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_95619668039881918b259c0bb6d0f292",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "q048_v115_accept.py",
+        "sha256": "481b311e267552bfd67c0b3eba263d6164134b698e9496ca6ee58872546d946d",
+        "bytes": 3130,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_c4aaaa442e1881919bd0b5e31cf539cf",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "q048_v115_actual_consumer.py",
+        "sha256": "629863945467da08eb243036d7765116a915652f1a3c7cf349bac9e1c97a00ae",
+        "bytes": 7840,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_790b8b0383448191ba6df551876c3866",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "q048_v115_postaccept.py",
+        "sha256": "6690c757a6d5c08f9edbc476cabb409aaaa3832386ceece30f13afbc7519e09c",
+        "bytes": 5554,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_928ca42c0e5c81918333ed07b61974ac",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "q048_v115_run.py",
+        "sha256": "48ef8f3979dff7246ff8c5378debf9864893a09fddc96146703ba9d58f19cfee",
+        "bytes": 2963,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_b6ff770f87388191bafe4e2e5d796ba6",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "q048_v115_verify.py",
+        "sha256": "bd45b82a784e3ac32db9e984baad3b625db689a96294c402dfd20cb771eed97e",
+        "bytes": 13348,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_44b50939ca7c8191bc4c349b9dde9e3b",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "test_q048_v115_contract.py",
+        "sha256": "ef3f1cc7b848a9b60d6e504c14bf3d4a5ee3606dc0d90bb6b00349a93957cda1",
+        "bytes": 5736,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_74fb029167348191b253311309802eb8",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "v115_repository_equivalence.json",
+        "sha256": "8fa14d2c7c9942f557b67e9fbe8731d1c6cd521c77b7650c603a131c40fea903",
+        "bytes": 17934,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_1d603d23ea04819181a6eedb69ef9f0b",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+        "sha256": "61be501f5eb534bdcda837bf219f36e6e719a8e7bd45e0e1735edf9e659d4915",
+        "bytes": 11116,
+        "repository_relative_paths": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_75ad3413e0b08191a389ad1ae53e4d6f",
+        "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+      }
+    ]
+  },
+  "preparation_is_not_dispatch": true,
+  "science_budget_seconds": 300,
+  "retry_count": 0,
+  "postfreeze_edits_allowed": false,
+  "method_references": [
+    {
+      "filename": "q048_v115_actual_consumer.py",
+      "sha256": "629863945467da08eb243036d7765116a915652f1a3c7cf349bac9e1c97a00ae",
+      "bytes": 7840,
+      "repository_relative_paths": [],
+      "repository_commit": null,
+      "library_file_id": "libfile_790b8b0383448191ba6df551876c3866",
+      "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING",
+      "git_blob_sha1": "a565db8392777ab4c0c4979d554cfd7219f6536c",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact saved Library bytes while GitHub upload pending; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "q048_v115_verify.py",
+      "sha256": "bd45b82a784e3ac32db9e984baad3b625db689a96294c402dfd20cb771eed97e",
+      "bytes": 13348,
+      "repository_relative_paths": [],
+      "repository_commit": null,
+      "library_file_id": "libfile_44b50939ca7c8191bc4c349b9dde9e3b",
+      "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING",
+      "git_blob_sha1": "db674f5b1719ed9470125dab8cd2f1167436af73",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact saved Library bytes while GitHub upload pending; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "q048_v115_accept.py",
+      "sha256": "481b311e267552bfd67c0b3eba263d6164134b698e9496ca6ee58872546d946d",
+      "bytes": 3130,
+      "repository_relative_paths": [],
+      "repository_commit": null,
+      "library_file_id": "libfile_c4aaaa442e1881919bd0b5e31cf539cf",
+      "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING",
+      "git_blob_sha1": "4959a390e5e1b05c786e45c4faec85fab0c8fe41",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact saved Library bytes while GitHub upload pending; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "q048_v115_postaccept.py",
+      "sha256": "6690c757a6d5c08f9edbc476cabb409aaaa3832386ceece30f13afbc7519e09c",
+      "bytes": 5554,
+      "repository_relative_paths": [],
+      "repository_commit": null,
+      "library_file_id": "libfile_928ca42c0e5c81918333ed07b61974ac",
+      "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING",
+      "git_blob_sha1": "0600d96ffe6b4650f0981a4fa4d28dcebb5d9163",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact saved Library bytes while GitHub upload pending; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "q048_v115_run.py",
+      "sha256": "48ef8f3979dff7246ff8c5378debf9864893a09fddc96146703ba9d58f19cfee",
+      "bytes": 2963,
+      "repository_relative_paths": [],
+      "repository_commit": null,
+      "library_file_id": "libfile_b6ff770f87388191bafe4e2e5d796ba6",
+      "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING",
+      "git_blob_sha1": "3a4463a6e147469f0b79b7f5cf2660a4ae732bc0",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact saved Library bytes while GitHub upload pending; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "test_q048_v115_contract.py",
+      "sha256": "ef3f1cc7b848a9b60d6e504c14bf3d4a5ee3606dc0d90bb6b00349a93957cda1",
+      "bytes": 5736,
+      "repository_relative_paths": [],
+      "repository_commit": null,
+      "library_file_id": "libfile_74fb029167348191b253311309802eb8",
+      "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING",
+      "git_blob_sha1": "d4d45f1c695ca3cc13c91355c2ddfaa8b3d3844d",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact saved Library bytes while GitHub upload pending; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+      "sha256": "79df80f0b1c1d47e50418cca050b2e8a19ffcc25ce715e753277bace6f97b6cd",
+      "bytes": 7032,
+      "repository_relative_paths": [],
+      "repository_commit": null,
+      "library_file_id": "libfile_8fef8352141c819180fc90f50d2bf4a3",
+      "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING",
+      "git_blob_sha1": "bb1a0a394f65c00c30b9fd83d57d9f22d990cfce",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact saved Library bytes while GitHub upload pending; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+      "sha256": "04dfd15015d276bcdec0c1eceae36a382a5c091481fee75a872511435eb96835",
+      "bytes": 2899,
+      "repository_relative_paths": [],
+      "repository_commit": null,
+      "library_file_id": "libfile_e3bfac6420e48191a9125edb1f081821",
+      "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING",
+      "git_blob_sha1": "fdfec77e88706091445376b3c0df2bc32c52f14b",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact saved Library bytes while GitHub upload pending; adapt all authority/cell pins before freeze, never execute historical main"
+    }
+  ],
+  "new_code_identity": "NOT_YET_FROZEN",
+  "mandatory_schema_negative_controls": [
+    "wrong raw-result schema",
+    "wrong V116 theorem-acceptance schema"
+  ],
+  "mutation_integrity": "All controls must actually change derivative fixtures; freeze named schema controls with the base suite, never rely only on a count",
+  "preserve_parent_authority_until_acceptance": true,
+  "input_recovery_map": [
+    {
+      "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "0b69e1f1d37f213d833a23016e5bcbc9874bb0967584625828fcb5351a7e887a",
+      "bytes": 2615,
+      "repository_relative_paths": [],
+      "repository_commit": null,
+      "library_file_id": "libfile_67cb086ce87081919ef581ff499e551f",
+      "source_sync": "LIBRARY_SAVED_LOCAL_VERIFIED_GITHUB_UPLOAD_PENDING"
+    },
+    {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "bytes": 1198030,
+      "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+      "source_sync": "ORIGINAL_SAVED_GUARD_VERIFY_BYTES"
+    },
+    {
+      "filename": "Q048_V116_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+      "sha256": "5c5e44f868c1c75ab453c5529139d4619af61dfa5374d986c5085c2799606929",
+      "bytes": 2504,
+      "repository_relative_paths": [
+        "Q048_V116_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json"
+      ],
+      "repository_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+      "library_file_id": "libfile_d821aef31b248191afeab31a86d1e4cc",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V116_SOURCE_CORRECT_PROOF_RAW_V1.json",
+      "sha256": "c51eef3334fe9c237afe2735eca93d0538611b98d5023707bc9e544dda2d871f",
+      "bytes": 26902,
+      "repository_relative_paths": [
+        "Q048_V116_SOURCE_CORRECT_PROOF_RAW_V1.json"
+      ],
+      "repository_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+      "library_file_id": "libfile_d93a04aae7d88191b0b58066e19b279d",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V116_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+      "sha256": "58bd7305ee69d3552922f0dba72e680d211ca7ca41d49cbc287105b3d8edf282",
+      "bytes": 5470,
+      "repository_relative_paths": [
+        "Q048_V116_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json"
+      ],
+      "repository_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+      "library_file_id": "libfile_0a70ef69a9d88191a933dd83aba311f2",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V116_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+      "sha256": "d455ac922a3855cf935bbe1e482b8754c099c2a3991002af238d01cb01f6cc8d",
+      "bytes": 880,
+      "repository_relative_paths": [
+        "Q048_V116_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json"
+      ],
+      "repository_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+      "library_file_id": "libfile_f7da55eb95848191b6eed0bbe1a32530",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V116_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+      "sha256": "73bd857f5c6bfa252a0890eba992af2d99782f70db9d30c5b8dd5ec4d9b5d9ad",
+      "bytes": 13729,
+      "repository_relative_paths": [
+        "Q048_V116_SOURCE_CORRECT_PROOF_SPEC_V1.json"
+      ],
+      "repository_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+      "library_file_id": "libfile_182007d20e0c81918ac3892578fb2af6",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V116_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+      "sha256": "dea21814361024ab00bde7aa0c9c44735624c6385e86775b2d55cd8a3dfa2c22",
+      "bytes": 4367,
+      "repository_relative_paths": [
+        "Q048_V116_SOURCE_CORRECT_PROOF_FREEZE_V1.json"
+      ],
+      "repository_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+      "library_file_id": "libfile_6cbd72cb15548191bc296ce720a0c74d",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    }
+  ],
+  "new_authorization_inputs": [
+    {
+      "filename": "Q048_V116_INGESTION_STATE_V1.json",
+      "role": "NEW_INGESTION_AUTHORIZATION; delivered sibling hash in manifest"
+    },
+    {
+      "filename": "Q048_V117_NEXT_BUILDER_TASK_V1.json",
+      "role": "THIS_TASK; hash in envelope/manifest"
+    }
+  ]
+}

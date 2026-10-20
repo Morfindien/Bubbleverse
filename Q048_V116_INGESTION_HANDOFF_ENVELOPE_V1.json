@@ -1,0 +1,168 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "handoff_id": "LOCAL-Q048-V116-INGESTION-TO-V117-BUILDER-V1",
+  "created_at_utc": "2026-10-20T11:28:02.834732+00:00",
+  "case_id": "Q048; separate case ID not documented",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": {
+    "authorized_bubbleverse": "Q001–Q048",
+    "external_publication_cutoff": "NOT_DEFINED; none invented",
+    "historical_scope": "Original source identities preserved; downstream task is a separately identified continuation"
+  },
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "ingestion_event_id": "LOCAL-Q048-V116-SOURCE-CORRECT-PROOF-INGESTION-V1",
+  "idempotency_key": "a283cbb637247d18e6923f0053405bff0e29a4911efc163384baf830022027a2",
+  "new_result_ids": [
+    "LOCAL-Q048-V116-SOURCE-CORRECT-NEW-PROOF-930-920-V1"
+  ],
+  "source_state_version": {
+    "journal": "Q047_SAMLET_JOURNAL_Q048_V116_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+    "sha256": "c7ea02f5e38a784a0a66b31f166128d52e9aacb8108f48bdade9bd9bea959fe8",
+    "theorem": "Q048_V116_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+    "theorem_sha256": "5c5e44f868c1c75ab453c5529139d4619af61dfa5374d986c5085c2799606929",
+    "actual_checkpoint": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "actual_checkpoint_sha256": "0b69e1f1d37f213d833a23016e5bcbc9874bb0967584625828fcb5351a7e887a"
+  },
+  "target_state_version": "Q048_V116_INGESTION_STATE_V1.json",
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+  "engine_registry_ref": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "repository_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+    "role": "Bounded actual-consumer admission with source/theorem/parent binding and separate validation; choose smallest sufficient compute mechanism"
+  },
+  "execution_profile_ref": {
+    "file": "Q048_V116_INGESTION_STATE_V1.json",
+    "section": "execution_profile"
+  },
+  "journal_ref": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V116_INGESTED_SOURCE_CORRECT_V1.md",
+    "sha256": "da6b29c98789a405e3ae51e26016cd861f8afe2adc287c2c91a5764532c43f0b",
+    "incoming_journal_sha256": "c7ea02f5e38a784a0a66b31f166128d52e9aacb8108f48bdade9bd9bea959fe8",
+    "incoming_prefix_bytes": 14535761
+  },
+  "source_register_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V116_INGESTED_SOURCE_CORRECT_V1.md",
+    "role": "Complete preserved historical sources/claim links, with new evidence map in audit"
+  },
+  "claim_evidence_map_ref": "Q048_V116_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "result_provenance_ref": {
+    "repository_commit": "58b956cc2b05068a5636501261e0ae680f46734f",
+    "source_manifest": "Q048_V116_SOURCE_CORRECT_PROOF_OUTPUT_MANIFEST_V1.json",
+    "repository_byte_equivalence_ref": "Q048_V116_INGESTION_EVIDENCE_AUDIT_V1.json"
+  },
+  "anomaly_tension_registry_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V116_INGESTED_SOURCE_CORRECT_V1.md",
+    "effect": "LEAVES_UNCHANGED"
+  },
+  "completed_task_ledger_ref": {
+    "file": "Q048_V116_INGESTION_STATE_V1.json",
+    "section": "completed_task"
+  },
+  "route_history_ref": {
+    "file": "Q048_V116_INGESTION_STATE_V1.json",
+    "section": "route_history_append"
+  },
+  "integrity_manifest_ref": "Q048_V116_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "Ingest V116 accepted proof930->920 once",
+    "Keep actual115/frontier930",
+    "Prepare/grant exactly one V117 actual consumer930->920; no execution here"
+  ],
+  "frozen_configuration_refs": [
+    {
+      "file": "Q048_V116_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+      "sha256": "73bd857f5c6bfa252a0890eba992af2d99782f70db9d30c5b8dd5ec4d9b5d9ad"
+    },
+    {
+      "file": "Q048_V116_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+      "sha256": "dea21814361024ab00bde7aa0c9c44735624c6385e86775b2d55cd8a3dfa2c22"
+    }
+  ],
+  "open_material_uncertainties": [
+    "Source-correct actual consumer930->920 not yet executed",
+    "NativeP6 unresolved",
+    "Complete four-case xe/tau bounds unresolved"
+  ],
+  "missing_information": [
+    "Separate CASE ID/global shared core not documented; Q048 identity and standalone handoff unaffected"
+  ],
+  "next_task": {
+    "file": "Q048_V117_NEXT_BUILDER_TASK_V1.json",
+    "sha256": "e92c800fcf527cac1cc657c732ce998f12485e1b19e276521b16382d7cf3d629",
+    "task_id": "LOCAL-Q048-V117-SOURCE-CORRECT-ACTUAL-CONSUMER-930-920-V1",
+    "task_fingerprint": "1befbb323eea6f78d76783b307b2ddb8d00f704aa190638022bfeba7ed218fed"
+  },
+  "success_condition": "One validated and accepted source-correct reassessment actual116/frontier920, exactly one actual cell, zero proof cells, exact parent/theorem/row/schema/glue and postaccept PASS",
+  "failure_or_falsification_condition": "First material hash, parent/theorem/schema, source/reset/glue, endpoint, verifier or postaccept invariant failure; preserve it without retuning or historical relabel",
+  "stop_condition": "One accepted actual cell or first exact blocker; no below920; then one return to ingestion",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Complete four-case xe(z)/tau_T(z) bounds and NativeP6 remain unestablished; accepted theorem is not an actual consumer or full scientific answer",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": {
+    "routine_same_Q_bounded_consumer": "WITHIN_EXISTING_SCOPE",
+    "new_Q_or_model_promotion": "NOT_REQUESTED",
+    "paid_compute": "NOT_AUTHORIZED_OR_REQUESTED"
+  },
+  "output_file_refs": [
+    "Q048_V116_INGESTION_RESULT_V1.md",
+    "Q048_V116_INGESTION_STATE_V1.json",
+    "Q048_V116_INGESTION_EVIDENCE_AUDIT_V1.json",
+    "Q048_V116_INGESTION_HANDOFF_ENVELOPE_V1.json",
+    "Q048_V116_INGESTION_JOURNAL_APPEND_V1.md",
+    "Q047_SAMLET_JOURNAL_Q048_V116_INGESTED_SOURCE_CORRECT_V1.md",
+    "Q048_V116_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "Q048_V116_INGESTION_VALIDATION_V1.json",
+    "Q048_V116_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "Q048_V117_NEXT_BUILDER_TASK_V1.json",
+    "Q048_V117_HANDOFF_TO_BUILDER_SOURCE_CORRECT_ACTUAL_CONSUMER_V1.md"
+  ],
+  "output_manifest_ref": "Q048_V116_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "NOT_DOCUMENTED_SEPARATELY",
+    "base_commit_sha": "58b956cc2b05068a5636501261e0ae680f46734f",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V116_INGESTED_SOURCE_CORRECT_V1.md",
+    "current_state_path": "Q048_V116_INGESTION_STATE_V1.json",
+    "index_refs": [
+      "Q048_V116_INGESTION_GITHUB_MEMORY_UPDATE_V1.md"
+    ],
+    "cross_reference_refs": [
+      "Q048_V116_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "Q048_V117_NEXT_BUILDER_TASK_V1.json",
+      "Q048_V117_HANDOFF_TO_BUILDER_SOURCE_CORRECT_ACTUAL_CONSUMER_V1.md"
+    ],
+    "memory_update_ref": "Q048_V116_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "target_paths_status": "PROPOSED_NEW_FILES_UNDER_VERIFIED_ROOT_CONVENTION",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V116_INGESTION_GITHUB_MEMORY_UPDATE_V1.md"
+  },
+  "scientific_execution_in_ingestion": {
+    "new_actual_cells": 0,
+    "new_proof_cells": 0,
+    "historical_science_reruns": 0,
+    "next_task_dispatched": false
+  },
+  "authorization_distinction": {
+    "historical_math_record": "NOT_GRANTED_UNCHANGED",
+    "new_ingestion": "GRANTS_EXACTLY_ONE_V117_CONSUMER_930_TO_920"
+  }
+}
