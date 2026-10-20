@@ -1,0 +1,1347 @@
+{
+  "schema": "bubbleverse.q048.v120.ingestion.evidence_audit.v1",
+  "created_at_utc": "2026-10-20T14:52:22.356248+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "ingestion_event_id": "LOCAL-Q048-V120-SOURCE-CORRECT-PROOF-INGESTION-V1",
+  "idempotency_key": "6ad8a6918cfac0cee5493ec839a93bfd691cf7127e7dd79b1d285e6c6fd4e657",
+  "status": "PASS",
+  "checks_total": 46,
+  "checks_passed": 46,
+  "checks": {
+    "boundary_certificate_exact": true,
+    "boundary_source_pins": true,
+    "boundary_validators_and_controls": true,
+    "prefreeze_qualification": true,
+    "q_target_identity": true,
+    "question_exact_hash": true,
+    "repository_tree_complete": true,
+    "source_aliases_verified": true,
+    "all19_proof_files_remote_equivalent": true,
+    "old_manifest_sha256_pins": true,
+    "acceptance_is_proof": true,
+    "cell_identity": true,
+    "parent_pin": true,
+    "parent_validated": true,
+    "proof_parent_state": true,
+    "raw_pin": true,
+    "verifier_pin": true,
+    "postaccept_pin": true,
+    "spec_freeze_pins": true,
+    "all19_frozen_inputs": true,
+    "all5_frozen_code": true,
+    "verifier31_31": true,
+    "actual_mutations18_18": true,
+    "postaccept21_21": true,
+    "delivery35_35": true,
+    "execution_complete": true,
+    "one_proof_zero_actual": true,
+    "fresh_bounds_match_raw": true,
+    "correct_source": true,
+    "both_branches_admitted": true,
+    "mathematics_stop_preserved": true,
+    "history_and_claim_firewall": true,
+    "guard_source_hash": true,
+    "primary_row_hash": true,
+    "row_cell_glue": true,
+    "row_no_reset_committed": true,
+    "no_prior_receipt_marker": true,
+    "no_existing_ingestion_or_V121_in_repository": true,
+    "focused_library_no_prior_receipt_found": true,
+    "parent20_previous11_remote": true,
+    "ancestry20_pending_saved": true,
+    "source_audit_frozen": true,
+    "spec_freeze_and_execution_code": true,
+    "incoming_journal_prefix_preserved": true,
+    "non_no_op_mutation_policy": true,
+    "builder2_2_verified": true
+  },
+  "repository_byte_equivalence": {
+    "base_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+    "tree_sha": "4d163551f57e11d65234eddeebb9a1de30e05bf8",
+    "tree_retrieval": "Fresh complete recursive tree; untruncated",
+    "proof_files": [
+      {
+        "filename": "Q047_SAMLET_JOURNAL_Q048_V120_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "local_path": "v120_output/Q047_SAMLET_JOURNAL_Q048_V120_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "bytes": 14563100,
+        "sha256": "e966651e0cf64e2c1c66db3aebf5e9e723f9b39899f95d9d48477372cae3c020",
+        "git_blob_sha1": "ccb9b2adaf0041a903108dd00ee37a87c6144d17",
+        "repository_matches": [
+          "Q047_SAMLET_JOURNAL_Q048_V120_SOURCE_CORRECT_PROOF_APPENDED_V1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_1893c63e407c8191ba0a7495eeb5033b",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_HANDOFF_TO_INGESTION_V1.md",
+        "local_path": "v120_output/Q048_V120_HANDOFF_TO_INGESTION_V1.md",
+        "bytes": 8355,
+        "sha256": "15dc166917ea99c4184a5840cefe772d02cf0e77fe50350e651d582fd3e66dc0",
+        "git_blob_sha1": "7b580fce90b84eab71ba5895d4ad7573bdad958b",
+        "repository_matches": [
+          "Q048_V120_HANDOFF_TO_INGESTION_V1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_6247668b615c8191b905d821dadcf2b0",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "bytes": 2944,
+        "sha256": "9f3d2381f40bdd03f4bd692e72105fb4e3e02611e47772be2bab27dee7b0158f",
+        "git_blob_sha1": "8fed8ea6d466d7624aa2cfb219c8a43cbfcb8183",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_d501cf4e836c8191a3bc264b8f19969f",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_DELIVERY_VALIDATION_V1.json",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_DELIVERY_VALIDATION_V1.json",
+        "bytes": 1351,
+        "sha256": "069679b67c7286b815930d729152cd05eb597dedb93d362d911f2b9f7a300b63",
+        "git_blob_sha1": "174793a64e3e33e659ce52d81d356a76c8e4e0e0",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_DELIVERY_VALIDATION_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_3c1d7f6804688191a7eaf076c120af2c",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_EXECUTION_V1.json",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_EXECUTION_V1.json",
+        "bytes": 2875,
+        "sha256": "e5a9c23779884360de8b0b3bc83fbb9c2e3045b5c969f3c7030f5d44c79cf1be",
+        "git_blob_sha1": "54492edb2c00d87773c761f56eb50a3b6c38d008",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_EXECUTION_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_3d7f62042104819191da100eceff8c56",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+        "bytes": 4368,
+        "sha256": "57c70bc2bbbf4e9a2c41b09ada81c8b0382297e39bea4a4ef53121bd291ef27d",
+        "git_blob_sha1": "2916ef7cfdb76b41c465e519c00c681d4ebdffc7",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_2395aeb6e68481918edaf6f3130ae128",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_JOURNAL_APPEND_V1.md",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_JOURNAL_APPEND_V1.md",
+        "bytes": 3775,
+        "sha256": "9b085c575f4830b5a670cc7234ea9a783462453d5e4e3972a2f5402bd9754e69",
+        "git_blob_sha1": "f6beb192f7ea1bac4e9e35bf99565539b12b31f2",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_JOURNAL_APPEND_V1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_5b42cf69dad88191a22442a91ea03485",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+        "bytes": 921,
+        "sha256": "dae1aac830186e328669ad1dd82605290e2b7aedce330cd21c959ffea4cb0b06",
+        "git_blob_sha1": "fc4a266524a7f102a4315ae2cd41e0ce0ceeb0ca",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_8aa6a68b1b1881919c7c59d6541cadbf",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json",
+        "bytes": 27333,
+        "sha256": "3324b5801396dd5a7b13be99f8fe0e5e1d65b347711b535eb0f3ac9dc30804a0",
+        "git_blob_sha1": "89fdb4034e06fb15c85d28dffe12053f2f009d9c",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_0de30b80e47081919083c2bb5168dad5",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_RESULT_V1.md",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_RESULT_V1.md",
+        "bytes": 13569,
+        "sha256": "a180bf420217ca5e4e0df9cefbc4a905719939c3721b2d8ee614e8d274d73b64",
+        "git_blob_sha1": "0781353dd68dece738abcdbcc72996cc4f1440d9",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_RESULT_V1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_184ac1a3902881919f7c376ef4e1d7ae",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+        "bytes": 17854,
+        "sha256": "cd0a6cdb8b2c1ecb202a2fb9e6c5b73075ac958cf3ee705645b3ad24d749ed13",
+        "git_blob_sha1": "e93b342066a4d8ea510bf0e1999ec4663512a43c",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_8e98bc775d808191a66f2f89235de136",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+        "bytes": 5712,
+        "sha256": "e439c998684b9d047a5d78d909cfc30568a82ea9d21a074b1db9c4b74400460e",
+        "git_blob_sha1": "9cef154c2da5565fdf1f75d37ecf444d590ca5e7",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_0662a729b72881919b7695e0542892ab",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v120_accept.py",
+        "local_path": "v120_output/q048_v120_accept.py",
+        "bytes": 5148,
+        "sha256": "0b0c081fcb8775b289cb888059b4ae5302b2fbb92eee461a7350cd694719ebe8",
+        "git_blob_sha1": "50c06f46ec2fedfb186df188116646c7ba5c20b3",
+        "repository_matches": [
+          "q048_v120_accept.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_aedfd95fb4448191b051a51db8ab43a4",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v120_proof.py",
+        "local_path": "v120_output/q048_v120_proof.py",
+        "bytes": 10547,
+        "sha256": "466758d4176e70ee2c25a97611a30866fa6a6303b65681411b1c5ca9dfb46b94",
+        "git_blob_sha1": "3e9b8c77b8c368ef1f11058705564052f05e6605",
+        "repository_matches": [
+          "q048_v120_proof.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_4c0b018b67a4819181d25723f3798498",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v120_run.py",
+        "local_path": "v120_output/q048_v120_run.py",
+        "bytes": 6082,
+        "sha256": "d13be195efee68ca723b5a23a883a363d33547f072f736d1348460542f9d95b7",
+        "git_blob_sha1": "a22f1a61296d6526e5b27014e20f69ff34d05cda",
+        "repository_matches": [
+          "q048_v120_run.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_06e833fd2d9c8191b48a4f9b1619bbd7",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v120_verify.py",
+        "local_path": "v120_output/q048_v120_verify.py",
+        "bytes": 13244,
+        "sha256": "8288577f2d1bac0be891df486e2b8357ccc41cbb2096ac23ef9506e8b41efb65",
+        "git_blob_sha1": "9f909bedd9d3d60c52317e1beadbd9a7897e7f34",
+        "repository_matches": [
+          "q048_v120_verify.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_9d3f0312d03481919b462db64dd797a0",
+        "library_version": "0"
+      },
+      {
+        "filename": "test_q048_v120_binding.py",
+        "local_path": "v120_output/test_q048_v120_binding.py",
+        "bytes": 4111,
+        "sha256": "dc2918b4ced054c41bcdfd800d2793482c43b2a723d3f10ca3a6a9cd79baf1ea",
+        "git_blob_sha1": "30042585c0a382ee9cd883321b470c214e93dda8",
+        "repository_matches": [
+          "test_q048_v120_binding.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_91a90bab7858819186ec1c6fc95ce322",
+        "library_version": "0"
+      },
+      {
+        "filename": "v120_source_repository_equivalence.json",
+        "local_path": "v120_output/v120_source_repository_equivalence.json",
+        "bytes": 41011,
+        "sha256": "f4b4bdc36f80c68f6e342f9aabb9b58bf2c21364657e81b4224a51ba08ca718e",
+        "git_blob_sha1": "a88993eeb25895a01eaf14e4217f33332dc50f50",
+        "repository_matches": [
+          "v120_source_repository_equivalence.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_79e8521ee4e48191bade4fbe2a1a44b9",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_SOURCE_CORRECT_PROOF_OUTPUT_MANIFEST_V1.json",
+        "local_path": "v120_output/Q048_V120_SOURCE_CORRECT_PROOF_OUTPUT_MANIFEST_V1.json",
+        "bytes": 27884,
+        "sha256": "5d28ba2738e675d4bbba3d0ea7e5ab10d8a60a9cb1c47c09ef5e167837c2f5fd",
+        "git_blob_sha1": "255405f9dcea461fe71e2f4f74b787212494e3fa",
+        "repository_matches": [
+          "Q048_V120_SOURCE_CORRECT_PROOF_OUTPUT_MANIFEST_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_25661d08937c81918e13ddebf9cf4820",
+        "library_version": "0"
+      }
+    ],
+    "parent_files": [
+      {
+        "filename": "q048_v119_actual_consumer.py",
+        "local_path": "v119_output/q048_v119_actual_consumer.py",
+        "bytes": 7860,
+        "sha256": "ead959a315657002509934bfcfd494e496fa747dadd8f268de165e68ec3e4dc6",
+        "git_blob_sha1": "eeb10d3b42672672c427338319ae83411d7a5cc2",
+        "repository_matches": [
+          "q048_v119_actual_consumer.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_26db384e311881919b066a11d1b42240",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v119_verify.py",
+        "local_path": "v119_output/q048_v119_verify.py",
+        "bytes": 13357,
+        "sha256": "5ca3c734e05732c50e555d03bf9b6db48f22b4861051b359076d0950163566f8",
+        "git_blob_sha1": "b124c9c9732e32cb361e136cf19c18a8ed031ab2",
+        "repository_matches": [
+          "q048_v119_verify.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_b3118d49f8708191bae62c7c998ce910",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v119_accept.py",
+        "local_path": "v119_output/q048_v119_accept.py",
+        "bytes": 3130,
+        "sha256": "4a2541d8c7aedbd7aa8d45cf4c7573cdfa15aed2e4dd183fdade7c04574f6bde",
+        "git_blob_sha1": "adf536ad1e9476ddcc09b6a4cc9ed83dffb505b0",
+        "repository_matches": [
+          "q048_v119_accept.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_0ac417db2e848191b03b46f4493507de",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v119_postaccept.py",
+        "local_path": "v119_output/q048_v119_postaccept.py",
+        "bytes": 5554,
+        "sha256": "fcbb2427486e2d691e24b8d216a017c9973971e00d984596a77c618bf48a6e88",
+        "git_blob_sha1": "78d9041bacfa7fcb78c11b9209cd3aa0755e7039",
+        "repository_matches": [
+          "q048_v119_postaccept.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_02e9f2739bdc8191b3e21d9af7fa2293",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v119_run.py",
+        "local_path": "v119_output/q048_v119_run.py",
+        "bytes": 2963,
+        "sha256": "525202697dc0a72b99b95c6517e48a126324394246ef97dcc60a0059d18ad914",
+        "git_blob_sha1": "56519bd07e82b41e55a51430185baeb21ab894cf",
+        "repository_matches": [
+          "q048_v119_run.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_ec178723c59c81919b57c0b483d68835",
+        "library_version": "0"
+      },
+      {
+        "filename": "test_q048_v119_contract.py",
+        "local_path": "v119_output/test_q048_v119_contract.py",
+        "bytes": 5820,
+        "sha256": "6963485c916abd908577b90d917af239eba284cd76a43e9142eb105e20b7f610",
+        "git_blob_sha1": "7d4e2d3c457ccf1cb10eb8fd8a8c7486bfe0b0c3",
+        "repository_matches": [
+          "test_q048_v119_contract.py"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_39f6defc93e8819193dbe10db9eabd20",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+        "bytes": 14100,
+        "sha256": "e1d3625668227a3ed4f5cd75eaa341ffa779bb42b3bc95521f1582cb3d6a928f",
+        "git_blob_sha1": "4d065552ef03cb0023057e15fffa47f8c15625bc",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_702aac9ad5f08191a0eb15994f2f9ed3",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+        "bytes": 3203,
+        "sha256": "199adc4cac1377367bc96cce9dc53d57abe9aa94d8069a6833f8ef3cf1fd0723",
+        "git_blob_sha1": "e7f11490c3f0ef94d04ba9aeddf13bdf1a1ad42b",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_f659f009e0dc81918f700e7ff0f31772",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json",
+        "bytes": 4487,
+        "sha256": "fb2f04dc7d1475d722dcd318471121286ed072e8792eb969118914e5de541fa7",
+        "git_blob_sha1": "ab5a7e5fc30ca88afbeecfed4c840f7db18a5cbd",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_bf915b7890c48191b8488eee94acadf9",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json",
+        "bytes": 5221,
+        "sha256": "d855c6fe991c39b08658118a13ccd3182d6916a8a26b079a77d61144f425e1ce",
+        "git_blob_sha1": "5a07b1d28f0acf24b065acb73b942569df653b1d",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_c96866d962c08191b326b79349371d64",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "bytes": 2624,
+        "sha256": "b99025ea901930476d91d31a8ff3cbdbf1caadc86d4b92a44cd0bd4e5d63e8ae",
+        "git_blob_sha1": "356285770d4ad0c15fe4fdfcaf9e72dc951fe908",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_b575a2be23688191bc584782a1ab8779",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+        "bytes": 1653,
+        "sha256": "97c48a4002a3b59de898a258d5041bb43d77f4266298c9ed097b9686213f3010",
+        "git_blob_sha1": "20a8a713b254a13ff7d3419f4eba920d9c3b302e",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_eb057b4847988191a3171e7f2a246a5e",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_EXECUTION_V1.json",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_EXECUTION_V1.json",
+        "bytes": 3047,
+        "sha256": "33be364a2b44474304c288895603cd6f4b962ff133fa3da4faa7324867d6eec1",
+        "git_blob_sha1": "90e66b4dbcd59cb24b9edbddc61a4033dc0d87af",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_EXECUTION_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_49b3276c57f88191820f82773ef2b633",
+        "library_version": "0"
+      },
+      {
+        "filename": "v119_repository_equivalence.json",
+        "local_path": "v119_output/v119_repository_equivalence.json",
+        "bytes": 40900,
+        "sha256": "72f2eea4174da193dda6b2bcd860c16d47e5c82902fd8ba17e26a932bfc9b684",
+        "git_blob_sha1": "369af27e078804946687f7348ded4f0dd7aaaad6",
+        "repository_matches": [
+          "v119_repository_equivalence.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_93323aafd18c8191a02307957907b466",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_RESULT_V1.md",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_RESULT_V1.md",
+        "bytes": 9465,
+        "sha256": "526d2ebd7ec1a24e3680d21aacff8f5a454e4b99ff809f49e6a1b87bd0dad357",
+        "git_blob_sha1": "5ec26e96dac0249fef501b85d6761171cd4e99f0",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_RESULT_V1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_86e3f73b2074819189668e7c46f2d8a8",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_HANDOFF_TO_INGESTION_V1.md",
+        "local_path": "v119_output/Q048_V119_HANDOFF_TO_INGESTION_V1.md",
+        "bytes": 6120,
+        "sha256": "82ac37d99afd0edbf8ca9b4c838530fcde41e21d8682c397dd41b90d2dd315be",
+        "git_blob_sha1": "5b525ddf48e2cdcfe7fd4fb13cf7f847cfb4c43e",
+        "repository_matches": [
+          "Q048_V119_HANDOFF_TO_INGESTION_V1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_c034e79d86d88191b36513a746e213df",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q047_SAMLET_JOURNAL_Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "local_path": "v119_output/Q047_SAMLET_JOURNAL_Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "bytes": 14555427,
+        "sha256": "bd58460b654f1f21c034b8b1d7235d08fecf5b33a0f363f40ba08fe166e6107e",
+        "git_blob_sha1": "a5b0cef73e5751ed4ad58e91481deb1cbc676163",
+        "repository_matches": [
+          "Q047_SAMLET_JOURNAL_Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_2969212e6b0c8191a3e077f07baed809",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_JOURNAL_APPEND_V1.md",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_JOURNAL_APPEND_V1.md",
+        "bytes": 3427,
+        "sha256": "18790af0fe0b39322b9e98cac37ccfbe0d23fb15531d76195f3af6144d9344e0",
+        "git_blob_sha1": "c6f2c91044014061a74d24c7ea743379dc7cf009",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_JOURNAL_APPEND_V1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_76cdb14eb7b081919deb3aa9ebe73963",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_DELIVERY_VALIDATION_V1.json",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_DELIVERY_VALIDATION_V1.json",
+        "bytes": 1614,
+        "sha256": "407d19d5bb812d163d03933c28b3a6de8d51e677719f91b0e5108e2ab1a90ff6",
+        "git_blob_sha1": "1587cf5cfcb053f52fc10550dd3e40f1cf3f5dd8",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_DELIVERY_VALIDATION_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_89a5d6be9b3c819198cbca88d1ee3d44",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+        "local_path": "v119_output/Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+        "bytes": 27371,
+        "sha256": "0c7d3ba327acc941dfc31345f49dc8fc33c6d57845cfaed3dc895135dbb191da",
+        "git_blob_sha1": "a71116494b0230c705972830e41fb794c900faf9",
+        "repository_matches": [
+          "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_481ea7fb814481919958e323b16ec84a",
+        "library_version": "0"
+      }
+    ],
+    "previous_ingestion_files": [
+      {
+        "filename": "Q048_V119_INGESTION_RESULT_V1.md",
+        "local_path": "v119_ingestion_output/Q048_V119_INGESTION_RESULT_V1.md",
+        "bytes": 10124,
+        "sha256": "47edc430ac70ba33a85531ab99690f0112652e583207a8f7c7c4ec8c5336675e",
+        "git_blob_sha1": "499b3bf88861fcae709a6311c66101fc24880c85",
+        "repository_matches": [
+          "Q048_V119_INGESTION_RESULT_V1-1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_54e244c9d8788191a2cd4b2a6170ba73",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_INGESTION_STATE_V1.json",
+        "local_path": "v119_ingestion_output/Q048_V119_INGESTION_STATE_V1.json",
+        "bytes": 8413,
+        "sha256": "bc0c9f03904b722c6475e0106c808d5ab25caece1f2ec5da25e99834e46a297c",
+        "git_blob_sha1": "746e27d0c58a43effb1e0531a201fc6001ad52be",
+        "repository_matches": [
+          "Q048_V119_INGESTION_STATE_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_8060edad9dd8819199505974400c4984",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_INGESTION_EVIDENCE_AUDIT_V1.json",
+        "local_path": "v119_ingestion_output/Q048_V119_INGESTION_EVIDENCE_AUDIT_V1.json",
+        "bytes": 66992,
+        "sha256": "ea950a831b1adb1388115d7976340c623ed30c6da25804e058f43454e76bbf89",
+        "git_blob_sha1": "48149e27f4e35d3083b2fc3ade57c6a8f45a5647",
+        "repository_matches": [
+          "Q048_V119_INGESTION_EVIDENCE_AUDIT_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_b23fbb2fe89c8191b47a0a2552390f03",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_INGESTION_HANDOFF_ENVELOPE_V1.json",
+        "local_path": "v119_ingestion_output/Q048_V119_INGESTION_HANDOFF_ENVELOPE_V1.json",
+        "bytes": 9780,
+        "sha256": "6512421b23a31b79a348c940daa98bbed359015673e9d52e7c748ef6a34992d8",
+        "git_blob_sha1": "3790d5e176f75043cbf9482df590f44c02fac725",
+        "repository_matches": [
+          "Q048_V119_INGESTION_HANDOFF_ENVELOPE_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_07c051e1de0881919e29bf90201b335e",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+        "local_path": "v119_ingestion_output/Q048_V119_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+        "bytes": 4423,
+        "sha256": "0cb602639a816a8511974e86f58ae0081547f50141d9a6f22f981373fc0a6bd1",
+        "git_blob_sha1": "ac2cefe25b8121b388f1761c8b3cc2297ad0e632",
+        "repository_matches": [
+          "Q048_V119_INGESTION_GITHUB_MEMORY_UPDATE_V1-1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_8c3f374f35088191a950e797c9f671b7",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_INGESTION_JOURNAL_APPEND_V1.md",
+        "local_path": "v119_ingestion_output/Q048_V119_INGESTION_JOURNAL_APPEND_V1.md",
+        "bytes": 3898,
+        "sha256": "5c3cf9646dec4a507427d4fcc6705e51288627a7104de488f51810e085df77bd",
+        "git_blob_sha1": "302413d87364476444863696a07f1aaafeedceda",
+        "repository_matches": [
+          "Q048_V119_INGESTION_JOURNAL_APPEND_V1-1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_6bc5da81bca88191901a1c78988dcffa",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_INGESTION_VALIDATION_V1.json",
+        "local_path": "v119_ingestion_output/Q048_V119_INGESTION_VALIDATION_V1.json",
+        "bytes": 1574,
+        "sha256": "8e41f0a26d9e5413c6b70fcee8eb6f245cbfd0c282737973674ac9eca546afa6",
+        "git_blob_sha1": "c317cfbb4a4e2ad99bd89e0b16703fc6b9b98c13",
+        "repository_matches": [
+          "Q048_V119_INGESTION_VALIDATION_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_972dc6fabdb08191a80aeebf96e99a4d",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q047_SAMLET_JOURNAL_Q048_V119_INGESTED_SOURCE_CORRECT_V1.md",
+        "local_path": "v119_ingestion_output/Q047_SAMLET_JOURNAL_Q048_V119_INGESTED_SOURCE_CORRECT_V1.md",
+        "bytes": 14559325,
+        "sha256": "8776505f0b2b763d96755eed8006fddf9af61f13c5a1e0438d0290f4edc49556",
+        "git_blob_sha1": "1822ed080274c856b8e5210f751316301be1e454",
+        "repository_matches": [
+          "Q047_SAMLET_JOURNAL_Q048_V119_INGESTED_SOURCE_CORRECT_V1-1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_32a37db553ec8191b3e3ad986272db4c",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_NEXT_MATHEMATICS_TASK_V1.json",
+        "local_path": "v119_ingestion_output/Q048_V120_NEXT_MATHEMATICS_TASK_V1.json",
+        "bytes": 35869,
+        "sha256": "7b8bb1a5554bf0887d51d0a8c1d4d5936b7d34e851eee8677a685d5cf52928fa",
+        "git_blob_sha1": "4b3b7cc3417b1dbfaaa0b921c6eac4af33e6dbb0",
+        "repository_matches": [
+          "Q048_V120_NEXT_MATHEMATICS_TASK_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_e751870215388191bbc687caa8a07770",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V120_HANDOFF_TO_MATHEMATICS_SOURCE_CORRECT_PROOF_910_900_V1.md",
+        "local_path": "v119_ingestion_output/Q048_V120_HANDOFF_TO_MATHEMATICS_SOURCE_CORRECT_PROOF_910_900_V1.md",
+        "bytes": 7454,
+        "sha256": "78d4651cec9cc455a6b6c730ea5de5eb1b91faa4a8a1bf3c85b09fff00764871",
+        "git_blob_sha1": "e7760eb756ac37947613d809121ae11ae3ec4ca5",
+        "repository_matches": [
+          "Q048_V120_HANDOFF_TO_MATHEMATICS_SOURCE_CORRECT_PROOF_910_900_V1-1.md"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_898a1d59ef6881918b2441cc445c95fc",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V119_INGESTION_OUTPUT_MANIFEST_V1.json",
+        "local_path": "v119_ingestion_output/Q048_V119_INGESTION_OUTPUT_MANIFEST_V1.json",
+        "bytes": 20192,
+        "sha256": "631e22ec411ad27efc5b82108d3856486ce39287844403730b8e3ab550059ceb",
+        "git_blob_sha1": "9e25d3f5d6d5ecabb2a25a99f2521b9ef4be652f",
+        "repository_matches": [
+          "Q048_V119_INGESTION_OUTPUT_MANIFEST_V1.json"
+        ],
+        "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+        "library_file_id": "libfile_7afb22f8acec8191a437009f62340029",
+        "library_version": "0"
+      }
+    ],
+    "pending_ancestry_files": [
+      {
+        "filename": "Q047_SAMLET_JOURNAL_Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "local_path": "v115_output/Q047_SAMLET_JOURNAL_Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "bytes": 14528824,
+        "sha256": "2872e91fd10dd5295afe2624e6e8b9a3716ffa372f5dcc4c2764f20bfcea3aa3",
+        "git_blob_sha1": "2d6513d150f3f7e7e545e20efe4d11261180bddd",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_5face9fe9c788191a17da67e3f574b44",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_HANDOFF_TO_INGESTION_V1.md",
+        "local_path": "v115_output/Q048_V115_HANDOFF_TO_INGESTION_V1.md",
+        "bytes": 5322,
+        "sha256": "b6790581be0f6f844391001c1b1e2c13eb9607bd1afbd790367e0b47c0948377",
+        "git_blob_sha1": "a57778e747e48e1cec9b1bcb40e0f17e07070558",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_06931b084d1c8191ab247cc765632616",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "bytes": 2615,
+        "sha256": "0b69e1f1d37f213d833a23016e5bcbc9874bb0967584625828fcb5351a7e887a",
+        "git_blob_sha1": "bdfe9c1d255fdebd29dbcefa78964ebe229da80c",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_67cb086ce87081919ef581ff499e551f",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_DELIVERY_VALIDATION_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_DELIVERY_VALIDATION_V1.json",
+        "bytes": 1523,
+        "sha256": "acf6be7f5c951871d0df94a71566253803a74f48e7bd8f6dce1e30286eaac058",
+        "git_blob_sha1": "614242257220876869371d87730d63db8b6a4064",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_78614aafa5d0819184d5a7d1b5d90e2b",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_EXECUTION_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_EXECUTION_V1.json",
+        "bytes": 3044,
+        "sha256": "ddda2d17a85320a6a634b971273a9777aef9896e84d2743b8b1352f17d8a35a2",
+        "git_blob_sha1": "35449cd39e4e36981fd34762b126aabad7a3ffee",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_1bdf115f05bc8191883ea6b09be92973",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+        "bytes": 2899,
+        "sha256": "04dfd15015d276bcdec0c1eceae36a382a5c091481fee75a872511435eb96835",
+        "git_blob_sha1": "fdfec77e88706091445376b3c0df2bc32c52f14b",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_e3bfac6420e48191a9125edb1f081821",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_JOURNAL_APPEND_V1.md",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_JOURNAL_APPEND_V1.md",
+        "bytes": 3174,
+        "sha256": "2dbd63aa453a62affd3a393500a99cf74f026f996142b4b880237bb54bd700b1",
+        "git_blob_sha1": "ffab9120004ff4e6410c487a5506f977d7103828",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_9674d7c161e08191a7567bb9f24e1e0c",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+        "bytes": 1653,
+        "sha256": "091b165f05ed0ea6eba881fdf4263aa0d7161d0927bb30b8c7035f8cb6daddfb",
+        "git_blob_sha1": "8d24e1243258a0fcded24ad335a420563b288632",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_6835727ac9548191a9ae20081d5c59fb",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json",
+        "bytes": 4462,
+        "sha256": "c09d1c850da942a6cf7e1d66ef5d032b3be6cd8212bddb64797acb281353e341",
+        "git_blob_sha1": "ead96d4d66c90898d39fcb17d4491c4f38111c85",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_081925449ec8819191a42861a1a1ff9f",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RESULT_V1.md",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RESULT_V1.md",
+        "bytes": 11247,
+        "sha256": "af02ad7b9b970c0cb0c94e83e6be35d6836e6b0cdfe747b0e4d855db14ba7b6c",
+        "git_blob_sha1": "bf7e5b488cbab2350a8712b8b95a2657f9a644ff",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_ef3435cff41c819196831457df1d821d",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+        "bytes": 7032,
+        "sha256": "79df80f0b1c1d47e50418cca050b2e8a19ffcc25ce715e753277bace6f97b6cd",
+        "git_blob_sha1": "bb1a0a394f65c00c30b9fd83d57d9f22d990cfce",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_8fef8352141c819180fc90f50d2bf4a3",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json",
+        "bytes": 5221,
+        "sha256": "b29bd8531a6445af38e57ae062e0efa410d85e2b8b50454fc9572d9922409bb3",
+        "git_blob_sha1": "d61b7b548c7364dc92963ce743d65f5710d10277",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_95619668039881918b259c0bb6d0f292",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_accept.py",
+        "local_path": "v115_output/q048_v115_accept.py",
+        "bytes": 3130,
+        "sha256": "481b311e267552bfd67c0b3eba263d6164134b698e9496ca6ee58872546d946d",
+        "git_blob_sha1": "4959a390e5e1b05c786e45c4faec85fab0c8fe41",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_c4aaaa442e1881919bd0b5e31cf539cf",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_actual_consumer.py",
+        "local_path": "v115_output/q048_v115_actual_consumer.py",
+        "bytes": 7840,
+        "sha256": "629863945467da08eb243036d7765116a915652f1a3c7cf349bac9e1c97a00ae",
+        "git_blob_sha1": "a565db8392777ab4c0c4979d554cfd7219f6536c",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_790b8b0383448191ba6df551876c3866",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_postaccept.py",
+        "local_path": "v115_output/q048_v115_postaccept.py",
+        "bytes": 5554,
+        "sha256": "6690c757a6d5c08f9edbc476cabb409aaaa3832386ceece30f13afbc7519e09c",
+        "git_blob_sha1": "0600d96ffe6b4650f0981a4fa4d28dcebb5d9163",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_928ca42c0e5c81918333ed07b61974ac",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_run.py",
+        "local_path": "v115_output/q048_v115_run.py",
+        "bytes": 2963,
+        "sha256": "48ef8f3979dff7246ff8c5378debf9864893a09fddc96146703ba9d58f19cfee",
+        "git_blob_sha1": "3a4463a6e147469f0b79b7f5cf2660a4ae732bc0",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_b6ff770f87388191bafe4e2e5d796ba6",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_verify.py",
+        "local_path": "v115_output/q048_v115_verify.py",
+        "bytes": 13348,
+        "sha256": "bd45b82a784e3ac32db9e984baad3b625db689a96294c402dfd20cb771eed97e",
+        "git_blob_sha1": "db674f5b1719ed9470125dab8cd2f1167436af73",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_44b50939ca7c8191bc4c349b9dde9e3b",
+        "library_version": "0"
+      },
+      {
+        "filename": "test_q048_v115_contract.py",
+        "local_path": "v115_output/test_q048_v115_contract.py",
+        "bytes": 5736,
+        "sha256": "ef3f1cc7b848a9b60d6e504c14bf3d4a5ee3606dc0d90bb6b00349a93957cda1",
+        "git_blob_sha1": "d4d45f1c695ca3cc13c91355c2ddfaa8b3d3844d",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_74fb029167348191b253311309802eb8",
+        "library_version": "0"
+      },
+      {
+        "filename": "v115_repository_equivalence.json",
+        "local_path": "v115_output/v115_repository_equivalence.json",
+        "bytes": 17934,
+        "sha256": "8fa14d2c7c9942f557b67e9fbe8731d1c6cd521c77b7650c603a131c40fea903",
+        "git_blob_sha1": "1a0e8f2544cfaef81e6e3123492ad1cf5aa8a422",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_1d603d23ea04819181a6eedb69ef9f0b",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+        "bytes": 11116,
+        "sha256": "61be501f5eb534bdcda837bf219f36e6e719a8e7bd45e0e1735edf9e659d4915",
+        "git_blob_sha1": "fb835bab6d1a63d7c28b11797478b88d7ea64f47",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_75ad3413e0b08191a389ad1ae53e4d6f",
+        "library_version": "0"
+      }
+    ],
+    "repository_metadata": [
+      {
+        "filename": "README.md",
+        "bytes": 78113,
+        "sha256": "1e9832aa8198352f98f476d5467079fd6c1f47d590055f2f515c512617740d84",
+        "git_blob_sha1": "2173509d5202baa5e4aa0ee1964878d3d7a8461f",
+        "access": "UNCHANGED_EXACT_LOCAL_BYTES_REUSED"
+      },
+      {
+        "filename": "bubbleverse_program_registry.json",
+        "bytes": 116275,
+        "sha256": "f78e8bff6112dfc1de27d9cb5098813bc7f26adccf22e9a82528098cd6e9b359",
+        "git_blob_sha1": "4620a0565e686ef29716d30039725946b1c62e37",
+        "access": "UNCHANGED_EXACT_LOCAL_BYTES_REUSED"
+      }
+    ],
+    "duplicate_upload_aliases": [],
+    "status": "PASS;50_CURRENT_SOURCE_FILES_GITHUB_BYTE_VERIFIED;20_V115_ORIGINALS_SAVED_LOCAL_VERIFIED_UPLOAD_PENDING"
+  },
+  "source_checkpoint": {
+    "record": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "b99025ea901930476d91d31a8ff3cbdbf1caadc86d4b92a44cd0bd4e5d63e8ae"
+  },
+  "origin": "INTERNAL/AI_ASSISTED; file identity and existing output status OBSERVED; mathematical applicability INFERRED under frozen premises",
+  "scientific_tests_reused": {
+    "verification": "31/31 PASS;18/18 real semantic mutations rejected",
+    "postaccept": "21/21 PASS",
+    "delivery": "35/35 PASS",
+    "new_scientific_reruns_in_ingestion": 0
+  },
+  "duplicate_assessment": {
+    "journal": "No ingestion receipt marker in full V120 producer journal",
+    "repository": "Complete pinned tree has no V120 ingestion/V121 target",
+    "library": "No exact-target prior packet returned; unrelated fuzzy title candidates excluded without opening the files; not global nonexistence evidence",
+    "classification": "NEW_INGESTION_OF_EXISTING_PROOF_RESULT; upload is not independent evidence",
+    "focused_search_result": {
+      "api_tool_source": "files/search",
+      "results": [],
+      "retrieval_title_results": [
+        {
+          "read_locator": {
+            "file_id": null,
+            "version_id": null,
+            "content_location": "sediment://9327971a36e5944#file_0000000000b481f4b39f944c4711c040#full_text?version=2",
+            "document_chunk_id": "file_0000000000b481f4b39f944c4711c040--1--3",
+            "page_number": null,
+            "anchor_text": null
+          },
+          "result_index": 0,
+          "result_id": "library-retrieval-title:libfile_48df0f3c8d188191973ee1063e833a7a:0",
+          "file_id": "file_0000000000b481f4b39f944c4711c040",
+          "version_id": null,
+          "library_file_id": "libfile_48df0f3c8d188191973ee1063e833a7a",
+          "name": "Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+          "mime_type": "application/json",
+          "score": 0.03278688524590164,
+          "snippets": [],
+          "locators": [
+            {
+              "file_id": null,
+              "version_id": null,
+              "content_location": null,
+              "document_chunk_id": "file_0000000000b481f4b39f944c4711c040--1--3",
+              "page_number": null,
+              "anchor_text": null
+            }
+          ],
+          "document_chunk_id": "file_0000000000b481f4b39f944c4711c040--1--3",
+          "created_at": "2026-10-19T09:29:08.628592Z",
+          "modified_at": "2026-10-19T09:29:08.628592Z",
+          "size_bytes": 7225,
+          "image_taken_at": null,
+          "image_location": null,
+          "surface": "library",
+          "metadata": {
+            "id": "file_0000000000b481f4b39f944c4711c040",
+            "kind": "file",
+            "name": "Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+            "path": "/Q048_MOVING_H_DOMAIN_V90_INGESTION_STATE_V1.json",
+            "file_id": "file_0000000000b481f4b39f944c4711c040",
+            "library_file_id": "libfile_48df0f3c8d188191973ee1063e833a7a",
+            "library_artifact_type": "other",
+            "version_id": null,
+            "mime_type": "application/json",
+            "size_bytes": 7225,
+            "created_at": "2026-10-19T09:29:08.628592Z",
+            "modified_at": "2026-10-19T09:29:08.628592Z",
+            "model_generated": true,
+            "surface": "library"
+          },
+          "match_source": "retrieval_title"
+        },
+        {
+          "read_locator": {
+            "file_id": null,
+            "version_id": null,
+            "content_location": "sediment://fded66cd926da7a#file_00000000e39c81f5bb4f973ecee83614#full_text?version=2",
+            "document_chunk_id": "file_00000000e39c81f5bb4f973ecee83614--1--80",
+            "page_number": null,
+            "anchor_text": null
+          },
+          "result_index": 1,
+          "result_id": "library-retrieval-title:libfile_4b7a17db79788191ba237cb5533186b7:1",
+          "file_id": "file_00000000e39c81f5bb4f973ecee83614",
+          "version_id": null,
+          "library_file_id": "libfile_4b7a17db79788191ba237cb5533186b7",
+          "name": "Q048_V96_FULL_RECOVERY_SEARCH_AUDIT_V1.json",
+          "mime_type": "application/json",
+          "score": 0.03278688524590164,
+          "snippets": [],
+          "locators": [
+            {
+              "file_id": null,
+              "version_id": null,
+              "content_location": null,
+              "document_chunk_id": "file_00000000e39c81f5bb4f973ecee83614--1--80",
+              "page_number": null,
+              "anchor_text": null
+            }
+          ],
+          "document_chunk_id": "file_00000000e39c81f5bb4f973ecee83614--1--80",
+          "created_at": "2026-10-19T16:50:20.863625Z",
+          "modified_at": "2026-10-19T16:50:20.863625Z",
+          "size_bytes": 385916,
+          "image_taken_at": null,
+          "image_location": null,
+          "surface": "library",
+          "metadata": {
+            "id": "file_00000000e39c81f5bb4f973ecee83614",
+            "kind": "file",
+            "name": "Q048_V96_FULL_RECOVERY_SEARCH_AUDIT_V1.json",
+            "path": "/Q048_V96_FULL_RECOVERY_SEARCH_AUDIT_V1.json",
+            "file_id": "file_00000000e39c81f5bb4f973ecee83614",
+            "library_file_id": "libfile_4b7a17db79788191ba237cb5533186b7",
+            "library_artifact_type": "other",
+            "version_id": null,
+            "mime_type": "application/json",
+            "size_bytes": 385916,
+            "created_at": "2026-10-19T16:50:20.863625Z",
+            "modified_at": "2026-10-19T16:50:20.863625Z",
+            "model_generated": true,
+            "surface": "library"
+          },
+          "match_source": "retrieval_title"
+        },
+        {
+          "read_locator": {
+            "file_id": null,
+            "version_id": null,
+            "content_location": "sediment://9b7193269b40b63#file_00000000e27481f59f9803779b560c8b#full_text?version=2",
+            "document_chunk_id": "file_00000000e27481f59f9803779b560c8b--1--93",
+            "page_number": null,
+            "anchor_text": null
+          },
+          "result_index": 2,
+          "result_id": "library-retrieval-title:libfile_e136a4b6f6808191b09321128ddfbbdb:2",
+          "file_id": "file_00000000e27481f59f9803779b560c8b",
+          "version_id": null,
+          "library_file_id": "libfile_e136a4b6f6808191b09321128ddfbbdb",
+          "name": "Q048_V96_FULL_RECOVERY_RECEIPT_V1.json",
+          "mime_type": "application/json",
+          "score": 0.03278688524590164,
+          "snippets": [],
+          "locators": [
+            {
+              "file_id": null,
+              "version_id": null,
+              "content_location": null,
+              "document_chunk_id": "file_00000000e27481f59f9803779b560c8b--1--93",
+              "page_number": null,
+              "anchor_text": null
+            }
+          ],
+          "document_chunk_id": "file_00000000e27481f59f9803779b560c8b--1--93",
+          "created_at": "2026-10-19T16:50:20.846633Z",
+          "modified_at": "2026-10-19T16:50:20.846633Z",
+          "size_bytes": 126277,
+          "image_taken_at": null,
+          "image_location": null,
+          "surface": "library",
+          "metadata": {
+            "id": "file_00000000e27481f59f9803779b560c8b",
+            "kind": "file",
+            "name": "Q048_V96_FULL_RECOVERY_RECEIPT_V1.json",
+            "path": "/Q048_V96_FULL_RECOVERY_RECEIPT_V1.json",
+            "file_id": "file_00000000e27481f59f9803779b560c8b",
+            "library_file_id": "libfile_e136a4b6f6808191b09321128ddfbbdb",
+            "library_artifact_type": "other",
+            "version_id": null,
+            "mime_type": "application/json",
+            "size_bytes": 126277,
+            "created_at": "2026-10-19T16:50:20.846633Z",
+            "modified_at": "2026-10-19T16:50:20.846633Z",
+            "model_generated": true,
+            "surface": "library"
+          },
+          "match_source": "retrieval_title"
+        },
+        {
+          "read_locator": {
+            "file_id": null,
+            "version_id": null,
+            "content_location": "sediment://746e20268078864#file_00000000ce8c81f48db70d1cd3f828ea#full_text?version=2",
+            "document_chunk_id": "file_00000000ce8c81f48db70d1cd3f828ea--1--369",
+            "page_number": null,
+            "anchor_text": null
+          },
+          "result_index": 3,
+          "result_id": "library-retrieval-title:libfile_4b18be6658848191bf51c2fd7c1e9343:3",
+          "file_id": "file_00000000ce8c81f48db70d1cd3f828ea",
+          "version_id": null,
+          "library_file_id": "libfile_4b18be6658848191bf51c2fd7c1e9343",
+          "name": "q048_frec_moving_h_spec_v87.json",
+          "mime_type": "application/json",
+          "score": 0.03278688524590164,
+          "snippets": [],
+          "locators": [
+            {
+              "file_id": null,
+              "version_id": null,
+              "content_location": null,
+              "document_chunk_id": "file_00000000ce8c81f48db70d1cd3f828ea--1--369",
+              "page_number": null,
+              "anchor_text": null
+            }
+          ],
+          "document_chunk_id": "file_00000000ce8c81f48db70d1cd3f828ea--1--369",
+          "created_at": "2026-10-19T05:57:52.069580Z",
+          "modified_at": "2026-10-19T05:57:52.069580Z",
+          "size_bytes": 1080266,
+          "image_taken_at": null,
+          "image_location": null,
+          "surface": "library",
+          "metadata": {
+            "id": "file_00000000ce8c81f48db70d1cd3f828ea",
+            "kind": "file",
+            "name": "q048_frec_moving_h_spec_v87.json",
+            "path": "/q048_frec_moving_h_spec_v87.json",
+            "file_id": "file_00000000ce8c81f48db70d1cd3f828ea",
+            "library_file_id": "libfile_4b18be6658848191bf51c2fd7c1e9343",
+            "library_artifact_type": "other",
+            "version_id": null,
+            "mime_type": "application/json",
+            "size_bytes": 1080266,
+            "created_at": "2026-10-19T05:57:52.069580Z",
+            "modified_at": "2026-10-19T05:57:52.069580Z",
+            "model_generated": true,
+            "surface": "library"
+          },
+          "match_source": "retrieval_title"
+        },
+        {
+          "read_locator": {
+            "file_id": null,
+            "version_id": null,
+            "content_location": "sediment://bba3bd399ec1a2b#file_0000000020d48243849d9fd5283f757b#full_text?version=2",
+            "document_chunk_id": "file_0000000020d48243849d9fd5283f757b--1--9",
+            "page_number": null,
+            "anchor_text": null
+          },
+          "result_index": 4,
+          "result_id": "library-retrieval-title:libfile_14ebaf8f720c81918cda20fe77f34235:4",
+          "file_id": "file_0000000020d48243849d9fd5283f757b",
+          "version_id": null,
+          "library_file_id": "libfile_14ebaf8f720c81918cda20fe77f34235",
+          "name": "Q048_V114_SOURCE_CORRECT_PROOF_OUTPUT_MANIFEST_V1.json",
+          "mime_type": "application/json",
+          "score": 0.03278688524590164,
+          "snippets": [],
+          "locators": [
+            {
+              "file_id": null,
+              "version_id": null,
+              "content_location": null,
+              "document_chunk_id": "file_0000000020d48243849d9fd5283f757b--1--9",
+              "page_number": null,
+              "anchor_text": null
+            }
+          ],
+          "document_chunk_id": "file_0000000020d48243849d9fd5283f757b--1--9",
+          "created_at": "2026-10-20T07:37:01.886670Z",
+          "modified_at": "2026-10-20T07:37:01.886670Z",
+          "size_bytes": 14769,
+          "image_taken_at": null,
+          "image_location": null,
+          "surface": "library",
+          "metadata": {
+            "id": "file_0000000020d48243849d9fd5283f757b",
+            "kind": "file",
+            "name": "Q048_V114_SOURCE_CORRECT_PROOF_OUTPUT_MANIFEST_V1.json",
+            "path": "/Q048_V114_SOURCE_CORRECT_PROOF_OUTPUT_MANIFEST_V1.json",
+            "file_id": "file_0000000020d48243849d9fd5283f757b",
+            "library_file_id": "libfile_14ebaf8f720c81918cda20fe77f34235",
+            "library_artifact_type": "other",
+            "version_id": null,
+            "mime_type": "application/json",
+            "size_bytes": 14769,
+            "created_at": "2026-10-20T07:37:01.886670Z",
+            "modified_at": "2026-10-20T07:37:01.886670Z",
+            "model_generated": true,
+            "surface": "library"
+          },
+          "match_source": "retrieval_title"
+        }
+      ],
+      "next_cursor": null,
+      "warnings": [
+        "retrieval_title_results are first-page supplemental candidates only."
+      ],
+      "external_connectors_accessed": false
+    }
+  },
+  "claim_map": [
+    {
+      "claim": "One new source-correct proof910->900 accepted on V119",
+      "role": "SUPPORTS",
+      "evidence": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json",
+        "Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+        "Q048_V120_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json"
+      ],
+      "limit": "Exact conditional cell, shared physical/helpers, no native trajectory or empirical replication"
+    },
+    {
+      "claim": "Actual reassessment frontier",
+      "role": "LEAVES_UNCHANGED",
+      "evidence": [
+        "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json"
+      ],
+      "value": "117/frontier910; no actual118 yet"
+    },
+    {
+      "claim": "Full four-case xe/tau and NativeP6",
+      "role": "LIMITS",
+      "evidence": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_RESULT_V1.md",
+        "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json"
+      ],
+      "value": "UNRESOLVED"
+    },
+    {
+      "claim": "Potential next endpoint from guard row54",
+      "role": "CONTEXT",
+      "evidence": [
+        "Q048_V121_NEXT_BUILDER_TASK_V1.json",
+        "q048_guard_local_v_result_v12.json"
+      ],
+      "limit": "Expected endpoint cross-check only, not accepted actual authority"
+    },
+    {
+      "claim": "Endpoint900 source dispatch qualification",
+      "role": "SUPPORTS",
+      "evidence": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json",
+        "Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+        "Q048_V120_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+        "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json"
+      ],
+      "limit": "z>=900 for this captured source/domain only;no below900 extension"
+    }
+  ],
+  "source_register_and_history": "Preserved full incoming journal and source/code/spec manifests; stable source/claim IDs unchanged; no new external source IDs",
+  "anomaly": "NONE_IDENTIFIED_WITHIN_INGESTION_CHECK_SCOPE",
+  "independence_limit": "Separate mathematics verifier used shared physical/helper inputs; ingestion does not rerun or create independent support",
+  "capability_and_failure_notes": [
+    "GitHub source reads verified at current base",
+    "Earlier same-session create-branch403; unchanged access not retried",
+    "No external papers/search needed for this mechanical authority transition"
+  ],
+  "source_boundary_contract": {
+    "source_function": "rec_dxHIIdlna",
+    "source_predicate": "if (z < 900.)",
+    "boundary": "z>=900",
+    "cell_z": [
+      910,
+      900
+    ],
+    "cell_a": [
+      "1/911",
+      "1/901"
+    ],
+    "certificate": {
+      "z_min": "900",
+      "z_max": "910",
+      "low_z_branch_active_anywhere": false,
+      "Pion": "1",
+      "PION_MAX": "1/100",
+      "dispatch": "SWIFT_FIT_SUBJECT_TO_OTHER_DOMAIN_GATES",
+      "boundary": "z>=900",
+      "hydrogen_c_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+      "hydrogen_h_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+    },
+    "certificate_sha256": "f2b2d34f02801d225c40587c115ef85e2e97241084deb4d21b684eb3ddffb098",
+    "requirements": "Bind exact certificate from accepted V120 and raw; require verifier/postaccept source_boundary_certificate checks; endpoint900 is included, below900 is forbidden; consume existing proof without recomputation",
+    "legacy_methods": "V119 method files are READ_ONLY; adapt previous 30/16/20 proof-record assumptions to V120 31/18/21 plus boundary certificate before freezing new V121 code; never edit or replay historical programs"
+  },
+  "proof_validation_requirements": {
+    "verification_checks": 31,
+    "semantic_mutations_rejected": 18,
+    "postaccept_checks": 21,
+    "delivery_checks": 35,
+    "preflight_binding_tests": 5
+  }
+}

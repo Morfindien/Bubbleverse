@@ -1,0 +1,866 @@
+{
+  "schema": "bubbleverse.q048.v121.next_builder_task.v1",
+  "created_at_utc": "2026-10-20T14:52:22.356248+00:00",
+  "q": "Q048",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "case_id": "NOT_DOCUMENTED_SEPARATELY_FROM_Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-V121-SOURCE-CORRECT-ACTUAL-CONSUMER-910-900-V1",
+  "task_fingerprint": "781f560ae5a913bedd6d0305552cdc4f36dc79ab8f7af99299a544337c2abd44",
+  "task_definition_for_fingerprint": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "task_id": "LOCAL-Q048-V121-SOURCE-CORRECT-ACTUAL-CONSUMER-910-900-V1",
+    "objective": "Exactly one source-correct actual consumer910->900",
+    "parent_sha256": "b99025ea901930476d91d31a8ff3cbdbf1caadc86d4b92a44cd0bd4e5d63e8ae",
+    "theorem_acceptance_sha256": "9f3d2381f40bdd03f4bd692e72105fb4e3e02611e47772be2bab27dee7b0158f",
+    "theorem_raw_sha256": "3324b5801396dd5a7b13be99f8fe0e5e1d65b347711b535eb0f3ac9dc30804a0",
+    "theorem_verification_sha256": "e439c998684b9d047a5d78d909cfc30568a82ea9d21a074b1db9c4b74400460e",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row54_sha256": "448ae715d15903d6bf77750ba62c673fde3d7422e6bd626a76f0062c037329ec",
+    "cell_z": [
+      910,
+      900
+    ],
+    "cell_a": [
+      "1/911",
+      "1/901"
+    ],
+    "max_new_actual_cells": 1,
+    "max_new_proof_cells": 0,
+    "criteria": "Exact parent/theorem/source/no-reset glue; canonical endpoint/bounds; separate validation and postaccept; stop900 then return once; 300 science seconds, zero retries, no postfreeze edits",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "theorem_postaccept_sha256": "dae1aac830186e328669ad1dd82605290e2b7aedce330cd21c959ffea4cb0b06",
+    "theorem_spec_sha256": "cd0a6cdb8b2c1ecb202a2fb9e6c5b73075ac958cf3ee705645b3ad24d749ed13",
+    "theorem_freeze_sha256": "57c70bc2bbbf4e9a2c41b09ada81c8b0382297e39bea4a4ef53121bd291ef27d",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "method_reference_hashes": {
+      "q048_v119_actual_consumer.py": "ead959a315657002509934bfcfd494e496fa747dadd8f268de165e68ec3e4dc6",
+      "q048_v119_verify.py": "5ca3c734e05732c50e555d03bf9b6db48f22b4861051b359076d0950163566f8",
+      "q048_v119_accept.py": "4a2541d8c7aedbd7aa8d45cf4c7573cdfa15aed2e4dd183fdade7c04574f6bde",
+      "q048_v119_postaccept.py": "fcbb2427486e2d691e24b8d216a017c9973971e00d984596a77c618bf48a6e88",
+      "q048_v119_run.py": "525202697dc0a72b99b95c6517e48a126324394246ef97dcc60a0059d18ad914",
+      "test_q048_v119_contract.py": "6963485c916abd908577b90d917af239eba284cd76a43e9142eb105e20b7f610",
+      "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json": "e1d3625668227a3ed4f5cd75eaa341ffa779bb42b3bc95521f1582cb3d6a928f",
+      "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json": "199adc4cac1377367bc96cce9dc53d57abe9aa94d8069a6833f8ef3cf1fd0723"
+    },
+    "new_code_identity": "NOT_YET_FROZEN; Builder must version and freeze V121 source/spec before admission",
+    "science_budget_seconds": 300,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false,
+    "source_boundary_contract": {
+      "source_function": "rec_dxHIIdlna",
+      "source_predicate": "if (z < 900.)",
+      "boundary": "z>=900",
+      "cell_z": [
+        910,
+        900
+      ],
+      "cell_a": [
+        "1/911",
+        "1/901"
+      ],
+      "certificate": {
+        "z_min": "900",
+        "z_max": "910",
+        "low_z_branch_active_anywhere": false,
+        "Pion": "1",
+        "PION_MAX": "1/100",
+        "dispatch": "SWIFT_FIT_SUBJECT_TO_OTHER_DOMAIN_GATES",
+        "boundary": "z>=900",
+        "hydrogen_c_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+        "hydrogen_h_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+      },
+      "certificate_sha256": "f2b2d34f02801d225c40587c115ef85e2e97241084deb4d21b684eb3ddffb098",
+      "requirements": "Bind exact certificate from accepted V120 and raw; require verifier/postaccept source_boundary_certificate checks; endpoint900 is included, below900 is forbidden; consume existing proof without recomputation",
+      "legacy_methods": "V119 method files are READ_ONLY; adapt previous 30/16/20 proof-record assumptions to V120 31/18/21 plus boundary certificate before freezing new V121 code; never edit or replay historical programs"
+    },
+    "proof_validation_requirements": {
+      "verification_checks": 31,
+      "semantic_mutations_rejected": 18,
+      "postaccept_checks": 21,
+      "delivery_checks": 35,
+      "preflight_binding_tests": 5
+    },
+    "mandatory_boundary_negative_controls": [
+      "missing source_boundary_certificate",
+      "changed certificate boundary or source hash",
+      "certificate z_min below900",
+      "certificate/cell_z/cell_a mismatch",
+      "wrong proof verification31/mutation18/postaccept21 counts"
+    ]
+  },
+  "selected_engine": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+    "role": "Bounded actual-consumer admission with source/theorem/parent binding and separate validation; choose smallest sufficient compute mechanism"
+  },
+  "status": "PREPARED_NOT_EXECUTED",
+  "objective": "Exactly one new source-correct reassessment-lineage actual consumer910->900; expected actual118/frontier900 only after validation/acceptance",
+  "parent_authority": {
+    "record": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "b99025ea901930476d91d31a8ff3cbdbf1caadc86d4b92a44cd0bd4e5d63e8ae",
+    "accepted_actual": {
+      "count": 117,
+      "frontier": 910
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 910
+    },
+    "endpoint": {
+      "a": "1/911",
+      "E": "41553114742782417797/1000000000000000000",
+      "Y": "33016542108247500469/1000000000000000000",
+      "Vbar": "8180882108095962439/1000000000000000000"
+    },
+    "connected_lower": "426269669916063/1000000000000000000",
+    "K_upper": "1202814173580219054419/250000000000000000",
+    "correct_saha_fact": "3.016103031869581e21",
+    "repository_relative_paths": [
+      "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+    ],
+    "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+    "library_file_id": "libfile_b575a2be23688191bc584782a1ab8779",
+    "source_sync": "GITHUB_BYTE_VERIFIED"
+  },
+  "theorem_authority": {
+    "record": "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+    "sha256": "9f3d2381f40bdd03f4bd692e72105fb4e3e02611e47772be2bab27dee7b0158f",
+    "schema": "bubbleverse.q048.v120.source_correct_proof.acceptance.v1",
+    "raw_record": "Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json",
+    "raw_sha256": "3324b5801396dd5a7b13be99f8fe0e5e1d65b347711b535eb0f3ac9dc30804a0",
+    "verification_record": "Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+    "verification_sha256": "e439c998684b9d047a5d78d909cfc30568a82ea9d21a074b1db9c4b74400460e",
+    "postaccept_record": "Q048_V120_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+    "postaccept_sha256": "dae1aac830186e328669ad1dd82605290e2b7aedce330cd21c959ffea4cb0b06",
+    "spec_record": "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+    "spec_sha256": "cd0a6cdb8b2c1ecb202a2fb9e6c5b73075ac958cf3ee705645b3ad24d749ed13",
+    "freeze_record": "Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+    "freeze_sha256": "57c70bc2bbbf4e9a2c41b09ada81c8b0382297e39bea4a4ef53121bd291ef27d",
+    "proof_cell_z": [
+      910,
+      900
+    ],
+    "proof_cell_a": [
+      "1/911",
+      "1/901"
+    ],
+    "K_upper": "1184837959588125278027/250000000000000000",
+    "connected_lower": "83379887432219/200000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "source_saha_factor": "3.016103031869581e21",
+    "historical_math_consumer_authorization": "NOT_GRANTED_PRESERVED",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "source_boundary_certificate": {
+      "z_min": "900",
+      "z_max": "910",
+      "low_z_branch_active_anywhere": false,
+      "Pion": "1",
+      "PION_MAX": "1/100",
+      "dispatch": "SWIFT_FIT_SUBJECT_TO_OTHER_DOMAIN_GATES",
+      "boundary": "z>=900",
+      "hydrogen_c_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+      "hydrogen_h_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+    },
+    "validation_requirements": {
+      "verification_checks": 31,
+      "semantic_mutations_rejected": 18,
+      "postaccept_checks": 21,
+      "delivery_checks": 35,
+      "preflight_binding_tests": 5
+    }
+  },
+  "theorem_schema_binding_note": "V120 is a fresh-proof acceptance, not V108 bridge schema. Bind proof_cell_z/proof_cell_a, parent_checkpoint_sha256 and flat K_upper/connected_lower explicitly. Do not assume proof_bridge_cell or retained_theorem fields exist.",
+  "guard": {
+    "source_record": "q048_guard_local_v_result_v12.json",
+    "source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+    "primary_index": 54,
+    "primary_row_sha256": "448ae715d15903d6bf77750ba62c673fde3d7422e6bd626a76f0062c037329ec",
+    "primary": {
+      "a0": "1/911",
+      "a1": "1/901",
+      "z0": 910,
+      "z1": 900,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "15523030507507252959/1000000000000000000",
+        "H_upper_left": "541978493958359709/100000000000000000",
+        "X_upper_left": "4558130907662833777/500000000000000000",
+        "V_candidate_upper": "3944736412871797407/500000000000000000",
+        "retained_Vbar": "8180882108095962439/1000000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "41553114742782417797/1000000000000000000",
+      "Y_left": "33016542108247500469/1000000000000000000",
+      "V_previous": "8180882108095962439/1000000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "8249807098326424229/200000000000000000",
+      "V_local": "3944736412871797407/500000000000000000",
+      "V_admitted": "3944736412871797407/500000000000000000",
+      "equilibrium_upper": "4390663137805131027/1000000000000000000",
+      "amplitude": "14312939485221184721/500000000000000000",
+      "constant_energy_part": "290332599987364289157/23000000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "59858042039175429/62500000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "16580583896522760881/500000000000000000",
+      "raw_G_lower": "1699288486247968632676227369919502708490147478867805684295177540776615115655521324593657349831570825602357996180455637001633/357451076169534149049180990855527478822202858385593671910333483391958388477758363664384000000000000000000000000000000000000",
+      "G_lower": "37139883424258531/7812500000000000",
+      "Y_right_candidate": "1987905512933907887/62500000000000000",
+      "E_right_candidate": "10009745397581786717/250000000000000000",
+      "endpoint_energy_envelope": "10009745397581786717/250000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "901/911",
+      "R_at_left": "3424223687715855678157472034033571865228259779744412292454915212973710296722687625230936489522317/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "18792410197118432669078779533689656370022287116883171475/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "957728672626806859/1000000000000000000",
+        "upper": "59858042039175429/62500000000000000",
+        "log_lower": "5518819825810203/500000000000000000",
+        "log_upper": "11037639651620407/1000000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "10009745397581786717/250000000000000000",
+      "Y_right": "1987905512933907887/62500000000000000",
+      "index": 54,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control_row_sha256": "cdd8839fcee701d0acf6bd1a6a8679fbfeca867a911559ebd47252939b5708d7",
+    "control_role": "GUARD_ONLY_NOT_AN_ADDITIONAL_ACTUAL_CELL",
+    "control": {
+      "a0": "1/911",
+      "a1": "1/901",
+      "z0": 910,
+      "z1": 900,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "15523030507507252959/1000000000000000000",
+        "H_upper_left": "2730591049432291867/500000000000000000",
+        "X_upper_left": "2315827015335121927/250000000000000000",
+        "V_candidate_upper": "4038981936966073529/500000000000000000",
+        "retained_Vbar": "2092802815894038509/250000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "8580887623929566477/200000000000000000",
+      "Y_left": "34169261148959671651/1000000000000000000",
+      "V_previous": "2092802815894038509/250000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "205650720852993170681200238313/500000000000000000000000000000",
+        "772091695517049706900631999467/1000000000000000000000000000000",
+        "26454048141052729139644537669/15625000000000000000000000000",
+        "3115843248690427123585669973933/1000000000000000000000000000000",
+        "1261126622386122936610021848517/250000000000000000000000000000",
+        "235002825485906787677807758733/31250000000000000000000000000",
+        "2653294423163795803649033293781/250000000000000000000000000000",
+        "14436925565820091641246243016607/1000000000000000000000000000000",
+        "2397856840701467770577552908047/125000000000000000000000000000",
+        "6305187390511994140102221904611/250000000000000000000000000000",
+        "33499481679153641244788116626721/1000000000000000000000000000000"
+      ],
+      "E_safe_left": "21299220421748782117/500000000000000000",
+      "V_local": "4038981936966073529/500000000000000000",
+      "V_admitted": "4038981936966073529/500000000000000000",
+      "equilibrium_upper": "4495562503753542711/1000000000000000000",
+      "amplitude": "1483684932260306447/50000000000000000",
+      "constant_energy_part": "59453814112140602349/4600000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "20953/21853",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "1819703595845173519/62500000000000000",
+      "raw_G_lower": "104658744645452290101701223374304085232172464607519098956543266090096078039449342102444851975482628739127868644702534293/30513196748175116246764657004554070291803121344923353563502021924079947903923646567022592000000000000000000000000000000",
+      "G_lower": "3429950178907804881/1000000000000000000",
+      "Y_right_candidate": "8236792832877982297/250000000000000000",
+      "E_right_candidate": "41376351026049821771/1000000000000000000",
+      "endpoint_energy_envelope": "41376351026049821771/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "901/911",
+      "R_at_left": "194928293260782242476396800523671231761835187991145640568433377621349415270037698265530467147817391599197042724309/60708402882054033466233184588234965832575213720379360039119137804340758912662765568000000000000000000000000000000",
+      "M_at_left": "18792410197118432669078779533689656370022287116883171475/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "41376351026049821771/1000000000000000000",
+      "Y_right": "8236792832877982297/250000000000000000",
+      "index": 54,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    }
+  },
+  "cell_z": [
+    910,
+    900
+  ],
+  "cell_a": [
+    "1/911",
+    "1/901"
+  ],
+  "expected_actual_after": {
+    "count": 118,
+    "frontier": 900
+  },
+  "expected_endpoint_crosscheck_only": {
+    "a": "1/901",
+    "E": "10009745397581786717/250000000000000000",
+    "Y": "1987905512933907887/62500000000000000",
+    "Vbar": "3944736412871797407/500000000000000000"
+  },
+  "theorem_K_to_bind_if_all_checks_pass": "1184837959588125278027/250000000000000000",
+  "theorem_lower_to_bind_if_all_checks_pass": "83379887432219/200000000000000000",
+  "max_new_actual_cells": 1,
+  "max_new_proof_cells": 0,
+  "max_full_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "consumer_authorization": "GRANTED_BY_THIS_INGESTION_FOR_EXACTLY_ONE_CELL_910_TO_900",
+  "below900_authorization": "NOT_GRANTED",
+  "required_behavior": [
+    "Freeze exact V119 parent, V120 accepted theorem/raw/verifier and committed primary row54 before execution",
+    "Verify all byte hashes, Q/source/scopes, exact primary row left a/E/Y/V glue and source_state_reset=false before the single admission",
+    "Consume V120 theorem once; endpoint values must come from the committed primary row; supplied endpoint is a cross-check only",
+    "Use separate validation and postaccept checks including real semantic mutations for wrong parent/theorem/schema/row/reset/cell/endpoint/K/lower/below900/extra cell",
+    "Write a separately versioned V121 raw result and accepted actual checkpoint only if all gates pass",
+    "Preserve V101/V102/V108/V119/V120 source/history unchanged; zero proof cells; no reset/refit/recapture/tuning",
+    "Stop one cell or first precise blocker; return exactly once to Result Ingestion2.1.0",
+    "Before freeze adapt V119 methods to V121, current V119 parent actual117/frontier910, accepted V120 fresh-proof schema, row54 and STOP900; replace V117 historical parent, V118 theorem/state and V119 task pins. Freeze both wrong-schema controls with base suite.",
+    "Before freeze bind exact V120 source_boundary_certificate in consumer, separate validator and postaccept; require V120 verifier31/31,18/18 rejected real mutations,postaccept21/21 and delivery35/35. V119 references contain older30/16/20 assumptions; adapt them explicitly. Freeze all named boundary controls and reject any below900 or certificate/cell/source mismatch. Do not recompute the proof."
+  ],
+  "success_condition": "One validated and accepted source-correct reassessment actual118/frontier900, exactly one actual cell, zero proof cells, exact parent/theorem/row/schema/glue and postaccept PASS",
+  "failure_condition": "First material hash, parent/theorem/schema, source/reset/glue, endpoint, verifier or postaccept invariant failure; preserve it without retuning or historical relabel",
+  "stop_condition": "One accepted actual cell or first exact blocker; no below900; then one return to ingestion",
+  "forbidden": [
+    "V120 theorem rerun/reproof",
+    "old science replay/relabel",
+    "physical reset/refit/recapture/tuning",
+    "changing the exact question, captures or accepted z_reio",
+    "below900",
+    "extra actual or proof cells",
+    "NativeP6 or complete histories claim",
+    "accepted-model/Q change or Q closure"
+  ],
+  "resource_policy": "Use smallest adequate local/direct mechanism if available; choose GitHub compute only on measured/qualified workload benefit. Finite300 science-second budget, zero retries and no postfreeze edits. No paid resources or speculative infrastructure authorized.",
+  "source_repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+    "all19_V120_source_artifacts": "VERIFIED_PRESENT_AND_BYTE_EQUIVALENT",
+    "pending_parent_source_files": [],
+    "pending_ancestry_source_files": [
+      {
+        "filename": "Q047_SAMLET_JOURNAL_Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "local_path": "v115_output/Q047_SAMLET_JOURNAL_Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "bytes": 14528824,
+        "sha256": "2872e91fd10dd5295afe2624e6e8b9a3716ffa372f5dcc4c2764f20bfcea3aa3",
+        "git_blob_sha1": "2d6513d150f3f7e7e545e20efe4d11261180bddd",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_5face9fe9c788191a17da67e3f574b44",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_HANDOFF_TO_INGESTION_V1.md",
+        "local_path": "v115_output/Q048_V115_HANDOFF_TO_INGESTION_V1.md",
+        "bytes": 5322,
+        "sha256": "b6790581be0f6f844391001c1b1e2c13eb9607bd1afbd790367e0b47c0948377",
+        "git_blob_sha1": "a57778e747e48e1cec9b1bcb40e0f17e07070558",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_06931b084d1c8191ab247cc765632616",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "bytes": 2615,
+        "sha256": "0b69e1f1d37f213d833a23016e5bcbc9874bb0967584625828fcb5351a7e887a",
+        "git_blob_sha1": "bdfe9c1d255fdebd29dbcefa78964ebe229da80c",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_67cb086ce87081919ef581ff499e551f",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_DELIVERY_VALIDATION_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_DELIVERY_VALIDATION_V1.json",
+        "bytes": 1523,
+        "sha256": "acf6be7f5c951871d0df94a71566253803a74f48e7bd8f6dce1e30286eaac058",
+        "git_blob_sha1": "614242257220876869371d87730d63db8b6a4064",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_78614aafa5d0819184d5a7d1b5d90e2b",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_EXECUTION_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_EXECUTION_V1.json",
+        "bytes": 3044,
+        "sha256": "ddda2d17a85320a6a634b971273a9777aef9896e84d2743b8b1352f17d8a35a2",
+        "git_blob_sha1": "35449cd39e4e36981fd34762b126aabad7a3ffee",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_1bdf115f05bc8191883ea6b09be92973",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+        "bytes": 2899,
+        "sha256": "04dfd15015d276bcdec0c1eceae36a382a5c091481fee75a872511435eb96835",
+        "git_blob_sha1": "fdfec77e88706091445376b3c0df2bc32c52f14b",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_e3bfac6420e48191a9125edb1f081821",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_JOURNAL_APPEND_V1.md",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_JOURNAL_APPEND_V1.md",
+        "bytes": 3174,
+        "sha256": "2dbd63aa453a62affd3a393500a99cf74f026f996142b4b880237bb54bd700b1",
+        "git_blob_sha1": "ffab9120004ff4e6410c487a5506f977d7103828",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_9674d7c161e08191a7567bb9f24e1e0c",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+        "bytes": 1653,
+        "sha256": "091b165f05ed0ea6eba881fdf4263aa0d7161d0927bb30b8c7035f8cb6daddfb",
+        "git_blob_sha1": "8d24e1243258a0fcded24ad335a420563b288632",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_6835727ac9548191a9ae20081d5c59fb",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json",
+        "bytes": 4462,
+        "sha256": "c09d1c850da942a6cf7e1d66ef5d032b3be6cd8212bddb64797acb281353e341",
+        "git_blob_sha1": "ead96d4d66c90898d39fcb17d4491c4f38111c85",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_081925449ec8819191a42861a1a1ff9f",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RESULT_V1.md",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RESULT_V1.md",
+        "bytes": 11247,
+        "sha256": "af02ad7b9b970c0cb0c94e83e6be35d6836e6b0cdfe747b0e4d855db14ba7b6c",
+        "git_blob_sha1": "bf7e5b488cbab2350a8712b8b95a2657f9a644ff",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_ef3435cff41c819196831457df1d821d",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+        "bytes": 7032,
+        "sha256": "79df80f0b1c1d47e50418cca050b2e8a19ffcc25ce715e753277bace6f97b6cd",
+        "git_blob_sha1": "bb1a0a394f65c00c30b9fd83d57d9f22d990cfce",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_8fef8352141c819180fc90f50d2bf4a3",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json",
+        "bytes": 5221,
+        "sha256": "b29bd8531a6445af38e57ae062e0efa410d85e2b8b50454fc9572d9922409bb3",
+        "git_blob_sha1": "d61b7b548c7364dc92963ce743d65f5710d10277",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_95619668039881918b259c0bb6d0f292",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_accept.py",
+        "local_path": "v115_output/q048_v115_accept.py",
+        "bytes": 3130,
+        "sha256": "481b311e267552bfd67c0b3eba263d6164134b698e9496ca6ee58872546d946d",
+        "git_blob_sha1": "4959a390e5e1b05c786e45c4faec85fab0c8fe41",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_c4aaaa442e1881919bd0b5e31cf539cf",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_actual_consumer.py",
+        "local_path": "v115_output/q048_v115_actual_consumer.py",
+        "bytes": 7840,
+        "sha256": "629863945467da08eb243036d7765116a915652f1a3c7cf349bac9e1c97a00ae",
+        "git_blob_sha1": "a565db8392777ab4c0c4979d554cfd7219f6536c",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_790b8b0383448191ba6df551876c3866",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_postaccept.py",
+        "local_path": "v115_output/q048_v115_postaccept.py",
+        "bytes": 5554,
+        "sha256": "6690c757a6d5c08f9edbc476cabb409aaaa3832386ceece30f13afbc7519e09c",
+        "git_blob_sha1": "0600d96ffe6b4650f0981a4fa4d28dcebb5d9163",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_928ca42c0e5c81918333ed07b61974ac",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_run.py",
+        "local_path": "v115_output/q048_v115_run.py",
+        "bytes": 2963,
+        "sha256": "48ef8f3979dff7246ff8c5378debf9864893a09fddc96146703ba9d58f19cfee",
+        "git_blob_sha1": "3a4463a6e147469f0b79b7f5cf2660a4ae732bc0",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_b6ff770f87388191bafe4e2e5d796ba6",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_verify.py",
+        "local_path": "v115_output/q048_v115_verify.py",
+        "bytes": 13348,
+        "sha256": "bd45b82a784e3ac32db9e984baad3b625db689a96294c402dfd20cb771eed97e",
+        "git_blob_sha1": "db674f5b1719ed9470125dab8cd2f1167436af73",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_44b50939ca7c8191bc4c349b9dde9e3b",
+        "library_version": "0"
+      },
+      {
+        "filename": "test_q048_v115_contract.py",
+        "local_path": "v115_output/test_q048_v115_contract.py",
+        "bytes": 5736,
+        "sha256": "ef3f1cc7b848a9b60d6e504c14bf3d4a5ee3606dc0d90bb6b00349a93957cda1",
+        "git_blob_sha1": "d4d45f1c695ca3cc13c91355c2ddfaa8b3d3844d",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_74fb029167348191b253311309802eb8",
+        "library_version": "0"
+      },
+      {
+        "filename": "v115_repository_equivalence.json",
+        "local_path": "v115_output/v115_repository_equivalence.json",
+        "bytes": 17934,
+        "sha256": "8fa14d2c7c9942f557b67e9fbe8731d1c6cd521c77b7650c603a131c40fea903",
+        "git_blob_sha1": "1a0e8f2544cfaef81e6e3123492ad1cf5aa8a422",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_1d603d23ea04819181a6eedb69ef9f0b",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+        "local_path": "v115_output/Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+        "bytes": 11116,
+        "sha256": "61be501f5eb534bdcda837bf219f36e6e719a8e7bd45e0e1735edf9e659d4915",
+        "git_blob_sha1": "fb835bab6d1a63d7c28b11797478b88d7ea64f47",
+        "repository_matches": [],
+        "repository_commit": null,
+        "library_file_id": "libfile_75ad3413e0b08191a389ad1ae53e4d6f",
+        "library_version": "0"
+      }
+    ]
+  },
+  "preparation_is_not_dispatch": true,
+  "science_budget_seconds": 300,
+  "retry_count": 0,
+  "postfreeze_edits_allowed": false,
+  "method_references": [
+    {
+      "filename": "q048_v119_actual_consumer.py",
+      "sha256": "ead959a315657002509934bfcfd494e496fa747dadd8f268de165e68ec3e4dc6",
+      "bytes": 7860,
+      "repository_relative_paths": [
+        "q048_v119_actual_consumer.py"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_26db384e311881919b066a11d1b42240",
+      "source_sync": "GITHUB_BYTE_VERIFIED",
+      "git_blob_sha1": "eeb10d3b42672672c427338319ae83411d7a5cc2",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "q048_v119_verify.py",
+      "sha256": "5ca3c734e05732c50e555d03bf9b6db48f22b4861051b359076d0950163566f8",
+      "bytes": 13357,
+      "repository_relative_paths": [
+        "q048_v119_verify.py"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_b3118d49f8708191bae62c7c998ce910",
+      "source_sync": "GITHUB_BYTE_VERIFIED",
+      "git_blob_sha1": "b124c9c9732e32cb361e136cf19c18a8ed031ab2",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "q048_v119_accept.py",
+      "sha256": "4a2541d8c7aedbd7aa8d45cf4c7573cdfa15aed2e4dd183fdade7c04574f6bde",
+      "bytes": 3130,
+      "repository_relative_paths": [
+        "q048_v119_accept.py"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_0ac417db2e848191b03b46f4493507de",
+      "source_sync": "GITHUB_BYTE_VERIFIED",
+      "git_blob_sha1": "adf536ad1e9476ddcc09b6a4cc9ed83dffb505b0",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "q048_v119_postaccept.py",
+      "sha256": "fcbb2427486e2d691e24b8d216a017c9973971e00d984596a77c618bf48a6e88",
+      "bytes": 5554,
+      "repository_relative_paths": [
+        "q048_v119_postaccept.py"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_02e9f2739bdc8191b3e21d9af7fa2293",
+      "source_sync": "GITHUB_BYTE_VERIFIED",
+      "git_blob_sha1": "78d9041bacfa7fcb78c11b9209cd3aa0755e7039",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "q048_v119_run.py",
+      "sha256": "525202697dc0a72b99b95c6517e48a126324394246ef97dcc60a0059d18ad914",
+      "bytes": 2963,
+      "repository_relative_paths": [
+        "q048_v119_run.py"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_ec178723c59c81919b57c0b483d68835",
+      "source_sync": "GITHUB_BYTE_VERIFIED",
+      "git_blob_sha1": "56519bd07e82b41e55a51430185baeb21ab894cf",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "test_q048_v119_contract.py",
+      "sha256": "6963485c916abd908577b90d917af239eba284cd76a43e9142eb105e20b7f610",
+      "bytes": 5820,
+      "repository_relative_paths": [
+        "test_q048_v119_contract.py"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_39f6defc93e8819193dbe10db9eabd20",
+      "source_sync": "GITHUB_BYTE_VERIFIED",
+      "git_blob_sha1": "7d4e2d3c457ccf1cb10eb8fd8a8c7486bfe0b0c3",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+      "sha256": "e1d3625668227a3ed4f5cd75eaa341ffa779bb42b3bc95521f1582cb3d6a928f",
+      "bytes": 14100,
+      "repository_relative_paths": [
+        "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_702aac9ad5f08191a0eb15994f2f9ed3",
+      "source_sync": "GITHUB_BYTE_VERIFIED",
+      "git_blob_sha1": "4d065552ef03cb0023057e15fffa47f8c15625bc",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+    },
+    {
+      "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+      "sha256": "199adc4cac1377367bc96cce9dc53d57abe9aa94d8069a6833f8ef3cf1fd0723",
+      "bytes": 3203,
+      "repository_relative_paths": [
+        "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_f659f009e0dc81918f700e7ff0f31772",
+      "source_sync": "GITHUB_BYTE_VERIFIED",
+      "git_blob_sha1": "e7f11490c3f0ef94d04ba9aeddf13bdf1a1ad42b",
+      "role": "READ_ONLY_METHOD_REFERENCE; exact bytes verified at current GitHub base; adapt all authority/cell pins before freeze, never execute historical main"
+    }
+  ],
+  "new_code_identity": "NOT_YET_FROZEN",
+  "mandatory_schema_negative_controls": [
+    "wrong raw-result schema",
+    "wrong V120 theorem-acceptance schema"
+  ],
+  "mutation_integrity": "All controls must actually change derivative fixtures; freeze named schema controls with the base suite, never rely only on a count",
+  "preserve_parent_authority_until_acceptance": true,
+  "input_recovery_map": [
+    {
+      "filename": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "b99025ea901930476d91d31a8ff3cbdbf1caadc86d4b92a44cd0bd4e5d63e8ae",
+      "bytes": 2624,
+      "repository_relative_paths": [
+        "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_b575a2be23688191bc584782a1ab8779",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "bytes": 1198030,
+      "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+      "source_sync": "ORIGINAL_SAVED_GUARD_VERIFY_BYTES"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+      "sha256": "9f3d2381f40bdd03f4bd692e72105fb4e3e02611e47772be2bab27dee7b0158f",
+      "bytes": 2944,
+      "repository_relative_paths": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_d501cf4e836c8191a3bc264b8f19969f",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json",
+      "sha256": "3324b5801396dd5a7b13be99f8fe0e5e1d65b347711b535eb0f3ac9dc30804a0",
+      "bytes": 27333,
+      "repository_relative_paths": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_0de30b80e47081919083c2bb5168dad5",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+      "sha256": "e439c998684b9d047a5d78d909cfc30568a82ea9d21a074b1db9c4b74400460e",
+      "bytes": 5712,
+      "repository_relative_paths": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_0662a729b72881919b7695e0542892ab",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+      "sha256": "dae1aac830186e328669ad1dd82605290e2b7aedce330cd21c959ffea4cb0b06",
+      "bytes": 921,
+      "repository_relative_paths": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_8aa6a68b1b1881919c7c59d6541cadbf",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+      "sha256": "cd0a6cdb8b2c1ecb202a2fb9e6c5b73075ac958cf3ee705645b3ad24d749ed13",
+      "bytes": 17854,
+      "repository_relative_paths": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_8e98bc775d808191a66f2f89235de136",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+      "sha256": "57c70bc2bbbf4e9a2c41b09ada81c8b0382297e39bea4a4ef53121bd291ef27d",
+      "bytes": 4368,
+      "repository_relative_paths": [
+        "Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json"
+      ],
+      "repository_commit": "8bc070b56e8178637075d3d542b22bc552c2582d",
+      "library_file_id": "libfile_2395aeb6e68481918edaf6f3130ae128",
+      "source_sync": "GITHUB_BYTE_VERIFIED"
+    }
+  ],
+  "new_authorization_inputs": [
+    {
+      "filename": "Q048_V120_INGESTION_STATE_V1.json",
+      "role": "NEW_INGESTION_AUTHORIZATION; delivered sibling hash in manifest"
+    },
+    {
+      "filename": "Q048_V121_NEXT_BUILDER_TASK_V1.json",
+      "role": "THIS_TASK; hash in envelope/manifest"
+    }
+  ],
+  "source_boundary_contract": {
+    "source_function": "rec_dxHIIdlna",
+    "source_predicate": "if (z < 900.)",
+    "boundary": "z>=900",
+    "cell_z": [
+      910,
+      900
+    ],
+    "cell_a": [
+      "1/911",
+      "1/901"
+    ],
+    "certificate": {
+      "z_min": "900",
+      "z_max": "910",
+      "low_z_branch_active_anywhere": false,
+      "Pion": "1",
+      "PION_MAX": "1/100",
+      "dispatch": "SWIFT_FIT_SUBJECT_TO_OTHER_DOMAIN_GATES",
+      "boundary": "z>=900",
+      "hydrogen_c_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+      "hydrogen_h_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+    },
+    "certificate_sha256": "f2b2d34f02801d225c40587c115ef85e2e97241084deb4d21b684eb3ddffb098",
+    "requirements": "Bind exact certificate from accepted V120 and raw; require verifier/postaccept source_boundary_certificate checks; endpoint900 is included, below900 is forbidden; consume existing proof without recomputation",
+    "legacy_methods": "V119 method files are READ_ONLY; adapt previous 30/16/20 proof-record assumptions to V120 31/18/21 plus boundary certificate before freezing new V121 code; never edit or replay historical programs"
+  },
+  "mandatory_boundary_negative_controls": [
+    "missing source_boundary_certificate",
+    "changed certificate boundary or source hash",
+    "certificate z_min below900",
+    "certificate/cell_z/cell_a mismatch",
+    "wrong proof verification31/mutation18/postaccept21 counts"
+  ]
+}
