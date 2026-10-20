@@ -1,0 +1,149 @@
+{
+  "schema": "bubbleverse.q048.moving_h.domain.verification.v118",
+  "status": "PASS",
+  "verification_pass": true,
+  "checks_total": 30,
+  "checks_passed": 30,
+  "checks": {
+    "parent_source_correct": true,
+    "declared_domain": true,
+    "source_factor_literal": true,
+    "identity": true,
+    "parent": true,
+    "guard_roles": true,
+    "row53": true,
+    "no_reset_glue": true,
+    "guard_domain": true,
+    "frozen_thermal": true,
+    "no_actual_or_preaccept_proof": true,
+    "background_recompute": true,
+    "reported_source_enclosures": true,
+    "source_domain": true,
+    "atomic_recompute": true,
+    "atomic_positive": true,
+    "fresh_K_exact_outward": true,
+    "primary_endpoint_recomputed": true,
+    "positive_connected_lower_rational_dual": true,
+    "rational_control_exact": true,
+    "outward_lower_18": true,
+    "C_factors_recomputed_positive": true,
+    "L_H_faces": true,
+    "L_thermal_primitive": true,
+    "L_reported_margins": true,
+    "L_analytic_thermal_faces": true,
+    "R_H_faces": true,
+    "R_thermal_primitive": true,
+    "R_reported_margins": true,
+    "R_analytic_thermal_faces": true
+  },
+  "independent_algebraic_controls": {
+    "comparison": {
+      "inequality": "h_u >= -K*h*(h+epsilon), K>0; exp(x)<=1/(1-x), log(r)<=r-1 for r>1",
+      "x": "1202814173580219054419/22775000000000000000000000",
+      "independent_rational_lower": "1241486973411821825044571743581952297047/2912445010822099955428256418047702953000000",
+      "hmin": "426269669916063/1000000000000000000",
+      "scope": "Conditional moving lower bound, not a native trajectory sample"
+    },
+    "L": {
+      "lower": "125009087068246168743955839601570069047505689082866609342006179077168653704296574180973038420570054275987119634994268201200093/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "upper": "2837068246168743955839601570069047505689082866609342006179077168653704296574180973038420570054275987119634994268201200093/6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "threshold": "125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/9087068246168743955839601570069047505689082866609342006179077168653704296574180973038420570054275987119634994268201200093",
+      "admitted": true
+    },
+    "R": {
+      "lower": "200014505755740057880886297720483834198481089056106285230973663307493571138603417652285321370179129769257793234308241958955033/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "upper": "4505755740057880886297720483834198481089056106285230973663307493571138603417652285321370179129769257793234308241958955033/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "threshold": "200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000/14505755740057880886297720483834198481089056106285230973663307493571138603417652285321370179129769257793234308241958955033",
+      "admitted": true
+    }
+  },
+  "independence_scope": "Independent rational comparison bound and thermal-face algebra; source/background/atomic/C-factor enclosures separately recomputed with shared pinned helper implementation and exact physical inputs. No independent native or empirical evidence.",
+  "authoritative_actual_state_unchanged": {
+    "count": 116,
+    "frontier": 920
+  },
+  "new_actual_cells": 0,
+  "q_complete": false,
+  "raw_sha256": "694ced95801447d77706c811ca25defd4d6c3c173ea7f21a37fd5f090190ab14",
+  "semantic_mutations_total": 16,
+  "semantic_mutations_rejected": 16,
+  "semantic_mutations": {
+    "wrong_parent_hash": true,
+    "wrong_h0": true,
+    "wrong_cell": true,
+    "wrong_a": true,
+    "wrong_row": true,
+    "reset": true,
+    "bad_saha": true,
+    "actual_promotion": true,
+    "preaccept_proof": true,
+    "below910": true,
+    "epsilon": true,
+    "thermal": true,
+    "wrong_fingerprint": true,
+    "drop_L": true,
+    "wrong_K": true,
+    "zero_lower": true
+  },
+  "mutation_failed_invariants": {
+    "wrong_parent_hash": [
+      "semantic_gate"
+    ],
+    "wrong_h0": [
+      "semantic_gate"
+    ],
+    "wrong_cell": [
+      "semantic_gate"
+    ],
+    "wrong_a": [
+      "semantic_gate"
+    ],
+    "wrong_row": [
+      "semantic_gate"
+    ],
+    "reset": [
+      "semantic_gate"
+    ],
+    "bad_saha": [
+      "semantic_gate"
+    ],
+    "actual_promotion": [
+      "semantic_gate"
+    ],
+    "preaccept_proof": [
+      "semantic_gate"
+    ],
+    "below910": [
+      "semantic_gate"
+    ],
+    "epsilon": [
+      "semantic_gate"
+    ],
+    "thermal": [
+      "semantic_gate"
+    ],
+    "wrong_fingerprint": [
+      "semantic_gate"
+    ],
+    "drop_L": [
+      "semantic_gate"
+    ],
+    "wrong_K": [
+      "fresh_K_exact_outward",
+      "primary_endpoint_recomputed",
+      "rational_control_exact",
+      "outward_lower_18"
+    ],
+    "zero_lower": [
+      "positive_connected_lower_rational_dual",
+      "outward_lower_18",
+      "C_factors_recomputed_positive",
+      "L_thermal_primitive",
+      "L_reported_margins",
+      "L_analytic_thermal_faces",
+      "R_thermal_primitive",
+      "R_reported_margins",
+      "R_analytic_thermal_faces"
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "schema": "bubbleverse.q048.v118.source_correct_proof.execution.v1",
+  "task_id": "LOCAL-Q048-V118-SOURCE-CORRECT-NEW-PROOF-920-910-V1",
+  "start_utc": "2026-10-20T11:54:51.528534+00:00",
+  "end_utc": "2026-10-20T11:54:52.718040+00:00",
+  "science_elapsed_seconds": 1.189502690000154,
+  "science_budget_seconds": 300,
+  "compute_backend": "LOCAL_RUNTIME",
+  "github_actions_used": false,
+  "status": "COMPLETE",
+  "obstruction": null,
+  "phases": [
+    {
+      "phase": "PRODUCER",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/660cd6de75b5/v118_work/q048_v118_proof.py",
+        "--spec",
+        "/workspace/scratch/660cd6de75b5/v118_work/Q048_V118_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+        "--output",
+        "/workspace/scratch/660cd6de75b5/v118_work/Q048_V118_SOURCE_CORRECT_PROOF_RAW_V1.json"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.3051513350001187,
+      "stdout": "{\"status\": \"CANDIDATE_PROOF\", \"obstruction\": null, \"K_upper\": \"1202814173580219054419/250000000000000000\", \"hmin\": \"426269669916063/1000000000000000000\"}\n",
+      "stderr": ""
+    },
+    {
+      "phase": "SEPARATE_VERIFIER",
+      "command": "q048_v118_verify.verify(root,spec,raw)",
+      "status": "PASS",
+      "wall_seconds": 0.24498000699986733
+    },
+    {
+      "phase": "REAL_MUTATION_CONTROLS",
+      "count": 16,
+      "rejected": 16,
+      "wall_seconds": 0.6033004030000484
+    },
+    {
+      "phase": "ACCEPT_AND_READBACK",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/660cd6de75b5/v118_work/q048_v118_accept.py",
+        "--root",
+        "/workspace/scratch/660cd6de75b5/v118_work"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.031149023000125453,
+      "stdout": "{\"accepted_sha256\": \"653a4814568ff73845f570db80179bd612161db3ece11c9215261e847750e39d\", \"postaccept\": \"PASS\", \"checks_passed\": 20, \"checks_total\": 20}\n",
+      "stderr": ""
+    }
+  ],
+  "producer_invocations": 1,
+  "historical_program_main_invocations": 0,
+  "new_actual_cells": 0,
+  "actual_state_unchanged": {
+    "count": 116,
+    "frontier": 920
+  },
+  "below910_work": false,
+  "no_retry": true,
+  "spec_sha256": "3267bba2942bf9419a23c28aa5fdd2cb1dd3542ed344a3ef971b413607eaf2b6",
+  "code_hashes": {
+    "q048_v118_proof.py": "a5e0f3c63fbdf8502854b069c718171dcddb9472ae6f97abe063a3cc5ceafeb4",
+    "q048_v118_verify.py": "4f42c136d7c948083a4f249cf42b964d71aa6f18fc43d79ffe2c31b5e97482a6",
+    "q048_v118_accept.py": "b5113e4240e57e60608f5ba4e972009f4a46a14da862d17f9c39f16073e0048d",
+    "q048_v118_run.py": "ecb8f5d797474865f7ce2a0e1b913a24ce372cea6d32a0e14dd8961bcaf2ed54",
+    "test_q048_v118_binding.py": "869b2314415bfeaf99fed2f477db7f9a7d43d42935596e284a96bde45125330a"
+  }
+}
