@@ -1,0 +1,99 @@
+{
+  "schema": "bubbleverse.q048.v122.low_z_dispatch_diagnostic.verification.v1",
+  "status": "PASS",
+  "checks_total": 33,
+  "checks_passed": 33,
+  "checks": {
+    "schema": true,
+    "q_target": true,
+    "task": true,
+    "question": true,
+    "input_pins": true,
+    "parent": true,
+    "candidate": true,
+    "row": true,
+    "actual": true,
+    "endpoint": true,
+    "left_lower_preserved": true,
+    "source_pins": true,
+    "source_dispatch": true,
+    "source_rate_identity": true,
+    "kernel_h_identity": true,
+    "journal_identity": true,
+    "task_conflict_actual": true,
+    "canonical_identity": true,
+    "obstruction": true,
+    "parent_lower_not_relabelled": true,
+    "correct_RLya": true,
+    "correct_Pion": true,
+    "correct_margin": true,
+    "polynomial_algebra": true,
+    "domain": true,
+    "strict_HMLA": true,
+    "equality_otherwise": true,
+    "exact900": true,
+    "zero_cells": true,
+    "no_interval_promotion": true,
+    "no_trajectory_claim": true,
+    "history_firewall": true,
+    "no_authorization": true
+  },
+  "semantic_mutations_total": 17,
+  "semantic_mutations_rejected": 17,
+  "mutation_failed_invariants": {
+    "wrong_parent": [
+      "parent"
+    ],
+    "wrong_task": [
+      "task"
+    ],
+    "wrong_a": [
+      "candidate"
+    ],
+    "wrong_row": [
+      "row"
+    ],
+    "source_hash": [
+      "source_pins"
+    ],
+    "Pion900": [
+      "exact900"
+    ],
+    "threshold_equality": [
+      "strict_HMLA"
+    ],
+    "drop_HMLA": [
+      "strict_HMLA"
+    ],
+    "old_h0_as_lower": [
+      "parent_lower_not_relabelled"
+    ],
+    "actual_promotion": [
+      "zero_cells"
+    ],
+    "proof_promotion": [
+      "zero_cells"
+    ],
+    "wrong_A": [
+      "correct_Pion"
+    ],
+    "wrong_B": [
+      "correct_Pion"
+    ],
+    "wrong_threshold": [
+      "equality_otherwise"
+    ],
+    "wrong_small_margin": [
+      "correct_margin"
+    ],
+    "wrong_large_margin": [
+      "equality_otherwise"
+    ],
+    "claim_trajectory": [
+      "no_trajectory_claim"
+    ]
+  },
+  "raw_sha256": "3115415c7f90ca18b044db331ec72e82d098eef727265d854ef4a08f1b131e14",
+  "spec_sha256": "4dc6cde558f864654eb4ac341b06f7b85163b0c4c9a7dd33bab61891f64d4f90",
+  "independence_scope": "Separate source/variable reconstruction and polynomial coefficient check;no producer import. Shares original pinned source/journal/helper evidence;not empirical replication."
+}

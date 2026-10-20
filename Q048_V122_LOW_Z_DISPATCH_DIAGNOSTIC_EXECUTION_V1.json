@@ -1,0 +1,53 @@
+{
+  "schema": "bubbleverse.q048.v122.low_z_dispatch_diagnostic.execution.v1",
+  "status": "COMPLETE",
+  "start_utc": "2026-10-20T15:31:22.863497+00:00",
+  "end_utc": "2026-10-20T15:31:23.118497+00:00",
+  "wall_seconds": 0.25500039000007746,
+  "phases": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "q048_v122_diagnostic.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"FIRST_OBSTRUCTION\", \"obstruction\": \"TASK_NEUTRAL_H_CONFLICTS_WITH_CANONICAL_IONIZED_H\", \"new_actual_cells\": 0, \"new_proof_cells\": 0}\n",
+      "stderr": "",
+      "wall_seconds": 0.04350337799996851,
+      "code_sha256": "a825fbbe626cd6a110eec3e9f63e5bd295dca29778dea36b8b044f4024028c9f"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "q048_v122_verify.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"checks\": 33, \"mutations_rejected\": 17}\n",
+      "stderr": "",
+      "wall_seconds": 0.1871349839998402,
+      "code_sha256": "e20d5eaed6565f4c8d897cadeb2e3a4c07c02cb33fad2db9e383cb92c102a2f0"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "q048_v122_accept.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\"status\": \"PASS\", \"checks\": 19, \"acceptance_sha256\": \"dcd217b8885679b5bb0f839570d6fe51dcc4506f5404df0e516146f5bc7c6a58\"}\n",
+      "stderr": "",
+      "wall_seconds": 0.024100163000184693,
+      "code_sha256": "5501b410493c0e5d3657257dad9690eb98754dd2f442c9cf5fd35e707efdfcba"
+    }
+  ],
+  "diagnostic_producer_invocations": 1,
+  "historical_program_main_invocations": 0,
+  "new_actual_cells": 0,
+  "new_proof_cells": 0,
+  "new_full_connected_theorems": 0,
+  "source_interval_evaluations": 0,
+  "science_budget_seconds": 300,
+  "retry_count": 0,
+  "postfreeze_edits": false,
+  "spec_sha256": "4dc6cde558f864654eb4ac341b06f7b85163b0c4c9a7dd33bab61891f64d4f90",
+  "freeze_sha256": "ef23890b15e14dbc964f19bbc227025074e8956fb82da5359f1c05972cd35d5f"
+}

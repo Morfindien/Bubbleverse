@@ -1,0 +1,61 @@
+{
+  "schema": "bubbleverse.q048.v122.low_z_dispatch_diagnostic.acceptance.v1",
+  "created_at_utc": "2026-10-20T15:31:23.114678+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V122-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+  "task_fingerprint": "3a65e574aafe20c4ec790539ea06c99ccff72fa7ba3240f02242a07c9e45ea6a",
+  "status": "VALIDATED_OBSTRUCTION",
+  "technical_state": "PASS",
+  "scientific_state": "INCONCLUSIVE",
+  "diagnostic_accepted": true,
+  "mathematical_connected_cell_proof_accepted": false,
+  "obstruction": {
+    "gate": "SOURCE_VARIABLE_IDENTITY",
+    "code": "TASK_NEUTRAL_H_CONFLICTS_WITH_CANONICAL_IONIZED_H",
+    "first_before_interval_execution": true,
+    "identity": {
+      "status": "CONFLICT",
+      "canonical_h": "xHII",
+      "canonical_neutral_fraction": "1-h",
+      "incoming_task_h": "1-xHII",
+      "affected_parent_lower": "ionized_h_left_face_only;not neutral_fraction_lower",
+      "correct_RLya": "A/(1-h)",
+      "correct_threshold": "(1-h)*(99*B-C)<3*A",
+      "C": "L2s1s",
+      "incoming_threshold": "h*(99*B-L2s1s)<3*A"
+    }
+  },
+  "threshold_algebra": {
+    "source_variable": "xHII",
+    "canonical_h": "xHII",
+    "neutral_g": "1-h",
+    "domain": "0<h<1,A>0,B>0,C>0",
+    "Pion": "B/(3*A/(1-h)+C+B)",
+    "margin": "(1-h)*(99*B-C)-3*A",
+    "HMLA": "margin<0",
+    "otherwise": "margin>=0;captured model/temperature gate still applies",
+    "at_exact900": "Pion=1 before the low-z formula;not a below900 certificate",
+    "strict_equality_Pion": "1/100",
+    "new_interval_certificate": false
+  },
+  "required_repair": "New versioned ingestion task must retain h=xHII,define separate neutral_g=1-h,and use neutral_g in RLya/Pion threshold. Do not relabel old checkpoints or copy ionized h0 into neutral g0.",
+  "parent_checkpoint_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+  "actual_state_unchanged": {
+    "count": 118,
+    "frontier": 900
+  },
+  "new_actual_cells": 0,
+  "new_proof_cells": 0,
+  "new_full_connected_theorems": 0,
+  "raw_sha256": "3115415c7f90ca18b044db331ec72e82d098eef727265d854ef4a08f1b131e14",
+  "verification_sha256": "4d91567bcbd128e0a5990b95450dac6b1a8e98815665bed60d8c7481c826e3a1",
+  "spec_sha256": "4dc6cde558f864654eb4ac341b06f7b85163b0c4c9a7dd33bab61891f64d4f90",
+  "freeze_sha256": "ef23890b15e14dbc964f19bbc227025074e8956fb82da5359f1c05972cd35d5f",
+  "consumer_authorization": "NOT_GRANTED",
+  "connected_cell_proof_authorization": "NOT_GRANTED",
+  "historical_record_modified": false,
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED",
+  "return_route": "RESULT_INGESTION_ROUTING2.1.0"
+}
