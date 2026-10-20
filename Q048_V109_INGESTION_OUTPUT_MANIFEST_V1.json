@@ -1,0 +1,174 @@
+{
+  "schema": "bubbleverse.q048.v109.ingestion.output_manifest.v1",
+  "created_at_utc": "2026-10-20T05:47:56.573013+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "ingestion_event_id": "LOCAL-Q048-V109-SOURCE-CORRECT-ACTUAL-INGESTION-V1",
+  "idempotency_key": "3187fa09e522efc11b6a35bde13538380bc5fde792d4b153384f9892a6f494e9",
+  "repository": "Morfindien/Bubbleverse",
+  "base_commit": "67a018cd9b84a6ca437f8975efd744fa1612b83e",
+  "repository_source_freshness": "VERIFIED",
+  "new_ingestion_sync": "USER_UPLOAD_PENDING",
+  "prior_V109_source_sync": "ALL18_PRESENT_AND_BYTE_EQUIVALENT_AT_BASE",
+  "hash_algorithm": "SHA256 exact raw file bytes; no normalization",
+  "row_hash_convention": "UTF8 canonical JSON(sort_keys=True,separators=comma/colon,ensure_ascii=False)",
+  "self_hash_policy": "Manifest excludes its own recursive hash; filename is still delivered",
+  "files": [
+    {
+      "filename": "Q048_V109_INGESTION_RESULT_V1.md",
+      "role": "Ingestion interpretation and one-engine routing",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V109_INGESTION_RESULT_V1.md",
+      "dependencies": [
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 9023,
+      "sha256": "e3e89606bd7e6d346d9ed1fa61de9d48c1d342134a42c65bbe923fc9378de665"
+    },
+    {
+      "filename": "Q048_V109_INGESTION_STATE_V1.json",
+      "role": "Versioned local integrated state / proposed GitHub current view",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V109_INGESTION_STATE_V1.json",
+      "dependencies": [
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 5816,
+      "sha256": "7e26090bbdef4675c2d3ceaf1a543c3c9b6485677bc78e9c1663e660be954e70"
+    },
+    {
+      "filename": "Q048_V109_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "role": "Evidence, byte-equivalence, provenance and claim map",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V109_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "dependencies": [
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 18425,
+      "sha256": "ea94b78005d4ef88062d622b447658ca7958b022a16d56392d7c44ce83a0c1b2"
+    },
+    {
+      "filename": "Q048_V109_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "role": "Machine-readable2.1.0 handoff envelope",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V109_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "dependencies": [
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 8461,
+      "sha256": "c899e3e03457cc4983386e6f65f2bc2855c6df8dcb09fee7ff72ad57c63bfb68"
+    },
+    {
+      "filename": "Q048_V109_INGESTION_JOURNAL_APPEND_V1.md",
+      "role": "One idempotent journal append",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V109_INGESTION_JOURNAL_APPEND_V1.md",
+      "dependencies": [
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 3019,
+      "sha256": "3a3278aad030af68e4256b52c4d42bdee7c9580c1ff0bb66d5b8783fbaed3b38"
+    },
+    {
+      "filename": "Q047_SAMLET_JOURNAL_Q048_V109_INGESTED_SOURCE_CORRECT_V1.md",
+      "role": "Complete exact-prefix full journal successor",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q047_SAMLET_JOURNAL_Q048_V109_INGESTED_SOURCE_CORRECT_V1.md",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "Q048_V109_INGESTION_JOURNAL_APPEND_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 14494407,
+      "sha256": "19ddbe55fcc1f0fb709c26998e4afb7452fd1a623af2883f72d422dfa4bbfe3d"
+    },
+    {
+      "filename": "Q048_V109_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+      "role": "Proposed GitHub memory/index deltas and upload/apply instructions",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V109_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+      "dependencies": [
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 4764,
+      "sha256": "34aff47326cf902501012c83df2b15547f31f37701a97d3cd0274beb12a8e7b8"
+    },
+    {
+      "filename": "Q048_V109_INGESTION_VALIDATION_V1.json",
+      "role": "Finite ingestion contract/packaging verification",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V109_INGESTION_VALIDATION_V1.json",
+      "dependencies": [
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 1513,
+      "sha256": "6748aca393f5f37e7fbb5c2b46720e546c6271ceeb69fd6650f86e4a71df70f3"
+    },
+    {
+      "filename": "Q048_V110_NEXT_MATHEMATICS_TASK_V1.json",
+      "role": "Exact bounded next Mathematics task, guard rows and dependency map",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V110_NEXT_MATHEMATICS_TASK_V1.json",
+      "dependencies": [
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 19425,
+      "sha256": "57a4ac3fa0bf3ce3b430ed7d47301135d04bd16d8a8bbcfa3ed5b8f09d8f9888"
+    },
+    {
+      "filename": "Q048_V110_HANDOFF_TO_MATHEMATICS_SOURCE_CORRECT_PROOF_960_950_V1.md",
+      "role": "Human-readable V110 Mathematics handoff",
+      "q": "Q048",
+      "version": "V1",
+      "repository_relative_path": "Q048_V110_HANDOFF_TO_MATHEMATICS_SOURCE_CORRECT_PROOF_960_950_V1.md",
+      "dependencies": [
+        "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md"
+      ],
+      "decision": "CREATE_NEW_VERSIONED_FILE",
+      "bytes": 7057,
+      "sha256": "4a6e2cf9efded9e72c32caefdc9918d2629955540c1ed679f14790e86636560b"
+    }
+  ],
+  "source_checkpoint": {
+    "filename": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba"
+  },
+  "source_journal": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+    "sha256": "efd137b04f971145d78f438215d82975acd0ab9d3986583151521f279bc02388",
+    "bytes": 14491388
+  },
+  "selected_next_task": {
+    "id": "LOCAL-Q048-V110-SOURCE-CORRECT-NEW-PROOF-960-950-V1",
+    "fingerprint": "318be278c63a0628275b1e22ced43cbd100065a4dc54d7fb428c4f8967194d6e",
+    "file": "Q048_V110_NEXT_MATHEMATICS_TASK_V1.json",
+    "status": "PREPARED_NOT_EXECUTED"
+  },
+  "closure": "NOT_SATISFIED; Q048 ACTIVE/INCONCLUSIVE"
+}

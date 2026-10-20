@@ -1,0 +1,163 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "prompt_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+  "handoff_id": "LOCAL-Q048-V109-INGESTION-TO-V110-MATHEMATICS-V1",
+  "created_at_utc": "2026-10-20T05:47:56.573013+00:00",
+  "case_id": "Q048; no separate case ID documented",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": {
+    "bubbleverse_range": "Q001–Q048",
+    "external_date_cutoff": "NOT_DEFINED; none invented",
+    "historical_source_versions": "Preserved; new task is present-day separately versioned continuation"
+  },
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "ingestion_event_id": "LOCAL-Q048-V109-SOURCE-CORRECT-ACTUAL-INGESTION-V1",
+  "idempotency_key": "3187fa09e522efc11b6a35bde13538380bc5fde792d4b153384f9892a6f494e9",
+  "new_result_ids": [
+    "LOCAL-Q048-V109-SOURCE-CORRECT-ACTUAL-CONSUMER-970-960-V1"
+  ],
+  "source_state_version": {
+    "journal": "Q047_SAMLET_JOURNAL_Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+    "sha256": "efd137b04f971145d78f438215d82975acd0ab9d3986583151521f279bc02388",
+    "result": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "result_sha256": "37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba"
+  },
+  "target_state_version": "Q048_V109_INGESTION_STATE_V1.json",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS",
+  "engine_registry_ref": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "git_blob_sha1": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "repository_commit": "67a018cd9b84a6ca437f8975efd744fa1612b83e",
+    "role": "Fresh exact-arithmetic mathematical domain proof; technical inputs and source-correct method verified as references"
+  },
+  "execution_profile_ref": {
+    "file": "Q048_V109_INGESTION_STATE_V1.json",
+    "section": "execution_profile"
+  },
+  "journal_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V109_INGESTED_SOURCE_CORRECT_V1.md",
+    "sha256": "19ddbe55fcc1f0fb709c26998e4afb7452fd1a623af2883f72d422dfa4bbfe3d",
+    "completeness": "Complete incoming bytes plus one identified append"
+  },
+  "source_register_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V109_INGESTED_SOURCE_CORRECT_V1.md",
+    "role": "Preserved full historical source register and linked provenance; next-method pins additionally in next_task"
+  },
+  "claim_evidence_map_ref": "Q048_V109_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "result_provenance_ref": {
+    "manifest": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+    "repository_commit": "67a018cd9b84a6ca437f8975efd744fa1612b83e",
+    "verified_byte_equivalence": "Q048_V109_INGESTION_EVIDENCE_AUDIT_V1.json"
+  },
+  "anomaly_tension_registry_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V109_INGESTED_SOURCE_CORRECT_V1.md",
+    "new_anomaly": "NONE_IDENTIFIED_WITHIN_CHECK_SCOPE"
+  },
+  "completed_task_ledger_ref": {
+    "file": "Q048_V109_INGESTION_STATE_V1.json",
+    "section": "completed_task"
+  },
+  "route_history_ref": {
+    "file": "Q048_V109_INGESTION_STATE_V1.json",
+    "section": "route_history_append"
+  },
+  "integrity_manifest_ref": "Q048_V109_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "V109 source-correct actual112/frontier960 ingested once",
+    "One fresh960->950 Mathematics task prepared; zero proof/actual cells executed here"
+  ],
+  "frozen_configuration_refs": [
+    {
+      "file": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+      "sha256": "5834ed32cb0cf80dc2e8609efa0d8f6145f25171c683303729b1e8a07879cad1"
+    },
+    {
+      "file": "Q048_V110_NEXT_MATHEMATICS_TASK_V1.json",
+      "role": "New proof-task constraints and exact input map; not an executed science spec"
+    }
+  ],
+  "open_material_uncertainties": [
+    "Fresh960->950 source-correct connected theorem not yet computed",
+    "NativeP6 unresolved",
+    "Complete four-case xe(z)/tau_T(z) bounds unresolved"
+  ],
+  "missing_information": [
+    "No separately documented CASE ID or deployed shared core; no impact on Q048 identity",
+    "V110 helper/data materialization remains mandatory Mathematics preflight; exact recovery map supplied"
+  ],
+  "next_task": {
+    "file": "Q048_V110_NEXT_MATHEMATICS_TASK_V1.json",
+    "sha256": "57a4ac3fa0bf3ce3b430ed7d47301135d04bd16d8a8bbcfa3ed5b8f09d8f9888",
+    "task_id": "LOCAL-Q048-V110-SOURCE-CORRECT-NEW-PROOF-960-950-V1",
+    "task_fingerprint": "318be278c63a0628275b1e22ced43cbd100065a4dc54d7fb428c4f8967194d6e"
+  },
+  "success_condition": "One separately validated source-correct connected960->950 theorem tied to exact V109 parent and row49, with fresh K_upper/lower and both L/R source/upper-h/C/thermal premises; zero actual cells.",
+  "failure_or_falsification_condition": "First failed source/hash/domain/inequality/verifier invariant or exact missing dependency; preserve signed margins and partial evidence, no tuning",
+  "stop_condition": "One accepted proof, first precise blocker, or300 science seconds, then return once to ingestion; no work below950",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Complete four-case xe(z)/tau_T(z) bounds and NativeP6 are not established; current result is a single theorem-backed admission.",
+  "handoff_completeness": "COMPLETE",
+  "handoff_scope_limit": "Next-task scientific context and retrievable pinned source map complete; actual V110 execution readiness is not asserted",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": {
+    "new_Q_activation": "NOT_REQUESTED",
+    "accepted_model_change": "NOT_REQUESTED",
+    "paid_compute": "NOT_REQUESTED",
+    "routine_same_Q_math_task": "WITHIN_EXISTING_SCOPE; no extra approval invented"
+  },
+  "output_file_refs": [
+    "Q048_V109_INGESTION_RESULT_V1.md",
+    "Q048_V109_INGESTION_STATE_V1.json",
+    "Q048_V109_INGESTION_EVIDENCE_AUDIT_V1.json",
+    "Q048_V109_INGESTION_HANDOFF_ENVELOPE_V1.json",
+    "Q048_V109_INGESTION_JOURNAL_APPEND_V1.md",
+    "Q047_SAMLET_JOURNAL_Q048_V109_INGESTED_SOURCE_CORRECT_V1.md",
+    "Q048_V109_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "Q048_V109_INGESTION_VALIDATION_V1.json",
+    "Q048_V109_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "Q048_V110_NEXT_MATHEMATICS_TASK_V1.json",
+    "Q048_V110_HANDOFF_TO_MATHEMATICS_SOURCE_CORRECT_PROOF_960_950_V1.md"
+  ],
+  "output_manifest_ref": "Q048_V109_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "No separate segment ID documented",
+    "base_commit_sha": "67a018cd9b84a6ca437f8975efd744fa1612b83e",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V109_INGESTED_SOURCE_CORRECT_V1.md",
+    "current_state_path": "Q048_V109_INGESTION_STATE_V1.json",
+    "index_refs": [
+      "Existing journal/source maps; proposed deltas in Q048_V109_INGESTION_GITHUB_MEMORY_UPDATE_V1.md"
+    ],
+    "cross_reference_refs": [
+      "Q048_V109_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "Q048_V110_HANDOFF_TO_MATHEMATICS_SOURCE_CORRECT_PROOF_960_950_V1.md",
+      "Q048_V110_NEXT_MATHEMATICS_TASK_V1.json"
+    ],
+    "memory_update_ref": "Q048_V109_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "target_paths_status": "PROPOSED_NEW_FILES_UNDER_VERIFIED_ROOT_CONVENTION",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V109_INGESTION_GITHUB_MEMORY_UPDATE_V1.md"
+  },
+  "scientific_execution_in_ingestion": {
+    "new_actual_cells": 0,
+    "new_proof_cells": 0,
+    "historical_science_reruns": 0,
+    "next_task_dispatched": false
+  }
+}

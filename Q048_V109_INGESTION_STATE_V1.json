@@ -1,0 +1,112 @@
+{
+  "schema": "bubbleverse.q048.v109.ingestion.state.v1",
+  "created_at_utc": "2026-10-20T05:47:56.573013+00:00",
+  "created_at_local": "2026-10-20T07:47:56.573013+02:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_DOCUMENTED_SEPARATELY_FROM_Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "ingestion_event_id": "LOCAL-Q048-V109-SOURCE-CORRECT-ACTUAL-INGESTION-V1",
+  "idempotency_key": "3187fa09e522efc11b6a35bde13538380bc5fde792d4b153384f9892a6f494e9",
+  "disposition": "CONTINUE",
+  "current_reassessment_lineage": {
+    "accepted_actual": {
+      "count": 112,
+      "frontier": 960
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 960
+    },
+    "checkpoint": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "checkpoint_sha256": "37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba",
+    "endpoint": {
+      "a": "1/961",
+      "E": "49737668672811936943/1000000000000000000",
+      "Y": "39560432998711765483/1000000000000000000",
+      "Vbar": "4876592093839665491/500000000000000000"
+    },
+    "connected_lower": "479774678212513/1000000000000000000",
+    "K_upper": "1001919080623370229873/200000000000000000",
+    "correct_saha_fact": "3.016103031869581e21",
+    "new_actual_cells_from_V109": 1,
+    "new_proof_cells_from_V109": 0,
+    "new_actual_cells_from_this_ingestion": 0,
+    "new_proof_cells_from_this_ingestion": 0
+  },
+  "completed_task": {
+    "task_id": "LOCAL-Q048-V109-SOURCE-CORRECT-ACTUAL-CONSUMER-970-960-V1",
+    "task_fingerprint": "042bf80b3e652120e1a00fd33a00a9aef2c907c0ec05f112497540a57d43f5cd",
+    "status": "COMPLETED_AND_INGESTED_ONCE",
+    "raw_sha256": "e4775af028c0d8bd0d20b28f707d00ad61eb1e81b31c520f51c438509285cb13"
+  },
+  "route_history_append": [
+    "V108 Ingestion -> V109 Builder",
+    "V109 Builder -> V109 Ingestion",
+    "V109 Ingestion -> V110 Mathematics (PREPARED_NOT_SENT)"
+  ],
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Complete four-case xe(z)/tau_T(z) bounds and NativeP6 are not established; current result is a single theorem-backed admission.",
+  "open_material_uncertainties": [
+    "Fresh960->950 source-correct connected theorem not yet computed",
+    "NativeP6 unresolved",
+    "Complete four-case xe(z)/tau_T(z) bounds unresolved"
+  ],
+  "selected_next_engine": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "git_blob_sha1": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "repository_commit": "67a018cd9b84a6ca437f8975efd744fa1612b83e",
+    "role": "Fresh exact-arithmetic mathematical domain proof; technical inputs and source-correct method verified as references"
+  },
+  "next_task_id": "LOCAL-Q048-V110-SOURCE-CORRECT-NEW-PROOF-960-950-V1",
+  "next_task_fingerprint": "318be278c63a0628275b1e22ced43cbd100065a4dc54d7fb428c4f8967194d6e",
+  "next_task_ref": "Q048_V110_NEXT_MATHEMATICS_TASK_V1.json",
+  "consumer_authorization": "NOT_GRANTED_FOR_ANY_FURTHER_ACTUAL_CELL",
+  "math_authorization": "NEW_BOUNDED_ONE_PROOF_TASK_960_TO_950_ONLY",
+  "below950_authorization": "NOT_GRANTED",
+  "repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit_sha": "67a018cd9b84a6ca437f8975efd744fa1612b83e",
+    "source_freshness": "VERIFIED",
+    "V109_source_artifacts": "ALL18_PRESENT_AND_BYTE_EQUIVALENT",
+    "new_ingestion_sync_status": "USER_UPLOAD_PENDING",
+    "write_access_observation": "Recent in-session create-branch403; unchanged access, no repeat attempt"
+  },
+  "execution_profile": {
+    "inventory_time_utc": "2026-10-20T05:47:56.573013+00:00",
+    "observed_runtime": "Local Linux/Python, exact arithmetic and hash/JSON/file checks; GitHub reads, Library retrieval and file persistence observed",
+    "recommended_functional_class": "GENERAL_REASONING for ingestion; HIGH_REASONING plus exact arithmetic for next proof",
+    "selectable_model_catalog": "NOT_VERIFIED",
+    "recommended_reasoning": "Proportional to provenance/one-cell theorem task; no setting switch claimed",
+    "execution_style": "Serial state integration; no scientific rerun",
+    "required_tools": [
+      "local file/hash/JSON checks",
+      "GitHub read access",
+      "source-file recovery"
+    ],
+    "optional_tools": [],
+    "actual_selected_setup": "Current runtime",
+    "switch_status": "NOT_REQUIRED",
+    "unavailable_or_unverified": [
+      "GitHub write capability denied HTTP403 earlier in this session; not retried without changed access",
+      "model switching not performed",
+      "shared core/global scientific registry not exposed in scoped evidence"
+    ],
+    "known_budget": "No paid compute or new numerical/proof run in ingestion"
+  },
+  "scientific_handoff": {
+    "delivery": "PREPARED",
+    "completeness": "COMPLETE",
+    "scope": "Complete next-task context and source-pin recovery map; execution readiness requires Mathematics preflight, not claimed here"
+  },
+  "canonical_writeback": "PENDING_USER_UPLOAD; local versioned integration does not claim GitHub canonical pointer updated"
+}
