@@ -1,0 +1,136 @@
+{
+  "schema": "bubbleverse.q048.v127.two_operator_conditional_actual_consumer.checkpoint.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V127-TWO-OPERATOR-CONDITIONAL-SOURCE-REAL-ACTUAL-CONSUMER-900-890-V1",
+  "task_fingerprint": "c13b24537e18a49879dccdfa23bc21c8aa0a70985c50592f55ed649bf03e9c82",
+  "program_id": "Q048-V127-TWO-OPERATOR-CONDITIONAL-CONSUMER-V1",
+  "program_registration": "LOCAL_NOT_REGISTERED",
+  "spec_sha256": "7cd019fc96900645df0ada6ae9b37a02a9bd4bc53f462e5d01b5edcba9e24ec6",
+  "status": "VALIDATED",
+  "activation_status": "ACCEPTED_AFTER_POSTACCEPT",
+  "technical_state": "PASS",
+  "scientific_state": "INCONCLUSIVE",
+  "checkpoint_kind": "ACCEPTED_ACTUAL_REANALYSIS_LINEAGE",
+  "admission_scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS",
+  "operator_cover": [
+    "HMLA",
+    "SWIFT"
+  ],
+  "q_branches": {
+    "L": "1/1000000",
+    "R": "0"
+  },
+  "source_cover_contract": {
+    "kind": "TWO_OPERATOR_SOURCE_REAL_COVER_THROUGH_FIRST_BELOW900_CELL",
+    "exact900": "SWIFT endpoint under proved source gates;HMLA retained as conservative overcoverage only",
+    "below900": "Both HMLA and SWIFT retained;no unique Pion predicate or native evaluation certificate",
+    "selection": "Every existing absolutely-continuous solution with admitted scalar/background guard and selection in conv(HMLA,SWIFT)",
+    "existence_and_uniqueness": "NOT_ESTABLISHED_FOR_EXACT_DISCONTINUOUS_SOURCE_OR_NATIVE_SELECTOR",
+    "required_fields": [
+      "raw.operators=[HMLA,SWIFT]",
+      "raw.C_subset has both operators",
+      "raw.source_checks all true",
+      "raw.branches L/R operator coverage and positive signed margins",
+      "raw.continuation and acceptance.continuation preserve conditional scope",
+      "raw.source_dispatch.native_threshold_certificate=false",
+      "NativeP6=UNRESOLVED and no native/trajectory/unique-branch promotion"
+    ],
+    "forbidden_legacy_certificate": "Do not reuse V120/V121 z>=900,Pion=1,SWIFT-only boundary certificate as authority on900->890."
+  },
+  "proof_validation_requirements": {
+    "verification_checks": 49,
+    "semantic_mutations_rejected": 38,
+    "acceptance_checks": 15,
+    "postaccept_checks": 10,
+    "delivery_checks": 37,
+    "preflight_tests": 8
+  },
+  "actual_before": {
+    "count": 118,
+    "frontier": 900,
+    "accepted_checkpoint_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a"
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 890
+  },
+  "endpoint": {
+    "a": "1/891",
+    "E": "38564332135202104759/1000000000000000000",
+    "Y": "7657044247739152913/250000000000000000",
+    "Vbar": "7605482013235264227/1000000000000000000"
+  },
+  "connected_lower": "407967490324051/1000000000000000000",
+  "K_upper": "4667708628226718074319/1000000000000000000",
+  "thermal_domain": [
+    "-1/1000000",
+    "1/50"
+  ],
+  "correct_saha_fact": "3.016103031869581e21",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "parent_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+  "theorem_acceptance_sha256": "9fb055f3fa6cffee28d4044750180b731fde78a91036054b6fb0eb0bfddf2213",
+  "theorem_raw_sha256": "d5413c8bf8235ae9b44b6c3e97ddb7e61855e38e83a8f248dd6e716d22ff70f1",
+  "theorem_verification_sha256": "ec5418a0fd9b81db1e978f22628a96a9d86f346db69750265931fa1c068bd08b",
+  "theorem_postaccept_sha256": "09bfba98317eb6df8c6afa971df6257bc567ec547a447dc9c2457ba87e9a0cae",
+  "theorem_spec_sha256": "dd99980f0ee2e7262b86311f1ce5f13e6963e682aeca8a667f14f161b32f9941",
+  "theorem_freeze_sha256": "3772014160216b19a21df75013b0386af9369937c702929dc92b11fac5a7abc0",
+  "theorem_delivery_sha256": "561476ff5b60b57e2cbfd7045fcbbbd2dcf037827e0d54c512b9679acfa6d7f5",
+  "theorem_continuation_scope": {
+    "initial_face": {
+      "a0": "1/901",
+      "h": [
+        "83379887432219/200000000000000000",
+        "99999/100000"
+      ],
+      "w": {
+        "lo": "-1/1000000",
+        "hi": "1/50",
+        "display_lo": -1e-06,
+        "display_hi": 0.02
+      },
+      "authority": "Exact V121checkpoint plus V120accepted thermal theorem;conditional original event family,not a restart"
+    },
+    "conclusion": "Every existing absolutely-continuous solution with admitted scalar/background guard and hydrogen selection inconv(HMLA,SWIFT),same q per branch,remains in[h_connected_lower,h_upper]and frozenwbox throughout900->890.",
+    "proof": "Until firstexit,source/atomic/C premises apply. The moving positive Riccati barrier excludes lower-h exit;strictupper-h andthermal faces exclude the other exits. Bounds extend to the closed endpoint;bounded source-real fields on this compact subset prevent blowup for an existing extendible solution. Convex combinations preserve all linear derivative inequalities.",
+    "existence_scope": "Conditional continuation of existing admissible source-real solutions. No existence or uniqueness assertion for the exact discontinuous native/source selector;the convex relaxation is an outer inclusion,not trajectory identity.",
+    "background_hypothesis": "Retained admitted whole-cell scalar guard supplies continuous positive background and cap;no new scalarstate is consumed",
+    "native_error_certificate": false,
+    "unique_trajectory_claim": false,
+    "closed_endpoint_a1": "1/891"
+  },
+  "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "guard_primary_row_sha256": "3fdf1ba40f681d85e806a1dbb079b2d1fc714f874961c6efadb5519cc5159adc",
+  "guard_control_row_sha256": "19728658e3fd9765fc6b341c627d14d932b20ecae2e4ee31887468f9dcedbc71",
+  "authorization_sha256": "55644fccd8facb258d564ffd05635d47f43085921bcb6e4270ae5eb00552bce8",
+  "task_authorization_sha256": "46df8e7bfdc3545de89d13dfc62f2fb244c21ae9b449efd4cb2f01686fc598ec",
+  "source_result_sha256": "488e471aa38b34d46bae2ff8f73cb99ea5670fd7fa1867783efae91d08f33259",
+  "validation_sha256": "f1102b2e3869dac2a132b04a238056142d6f24f081d000a4446678508f99e923",
+  "provisional_at_utc": "2026-10-20T18:40:47.841369+00:00",
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "new_full_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "no_physical_reset": true,
+  "no_native_trajectory_claim": true,
+  "native_error_certificate": false,
+  "exact_selector_existence_uniqueness_established": false,
+  "trajectory_identity_claim": false,
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "below890_work": false,
+  "historical_record_modified": false,
+  "historical_science_reexecuted": false,
+  "resume_rule": "STOP at890. Return exactly once to Result Ingestion2.1.0;no below890 authorization.",
+  "accepted_actual": {
+    "count": 119,
+    "frontier": 890
+  },
+  "accepted_at_utc": "2026-10-20T18:40:47.912574+00:00",
+  "postaccept_checks_before_activation": 37,
+  "postaccept_mutations_rejected": 18
+}
