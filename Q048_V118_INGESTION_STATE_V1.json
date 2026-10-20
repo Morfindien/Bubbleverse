@@ -1,0 +1,123 @@
+{
+  "schema": "bubbleverse.q048.v118.ingestion.state.v1",
+  "created_at_utc": "2026-10-20T12:04:17.334303+00:00",
+  "created_at_local": "2026-10-20T14:04:17.334303+02:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": "NOT_DOCUMENTED_SEPARATELY_FROM_Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "ingestion_event_id": "LOCAL-Q048-V118-SOURCE-CORRECT-PROOF-INGESTION-V1",
+  "idempotency_key": "bb154a92ecaac69bd125b33ca1fd85597b2d85b5557ef8a1736f1d081b056998",
+  "disposition": "CONTINUE",
+  "current_reassessment_lineage": {
+    "accepted_actual": {
+      "count": 116,
+      "frontier": 920
+    },
+    "actual_checkpoint": "Q048_V117_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "actual_checkpoint_sha256": "e47af0c2bce1ddd0e8bb1cd31ebfd5566a88c62646bb59400426ea6d84d6ba12",
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 920
+    },
+    "endpoint": {
+      "a": "1/921",
+      "E": "21553673409627471439/500000000000000000",
+      "Y": "133823577632185643/3906250000000000",
+      "Vbar": "2119955747339110627/250000000000000000"
+    },
+    "actual_connected_lower": "54513832861587/125000000000000000",
+    "actual_K_upper": "1220855076846709617829/250000000000000000",
+    "accepted_next_cell_theorem": {
+      "cell_z": [
+        920,
+        910
+      ],
+      "acceptance": "Q048_V118_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+      "sha256": "653a4814568ff73845f570db80179bd612161db3ece11c9215261e847750e39d",
+      "raw_sha256": "694ced95801447d77706c811ca25defd4d6c3c173ea7f21a37fd5f090190ab14",
+      "verification_sha256": "ea5cbd0d31911bc0264ec39a5384ac99d0dda6f94eaf411142f14d8aceeb5358",
+      "K_upper": "1202814173580219054419/250000000000000000",
+      "connected_lower": "426269669916063/1000000000000000000",
+      "correct_saha_fact": "3.016103031869581e21"
+    },
+    "V118_added_proof_cells": 1,
+    "V118_added_actual_cells": 0,
+    "this_ingestion_added_proof_cells": 0,
+    "this_ingestion_added_actual_cells": 0
+  },
+  "completed_task": {
+    "task_id": "LOCAL-Q048-V118-SOURCE-CORRECT-NEW-PROOF-920-910-V1",
+    "task_fingerprint": "f9b5dbe5db52d9ececb6170f52db6fd00d66b6ee2489873cdaefdd67b053a7ac",
+    "status": "COMPLETED_PROOF_INGESTED_ONCE"
+  },
+  "route_history_append": [
+    "V117 Ingestion -> V118 Mathematics",
+    "V118 Mathematics -> V118 Ingestion",
+    "V118 Ingestion -> V119 Builder (PREPARED_NOT_SENT)"
+  ],
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Complete four-case xe(z)/tau_T(z) bounds and NativeP6 remain unestablished; accepted theorem is not an actual consumer or full scientific answer",
+  "open_material_uncertainties": [
+    "Source-correct actual consumer920->910 not yet executed",
+    "NativeP6 unresolved",
+    "Complete four-case xe/tau bounds unresolved"
+  ],
+  "selected_next_engine": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "repository_commit": "ecd01f777022f2e585abee2058b017bd071020bb",
+    "role": "Bounded actual-consumer admission with source/theorem/parent binding and separate validation; choose smallest sufficient compute mechanism"
+  },
+  "next_task_id": "LOCAL-Q048-V119-SOURCE-CORRECT-ACTUAL-CONSUMER-920-910-V1",
+  "next_task_fingerprint": "312bd6f751819eece72b369268d61f795f7b53801f0b17c8f85915ca8480c7f0",
+  "next_task_ref": "Q048_V119_NEXT_BUILDER_TASK_V1.json",
+  "consumer_authorization": "GRANTED_BY_INGESTION_FOR_EXACTLY_ONE_CELL_920_TO_910",
+  "below910_authorization": "NOT_GRANTED",
+  "execution_profile": {
+    "inventory_time_utc": "2026-10-20T12:04:17.334303+00:00",
+    "observed_runtime": "Local Linux/Python/hash/JSON/files; GitHub read access; source retrieval and file persistence observed",
+    "recommended_functional_class": "GENERAL_REASONING for ingestion; exact-arithmetic-capable Builder for one deterministic admission",
+    "reasoning_settings_and_model_catalog": "NOT_VERIFIED; no switch performed",
+    "execution_style": "Serial integration and next-task preparation; no scientific programs rerun",
+    "required_tools": [
+      "local original-file/hash/JSON checks",
+      "GitHub reads",
+      "file persistence"
+    ],
+    "optional_external_web_research": "NOT_NEEDED for this exact authority/admission bottleneck",
+    "switch_status": "NOT_REQUIRED",
+    "write_access": "Earlier same-session create-branch403; unchanged access not retried",
+    "budget": "No paid/external compute or next-cell execution during ingestion"
+  },
+  "scientific_handoff": {
+    "delivery": "PREPARED",
+    "completeness": "COMPLETE",
+    "execution_status": "NOT_EXECUTED"
+  },
+  "repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit_sha": "ecd01f777022f2e585abee2058b017bd071020bb",
+    "source_freshness": "VERIFIED",
+    "source_V118_proof_artifacts": "ALL19_PRESENT_AND_BYTE_EQUIVALENT",
+    "new_ingestion_sync_status": "USER_UPLOAD_PENDING",
+    "canonical_pointer_writeback": "PENDING; local coherent snapshot is not a GitHub write"
+  },
+  "journal_ref": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V118_INGESTED_SOURCE_CORRECT_V1.md",
+    "sha256": "e1cd13ff6704e7d6965d774310f5be1bd9a59ce6f51a67745292384a8b43ab0c",
+    "incoming_journal_sha256": "8d6dbd173f4c2735424e2f4e689b37b74090eb39ba89eea2c9f39242450ab885",
+    "incoming_prefix_bytes": 14548940
+  },
+  "evidence_audit_ref": "Q048_V118_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "output_manifest_ref": "Q048_V118_INGESTION_OUTPUT_MANIFEST_V1.json"
+}
