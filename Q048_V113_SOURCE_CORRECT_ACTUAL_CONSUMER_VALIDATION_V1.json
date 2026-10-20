@@ -1,0 +1,184 @@
+{
+  "schema": "bubbleverse.q048.v113.source_correct_actual_consumer.validation.v1",
+  "status": "PASS",
+  "result_sha256": "603eef2727361223cdced0fb94d4bb4ceb518d7872caf236474d34ba2c0ddce0",
+  "spec_sha256": "7e382f44eb73dc623fa84823bfbcf789d1fab28c589d067c61ae7b4824a60790",
+  "authority_pins": {
+    "Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json": "236764f217c6c9d7affd8cffbaeefef20ee3d456ef31c1d8402baafff78d8bb7",
+    "Q048_V112_INGESTION_STATE_V1.json": "4cf49e206a5b96bd7bfa8b317601a141882f9d4fd3f4741e0f8e0313d1e64e48",
+    "Q048_V112_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json": "0614968fba0060267b3f8a1d63cf5fd8cb153982a9a4c751670e26c72f5390fe",
+    "Q048_V112_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json": "c6819098da5f4748b1f2fa4aca084fef0ba6eeceee235456d788d4deccab0d85",
+    "Q048_V112_SOURCE_CORRECT_PROOF_RAW_V1.json": "523f9796b42307529295194a560964740ce9d46d56b81be21b984845b8a7f542",
+    "Q048_V112_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json": "3688dc054da433971e4ddc456ec93062e1f611cd191ce01a009affd95989e8c7",
+    "Q048_V113_NEXT_BUILDER_TASK_V1.json": "220feca6865f50c50f9438c53606c2fa24b0193ac2f6069c775d59ffc7a9fb09",
+    "q048_guard_local_v_result_v12.json": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+  },
+  "checks_total": 53,
+  "checks_passed": 53,
+  "checks": {
+    "schema": true,
+    "q_target": true,
+    "task": true,
+    "question": true,
+    "spec_pin": true,
+    "candidate_unaccepted": true,
+    "parent_pin": true,
+    "parent_validated": true,
+    "parent_state": true,
+    "parent_endpoint": true,
+    "parent_frontiers": true,
+    "theorem_pin": true,
+    "theorem_raw_pin": true,
+    "theorem_ver_pin": true,
+    "theorem_accepted": true,
+    "theorem_parent_hash": true,
+    "theorem_parent_full_state": true,
+    "theorem_raw_binding": true,
+    "retained_verifier": true,
+    "consumer_authorized_by_ingestion": true,
+    "fresh_proof_schema": true,
+    "proof_postaccept_pin": true,
+    "bounded_task_pin": true,
+    "mathematics_stop_preserved": true,
+    "cell_z": true,
+    "cell_a": true,
+    "saha": true,
+    "thermal_domain": true,
+    "guard_source": true,
+    "guard_row_hash": true,
+    "guard_primary_not_control": true,
+    "row_identity": true,
+    "row_E_glue": true,
+    "row_Y_glue": true,
+    "row_V_glue": true,
+    "row_a_glue": true,
+    "no_reset": true,
+    "guard_commit": true,
+    "guard_domain": true,
+    "actual_count": true,
+    "actual_frontier": true,
+    "four_frontiers": true,
+    "endpoint_a": true,
+    "endpoint_E": true,
+    "endpoint_Y": true,
+    "endpoint_V": true,
+    "theorem_lower": true,
+    "theorem_K": true,
+    "one_actual_zero_proof": true,
+    "single_consumption": true,
+    "no_below940": true,
+    "history_firewall": true,
+    "claim_firewall": true
+  },
+  "semantic_mutations_total": 26,
+  "semantic_mutations_rejected": 26,
+  "mutations_rejected": {
+    "wrong_raw_schema": true,
+    "wrong_parent_hash": true,
+    "historical_parent_identity": true,
+    "wrong_theorem_hash": true,
+    "wrong_row_hash": true,
+    "wrong_row_index": true,
+    "reset_true": true,
+    "wrong_cell": true,
+    "wrong_endpoint_a": true,
+    "wrong_endpoint_E": true,
+    "wrong_endpoint_Y": true,
+    "wrong_endpoint_V": true,
+    "below940_frontier": true,
+    "below940_flag": true,
+    "wrong_K": true,
+    "wrong_lower": true,
+    "old_saha": true,
+    "uncommitted_row": true,
+    "extra_actual": true,
+    "extra_proof": true,
+    "double_consumption": true,
+    "historical_replay": true,
+    "wrong_left_glue": true,
+    "unauthorized": true,
+    "Q_closed": true,
+    "wrong_theorem_schema": true
+  },
+  "mutation_failed_invariants": {
+    "wrong_raw_schema": [
+      "schema"
+    ],
+    "wrong_parent_hash": [
+      "parent_pin"
+    ],
+    "historical_parent_identity": [
+      "parent_pin"
+    ],
+    "wrong_theorem_hash": [
+      "theorem_pin"
+    ],
+    "wrong_row_hash": [
+      "guard_row_hash"
+    ],
+    "wrong_row_index": [
+      "row_identity"
+    ],
+    "reset_true": [
+      "no_reset"
+    ],
+    "wrong_cell": [
+      "cell_z"
+    ],
+    "wrong_endpoint_a": [
+      "endpoint_a"
+    ],
+    "wrong_endpoint_E": [
+      "endpoint_E"
+    ],
+    "wrong_endpoint_Y": [
+      "endpoint_Y"
+    ],
+    "wrong_endpoint_V": [
+      "endpoint_V"
+    ],
+    "below940_frontier": [
+      "actual_frontier"
+    ],
+    "below940_flag": [
+      "no_below940"
+    ],
+    "wrong_K": [
+      "theorem_K"
+    ],
+    "wrong_lower": [
+      "theorem_lower"
+    ],
+    "old_saha": [
+      "saha"
+    ],
+    "uncommitted_row": [
+      "guard_commit"
+    ],
+    "extra_actual": [
+      "one_actual_zero_proof"
+    ],
+    "extra_proof": [
+      "one_actual_zero_proof"
+    ],
+    "double_consumption": [
+      "single_consumption"
+    ],
+    "historical_replay": [
+      "history_firewall"
+    ],
+    "wrong_left_glue": [
+      "row_Y_glue"
+    ],
+    "unauthorized": [
+      "consumer_authorized_by_ingestion"
+    ],
+    "Q_closed": [
+      "claim_firewall"
+    ],
+    "wrong_theorem_schema": [
+      "fresh_proof_schema"
+    ]
+  },
+  "independence_scope": "Separate invariant composition and authority readback; no producer import. Shared frozen theorem/source premises, not independent physics."
+}

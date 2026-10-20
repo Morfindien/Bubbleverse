@@ -1,0 +1,68 @@
+{
+  "schema": "bubbleverse.q048.v113.source_correct_actual_consumer.postaccept_validation.v1",
+  "status": "PASS",
+  "accepted_checkpoint_sha256": "ab1502f874051cb4d534093769a3c28f4477f4aae8b8a751fb4ba4edc9eeb2b7",
+  "checks_total": 30,
+  "checks_passed": 30,
+  "checks": {
+    "schema": true,
+    "identity": true,
+    "spec_pin": true,
+    "status": true,
+    "scientific_state": true,
+    "raw_pin": true,
+    "validation_pin": true,
+    "validation_pass": true,
+    "real_mutations": true,
+    "parent_pin": true,
+    "actual_before": true,
+    "actual_after": true,
+    "four_frontiers": true,
+    "endpoint": true,
+    "K": true,
+    "lower": true,
+    "saha": true,
+    "theorem_pin": true,
+    "theorem_raw_pin": true,
+    "theorem_verifier_pin": true,
+    "guard_source": true,
+    "guard_row": true,
+    "authorization": true,
+    "one_actual_zero_proof": true,
+    "single_consumption": true,
+    "no_reset": true,
+    "history": true,
+    "no_below940": true,
+    "no_native_claim": true,
+    "stop_rule": true
+  },
+  "semantic_mutations_total": 8,
+  "semantic_mutations_rejected": 8,
+  "mutation_failed_invariants": {
+    "wrong_parent": [
+      "parent_pin"
+    ],
+    "wrong_theorem": [
+      "theorem_pin"
+    ],
+    "wrong_row": [
+      "guard_row"
+    ],
+    "reset": [
+      "no_reset"
+    ],
+    "below940": [
+      "actual_after"
+    ],
+    "endpoint": [
+      "endpoint"
+    ],
+    "extra_cell": [
+      "one_actual_zero_proof"
+    ],
+    "new_proof": [
+      "one_actual_zero_proof"
+    ]
+  },
+  "independence_scope": "Separate process and implementation read back checkpoint, raw, validation and spec; shares frozen premises."
+}

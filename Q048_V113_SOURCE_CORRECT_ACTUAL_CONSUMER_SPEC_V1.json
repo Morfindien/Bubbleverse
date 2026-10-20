@@ -1,0 +1,131 @@
+{
+  "schema": "bubbleverse.q048.v113.source_correct_actual_consumer.spec.v1",
+  "created_at_utc": "2026-10-20T07:01:24.235163+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_type": "SCIENTIFIC_CASE_EXECUTION",
+  "task_id": "LOCAL-Q048-V113-SOURCE-CORRECT-ACTUAL-CONSUMER-950-940-V1",
+  "task_fingerprint": "7cfc1bc2b57ed6cfda6c21a37b7816902da34115a39b55ce91402ce5a131c9df",
+  "program_id": "Q048-V113-SOURCE-CORRECT-CONSUMER-V1",
+  "program_registration": "LOCAL_NOT_REGISTERED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-65.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "core_version": "NOT_AVAILABLE_IN_SCOPED_EVIDENCE"
+  },
+  "repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "641065295c359c5c6b24ef198cc4b07726297c82",
+    "source_freshness": "VERIFIED",
+    "version_check": "Untruncated tree has V113 task/handoff only;29proof/ingestion files and8method references matched content-addressed repository bytes"
+  },
+  "input_hashes": {
+    "Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json": "236764f217c6c9d7affd8cffbaeefef20ee3d456ef31c1d8402baafff78d8bb7",
+    "Q048_V112_INGESTION_STATE_V1.json": "4cf49e206a5b96bd7bfa8b317601a141882f9d4fd3f4741e0f8e0313d1e64e48",
+    "Q048_V112_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json": "0614968fba0060267b3f8a1d63cf5fd8cb153982a9a4c751670e26c72f5390fe",
+    "Q048_V112_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json": "c6819098da5f4748b1f2fa4aca084fef0ba6eeceee235456d788d4deccab0d85",
+    "Q048_V112_SOURCE_CORRECT_PROOF_RAW_V1.json": "523f9796b42307529295194a560964740ce9d46d56b81be21b984845b8a7f542",
+    "Q048_V112_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json": "3688dc054da433971e4ddc456ec93062e1f611cd191ce01a009affd95989e8c7",
+    "Q048_V113_NEXT_BUILDER_TASK_V1.json": "220feca6865f50c50f9438c53606c2fa24b0193ac2f6069c775d59ffc7a9fb09",
+    "q048_guard_local_v_result_v12.json": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+  },
+  "actual_before": {
+    "count": 113,
+    "frontier": 950
+  },
+  "actual_after": {
+    "count": 114,
+    "frontier": 940
+  },
+  "cell_z": [
+    950,
+    940
+  ],
+  "cell_a": [
+    "1/951",
+    "1/941"
+  ],
+  "source_row_path": [
+    "evaluators",
+    0,
+    "rows",
+    50
+  ],
+  "row_sha256": "50f8411d6a53b4bf0184da0eb0f83e8da6422d75e6b48a7698f6f8dba12561f4",
+  "correct_saha_fact": "3.016103031869581e21",
+  "retained_theorem": {
+    "K_upper": "2434080172867495593979/500000000000000000",
+    "connected_lower": "228498093366287/500000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ]
+  },
+  "theorem_schema": "bubbleverse.q048.v112.source_correct_proof.acceptance.v1",
+  "endpoint_crosscheck": {
+    "a": "1/941",
+    "E": "23169291469718832199/500000000000000000",
+    "Y": "36842143149632196673/1000000000000000000",
+    "Vbar": "2275188699640893309/250000000000000000"
+  },
+  "max_new_actual_cells": 1,
+  "max_new_proof_cells": 0,
+  "max_full_theorem_recomputations": 0,
+  "stop": "One accepted actual cell or first exact blocker; no below940; then one return to ingestion",
+  "mandatory_tests": [
+    "All8 exact source input byte pins",
+    "Fresh-proof V112 schema and exact V111 parent binding",
+    "row50 canonical hash and left a/E/Y/V no-reset glue",
+    "Qualified committed primary row; guard-only control",
+    "Exact endpoint/accepted theorem bounds",
+    "Separate raw verifier with25 result mutations plus1 theorem-schema authority mutation (26total); no no-op fixtures",
+    "Wrong raw-result and wrong V112 theorem-acceptance schema are frozen named controls",
+    "Separate checkpoint readback with8 real non-no-op mutations",
+    "All original source and full incoming journal bytes preserved"
+  ],
+  "compute_decision": {
+    "compute_backend": "LOCAL_RUNTIME",
+    "github_worthwhile": "NO",
+    "github_worthwhile_gate": "PASS",
+    "local_total_estimate_seconds": [
+      1,
+      10
+    ],
+    "estimate_basis": "Prior V111 same four-phase hash/JSON/Fraction admission completed in0.1635s; V113 adds two frozen schema negative controls. No proof solver/integration.",
+    "github_total_estimate": "UNMEASURED; workflow/setup/registration/queue/operator overhead offers no material benefit for this small serial one-shot task",
+    "resource_budget": "Single admission; four phases at most60seconds each; finite26raw/authority plus8checkpoint controls;0retry; no external/paid compute"
+  },
+  "journal_input": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V112_INGESTED_SOURCE_CORRECT_V1.md",
+    "bytes": 14512686,
+    "sha256": "10357b16a5fd61d7ee7d5200590f799518a7970ead74f599f9ed0f0212975c2f"
+  },
+  "handoff_input": {
+    "filename": "Q048_V113_HANDOFF_TO_BUILDER_SOURCE_CORRECT_ACTUAL_CONSUMER_V1.md",
+    "sha256": "15d3075016428811237381037134e06442982d1f25f995eb96612d0348e3306d"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "arithmetic": "Exact string/Fraction equality; no floating solver",
+    "dependencies": "Python standard library only"
+  },
+  "hash_conventions": {
+    "files": "SHA256 exact raw bytes without normalization",
+    "row": "SHA256 UTF8 sorted compact JSON ensure_ascii=False"
+  },
+  "forbidden": [
+    "V112 theorem rerun/reproof",
+    "old science replay/relabel",
+    "physical reset/refit/recapture/tuning",
+    "changing the exact question, captures or accepted z_reio",
+    "below940",
+    "extra actual or proof cells",
+    "NativeP6 or complete histories claim",
+    "accepted-model/Q change or Q closure"
+  ]
+}
