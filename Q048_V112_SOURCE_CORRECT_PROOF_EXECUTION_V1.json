@@ -1,0 +1,71 @@
+{
+  "schema": "bubbleverse.q048.v112.source_correct_proof.execution.v1",
+  "task_id": "LOCAL-Q048-V112-SOURCE-CORRECT-NEW-PROOF-950-940-V1",
+  "start_utc": "2026-10-20T06:43:59.003233+00:00",
+  "end_utc": "2026-10-20T06:44:00.141602+00:00",
+  "science_elapsed_seconds": 1.1383653519997097,
+  "science_budget_seconds": 300,
+  "compute_backend": "LOCAL_RUNTIME",
+  "github_actions_used": false,
+  "status": "COMPLETE",
+  "obstruction": null,
+  "phases": [
+    {
+      "phase": "PRODUCER",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/660cd6de75b5/v112_work/q048_v112_proof.py",
+        "--spec",
+        "/workspace/scratch/660cd6de75b5/v112_work/Q048_V112_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+        "--output",
+        "/workspace/scratch/660cd6de75b5/v112_work/Q048_V112_SOURCE_CORRECT_PROOF_RAW_V1.json"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.3175327440003457,
+      "stdout": "{\"status\": \"CANDIDATE_PROOF\", \"obstruction\": null, \"K_upper\": \"2434080172867495593979/500000000000000000\", \"hmin\": \"228498093366287/500000000000000000\"}\n",
+      "stderr": ""
+    },
+    {
+      "phase": "SEPARATE_VERIFIER",
+      "command": "q048_v112_verify.verify(root,spec,raw)",
+      "status": "PASS",
+      "wall_seconds": 0.23174473900053272
+    },
+    {
+      "phase": "REAL_MUTATION_CONTROLS",
+      "count": 16,
+      "rejected": 16,
+      "wall_seconds": 0.5445623719997457
+    },
+    {
+      "phase": "ACCEPT_AND_READBACK",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "/workspace/scratch/660cd6de75b5/v112_work/q048_v112_accept.py",
+        "--root",
+        "/workspace/scratch/660cd6de75b5/v112_work"
+      ],
+      "returncode": 0,
+      "wall_seconds": 0.03989760000058595,
+      "stdout": "{\"accepted_sha256\": \"0614968fba0060267b3f8a1d63cf5fd8cb153982a9a4c751670e26c72f5390fe\", \"postaccept\": \"PASS\", \"checks_passed\": 20, \"checks_total\": 20}\n",
+      "stderr": ""
+    }
+  ],
+  "producer_invocations": 1,
+  "historical_program_main_invocations": 0,
+  "new_actual_cells": 0,
+  "actual_state_unchanged": {
+    "count": 113,
+    "frontier": 950
+  },
+  "below940_work": false,
+  "no_retry": true,
+  "spec_sha256": "c592d72a7bb33a218d4963d6c90e0744ec8a3024af0145bf84db542a59c33eb5",
+  "code_hashes": {
+    "q048_v112_proof.py": "680838d9f0a61981c31ca83b1200538c8dde46f6bac4693ff46064b574e8df52",
+    "q048_v112_verify.py": "918c87498bb0b7275b15f7e2976d943d0461e1e27154f5a6e03dbbf0443e6cb0",
+    "q048_v112_accept.py": "feb5cc4038bacdd8e1ee312eeebf9c37262bb5f130af7ef29caec7ce9686a8a5",
+    "q048_v112_run.py": "8e388becc889c93db44e44a2893d83a5a0699790100f4c0f63545f50788223c6",
+    "test_q048_v112_binding.py": "53f310e35ff2660d2d15cd1d074371cac8683a7eafea62c3a964438d510e77b5"
+  }
+}
