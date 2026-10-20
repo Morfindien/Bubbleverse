@@ -1,0 +1,104 @@
+{
+  "schema": "bubbleverse.q048.v111.source_correct_actual_consumer.raw.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V111-SOURCE-CORRECT-ACTUAL-CONSUMER-960-950-V1",
+  "task_fingerprint": "c48637d6aff6dd94883e58ace9ed8ca1a748c92863d9c7a17e5ead825bfebf8f",
+  "program_id": "Q048-V111-SOURCE-CORRECT-CONSUMER-V1",
+  "program_registration": "LOCAL_NOT_REGISTERED",
+  "created_at_utc": "2026-10-20T06:20:20.308592+00:00",
+  "status": "PENDING_VALIDATION",
+  "scientific_state": "INCONCLUSIVE",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "spec_sha256": "5f151bcc109eb7a4ee15e6eacfc31db75dc758b1fe9b398cf6ffebc94ca713e3",
+  "task_authorization_sha256": "e11e68fac4e2e0e2b0736a88218052fa70a8aed76b6cbac9a118dcd9e9461eb7",
+  "theorem_postaccept_sha256": "0b1310f78c05826c09feaf8d4cbfd08047e115273cb852e160776e2f8d03c99d",
+  "authorization_sha256": "3779a5a6ebfc71b213548338c8f14013edd2207505db4017562b12504ba0eccb",
+  "lineage": "SOURCE_CORRECT_REASSESSMENT_V104_V105_V106_V107_V108_V109_V110_V111",
+  "cell_z": [
+    960,
+    950
+  ],
+  "cell_a": [
+    "1/961",
+    "1/951"
+  ],
+  "parent_authority": {
+    "record": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba",
+    "actual": {
+      "count": 112,
+      "frontier": 960
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 960
+    },
+    "endpoint": {
+      "a": "1/961",
+      "E": "49737668672811936943/1000000000000000000",
+      "Y": "39560432998711765483/1000000000000000000",
+      "Vbar": "4876592093839665491/500000000000000000"
+    }
+  },
+  "theorem_authority": {
+    "record": "Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+    "sha256": "524aa47cec3698015824722380adc9e08359c41e4d4f5ec7dda404dadf1d111f",
+    "raw_sha256": "8883c3d7d01660ee0d6a9f602220e41ef9e5b232079d87dda1a1cde68d4b6642",
+    "verification_sha256": "093f4fda4fc617db3e518626f4f89a1e392070f300db38c7f6178707c0d53a7d",
+    "correct_saha_fact": "3.016103031869581e21",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "K_upper": "4938757978740257564629/1000000000000000000",
+    "connected_lower": "93617401567469/200000000000000000"
+  },
+  "guard_binding": {
+    "source_record": "q048_guard_local_v_result_v12.json",
+    "source_record_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row_sha256": "5213279b9cf078f3854fb16c6669f761a86a39c19bd5c6ef872519a66d6a08ee",
+    "index": 49,
+    "E_input_left": "49737668672811936943/1000000000000000000",
+    "Y_left": "39560432998711765483/1000000000000000000",
+    "V_previous": "4876592093839665491/500000000000000000",
+    "source_state_reset": false,
+    "whole_cell_qualified": true,
+    "accepted": true,
+    "committed": true,
+    "control_role": "GUARD_ONLY"
+  },
+  "candidate_actual": {
+    "count": 113,
+    "frontier": 950,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 950
+    },
+    "endpoint": {
+      "a": "1/951",
+      "E": "12004207918064743109/250000000000000000",
+      "Y": "37289221101899893/976562500000000",
+      "Vbar": "9422974711250420253/1000000000000000000"
+    },
+    "connected_lower": "93617401567469/200000000000000000",
+    "K_upper": "4938757978740257564629/1000000000000000000"
+  },
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "new_full_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "below950_work": false,
+  "historical_record_modified": false,
+  "historical_v101_v102_replayed": false,
+  "no_physical_reset": true,
+  "no_native_trajectory_claim": true,
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED",
+  "claim_firewall": "One exact theorem-backed admission, not native trajectory integration, new proof or complete four-case xe/tau bounds."
+}

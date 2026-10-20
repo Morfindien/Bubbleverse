@@ -1,0 +1,183 @@
+"""Separate V109 admission validator. Does not import or execute the producer."""
+import argparse
+import copy
+import hashlib
+import json
+from pathlib import Path
+from fractions import Fraction as F
+
+PARENT = 'Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json'
+THEOREM = 'Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json'
+RAW = 'Q048_V110_SOURCE_CORRECT_PROOF_RAW_V1.json'
+VER = 'Q048_V110_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json'
+GUARD = 'q048_guard_local_v_result_v12.json'
+INGEST = 'Q048_V110_INGESTION_STATE_V1.json'
+POST = 'Q048_V110_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json'
+TASKFILE = 'Q048_V111_NEXT_BUILDER_TASK_V1.json'
+PINS = {'Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json': '37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba', 'Q048_V110_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json': '524aa47cec3698015824722380adc9e08359c41e4d4f5ec7dda404dadf1d111f', 'Q048_V110_SOURCE_CORRECT_PROOF_RAW_V1.json': '8883c3d7d01660ee0d6a9f602220e41ef9e5b232079d87dda1a1cde68d4b6642', 'Q048_V110_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json': '093f4fda4fc617db3e518626f4f89a1e392070f300db38c7f6178707c0d53a7d', 'Q048_V110_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json': '0b1310f78c05826c09feaf8d4cbfd08047e115273cb852e160776e2f8d03c99d', 'q048_guard_local_v_result_v12.json': '90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5', 'Q048_V110_INGESTION_STATE_V1.json': '3779a5a6ebfc71b213548338c8f14013edd2207505db4017562b12504ba0eccb', 'Q048_V111_NEXT_BUILDER_TASK_V1.json': 'e11e68fac4e2e0e2b0736a88218052fa70a8aed76b6cbac9a118dcd9e9461eb7'}
+ROW_HASH = '5213279b9cf078f3854fb16c6669f761a86a39c19bd5c6ef872519a66d6a08ee'
+SPEC = 'Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json'
+SPEC_HASH = '5f151bcc109eb7a4ee15e6eacfc31db75dc758b1fe9b398cf6ffebc94ca713e3'
+PREFIX = 'Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_'
+TASK = 'LOCAL-Q048-V111-SOURCE-CORRECT-ACTUAL-CONSUMER-960-950-V1'
+QUESTION_HASH = 'c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436'
+
+
+def sha(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def load(path):
+    return json.loads(Path(path).read_bytes())
+
+
+def rowhash(row):
+    return hashlib.sha256(json.dumps(row, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode()).hexdigest()
+
+
+def load_authorities(root):
+    result = {}
+    for name, expected in PINS.items():
+        if sha(root / name) != expected:
+            raise ValueError('authority byte pin: ' + name)
+        result[name] = load(root / name)
+    return result
+
+
+def check_result(r, sources):
+    p, t, tr, tv, g, i = (sources[n] for n in (PARENT, THEOREM, RAW, VER, GUARD, INGEST))
+    row = g['evaluators'][0]['rows'][49]
+    c, pa, ta, gb = (r[k] for k in ('candidate_actual', 'parent_authority', 'theorem_authority', 'guard_binding'))
+    th = t
+    expected_frontiers = dict(p['frontiers'], **{'hillipop-ede_n3': 950})
+    # Exact dictionaries intentionally require canonical strings, as well as rational consistency.
+    checks = {
+        'schema': r['schema'] == 'bubbleverse.q048.v111.source_correct_actual_consumer.raw.v1',
+        'q_target': r['q'] == r['target_q'] == p['q'] == t['q'] == 'Q048',
+        'task': r['task_id'] == TASK and r['task_fingerprint'] == i['next_task_fingerprint'],
+        'question': r['question_sha256'] == QUESTION_HASH == hashlib.sha256(r['exact_question'].encode()).hexdigest(),
+        'spec_pin': r['spec_sha256'] == SPEC_HASH,
+        'candidate_unaccepted': r['status'] == 'PENDING_VALIDATION',
+        'parent_pin': pa['record'] == PARENT and pa['sha256'] == PINS[PARENT],
+        'parent_validated': p['status'] == 'VALIDATED' and p['technical_state'] == 'PASS',
+        'parent_state': pa['actual'] == p['accepted_actual'] == {'count':112, 'frontier':960},
+        'parent_endpoint': pa['endpoint'] == p['endpoint'],
+        'parent_frontiers': pa['frontiers'] == p['frontiers'],
+        'theorem_pin': ta['record'] == THEOREM and ta['sha256'] == PINS[THEOREM],
+        'theorem_raw_pin': ta['raw_sha256'] == t['raw_sha256'] == PINS[RAW],
+        'theorem_ver_pin': ta['verification_sha256'] == t['verification_sha256'] == PINS[VER],
+        'theorem_accepted': t['status'] == 'ACCEPTED' and t['technical_state'] == 'PASS',
+        'theorem_parent_hash': t['parent_checkpoint_sha256'] == PINS[PARENT],
+        'theorem_parent_full_state': t['parent_actual']==p['accepted_actual'] and t['parent_endpoint']==p['endpoint'] and t['parent_connected_lower']==p['connected_lower'],
+        'theorem_raw_binding': tr['parent_checkpoint_sha256']==PINS[PARENT] and tr['parent_actual']==p['accepted_actual'] and tr['K_upper']==t['K_upper'] and tr['hmin']==t['connected_lower'],
+        'retained_verifier': tv['status'] == 'PASS' and tv['verification_pass'] is True and tv['raw_sha256'] == PINS[RAW] and tv['checks_total'] == tv['checks_passed'] == 30 and all(tv['checks'].values()) and tv['semantic_mutations_total'] == tv['semantic_mutations_rejected'] == 16,
+        'consumer_authorized_by_ingestion': i['consumer_authorization'] == 'GRANTED_BY_INGESTION_FOR_EXACTLY_ONE_CELL_960_TO_950' and r['authorization_sha256'] == PINS[INGEST] and i['next_task_id'] == TASK,
+        'fresh_proof_schema':t['schema']=='bubbleverse.q048.v110.source_correct_proof.acceptance.v1' and t['mathematical_proof_accepted'] is True,
+        'proof_postaccept_pin':r['theorem_postaccept_sha256']==PINS[POST] and sources[POST]['status']=='PASS' and sources[POST]['accepted_checkpoint_sha256']==PINS[THEOREM] and sources[POST]['checks_total']==sources[POST]['checks_passed']==20 and all(sources[POST]['checks'].values()),
+        'bounded_task_pin':r['task_authorization_sha256']==PINS[TASKFILE] and sources[TASKFILE]['task_id']==TASK and sources[TASKFILE]['parent_authority']['sha256']==PINS[PARENT] and sources[TASKFILE]['theorem_authority']['sha256']==PINS[THEOREM],
+        'mathematics_stop_preserved': t['consumer_authorization'] == 'NOT_GRANTED',
+        'cell_z': r['cell_z'] == t['proof_cell_z'] == [960,950],
+        'cell_a': r['cell_a'] == t['proof_cell_a'] == ['1/961','1/951'],
+        'saha': ta['correct_saha_fact'] == th['source_saha_factor'] == p['correct_saha_fact'] == '3.016103031869581e21',
+        'thermal_domain': ta['thermal_domain'] == th['thermal_domain'] == ['-1/1000000','1/50'],
+        'guard_source': gb['source_record'] == GUARD and gb['source_record_sha256'] == PINS[GUARD],
+        'guard_row_hash': gb['primary_row_sha256'] == rowhash(row) == ROW_HASH,
+        'guard_primary_not_control': g['evaluators'][0]['control'] is False and gb['control_role'] == 'GUARD_ONLY',
+        'row_identity': gb['index'] == row['index'] == 49 and [row['z0'],row['z1']] == [960,950] and [row['a0'],row['a1']] == ['1/961','1/951'],
+        'row_E_glue': gb['E_input_left'] == row['E_input_left'] == p['endpoint']['E'],
+        'row_Y_glue': gb['Y_left'] == row['Y_left'] == p['endpoint']['Y'],
+        'row_V_glue': gb['V_previous'] == row['V_previous'] == p['endpoint']['Vbar'],
+        'row_a_glue': row['a0'] == p['endpoint']['a'],
+        'no_reset': gb['source_state_reset'] is row['source_state_reset'] is False and r['no_physical_reset'] is True,
+        'guard_commit': gb['whole_cell_qualified'] is row['whole_cell_qualified'] is True and gb['accepted'] is row['accepted'] is True and gb['committed'] is row['committed'] is True,
+        'guard_domain': row['domain']['admitted'] is True and all(row['domain']['checks'].values()),
+        'actual_count': type(c['count']) is int and c['count'] == p['accepted_actual']['count']+1 == 113,
+        'actual_frontier': c['frontier'] == row['z1'] == 950,
+        'four_frontiers': c['frontiers'] == expected_frontiers,
+        'endpoint_a': c['endpoint']['a'] == row['a1'] == '1/951',
+        'endpoint_E': c['endpoint']['E'] == row['E_right'] == '12004207918064743109/250000000000000000',
+        'endpoint_Y': c['endpoint']['Y'] == row['Y_right'] == '37289221101899893/976562500000000',
+        'endpoint_V': c['endpoint']['Vbar'] == row['V_admitted'] == '9422974711250420253/1000000000000000000',
+        'theorem_lower': c['connected_lower'] == ta['connected_lower'] == th['connected_lower'] == '93617401567469/200000000000000000' and F(c['connected_lower']) > 0,
+        'theorem_K': c['K_upper'] == ta['K_upper'] == th['K_upper'] == '4938757978740257564629/1000000000000000000' and F(c['K_upper']) > 0,
+        'one_actual_zero_proof': r['new_actual_cells'] == 1 and r['new_mathematical_proof_cells'] == r['new_full_theorem_recomputations'] == 0,
+        'single_consumption': r['theorem_consumptions'] == 1,
+        'no_below950': r['below950_work'] is False,
+        'history_firewall': r['historical_record_modified'] is False and r['historical_v101_v102_replayed'] is False,
+        'claim_firewall': r['scientific_state'] == 'INCONCLUSIVE' and r['q_complete'] is False and r['NativeP6'] == 'UNRESOLVED' and r['no_native_trajectory_claim'] is True,
+    }
+    return checks
+
+
+def mutations(original):
+    controls = [
+        ('wrong_parent_hash', ('parent_authority','sha256'), '0'*64),
+        ('historical_parent_identity', ('parent_authority','record'), 'q048_frec_moving_h_accepted_checkpoint_v101.json'),
+        ('wrong_theorem_hash', ('theorem_authority','sha256'), '1'*64),
+        ('wrong_row_hash', ('guard_binding','primary_row_sha256'), '2'*64),
+        ('wrong_row_index', ('guard_binding','index'),48),
+        ('reset_true', ('guard_binding','source_state_reset'),True),
+        ('wrong_cell', ('cell_z',),[950,940]),
+        ('wrong_endpoint_a', ('candidate_actual','endpoint','a'),'1/941'),
+        ('wrong_endpoint_E', ('candidate_actual','endpoint','E'),'1'),
+        ('wrong_endpoint_Y', ('candidate_actual','endpoint','Y'),'1'),
+        ('wrong_endpoint_V', ('candidate_actual','endpoint','Vbar'),'1'),
+        ('below950_frontier', ('candidate_actual','frontier'),940),
+        ('below950_flag', ('below950_work',),True),
+        ('wrong_K', ('candidate_actual','K_upper'),'1'),
+        ('wrong_lower', ('candidate_actual','connected_lower'),'1'),
+        ('old_saha', ('theorem_authority','correct_saha_fact'),'3.016101031869581e21'),
+        ('uncommitted_row', ('guard_binding','committed'),False),
+        ('extra_actual', ('new_actual_cells',),2),
+        ('extra_proof', ('new_mathematical_proof_cells',),1),
+        ('double_consumption', ('theorem_consumptions',),2),
+        ('historical_replay', ('historical_v101_v102_replayed',),True),
+        ('wrong_left_glue', ('guard_binding','Y_left'),'0'),
+        ('unauthorized', ('authorization_sha256',),'3'*64),
+        ('Q_closed', ('q_complete',),True),
+    ]
+    result = {}
+    for name, path, value in controls:
+        item = copy.deepcopy(original)
+        target = item
+        for key in path[:-1]:
+            target = target[key]
+        target[path[-1]] = value
+        result[name] = item
+    return result
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    here = Path(__file__).resolve().parent
+    parser.add_argument('--inputs', type=Path, default=here/'inputs')
+    parser.add_argument('--out', type=Path, default=here)
+    args = parser.parse_args()
+    if sha(args.out/SPEC) != SPEC_HASH:
+        raise ValueError('spec byte pin')
+    a = load_authorities(args.inputs)
+    source = args.out/(PREFIX+'RAW_V1.json')
+    r = load(source)
+    checks = check_result(r,a)
+    rejected = {}
+    failed_checks = {}
+    for name, mutated in mutations(r).items():
+        mchecks = check_result(mutated,a)
+        failed_checks[name] = [key for key,val in mchecks.items() if not val]
+        rejected[name] = bool(failed_checks[name])
+    passed = all(checks.values()) and all(rejected.values())
+    report = {'schema':'bubbleverse.q048.v111.source_correct_actual_consumer.validation.v1',
+              'status':'PASS' if passed else 'FAIL', 'result_sha256':sha(source),
+              'spec_sha256':SPEC_HASH, 'authority_pins':PINS,
+              'checks_total':len(checks),'checks_passed':sum(checks.values()),'checks':checks,
+              'semantic_mutations_total':len(rejected),'semantic_mutations_rejected':sum(rejected.values()),
+              'mutations_rejected':rejected,'mutation_failed_invariants':failed_checks,
+              'independence_scope':'Separate invariant composition and authority readback; no producer import. Shared frozen theorem/source premises, not independent physics.'}
+    dest = args.out/(PREFIX+'VALIDATION_V1.json')
+    with dest.open('x') as f: json.dump(report,f,indent=2); f.write('\n')
+    print(report['status'],report['checks_passed'],len(checks),'checks;',sum(rejected.values()),len(rejected),'real mutations rejected')
+    if not passed: raise SystemExit(1)
+
+
+if __name__ == '__main__':
+    main()

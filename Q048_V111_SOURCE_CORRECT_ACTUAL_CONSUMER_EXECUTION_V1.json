@@ -1,0 +1,73 @@
+{
+  "schema": "bubbleverse.q048.v111.source_correct_actual_consumer.execution.v1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "compute_backend": "LOCAL_RUNTIME",
+  "github_actions_used": false,
+  "start_utc": "2026-10-20T06:20:20.266971+00:00",
+  "end_utc": "2026-10-20T06:20:20.430505+00:00",
+  "wall_seconds": 0.16352347000020018,
+  "status": "COMPLETE",
+  "first_failure": null,
+  "commands": [
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "q048_v111_actual_consumer.py"
+      ],
+      "start_utc": "2026-10-20T06:20:20.266986+00:00",
+      "end_utc": "2026-10-20T06:20:20.314372+00:00",
+      "wall_seconds": 0.047400608000316424,
+      "returncode": 0,
+      "stdout": "Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json 2a5a03461f96b3991cad0cccf91c214500a9d0e105c5d6ea63708210b4fbb4c3 actual113/frontier950; pending validation\n",
+      "stderr": "",
+      "code_sha256": "5771a3b1e6717612971f9e675249edf71c083d1b1156bbf49b3de727efbd5e99"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "q048_v111_verify.py"
+      ],
+      "start_utc": "2026-10-20T06:20:20.314477+00:00",
+      "end_utc": "2026-10-20T06:20:20.355386+00:00",
+      "wall_seconds": 0.04092662699986249,
+      "returncode": 0,
+      "stdout": "PASS 53 53 checks; 24 24 real mutations rejected\n",
+      "stderr": "",
+      "code_sha256": "03c02162f788b1e18ca9a42df1a36cf585313b51f70037151e9534a39b08cd9a"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "q048_v111_accept.py"
+      ],
+      "start_utc": "2026-10-20T06:20:20.355556+00:00",
+      "end_utc": "2026-10-20T06:20:20.394925+00:00",
+      "wall_seconds": 0.039381005999985064,
+      "returncode": 0,
+      "stdout": "Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json 236764f217c6c9d7affd8cffbaeefef20ee3d456ef31c1d8402baafff78d8bb7\n",
+      "stderr": "",
+      "code_sha256": "477d22f8b522d75ce97875644df7380b3bffe1c9ace7033347c347b3d21a2934"
+    },
+    {
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "q048_v111_postaccept.py"
+      ],
+      "start_utc": "2026-10-20T06:20:20.395019+00:00",
+      "end_utc": "2026-10-20T06:20:20.430382+00:00",
+      "wall_seconds": 0.03538141499984704,
+      "returncode": 0,
+      "stdout": "PASS 30 30 postaccept; 8 8 checkpoint mutations rejected\n",
+      "stderr": "",
+      "code_sha256": "8e94946618c4c62e60ef2c473f912e1478b4994a555e81fc3f39018b39422a65"
+    }
+  ],
+  "actual_consumer_executions": 1,
+  "theorem_producer_executions": 0,
+  "historical_program_main_executions": 0,
+  "below950_executions": 0,
+  "retry_count": 0,
+  "freeze_sha256": "9b99127d3fd30c2bb6906674e3932e45d1ef449a80142932e7c0c7b22e068954",
+  "spec_sha256": "5f151bcc109eb7a4ee15e6eacfc31db75dc758b1fe9b398cf6ffebc94ca713e3"
+}

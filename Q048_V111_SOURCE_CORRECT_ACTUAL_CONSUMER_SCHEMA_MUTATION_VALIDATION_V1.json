@@ -1,0 +1,24 @@
+{
+  "schema": "bubbleverse.q048.v111.source_correct_actual_consumer.schema_mutation_validation.v1",
+  "status": "PASS",
+  "mutations_total": 2,
+  "mutations_rejected": 2,
+  "controls": {
+    "wrong_raw_schema": {
+      "rejected": true,
+      "failed_invariants": [
+        "schema"
+      ]
+    },
+    "wrong_theorem_bridge_schema": {
+      "rejected": true,
+      "failed_invariants": [
+        "fresh_proof_schema"
+      ]
+    }
+  },
+  "scope": "Task-required schema negative controls using the unchanged frozen production validator; derivative in-memory fixtures only, no source bytes changed or actual cell executed",
+  "reason_for_additional_check": "Task explicitly requires wrong-schema semantic controls; the frozen24raw-controls did not include a named schema mutation. This supplement fills that obligation without postfreeze edits or producer/proof reruns.",
+  "raw_sha256": "2a5a03461f96b3991cad0cccf91c214500a9d0e105c5d6ea63708210b4fbb4c3",
+  "verifier_code_sha256": "03c02162f788b1e18ca9a42df1a36cf585313b51f70037151e9534a39b08cd9a"
+}
