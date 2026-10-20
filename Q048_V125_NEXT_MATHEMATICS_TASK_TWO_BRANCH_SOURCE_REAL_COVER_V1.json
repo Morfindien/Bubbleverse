@@ -1,0 +1,266 @@
+{
+  "schema": "bubbleverse.q048.v125.two_branch_source_real_operator_task.v1",
+  "created_at_utc": "2026-10-20T17:11:16.823161+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-V125-CONSERVATIVE-TWO-BRANCH-SOURCE-REAL-OPERATOR-DIAGNOSTIC-900-890-V1",
+  "objective": "Establish a useful finite conditional source-real enclosure of both admissible HMLA/SWIFT hydrogen operators on the declared candidate900->890 outer box,or identify the first precise source-real domain/input obstruction. Do not require or claim native branch selection.",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "candidate_cell_z": [
+    900,
+    890
+  ],
+  "candidate_cell_a": [
+    "1/901",
+    "1/891"
+  ],
+  "current_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "case_id": "Q048;separate CASE ID NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "task_fingerprint": "9e7b9edbc5ee9db1b27267c63ac747381d51e0b28f7081631ba5ac4024e33821",
+  "task_definition_for_fingerprint": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "task_id": "LOCAL-Q048-V125-CONSERVATIVE-TWO-BRANCH-SOURCE-REAL-OPERATOR-DIAGNOSTIC-900-890-V1",
+    "objective": "Establish a useful finite conditional source-real enclosure of both admissible HMLA/SWIFT hydrogen operators on the declared candidate900->890 outer box,or identify the first precise source-real domain/input obstruction. Do not require or claim native branch selection.",
+    "evidence_scope": "CONDITIONAL_SOURCE_REAL_OUTER_DOMAIN_DIAGNOSTIC;not native execution or historical executable certification",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "parent_checkpoint_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+    "v122_correction_acceptance_sha256": "dcd217b8885679b5bb0f839570d6fe51dcc4506f5404df0e516146f5bc7c6a58",
+    "v124_obstruction_acceptance_sha256": "84326114de4edc10b45b2b52fe50fc3cbc6c757c1752f90b3291817714a82773",
+    "candidate_cell_z": [
+      900,
+      890
+    ],
+    "candidate_cell_a": [
+      "1/901",
+      "1/891"
+    ],
+    "canonical_variables": {
+      "h": "xHII",
+      "g": "1-h",
+      "q": "fHe*x_He"
+    },
+    "trial_outer_domain": {
+      "h": [
+        "0",
+        "99999/100000"
+      ],
+      "g": [
+        "1/100000",
+        "1"
+      ],
+      "w": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "TM_over_TR": [
+        "49/50",
+        "1000001/1000000"
+      ],
+      "branches_q": {
+        "L": "1/1000000",
+        "R": "0"
+      },
+      "status": "TRIAL_OPERATOR_DOMAIN_ONLY;not established reachable tube;do not infer whole-cell authority from inherited left-face h0"
+    },
+    "method": {
+      "branch_policy": "Keep every source branch that may apply. For model4 and successful calls,the dispatch inventory is HMLA or SWIFT;prove the temperature/fit domain before evaluating SWIFT. Exact900 bypasses the low-z Pion formula. No threshold separation is needed merely to retain both defined operators.",
+      "operator_inclusion": "For state x in a certified common source-real domain,f_selected(x) is enclosed by hull(F_HMLA(x),F_SWIFT(x));this set inclusion does not supply numeric bounds until both operators have validated enclosures.",
+      "shared_rate_term": "Alpha_l*h*(h+q)-Alpha_eq_l*s*g",
+      "full_hydrogen_rate": "-nH/H * sum_l(C_l*(Alpha_l*h*(h+q)-Alpha_eq_l*s*g)) + captured_injection/H",
+      "HMLA_escape": "R=LYA_FACT(fsR,meR)*H/nH/g",
+      "SWIFT_escape": "R_fit=R/(1+DK_K)",
+      "required_denominators": [
+        "H>0",
+        "nH>0",
+        "g>0",
+        "1+DK_K>0 when SWIFT applicable",
+        "positive generalized C-factor denominators",
+        "all interpolation/fit source-domain gates"
+      ],
+      "constants": "Retain the established conditional exact-real convention enclosing exact source-decimal and decoded binary64 constants;document it. No unqualified native pow/exp/sqrt errors are absorbed into that convention.",
+      "arithmetic": "Validated exact/rational or directed-rounding enclosures for mathematical functions and source interpolation;never native point sampling as interval authority.",
+      "table_channels": "When TM/TR crosses1,retain both source interpolation channels and the relevant stencils;no midpoint channel choice."
+    },
+    "native_obligation": "V124 native sqrt/exp/pow+arithmetic error contract remains UNRESOLVED for every native claim. This task neither discharges nor retroactively changes V124. The conservative branch inventory does not bound the native evaluation of either operator.",
+    "max_new_proof_cells": 0,
+    "max_new_actual_cells": 0,
+    "max_full_connected_theorems": 0,
+    "science_budget_seconds": 300,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false,
+    "success": "One independently checked finite source-real two-operator enclosure with denominator/fit/domain certificates on explicitly stated boxes,OR one precise validated source-real obstruction after legitimate required-input recovery. A bare list of two branch names or [-infinity,+infinity] is not success.",
+    "stop": "Stop after that diagnostic result;no connected K/Riccati/H/thermal theorem,no actual119,no below890,no NativeP6 closure,no model/Q change. Return once to ingestion."
+  },
+  "fingerprint_rule": "SHA256 of UTF-8 compact sorted-key JSON(task_definition_for_fingerprint),ensure_ascii=False,no trailing newline",
+  "selected_engine": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "repository_ref": "2ba214be171884cd96e6e227f3f2eb8baea09579",
+    "identity_basis": "Current tree git-blob equals previously read complete prompt bytes"
+  },
+  "status": "PREPARED_NOT_EXECUTED",
+  "scientific_state": "INCONCLUSIVE",
+  "parent_authority": {
+    "accepted_checkpoint_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+    "accepted_actual": {
+      "count": 118,
+      "frontier": 900
+    },
+    "other_frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440
+    },
+    "h0_left_face_ionized_only": "83379887432219/200000000000000000",
+    "rule": "h0 is an ionized-h left-face bound/checkpoint at z=900. It is not a neutral-g bound and is not an established whole-cell lower for 900->890."
+  },
+  "v124_result": {
+    "filename": "Q048_V124_NATIVE_THRESHOLD_ACCEPTANCE_V1.json",
+    "bytes": 2601,
+    "sha256": "84326114de4edc10b45b2b52fe50fc3cbc6c757c1752f90b3291817714a82773"
+  },
+  "incoming_journal": {
+    "filename": "Q047_SAMLET_JOURNAL_Q048_V124_NATIVE_THRESHOLD_OBSTRUCTION_APPENDED_V1.md",
+    "bytes": 14595191,
+    "sha256": "f86eaf9f2049ca4157127fe53bcbcfeb6143237c8115fad22a8b461d481f876f"
+  },
+  "journal_for_execution": "Q047_SAMLET_JOURNAL_Q048_V124_OBSTRUCTION_INGESTED_V1.md",
+  "required_inputs": [
+    {
+      "filename": "q048_prefix_config_v1.json",
+      "expected_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "origin": "V124 input package;verify before freeze"
+    },
+    {
+      "filename": "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "expected_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+      "origin": "V124 input package/current repository"
+    },
+    {
+      "filename": "source/hydrogen.c",
+      "expected": {
+        "sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+        "bytes": 46627
+      },
+      "origin": "mwt5345/class_ede@5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/hydrogen.c"
+    },
+    {
+      "filename": "source/hydrogen.h",
+      "expected": {
+        "sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52",
+        "bytes": 11868
+      },
+      "origin": "mwt5345/class_ede@5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/hydrogen.h"
+    },
+    {
+      "filename": "q048_p3_scaled_raw_result_v2.json",
+      "expected": {
+        "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+        "bytes": 699697
+      },
+      "library_file_id": "libfile_58106ff5484c8191b93c2bf6bb707ccc",
+      "file_id": "file_000000002abc81f4b3bcdc77555a04d1",
+      "availability": "LIBRARY_METADATA_RESOLVED;BYTES_MUST_BE_VERIFIED_BEFORE_V125_FREEZE"
+    },
+    {
+      "filename": "q048_p3_scaled_transformed_log_tables_v2.json",
+      "expected": {
+        "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+        "bytes": 3958952
+      },
+      "library_file_id": "libfile_f9525531a138819187625a006f50fa7d",
+      "file_id": "file_00000000118c82108f6d94fbf3b655d0",
+      "availability": "LIBRARY_METADATA_RESOLVED;BYTES_MUST_BE_VERIFIED_BEFORE_V125_FREEZE"
+    },
+    {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "expected": {
+        "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+        "bytes": 1198030
+      },
+      "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+      "availability": "EXACT_LIBRARY_METADATA_RESOLVED_DURING_V124;VERIFY_CURRENT_BYTES_BEFORE_FREEZE"
+    },
+    {
+      "filename": "q048_post_event_state_tube_v1.py",
+      "expected": {
+        "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+        "bytes": 12423
+      },
+      "library_file_id": "libfile_38e3ebdeca4c81918568140a6731e83b",
+      "availability": "EXACT_LIBRARY_METADATA_RESOLVED_DURING_V124;VERIFY_CURRENT_BYTES_BEFORE_FREEZE"
+    }
+  ],
+  "helper_pins": {
+    "inputs/q047_certificate_v1.py": {
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "bytes": 15302
+    },
+    "inputs/q047_math_v1.py": {
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "bytes": 12617
+    },
+    "inputs/q047_precursor_check_v1.py": {
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "bytes": 29808
+    },
+    "inputs/q048_full_tube_reuse_v1.py": {
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+      "bytes": 10171
+    },
+    "inputs/q048_p3_scaled_arithmetic_v2.py": {
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "bytes": 5988
+    },
+    "inputs/q048_p3_scaled_kernel_v2.py": {
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "bytes": 15855
+    },
+    "inputs/q048_post_event_state_tube_v1.py": {
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+      "bytes": 12423
+    },
+    "inputs/q048_prefix_v1.py": {
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "bytes": 17198
+    },
+    "inputs/source/q047_math_v1.py": {
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "bytes": 12617
+    }
+  },
+  "source_and_data_recovery": "Use existing saved originals or documented source repository/Library locators. Check every conclusion-critical byte/size/hash before freeze. No inferred reconstruction of missing tables. Additional fit source data must be explicitly pinned to the unchanged source commit and matched to inherited capture/rate records.",
+  "mandatory_controls": [
+    "Reject wrong64/malformed62 question hashes,payload conflicts,stale fingerprints and source/capture/parent drift before freeze.",
+    "Retain h=xHII,g=1-h and left-face-only parent h0;never relabel inherited checkpoint.",
+    "Reject dropping HMLA or evaluating SWIFT outside its source temperature/fit domain.",
+    "Separate exact900 from z<900;threshold equality and overlapping thresholds must not select a unique branch.",
+    "A source-real certificate must be labelled source-real;reject promotion to a native error/trajectory certificate.",
+    "Prove denominator positivity analytically or by rigorous intervals;midpoint positivity is insufficient.",
+    "Do not call an outer operator box a reachable whole-cell tube.",
+    "Check source injection terms:prove captured zero injection or enclose them;do not omit by assumption.",
+    "If source interpreter error flags are possible,report the domain/error obstruction;do not treat an error-return0 as a valid physical rate.",
+    "Use separate checker and actual semantic mutations;fail-fast dependent phases;stop on producer failure;no retry/postfreeze edits."
+  ],
+  "what_changed_since_v124": "A new set-valued conditional source-real diagnostic keeps both operators instead of trying to certify a unique native predicate. It can supply a prerequisite for a later robust connected proof without inventing the missing NativeP6 bound.",
+  "same_engine_route_justification": "V124 never evaluated source-real rate/background intervals. V125 has different objective,method,evidence claim and fingerprint;it is not a retry of the stopped native-branch task.",
+  "forbidden": [
+    "claim V124 native gate resolved",
+    "claim actual native implementation lies in a source-real operator interval without an error relation",
+    "repeat Q047 global libm search on unchanged sources",
+    "full connected theorem or actual/proof cell",
+    "reset/refit/recapture/tuning",
+    "below890",
+    "model/Q change or Q closure"
+  ],
+  "execution_authorization": "Prepared by ingestion,diagnostic only;not executed in this run."
+}
