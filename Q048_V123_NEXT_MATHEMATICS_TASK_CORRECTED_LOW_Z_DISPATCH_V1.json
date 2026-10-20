@@ -1,0 +1,173 @@
+{
+  "schema": "bubbleverse.q048.v123.corrected_low_z_dispatch_diagnostic_task.v1",
+  "created_at_utc": "2026-10-20T15:57:02.211761+00:00",
+  "q": "Q048",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "case_id": "Q048; separate CASE ID NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be8398c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-V123-CORRECTED-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+  "task_fingerprint": "9406a875d44abc08564c392faf4db73c692cffe862062e4fde5216db8b440fdf",
+  "supersedes_for_future_execution_only": {
+    "task_id": "LOCAL-Q048-V122-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+    "fingerprint": "3a65e574aafe20c4ec790539ea06c99ccff72fa7ba3240f02242a07c9e45ea6a",
+    "rule": "Preserve V122 task unchanged as historical defective prospective contract; V123 is a new correction and does not relabel V122."
+  },
+  "task_definition_for_fingerprint": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be8398c4c6eaf85f8141ad3dc0436",
+    "task_id": "LOCAL-Q048-V123-CORRECTED-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+    "objective": "Establish source-faithful low-z dispatch branch coverage for candidate 900->890 after correcting the V122 h/g identity defect, or stop at the first precise remaining premise.",
+    "parent_checkpoint_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+    "v122_diagnostic_acceptance_sha256": "dcd217b8885679b5bb0f839570d6fe51dcc4506f5404df0e516146f5bc7c6a58",
+    "accepted_actual_must_remain": {
+      "count": 118,
+      "frontier": 900
+    },
+    "candidate_cell_z": [
+      900,
+      890
+    ],
+    "candidate_cell_a": [
+      "1/901",
+      "1/891"
+    ],
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "canonical_variables": {
+      "h": "xHII",
+      "g": "1-h",
+      "q": "fHe*x_He"
+    },
+    "left_face_h0_ionized_only": "83379887432219/200000000000000000",
+    "source_dispatch": {
+      "exact900": "z<900 block inactive;Pion remains initialized 1 before captured model/temperature gate",
+      "below900_RLya": "A/g where A=LYA_FACT(1,1)*H/nH and g=1-h",
+      "below900_Pion": "B/(3*A/g + C + B), with B=four_betaB and C=L2s1s",
+      "source_test": "Pion < PION_MAX",
+      "source_literal": "1e-2",
+      "exact_real_aid": "g*(99*B-C)<3*A is only an exact-real algebraic aid for threshold 1/100, not by itself a native branch certificate"
+    },
+    "binary64_requirement": "Verify compiled/source literal, arithmetic and libm enclosure. Near threshold compare outward-rounded Pion interval to the actual binary64 PION_MAX; do not replace the native predicate with exact-real 1/100 unless separation proves equivalence.",
+    "max_new_proof_cells": 0,
+    "max_new_actual_cells": 0,
+    "max_full_connected_theorems": 0,
+    "science_budget_seconds": 300,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false,
+    "stop": "Stop after one validated dispatch certificate/branch cover or first precise unresolved premise; no K/Riccati/H/thermal connected theorem and no actual admission."
+  },
+  "status": "PREPARED_NOT_EXECUTED",
+  "selected_engine": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.1.0",
+    "prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "identity_basis": "Verified by incoming V122 task/execution provenance; same specialist engine, materially corrected task."
+  },
+  "same_engine_route_justification": "V122 terminated before interval work because its incoming contract mislabeled h. The new evidence is a validated source-variable defect plus an explicit corrected mapping. Re-running the same defective task is forbidden; a separately fingerprinted corrected diagnostic can now answer the still-material source-dispatch question.",
+  "objective": "Establish source-faithful low-z dispatch branch coverage for candidate 900->890 after correcting the V122 h/g identity defect, or stop at the first precise remaining premise.",
+  "materiality": "Actual has reached frontier900. Any rigorous 900->890 proof depends on which pinned low-z source branch is active or possible. Without a source-faithful dispatch cover, later connected-cell mathematics could use the wrong differential equation.",
+  "parent_authority": {
+    "accepted_checkpoint_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+    "accepted_actual": {
+      "count": 118,
+      "frontier": 900
+    },
+    "other_frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440
+    },
+    "h0_left_face_ionized_only": "83379887432219/200000000000000000",
+    "rule": "h0 is an ionized-h left-face bound/checkpoint at z=900. It is not a neutral-g bound and is not an established whole-cell lower for 900->890."
+  },
+  "v122_correction_authority": {
+    "acceptance_sha256": "dcd217b8885679b5bb0f839570d6fe51dcc4506f5404df0e516146f5bc7c6a58",
+    "raw_sha256": "3115415c7f90ca18b044db331ec72e82d098eef727265d854ef4a08f1b131e14",
+    "verification_sha256": "4d91567bcbd128e0a5990b95450dac6b1a8e98815665bed60d8c7481c826e3a1",
+    "postaccept_sha256": "141712f21697b906e4d45a92fda4e46329355f3f479671f1090a4a534f4589a8",
+    "obstruction": "SOURCE_VARIABLE_IDENTITY / TASK_NEUTRAL_H_CONFLICTS_WITH_CANONICAL_IONIZED_H",
+    "canonical_h": "xHII",
+    "neutral_g": "1-h",
+    "correct_exact_real_threshold_aid": "(1-h)*(99*B-C)<3*A",
+    "scope": "Symbolic mapping only; not a below900 interval or native binary64/libm certificate."
+  },
+  "candidate_cell_z": [
+    900,
+    890
+  ],
+  "candidate_cell_a": [
+    "1/901",
+    "1/891"
+  ],
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "source_contract_corrected": {
+    "canonical_h": "xHII",
+    "neutral_g": "1-h",
+    "RLya": "LYA_FACT(1.,1.)*H/nH/g",
+    "four_betaB": "SAHA_FACT(1.,1.)*TR*sqrt(TR)*exp(-0.25*EI/TR)*alphaB_PPB(TR,1.,1.)",
+    "Pion": "four_betaB/(3.*RLya + L2s1s + four_betaB)",
+    "low_probability_test": "Pion < PION_MAX",
+    "PION_MAX_source_literal": "1e-2",
+    "exact900": "Treat separately: z<900 block inactive; Pion initialized1; captured SWIFT/temperature/model gate still applies.",
+    "below_threshold_dispatch": "HMLA",
+    "otherwise": "Captured MODEL=4 SWIFT path only if its temperature/fit gate passes; otherwise HMLA.",
+    "strict_threshold": "Equality is not low_probability_test; take otherwise then temperature/model gate."
+  },
+  "threshold_representation_obligation": {
+    "must_verify_native_literal_and_computation": true,
+    "exact_real_reference": "1/100",
+    "expected_binary64_if_IEEE754_RN": "5764607523034235/576460752303423488",
+    "expected_binary64_minus_exact_1_over_100": "3/14411518807585587200",
+    "rule": "These expected values are diagnostic guidance, not authority. Confirm actual compiled/runtime semantics and use outward rounding or a native-faithful proof before classifying points/intervals close to threshold."
+  },
+  "required_domain_work": [
+    "Use frozen captured H/nH/TR inputs and source units for both latch q=1e-6 and reset q=0 branches.",
+    "Establish denominator positivity and all rate/source intervals needed to compare Pion with the verified native PION_MAX.",
+    "Keep exact z=900 separate from every nonempty z<900 interval.",
+    "Derive any whole-cell h or g enclosure explicitly. Do not promote h0 from the left face to a whole-cell bound without proof.",
+    "If the Pion threshold or the subsequent SWIFT temperature gate can be crossed, retain every possible branch or rigorously partition the domain; do not use midpoint selection.",
+    "If no rigorous branch cover closes, identify the first exact missing premise and stop."
+  ],
+  "mandatory_controls": [
+    "Reject h=1-xHII notation for canonical h; neutral fraction must be g=1-h.",
+    "Reject use of ionized h0 as neutral g0 or as an unproved whole-cell lower.",
+    "Exact900 does not inherit any z<900 Pion formula.",
+    "Strict Pion<PION_MAX equality boundary follows otherwise path.",
+    "Changed hydrogen.c/h source hashes, source commit, captured model/flags or capture hash are a hard stop.",
+    "Exact-real algebra alone cannot decide the native branch when floating-point/libm rounding overlaps the threshold.",
+    "Mixed/unresolved branch cover is an admissible scientific result."
+  ],
+  "allowed_work": {
+    "new_diagnostic_code_spec_freeze": true,
+    "source_interval_background_rate_enclosures": true,
+    "directed_rounding_or_native_binary64_branch_enclosure": true,
+    "separate_verifier_and_boundary_mutations": true
+  },
+  "forbidden_work": {
+    "full_connected_K_Riccati_H_thermal_theorem": true,
+    "new_proof_cells": true,
+    "new_actual_cells": true,
+    "actual119": true,
+    "below890": true,
+    "reset_refit_recapture_tuning": true,
+    "NativeP6": true,
+    "model_or_Q_change": true,
+    "Q_closure": true,
+    "historical_overwrite_or_relabel": true
+  },
+  "budget": {
+    "science_seconds": 300,
+    "retry_count": 0,
+    "postfreeze_edits": false
+  },
+  "success_condition": "One technically validated source-dispatch certificate/branch cover for the candidate 900->890 tube under corrected h/g semantics and native threshold handling, OR one technically validated first precise remaining premise/obstruction. Either outcome is useful and must return once to Result Ingestion.",
+  "failure_condition": "Any variable-identity regression, historical relabel, unverified threshold substitution, midpoint-only branch choice, changed frozen inputs, postfreeze edits, or attempt to advance proof/actual state invalidates this task.",
+  "stop_condition": "Stop after the first accepted dispatch certificate/cover or precise obstruction. Produce 0 proof cells, 0 actual cells, 0 full connected theorems and return exactly once to Result Ingestion2.1.0.",
+  "execution_authorization": "PREPARED_BY_INGESTION; not executed in this ingestion run."
+}
