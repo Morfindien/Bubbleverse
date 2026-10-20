@@ -1,0 +1,55 @@
+{
+  "schema": "bubbleverse.q048.v108.ingestion.state.v1",
+  "created_at_utc": "2026-10-19T19:45:27Z",
+  "created_at_local": "2026-10-19T21:45:27+02:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "disposition": "CONTINUE",
+  "current_reassessment_lineage": {
+    "accepted_actual": {
+      "count": 111,
+      "frontier": 970
+    },
+    "parent_checkpoint_sha256": "3876328fa6acfd5a79c01505526de8e2b6d384b06241685eb359fa5635747e24",
+    "accepted_proof_bridge": {
+      "cell_z": [
+        970,
+        960
+      ],
+      "sha256": "4356c7f697c2df5897a64bfb7dc5f155af0b5dbaea7345f1f0af804d6963c5e7",
+      "raw_sha256": "df25316ce4a19f9177d99d3d256754dc640773f4ac9d0420d02c2f8e7412e928",
+      "verification_sha256": "c201bbdf75f7529f3c3f3d03a6c75df2197542d63fcad2d86d60c740e1ab7c8b",
+      "K_upper": "1001919080623370229873/200000000000000000",
+      "connected_lower": "479774678212513/1000000000000000000",
+      "correct_saha_fact": "3.016103031869581e21"
+    },
+    "new_actual_cells_from_v108": 0
+  },
+  "completion_gate_satisfied": false,
+  "open_material_uncertainties": [
+    "Source-correct actual consumer 970->960 not yet executed",
+    "NativeP6 unresolved",
+    "Complete four-case x_e(z) and cumulative tau_T(z) bounds unresolved"
+  ],
+  "selected_next_engine": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+    "git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "prompt_sha256_prior_verified": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1"
+  },
+  "next_task_id": "LOCAL-Q048-V109-SOURCE-CORRECT-ACTUAL-CONSUMER-970-960-V1",
+  "next_task_fingerprint": "042bf80b3e652120e1a00fd33a00a9aef2c907c0ec05f112497540a57d43f5cd",
+  "consumer_authorization": "GRANTED_BY_INGESTION_FOR_EXACTLY_ONE_CELL_970_TO_960",
+  "below960_authorization": "NOT_GRANTED",
+  "repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit_sha": "d910cc2ea09e9251f6f241992520f57d4609c62f",
+    "source_freshness": "VERIFIED",
+    "sync_status": "USER_UPLOAD_PENDING_FOR_NEW_INGESTION_FILES"
+  }
+}

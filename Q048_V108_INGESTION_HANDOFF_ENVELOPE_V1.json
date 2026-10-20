@@ -1,0 +1,89 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-V108-INGESTION-TO-V109-BUILDER-V1",
+  "created_at_utc": "2026-10-19T19:45:27Z",
+  "case_id": "NOT_ASSIGNED/PROPOSED_UNVERIFIED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": "Q048",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-V108-SOURCE-CORRECT-PROOF-BRIDGE-970-960-V1"
+  ],
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "engine_registry_ref": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V108_INGESTED_SOURCE_CORRECT_V1.md",
+  "result_provenance_ref": "Q048_V108_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "route_history_ref": "Q048_V108_INGESTION_JOURNAL_APPEND_V1.md",
+  "what_changed": [
+    "V108 source-correct proof bridge 970->960 ingested",
+    "New reassessment lineage now has theorem authority through960 while actual remains111/frontier970",
+    "Exactly one V109 consumer 970->960 authorized"
+  ],
+  "frozen_configuration_refs": [
+    "Q048_V107_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "Q048_V108_SOURCE_CORRECT_PROOF_BRIDGE_ACCEPTANCE_V1.json"
+  ],
+  "open_material_uncertainties": [
+    "Source-correct actual112/frontier960 not yet executed",
+    "NativeP6 unresolved",
+    "Complete four-case x_e(z) and cumulative tau_T(z) bounds unresolved"
+  ],
+  "missing_information": [],
+  "next_task": {
+    "task_id": "LOCAL-Q048-V109-SOURCE-CORRECT-ACTUAL-CONSUMER-970-960-V1",
+    "task_fingerprint": "042bf80b3e652120e1a00fd33a00a9aef2c907c0ec05f112497540a57d43f5cd",
+    "objective": "Execute exactly one source-correct reassessment-lineage actual consumer 970->960.",
+    "parent_checkpoint_sha256": "3876328fa6acfd5a79c01505526de8e2b6d384b06241685eb359fa5635747e24",
+    "theorem_acceptance_sha256": "4356c7f697c2df5897a64bfb7dc5f155af0b5dbaea7345f1f0af804d6963c5e7",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row_sha256": "98b31afe3cc6371533b59edf6ef673c0da6219122d145a8ca997276c270301cf",
+    "cell_z": [
+      970,
+      960
+    ],
+    "cell_a": [
+      "1/971",
+      "1/961"
+    ],
+    "expected_endpoint_crosscheck": {
+      "a": "1/961",
+      "E": "49737668672811936943/1000000000000000000",
+      "Y": "39560432998711765483/1000000000000000000",
+      "Vbar": "4876592093839665491/500000000000000000"
+    },
+    "max_new_actual_cells": 1,
+    "max_new_proof_cells": 0,
+    "success_condition": "One validated/accepted source-correct actual112/frontier960; zero new proof cells; no reset; return once to ingestion.",
+    "failure_condition": "Any authority/glue/theorem/source/verifier/postaccept invariant fails.",
+    "stop_condition": "Stop after one cell; no below960 execution."
+  },
+  "success_condition": "One validated/accepted source-correct actual112/frontier960; zero new proof cells; no reset.",
+  "failure_or_falsification_condition": "Any required authority/glue/theorem/verifier invariant fails.",
+  "stop_condition": "Stop after one cell; no below960 execution.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Exact Q048 still lacks NativeP6 and complete four-case x_e(z)/cumulative tau_T(z) bounds.",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "NOT_REQUIRED_WITHIN_EXISTING_AUTHORIZATION",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "base_commit_sha": "d910cc2ea09e9251f6f241992520f57d4609c62f",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V108_INGESTED_SOURCE_CORRECT_V1.md",
+    "memory_update_ref": "Q048_V108_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "target_paths_status": "PROPOSED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V108_INGESTION_UPLOAD_INSTRUCTIONS_V1.md"
+  }
+}
