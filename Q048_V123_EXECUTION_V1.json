@@ -1,0 +1,54 @@
+{
+  "schema": "bubbleverse.q048.v123.corrected_low_z_dispatch.execution.v1",
+  "created_at_utc": "2026-10-20T16:23:24.685707+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V123-CORRECTED-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+  "task_fingerprint": "9406a875d44abc08564c392faf4db73c692cffe862062e4fde5216db8b440fdf",
+  "status": "STOPPED_AT_START_GATE",
+  "start_utc": "2026-10-20T16:21:20.839529392+00:00",
+  "end_utc": "2026-10-20T16:21:25.212892369+00:00",
+  "wrapper_elapsed_seconds": 4.381084092,
+  "phases": [
+    {
+      "phase": "producer",
+      "invocations": 1,
+      "returncode": 1,
+      "error": "ValueError: CAPTURE_SCOPE",
+      "raw_output_created": false,
+      "science_interval_evaluations_accepted": 0
+    },
+    {
+      "phase": "verifier",
+      "invocations": 1,
+      "returncode": 1,
+      "error": "FileNotFoundError: raw output absent after producer start-gate stop",
+      "scientific_verification_executed": false
+    },
+    {
+      "phase": "accept",
+      "invocations": 1,
+      "returncode": 1,
+      "error": "FileNotFoundError: raw/verification absent",
+      "scientific_acceptance_executed": false
+    },
+    {
+      "phase": "preflight",
+      "invocations": 1,
+      "returncode": 0,
+      "stdout": "PASS 8/8 preflight controls",
+      "note": "Preflight did not include the malformed question-hash cross-check; frozen producer start gate did."
+    }
+  ],
+  "orchestration_note": "The shell wrapper used tee without pipefail, so verifier/accept commands were attempted after producer failure; both failed immediately on missing inputs and created no scientific evidence. This is preserved as execution provenance.",
+  "retry_count": 0,
+  "postfreeze_edits": false,
+  "science_budget_seconds": 300,
+  "new_actual_cells": 0,
+  "new_proof_cells": 0,
+  "new_full_connected_theorems": 0,
+  "historical_program_main_invocations": 0,
+  "freeze_sha256": "68efe02095177f091f148437dbb8b8cdbd810a556df827b3ec7842928bb04c4a",
+  "spec_sha256": "ec544166f584bcbee5e5a3ddb424dcbbb240342e78e7a577c88371280a16e8f9",
+  "source_runtime_audit_sha256": "3da65f34b8f6bd3dae4704eeb754ed199045b68ed7a7d19c9814d7fd2e66a47a"
+}

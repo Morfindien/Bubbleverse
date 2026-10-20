@@ -1,0 +1,92 @@
+{
+  "schema": "bubbleverse.q048.v123.question_identity_obstruction.v1",
+  "created_at_utc": "2026-10-20T16:23:24.685707+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V123-CORRECTED-LOW-Z-SOURCE-DISPATCH-DIAGNOSTIC-900-890-V1",
+  "task_fingerprint": "9406a875d44abc08564c392faf4db73c692cffe862062e4fde5216db8b440fdf",
+  "status": "VALIDATED_OBSTRUCTION",
+  "gate": "QUESTION_IDENTITY",
+  "code": "TASK_QUESTION_SHA256_MALFORMED_AND_MISMATCHED",
+  "technical_state": "PASS",
+  "scientific_state": "INCONCLUSIVE",
+  "case_lifecycle": "ACTIVE",
+  "exact_question_text_matches_capture": true,
+  "task_question_sha256_field": "c8d4ca366c84d235986b4413cbd436806be8398c4c6eaf85f8141ad3dc0436",
+  "task_question_sha256_length": 62,
+  "task_fingerprint_payload_question_sha256": "c8d4ca366c84d235986b4413cbd436806be8398c4c6eaf85f8141ad3dc0436",
+  "task_fingerprint_payload_length": 62,
+  "canonical_capture_question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "canonical_capture_hash_length": 64,
+  "computed_sha256_of_exact_question_utf8": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "computed_matches_capture": true,
+  "task_field_matches_canonical": false,
+  "missing_subsequence_description": "The malformed task field omits the two hexadecimal characters \"19\" in the canonical segment ...6be839198c4c... -> ...6be8398c4c....",
+  "repository_confirmation": {
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "9cac3d1e44ca336c0b8b237758ec6f087fe6157c",
+    "path": "Q048_V123_NEXT_MATHEMATICS_TASK_CORRECTED_LOW_Z_DISPATCH_V1.json",
+    "git_blob_sha1": "508d779ca78b7971b403e1d886eac5926679ac51",
+    "repo_question_sha256_field": "c8d4ca366c84d235986b4413cbd436806be8398c4c6eaf85f8141ad3dc0436",
+    "repo_field_length": 62,
+    "not_local_transport_corruption": true
+  },
+  "execution_effect": {
+    "frozen_producer_invocations": 1,
+    "producer_stopped_before_source_interval_science": true,
+    "producer_error": "ValueError: CAPTURE_SCOPE",
+    "raw_scientific_result_created": false,
+    "verifier_science_executed": false,
+    "acceptance_science_executed": false,
+    "new_actual_cells": 0,
+    "new_proof_cells": 0,
+    "new_full_connected_theorems": 0
+  },
+  "immutability": {
+    "task_must_remain_unchanged": true,
+    "task_fingerprint_must_remain_historical": true,
+    "in_place_hash_repair_forbidden": true,
+    "postfreeze_code_edits": false,
+    "frozen_code_unchanged": true,
+    "code_check": {
+      "q048_v123_dispatch.py": {
+        "expected": "eec5ed2cbc93082da30fe3f21f48a828bd3b1c31e35ef6a540a315a8d943b129",
+        "actual": "eec5ed2cbc93082da30fe3f21f48a828bd3b1c31e35ef6a540a315a8d943b129",
+        "unchanged": true
+      },
+      "q048_v123_verify.py": {
+        "expected": "f5057acb68719389625aa4674811eaf2c7bc8d0a16d5a367a08dd4201de8f2c6",
+        "actual": "f5057acb68719389625aa4674811eaf2c7bc8d0a16d5a367a08dd4201de8f2c6",
+        "unchanged": true
+      },
+      "q048_v123_accept.py": {
+        "expected": "e7c378ca39a5e6fae2f7873af84119690e6539d574c4d7f36f9aee6001bf0725",
+        "actual": "e7c378ca39a5e6fae2f7873af84119690e6539d574c4d7f36f9aee6001bf0725",
+        "unchanged": true
+      },
+      "q048_v123_native_probe.c": {
+        "expected": "6ca42224c3590118be48a264e7f3ac8ee3294f61e396f276c8a1b5cfe9704f54",
+        "actual": "6ca42224c3590118be48a264e7f3ac8ee3294f61e396f276c8a1b5cfe9704f54",
+        "unchanged": true
+      },
+      "test_q048_v123_dispatch.py": {
+        "expected": "2511a55201f526a11fcfdef3012105c3d8bd84b504aaf6e26bde9e603a06a08b",
+        "actual": "2511a55201f526a11fcfdef3012105c3d8bd84b504aaf6e26bde9e603a06a08b",
+        "unchanged": true
+      }
+    }
+  },
+  "actual_state_unchanged": {
+    "count": 118,
+    "frontier": 900
+  },
+  "other_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440
+  },
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED",
+  "required_recovery": "Result Ingestion must version a new successor task with the canonical 64-character question SHA256 and a new task fingerprint, while preserving all V122 h/g corrections and native-threshold obligations. Do not rerun this malformed V123 task.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+}
