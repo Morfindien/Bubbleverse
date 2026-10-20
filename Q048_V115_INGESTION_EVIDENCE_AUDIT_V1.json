@@ -1,0 +1,886 @@
+{
+  "schema": "bubbleverse.q048.v115.ingestion.evidence_audit.v1",
+  "created_at_utc": "2026-10-20T08:39:18.931605+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "status": "PASS",
+  "evidence_checks_total": 39,
+  "evidence_checks_passed": 39,
+  "evidence_checks": {
+    "q_target_identity": true,
+    "exact_question": true,
+    "repository_cache_complete_and_base": true,
+    "prior29_repository_anchors": true,
+    "source20_pending_explicit": true,
+    "manifest_hashes_sizes": true,
+    "accepted_checkpoint": true,
+    "one_actual_increment": true,
+    "frontiers_preserved": true,
+    "raw_pin": true,
+    "validation_pin": true,
+    "postaccept_pin": true,
+    "verifier53": true,
+    "mutations26": true,
+    "both_schema_controls": true,
+    "postaccept30": true,
+    "checkpoint_mutations8": true,
+    "delivery32": true,
+    "frozen8_inputs": true,
+    "frozen6_code": true,
+    "spec_freeze_pins": true,
+    "source_audit_pin": true,
+    "four_phase_exit0": true,
+    "execution_code_pins": true,
+    "finite_execution_once": true,
+    "zero_proof_single_consumption": true,
+    "history_claim_stop": true,
+    "incoming_journal_exact_anchor": true,
+    "one_source_scientific_event": true,
+    "no_prior_receipt": true,
+    "no_prior_receipt_or_next_task_tree": true,
+    "no_exact_library_duplicate": true,
+    "math_engine_verified": true,
+    "row52_cell": true,
+    "row52_exact_glue": true,
+    "row52_qualified_no_reset": true,
+    "guard_roles_source": true,
+    "source_prefactor_capture": true,
+    "complete_helper_method_maps": true
+  },
+  "repository_observation": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "03e1dc218293a580e720789c990f189758561dd6",
+    "commit_time_utc": "2026-10-20T08:09:46Z",
+    "tree_sha": "9f0cc9c18d4f3696f0e5283d3b81d371cff5830c",
+    "fresh_main_checked": true,
+    "tree_cache_reuse": "Same commit/tree as earlier complete verified snapshot; no redundant download",
+    "source_freshness": "VERIFIED_AT_BASE",
+    "v115_source_sync": "NOT_ON_GITHUB; ALL20_LIBRARY_SAVED_AND_LOCAL_BYTE_VERIFIED"
+  },
+  "source_and_anchor_inventory": {
+    "base_commit": "03e1dc218293a580e720789c990f189758561dd6",
+    "tree_sha": "9f0cc9c18d4f3696f0e5283d3b81d371cff5830c",
+    "tree_cache": "Reused byte-identical complete Git tree after fresh main confirmed identical commit/tree; no new full tree download needed",
+    "source_files": [
+      {
+        "filename": "Q047_SAMLET_JOURNAL_Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "bytes": 14528824,
+        "sha256": "2872e91fd10dd5295afe2624e6e8b9a3716ffa372f5dcc4c2764f20bfcea3aa3",
+        "git_blob_sha1": "2d6513d150f3f7e7e545e20efe4d11261180bddd",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_5face9fe9c788191a17da67e3f574b44",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_HANDOFF_TO_INGESTION_V1.md",
+        "bytes": 5322,
+        "sha256": "b6790581be0f6f844391001c1b1e2c13eb9607bd1afbd790367e0b47c0948377",
+        "git_blob_sha1": "a57778e747e48e1cec9b1bcb40e0f17e07070558",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_06931b084d1c8191ab247cc765632616",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "bytes": 2615,
+        "sha256": "0b69e1f1d37f213d833a23016e5bcbc9874bb0967584625828fcb5351a7e887a",
+        "git_blob_sha1": "bdfe9c1d255fdebd29dbcefa78964ebe229da80c",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_67cb086ce87081919ef581ff499e551f",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_DELIVERY_VALIDATION_V1.json",
+        "bytes": 1523,
+        "sha256": "acf6be7f5c951871d0df94a71566253803a74f48e7bd8f6dce1e30286eaac058",
+        "git_blob_sha1": "614242257220876869371d87730d63db8b6a4064",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_78614aafa5d0819184d5a7d1b5d90e2b",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_EXECUTION_V1.json",
+        "bytes": 3044,
+        "sha256": "ddda2d17a85320a6a634b971273a9777aef9896e84d2743b8b1352f17d8a35a2",
+        "git_blob_sha1": "35449cd39e4e36981fd34762b126aabad7a3ffee",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_1bdf115f05bc8191883ea6b09be92973",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+        "bytes": 2899,
+        "sha256": "04dfd15015d276bcdec0c1eceae36a382a5c091481fee75a872511435eb96835",
+        "git_blob_sha1": "fdfec77e88706091445376b3c0df2bc32c52f14b",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_e3bfac6420e48191a9125edb1f081821",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_JOURNAL_APPEND_V1.md",
+        "bytes": 3174,
+        "sha256": "2dbd63aa453a62affd3a393500a99cf74f026f996142b4b880237bb54bd700b1",
+        "git_blob_sha1": "ffab9120004ff4e6410c487a5506f977d7103828",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_9674d7c161e08191a7567bb9f24e1e0c",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_OUTPUT_MANIFEST_V1.json",
+        "bytes": 11116,
+        "sha256": "61be501f5eb534bdcda837bf219f36e6e719a8e7bd45e0e1735edf9e659d4915",
+        "git_blob_sha1": "fb835bab6d1a63d7c28b11797478b88d7ea64f47",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_75ad3413e0b08191a389ad1ae53e4d6f",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+        "bytes": 1653,
+        "sha256": "091b165f05ed0ea6eba881fdf4263aa0d7161d0927bb30b8c7035f8cb6daddfb",
+        "git_blob_sha1": "8d24e1243258a0fcded24ad335a420563b288632",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_6835727ac9548191a9ae20081d5c59fb",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json",
+        "bytes": 4462,
+        "sha256": "c09d1c850da942a6cf7e1d66ef5d032b3be6cd8212bddb64797acb281353e341",
+        "git_blob_sha1": "ead96d4d66c90898d39fcb17d4491c4f38111c85",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_081925449ec8819191a42861a1a1ff9f",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RESULT_V1.md",
+        "bytes": 11247,
+        "sha256": "af02ad7b9b970c0cb0c94e83e6be35d6836e6b0cdfe747b0e4d855db14ba7b6c",
+        "git_blob_sha1": "bf7e5b488cbab2350a8712b8b95a2657f9a644ff",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_ef3435cff41c819196831457df1d821d",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+        "bytes": 7032,
+        "sha256": "79df80f0b1c1d47e50418cca050b2e8a19ffcc25ce715e753277bace6f97b6cd",
+        "git_blob_sha1": "bb1a0a394f65c00c30b9fd83d57d9f22d990cfce",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_8fef8352141c819180fc90f50d2bf4a3",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json",
+        "bytes": 5221,
+        "sha256": "b29bd8531a6445af38e57ae062e0efa410d85e2b8b50454fc9572d9922409bb3",
+        "git_blob_sha1": "d61b7b548c7364dc92963ce743d65f5710d10277",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_95619668039881918b259c0bb6d0f292",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_accept.py",
+        "bytes": 3130,
+        "sha256": "481b311e267552bfd67c0b3eba263d6164134b698e9496ca6ee58872546d946d",
+        "git_blob_sha1": "4959a390e5e1b05c786e45c4faec85fab0c8fe41",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_c4aaaa442e1881919bd0b5e31cf539cf",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_actual_consumer.py",
+        "bytes": 7840,
+        "sha256": "629863945467da08eb243036d7765116a915652f1a3c7cf349bac9e1c97a00ae",
+        "git_blob_sha1": "a565db8392777ab4c0c4979d554cfd7219f6536c",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_790b8b0383448191ba6df551876c3866",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_postaccept.py",
+        "bytes": 5554,
+        "sha256": "6690c757a6d5c08f9edbc476cabb409aaaa3832386ceece30f13afbc7519e09c",
+        "git_blob_sha1": "0600d96ffe6b4650f0981a4fa4d28dcebb5d9163",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_928ca42c0e5c81918333ed07b61974ac",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_run.py",
+        "bytes": 2963,
+        "sha256": "48ef8f3979dff7246ff8c5378debf9864893a09fddc96146703ba9d58f19cfee",
+        "git_blob_sha1": "3a4463a6e147469f0b79b7f5cf2660a4ae732bc0",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_b6ff770f87388191bafe4e2e5d796ba6",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v115_verify.py",
+        "bytes": 13348,
+        "sha256": "bd45b82a784e3ac32db9e984baad3b625db689a96294c402dfd20cb771eed97e",
+        "git_blob_sha1": "db674f5b1719ed9470125dab8cd2f1167436af73",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_44b50939ca7c8191bc4c349b9dde9e3b",
+        "library_version": "0"
+      },
+      {
+        "filename": "test_q048_v115_contract.py",
+        "bytes": 5736,
+        "sha256": "ef3f1cc7b848a9b60d6e504c14bf3d4a5ee3606dc0d90bb6b00349a93957cda1",
+        "git_blob_sha1": "d4d45f1c695ca3cc13c91355c2ddfaa8b3d3844d",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_74fb029167348191b253311309802eb8",
+        "library_version": "0"
+      },
+      {
+        "filename": "v115_repository_equivalence.json",
+        "bytes": 17934,
+        "sha256": "8fa14d2c7c9942f557b67e9fbe8731d1c6cd521c77b7650c603a131c40fea903",
+        "git_blob_sha1": "1a0e8f2544cfaef81e6e3123492ad1cf5aa8a422",
+        "remote_matches": false,
+        "repository_path_present": false,
+        "library_file_id": "libfile_1d603d23ea04819181a6eedb69ef9f0b",
+        "library_version": "0"
+      }
+    ],
+    "prior_repository_anchors": [
+      {
+        "filename": "Q047_SAMLET_JOURNAL_Q048_V114_SOURCE_CORRECT_PROOF_APPENDED_V1.md",
+        "bytes": 14522599,
+        "sha256": "70b397bc26410aeb49c4f9d5735507296a9fe991a8b95dabd9c403ed5e88fbe2",
+        "git_blob_sha1": "88c4321a2de747ed90968935fbd8a224bfc048fd",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_0b021aa35bbc819184a6909a81bd11f1",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_HANDOFF_TO_INGESTION_V1.md",
+        "bytes": 6208,
+        "sha256": "fb7fcd7f1be1c32bda04960674204859bc3664ea19ecefc9015e2b9b1ef728c7",
+        "git_blob_sha1": "f3a7d5d2ab1b86a425522542cf95364340ab858a",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_8b0a264098f88191a3e6b94a85f55301",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+        "bytes": 2502,
+        "sha256": "76fc7cd7448ec5d45f3c207f76188c84e81790505125b70009a2eb2ac8b8ee50",
+        "git_blob_sha1": "abd4af6cbcd56bd76c855015533e08313db7d765",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_d124a3709ad08191b4cef210437fb7e1",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_DELIVERY_VALIDATION_V1.json",
+        "bytes": 1219,
+        "sha256": "c8255b9fbb2e27d3aa2db01224f70e8cd6ba775aff0d9be0733a31d3a4280c19",
+        "git_blob_sha1": "73ae15b430c0952cd98da7ea7334a837b0a7eb3b",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_8ffa9b401a988191b7ee2efae65010bd",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_EXECUTION_V1.json",
+        "bytes": 2870,
+        "sha256": "2b12c35f6eab2540c5b6f21f15aae6afd307523ad8543ad340cb3a114a880723",
+        "git_blob_sha1": "2d3063b1b5c043c85f34f4dfe167ffc290cb7f66",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_ff3ef7ff7624819193d98fd668c60d34",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+        "bytes": 4187,
+        "sha256": "2667c07cd9528339fb151c3d94be4439958057074b0e8f93e155dc85009c1acf",
+        "git_blob_sha1": "352725ca033b9d193b5c359153eb3ca5fc108b2f",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_c10f878653f48191b1ad5ecf042195d5",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_JOURNAL_APPEND_V1.md",
+        "bytes": 2955,
+        "sha256": "129757aab428210da34a62f4ba4846efd0359641cf37e8a7cfbbe8ba68d5505e",
+        "git_blob_sha1": "6841e79e898a41f93a7b93e3d1c143fad48b8a93",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_113fc35ef1e48191ae44d07837172a5b",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_OUTPUT_MANIFEST_V1.json",
+        "bytes": 14769,
+        "sha256": "cc39af2cd14c5c6eaf7add3cc3c323bbba3b524138610a1d842b08b8471c23ab",
+        "git_blob_sha1": "c92c85a8d054fbd91d2cfad115d9cdcbd7be5da6",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_14ebaf8f720c81918cda20fe77f34235",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+        "bytes": 880,
+        "sha256": "b9edaa22d49498f0455501a36f1c1b807537b7cce59d5704ea6f84c10dc2bbcf",
+        "git_blob_sha1": "280e6654e50f7f8841520f591a27a612da96888b",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_3dac809d75cc8191b1e72b1c041c2133",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_RAW_V1.json",
+        "bytes": 26903,
+        "sha256": "b3ff4fec20ebd9f8f261b9da2232e462a47780aee7744abd05c5575df4665f4d",
+        "git_blob_sha1": "33be96465a1a259f29aee56d8f54871a5b106c1b",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_e955c45a8b6481919fcf28ab9b41e878",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_RESULT_V1.md",
+        "bytes": 13015,
+        "sha256": "83a3685f83f82bf0763a1b4852e40f6e3b53caed92dc81f59b69ea30c9150ff2",
+        "git_blob_sha1": "e1c0e466223eaf801e97d5a2403f6e506c282b88",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_84a4bb07f1cc8191a9d772502fc4a204",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+        "bytes": 12220,
+        "sha256": "252416311680e02034b7f854638d385ecc603d07b0581c43ee43a7afef096623",
+        "git_blob_sha1": "8d449b3260d7e4b759267d14e4e3130982888b37",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_66d460419ffc81919e3f4c7f1cdababd",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+        "bytes": 5465,
+        "sha256": "c1912560218f5e898c9ce07ea1f2a4b52af26ff106daa6bedccf1ee6bd85a40e",
+        "git_blob_sha1": "7509139febc04b5f485a0e00101749c20c717035",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_d3f7d5bc656081919e93be3bae593c1c",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v114_accept.py",
+        "bytes": 4977,
+        "sha256": "ea66d2c86e465921491ec1bf9d211b9e0bdb06054d7d68c7e32ac1280bd891af",
+        "git_blob_sha1": "25fd6ab86693738e0c86ce721b441cd56a66bfd9",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_f234bccc0318819196c1eefa96d00d6e",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v114_proof.py",
+        "bytes": 9399,
+        "sha256": "0f9971f7fb814fc3f63ea9b5c40a965503f085d5fb05ac24c21f499ec967d065",
+        "git_blob_sha1": "e6157423d80cdb5903d4475693fca1476b3cf5ca",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_ba3625c115dc81918aa4edb2ec04e5a0",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v114_run.py",
+        "bytes": 5955,
+        "sha256": "868562ac28a28ed2abffa8e0e3efb7e8310220e16ae4ce9e3bcb215301b221e4",
+        "git_blob_sha1": "6618754dea2357e77eb8fa107b2377e0cd6450bb",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_157236fe7d248191a451202928351486",
+        "library_version": "0"
+      },
+      {
+        "filename": "q048_v114_verify.py",
+        "bytes": 12113,
+        "sha256": "1f634ef6466399ebad876c8e24fe985bfb3fbd2fcfeb62705fd1817315558f84",
+        "git_blob_sha1": "91ec5ef65d40e8ced83edbf70dd605e5894e7f7f",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_1c9f8783a880819189203c93ee223874",
+        "library_version": "0"
+      },
+      {
+        "filename": "test_q048_v114_binding.py",
+        "bytes": 2091,
+        "sha256": "645adbe56ceac038f86c3931e5ce2e80478d20fd70c9aee228571b0ac64c8ba6",
+        "git_blob_sha1": "0a1365f974ec75ddd896fb1f341915a9e59e1f2e",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_44554247ab6c819183f9b0d55efcfe24",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q047_SAMLET_JOURNAL_Q048_V114_INGESTED_SOURCE_CORRECT_V1.md",
+        "bytes": 14525650,
+        "sha256": "5074f893fb25cfab5e2a40bc12f8959787cb03b22a96d78e42036353f7fa4343",
+        "git_blob_sha1": "91c88baf92c9661e33a5e840500a3d11f0bd30d0",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_d959b489233081919c91e61ed1f876e2",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_INGESTION_EVIDENCE_AUDIT_V1.json",
+        "bytes": 28730,
+        "sha256": "7935de46ba0f08f4f7379b3eb648132f2ec9ffbcc0369aacf2305538a3118d86",
+        "git_blob_sha1": "ebd95a4da03153d73fde68965f7a64146e2ddcb9",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_e26ffb62d02c8191946156ccfd37d5e8",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+        "bytes": 4113,
+        "sha256": "926b08a71d793919b4102e7ba650a0d14bb0e8652ba4e71c4ddcd33c1b519e4a",
+        "git_blob_sha1": "d5146af2d2c81917d15582801619ab2d25963050",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_f8fcfa462ddc8191bd3da5f04a3b5f58",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_INGESTION_HANDOFF_ENVELOPE_V1.json",
+        "bytes": 8559,
+        "sha256": "25bdd9cdc866601f1d61ee9e6516578c5fbd2a15033fe2900c430ae367ffe445",
+        "git_blob_sha1": "114a7583e0c70b65dccdac905d2b013caf91964f",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_27daf21b70d08191b5a62ea07d062f49",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_INGESTION_JOURNAL_APPEND_V1.md",
+        "bytes": 3051,
+        "sha256": "ebde65db34ac08a6c1e2c65e6b936830f0ff52cc6b13750206f08abafb65956c",
+        "git_blob_sha1": "c5cca384c63c6fe9fbe0c2d4e88f39038246756c",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_e8256f61e75c819185d8a1b0d3b8bb4c",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_INGESTION_OUTPUT_MANIFEST_V1.json",
+        "bytes": 8522,
+        "sha256": "e616d344556ca5269969c7262e053469bd073c7ecf2fb6daabd23a5b0b2236e0",
+        "git_blob_sha1": "68e89a935a5023f1c63c45aee5a1e43d5c411a0f",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_3afcc298ef7481919672a7aa8e8ae2cd",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_INGESTION_RESULT_V1.md",
+        "bytes": 9395,
+        "sha256": "ccf3d57a4c9728fec162e65a3f992d652131a25e2b2943677625cb2e6ba38c03",
+        "git_blob_sha1": "a3cda2bfd43c4ae4eedca5799f906b8bc7ad472a",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_7ad9e7b45df08191ab735e14f7d12acb",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_INGESTION_STATE_V1.json",
+        "bytes": 6338,
+        "sha256": "c7c51334c19dd4b54b504bc12da0d144261e17d1f6ef4397255d415d1b591215",
+        "git_blob_sha1": "63b09b145d0905c1a7ae840e5f3e6198a3a171f6",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_7f9cba31bb108191b95a177f8e857e80",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V114_INGESTION_VALIDATION_V1.json",
+        "bytes": 1718,
+        "sha256": "8b2a13cdfb8fea502719cdb8a4ddf43d3858eea584a27ad3bd69c84025bb67bd",
+        "git_blob_sha1": "413a0ad008e18ead535d639d5f39abac66ceedf1",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_862bd409b9ac8191beec08f49e724bc4",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_HANDOFF_TO_BUILDER_SOURCE_CORRECT_ACTUAL_CONSUMER_V1.md",
+        "bytes": 7069,
+        "sha256": "efc6ca843980ca2229d332a3d7c3d22180f31df3ea8191de1a293d2fe5515645",
+        "git_blob_sha1": "2c3f5681b20ed514f475378f86da1aca77933db4",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_e47d87985eb88191a4366221ab75c3a2",
+        "library_version": "0"
+      },
+      {
+        "filename": "Q048_V115_NEXT_BUILDER_TASK_V1.json",
+        "bytes": 27767,
+        "sha256": "be2f5f73db0dade0bc71970fc3d1b1e7ccf4a75f33c8f8a5dc8a84c1408ce21f",
+        "git_blob_sha1": "94190240b3d9e1de7095ef79e8f99ca43de57494",
+        "remote_matches": true,
+        "repository_path_present": true,
+        "library_file_id": "libfile_e01842a878b08191add6678ce2dfff50",
+        "library_version": "0"
+      }
+    ],
+    "source_v115_sync": "ALL20_LIBRARY_SAVED_LOCAL_EXACT_BYTES; NOT_PRESENT_AT_CURRENT_GITHUB_BASE",
+    "status": "PASS_WITH_EXPLICIT_PENDING_SOURCE_UPLOAD"
+  },
+  "methods": [
+    {
+      "filename": "q048_v114_proof.py",
+      "sha256": "0f9971f7fb814fc3f63ea9b5c40a965503f085d5fb05ac24c21f499ec967d065",
+      "bytes": 9399,
+      "git_blob_sha1": "e6157423d80cdb5903d4475693fca1476b3cf5ca",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "role": "READ_ONLY_METHOD_REFERENCE; adapt identities coherently, never execute old main"
+    },
+    {
+      "filename": "q048_v114_verify.py",
+      "sha256": "1f634ef6466399ebad876c8e24fe985bfb3fbd2fcfeb62705fd1817315558f84",
+      "bytes": 12113,
+      "git_blob_sha1": "91ec5ef65d40e8ced83edbf70dd605e5894e7f7f",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "role": "READ_ONLY_METHOD_REFERENCE; adapt identities coherently, never execute old main"
+    },
+    {
+      "filename": "q048_v114_accept.py",
+      "sha256": "ea66d2c86e465921491ec1bf9d211b9e0bdb06054d7d68c7e32ac1280bd891af",
+      "bytes": 4977,
+      "git_blob_sha1": "25fd6ab86693738e0c86ce721b441cd56a66bfd9",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "role": "READ_ONLY_METHOD_REFERENCE; adapt identities coherently, never execute old main"
+    },
+    {
+      "filename": "q048_v114_run.py",
+      "sha256": "868562ac28a28ed2abffa8e0e3efb7e8310220e16ae4ce9e3bcb215301b221e4",
+      "bytes": 5955,
+      "git_blob_sha1": "6618754dea2357e77eb8fa107b2377e0cd6450bb",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "role": "READ_ONLY_METHOD_REFERENCE; adapt identities coherently, never execute old main"
+    },
+    {
+      "filename": "test_q048_v114_binding.py",
+      "sha256": "645adbe56ceac038f86c3931e5ce2e80478d20fd70c9aee228571b0ac64c8ba6",
+      "bytes": 2091,
+      "git_blob_sha1": "0a1365f974ec75ddd896fb1f341915a9e59e1f2e",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "role": "READ_ONLY_METHOD_REFERENCE; adapt identities coherently, never execute old main"
+    },
+    {
+      "filename": "Q048_V114_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+      "sha256": "252416311680e02034b7f854638d385ecc603d07b0581c43ee43a7afef096623",
+      "bytes": 12220,
+      "git_blob_sha1": "8d449b3260d7e4b759267d14e4e3130982888b37",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "role": "READ_ONLY_METHOD_REFERENCE; adapt identities coherently, never execute old main"
+    },
+    {
+      "filename": "Q048_V114_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+      "sha256": "2667c07cd9528339fb151c3d94be4439958057074b0e8f93e155dc85009c1acf",
+      "bytes": 4187,
+      "git_blob_sha1": "352725ca033b9d193b5c359153eb3ca5fc108b2f",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "role": "READ_ONLY_METHOD_REFERENCE; adapt identities coherently, never execute old main"
+    }
+  ],
+  "helper_recovery_map": [
+    {
+      "target_relative_path": "inputs/q047_certificate_v1.py",
+      "bytes": 15302,
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q047_certificate_v1.py",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "00c8c5395e2b4070be33e768e83db33edb3ea2d1"
+    },
+    {
+      "target_relative_path": "inputs/q047_math_v1.py",
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q047_math_v1.py",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb"
+    },
+    {
+      "target_relative_path": "inputs/q047_precursor_check_v1.py",
+      "bytes": 29808,
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q047_precursor_check_v1.py",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "21cee458a6a4e931148405a7ffebeaf0a2d79749"
+    },
+    {
+      "target_relative_path": "inputs/q048_full_tube_reuse_v1.py",
+      "bytes": 10171,
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_full_tube_reuse_v1.py",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "437f64b601d7aa81d66394abe465ac8f760f9f60"
+    },
+    {
+      "target_relative_path": "inputs/q048_p3_scaled_arithmetic_v2.py",
+      "bytes": 5988,
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_p3_scaled_arithmetic_v2.py",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "f483ce212be4dea63df8183194a2c04b0bbdae70"
+    },
+    {
+      "target_relative_path": "inputs/q048_p3_scaled_kernel_v2.py",
+      "bytes": 15855,
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_p3_scaled_kernel_v2.py",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "5ec4b6bb325a01d11960f1587d41eaab6eb7de9e"
+    },
+    {
+      "target_relative_path": "inputs/q048_p3_scaled_raw_result_v2.json",
+      "bytes": 699697,
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_p3_scaled_raw_result_v2.json",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "dad8be5d063ae6639199cf30e46f7cf36416189f"
+    },
+    {
+      "target_relative_path": "inputs/q048_p3_scaled_transformed_log_tables_v2.json",
+      "bytes": 3958952,
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_p3_scaled_transformed_log_tables_v2.json",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "6c30d62dde9205e383a6dbce89287f4e300648e7"
+    },
+    {
+      "target_relative_path": "inputs/q048_post_event_state_tube_v1.py",
+      "bytes": 12423,
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "library_file_id": "libfile_38e3ebdeca4c81918568140a6731e83b"
+    },
+    {
+      "target_relative_path": "inputs/q048_prefix_config_v1.json",
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_prefix_config_v1.json",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "02c9525cbda1ad56c1251d06fc74dba2c1aec9ba"
+    },
+    {
+      "target_relative_path": "inputs/q048_prefix_v1.py",
+      "bytes": 17198,
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q048_prefix_v1.py",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "288ebe6da1df592692f174be0f1d89478c1001aa"
+    },
+    {
+      "target_relative_path": "inputs/source/hydrogen.c",
+      "bytes": 46627,
+      "sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "source_repository": "mwt5345/class_ede",
+      "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "source_path": "external/HyRec2020/hydrogen.c",
+      "source_url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/hydrogen.c",
+      "origin_basis": "Pinned original source location recovered from complete journal; exact local source bytes verified; not refetched in ingestion"
+    },
+    {
+      "target_relative_path": "inputs/source/hydrogen.h",
+      "bytes": 11868,
+      "sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "source_repository": "mwt5345/class_ede",
+      "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "source_path": "external/HyRec2020/hydrogen.h",
+      "source_url": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/hydrogen.h",
+      "origin_basis": "Pinned original source location recovered from complete journal; exact local source bytes verified; not refetched in ingestion"
+    },
+    {
+      "target_relative_path": "inputs/source/q047_math_v1.py",
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "access_status": "EXACT_LOCAL_BYTES_RECHECKED; no helper import or execution",
+      "role": "Pinned scientific method/data dependency; not new proof authority",
+      "repository_path": "q047_math_v1.py",
+      "repository_commit": "03e1dc218293a580e720789c990f189758561dd6",
+      "git_blob_sha1": "58f2e0e29eb26c54b973f1f22b4aa1b8f8c40ceb"
+    }
+  ],
+  "original_source_validation_reused": "53/53+26/26 including both schema controls; postaccept30/30+8/8; delivery32/32 and frozen3/3 preflight; none rerun",
+  "three_layers": {
+    "direct_output": {
+      "schema": "bubbleverse.q048.v115.source_correct_actual_consumer.accepted_checkpoint.v1",
+      "q": "Q048",
+      "target_q": "Q048",
+      "status": "VALIDATED",
+      "technical_state": "PASS",
+      "scientific_state": "INCONCLUSIVE",
+      "checkpoint_kind": "ACCEPTED_ACTUAL_REANALYSIS_LINEAGE",
+      "task_id": "LOCAL-Q048-V115-SOURCE-CORRECT-ACTUAL-CONSUMER-940-930-V1",
+      "task_fingerprint": "5e59123a1f807d690e9df37ee4d97b714c2758628f035658b308e634195dc626",
+      "spec_sha256": "79df80f0b1c1d47e50418cca050b2e8a19ffcc25ce715e753277bace6f97b6cd",
+      "actual_before": {
+        "count": 114,
+        "frontier": 940,
+        "accepted_checkpoint_sha256": "ab1502f874051cb4d534093769a3c28f4477f4aae8b8a751fb4ba4edc9eeb2b7"
+      },
+      "accepted_actual": {
+        "count": 115,
+        "frontier": 930
+      },
+      "frontiers": {
+        "camspec-lcdm": 1440,
+        "camspec-ede_n3": 1440,
+        "hillipop-lcdm": 1440,
+        "hillipop-ede_n3": 930
+      },
+      "endpoint": {
+        "a": "1/931",
+        "E": "22351147953825389271/500000000000000000",
+        "Y": "7106773794579442473/200000000000000000",
+        "Vbar": "8786409145805500919/1000000000000000000"
+      },
+      "connected_lower": "89291638472793/200000000000000000",
+      "K_upper": "38382440913912560363/8000000000000000",
+      "correct_saha_fact": "3.016103031869581e21",
+      "parent_sha256": "ab1502f874051cb4d534093769a3c28f4477f4aae8b8a751fb4ba4edc9eeb2b7",
+      "theorem_acceptance_sha256": "76fc7cd7448ec5d45f3c207f76188c84e81790505125b70009a2eb2ac8b8ee50",
+      "theorem_raw_sha256": "b3ff4fec20ebd9f8f261b9da2232e462a47780aee7744abd05c5575df4665f4d",
+      "theorem_verification_sha256": "c1912560218f5e898c9ce07ea1f2a4b52af26ff106daa6bedccf1ee6bd85a40e",
+      "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "guard_primary_row_sha256": "b14afe88c535bbc3468c0973752d0cfb15eab437eeed69e414f1231987ca9aed",
+      "authorization_sha256": "c7c51334c19dd4b54b504bc12da0d144261e17d1f6ef4397255d415d1b591215",
+      "source_result_sha256": "c09d1c850da942a6cf7e1d66ef5d032b3be6cd8212bddb64797acb281353e341",
+      "validation_sha256": "b29bd8531a6445af38e57ae062e0efa410d85e2b8b50454fc9572d9922409bb3",
+      "accepted_at_utc": "2026-10-20T08:14:13.822189+00:00",
+      "new_actual_cells": 1,
+      "new_mathematical_proof_cells": 0,
+      "new_full_theorem_recomputations": 0,
+      "theorem_consumptions": 1,
+      "historical_v101_v102_replayed": false,
+      "historical_record_modified": false,
+      "no_physical_reset": true,
+      "no_native_trajectory_claim": true,
+      "below930_work": false,
+      "q_complete": false,
+      "NativeP6": "UNRESOLVED",
+      "resume_rule": "STOP at930. Return exactly once to Result Ingestion2.1.0; no below930 authorization."
+    },
+    "technical_interpretation": "Exactly one bounded admission940->930 on V113 parent, V114 theorem and committed primary row51. Separate invariant and disk-readback records reused under unchanged frozen bytes.",
+    "physical_interpretation": "Conditional construction only; full four-case histories/tau,NativeP6,empirical support and native trajectory identity remain unestablished."
+  },
+  "claim_evidence_map": [
+    {
+      "claim_id": "LOCAL-Q048-V115-INGESTION-ACTUAL115",
+      "effect": "CONFIRMS_REGISTRATION_ONCE",
+      "claim": "Locally accepted source-correct actual115/frontier930; other3frontiers1440",
+      "evidence": [
+        "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json",
+        "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_VALIDATION_V1.json",
+        "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json"
+      ],
+      "limit": "One theorem-backed admission, no native/empirical/independent replication; source upload pending"
+    },
+    {
+      "claim_id": "LOCAL-Q048-V115-INGESTION-Q-OPEN",
+      "effect": "LEAVES_UNCHANGED",
+      "claim": "Full four-case xe/tau bounds and NativeP6 unresolved; Q048 ACTIVE/INCONCLUSIVE",
+      "evidence": [
+        "Q047_SAMLET_JOURNAL_Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_APPENDED_V1.md",
+        "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+      ]
+    },
+    {
+      "claim_id": "LOCAL-Q048-V116-PROOF-NEEDED",
+      "effect": "ADDS_NEXT_TASK",
+      "claim": "Fresh930->920 source-correct proof required before later actual admission",
+      "evidence": [
+        "Q048_V115_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+        "Q048_V116_NEXT_MATHEMATICS_TASK_V1.json"
+      ],
+      "limit": "New K/lower not computed; no actual116 authority"
+    }
+  ],
+  "source_register": "Complete inherited journal preserves original active/historical/rejected sources and claims; explicit current recovery maps above; no new external source allocated",
+  "duplicate_assessment": {
+    "event": "LOCAL-Q048-V115-SOURCE-CORRECT-ACTUAL-INGESTION-V1",
+    "key": "07913141e8332e2e0bfe83d7ab888016ecff87e902da1e580bc727fb50530a06",
+    "source_scientific_event_already_present": true,
+    "ingestion_event_absent": true,
+    "tree_no_existing_ingestion_or_V116": true,
+    "library_exact_target_results": [],
+    "unrelated_fuzzy_titles_excluded_without_reading": true,
+    "limit": "Focused title lookup is not global nonexistence evidence; file saves and repeated deliveries add no independent support"
+  },
+  "anomalies_tensions": "LEAVES_UNCHANGED; no new scientific discrepancy within scope. V115 source upload pending is operational, not a scientific anomaly.",
+  "tools_and_research": {
+    "performed": [
+      "Hash-check supplied prompt; identical to previously read2.1.0",
+      "Fresh GitHub main read and exact complete-tree cache reuse",
+      "Compare29 prior GitHub anchor files; distinguish20 pending V115 source files with saved Library identities",
+      "Inspect V115 source/checkpoint/spec/freeze/execution/validation and complete journal bytes",
+      "Check row52 exact glue and14 helper/source/data pins without imports/execution",
+      "Focused Library title duplicate search"
+    ],
+    "new_external_science_research": false,
+    "scientific_runs": 0,
+    "github_write": "Earlier branch-create403 remains; no unchanged retry or new write",
+    "source_availability_limit": "Next engine must use delivered/saved V115 authorities or wait for manual source upload; never fetch a nonexistent V115 parent from the pinned base"
+  },
+  "shared_premise_limit": "Separate software checks share physical source/theorem/helper premises and are not independent physics evidence"
+}
