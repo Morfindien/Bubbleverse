@@ -1,0 +1,241 @@
+{
+  "schema": "bubbleverse.q048.v110.source_correct_proof.spec.v1",
+  "schema_validation": "LOCAL_CONTRACT_CHECKED; no deployed common schema asserted",
+  "created_at_utc": "2026-10-20T05:56:41.178711+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "task_id": "LOCAL-Q048-V110-SOURCE-CORRECT-NEW-PROOF-960-950-V1",
+  "task_fingerprint": "318be278c63a0628275b1e22ced43cbd100065a4dc54d7fb428c4f8967194d6e",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "cell_z": [
+    960,
+    950
+  ],
+  "cell_a": [
+    "1/961",
+    "1/951"
+  ],
+  "guard_row_index": 49,
+  "guard_primary_row_sha256": "5213279b9cf078f3854fb16c6669f761a86a39c19bd5c6ef872519a66d6a08ee",
+  "guard_control_row_sha256": "9383f8ec3d8e84b13314e26b4ba56ad35145693ad5c2c1bdb78a3f8431529838",
+  "parent_actual": [
+    112,
+    960
+  ],
+  "actual_must_remain": [
+    112,
+    960
+  ],
+  "parent_checkpoint_sha256": "37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba",
+  "initial_connected_lower": "479774678212513/1000000000000000000",
+  "thermal_domain": [
+    "-1/1000000",
+    "1/50"
+  ],
+  "epsilon": "1/1000000",
+  "hmax": "99999/100000",
+  "saha_factor": "3.016103031869581e21",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "science_budget_seconds": 300,
+  "max_new_mathematical_proof_cells": 1,
+  "max_new_actual_cells": 0,
+  "retry_count": 0,
+  "postfreeze_edits_allowed": false,
+  "input_pins": {
+    "inputs/q047_certificate_v1.py": {
+      "bytes": 15302,
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240"
+    },
+    "inputs/q047_math_v1.py": {
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    "inputs/q047_precursor_check_v1.py": {
+      "bytes": 29808,
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5"
+    },
+    "inputs/q048_full_tube_reuse_v1.py": {
+      "bytes": 10171,
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc"
+    },
+    "inputs/q048_p3_scaled_arithmetic_v2.py": {
+      "bytes": 5988,
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa"
+    },
+    "inputs/q048_p3_scaled_kernel_v2.py": {
+      "bytes": 15855,
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd"
+    },
+    "inputs/q048_p3_scaled_raw_result_v2.json": {
+      "bytes": 699697,
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c"
+    },
+    "inputs/q048_p3_scaled_transformed_log_tables_v2.json": {
+      "bytes": 3958952,
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb"
+    },
+    "inputs/q048_post_event_state_tube_v1.py": {
+      "bytes": 12423,
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b"
+    },
+    "inputs/q048_prefix_config_v1.json": {
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    "inputs/q048_prefix_v1.py": {
+      "bytes": 17198,
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516"
+    },
+    "inputs/source/hydrogen.c": {
+      "bytes": 46627,
+      "sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616"
+    },
+    "inputs/source/hydrogen.h": {
+      "bytes": 11868,
+      "sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+    },
+    "inputs/source/q047_math_v1.py": {
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    "inputs/Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json": {
+      "bytes": 2623,
+      "sha256": "37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba"
+    },
+    "inputs/q048_guard_local_v_result_v12.json": {
+      "bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    "inputs/Q048_V110_NEXT_MATHEMATICS_TASK_V1.json": {
+      "bytes": 19425,
+      "sha256": "57a4ac3fa0bf3ce3b430ed7d47301135d04bd16d8a8bbcfa3ed5b8f09d8f9888"
+    },
+    "Bubbleverse_Matematikmotor_2.1.0-107.md": {
+      "bytes": 56414,
+      "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+    },
+    "Q048_V110_HANDOFF_TO_MATHEMATICS_SOURCE_CORRECT_PROOF_960_950_V1.md": {
+      "bytes": 7057,
+      "sha256": "4a6e2cf9efded9e72c32caefdc9918d2629955540c1ed679f14790e86636560b"
+    }
+  },
+  "code_pins": {
+    "q048_v110_proof.py": {
+      "bytes": 9399,
+      "sha256": "7c03b417dd6c4c75d7edd7bc43529cf6f1702dace7788b3cc1fcc6081d08cce6"
+    },
+    "q048_v110_verify.py": {
+      "bytes": 12113,
+      "sha256": "139fc33be88d25a358eefba6f95091eb3c2f0e80475acb0bc00758f7d41fceb6"
+    },
+    "q048_v110_accept.py": {
+      "bytes": 4977,
+      "sha256": "9680d2cac92af1734d2fafd3cd70902694e3be82e42f93e7d30db1c6f271595d"
+    },
+    "q048_v110_run.py": {
+      "bytes": 5882,
+      "sha256": "7897695f43fe18adf3f3acf5a26d514834d9d1c40b7926d0a73c6f50e573eb32"
+    },
+    "test_q048_v110_binding.py": {
+      "bytes": 2091,
+      "sha256": "45d7bf2de68e371e608d583f560235130414b5d0df28ba2721a73b60af64798a"
+    }
+  },
+  "source_method_refs": [
+    {
+      "filename": "q048_moving_h_domain_v102.py",
+      "library_file_id": "libfile_f3ae86f0eac88191bd3e5ebab1487b4b",
+      "bytes": 8714,
+      "sha256": "84e1dd4ef937f6d61d0dd4e5a697507ac0139778d472175bc36366b4c4a63f57",
+      "access_status": "EXACT_BYTES_RECOVERED_AND_HASH_VERIFIED",
+      "role": "READ_ONLY_METHOD_REFERENCE_NOT_AUTHORITY_FOR_NEXT_CELL"
+    },
+    {
+      "filename": "q048_moving_h_domain_spec_v102.json",
+      "library_file_id": "libfile_caefe57e9ef48191a35e375b9edca33a",
+      "bytes": 8003,
+      "sha256": "c54bc8ac547c66349f6797bd15b98fd4b9bb98915bd5e0004b630bf3f2149d63",
+      "access_status": "EXACT_BYTES_RECOVERED_AND_HASH_VERIFIED",
+      "role": "READ_ONLY_METHOD_REFERENCE_NOT_AUTHORITY_FOR_NEXT_CELL"
+    },
+    {
+      "filename": "Q048_MOVING_H_DOMAIN_FREEZE_V102.json",
+      "library_file_id": "libfile_a2383bb1cf9c8191bf6a9cc9ba5e1171",
+      "bytes": 5386,
+      "sha256": "a4be9ad22c1dc76542a0350174d560b26619cb6f1054be8c512584ac04047d5c",
+      "access_status": "EXACT_BYTES_RECOVERED_AND_HASH_VERIFIED",
+      "role": "READ_ONLY_METHOD_REFERENCE_NOT_AUTHORITY_FOR_NEXT_CELL"
+    },
+    {
+      "filename": "q048_moving_h_domain_verify_v102.py",
+      "library_file_id": "libfile_81f4f7ddbdd8819194b582436e52d0fa",
+      "bytes": 9801,
+      "sha256": "09066cd3b531dd721b168da06b566f12a11132354110d5570ddf28c659faedab",
+      "access_status": "EXACT_BYTES_RECOVERED_AND_HASH_VERIFIED",
+      "role": "READ_ONLY_METHOD_REFERENCE_NOT_AUTHORITY_FOR_NEXT_CELL"
+    }
+  ],
+  "numerics": {
+    "representation": "Exact rational interval arithmetic, rounded outward as specified by pinned helpers",
+    "constants": "Pinned q047_math C and exact source literals; HyRec n converts m^-3 to cm^-3 with1e-6",
+    "TR": "eV with pinned8.617343e-5 eV/K",
+    "H": "s^-1; c/Mpc conversion from pinned constants",
+    "a_h_w_q": "dimensionless",
+    "K_coordinate": "u=ln(a); comparison h_u>=-K*h*(h+epsilon)",
+    "lower_rounding": "floor(min(primary exponential lower, rational dual lower)*1e18)/1e18",
+    "K_rounding": "ceil(exact_K*1e18)/1e18"
+  },
+  "criteria": {
+    "success": "One separately validated source-correct connected960->950 theorem tied to exact V109 parent and row49, with fresh K_upper/lower and both L/R source/upper-h/C/thermal premises; zero actual cells.",
+    "failure": "First failed source/hash/domain/inequality/verifier invariant or exact missing dependency; preserve signed margins and partial evidence, no tuning",
+    "stop": "One accepted proof, first precise blocker, or300 science seconds, then return once to ingestion; no work below950",
+    "mandatory_checks": [
+      "all frozen input and code pins",
+      "exact V109 parent/row49 no-reset glue",
+      "source branch/domain/prefactor",
+      "positive atomic/C factors",
+      "fresh outward K and positive connected lower",
+      "both L/R upper-h and thermal inward faces",
+      "separate numerical recomputation plus independent rational and thermal algebra",
+      "16 actual semantic mutation controls",
+      "acceptance disk readback",
+      "immutable input/journal retention"
+    ],
+    "mutation_count": 16
+  },
+  "no_repeat": "One new960->950 proof; no historical main execution, proof rerun, actual consumer or below950 work",
+  "journal_ref": {
+    "path": "Q047_SAMLET_JOURNAL_Q048_V109_INGESTED_SOURCE_CORRECT_V1.md",
+    "bytes": 14494407,
+    "sha256": "19ddbe55fcc1f0fb709c26998e4afb7452fd1a623af2883f72d422dfa4bbfe3d"
+  },
+  "repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "46bb4241b8477b969d638d4f00cc2d837054df78",
+    "source_freshness": "VERIFIED",
+    "source_inspection": "11 prior ingestion files matched complete tree content-addressed bytes; no existing V110 proof result found"
+  },
+  "execution_profile": {
+    "functional_class": "H+A+C",
+    "observed_runtime": "Local Python standard-library exact arithmetic; GitHub read and file retrieval available",
+    "model_setting_change": "NOT_PERFORMED",
+    "compute_backend": "LOCAL_RUNTIME",
+    "external_paid_compute": false,
+    "timing_basis": "Small single-cell exact arithmetic with bounded300science seconds, no new workflow needed; no timing promise invented"
+  },
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+    "dependencies": "Python standard library; all mathematical helper source bytes pinned"
+  },
+  "preflight": {
+    "binding_contract_tests": "2/2 PASS after expected preimplementation RED",
+    "syntax": "all four new scripts compiled",
+    "source_prefactor_verified_in_hydrogen_c": true,
+    "historical_main_executions": 0,
+    "prefreeze_tooling_failure": "Adaptation-script quote syntax error corrected before producer creation; no science execution or source artifact alteration occurred"
+  }
+}
