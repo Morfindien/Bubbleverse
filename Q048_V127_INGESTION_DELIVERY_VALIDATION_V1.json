@@ -1,0 +1,21 @@
+{
+  "schema": "bubbleverse.delivery_validation.v1",
+  "q": "Q048",
+  "event": "LOCAL-Q048-V127-CONDITIONAL-ACTUAL-INGESTION-V1",
+  "validated_at_utc": "2026-10-20T19:00:55.692996+00:00",
+  "checks": {
+    "input_engine_sha256_matches_recorded_prompt": true,
+    "v127_result_git_blob_matches_observed_commit": true,
+    "v127_journal_git_blob_matches_observed_commit": true,
+    "v127_checkpoint_git_blob_matches_observed_commit": true,
+    "v127_files_index_git_blob_matches_observed_commit": true,
+    "successor_journal_has_exact_input_prefix": true,
+    "next_engine_exactly_one": true,
+    "next_engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+    "q_completion": false,
+    "native_p6_preserved_unresolved": true,
+    "github_sync_claimed": false
+  },
+  "status": "PASS",
+  "validation_class": "MANUAL_CONTRACT_CHECK_PLUS_LOCAL_HASH_AND_PREFIX_ASSERTIONS"
+}

@@ -1,0 +1,116 @@
+{
+  "schema": "bubbleverse.q048.v128.next_mathematics_task.v1",
+  "task_id": "LOCAL-Q048-V128-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-890-880-V1",
+  "task_fingerprint": "468ec7f79bb0c73ef80a5e14c6ebf196f10587d9dd7445c8564534cf7ed274be",
+  "task_fingerprint_basis": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "parent_actual": 119,
+    "parent_frontier_z": 890,
+    "candidate_frontier_z": 880,
+    "a_interval": [
+      "1/891",
+      "1/881"
+    ],
+    "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_CONNECTED_PROOF",
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "parent_checkpoint_file_sha256": "1b3e7bb8484e0a9227460caf6d8832b0fda905d7bc7561dd84d4343bac29732c",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "no_below_880": true,
+    "native_p6": "UNRESOLVED"
+  },
+  "engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "engine_prompt_sha256_from_current_journal": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "exact_full_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_id": "NOT_DOCUMENTED",
+  "objective": "Establish one new cell-specific conditional source-real connected proof for z=890->880 from the accepted actual119/frontier890 left face, or stop at the first precise material obstruction. Do not treat the V126 900->890 theorem as authority for the new cell.",
+  "parent_checkpoint": {
+    "file": "Q048_V127_TWO_OPERATOR_CONDITIONAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "file_sha256": "1b3e7bb8484e0a9227460caf6d8832b0fda905d7bc7561dd84d4343bac29732c",
+    "accepted_actual": 119,
+    "frontier_z": 890,
+    "endpoint": {
+      "a": "1/891",
+      "E": "38564332135202104759/1000000000000000000",
+      "Y": "7657044247739152913/250000000000000000",
+      "Vbar": "7605482013235264227/1000000000000000000"
+    },
+    "connected_lower_inherited_as_left_face_input_only": "407967490324051/1000000000000000000",
+    "K_upper_previous_cell_reference_only": "4667708628226718074319/1000000000000000000",
+    "thermal_domain_previous_cell_reference_only": [
+      "-1/1000000",
+      "1/50"
+    ]
+  },
+  "candidate_cell": {
+    "z_left": 890,
+    "z_right": 880,
+    "a_left": "1/891",
+    "a_right": "1/881",
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "source_cover": "retain both source-real operators unless a stricter source-faithful cover is proved",
+    "native_selector_certificate": false
+  },
+  "required_work": [
+    "Bind the exact V127 accepted checkpoint and verify source/capture/question pins before scientific arithmetic.",
+    "Recover the authoritative next-cell guard/background record for 890->880; do not assume a row number or endpoint values from sequence alone.",
+    "Verify that the complete source/background/atomic/C/operator domains used are valid on the whole candidate cell for both q branches.",
+    "If any V125 operator enclosure is reused, prove its domain covers 890->880; otherwise derive a new cell-specific enclosure.",
+    "Derive cell-specific K/connected-lower/upper-h/thermal inequalities needed for a closed-endpoint continuation theorem.",
+    "Keep the claim conditional on existing admissible absolutely-continuous source-real solutions and the admitted background guard.",
+    "Use an independent verification path and real semantic negative controls appropriate to the new cell."
+  ],
+  "success": {
+    "scientific_product": "one accepted conditional source-real connected proof for 890->880",
+    "new_proof_cells": 1,
+    "new_actual_cells": 0,
+    "consumer_authorization": "NOT_GRANTED_BY_MATHEMATICS",
+    "required_claim_limits": [
+      "no exact discontinuous-selector existence/uniqueness claim",
+      "no native evaluation-error certificate unless separately proved",
+      "no trajectory-identity claim",
+      "NativeP6 remains UNRESOLVED",
+      "Q048 remains ACTIVE unless later ingestion independently satisfies completion"
+    ]
+  },
+  "failure_or_obstruction": "Stop at the first exact missing/mismatched pin, source-domain failure, guard failure, non-strict barrier face, unavailable required state, or provenance defect. Record a validated obstruction; do not fabricate a proof.",
+  "frozen_constraints": {
+    "no_reset_refit_recapture_tuning": true,
+    "no_native_integration": true,
+    "no_historical_reexecution_without_material_reason": true,
+    "no_below_z": 880,
+    "no_actual120": true,
+    "no_model_change": true,
+    "no_new_q": true,
+    "no_q_closure_inside_task": true,
+    "retry_count": 0,
+    "postfreeze_edits": false
+  },
+  "budget": {
+    "preferred_backend": "LOCAL_RUNTIME",
+    "science_seconds_max": 300,
+    "escalation": "only if a material mathematics bottleneck cannot be resolved locally"
+  },
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "dispatch_status": "PREPARED_NOT_SENT"
+}
