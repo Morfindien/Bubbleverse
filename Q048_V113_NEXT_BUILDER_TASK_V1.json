@@ -1,0 +1,401 @@
+{
+  "schema": "bubbleverse.q048.v113.next_builder_task.v1",
+  "created_at_utc": "2026-10-20T06:55:38.531534+00:00",
+  "q": "Q048",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001–Q048",
+  "case_id": "NOT_DOCUMENTED_SEPARATELY_FROM_Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-V113-SOURCE-CORRECT-ACTUAL-CONSUMER-950-940-V1",
+  "task_fingerprint": "7cfc1bc2b57ed6cfda6c21a37b7816902da34115a39b55ce91402ce5a131c9df",
+  "task_definition_for_fingerprint": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "task_id": "LOCAL-Q048-V113-SOURCE-CORRECT-ACTUAL-CONSUMER-950-940-V1",
+    "objective": "Exactly one source-correct actual consumer950->940",
+    "parent_sha256": "236764f217c6c9d7affd8cffbaeefef20ee3d456ef31c1d8402baafff78d8bb7",
+    "theorem_acceptance_sha256": "0614968fba0060267b3f8a1d63cf5fd8cb153982a9a4c751670e26c72f5390fe",
+    "theorem_raw_sha256": "523f9796b42307529295194a560964740ce9d46d56b81be21b984845b8a7f542",
+    "theorem_verification_sha256": "3688dc054da433971e4ddc456ec93062e1f611cd191ce01a009affd95989e8c7",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row50_sha256": "50f8411d6a53b4bf0184da0eb0f83e8da6422d75e6b48a7698f6f8dba12561f4",
+    "cell_z": [
+      950,
+      940
+    ],
+    "cell_a": [
+      "1/951",
+      "1/941"
+    ],
+    "max_new_actual_cells": 1,
+    "max_new_proof_cells": 0,
+    "criteria": "Exact parent/theorem/source/no-reset glue; canonical endpoint/bounds; separate validation and postaccept; stop940 then return once",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "theorem_postaccept_sha256": "c6819098da5f4748b1f2fa4aca084fef0ba6eeceee235456d788d4deccab0d85",
+    "theorem_spec_sha256": "c592d72a7bb33a218d4963d6c90e0744ec8a3024af0145bf84db542a59c33eb5",
+    "theorem_freeze_sha256": "6643821b3a8e1c260315ec97bd817115a88cc8b4dc553dd08ba0c3212f601186",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "method_reference_hashes": {
+      "q048_v111_actual_consumer.py": "5771a3b1e6717612971f9e675249edf71c083d1b1156bbf49b3de727efbd5e99",
+      "q048_v111_verify.py": "03c02162f788b1e18ca9a42df1a36cf585313b51f70037151e9534a39b08cd9a",
+      "q048_v111_accept.py": "477d22f8b522d75ce97875644df7380b3bffe1c9ace7033347c347b3d21a2934",
+      "q048_v111_postaccept.py": "8e94946618c4c62e60ef2c473f912e1478b4994a555e81fc3f39018b39422a65",
+      "q048_v111_run.py": "913f58ed212cf05bf843469000c0b342ab8ba10f4cbb57dc30816caba27d8974",
+      "test_q048_v111_contract.py": "5c8ce9ee46b81b4953b5b463cfd2ff180184e02e9dfc52f672bf68e214f4c5cc",
+      "Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json": "5f151bcc109eb7a4ee15e6eacfc31db75dc758b1fe9b398cf6ffebc94ca713e3",
+      "Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json": "9b99127d3fd30c2bb6906674e3932e45d1ef449a80142932e7c0c7b22e068954"
+    },
+    "new_code_identity": "NOT_YET_FROZEN; Builder must version and freeze V113 source/spec before admission"
+  },
+  "selected_engine": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER",
+    "version": "2.2.0",
+    "prompt_file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-33.md",
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "git_blob_sha1": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "repository_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+    "role": "Bounded actual-consumer admission with source/theorem/parent binding and separate validation; choose smallest sufficient compute mechanism"
+  },
+  "status": "PREPARED_NOT_EXECUTED",
+  "objective": "Exactly one new source-correct reassessment-lineage actual consumer950->940; expected actual114/frontier940 only after validation/acceptance",
+  "parent_authority": {
+    "record": "Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "236764f217c6c9d7affd8cffbaeefef20ee3d456ef31c1d8402baafff78d8bb7",
+    "accepted_actual": {
+      "count": 113,
+      "frontier": 950
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 950
+    },
+    "endpoint": {
+      "a": "1/951",
+      "E": "12004207918064743109/250000000000000000",
+      "Y": "37289221101899893/976562500000000",
+      "Vbar": "9422974711250420253/1000000000000000000"
+    },
+    "connected_lower": "93617401567469/200000000000000000",
+    "K_upper": "4938757978740257564629/1000000000000000000",
+    "correct_saha_fact": "3.016103031869581e21"
+  },
+  "theorem_authority": {
+    "record": "Q048_V112_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+    "sha256": "0614968fba0060267b3f8a1d63cf5fd8cb153982a9a4c751670e26c72f5390fe",
+    "schema": "bubbleverse.q048.v112.source_correct_proof.acceptance.v1",
+    "raw_record": "Q048_V112_SOURCE_CORRECT_PROOF_RAW_V1.json",
+    "raw_sha256": "523f9796b42307529295194a560964740ce9d46d56b81be21b984845b8a7f542",
+    "verification_record": "Q048_V112_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+    "verification_sha256": "3688dc054da433971e4ddc456ec93062e1f611cd191ce01a009affd95989e8c7",
+    "postaccept_record": "Q048_V112_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json",
+    "postaccept_sha256": "c6819098da5f4748b1f2fa4aca084fef0ba6eeceee235456d788d4deccab0d85",
+    "spec_record": "Q048_V112_SOURCE_CORRECT_PROOF_SPEC_V1.json",
+    "spec_sha256": "c592d72a7bb33a218d4963d6c90e0744ec8a3024af0145bf84db542a59c33eb5",
+    "freeze_record": "Q048_V112_SOURCE_CORRECT_PROOF_FREEZE_V1.json",
+    "freeze_sha256": "6643821b3a8e1c260315ec97bd817115a88cc8b4dc553dd08ba0c3212f601186",
+    "proof_cell_z": [
+      950,
+      940
+    ],
+    "proof_cell_a": [
+      "1/951",
+      "1/941"
+    ],
+    "K_upper": "2434080172867495593979/500000000000000000",
+    "connected_lower": "228498093366287/500000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "source_saha_factor": "3.016103031869581e21",
+    "historical_math_consumer_authorization": "NOT_GRANTED_PRESERVED",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+  },
+  "theorem_schema_binding_note": "V112 is a fresh-proof acceptance, not V108 bridge schema. Bind proof_cell_z/proof_cell_a, parent_checkpoint_sha256 and flat K_upper/connected_lower explicitly. Do not assume proof_bridge_cell or retained_theorem fields exist.",
+  "guard": {
+    "source_record": "q048_guard_local_v_result_v12.json",
+    "source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+    "primary_index": 50,
+    "primary_row_sha256": "50f8411d6a53b4bf0184da0eb0f83e8da6422d75e6b48a7698f6f8dba12561f4",
+    "primary": {
+      "a0": "1/951",
+      "a1": "1/941",
+      "z0": 950,
+      "z1": 940,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "17819018883277416219/1000000000000000000",
+        "H_upper_left": "5815894555176602979/1000000000000000000",
+        "X_upper_left": "9799676695917980379/1000000000000000000",
+        "V_candidate_upper": "2275188699640893309/250000000000000000",
+        "retained_Vbar": "9422974711250420253/1000000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "12004207918064743109/250000000000000000",
+      "Y_left": "37289221101899893/976562500000000",
+      "V_previous": "9422974711250420253/1000000000000000000",
+      "source_state_reset": false,
+      "E_safe_left": "47680602198150958157/1000000000000000000",
+      "V_local": "2275188699640893309/250000000000000000",
+      "V_admitted": "2275188699640893309/250000000000000000",
+      "equilibrium_upper": "2532383943948124727/500000000000000000",
+      "amplitude": "16559697260224620489/500000000000000000",
+      "constant_energy_part": "167453888293569747553/11500000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "239869838517996779/250000000000000000",
+      "decay_selection": "OUTWARD_SERIES_UPPER",
+      "derivative_lower": "7517718055313300351/200000000000000000",
+      "raw_G_lower": "1842401744601884924960463841364950342670987032323076940657802026993883587617550116768953818882071254037728394994680948470593/357451076169534149049180990855527478822202858385593671910333483391958388477758363664384000000000000000000000000000000000000",
+      "G_lower": "5154276675692700991/1000000000000000000",
+      "Y_right_candidate": "36842143149632196673/1000000000000000000",
+      "E_right_candidate": "23169291469718832199/500000000000000000",
+      "endpoint_energy_envelope": "23169291469718832199/500000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "941/951",
+      "R_at_left": "4066405528246356139832521599414531196970117456542533542032450983734290556488306211915405381741037/1067993517960455041197510853084776057301352261178326384973520803911109862890320275011481043468288",
+      "M_at_left": "21378090117165340117595403125722613247500845199999258475/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "lower": "119934919258998389/125000000000000000",
+        "upper": "239869838517996779/250000000000000000",
+        "log_lower": "1057092296001067/100000000000000000",
+        "log_upper": "10570922960010671/1000000000000000000",
+        "range_reduction_squarings": 0,
+        "method": "OUTWARD_SERIES_RANGE_REDUCED"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "23169291469718832199/500000000000000000",
+      "Y_right": "36842143149632196673/1000000000000000000",
+      "index": 50,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    },
+    "control_row_sha256": "1b50eae4fdd3d74b958884d78797231fb7608f24fbe4dc7c1c2df7fe054c7780",
+    "control_role": "GUARD_ONLY_NOT_AN_ADDITIONAL_ACTUAL_CELL",
+    "control": {
+      "a0": "1/951",
+      "a1": "1/941",
+      "z0": 950,
+      "z1": 940,
+      "domain": {
+        "checks": {
+          "positive_H_and_background": true,
+          "positive_source": true,
+          "central_well_energy_wall": true,
+          "coercivity_n_ge_15_over_4": true,
+          "new_or_retained_future_cap_positive": true,
+          "ell_range_from_positive_flat_source": true
+        },
+        "admitted": true,
+        "Uwall_lower": "696320960517176292913/1000000000000000000",
+        "coercivity_margin_lower": "107872052724033/1250000000000000",
+        "B0_upper_left": "17819018883277416219/1000000000000000000",
+        "H_upper_left": "5855898522132203197/1000000000000000000",
+        "X_upper_left": "1988317595274774347/200000000000000000",
+        "V_candidate_upper": "9296049842802932881/1000000000000000000",
+        "retained_Vbar": "4809865157994039769/500000000000000000",
+        "proof": "Reuse admitted central-well/coercivity and positive-flat-source lemmas. e,H nonincreasing, |theta|<2, so fresh2Hup*sqrt(2E_input)/lambda_lo bounds |V| on the whole future cell. No G premise or Y reset."
+      },
+      "domain_origin": "FRESH_NEW_CELL_SOURCE_QUALIFICATION",
+      "E_input_left": "6177198218248845879/125000000000000000",
+      "Y_left": "39379606285829292731/1000000000000000000",
+      "V_previous": "4809865157994039769/500000000000000000",
+      "source_state_reset": false,
+      "root_lowers": [
+        "395652056365004313780553350259/1000000000000000000000000000000",
+        "763869923509772876066984153521/1000000000000000000000000000000",
+        "337865104774416861121008568973/200000000000000000000000000000",
+        "3113816119196210429458710256631/1000000000000000000000000000000",
+        "5043254643264895174602428255247/1000000000000000000000000000000",
+        "1879812682353427733870833151007/250000000000000000000000000000",
+        "5306291369912465339446141027517/500000000000000000000000000000",
+        "14436488197161600798797008816037/1000000000000000000000000000000",
+        "1198907847887116432902463955699/62500000000000000000000000000",
+        "1008819968196743921008206600631/40000000000000000000000000000",
+        "8374823298306459256858815647821/250000000000000000000000000000"
+      ],
+      "E_safe_left": "49079832208754092259/1000000000000000000",
+      "V_local": "9296049842802932881/1000000000000000000",
+      "V_admitted": "9296049842802932881/1000000000000000000",
+      "equilibrium_upper": "2586726912779946541/500000000000000000",
+      "amplitude": "34206152460269399649/1000000000000000000",
+      "constant_energy_part": "1487367974848469261/100000000000000000",
+      "amplitude_case": "NONNEGATIVE",
+      "decay_used": "7291/7591",
+      "decay_selection": "BERNOULLI_UPPER",
+      "derivative_lower": "8348846315926907449/250000000000000000",
+      "raw_G_lower": "435439199109096042428047118026138800877769116009471032844566872286365862903212984858051437609451776758146118146135381/115209371569418042010544026052322906408769611837849930514238343768187675226505763356672000000000000000000000000000000",
+      "G_lower": "1889773345594231071/500000000000000000",
+      "Y_right_candidate": "38027762557983051143/1000000000000000000",
+      "E_right_candidate": "47727988480907850671/1000000000000000000",
+      "endpoint_energy_envelope": "47727988480907850671/1000000000000000000",
+      "whole_cell_qualified": true,
+      "accepted": true,
+      "ratio": "941/951",
+      "R_at_left": "57864548942926640501165996656451156855413461873622870896778269751318019923133407682468465988487467898057764273777/15177100720513508366558296147058741458143803430094840009779784451085189728165691392000000000000000000000000000000",
+      "M_at_left": "21378090117165340117595403125722613247500845199999258475/1532495540865888858358347027150309183618739122183602176",
+      "Lambda": "0",
+      "decay": {
+        "method": "SIGNED_BERNOULLI_OR_POLYNOMIAL_CONTROL"
+      },
+      "floor_omitted": true,
+      "correlation": "Same connected V11/V10 scalar source family; Y inherited unchanged, smaller valid absolute-V cap; component bounds are projections, no independent restart.",
+      "status": "PASS_LOCAL_V_CORRELATED_WHOLE_CELL_GUARD",
+      "committed": true,
+      "E_right": "47727988480907850671/1000000000000000000",
+      "Y_right": "38027762557983051143/1000000000000000000",
+      "index": 50,
+      "role": "NEW_FORWARD_GUARD_CELL"
+    }
+  },
+  "cell_z": [
+    950,
+    940
+  ],
+  "cell_a": [
+    "1/951",
+    "1/941"
+  ],
+  "expected_actual_after": {
+    "count": 114,
+    "frontier": 940
+  },
+  "expected_endpoint_crosscheck_only": {
+    "a": "1/941",
+    "E": "23169291469718832199/500000000000000000",
+    "Y": "36842143149632196673/1000000000000000000",
+    "Vbar": "2275188699640893309/250000000000000000"
+  },
+  "theorem_K_to_bind_if_all_checks_pass": "2434080172867495593979/500000000000000000",
+  "theorem_lower_to_bind_if_all_checks_pass": "228498093366287/500000000000000000",
+  "max_new_actual_cells": 1,
+  "max_new_proof_cells": 0,
+  "max_full_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "consumer_authorization": "GRANTED_BY_THIS_INGESTION_FOR_EXACTLY_ONE_CELL_950_TO_940",
+  "below940_authorization": "NOT_GRANTED",
+  "required_behavior": [
+    "Freeze exact V111 parent, V112 accepted theorem/raw/verifier and committed primary row50 before execution",
+    "Verify all byte hashes, Q/source/scopes, exact primary row left a/E/Y/V glue and source_state_reset=false before the single admission",
+    "Consume V112 theorem once; endpoint values must come from the committed primary row; supplied endpoint is a cross-check only",
+    "Use separate validation and postaccept checks including real semantic mutations for wrong parent/theorem/schema/row/reset/cell/endpoint/K/lower/below940/extra cell",
+    "Write a separately versioned V113 raw result and accepted actual checkpoint only if all gates pass",
+    "Preserve V101/V102/V108/V111/V112 source/history unchanged; zero proof cells; no reset/refit/recapture/tuning",
+    "Stop one cell or first precise blocker; return exactly once to Result Ingestion2.1.0",
+    "Before freeze adapt V111 method to V113, parent113/950, V112 fresh-proof schema, row50 and STOP940; replace old V110 authority and V111 authorization/task pins. Include both wrong-schema controls in the frozen suite."
+  ],
+  "success_condition": "One validated and accepted source-correct reassessment actual114/frontier940, exactly one actual cell, zero proof cells, exact parent/theorem/row/schema/glue and postaccept PASS",
+  "failure_condition": "First material hash, parent/theorem/schema, source/reset/glue, endpoint, verifier or postaccept invariant failure; preserve it without retuning or historical relabel",
+  "stop_condition": "One accepted actual cell or first exact blocker; no below940; then one return to ingestion",
+  "forbidden": [
+    "V112 theorem rerun/reproof",
+    "old science replay/relabel",
+    "physical reset/refit/recapture/tuning",
+    "changing the exact question, captures or accepted z_reio",
+    "below940",
+    "extra actual or proof cells",
+    "NativeP6 or complete histories claim",
+    "accepted-model/Q change or Q closure"
+  ],
+  "resource_policy": "Use smallest adequate local/direct mechanism if available; choose GitHub compute only on measured/qualified workload benefit. No paid resources or speculative infrastructure authorized.",
+  "source_repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+    "all18_V112_source_artifacts": "VERIFIED_PRESENT_AND_BYTE_EQUIVALENT"
+  },
+  "preparation_is_not_dispatch": true,
+  "method_references": [
+    {
+      "filename": "q048_v111_actual_consumer.py",
+      "sha256": "5771a3b1e6717612971f9e675249edf71c083d1b1156bbf49b3de727efbd5e99",
+      "bytes": 7820,
+      "git_blob_sha1": "c18f040fda4f673db7c2c24aa5b8edbec831e98a",
+      "repository_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+      "role": "READ_ONLY_METHOD_REFERENCE; replace old parent/theorem/authorization/cell identities before new freeze; do not execute historical main"
+    },
+    {
+      "filename": "q048_v111_verify.py",
+      "sha256": "03c02162f788b1e18ca9a42df1a36cf585313b51f70037151e9534a39b08cd9a",
+      "bytes": 12729,
+      "git_blob_sha1": "9b7ae53e2f4bcef9e41a19691f63204a25619b93",
+      "repository_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+      "role": "READ_ONLY_METHOD_REFERENCE; replace old parent/theorem/authorization/cell identities before new freeze; do not execute historical main"
+    },
+    {
+      "filename": "q048_v111_accept.py",
+      "sha256": "477d22f8b522d75ce97875644df7380b3bffe1c9ace7033347c347b3d21a2934",
+      "bytes": 3130,
+      "git_blob_sha1": "79f1d2e1fffb0ea7b70eab63bbb756516464fcc4",
+      "repository_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+      "role": "READ_ONLY_METHOD_REFERENCE; replace old parent/theorem/authorization/cell identities before new freeze; do not execute historical main"
+    },
+    {
+      "filename": "q048_v111_postaccept.py",
+      "sha256": "8e94946618c4c62e60ef2c473f912e1478b4994a555e81fc3f39018b39422a65",
+      "bytes": 5479,
+      "git_blob_sha1": "2fbb985a1feb1fbe8d0cf201af3174375bc12d3e",
+      "repository_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+      "role": "READ_ONLY_METHOD_REFERENCE; replace old parent/theorem/authorization/cell identities before new freeze; do not execute historical main"
+    },
+    {
+      "filename": "q048_v111_run.py",
+      "sha256": "913f58ed212cf05bf843469000c0b342ab8ba10f4cbb57dc30816caba27d8974",
+      "bytes": 2862,
+      "git_blob_sha1": "c3ef36f47ce55d9bcf2eb60c2a043677abec0d1a",
+      "repository_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+      "role": "READ_ONLY_METHOD_REFERENCE; replace old parent/theorem/authorization/cell identities before new freeze; do not execute historical main"
+    },
+    {
+      "filename": "test_q048_v111_contract.py",
+      "sha256": "5c8ce9ee46b81b4953b5b463cfd2ff180184e02e9dfc52f672bf68e214f4c5cc",
+      "bytes": 5254,
+      "git_blob_sha1": "f64e244778802363146a250b5b76e9f6d3928cc9",
+      "repository_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+      "role": "READ_ONLY_METHOD_REFERENCE; replace old parent/theorem/authorization/cell identities before new freeze; do not execute historical main"
+    },
+    {
+      "filename": "Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_SPEC_V1.json",
+      "sha256": "5f151bcc109eb7a4ee15e6eacfc31db75dc758b1fe9b398cf6ffebc94ca713e3",
+      "bytes": 6104,
+      "git_blob_sha1": "8222c1e681f1a530b0d892a6c50a222d44b23beb",
+      "repository_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+      "role": "READ_ONLY_METHOD_REFERENCE; replace old parent/theorem/authorization/cell identities before new freeze; do not execute historical main"
+    },
+    {
+      "filename": "Q048_V111_SOURCE_CORRECT_ACTUAL_CONSUMER_FREEZE_V1.json",
+      "sha256": "9b99127d3fd30c2bb6906674e3932e45d1ef449a80142932e7c0c7b22e068954",
+      "bytes": 2218,
+      "git_blob_sha1": "511440a1696a6171c1452c9f04bc8ee8242a6ce0",
+      "repository_commit": "06942fc4c270ff9160ccaef241993fb7416691aa",
+      "role": "READ_ONLY_METHOD_REFERENCE; replace old parent/theorem/authorization/cell identities before new freeze; do not execute historical main"
+    }
+  ],
+  "new_code_identity": "NOT_YET_FROZEN",
+  "mandatory_schema_negative_controls": [
+    "wrong raw-result schema",
+    "wrong V112 theorem-acceptance schema"
+  ],
+  "mutation_integrity": "All controls must actually change derivative fixtures; freeze named schema controls with the base suite, never rely only on a count",
+  "preserve_parent_authority_until_acceptance": true
+}
