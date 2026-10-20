@@ -1,0 +1,63 @@
+{
+  "schema": "bubbleverse.q048.v109.source_correct_actual_consumer.execution.v1",
+  "compute_backend": "LOCAL_RUNTIME",
+  "github_actions_used": false,
+  "commands": [
+    {
+      "command": [
+        "python",
+        "q048_v109_actual_consumer.py"
+      ],
+      "start_utc": "2026-10-20T05:34:28.311160+00:00",
+      "end_utc": "2026-10-20T05:34:28.346715+00:00",
+      "wall_seconds": 0.035560157000020354,
+      "returncode": 0,
+      "stdout": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_RAW_V1.json e4775af028c0d8bd0d20b28f707d00ad61eb1e81b31c520f51c438509285cb13 actual112/frontier960; pending validation\n",
+      "stderr": "",
+      "code_sha256": "9a0a40080204145224bdda0c063a2cdf8437dc72fac95ea1fd34df7d1694a4a9"
+    },
+    {
+      "command": [
+        "python",
+        "q048_v109_verify.py"
+      ],
+      "start_utc": "2026-10-20T05:34:28.346841+00:00",
+      "end_utc": "2026-10-20T05:34:28.384977+00:00",
+      "wall_seconds": 0.03814798600001268,
+      "returncode": 0,
+      "stdout": "PASS 50 50 checks; 24 24 real mutations rejected\n",
+      "stderr": "",
+      "code_sha256": "4e8d2c518e8ad58f38082f44c9c79e4e94afd82ce7e883ebefc952a5d519a76e"
+    },
+    {
+      "command": [
+        "python",
+        "q048_v109_accept.py"
+      ],
+      "start_utc": "2026-10-20T05:34:28.385086+00:00",
+      "end_utc": "2026-10-20T05:34:28.421661+00:00",
+      "wall_seconds": 0.03658277800002452,
+      "returncode": 0,
+      "stdout": "Q048_V109_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json 37a1d5d738f2d64fba0e23ab7b19d53f58acef22f776735a14c98e6524e284ba\n",
+      "stderr": "",
+      "code_sha256": "c97682fae6121f7eb2cb49fb2b81453751a81c9616f7a025121b079e16af8f98"
+    },
+    {
+      "command": [
+        "python",
+        "q048_v109_postaccept.py"
+      ],
+      "start_utc": "2026-10-20T05:34:28.421796+00:00",
+      "end_utc": "2026-10-20T05:34:28.450544+00:00",
+      "wall_seconds": 0.028757768999980726,
+      "returncode": 0,
+      "stdout": "PASS 30 30 postaccept; 8 8 checkpoint mutations rejected\n",
+      "stderr": "",
+      "code_sha256": "bd3cf71ff988db9a54f20c82da9b2a78c3699fa85c3aa2513ceca4fed488b82b"
+    }
+  ],
+  "status": "COMPLETE",
+  "theorem_producer_executions": 0,
+  "actual_consumer_executions": 1,
+  "below960_executions": 0
+}
