@@ -1,0 +1,80 @@
+{
+  "schema": "bubbleverse.q048.v121.source_correct_actual_consumer.freeze.v1",
+  "created_at_utc": "2026-10-20T15:00:19.184166+00:00",
+  "spec_sha256": "9d8ede2d16482462e97ec426b29a7f8c7be7aa68646b3d6cb577774cb0ffb045",
+  "input_hashes": {
+    "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json": "b99025ea901930476d91d31a8ff3cbdbf1caadc86d4b92a44cd0bd4e5d63e8ae",
+    "Q048_V120_INGESTION_STATE_V1.json": "f3bd5afe9d7c75d8c978c9a10161d54c7ecf3ce88e8796ba168bcc98d4af45c9",
+    "Q048_V121_NEXT_BUILDER_TASK_V1.json": "360ad104d73e889aeeb0596ac5ceda8e2bbc96ec9957bd55696ff119c8fa7d95",
+    "q048_guard_local_v_result_v12.json": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json": "9f3d2381f40bdd03f4bd692e72105fb4e3e02611e47772be2bab27dee7b0158f",
+    "Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json": "3324b5801396dd5a7b13be99f8fe0e5e1d65b347711b535eb0f3ac9dc30804a0",
+    "Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json": "e439c998684b9d047a5d78d909cfc30568a82ea9d21a074b1db9c4b74400460e",
+    "Q048_V120_SOURCE_CORRECT_PROOF_POSTACCEPT_V1.json": "dae1aac830186e328669ad1dd82605290e2b7aedce330cd21c959ffea4cb0b06",
+    "Q048_V120_SOURCE_CORRECT_PROOF_SPEC_V1.json": "cd0a6cdb8b2c1ecb202a2fb9e6c5b73075ac958cf3ee705645b3ad24d749ed13",
+    "Q048_V120_SOURCE_CORRECT_PROOF_FREEZE_V1.json": "57c70bc2bbbf4e9a2c41b09ada81c8b0382297e39bea4a4ef53121bd291ef27d",
+    "Q048_V120_SOURCE_CORRECT_PROOF_DELIVERY_VALIDATION_V1.json": "069679b67c7286b815930d729152cd05eb597dedb93d362d911f2b9f7a300b63"
+  },
+  "code_hashes": {
+    "q048_v121_actual_consumer.py": "613f0f4ab5ab0d885dac1b2e58acd7f607dc4d7aa670b30cf711bb6a7cb7d3e9",
+    "q048_v121_verify.py": "bb211771b66ae2f8b6be5198a08c280d300a4603a3741d274965f675901e8f90",
+    "q048_v121_accept.py": "af749bb1388cfc56076bc1e9a1078e3d836feb9d9119c2852e9c72ff11ad8e96",
+    "q048_v121_postaccept.py": "110b7a45ae649e3e0bcc404e1a25acd464b0e17221df81dbded1ed8d17fbee9c",
+    "q048_v121_run.py": "0c59f9226cc411eecffaf7d79d3f774de43fc796fe2c78d158b03261487fc226",
+    "test_q048_v121_contract.py": "ee16bc0e89b2908345cf7d52692951c16c07aba0240442ba989b9978c174db2e"
+  },
+  "task_id": "LOCAL-Q048-V121-SOURCE-CORRECT-ACTUAL-CONSUMER-910-900-V1",
+  "task_fingerprint": "781f560ae5a913bedd6d0305552cdc4f36dc79ab8f7af99299a544337c2abd44",
+  "preflight": "5/5 synthetic contract tests PASS after expected missing-implementation RED;all6 modules compiled;source/parent/theorem/guard/task/certificate and proof31/18/21+35/5 requirements verified",
+  "frozen_validation_plan": {
+    "raw_checks": 57,
+    "result_mutations": 30,
+    "authority_mutations": 9,
+    "total_raw_authority_mutations": 39,
+    "postaccept_checks": 32,
+    "checkpoint_mutations": 10,
+    "synthetic_preflight_tests": 5,
+    "mandatory_boundary_negative_controls": [
+      "missing source_boundary_certificate",
+      "changed certificate boundary or source hash",
+      "certificate z_min below900",
+      "certificate/cell_z/cell_a mismatch",
+      "wrong proof verification31/mutation18/postaccept21 counts"
+    ]
+  },
+  "source_boundary_certificate": {
+    "z_min": "900",
+    "z_max": "910",
+    "low_z_branch_active_anywhere": false,
+    "Pion": "1",
+    "PION_MAX": "1/100",
+    "dispatch": "SWIFT_FIT_SUBJECT_TO_OTHER_DOMAIN_GATES",
+    "boundary": "z>=900",
+    "hydrogen_c_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+    "hydrogen_h_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+  },
+  "proof_validation_requirements": {
+    "verification_checks": 31,
+    "semantic_mutations_rejected": 18,
+    "postaccept_checks": 21,
+    "delivery_checks": 35,
+    "preflight_binding_tests": 5
+  },
+  "policy": "No postfreeze edits;exactly one admission and finite validation;zero proof producers/historical mains/retries/below900;first material failure stops",
+  "science_budget_seconds": 300,
+  "max_phase_seconds": 60,
+  "source_repository_equivalence": {
+    "filename": "v121_repository_equivalence.json",
+    "sha256": "611f2076c872f7fc104010bb5f207c5900c1f7b053e79592249904c0d11ddc0a",
+    "source_files": 70,
+    "repository_matches": 50,
+    "saved_v115_ancestry_files_pending_upload": 20
+  },
+  "auxiliary_source_pins": {
+    "prompt_sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "handoff_sha256": "573526114ed5ad8a0935d490514ab3eb5dd25c568ba19ab69133e1fdd3360393",
+    "incoming_journal_sha256": "bc273f76c398293765b3ad478dbd9706fc77ecb5a92f95ac97a0f06cb7968cfe",
+    "incoming_journal_library_file_id": "libfile_97d797c4c2708191b82a989b0e80afe8",
+    "incoming_journal_github_status": "GITHUB_BYTE_VERIFIED_AT_BASE"
+  }
+}

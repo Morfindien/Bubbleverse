@@ -1,0 +1,122 @@
+{
+  "schema": "bubbleverse.q048.v121.source_correct_actual_consumer.raw.v1",
+  "source_boundary_certificate": {
+    "z_min": "900",
+    "z_max": "910",
+    "low_z_branch_active_anywhere": false,
+    "Pion": "1",
+    "PION_MAX": "1/100",
+    "dispatch": "SWIFT_FIT_SUBJECT_TO_OTHER_DOMAIN_GATES",
+    "boundary": "z>=900",
+    "hydrogen_c_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+    "hydrogen_h_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+  },
+  "proof_validation_requirements": {
+    "verification_checks": 31,
+    "semantic_mutations_rejected": 18,
+    "postaccept_checks": 21,
+    "delivery_checks": 35,
+    "preflight_binding_tests": 5
+  },
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V121-SOURCE-CORRECT-ACTUAL-CONSUMER-910-900-V1",
+  "task_fingerprint": "781f560ae5a913bedd6d0305552cdc4f36dc79ab8f7af99299a544337c2abd44",
+  "program_id": "Q048-V121-SOURCE-CORRECT-CONSUMER-V1",
+  "program_registration": "LOCAL_NOT_REGISTERED",
+  "created_at_utc": "2026-10-20T15:00:19.626435+00:00",
+  "status": "PENDING_VALIDATION",
+  "scientific_state": "INCONCLUSIVE",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "spec_sha256": "9d8ede2d16482462e97ec426b29a7f8c7be7aa68646b3d6cb577774cb0ffb045",
+  "task_authorization_sha256": "360ad104d73e889aeeb0596ac5ceda8e2bbc96ec9957bd55696ff119c8fa7d95",
+  "theorem_postaccept_sha256": "dae1aac830186e328669ad1dd82605290e2b7aedce330cd21c959ffea4cb0b06",
+  "authorization_sha256": "f3bd5afe9d7c75d8c978c9a10161d54c7ecf3ce88e8796ba168bcc98d4af45c9",
+  "lineage": "SOURCE_CORRECT_REASSESSMENT_V104_V105_V106_V107_V108_V109_V110_V111_V112_V113_V114_V115_V116_V117_V118_V119_V120_V121",
+  "cell_z": [
+    910,
+    900
+  ],
+  "cell_a": [
+    "1/911",
+    "1/901"
+  ],
+  "parent_authority": {
+    "record": "Q048_V119_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "b99025ea901930476d91d31a8ff3cbdbf1caadc86d4b92a44cd0bd4e5d63e8ae",
+    "actual": {
+      "count": 117,
+      "frontier": 910
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 910
+    },
+    "endpoint": {
+      "a": "1/911",
+      "E": "41553114742782417797/1000000000000000000",
+      "Y": "33016542108247500469/1000000000000000000",
+      "Vbar": "8180882108095962439/1000000000000000000"
+    }
+  },
+  "theorem_authority": {
+    "record": "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+    "sha256": "9f3d2381f40bdd03f4bd692e72105fb4e3e02611e47772be2bab27dee7b0158f",
+    "raw_sha256": "3324b5801396dd5a7b13be99f8fe0e5e1d65b347711b535eb0f3ac9dc30804a0",
+    "verification_sha256": "e439c998684b9d047a5d78d909cfc30568a82ea9d21a074b1db9c4b74400460e",
+    "correct_saha_fact": "3.016103031869581e21",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "K_upper": "1184837959588125278027/250000000000000000",
+    "connected_lower": "83379887432219/200000000000000000"
+  },
+  "guard_binding": {
+    "source_record": "q048_guard_local_v_result_v12.json",
+    "source_record_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row_sha256": "448ae715d15903d6bf77750ba62c673fde3d7422e6bd626a76f0062c037329ec",
+    "index": 54,
+    "E_input_left": "41553114742782417797/1000000000000000000",
+    "Y_left": "33016542108247500469/1000000000000000000",
+    "V_previous": "8180882108095962439/1000000000000000000",
+    "source_state_reset": false,
+    "whole_cell_qualified": true,
+    "accepted": true,
+    "committed": true,
+    "control_role": "GUARD_ONLY"
+  },
+  "candidate_actual": {
+    "count": 118,
+    "frontier": 900,
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 900
+    },
+    "endpoint": {
+      "a": "1/901",
+      "E": "10009745397581786717/250000000000000000",
+      "Y": "1987905512933907887/62500000000000000",
+      "Vbar": "3944736412871797407/500000000000000000"
+    },
+    "connected_lower": "83379887432219/200000000000000000",
+    "K_upper": "1184837959588125278027/250000000000000000"
+  },
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "new_full_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "below900_work": false,
+  "historical_record_modified": false,
+  "historical_v101_v102_replayed": false,
+  "no_physical_reset": true,
+  "no_native_trajectory_claim": true,
+  "q_complete": false,
+  "NativeP6": "UNRESOLVED",
+  "claim_firewall": "One exact theorem-backed admission, not native trajectory integration, new proof or complete four-case xe/tau bounds."
+}

@@ -1,0 +1,76 @@
+{
+  "schema": "bubbleverse.q048.v121.source_correct_actual_consumer.postaccept_validation.v1",
+  "status": "PASS",
+  "accepted_checkpoint_sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+  "checks_total": 32,
+  "checks_passed": 32,
+  "checks": {
+    "source_boundary_certificate": true,
+    "proof_validation_requirements": true,
+    "schema": true,
+    "identity": true,
+    "spec_pin": true,
+    "status": true,
+    "scientific_state": true,
+    "raw_pin": true,
+    "validation_pin": true,
+    "validation_pass": true,
+    "real_mutations": true,
+    "parent_pin": true,
+    "actual_before": true,
+    "actual_after": true,
+    "four_frontiers": true,
+    "endpoint": true,
+    "K": true,
+    "lower": true,
+    "saha": true,
+    "theorem_pin": true,
+    "theorem_raw_pin": true,
+    "theorem_verifier_pin": true,
+    "guard_source": true,
+    "guard_row": true,
+    "authorization": true,
+    "one_actual_zero_proof": true,
+    "single_consumption": true,
+    "no_reset": true,
+    "history": true,
+    "no_below900": true,
+    "no_native_claim": true,
+    "stop_rule": true
+  },
+  "semantic_mutations_total": 10,
+  "semantic_mutations_rejected": 10,
+  "mutation_failed_invariants": {
+    "checkpoint_boundary_missing": [
+      "source_boundary_certificate"
+    ],
+    "checkpoint_old_proof_counts": [
+      "proof_validation_requirements"
+    ],
+    "wrong_parent": [
+      "parent_pin"
+    ],
+    "wrong_theorem": [
+      "theorem_pin"
+    ],
+    "wrong_row": [
+      "guard_row"
+    ],
+    "reset": [
+      "no_reset"
+    ],
+    "below900": [
+      "actual_after"
+    ],
+    "endpoint": [
+      "endpoint"
+    ],
+    "extra_cell": [
+      "one_actual_zero_proof"
+    ],
+    "new_proof": [
+      "one_actual_zero_proof"
+    ]
+  },
+  "independence_scope": "Separate process and implementation read back checkpoint, raw, validation and spec; shares frozen premises."
+}
