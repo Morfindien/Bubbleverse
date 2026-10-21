@@ -1,0 +1,154 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_type": "SCIENTIFIC_CASE_EXECUTION",
+  "q": "Q048",
+  "revision_id": "V129",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "journal": {
+    "reference": "Q047_SAMLET_JOURNAL_Q048_V129_CONDITIONAL_CONSUMER_APPENDED_V1.md",
+    "version": "V129 appendedV1",
+    "sha256": "6bcb57fc2ba56b2c77e3cd9f6aea8b611ed4015fefda4adac6cefcba07ca443f",
+    "incoming": "Q047_SAMLET_JOURNAL_Q048_V128_INGESTED_V1.md",
+    "incoming_sha256": "694b829ec9f0e19d9155a6f9f44e08d94ad948629d3b6a96f81f9fa907411856",
+    "unchanged_prefix_bytes": 14646566
+  },
+  "program_id": "Q048-V129-TWO-OPERATOR-CONDITIONAL-CONSUMER-V1",
+  "program_registration": "LOCAL_NOT_REGISTERED",
+  "run_id": "LOCAL-Q048-V129-20261021T051157061124Z-CONSUMER-V1",
+  "task_id": "LOCAL-Q048-V129-TWO-OPERATOR-CONDITIONAL-SOURCE-REAL-ACTUAL-CONSUMER-890-880-V1",
+  "task_fingerprint": "4b4d4bff00b339a479dd95b6da9366fe4d19708512da31520eda2ce54fa2f0a0",
+  "compute_backend": "LOCAL_RUNTIME",
+  "backend_decision_ref": "Q048_V129_COMPUTE_DECISION_V1.json",
+  "specification": {
+    "file": "Q048_V129_SPEC_V1.json",
+    "sha256": "d14aa19c2997e7e87efc466acac2a4ac4c15821d8b4353c77422b8653bd711b2"
+  },
+  "execution_status": "COMPLETE",
+  "result_validation_status": "VALIDATED",
+  "scientific_outcome": "INCONCLUSIVE",
+  "case_lifecycle": "ACTIVE",
+  "result_id": "LOCAL-Q048-V129-TWO-OPERATOR-CONDITIONAL-ACTUAL-ADMISSION-V1",
+  "results": {
+    "accepted_actual": {
+      "count": 120,
+      "frontier": 880
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 880
+    },
+    "endpoint": {
+      "a": "1/881",
+      "E": "9282138507468806523/250000000000000000",
+      "Y": "7370278396737559369/250000000000000000",
+      "Vbar": "7328797091136447423/1000000000000000000"
+    },
+    "new_actual_cells": 1,
+    "new_mathematical_proof_cells": 0,
+    "full_theorem_recomputations": 0,
+    "theorem_consumptions": 1,
+    "admission_scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS",
+    "source_cover_contract": {
+      "kind": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS",
+      "operators": [
+        "HMLA",
+        "SWIFT"
+      ],
+      "q_branches": {
+        "L": "1/1000000",
+        "R": "0"
+      },
+      "continuation": {
+        "initial_a": "1/891",
+        "endpoint_a": "1/881",
+        "initial_h_only": "407967490324051/1000000000000000000",
+        "h_upper": "99999/100000",
+        "w": [
+          "-1/1000000",
+          "1/50"
+        ],
+        "background": "Admitted primary guard row56, exact inherited E/Y/V_previous; E_input_left is conservative whole-cell energy cap; no scalar consumption.",
+        "selection": "conv(HMLA,SWIFT) for each fixed q branch",
+        "hypothesis": "An existing absolutely-continuous source-real solution satisfying the admitted background and fixed-q two-operator inclusion, starting from the inherited h and w face; no assumed future domain membership. The invariant bounds apply on its existing interval and at a1 whenever an admissible continuation reaches a1. Exact discontinuous-selector existence/uniqueness is not established.",
+        "proof": "Until the first exit, positive atomic/source/C premises hold on the larger outer box. The decreasing positive Riccati comparison excludes lower-h exit. Strict upper-h and both thermal inward faces exclude all other exits. The bounds persist at the closed endpoint for existing admissible continuations. Convex combinations preserve these linear derivative inequalities.",
+        "native_error_certificate": false,
+        "trajectory_identity_claim": false
+      },
+      "exact_selector_existence_uniqueness": "NOT_ESTABLISHED",
+      "native_evaluation_error_certificate": false,
+      "trajectory_identity_claim": false,
+      "required_scope_preservation": "Copy the V128 continuation contract byte-equivalently as JSON content; do not infer solution existence or endpoint reachability from metadata admission."
+    },
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false
+  },
+  "validation": {
+    "validator_checks": [
+      40,
+      40
+    ],
+    "validator_semantic_controls": [
+      43,
+      43
+    ],
+    "provisional_acceptance": [
+      10,
+      10
+    ],
+    "postaccept_checks": [
+      35,
+      35
+    ],
+    "postaccept_controls": [
+      23,
+      23
+    ],
+    "serialized_final_checks": [
+      35,
+      35
+    ],
+    "published_readback_checks": [
+      35,
+      35
+    ],
+    "metadata_tests": [
+      17,
+      17
+    ],
+    "frozen_pins": 112
+  },
+  "provenance": {
+    "raw": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_RAW_V1.json",
+    "raw_sha256": "c0213780547e6d40c02bc5e997d521202940f3aa167be908c61bf768b1e3afe3",
+    "validation": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_VALIDATION_V1.json",
+    "validation_sha256": "ac19cf3fbfe9e9efc45f4e56cd3e173d2f59ee65aaf2c39d6f5a4541deba01b2",
+    "postaccept": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+    "postaccept_sha256": "11e931698ffdffcccf2b525c2375e7cd066a1a5bae8521ace8b87bebcae7b1c6",
+    "accepted_checkpoint": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "checkpoint_sha256": "17bd90a77db1e2605fbc8d546f33b5f5bb355f5b8c0c5975fbe8d979b54bba28",
+    "execution": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_EXECUTION_V1.json",
+    "phase_logs": "Q048_V129_PHASE_LOGS_V1.json",
+    "input_map": "Q048_V129_INPUT_RECOVERY_MAP_V1.json",
+    "separate_static_review": "Q048_V129_PREFREEZE_REVIEW_V1.md"
+  },
+  "gates_ref": "Q048_V129_GATE_REGISTER_V1.json",
+  "unresolved_issues": [
+    "Completefour-casehistory/opticaldepthdifferencebounds missing",
+    "NativeP6UNRESOLVED",
+    "GitHubregistration/README/pointers manualuploadpending"
+  ],
+  "next_action": "RegisterV129onceas1conditionalactualadmission/0proof,thenchooseaseparatelyjustifiednexttask;noactual121orbelow880authorizationhere",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "handoff_status": "PREPARED_NOT_SENT",
+  "termination": {
+    "status": "PASS_FOR_BOUNDED_V129_TASK",
+    "Q048_complete": false
+  },
+  "GitHub_sync": "USER_UPLOAD_PENDING",
+  "formal_canonical_schema_validation": false
+}
