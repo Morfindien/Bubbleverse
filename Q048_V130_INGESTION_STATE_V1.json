@@ -1,0 +1,74 @@
+{
+  "schema": "bubbleverse.q048.v130.ingestion_state.v1",
+  "ingestion_event": "LOCAL-Q048-V130-CONDITIONAL-PROOF-INGESTION-V1",
+  "idempotency_key": "10b6eede834dd1bb52ac689231758c2a05da94ed954b95650e7f018ed4ac9975",
+  "created_at_utc": "2026-10-21T06:48:19.090560+00:00",
+  "created_at_local": "2026-10-21T08:48:19.090560+02:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "incoming_result": {
+    "event": "LOCAL-Q048-V130-CONDITIONAL-CONNECTED-PROOF-880-870-V1",
+    "task_id": "LOCAL-Q048-V130-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-880-870-V1",
+    "task_fingerprint": "fb66027cd2f2d109065e51cc792896ba8dd044eb9c76a41ad70e92c50868cfb2",
+    "acceptance_sha256": "c147506b1a77c61712b055f43a2985732ba0844d79a3e24f202eec30c18185bd"
+  },
+  "ingestion_state": "NEW",
+  "registration": {
+    "new_mathematical_proof_cells": 1,
+    "new_actual_cells": 0,
+    "register_once": true
+  },
+  "current_accepted_actual": {
+    "count": 120,
+    "frontier": 880
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 880
+  },
+  "accepted_conditional_theorem": {
+    "cell_z": [
+      880,
+      870
+    ],
+    "K_upper": "584224635576687533643/125000000000000000",
+    "connected_lower": "19538936983771/50000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "scope": "existing admissible absolutely-continuous source-real continuations only"
+  },
+  "NativeP6": "UNRESOLVED",
+  "Q048": "ACTIVE/INCONCLUSIVE",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Complete controlled four-case x_e(z) and cumulative tau_T(z) latch-reset bounds remain unavailable; V130 is proof-only and actual120/frontier880 remains current.",
+  "next_engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "next_task_file": "Q048_V131_NEXT_BUILDER_TASK_TWO_OPERATOR_CONDITIONAL_CONSUMER_880_870_V1.json",
+  "next_task_fingerprint": "2f1da82a511e81d37fcccd4e97f100f307c630500a374b2251a812b489588bc3",
+  "consumer_authorization": "GRANTED_BY_INGESTION_FOR_EXACTLY_ONE_CONDITIONAL_SOURCE_REAL_CELL_880_TO_870",
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit": "61ea41aaaf1f8cf2c598e3244622d71897ca74ad",
+    "source_freshness": "VERIFIED",
+    "producer_journal_blob": "1c69ac2e47dd2b83a2efdbcbeb3d9e4159a357bb",
+    "payload_root_completeness": "PARTIAL_FOR_CONCLUSION_CRITICAL_V130_SET; supplied local originals remain authoritative transport evidence",
+    "sync_status": "USER_UPLOAD_PENDING"
+  }
+}

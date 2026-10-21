@@ -1,0 +1,189 @@
+{
+  "schema": "bubbleverse.q048.v130.ingestion_evidence_audit.v1",
+  "created_at_utc": "2026-10-21T06:48:19.090560+00:00",
+  "q": "Q048",
+  "result_id": "LOCAL-Q048-V130-CONDITIONAL-CONNECTED-PROOF-880-870-V1",
+  "checks": {
+    "question_hash_matches": true,
+    "task_fingerprint_matches_incoming": true,
+    "acceptance_status": true,
+    "acceptance_raw_hash": true,
+    "acceptance_verification_hash": true,
+    "acceptance_spec_hash": true,
+    "acceptance_freeze_hash": true,
+    "execution_pass": true,
+    "process_returncodes_zero": true,
+    "proof_one_actual_zero": true,
+    "verifier_all": true,
+    "semantic_mutations_all": true,
+    "delivery_all": true,
+    "source_provenance_verified": true,
+    "frozen_archive_match": true,
+    "manifest_payloads_local_exact": true,
+    "manifest_payload_count": true,
+    "v129_journal_prefix_byte_identical": true,
+    "parent_current_actual120": true,
+    "parent_endpoint_matches_guard_left": true,
+    "scope_not_promoted": true,
+    "no_below_870": true
+  },
+  "checks_passed": 22,
+  "checks_total": 22,
+  "classification": {
+    "result_class": "MATHEMATICAL_RESULT + VALIDATION_RESULT",
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED within conditional source-real scope",
+    "reproducibility": "NOT_ASSESSED anew by ingestion; producer/verifier share frozen source/helper authorities",
+    "robustness": "ROBUST_WITHIN_TESTED_DOMAIN per semantic controls, not general physical robustness",
+    "scientific_effect": "SUPPORTS one conditional connected proof cell; complete Q remains UNRESOLVED",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "claim_strength_limits": [
+    "Proof applies only to existing admissible absolutely-continuous source-real continuations under the admitted background and fixed-q two-operator inclusion.",
+    "No exact selector existence/uniqueness, endpoint reachability existence theorem, native error certificate or trajectory identity is established.",
+    "Proof acceptance does not itself create actual121."
+  ],
+  "repository_evidence": {
+    "base_commit": "61ea41aaaf1f8cf2c598e3244622d71897ca74ad",
+    "verified_present_exact_objects": {
+      "Q047_SAMLET_JOURNAL_Q048_V130_CONNECTED_PROOF_APPENDED_V1.md": "git blob 1c69ac2e47dd2b83a2efdbcbeb3d9e4159a357bb",
+      "Q048_V130_ACCEPTANCE_V1.json": "git blob d66ab536d1baad37b31d9c3f3e58f69c5bdd78f6",
+      "Q048_V130_VERIFICATION_V1.json": "git blob 373b1f85274d93172796e4f69350e8e6266557ad",
+      "Q048_V130_OUTPUT_MANIFEST_V1.json": "git blob cefa7ab0162f7c57edc2d44731f6ec9e2a2b3546",
+      "Q048_V130_RESULT_AND_HANDOFF_V1.md": "git blob 87ee018fe174d03e80a92b3160e2f12f06b6eb35",
+      "Q048_V130_SHA256SUMS.txt": "git blob 325a35d648272cbac1f36b43e90b1d31191c06f3"
+    },
+    "verified_root_404_objects": [
+      "Q048_V130_RAW_V1.json",
+      "Q048_V130_FREEZE_V1.json",
+      "Q048_V130_SPEC_V1.json",
+      "Q048_V130_EXECUTION_V1.json",
+      "Q048_V130_DELIVERY_VALIDATION_V1.json",
+      "Q048_V130_SOURCE_PROVENANCE_V1.json",
+      "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json"
+    ],
+    "interpretation": "Repository memory is fresh but conclusion-critical V130 root payload presence is partial. Supplied local originals are verified and sufficient for ingestion; upload completion is proposed."
+  },
+  "input_recovery_map": [
+    {
+      "filename": "Q048_V130_ACCEPTANCE_V1.json",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "c147506b1a77c61712b055f43a2985732ba0844d79a3e24f202eec30c18185bd",
+      "bytes": 5995,
+      "verified_local_path": "/mnt/data/v130_delivery/Q048_V130_ACCEPTANCE_V1.json",
+      "repository_root_presence": "PRESENT_EXACT_GIT_BLOB_d66ab536d1baad37b31d9c3f3e58f69c5bdd78f6",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q048_V130_RAW_V1.json",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "713dba1beb554493fbf42ab563ad6ad21b9795ae6aeb5260b66465208dbfade9",
+      "bytes": 44382,
+      "verified_local_path": "/mnt/data/v130_delivery/Q048_V130_RAW_V1.json",
+      "repository_root_presence": "ROOT_404_AT_BASE_COMMIT",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q048_V130_VERIFICATION_V1.json",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "1b5a7e5263165a6d3c6d96a4b3d7cc0d8425aaaf2361b4708be9de3d34e90aae",
+      "bytes": 6602,
+      "verified_local_path": "/mnt/data/v130_delivery/Q048_V130_VERIFICATION_V1.json",
+      "repository_root_presence": "PRESENT_EXACT_GIT_BLOB_373b1f85274d93172796e4f69350e8e6266557ad",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q048_V130_SPEC_V1.json",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "a227ea4fa31e78ec31fa56c2e978d12228d263d42eab3516053ec30b20b74640",
+      "bytes": 15742,
+      "verified_local_path": "/mnt/data/v130_delivery/Q048_V130_SPEC_V1.json",
+      "repository_root_presence": "ROOT_404_AT_BASE_COMMIT",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q048_V130_FREEZE_V1.json",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "84641511717cf26b7a9c30c58ff4489d97f9b4e4d955ef60c97f805353f7c89f",
+      "bytes": 11584,
+      "verified_local_path": "/mnt/data/v130_delivery/Q048_V130_FREEZE_V1.json",
+      "repository_root_presence": "ROOT_404_AT_BASE_COMMIT",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q048_V130_EXECUTION_V1.json",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "78a11572f6bc51363d91d54834ba908f30caf9191b37803b4f58ffef05dc6a3f",
+      "bytes": 637,
+      "verified_local_path": "/mnt/data/v130_delivery/Q048_V130_EXECUTION_V1.json",
+      "repository_root_presence": "ROOT_404_AT_BASE_COMMIT",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q048_V130_DELIVERY_VALIDATION_V1.json",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "54fd169a3ffe179cbe5080a42741bae13b95dfc7e07227e841d59e9984568123",
+      "bytes": 838,
+      "verified_local_path": "/mnt/data/v130_delivery/Q048_V130_DELIVERY_VALIDATION_V1.json",
+      "repository_root_presence": "ROOT_404_AT_BASE_COMMIT",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q048_V130_SOURCE_PROVENANCE_V1.json",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "5769c8d3161c437f537239e8fef35f81ad9479b6f7a3080496be8e53a079ce67",
+      "bytes": 2906,
+      "verified_local_path": "/mnt/data/v130_delivery/Q048_V130_SOURCE_PROVENANCE_V1.json",
+      "repository_root_presence": "ROOT_404_AT_BASE_COMMIT",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q048_V130_OUTPUT_MANIFEST_V1.json",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "ac5bb9fad7a372acfb0cb0f245dc7ab6258331d232439c4adc1bd36376358031",
+      "bytes": 7102,
+      "verified_local_path": "/mnt/data/v130_delivery/Q048_V130_OUTPUT_MANIFEST_V1.json",
+      "repository_root_presence": "PRESENT_EXACT_GIT_BLOB_cefa7ab0162f7c57edc2d44731f6ec9e2a2b3546",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q047_SAMLET_JOURNAL_Q048_V130_CONNECTED_PROOF_APPENDED_V1.md",
+      "version": "V130 V1",
+      "scope": "Q048",
+      "sha256": "c576a68504ae2e5b167476b6d8c03b7126f2476c49896d4fecf0f284c5299404",
+      "bytes": 14664744,
+      "verified_local_path": "/mnt/data/v130_delivery/Q047_SAMLET_JOURNAL_Q048_V130_CONNECTED_PROOF_APPENDED_V1.md",
+      "repository_root_presence": "PRESENT_EXACT_GIT_BLOB_1c69ac2e47dd2b83a2efdbcbeb3d9e4159a357bb",
+      "reuse": "READ_ONLY_ORIGINAL"
+    },
+    {
+      "filename": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "version": "V129 V1",
+      "scope": "Q048",
+      "sha256": "17bd90a77db1e2605fbc8d546f33b5f5bb355f5b8c0c5975fbe8d979b54bba28",
+      "bytes": 7906,
+      "verified_local_path": "/mnt/data/v130_work/inputs/Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "repository_root_presence": "ROOT_404_AT_BASE_COMMIT",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "version": "historical frozen guard",
+      "scope": "Q048",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "bytes": 1198030,
+      "verified_local_path": "Q048_V128_COMPLETE_DELIVERY_V1.zip::prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; no historical main/suite execution"
+    }
+  ]
+}
