@@ -1,0 +1,257 @@
+{
+  "schema": "bubbleverse.q048.v146.prefreeze_control_logic_repair_consumer.task.v1",
+  "created_at_utc": "2026-10-21T17:45:04.103597+00:00",
+  "task_id": "LOCAL-Q048-V146-PREFREEZE-CONTROL-LOGIC-REPAIR-CONDITIONAL-CONSUMER-840-830-V1",
+  "task_fingerprint": "1a1990a4d437e9c781448d0ee52cbd653be4de80f74885c353b9218eb0c2155f",
+  "task_definition_for_fingerprint": {
+    "task_id": "LOCAL-Q048-V146-PREFREEZE-CONTROL-LOGIC-REPAIR-CONDITIONAL-CONSUMER-840-830-V1",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "parent_checkpoint_sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+    "v142_acceptance_sha256": "aab654d2ffd05bd313f70fa925630183d44043a1083a8e8c3233b57c5965c7ab",
+    "cell_z": [
+      840,
+      830
+    ],
+    "guard_primary_sha256": "93c02dbd79e9a33fd72955e176bacf872ae7c1f7fa68155a1358c8cec69d402d",
+    "guard_control_sha256": "f78c6543deb285d5632774694b75054239361b3dd4eac53bfcbc42e196feba62",
+    "material_change": "Separately versioned V146 fixes exactly two demonstrated V145 pre-freeze assertion implementation defects: (1) derive/compare the authoritative question SHA without the mistyped hardcoded literal; (2) verify primary/control role from enclosing evaluator membership plus pinned row hashes, not a nonexistent row-level control key. Serializer repair and all scientific contracts/pins remain unchanged.",
+    "authorization_event": "LOCAL-Q048-V145-TERMINAL-PREFREEZE-FAILURE-INGESTION-V1",
+    "budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_version": 3,
+    "limits": {
+      "max_new_actual_cells": 1,
+      "max_new_mathematical_proof_cells": 0,
+      "max_new_theorem_recomputations": 0,
+      "theorem_consumptions_max": 1,
+      "no_actual126": true,
+      "no_below_z": 830,
+      "no_native_integration": true,
+      "no_reset_refit_recapture_tuning": true,
+      "no_historical_main_or_suite": true,
+      "no_new_q_model_or_closure": true,
+      "retry_count": 0,
+      "postfreeze_edits_allowed": false
+    }
+  },
+  "fingerprint_convention": "SHA256 UTF-8 sorted compact JSON ensure_ascii=False, no final newline",
+  "case_id": "NOT_ASSIGNED; no new global case created",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+  "engine_prompt": {
+    "version": "2.3.0",
+    "source": "SUPPLIED_LOCAL_EXACT_BYTES",
+    "sha256": "2ee97f047d69e2e671e6fa560ec250b103807ba7f9417cc5965be965fd66976a",
+    "repository_presence_at_observed_main": "NOT_FOUND_AT_ROOT; existence verified from supplied prompt and executed V145 engine provenance",
+    "budget_contract": "Inherit Q048 ledger V3; no reset."
+  },
+  "authorization": {
+    "event_id": "LOCAL-Q048-V145-TERMINAL-PREFREEZE-FAILURE-INGESTION-V1",
+    "record": "Q048_V145_INGESTION_STATE_V1.json",
+    "status": "ONE_SEPARATELY_VERSIONED_BOUNDED_REPAIR_PREPARED_NOT_EXECUTED",
+    "replaces_failed_task_for_future_work_only": "LOCAL-Q048-V145-SERIALIZER-REPAIR-CONDITIONAL-CONSUMER-840-830-V1"
+  },
+  "objective": "Repair only the two V145 pre-freeze control assertions, re-run the complete pre-freeze gate, then consume accepted V142 proof840→830 at most once through the full conditional admission chain. No theorem recomputation.",
+  "historical_v145": {
+    "run_id": "LOCAL-Q048-V145-20261021T173248427259Z-SERIALIZER-REPAIR-CONSUMER-V1",
+    "event_id": "LOCAL-Q048-V145-PREFREEZE-CONTROL-LOGIC-FAILURE-V1",
+    "status": "IMMUTABLE_TERMINAL_TECHNICAL_PREFREEZE_FAIL",
+    "diagnostic_sha256": "d8895d898b409c15da5ad74481d7cddfc96f4597c9dba8d9de3e8205f6ee0d03",
+    "result_state_sha256": "ba59eab20e46c982dde2ee73b53b53529bf37eeea399dc58b30c280a992179f6",
+    "preflight_sha256": "0d89a04bcab77d6d5e47ce6461dcb2b55a6034bccb0336d357315a55336c74cc",
+    "failed_checks": [
+      "question",
+      "control_roles"
+    ],
+    "no_retry_under_v145_identity": true
+  },
+  "parent_authority": {
+    "file": "Q048_V140_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+    "accepted_actual": {
+      "count": 124,
+      "frontier": 840
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 840
+    },
+    "endpoint": {
+      "a": "1/841",
+      "E": "15881004977532652117/500000000000000000",
+      "Y": "5039104441059922143/200000000000000000",
+      "Vbar": "6292884093525456289/1000000000000000000"
+    }
+  },
+  "theorem_authority": {
+    "artifacts": {
+      "Q048_V142_ACCEPTANCE_V1.json": {
+        "sha256": "aab654d2ffd05bd313f70fa925630183d44043a1083a8e8c3233b57c5965c7ab",
+        "workspace_path_required": "proof_runtime/Q048_V142_ACCEPTANCE_V1.json"
+      },
+      "Q048_V142_RAW_V1.json": {
+        "sha256": "c7b81ec01ecd387d619afaf97cfe529cb73986d59342e525773fc4389bed370a",
+        "workspace_path_required": "proof_runtime/Q048_V142_RAW_V1.json"
+      },
+      "Q048_V142_VERIFICATION_V1.json": {
+        "sha256": "da62cf48deb3b3492fa1961ceef70df005042d8cb2a7f88430251ebda24d70a6",
+        "workspace_path_required": "proof_runtime/Q048_V142_VERIFICATION_V1.json"
+      },
+      "Q048_V142_SPEC_V1.json": {
+        "sha256": "1cbce8da7e1db76f3aadf1dad0662c4fb55719b70692e1dc3db2dc7ca937004f",
+        "workspace_path_required": "proof_runtime/Q048_V142_SPEC_V1.json"
+      },
+      "Q048_V142_FREEZE_V1.json": {
+        "sha256": "f2314868c549252eeaefa7829140a0ba40c578e17516dec3b2388cfceacd5efd",
+        "workspace_path_required": "proof_runtime/Q048_V142_FREEZE_V1.json"
+      },
+      "Q048_V142_EXECUTION_V1.json": {
+        "sha256": "dcb3692c72b67715ba5cfc974164b003027c9759e2ff5f04246a9c44a744fca1",
+        "workspace_path_required": "proof_runtime/Q048_V142_EXECUTION_V1.json"
+      },
+      "Q048_V142_ACCEPTANCE_READBACK_V1.json": {
+        "sha256": "7eabdf7cdb19c24067b9b9b479b129f66ce2b6f9e98abdbb2ccca481cffb6ca9",
+        "workspace_path_required": "proof_runtime/Q048_V142_ACCEPTANCE_READBACK_V1.json"
+      },
+      "Q048_V142_OUTPUT_MANIFEST_V1.json": {
+        "sha256": "4ee2e337b05b4d3a1ab3463fd97753e02d499e45ef80bba25da74542d13d0a25",
+        "workspace_path_required": "proof_runtime/Q048_V142_OUTPUT_MANIFEST_V1.json"
+      },
+      "Q048_V142_DELIVERY_VALIDATION_V1.json": {
+        "sha256": "66ae7ca68d9778b6018b067f45ca5534e77ffc36bf6ed8a4f59d638653679429",
+        "workspace_path_required": "proof_runtime/Q048_V142_DELIVERY_VALIDATION_V1.json"
+      }
+    },
+    "task_id": "LOCAL-Q048-V142-TWO-OPERATOR-BETA-DEPENDENCY-REPAIR-CONDITIONAL-PROOF-840-830-V1",
+    "task_fingerprint": "28aa21a5e07f2e56627ebbc48e7a5376c95217d8ccee7c1ed6aa9321dae3c32a",
+    "run_id": "LOCAL-Q048-V142-20261021T154237996738Z-BETA-DEPENDENCY-REPAIR-PROOF-V1",
+    "consumer_authorization_from_mathematics": "NOT_GRANTED_BY_MATHEMATICS"
+  },
+  "guard_authority": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "workspace_path_required": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "index_reference_only": 61,
+    "primary_row_sha256": "93c02dbd79e9a33fd72955e176bacf872ae7c1f7fa68155a1358c8cec69d402d",
+    "control_row_sha256": "f78c6543deb285d5632774694b75054239361b3dd4eac53bfcbc42e196feba62",
+    "left_glue": {
+      "a0": "1/841",
+      "E_input_left": "15881004977532652117/500000000000000000",
+      "Y_left": "5039104441059922143/200000000000000000",
+      "V_previous": "6292884093525456289/1000000000000000000"
+    },
+    "energy_cap_used": "15881004977532652117/500000000000000000",
+    "E_safe_left_distinct": "1969354442793606491/62500000000000000"
+  },
+  "retained_theorem_values": {
+    "K_upper": "4526301149059825126009/1000000000000000000",
+    "connected_lower": "72061959455351/200000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "beta_lower": {
+      "L": "6749509820830701233911928395181048852775632258030431101025342503117681985996442459786122943670133004177110287497066767269176789061014166503/72147590357999265242845010372548131272196769714355468750000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "R": "20192487446429687891996804048086662305115358208264549508698108804047935854176466803649622853660838225362435923255540214257669595383042499509/216442571073997795728535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "cell_z": [
+    840,
+    830
+  ],
+  "cell_a": [
+    "1/841",
+    "1/831"
+  ],
+  "expected_endpoint_crosscheck_only": {
+    "a1": "1/831",
+    "E_right": "15255752724206057963/500000000000000000",
+    "Y_right": "4839471313802804557/200000000000000000",
+    "V_admitted": "3025529671378252963/500000000000000000"
+  },
+  "source_cover_contract": "Existing absolutely-continuous source-real solution under the admitted background and fixed-q two-operator inclusion; no assumed future domain membership. Bounds apply on its existing interval and at a1 whenever an admissible continuation reaches a1. Exact selector existence/uniqueness is not established.",
+  "allowed_changes": [
+    "Use the authoritative task/exact-question SHA field or recompute it from the exact question; do not compare against the faulty V145 literal.",
+    "Determine primary/control role from enclosing evaluator membership and verify the pinned primary/control row hashes; do not require a row-level `control` key.",
+    "Use new V146 source/output/schema/run/task identities. Preserve V145 bytes as failed history.",
+    "Retain the V145 real-LF serializer repair and strict unmodified-byte JSON roundtrip checks."
+  ],
+  "unchanged_scientific_contract": [
+    "Same actual124/frontier840 parent and V142 accepted unconsumed proof840→830.",
+    "Same guard/prefix/source/capture pins, row61 endpoint derivation, theorem values, operator cover and conditional source-real scope.",
+    "No proof/theorem recomputation, no reset/refit/recapture/tuning and no lowering of mathematical or semantic gates."
+  ],
+  "required_work": [
+    "Before implementation recover ledger V3/current state and reserve the bounded V146 estimate from the same Q048 balance; reconcile any newer concurrent state first.",
+    "Reuse exact cached V145-recovered inputs only after rechecking their pinned SHA-256 values; do not repeat broad source-recovery campaigns already completed.",
+    "Create separate V146 files. In isolated diagnostics demonstrate the old two V145 assertion failures and the corrected V146 logic, without patching V145.",
+    "Re-run all 48 intended pre-freeze input checks plus the existing extra budget/serializer/authorization checks; both formerly failed checks must pass for the correct reasons.",
+    "Re-enumerate at least 60 real non-noop semantic controls before freeze and keep the original scientific invariants unchanged.",
+    "Strictly parse and hash all V146 pre-freeze JSON from exact written bytes. Freeze only after every mandatory pre-freeze check passes.",
+    "Execute at most one consumer→independent-validator→provisional-acceptance→postaccept→serialized-publication/readback chain within 300 seconds; zero retries and zero post-freeze edits.",
+    "Derive the right endpoint from the unique primary row61; expected endpoint is crosscheck only. Do not recompute or replay the V142 proof.",
+    "Only after every mandatory gate passes publish actual125/frontier830 and consume V142 exactly once. Preserve first failure or full success and return once to Result Ingestion2.2.0."
+  ],
+  "negative_controls_required": [
+    "wrong identity/fingerprint",
+    "question hash drift or reintroduction of V145 typo",
+    "row/evaluator role confusion",
+    "parent/proof/source/capture drift",
+    "E_input_left/E_safe_left swap",
+    "copied endpoint",
+    "wrong theorem metadata/beta method",
+    "lost conditional scope",
+    "premature actual125 current",
+    "double theorem consumption/recompute",
+    "V145 history rewrite",
+    "actual126/below830",
+    "malformed serialized JSON",
+    "question budget reset/duplicate debit/zero-balance continuation"
+  ],
+  "success": "Exactly one V146 conditional source-real actual admission840→830: +1actual/+0proof/+0theorem recomputations/+1 theorem consumption only after all pre-freeze, independent, postaccept and serialized publication/readback gates pass; actual125/frontier830 then current, NativeP6 unresolved, Q048 ACTIVE/INCONCLUSIVE.",
+  "failure": "First missing required pin, invalid JSON/schema, pre-flight/control/process/postaccept/freeze/budget failure is terminal for V146. Preserve actual124/frontier840 and V142 ACCEPTED_UNCONSUMED; no patch/retry under V146 identity.",
+  "stop": "One terminal V146 result then Result Ingestion2.2.0. No autonomous following cell. At exhausted unresolved budget use UNRESOLVED — BUDGET EXHAUSTED and next-question transition.",
+  "budget": {
+    "backend": "LOCAL_RUNTIME",
+    "science_seconds_max": 300,
+    "scientific_chains_max": 1,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false,
+    "paid_compute_authorized": false,
+    "github_actions_justified": false
+  },
+  "question_budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V3.json",
+    "ledger_version": 3,
+    "used_pts": 118,
+    "remaining_pts": 882,
+    "estimated_next_run_cost_pts": 52,
+    "reservation_pts": 0,
+    "status": "ESTIMATE_ONLY_RECIPIENT_MUST_RESERVE",
+    "reset_allowed": false
+  },
+  "input_availability": "Core V145-recovered authoritative inputs were verified before the failed pre-freeze gate; V146 must re-hash them but no broad recovery is presently justified.",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0"
+}
