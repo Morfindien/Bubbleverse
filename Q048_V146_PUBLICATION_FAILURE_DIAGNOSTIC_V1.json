@@ -1,0 +1,39 @@
+{
+  "schema": "bubbleverse.q048.v146.publication_failure_diagnostic.v1",
+  "run_id": "LOCAL-Q048-V146-20261021T175623712319Z-PREFREEZE-CONTROL-LOGIC-REPAIR-CONSUMER-V1",
+  "status": "TERMINAL_TECHNICAL_PUBLICATION_CONTROL_FAILURE",
+  "execution_status": "FAIL",
+  "first_obstruction": {
+    "script": "q048_v146_publish.py",
+    "returncode": 4,
+    "stderr": "",
+    "stdout": ""
+  },
+  "completed_chain_stages": [
+    "consumer",
+    "independent_validator",
+    "provisional_acceptance",
+    "postaccept_validation"
+  ],
+  "failed_stage": "serialized_publication",
+  "scientific_candidate_status": "NOT_CURRENT",
+  "accepted_checkpoint_written": false,
+  "publication_readback_written": false,
+  "freeze_unchanged": true,
+  "diagnosis": {
+    "type": "FINAL_NEGATIVE_CONTROL_IMPLEMENTATION_DEFECT",
+    "control_id": "final_budget",
+    "expected_invariant": "budget",
+    "cause": "The final publication negative control mutates question_budget.question_budget_id to RESET, but validate_checkpoint budget invariant checks only used_before_pts=118, reserved_pts=52 and remaining_before_pts=882. Therefore the mutated checkpoint still passes the budget invariant and the negative control is not rejected. Publication exits with code 4 before staging or accepted checkpoint write.",
+    "scientific_effect": "NO_ACCEPTANCE; technical publication-gate failure only. It does not invalidate the 62/62 validator or 19/19 postaccept results, and it does not consume V142.",
+    "required_future_fix_if_ingestion_authorizes": "A new versioned task may strengthen validate_checkpoint budget binding to include question_budget_id (and preferably parent_ledger_version/reservation identity) and then rerun the full new-identity chain. V146 itself must not be patched or retried."
+  },
+  "evidence": {
+    "raw_sha256": "ff1679ef4d33bd38eb6c140c2fb43eb7ffeecae2c215079e3addbf5773e9164d",
+    "validation_sha256": "7b29ad1f1a6b47dd93bd91001e84cc6c908ac5c03bd604eafc972b8911ce39a6",
+    "provisional_sha256": "b7ddb2e6c935be451227de889eec8961467c7656acc55807f592919eda6a104b",
+    "postaccept_sha256": "40e825b2ba2522c7e07c3816a4ed15b3546561207b12cf1637e67ac9b814c717",
+    "execution_sha256": "1bd98a92d79644b58369386a856d043d72ee00a46eb7ca3ed7712f4c4d309537",
+    "freeze_sha256": "70321cc8f857489cc88dad803549c02ca387eeb935314a123fe1699ec13bff8e"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "bubbleverse.q048.v146.handoff_to_ingestion.v1",
+  "schema_version": "1.0",
+  "created_at_utc": "2026-10-21T17:58:51.131320+00:00",
+  "handoff_id": "LOCAL-Q048-V146-PUBLICATION-CONTROL-FAILURE-HANDOFF-V1",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "RETURN_TO_RESULT_INGESTION",
+  "epistemic_status": "INCONCLUSIVE",
+  "result_status": "TERMINAL_TECHNICAL_PUBLICATION_CONTROL_FAILURE",
+  "run_id": "LOCAL-Q048-V146-20261021T175623712319Z-PREFREEZE-CONTROL-LOGIC-REPAIR-CONSUMER-V1",
+  "task_id": "LOCAL-Q048-V146-PREFREEZE-CONTROL-LOGIC-REPAIR-CONDITIONAL-CONSUMER-840-830-V1",
+  "task_fingerprint": "1a1990a4d437e9c781448d0ee52cbd653be4de80f74885c353b9218eb0c2155f",
+  "new_result_ids": [
+    "LOCAL-Q048-V146-PUBLICATION-CONTROL-FAILURE-V1"
+  ],
+  "current_actual": {
+    "count": 124,
+    "frontier": 840
+  },
+  "candidate_not_current": {
+    "count": 125,
+    "frontier": 830
+  },
+  "v142_proof_status": "ACCEPTED_UNCONSUMED",
+  "scientific_delta": {
+    "current_actual": 0,
+    "proof": 0,
+    "theorem_recomputations": 0,
+    "finalized_theorem_consumptions": 0
+  },
+  "failure": {
+    "stage": "serialized_publication",
+    "publisher_returncode": 4,
+    "diagnostic_ref": "Q048_V146_PUBLICATION_FAILURE_DIAGNOSTIC_V1.json",
+    "accepted_checkpoint_written": false,
+    "retry_under_v146": false
+  },
+  "question_budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V4.json",
+    "ledger_version": 4,
+    "parent_ledger_version": 3,
+    "run_id": "LOCAL-Q048-V146-20261021T175623712319Z-PREFREEZE-CONTROL-LOGIC-REPAIR-CONSUMER-V1",
+    "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+    "assessed_run_cost_pts": 52,
+    "used_pts": 170,
+    "remaining_pts": 830,
+    "status": "ACTIVE"
+  },
+  "next_task": "Result Ingestion2.2.0 must ingest V146 exactly once and decide whether a separate new-version repair of final checkpoint budget-ID binding is materially warranted.",
+  "success_condition": "Ingestion preserves current actual124/frontier840 and V142 accepted-unconsumed, records terminal V146 failure once, carries ledger V4, and selects at most one material next route.",
+  "stop_condition": "No V146 retry or patch. No candidate promotion without a separately valid published accepted checkpoint.",
+  "selected_next_engine_id": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V146_PUBLICATION_FAILURE_APPENDED_V1.md",
+  "result_state_ref": "Q048_V146_RESULT_STATE_V1.json",
+  "delivery_status": "PREPARED",
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "base_commit_sha": "7dfe950479bcc3727f0ed8d6835baca9c65b4557",
+    "source_freshness": "VERIFIED_READ_ONLY",
+    "sync_status": "USER_UPLOAD_PENDING"
+  }
+}
