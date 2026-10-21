@@ -1,0 +1,710 @@
+{
+  "schema": "bubbleverse.q048.v130.conditional_connected_proof.task.v1",
+  "task_id": "LOCAL-Q048-V130-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-880-870-V1",
+  "task_fingerprint": "fb66027cd2f2d109065e51cc792896ba8dd044eb9c76a41ad70e92c50868cfb2",
+  "task_fingerprint_basis": {
+    "task_id": "LOCAL-Q048-V130-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-880-870-V1",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "parent_checkpoint_sha256": "17bd90a77db1e2605fbc8d546f33b5f5bb355f5b8c0c5975fbe8d979b54bba28",
+    "parent_actual": 120,
+    "parent_frontier": 880,
+    "cell_z": [
+      880,
+      870
+    ],
+    "cell_a": [
+      "1/881",
+      "1/871"
+    ],
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row_sha256": "e9b36d7d43b0b87cc2b78e0c0872d453f29a0a3b6a66fb6438a7752f7fdf7403",
+    "control_row_sha256": "633c47933fca155766e46838b919d305072efb9e8f645047051829ac750a72f2",
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "authorization": "PROSPECTIVE_ONE_NEW_CONDITIONAL_MATHEMATICAL_PROOF_CELL_880_TO_870_ZERO_ACTUAL",
+    "max_new_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "no_below_z": 870,
+    "NativeP6": "UNRESOLVED"
+  },
+  "created_at_utc": "2026-10-21T05:36:07.625417+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_full_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "engine_prompt": {
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "7240e990e9150a2d176c67f4c5edc5b5dc3c6d4c",
+    "path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "git_blob": "d3bc042e9610d4c417bfb75ad67468edf44db707"
+  },
+  "engine_prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+  "authorization": "PROSPECTIVE_ONE_NEW_CONDITIONAL_MATHEMATICAL_PROOF_CELL_880_TO_870_ZERO_ACTUAL",
+  "authorization_record": "Q048_V129_INGESTION_STATE_V1.json",
+  "objective": "Prove one fresh connected conditional source-real two-operator cell880→870, or return the first exact obstruction. Do not consume/admit any new actual cell.",
+  "parent_checkpoint": {
+    "file": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+    "file_sha256": "17bd90a77db1e2605fbc8d546f33b5f5bb355f5b8c0c5975fbe8d979b54bba28",
+    "accepted_actual": {
+      "count": 120,
+      "frontier": 880
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 880
+    },
+    "endpoint": {
+      "a": "1/881",
+      "E": "9282138507468806523/250000000000000000",
+      "Y": "7370278396737559369/250000000000000000",
+      "Vbar": "7328797091136447423/1000000000000000000"
+    },
+    "initial_h_lower_only": "199585229567609/500000000000000000",
+    "initial_h_upper": "99999/100000",
+    "initial_thermal_face": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "old_K_reference_only": "4747242944344523507503/1000000000000000000"
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "cell_z": [
+    880,
+    870
+  ],
+  "cell_a": [
+    "1/881",
+    "1/871"
+  ],
+  "guard": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "control_role": "secondary comparison only; never substitute its endpoint/background for primary",
+    "row_index_reference_only": 57,
+    "selection": "Select unique exact a/z cell in each evaluator; bind control flags before row index",
+    "primary_row_sha256": "e9b36d7d43b0b87cc2b78e0c0872d453f29a0a3b6a66fb6438a7752f7fdf7403",
+    "control_row_sha256": "633c47933fca155766e46838b919d305072efb9e8f645047051829ac750a72f2",
+    "left_glue": {
+      "a0": "1/881",
+      "E_input_left": "9282138507468806523/250000000000000000",
+      "Y_left": "7370278396737559369/250000000000000000",
+      "V_previous": "7328797091136447423/1000000000000000000"
+    },
+    "energy_cap_used": "9282138507468806523/250000000000000000",
+    "E_safe_left_distinct": "9211836492066188311/250000000000000000",
+    "qualification": "Metadata admitted/committed/whole-cell flags verified; worker must validate all mathematical domain premises for the new cell",
+    "source_state_reset": false
+  },
+  "proof_contract": {
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "selection": "conv(HMLA,SWIFT) for each fixed q branch",
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; bounds hold on their existing interval and at the new endpoint only whenever an admissible continuation reaches it",
+    "initial_face_only": true,
+    "no_assumed_future_domain_membership": true,
+    "exact_selector_existence_uniqueness": "NOT_ESTABLISHED",
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false,
+    "source_saha_constant": "3.016103031869581e21",
+    "thermal_domain_target": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "h_upper_target": "99999/100000",
+    "required_new_work": [
+      "Verify new880→870 source/background guards and exact inherited left face; retain E_input_left whole-cell cap distinct from E_safe_left.",
+      "Establish fresh atomic/interpolation bounds with decimal and binary64 input channel coverage and frozen source constants; prove valid domain containment for any reused enclosure.",
+      "Verify positive source/denominators and0<C<1 separately for HMLA/SWIFT and both fixed-q branches.",
+      "Derive a new K_upper and positive connected lower h bound from the accepted actual120 initial face. Old890→880 K/conclusion is reference only.",
+      "Prove strict upper-h and both thermal inward faces, then non-circular first-exit/closed-endpoint persistence on existing admissible continuations; convex combinations preserve derivative inequalities.",
+      "Use an independent verifier with actual non-noop semantic mutations and serialized acceptance/readback; declare shared helper/source dependence."
+    ]
+  },
+  "method_reuse_limits": [
+    "Do not import/run any historical proof main or suite. Read-only helper functions may be reused after byte/domain validation.",
+    "Do not transfer the V128890→880 theorem to880→870. It is a method reference only.",
+    "Do not rename old acceptance/check counts into new proof evidence. Pin and freeze the actual new spec/code/inputs before one serial proof/verifier/acceptance chain.",
+    "Do not restate source-real conditional bounds as native error, exact-selector existence/uniqueness, endpoint reachability or trajectory identity."
+  ],
+  "budget": {
+    "backend": "LOCAL_RUNTIME",
+    "science_seconds_max": 300,
+    "scientific_chains_max": 1,
+    "retries": 0,
+    "postfreeze_edits_allowed": false,
+    "estimate": "V128 analogous proof+verifier recorded7.178571636s; preliminary V1301–30s UNMEASURED. Mathematics must estimate actual whole chain before freeze.",
+    "paid_compute_authorized": false
+  },
+  "limits": {
+    "max_new_mathematical_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "no_actual121": true,
+    "no_below_z": 870,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_model_newQ_or_closure": true
+  },
+  "success": "One accepted fresh880→870 conditional proof with all operator/branch/source/atomic/C/connected/upper/thermal gates and independent real semantic controls passing; actual120/frontier880 unchanged.",
+  "failure_or_falsification": "First missing pin, invalid source/atomic/domain assumption, failed inward/connected inequality, semantic mutation escape, process failure or budget exhaustion; preserve parent and return exact obstruction without retry.",
+  "stop": "Return after one bounded proof result or first obstruction; do not consume it or proceed below870.",
+  "input_recovery_map": [
+    {
+      "filename": "Q048_V129_RESULT_CONTRACT_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_RESULT_CONTRACT_V1.json",
+      "bytes": 6842,
+      "sha256": "452bff31fb80e9248ae88e696e529bb4ca890c151e1b14a64c2b015254ed89c8",
+      "library_file_id": "libfile_82f3fcfbfb888191b9cace15b350b3e8",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "bytes": 7906,
+      "sha256": "17bd90a77db1e2605fbc8d546f33b5f5bb355f5b8c0c5975fbe8d979b54bba28",
+      "library_file_id": "libfile_232de23bdbf48191bd5cc907132eabaf",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_RAW_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_RAW_V1.json",
+      "bytes": 9141,
+      "sha256": "c0213780547e6d40c02bc5e997d521202940f3aa167be908c61bf768b1e3afe3",
+      "library_file_id": "libfile_8702ad3c32e48191919b2063480dbc9d",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_VALIDATION_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_VALIDATION_V1.json",
+      "bytes": 4689,
+      "sha256": "ac19cf3fbfe9e9efc45f4e56cd3e173d2f59ee65aaf2c39d6f5a4541deba01b2",
+      "library_file_id": "libfile_17ac2a63f0f88191920f8949533ca1a8",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_POSTACCEPT_VALIDATION_V1.json",
+      "bytes": 4205,
+      "sha256": "11e931698ffdffcccf2b525c2375e7cd066a1a5bae8521ace8b87bebcae7b1c6",
+      "library_file_id": "libfile_6a78f1a1a35c819181772445fe4af5cd",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_EXECUTION_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_EXECUTION_V1.json",
+      "bytes": 2145,
+      "sha256": "41bd61f359093251da8dfda7c3182bab914b466ff0eef8a88ee78ff35a12428e",
+      "library_file_id": "libfile_2e47437ad3e081918a7e2c6f4fc322bd",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_FREEZE_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_TWO_OPERATOR_CONDITIONAL_CONSUMER_FREEZE_V1.json",
+      "bytes": 18796,
+      "sha256": "5815e98d4c34cdd251de9dbd881d9e7e491a1d6ba1c9374371bb99576e40bf3f",
+      "library_file_id": "libfile_d690c90aa56881919a2e0b89df968c61",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_SPEC_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_SPEC_V1.json",
+      "bytes": 28325,
+      "sha256": "d14aa19c2997e7e87efc466acac2a4ac4c15821d8b4353c77422b8653bd711b2",
+      "library_file_id": "libfile_ef490659ada08191ac24c3ba9696e764",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_DELIVERY_VALIDATION_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_DELIVERY_VALIDATION_V1.json",
+      "bytes": 1263,
+      "sha256": "8dbf9a357c6b1d0adaeac054a33b4df3d4fa668d948f17693477d7d5b779e966",
+      "library_file_id": "libfile_342bd4e9f6848191ba7364684a1c831c",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_OUTPUT_MANIFEST_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_OUTPUT_MANIFEST_V1.json",
+      "bytes": 17478,
+      "sha256": "9d78622c53d4282a94a9c18cf6ced90986776ab82897f2594f598480e1f496f7",
+      "library_file_id": "libfile_e2a67317f1dc8191a264c538dcc8435c",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Q048_V129_INPUT_RECOVERY_MAP_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v129/Q048_V129_INPUT_RECOVERY_MAP_V1.json",
+      "bytes": 18256,
+      "sha256": "1a91abca2bfe9b7e0e3e30e77eaa3b1a90b7fda3551cd6940ceb2c55916954dc",
+      "library_file_id": "libfile_eaab62b8cc248191831196f289a7bf0f",
+      "reuse": "IMMUTABLE_ACCEPTED_PARENT_EVIDENCE"
+    },
+    {
+      "filename": "Bubbleverse_Matematikmotor_2.1.0-139.md",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/Bubbleverse_Matematikmotor_2.1.0-139.md",
+      "bytes": 56414,
+      "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/Bubbleverse_Matematikmotor_2.1.0-139.md",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q047_SAMLET_JOURNAL_Q048_V125_TWO_BRANCH_SOURCE_REAL_INGESTED_V1.md",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/Q047_SAMLET_JOURNAL_Q048_V125_TWO_BRANCH_SOURCE_REAL_INGESTED_V1.md",
+      "bytes": 14611012,
+      "sha256": "b9d36e4d5e7905d56b778e5965a10d95acf70e846d7c0767426176093c488aaa",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/Q047_SAMLET_JOURNAL_Q048_V125_TWO_BRANCH_SOURCE_REAL_INGESTED_V1.md",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "bytes": 3253,
+      "sha256": "51586ee94d6210774150c6e0455df7e104db6c32671461a17cf8a52f1b040f6a",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/Q048_V121_SOURCE_CORRECT_ACTUAL_CONSUMER_ACCEPTED_CHECKPOINT_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V126_NEXT_MATHEMATICS_TASK_TWO_OPERATOR_CONNECTED_PROOF_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/Q048_V126_NEXT_MATHEMATICS_TASK_TWO_OPERATOR_CONNECTED_PROOF_V1.json",
+      "bytes": 24750,
+      "sha256": "008bf8b2f77a3cf763fb13661dabc37cd912b4d189ce525406ce67c9dffd6536",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/Q048_V126_NEXT_MATHEMATICS_TASK_TWO_OPERATOR_CONNECTED_PROOF_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/ancestry/Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+      "bytes": 2944,
+      "sha256": "9f3d2381f40bdd03f4bd692e72105fb4e3e02611e47772be2bab27dee7b0158f",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/ancestry/Q048_V120_SOURCE_CORRECT_PROOF_ACCEPTANCE_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/ancestry/Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json",
+      "bytes": 27333,
+      "sha256": "3324b5801396dd5a7b13be99f8fe0e5e1d65b347711b535eb0f3ac9dc30804a0",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/ancestry/Q048_V120_SOURCE_CORRECT_PROOF_RAW_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/ancestry/Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+      "bytes": 5712,
+      "sha256": "e439c998684b9d047a5d78d909cfc30568a82ea9d21a074b1db9c4b74400460e",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/ancestry/Q048_V120_SOURCE_CORRECT_PROOF_VERIFICATION_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_v118_proof.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/ancestry/q048_v118_proof.py",
+      "bytes": 9399,
+      "sha256": "a5e0f3c63fbdf8502854b069c718171dcddb9472ae6f97abe063a3cc5ceafeb4",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/ancestry/q048_v118_proof.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_v118_verify.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/ancestry/q048_v118_verify.py",
+      "bytes": 12113,
+      "sha256": "4f42c136d7c948083a4f249cf42b964d71aa6f18fc43d79ffe2c31b5e97482a6",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/ancestry/q048_v118_verify.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q047_certificate_v1.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q047_certificate_v1.py",
+      "bytes": 15302,
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q047_certificate_v1.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q047_math_v1.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q047_math_v1.py",
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q047_math_v1.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q047_precursor_check_v1.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q047_precursor_check_v1.py",
+      "bytes": 29808,
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q047_precursor_check_v1.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_full_tube_reuse_v1.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q048_full_tube_reuse_v1.py",
+      "bytes": 10171,
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q048_full_tube_reuse_v1.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_guard_local_v_result_v12.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_p3_scaled_arithmetic_v2.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q048_p3_scaled_arithmetic_v2.py",
+      "bytes": 5988,
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q048_p3_scaled_arithmetic_v2.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_p3_scaled_kernel_v2.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q048_p3_scaled_kernel_v2.py",
+      "bytes": 15855,
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q048_p3_scaled_kernel_v2.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_p3_scaled_raw_result_v2.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q048_p3_scaled_raw_result_v2.json",
+      "bytes": 699697,
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q048_p3_scaled_raw_result_v2.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_p3_scaled_transformed_log_tables_v2.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q048_p3_scaled_transformed_log_tables_v2.json",
+      "bytes": 3958952,
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q048_p3_scaled_transformed_log_tables_v2.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_post_event_state_tube_v1.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q048_post_event_state_tube_v1.py",
+      "bytes": 12423,
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q048_post_event_state_tube_v1.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_prefix_config_v1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q048_prefix_config_v1.json",
+      "bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q048_prefix_config_v1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_prefix_v1.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/q048_prefix_v1.py",
+      "bytes": 17198,
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/q048_prefix_v1.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "fit_swift.dat",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/source/fit_swift.dat",
+      "bytes": 17797,
+      "sha256": "46a644d7d2633b8f13080f9062df9b72a2e5adfa956d70d32ad1d7f4ec0a4641",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/source/fit_swift.dat",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "hydrogen.c",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/source/hydrogen.c",
+      "bytes": 46627,
+      "sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/source/hydrogen.c",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "hydrogen.h",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/source/hydrogen.h",
+      "bytes": 11868,
+      "sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/source/hydrogen.h",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q047_math_v1.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/source/q047_math_v1.py",
+      "bytes": 12617,
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/source/q047_math_v1.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "wrap_hyrec.c",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/source/wrap_hyrec.c",
+      "bytes": 7489,
+      "sha256": "4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/source/wrap_hyrec.c",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V125_TWO_BRANCH_SOURCE_REAL_ACCEPTANCE_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_ACCEPTANCE_V1.json",
+      "bytes": 6893,
+      "sha256": "b52b704a615630bd813368c4c3a4a5e1072250b8d78230e6c4c12b475872def0",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_ACCEPTANCE_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V125_TWO_BRANCH_SOURCE_REAL_FREEZE_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_FREEZE_V1.json",
+      "bytes": 5291,
+      "sha256": "00b8bfb960d78dba79efa4b2cead88c33401041e2d0108d3c191c827a9cf18bf",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_FREEZE_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V125_TWO_BRANCH_SOURCE_REAL_RAW_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_RAW_V1.json",
+      "bytes": 31358,
+      "sha256": "065cd7f897585656af224dc48b3932e07b9202aa19621e2973367366fa63e79e",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_RAW_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V125_TWO_BRANCH_SOURCE_REAL_SPEC_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_SPEC_V1.json",
+      "bytes": 6711,
+      "sha256": "5915566218b4368ec7e7ee5de6152f5eea9f12f7a60d76152fde2408a9e0f4d9",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_SPEC_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V125_TWO_BRANCH_SOURCE_REAL_VERIFICATION_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_VERIFICATION_V1.json",
+      "bytes": 3065,
+      "sha256": "0df84e91771f98c9e490702cc816b259c7c3df04cc43e225cbacf46634e61e66",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/v125_component/Q048_V125_TWO_BRANCH_SOURCE_REAL_VERIFICATION_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_v125_operator.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/v125_component/q048_v125_operator.py",
+      "bytes": 10346,
+      "sha256": "54302ab6225f57eaf46a52f1e2c704532d576b499f2f3e9c05f42c5fbdddcd90",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/v125_component/q048_v125_operator.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "q048_v125_verify.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/inputs/v125_component/q048_v125_verify.py",
+      "bytes": 13939,
+      "sha256": "ae3ed725ba14133b71b612d8637b185906fbcf9c8576daa567ae5dd0e87fab4f",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/inputs/v125_component/q048_v125_verify.py",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V126_TWO_OPERATOR_CONNECTED_RAW_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/output/Q048_V126_TWO_OPERATOR_CONNECTED_RAW_V1.json",
+      "bytes": 37911,
+      "sha256": "d5413c8bf8235ae9b44b6c3e97ddb7e61855e38e83a8f248dd6e716d22ff70f1",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/output/Q048_V126_TWO_OPERATOR_CONNECTED_RAW_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V126_TWO_OPERATOR_CONNECTED_ACCEPTANCE_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/prior_v126/output/Q048_V126_TWO_OPERATOR_CONNECTED_ACCEPTANCE_V1.json",
+      "bytes": 16652,
+      "sha256": "9fb055f3fa6cffee28d4044750180b731fde78a91036054b6fb0eb0bfddf2213",
+      "historical_archive": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "archive_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "archive_library_file_id": "libfile_a93916b1de10819184c6cb899a72b13f",
+      "archive_member": "prior_v126/output/Q048_V126_TWO_OPERATOR_CONNECTED_ACCEPTANCE_V1.json",
+      "reuse": "READ_ONLY_FROZEN_SOURCE_OR_METHOD; never execute historical mains/suites"
+    },
+    {
+      "filename": "Q048_V128_RAW_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v128/Q048_V128_RAW_V1.json",
+      "bytes": 41144,
+      "sha256": "513fac4450e414a73d61c96d1471f1666d13c11410e248ac2016f1c408d94193",
+      "library_file_id": "libfile_fc677e0fd16c8191b8ea9ea404d6de6f",
+      "reuse": "METHOD_REFERENCE_ONLY_FOR_NEW_CELL; no old theorem transfer or historical main/suite"
+    },
+    {
+      "filename": "Q048_V128_ACCEPTANCE_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v128/Q048_V128_ACCEPTANCE_V1.json",
+      "bytes": 2638,
+      "sha256": "b6e901dc7774a6ef7241cd9d6479ed03ea331d1dfc05fc3e368cf6b4cc7cdcbd",
+      "library_file_id": "libfile_bd1cdcc6d68c819191ad3b2d066c79b0",
+      "reuse": "METHOD_REFERENCE_ONLY_FOR_NEW_CELL; no old theorem transfer or historical main/suite"
+    },
+    {
+      "filename": "Q048_V128_VERIFICATION_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v128/Q048_V128_VERIFICATION_V1.json",
+      "bytes": 3476,
+      "sha256": "55be56e1292a74082d6e5ae6bf72c2eb352de0b8acd2ab91777a0dc4917a4f94",
+      "library_file_id": "libfile_f3ca19fbefc08191a51204c6cb3be9b5",
+      "reuse": "METHOD_REFERENCE_ONLY_FOR_NEW_CELL; no old theorem transfer or historical main/suite"
+    },
+    {
+      "filename": "Q048_V128_SPEC_V1.json",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v128/Q048_V128_SPEC_V1.json",
+      "bytes": 9361,
+      "sha256": "6c7eb7580e9aa96fd88f7ddfd989be5343131b1958191ba0ea4ef0d789f7e189",
+      "library_file_id": "libfile_08d5af63f24481919c220e24fd813dc7",
+      "reuse": "METHOD_REFERENCE_ONLY_FOR_NEW_CELL; no old theorem transfer or historical main/suite"
+    },
+    {
+      "filename": "q048_v128_proof.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v128/q048_v128_proof.py",
+      "bytes": 12559,
+      "sha256": "58c835e53f043ffa50bda146e47fc488edc35a2447a57a90723fb26564207c2d",
+      "library_file_id": "libfile_7d93baa95fcc8191b58b07e636382467",
+      "reuse": "METHOD_REFERENCE_ONLY_FOR_NEW_CELL; no old theorem transfer or historical main/suite"
+    },
+    {
+      "filename": "q048_v128_verify.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v128/q048_v128_verify.py",
+      "bytes": 15022,
+      "sha256": "ea0027dc6b37f54f83d05eeeec4c87765d66073d52062d5b3aa0d49a9563c17b",
+      "library_file_id": "libfile_14df8a5d5dd081919f64e5caa1434f6c",
+      "reuse": "METHOD_REFERENCE_ONLY_FOR_NEW_CELL; no old theorem transfer or historical main/suite"
+    },
+    {
+      "filename": "q048_v128_run.py",
+      "verified_local_path": "/workspace/scratch/544c6a2403e7/v128/q048_v128_run.py",
+      "bytes": 4088,
+      "sha256": "e9380ceba3046b137513a1f75c9459f627cff8573ae6ec981aabcfe544655ee9",
+      "library_file_id": "libfile_504569eae72c81918c2e67eb89326800",
+      "reuse": "METHOD_REFERENCE_ONLY_FOR_NEW_CELL; no old theorem transfer or historical main/suite"
+    }
+  ],
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V129_INGESTED_V1.md",
+  "evidence_audit_ref": "Q048_V129_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "program_registration": "NOT_CLAIMED; new worker checks/allocates identity before execution"
+}
