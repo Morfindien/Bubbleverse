@@ -1,0 +1,550 @@
+{
+  "schema": "bubbleverse.q048.v135.conditional_actual_consumer.task.v1",
+  "task_id": "LOCAL-Q048-V135-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-870-860-V1",
+  "task_fingerprint": "f3124bbe983bb0a7d8621060e9011754aaaa4eed7ce691c3eaf8f76b92fd1d22",
+  "task_definition_for_fingerprint": {
+    "task_id": "LOCAL-Q048-V135-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-870-860-V1",
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS",
+    "parent_sha256": "2a16ced67538913c34db2cc608b533e6dbbe6db9a1eaf48f4e4442c10f05f01b",
+    "parent_actual": 121,
+    "parent_frontier": 870,
+    "candidate_actual": 122,
+    "candidate_frontier": 860,
+    "cell_z": [
+      870,
+      860
+    ],
+    "cell_a": [
+      "1/871",
+      "1/861"
+    ],
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "theorem_acceptance_sha256": "e12ec66f8311a5645eb31ee2f8cdc524eff82a3ef1f2a46bf794ef46246d665d",
+    "theorem_raw_sha256": "59fe997cc1bebf483ff006e8de245ba7a1698659b917d609f06a1420f4ffd0b4",
+    "theorem_verification_sha256": "c537218e4d70501c051c40bb219c265c5248e1a756f25d731d499e6be40bfa0e",
+    "theorem_freeze_sha256": "7553f983b1645d01e823a7b448fa250c7a77eac7c511db6dbe20bbf47223f26e",
+    "theorem_execution_task_id": "LOCAL-Q048-V134-PATH-BINDING-CORRECTION-RETRY-870-860-V1",
+    "theorem_execution_task_fingerprint": "b49fca97c717a3ffb64fec18118459b10730d7bc1a63f559610596385cece407",
+    "theorem_scientific_contract_task_id": "LOCAL-Q048-V133-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-870-860-V1",
+    "theorem_scientific_contract_task_fingerprint": "a415ccb486ad329e6b2cc376a968da22d68c04794426a84cd35b24b570a06ea8",
+    "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row_sha256": "86e48d9266bfd7b901764eff1a118d6c1febf70186ef016300714409de6f2ef3",
+    "control_row_sha256": "04e1cf5c5c084ca7a5b4248f2adf2ce52ea60940fc7133a1c3a233868da98503",
+    "retained_K_upper": "287539421008054509007/62500000000000000",
+    "retained_connected_lower": "95691361670493/250000000000000000",
+    "retained_h_upper": "99999/100000",
+    "retained_thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "max_new_actual_cells": 1,
+    "max_new_proof_cells": 0,
+    "max_theorem_recomputations": 0,
+    "theorem_consumptions": 1,
+    "no_below_z": 860,
+    "consumer_authorization": "GRANTED_BY_INGESTION_FOR_EXACTLY_ONE_CONDITIONAL_SOURCE_REAL_CELL_870_TO_860",
+    "NativeP6": "UNRESOLVED",
+    "code_version": "NOT_CREATED_YET; separately freeze V135 implementation before its single chain"
+  },
+  "fingerprint_convention": "UTF-8 JSON, ensure_ascii=False, sorted keys, compact comma/colon separators, no final newline; excludes outer fingerprint field.",
+  "created_at_utc": "2026-10-21T10:12:32.819149+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "engine_prompt": {
+    "repository": "Morfindien/Bubbleverse",
+    "commit": "f6c99eeab3ebb14e0508e3321ab5e276d99ea464",
+    "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38.md",
+    "git_blob": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "version": "2.2.0",
+    "status": "VERIFIED_EXISTING_PROMPT; prepared, not dispatched"
+  },
+  "objective": "Consume the newly accepted V134 conditional proof870→860 once. Keep actual121/frontier870 current until a separate independent validator, provisional accept, independent postaccept/disk readback and final publication/readback all pass. Do not recompute any theorem.",
+  "consumer_authorization": "GRANTED_BY_INGESTION_FOR_EXACTLY_ONE_CONDITIONAL_SOURCE_REAL_CELL_870_TO_860",
+  "authorization_record": "Q048_V134_INGESTION_STATE_V1.json",
+  "authorization_event": "LOCAL-Q048-V134-ACCEPTED-PROOF-INGESTION-V1",
+  "why_this_is_not_repeat_or_ping_pong": "V134 produced a newly accepted proof870→860. V135 is its first consumer/admission, distinct from proof construction or the already completed V132 admission880→870. It performs no theorem recomputation.",
+  "parent_authority": {
+    "file": "Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+    "workspace_path_required": "proof_runtime/inputs/Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "2a16ced67538913c34db2cc608b533e6dbbe6db9a1eaf48f4e4442c10f05f01b",
+    "accepted_actual": {
+      "count": 121,
+      "frontier": 870
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 870
+    },
+    "endpoint": {
+      "a": "1/871",
+      "E": "17865518912095738771/500000000000000000",
+      "Y": "14182402721438480887/500000000000000000",
+      "Vbar": "7059306032093077611/1000000000000000000"
+    },
+    "initial_h_only": "19538936983771/50000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ]
+  },
+  "theorem_authority": {
+    "artifacts": {
+      "Q048_V134_ACCEPTANCE_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_ACCEPTANCE_V1.json",
+        "sha256": "e12ec66f8311a5645eb31ee2f8cdc524eff82a3ef1f2a46bf794ef46246d665d"
+      },
+      "Q048_V134_RAW_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_RAW_V1.json",
+        "sha256": "59fe997cc1bebf483ff006e8de245ba7a1698659b917d609f06a1420f4ffd0b4"
+      },
+      "Q048_V134_VERIFICATION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_VERIFICATION_V1.json",
+        "sha256": "c537218e4d70501c051c40bb219c265c5248e1a756f25d731d499e6be40bfa0e"
+      },
+      "Q048_V134_SPEC_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_SPEC_V1.json",
+        "sha256": "23eca15f7a389e3821012879377c627776f611d65dd70723a425752ec764ace1"
+      },
+      "Q048_V134_FREEZE_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_FREEZE_V1.json",
+        "sha256": "7553f983b1645d01e823a7b448fa250c7a77eac7c511db6dbe20bbf47223f26e"
+      },
+      "Q048_V134_EXECUTION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_EXECUTION_V1.json",
+        "sha256": "15f72637c64a6bbf5bbc9e9c2395eb1eda6b91374837414a3f53ae0e347ef140"
+      },
+      "Q048_V134_CHAIN_CONTROL_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_CHAIN_CONTROL_V1.json",
+        "sha256": "5ccee5705a28b2e9c8dc963c3dab850502fa768085a84e504f17fffc94caf6ad"
+      },
+      "Q048_V134_POSTACCEPT_VALIDATION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_POSTACCEPT_VALIDATION_V1.json",
+        "sha256": "4831d0ac72b2355c5dd14adb0d0b6b6dc74a15a19e2c92acf6be6143df297d47"
+      },
+      "Q048_V134_OUTPUT_MANIFEST_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_OUTPUT_MANIFEST_V1.json",
+        "sha256": "411336928fda64b8eddc8bfe2178fd8eb8a0a37b8b67001ac3169972d2362bf8"
+      },
+      "Q048_V134_DELIVERY_VALIDATION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V134_DELIVERY_VALIDATION_V1.json",
+        "sha256": "46d0e68a58d25769a973f3560eedd7d951abfc6289425818e51f7c34d42c0a30"
+      }
+    },
+    "expected_validation": {
+      "producer_gates": 30,
+      "verifier_checks": 30,
+      "semantic_controls_rejected": 35,
+      "technical_preflight": 8,
+      "frozen_files": 46,
+      "postaccept_checks": 12,
+      "delivery_checks": 21
+    },
+    "identity_mapping": {
+      "active_execution_task_id": "LOCAL-Q048-V134-PATH-BINDING-CORRECTION-RETRY-870-860-V1",
+      "active_execution_task_fingerprint": "b49fca97c717a3ffb64fec18118459b10730d7bc1a63f559610596385cece407",
+      "scientific_contract_task_id": "LOCAL-Q048-V133-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-870-860-V1",
+      "scientific_contract_task_fingerprint": "a415ccb486ad329e6b2cc376a968da22d68c04794426a84cd35b24b570a06ea8",
+      "required_rule": "V134 RAW/acceptance.task_id/fingerprint intentionally name the immutable V133 scientific contract; V134 execution identity is pinned in V134 spec/freeze/postaccept/handoff. Check both sides and all artifact hashes. Do not rewrite or reject this mapped identity merely because task labels differ."
+    },
+    "original_consumer_authorization_must_remain": "NOT_GRANTED_BY_MATHEMATICS"
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "cell_z": [
+    870,
+    860
+  ],
+  "cell_a": [
+    "1/871",
+    "1/861"
+  ],
+  "guard_authority": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "workspace_path_required": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "index_reference_only": 58,
+    "selection": "Select unique exact a/z cell in each evaluator, bind control=False as primary and control=True as secondary before any index use.",
+    "primary_row_sha256": "86e48d9266bfd7b901764eff1a118d6c1febf70186ef016300714409de6f2ef3",
+    "control_row_sha256": "04e1cf5c5c084ca7a5b4248f2adf2ce52ea60940fc7133a1c3a233868da98503",
+    "left_glue": {
+      "a0": "1/871",
+      "E_input_left": "17865518912095738771/500000000000000000",
+      "Y_left": "14182402721438480887/500000000000000000",
+      "V_previous": "7059306032093077611/1000000000000000000"
+    },
+    "required_flags": [
+      "accepted",
+      "committed",
+      "whole_cell_qualified",
+      "domain.admitted",
+      "all domain.checks"
+    ],
+    "energy_cap_used": "17865518912095738771/500000000000000000",
+    "E_safe_left_distinct": "17728610041432167283/500000000000000000",
+    "source_state_reset": false
+  },
+  "retained_theorem_values": {
+    "K_upper": "287539421008054509007/62500000000000000",
+    "connected_lower": "95691361670493/250000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "source_saha_factor": "3.016103031869581e21"
+  },
+  "source_cover_contract": {
+    "kind": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS",
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "continuation": {
+      "initial_a": "1/871",
+      "endpoint_a": "1/861",
+      "initial_h_only": "19538936983771/50000000000000000",
+      "h_upper": "99999/100000",
+      "w": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "background": "Admitted primary guard row58, exact inherited V132 E/Y/V_previous; E_input_left is conservative whole-cell energy cap; no scalar consumption.",
+      "selection": "conv(HMLA,SWIFT) for each fixed q branch",
+      "hypothesis": "Existing absolutely-continuous source-real solution under the admitted background and fixed-q two-operator inclusion; no assumed future domain membership. Bounds apply on its existing interval and at a1 whenever an admissible continuation reaches a1. Exact selector existence/uniqueness is not established.",
+      "proof": "Positive source/atomic/C premises hold on the outer box. Riccati comparison excludes lower-h exit. Strict upper-h and both thermal inward faces exclude all other exits. Closed-endpoint persistence follows for existing admissible continuations; convex combinations preserve the derivative inequalities.",
+      "native_error_certificate": false,
+      "trajectory_identity_claim": false
+    },
+    "continuation_canonical_sha256": "ef8be5fec7c868ef3d90630032aa6276e9a4dd46a91f426f15e7126061afe505",
+    "exact_selector_existence_uniqueness": "NOT_ESTABLISHED",
+    "native_evaluation_error_certificate": false,
+    "trajectory_identity_claim": false,
+    "required_scope_preservation": "Copy the accepted V134 continuation exactly in meaning and do not infer existence or endpoint reachability from metadata admission."
+  },
+  "expected_endpoint_crosscheck_only": {
+    "a": "1/861",
+    "E": "34371176983888929189/1000000000000000000",
+    "Y": "27278762343901556397/1000000000000000000",
+    "Vbar": "6796897363321232259/1000000000000000000"
+  },
+  "candidate_after_all_gates_not_current": {
+    "count": 122,
+    "frontier": 860
+  },
+  "frontiers_after_all_gates_not_current": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 860
+  },
+  "schema_adapter_gate": {
+    "required": true,
+    "changes_from_previous_consumer": "New accepted V134 schema/identity mapping, parentV132 actual121/frontier870, exact cell870→860 and row58; old V131/V132 metadata counts are not current proof evidence.",
+    "known_previous_validator_failures_to_prevent": [
+      {
+        "invariant": "capture_binding",
+        "requirement": "V131 raw capture_sha256 must equal the authorized task/capture SHA and the frozen V130 source/capture identity; mutation of capture_sha256 must fail this invariant."
+      },
+      {
+        "invariant": "theorem_acceptance_binding",
+        "requirement": "V131 raw theorem_authority.acceptance_sha256 must equal the exact SHA-256 of Q048_V130_ACCEPTANCE_V1.json and the authorized theorem-acceptance pin; mutation must fail."
+      },
+      {
+        "invariant": "saha_binding",
+        "requirement": "V131 raw source_saha_factor must equal the authorized retained theorem value and V130 raw atomic.saha_constant; mutation must fail."
+      },
+      {
+        "invariant": "endpoint_source_binding",
+        "requirement": "guard_binding.endpoint_derivation must equal PRIMARY_ROW:a1,E_right,Y_right,V_admitted and endpoint must be independently reconstructed from the unique admitted primary row57, not copied from task expected_endpoint_crosscheck_only; mutation to TASK_EXPECTED_ENDPOINT must fail."
+      }
+    ],
+    "additional_current_requirements": [
+      "Named capture, theorem-acceptance, source-Saha and PRIMARY_ROW endpoint-source invariants must reject their real mutations.",
+      "Both correction execution and scientific-contract identities must be checked, not collapsed.",
+      "V134 first-obstruction stop policy must be enforced by consumer orchestration; process exit0 is insufficient when serialized status reports failure.",
+      "Validate actual serialized raw/provisional/final bytes; use structured exact fields, not wording-sensitive regex assertions."
+    ]
+  },
+  "required_work": [
+    "Recover exact inputs using the embedded file IDs and V134 recovery map; verify hashes and reconstruct missing zero-byte logs exactly when validating the frozen runtime. Verify parent paths exist and resolve from frozen spec paths before any freeze.",
+    "Search/reuse/patch existing consumer/validator methods; inspect V131 failure and V132 repaired invariants read-only. If historical implementation bytes are unavailable, build a minimal separately versioned V135 metadata consumer/validator under this task, never fabricate original source.",
+    "Bind parent, Q/question, source/capture, both V134 identities, all proof artifacts and exact guard roles/rows before constructing a candidate. No execution/import of proof mains or produce() functions.",
+    "Derive candidate endpoint independently from primary row58 a1/E_right/Y_right/V_admitted. Treat expected_endpoint_crosscheck_only solely as a cross-check.",
+    "Copy accepted V134 K/h/w and conditional continuation contract; no new interval/theorem arithmetic, physical integration or native error assertion.",
+    "Freeze V135 task/spec/code/input pins after technical preflight, then execute exactly one consumer→independent validator→provisional accept→separate postaccept/published readback chain.",
+    "Require all frozen invariants, at least30 explicit baseline checks and at least35 real non-noop semantic controls. Freeze the exact test roster before the chain and reject every required control, including the four formerly escaped bindings and current dual-identity mapping.",
+    "Keep provisional and final states distinct. Only no-overwrite publication and independently validated serialized-final readback may yield ACCEPTED_AFTER_POSTACCEPT actual122/frontier860.",
+    "Return once after one terminal result or first exact obstruction; preserve all original bytes and stop."
+  ],
+  "negative_controls_required": [
+    "wrong/malformed question or stale task fingerprint",
+    "parent/source/capture/proof-byte drift",
+    "wrong guard row57 or primary/control role",
+    "copied expected endpoint instead of guard derivation",
+    "wrong K/lower/w/Saha or lost existing-solution hypothesis",
+    "native/unique-selector/trajectory/Q-closure promotion",
+    "actual121 made current before separate postaccept",
+    "double consumption or new theorem/proof count",
+    "noop mutation counted as rejection",
+    "changed frozen pin/process failure followed by dependent execution",
+    "serialized/provisional/published checkpoint tampering",
+    "For this task, wrong guard row means any cell other than exact870→860 row58; premature state promotion means actual122 before separate postaccept. Historical row57/actual121 control examples are reference-only.",
+    "Wrong or dropped V134 execution-to-V133 scientific-contract identity mapping must fail a named invariant."
+  ],
+  "activation_policy": "Parent remains current until independent validation, provisional acceptance, separate disk-readback semantic controls, serialized-final checks and no-overwrite publication/readback all pass.",
+  "success": "Exactly one conditional source-real cell admission870→860, +1actual/+0proof/+0theorem recomputations, after all independent and serialized/final gates. Only then actual122/frontier860 becomes accepted. NativeP6 UNRESOLVED; Q048 remains ACTIVE/INCONCLUSIVE.",
+  "failure": "First missing pin/schema/invariant/semantic-control/serialization/postaccept/process/budget failure is terminal. Preserve the exact obstruction and actual121/frontier870; no retry or postfreeze patch.",
+  "frozen_constraints": {
+    "max_new_actual_cells": 1,
+    "max_new_mathematical_proof_cells": 0,
+    "max_new_theorem_recomputations": 0,
+    "theorem_consumptions_max": 1,
+    "no_actual123": true,
+    "no_below_z": 860,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_new_q_model_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "budget": {
+    "preferred_backend": "LOCAL_RUNTIME",
+    "science_seconds_max": 300,
+    "chains_max": 1,
+    "estimate_basis": "Full V135 chain UNMEASURED. Prior consumer-task reference cites V1294.109959935s; this is not a V135 measurement. JSON/Fraction/hash-only consumer is expected small; builder must re-estimate before freeze.",
+    "github_actions_justified": false,
+    "paid_compute_authorized": false
+  },
+  "input_recovery_map": [
+    {
+      "runtime_relative_path": "inputs/Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+      "size_bytes": 2213,
+      "sha256": "2a16ced67538913c34db2cc608b533e6dbbe6db9a1eaf48f4e4442c10f05f01b",
+      "library_file_id": "libfile_7b0dfe96a4488191b864f7a52d6b20e2",
+      "stored_filename": "Q048_V132_ACCEPTED_CHECKPOINT_V1(1).json",
+      "library_path": "/Q048_V132_ACCEPTED_CHECKPOINT_V1(1).json",
+      "file_id": "file_000000000b8481f59a4f4da2c060d5b9",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/inputs/Q048_V132_ACCEPTED_CHECKPOINT_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_ACCEPTANCE_V1.json",
+      "size_bytes": 3232,
+      "sha256": "e12ec66f8311a5645eb31ee2f8cdc524eff82a3ef1f2a46bf794ef46246d665d",
+      "library_file_id": "libfile_8bd42235f07c81918610bc2ba4a0eac7",
+      "stored_filename": "Q048_V134_ACCEPTANCE_V1.json",
+      "library_path": "/Q048_V134_ACCEPTANCE_V1.json",
+      "file_id": "file_000000003d4c81f5b1e4f451366405f6",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_ACCEPTANCE_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_RAW_V1.json",
+      "size_bytes": 41063,
+      "sha256": "59fe997cc1bebf483ff006e8de245ba7a1698659b917d609f06a1420f4ffd0b4",
+      "library_file_id": "libfile_ae361c41c1f081918f10366a931e40f7",
+      "stored_filename": "Q048_V134_RAW_V1.json",
+      "library_path": "/Q048_V134_RAW_V1.json",
+      "file_id": "file_00000000352881f59f5dbb0d1f3b6d8e",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_RAW_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_VERIFICATION_V1.json",
+      "size_bytes": 3327,
+      "sha256": "c537218e4d70501c051c40bb219c265c5248e1a756f25d731d499e6be40bfa0e",
+      "library_file_id": "libfile_86b31e21604881919b02c86407dad55b",
+      "stored_filename": "Q048_V134_VERIFICATION_V1.json",
+      "library_path": "/Q048_V134_VERIFICATION_V1.json",
+      "file_id": "file_000000005ec081f59a9417aff764e796",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_VERIFICATION_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_SPEC_V1.json",
+      "size_bytes": 5186,
+      "sha256": "23eca15f7a389e3821012879377c627776f611d65dd70723a425752ec764ace1",
+      "library_file_id": "libfile_ae672eba70bc8191a1bc1ca16ee1bdf3",
+      "stored_filename": "Q048_V134_SPEC_V1.json",
+      "library_path": "/Q048_V134_SPEC_V1.json",
+      "file_id": "file_00000000532881f7b64037784d6769fb",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_SPEC_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_FREEZE_V1.json",
+      "size_bytes": 9188,
+      "sha256": "7553f983b1645d01e823a7b448fa250c7a77eac7c511db6dbe20bbf47223f26e",
+      "library_file_id": "libfile_103971f3f5408191b5b8411b6f330027",
+      "stored_filename": "Q048_V134_FREEZE_V1.json",
+      "library_path": "/Q048_V134_FREEZE_V1.json",
+      "file_id": "file_00000000823881f6bc0c6cb96aa2f998",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_FREEZE_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_EXECUTION_V1.json",
+      "size_bytes": 2835,
+      "sha256": "15f72637c64a6bbf5bbc9e9c2395eb1eda6b91374837414a3f53ae0e347ef140",
+      "library_file_id": "libfile_d8faab2537b8819195d53a3e3978f716",
+      "stored_filename": "Q048_V134_EXECUTION_V1.json",
+      "library_path": "/Q048_V134_EXECUTION_V1.json",
+      "file_id": "file_00000000431c820d9c8d2cffd02159dd",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_EXECUTION_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_CHAIN_CONTROL_V1.json",
+      "size_bytes": 3247,
+      "sha256": "5ccee5705a28b2e9c8dc963c3dab850502fa768085a84e504f17fffc94caf6ad",
+      "library_file_id": "libfile_f3587edc03f88191b8f1b2e10cedcd56",
+      "stored_filename": "Q048_V134_CHAIN_CONTROL_V1.json",
+      "library_path": "/Q048_V134_CHAIN_CONTROL_V1.json",
+      "file_id": "file_00000000602481f5a96de0b6d30473e0",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_CHAIN_CONTROL_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_POSTACCEPT_VALIDATION_V1.json",
+      "size_bytes": 1004,
+      "sha256": "4831d0ac72b2355c5dd14adb0d0b6b6dc74a15a19e2c92acf6be6143df297d47",
+      "library_file_id": "libfile_4e2b1c3ce50481919660a6c5d6fbdeba",
+      "stored_filename": "Q048_V134_POSTACCEPT_VALIDATION_V1.json",
+      "library_path": "/Q048_V134_POSTACCEPT_VALIDATION_V1.json",
+      "file_id": "file_0000000056a081f682801a8bc5fcf0f5",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_POSTACCEPT_VALIDATION_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_OUTPUT_MANIFEST_V1.json",
+      "size_bytes": 27654,
+      "sha256": "411336928fda64b8eddc8bfe2178fd8eb8a0a37b8b67001ac3169972d2362bf8",
+      "library_file_id": "libfile_776fd3a2e5d48191bd33dfce22f6c077",
+      "stored_filename": "Q048_V134_OUTPUT_MANIFEST_V1.json",
+      "library_path": "/Q048_V134_OUTPUT_MANIFEST_V1.json",
+      "file_id": "file_00000000003081f58b3a41005c74b895",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_OUTPUT_MANIFEST_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V134_DELIVERY_VALIDATION_V1.json",
+      "size_bytes": 1269,
+      "sha256": "46d0e68a58d25769a973f3560eedd7d951abfc6289425818e51f7c34d42c0a30",
+      "library_file_id": "libfile_5eaa84034fc08191ab3f2be8dc82927e",
+      "stored_filename": "Q048_V134_DELIVERY_VALIDATION_V1.json",
+      "library_path": "/Q048_V134_DELIVERY_VALIDATION_V1.json",
+      "file_id": "file_000000006c8481f593e39155d819d936",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_DELIVERY_VALIDATION_V1.json"
+    },
+    {
+      "runtime_relative_path": "inputs/Q048_V134_NEXT_MATHEMATICS_TASK_PATH_REPAIR_870_860_V1.json",
+      "size_bytes": 12023,
+      "sha256": "ca53b4d6deb9f8f573c3e0235a9a67f28d555545c8000feba21e58896ac2e66e",
+      "library_file_id": "libfile_f181820e935c819196daad55ae9b878f",
+      "stored_filename": "Q048_V134_NEXT_MATHEMATICS_TASK_PATH_REPAIR_870_860_V1(2).json",
+      "library_path": "/Q048_V134_NEXT_MATHEMATICS_TASK_PATH_REPAIR_870_860_V1(2).json",
+      "file_id": "file_000000008fbc820c8f5e7112e80e0105",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/inputs/Q048_V134_NEXT_MATHEMATICS_TASK_PATH_REPAIR_870_860_V1.json"
+    },
+    {
+      "runtime_relative_path": "inputs/Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1.json",
+      "size_bytes": 10868,
+      "sha256": "74e0cba7c57120587d6481f22f45dba4d5978fcb441e7d0d35d984b0b2aba52f",
+      "library_file_id": "libfile_7e09a33d94388191b25da11079598b6b",
+      "stored_filename": "Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1(1).json",
+      "library_path": "/Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1(1).json",
+      "file_id": "file_00000000504881f5a31c16e74de427dc",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/inputs/Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1.json"
+    },
+    {
+      "runtime_relative_path": "ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "size_bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "library_file_id": "libfile_8a509e02aaa48191a03445cc5e34a32e",
+      "stored_filename": "q048_guard_local_v_result_v12(5).json",
+      "library_path": "/q048_guard_local_v_result_v12(5).json",
+      "file_id": "file_00000000f02881f6a96ccca7122647f2",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json"
+    },
+    {
+      "runtime_relative_path": "ref/prior_v126/inputs/q048_prefix_config_v1.json",
+      "size_bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "library_file_id": "libfile_5ce6b9e59a788191aec4b8951fe781df",
+      "stored_filename": "q048_prefix_config_v1(8).json",
+      "library_path": "/q048_prefix_config_v1(8).json",
+      "file_id": "file_00000000d2d081f5b9cc9cd57406bb88",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/ref/prior_v126/inputs/q048_prefix_config_v1.json"
+    }
+  ],
+  "full_proof_runtime_recovery": {
+    "file": "Q048_V134_INPUT_AND_OUTPUT_RECOVERY_MAP_V1.json",
+    "library_file_id": "libfile_461b47d44a388191b97aa1434937de35",
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "f6c99eeab3ebb14e0508e3321ab5e276d99ea464",
+    "path": "Q048_V134_INPUT_AND_OUTPUT_RECOVERY_MAP_V1.json",
+    "sha256": "a044bd57983ae3b307add2cacda8f532ee98e3b13eaebef16496117bc029af16",
+    "restore_prefix": "proof_runtime/",
+    "instruction": "Materialize referenced nonempty files using recorded IDs and metadata, restore original relative paths and verify every exact hash. Five empty intermediate logs are fully represented by zero-byte descriptors. Do not infer missing files from basenames alone."
+  },
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V134_INGESTED_V1.md",
+  "parent_journal": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V134_PATH_REPAIR_PROOF_APPENDED_V1.md",
+    "sha256": "e0f78cf675136bdd17534c27a86c5dfde0dd984f2949d2bdc1067a03d3f805c7"
+  },
+  "method_references": [
+    {
+      "repository": "Morfindien/Bubbleverse",
+      "ref": "f6c99eeab3ebb14e0508e3321ab5e276d99ea464",
+      "path": "Q048_V131_NEXT_BUILDER_TASK_TWO_OPERATOR_CONDITIONAL_CONSUMER_880_870_V1.json",
+      "role": "METHOD_REFERENCE_ONLY; previous cell not executable evidence for current cell"
+    },
+    {
+      "repository": "Morfindien/Bubbleverse",
+      "ref": "f6c99eeab3ebb14e0508e3321ab5e276d99ea464",
+      "path": "Q048_V132_NEXT_BUILDER_TASK_VALIDATOR_REPAIR_880_870_V1.json",
+      "role": "KNOWN_VALIDATOR_DEFECTS_AND_REPAIRS_REFERENCE_ONLY"
+    }
+  ],
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "stop": "One terminal V135 result, then Result Ingestion. No below860, actual123 or theorem recomputation.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+}
