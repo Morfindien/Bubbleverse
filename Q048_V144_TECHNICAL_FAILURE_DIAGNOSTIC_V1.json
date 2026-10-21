@@ -1,0 +1,84 @@
+{
+  "schema": "bubbleverse.q048.v144.technical_failure_diagnostic.v1",
+  "created_at_utc": "2026-10-21T16:48:26.114418+00:00",
+  "status": "TERMINAL_TECHNICAL_FAILURE",
+  "classification": "SOFTWARE_BUG/SERIALIZATION/PREFLIGHT_FREEZE_ARTIFACT_INVALID_JSON",
+  "run_id": "LOCAL-Q048-V144-20261021T164631926422Z-CONTRACT-REPAIRED-CONSUMER-V1",
+  "task_id": "LOCAL-Q048-V144-CONTRACT-RECONSTRUCTED-CONDITIONAL-ACTUAL-CONSUMER-840-830-V1",
+  "task_fingerprint": "f5cf26f7a021f7425ec9e72125c5a95c7a847016cf0c9f88c7adc6b4cd82d9f8",
+  "stage": "FIRST_CHAIN_STEP / CONSUMER STARTUP + RUNNER FREEZE READBACK",
+  "observed_top_level_exception": "json.decoder.JSONDecodeError: Extra data: line 55 column 2 (char 4350) while q048_v144_run.py called verify_freeze() on Q048_V144_FREEZE_V1.json",
+  "root_cause": {
+    "file": "q048_v144_contract.py",
+    "line_observed": 15,
+    "expression": "f.write('\\\\n')",
+    "effect": "writes literal backslash+n bytes 5c 6e after each JSON document rather than a JSON-legal whitespace newline",
+    "affected_prefreeze_files": [
+      "Q048_V144_RUN_CONTEXT_V1.json",
+      "Q048_V144_SPEC_V1.json",
+      "Q048_V144_INPUT_PREFLIGHT_V1.json",
+      "Q048_V144_CONTROL_ROSTER_V1.json",
+      "Q048_V144_FREEZE_V1.json"
+    ],
+    "each_affected_file_trailing_bytes_hex": "5c6e"
+  },
+  "parse_diagnostics": {
+    "Q048_V144_RUN_CONTEXT_V1.json": {
+      "trailing_bytes_hex": "5c6e",
+      "error": "JSONDecodeError('Extra data: line 11 column 2 (char 481)')"
+    },
+    "Q048_V144_SPEC_V1.json": {
+      "trailing_bytes_hex": "5c6e",
+      "error": "JSONDecodeError('Extra data: line 77 column 2 (char 4442)')"
+    },
+    "Q048_V144_INPUT_PREFLIGHT_V1.json": {
+      "trailing_bytes_hex": "5c6e",
+      "error": "JSONDecodeError('Extra data: line 66 column 2 (char 2290)')"
+    },
+    "Q048_V144_CONTROL_ROSTER_V1.json": {
+      "trailing_bytes_hex": "5c6e",
+      "error": "JSONDecodeError('Extra data: line 625 column 2 (char 14276)')"
+    },
+    "Q048_V144_FREEZE_V1.json": {
+      "trailing_bytes_hex": "5c6e",
+      "error": "JSONDecodeError('Extra data: line 55 column 2 (char 4350)')"
+    }
+  },
+  "frozen_files_rechecked_without_editing_broken_freeze": {
+    "passed": 31,
+    "total": 31,
+    "all_unchanged": true
+  },
+  "science_outputs_absent": {
+    "Q048_V144_RAW_V1.json": true,
+    "Q048_V144_VALIDATION_V1.json": true,
+    "Q048_V144_PROVISIONAL_ACCEPTANCE_V1.json": true,
+    "Q048_V144_POSTACCEPT_VALIDATION_V1.json": true,
+    "Q048_V144_PUBLICATION_READBACK_V1.json": true,
+    "Q048_V144_ACCEPTED_CHECKPOINT_V1.json": true,
+    "Q048_V144_EXECUTION_V1.json": true
+  },
+  "raw_candidate_created": false,
+  "validator_ran_to_result": false,
+  "provisional_created": false,
+  "postaccept_created": false,
+  "publication_created": false,
+  "accepted_checkpoint_created": false,
+  "theorem_consumption": 0,
+  "scientific_delta": {
+    "actual": 0,
+    "proof": 0,
+    "theorem_recomputations": 0,
+    "theorem_consumptions": 0
+  },
+  "v142_proof_after": "ACCEPTED_UNCONSUMED",
+  "current_after": {
+    "count": 124,
+    "frontier": 840
+  },
+  "retry_count": 0,
+  "postfreeze_edits": 0,
+  "no_retry_reason": "V144 frozen constraints require retries=0 and postfreeze_edits_allowed=false; repair must be separately versioned after Result Ingestion.",
+  "not_physical_falsification": true,
+  "missing_inner_consumer_stderr": "NOT_PERSISTED because runner crashed before writing Q048_V144_EXECUTION_V1.json; no second execution was performed to reconstruct it."
+}

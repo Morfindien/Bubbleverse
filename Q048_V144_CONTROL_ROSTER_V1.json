@@ -1,0 +1,625 @@
+{
+  "schema": "bubbleverse.q048.v144.control_roster.v1",
+  "created_at_utc": "2026-10-21T16:46:31.926422+00:00",
+  "baseline_invariants": [
+    "load",
+    "TASK_PATH",
+    "PARENT_PATH",
+    "GUARD_PATH",
+    "PROOF_DIR",
+    "V143_PATH",
+    "AUTH_PATH",
+    "select_rows",
+    "get",
+    "hashlib",
+    "sha256",
+    "canon",
+    "hexdigest",
+    "isinstance",
+    "str",
+    "startswith",
+    "sha",
+    "PREFIX_PATH",
+    "expected_proof_hashes",
+    "all",
+    "items",
+    "len",
+    "objsha",
+    "values"
+  ],
+  "semantic_controls": [
+    {
+      "id": "wrong_q",
+      "expected_invariant": "identity_q",
+      "path": [
+        "q"
+      ],
+      "bad_value": "Q999",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_target_q",
+      "expected_invariant": "identity_q",
+      "path": [
+        "target_q"
+      ],
+      "bad_value": "Q999",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_question",
+      "expected_invariant": "question",
+      "path": [
+        "question_sha256"
+      ],
+      "bad_value": "deadbeef",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_task",
+      "expected_invariant": "identity_task",
+      "path": [
+        "task_id"
+      ],
+      "bad_value": "WRONG",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_fingerprint",
+      "expected_invariant": "task_fingerprint",
+      "path": [
+        "task_fingerprint"
+      ],
+      "bad_value": "0000000000000000000000000000000000000000000000000000000000000000",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_run",
+      "expected_invariant": "identity_run",
+      "path": [
+        "run_id"
+      ],
+      "bad_value": "BAD",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_program",
+      "expected_invariant": "program",
+      "path": [
+        "program_id"
+      ],
+      "bad_value": "BAD",
+      "nonnoop_required": true
+    },
+    {
+      "id": "premature_status",
+      "expected_invariant": "raw_state",
+      "path": [
+        "status"
+      ],
+      "bad_value": "CURRENT",
+      "nonnoop_required": true
+    },
+    {
+      "id": "candidate_current",
+      "expected_invariant": "raw_state",
+      "path": [
+        "candidate_is_current"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_authorization",
+      "expected_invariant": "authorization",
+      "path": [
+        "consumer_authorization"
+      ],
+      "bad_value": "BAD",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_repair",
+      "expected_invariant": "repair_strategy",
+      "path": [
+        "repair_strategy"
+      ],
+      "bad_value": "V143_REPLAY",
+      "nonnoop_required": true
+    },
+    {
+      "id": "rewrite_v143",
+      "expected_invariant": "v143_preserved",
+      "path": [
+        "v143_historical_blockage",
+        "result_state_sha256"
+      ],
+      "bad_value": "1111111111111111111111111111111111111111111111111111111111111111",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_parent_hash",
+      "expected_invariant": "parent_hash",
+      "path": [
+        "parent_authority",
+        "sha256"
+      ],
+      "bad_value": "2222222222222222222222222222222222222222222222222222222222222222",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_parent_count",
+      "expected_invariant": "parent_actual",
+      "path": [
+        "parent_authority",
+        "actual",
+        "count"
+      ],
+      "bad_value": 123,
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_parent_frontier",
+      "expected_invariant": "parent_actual",
+      "path": [
+        "parent_authority",
+        "actual",
+        "frontier"
+      ],
+      "bad_value": 850,
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_parent_E",
+      "expected_invariant": "parent_endpoint",
+      "path": [
+        "parent_authority",
+        "endpoint",
+        "E"
+      ],
+      "bad_value": "0",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_source",
+      "expected_invariant": "source_commit",
+      "path": [
+        "source_commit"
+      ],
+      "bad_value": "bad",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_capture",
+      "expected_invariant": "capture",
+      "path": [
+        "capture_sha256"
+      ],
+      "bad_value": "3333333333333333333333333333333333333333333333333333333333333333",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_accept_hash",
+      "expected_invariant": "theorem_acceptance_hash",
+      "path": [
+        "theorem_authority",
+        "artifacts",
+        "Q048_V142_ACCEPTANCE_V1.json"
+      ],
+      "bad_value": "4444444444444444444444444444444444444444444444444444444444444444",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_raw_hash",
+      "expected_invariant": "theorem_raw_hash",
+      "path": [
+        "theorem_authority",
+        "artifacts",
+        "Q048_V142_RAW_V1.json"
+      ],
+      "bad_value": "5555555555555555555555555555555555555555555555555555555555555555",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_proof_task",
+      "expected_invariant": "theorem_task_identity",
+      "path": [
+        "theorem_authority",
+        "task_id"
+      ],
+      "bad_value": "BAD",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_proof_run",
+      "expected_invariant": "theorem_run_identity",
+      "path": [
+        "theorem_authority",
+        "run_id"
+      ],
+      "bad_value": "BAD",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_guard",
+      "expected_invariant": "guard_file",
+      "path": [
+        "guard_binding",
+        "sha256"
+      ],
+      "bad_value": "6666666666666666666666666666666666666666666666666666666666666666",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_primary_row",
+      "expected_invariant": "guard_primary_unique",
+      "path": [
+        "guard_binding",
+        "primary_row_sha256"
+      ],
+      "bad_value": "7777777777777777777777777777777777777777777777777777777777777777",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_control_row",
+      "expected_invariant": "guard_control_unique",
+      "path": [
+        "guard_binding",
+        "control_row_sha256"
+      ],
+      "bad_value": "8888888888888888888888888888888888888888888888888888888888888888",
+      "nonnoop_required": true
+    },
+    {
+      "id": "control_as_primary",
+      "expected_invariant": "guard_role",
+      "path": [
+        "guard_binding",
+        "primary_control"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_cell",
+      "expected_invariant": "cell",
+      "path": [
+        "guard_binding",
+        "cell_z"
+      ],
+      "bad_value": [
+        830,
+        820
+      ],
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_left_glue",
+      "expected_invariant": "left_glue",
+      "path": [
+        "guard_binding",
+        "left_glue",
+        "E_input_left"
+      ],
+      "bad_value": "0",
+      "nonnoop_required": true
+    },
+    {
+      "id": "silent_cap_swap",
+      "expected_invariant": "energy_cap",
+      "path": [
+        "guard_binding",
+        "energy_cap_used"
+      ],
+      "bad_value": "1969354442793606491/62500000000000000",
+      "nonnoop_required": true
+    },
+    {
+      "id": "safe_equals_cap",
+      "expected_invariant": "safe_energy_distinct",
+      "path": [
+        "guard_binding",
+        "E_safe_left_distinct"
+      ],
+      "bad_value": "15881004977532652117/500000000000000000",
+      "nonnoop_required": true
+    },
+    {
+      "id": "copied_wrong_endpoint_E",
+      "expected_invariant": "endpoint_source_binding",
+      "path": [
+        "candidate_endpoint",
+        "E"
+      ],
+      "bad_value": "0",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_endpoint_a",
+      "expected_invariant": "endpoint_source_binding",
+      "path": [
+        "candidate_endpoint",
+        "a"
+      ],
+      "bad_value": "1/821",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_endpoint_Y",
+      "expected_invariant": "endpoint_source_binding",
+      "path": [
+        "candidate_endpoint",
+        "Y"
+      ],
+      "bad_value": "0",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_endpoint_V",
+      "expected_invariant": "endpoint_source_binding",
+      "path": [
+        "candidate_endpoint",
+        "Vbar"
+      ],
+      "bad_value": "0",
+      "nonnoop_required": true
+    },
+    {
+      "id": "actual126",
+      "expected_invariant": "candidate_actual",
+      "path": [
+        "candidate_actual",
+        "count"
+      ],
+      "bad_value": 126,
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_frontier",
+      "expected_invariant": "candidate_actual",
+      "path": [
+        "candidate_actual",
+        "frontier"
+      ],
+      "bad_value": 820,
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_branch_frontier",
+      "expected_invariant": "candidate_frontiers",
+      "path": [
+        "candidate_frontiers",
+        "hillipop-ede_n3"
+      ],
+      "bad_value": 820,
+      "nonnoop_required": true
+    },
+    {
+      "id": "premature_current_125",
+      "expected_invariant": "current_until_publication",
+      "path": [
+        "actual_current_until_publication",
+        "count"
+      ],
+      "bad_value": 125,
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_K",
+      "expected_invariant": "theorem_K",
+      "path": [
+        "retained_theorem_values",
+        "K_upper"
+      ],
+      "bad_value": "1",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_lower",
+      "expected_invariant": "theorem_lower",
+      "path": [
+        "retained_theorem_values",
+        "connected_lower"
+      ],
+      "bad_value": "1",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_hupper",
+      "expected_invariant": "theorem_h_upper",
+      "path": [
+        "retained_theorem_values",
+        "h_upper"
+      ],
+      "bad_value": "1",
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_thermal",
+      "expected_invariant": "theorem_thermal",
+      "path": [
+        "retained_theorem_values",
+        "thermal_domain"
+      ],
+      "bad_value": [
+        "-1",
+        "1"
+      ],
+      "nonnoop_required": true
+    },
+    {
+      "id": "drop_operator",
+      "expected_invariant": "theorem_operators",
+      "path": [
+        "retained_theorem_values",
+        "operators"
+      ],
+      "bad_value": [
+        "HMLA"
+      ],
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_qbranch",
+      "expected_invariant": "theorem_q_branches",
+      "path": [
+        "retained_theorem_values",
+        "q_branches",
+        "L"
+      ],
+      "bad_value": "0",
+      "nonnoop_required": true
+    },
+    {
+      "id": "naive_beta_method",
+      "expected_invariant": "beta_method",
+      "path": [
+        "retained_theorem_values",
+        "beta_dependency_method"
+      ],
+      "bad_value": "naive_interval",
+      "nonnoop_required": true
+    },
+    {
+      "id": "beta_tamper",
+      "expected_invariant": "beta_values",
+      "path": [
+        "retained_theorem_values",
+        "beta_lower",
+        "L"
+      ],
+      "bad_value": "48",
+      "nonnoop_required": true
+    },
+    {
+      "id": "future_domain",
+      "expected_invariant": "conditional_scope",
+      "path": [
+        "source_cover_contract",
+        "no_assumed_future_domain_membership"
+      ],
+      "bad_value": false,
+      "nonnoop_required": true
+    },
+    {
+      "id": "native_promotion",
+      "expected_invariant": "native",
+      "path": [
+        "native_error_certificate"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "selector_promotion",
+      "expected_invariant": "selector",
+      "path": [
+        "exact_selector_existence_uniqueness_established"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "trajectory_promotion",
+      "expected_invariant": "trajectory",
+      "path": [
+        "trajectory_identity_claim"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "q_closure",
+      "expected_invariant": "q_complete",
+      "path": [
+        "q_complete"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "theorem_recompute",
+      "expected_invariant": "delta_recompute",
+      "path": [
+        "new_theorem_recomputations"
+      ],
+      "bad_value": 1,
+      "nonnoop_required": true
+    },
+    {
+      "id": "double_consumption",
+      "expected_invariant": "delta_consumption",
+      "path": [
+        "theorem_consumptions"
+      ],
+      "bad_value": 2,
+      "nonnoop_required": true
+    },
+    {
+      "id": "physical_reset",
+      "expected_invariant": "no_reset",
+      "path": [
+        "no_physical_reset"
+      ],
+      "bad_value": false,
+      "nonnoop_required": true
+    },
+    {
+      "id": "below830",
+      "expected_invariant": "below830",
+      "path": [
+        "below830_work"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "actual126_flag",
+      "expected_invariant": "actual126",
+      "path": [
+        "actual126_created"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "history_rewrite",
+      "expected_invariant": "history",
+      "path": [
+        "historical_record_modified"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "proof_replay",
+      "expected_invariant": "history",
+      "path": [
+        "proof_reexecuted"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "require_missing_sources",
+      "expected_invariant": "missing_source_nondependency",
+      "path": [
+        "missing_v140_historical_sources_required"
+      ],
+      "bad_value": true,
+      "nonnoop_required": true
+    },
+    {
+      "id": "wrong_return",
+      "expected_invariant": "return_route",
+      "path": [
+        "return_route"
+      ],
+      "bad_value": "WRONG",
+      "nonnoop_required": true
+    }
+  ],
+  "semantic_controls_total": 60,
+  "minimum_required": 40,
+  "status": "FROZEN_PENDING_EXECUTION"
+}\n

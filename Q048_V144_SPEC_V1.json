@@ -1,0 +1,77 @@
+{
+  "schema": "bubbleverse.q048.v144.spec.v1",
+  "created_at_utc": "2026-10-21T16:46:31.926422+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-V144-CONTRACT-RECONSTRUCTED-CONDITIONAL-ACTUAL-CONSUMER-840-830-V1",
+  "task_fingerprint": "f5cf26f7a021f7425ec9e72125c5a95c7a847016cf0c9f88c7adc6b4cd82d9f8",
+  "authorization": "ONE_REPAIRED_CONDITIONAL_SOURCE_REAL_ACTUAL_CONSUMER_840_TO_830_AFTER_V143_PREFREEZE_INPUT_BLOCKAGE",
+  "repair_strategy": "SOURCE_INDEPENDENT_CONTRACT_RECONSTRUCTION_FROM_PRESERVED_V140_VALIDATED_ARTIFACTS",
+  "parent_sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+  "theorem_artifacts": {
+    "Q048_V142_ACCEPTANCE_V1.json": "aab654d2ffd05bd313f70fa925630183d44043a1083a8e8c3233b57c5965c7ab",
+    "Q048_V142_RAW_V1.json": "c7b81ec01ecd387d619afaf97cfe529cb73986d59342e525773fc4389bed370a",
+    "Q048_V142_VERIFICATION_V1.json": "da62cf48deb3b3492fa1961ceef70df005042d8cb2a7f88430251ebda24d70a6",
+    "Q048_V142_SPEC_V1.json": "1cbce8da7e1db76f3aadf1dad0662c4fb55719b70692e1dc3db2dc7ca937004f",
+    "Q048_V142_FREEZE_V1.json": "f2314868c549252eeaefa7829140a0ba40c578e17516dec3b2388cfceacd5efd",
+    "Q048_V142_EXECUTION_V1.json": "dcb3692c72b67715ba5cfc974164b003027c9759e2ff5f04246a9c44a744fca1",
+    "Q048_V142_ACCEPTANCE_READBACK_V1.json": "7eabdf7cdb19c24067b9b9b479b129f66ce2b6f9e98abdbb2ccca481cffb6ca9",
+    "Q048_V142_OUTPUT_MANIFEST_V1.json": "4ee2e337b05b4d3a1ab3463fd97753e02d499e45ef80bba25da74542d13d0a25",
+    "Q048_V142_DELIVERY_VALIDATION_V1.json": "66ae7ca68d9778b6018b067f45ca5534e77ffc36bf6ed8a4f59d638653679429"
+  },
+  "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "guard_primary_row_sha256": "93c02dbd79e9a33fd72955e176bacf872ae7c1f7fa68155a1358c8cec69d402d",
+  "guard_control_row_sha256": "f78c6543deb285d5632774694b75054239361b3dd4eac53bfcbc42e196feba62",
+  "cell_z": [
+    840,
+    830
+  ],
+  "cell_a": [
+    "1/841",
+    "1/831"
+  ],
+  "endpoint_derivation": "PRIMARY_ROW61:a1,E_right,Y_right,V_admitted",
+  "retained_theorem_values": {
+    "K_upper": "4526301149059825126009/1000000000000000000",
+    "connected_lower": "72061959455351/200000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "beta_lower": {
+      "L": "6749509820830701233911928395181048852775632258030431101025342503117681985996442459786122943670133004177110287497066767269176789061014166503/72147590357999265242845010372548131272196769714355468750000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "R": "20192487446429687891996804048086662305115358208264549508698108804047935854176466803649622853660838225362435923255540214257669595383042499509/216442571073997795728535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "limits": {
+    "max_new_actual_cells": 1,
+    "max_new_mathematical_proof_cells": 0,
+    "max_new_theorem_recomputations": 0,
+    "theorem_consumptions_max": 1,
+    "no_actual126": true,
+    "no_below_z": 830,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_new_q_model_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "compute_backend": "LOCAL_RUNTIME",
+  "github_worthwhile": "NO",
+  "estimate_basis": "V140 same-class measured 11.917513963s; V144 local 300s cap, one chain, no retry.",
+  "success": "Exactly one repaired conditional source-real actual admission840→830: +1actual/+0proof/+0theorem recomputations/+1 theorem consumption after all independent/postaccept/serialized gates; actual125/frontier830 then current, NativeP6 unresolved, Q048 ACTIVE/INCONCLUSIVE.",
+  "failure": "First exact input/schema/invariant/semantic/serialization/postaccept/process/budget failure is terminal for V144; preserve actual124/frontier840 and V142 ACCEPTED_UNCONSUMED; no retry/postfreeze patch.",
+  "stop": "One terminal V144 result then Result Ingestion; no below830, actual126, theorem recomputation, native integration, model/new-Q promotion or closure."
+}\n
