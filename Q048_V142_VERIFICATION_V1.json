@@ -1,0 +1,340 @@
+{
+  "schema": "bubbleverse.q048.v142.verification.v1",
+  "status": "PASS",
+  "checks": {
+    "schema": true,
+    "identity_q": true,
+    "identity_task": true,
+    "identity_run": true,
+    "identity_question": true,
+    "parent_hash_pin": true,
+    "source_pin": true,
+    "capture_pin": true,
+    "cell": true,
+    "operators": true,
+    "parent_contract": true,
+    "guard_primary": true,
+    "guard_control": true,
+    "energy_cap": true,
+    "outer_domains": true,
+    "background": true,
+    "atomic": true,
+    "fit": true,
+    "source_checks_count": true,
+    "source_checks_true": true,
+    "source_formulas": true,
+    "zero_injection": true,
+    "fresh_enclosure": true,
+    "C_HMLA": true,
+    "C_SWIFT": true,
+    "K_cross_product": true,
+    "log_width": true,
+    "comparison_values": true,
+    "rational_lower_cross_product": true,
+    "rounding": true,
+    "connected_domains": true,
+    "dependency_method_L": true,
+    "dependency_math_L": true,
+    "naive_rejected_L": true,
+    "branch_L_math": true,
+    "dependency_method_R": true,
+    "dependency_math_R": true,
+    "naive_rejected_R": true,
+    "branch_R_math": true,
+    "continuation_interval": true,
+    "continuation_scope": true,
+    "frozen_gate_names": true,
+    "frozen_gates_pass": true,
+    "no_state_advance": true,
+    "scope_limits": true,
+    "candidate_status": true,
+    "no_routing_crosscheck_import": true,
+    "repair_constraints": true
+  },
+  "checks_passed": 48,
+  "checks_total": 48,
+  "check_roster": [
+    "schema",
+    "identity_q",
+    "identity_task",
+    "identity_run",
+    "identity_question",
+    "parent_hash_pin",
+    "source_pin",
+    "capture_pin",
+    "cell",
+    "operators",
+    "parent_contract",
+    "guard_primary",
+    "guard_control",
+    "energy_cap",
+    "outer_domains",
+    "background",
+    "atomic",
+    "fit",
+    "source_checks_count",
+    "source_checks_true",
+    "source_formulas",
+    "zero_injection",
+    "fresh_enclosure",
+    "C_HMLA",
+    "C_SWIFT",
+    "K_cross_product",
+    "log_width",
+    "comparison_values",
+    "rational_lower_cross_product",
+    "rounding",
+    "connected_domains",
+    "dependency_method_L",
+    "dependency_math_L",
+    "naive_rejected_L",
+    "branch_L_math",
+    "dependency_method_R",
+    "dependency_math_R",
+    "naive_rejected_R",
+    "branch_R_math",
+    "continuation_interval",
+    "continuation_scope",
+    "frozen_gate_names",
+    "frozen_gates_pass",
+    "no_state_advance",
+    "scope_limits",
+    "candidate_status",
+    "no_routing_crosscheck_import",
+    "repair_constraints"
+  ],
+  "check_roster_sha256": "a0fed87b85825c8a3617c82bcc732b8e8ee58474048307446a4623b3e0a176eb",
+  "check_roster_ok": true,
+  "semantic_control_roster": [
+    "wrong_question",
+    "wrong_task_id",
+    "wrong_task_fingerprint",
+    "wrong_run",
+    "wrong_parent",
+    "source_drift",
+    "capture_drift",
+    "below830",
+    "wrong_cell_a",
+    "wrong_guard",
+    "control_as_primary",
+    "silent_cap_swap",
+    "drop_HMLA",
+    "drop_SWIFT",
+    "wrong_q",
+    "h_not_g",
+    "wrong_Saha",
+    "drop_channel",
+    "wrong_atomic",
+    "unqualified_fit",
+    "nonpositive_C",
+    "wrong_escape",
+    "omit_injection",
+    "understate_K",
+    "old_h0_wholecell",
+    "nonpositive_lower",
+    "wrong_log",
+    "wrong_rounding",
+    "reverse_upper_h",
+    "old_thermal_face",
+    "reverse_thermal",
+    "future_domain_assumption",
+    "native_promotion",
+    "selector_existence",
+    "trajectory_identity",
+    "actual125",
+    "proof_before_accept",
+    "Q_closure",
+    "old_cache",
+    "physical_reset",
+    "empty_gates",
+    "malformed_gate_pass",
+    "dependency_method_naive",
+    "ratio_lower_tamper",
+    "ratio_derivative_tamper",
+    "routing_crosscheck_import",
+    "domain_widening",
+    "cell_partition",
+    "dependency_beta_tamper",
+    "naive_promoted"
+  ],
+  "semantic_control_roster_sha256": "700444eff8a741fb31e714bed1b96385101f72a2195566e460d27bec3378351d",
+  "semantic_control_roster_ok": true,
+  "semantic_mutations_rejected": 50,
+  "semantic_mutations_total": 50,
+  "semantic_controls_nonvacuous": true,
+  "mutation_failed_checks": {
+    "wrong_question": [
+      "identity_question"
+    ],
+    "wrong_task_id": [
+      "identity_task"
+    ],
+    "wrong_task_fingerprint": [
+      "identity_task"
+    ],
+    "wrong_run": [
+      "identity_run"
+    ],
+    "wrong_parent": [
+      "parent_hash_pin"
+    ],
+    "source_drift": [
+      "source_pin"
+    ],
+    "capture_drift": [
+      "capture_pin"
+    ],
+    "below830": [
+      "cell"
+    ],
+    "wrong_cell_a": [
+      "cell"
+    ],
+    "wrong_guard": [
+      "guard_primary"
+    ],
+    "control_as_primary": [
+      "guard_primary"
+    ],
+    "silent_cap_swap": [
+      "energy_cap"
+    ],
+    "drop_HMLA": [
+      "operators",
+      "parent_contract"
+    ],
+    "drop_SWIFT": [
+      "operators",
+      "parent_contract"
+    ],
+    "wrong_q": [
+      "operators",
+      "parent_contract"
+    ],
+    "h_not_g": [
+      "outer_domains"
+    ],
+    "wrong_Saha": [
+      "atomic"
+    ],
+    "drop_channel": [
+      "atomic"
+    ],
+    "wrong_atomic": [
+      "atomic"
+    ],
+    "unqualified_fit": [
+      "fit"
+    ],
+    "nonpositive_C": [
+      "C_HMLA"
+    ],
+    "wrong_escape": [
+      "C_SWIFT"
+    ],
+    "omit_injection": [
+      "zero_injection"
+    ],
+    "understate_K": [
+      "K_cross_product",
+      "comparison_values",
+      "rounding"
+    ],
+    "old_h0_wholecell": [
+      "rational_lower_cross_product",
+      "rounding",
+      "connected_domains",
+      "dependency_math_L",
+      "branch_L_math",
+      "dependency_math_R",
+      "branch_R_math"
+    ],
+    "nonpositive_lower": [
+      "rational_lower_cross_product",
+      "rounding",
+      "connected_domains",
+      "dependency_math_L",
+      "branch_L_math",
+      "dependency_math_R",
+      "branch_R_math"
+    ],
+    "wrong_log": [
+      "log_width"
+    ],
+    "wrong_rounding": [
+      "log_width"
+    ],
+    "reverse_upper_h": [
+      "branch_L_math"
+    ],
+    "old_thermal_face": [
+      "continuation_interval"
+    ],
+    "reverse_thermal": [
+      "branch_R_math"
+    ],
+    "future_domain_assumption": [
+      "continuation_scope"
+    ],
+    "native_promotion": [
+      "scope_limits"
+    ],
+    "selector_existence": [
+      "scope_limits"
+    ],
+    "trajectory_identity": [
+      "scope_limits"
+    ],
+    "actual125": [
+      "no_state_advance"
+    ],
+    "proof_before_accept": [
+      "no_state_advance"
+    ],
+    "Q_closure": [
+      "scope_limits"
+    ],
+    "old_cache": [
+      "fresh_enclosure"
+    ],
+    "physical_reset": [
+      "scope_limits"
+    ],
+    "empty_gates": [
+      "frozen_gate_names",
+      "frozen_gates_pass"
+    ],
+    "malformed_gate_pass": [
+      "frozen_gates_pass"
+    ],
+    "dependency_method_naive": [
+      "dependency_method_L",
+      "dependency_math_L"
+    ],
+    "ratio_lower_tamper": [
+      "dependency_math_L"
+    ],
+    "ratio_derivative_tamper": [
+      "dependency_math_L"
+    ],
+    "routing_crosscheck_import": [
+      "no_routing_crosscheck_import"
+    ],
+    "domain_widening": [
+      "repair_constraints"
+    ],
+    "cell_partition": [
+      "repair_constraints"
+    ],
+    "dependency_beta_tamper": [
+      "dependency_math_R"
+    ],
+    "naive_promoted": [
+      "dependency_method_R",
+      "dependency_math_R"
+    ]
+  },
+  "raw_sha256": "c7b81ec01ecd387d619afaf97cfe529cb73986d59342e525773fc4389bed370a",
+  "spec_sha256": "1cbce8da7e1db76f3aadf1dad0662c4fb55719b70692e1dc3db2dc7ca937004f",
+  "independence": "Does not import producer. Independently reconstructs task/source/guard binding, atomic/C, fresh connected lower, and same-h monotone beta ratio; explicitly rejects naive independent interval division as the repaired theorem."
+}
