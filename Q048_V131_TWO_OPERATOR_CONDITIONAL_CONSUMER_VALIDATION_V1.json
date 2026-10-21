@@ -1,0 +1,138 @@
+{
+  "schema": "bubbleverse.q048.v131.admission_validation.v1",
+  "status": "FAIL",
+  "checks": {
+    "identity": true,
+    "program": true,
+    "authorization": true,
+    "parent": true,
+    "proof_status": true,
+    "proof_links": true,
+    "proof_validation": true,
+    "proof_execution": true,
+    "delivery": true,
+    "source_provenance": true,
+    "scope": true,
+    "bounds": true,
+    "continuation": true,
+    "unique_guard_False": true,
+    "unique_guard_True": true,
+    "guard_role": true,
+    "guard_hashes": true,
+    "left_glue": true,
+    "guard_flags": true,
+    "endpoint": true,
+    "advance": true,
+    "noncurrent": true,
+    "counts": true,
+    "limits": true,
+    "no_history": true,
+    "return_route": true
+  },
+  "checks_total": 26,
+  "checks_passed": 26,
+  "semantic_mutations_total": 35,
+  "semantic_mutations_rejected": 31,
+  "mutation_failed_invariants": {
+    "question": [
+      "identity"
+    ],
+    "fingerprint": [
+      "program"
+    ],
+    "parent": [
+      "parent"
+    ],
+    "source": [
+      "source_provenance"
+    ],
+    "capture": [],
+    "theorem": [],
+    "operator": [
+      "scope"
+    ],
+    "q": [
+      "scope"
+    ],
+    "control": [
+      "guard_role"
+    ],
+    "row": [
+      "guard_role"
+    ],
+    "E": [
+      "endpoint"
+    ],
+    "Y": [
+      "endpoint"
+    ],
+    "V": [
+      "endpoint"
+    ],
+    "a": [
+      "endpoint"
+    ],
+    "count": [
+      "advance"
+    ],
+    "frontier": [
+      "advance"
+    ],
+    "otherfrontier": [
+      "advance"
+    ],
+    "K": [
+      "bounds"
+    ],
+    "lower": [
+      "bounds"
+    ],
+    "w": [
+      "bounds"
+    ],
+    "saha": [],
+    "continuation": [
+      "continuation"
+    ],
+    "native": [
+      "limits"
+    ],
+    "selector": [
+      "limits"
+    ],
+    "trajectory": [
+      "limits"
+    ],
+    "closure": [
+      "limits"
+    ],
+    "current": [
+      "noncurrent"
+    ],
+    "status": [
+      "noncurrent"
+    ],
+    "proof": [
+      "counts"
+    ],
+    "consume": [
+      "counts"
+    ],
+    "reset": [
+      "limits"
+    ],
+    "below": [
+      "limits"
+    ],
+    "auth": [
+      "authorization"
+    ],
+    "endpointsource": [],
+    "scope": [
+      "scope"
+    ]
+  },
+  "result_sha256": "976b679178ee29fa94f7f54116410fe9e18685445e35a629535c0b6d2e48b3a1",
+  "spec_sha256": "afdd8d8077341378dc887c84545211070d8110cf73daf96261825a3e8594c51c",
+  "independence_scope": "No consumer import; independently reconstructs parent, theorem, row57 endpoint and authorization from immutable inputs. Shared source evidence; not native/empirical replication."
+}

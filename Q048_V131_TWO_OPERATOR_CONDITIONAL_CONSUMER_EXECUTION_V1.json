@@ -1,0 +1,35 @@
+{
+  "schema": "bubbleverse.q048.v131.execution.v1",
+  "run_id": "LOCAL-Q048-V131-20261021T071002408345Z-CONSUMER-V1",
+  "program_id": "Q048-V131-TWO-OPERATOR-CONDITIONAL-CONSUMER-V1",
+  "task_id": "LOCAL-Q048-V131-TWO-OPERATOR-CONDITIONAL-SOURCE-REAL-ACTUAL-CONSUMER-880-870-V1",
+  "task_fingerprint": "2f1da82a511e81d37fcccd4e97f100f307c630500a374b2251a812b489588bc3",
+  "started_at_utc": "2026-10-21T07:10:15.867471+00:00",
+  "compute_backend": "LOCAL_RUNTIME",
+  "phases": [
+    {
+      "phase": "consumer",
+      "returncode": 0,
+      "seconds": 1.4650390359993253
+    },
+    {
+      "phase": "validator",
+      "returncode": 1,
+      "seconds": 1.513906211000176
+    }
+  ],
+  "retry_count": 0,
+  "postfreeze_edits": false,
+  "historical_mains_executed": 0,
+  "native_integrations": 0,
+  "new_proof_computations": 0,
+  "status": "FAIL",
+  "parent_current_on_failure": {
+    "count": 120,
+    "frontier": 880
+  },
+  "error": "ValueError:PHASE_FAILED:validator:",
+  "finished_at_utc": "2026-10-21T07:10:18.854067+00:00",
+  "science_seconds": 2.986616879000394,
+  "frozen_pins_unchanged": true
+}
