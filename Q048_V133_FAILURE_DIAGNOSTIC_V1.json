@@ -1,0 +1,46 @@
+{
+  "schema": "bubbleverse.q048.v133.failure_diagnostic.v1",
+  "created_at_utc": "2026-10-21T09:04:06.597183+00:00",
+  "q": "Q048",
+  "task_id": "LOCAL-Q048-V133-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-870-860-V1",
+  "task_fingerprint": "a415ccb486ad329e6b2cc376a968da22d68c04794426a84cd35b24b570a06ea8",
+  "classification": "SOFTWARE_BUG/PATH_BINDING",
+  "execution_status": "FAIL",
+  "technical_state": "FAIL",
+  "scientific_effect": "NO_NEW_MATHEMATICAL_RESULT; PARENT_REMAINS_CURRENT",
+  "parent_current": {
+    "count": 121,
+    "frontier": 870
+  },
+  "frontiers_current": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 870
+  },
+  "phase_failed": "producer",
+  "producer_returncode": 1,
+  "raw_result_created": false,
+  "verification_created": false,
+  "acceptance_created": false,
+  "accepted_new_mathematical_proof_cells": 0,
+  "accepted_new_actual_cells": 0,
+  "fatal_obstruction": {
+    "exception": "FileNotFoundError",
+    "missing_path": "/mnt/data/v133_work/Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+    "actual_frozen_parent_path": "inputs/Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+    "faulting_expression": "sha(ROOT/task['parent_checkpoint']['file'])",
+    "correct_binding_for_future_revision": "Use the spec-bound parent path (`ROOT/spec['parent']`) or an equivalently frozen explicit inputs/ path; do not edit or rerun V133."
+  },
+  "startup_warning": {
+    "observed": true,
+    "text_prefix": "Spreadsheet runtime warmup failed during python startup",
+    "classification": "NONFATAL_WARNING_FOR_THIS_ATTEMPT",
+    "reason": "Python continued into q048_v133_proof.py and the terminal traceback is the FileNotFoundError path-binding bug."
+  },
+  "retry_policy": "retry_count=0 and postfreeze_edits_allowed=false; V133 is immutable. Any repair requires a separately versioned task after Result Ingestion.",
+  "frozen_pins_unchanged": true,
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+}

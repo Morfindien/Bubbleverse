@@ -1,0 +1,25 @@
+{
+  "schema": "bubbleverse.q048.v133.execution.v1",
+  "run_id": "LOCAL-Q048-V133-20261021T090230311659Z-PROOF-V1",
+  "started_at_utc": "2026-10-21T09:02:47.478274+00:00",
+  "status": "FAIL",
+  "retry_count": 0,
+  "postfreeze_edits": false,
+  "historical_mains_executed": 0,
+  "native_integrations": 0,
+  "new_actual_cells": 0,
+  "new_proof_computations": 1,
+  "phases": [
+    {
+      "phase": "producer",
+      "returncode": 1,
+      "seconds": 8.436991537999802,
+      "stdout": "",
+      "stderr": "Spreadsheet runtime warmup failed during python startup\nTraceback (most recent call last):\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py\", line 26, in warm_spreadsheet_runtime_on_startup\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py\", line 785, in warm_spreadsheet_runtime\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py\", line 718, in _warm_feature_flows\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py\", line 509, in _warm_drawing_and_image_flows\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py\", line 32861, in bring_to_front\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py\", line 764, in __call__\n  File \"/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py\", line 175, in call\nartifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.\nTraceback (most recent call last):\n  File \u001b[35m\"/mnt/data/v133_work/q048_v133_proof.py\"\u001b[0m, line \u001b[35m132\u001b[0m, in \u001b[35m<module>\u001b[0m\n    result=produce(SPEC)\n  File \u001b[35m\"/mnt/data/v133_work/q048_v133_proof.py\"\u001b[0m, line \u001b[35m64\u001b[0m, in \u001b[35mproduce\u001b[0m\n    row,control=\u001b[31mbind\u001b[0m\u001b[1;31m(task,parent,guard,cap)\u001b[0m\n                \u001b[31m~~~~\u001b[0m\u001b[1;31m^^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n  File \u001b[35m\"/mnt/data/v133_work/q048_v133_proof.py\"\u001b[0m, line \u001b[35m34\u001b[0m, in \u001b[35mbind\u001b[0m\n    if \u001b[31msha\u001b[0m\u001b[1;31m(ROOT/task['parent_checkpoint']['file'])\u001b[0m!=task['parent_checkpoint']['file_sha256']: raise ValueError('PARENT_HASH')\n       \u001b[31m~~~\u001b[0m\u001b[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n  File \u001b[35m\"/mnt/data/v133_work/q048_v133_proof.py\"\u001b[0m, line \u001b[35m14\u001b[0m, in \u001b[35msha\u001b[0m\n    def sha(p): return hashlib.sha256(\u001b[31mPath(p).read_bytes\u001b[0m\u001b[1;31m()\u001b[0m).hexdigest()\n                                      \u001b[31m~~~~~~~~~~~~~~~~~~\u001b[0m\u001b[1;31m^^\u001b[0m\n  File \u001b[35m\"/usr/lib/python3.13/pathlib/_abc.py\"\u001b[0m, line \u001b[35m625\u001b[0m, in \u001b[35mread_bytes\u001b[0m\n    with \u001b[31mself.open\u001b[0m\u001b[1;31m(mode='rb')\u001b[0m as f:\n         \u001b[31m~~~~~~~~~\u001b[0m\u001b[1;31m^^^^^^^^^^^\u001b[0m\n  File \u001b[35m\"/usr/lib/python3.13/pathlib/_local.py\"\u001b[0m, line \u001b[35m539\u001b[0m, in \u001b[35mopen\u001b[0m\n    return \u001b[31mio.open\u001b[0m\u001b[1;31m(self, mode, buffering, encoding, errors, newline)\u001b[0m\n           \u001b[31m~~~~~~~\u001b[0m\u001b[1;31m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n\u001b[1;35mFileNotFoundError\u001b[0m: \u001b[35m[Errno 2] No such file or directory: '/mnt/data/v133_work/Q048_V132_ACCEPTED_CHECKPOINT_V1.json'\u001b[0m\n"
+    }
+  ],
+  "error": "RuntimeError:PRODUCER_FAIL",
+  "finished_at_utc": "2026-10-21T09:02:55.917362+00:00",
+  "science_seconds": 8.439099303000148,
+  "frozen_pins_unchanged": true
+}

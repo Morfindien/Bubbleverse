@@ -1,0 +1,42 @@
+{
+  "schema": "bubbleverse.q048.v133.handoff_to_ingestion.v1",
+  "created_at_utc": "2026-10-21T09:04:06.674530+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "result": "FAILED_TECHNICAL_EXECUTION",
+  "result_class": "RUN_FAILURE",
+  "failure_classification": "SOFTWARE_BUG/PATH_BINDING",
+  "accepted_state": {
+    "count": 121,
+    "frontier": 870
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 870
+  },
+  "new_mathematical_proof_cells": 0,
+  "new_actual_cells": 0,
+  "raw_result_created": false,
+  "validation_created": false,
+  "acceptance_created": false,
+  "first_material_obstruction": {
+    "exception": "FileNotFoundError",
+    "missing_path": "/mnt/data/v133_work/Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+    "actual_frozen_parent_path": "inputs/Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+    "faulting_expression": "sha(ROOT/task['parent_checkpoint']['file'])",
+    "correct_binding_for_future_revision": "Use the spec-bound parent path (`ROOT/spec['parent']`) or an equivalently frozen explicit inputs/ path; do not edit or rerun V133."
+  },
+  "retry_count": 0,
+  "postfreeze_edits": false,
+  "frozen_pins_unchanged": true,
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "repair_constraint": "Do not patch/retry V133. Result Ingestion may authorize a separately versioned correction that changes only the parent-path binding before rerunning the same bounded 870→860 proof task."
+}
