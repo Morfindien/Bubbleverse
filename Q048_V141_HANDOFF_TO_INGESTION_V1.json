@@ -1,0 +1,105 @@
+{
+  "schema": "bubbleverse.q048.v141.handoff_to_ingestion.v1",
+  "created_at_utc": "2026-10-21T13:39:38.396552+00:00",
+  "status": "TERMINAL_FIRST_MATERIAL_OBSTRUCTION",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V141-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-840-830-V1",
+  "task_fingerprint": "52383be9992ffb4fe19126c21a54f655580e278a98bce8b230a9e7a67c42759c",
+  "run_id": "LOCAL-Q048-V141-20261021T133707256381Z-PROOF-V1",
+  "parent_checkpoint_sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+  "result_class": "MATHEMATICAL_RESULT_FIRST_MATERIAL_OBSTRUCTION",
+  "execution_status": "COMPLETE_TERMINAL_OBSTRUCTION",
+  "technical_validity": "TECHNICALLY_VALIDATED_STOP_BEHAVIOR",
+  "scientific_effect": "NO_ACCEPTED_PROOF_DELTA",
+  "new_mathematical_proof_cells": 0,
+  "new_actual_cells": 0,
+  "current_actual": {
+    "count": 124,
+    "frontier": 840
+  },
+  "current_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 840
+  },
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "obstruction": {
+    "schema": "bubbleverse.q048.v141.obstruction_diagnostic.v1",
+    "created_at_utc": "2026-10-21T13:39:38.396552+00:00",
+    "q": "Q048",
+    "target_q": "Q048",
+    "run_id": "LOCAL-Q048-V141-20261021T133707256381Z-PROOF-V1",
+    "task_id": "LOCAL-Q048-V141-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-840-830-V1",
+    "task_fingerprint": "52383be9992ffb4fe19126c21a54f655580e278a98bce8b230a9e7a67c42759c",
+    "status": "FIRST_MATERIAL_OBSTRUCTION",
+    "classification": "MATHEMATICAL_INEQUALITY_OBSTRUCTION_NOT_PHYSICAL_FALSIFICATION",
+    "cell_z": [
+      840,
+      830
+    ],
+    "cell_a": [
+      "1/841",
+      "1/831"
+    ],
+    "gate": "BRANCH:L:upper_w_inward",
+    "gate_margin_exact": "-368753176594349215646513380252356167953484612076363678265349621642393686399610193423749679843903637317468922626983231757/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "gate_margin_decimal_approx": -0.007375063531886984,
+    "branch": "L",
+    "q_branch": "1/1000000",
+    "thermal_upper_face": "1/50",
+    "beta_lower_exact": "48631246823405650784353486619747643832046515387923636321734650378357606313600389806576250320156096362682531077373016768243/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "beta_lower_decimal_approx": 48.631246823405654,
+    "inward_condition_for_w_upper": "(1 + beta_lower) * (1/50) - 1 > 0, equivalently beta_lower > 49",
+    "beta_threshold": "49",
+    "beta_deficit_exact": "368753176594349215646513380252356167953484612076363678265349621642393686399610193423749679843903637317468922626983231757/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "beta_deficit_decimal_approx": 0.3687531765943492,
+    "producer_gates_reached": 24,
+    "producer_gates_passed": 23,
+    "failed_gate_is_first_obstruction": true,
+    "candidate_comparison_values_not_accepted_theorem": {
+      "K_upper": "4526301149059825126009/1000000000000000000",
+      "connected_lower": "72061959455351/200000000000000000"
+    },
+    "verifier_status": "NOT_RUN_BY_FROZEN_RUNNER_AFTER_SERIALIZED_OBSTRUCTION",
+    "acceptance_status": "NOT_CREATED",
+    "new_mathematical_proof_cells": 0,
+    "new_actual_cells": 0,
+    "current_actual_unchanged": {
+      "count": 124,
+      "frontier": 840
+    },
+    "current_frontiers_unchanged": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 840
+    },
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false,
+    "interpretation": [
+      "The frozen V141 outer thermal domain [-1/1000000,1/50] is not certified inward at its upper face by the whole-cell lower beta enclosure on branch L.",
+      "This does not establish that an admissible physical trajectory exits the domain; it establishes failure of this particular conditional enclosure/first-exit proof on 840→830 under the frozen criteria.",
+      "Prior accepted V140 actual124/frontier840 remains unchanged. No V141 proof was accepted and no theorem was consumed."
+    ],
+    "no_retry": true,
+    "postfreeze_edits": false,
+    "frozen_pins_unchanged": true,
+    "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+  },
+  "raw_sha256": "1faa36e2d27ee237508917bee0944388f9a34e2aad4e9cfa173a940d42993017",
+  "execution_sha256": "5cd79f263f4eb578ea3b983f2893b9faa526bdc31431896be1b53fe3b4fbb886",
+  "freeze_sha256": "f097647bc94ec58fe909fae23ed1b18cc2eb7906fcb15ef1f2fdb3be97e735bf",
+  "spec_sha256": "d59a68a71b9431ae49088c482680ddfd1cd699323af90b00af9ca02c3f335e76",
+  "journal_file": "Q047_SAMLET_JOURNAL_Q048_V141_MATHEMATICAL_OBSTRUCTION_APPENDED_V1.md",
+  "next_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "next_task": "Register V141 once; preserve current actual124/frontier840; decide one bounded material next task.",
+  "no_repeat": [
+    "Do not rerun frozen V141.",
+    "Do not accept candidate K/lower from obstructed raw output as theorem.",
+    "Do not create actual125 or below830 work from this handoff."
+  ],
+  "repository_sync_status": "USER_UPLOAD_PENDING"
+}
