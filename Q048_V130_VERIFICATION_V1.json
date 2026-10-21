@@ -1,0 +1,225 @@
+{
+  "schema": "bubbleverse.q048.v130.verification.v1",
+  "status": "PASS",
+  "checks": {
+    "schema": true,
+    "identity": true,
+    "authorization": true,
+    "remote_source_provenance": true,
+    "pins": true,
+    "cell": true,
+    "operators": true,
+    "guard": true,
+    "energy_cap": true,
+    "outer_domains": true,
+    "background": true,
+    "new_atomic": true,
+    "fit": true,
+    "source_gates": true,
+    "source_formulas": true,
+    "zero_injection": true,
+    "fresh_enclosure": true,
+    "C_HMLA": true,
+    "C_SWIFT": true,
+    "K_cross_product": true,
+    "log_width": true,
+    "comparison_values": true,
+    "rational_lower_cross_product": true,
+    "rounding": true,
+    "connected_domains": true,
+    "branch_L": true,
+    "branch_R": true,
+    "both_branches": true,
+    "continuation": true,
+    "frozen_gates": true,
+    "no_state_advance": true,
+    "scope_limits": true,
+    "candidate_status": true
+  },
+  "checks_passed": 33,
+  "checks_total": 33,
+  "semantic_mutations_rejected": 35,
+  "semantic_mutations_total": 35,
+  "mutation_failed_checks": {
+    "wrong_question": [
+      "identity"
+    ],
+    "wrong_parent": [
+      "pins"
+    ],
+    "source_drift": [
+      "pins"
+    ],
+    "capture_drift": [
+      "pins"
+    ],
+    "below870": [
+      "cell"
+    ],
+    "wrong_guard": [
+      "guard"
+    ],
+    "control_as_primary": [
+      "guard"
+    ],
+    "silent_cap_swap": [
+      "energy_cap"
+    ],
+    "drop_HMLA": [
+      "operators"
+    ],
+    "drop_SWIFT": [
+      "operators"
+    ],
+    "wrong_q": [
+      "operators"
+    ],
+    "h_not_g": [
+      "outer_domains"
+    ],
+    "wrong_Saha": [
+      "new_atomic"
+    ],
+    "drop_channel": [
+      "new_atomic"
+    ],
+    "wrong_atomic": [
+      "new_atomic"
+    ],
+    "unqualified_fit": [
+      "fit"
+    ],
+    "nonpositive_C": [
+      "C_HMLA",
+      "branch_L",
+      "branch_R"
+    ],
+    "wrong_escape": [
+      "C_SWIFT"
+    ],
+    "omit_injection": [
+      "zero_injection"
+    ],
+    "understate_K": [
+      "K_cross_product",
+      "comparison_values",
+      "rounding"
+    ],
+    "old_h0_wholecell": [
+      "rational_lower_cross_product",
+      "rounding",
+      "connected_domains",
+      "branch_L",
+      "branch_R"
+    ],
+    "nonpositive_lower": [
+      "rational_lower_cross_product",
+      "rounding",
+      "connected_domains",
+      "branch_L",
+      "branch_R"
+    ],
+    "wrong_log": [
+      "log_width"
+    ],
+    "wrong_rounding": [
+      "log_width"
+    ],
+    "reverse_upper_h": [
+      "branch_L"
+    ],
+    "old_thermal_face": [
+      "continuation"
+    ],
+    "reverse_thermal": [
+      "branch_R"
+    ],
+    "native_promotion": [
+      "scope_limits"
+    ],
+    "selector_existence": [
+      "scope_limits"
+    ],
+    "trajectory_identity": [
+      "scope_limits"
+    ],
+    "actual121": [
+      "no_state_advance"
+    ],
+    "proof_before_accept": [
+      "no_state_advance"
+    ],
+    "Q_closure": [
+      "scope_limits"
+    ],
+    "old_cache": [
+      "fresh_enclosure"
+    ],
+    "physical_reset": [
+      "scope_limits"
+    ]
+  },
+  "raw_sha256": "713dba1beb554493fbf42ab563ad6ad21b9795ae6aeb5260b66465208dbfade9",
+  "spec_sha256": "a227ea4fa31e78ec31fa56c2e978d12228d263d42eab3516053ec30b20b74640",
+  "independence": "Does not import producer. Independent binding, polynomial coefficient identities and cross-multiplied Riccati/K checks; reconstructs fresh source, atomic/C and thermal values. Shares pinned interval/interpolation helpers and exact frozen source authorities; not independent native or empirical replication.",
+  "source_provenance": {
+    "schema": "bubbleverse.q048.v130.source_provenance.v1",
+    "created_at_utc": "2026-10-21T06:12:39.276101+00:00",
+    "created_at_local": "2026-10-21T08:12:39.276101+02:00",
+    "repository": "mwt5345/class_ede",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "github_read_state": "VERIFIED",
+    "verification_method": "Connected GitHub fetch_file at exact commit; returned blob identities compared with frozen V128 source-blob manifest.",
+    "github_files": [
+      {
+        "path": "external/HyRec2020/fit_swift.dat",
+        "expected_blob_sha": "fd0cfa4f380d30640c4b2da47e4e35d6894b4dcb",
+        "returned_blob_sha": "fd0cfa4f380d30640c4b2da47e4e35d6894b4dcb",
+        "blob_match": true,
+        "local_file": "ref/prior_v126/inputs/source/fit_swift.dat",
+        "local_bytes": 17797,
+        "local_sha256": "46a644d7d2633b8f13080f9062df9b72a2e5adfa956d70d32ad1d7f4ec0a4641"
+      },
+      {
+        "path": "external/HyRec2020/hydrogen.c",
+        "expected_blob_sha": "233f174bfb1758fa910866310340ae1bfad703db",
+        "returned_blob_sha": "233f174bfb1758fa910866310340ae1bfad703db",
+        "blob_match": true,
+        "local_file": "ref/prior_v126/inputs/source/hydrogen.c",
+        "local_bytes": 46627,
+        "local_sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616"
+      },
+      {
+        "path": "external/HyRec2020/hydrogen.h",
+        "expected_blob_sha": "088b34a699efe5d6d3aefb158229e9fb83d9a586",
+        "returned_blob_sha": "088b34a699efe5d6d3aefb158229e9fb83d9a586",
+        "blob_match": true,
+        "local_file": "ref/prior_v126/inputs/source/hydrogen.h",
+        "local_bytes": 11868,
+        "local_sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+      },
+      {
+        "path": "external/HyRec2020/wrap_hyrec.c",
+        "expected_blob_sha": "fa44c774cf1fc7dbf6185e01980764f7eb260204",
+        "returned_blob_sha": "fa44c774cf1fc7dbf6185e01980764f7eb260204",
+        "blob_match": true,
+        "local_file": "ref/prior_v126/inputs/source/wrap_hyrec.c",
+        "local_bytes": 7489,
+        "local_sha256": "4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd"
+      }
+    ],
+    "frozen_archive": {
+      "file": "Q048_V128_COMPLETE_DELIVERY_V1.zip",
+      "sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "local_sha256": "06a70581fa2ff462a4c0b0830164972853f38af76d3c35f72f1d4e09dcab72b7",
+      "match": true
+    },
+    "source_blob_manifest": {
+      "file": "ref/v128/Q048_V128_SOURCE_BLOBS_V1.json",
+      "sha256": "2e5f95e2180d16040e5f5d541d34206cf1f42c6ceff0adbe23b15f46e42562a2"
+    },
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "scope_note": "Remote verification establishes exact source blob identity only; scientific proof remains conditional on the frozen mathematical/source-real contract."
+  }
+}
