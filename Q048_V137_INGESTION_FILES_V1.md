@@ -1,0 +1,22 @@
+# Q048 V137 ingestion — alle filer
+
+V137 actual123/frontier850 er registreret én gang. V138 proof850→840 er klargjort, ikke kørt.
+
+| Fil | Rolle | Repo-sti |
+|---|---|---|
+| `Q047_SAMLET_JOURNAL_Q048_V137_INGESTED_V1.md` | complete cumulative journal | `Q047_SAMLET_JOURNAL_Q048_V137_INGESTED_V1.md` |
+| `Q048_V137_INGESTION_EVIDENCE_AUDIT_V1.json` | evidence/provenance audit | `Q048_V137_INGESTION_EVIDENCE_AUDIT_V1.json` |
+| `Q048_V137_INGESTION_FILES_V1.md` | delivery index | `Q048_V137_INGESTION_FILES_V1.md` |
+| `Q048_V137_INGESTION_GITHUB_MEMORY_UPDATE_V1.json` | GitHub memory update | `Q048_V137_INGESTION_GITHUB_MEMORY_UPDATE_V1.json` |
+| `Q048_V137_INGESTION_HANDOFF_ENVELOPE_V1.json` | machine handoff | `Q048_V137_INGESTION_HANDOFF_ENVELOPE_V1.json` |
+| `Q048_V137_INGESTION_JOURNAL_APPEND_V1.md` | ingestion journal append | `Q048_V137_INGESTION_JOURNAL_APPEND_V1.md` |
+| `Q048_V137_INGESTION_RECOVERY_MAP_V1.json` | exact input/runtime recovery map | `Q048_V137_INGESTION_RECOVERY_MAP_V1.json` |
+| `Q048_V137_INGESTION_RESULT_AND_HANDOFF_V1.md` | primary ingestion result/handoff | `Q048_V137_INGESTION_RESULT_AND_HANDOFF_V1.md` |
+| `Q048_V137_INGESTION_STATE_V1.json` | machine current state | `Q048_V137_INGESTION_STATE_V1.json` |
+| `Q048_V137_UPLOAD_APPLY_INSTRUCTIONS_INGESTION_V1.md` | manual GitHub apply instructions | `Q048_V137_UPLOAD_APPLY_INSTRUCTIONS_INGESTION_V1.md` |
+| `Q048_V138_NEXT_MATHEMATICS_TASK_850_840_V1.json` | next mathematics task | `Q048_V138_NEXT_MATHEMATICS_TASK_850_840_V1.json` |
+| `Q048_V137_INGESTION_OUTPUT_MANIFEST_V1.json` | output manifest | `Q048_V137_INGESTION_OUTPUT_MANIFEST_V1.json` |
+| `Q048_V137_INGESTION_DELIVERY_VALIDATION_V1.json` | delivery validation | `Q048_V137_INGESTION_DELIVERY_VALIDATION_V1.json` |
+| `Q048_V137_INGESTION_SHA256SUMS.txt` | checksums | `Q048_V137_INGESTION_SHA256SUMS.txt` |
+
+GitHub-status: USER_UPLOAD_PENDING. Ingen commit/PR påstås.

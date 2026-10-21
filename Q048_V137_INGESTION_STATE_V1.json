@@ -1,0 +1,106 @@
+{
+  "schema": "bubbleverse.q048.v137.ingestion_state.v1",
+  "created_at_utc": "2026-10-21T12:03:06.201514+00:00",
+  "created_at_local": "2026-10-21T14:03:06.201514+02:00",
+  "event": "LOCAL-Q048-V137-ACCEPTED-CONSUMER-INGESTION-V1",
+  "idempotency_key": "7032d09ac092997859d7aff9ce0f8e38ad052c522d572e501a1fca41ace399b7",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "registered_result": {
+    "run_id": "LOCAL-Q048-V137-20261021T114331146973Z-CONSUMER-V1",
+    "task_id": "LOCAL-Q048-V137-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-860-850-V1",
+    "task_fingerprint": "f16fabcf483410554aca535430bde6ea24607fd93b2a1158a51d1b79d5583703",
+    "status": "ACCEPTED_CONDITIONAL_SOURCE_REAL_ACTUAL_ADMISSION",
+    "cell_z": [
+      860,
+      850
+    ],
+    "registered_delta": {
+      "actual_cells": 1,
+      "mathematical_proof_cells": 0,
+      "theorem_recomputations_in_ingestion": 0,
+      "theorem_consumptions": 1
+    },
+    "endpoint": {
+      "a": "1/851",
+      "E": "33048367909416991121/1000000000000000000",
+      "Y": "13111248214289354873/500000000000000000",
+      "Vbar": "6541460169136686317/1000000000000000000"
+    }
+  },
+  "current_actual": {
+    "count": 123,
+    "frontier": 850
+  },
+  "current_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 850
+  },
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "V137 advances one conditional source-real actual cell to frontier850, but the complete four-case x_e(z)/tau_T(z) histories required by Q048 are still not established; NativeP6 remains unresolved.",
+  "selected_next_engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "next_task_file": "Q048_V138_NEXT_MATHEMATICS_TASK_850_840_V1.json",
+  "next_task_fingerprint": "672ead7e2a912d8be3f428c8ce28230a6e847f579ad4f315f4bb82955f9d2bb2",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "mathematics_authorization": "PROSPECTIVE_ONE_NEW_CONDITIONAL_MATHEMATICAL_PROOF_CELL_850_TO_840_ZERO_ACTUAL",
+  "no_repeat": [
+    "Do not rerun V137 consumer without a material defect/new version.",
+    "Do not rerun V136 proof or earlier completed cells.",
+    "V138 is a fresh proof task for row60/cell850→840; guard metadata is not the theorem."
+  ],
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "base_commit": "93e49433ed05cf33dfca2899261dfc42a35a817d",
+    "source_freshness": "VERIFIED",
+    "sync_status": "PARTIAL",
+    "details": {
+      "repository": "Morfindien/Bubbleverse",
+      "branch": "main",
+      "observed_head": "93e49433ed05cf33dfca2899261dfc42a35a817d",
+      "parent_head": "bdc59e67fb54db29945a934fd60b766ecc6056bc",
+      "observed_head_time_utc": "2026-10-21T11:56:51Z",
+      "head_contains_v137_top_level": [
+        "Q047_SAMLET_JOURNAL_Q048_V137_CONDITIONAL_CONSUMER_APPENDED_V1.md",
+        "Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+        "Q048_V137_DELIVERY_VALIDATION_V1.json",
+        "Q048_V137_FILES_V1.md",
+        "Q048_V137_HANDOFF_TO_INGESTION_V1.json",
+        "Q048_V137_OUTPUT_MANIFEST_V1.json",
+        "Q048_V137_RESULT_AND_HANDOFF_V1.md",
+        "Q048_V137_RESULT_STATE_V1.json",
+        "Q048_V137_SHA256SUMS.txt",
+        "Q048_V137_UPLOAD_APPLY_INSTRUCTIONS_V1.md"
+      ],
+      "runtime_evidence_status": "USER_UPLOAD_PENDING",
+      "sync_assessment": "PARTIAL_SYNC_V137_TOP_LEVEL_PRESENT_RUNTIME_EVIDENCE_LOCAL_ONLY"
+    },
+    "write_status": "USER_UPLOAD_PENDING_FOR_INGESTION_AND_RUNTIME_EVIDENCE"
+  },
+  "prompt": {
+    "file": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.1.0-244.md",
+    "sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+    "version": "2.1.0"
+  },
+  "next_engine_prompt": {
+    "id": "BUBBLEVERSE.MATHEMATICS2.1.0",
+    "prompt_version": "2.1.0",
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "93e49433ed05cf33dfca2899261dfc42a35a817d",
+    "path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "git_blob": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "status": "VERIFIED_EXISTING_PROMPT_BY_EXACT_LOCAL_BYTES_AND_REPOSITORY_BLOB"
+  }
+}
