@@ -1,0 +1,107 @@
+{
+  "SCHEMA_VERSION": "UNVALIDATED_LOCAL_CONTRACT",
+  "PROMPT_ID": "BUBBLEVERSE.MATHEMATICS",
+  "PROMPT_VERSION": "2.1.0",
+  "TARGET_Q": "Q048",
+  "AUTHORIZED_Q_RANGE": "Q001-Q048",
+  "EVIDENCE_BOUNDARY": "Supplied V127 journal/task; pinned source/capture and admitted historical inputs throughQ048; no laterQ",
+  "MAIN_QUESTION": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "JOURNAL_REF": "Q047_SAMLET_JOURNAL_Q048_V128_CONNECTED_PROOF_APPENDED_V1.md",
+  "JOURNAL_VERSION": "V128 appended V1",
+  "JOURNAL_COMPLETENESS": "COMPLETE_SUPPLIED_JOURNAL_WITH_BYTE_IDENTICAL_PREFIX",
+  "WORKFLOW_STATE": "READY_FOR_HANDOFF",
+  "SCIENTIFIC_STATE": "INCONCLUSIVE",
+  "TECHNICAL_STATE": "PASS",
+  "COMPLETED_TESTS": {
+    "producer_gates": 30,
+    "verifier_checks": 31,
+    "semantic_mutations_rejected": 35,
+    "metadata_preflight": 7,
+    "frozen_input_code_pins": 53
+  },
+  "NEW_INFORMATION_THIS_ROUND": "One accepted conditional source-real two-operator connected proof890→880; no actual admission.",
+  "BLOCKER_ID": "LOCAL-Q048-V128-NO-AUTHORIZED-CONSUMER",
+  "BLOCKER_DESCRIPTION": "Proof alone does not authorize or perform actual120; complete four-case histories and NativeP6 remain unresolved.",
+  "NEXT_ENGINE": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "NEXT_TASK": "Register V128 proof once as1proof/0actual; validate exact acceptance/raw/verifier/freeze pins and conditional scope; assess a separately versioned consumer for890→880.",
+  "INPUT_REFS": [
+    "Q048_V128_ACCEPTANCE_V1.json",
+    "Q048_V128_RAW_V1.json",
+    "Q048_V128_VERIFICATION_V1.json",
+    "Q048_V128_FREEZE_V1.json",
+    "Q048_V128_SPEC_V1.json",
+    "Q048_V128_EXECUTION_V1.json",
+    "Q047_SAMLET_JOURNAL_Q048_V128_CONNECTED_PROOF_APPENDED_V1.md"
+  ],
+  "SOURCE_REFS": [
+    "Q048_V128_SOURCE_BLOBS_V1.json",
+    "q048_prefix_config_v1.json",
+    "q048_guard_local_v_result_v12.json"
+  ],
+  "CLAIM_REFS": [
+    "LOCAL-Q048-V128-CONDITIONAL-CONNECTED-PROOF-890-880-V1"
+  ],
+  "EQUATIONS": [
+    "h_u >= -K*h*(h+epsilon), u=ln(a), epsilon=1e-6",
+    "w_u=1-(1+beta)*w",
+    "h_lower <= h0*(1-K*epsilon*d)/(1+K*h0*d),d=10/881"
+  ],
+  "PARAMETERS": {
+    "K_upper": "4747242944344523507503/1000000000000000000",
+    "h_lower": "199585229567609/500000000000000000",
+    "h_upper": "99999/100000",
+    "w": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "a": [
+      "1/891",
+      "1/881"
+    ],
+    "q": {
+      "L": "1/1000000",
+      "R": "0"
+    }
+  },
+  "UNITS": "a,h,w,q,K dimensionless; TR eV; Tgamma K; nH cm^-3; H_s s^-1; Alpha cm^3/s",
+  "UNCERTAINTY": "Deterministic mathematical interval bounds under pinned source-real convention; no native floating-point or observational uncertainty certificate.",
+  "ACCEPTANCE_CRITERIA": "All exact files/pins and conditional scope valid; register exactly1proof/0actual; retain actual119/frontier890.",
+  "REJECTION_CRITERIA": "Any pin mismatch, missing conditional hypothesis, claimed actual120/native error/trajectory identity/Q closure.",
+  "INCONCLUSIVE_CRITERIA": "Full Q048 remains INCONCLUSIVE until complete controlled four-case x_e/tau_T bounds exist.",
+  "EXPECTED_OUTPUT_ARTIFACT": "A separately versioned V128 ingestion record with a material next task, if justified.",
+  "NO_REPEAT_CONSTRAINTS": [
+    "No unchanged V128,V127,V126,V125 suite or theorem rerun",
+    "No reset/refit/recapture/tuning",
+    "No native integration",
+    "No below880",
+    "No model/newQ/closure change",
+    "No actual120 without separate ingestion authorization"
+  ],
+  "RESUME_CONDITION": "Result Ingestion receives the exact accepted proof package; no mathematical recomputation is needed.",
+  "RUN_MANIFEST_REF": "Q048_V128_EXECUTION_V1.json",
+  "SETUP_ASSESSMENT": {
+    "current": "Codex Work Mode with local Python and GitHub connector",
+    "model_identifier": "UNKNOWN",
+    "reasoning_level": "NOT_VERIFIED",
+    "primary": "Current local exact-rational runtime",
+    "functional_class": "H+A+C",
+    "available": [
+      "files",
+      "Python",
+      "GitHub read",
+      "Library file saving",
+      "separate reviewer"
+    ],
+    "write": "GitHub write denied403",
+    "fallback": "Preserve exact obstruction and stop; no science retry",
+    "upgrade_trigger": "Material mathematics or runtime bottleneck; none encountered",
+    "downgrade_trigger": "After one science chain, mechanical delivery",
+    "paid_compute": false
+  },
+  "DELIVERY_FILES": "Q048_V128_OUTPUT_MANIFEST_V1.json",
+  "GITHUB_MEMORY_UPDATE": "Q048_V128_GITHUB_MEMORY_UPDATE_V1.json",
+  "GITHUB_READ_STATE": "VERIFIED",
+  "GITHUB_WRITE_STATE": "READY_FOR_MANUAL_UPLOAD",
+  "HANDOFF_STATUS": "PREPARED_NOT_SENT",
+  "formal_shared_schema_validation": false
+}
