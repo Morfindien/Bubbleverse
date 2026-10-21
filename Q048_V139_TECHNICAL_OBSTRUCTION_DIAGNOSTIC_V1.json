@@ -1,0 +1,63 @@
+{
+  "schema": "bubbleverse.q048.v139.technical_obstruction_diagnostic.v1",
+  "created_at_utc": "2026-10-21T12:36:37.028597+00:00",
+  "status": "DIAGNOSED_TECHNICAL_FAILURE_NO_RETRY",
+  "run_id": "LOCAL-Q048-V139-20261021T123336944359Z-CONSUMER-V1",
+  "task_id": "LOCAL-Q048-V139-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-850-840-V1",
+  "task_fingerprint": "c17c074bd92a20fd27bd75aa354b49c081a16f2b95d0bdd80ff9918897d6f289",
+  "current_preserved": {
+    "count": 123,
+    "frontier": 850
+  },
+  "candidate_not_accepted": {
+    "count": 124,
+    "frontier": 840
+  },
+  "validator_status": "FAIL",
+  "validator_checks_passed": 51,
+  "validator_checks_total": 53,
+  "failed_baseline_checks": [
+    "proof_validation_counts",
+    "energy_cap"
+  ],
+  "semantic_controls_executed": 0,
+  "obstructions": [
+    {
+      "check": "proof_validation_counts",
+      "classification": "SCHEMA_ADAPTER_BUG",
+      "detail": "V139 validator inherited the V137 delivery-field names consistency_checks_total/consistency_checks_passed. The authoritative V138 delivery object instead exposes checks_total/checks_passed and is itself PASS 12/12. The failed V139 predicate therefore does not establish a defect in V138 proof validation."
+    },
+    {
+      "check": "energy_cap",
+      "classification": "SCHEMA_ADAPTER_BUG",
+      "detail": "V139 validator required task.guard_authority.E_safe_left_distinct, but the V139 task does not define that key. The exact primary row60 does contain E_safe_left and independently shows E_input_left equals the authorized energy_cap_used and is distinct from E_safe_left. Missing task-field access was caught as validator False."
+    }
+  ],
+  "read_only_evidence": {
+    "v138_delivery_status": "PASS",
+    "v138_delivery_checks": [
+      12,
+      12
+    ],
+    "guard_primary_index": 60,
+    "row_E_input_left": "33048367909416991121/1000000000000000000",
+    "task_energy_cap_used": "33048367909416991121/1000000000000000000",
+    "row_E_safe_left": "6557796835668880653/200000000000000000",
+    "cap_distinct": true,
+    "candidate_endpoint_from_row": {
+      "a": "1/841",
+      "E": "15881004977532652117/500000000000000000",
+      "Y": "5039104441059922143/200000000000000000",
+      "Vbar": "6292884093525456289/1000000000000000000"
+    },
+    "candidate_endpoint_matches_raw": true,
+    "freeze_pins_unchanged": [
+      38,
+      38
+    ]
+  },
+  "scientific_interpretation": "NO_NEW_SCIENTIFIC_RESULT. The candidate metadata is not current because the mandatory independent validator failed. The two observed failures are technical schema-adapter defects; this diagnosis does not retroactively pass V139 and does not authorize a retry under the frozen V139 identity.",
+  "retry_performed": false,
+  "postfreeze_edits_to_frozen_files": false,
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+}

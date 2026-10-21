@@ -1,0 +1,35 @@
+{
+  "schema": "bubbleverse.q048.v139.execution.v1",
+  "created_at_utc": "2026-10-21T12:34:39.822749+00:00",
+  "status": "FAIL",
+  "run_id": "LOCAL-Q048-V139-20261021T123336944359Z-CONSUMER-V1",
+  "events": [
+    {
+      "script": "q048_v139_consumer.py",
+      "returncode": 0,
+      "seconds": 0.8826176619995749,
+      "stdout": "",
+      "stderr": "",
+      "output": "Q048_V139_RAW_V1.json",
+      "serialized_status": "CANDIDATE_NOT_CURRENT",
+      "output_sha256": "7076e35b29b27f95cd569cb792da051c99089cb8e62ae9309edf194085170aed"
+    }
+  ],
+  "first_obstruction": "RuntimeError: process obstruction: {'script': 'q048_v139_validate.py', 'returncode': 1, 'seconds': 0.7721230949991877, 'stdout': '', 'stderr': 'Traceback (most recent call last):\\n  File \"/mnt/data/Q048_V139_work/q048_v139_validate.py\", line 99, in <module>\\n    if __name__==\\'__main__\\': validate(Path(__file__).resolve().parent)\\n                             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/mnt/data/Q048_V139_work/q048_v139_validate.py\", line 98, in validate\\n    if not ok: raise ValueError(\\'validator baseline or semantic-control obstruction\\')\\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: validator baseline or semantic-control obstruction\\n', 'output': 'Q048_V139_VALIDATION_V1.json'}",
+  "seconds": 1.7067820060001395,
+  "budget_seconds": 300,
+  "chains": 1,
+  "retry_count": 0,
+  "postfreeze_edits": 0,
+  "new_actual_cells": 0,
+  "new_mathematical_proof_cells": 0,
+  "new_theorem_recomputations": 0,
+  "theorem_consumptions": 0,
+  "historical_mains_executed": false,
+  "v138_proof_mains_executed": false,
+  "current": {
+    "count": 123,
+    "frontier": 850
+  },
+  "publication_readback_sha256": null
+}

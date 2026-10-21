@@ -1,0 +1,42 @@
+{
+  "schema": "bubbleverse.q048.v139.handoff_to_ingestion.v1",
+  "created_at_utc": "2026-10-21T12:36:37.028971+00:00",
+  "status": "TERMINAL_TECHNICAL_FAILURE",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V139-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-850-840-V1",
+  "task_fingerprint": "c17c074bd92a20fd27bd75aa354b49c081a16f2b95d0bdd80ff9918897d6f289",
+  "run_id": "LOCAL-Q048-V139-20261021T123336944359Z-CONSUMER-V1",
+  "program_id": "Q048-CONDITIONAL-CONSUMER-V139",
+  "execution_status": "FAILED",
+  "validation_status": "FAIL",
+  "first_obstruction": "RuntimeError: process obstruction: {'script': 'q048_v139_validate.py', 'returncode': 1, 'seconds': 0.7721230949991877, 'stdout': '', 'stderr': 'Traceback (most recent call last):\\n  File \"/mnt/data/Q048_V139_work/q048_v139_validate.py\", line 99, in <module>\\n    if __name__==\\'__main__\\': validate(Path(__file__).resolve().parent)\\n                             ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\n  File \"/mnt/data/Q048_V139_work/q048_v139_validate.py\", line 98, in validate\\n    if not ok: raise ValueError(\\'validator baseline or semantic-control obstruction\\')\\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\\nValueError: validator baseline or semantic-control obstruction\\n', 'output': 'Q048_V139_VALIDATION_V1.json'}",
+  "failed_validator_checks": [
+    "proof_validation_counts",
+    "energy_cap"
+  ],
+  "diagnostic_file": "Q048_V139_TECHNICAL_OBSTRUCTION_DIAGNOSTIC_V1.json",
+  "registered_delta_requested": {
+    "actual_cells": 0,
+    "proof_cells": 0,
+    "theorem_recomputations": 0,
+    "theorem_consumptions": 0
+  },
+  "current_preserved": {
+    "count": 123,
+    "frontier": 850
+  },
+  "candidate_must_not_be_current": {
+    "count": 124,
+    "frontier": 840
+  },
+  "V138_proof_remains_accepted": true,
+  "V138_proof_consumed": false,
+  "no_retry_under_v139": true,
+  "freeze_pins_postrun": {
+    "verified": 38,
+    "total": 38
+  },
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "ingestion_instruction": "Register the V139 technical failure exactly once with +0 actual/+0 proof/+0 theorem recomputation/+0 theorem consumption; preserve actual123/frontier850 and V138 proof as unconsumed. Decide the cheapest next task, likely a separately versioned technical repair/consumer, without replaying V138 proof."
+}
