@@ -1,0 +1,78 @@
+{
+  "schema": "bubbleverse.q048.v139.ingestion_recovery_map.v1",
+  "created_at_utc": "2026-10-21T12:54:02.184303+00:00",
+  "current_q": "Q048",
+  "next_task": "Q048_V140_NEXT_BUILDER_TASK_REPAIRED_CONDITIONAL_CONSUMER_850_840_V1.json",
+  "required_inputs": [
+    {
+      "role": "canonical_input_journal",
+      "filename": "Q047_SAMLET_JOURNAL_Q048_V139_INGESTED_V1.md",
+      "sha256": "7062834019dd66982664b94fe2c2f713cc3bb6e4bcf37b30de8c11137b5fe1d9"
+    },
+    {
+      "role": "v140_task",
+      "filename": "Q048_V140_NEXT_BUILDER_TASK_REPAIRED_CONDITIONAL_CONSUMER_850_840_V1.json",
+      "sha256": "326b05b6dffa905d3789160f3e7e04f88dea3f1365dbb5e726592f99d0871d05"
+    },
+    {
+      "role": "v139_failure_result_state",
+      "source_path": "/mnt/data/Q048_V139_delivery/Q048_V139_RESULT_STATE_V1.json",
+      "sha256": "65702fc3ba5703ee1c9392644af92f58cf518febbbf09e3df2653ec3c6a13d80"
+    },
+    {
+      "role": "v139_failure_validation",
+      "source_path": "/mnt/data/Q048_V139_delivery/Q048_V139_VALIDATION_V1.json",
+      "sha256": "618c208ee99577798136e667700da890835698f2d87ee903246241933493a032"
+    },
+    {
+      "role": "v139_failure_diagnostic",
+      "source_path": "/mnt/data/Q048_V139_delivery/Q048_V139_TECHNICAL_OBSTRUCTION_DIAGNOSTIC_V1.json",
+      "sha256": "b8fa38f629f28b292cf28a25dac85fd7d5d2ba3c73fc415c9578cab50367dfbf"
+    },
+    {
+      "role": "v138_proof_runtime_root",
+      "source_path": "/mnt/data/Q048_V139_work/proof_runtime",
+      "status": "EXACT_FROZEN_INPUT_BYTES_AVAILABLE"
+    },
+    {
+      "role": "v137_parent_checkpoint",
+      "source_path": "/mnt/data/Q048_V139_work/inputs/Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "1fc45bb7fdd885cd61fa91d7518d43c3424b4f3dfc4d0df9308460c5beba1309"
+    },
+    {
+      "role": "row60_guard",
+      "source_path": "/mnt/data/Q048_V139_work/proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    {
+      "role": "capture",
+      "source_path": "/mnt/data/Q048_V139_work/proof_runtime/ref/prior_v126/inputs/q048_prefix_config_v1.json",
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    {
+      "role": "v139_code_reference",
+      "source_path": "/mnt/data/Q048_V139_delivery",
+      "status": "REFERENCE_ONLY_IMMUTABLE_FAIL"
+    },
+    {
+      "role": "builder_prompt",
+      "repository": "Morfindien/Bubbleverse",
+      "ref": "fc704a128f1a5cd88245f3db92094f4cd219aa73",
+      "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38.md",
+      "git_blob": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+      "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1"
+    }
+  ],
+  "repair_requirements": [
+    "Use V138 delivery status/checks_passed/checks_total = PASS/12/12.",
+    "Use row60 E_input_left == energy_cap_used, row60 E_safe_left exact, and distinctness; never require absent V139 E_safe_left_distinct key."
+  ],
+  "forbidden": [
+    "Edit or relabel V139",
+    "Accept V139 raw candidate",
+    "Rerun V138 proof",
+    "Recompute theorem",
+    "Work below z=840",
+    "Create actual125"
+  ]
+}

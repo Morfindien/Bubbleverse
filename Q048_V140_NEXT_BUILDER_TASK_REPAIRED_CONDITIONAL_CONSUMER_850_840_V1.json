@@ -1,0 +1,345 @@
+{
+  "schema": "bubbleverse.q048.v140.repaired_conditional_actual_consumer.task.v1",
+  "task_id": "LOCAL-Q048-V140-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-850-840-REPAIR-V1",
+  "task_fingerprint": "00dfe61bd2b878d02a236a18b16fa86e02b977a8c2db89b27a746029b9043d1b",
+  "task_definition_for_fingerprint": {
+    "task_id": "LOCAL-Q048-V140-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-850-840-REPAIR-V1",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "objective": "Execute one separately versioned repaired consumer of the accepted V138 conditional proof 850→840 after immutable V139 technical schema-adapter failure; admit actual124/frontier840 only after the full independent serialized acceptance/readback chain passes, with no theorem recomputation.",
+    "repair_of_task_id": "LOCAL-Q048-V139-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-850-840-V1",
+    "repair_of_run_id": "LOCAL-Q048-V139-20261021T123336944359Z-CONSUMER-V1",
+    "v139_failure_diagnostic_sha256": "b8fa38f629f28b292cf28a25dac85fd7d5d2ba3c73fc415c9578cab50367dfbf",
+    "v139_validation_sha256": "618c208ee99577798136e667700da890835698f2d87ee903246241933493a032",
+    "parent_checkpoint_sha256": "1fc45bb7fdd885cd61fa91d7518d43c3424b4f3dfc4d0df9308460c5beba1309",
+    "v138_acceptance_sha256": "a248276219dc77058a01d4522b6938cba04fb1932c2d3626e2c417a34fc42081",
+    "v138_raw_sha256": "8851268f297534401e21f9dd43ec1eb98f7b4179ec4020a8d66159d57791d41d",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "cell_z": [
+      850,
+      840
+    ],
+    "guard_primary_sha256": "94328dafa80582dcd852aa46ae0d8ad87b47435b2970c2546cd9f1ac78c0f6fc",
+    "guard_control_sha256": "e4896b69f9e9b7d02469cd99898ae174ebccda70ed19e996d7dfe0d075e316a4",
+    "K_upper": "2300488155568955225509/500000000000000000",
+    "connected_lower": "918857486347/2500000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "repair_contract": {
+      "proof_validation_counts": "Use authoritative V138 Q048_V138_DELIVERY_VALIDATION_V1.json fields status, checks_passed, checks_total; require PASS and 12/12. Do not require V137-only consistency_checks_total/consistency_checks_passed.",
+      "energy_cap": "Bind exact primary row60 E_input_left to energy_cap_used; bind exact row60 E_safe_left separately; require E_input_left != E_safe_left. Do not require absent V139 task key guard_authority.E_safe_left_distinct.",
+      "v139_historical_status": "IMMUTABLE_FAIL_NO_RETROACTIVE_PASS"
+    },
+    "limits": {
+      "max_new_actual_cells": 1,
+      "max_new_mathematical_proof_cells": 0,
+      "max_new_theorem_recomputations": 0,
+      "theorem_consumptions_max": 1,
+      "no_actual125": true,
+      "no_below_z": 840,
+      "no_native_integration": true,
+      "no_reset_refit_recapture_tuning": true,
+      "no_historical_main_or_suite": true,
+      "no_new_q_model_or_closure": true,
+      "retry_count": 0,
+      "postfreeze_edits_allowed": false
+    },
+    "authorization": "ONE_REPAIRED_CONDITIONAL_SOURCE_REAL_ACTUAL_CONSUMER_850_TO_840_AFTER_V139_TECHNICAL_FAILURE"
+  },
+  "fingerprint_convention": "SHA256 of UTF-8 sorted compact JSON task_definition_for_fingerprint, ensure_ascii=False, no final newline",
+  "created_at_utc": "2026-10-21T12:54:02.184303+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "engine_prompt": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+    "version": "2.2.0",
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "fc704a128f1a5cd88245f3db92094f4cd219aa73",
+    "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38.md",
+    "git_blob": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "status": "VERIFIED_EXISTING_PROMPT_AT_CURRENT_REPO_HEAD"
+  },
+  "objective": "Execute one separately versioned repaired consumer of the accepted V138 conditional proof 850→840 after immutable V139 technical schema-adapter failure; admit actual124/frontier840 only after the full independent serialized acceptance/readback chain passes, with no theorem recomputation.",
+  "consumer_authorization": "GRANTED_BY_INGESTION_FOR_EXACTLY_ONE_REPAIRED_CONDITIONAL_SOURCE_REAL_CELL_850_TO_840_AFTER_V139_TECHNICAL_FAILURE",
+  "authorization_record": "Q048_V139_INGESTION_STATE_V1.json",
+  "authorization_event": "LOCAL-Q048-V139-TECHNICAL-FAILURE-INGESTION-V1",
+  "why_this_is_not_repeat_or_ping_pong": "V139 exposed two concrete pre-existing schema-adapter defects and terminated without consumption. V140 has a new task identity and a bounded repair contract; V138 proof and all science inputs stay unchanged. A demonstrated defect plus a new validator version is a valid no-repeat exception.",
+  "immutable_failure_authority": {
+    "result_state": {
+      "file": "Q048_V139_RESULT_STATE_V1.json",
+      "sha256": "65702fc3ba5703ee1c9392644af92f58cf518febbbf09e3df2653ec3c6a13d80"
+    },
+    "validation": {
+      "file": "Q048_V139_VALIDATION_V1.json",
+      "sha256": "618c208ee99577798136e667700da890835698f2d87ee903246241933493a032",
+      "status": "FAIL",
+      "checks_passed": 51,
+      "checks_total": 53,
+      "failed_checks": [
+        "proof_validation_counts",
+        "energy_cap"
+      ]
+    },
+    "diagnostic": {
+      "file": "Q048_V139_TECHNICAL_OBSTRUCTION_DIAGNOSTIC_V1.json",
+      "sha256": "b8fa38f629f28b292cf28a25dac85fd7d5d2ba3c73fc415c9578cab50367dfbf"
+    },
+    "rule": "Do not edit, rerun, relabel, or retroactively accept V139. Its raw candidate is evidence of execution behavior only and MUST NOT be published/current."
+  },
+  "parent_authority": {
+    "file": "Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+    "workspace_path_required": "inputs/Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "1fc45bb7fdd885cd61fa91d7518d43c3424b4f3dfc4d0df9308460c5beba1309",
+    "accepted_actual": {
+      "count": 123,
+      "frontier": 850
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 850
+    },
+    "endpoint": {
+      "a": "1/851",
+      "E": "33048367909416991121/1000000000000000000",
+      "Y": "13111248214289354873/500000000000000000",
+      "Vbar": "6541460169136686317/1000000000000000000"
+    },
+    "initial_h_only": "375106031257251/1000000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ]
+  },
+  "theorem_authority": {
+    "artifacts": {
+      "Q048_V138_ACCEPTANCE_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V138_ACCEPTANCE_V1.json",
+        "sha256": "a248276219dc77058a01d4522b6938cba04fb1932c2d3626e2c417a34fc42081",
+        "size_bytes": 6135
+      },
+      "Q048_V138_RAW_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V138_RAW_V1.json",
+        "sha256": "8851268f297534401e21f9dd43ec1eb98f7b4179ec4020a8d66159d57791d41d",
+        "size_bytes": 41070
+      },
+      "Q048_V138_VERIFICATION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V138_VERIFICATION_V1.json",
+        "sha256": "644b0f773e89ee10ed82cbb3b7ff64b53995e65352cdfd35751fe529f2160d66",
+        "size_bytes": 5824
+      },
+      "Q048_V138_SPEC_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V138_SPEC_V1.json",
+        "sha256": "0ef44f38f16a5c3a379581b32dfe9b456832a4391d0741b38469c6a8ff8b84aa",
+        "size_bytes": 11504
+      },
+      "Q048_V138_FREEZE_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V138_FREEZE_V1.json",
+        "sha256": "6b63de89ddd0c0c8802cf3f656bf99a0b82e6dafc9e39863158d238abcd1da23",
+        "size_bytes": 10426
+      },
+      "Q048_V138_EXECUTION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V138_EXECUTION_V1.json",
+        "sha256": "e79bd2bc796ea2bbaf9a2f7ea1acfc7280792cedb1861283b2ff4a0bf18f1cf6",
+        "size_bytes": 3180
+      },
+      "Q048_V138_ACCEPTANCE_READBACK_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V138_ACCEPTANCE_READBACK_V1.json",
+        "sha256": "3f0717938479a41955393d950099695f6acbd449dfd585bd1dcd57fca4037543",
+        "size_bytes": 3542
+      },
+      "Q048_V138_OUTPUT_MANIFEST_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V138_OUTPUT_MANIFEST_V1.json",
+        "sha256": "83da4a145e3323d4b86b0ab68bd3e719107a0f25c3f501e41a42694b42340e7f",
+        "size_bytes": 7411
+      },
+      "Q048_V138_DELIVERY_VALIDATION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V138_DELIVERY_VALIDATION_V1.json",
+        "sha256": "1eb68c21feb97e606885a63b3244d7f3f6b7b6d1485e6ac9f08db86a28a750a5",
+        "size_bytes": 709
+      }
+    },
+    "expected_validation": {
+      "producer_gates": 30,
+      "verifier_checks": 41,
+      "semantic_controls_rejected": 35,
+      "frozen_files": 48,
+      "delivery_checks": 12
+    },
+    "task_id": "LOCAL-Q048-V138-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-850-840-V1",
+    "task_fingerprint": "672ead7e2a912d8be3f428c8ce28230a6e847f579ad4f315f4bb82955f9d2bb2",
+    "run_id": "LOCAL-Q048-V138-20261021T121344901613Z-PROOF-V1",
+    "original_consumer_authorization_must_remain": "NOT_GRANTED_BY_MATHEMATICS"
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "cell_z": [
+    850,
+    840
+  ],
+  "cell_a": [
+    "1/851",
+    "1/841"
+  ],
+  "guard_authority": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "workspace_path_required": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "index_reference_only": 60,
+    "selection": "Select unique exact a/z cell, bind control=False as primary and control=True as secondary before any index use.",
+    "primary_row_sha256": "94328dafa80582dcd852aa46ae0d8ad87b47435b2970c2546cd9f1ac78c0f6fc",
+    "control_row_sha256": "e4896b69f9e9b7d02469cd99898ae174ebccda70ed19e996d7dfe0d075e316a4",
+    "left_glue": {
+      "a0": "1/851",
+      "E_input_left": "33048367909416991121/1000000000000000000",
+      "Y_left": "13111248214289354873/500000000000000000",
+      "V_previous": "6541460169136686317/1000000000000000000"
+    },
+    "energy_cap_used": "33048367909416991121/1000000000000000000",
+    "source_state_reset": false,
+    "E_safe_left": "6557796835668880653/200000000000000000",
+    "E_input_left_must_equal_energy_cap_used": true,
+    "E_input_left_must_differ_from_E_safe_left": true
+  },
+  "retained_theorem_values": {
+    "K_upper": "2300488155568955225509/500000000000000000",
+    "connected_lower": "918857486347/2500000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "source_saha_constant": "3.016103031869581e21"
+  },
+  "source_cover_contract": {
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions under conv(HMLA,SWIFT) for each fixed q branch; endpoint only if an admissible continuation reaches it.",
+    "exact_selector_existence_uniqueness": false,
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false,
+    "no_assumed_future_domain_membership": true
+  },
+  "expected_endpoint_crosscheck_only": {
+    "a1": "1/841",
+    "E_right": "15881004977532652117/500000000000000000",
+    "Y_right": "5039104441059922143/200000000000000000",
+    "V_admitted": "6292884093525456289/1000000000000000000"
+  },
+  "candidate_after_all_gates_not_current": {
+    "count": 124,
+    "frontier": 840
+  },
+  "frontiers_after_all_gates_not_current": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 840
+  },
+  "repair_contract": {
+    "proof_validation_counts": "Use authoritative V138 Q048_V138_DELIVERY_VALIDATION_V1.json fields status, checks_passed, checks_total; require PASS and 12/12. Do not require V137-only consistency_checks_total/consistency_checks_passed.",
+    "energy_cap": "Bind exact primary row60 E_input_left to energy_cap_used; bind exact row60 E_safe_left separately; require E_input_left != E_safe_left. Do not require absent V139 task key guard_authority.E_safe_left_distinct.",
+    "v139_historical_status": "IMMUTABLE_FAIL_NO_RETROACTIVE_PASS"
+  },
+  "schema_adapter_gate": {
+    "required": true,
+    "pre_freeze_only": true,
+    "rule": "Before freeze, prove the repaired validator binds V138 delivery status/checks_passed/checks_total and row60 E_input_left/E_safe_left using actual V138/V139 bytes. Explicitly reject use of V137-only delivery count field names and absent V139 E_safe_left_distinct key."
+  },
+  "required_work": [
+    "Recover exact V139 terminal failure artifacts and confirm +0 actual/+0 proof/+0 theorem recomputation/+0 theorem consumption; actual123/frontier850 remains current and V138 proof remains accepted/unconsumed.",
+    "Recover V137 parent checkpoint, full V138 proof authority and row60 guard bytes exactly; do not execute V138 proof mains or recompute theorem arithmetic.",
+    "Create a separately versioned V140 consumer/validator chain. V139 code may be REFERENCE_ONLY; do not patch V139 frozen files in place.",
+    "Repair proof_validation_counts by reading V138 delivery fields status/checks_passed/checks_total and requiring PASS 12/12.",
+    "Repair energy_cap by deriving from exact primary row60: E_input_left equals frozen energy_cap_used; E_safe_left equals the frozen exact row value and is distinct. Do not access absent guard_authority.E_safe_left_distinct.",
+    "Independently derive candidate endpoint from exact primary row60; V139 raw candidate and expected endpoint are crosschecks only, never acceptance authority.",
+    "Freeze V140 task/spec/code/input pins after repair preflight, then execute one consumer→independent validator→provisional accept→separate postaccept→serialized no-overwrite publication/readback chain.",
+    "Only after every final/readback gate passes may actual124/frontier840 become current and V138 theorem_consumptions increment exactly once. Otherwise preserve actual123/frontier850 and stop at first obstruction.",
+    "Return exactly once to Result Ingestion after one terminal V140 result; no work below z=840."
+  ],
+  "negative_controls_required": [
+    "wrong question/task/fingerprint",
+    "parent/source/capture/proof-byte drift",
+    "wrong guard row or primary/control role",
+    "copied expected endpoint instead of guard derivation",
+    "wrong K/lower/h-upper/thermal/Saha",
+    "lost existing-solution conditional scope",
+    "native/selector/trajectory/Q-closure promotion",
+    "actual124 made current before separate postaccept",
+    "double proof consumption or theorem/proof recomputation",
+    "noop mutation counted as rejection",
+    "freeze drift or process failure followed by dependent execution",
+    "serialized/provisional/published checkpoint tampering",
+    "actual125 or below840 work",
+    "V137-only consistency_checks_total/consistency_checks_passed field names must be rejected as authoritative V138 delivery schema",
+    "missing/fictional task.guard_authority.E_safe_left_distinct must not be accepted as energy-cap evidence",
+    "V139 raw candidate treated as accepted/current must be rejected",
+    "V139 status relabelled PASS must be rejected"
+  ],
+  "activation_policy": {
+    "current_until_final_acceptance": {
+      "count": 123,
+      "frontier": 850
+    },
+    "candidate_only_until_all_gates": {
+      "count": 124,
+      "frontier": 840
+    },
+    "publication": "NO_OVERWRITE; serialize provisional/final separately; disk/readback validation required before current-state advance"
+  },
+  "success": "Exactly one repaired conditional source-real cell admission 850→840: +1 actual/+0 proof/+0 theorem recomputations and exactly one V138 theorem consumption, only after independent validation, postaccept, serialized final no-overwrite publication and readback all pass. Then actual124/frontier840 becomes current; NativeP6 stays UNRESOLVED and Q048 ACTIVE/INCONCLUSIVE.",
+  "failure": "First missing pin, repair-contract violation, invariant/control/serialization/postaccept/process/budget failure is terminal under V140. Preserve V139 FAIL, V138 proof unconsumed if V140 fails before final acceptance, and current actual123/frontier850. No retry or postfreeze patch under V140.",
+  "frozen_constraints": {
+    "max_new_actual_cells": 1,
+    "max_new_mathematical_proof_cells": 0,
+    "max_new_theorem_recomputations": 0,
+    "theorem_consumptions_max": 1,
+    "no_actual125": true,
+    "no_below_z": 840,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_new_q_model_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "budget": {
+    "preferred_backend": "LOCAL_RUNTIME",
+    "science_seconds_max": 300,
+    "chains_max": 1,
+    "retries": 0,
+    "postfreeze_edits_allowed": false,
+    "estimate_basis": "Closest successful consumer V137 measured 11.782773796 s. V139 reached validator in a short local chain and failed technically. V140 is the same bounded metadata-consumer class with two schema repairs; GitHub Actions overhead provides no compute benefit. Re-estimate before freeze if environment materially changes.",
+    "github_actions_justified": false,
+    "paid_compute_authorized": false
+  },
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V139_INGESTED_V1.md",
+  "parent_journal": "Q047_SAMLET_JOURNAL_Q048_V139_TECHNICAL_FAILURE_APPENDED_V1.md",
+  "method_references": [
+    "V139 code and diagnostic are REFERENCE_ONLY for the demonstrated defects; immutable V139 status remains FAIL.",
+    "V137 consumer/validator chain may be used as read-only method reference.",
+    "V138 proof artifacts are theorem authority, not executable consumer code."
+  ],
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "stop": "One terminal V140 result, then Result Ingestion. No below840, actual125, theorem recomputation, native integration, new Q/model promotion or closure.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+}

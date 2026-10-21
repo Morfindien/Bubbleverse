@@ -1,0 +1,115 @@
+{
+  "schema": "bubbleverse.q048.v139.ingestion_state.v1",
+  "created_at_utc": "2026-10-21T12:54:02.184303+00:00",
+  "created_at_local": "2026-10-21T14:54:02.184303+02:00",
+  "event": "LOCAL-Q048-V139-TECHNICAL-FAILURE-INGESTION-V1",
+  "idempotency_key": "6999656221c73b894ed8bf278dbf54ed6b5efc244109bf9e29fd2631113ec43e",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "registered_result": {
+    "run_id": "LOCAL-Q048-V139-20261021T123336944359Z-CONSUMER-V1",
+    "task_id": "LOCAL-Q048-V139-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-850-840-V1",
+    "task_fingerprint": "c17c074bd92a20fd27bd75aa354b49c081a16f2b95d0bdd80ff9918897d6f289",
+    "status": "TERMINAL_TECHNICAL_SCHEMA_ADAPTER_FAILURE",
+    "registered_delta": {
+      "actual_cells": 0,
+      "mathematical_proof_cells": 0,
+      "theorem_recomputations_in_ingestion": 0,
+      "theorem_consumptions_in_ingestion": 0
+    },
+    "validator": {
+      "status": "FAIL",
+      "checks_passed": 51,
+      "checks_total": 53,
+      "failed_checks": [
+        "proof_validation_counts",
+        "energy_cap"
+      ]
+    },
+    "historical_candidate": {
+      "count": 124,
+      "frontier": 840,
+      "status": "NONCURRENT_INVALIDATED_BY_MANDATORY_VALIDATOR_FAILURE"
+    }
+  },
+  "current_actual": {
+    "count": 123,
+    "frontier": 850
+  },
+  "current_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 850
+  },
+  "v138_proof_state": {
+    "status": "ACCEPTED",
+    "cell_z": [
+      850,
+      840
+    ],
+    "consumed": false,
+    "K_upper": "2300488155568955225509/500000000000000000",
+    "connected_lower": "918857486347/2500000000000000"
+  },
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "V139 is a technical validator failure and adds no accepted history cell. V138 proof 850→840 remains accepted but unconsumed; the complete four-case x_e(z)/tau_T(z) histories required by Q048 are still not established and NativeP6 remains unresolved.",
+  "technical_failure_interpretation": {
+    "scientific_effect": "NO_MATERIAL_CHANGE",
+    "failure_classification": "TECHNICAL_SCHEMA_ADAPTER_FAILURE",
+    "repairable": true,
+    "repairs": [
+      "Normalize authoritative V138 delivery validation to status/checks_passed/checks_total=PASS/12/12.",
+      "Bind energy cap from exact row60 E_input_left and E_safe_left; do not require absent V139 task field E_safe_left_distinct."
+    ],
+    "v139_retroactive_pass_forbidden": true
+  },
+  "selected_next_engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "next_task_file": "Q048_V140_NEXT_BUILDER_TASK_REPAIRED_CONDITIONAL_CONSUMER_850_840_V1.json",
+  "next_task_fingerprint": "00dfe61bd2b878d02a236a18b16fa86e02b977a8c2db89b27a746029b9043d1b",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "consumer_authorization": "GRANTED_FOR_EXACTLY_ONE_SEPARATELY_VERSIONED_REPAIRED_CONSUMER_OF_V138_PROOF_850_TO_840",
+  "no_repeat": [
+    "Do not rerun or patch V139 under its frozen identity; V139 remains terminal FAIL.",
+    "Do not rerun V138 proof; it remains accepted and unconsumed.",
+    "V140 may repeat only the consumer role because V139 exposed two concrete schema-adapter defects and V140 has a new frozen repair contract.",
+    "Do not use the V139 raw candidate as accepted/current evidence."
+  ],
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit": "fc704a128f1a5cd88245f3db92094f4cd219aa73",
+    "parent_commit": "eafa8bbb6e51ead016e7a6962616ae0947663f86",
+    "observed_head_time_utc": "2026-10-21T12:47:15Z",
+    "source_freshness": "VERIFIED",
+    "head_contains_v139_top_level": true,
+    "runtime_evidence_status": "PARTIAL_TOP_LEVEL_COMMITTED_FULL_RUNTIME_LOCAL_OR_PENDING",
+    "sync_status": "PARTIAL",
+    "write_status": "USER_UPLOAD_PENDING_FOR_V139_INGESTION_AND_V140_TASK"
+  },
+  "prompt": {
+    "file": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.1.0-122.md",
+    "sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+    "version": "2.1.0"
+  },
+  "next_engine_prompt": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+    "version": "2.2.0",
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "fc704a128f1a5cd88245f3db92094f4cd219aa73",
+    "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38.md",
+    "git_blob": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "status": "VERIFIED_EXISTING_PROMPT_AT_CURRENT_REPO_HEAD"
+  }
+}

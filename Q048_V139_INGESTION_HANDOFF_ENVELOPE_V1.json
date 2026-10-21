@@ -1,0 +1,89 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-V139-INGESTION-TO-V140-REPAIRED-CONSUMER-V1",
+  "created_at_utc": "2026-10-21T12:54:02.184303+00:00",
+  "case_id": "NOT_DOCUMENTED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": "Q001-Q048",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-V139-20261021T123336944359Z-CONSUMER-V1",
+    "LOCAL-Q048-V139-TECHNICAL-FAILURE-INGESTION-V1"
+  ],
+  "source_state_version": "V139_TECHNICAL_FAILURE",
+  "target_state_version": "V139_INGESTED_V1",
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "engine_registry_ref": {
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "fc704a128f1a5cd88245f3db92094f4cd219aa73",
+    "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38.md",
+    "git_blob": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a"
+  },
+  "execution_profile_ref": "INGESTION_GENERAL_REASONING_TO_BUILDER_LOCAL_RUNTIME",
+  "journal_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V139_INGESTED_V1.md",
+    "sha256": "7062834019dd66982664b94fe2c2f713cc3bb6e4bcf37b30de8c11137b5fe1d9"
+  },
+  "result_provenance_ref": "Q048_V139_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "completed_task_ledger_ref": "Q048_V139_INGESTION_STATE_V1.json",
+  "route_history_ref": "Q048_V139_INGESTION_JOURNAL_APPEND_V1.md",
+  "integrity_manifest_ref": "Q048_V139_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "Registered V139 terminal technical schema-adapter failure exactly once with zero scientific cell/theorem deltas.",
+    "Preserved actual123/frontier850 and V138 proof as accepted/unconsumed.",
+    "Authorized one separately versioned V140 repaired consumer with exactly two bounded adapter repairs."
+  ],
+  "frozen_configuration_refs": [
+    "V138 accepted proof and 48-file freeze",
+    "V139 immutable failed 38-file freeze",
+    "row60 primary/control hashes"
+  ],
+  "open_material_uncertainties": [
+    "V138 proof850→840 is not yet successfully consumed into actual history.",
+    "Complete four-case x_e(z)/tau_T(z) histories remain incomplete.",
+    "NativeP6 remains unresolved."
+  ],
+  "missing_information": [],
+  "next_task": "Q048_V140_NEXT_BUILDER_TASK_REPAIRED_CONDITIONAL_CONSUMER_850_840_V1.json",
+  "success_condition": "V140 full serialized chain passes and publishes exactly actual124/frontier840 with one V138 proof consumption and zero theorem recomputation.",
+  "failure_or_falsification_condition": "Any repair-contract, pin, validation, semantic-control, postaccept, publication/readback or budget obstruction terminates V140 without current-state advance.",
+  "stop_condition": "One terminal V140 result then return to Result Ingestion; no work below z=840.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "V139 is a technical validator failure and adds no accepted history cell. V138 proof 850→840 remains accepted but unconsumed; the complete four-case x_e(z)/tau_T(z) histories required by Q048 are still not established and NativeP6 remains unresolved.",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "NO_NEW_OPERATOR_GATE_REQUIRED_WITHIN_EXISTING_Q048_SCOPE",
+  "output_file_refs": [],
+  "output_manifest_ref": "Q048_V139_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "main",
+    "base_commit_sha": "fc704a128f1a5cd88245f3db92094f4cd219aa73",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V139_INGESTED_V1.md",
+    "current_state_path": "Q048_V139_INGESTION_STATE_V1.json",
+    "index_refs": [
+      "Q048_V139_INGESTION_FILES_V1.md"
+    ],
+    "cross_reference_refs": [
+      "Q048_V140_NEXT_BUILDER_TASK_REPAIRED_CONDITIONAL_CONSUMER_850_840_V1.json",
+      "Q048_V139_INGESTION_EVIDENCE_AUDIT_V1.json"
+    ],
+    "memory_update_ref": "Q048_V139_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+    "target_paths_status": "PROPOSED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V139_UPLOAD_APPLY_INSTRUCTIONS_INGESTION_V1.md"
+  }
+}
