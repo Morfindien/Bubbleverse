@@ -1,0 +1,156 @@
+{
+  "schema": "bubbleverse.q048.v132.validator_repair_revalidation.task.v1",
+  "task_id": "LOCAL-Q048-V132-VALIDATOR-REPAIR-REVALIDATE-V131-RAW-880-870-V1",
+  "task_fingerprint": "a89f389b91a4cef079886cef888c6eed6637d47bccdf0acb1c698d0cc267d004",
+  "task_definition_for_fingerprint": {
+    "task_id": "LOCAL-Q048-V132-VALIDATOR-REPAIR-REVALIDATE-V131-RAW-880-870-V1",
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS_VALIDATOR_REPAIR",
+    "parent_current": {
+      "count": 120,
+      "frontier": 880
+    },
+    "candidate_raw": {
+      "file": "Q048_V131_TWO_OPERATOR_CONDITIONAL_CONSUMER_RAW_V1.json",
+      "sha256": "976b679178ee29fa94f7f54116410fe9e18685445e35a629535c0b6d2e48b3a1",
+      "status": "PENDING_VALIDATION",
+      "candidate_count": 121,
+      "candidate_frontier": 870,
+      "must_remain_immutable": true
+    },
+    "failed_validation": {
+      "file": "Q048_V131_TWO_OPERATOR_CONDITIONAL_CONSUMER_VALIDATION_V1.json",
+      "sha256": "fbd709ecb820b10d1c73d60e37f260c381e961b25036dc10f6f420267a58cc41",
+      "baseline_checks": [
+        26,
+        26
+      ],
+      "semantic_controls": [
+        31,
+        35
+      ],
+      "escaped": [
+        "capture",
+        "theorem",
+        "saha",
+        "endpointsource"
+      ]
+    },
+    "failure_diagnostic_sha256": "575049920e1338cb27ac5bd7e32730fdf562ee172e9aa651b5a1c8116f484e5d",
+    "execution_sha256": "3e70599aa8f6455f22a90e4f9baa04536b8e0fcb4ec159cf73c411cd8aa31db7",
+    "handoff_sha256": "5c60057296c541190264d43a9d10a4d99249cc210bd76873673acdcc94dfca87",
+    "v130_theorem_acceptance_sha256": "c147506b1a77c61712b055f43a2985732ba0844d79a3e24f202eec30c18185bd",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "source_saha_factor": "3.016103031869581e21",
+    "guard_source_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row_sha256": "e9b36d7d43b0b87cc2b78e0c0872d453f29a0a3b6a66fb6438a7752f7fdf7403",
+    "control_row_sha256": "633c47933fca155766e46838b919d305072efb9e8f645047051829ac750a72f2",
+    "expected_endpoint_derivation": "PRIMARY_ROW:a1,E_right,Y_right,V_admitted",
+    "max_new_actual_cells": 1,
+    "max_new_mathematical_proof_cells": 0,
+    "max_new_theorem_recomputations": 0,
+    "consumer_reruns": 0,
+    "no_below_z": 870,
+    "no_actual122": true,
+    "NativeP6": "UNRESOLVED"
+  },
+  "created_at_utc": "2026-10-21T07:17:41.621848+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "engine_registry_evidence": {
+    "repository": "Morfindien/Bubbleverse",
+    "commit": "b19a70fe486932355fca5fe06c6f1c40bc3156f9",
+    "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38.md",
+    "blob_sha": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "prompt_version": "2.2.0",
+    "status": "VERIFIED_EXISTING_PROMPT"
+  },
+  "objective": "Repair the V131 independent validator in a separately versioned V132 implementation and revalidate the immutable V131 raw candidate without rerunning the consumer. Promote actual121/frontier870 only after corrected validation and separate V132 postaccept/readback pass.",
+  "why_same_engine_is_not_ping_pong": "V131 exposed a new concrete validator defect: four non-noop semantic mutations escaped. Inputs are not unchanged because the V132 task changes the validator specification and required invariants while preserving the V131 raw candidate.",
+  "immutable_inputs": {
+    "v131_raw": {
+      "file": "Q048_V131_TWO_OPERATOR_CONDITIONAL_CONSUMER_RAW_V1.json",
+      "sha256": "976b679178ee29fa94f7f54116410fe9e18685445e35a629535c0b6d2e48b3a1"
+    },
+    "v131_validation": {
+      "file": "Q048_V131_TWO_OPERATOR_CONDITIONAL_CONSUMER_VALIDATION_V1.json",
+      "sha256": "fbd709ecb820b10d1c73d60e37f260c381e961b25036dc10f6f420267a58cc41"
+    },
+    "v131_execution": {
+      "file": "Q048_V131_TWO_OPERATOR_CONDITIONAL_CONSUMER_EXECUTION_V1.json",
+      "sha256": "3e70599aa8f6455f22a90e4f9baa04536b8e0fcb4ec159cf73c411cd8aa31db7"
+    },
+    "v131_failure_diagnostic": {
+      "file": "Q048_V131_FAILURE_DIAGNOSTIC_V1.json",
+      "sha256": "575049920e1338cb27ac5bd7e32730fdf562ee172e9aa651b5a1c8116f484e5d"
+    },
+    "v130_proof_acceptance_sha256": "c147506b1a77c61712b055f43a2985732ba0844d79a3e24f202eec30c18185bd",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+  },
+  "required_validator_repairs": [
+    {
+      "invariant": "capture_binding",
+      "requirement": "V131 raw capture_sha256 must equal the authorized task/capture SHA and the frozen V130 source/capture identity; mutation of capture_sha256 must fail this invariant."
+    },
+    {
+      "invariant": "theorem_acceptance_binding",
+      "requirement": "V131 raw theorem_authority.acceptance_sha256 must equal the exact SHA-256 of Q048_V130_ACCEPTANCE_V1.json and the authorized theorem-acceptance pin; mutation must fail."
+    },
+    {
+      "invariant": "saha_binding",
+      "requirement": "V131 raw source_saha_factor must equal the authorized retained theorem value and V130 raw atomic.saha_constant; mutation must fail."
+    },
+    {
+      "invariant": "endpoint_source_binding",
+      "requirement": "guard_binding.endpoint_derivation must equal PRIMARY_ROW:a1,E_right,Y_right,V_admitted and endpoint must be independently reconstructed from the unique admitted primary row57, not copied from task expected_endpoint_crosscheck_only; mutation to TASK_EXPECTED_ENDPOINT must fail."
+    }
+  ],
+  "required_work": [
+    "Do not rerun q048_v131_consumer.py and do not modify the immutable V131 raw candidate.",
+    "Implement a separately versioned V132 independent validator with the original 26 baseline checks plus the four explicit missing invariants, for at least 30/30 baseline checks.",
+    "Retain the 35 non-noop semantic mutations and require 35/35 rejection; prove the four formerly escaped controls now each trip a named invariant.",
+    "Freeze V132 validator/accept/postaccept code and exact input pins before the final serial validation→provisional-accept→separate-postaccept/readback chain.",
+    "Use a separate V132 acceptance/checkpoint identity. Never rewrite V131 failure artifacts or relabel V131 as PASS.",
+    "Postaccept must independently recheck serialized/published bytes and the four repaired invariants before any current-state promotion.",
+    "Only after every gate passes may a V132 accepted checkpoint set current accepted state to actual121/frontier870. Otherwise retain actual120/frontier880.",
+    "Return exactly once to Result Ingestion after terminal V132 success or failure. Stop at z=870."
+  ],
+  "success": {
+    "consumer_reruns": 0,
+    "corrected_baseline_checks_min": 30,
+    "corrected_baseline_checks_passed_required": "ALL",
+    "semantic_mutations_total": 35,
+    "semantic_mutations_rejected_required": 35,
+    "formerly_escaped_controls_required_rejected": [
+      "capture",
+      "theorem",
+      "saha",
+      "endpointsource"
+    ],
+    "new_conditional_actual_admissions_max": 1,
+    "accepted_state_only_after_postaccept": {
+      "count": 121,
+      "frontier": 870
+    },
+    "new_mathematical_proof_cells": 0,
+    "new_theorem_recomputations": 0,
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false
+  },
+  "failure": "First pin/schema/invariant/semantic-control/serialization/postaccept failure stops. Preserve V131 raw and V131 failure unchanged and retain accepted actual120/frontier880. No retry after freeze and no dependent promotion.",
+  "stop_condition": "Terminal V132 pass/fail returned to Result Ingestion; no work below z=870, no actual122, no native integration/reset/refit/recapture/tuning.",
+  "budget": {
+    "preferred_backend": "LOCAL_RUNTIME",
+    "github_actions": "NOT_JUSTIFIED_FOR_COMPUTE",
+    "science_seconds_max": 300,
+    "basis": "Validator-only revalidation is cheaper than repeating the V131 consumer and materially targets the observed defect."
+  }
+}

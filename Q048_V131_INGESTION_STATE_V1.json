@@ -1,0 +1,74 @@
+{
+  "schema": "bubbleverse.q048.v131.ingestion_state.v1",
+  "created_at_utc": "2026-10-21T07:17:41.621848+00:00",
+  "prompt": {
+    "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+    "prompt_version": "2.1.0",
+    "source_file": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.1.0-78.md",
+    "source_sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c"
+  },
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "result_classification": [
+    "RUN_FAILURE",
+    "VALIDATION_RESULT"
+  ],
+  "status_axes": {
+    "execution": "FAILURE",
+    "technical_validity": "INVALID",
+    "reproducibility": "NOT_ASSESSED",
+    "robustness": "UNRESOLVED",
+    "scientific_effect": "NO_MATERIAL_CHANGE",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "accepted_state_before": {
+    "count": 120,
+    "frontier": 880
+  },
+  "accepted_state_after": {
+    "count": 120,
+    "frontier": 880
+  },
+  "candidate_preserved_noncurrent": {
+    "count": 121,
+    "frontier": 870,
+    "raw_sha256": "976b679178ee29fa94f7f54116410fe9e18685445e35a629535c0b6d2e48b3a1"
+  },
+  "what_changed": [
+    "V131 failed attempt registered once.",
+    "Concrete validator defect registered: four non-noop semantic mutations escaped capture/theorem/Saha/endpoint-source binding.",
+    "No accepted scientific state advanced.",
+    "A separately versioned V132 validator-repair/revalidation task is authorized."
+  ],
+  "what_did_not_change": [
+    "actual120/frontier880 remains current.",
+    "V130 conditional proof remains accepted evidence.",
+    "NativeP6 remains UNRESOLVED.",
+    "Q048 remains ACTIVE/INCONCLUSIVE.",
+    "No actual121, no work below z=870, no new proof, no native integration."
+  ],
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "The exact Q still lacks an accepted 880→870 actual admission and the complete four-configuration x_e(z)/tau_T(z) bound chain. V131 cannot supply that admission because mandatory validator controls failed.",
+  "single_material_bottleneck": "Validator completeness for the preserved V131 880→870 candidate.",
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "next_task_file": "Q048_V132_NEXT_BUILDER_TASK_VALIDATOR_REPAIR_880_870_V1.json",
+  "no_repeat_decision": "Do not rerun the V131 consumer. Revalidate its immutable raw candidate with a corrected separately versioned validator.",
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit_sha": "b19a70fe486932355fca5fe06c6f1c40bc3156f9",
+    "source_freshness": "VERIFIED",
+    "observed_v131_failure_diagnostic_in_repo": true,
+    "observed_complete_v131_journal_name_in_repo": "Q047_SAMLET_JOURNAL_Q048_V131_CONSUMER_FAILURE_APPENDED_V1-1.md",
+    "ingestion_outputs_already_present": false,
+    "sync_status": "USER_UPLOAD_PENDING"
+  }
+}
