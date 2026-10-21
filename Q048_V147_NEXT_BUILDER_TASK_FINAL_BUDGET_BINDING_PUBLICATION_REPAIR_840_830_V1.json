@@ -1,0 +1,220 @@
+{
+  "schema": "bubbleverse.q048.v147.final_budget_binding_publication_repair_consumer.task.v1",
+  "created_at_utc": "2026-10-21T18:12:47.296521+00:00",
+  "task_id": "LOCAL-Q048-V147-FINAL-BUDGET-BINDING-PUBLICATION-REPAIR-CONDITIONAL-CONSUMER-840-830-V1",
+  "task_fingerprint": "a087d84be4c435e894dc7d58cba7e0ee2cbf5dc748f2dd840c0a7d127ee38446",
+  "task_definition_for_fingerprint": {
+    "task_id": "LOCAL-Q048-V147-FINAL-BUDGET-BINDING-PUBLICATION-REPAIR-CONDITIONAL-CONSUMER-840-830-V1",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "parent_checkpoint_sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+    "v142_acceptance_sha256": "aab654d2ffd05bd313f70fa925630183d44043a1083a8e8c3233b57c5965c7ab",
+    "cell_z": [
+      840,
+      830
+    ],
+    "guard_primary_sha256": "93c02dbd79e9a33fd72955e176bacf872ae7c1f7fa68155a1358c8cec69d402d",
+    "guard_control_sha256": "f78c6543deb285d5632774694b75054239361b3dd4eac53bfcbc42e196feba62",
+    "material_change": "Separately versioned V147 strengthens only the final accepted-checkpoint publication budget invariant demonstrated defective in V146: bind question_budget_id plus parent ledger version, reservation event identity and inherited charge IDs, while preserving exact V146-corrected serializer/prefreeze logic and all scientific pins/contracts.",
+    "authorization_event": "LOCAL-Q048-V146-TERMINAL-PUBLICATION-CONTROL-FAILURE-INGESTION-V1",
+    "budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_version": 5,
+    "limits": {
+      "max_new_actual_cells": 1,
+      "max_new_mathematical_proof_cells": 0,
+      "max_new_theorem_recomputations": 0,
+      "theorem_consumptions_max": 1,
+      "no_actual126": true,
+      "no_below_z": 830,
+      "no_native_integration": true,
+      "no_reset_refit_recapture_tuning": true,
+      "no_historical_main_or_suite": true,
+      "no_new_q_model_or_closure": true,
+      "retry_count": 0,
+      "postfreeze_edits_allowed": false
+    }
+  },
+  "fingerprint_convention": "SHA256 UTF-8 sorted compact JSON ensure_ascii=False, no final newline",
+  "case_id": "NOT_ASSIGNED; no new global case created",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+  "engine_prompt": {
+    "version": "2.3.0",
+    "source": "VERIFIED_PREVIOUSLY_SUPPLIED_ENGINE_PROMPT",
+    "budget_contract": "Inherit Q048 ledger V5; no reset."
+  },
+  "authorization": {
+    "event_id": "LOCAL-Q048-V146-TERMINAL-PUBLICATION-CONTROL-FAILURE-INGESTION-V1",
+    "status": "ONE_SEPARATELY_VERSIONED_BOUNDED_REPAIR_PREPARED_NOT_EXECUTED",
+    "replaces_failed_task_for_future_work_only": "LOCAL-Q048-V146-PREFREEZE-CONTROL-LOGIC-REPAIR-CONDITIONAL-CONSUMER-840-830-V1"
+  },
+  "objective": "Strengthen only the V146 final accepted-checkpoint budget-binding invariant, then run a fresh V147 identity from current actual124/frontier840 and consume accepted V142 proof840→830 at most once through the full conditional admission/publication chain. No theorem recomputation.",
+  "historical_v146": {
+    "run_id": "LOCAL-Q048-V146-20261021T175623712319Z-PREFREEZE-CONTROL-LOGIC-REPAIR-CONSUMER-V1",
+    "event_id": "LOCAL-Q048-V146-PUBLICATION-CONTROL-FAILURE-V1",
+    "status": "IMMUTABLE_TERMINAL_TECHNICAL_PUBLICATION_CONTROL_FAIL",
+    "diagnostic_sha256": "294598ffa00c78f4e4dd4e141454bac123ffdfa2fc93f2704f16cd7e71a4787f",
+    "failed_stage": "serialized_publication",
+    "failed_control": "final_budget",
+    "accepted_checkpoint_written": false,
+    "no_retry_under_v146_identity": true
+  },
+  "parent_authority": {
+    "file": "Q048_V140_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+    "accepted_actual": {
+      "count": 124,
+      "frontier": 840
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 840
+    },
+    "endpoint": {
+      "a": "1/841",
+      "E": "15881004977532652117/500000000000000000",
+      "Y": "5039104441059922143/200000000000000000",
+      "Vbar": "6292884093525456289/1000000000000000000"
+    }
+  },
+  "theorem_authority": {
+    "artifacts": {
+      "Q048_V142_ACCEPTANCE_V1.json": {
+        "sha256": "aab654d2ffd05bd313f70fa925630183d44043a1083a8e8c3233b57c5965c7ab",
+        "workspace_path_required": "proof_runtime/Q048_V142_ACCEPTANCE_V1.json"
+      },
+      "Q048_V142_RAW_V1.json": {
+        "sha256": "c7b81ec01ecd387d619afaf97cfe529cb73986d59342e525773fc4389bed370a",
+        "workspace_path_required": "proof_runtime/Q048_V142_RAW_V1.json"
+      },
+      "Q048_V142_VERIFICATION_V1.json": {
+        "sha256": "da62cf48deb3b3492fa1961ceef70df005042d8cb2a7f88430251ebda24d70a6",
+        "workspace_path_required": "proof_runtime/Q048_V142_VERIFICATION_V1.json"
+      },
+      "Q048_V142_SPEC_V1.json": {
+        "sha256": "1cbce8da7e1db76f3aadf1dad0662c4fb55719b70692e1dc3db2dc7ca937004f",
+        "workspace_path_required": "proof_runtime/Q048_V142_SPEC_V1.json"
+      },
+      "Q048_V142_FREEZE_V1.json": {
+        "sha256": "f2314868c549252eeaefa7829140a0ba40c578e17516dec3b2388cfceacd5efd",
+        "workspace_path_required": "proof_runtime/Q048_V142_FREEZE_V1.json"
+      },
+      "Q048_V142_EXECUTION_V1.json": {
+        "sha256": "dcb3692c72b67715ba5cfc974164b003027c9759e2ff5f04246a9c44a744fca1",
+        "workspace_path_required": "proof_runtime/Q048_V142_EXECUTION_V1.json"
+      },
+      "Q048_V142_ACCEPTANCE_READBACK_V1.json": {
+        "sha256": "7eabdf7cdb19c24067b9b9b479b129f66ce2b6f9e98abdbb2ccca481cffb6ca9",
+        "workspace_path_required": "proof_runtime/Q048_V142_ACCEPTANCE_READBACK_V1.json"
+      },
+      "Q048_V142_OUTPUT_MANIFEST_V1.json": {
+        "sha256": "4ee2e337b05b4d3a1ab3463fd97753e02d499e45ef80bba25da74542d13d0a25",
+        "workspace_path_required": "proof_runtime/Q048_V142_OUTPUT_MANIFEST_V1.json"
+      },
+      "Q048_V142_DELIVERY_VALIDATION_V1.json": {
+        "sha256": "66ae7ca68d9778b6018b067f45ca5534e77ffc36bf6ed8a4f59d638653679429",
+        "workspace_path_required": "proof_runtime/Q048_V142_DELIVERY_VALIDATION_V1.json"
+      }
+    },
+    "task_id": "LOCAL-Q048-V142-TWO-OPERATOR-BETA-DEPENDENCY-REPAIR-CONDITIONAL-PROOF-840-830-V1",
+    "task_fingerprint": "28aa21a5e07f2e56627ebbc48e7a5376c95217d8ccee7c1ed6aa9321dae3c32a",
+    "run_id": "LOCAL-Q048-V142-20261021T154237996738Z-BETA-DEPENDENCY-REPAIR-PROOF-V1",
+    "consumer_authorization_from_mathematics": "NOT_GRANTED_BY_MATHEMATICS"
+  },
+  "guard_authority": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "workspace_path_required": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "index_reference_only": 61,
+    "primary_row_sha256": "93c02dbd79e9a33fd72955e176bacf872ae7c1f7fa68155a1358c8cec69d402d",
+    "control_row_sha256": "f78c6543deb285d5632774694b75054239361b3dd4eac53bfcbc42e196feba62",
+    "left_glue": {
+      "a0": "1/841",
+      "E_input_left": "15881004977532652117/500000000000000000",
+      "Y_left": "5039104441059922143/200000000000000000",
+      "V_previous": "6292884093525456289/1000000000000000000"
+    },
+    "energy_cap_used": "15881004977532652117/500000000000000000",
+    "E_safe_left_distinct": "1969354442793606491/62500000000000000"
+  },
+  "retained_theorem_values": {
+    "K_upper": "4526301149059825126009/1000000000000000000",
+    "connected_lower": "72061959455351/200000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "beta_lower": {
+      "L": "6749509820830701233911928395181048852775632258030431101025342503117681985996442459786122943670133004177110287497066767269176789061014166503/72147590357999265242845010372548131272196769714355468750000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "R": "20192487446429687891996804048086662305115358208264549508698108804047935854176466803649622853660838225362435923255540214257669595383042499509/216442571073997795728535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "allowed_changes": [
+    "Create only new V147 identities/files; never patch V146.",
+    "Preserve V146 real-LF serializer repair and the two corrected pre-freeze assertions unchanged.",
+    "Strengthen validate_checkpoint budget invariant so it rejects any mismatch in question_budget_id.",
+    "Also bind parent_ledger_version to ledger V5, reservation_event_id to the V147 reservation, and inherited_charge_ids exactly once/in order; retain exact used/remaining/reserved amount checks.",
+    "Add explicit non-noop final negative controls proving each newly bound budget identity field is rejected before publication.",
+    "Update only version/run/task/budget-lineage literals required by the new V147 identity."
+  ],
+  "unchanged_scientific_contract": [
+    "Current parent remains actual124/frontier840.",
+    "V142 proof840→830 remains accepted-unconsumed before the run.",
+    "No theorem recomputation.",
+    "No change to guard/source/capture/endpoint derivation or retained theorem values.",
+    "No native integration, reset/refit/recapture/tuning, below830 work, actual126, Q closure or model/new-Q promotion."
+  ],
+  "mandatory_preconditions": {
+    "rehash_all_authoritative_inputs": true,
+    "reuse_v146_corrected_prefreeze_logic": true,
+    "prefreeze_checks_min": 48,
+    "semantic_controls_min": 66,
+    "new_final_budget_negative_controls": [
+      "question_budget_id",
+      "parent_ledger_version",
+      "reservation_event_id",
+      "inherited_charge_ids"
+    ],
+    "strict_json_parse_and_freeze_before_chain": true
+  },
+  "execution_chain": [
+    "consumer",
+    "independent_validator",
+    "provisional_acceptance",
+    "postaccept_validation",
+    "serialized_publication_readback"
+  ],
+  "success_condition": "Only if every V147 prefreeze/control/freeze check, consumer, independent validator, provisional/postaccept and strengthened serialized publication/readback gate passes may V147 create accepted actual125/frontier830 and mark V142 ACCEPTED_CONSUMED_ONCE.",
+  "failure_condition": "Any mismatch or failed control is terminal for V147; preserve artifacts, do not promote candidate, do not consume V142, and return once to Result Ingestion2.2.0.",
+  "stop_condition": "Zero retries and zero post-freeze edits. Stop after one accepted cell or the first exact blocker. No work below z=830.",
+  "question_budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V5.json",
+    "ledger_version": 5,
+    "used_pts": 198,
+    "remaining_pts": 802,
+    "estimated_run_cost_pts": 50,
+    "reservation_pts": 0,
+    "status": "ACTIVE_ESTIMATE_ONLY_NOT_DISPATCHED"
+  }
+}
