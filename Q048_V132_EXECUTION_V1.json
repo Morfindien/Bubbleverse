@@ -1,0 +1,45 @@
+{
+  "schema": "bubbleverse.q048.v132.execution.v1",
+  "task_id": "LOCAL-Q048-V132-VALIDATOR-REPAIR-REVALIDATE-V131-RAW-880-870-V1",
+  "task_fingerprint": "a89f389b91a4cef079886cef888c6eed6637d47bccdf0acb1c698d0cc267d004",
+  "started_at_utc": "2026-10-21T08:30:07.817367+00:00",
+  "compute_backend": "LOCAL_RUNTIME",
+  "phases": [
+    {
+      "phase": "validator",
+      "returncode": 0,
+      "seconds": 1.8502981870000212,
+      "stdout": "{\"status\": \"PASS\", \"checks\": \"30/30\", \"semantic\": \"35/35\"}\n",
+      "stderr": ""
+    },
+    {
+      "phase": "provisional_accept",
+      "returncode": 0,
+      "seconds": 1.4190431040000249,
+      "stdout": "{\"status\": \"PROVISIONAL_ACCEPTED_PENDING_POSTACCEPT\", \"candidate\": 121, \"frontier\": 870}\n",
+      "stderr": ""
+    },
+    {
+      "phase": "postaccept",
+      "returncode": 0,
+      "seconds": 1.748131990999923,
+      "stdout": "{\"status\": \"ACCEPTED_AFTER_POSTACCEPT\", \"checks\": \"14/14\", \"actual\": 121, \"frontier\": 870}\n",
+      "stderr": ""
+    }
+  ],
+  "retry_count": 0,
+  "postfreeze_edits": false,
+  "consumer_reruns": 0,
+  "historical_mains_executed": 0,
+  "native_integrations": 0,
+  "new_proof_computations": 0,
+  "status": "PASS",
+  "error": null,
+  "science_seconds": 5.037939136999967,
+  "finished_at_utc": "2026-10-21T08:30:12.855331+00:00",
+  "frozen_pins_unchanged": true,
+  "accepted_state": {
+    "count": 121,
+    "frontier": 870
+  }
+}

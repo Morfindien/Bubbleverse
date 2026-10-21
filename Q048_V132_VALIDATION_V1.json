@@ -1,0 +1,166 @@
+{
+  "schema": "bubbleverse.q048.v132.validator_repair.validation.v1",
+  "status": "PASS",
+  "checks": {
+    "identity": true,
+    "question": true,
+    "task_binding": true,
+    "program": true,
+    "raw_state": true,
+    "authorization": true,
+    "parent": true,
+    "theorem_acceptance_binding": true,
+    "theorem_status": true,
+    "theorem_links": true,
+    "proof_validation": true,
+    "source_provenance": true,
+    "capture_binding": true,
+    "saha_binding": true,
+    "scope": true,
+    "operators": true,
+    "q_branches": true,
+    "continuation": true,
+    "bounds": true,
+    "guard_file": true,
+    "guard_unique_primary": true,
+    "guard_unique_control": true,
+    "guard_role": true,
+    "left_glue": true,
+    "endpoint_source_binding": true,
+    "guard_flags": true,
+    "advance": true,
+    "noncurrent": true,
+    "counts": true,
+    "limits": true
+  },
+  "checks_total": 30,
+  "checks_passed": 30,
+  "semantic_mutations_total": 35,
+  "semantic_mutations_rejected": 35,
+  "mutation_failed_invariants": {
+    "question": [
+      "question"
+    ],
+    "fingerprint": [
+      "task_binding"
+    ],
+    "parent": [
+      "parent"
+    ],
+    "source": [
+      "source_provenance"
+    ],
+    "capture": [
+      "capture_binding"
+    ],
+    "theorem": [
+      "theorem_acceptance_binding"
+    ],
+    "operator": [
+      "operators"
+    ],
+    "q": [
+      "q_branches"
+    ],
+    "control": [
+      "guard_role"
+    ],
+    "row": [
+      "guard_role"
+    ],
+    "E": [
+      "endpoint_source_binding"
+    ],
+    "Y": [
+      "endpoint_source_binding"
+    ],
+    "V": [
+      "endpoint_source_binding"
+    ],
+    "a": [
+      "endpoint_source_binding"
+    ],
+    "count": [
+      "advance"
+    ],
+    "frontier": [
+      "advance"
+    ],
+    "otherfrontier": [
+      "advance"
+    ],
+    "K": [
+      "bounds"
+    ],
+    "lower": [
+      "bounds"
+    ],
+    "w": [
+      "bounds"
+    ],
+    "saha": [
+      "saha_binding"
+    ],
+    "continuation": [
+      "continuation"
+    ],
+    "native": [
+      "limits"
+    ],
+    "selector": [
+      "limits"
+    ],
+    "trajectory": [
+      "limits"
+    ],
+    "closure": [
+      "limits"
+    ],
+    "current": [
+      "noncurrent"
+    ],
+    "status": [
+      "raw_state"
+    ],
+    "proof": [
+      "counts"
+    ],
+    "consume": [
+      "counts"
+    ],
+    "reset": [
+      "limits"
+    ],
+    "below": [
+      "limits"
+    ],
+    "auth": [
+      "authorization"
+    ],
+    "endpointsource": [
+      "endpoint_source_binding"
+    ],
+    "scope": [
+      "scope"
+    ]
+  },
+  "formerly_escaped_now_rejected": {
+    "capture": [
+      "capture_binding"
+    ],
+    "theorem": [
+      "theorem_acceptance_binding"
+    ],
+    "saha": [
+      "saha_binding"
+    ],
+    "endpointsource": [
+      "endpoint_source_binding"
+    ]
+  },
+  "v131_raw_sha256": "976b679178ee29fa94f7f54116410fe9e18685445e35a629535c0b6d2e48b3a1",
+  "v130_acceptance_sha256": "c147506b1a77c61712b055f43a2985732ba0844d79a3e24f202eec30c18185bd",
+  "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "independence_scope": "No V131 consumer execution/import. Validator re-derives row57 endpoint from frozen guard and binds V130 proof/capture/Saha using immutable source records. Shared evidence; not native/empirical replication.",
+  "saha_binding_evidence": "V130 frozen mathematics task proof_contract.source_saha_constant plus accepted source/capture lineage; exact V130 raw bytes are not required to promote this consumer candidate because the V130 acceptance SHA is independently byte-bound."
+}

@@ -1,0 +1,81 @@
+{
+  "schema": "bubbleverse.q048.v132.handoff_to_ingestion.v1",
+  "created_at_utc": "2026-10-21T08:32:34.783132+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "result": "ACCEPTED_AFTER_POSTACCEPT",
+  "result_class": "VALIDATION_RESULT",
+  "accepted_state": {
+    "count": 121,
+    "frontier": 870
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 870
+  },
+  "endpoint": {
+    "a": "1/871",
+    "E": "17865518912095738771/500000000000000000",
+    "Y": "14182402721438480887/500000000000000000",
+    "Vbar": "7059306032093077611/1000000000000000000"
+  },
+  "validation": {
+    "checks": [
+      30,
+      30
+    ],
+    "semantic_mutations": [
+      35,
+      35
+    ],
+    "formerly_escaped_now_rejected": {
+      "capture": [
+        "capture_binding"
+      ],
+      "theorem": [
+        "theorem_acceptance_binding"
+      ],
+      "saha": [
+        "saha_binding"
+      ],
+      "endpointsource": [
+        "endpoint_source_binding"
+      ]
+    },
+    "sha256": "a08aa78e1b74d76afe8932feef80b5382c7c88f091b2c148dd3a3990e999b86f"
+  },
+  "postaccept": {
+    "checks": [
+      14,
+      14
+    ],
+    "sha256": "5e49ae039283a91cd0f41644ba89d738f2430a247b1669905f0bdad31084099a"
+  },
+  "accepted_checkpoint_sha256": "2a16ced67538913c34db2cc608b533e6dbbe6db9a1eaf48f4e4442c10f05f01b",
+  "execution_sha256": "259b907e0b0bdb0acf37de751dc8d6fc1af7bf441f9497b50cfaa6560651d803",
+  "consumer_reruns": 0,
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "new_theorem_recomputations": 0,
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "scientific_scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS",
+  "claim_limits": {
+    "native_error_certificate": false,
+    "exact_selector_existence_uniqueness": false,
+    "trajectory_identity_claim": false
+  },
+  "journal_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V132_VALIDATOR_REPAIR_ACCEPTED_APPENDED_V1.md",
+    "sha256": "13224f448215421495eb89b09690190878adfe2a607a698a780913ddbce4757b"
+  },
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "next_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "stop_condition": "Ingest V132 exactly once; no further Builder work is authorized by V132 itself."
+}
