@@ -1,0 +1,82 @@
+{
+  "schema": "bubbleverse.q048.v142.result_state.v1",
+  "created_at_utc": "2026-10-21T15:44:22.821070+00:00",
+  "event": "LOCAL-Q048-V142-BETA-DEPENDENCY-REPAIR-PROOF-ACCEPTED-V1",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_lifecycle": "ACTIVE",
+  "scientific_outcome": "INCONCLUSIVE",
+  "NativeP6": "UNRESOLVED",
+  "task_id": "LOCAL-Q048-V142-TWO-OPERATOR-BETA-DEPENDENCY-REPAIR-CONDITIONAL-PROOF-840-830-V1",
+  "task_fingerprint": "28aa21a5e07f2e56627ebbc48e7a5376c95217d8ccee7c1ed6aa9321dae3c32a",
+  "run_id": "LOCAL-Q048-V142-20261021T154237996738Z-BETA-DEPENDENCY-REPAIR-PROOF-V1",
+  "execution_status": "COMPLETE",
+  "result_validation_status": "VALIDATED",
+  "technical_result": "PASS",
+  "proof_delta": {
+    "new_mathematical_proof_cells": 1,
+    "new_actual_cells": 0,
+    "theorem_recomputations": 1,
+    "theorem_consumptions": 0
+  },
+  "current_actual": {
+    "count": 124,
+    "frontier": 840
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 840
+  },
+  "accepted_proof": {
+    "cell_z": [
+      840,
+      830
+    ],
+    "cell_a": [
+      "1/841",
+      "1/831"
+    ],
+    "K_upper": "4526301149059825126009/1000000000000000000",
+    "connected_lower": "72061959455351/200000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "beta_lower": {
+      "L": "6749509820830701233911928395181048852775632258030431101025342503117681985996442459786122943670133004177110287497066767269176789061014166503/72147590357999265242845010372548131272196769714355468750000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "R": "20192487446429687891996804048086662305115358208264549508698108804047935854176466803649622853660838225362435923255540214257669595383042499509/216442571073997795728535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "naive_interval_beta_lower_reference": {
+      "L": "48631246823405650784353486619747643832046515387923636321734650378357606313600389806576250320156096362682531077373016768243/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "R": "48496673029791406251533029292995553142244607288102965635636329599414309582214865121134347690041369338836926731424590783779/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "scope": "Existing absolutely-continuous source-real solution under the admitted background and fixed-q two-operator inclusion; no assumed future domain membership. Bounds apply on its existing interval and at a1 whenever an admissible continuation reaches a1. Exact selector existence/uniqueness is not established."
+  },
+  "v141_obstruction_resolution": {
+    "historical_v141_status": "IMMUTABLE_TERMINAL_FIRST_MATERIAL_OBSTRUCTION",
+    "v141_gate": "BRANCH:L:upper_w_inward",
+    "repair": "Dependency-aware same-h monotone ratio removes interval dependency loss on unchanged thermal domain.",
+    "thermal_domain_changed": false,
+    "cell_partitioned": false
+  },
+  "consumer_authorization": "NOT_GRANTED_BY_MATHEMATICS",
+  "q_complete": false,
+  "native_error_certificate": false,
+  "exact_selector_existence_uniqueness": false,
+  "trajectory_identity_claim": false,
+  "actual125_created": false,
+  "below830_work": false,
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+}

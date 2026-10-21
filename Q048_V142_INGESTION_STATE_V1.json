@@ -1,0 +1,111 @@
+{
+  "schema": "bubbleverse.q048.v142.ingestion_state.v1",
+  "created_at_utc": "2026-10-21T16:06:06.658045+00:00",
+  "created_at_local": "2026-10-21T18:06:06.659312+02:00",
+  "event": "LOCAL-Q048-V142-ACCEPTED-PROOF-INGESTION-V1",
+  "idempotency_key": "1bc97c2e2f364bdcc9edf67d6345b4b1ee3d8c4383040915aa05082a77b4fc66",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "registered_result": {
+    "run_id": "LOCAL-Q048-V142-20261021T154237996738Z-BETA-DEPENDENCY-REPAIR-PROOF-V1",
+    "task_id": "LOCAL-Q048-V142-TWO-OPERATOR-BETA-DEPENDENCY-REPAIR-CONDITIONAL-PROOF-840-830-V1",
+    "task_fingerprint": "28aa21a5e07f2e56627ebbc48e7a5376c95217d8ccee7c1ed6aa9321dae3c32a",
+    "status": "ACCEPTED_DEPENDENCY_AWARE_CONDITIONAL_SOURCE_REAL_CONNECTED_PROOF",
+    "cell_z": [
+      840,
+      830
+    ],
+    "registered_delta": {
+      "actual_cells": 0,
+      "mathematical_proof_cells": 1,
+      "theorem_recomputations_in_ingestion": 0,
+      "theorem_consumptions_in_ingestion": 0
+    },
+    "proof_values": {
+      "K_upper": "4526301149059825126009/1000000000000000000",
+      "connected_lower": "72061959455351/200000000000000000",
+      "h_upper": "99999/100000",
+      "thermal_domain": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "beta_dependency_method": "same_h_monotone",
+      "beta_lower": {
+        "L": "6749509820830701233911928395181048852775632258030431101025342503117681985996442459786122943670133004177110287497066767269176789061014166503/72147590357999265242845010372548131272196769714355468750000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "R": "20192487446429687891996804048086662305115358208264549508698108804047935854176466803649622853660838225362435923255540214257669595383042499509/216442571073997795728535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "proof_state_after": "ACCEPTED_UNCONSUMED"
+  },
+  "current_actual": {
+    "count": 124,
+    "frontier": 840
+  },
+  "current_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 840
+  },
+  "current_endpoint": {
+    "a": "1/841",
+    "E": "15881004977532652117/500000000000000000",
+    "Y": "5039104441059922143/200000000000000000",
+    "Vbar": "6292884093525456289/1000000000000000000"
+  },
+  "historical_states": {
+    "V138_proof": "ACCEPTED_CONSUMED_ONCE",
+    "V139": "IMMUTABLE_TERMINAL_TECHNICAL_FAIL",
+    "V140": "ACCEPTED_CURRENT_ACTUAL124_FRONTIER840",
+    "V141": "IMMUTABLE_TERMINAL_FIRST_MATERIAL_OBSTRUCTION",
+    "V142": "ACCEPTED_UNCONSUMED"
+  },
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "V142 adds one accepted conditional proof for840→830 but no new actual history cell. Complete four-case x_e(z)/tau_T(z) histories are still not established; NativeP6 remains unresolved.",
+  "selected_next_engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "next_task_file": "Q048_V143_NEXT_BUILDER_TASK_CONDITIONAL_CONSUMER_840_830_V1.json",
+  "next_task_fingerprint": "0b5c65203c0a00960b0ea019f72b2470c2865b3491a4b2a0e47d90d36d032947",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "consumer_authorization": "GRANTED_FOR_EXACTLY_ONE_FIRST_CONSUMER_OF_V142_PROOF_840_TO_830",
+  "no_repeat": [
+    "Do not rerun V142 proof without a material defect/new version.",
+    "Do not relabel V141 obstruction; preserve it as immutable historical failure of the naive frozen enclosure.",
+    "Do not rerun V140 accepted consumer.",
+    "V143 is the first authorized consumer of V142 proof840→830 and must not recompute the theorem."
+  ],
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit": "b7af5c062ab5d006069cbb73d634812a44b5e33f",
+    "parent_commit": "f7e78523efddd6530c70ede04971320d8853e831",
+    "source_freshness": "VERIFIED",
+    "sync_status": "PARTIAL",
+    "details": {
+      "v142_commit_synced_files": 23,
+      "v142_missing_top_level": [
+        "Q048_V142_RESULT_STATE_V1.json",
+        "Q048_V142_HANDOFF_TO_INGESTION_V1.json"
+      ],
+      "recovery_copies_in_this_package": true,
+      "ingestion_package_sync": "USER_UPLOAD_PENDING"
+    }
+  },
+  "validation": {
+    "evidence_audit": "72/72 PASS",
+    "v142_delivery": "53/53 PASS",
+    "producer": "40/40 PASS",
+    "verifier": "48/48 PASS",
+    "semantic": "50/50 PASS",
+    "acceptance_readback": "PASS"
+  }
+}
