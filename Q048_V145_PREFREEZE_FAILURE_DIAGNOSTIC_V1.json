@@ -1,0 +1,59 @@
+{
+  "schema": "bubbleverse.q048.v145.prefreeze_failure_diagnostic.v1",
+  "created_at_utc": "2026-10-21T17:35:00.988341+00:00",
+  "event_id": "LOCAL-Q048-V145-PREFREEZE-CONTROL-LOGIC-FAILURE-V1",
+  "run_id": "LOCAL-Q048-V145-20261021T173248427259Z-SERIALIZER-REPAIR-CONSUMER-V1",
+  "classification": "TECHNICAL_PREFREEZE_CONTROL_IMPLEMENTATION_FAILURE_NOT_PHYSICAL_FALSIFICATION",
+  "status": "TERMINAL_NO_RETRY",
+  "preflight_status": "FAIL",
+  "checks_passed": 46,
+  "checks_total": 48,
+  "failed_checks": [
+    "question",
+    "control_roles"
+  ],
+  "cause": [
+    {
+      "check": "question",
+      "finding": "V145 preparation code compared the correct task question SHA-256 against a mistyped 62-character literal; the literal omitted characters \"19\" in the segment ...be839198c4... versus authoritative ...be839198c4... with the full authoritative value below.",
+      "authoritative_question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+      "faulty_literal_in_prepare": "c8d4ca366c84d235986b4413cbd436806be8398c4c6eaf85f8141ad3dc0436",
+      "input_pin_failed": false
+    },
+    {
+      "check": "control_roles",
+      "finding": "The preparation assertion incorrectly expected a row-level `control` field. Row objects have no such field; `select_rows()` correctly derives primary/control membership from the enclosing evaluator and the pinned primary/control row hashes both matched.",
+      "primary_row_control_field": null,
+      "control_row_control_field": null,
+      "primary_row_sha256": "93c02dbd79e9a33fd72955e176bacf872ae7c1f7fa68155a1358c8cec69d402d",
+      "control_row_sha256": "f78c6543deb285d5632774694b75054239361b3dd4eac53bfcbc42e196feba62",
+      "input_pin_failed": false
+    }
+  ],
+  "serializer_regression_status": "PASS",
+  "serializer_bug_repair_tested": true,
+  "freeze_created": false,
+  "scientific_chain_started": false,
+  "raw_candidate_created": false,
+  "validator_started": false,
+  "provisional_acceptance_created": false,
+  "postaccept_started": false,
+  "publication_started": false,
+  "accepted_checkpoint_created": false,
+  "theorem_consumptions": 0,
+  "new_actual_cells": 0,
+  "new_proof_cells": 0,
+  "new_theorem_recomputations": 0,
+  "retry_performed": false,
+  "patch_after_failure_performed": false,
+  "last_validated_scientific_state": {
+    "actual": {
+      "count": 124,
+      "frontier": 840
+    },
+    "v142_proof_status": "ACCEPTED_UNCONSUMED",
+    "NativeP6": "UNRESOLVED",
+    "q048": "ACTIVE/INCONCLUSIVE"
+  },
+  "disposition": "RETURN_ONCE_TO_RESULT_INGESTION_2.2.0; any repair must be separately versioned and newly authorized by ingestion."
+}
