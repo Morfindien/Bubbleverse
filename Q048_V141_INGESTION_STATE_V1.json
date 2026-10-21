@@ -1,0 +1,111 @@
+{
+  "schema": "bubbleverse.q048.v141.ingestion_state.v1",
+  "created_at_utc": "2026-10-21T14:23:02.723907+00:00",
+  "created_at_local": "2026-10-21T16:23:02.723907+02:00",
+  "event": "LOCAL-Q048-V141-MATHEMATICAL-OBSTRUCTION-INGESTION-V1",
+  "idempotency_key": "c9f540fbc29ea3220ae7baf0a731df3ba6eb83a980f0e903da0e334c4e27979a",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "registered_result": {
+    "run_id": "LOCAL-Q048-V141-20261021T133707256381Z-PROOF-V1",
+    "task_id": "LOCAL-Q048-V141-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-840-830-V1",
+    "task_fingerprint": "52383be9992ffb4fe19126c21a54f655580e278a98bce8b230a9e7a67c42759c",
+    "status": "REGISTERED_TERMINAL_FIRST_MATERIAL_MATHEMATICAL_OBSTRUCTION",
+    "cell_z": [
+      840,
+      830
+    ],
+    "registered_delta": {
+      "actual_cells": 0,
+      "mathematical_proof_cells": 0,
+      "theorem_recomputations_in_ingestion": 0,
+      "theorem_consumptions": 0
+    },
+    "obstruction_gate": "BRANCH:L:upper_w_inward",
+    "classification": "MATHEMATICAL_INEQUALITY_OBSTRUCTION_NOT_PHYSICAL_FALSIFICATION",
+    "beta_lower_approx": 48.631246823405654,
+    "required_beta_threshold": 49,
+    "beta_deficit_approx": 0.3687531765943492,
+    "verifier_status": "NOT_RUN_BY_FROZEN_RUNNER_AFTER_SERIALIZED_OBSTRUCTION",
+    "acceptance_status": "NOT_CREATED"
+  },
+  "current_actual": {
+    "count": 124,
+    "frontier": 840
+  },
+  "current_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 840
+  },
+  "current_endpoint": {
+    "a": "1/841",
+    "E": "15881004977532652117/500000000000000000",
+    "Y": "5039104441059922143/200000000000000000",
+    "Vbar": "6292884093525456289/1000000000000000000"
+  },
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "V141 adds a valid mathematical obstruction record but no proof/actual delta. Complete four-case x_e(z)/tau_T(z) histories remain unestablished, NativeP6 remains unresolved, and 840→830 still lacks an accepted proof.",
+  "routing_diagnostic_not_theorem": {
+    "issue": "Interval dependency loss in (h+q)/(1+fHe+h+q) is a concrete material candidate explanation of the failed V141 beta lower bound.",
+    "old_beta_lower_approx": 48.631246823405654,
+    "dependency_aware_crosscheck_beta_lower_approx": 93.55142406474506,
+    "threshold": 49,
+    "crosscheck_margin_approx": 44.55142406474506,
+    "claim_strength": "ROUTING_DIAGNOSTIC_ONLY; V142 must rederive rigorously and independently."
+  },
+  "selected_next_engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "next_task_file": "Q048_V142_NEXT_MATHEMATICS_TASK_840_830_BETA_DEPENDENCY_REPAIR_V1.json",
+  "next_task_fingerprint": "28aa21a5e07f2e56627ebbc48e7a5376c95217d8ccee7c1ed6aa9321dae3c32a",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "mathematics_authorization": "PROSPECTIVE_ONE_NEW_DEPENDENCY_AWARE_CONDITIONAL_MATHEMATICAL_PROOF_CELL_840_TO_830_ZERO_ACTUAL",
+  "no_repeat": [
+    "Do not rerun frozen V141 or relabel it as accepted.",
+    "Do not promote V141 diagnostic K/connected-lower/crosscheck values to theorem.",
+    "Do not widen the thermal domain or partition/tune the cell in V142.",
+    "Do not create actual125, consume a theorem, or work below z=830 in V142."
+  ],
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "base_commit": "1362398c74950f66eb061fa73d3c41b078a7b863",
+    "parent_commit": "10f90839f2dc4a9f90ef5a18e332ccae535b1481",
+    "observed_head_time_utc": "2026-10-21T13:55:26Z",
+    "source_freshness": "VERIFIED",
+    "head_contains_v141_core_upload": true,
+    "v141_manifest_payloads_expected": 19,
+    "v141_top_level_files_observed_in_commit": 20,
+    "v141_missing_direct_repository_paths": [
+      "Q048_V141_RAW_V1.json",
+      "Q048_V141_OBSTRUCTION_DIAGNOSTIC_V1.json"
+    ],
+    "sync_status": "V141_PARTIAL_SYNC_TWO_SOURCE_ARTIFACTS_MISSING",
+    "write_status": "USER_UPLOAD_PENDING_FOR_TWO_V141_SOURCE_FILES_AND_V141_INGESTION_V142_TASK"
+  },
+  "prompt": {
+    "file": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.1.0-176.md",
+    "sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+    "version": "2.1.0"
+  },
+  "next_engine_prompt": {
+    "id": "BUBBLEVERSE.MATHEMATICS2.1.0",
+    "version": "2.1.0",
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "1362398c74950f66eb061fa73d3c41b078a7b863",
+    "path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "git_blob": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "status": "VERIFIED_EXISTING_PROMPT"
+  }
+}

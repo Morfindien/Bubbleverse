@@ -1,0 +1,209 @@
+{
+  "schema": "bubbleverse.q048.v142.beta_dependency_repair_connected_proof.task.v1",
+  "created_at_utc": "2026-10-21T14:23:02.723907+00:00",
+  "task_id": "LOCAL-Q048-V142-TWO-OPERATOR-BETA-DEPENDENCY-REPAIR-CONDITIONAL-PROOF-840-830-V1",
+  "task_fingerprint": "28aa21a5e07f2e56627ebbc48e7a5376c95217d8ccee7c1ed6aa9321dae3c32a",
+  "task_fingerprint_basis": {
+    "task_id": "LOCAL-Q048-V142-TWO-OPERATOR-BETA-DEPENDENCY-REPAIR-CONDITIONAL-PROOF-840-830-V1",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "objective": "Repair the V141 840→830 upper-w inwardness obstruction using a dependency-aware monotone beta lower bound on the unchanged thermal domain, then admit at most one fresh conditional source-real mathematical proof cell; no actual admission.",
+    "parent_checkpoint": {
+      "file": "Q048_V140_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+      "accepted_actual": {
+        "count": 124,
+        "frontier": 840
+      },
+      "frontiers": {
+        "camspec-lcdm": 1440,
+        "camspec-ede_n3": 1440,
+        "hillipop-lcdm": 1440,
+        "hillipop-ede_n3": 840
+      },
+      "endpoint": {
+        "a": "1/841",
+        "E": "15881004977532652117/500000000000000000",
+        "Y": "5039104441059922143/200000000000000000",
+        "Vbar": "6292884093525456289/1000000000000000000"
+      }
+    },
+    "v141_obstruction": {
+      "run_id": "LOCAL-Q048-V141-20261021T133707256381Z-PROOF-V1",
+      "task_id": "LOCAL-Q048-V141-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-840-830-V1",
+      "task_fingerprint": "52383be9992ffb4fe19126c21a54f655580e278a98bce8b230a9e7a67c42759c",
+      "raw_sha256": "1faa36e2d27ee237508917bee0944388f9a34e2aad4e9cfa173a940d42993017",
+      "obstruction_sha256": "611a51ad961dd43cd0147dd24dabc360e87c89d2d47ef38eb7084f73365d832c",
+      "execution_sha256": "5cd79f263f4eb578ea3b983f2893b9faa526bdc31431896be1b53fe3b4fbb886",
+      "freeze_sha256": "f097647bc94ec58fe909fae23ed1b18cc2eb7906fcb15ef1f2fdb3be97e735bf",
+      "gate": "BRANCH:L:upper_w_inward",
+      "beta_lower": "48631246823405650784353486619747643832046515387923636321734650378357606313600389806576250320156096362682531077373016768243/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "beta_lower_approx": 48.631246823405654,
+      "threshold": "49",
+      "beta_deficit": "368753176594349215646513380252356167953484612076363678265349621642393686399610193423749679843903637317468922626983231757/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "beta_deficit_approx": 0.3687531765943492,
+      "classification": "MATHEMATICAL_INEQUALITY_OBSTRUCTION_NOT_PHYSICAL_FALSIFICATION"
+    },
+    "repair_contract": {
+      "thermal_domain_unchanged": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "h_upper_unchanged": "99999/100000",
+      "operators": [
+        "HMLA",
+        "SWIFT"
+      ],
+      "q_branches": {
+        "L": "1/1000000",
+        "R": "0"
+      },
+      "required_identity": "r_q(h)=(h+q)/(1+fHe+h+q)",
+      "required_monotonicity": "dr_q/dh=(1+fHe)/(1+fHe+h+q)^2 > 0 on the certified domain",
+      "required_change": "Do not interval-divide the same h independently through numerator and denominator. Derive a correlation-preserving lower bound for r_q(h), or an independently equivalent rigorous lower bound, before multiplying by the remaining positive beta prefactor.",
+      "routing_crosscheck_only": {
+        "old_beta_lower_approx": 48.631246823405654,
+        "old_denominator_lo": "59495335885979861032329372969/54975581388800000000000000000",
+        "old_denominator_hi": "2343947454021234744509/1125899906842624000000",
+        "algebraic_crosscheck_beta_lower_exact": "113989087177599934866647594834053177625737924603923667163618154059225715844774823213638064004262021555464123488344707411527956425286212969827687/1218464478944867553942105558405120000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "algebraic_crosscheck_beta_lower_approx": 93.55142406474506,
+        "algebraic_crosscheck_margin_over_49_exact": "54284327709301424723484422472202297625737924603923667163618154059225715844774823213638064004262021555464123488344707411527956425286212969827687/1218464478944867553942105558405120000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "algebraic_crosscheck_margin_over_49_approx": 44.55142406474506,
+        "status": "NOT_A_THEOREM_NOT_ACCEPTED_V142_MUST_RECONSTRUCT_FROM_FROZEN_FACTORS"
+      },
+      "required_new_work": [
+        "Create fresh V142 code/spec/control roster and freeze them before execution; V141 code is reference-only and V141 main/runner must not be rerun.",
+        "Re-derive the fresh 840→830 connected h lower bound from the accepted V140 initial face. V141 diagnostic connected/K values are crosschecks only, not accepted theorem values.",
+        "For each fixed q branch, prove the beta ratio lower bound with h-dependence preserved. Prove all denominator positivity and monotonicity premises explicitly; do not import the routing crosscheck as proof.",
+        "Recompute upper-w inwardness on both L and R branches on the unchanged thermal domain. Also independently revalidate the source/atomic/C, upper-h, lower-w and continuation gates needed for one complete proof.",
+        "Verifier must independently reconstruct the dependency-aware inequality from frozen factors and reject naive independent numerator/denominator interval division as insufficient for this repair.",
+        "If any required inequality/premise fails, stop at the first exact obstruction. Do not widen the thermal domain, split/tune the cell, change source inputs, or admit actual125 in V142."
+      ]
+    },
+    "limits": {
+      "max_new_mathematical_proof_cells": 1,
+      "max_new_actual_cells": 0,
+      "no_actual125": true,
+      "no_below_z": 830,
+      "no_thermal_domain_change": true,
+      "no_cell_partition_or_tuning": true,
+      "no_native_integration": true,
+      "no_reset_refit_recapture": true,
+      "no_historical_main_or_suite": true,
+      "no_model_newQ_or_closure": true,
+      "retry_count": 0,
+      "postfreeze_edits_allowed": false,
+      "scientific_chains_max": 1,
+      "science_seconds_max": 300
+    },
+    "authorization": "PROSPECTIVE_ONE_NEW_DEPENDENCY_AWARE_CONDITIONAL_MATHEMATICAL_PROOF_CELL_840_TO_830_ZERO_ACTUAL",
+    "NativeP6": "UNRESOLVED"
+  },
+  "fingerprint_convention": "SHA256 of UTF-8 sorted compact JSON task_fingerprint_basis, ensure_ascii=False, no final newline",
+  "q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "engine_prompt_version": "2.1.0",
+  "engine_prompt_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+  "engine_prompt_git_blob": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+  "engine_prompt_sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+  "material_change_from_v141": "V141 used dependency-losing interval division for (h+q)/(1+fHe+h+q). V142 is separately versioned and must use a correlation-preserving monotone ratio bound on the unchanged domain.",
+  "objective": "Repair the V141 840→830 upper-w inwardness obstruction using a dependency-aware monotone beta lower bound on the unchanged thermal domain, then admit at most one fresh conditional source-real mathematical proof cell; no actual admission.",
+  "inputs": {
+    "v140_checkpoint_sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+    "v140_ingestion_state_file": "Q048_V140_INGESTION_STATE_V1.json",
+    "v140_ingestion_state_sha256": "7171719d5cc3db6ecb59bd77abfbab0578baa683ced14fc39e1b6b38f9725511",
+    "v141_raw_file": "Q048_V141_RAW_V1.json",
+    "v141_raw_sha256": "1faa36e2d27ee237508917bee0944388f9a34e2aad4e9cfa173a940d42993017",
+    "v141_obstruction_file": "Q048_V141_OBSTRUCTION_DIAGNOSTIC_V1.json",
+    "v141_obstruction_sha256": "611a51ad961dd43cd0147dd24dabc360e87c89d2d47ef38eb7084f73365d832c",
+    "v141_execution_file": "Q048_V141_EXECUTION_V1.json",
+    "v141_execution_sha256": "5cd79f263f4eb578ea3b983f2893b9faa526bdc31431896be1b53fe3b4fbb886",
+    "v141_freeze_file": "Q048_V141_FREEZE_V1.json",
+    "v141_freeze_sha256": "f097647bc94ec58fe909fae23ed1b18cc2eb7906fcb15ef1f2fdb3be97e735bf",
+    "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row61_sha256": "93c02dbd79e9a33fd72955e176bacf872ae7c1f7fa68155a1358c8cec69d402d",
+    "control_row61_sha256": "f78c6543deb285d5632774694b75054239361b3dd4eac53bfcbc42e196feba62",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+  },
+  "proof_contract": {
+    "thermal_domain_unchanged": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "h_upper_unchanged": "99999/100000",
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "required_identity": "r_q(h)=(h+q)/(1+fHe+h+q)",
+    "required_monotonicity": "dr_q/dh=(1+fHe)/(1+fHe+h+q)^2 > 0 on the certified domain",
+    "required_change": "Do not interval-divide the same h independently through numerator and denominator. Derive a correlation-preserving lower bound for r_q(h), or an independently equivalent rigorous lower bound, before multiplying by the remaining positive beta prefactor.",
+    "routing_crosscheck_only": {
+      "old_beta_lower_approx": 48.631246823405654,
+      "old_denominator_lo": "59495335885979861032329372969/54975581388800000000000000000",
+      "old_denominator_hi": "2343947454021234744509/1125899906842624000000",
+      "algebraic_crosscheck_beta_lower_exact": "113989087177599934866647594834053177625737924603923667163618154059225715844774823213638064004262021555464123488344707411527956425286212969827687/1218464478944867553942105558405120000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "algebraic_crosscheck_beta_lower_approx": 93.55142406474506,
+      "algebraic_crosscheck_margin_over_49_exact": "54284327709301424723484422472202297625737924603923667163618154059225715844774823213638064004262021555464123488344707411527956425286212969827687/1218464478944867553942105558405120000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "algebraic_crosscheck_margin_over_49_approx": 44.55142406474506,
+      "status": "NOT_A_THEOREM_NOT_ACCEPTED_V142_MUST_RECONSTRUCT_FROM_FROZEN_FACTORS"
+    },
+    "required_new_work": [
+      "Create fresh V142 code/spec/control roster and freeze them before execution; V141 code is reference-only and V141 main/runner must not be rerun.",
+      "Re-derive the fresh 840→830 connected h lower bound from the accepted V140 initial face. V141 diagnostic connected/K values are crosschecks only, not accepted theorem values.",
+      "For each fixed q branch, prove the beta ratio lower bound with h-dependence preserved. Prove all denominator positivity and monotonicity premises explicitly; do not import the routing crosscheck as proof.",
+      "Recompute upper-w inwardness on both L and R branches on the unchanged thermal domain. Also independently revalidate the source/atomic/C, upper-h, lower-w and continuation gates needed for one complete proof.",
+      "Verifier must independently reconstruct the dependency-aware inequality from frozen factors and reject naive independent numerator/denominator interval division as insufficient for this repair.",
+      "If any required inequality/premise fails, stop at the first exact obstruction. Do not widen the thermal domain, split/tune the cell, change source inputs, or admit actual125 in V142."
+    ]
+  },
+  "validation_requirements": {
+    "baseline_named_checks_min": 30,
+    "semantic_controls_min": 35,
+    "independent_verifier": true,
+    "serialized_acceptance_readback": true,
+    "negative_controls_required": [
+      "naive independent interval division of same h falsely treated as the repaired theorem",
+      "routing crosscheck value imported as accepted proof",
+      "wrong q branch/operator/row/hash/source/capture",
+      "thermal-domain widening or cell partitioning hidden inside repair",
+      "V141 diagnostic K/connected lower promoted to theorem without fresh derivation",
+      "future-domain membership assumed; selector/native/trajectory identity promoted",
+      "actual125 or below830 state mutation",
+      "verifier imports/executes producer or V141 historical main",
+      "empty/noop semantic controls or post-freeze edits"
+    ]
+  },
+  "limits": {
+    "max_new_mathematical_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "no_actual125": true,
+    "no_below_z": 830,
+    "no_thermal_domain_change": true,
+    "no_cell_partition_or_tuning": true,
+    "no_native_integration": true,
+    "no_reset_refit_recapture": true,
+    "no_historical_main_or_suite": true,
+    "no_model_newQ_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false,
+    "scientific_chains_max": 1,
+    "science_seconds_max": 300
+  },
+  "success": "One fresh accepted dependency-aware conditional source-real proof840→830 with beta upper-face inwardness certified for both branches on the unchanged thermal domain; +1 proof/+0 actual; actual124/frontier840 remains current.",
+  "failure_or_falsification": "First exact premise/domain/inequality/semantic/serialization/process/budget obstruction is terminal; +0 proof/+0 actual and actual124/frontier840 remains current. Failure of this repair is not automatically physical falsification.",
+  "stop": "One terminal V142 result then Result Ingestion. No domain widening, cell partition/tuning, consumer, actual125, below830 work, native integration, new Q/model promotion or closure.",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V141_INGESTED_V1.md"
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "bubbleverse.q048.v141.ingestion.recovery_map.v1",
+  "created_at_utc": "2026-10-21T14:23:02.723907+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "current_actual": {
+    "count": 124,
+    "frontier": 840
+  },
+  "next_task_file": "Q048_V142_NEXT_MATHEMATICS_TASK_840_830_BETA_DEPENDENCY_REPAIR_V1.json",
+  "source_recovery": [
+    {
+      "file": "Q048_V140_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+      "role": "current accepted parent checkpoint",
+      "repository_path": "Q048_V140_ACCEPTED_CHECKPOINT_V1.json",
+      "status": "VERIFIED_PRIOR_PROJECT_MEMORY"
+    },
+    {
+      "file": "Q048_V141_RAW_V1.json",
+      "sha256": "1faa36e2d27ee237508917bee0944388f9a34e2aad4e9cfa173a940d42993017",
+      "role": "immutable raw obstruction result",
+      "local_delivery_path": "Q048_V141_RAW_V1.json",
+      "repository_path": "Q048_V141_RAW_V1.json",
+      "status": "AVAILABLE_LOCAL_MISSING_DIRECT_GITHUB_PATH"
+    },
+    {
+      "file": "Q048_V141_OBSTRUCTION_DIAGNOSTIC_V1.json",
+      "sha256": "611a51ad961dd43cd0147dd24dabc360e87c89d2d47ef38eb7084f73365d832c",
+      "role": "immutable obstruction diagnostic",
+      "local_delivery_path": "Q048_V141_OBSTRUCTION_DIAGNOSTIC_V1.json",
+      "repository_path": "Q048_V141_OBSTRUCTION_DIAGNOSTIC_V1.json",
+      "status": "AVAILABLE_LOCAL_MISSING_DIRECT_GITHUB_PATH"
+    },
+    {
+      "file": "Q048_V141_EXECUTION_V1.json",
+      "sha256": "5cd79f263f4eb578ea3b983f2893b9faa526bdc31431896be1b53fe3b4fbb886",
+      "role": "execution record",
+      "repository_path": "Q048_V141_EXECUTION_V1.json",
+      "status": "SYNCED_TOP_LEVEL"
+    },
+    {
+      "file": "Q048_V141_FREEZE_V1.json",
+      "sha256": "f097647bc94ec58fe909fae23ed1b18cc2eb7906fcb15ef1f2fdb3be97e735bf",
+      "role": "freeze authority",
+      "repository_path": "Q048_V141_FREEZE_V1.json",
+      "status": "SYNCED_TOP_LEVEL"
+    },
+    {
+      "file": "Q048_V141_SPEC_V1.json",
+      "sha256": "d59a68a71b9431ae49088c482680ddfd1cd699323af90b00af9ca02c3f335e76",
+      "role": "V141 specification",
+      "repository_path": "Q048_V141_SPEC_V1.json",
+      "status": "SYNCED_TOP_LEVEL"
+    },
+    {
+      "file": "Q047_SAMLET_JOURNAL_Q048_V141_MATHEMATICAL_OBSTRUCTION_APPENDED_V1.md",
+      "sha256": "d1f936d4f433b3cc32fddd9481302614b8da690353793a0103de9d81f47d6ba8",
+      "role": "pre-ingestion complete journal",
+      "repository_path": "Q047_SAMLET_JOURNAL_Q048_V141_MATHEMATICAL_OBSTRUCTION_APPENDED_V1.md",
+      "status": "SYNCED_TOP_LEVEL"
+    },
+    {
+      "file": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+      "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+      "git_blob": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+      "role": "next engine prompt",
+      "repository_path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+      "status": "VERIFIED_AT_CURRENT_HEAD"
+    }
+  ],
+  "v142_fresh_requirements": [
+    "Fresh V142 code/spec/control roster; freeze before one chain.",
+    "V141 code/reference may be read but V141 frozen runner/main must not be rerun.",
+    "Reconstruct dependency-aware beta ratio theorem independently from source/frozen factors.",
+    "No thermal-domain change, no cell partition/tuning, no actual mutation."
+  ]
+}
