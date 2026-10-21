@@ -1,0 +1,588 @@
+{
+  "schema": "bubbleverse.q048.v136.conditional_connected_proof.task.v1",
+  "created_at_utc": "2026-10-21T10:44:25.052331+00:00",
+  "task_id": "LOCAL-Q048-V136-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-860-850-V1",
+  "task_fingerprint": "a389cdb7ea29491bf83bb3ef198f336d4403004c6814ef21de542a66ab2fe18e",
+  "task_fingerprint_basis": {
+    "task_id": "LOCAL-Q048-V136-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-860-850-V1",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "objective": "One fresh860→850 conditional source-real connected proof, no actual admission",
+    "parent_checkpoint": {
+      "file": "Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+      "workspace_path_required": "inputs/Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+      "file_sha256": "6bf508ad3d5c652787e583b2575fea2e5d5c250674e384aa553d2be8b751932e",
+      "accepted_actual": {
+        "count": 122,
+        "frontier": 860
+      },
+      "frontiers": {
+        "camspec-lcdm": 1440,
+        "camspec-ede_n3": 1440,
+        "hillipop-lcdm": 1440,
+        "hillipop-ede_n3": 860
+      },
+      "endpoint": {
+        "a": "1/861",
+        "E": "34371176983888929189/1000000000000000000",
+        "Y": "27278762343901556397/1000000000000000000",
+        "Vbar": "6796897363321232259/1000000000000000000"
+      },
+      "initial_h_lower_only": "95691361670493/250000000000000000",
+      "initial_h_upper": "99999/100000",
+      "initial_thermal_face": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "old_K_reference_only": "287539421008054509007/62500000000000000",
+      "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS"
+    },
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "guard": {
+      "file": "q048_guard_local_v_result_v12.json",
+      "workspace_path_required": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "primary_control": false,
+      "control_role": "secondary comparison only; never substitute its background/endpoint",
+      "row_index_reference_only": 59,
+      "selection": "Unique exact a/z cell for each strict boolean control role, before any row index use",
+      "primary_row_sha256": "8a886b2a01005cad997b69fd60f5abe6577c1451282e1604a220a499a8eeea8c",
+      "control_row_sha256": "eb9cff23a50f749dfd0cd023786715ce0e5a1be271ceb4a16faf1c4633c6480f",
+      "left_glue": {
+        "a0": "1/861",
+        "E_input_left": "34371176983888929189/1000000000000000000",
+        "Y_left": "27278762343901556397/1000000000000000000",
+        "V_previous": "6796897363321232259/1000000000000000000"
+      },
+      "expected_primary_endpoint_crosscheck_only": {
+        "a1": "1/851",
+        "E_right": "33048367909416991121/1000000000000000000",
+        "Y_right": "13111248214289354873/500000000000000000",
+        "V_admitted": "6541460169136686317/1000000000000000000"
+      },
+      "energy_cap_used": "34371176983888929189/1000000000000000000",
+      "E_safe_left_distinct": "8526158456184959443/250000000000000000",
+      "metadata_qualification": "accepted/committed/whole_cell/domain flags verified. All mathematical premises for new cell remain to be proved.",
+      "source_state_reset": false
+    },
+    "proof_contract": {
+      "operators": [
+        "HMLA",
+        "SWIFT"
+      ],
+      "q_branches": {
+        "L": "1/1000000",
+        "R": "0"
+      },
+      "selection": "conv(HMLA,SWIFT) for each fixed q branch",
+      "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; bounds hold on their existing interval and at the new endpoint only whenever an admissible continuation reaches it",
+      "initial_face_only": true,
+      "no_assumed_future_domain_membership": true,
+      "exact_selector_existence_uniqueness": "NOT_ESTABLISHED",
+      "native_error_certificate": false,
+      "trajectory_identity_claim": false,
+      "source_saha_constant": "3.016103031869581e21",
+      "thermal_domain_target": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "h_upper_target": "99999/100000",
+      "required_new_work": [
+        "Freshly validate860→850 source/background/atomic/C premises for HMLA and SWIFT and both fixed-q branches, using exact accepted V135 left face. Guard flags are background inputs, not the requested theorem.",
+        "Use E_input_left as conservative whole-cell cap, separate from E_safe_left. Validate all helper/interpolation domains, decimal/binary64 channels and source constants; do not assume previous fit/domain coverage extends.",
+        "Derive a fresh K_upper and strictly positive connected lower h bound from V135.retained_theorem_values.connected_lower as initial-face-only. Old V134 K/lower conclusion is not an860→850 enclosure.",
+        "Prove strict upper-h and both thermal inward faces, non-circular first-exit and closed-endpoint persistence for existing admissible continuations; convex combinations preserve inequalities.",
+        "Independently reconstruct and verify both operators/branches, with at least30 named checks and35 real non-noop semantic controls, exact serialized evidence and separate readback. Do not import the new producer in the verifier or any historical proof main."
+      ]
+    },
+    "limits": {
+      "max_new_mathematical_proof_cells": 1,
+      "max_new_actual_cells": 0,
+      "no_actual123": true,
+      "no_below_z": 850,
+      "no_native_integration": true,
+      "no_reset_refit_recapture_tuning": true,
+      "no_historical_main_or_suite": true,
+      "no_model_newQ_or_closure": true,
+      "retry_count": 0,
+      "postfreeze_edits_allowed": false
+    },
+    "authorization": "PROSPECTIVE_ONE_NEW_CONDITIONAL_MATHEMATICAL_PROOF_CELL_860_TO_850_ZERO_ACTUAL",
+    "scientific_chains_max": 1,
+    "science_seconds_max": 300,
+    "code_version": "NOT_CREATED_YET; V136 code/spec/roster must be separately frozen before its one chain",
+    "NativeP6": "UNRESOLVED"
+  },
+  "fingerprint_convention": "SHA256 of UTF-8 sorted compact JSON task_fingerprint_basis, ensure_ascii=False, no final newline",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_full_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "engine_prompt": {
+    "id": "BUBBLEVERSE.MATHEMATICS2.1.0",
+    "prompt_version": "2.1.0",
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "6837b39554670b69b9255e35d9bcf0e2261c08df",
+    "path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "git_blob": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b",
+    "status": "VERIFIED_EXISTING_PROMPT_BY_EXACT_LOCAL_BYTES_AND_REPOSITORY_BLOB"
+  },
+  "authorization": "PROSPECTIVE_ONE_NEW_CONDITIONAL_MATHEMATICAL_PROOF_CELL_860_TO_850_ZERO_ACTUAL",
+  "authorization_record": "Q048_V135_INGESTION_STATE_V1.json",
+  "authorization_event": "LOCAL-Q048-V135-ACCEPTED-CONSUMER-INGESTION-V1",
+  "objective": "One fresh860→850 conditional source-real connected proof, no actual admission",
+  "why_not_repeat": "V135 just accepted870→860 as actual122. No connected HMLA/SWIFT proof860→850 exists in this run; guard metadata alone is not it. V134 conclusions and V135 admission are completed and must not be rerun.",
+  "parent_checkpoint": {
+    "file": "Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+    "workspace_path_required": "inputs/Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+    "file_sha256": "6bf508ad3d5c652787e583b2575fea2e5d5c250674e384aa553d2be8b751932e",
+    "accepted_actual": {
+      "count": 122,
+      "frontier": 860
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 860
+    },
+    "endpoint": {
+      "a": "1/861",
+      "E": "34371176983888929189/1000000000000000000",
+      "Y": "27278762343901556397/1000000000000000000",
+      "Vbar": "6796897363321232259/1000000000000000000"
+    },
+    "initial_h_lower_only": "95691361670493/250000000000000000",
+    "initial_h_upper": "99999/100000",
+    "initial_thermal_face": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "old_K_reference_only": "287539421008054509007/62500000000000000",
+    "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS"
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "cell_z": [
+    860,
+    850
+  ],
+  "cell_a": [
+    "1/861",
+    "1/851"
+  ],
+  "guard": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "workspace_path_required": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "control_role": "secondary comparison only; never substitute its background/endpoint",
+    "row_index_reference_only": 59,
+    "selection": "Unique exact a/z cell for each strict boolean control role, before any row index use",
+    "primary_row_sha256": "8a886b2a01005cad997b69fd60f5abe6577c1451282e1604a220a499a8eeea8c",
+    "control_row_sha256": "eb9cff23a50f749dfd0cd023786715ce0e5a1be271ceb4a16faf1c4633c6480f",
+    "left_glue": {
+      "a0": "1/861",
+      "E_input_left": "34371176983888929189/1000000000000000000",
+      "Y_left": "27278762343901556397/1000000000000000000",
+      "V_previous": "6796897363321232259/1000000000000000000"
+    },
+    "expected_primary_endpoint_crosscheck_only": {
+      "a1": "1/851",
+      "E_right": "33048367909416991121/1000000000000000000",
+      "Y_right": "13111248214289354873/500000000000000000",
+      "V_admitted": "6541460169136686317/1000000000000000000"
+    },
+    "energy_cap_used": "34371176983888929189/1000000000000000000",
+    "E_safe_left_distinct": "8526158456184959443/250000000000000000",
+    "metadata_qualification": "accepted/committed/whole_cell/domain flags verified. All mathematical premises for new cell remain to be proved.",
+    "source_state_reset": false
+  },
+  "proof_contract": {
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "selection": "conv(HMLA,SWIFT) for each fixed q branch",
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; bounds hold on their existing interval and at the new endpoint only whenever an admissible continuation reaches it",
+    "initial_face_only": true,
+    "no_assumed_future_domain_membership": true,
+    "exact_selector_existence_uniqueness": "NOT_ESTABLISHED",
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false,
+    "source_saha_constant": "3.016103031869581e21",
+    "thermal_domain_target": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "h_upper_target": "99999/100000",
+    "required_new_work": [
+      "Freshly validate860→850 source/background/atomic/C premises for HMLA and SWIFT and both fixed-q branches, using exact accepted V135 left face. Guard flags are background inputs, not the requested theorem.",
+      "Use E_input_left as conservative whole-cell cap, separate from E_safe_left. Validate all helper/interpolation domains, decimal/binary64 channels and source constants; do not assume previous fit/domain coverage extends.",
+      "Derive a fresh K_upper and strictly positive connected lower h bound from V135.retained_theorem_values.connected_lower as initial-face-only. Old V134 K/lower conclusion is not an860→850 enclosure.",
+      "Prove strict upper-h and both thermal inward faces, non-circular first-exit and closed-endpoint persistence for existing admissible continuations; convex combinations preserve inequalities.",
+      "Independently reconstruct and verify both operators/branches, with at least30 named checks and35 real non-noop semantic controls, exact serialized evidence and separate readback. Do not import the new producer in the verifier or any historical proof main."
+    ]
+  },
+  "parent_schema_adapter_gate": {
+    "required": true,
+    "cause": "V135 checkpoint preserves bounds/operators in nested objects; historical V134 proof expects V132 top-level fields and literal old parent/cell state. A blind version rename will fail or misbind.",
+    "source_schema": "bubbleverse.q048.v135.accepted_checkpoint.v1",
+    "authoritative_checkpoint_sha256": "6bf508ad3d5c652787e583b2575fea2e5d5c250674e384aa553d2be8b751932e",
+    "exact_field_mapping": {
+      "actual": "actual",
+      "frontiers": "frontiers",
+      "endpoint": "endpoint",
+      "connected_lower": "retained_theorem_values.connected_lower",
+      "K_upper": "retained_theorem_values.K_upper",
+      "h_upper": "retained_theorem_values.h_upper",
+      "thermal_domain": "retained_theorem_values.thermal_domain",
+      "operators": "source_cover_contract.operators",
+      "q_branches": "source_cover_contract.q_branches"
+    },
+    "rule": "Keep original V135 checkpoint bytes unchanged. New V136 code may read nested fields directly. If a projection is needed, create separately labelled technical-derived view with source SHA/field mapping/hash; independently verify it against raw checkpoint before freeze. It is not a second accepted checkpoint.",
+    "paths": "Resolve from frozen spec paths, never ROOT/task[parent_checkpoint][file] basename guess. Verify task/parent/helper paths before freeze.",
+    "cell_binding": "Replace literal parent121870, a1/871→1/861,row58 references only in new V136 code; bind actual122860,a1/861→1/851,row59. Historical source remains unchanged."
+  },
+  "method_reuse_limits": [
+    "Preserve and read V134 methods/spec/source/helper pins only as method reference; execute only separately versioned V136 producer/verifier after freeze. No historical main or suite.",
+    "Copying old K/lower/branch enclosure, old gate counts or old acceptance cannot satisfy new theorem. Reuse a helper/table only after exact byte and new-domain validation.",
+    "Do not treat row59 metadata acceptance as the requested connected proof or consume/admit actual123.",
+    "Preserve V134 execution-to-V133 scientific identity as historical provenance. V136 gets its own task/spec/freeze/run/output identity, not relabelled old artifacts."
+  ],
+  "required_work": [
+    "Recover exact parent/acceptance-chain/source inputs using embedded IDs/maps, verify hashes and full prior journal; no historical mains.",
+    "Resolve the explicit V135 nested-schema/path adapter and technical preflight before freeze. Freeze exact source/code/spec/roster/helper and parent pins.",
+    "Execute exactly one bounded fresh producer→independent verifier→acceptance/readback chain; enforce structured FIRST_MATERIAL_OBSTRUCTION as terminal even when exit status0.",
+    "Use>=30 named baseline gates and>=35 real non-noop semantic controls, all frozen before chain. Stop at first failed criterion/control/process/pin/budget; no retry or postfreeze edits.",
+    "Validate exact serialized acceptance maps/ordered control rosters, counts, hashes and independent readback; reject empty/vacuously passing reports. Copy no candidate to actual state.",
+    "Return one proof result or first obstruction to Result Ingestion and stop at850. No next consumer/task or closure."
+  ],
+  "negative_controls_required": [
+    "wrong question/fingerprint/Q/parent/run/source/capture",
+    "wrong strict control role or nonunique/wrong row/cell/hash",
+    "E_safe_left swapped for conservative E_input_left or wrong glue",
+    "wrong source-Saha, omitted operator/q/channel, invalid table-domain reuse",
+    "understated new K, initial h0 reused as whole-cell lower, nonpositive lower, invalid denominator/thermal inward face",
+    "lost existing-solution hypothesis or circular future-domain assumption",
+    "selector/native/trajectory/Q-closure promotion or actual123",
+    "missing/changed dual historical identity without explicit provenance mapping",
+    "empty/malformed serialized checks/control lists, noop mutation, predecessor tampering",
+    "exit0 serialized obstruction followed by dependent execution or freeze-pin drift"
+  ],
+  "budget": {
+    "backend": "LOCAL_RUNTIME",
+    "science_seconds_max": 300,
+    "scientific_chains_max": 1,
+    "retries": 0,
+    "postfreeze_edits_allowed": false,
+    "estimate": "V136 unmeasured. Prior V134 math chain1.632310070s and V135 metadata consumer16.067785s are distinct measurements, not V136 timings. Re-estimate full new chain before freeze; no Actions/paid compute assumed.",
+    "paid_compute_authorized": false
+  },
+  "limits": {
+    "max_new_mathematical_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "no_actual123": true,
+    "no_below_z": 850,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_model_newQ_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "success": "One fresh accepted conditional proof860→850 with all source/atomic/C/connected/inward/continuation and independent real semantic/readback gates passing. +1proof/+0actual; actual122/frontier860 and other frontiers unchanged.",
+  "failure_or_falsification": "First exact missing pin/path/schema/domain/inequality/semantic/serialization/process/budget obstruction is terminal; retain actual122/frontier860, preserve raw artifacts, no retry. This is not automatically physical falsification.",
+  "stop": "One terminal result then Result Ingestion; no consumer, actual123, below850 work, native integration, new Q/model promotion or closure.",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V135_INGESTED_V1.md",
+  "input_recovery_map": [
+    {
+      "runtime_relative_path": "Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "6bf508ad3d5c652787e583b2575fea2e5d5c250674e384aa553d2be8b751932e",
+      "size_bytes": 5387,
+      "library_file_id": "libfile_c7ead6f45a0c8191aabb6c78490a11b5",
+      "file_id": "file_000000003d7481f5a9a929538c3080bb",
+      "stored_filename": "Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+      "library_path": "/Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_ACCEPTED_CHECKPOINT_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_RAW_V1.json",
+      "sha256": "8d68cb1ff0927570c7ae864552f3a8e71e908e278af25f61fe131e582419f03a",
+      "size_bytes": 8924,
+      "library_file_id": "libfile_268375e9f37481919a3d204fd001694f",
+      "file_id": "file_00000000dc2481f5a05422f6a82f1257",
+      "stored_filename": "Q048_V135_RAW_V1.json",
+      "library_path": "/Q048_V135_RAW_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_RAW_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_VALIDATION_V1.json",
+      "sha256": "21cfa8f56a8c52ff784c97dcfdaee569898ac789f8e34db5a30a1b302587051b",
+      "size_bytes": 11482,
+      "library_file_id": "libfile_da8b5d899d0481918ed484c75fafd2c5",
+      "file_id": "file_00000000d30481f580d900422f83348d",
+      "stored_filename": "Q048_V135_VALIDATION_V1.json",
+      "library_path": "/Q048_V135_VALIDATION_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_VALIDATION_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_PROVISIONAL_ACCEPTANCE_V1.json",
+      "sha256": "3a79c08e23ef26482b2861e297881082375679da480b5f40e21f6e5ee8fb33a4",
+      "size_bytes": 936,
+      "library_file_id": "libfile_13b0ebb53a708191aadacf0b1191509c",
+      "file_id": "file_00000000f31c81f593424b5680df6507",
+      "stored_filename": "Q048_V135_PROVISIONAL_ACCEPTANCE_V1.json",
+      "library_path": "/Q048_V135_PROVISIONAL_ACCEPTANCE_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_PROVISIONAL_ACCEPTANCE_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_POSTACCEPT_VALIDATION_V1.json",
+      "sha256": "0b37fc94b92011f98f37a59e516f268648346459b4dbbba6e28e4b4f78da06d1",
+      "size_bytes": 13244,
+      "library_file_id": "libfile_40915dfe8c648191be9ad17f34709096",
+      "file_id": "file_00000000a2bc81f58977c4c5496cbbc6",
+      "stored_filename": "Q048_V135_POSTACCEPT_VALIDATION_V1.json",
+      "library_path": "/Q048_V135_POSTACCEPT_VALIDATION_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_POSTACCEPT_VALIDATION_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_PUBLICATION_READBACK_V1.json",
+      "sha256": "80ad3e82b770cd4d9e909e11d6b6eac7fc4a88593a323b7fb9981371975b6a70",
+      "size_bytes": 3364,
+      "library_file_id": "libfile_ef09af09fa848191badedd9eebadc03e",
+      "file_id": "file_000000000dcc81f5be06e59c856e66c7",
+      "stored_filename": "Q048_V135_PUBLICATION_READBACK_V1.json",
+      "library_path": "/Q048_V135_PUBLICATION_READBACK_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_PUBLICATION_READBACK_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_EXECUTION_V1.json",
+      "sha256": "eb664254e60ba2375f139202bc4b939d691064d2fcbd96e7e2617d44c2349416",
+      "size_bytes": 2286,
+      "library_file_id": "libfile_a878cac85260819186f74fe6cc807750",
+      "file_id": "file_000000000ac481f597e60f58aa6481b6",
+      "stored_filename": "Q048_V135_EXECUTION_V1.json",
+      "library_path": "/Q048_V135_EXECUTION_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_EXECUTION_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_SPEC_V1.json",
+      "sha256": "1d62c19c406ff1c1e443c6b7f8e820c17f84527201eb91d3cd3db2e7544beb41",
+      "size_bytes": 14907,
+      "library_file_id": "libfile_b82209760b4c8191bcc312b5f90840ec",
+      "file_id": "file_000000000eb481f58f9ebe803e850069",
+      "stored_filename": "Q048_V135_SPEC_V1.json",
+      "library_path": "/Q048_V135_SPEC_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_SPEC_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_FREEZE_V1.json",
+      "sha256": "36389ff2748609ff64f7201152a323b0d274ab5b544cceee0809a689c44b237c",
+      "size_bytes": 13048,
+      "library_file_id": "libfile_b73b5fc9c2ec8191acfae62f706c63de",
+      "file_id": "file_000000002f8081f5bfb124cfdde3cbda",
+      "stored_filename": "Q048_V135_FREEZE_V1.json",
+      "library_path": "/Q048_V135_FREEZE_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_FREEZE_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_DELIVERY_VALIDATION_V1.json",
+      "sha256": "dd4c33141f3fd4d10bad2f7d1f8f323e4072c50eb73484a7758c55e4f2e4d3da",
+      "size_bytes": 1398,
+      "library_file_id": "libfile_76fe076caaa48191bd8214661a26af99",
+      "file_id": "file_00000000e2f481f58eb1fec71e6f5343",
+      "stored_filename": "Q048_V135_DELIVERY_VALIDATION_V1.json",
+      "library_path": "/Q048_V135_DELIVERY_VALIDATION_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_DELIVERY_VALIDATION_V1.json"
+    },
+    {
+      "runtime_relative_path": "Q048_V135_HANDOFF_TO_INGESTION_V1.json",
+      "sha256": "0f26819fa99025753382c17f16c82c221d901b42ee93b17d17819a5bb927b012",
+      "size_bytes": 9170,
+      "library_file_id": "libfile_73abad792b1481918e08998a93b82fc0",
+      "file_id": "file_00000000283881f5978fd341a52f0fd3",
+      "stored_filename": "Q048_V135_HANDOFF_TO_INGESTION_V1.json",
+      "library_path": "/Q048_V135_HANDOFF_TO_INGESTION_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "inputs/Q048_V135_HANDOFF_TO_INGESTION_V1.json"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/Q048_V134_ACCEPTANCE_V1.json",
+      "sha256": "e12ec66f8311a5645eb31ee2f8cdc524eff82a3ef1f2a46bf794ef46246d665d",
+      "size_bytes": 3232,
+      "library_file_id": "libfile_8bd42235f07c81918610bc2ba4a0eac7",
+      "file_id": "file_000000003d4c81f5b1e4f451366405f6",
+      "stored_filename": "Q048_V134_ACCEPTANCE_V1.json",
+      "library_path": "/Q048_V134_ACCEPTANCE_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_ACCEPTANCE_V1.json"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/Q048_V134_RAW_V1.json",
+      "sha256": "59fe997cc1bebf483ff006e8de245ba7a1698659b917d609f06a1420f4ffd0b4",
+      "size_bytes": 41063,
+      "library_file_id": "libfile_ae361c41c1f081918f10366a931e40f7",
+      "file_id": "file_00000000352881f59f5dbb0d1f3b6d8e",
+      "stored_filename": "Q048_V134_RAW_V1.json",
+      "library_path": "/Q048_V134_RAW_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_RAW_V1.json"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/Q048_V134_SPEC_V1.json",
+      "sha256": "23eca15f7a389e3821012879377c627776f611d65dd70723a425752ec764ace1",
+      "size_bytes": 5186,
+      "library_file_id": "libfile_ae672eba70bc8191a1bc1ca16ee1bdf3",
+      "file_id": "file_00000000532881f7b64037784d6769fb",
+      "stored_filename": "Q048_V134_SPEC_V1.json",
+      "library_path": "/Q048_V134_SPEC_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_SPEC_V1.json"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/Q048_V134_FREEZE_V1.json",
+      "sha256": "7553f983b1645d01e823a7b448fa250c7a77eac7c511db6dbe20bbf47223f26e",
+      "size_bytes": 9188,
+      "library_file_id": "libfile_103971f3f5408191b5b8411b6f330027",
+      "file_id": "file_00000000823881f6bc0c6cb96aa2f998",
+      "stored_filename": "Q048_V134_FREEZE_V1.json",
+      "library_path": "/Q048_V134_FREEZE_V1.json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/Q048_V134_FREEZE_V1.json"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/q048_v134_proof.py",
+      "sha256": "83f295dce7f4218ec3c7bf0df6a066a6c593bd0f3cca025b9d983c45a66528b7",
+      "size_bytes": 13225,
+      "library_file_id": "libfile_6c919a43652c8191a23fb3b53ca63015",
+      "file_id": "file_00000000b02081f68c37134961ed408f",
+      "stored_filename": "q048_v134_proof.py",
+      "library_path": "/q048_v134_proof.py",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/q048_v134_proof.py"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/q048_v134_verify.py",
+      "sha256": "12496a35161b7c37f39366849f9a8d3e74517e5407c73e8e2042b6a4f514f48c",
+      "size_bytes": 14143,
+      "library_file_id": "libfile_77b14224fd9c8191ad3b349745af36f0",
+      "file_id": "file_00000000e95c81f6be5dc671f8beec1b",
+      "stored_filename": "q048_v134_verify.py",
+      "library_path": "/q048_v134_verify.py",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/q048_v134_verify.py"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/q048_v134_run.py",
+      "sha256": "9495ede83bb5f68de917d8d2184ce97b4151a97568cda8ad3b8af604b7014cfa",
+      "size_bytes": 4090,
+      "library_file_id": "libfile_4748a78bdc548191b4367d1bbeb361c6",
+      "file_id": "file_000000004a4081f68108dd071e16838f",
+      "stored_filename": "q048_v134_run.py",
+      "library_path": "/q048_v134_run.py",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/q048_v134_run.py"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/q048_v134_execution_guard.py",
+      "sha256": "666f89adff1b873feb620325b5c391870d122242f12d8ffe2a02cf1bd605945b",
+      "size_bytes": 3623,
+      "library_file_id": "libfile_879e206809548191b300ca593a73e6cc",
+      "file_id": "file_000000005de481f69166c82b3c3f7757",
+      "stored_filename": "q048_v134_execution_guard.py",
+      "library_path": "/q048_v134_execution_guard.py",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/q048_v134_execution_guard.py"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/inputs/Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1.json",
+      "sha256": "74e0cba7c57120587d6481f22f45dba4d5978fcb441e7d0d35d984b0b2aba52f",
+      "size_bytes": 10868,
+      "library_file_id": "libfile_7e09a33d94388191b25da11079598b6b",
+      "file_id": "file_00000000504881f5a31c16e74de427dc",
+      "stored_filename": "Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1(1).json",
+      "library_path": "/Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1(1).json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/inputs/Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1.json"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "size_bytes": 1198030,
+      "library_file_id": "libfile_8a509e02aaa48191a03445cc5e34a32e",
+      "file_id": "file_00000000f02881f6a96ccca7122647f2",
+      "stored_filename": "q048_guard_local_v_result_v12(5).json",
+      "library_path": "/q048_guard_local_v_result_v12(5).json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json"
+    },
+    {
+      "runtime_relative_path": "proof_runtime/ref/prior_v126/inputs/q048_prefix_config_v1.json",
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "size_bytes": 105567,
+      "library_file_id": "libfile_5ce6b9e59a788191aec4b8951fe781df",
+      "file_id": "file_00000000d2d081f5b9cc9cd57406bb88",
+      "stored_filename": "q048_prefix_config_v1(8).json",
+      "library_path": "/q048_prefix_config_v1(8).json",
+      "version": 0,
+      "local_metadata_applied": true,
+      "required_workspace_path": "proof_runtime/ref/prior_v126/inputs/q048_prefix_config_v1.json"
+    }
+  ],
+  "full_runtime_recovery": {
+    "file": "Q048_V135_INPUT_AND_OUTPUT_RECOVERY_MAP_V1.json",
+    "library_file_id": "libfile_2750a54f2ac8819196fc247b5b47030b",
+    "file_id": "file_000000003ae881f5a3a223ca9dc05a7b",
+    "sha256": "26bf6f348291647b5058bc351955e33c8cddee1e39520017800dcd57fe757227",
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "6837b39554670b69b9255e35d9bcf0e2261c08df",
+    "path": "Q048_V135_INPUT_AND_OUTPUT_RECOVERY_MAP_V1.json",
+    "records": 126,
+    "empty_logs": 7,
+    "instruction": "Restore each exact relative path, including proof_runtime/ and nested source/helpers. All102 V135 freeze paths and all46 historical proof pins are recoverable; zero-byte logs have exact inline descriptors. Do not run/import historical mains."
+  }
+}
