@@ -1,0 +1,57 @@
+{
+  "schema": "bubbleverse.q048.v147.handoff_to_ingestion.v1",
+  "created_at_utc": "2026-10-21T18:53:23.104481+00:00",
+  "handoff_id": "LOCAL-Q048-V147-ACCEPTED-ACTUAL125-FRONTIER830-V1",
+  "run_id": "LOCAL-Q048-V147-20261021T185152692691Z-FINAL-BUDGET-BINDING-PUBLICATION-REPAIR-CONSUMER-V1",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "result": "ACCEPTED_ACTUAL125_FRONTIER830",
+  "accepted_checkpoint_ref": "Q048_V147_ACCEPTED_CHECKPOINT_V1.json",
+  "accepted_checkpoint_sha256": "4cd47130df8040b595d33c552b8aa7b4f9ca855fa756eaa404fa35113e0c72d3",
+  "current_state": {
+    "actual": {
+      "count": 125,
+      "frontier": 830
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 830
+    },
+    "endpoint": {
+      "a": "1/831",
+      "E": "15255752724206057963/500000000000000000",
+      "Y": "4839471313802804557/200000000000000000",
+      "Vbar": "3025529671378252963/500000000000000000"
+    },
+    "v142_proof_status": "ACCEPTED_CONSUMED_ONCE",
+    "NativeP6": "UNRESOLVED",
+    "Q048": "ACTIVE_INCONCLUSIVE"
+  },
+  "delta": {
+    "new_actual_cells": 1,
+    "new_proof_cells": 0,
+    "new_theorem_recomputations": 0,
+    "theorem_consumptions": 1
+  },
+  "question_budget": {
+    "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V6.json",
+    "ledger_version": 6,
+    "run_cost_pts": 50,
+    "used_pts": 248,
+    "remaining_pts": 752,
+    "status": "ACTIVE"
+  },
+  "required_ingestion_actions": [
+    "Register V147 accepted result exactly once.",
+    "Advance current hillipop-ede_n3 state from actual124/frontier840 to actual125/frontier830.",
+    "Mark V142 proof840->830 ACCEPTED_CONSUMED_ONCE exactly once.",
+    "Import V147 50-point charge exactly once; preserve USED248 and REMAINING752.",
+    "Preserve V145 and V146 terminal technical failures historically unchanged.",
+    "Evaluate Q-completion; if still open, select exactly one material next task."
+  ],
+  "success_condition": "Ingestion preserves accepted checkpoint identity/hash, updates current state exactly once, keeps Q048 ACTIVE/INCONCLUSIVE unless its independent completion gate is satisfied, and routes one bounded next task or closure as warranted.",
+  "stop_condition": "Builder does not create V148, does not work below z=830, and does not consume another theorem. Return exactly once to Result Ingestion2.2.0.",
+  "destination": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0"
+}
