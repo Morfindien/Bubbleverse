@@ -1,0 +1,419 @@
+{
+  "schema": "bubbleverse.q048.v137.conditional_actual_consumer.task.v1",
+  "task_id": "LOCAL-Q048-V137-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-860-850-V1",
+  "task_fingerprint": "f16fabcf483410554aca535430bde6ea24607fd93b2a1158a51d1b79d5583703",
+  "task_definition_for_fingerprint": {
+    "task_id": "LOCAL-Q048-V137-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-860-850-V1",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "objective": "Consume the newly accepted V136 conditional connected proof860→850 exactly once as a conditional source-real actual admission, with no theorem recomputation.",
+    "parent_checkpoint_sha256": "6bf508ad3d5c652787e583b2575fea2e5d5c250674e384aa553d2be8b751932e",
+    "v136_acceptance_sha256": "445623fd57ec9b0d97598dea088b8c5cc9324380193bee61528874568a8e80ec",
+    "v136_raw_sha256": "a781ad2e972aded9f1c301e1162441de2eca137f6256052508ef7ec70049b0e4",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "cell_z": [
+      860,
+      850
+    ],
+    "guard_primary_sha256": "8a886b2a01005cad997b69fd60f5abe6577c1451282e1604a220a499a8eeea8c",
+    "guard_control_sha256": "eb9cff23a50f749dfd0cd023786715ce0e5a1be271ceb4a16faf1c4633c6480f",
+    "K_upper": "2263873551662768412319/500000000000000000",
+    "connected_lower": "375106031257251/1000000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "limits": {
+      "max_new_actual_cells": 1,
+      "max_new_mathematical_proof_cells": 0,
+      "max_new_theorem_recomputations": 0,
+      "theorem_consumptions_max": 1,
+      "no_actual124": true,
+      "no_below_z": 850,
+      "no_native_integration": true,
+      "no_reset_refit_recapture_tuning": true,
+      "no_historical_main_or_suite": true,
+      "no_new_q_model_or_closure": true,
+      "retry_count": 0,
+      "postfreeze_edits_allowed": false
+    },
+    "authorization": "ONE_CONDITIONAL_SOURCE_REAL_ACTUAL_CONSUMER_860_TO_850"
+  },
+  "fingerprint_convention": "SHA256 of UTF-8 sorted compact JSON task_definition_for_fingerprint, ensure_ascii=False, no final newline",
+  "created_at_utc": "2026-10-21T11:33:47.143129+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "engine_prompt": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+    "version": "2.2.0",
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "cc034748529ba1c7097c4ccd56218e3792eeace4",
+    "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38.md",
+    "git_blob": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "local_reference_filename": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-160.md",
+    "status": "VERIFIED_EXISTING_PROMPT_BY_REPOSITORY_BLOB_AND_LOCAL_EXACT_BYTES"
+  },
+  "objective": "Consume the newly accepted V136 conditional connected proof860→850 exactly once as a conditional source-real actual admission, with no theorem recomputation.",
+  "consumer_authorization": "GRANTED_BY_INGESTION_FOR_EXACTLY_ONE_CONDITIONAL_SOURCE_REAL_CELL_860_TO_850",
+  "authorization_record": "Q048_V136_INGESTION_STATE_V1.json",
+  "authorization_event": "LOCAL-Q048-V136-ACCEPTED-PROOF-INGESTION-V1",
+  "why_this_is_not_repeat_or_ping_pong": "V136 is a new accepted proof860→850 and has not yet been consumed. V137 is the first and only authorized consumer of that proof. Re-running V136 or V135/V134 would repeat completed work.",
+  "parent_authority": {
+    "file": "Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+    "workspace_path_required": "inputs/Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "6bf508ad3d5c652787e583b2575fea2e5d5c250674e384aa553d2be8b751932e",
+    "accepted_actual": {
+      "count": 122,
+      "frontier": 860
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 860
+    },
+    "endpoint": {
+      "a": "1/861",
+      "E": "34371176983888929189/1000000000000000000",
+      "Y": "27278762343901556397/1000000000000000000",
+      "Vbar": "6796897363321232259/1000000000000000000"
+    },
+    "initial_h_only": "95691361670493/250000000000000000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ]
+  },
+  "theorem_authority": {
+    "artifacts": {
+      "Q048_V136_ACCEPTANCE_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V136_ACCEPTANCE_V1.json",
+        "sha256": "445623fd57ec9b0d97598dea088b8c5cc9324380193bee61528874568a8e80ec",
+        "size_bytes": 6141
+      },
+      "Q048_V136_RAW_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V136_RAW_V1.json",
+        "sha256": "a781ad2e972aded9f1c301e1162441de2eca137f6256052508ef7ec70049b0e4",
+        "size_bytes": 41138
+      },
+      "Q048_V136_VERIFICATION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V136_VERIFICATION_V1.json",
+        "sha256": "239194828296430b7d465ede74fdf72786390c1db8590f3e9e14bd7244b8078c",
+        "size_bytes": 5824
+      },
+      "Q048_V136_SPEC_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V136_SPEC_V1.json",
+        "sha256": "459761fb757f2369b9f67cac85ec418fccc08ea0a6f15361fc516fb121aac907",
+        "size_bytes": 12833
+      },
+      "Q048_V136_FREEZE_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V136_FREEZE_V1.json",
+        "sha256": "61b0fec5e3799e6abcd0ae8c5aa7683924db0decf34d1dc10e7c9a509be4d9fb",
+        "size_bytes": 10265
+      },
+      "Q048_V136_EXECUTION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V136_EXECUTION_V1.json",
+        "sha256": "8e02dfb0644d0586e8794d3f4b854580c2e725798397a26d7e40d802b1ea5fd7",
+        "size_bytes": 3200
+      },
+      "Q048_V136_ACCEPTANCE_READBACK_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V136_ACCEPTANCE_READBACK_V1.json",
+        "sha256": "e98c76d9a24a71df86824485988a382baf1d24dc52eee532e57f1d3020ec182b",
+        "size_bytes": 3542
+      },
+      "Q048_V136_OUTPUT_MANIFEST_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V136_OUTPUT_MANIFEST_V1.json",
+        "sha256": "06e7c443d337d464046c77f0587f30c0eaecfdfad93c2786ac76dadbb35bc0be",
+        "size_bytes": 6151
+      },
+      "Q048_V136_DELIVERY_VALIDATION_V1.json": {
+        "workspace_path_required": "proof_runtime/Q048_V136_DELIVERY_VALIDATION_V1.json",
+        "sha256": "804309958a9ebe0080f8d7a8d8d2f2b85db67fca98af7d51db50806fac26933a",
+        "size_bytes": 1040
+      }
+    },
+    "expected_validation": {
+      "producer_gates": 30,
+      "verifier_checks": 41,
+      "semantic_controls_rejected": 35,
+      "frozen_files": 47,
+      "delivery_checks": 12
+    },
+    "task_id": "LOCAL-Q048-V136-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-860-850-V1",
+    "task_fingerprint": "a389cdb7ea29491bf83bb3ef198f336d4403004c6814ef21de542a66ab2fe18e",
+    "run_id": "LOCAL-Q048-V136-20261021T111455797495Z-PROOF-V1",
+    "original_consumer_authorization_must_remain": "NOT_GRANTED_BY_MATHEMATICS"
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "cell_z": [
+    860,
+    850
+  ],
+  "cell_a": [
+    "1/861",
+    "1/851"
+  ],
+  "guard_authority": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "workspace_path_required": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "index_reference_only": 59,
+    "selection": "Select unique exact a/z cell, bind control=False as primary and control=True as secondary before any index use.",
+    "primary_row_sha256": "8a886b2a01005cad997b69fd60f5abe6577c1451282e1604a220a499a8eeea8c",
+    "control_row_sha256": "eb9cff23a50f749dfd0cd023786715ce0e5a1be271ceb4a16faf1c4633c6480f",
+    "left_glue": {
+      "a0": "1/861",
+      "E_input_left": "34371176983888929189/1000000000000000000",
+      "Y_left": "27278762343901556397/1000000000000000000",
+      "V_previous": "6796897363321232259/1000000000000000000"
+    },
+    "energy_cap_used": "34371176983888929189/1000000000000000000",
+    "E_safe_left_distinct": "8526158456184959443/250000000000000000",
+    "source_state_reset": false
+  },
+  "retained_theorem_values": {
+    "K_upper": "2263873551662768412319/500000000000000000",
+    "connected_lower": "375106031257251/1000000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "source_saha_constant": "3.016103031869581e21"
+  },
+  "source_cover_contract": {
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions under conv(HMLA,SWIFT) for each fixed q branch; endpoint only if an admissible continuation reaches it.",
+    "exact_selector_existence_uniqueness": false,
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false,
+    "no_assumed_future_domain_membership": true
+  },
+  "expected_endpoint_crosscheck_only": {
+    "a1": "1/851",
+    "E_right": "33048367909416991121/1000000000000000000",
+    "Y_right": "13111248214289354873/500000000000000000",
+    "V_admitted": "6541460169136686317/1000000000000000000"
+  },
+  "candidate_after_all_gates_not_current": {
+    "count": 123,
+    "frontier": 850
+  },
+  "frontiers_after_all_gates_not_current": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 850
+  },
+  "schema_adapter_gate": {
+    "required": true,
+    "rule": "Bind V135 parent nested schema and V136 theorem artifact schemas explicitly. Resolve every required path/hash before freeze; do not infer from basenames or copy expected endpoint as derivation.",
+    "pre_freeze_only": true
+  },
+  "required_work": [
+    "Recover V135 parent and exact V136 proof artifacts; verify every pinned byte/hash and reconstruct required proof_runtime paths before freeze.",
+    "Search/reuse the validated V135 consumer/validator method as method reference only; create a separately versioned V137 consumer if needed. Do not execute V136 proof mains or recompute theorem arithmetic.",
+    "Bind Q/question, parent actual122/frontier860, source/capture, V136 task/run/artifact identities, row59 primary/control roles and theorem values before candidate construction.",
+    "Derive the candidate endpoint independently from the exact primary guard row59; treat expected_endpoint_crosscheck_only solely as a cross-check.",
+    "Carry V136 K/lower/h-upper/thermal and conditional continuation scope unchanged; no interval/theorem recomputation, physical integration or native-error promotion.",
+    "Freeze V137 task/spec/code/input pins after technical preflight, then execute exactly one consumer→independent validator→provisional accept→separate postaccept→serialized final no-overwrite publication/readback chain.",
+    "Require at least30 named baseline checks and at least35 real non-noop semantic controls frozen before execution, including wrong parent/proof hash/row/endpoint, premature actual123, double consumption and theorem recomputation.",
+    "Only after all separate final/readback gates pass may actual123/frontier850 become current. Otherwise preserve actual122/frontier860 and stop at first exact obstruction.",
+    "Return exactly once to Result Ingestion after one terminal V137 result; no below850 work."
+  ],
+  "negative_controls_required": [
+    "wrong question/task/fingerprint",
+    "parent/source/capture/proof-byte drift",
+    "wrong guard row or primary/control role",
+    "copied expected endpoint instead of guard derivation",
+    "wrong K/lower/h-upper/thermal/Saha",
+    "lost existing-solution conditional scope",
+    "native/selector/trajectory/Q-closure promotion",
+    "actual123 made current before separate postaccept",
+    "double proof consumption or theorem/proof recomputation",
+    "noop mutation counted as rejection",
+    "freeze drift or process failure followed by dependent execution",
+    "serialized/provisional/published checkpoint tampering",
+    "actual124 or below850 work"
+  ],
+  "activation_policy": {
+    "current_until_final_acceptance": {
+      "count": 122,
+      "frontier": 860
+    },
+    "candidate_only_until_all_gates": {
+      "count": 123,
+      "frontier": 850
+    },
+    "publication": "NO_OVERWRITE; serialize provisional/final separately; disk/readback validation required before current-state advance"
+  },
+  "success": "Exactly one conditional source-real cell admission860→850, +1actual/+0proof/+0theorem recomputations, after all independent and serialized-final gates. Only then actual123/frontier850 becomes accepted. NativeP6 UNRESOLVED; Q048 remains ACTIVE/INCONCLUSIVE.",
+  "failure": "First missing pin/schema/invariant/semantic-control/serialization/postaccept/process/budget failure is terminal. Preserve exact obstruction and actual122/frontier860; no retry or postfreeze patch. Technical failure is not physical falsification.",
+  "frozen_constraints": {
+    "max_new_actual_cells": 1,
+    "max_new_mathematical_proof_cells": 0,
+    "max_new_theorem_recomputations": 0,
+    "theorem_consumptions_max": 1,
+    "no_actual124": true,
+    "no_below_z": 850,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_new_q_model_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "budget": {
+    "preferred_backend": "LOCAL_RUNTIME",
+    "science_seconds_max": 300,
+    "chains_max": 1,
+    "retries": 0,
+    "postfreeze_edits_allowed": false,
+    "estimate_basis": "V137 unmeasured. Closest consumer V135 measured 16.067784823 s; V136 proof measured 3.183708145 s but is a different workload. Re-estimate the complete V137 chain before freeze.",
+    "github_actions_justified": false,
+    "paid_compute_authorized": false
+  },
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V136_INGESTED_V1.md",
+  "parent_journal": "Q047_SAMLET_JOURNAL_Q048_V136_CONDITIONAL_PROOF_APPENDED_V1.md",
+  "method_references": [
+    "Q048_V135 consumer/validator chain as read-only method reference; do not replay prior science",
+    "V136 proof artifacts are theorem authority, not executable consumer code"
+  ],
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "stop": "One terminal V137 result, then Result Ingestion. No below850, actual124, theorem recomputation, native integration, new Q/model promotion or closure.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "input_recovery_map": [
+    {
+      "source_filename": "Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+      "size_bytes": 5387,
+      "sha256": "6bf508ad3d5c652787e583b2575fea2e5d5c250674e384aa553d2be8b751932e",
+      "required_workspace_path": "inputs/Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V135_ACCEPTED_CHECKPOINT_V1.json",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "Q048_V136_ACCEPTANCE_V1.json",
+      "size_bytes": 6141,
+      "sha256": "445623fd57ec9b0d97598dea088b8c5cc9324380193bee61528874568a8e80ec",
+      "required_workspace_path": "proof_runtime/Q048_V136_ACCEPTANCE_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V136_ACCEPTANCE_V1.json",
+      "repository_sync_status": "SYNCED_TOP_LEVEL"
+    },
+    {
+      "source_filename": "Q048_V136_RAW_V1.json",
+      "size_bytes": 41138,
+      "sha256": "a781ad2e972aded9f1c301e1162441de2eca137f6256052508ef7ec70049b0e4",
+      "required_workspace_path": "proof_runtime/Q048_V136_RAW_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V136_RUNTIME/Q048_V136_RAW_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V136_VERIFICATION_V1.json",
+      "size_bytes": 5824,
+      "sha256": "239194828296430b7d465ede74fdf72786390c1db8590f3e9e14bd7244b8078c",
+      "required_workspace_path": "proof_runtime/Q048_V136_VERIFICATION_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V136_RUNTIME/Q048_V136_VERIFICATION_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V136_SPEC_V1.json",
+      "size_bytes": 12833,
+      "sha256": "459761fb757f2369b9f67cac85ec418fccc08ea0a6f15361fc516fb121aac907",
+      "required_workspace_path": "proof_runtime/Q048_V136_SPEC_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V136_RUNTIME/Q048_V136_SPEC_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V136_FREEZE_V1.json",
+      "size_bytes": 10265,
+      "sha256": "61b0fec5e3799e6abcd0ae8c5aa7683924db0decf34d1dc10e7c9a509be4d9fb",
+      "required_workspace_path": "proof_runtime/Q048_V136_FREEZE_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V136_RUNTIME/Q048_V136_FREEZE_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V136_EXECUTION_V1.json",
+      "size_bytes": 3200,
+      "sha256": "8e02dfb0644d0586e8794d3f4b854580c2e725798397a26d7e40d802b1ea5fd7",
+      "required_workspace_path": "proof_runtime/Q048_V136_EXECUTION_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V136_RUNTIME/Q048_V136_EXECUTION_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V136_ACCEPTANCE_READBACK_V1.json",
+      "size_bytes": 3542,
+      "sha256": "e98c76d9a24a71df86824485988a382baf1d24dc52eee532e57f1d3020ec182b",
+      "required_workspace_path": "proof_runtime/Q048_V136_ACCEPTANCE_READBACK_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V136_RUNTIME/Q048_V136_ACCEPTANCE_READBACK_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V136_OUTPUT_MANIFEST_V1.json",
+      "size_bytes": 6151,
+      "sha256": "06e7c443d337d464046c77f0587f30c0eaecfdfad93c2786ac76dadbb35bc0be",
+      "required_workspace_path": "proof_runtime/Q048_V136_OUTPUT_MANIFEST_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V136_RUNTIME/Q048_V136_OUTPUT_MANIFEST_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V136_DELIVERY_VALIDATION_V1.json",
+      "size_bytes": 1040,
+      "sha256": "804309958a9ebe0080f8d7a8d8d2f2b85db67fca98af7d51db50806fac26933a",
+      "required_workspace_path": "proof_runtime/Q048_V136_DELIVERY_VALIDATION_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V136_RUNTIME/Q048_V136_DELIVERY_VALIDATION_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "q048_guard_local_v_result_v12.json",
+      "size_bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "required_workspace_path": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "q048_guard_local_v_result_v12.json",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "q048_prefix_config_v1.json",
+      "size_bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "required_workspace_path": "proof_runtime/ref/prior_v126/inputs/q048_prefix_config_v1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "q048_prefix_config_v1.json",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    }
+  ],
+  "full_proof_runtime_recovery": {
+    "file": "Q048_V136_INGESTION_RECOVERY_MAP_V1.json",
+    "sha256": "d071620eb9adb9816084676aa918b4ad77c32badb3d527dc80a296987b4e1512",
+    "restore_prefix": "proof_runtime/",
+    "instruction": "Restore V136 proof artifacts and inherited frozen dependencies by exact path/hash. V136 top-level journal/acceptance/result are already on main@cc034748..., while remaining runtime evidence is upload-pending. Do not execute historical proof mains."
+  }
+}
