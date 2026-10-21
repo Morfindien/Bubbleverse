@@ -1,0 +1,71 @@
+{
+  "schema": "bubbleverse.q048.v137.handoff_to_ingestion.v1",
+  "created_at_utc": "2026-10-21T11:48:27.722700+00:00",
+  "status": "READY_FOR_RESULT_INGESTION",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V137-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-860-850-V1",
+  "task_fingerprint": "f16fabcf483410554aca535430bde6ea24607fd93b2a1158a51d1b79d5583703",
+  "run_id": "LOCAL-Q048-V137-20261021T114331146973Z-CONSUMER-V1",
+  "result": {
+    "accepted": true,
+    "classification": "CONDITIONAL_SOURCE_REAL_ACTUAL_ADMISSION",
+    "actual": {
+      "count": 123,
+      "frontier": 850
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 850
+    },
+    "endpoint": {
+      "a": "1/851",
+      "E": "33048367909416991121/1000000000000000000",
+      "Y": "13111248214289354873/500000000000000000",
+      "Vbar": "6541460169136686317/1000000000000000000"
+    },
+    "new_actual_cells": 1,
+    "new_proof_cells": 0,
+    "new_theorem_recomputations": 0,
+    "theorem_consumptions": 1
+  },
+  "technical_evidence": {
+    "preflight": "PASS",
+    "validator": "53/53",
+    "semantic_controls": "52/52",
+    "postaccept": "16/16",
+    "serialized_final": "12/12",
+    "frozen_files_postrun": "29/29",
+    "execution_seconds": 11.782773796000129,
+    "chains": 1,
+    "retries": 0,
+    "postfreeze_edits": 0
+  },
+  "scientific_limits": {
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false,
+    "native_error_certificate": false,
+    "selector_existence_uniqueness": false,
+    "trajectory_identity": false,
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions under conv(HMLA,SWIFT) for each fixed q branch; endpoint only if an admissible continuation reaches it."
+  },
+  "journal_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V137_CONDITIONAL_CONSUMER_APPENDED_V1.md",
+    "sha256": "8683f6864e7f5b5cbfe9fb90dd8301015546fe94302448c0a45794940cde6adb"
+  },
+  "accepted_checkpoint_ref": {
+    "file": "Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "1fc45bb7fdd885cd61fa91d7518d43c3424b4f3dfc4d0df9308460c5beba1309"
+  },
+  "result_state_ref": "Q048_V137_RESULT_STATE_V1.json",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "next_scientific_task_authorized": false,
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "base_commit": "bdc59e67fb54db29945a934fd60b766ecc6056bc",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "write_performed": false
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "schema": "bubbleverse.q048.v137.accepted_checkpoint.v1",
+  "created_at_utc": "2026-10-21T11:43:49.531941+00:00",
+  "status": "ACCEPTED_AFTER_POSTACCEPT",
+  "q": "Q048",
+  "target_q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "task_id": "LOCAL-Q048-V137-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-860-850-V1",
+  "task_fingerprint": "f16fabcf483410554aca535430bde6ea24607fd93b2a1158a51d1b79d5583703",
+  "run_id": "LOCAL-Q048-V137-20261021T114331146973Z-CONSUMER-V1",
+  "program_id": "Q048-CONDITIONAL-CONSUMER-V137",
+  "raw_sha256": "aa8f841cbf5557fa794fa15005b736d899e5de1e196c2546015867f1aa50f070",
+  "validation_sha256": "e2bde5f447d048a46c3a33a6129dff709a49304cd46c3c16bed96818ba4a5885",
+  "provisional_sha256": "037f1843ccfa3bc5ce49778bb567f49086fd63355833fea7ad28dfdfb313eaa4",
+  "postaccept_sha256": "adf22e2a5edf31f58457b7438866df359421bc73c8815c17bb315571d4fdbdd1",
+  "freeze_sha256": "031343ab673a02f92ff7bcd38e1432ad4e4ceb195001298cb0e57ee38a9289e6",
+  "parent_sha256": "6bf508ad3d5c652787e583b2575fea2e5d5c250674e384aa553d2be8b751932e",
+  "actual": {
+    "count": 123,
+    "frontier": 850
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 850
+  },
+  "endpoint": {
+    "a": "1/851",
+    "E": "33048367909416991121/1000000000000000000",
+    "Y": "13111248214289354873/500000000000000000",
+    "Vbar": "6541460169136686317/1000000000000000000"
+  },
+  "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS",
+  "source_cover_contract": {
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions under conv(HMLA,SWIFT) for each fixed q branch; endpoint only if an admissible continuation reaches it.",
+    "exact_selector_existence_uniqueness": false,
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false,
+    "no_assumed_future_domain_membership": true
+  },
+  "retained_theorem_values": {
+    "K_upper": "2263873551662768412319/500000000000000000",
+    "connected_lower": "375106031257251/1000000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "source_saha_constant": "3.016103031869581e21"
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "theorem_acceptance_sha256": "445623fd57ec9b0d97598dea088b8c5cc9324380193bee61528874568a8e80ec",
+  "proof_run_id": "LOCAL-Q048-V136-20261021T111455797495Z-PROOF-V1",
+  "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "guard_primary_row_sha256": "8a886b2a01005cad997b69fd60f5abe6577c1451282e1604a220a499a8eeea8c",
+  "endpoint_derivation": "PRIMARY_ROW:a1,E_right,Y_right,V_admitted",
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "new_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "native_error_certificate": false,
+  "exact_selector_existence_uniqueness_established": false,
+  "trajectory_identity_claim": false,
+  "below850_work": false,
+  "actual124_created": false,
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+}
