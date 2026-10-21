@@ -1,0 +1,80 @@
+{
+  "schema": "bubbleverse.q048.v132.ingestion_state.v1",
+  "created_at_utc": "2026-10-21T08:48:12.069304+00:00",
+  "ingestion_event_id": "LOCAL-Q048-V132-ACCEPTED-ACTUAL-INGESTION-V1",
+  "idempotency_key": "52a5de28944a8f248b4556668a4343e6df04327f96ec330e5fd15317c7523f8e",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "result_classification": [
+    "VALIDATION_RESULT",
+    "RUN_SUCCESS"
+  ],
+  "status_axes": {
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED",
+    "reproducibility": "NOT_ASSESSED",
+    "robustness": "ROBUST_WITHIN_TESTED_DOMAIN",
+    "scientific_effect": "SUPPORTS",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "register_once": {
+    "v132_task_id": "LOCAL-Q048-V132-VALIDATOR-REPAIR-REVALIDATE-V131-RAW-880-870-V1",
+    "v132_task_fingerprint": "a89f389b91a4cef079886cef888c6eed6637d47bccdf0acb1c698d0cc267d004",
+    "new_actual_cells": 1,
+    "new_mathematical_proof_cells": 0,
+    "new_theorem_recomputations": 0,
+    "consumer_reruns": 0
+  },
+  "accepted_state": {
+    "count": 121,
+    "frontier": 870
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 870
+  },
+  "accepted_checkpoint_sha256": "2a16ced67538913c34db2cc608b533e6dbbe6db9a1eaf48f4e4442c10f05f01b",
+  "what_changed": [
+    "The V131 noncurrent candidate is accepted under the separately versioned V132 repaired validator and postaccept chain.",
+    "hillipop-ede_n3 accepted actual count advances 120→121.",
+    "hillipop-ede_n3 frontier advances 880→870.",
+    "The four V131 validator gaps are resolved under V132: capture, theorem, Saha and endpoint-source bindings."
+  ],
+  "what_did_not_change": [
+    "V131 remains an immutable failed validator attempt.",
+    "V130 remains exactly one accepted conditional mathematical proof for 880→870.",
+    "Other three configuration frontiers remain 1440.",
+    "NativeP6 remains UNRESOLVED.",
+    "Exact selector existence/uniqueness, native error certificate and trajectory identity remain NOT_ESTABLISHED.",
+    "Q048 remains ACTIVE/INCONCLUSIVE."
+  ],
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Only one more conditional actual cell is accepted for hillipop-ede_n3; complete rigorously controlled four-configuration x_e(z) and cumulative tau_T(z) latch-reset histories are still unavailable.",
+  "single_material_bottleneck": "Extend the rigorously controlled hillipop-ede_n3 source-real two-operator continuation by one fresh cell 870→860 without assuming the previous theorem transfers.",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "next_task_file": "Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1.json",
+  "next_task_fingerprint": "a415ccb486ad329e6b2cc376a968da22d68c04794426a84cd35b24b570a06ea8",
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "observed_base_commit": "ff9b01dfb51ae5c3d5ca24a860f0448240b1a210",
+    "source_freshness": "VERIFIED",
+    "v132_checkpoint_present_at_base": true,
+    "v132_handoff_present_at_base": true,
+    "v132_complete_journal_present_at_base": true,
+    "v132_ingestion_outputs_present_at_base": false,
+    "sync_status": "USER_UPLOAD_PENDING"
+  }
+}
