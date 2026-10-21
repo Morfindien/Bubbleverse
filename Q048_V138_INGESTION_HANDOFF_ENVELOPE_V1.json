@@ -1,0 +1,71 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.1.0",
+  "handoff_id": "LOCAL-Q048-V138-INGESTION-TO-V139-BUILDER-V1",
+  "created_at_utc": "2026-10-21T12:23:32.981709+00:00",
+  "case_id": null,
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": "Q001-Q048",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-V138-ACCEPTED-PROOF-INGESTION-V1"
+  ],
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V138_INGESTED_V1.md",
+  "result_provenance_ref": "Q048_V138_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "route_history_ref": "Q048_V138_INGESTION_STATE_V1.json",
+  "integrity_manifest_ref": "Q048_V138_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "what_changed": [
+    "Registered V138 once as +1 proof/+0 actual/+0 theorem recomputations in ingestion.",
+    "Current remains actual123/frontier850.",
+    "Authorized exactly one first consumer V139 for850→840."
+  ],
+  "frozen_configuration_refs": [
+    "Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+    "Q048_V138_ACCEPTANCE_V1.json",
+    "q048_guard_local_v_result_v12.json"
+  ],
+  "open_material_uncertainties": [
+    "Complete four-case x_e(z)/tau_T(z) histories not established.",
+    "NativeP6 unresolved.",
+    "V138 proof has not yet been consumed into an accepted actual cell."
+  ],
+  "missing_information": [],
+  "next_task": "Q048_V139_NEXT_BUILDER_TASK_CONDITIONAL_CONSUMER_850_840_V1.json",
+  "success_condition": "V139 consumes V138 proof exactly once and, only after all independent validator/provisional/postaccept/serialized-final readback gates, accepts actual124/frontier840 with +1actual/+0proof/+0theorem recomputations.",
+  "failure_or_falsification_condition": "First exact technical/schema/invariant/semantic/serialization/budget obstruction is terminal; preserve actual123/frontier850. Technical failure is not physical falsification.",
+  "stop_condition": "One terminal V139 result; no actual125, below840 work, theorem recomputation, native integration, new Q/model promotion or closure.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "V138 adds one accepted conditional proof for850→840 but no new actual history cell. The complete four-case x_e(z)/tau_T(z) histories required by Q048 are still not established; NativeP6 remains unresolved.",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "NOT_REQUIRED_FOR_THIS_BOUNDED_CONTINUATION",
+  "output_file_refs": [],
+  "output_manifest_ref": "Q048_V138_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": null,
+    "base_commit_sha": "624a8210b981687275eedab3d3470c898dad662a",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V138_INGESTED_V1.md",
+    "current_state_path": "Q048_V138_INGESTION_STATE_V1.json",
+    "index_refs": [],
+    "cross_reference_refs": [
+      "Q048_V139_NEXT_BUILDER_TASK_CONDITIONAL_CONSUMER_850_840_V1.json"
+    ],
+    "memory_update_ref": "Q048_V138_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+    "target_paths_status": "PROPOSED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V138_UPLOAD_APPLY_INSTRUCTIONS_INGESTION_V1.md"
+  }
+}

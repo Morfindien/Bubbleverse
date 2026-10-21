@@ -1,0 +1,110 @@
+{
+  "schema": "bubbleverse.q048.v138.ingestion_state.v1",
+  "created_at_utc": "2026-10-21T12:23:32.981709+00:00",
+  "created_at_local": "2026-10-21T14:23:32.981709+02:00",
+  "event": "LOCAL-Q048-V138-ACCEPTED-PROOF-INGESTION-V1",
+  "idempotency_key": "b13776b5626ce3ca50f82346a5016b8b6f53ce984781e64060a00f0fab5ab7ac",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "NEW",
+  "registered_result": {
+    "run_id": "LOCAL-Q048-V138-20261021T121344901613Z-PROOF-V1",
+    "task_id": "LOCAL-Q048-V138-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-850-840-V1",
+    "task_fingerprint": "672ead7e2a912d8be3f428c8ce28230a6e847f579ad4f315f4bb82955f9d2bb2",
+    "status": "ACCEPTED_CONDITIONAL_SOURCE_REAL_CONNECTED_PROOF",
+    "cell_z": [
+      850,
+      840
+    ],
+    "registered_delta": {
+      "actual_cells": 0,
+      "mathematical_proof_cells": 1,
+      "theorem_recomputations_in_ingestion": 0,
+      "theorem_consumptions_in_ingestion": 0
+    },
+    "proof_values": {
+      "K_upper": "2300488155568955225509/500000000000000000",
+      "connected_lower": "918857486347/2500000000000000",
+      "h_upper": "99999/100000",
+      "thermal_domain": [
+        "-1/1000000",
+        "1/50"
+      ]
+    }
+  },
+  "current_actual": {
+    "count": 123,
+    "frontier": 850
+  },
+  "current_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 850
+  },
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "V138 adds one accepted conditional proof for850→840 but no new actual history cell. The complete four-case x_e(z)/tau_T(z) histories required by Q048 are still not established; NativeP6 remains unresolved.",
+  "selected_next_engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+  "next_task_file": "Q048_V139_NEXT_BUILDER_TASK_CONDITIONAL_CONSUMER_850_840_V1.json",
+  "next_task_fingerprint": "c17c074bd92a20fd27bd75aa354b49c081a16f2b95d0bdd80ff9918897d6f289",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "consumer_authorization": "GRANTED_FOR_EXACTLY_ONE_FIRST_CONSUMER_OF_V138_PROOF_850_TO_840",
+  "no_repeat": [
+    "Do not rerun V138 proof without a material defect/new version.",
+    "Do not rerun V137 consumer or earlier completed cells.",
+    "V139 is the first authorized consumer of V138 proof850→840; it must not recompute the theorem."
+  ],
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "base_commit": "624a8210b981687275eedab3d3470c898dad662a",
+    "source_freshness": "VERIFIED",
+    "sync_status": "PARTIAL",
+    "details": {
+      "repository": "Morfindien/Bubbleverse",
+      "branch": "main",
+      "observed_head": "624a8210b981687275eedab3d3470c898dad662a",
+      "parent_head": "6ec31f4d97883a781411231efeb16a07395e0c8b",
+      "observed_head_time_utc": "2026-10-21T12:18:14Z",
+      "head_contains_v138_top_level": [
+        "Q047_SAMLET_JOURNAL_Q048_V138_CONDITIONAL_PROOF_APPENDED_V1.md",
+        "Q048_V138_ACCEPTANCE_V1.json",
+        "Q048_V138_DELIVERY_VALIDATION_V1.json",
+        "Q048_V138_FILES_V1.md",
+        "Q048_V138_HANDOFF_TO_INGESTION_V1.json",
+        "Q048_V138_OUTPUT_MANIFEST_V1.json",
+        "Q048_V138_RESULT_AND_HANDOFF_V1.md",
+        "Q048_V138_RESULT_STATE_V1.json",
+        "Q048_V138_SHA256SUMS.txt",
+        "Q048_V138_UPLOAD_APPLY_INSTRUCTIONS_V1.md"
+      ],
+      "runtime_evidence_status": "USER_UPLOAD_PENDING",
+      "sync_assessment": "PARTIAL_SYNC_V138_TOP_LEVEL_PRESENT_RUNTIME_EVIDENCE_LOCAL_ONLY"
+    },
+    "write_status": "USER_UPLOAD_PENDING_FOR_INGESTION_AND_RUNTIME_EVIDENCE"
+  },
+  "prompt": {
+    "file": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.1.0-142.md",
+    "sha256": "19d139317684bf480e92b29fdf93cf64e681f6700f5ff6cd1dc8aa160b79bf6c",
+    "version": "2.1.0"
+  },
+  "next_engine_prompt": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.2.0",
+    "version": "2.2.0",
+    "repository": "Morfindien/Bubbleverse",
+    "ref": "624a8210b981687275eedab3d3470c898dad662a",
+    "path": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-38.md",
+    "git_blob": "e6f8cef22d4fc45b5c5b3d645539b05caf3c2c9a",
+    "sha256": "49175d52ac1e7ae4a04551950eb4b05bddbada29d956eb6c20782e610c6f6de1",
+    "local_reference_filename": "Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0-118.md",
+    "status": "VERIFIED_EXISTING_PROMPT_BY_REPOSITORY_BLOB_AND_LOCAL_EXACT_BYTES"
+  }
+}

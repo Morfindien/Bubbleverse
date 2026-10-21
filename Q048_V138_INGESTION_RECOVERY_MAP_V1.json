@@ -1,0 +1,521 @@
+{
+  "schema": "bubbleverse.q048.v138.ingestion_recovery_map.v1",
+  "created_at_utc": "2026-10-21T12:23:32.981709+00:00",
+  "current_q": "Q048",
+  "purpose": "Exact recovery map for V139 consumer preflight; preserves V138 proof/runtime, V137 accepted parent and V137 consumer method references without executing historical proof mains.",
+  "repository_observation": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "observed_head": "624a8210b981687275eedab3d3470c898dad662a",
+    "parent_head": "6ec31f4d97883a781411231efeb16a07395e0c8b",
+    "observed_head_time_utc": "2026-10-21T12:18:14Z",
+    "head_contains_v138_top_level": [
+      "Q047_SAMLET_JOURNAL_Q048_V138_CONDITIONAL_PROOF_APPENDED_V1.md",
+      "Q048_V138_ACCEPTANCE_V1.json",
+      "Q048_V138_DELIVERY_VALIDATION_V1.json",
+      "Q048_V138_FILES_V1.md",
+      "Q048_V138_HANDOFF_TO_INGESTION_V1.json",
+      "Q048_V138_OUTPUT_MANIFEST_V1.json",
+      "Q048_V138_RESULT_AND_HANDOFF_V1.md",
+      "Q048_V138_RESULT_STATE_V1.json",
+      "Q048_V138_SHA256SUMS.txt",
+      "Q048_V138_UPLOAD_APPLY_INSTRUCTIONS_V1.md"
+    ],
+    "runtime_evidence_status": "USER_UPLOAD_PENDING",
+    "sync_assessment": "PARTIAL_SYNC_V138_TOP_LEVEL_PRESENT_RUNTIME_EVIDENCE_LOCAL_ONLY"
+  },
+  "records": [
+    {
+      "source_filename": "Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+      "size_bytes": 3407,
+      "sha256": "1fc45bb7fdd885cd61fa91d7518d43c3424b4f3dfc4d0df9308460c5beba1309",
+      "required_workspace_path": "inputs/Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "Q048_V138_ACCEPTANCE_V1.json",
+      "size_bytes": 6135,
+      "sha256": "a248276219dc77058a01d4522b6938cba04fb1932c2d3626e2c417a34fc42081",
+      "required_workspace_path": "proof_runtime/Q048_V138_ACCEPTANCE_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V138_ACCEPTANCE_V1.json",
+      "repository_sync_status": "SYNCED_TOP_LEVEL"
+    },
+    {
+      "source_filename": "Q048_V138_RAW_V1.json",
+      "size_bytes": 41070,
+      "sha256": "8851268f297534401e21f9dd43ec1eb98f7b4179ec4020a8d66159d57791d41d",
+      "required_workspace_path": "proof_runtime/Q048_V138_RAW_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V138_RUNTIME/Q048_V138_RAW_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V138_VERIFICATION_V1.json",
+      "size_bytes": 5824,
+      "sha256": "644b0f773e89ee10ed82cbb3b7ff64b53995e65352cdfd35751fe529f2160d66",
+      "required_workspace_path": "proof_runtime/Q048_V138_VERIFICATION_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V138_RUNTIME/Q048_V138_VERIFICATION_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V138_SPEC_V1.json",
+      "size_bytes": 11504,
+      "sha256": "0ef44f38f16a5c3a379581b32dfe9b456832a4391d0741b38469c6a8ff8b84aa",
+      "required_workspace_path": "proof_runtime/Q048_V138_SPEC_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V138_RUNTIME/Q048_V138_SPEC_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V138_FREEZE_V1.json",
+      "size_bytes": 10426,
+      "sha256": "6b63de89ddd0c0c8802cf3f656bf99a0b82e6dafc9e39863158d238abcd1da23",
+      "required_workspace_path": "proof_runtime/Q048_V138_FREEZE_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V138_RUNTIME/Q048_V138_FREEZE_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V138_EXECUTION_V1.json",
+      "size_bytes": 3180,
+      "sha256": "e79bd2bc796ea2bbaf9a2f7ea1acfc7280792cedb1861283b2ff4a0bf18f1cf6",
+      "required_workspace_path": "proof_runtime/Q048_V138_EXECUTION_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V138_RUNTIME/Q048_V138_EXECUTION_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V138_ACCEPTANCE_READBACK_V1.json",
+      "size_bytes": 3542,
+      "sha256": "3f0717938479a41955393d950099695f6acbd449dfd585bd1dcd57fca4037543",
+      "required_workspace_path": "proof_runtime/Q048_V138_ACCEPTANCE_READBACK_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V138_RUNTIME/Q048_V138_ACCEPTANCE_READBACK_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V138_OUTPUT_MANIFEST_V1.json",
+      "size_bytes": 7411,
+      "sha256": "83da4a145e3323d4b86b0ab68bd3e719107a0f25c3f501e41a42694b42340e7f",
+      "required_workspace_path": "proof_runtime/Q048_V138_OUTPUT_MANIFEST_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V138_RUNTIME/Q048_V138_OUTPUT_MANIFEST_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "Q048_V138_DELIVERY_VALIDATION_V1.json",
+      "size_bytes": 709,
+      "sha256": "1eb68c21feb97e606885a63b3244d7f3f6b7b6d1485e6ac9f08db86a28a750a5",
+      "required_workspace_path": "proof_runtime/Q048_V138_DELIVERY_VALIDATION_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V138_RUNTIME/Q048_V138_DELIVERY_VALIDATION_V1.json",
+      "repository_sync_status": "USER_UPLOAD_PENDING"
+    },
+    {
+      "source_filename": "q048_guard_local_v_result_v12.json",
+      "size_bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "required_workspace_path": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "q048_guard_local_v_result_v12.json",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "q048_prefix_config_v1.json",
+      "size_bytes": 105567,
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "required_workspace_path": "proof_runtime/ref/prior_v126/inputs/q048_prefix_config_v1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "q048_prefix_config_v1.json",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "q048_v137_consumer.py",
+      "size_bytes": 4515,
+      "sha256": "e719da6e0d0d3deda38a6542df5e3edc6fd9da83b6f6ba9cb53523f77feaff23",
+      "required_workspace_path": "method_ref_v137/q048_v137_consumer.py",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_RUNTIME/q048_v137_consumer.py",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "q048_v137_validate.py",
+      "size_bytes": 12929,
+      "sha256": "f3c9415f5923152286cca2deeea71bec086fbd5564da62379af57c55f088d100",
+      "required_workspace_path": "method_ref_v137/q048_v137_validate.py",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_RUNTIME/q048_v137_validate.py",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "q048_v137_accept.py",
+      "size_bytes": 1392,
+      "sha256": "370fb834a9c3cee38c7e649d9110cc07d71b295799c508a4fe826255a2bdad4a",
+      "required_workspace_path": "method_ref_v137/q048_v137_accept.py",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_RUNTIME/q048_v137_accept.py",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "q048_v137_postaccept.py",
+      "size_bytes": 7703,
+      "sha256": "ef21871a53be4178ce1194c89ce1f141be8e34370ee004e4f255b5ff2216f700",
+      "required_workspace_path": "method_ref_v137/q048_v137_postaccept.py",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_RUNTIME/q048_v137_postaccept.py",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "q048_v137_publish.py",
+      "size_bytes": 5646,
+      "sha256": "8596c347a70e9bdabd6408b36c4622a2dffce89442b1939ded19502a0d7f429e",
+      "required_workspace_path": "method_ref_v137/q048_v137_publish.py",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_RUNTIME/q048_v137_publish.py",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "q048_v137_io.py",
+      "size_bytes": 1866,
+      "sha256": "edc8b88d4d6aa2cbf139f61d12c797ab200a4c85206acd1e998eb56e14983cb7",
+      "required_workspace_path": "method_ref_v137/q048_v137_io.py",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_RUNTIME/q048_v137_io.py",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "q048_v137_run.py",
+      "size_bytes": 2990,
+      "sha256": "e9b79439b0ebe875a2488da668c21fad368868526f2a8a71b11f86abb2551d4b",
+      "required_workspace_path": "method_ref_v137/q048_v137_run.py",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_RUNTIME/q048_v137_run.py",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "Q048_V137_CONTROL_ROSTER_V1.json",
+      "size_bytes": 12300,
+      "sha256": "b38a05b2329b3840f355fde4ee875e02b6c69f18f54101d6786733ad071c9b80",
+      "required_workspace_path": "method_ref_v137/Q048_V137_CONTROL_ROSTER_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_RUNTIME/Q048_V137_CONTROL_ROSTER_V1.json",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    },
+    {
+      "source_filename": "Q048_V137_INPUT_PREFLIGHT_V1.json",
+      "size_bytes": 8352,
+      "sha256": "6519ea374ec2dd3051c8dfe5664a6203b02287b2d7f4436ae5e164d9aa3a204d",
+      "required_workspace_path": "method_ref_v137/Q048_V137_INPUT_PREFLIGHT_V1.json",
+      "repository": "Morfindien/Bubbleverse",
+      "repository_path": "Q048_V137_RUNTIME/Q048_V137_INPUT_PREFLIGHT_V1.json",
+      "repository_sync_status": "PREVIOUS_PROJECT_MEMORY_OR_LOCAL_RECOVERY"
+    }
+  ],
+  "v138_freeze_pin_count": 48,
+  "v138_freeze_pins": [
+    {
+      "path": "q048_v138_proof.py",
+      "sha256": "af1a1997f28d9b1f9c56720ea324f0d55604e6ece69c41d5c8cbb2388347e955"
+    },
+    {
+      "path": "q048_v138_verify.py",
+      "sha256": "391e89d9b4590f532f291f80f13a7ac8b8c990f7bf576e61d183ec0ba7633450"
+    },
+    {
+      "path": "q048_v138_run.py",
+      "sha256": "28e74c479b5ac851e4721f44a6514ea0bc843a84e675beb6d7a415f6c750e699"
+    },
+    {
+      "path": "Q048_V138_SPEC_V1.json",
+      "sha256": "0ef44f38f16a5c3a379581b32dfe9b456832a4391d0741b38469c6a8ff8b84aa"
+    },
+    {
+      "path": "Q048_V138_PREFREEZE_REVIEW_V1.json",
+      "sha256": "1be0de24d4a914efb078f737ed481e434ca74d7f4e5ec97090023180f5f7f4b2"
+    },
+    {
+      "path": "inputs/Bubbleverse_Matematikmotor_2.1.0-158.md",
+      "sha256": "3594851ec3b827d643ba89c410a04ca454e80648011dde549f229a69f085475b"
+    },
+    {
+      "path": "inputs/Q047_SAMLET_JOURNAL_Q048_V137_INGESTED_V1.md",
+      "sha256": "5a2228ca2e21f210fa745dca71c96988d008777a82c6daa5e74d227ace203923"
+    },
+    {
+      "path": "inputs/Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "1fc45bb7fdd885cd61fa91d7518d43c3424b4f3dfc4d0df9308460c5beba1309"
+    },
+    {
+      "path": "inputs/Q048_V137_DELIVERY_VALIDATION_V1.json",
+      "sha256": "5accdbf9ca3081f914f2d00216c5f24521a5bdfbc6e1507d7c0e2a9e80c31861"
+    },
+    {
+      "path": "inputs/Q048_V137_EXECUTION_V1.json",
+      "sha256": "babf87d9b684d4b80ececfb66819aeb54f7f53d818b723f5c3b92c34944ab1c0"
+    },
+    {
+      "path": "inputs/Q048_V137_FREEZE_V1.json",
+      "sha256": "031343ab673a02f92ff7bcd38e1432ad4e4ceb195001298cb0e57ee38a9289e6"
+    },
+    {
+      "path": "inputs/Q048_V137_HANDOFF_TO_INGESTION_V1.json",
+      "sha256": "efbad940163952308e969339f09e2e11b9e51911de0c06d15cf28a148432ea31"
+    },
+    {
+      "path": "inputs/Q048_V137_INGESTION_EVIDENCE_AUDIT_V1.json",
+      "sha256": "5da7e0a0672022d333a6c700f8aa1076a286de973986997939cf77b38750a45a"
+    },
+    {
+      "path": "inputs/Q048_V137_INGESTION_HANDOFF_ENVELOPE_V1.json",
+      "sha256": "8f2441b46872978c62ee95df12444657fcb2ca08c89e85bb11d451ecef3a0f40"
+    },
+    {
+      "path": "inputs/Q048_V137_INGESTION_RECOVERY_MAP_V1.json",
+      "sha256": "810f1365699334b52ae2ccdf0ab1756c760dd4a096b0cb9fe2a4aa946191a916"
+    },
+    {
+      "path": "inputs/Q048_V137_INGESTION_RESULT_AND_HANDOFF_V1.md",
+      "sha256": "1a6fad59a1d753cc9c7d28b929ff20058128168fbb134da992521543d5db5123"
+    },
+    {
+      "path": "inputs/Q048_V137_INGESTION_STATE_V1.json",
+      "sha256": "ca06317e44bb35df7415c7e6531139ce2322ee16b1f853fc0ddbf7768cf67f49"
+    },
+    {
+      "path": "inputs/Q048_V137_POSTACCEPT_VALIDATION_V1.json",
+      "sha256": "adf22e2a5edf31f58457b7438866df359421bc73c8815c17bb315571d4fdbdd1"
+    },
+    {
+      "path": "inputs/Q048_V137_PROVISIONAL_ACCEPTANCE_V1.json",
+      "sha256": "037f1843ccfa3bc5ce49778bb567f49086fd63355833fea7ad28dfdfb313eaa4"
+    },
+    {
+      "path": "inputs/Q048_V137_PUBLICATION_READBACK_V1.json",
+      "sha256": "aac65625bd6011eed21506245ea6048cfbbff4b44f69b60f9375560082f4b3ca"
+    },
+    {
+      "path": "inputs/Q048_V137_RAW_V1.json",
+      "sha256": "aa8f841cbf5557fa794fa15005b736d899e5de1e196c2546015867f1aa50f070"
+    },
+    {
+      "path": "inputs/Q048_V137_SPEC_V1.json",
+      "sha256": "11f000964da84213378a1a449eb34919d15d8e091b384a3dd4ec08b2e5d1b9dd"
+    },
+    {
+      "path": "inputs/Q048_V137_VALIDATION_V1.json",
+      "sha256": "e2bde5f447d048a46c3a33a6129dff709a49304cd46c3c16bed96818ba4a5885"
+    },
+    {
+      "path": "inputs/Q048_V138_NEXT_MATHEMATICS_TASK_850_840_V1.json",
+      "sha256": "48d40126a8f0fba5514da0b0d854d7954eab469768983a5d355702c422b44781"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q047_math_v1.py",
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q048_post_event_state_tube_v1.py",
+      "sha256": "445b27a81502402029c69d62b63b21db757321104842e30fbdae449c56beb01b"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q048_prefix_v1.py",
+      "sha256": "00414ccd02d79130f38ca00a8ba397a61f33bac1ed018b50ab71af73d3e62516"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q048_full_tube_reuse_v1.py",
+      "sha256": "e975c73f7e767442cb0084c61791686061be6cd045378c8fbc48ba412bd454dc"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q048_p3_scaled_kernel_v2.py",
+      "sha256": "168275855fe8d36da42c6e997375444dc7eb8f2dc2f47132f11d888d575f85dd"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q048_p3_scaled_arithmetic_v2.py",
+      "sha256": "d0b6ab8022b3c66b90be1108a4a2c708b7c1112a0d4201e18335897db94586fa"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q048_prefix_config_v1.json",
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q048_p3_scaled_raw_result_v2.json",
+      "sha256": "fe9070d5054a4aac84cd342332dcec4b4895cc95d316ef527ad6a4a012c4c44c"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q048_p3_scaled_transformed_log_tables_v2.json",
+      "sha256": "ac162812185f862eb845019a6910dda94d40c8e962a9a7fc0b360e3b968075cb"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/source/q047_math_v1.py",
+      "sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/source/fit_swift.dat",
+      "sha256": "46a644d7d2633b8f13080f9062df9b72a2e5adfa956d70d32ad1d7f4ec0a4641"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/source/hydrogen.c",
+      "sha256": "734800ccd69b41d60b519f200003ce27c3b7640f76a70353499424842ba19616"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/source/hydrogen.h",
+      "sha256": "1b2c64d108078722dd546f4e8b9bddca2cbe6abdf4b63e44e76fe0e9d58f4e52"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/source/wrap_hyrec.c",
+      "sha256": "4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q047_certificate_v1.py",
+      "sha256": "11e87a05bca511c0b421752151082a2fecb9030c7e8f5949365566b9960c1240"
+    },
+    {
+      "path": "../proof_runtime/ref/prior_v126/inputs/q047_precursor_check_v1.py",
+      "sha256": "634ccfb21df8b85a15b5c1917e6a06917f8a28a97d6ed7a4208c14b2688268e5"
+    },
+    {
+      "path": "../proof_runtime/Q048_V136_ACCEPTANCE_V1.json",
+      "sha256": "445623fd57ec9b0d97598dea088b8c5cc9324380193bee61528874568a8e80ec"
+    },
+    {
+      "path": "../proof_runtime/Q048_V136_RAW_V1.json",
+      "sha256": "a781ad2e972aded9f1c301e1162441de2eca137f6256052508ef7ec70049b0e4"
+    },
+    {
+      "path": "../proof_runtime/Q048_V136_SPEC_V1.json",
+      "sha256": "459761fb757f2369b9f67cac85ec418fccc08ea0a6f15361fc516fb121aac907"
+    },
+    {
+      "path": "../proof_runtime/Q048_V136_FREEZE_V1.json",
+      "sha256": "61b0fec5e3799e6abcd0ae8c5aa7683924db0decf34d1dc10e7c9a509be4d9fb"
+    },
+    {
+      "path": "../proof_runtime/q048_v136_proof.py",
+      "sha256": "e6cf11904454999386faba4e657046ca35fe55a429ac22d1e529470bd99acd6b"
+    },
+    {
+      "path": "../proof_runtime/q048_v136_verify.py",
+      "sha256": "9ad6b4f02182e8701270f95e0f7c2f3119ca77e97000940ae02e4f231118f0f5"
+    },
+    {
+      "path": "../proof_runtime/q048_v136_run.py",
+      "sha256": "d67b32a501c45a8e57aaebbf82a5443bca4945db60df69ee91a26cf2f35ba6c8"
+    }
+  ],
+  "v138_delivery_files": [
+    {
+      "filename": "Q047_SAMLET_JOURNAL_Q048_V138_CONDITIONAL_PROOF_APPENDED_V1.md",
+      "size_bytes": 14732183,
+      "sha256": "5aae252145347986cf2f6ed8c8c5c43ea9c6fc3dcc10b37472fad09d00f45cc1"
+    },
+    {
+      "filename": "Q048_V138_JOURNAL_APPEND_V1.md",
+      "size_bytes": 4580,
+      "sha256": "ee012552e43ca636eadeee7ffa8041d8954d003d0426d239fecd65efedb97735"
+    },
+    {
+      "filename": "Q048_V138_RESULT_AND_HANDOFF_V1.md",
+      "size_bytes": 2223,
+      "sha256": "56ae7f827c078f65df9662e8f235f321d4fea4c1ca0706495a2cd0414b1ffda6"
+    },
+    {
+      "filename": "Q048_V138_RESULT_STATE_V1.json",
+      "size_bytes": 1981,
+      "sha256": "20dd487be5ff0fc847e6b96b9b057502869dd327cc56b5221d707944628a58fc"
+    },
+    {
+      "filename": "Q048_V138_HANDOFF_TO_INGESTION_V1.json",
+      "size_bytes": 2520,
+      "sha256": "6277bfa5a06e66a8ba63aa0cdf772b9a53f2b1bb48bd7fa56b91d975133daf01"
+    },
+    {
+      "filename": "Q048_V138_GITHUB_MEMORY_UPDATE_V1.json",
+      "size_bytes": 1120,
+      "sha256": "3060dbdb293f378bfd320395ccd46802c2b4e2a28ecba55fff83ea23f03af697"
+    },
+    {
+      "filename": "Q048_V138_UPLOAD_APPLY_INSTRUCTIONS_V1.md",
+      "size_bytes": 803,
+      "sha256": "5cb26c1bbb941b1f13538f1a913f54a96c3265ff8d0ad083bf7d372e4b590180"
+    },
+    {
+      "filename": "Q048_V138_PREFREEZE_REVIEW_V1.json",
+      "size_bytes": 2131,
+      "sha256": "1be0de24d4a914efb078f737ed481e434ca74d7f4e5ec97090023180f5f7f4b2"
+    },
+    {
+      "filename": "Q048_V138_SPEC_V1.json",
+      "size_bytes": 11504,
+      "sha256": "0ef44f38f16a5c3a379581b32dfe9b456832a4391d0741b38469c6a8ff8b84aa"
+    },
+    {
+      "filename": "Q048_V138_FREEZE_V1.json",
+      "size_bytes": 10426,
+      "sha256": "6b63de89ddd0c0c8802cf3f656bf99a0b82e6dafc9e39863158d238abcd1da23"
+    },
+    {
+      "filename": "Q048_V138_RAW_V1.json",
+      "size_bytes": 41070,
+      "sha256": "8851268f297534401e21f9dd43ec1eb98f7b4179ec4020a8d66159d57791d41d"
+    },
+    {
+      "filename": "Q048_V138_VERIFICATION_V1.json",
+      "size_bytes": 5824,
+      "sha256": "644b0f773e89ee10ed82cbb3b7ff64b53995e65352cdfd35751fe529f2160d66"
+    },
+    {
+      "filename": "Q048_V138_ACCEPTANCE_V1.json",
+      "size_bytes": 6135,
+      "sha256": "a248276219dc77058a01d4522b6938cba04fb1932c2d3626e2c417a34fc42081"
+    },
+    {
+      "filename": "Q048_V138_ACCEPTANCE_READBACK_V1.json",
+      "size_bytes": 3542,
+      "sha256": "3f0717938479a41955393d950099695f6acbd449dfd585bd1dcd57fca4037543"
+    },
+    {
+      "filename": "Q048_V138_EXECUTION_V1.json",
+      "size_bytes": 3180,
+      "sha256": "e79bd2bc796ea2bbaf9a2f7ea1acfc7280792cedb1861283b2ff4a0bf18f1cf6"
+    },
+    {
+      "filename": "q048_v138_proof.py",
+      "size_bytes": 13857,
+      "sha256": "af1a1997f28d9b1f9c56720ea324f0d55604e6ece69c41d5c8cbb2388347e955"
+    },
+    {
+      "filename": "q048_v138_verify.py",
+      "size_bytes": 16101,
+      "sha256": "391e89d9b4590f532f291f80f13a7ac8b8c990f7bf576e61d183ec0ba7633450"
+    },
+    {
+      "filename": "q048_v138_run.py",
+      "size_bytes": 9125,
+      "sha256": "28e74c479b5ac851e4721f44a6514ea0bc843a84e675beb6d7a415f6c750e699"
+    },
+    {
+      "filename": "Q048_V138_FILES_V1.md",
+      "size_bytes": 2360,
+      "sha256": "28917e37a9c1eb5af9fa3cde37d668cdc679e6d1dfe7f1c9f9b33837e96ee285"
+    },
+    {
+      "filename": "Q048_V138_OUTPUT_MANIFEST_V1.json",
+      "size_bytes": 7411,
+      "sha256": "83da4a145e3323d4b86b0ab68bd3e719107a0f25c3f501e41a42694b42340e7f"
+    },
+    {
+      "filename": "Q048_V138_DELIVERY_VALIDATION_V1.json",
+      "size_bytes": 709,
+      "sha256": "1eb68c21feb97e606885a63b3244d7f3f6b7b6d1485e6ac9f08db86a28a750a5"
+    }
+  ],
+  "restore_rule": "Materialize exact bytes to required_workspace_path, verify SHA256 and schema before freeze. Repository presence is not a substitute for hash validation. Do not execute V138 proof mains; use V137 consumer sources only as method reference."
+}
