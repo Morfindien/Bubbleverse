@@ -1,0 +1,29 @@
+{
+  "schema": "bubbleverse.q048.v140.ingestion.delivery_validation.v1",
+  "created_at_utc": "2026-10-21T13:14:33.479494+00:00",
+  "status": "PASS",
+  "checks": {
+    "manifest_payload_count": true,
+    "all_manifest_payloads_exist": true,
+    "all_manifest_payload_hashes_match": true,
+    "complete_journal_prefix_preserved": true,
+    "complete_journal_hash_recorded": true,
+    "ingestion_audit_pass": true,
+    "current_actual124_frontier840": true,
+    "v138_consumed_once": true,
+    "v139_fail_preserved": true,
+    "next_task_fingerprint_matches": true,
+    "next_task_math_only_proof1_actual0": true,
+    "next_task_no_actual125_below830": true,
+    "manifest_sha_computed": true,
+    "checksum_file_present": true,
+    "all_json_parse": true
+  },
+  "checks_total": 15,
+  "checks_passed": 15,
+  "manifest_sha256": "60b992c90e6352c72590e6c9ffa22baccbe51a22ee7b6af417b3ab089fada502",
+  "checksum_file_sha256": "e6605e080b51053e4b49aeb7b332c633da21e7f602a85834e91e353a7668b497",
+  "full_journal_sha256": "00c7a52e1861fe9b1ceb1d83e10bcf9131aa49aa0d74447b188f39f9df69007e",
+  "next_task_sha256": "cfbe75d3c87cc91c451993bcf87b2b072c01835051e2178be66bd1328fd1ff44",
+  "self_hash_convention": "This delivery-validation file is excluded from its own checksum to avoid recursion."
+}

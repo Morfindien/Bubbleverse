@@ -1,0 +1,528 @@
+{
+  "schema": "bubbleverse.q048.v140.ingestion_evidence_audit.v1",
+  "created_at_utc": "2026-10-21T13:14:33.479494+00:00",
+  "event": "LOCAL-Q048-V140-ACCEPTED-CONSUMER-INGESTION-V1",
+  "idempotency_key": "8c850b4601febaa1d07c23210184366dcdeb9eb2fe5893298fc01553d1f74774",
+  "idempotency_basis": {
+    "event": "LOCAL-Q048-V140-ACCEPTED-CONSUMER-INGESTION-V1",
+    "origin_run_id": "LOCAL-Q048-V140-20261021T130139683396Z-REPAIRED-CONSUMER-V1",
+    "origin_task_id": "LOCAL-Q048-V140-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-850-840-REPAIR-V1",
+    "origin_task_fingerprint": "00dfe61bd2b878d02a236a18b16fa86e02b977a8c2db89b27a746029b9043d1b",
+    "accepted_checkpoint_sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+    "publication_readback_sha256": "91e607a326aa706116b513aaa9e63a67b71a376ed60b706bac3f69908f26a8ec"
+  },
+  "status": "PASS",
+  "checks": {
+    "prompt_sha256": true,
+    "math_prompt_prior_exact_sha256": true,
+    "handoff_ready": true,
+    "handoff_accepted": true,
+    "task_identity": true,
+    "task_fingerprint": true,
+    "question_hash": true,
+    "q_firewall": true,
+    "result_state_pass": true,
+    "execution_complete": true,
+    "validation_validated": true,
+    "current_actual124_frontier840": true,
+    "frontiers_current": true,
+    "endpoint_current": true,
+    "delta_actual1": true,
+    "delta_proof0": true,
+    "delta_theorem_recompute0": true,
+    "delta_consumption1": true,
+    "v138_consumed_once": true,
+    "v139_immutable_fail": true,
+    "execution_one_chain": true,
+    "execution_zero_retry": true,
+    "execution_zero_postfreeze": true,
+    "execution_budget": true,
+    "preflight_46_46": true,
+    "validator_55_55": true,
+    "semantic_52_52": true,
+    "postaccept_16_16": true,
+    "readback_12_12": true,
+    "readback_checkpoint_hash": true,
+    "delivery_16_16": true,
+    "manifest_payloads_31": true,
+    "manifest_payload_hashes_exact": true,
+    "freeze_reported_43": true,
+    "freeze_recomputed_43": true,
+    "journal_parent_prefix": true,
+    "journal_hash": true,
+    "checkpoint_hash": true,
+    "result_state_hash_manifest": true,
+    "execution_hash_manifest": true,
+    "validation_hash_manifest": true,
+    "q_open": true,
+    "nativep6_unresolved": true,
+    "selector_not_established": true,
+    "trajectory_identity_not_claimed": true,
+    "no_actual125_in_v140": true,
+    "no_below840_in_v140": true,
+    "source_pin": true,
+    "capture_pin": true,
+    "guard_sha": true,
+    "row61_primary_hash": true,
+    "row61_control_hash": true,
+    "row61_glue_to_current": true,
+    "row61_no_source_reset": true,
+    "next_task_fingerprint": true,
+    "next_task_proof1": true,
+    "next_task_actual0": true,
+    "next_task_no_actual125": true,
+    "next_task_no_below830": true,
+    "repo_no_prior_ingestion_observed": true,
+    "repo_v140_top_level_commit_observed": true,
+    "math_prompt_verified_current_repo_blob": true,
+    "completion_gate_not_satisfied": true,
+    "selected_engine_single": true,
+    "report_writer_excluded": true,
+    "no_science_change_in_ingestion": true
+  },
+  "checks_passed": 66,
+  "checks_total": 66,
+  "v140_manifest_checks": [
+    {
+      "file": "Q047_SAMLET_JOURNAL_Q048_V140_REPAIRED_CONSUMER_APPENDED_V1.md",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_ACCEPTED_CHECKPOINT_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_CODE_REVIEW_V1.md",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_CONTROL_ROSTER_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_EXECUTION_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_FILES_V1.md",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_FINAL_STAGING_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_FREEZE_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_GITHUB_MEMORY_UPDATE_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_HANDOFF_TO_INGESTION_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_IMPLEMENTATION_PLAN_V1.md",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_INPUT_PREFLIGHT_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_JOURNAL_APPEND_V1.md",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_POSTACCEPT_VALIDATION_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_PROVISIONAL_ACCEPTANCE_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_PUBLICATION_READBACK_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_RAW_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_RESULT_AND_HANDOFF_V1.md",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_RESULT_STATE_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_RUN_CONTEXT_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_SINGLE_CHAIN_LOCK_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_SPEC_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_UPLOAD_APPLY_INSTRUCTIONS_V1.md",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "Q048_V140_VALIDATION_V1.json",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "q048_v140_accept.py",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "q048_v140_consumer.py",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "q048_v140_io.py",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "q048_v140_postaccept.py",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "q048_v140_publish.py",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "q048_v140_run.py",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    },
+    {
+      "file": "q048_v140_validate.py",
+      "exists": true,
+      "sha256_ok": true,
+      "size_ok": true
+    }
+  ],
+  "v140_freeze_recomputed": [
+    {
+      "path": "q048_v140_io.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "q048_v140_consumer.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "q048_v140_validate.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "q048_v140_accept.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "q048_v140_postaccept.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "q048_v140_publish.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "q048_v140_run.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "Q048_V140_SPEC_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "Q048_V140_INPUT_PREFLIGHT_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "Q048_V140_CONTROL_ROSTER_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "Q048_V140_IMPLEMENTATION_PLAN_V1.md",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "Q048_V140_CODE_REVIEW_V1.md",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Bubbleverse_Execution_HPC_Motor_Builder_v2.2.0.md",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q047_SAMLET_JOURNAL_Q048_V139_INGESTED_V1.md",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q048_V137_ACCEPTED_CHECKPOINT_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q048_V139_EXECUTION_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q048_V139_INGESTION_RECOVERY_MAP_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q048_V139_INGESTION_STATE_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q048_V139_RAW_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q048_V139_RESULT_STATE_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q048_V139_TECHNICAL_OBSTRUCTION_DIAGNOSTIC_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q048_V139_VALIDATION_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "inputs/Q048_V140_NEXT_BUILDER_TASK_REPAIRED_CONDITIONAL_CONSUMER_850_840_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/Q048_V138_ACCEPTANCE_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/Q048_V138_RAW_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/Q048_V138_VERIFICATION_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/Q048_V138_SPEC_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/Q048_V138_FREEZE_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/Q048_V138_EXECUTION_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/Q048_V138_ACCEPTANCE_READBACK_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/Q048_V138_OUTPUT_MANIFEST_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/Q048_V138_DELIVERY_VALIDATION_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/ref/prior_v126/inputs/q048_guard_local_v_result_v12.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "proof_runtime/ref/prior_v126/inputs/q048_prefix_config_v1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "method_ref_v137/Q048_V137_CONTROL_ROSTER_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "method_ref_v137/Q048_V137_INPUT_PREFLIGHT_V1.json",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "method_ref_v137/q048_v137_accept.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "method_ref_v137/q048_v137_consumer.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "method_ref_v137/q048_v137_io.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "method_ref_v137/q048_v137_postaccept.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "method_ref_v137/q048_v137_publish.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "method_ref_v137/q048_v137_run.py",
+      "exists": true,
+      "sha256_ok": true
+    },
+    {
+      "path": "method_ref_v137/q048_v137_validate.py",
+      "exists": true,
+      "sha256_ok": true
+    }
+  ],
+  "source_artifacts": {
+    "v140_result_state": {
+      "sha256": "c02259b82cca98bdbf17a5c2c8d28fff9ccd400f89b3cbd1f51fb66630a7b3fb"
+    },
+    "v140_checkpoint": {
+      "sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201"
+    },
+    "v140_validation": {
+      "sha256": "0b3490b91f9f7b7486369a4ba0cca183eaa43393bb74264a7cd8167de23049be"
+    },
+    "v140_readback": {
+      "sha256": "91e607a326aa706116b513aaa9e63a67b71a376ed60b706bac3f69908f26a8ec"
+    },
+    "v140_manifest": {
+      "sha256": "f82b6220dddff2c734044fc5f3fee6779c894291939937918a3322dd63a9cc6d",
+      "payloads": 31
+    },
+    "v140_delivery": {
+      "sha256": "32ccc6e4bb1a440ce169ed73e6293271360006ac5d0bbb526dd9f0cd6e1905f6",
+      "checks": "16/16"
+    },
+    "v140_freeze": {
+      "sha256": "bb116f618038a8e7d73db0df3f913cd7d732ceb098d93719c07f17da1e9b2ec5",
+      "recomputed": "43/43"
+    },
+    "v140_complete_journal": {
+      "sha256": "c612ddfa3c94706571e5c408fec107fcbc5761c7e20e65a6e7eaf8e3ea6eb682"
+    },
+    "v139_ingested_journal_embedded_byte_identical": true
+  },
+  "repository_observation": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "head": "f46e1b9227e409a469619a7f541c2149118b4792",
+    "commit_time_utc": "2026-10-21T13:07:48Z",
+    "v140_top_level_present": true,
+    "prior_ingestion_or_v141_task_observed": false
+  }
+}
