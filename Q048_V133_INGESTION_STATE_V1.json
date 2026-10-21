@@ -1,0 +1,74 @@
+{
+  "schema": "bubbleverse.q048.v133.ingestion_state.v1",
+  "created_at_utc": "2026-10-21T09:16:16.744255+00:00",
+  "ingestion_event_id": "LOCAL-Q048-V133-PATH-BINDING-FAILURE-INGESTION-V1",
+  "idempotency_key": "c67827f88e44ef7eb90f4b63e6b2c10da9ff5847954a0006f58c2ff0eda3237e",
+  "ingestion_state": "NEW",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "result_class": "RUN_FAILURE",
+  "status_axes": {
+    "execution": "FAILURE",
+    "technical_validity": "INVALID_EXECUTION",
+    "reproducibility": "NOT_ASSESSED",
+    "robustness": "NOT_ASSESSED",
+    "scientific_effect": "NO_MATERIAL_CHANGE",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "register_once": {
+    "task_id": "LOCAL-Q048-V133-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-870-860-V1",
+    "task_fingerprint": "a415ccb486ad329e6b2cc376a968da22d68c04794426a84cd35b24b570a06ea8",
+    "failure_classification": "SOFTWARE_BUG/PATH_BINDING",
+    "accepted_new_mathematical_proof_cells": 0,
+    "accepted_new_actual_cells": 0
+  },
+  "accepted_state": {
+    "count": 121,
+    "frontier": 870
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 870
+  },
+  "what_changed": [
+    "A concrete implementation defect is now registered: V133 bound the parent checkpoint basename against work-root instead of the frozen inputs/ path.",
+    "The failed V133 execution is preserved as immutable historical evidence.",
+    "A separately versioned V134 correction is prepared with the parent-path binding as the only intended material implementation change."
+  ],
+  "what_did_not_change": [
+    "No V133 raw mathematical result exists.",
+    "No V133 verification or acceptance exists.",
+    "Accepted actual state remains actual121/frontier870.",
+    "No accepted proof cell 870→860 exists yet.",
+    "All V133 scientific pins, guard row58 identities, source/capture identity, operators, q branches, proof scope and limits remain unchanged for V134.",
+    "NativeP6 remains UNRESOLVED.",
+    "Q048 remains ACTIVE/INCONCLUSIVE."
+  ],
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "The required 870→860 proof cell was not produced; V133 failed before mathematical evaluation due to a software path-binding defect.",
+  "single_material_bottleneck": "Execute the unchanged 870→860 proof contract with the corrected frozen parent checkpoint path binding.",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "next_task_file": "Q048_V134_NEXT_MATHEMATICS_TASK_PATH_REPAIR_870_860_V1.json",
+  "next_task_fingerprint": "b49fca97c717a3ffb64fec18118459b10730d7bc1a63f559610596385cece407",
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "observed_base_commit": "37c6ff134d6e1ccabf7b6d142fb83f5bc6258473",
+    "source_freshness": "VERIFIED",
+    "v133_failure_artifacts_present_at_base": true,
+    "v133_ingestion_outputs_present_at_base": false,
+    "v134_task_present_at_base": false,
+    "sync_status": "USER_UPLOAD_PENDING"
+  }
+}

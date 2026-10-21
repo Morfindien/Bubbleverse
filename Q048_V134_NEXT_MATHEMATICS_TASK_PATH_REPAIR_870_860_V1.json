@@ -1,0 +1,235 @@
+{
+  "schema": "bubbleverse.q048.v134.path_binding_correction.task.v1",
+  "task_id": "LOCAL-Q048-V134-PATH-BINDING-CORRECTION-RETRY-870-860-V1",
+  "task_fingerprint": "b49fca97c717a3ffb64fec18118459b10730d7bc1a63f559610596385cece407",
+  "task_fingerprint_basis": {
+    "task_id": "LOCAL-Q048-V134-PATH-BINDING-CORRECTION-RETRY-870-860-V1",
+    "parent_failed_task_id": "LOCAL-Q048-V133-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-870-860-V1",
+    "parent_failed_task_fingerprint": "a415ccb486ad329e6b2cc376a968da22d68c04794426a84cd35b24b570a06ea8",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "objective": "Repeat the same bounded 870→860 conditional proof task under a separately versioned implementation whose only material change is the corrected frozen parent-path binding.",
+    "repair_diff": {
+      "parent_path_binding_old": "ROOT/task['parent_checkpoint']['file']",
+      "parent_path_binding_old_resolves_to": "Q048_V132_ACCEPTED_CHECKPOINT_V1.json at work-root",
+      "parent_path_binding_new": "ROOT/spec['parent']",
+      "parent_path_binding_new_resolves_to": "inputs/Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+      "scientific_inputs_changed": false,
+      "cell_changed": false,
+      "guard_changed": false,
+      "operators_changed": false,
+      "q_branches_changed": false,
+      "source_commit_changed": false,
+      "capture_changed": false,
+      "criteria_changed": false
+    },
+    "parent_checkpoint_sha256": "2a16ced67538913c34db2cc608b533e6dbbe6db9a1eaf48f4e4442c10f05f01b",
+    "cell_z": [
+      870,
+      860
+    ],
+    "cell_a": [
+      "1/871",
+      "1/861"
+    ],
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_row_sha256": "86e48d9266bfd7b901764eff1a118d6c1febf70186ef016300714409de6f2ef3",
+    "guard_control_row_sha256": "04e1cf5c5c084ca7a5b4248f2adf2ce52ea60940fc7133a1c3a233868da98503",
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "max_new_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "no_below_z": 860,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "created_at_utc": "2026-10-21T09:16:16.744255+00:00",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_DOCUMENTED",
+  "exact_full_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "engine_prompt": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "ref": "37c6ff134d6e1ccabf7b6d142fb83f5bc6258473",
+    "path": "Bubbleverse_Matematikmotor_2.1.0-37.md",
+    "git_blob": "d3bc042e9610d4c417bfb75ad67468edf44db707",
+    "prompt_version": "2.1.0"
+  },
+  "authorization": "SEPARATELY_VERSIONED_CORRECTION_OF_V133_PATH_BINDING_FOR_SAME_ONE_CELL_870_TO_860_ZERO_ACTUAL",
+  "parent_failed_attempt": {
+    "task_id": "LOCAL-Q048-V133-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-870-860-V1",
+    "task_fingerprint": "a415ccb486ad329e6b2cc376a968da22d68c04794426a84cd35b24b570a06ea8",
+    "failure_diagnostic": "Q048_V133_FAILURE_DIAGNOSTIC_V1.json",
+    "failure_diagnostic_sha256": "7b5a435a9971b1b08f47c5fdf7ff8cb6748f1f78095b27ceb2a8f110786e9c5e",
+    "execution": "Q048_V133_EXECUTION_V1.json",
+    "execution_sha256": "e3adfdb2e70a4bca49128d34afc1b5eda7515e3e75335eebd090290f659079f2",
+    "classification": "SOFTWARE_BUG/PATH_BINDING",
+    "immutable": true,
+    "rerun_in_place_forbidden": true
+  },
+  "objective": "Execute the unchanged scientific 870→860 proof contract after correcting only the parent checkpoint path binding in a new frozen V134 implementation.",
+  "parent_checkpoint": {
+    "file": "Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+    "workspace_path_required": "inputs/Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+    "binding_rule_required": "Use ROOT/spec['parent'] or an equivalently frozen explicit inputs/ path; never derive the runtime path by ROOT + task basename.",
+    "sha256": "2a16ced67538913c34db2cc608b533e6dbbe6db9a1eaf48f4e4442c10f05f01b",
+    "accepted_actual": {
+      "count": 121,
+      "frontier": 870
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 870
+    },
+    "endpoint": {
+      "a": "1/871",
+      "E": "17865518912095738771/500000000000000000",
+      "Y": "14182402721438480887/500000000000000000",
+      "Vbar": "7059306032093077611/1000000000000000000"
+    },
+    "connected_lower": "19538936983771/50000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ]
+  },
+  "scientific_contract_source": {
+    "task_file": "Q048_V133_NEXT_MATHEMATICS_TASK_870_860_V1.json",
+    "sha256": "74e0cba7c57120587d6481f22f45dba4d5978fcb441e7d0d35d984b0b2aba52f",
+    "task_fingerprint": "a415ccb486ad329e6b2cc376a968da22d68c04794426a84cd35b24b570a06ea8",
+    "reuse": "UNCHANGED_SCIENTIFIC_CONTRACT"
+  },
+  "repair_diff": {
+    "parent_path_binding_old": "ROOT/task['parent_checkpoint']['file']",
+    "parent_path_binding_old_resolves_to": "Q048_V132_ACCEPTED_CHECKPOINT_V1.json at work-root",
+    "parent_path_binding_new": "ROOT/spec['parent']",
+    "parent_path_binding_new_resolves_to": "inputs/Q048_V132_ACCEPTED_CHECKPOINT_V1.json",
+    "scientific_inputs_changed": false,
+    "cell_changed": false,
+    "guard_changed": false,
+    "operators_changed": false,
+    "q_branches_changed": false,
+    "source_commit_changed": false,
+    "capture_changed": false,
+    "criteria_changed": false
+  },
+  "cell_z": [
+    870,
+    860
+  ],
+  "cell_a": [
+    "1/871",
+    "1/861"
+  ],
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "guard": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "control_role": "secondary comparison only; never substitute its endpoint/background for primary",
+    "row_index_reference_only": 58,
+    "selection": "Select unique exact a/z cell in each evaluator; bind control flags before row index",
+    "primary_row_sha256": "86e48d9266bfd7b901764eff1a118d6c1febf70186ef016300714409de6f2ef3",
+    "control_row_sha256": "04e1cf5c5c084ca7a5b4248f2adf2ce52ea60940fc7133a1c3a233868da98503",
+    "left_glue": {
+      "a0": "1/871",
+      "E_input_left": "17865518912095738771/500000000000000000",
+      "Y_left": "14182402721438480887/500000000000000000",
+      "V_previous": "7059306032093077611/1000000000000000000"
+    },
+    "expected_primary_endpoint_crosscheck_only": {
+      "a1": "1/861",
+      "E_right": "34371176983888929189/1000000000000000000",
+      "Y_right": "27278762343901556397/1000000000000000000",
+      "V_admitted": "6796897363321232259/1000000000000000000"
+    },
+    "energy_cap_used": "17865518912095738771/500000000000000000",
+    "E_safe_left_distinct": "17728610041432167283/500000000000000000",
+    "qualification": "Metadata admitted/committed/whole-cell flags verified; mathematics must freshly validate all mathematical domain premises for 870→860.",
+    "source_state_reset": false
+  },
+  "proof_contract": {
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "selection": "conv(HMLA,SWIFT) for each fixed q branch",
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; bounds hold on their existing interval and at the new endpoint only whenever an admissible continuation reaches it",
+    "initial_face_only": true,
+    "no_assumed_future_domain_membership": true,
+    "exact_selector_existence_uniqueness": "NOT_ESTABLISHED",
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false,
+    "source_saha_constant": "3.016103031869581e21",
+    "thermal_domain_target": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "h_upper_target": "99999/100000",
+    "required_new_work": [
+      "Verify fresh 870→860 source/background guards and exact inherited V132 left face; retain E_input_left whole-cell cap distinct from E_safe_left.",
+      "Establish fresh atomic/interpolation bounds with decimal and binary64 input-channel coverage and frozen source constants; prove valid domain containment for any reused enclosure.",
+      "Verify positive source/denominators and 0<C<1 separately for HMLA/SWIFT and both fixed-q branches.",
+      "Derive a new K_upper and positive connected lower h bound from accepted actual121 initial face. V130 880→870 K/conclusion is method/reference only.",
+      "Prove strict upper-h and both thermal inward faces, then non-circular first-exit/closed-endpoint persistence on existing admissible continuations; convex combinations preserve derivative inequalities.",
+      "Use an independent verifier with real non-noop semantic mutations and serialized acceptance/readback; declare shared helper/source dependence."
+    ]
+  },
+  "method_reuse_limits": [
+    "Preserve all V133 scientific pins and acceptance criteria unchanged.",
+    "Do not modify or relabel V133 as a pass; V133 remains a failed historical attempt.",
+    "Change only the implementation/path binding needed to make the frozen V132 parent bytes readable at the path already declared by the V133 spec.",
+    "Do not alter guard row58, source commit, capture, operators, q branches, atomic constants, cell bounds, accepted parent state, or proof scope.",
+    "Do not import the V130/V133 theorem conclusion as proof; rerun the fresh 870→860 mathematics under the unchanged V133 scientific contract."
+  ],
+  "required_preflight": [
+    "Assert the runtime parent path exists at inputs/Q048_V132_ACCEPTED_CHECKPOINT_V1.json before freeze.",
+    "Assert sha256(runtime parent path) equals the authorized V132 checkpoint hash.",
+    "Static-test the corrected binding against the frozen spec path before the single scientific chain.",
+    "Freeze V134 code/spec/input pins after preflight; retry_count=0 and postfreeze_edits=false."
+  ],
+  "success": "One fresh accepted conditional source-real connected proof cell 870→860, with independent verifier and semantic controls passing, +1 proof / +0 actual, while actual121/frontier870 remains current.",
+  "failure_or_falsification": "First path/pin/schema/source/domain/mathematical/verifier/serialization/process failure. Preserve exact obstruction; no retry or postfreeze patch.",
+  "stop": "Return to Result Ingestion after one terminal V134 success or failure. No work below z=860; no actual122; no native integration/reset/refit/recapture/tuning.",
+  "limits": {
+    "max_new_mathematical_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "no_actual122": true,
+    "no_below_z": 860,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_rewrite": true,
+    "retries": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "budget": {
+    "preferred_backend": "LOCAL_RUNTIME",
+    "science_seconds_max": 300,
+    "scientific_chains_max": 1,
+    "paid_compute_authorized": false,
+    "github_actions_justified": false
+  },
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0"
+}
