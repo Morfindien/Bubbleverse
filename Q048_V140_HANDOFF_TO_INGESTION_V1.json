@@ -1,0 +1,80 @@
+{
+  "schema": "bubbleverse.q048.v140.handoff_to_ingestion.v1",
+  "created_at_utc": "2026-10-21T13:03:42.042692+00:00",
+  "status": "READY_FOR_RESULT_INGESTION",
+  "q": "Q048",
+  "target_q": "Q048",
+  "task_id": "LOCAL-Q048-V140-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-850-840-REPAIR-V1",
+  "task_fingerprint": "00dfe61bd2b878d02a236a18b16fa86e02b977a8c2db89b27a746029b9043d1b",
+  "run_id": "LOCAL-Q048-V140-20261021T130139683396Z-REPAIRED-CONSUMER-V1",
+  "result": {
+    "accepted": true,
+    "classification": "REPAIRED_CONDITIONAL_SOURCE_REAL_ACTUAL_ADMISSION",
+    "actual": {
+      "count": 124,
+      "frontier": 840
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 840
+    },
+    "endpoint": {
+      "a": "1/841",
+      "E": "15881004977532652117/500000000000000000",
+      "Y": "5039104441059922143/200000000000000000",
+      "Vbar": "6292884093525456289/1000000000000000000"
+    },
+    "new_actual_cells": 1,
+    "new_proof_cells": 0,
+    "new_theorem_recomputations": 0,
+    "theorem_consumptions": 1
+  },
+  "repair_history": {
+    "v139_status": "IMMUTABLE_TERMINAL_TECHNICAL_FAIL",
+    "v139_consumption": 0,
+    "v140_repairs": [
+      "V138 delivery validation normalized to PASS/12/12 checks_passed/checks_total",
+      "energy cap bound directly to exact row60 E_input_left and separate E_safe_left"
+    ],
+    "v139_retroactive_pass": false
+  },
+  "technical_evidence": {
+    "preflight": "46/46",
+    "validator": "55/55",
+    "semantic_controls": "52/52",
+    "postaccept": "16/16",
+    "serialized_final": "12/12",
+    "frozen_files_postrun": "43/43",
+    "execution_seconds": 11.917513962999692,
+    "chains": 1,
+    "retries": 0,
+    "postfreeze_edits": 0
+  },
+  "scientific_limits": {
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false,
+    "native_error_certificate": false,
+    "selector_existence_uniqueness": false,
+    "trajectory_identity": false,
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions under conv(HMLA,SWIFT) for each fixed q branch; endpoint only if an admissible continuation reaches it."
+  },
+  "journal_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V140_REPAIRED_CONSUMER_APPENDED_V1.md",
+    "sha256": "c612ddfa3c94706571e5c408fec107fcbc5761c7e20e65a6e7eaf8e3ea6eb682"
+  },
+  "accepted_checkpoint_ref": {
+    "file": "Q048_V140_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201"
+  },
+  "result_state_ref": "Q048_V140_RESULT_STATE_V1.json",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "next_scientific_task_authorized": false,
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "base_commit": "baa8bb567563bc513d2a509c10d8073408661204",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "write_performed": false
+  }
+}

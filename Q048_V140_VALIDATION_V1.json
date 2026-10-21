@@ -1,0 +1,541 @@
+{
+  "schema": "bubbleverse.q048.v140.validation.v1",
+  "created_at_utc": "2026-10-21T13:01:54.638458+00:00",
+  "status": "PASS",
+  "checks": {
+    "schema": true,
+    "identity_q": true,
+    "identity_task": true,
+    "question": true,
+    "task_fingerprint": true,
+    "program": true,
+    "spec_freeze_binding": true,
+    "raw_state": true,
+    "authorization": true,
+    "v139_immutable_failure": true,
+    "v139_failure_diagnostic": true,
+    "parent_hash": true,
+    "parent_status": true,
+    "parent_actual": true,
+    "parent_endpoint": true,
+    "theorem_acceptance_hash": true,
+    "theorem_artifact_hashes": true,
+    "theorem_task_identity": true,
+    "theorem_run_identity": true,
+    "theorem_status": true,
+    "theorem_consumer_authorization": true,
+    "theorem_links": true,
+    "proof_validation_counts": true,
+    "v138_freeze_pins": true,
+    "source_commit": true,
+    "capture": true,
+    "saha": true,
+    "guard_file": true,
+    "guard_primary_unique": true,
+    "guard_control_unique": true,
+    "guard_role": true,
+    "guard_flags": true,
+    "left_glue": true,
+    "energy_cap": true,
+    "endpoint_source_binding": true,
+    "endpoint_crosscheck": true,
+    "operators": true,
+    "q_branches": true,
+    "bounds_K": true,
+    "bounds_lower": true,
+    "bounds_upper": true,
+    "bounds_thermal": true,
+    "continuation_scope": true,
+    "candidate_advance": true,
+    "noncurrent": true,
+    "counts": true,
+    "no_reset": true,
+    "native_limit": true,
+    "selector_limit": true,
+    "trajectory_limit": true,
+    "q_limit": true,
+    "boundary_limit": true,
+    "history_limit": true,
+    "no_actual125": true,
+    "return_route": true
+  },
+  "checks_total": 55,
+  "checks_passed": 55,
+  "controls": [
+    {
+      "id": "wrong_question",
+      "nonnoop": true,
+      "expected_invariant": "question",
+      "failed_invariants": [
+        "question"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_q",
+      "nonnoop": true,
+      "expected_invariant": "identity_q",
+      "failed_invariants": [
+        "identity_q"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_target_q",
+      "nonnoop": true,
+      "expected_invariant": "identity_q",
+      "failed_invariants": [
+        "identity_q"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_task",
+      "nonnoop": true,
+      "expected_invariant": "identity_task",
+      "failed_invariants": [
+        "identity_task"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_fingerprint",
+      "nonnoop": true,
+      "expected_invariant": "task_fingerprint",
+      "failed_invariants": [
+        "task_fingerprint"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_run",
+      "nonnoop": true,
+      "expected_invariant": "identity_task",
+      "failed_invariants": [
+        "identity_task"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_program",
+      "nonnoop": true,
+      "expected_invariant": "program",
+      "failed_invariants": [
+        "program"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "premature_status",
+      "nonnoop": true,
+      "expected_invariant": "raw_state",
+      "failed_invariants": [
+        "raw_state"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_authorization",
+      "nonnoop": true,
+      "expected_invariant": "authorization",
+      "failed_invariants": [
+        "authorization"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_parent_hash",
+      "nonnoop": true,
+      "expected_invariant": "parent_hash",
+      "failed_invariants": [
+        "parent_hash"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_parent_count",
+      "nonnoop": true,
+      "expected_invariant": "parent_actual",
+      "failed_invariants": [
+        "parent_actual"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_parent_frontier",
+      "nonnoop": true,
+      "expected_invariant": "parent_actual",
+      "failed_invariants": [
+        "parent_actual"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_parent_endpoint",
+      "nonnoop": true,
+      "expected_invariant": "parent_endpoint",
+      "failed_invariants": [
+        "parent_endpoint"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_theorem_acceptance",
+      "nonnoop": true,
+      "expected_invariant": "theorem_artifact_hashes",
+      "failed_invariants": [
+        "theorem_acceptance_hash",
+        "theorem_artifact_hashes"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_theorem_raw",
+      "nonnoop": true,
+      "expected_invariant": "theorem_artifact_hashes",
+      "failed_invariants": [
+        "theorem_artifact_hashes"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_theorem_task",
+      "nonnoop": true,
+      "expected_invariant": "theorem_task_identity",
+      "failed_invariants": [
+        "theorem_task_identity"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_theorem_run",
+      "nonnoop": true,
+      "expected_invariant": "theorem_run_identity",
+      "failed_invariants": [
+        "theorem_run_identity"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "mathematics_authorized_consumer",
+      "nonnoop": true,
+      "expected_invariant": "theorem_consumer_authorization",
+      "failed_invariants": [
+        "theorem_consumer_authorization"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_proof_gate_count",
+      "nonnoop": true,
+      "expected_invariant": "proof_validation_counts",
+      "failed_invariants": [
+        "proof_validation_counts"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "source_drift",
+      "nonnoop": true,
+      "expected_invariant": "source_commit",
+      "failed_invariants": [
+        "source_commit"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "capture_drift",
+      "nonnoop": true,
+      "expected_invariant": "capture",
+      "failed_invariants": [
+        "capture"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_guard",
+      "nonnoop": true,
+      "expected_invariant": "guard_file",
+      "failed_invariants": [
+        "guard_file"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "control_as_primary",
+      "nonnoop": true,
+      "expected_invariant": "guard_role",
+      "failed_invariants": [
+        "guard_role"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_guard_index",
+      "nonnoop": true,
+      "expected_invariant": "guard_primary_unique",
+      "failed_invariants": [
+        "guard_primary_unique"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_primary_row",
+      "nonnoop": true,
+      "expected_invariant": "guard_primary_unique",
+      "failed_invariants": [
+        "guard_primary_unique"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_control_row",
+      "nonnoop": true,
+      "expected_invariant": "guard_control_unique",
+      "failed_invariants": [
+        "guard_control_unique"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_left_glue",
+      "nonnoop": true,
+      "expected_invariant": "left_glue",
+      "failed_invariants": [
+        "left_glue"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "silent_cap_swap",
+      "nonnoop": true,
+      "expected_invariant": "energy_cap",
+      "failed_invariants": [
+        "energy_cap"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "copied_wrong_endpoint",
+      "nonnoop": true,
+      "expected_invariant": "endpoint_source_binding",
+      "failed_invariants": [
+        "endpoint_source_binding"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "drop_HMLA",
+      "nonnoop": true,
+      "expected_invariant": "operators",
+      "failed_invariants": [
+        "operators"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_q_branch",
+      "nonnoop": true,
+      "expected_invariant": "q_branches",
+      "failed_invariants": [
+        "q_branches"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_K",
+      "nonnoop": true,
+      "expected_invariant": "bounds_K",
+      "failed_invariants": [
+        "bounds_K"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_lower",
+      "nonnoop": true,
+      "expected_invariant": "bounds_lower",
+      "failed_invariants": [
+        "bounds_lower"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_h_upper",
+      "nonnoop": true,
+      "expected_invariant": "bounds_upper",
+      "failed_invariants": [
+        "bounds_upper"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "wrong_thermal",
+      "nonnoop": true,
+      "expected_invariant": "bounds_thermal",
+      "failed_invariants": [
+        "bounds_thermal"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "lost_scope",
+      "nonnoop": true,
+      "expected_invariant": "continuation_scope",
+      "failed_invariants": [
+        "continuation_scope"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "actual125",
+      "nonnoop": true,
+      "expected_invariant": "candidate_advance",
+      "failed_invariants": [
+        "candidate_advance",
+        "no_actual125"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "below840",
+      "nonnoop": true,
+      "expected_invariant": "candidate_advance",
+      "failed_invariants": [
+        "candidate_advance"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "premature_current",
+      "nonnoop": true,
+      "expected_invariant": "noncurrent",
+      "failed_invariants": [
+        "noncurrent"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "proof_recompute",
+      "nonnoop": true,
+      "expected_invariant": "counts",
+      "failed_invariants": [
+        "counts"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "theorem_recompute",
+      "nonnoop": true,
+      "expected_invariant": "counts",
+      "failed_invariants": [
+        "counts"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "double_consumption",
+      "nonnoop": true,
+      "expected_invariant": "counts",
+      "failed_invariants": [
+        "counts"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "native_promotion",
+      "nonnoop": true,
+      "expected_invariant": "native_limit",
+      "failed_invariants": [
+        "native_limit"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "selector_existence",
+      "nonnoop": true,
+      "expected_invariant": "selector_limit",
+      "failed_invariants": [
+        "selector_limit"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "trajectory_identity",
+      "nonnoop": true,
+      "expected_invariant": "trajectory_limit",
+      "failed_invariants": [
+        "trajectory_limit"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "q_closure",
+      "nonnoop": true,
+      "expected_invariant": "q_limit",
+      "failed_invariants": [
+        "q_limit"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "physical_reset",
+      "nonnoop": true,
+      "expected_invariant": "no_reset",
+      "failed_invariants": [
+        "no_reset"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "history_rewrite",
+      "nonnoop": true,
+      "expected_invariant": "history_limit",
+      "failed_invariants": [
+        "history_limit"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "historical_reexecution",
+      "nonnoop": true,
+      "expected_invariant": "history_limit",
+      "failed_invariants": [
+        "history_limit"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "proof_reexecution",
+      "nonnoop": true,
+      "expected_invariant": "history_limit",
+      "failed_invariants": [
+        "history_limit"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "actual125_flag",
+      "nonnoop": true,
+      "expected_invariant": "no_actual125",
+      "failed_invariants": [
+        "no_actual125"
+      ],
+      "rejected": true
+    },
+    {
+      "id": "return_route",
+      "nonnoop": true,
+      "expected_invariant": "return_route",
+      "failed_invariants": [
+        "return_route"
+      ],
+      "rejected": true
+    }
+  ],
+  "semantic_controls_total": 52,
+  "semantic_controls_rejected": 52,
+  "raw_sha256": "a30b276616344f498e506ccd2374eff48ea9eb7b432475cda324a433004dfd20",
+  "control_roster_sha256": "268c9db6a56c8e1cedfc9ebc242f3c8ca52385b1a7910baeeff38b7262719236",
+  "independence": "Separate process; no V140 consumer import and no V138 proof implementation import. Endpoint independently selected from frozen guard bytes; theorem artifacts are read-only authority."
+}

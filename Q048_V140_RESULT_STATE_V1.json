@@ -1,0 +1,118 @@
+{
+  "schema": "bubbleverse.q048.v140.result_state.v1",
+  "created_at_utc": "2026-10-21T13:03:42.042692+00:00",
+  "q": "Q048",
+  "target_q": "Q048",
+  "case_id": null,
+  "case_id_status": "NOT_DOCUMENTED",
+  "task_id": "LOCAL-Q048-V140-TWO-OPERATOR-CONDITIONAL-ACTUAL-CONSUMER-850-840-REPAIR-V1",
+  "task_fingerprint": "00dfe61bd2b878d02a236a18b16fa86e02b977a8c2db89b27a746029b9043d1b",
+  "run_id": "LOCAL-Q048-V140-20261021T130139683396Z-REPAIRED-CONSUMER-V1",
+  "program_id": "Q048-CONDITIONAL-CONSUMER-V140-REPAIR",
+  "program_registration": "LOCAL_UNREGISTERED",
+  "execution_status": "COMPLETE",
+  "result_validation_status": "VALIDATED",
+  "scientific_outcome": "INCONCLUSIVE",
+  "case_lifecycle": "ACTIVE",
+  "technical_result": "PASS",
+  "repair_of_v139": {
+    "historical_status": "IMMUTABLE_FAIL",
+    "run_id": "LOCAL-Q048-V139-20261021T123336944359Z-CONSUMER-V1",
+    "diagnostic_sha256": "b8fa38f629f28b292cf28a25dac85fd7d5d2ba3c73fc415c9578cab50367dfbf",
+    "validation_sha256": "618c208ee99577798136e667700da890835698f2d87ee903246241933493a032",
+    "retroactive_pass": false
+  },
+  "actual_before": {
+    "count": 123,
+    "frontier": 850
+  },
+  "actual_current": {
+    "count": 124,
+    "frontier": 840
+  },
+  "frontiers_current": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 840
+  },
+  "endpoint_current": {
+    "a": "1/841",
+    "E": "15881004977532652117/500000000000000000",
+    "Y": "5039104441059922143/200000000000000000",
+    "Vbar": "6292884093525456289/1000000000000000000"
+  },
+  "delta": {
+    "new_actual_cells": 1,
+    "new_mathematical_proof_cells": 0,
+    "new_theorem_recomputations": 0,
+    "theorem_consumptions": 1
+  },
+  "v138_proof_state_after_v140": {
+    "status": "ACCEPTED_CONSUMED_ONCE",
+    "acceptance_sha256": "a248276219dc77058a01d4522b6938cba04fb1932c2d3626e2c417a34fc42081",
+    "proof_run_id": "LOCAL-Q048-V138-20261021T121344901613Z-PROOF-V1"
+  },
+  "nativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "native_error_certificate": false,
+  "exact_selector_existence_uniqueness": false,
+  "trajectory_identity_claim": false,
+  "validation": {
+    "preflight_status": "PASS",
+    "preflight_checks": "46/46",
+    "v138_freeze_pins": "48/48",
+    "v140_frozen_files_postrun": "43/43",
+    "validator_checks": "55/55",
+    "semantic_controls": "52/52",
+    "postaccept": "16/16",
+    "final_controls": "12/12",
+    "readback_status": "PASS"
+  },
+  "compute": {
+    "backend": "LOCAL_RUNTIME",
+    "github_worthwhile": "NO",
+    "estimate_basis": "V137 same-class accepted consumer measured 11.782773796 s; V139 terminated during validator due two now-explicit schema adapter defects. V140 preserves same five-stage metadata topology, one chain, zero retry, 300 s budget; local runtime avoids GitHub execution overhead.",
+    "actual_seconds": 11.917513962999692,
+    "chains": 1,
+    "retries": 0,
+    "postfreeze_edits": 0,
+    "paid_compute": false
+  },
+  "source_pins": {
+    "parent_checkpoint_sha256": "1fc45bb7fdd885cd61fa91d7518d43c3424b4f3dfc4d0df9308460c5beba1309",
+    "v138_acceptance_sha256": "a248276219dc77058a01d4522b6938cba04fb1932c2d3626e2c417a34fc42081",
+    "v139_failure_diagnostic_sha256": "b8fa38f629f28b292cf28a25dac85fd7d5d2ba3c73fc415c9578cab50367dfbf",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_row_sha256": "94328dafa80582dcd852aa46ae0d8ad87b47435b2970c2546cd9f1ac78c0f6fc"
+  },
+  "artifact_hashes": {
+    "Q048_V140_RAW_V1.json": "a30b276616344f498e506ccd2374eff48ea9eb7b432475cda324a433004dfd20",
+    "Q048_V140_VALIDATION_V1.json": "0b3490b91f9f7b7486369a4ba0cca183eaa43393bb74264a7cd8167de23049be",
+    "Q048_V140_PROVISIONAL_ACCEPTANCE_V1.json": "11116799c5d6e80a2d5b1e4a002e6b51264d41ddd5a23ce5b0d16d51e1b539f2",
+    "Q048_V140_POSTACCEPT_VALIDATION_V1.json": "1f62c854a94ce09407fda37ebd6284880a3c69d3173451e4f68ebb80903752a9",
+    "Q048_V140_ACCEPTED_CHECKPOINT_V1.json": "2ee7bd4496a7a4d0cc923417fa65372626b921ea79e0dade055b817564ce8201",
+    "Q048_V140_PUBLICATION_READBACK_V1.json": "91e607a326aa706116b513aaa9e63a67b71a376ed60b706bac3f69908f26a8ec",
+    "Q048_V140_EXECUTION_V1.json": "a121a5fd978fa834266d3c34943453a1014f042186f7ad5eedaaacdc002c24cf",
+    "Q048_V140_SPEC_V1.json": "db3f40ea0d4322245fef073e5c9e0f00942b53957519249f4e831d11682408b8",
+    "Q048_V140_FREEZE_V1.json": "bb116f618038a8e7d73db0df3f913cd7d732ceb098d93719c07f17da1e9b2ec5"
+  },
+  "journal": {
+    "parent_file": "Q047_SAMLET_JOURNAL_Q048_V139_INGESTED_V1.md",
+    "parent_sha256": "7062834019dd66982664b94fe2c2f713cc3bb6e4bcf37b30de8c11137b5fe1d9",
+    "current_file": "Q047_SAMLET_JOURNAL_Q048_V140_REPAIRED_CONSUMER_APPENDED_V1.md",
+    "current_sha256": "c612ddfa3c94706571e5c408fec107fcbc5761c7e20e65a6e7eaf8e3ea6eb682",
+    "prefix_preserved": true
+  },
+  "repository": {
+    "repository": "Morfindien/Bubbleverse",
+    "observed_main_head": "baa8bb567563bc513d2a509c10d8073408661204",
+    "source_freshness": "VERIFIED_FOR_V139_INGESTION_INPUT",
+    "v140_sync_status": "USER_UPLOAD_PENDING",
+    "write_performed": false
+  },
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "stop": "Return once to Result Ingestion. No below840, actual125, theorem recomputation, native integration, new Q/model promotion or closure."
+}

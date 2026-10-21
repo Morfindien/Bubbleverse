@@ -1,0 +1,75 @@
+{
+  "schema": "bubbleverse.q048.v140.execution.v1",
+  "created_at_utc": "2026-10-21T13:02:02.949624+00:00",
+  "status": "PASS",
+  "run_id": "LOCAL-Q048-V140-20261021T130139683396Z-REPAIRED-CONSUMER-V1",
+  "events": [
+    {
+      "script": "q048_v140_consumer.py",
+      "returncode": 0,
+      "seconds": 0.8618532999998934,
+      "stdout": "",
+      "stderr": "",
+      "output": "Q048_V140_RAW_V1.json",
+      "serialized_status": "CANDIDATE_NOT_CURRENT",
+      "output_sha256": "a30b276616344f498e506ccd2374eff48ea9eb7b432475cda324a433004dfd20"
+    },
+    {
+      "script": "q048_v140_validate.py",
+      "returncode": 0,
+      "seconds": 2.9137065209997672,
+      "stdout": "",
+      "stderr": "",
+      "output": "Q048_V140_VALIDATION_V1.json",
+      "serialized_status": "PASS",
+      "output_sha256": "0b3490b91f9f7b7486369a4ba0cca183eaa43393bb74264a7cd8167de23049be"
+    },
+    {
+      "script": "q048_v140_accept.py",
+      "returncode": 0,
+      "seconds": 2.855808960000104,
+      "stdout": "",
+      "stderr": "",
+      "output": "Q048_V140_PROVISIONAL_ACCEPTANCE_V1.json",
+      "serialized_status": "PROVISIONAL_NOT_CURRENT",
+      "output_sha256": "11116799c5d6e80a2d5b1e4a002e6b51264d41ddd5a23ce5b0d16d51e1b539f2"
+    },
+    {
+      "script": "q048_v140_postaccept.py",
+      "returncode": 0,
+      "seconds": 2.7300522369996543,
+      "stdout": "",
+      "stderr": "",
+      "output": "Q048_V140_POSTACCEPT_VALIDATION_V1.json",
+      "serialized_status": "PASS",
+      "output_sha256": "1f62c854a94ce09407fda37ebd6284880a3c69d3173451e4f68ebb80903752a9"
+    },
+    {
+      "script": "q048_v140_publish.py",
+      "returncode": 0,
+      "seconds": 2.388964739000585,
+      "stdout": "",
+      "stderr": "",
+      "output": "Q048_V140_PUBLICATION_READBACK_V1.json",
+      "serialized_status": "PASS",
+      "output_sha256": "91e607a326aa706116b513aaa9e63a67b71a376ed60b706bac3f69908f26a8ec"
+    }
+  ],
+  "first_obstruction": null,
+  "seconds": 11.917513962999692,
+  "budget_seconds": 300,
+  "chains": 1,
+  "retry_count": 0,
+  "postfreeze_edits": 0,
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "new_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "historical_mains_executed": false,
+  "v138_proof_mains_executed": false,
+  "current": {
+    "count": 124,
+    "frontier": 840
+  },
+  "publication_readback_sha256": "91e607a326aa706116b513aaa9e63a67b71a376ed60b706bac3f69908f26a8ec"
+}
