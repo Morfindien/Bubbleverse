@@ -1,0 +1,74 @@
+{
+  "schema": "bubbleverse.q048.v138.handoff_to_ingestion.v1",
+  "handoff_id": "LOCAL-Q048-V138-TO-INGESTION-V1",
+  "task_type": "MATHEMATICAL_RESULT",
+  "q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V138_CONDITIONAL_PROOF_APPENDED_V1.md",
+  "journal_sha256": "5aae252145347986cf2f6ed8c8c5c43ea9c6fc3dcc10b37472fad09d00f45cc1",
+  "result_state_ref": "Q048_V138_RESULT_STATE_V1.json",
+  "accepted_proof_ref": "Q048_V138_ACCEPTANCE_V1.json",
+  "accepted_proof_sha256": "a248276219dc77058a01d4522b6938cba04fb1932c2d3626e2c417a34fc42081",
+  "new_information": {
+    "proof_cells": 1,
+    "actual_cells": 0,
+    "cell_z": [
+      850,
+      840
+    ],
+    "K_upper": "2300488155568955225509/500000000000000000",
+    "connected_lower": "918857486347/2500000000000000"
+  },
+  "current_state": {
+    "actual": {
+      "count": 123,
+      "frontier": 850
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 850
+    },
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false
+  },
+  "validation": {
+    "prefreeze": [
+      25,
+      25
+    ],
+    "producer_gates": [
+      30,
+      30
+    ],
+    "verifier": [
+      41,
+      41
+    ],
+    "semantic_controls": [
+      35,
+      35
+    ],
+    "frozen_pins": [
+      48,
+      48
+    ],
+    "acceptance_readback": "PASS",
+    "science_seconds": 3.1452585670003828,
+    "retries": 0,
+    "postfreeze_edits": 0
+  },
+  "scope_limits": {
+    "consumer_authorization": "NOT_GRANTED_BY_MATHEMATICS",
+    "no_actual124": true,
+    "no_below_z": 840,
+    "no_native_integration": true,
+    "no_new_q_model_or_closure": true
+  },
+  "next_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.1.0",
+  "next_task": "Register V138 proof exactly once, preserve actual123/frontier850, evaluate Q completion, and choose exactly one next material action.",
+  "return_condition": "One terminal ingestion disposition; no replay of V138 theorem."
+}
