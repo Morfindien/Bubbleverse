@@ -1,0 +1,133 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.2.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.2.0",
+  "handoff_id": "LOCAL-Q048-V147-INGESTION-TO-V148-MATHEMATICS-V1",
+  "created_at_utc": "2026-10-21T19:01:25.929265+00:00",
+  "case_id": null,
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "target_q": "Q048",
+  "evidence_cutoff": "Q001-Q048",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "terminal_status": null,
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-V147-ACCEPTED-CONSUMER-INGESTION-V1"
+  ],
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS2.1.0",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V147_INGESTED_V1.md",
+  "result_provenance_ref": "Q048_V147_INGESTION_EVIDENCE_AUDIT_V1.json",
+  "route_history_ref": "Q048_V147_INGESTION_STATE_V1.json",
+  "integrity_manifest_ref": "Q048_V147_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "what_changed": [
+    "Registered V147 accepted actual125/frontier830 exactly once.",
+    "Marked V142 proof840->830 ACCEPTED_CONSUMED_ONCE exactly once.",
+    "Prepared one fresh V148 Mathematics proof830->820; no actual126 authorized."
+  ],
+  "frozen_configuration_refs": [
+    "Q048_V147_ACCEPTED_CHECKPOINT_V1.json",
+    "q048_guard_local_v_result_v12.json",
+    "Q048_V142_ACCEPTANCE_V1.json"
+  ],
+  "open_material_uncertainties": [
+    "Complete four-case x_e(z)/tau_T(z) histories are not established.",
+    "NativeP6 remains unresolved.",
+    "No accepted connected theorem830->820 exists yet.",
+    "No native error certificate, exact selector existence/uniqueness or trajectory identity claim."
+  ],
+  "missing_information": [],
+  "next_task": "Q048_V148_NEXT_MATHEMATICS_TASK_830_820_V1.json",
+  "success_condition": "V148 returns one fresh accepted conditional proof830->820 with all frozen source/atomic/C/connected/beta/inward/continuation and independent semantic/readback gates passing; +1proof/+0actual.",
+  "failure_or_falsification_condition": "First exact obstruction is terminal; preserve actual125/frontier830 and return to ingestion.",
+  "stop_condition": "One terminal V148 result; no consumer, actual126, below820 work, native integration, new-Q/model promotion or Q048 closure.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "The exact Q048 asks for rigorously controlled differences in complete four-case x_e(z)/tau_T(z) histories. Current conditional source-real chain reaches only frontier830 for hillipop-ede_n3; complete histories are not established. NativeP6, native error certificate, exact selector existence/uniqueness and trajectory identity remain unresolved.",
+  "handoff_completeness": "COMPLETE",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "NOT_REQUIRED_FOR_THIS_BOUNDED_CONTINUATION",
+  "question_budget": {
+    "policy_id": "bubbleverse.question_work_budget",
+    "policy_version": "1.0.0",
+    "limit_pts": 1000,
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V7.json",
+    "ledger_version": 7,
+    "parent_ledger_version": 6,
+    "run_id": "LOCAL-Q048-V147-INGESTION-20261021T190125929265Z",
+    "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+    "parent_used_pts": 248,
+    "estimated_run_cost_pts": 32,
+    "reserved_pts": 32,
+    "assessed_run_cost_pts": 29,
+    "run_cost_breakdown": [
+      {
+        "component": "scope_and_state_recovery",
+        "pts": 5,
+        "basis": "Recovered V147 accepted checkpoint, ledger V6, handoff, current cumulative journal, V142 method lineage and guard authority."
+      },
+      {
+        "component": "analytical_complexity",
+        "pts": 5,
+        "basis": "Separated accepted current-state advance from Q closure; applied materiality/no-repeat and selected fresh proof830→820 rather than another consumer."
+      },
+      {
+        "component": "computation",
+        "pts": 2,
+        "basis": "Exact JSON/SHA-256 row62 hashing, left-glue verification, task fingerprint and package integrity arithmetic; no new science chain."
+      },
+      {
+        "component": "search_and_evidence_review",
+        "pts": 3,
+        "basis": "Bounded journal/task retrieval plus current GitHub main and Mathematics prompt/blob verification."
+      },
+      {
+        "component": "validation_and_review",
+        "pts": 5,
+        "basis": "Cross-checked V147 accepted checkpoint/publication state, theorem consumption, guard row62 evaluator roles, budget arithmetic and route invariants."
+      },
+      {
+        "component": "journal_provenance_delivery",
+        "pts": 9,
+        "basis": "Append-only cumulative journal successor, ledger V7, state/audit/handoff, V148 task, manifest/checksums and upload instructions."
+      }
+    ],
+    "inherited_charge_ids": [
+      "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1"
+    ],
+    "newly_applied_charge_ids": [
+      "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1"
+    ],
+    "used_pts": 277,
+    "remaining_pts": 723,
+    "overrun_pts": 0,
+    "status": "ACTIVE",
+    "last_validated_state_ref": "Q048_V147_ACCEPTED_CHECKPOINT_V1.json"
+  },
+  "next_question_transition": {
+    "required": false,
+    "reason": null,
+    "destination_engine_id": null,
+    "next_question_ref": null,
+    "status": "NOT_REQUIRED"
+  },
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "base_commit_sha": "805c1b5c6fb7c1d9c93c22ee63406ebcdc439001",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V147_INGESTED_V1.md",
+    "memory_update_ref": "Q048_V147_INGESTION_GITHUB_MEMORY_UPDATE_V1.json",
+    "target_paths_status": "PROPOSED",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "upload_instructions_ref": "Q048_V147_INGESTION_UPLOAD_APPLY_INSTRUCTIONS_V1.md"
+  }
+}
