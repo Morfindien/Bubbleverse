@@ -1,0 +1,1316 @@
+{
+  "schema": "bubbleverse.question_work_budget.ledger.v1",
+  "policy_id": "bubbleverse.question_work_budget",
+  "policy_version": "1.0.0",
+  "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "limit_pts": 1000,
+  "ledger_version": 21,
+  "parent_ledger_version": 20,
+  "status": "ACTIVE",
+  "activation": {
+    "event_id": "LOCAL-Q048-BUDGET-ACTIVATION-AT-V144-INGESTION-V1",
+    "created_at_utc": "2026-10-21T17:03:48.496701+00:00",
+    "mode": "FIRST_DOCUMENTED_FROM_NOW_ADOPTION_FOR_EXISTING_QUESTION",
+    "checkpoint": "actual124/frontier840; V142 proof840→830 ACCEPTED_UNCONSUMED; V144 terminal technical FAIL",
+    "used_at_activation_pts": 0,
+    "remaining_at_activation_pts": 1000,
+    "historical_cost_before_activation": "NOT_ASSESSED_OUTSIDE_POLICY",
+    "basis": "No ledger in identified current full journal or incoming artifacts; complete pinned repository tree has no budget/ledger path; bounded Library title and content searches returned no results. This is not proof that no unindexed artifact exists. On discovery of an earlier applicable ledger: stop, reconcile; never reset.",
+    "namespace": "LOCAL; repository registration USER_UPLOAD_PENDING"
+  },
+  "reservation_history": [
+    {
+      "event_id": "LOCAL-Q048-V144-INGESTION-20261021T170348496701Z-RESERVATION",
+      "run_id": "LOCAL-Q048-V144-INGESTION-20261021T170348496701Z",
+      "estimated_pts": 45,
+      "status": "FINALIZED",
+      "consumed_pts": 40,
+      "released_pts": 5,
+      "basis": "Bounded ingestion/recovery and delivery; reservation documented in this assessment, not a prior remote ledger transaction."
+    },
+    {
+      "event_id": "LOCAL-Q048-V145-20261021T173248427259Z-SERIALIZER-REPAIR-CONSUMER-V1-BUDGET-RESERVATION",
+      "run_id": "LOCAL-Q048-V145-20261021T173248427259Z-SERIALIZER-REPAIR-CONSUMER-V1",
+      "estimated_pts": 60,
+      "status": "FINALIZED",
+      "consumed_pts": 48,
+      "released_pts": 12,
+      "basis": "V145 stopped terminally at 46/48 pre-freeze checks before freeze or scientific chain; reservation settlement recorded separately."
+    },
+    {
+      "event_id": "LOCAL-Q048-V145-INGESTION-20261021T174504103597Z-BUDGET-RESERVATION",
+      "run_id": "LOCAL-Q048-V145-INGESTION-20261021T174504103597Z",
+      "estimated_pts": 35,
+      "status": "FINALIZED",
+      "consumed_pts": 30,
+      "released_pts": 5,
+      "basis": "Serialized local Result Ingestion2.2.0 allocation for V145 recovery/classification, GitHub freshness check, next-route decision, ledger/journal/handoff and file delivery; no scientific computation."
+    },
+    {
+      "event_id": "LOCAL-Q048-V146-20261021T175623712319Z-PREFREEZE-CONTROL-LOGIC-REPAIR-CONSUMER-V1-BUDGET-RESERVATION",
+      "run_id": "LOCAL-Q048-V146-20261021T175623712319Z-PREFREEZE-CONTROL-LOGIC-REPAIR-CONSUMER-V1",
+      "estimated_pts": 52,
+      "status": "FINALIZED",
+      "consumed_pts": 52,
+      "released_pts": 0,
+      "basis": "V146 full bounded chain attempted; terminal publication-control failure; no retry."
+    },
+    {
+      "event_id": "LOCAL-Q048-V146-INGESTION-20261021T181247296521Z-BUDGET-RESERVATION",
+      "run_id": "LOCAL-Q048-V146-INGESTION-20261021T181247296521Z",
+      "estimated_pts": 32,
+      "status": "FINALIZED",
+      "consumed_pts": 28,
+      "released_pts": 4,
+      "basis": "Bounded Result Ingestion2.2.0 registration of V146 terminal publication-control failure, exact-once charge import, GitHub freshness check, materiality/no-repeat decision, V147 task, ledger/journal/handoff and file delivery; no scientific recomputation."
+    },
+    {
+      "event_id": "LOCAL-Q048-V147-20261021T185152692691Z-FINAL-BUDGET-BINDING-PUBLICATION-REPAIR-CONSUMER-V1-BUDGET-RESERVATION",
+      "run_id": "LOCAL-Q048-V147-20261021T185152692691Z-FINAL-BUDGET-BINDING-PUBLICATION-REPAIR-CONSUMER-V1",
+      "estimated_pts": 50,
+      "status": "FINALIZED",
+      "consumed_pts": 50,
+      "released_pts": 0,
+      "basis": "V147 full bounded run completed through accepted publication; no retry, no theorem recomputation."
+    },
+    {
+      "event_id": "LOCAL-Q048-V147-INGESTION-20261021T190125929265Z-BUDGET-RESERVATION",
+      "run_id": "LOCAL-Q048-V147-INGESTION-20261021T190125929265Z",
+      "estimated_pts": 32,
+      "status": "FINALIZED",
+      "consumed_pts": 29,
+      "released_pts": 3,
+      "basis": "Bounded V147 accepted-result ingestion, exact guard row62 derivation, completion/materiality decision, V148 task construction, ledger/journal/handoff and delivery."
+    },
+    {
+      "event_id": "LOCAL-Q048-V148-20261022-PROOF-830-820-V1-RESERVATION",
+      "run_id": "LOCAL-Q048-V148-20261022-PROOF-830-820-V1",
+      "estimated_pts": 54,
+      "reserved_pts": 65,
+      "maximum_pts": 65,
+      "consumed_pts": 56,
+      "released_pts": 9,
+      "status": "FINALIZED",
+      "basis": "Serialized local reservation preserved in inputs/Q048_V148_BUDGET_RESERVATION_V1.json; includes input recovery, proof/verifier and delivery."
+    },
+    {
+      "event_id": "LOCAL-Q048-V148-INGESTION-20261022-V1-RESERVATION",
+      "run_id": "LOCAL-Q048-V148-INGESTION-20261022-V1",
+      "estimated_pts": 29,
+      "reserved_pts": 35,
+      "consumed_pts": 29,
+      "released_pts": 6,
+      "status": "FINALIZED",
+      "basis": "Bounded serialized ingestion and delivery from shared ledgerV8."
+    },
+    {
+      "event_id": "LOCAL-Q048-V149-BUDGET-RESERVATION-V1",
+      "run_id": "LOCAL-Q048-V149-20261022-CONDITIONAL-CONSUMER-830-820-V1",
+      "estimated_pts": 52,
+      "reserved_pts": 65,
+      "maximum_pts": 65,
+      "consumed_pts": 52,
+      "released_pts": 13,
+      "status": "FINALIZED",
+      "basis": "One successful new consumer chain; no retry/theorem recomputation. Includes required delivery."
+    },
+    {
+      "event_id": "LOCAL-Q048-V149-INGESTION-20261022-V1-RESERVATION",
+      "run_id": "LOCAL-Q048-V149-INGESTION-20261022-V1",
+      "estimated_pts": 26,
+      "reserved_pts": 32,
+      "consumed_pts": 26,
+      "released_pts": 6,
+      "status": "FINALIZED",
+      "basis": "One bounded local ingestion, next-route preparation and delivery."
+    },
+    {
+      "run_id": "LOCAL-Q048-V149-REDELIVERY-AUDIT-20261023-V1",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 11,
+      "used_before_pts": 440,
+      "remaining_before_pts": 560,
+      "reserved_pts": 48,
+      "estimated_pts": 44,
+      "status": "FINALIZED",
+      "timestamp": "2026-10-23T06:52:18.291576+00:00",
+      "basis": "Entire current run: receiver integrity work plus discovery/reconciliation/correction/delivery. Replaces the stale-base40-point reservation and candidate36-point settlement; not an additional charge.",
+      "consumed_pts": 44,
+      "released_pts": 4,
+      "settled_at_utc": "2026-10-23T06:54:14.226845+00:00"
+    },
+    {
+      "schema": "bubbleverse.q048.v150.reservation.v1",
+      "event_id": "LOCAL-Q048-V150-20261023-BUDGET-RESERVATION-V1",
+      "run_id": "LOCAL-Q048-V150-20261023-PROOF-820-810-V1",
+      "created_at_utc": "2026-10-23T06:59:59.691107+00:00",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 12,
+      "parent_ledger_sha256": "d0fd92bc1694b6c5902a81f4667887ecdfd12f6f89e47e3da02f2dd996f0ff53",
+      "used_before_pts": 484,
+      "remaining_before_pts": 516,
+      "estimated_pts": 52,
+      "reserved_pts": 65,
+      "maximum_pts": 65,
+      "status": "FINALIZED",
+      "scope": "One new820->810 conditional proof/independent verifier/acceptance-readback or first precise obstruction, with recovery/validation/journal/delivery; zero actual and zero retry.",
+      "consumed_pts": 60,
+      "released_pts": 5,
+      "settlement_ref": "Q048_V150_BUDGET_SETTLEMENT_V1.json"
+    },
+    {
+      "event_id": "LOCAL-Q048-V150-INGESTION-20261023-V1-RESERVATION",
+      "run_id": "LOCAL-Q048-V150-INGESTION-20261023-V1",
+      "created_at_utc": "2026-10-23T07:22:31.920590+00:00",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 13,
+      "used_before_pts": 544,
+      "remaining_before_pts": 456,
+      "estimated_pts": 28,
+      "reserved_pts": 35,
+      "maximum_pts": 35,
+      "status": "FINALIZED",
+      "scope": "Bounded exactly-once V150 intake, documentary guard-label reconciliation, current source checks, one consumer route, journal/ledger/handoff and delivery; zero proof/consumer execution.",
+      "consumed_pts": 28,
+      "released_pts": 7,
+      "settled_at_utc": "2026-10-23T07:30:26.266253+00:00"
+    },
+    {
+      "schema": "bubbleverse.q048.v151.reservation.v1",
+      "event_id": "LOCAL-Q048-V151-BUDGET-RESERVATION-V1",
+      "run_id": "LOCAL-Q048-V151-20261023-CONDITIONAL-CONSUMER-820-810-V1",
+      "created_at_utc": "2026-10-23T07:37:56.640737+00:00",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 14,
+      "parent_ledger_sha256": "157dfaa5eee0b49ff723e10351eacaa67913dd2d61b5b116a289f4673c58fe86",
+      "used_before_pts": 572,
+      "remaining_before_pts": 428,
+      "estimated_pts": 52,
+      "reserved_pts": 65,
+      "maximum_pts": 65,
+      "inherited_charge_ids": [
+        "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V148-PROOF-830-820-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V148-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V149-CONSUMER-830-820-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V149-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V149-REDELIVERY-AUDIT-20261023-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V150-PROOF-820-810-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V150-INGESTION-V1"
+      ],
+      "status": "FINALIZED",
+      "scope": "One new820→810 conditional consumer/independent validation/provisional/postaccept/publication-readback chain OR first precise obstruction; mandatory preparation, checks, review, journal and delivery; zero theorem arithmetic, no retry.",
+      "consumed_pts": 58,
+      "released_pts": 7,
+      "settled_at_utc": "2026-10-23T07:53:43.024093+00:00"
+    },
+    {
+      "event_id": "LOCAL-Q048-V151-INGESTION-20261023-V1-RESERVATION",
+      "run_id": "LOCAL-Q048-V151-INGESTION-20261023-V1",
+      "created_at_utc": "2026-10-23T10:21:35+00:00",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 15,
+      "parent_ledger_sha256": "ab48664279f95b17ae19d8d7395a6b1cc18bd0dcafb2092eb92485ce7862fbd8",
+      "used_before_pts": 630,
+      "remaining_before_pts": 370,
+      "estimated_pts": 28,
+      "reserved_pts": 35,
+      "maximum_pts": 35,
+      "status": "FINALIZED",
+      "scope": "Exactly-once V151 accepted-consumer ingestion, GitHub/state reconciliation, row64/810->800 route qualification, journal/ledger/handoff and file delivery; zero new scientific proof/consumer execution.",
+      "consumed_pts": 28,
+      "released_pts": 7,
+      "settled_at_utc": "2026-10-23T10:21:35+00:00"
+    },
+    {
+      "schema": "bubbleverse.q048.v152.reservation.v1",
+      "event_id": "LOCAL-Q048-V152-20261023-BUDGET-RESERVATION-V1",
+      "run_id": "LOCAL-Q048-V152-20261023-PROOF-810-800-V1",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 16,
+      "parent_ledger_sha256": "1d1890bc8d5144d91e0035f98dd601fad9741f83b717260597a3d8b2e2c7f68f",
+      "used_before_pts": 658,
+      "remaining_before_pts": 342,
+      "estimated_pts": 52,
+      "reserved_pts": 65,
+      "maximum_pts": 65,
+      "status": "FINALIZED",
+      "consumed_pts": 52,
+      "released_pts": 13,
+      "settled_at_utc": "2026-10-23T10:43:35.960323+00:00",
+      "basis": "Frozen reservation settled by separate V152 failure settlement; original frozen reservation file preserved."
+    },
+    {
+      "event_id": "LOCAL-Q048-V152-INGESTION-20261023-V1-RESERVATION",
+      "run_id": "LOCAL-Q048-V152-INGESTION-20261023-V1",
+      "created_at_utc": "2026-10-23T10:53:06.043894+00:00",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 17,
+      "parent_ledger_sha256": "c78038d80d2c2654afba94e8bf7b4189031e163ad54455ec65240144de8f09e3",
+      "used_before_pts": 710,
+      "remaining_before_pts": 290,
+      "estimated_pts": 28,
+      "reserved_pts": 32,
+      "maximum_pts": 32,
+      "status": "FINALIZED",
+      "scope": "Exactly-once V152 terminal technical-failure ingestion, GitHub canonical-state reconciliation, materiality/anti-loop decision, one V153 repair+proof task, journal/ledger/handoff and delivery; zero scientific theorem/consumer execution.",
+      "consumed_pts": 26,
+      "released_pts": 6,
+      "settled_at_utc": "2026-10-23T10:53:06.043894+00:00",
+      "basis": "Bounded ingestion allocation documented for this run; V152 source52 is inherited and not rebilled."
+    },
+    {
+      "schema": "bubbleverse.q048.v153.reservation.v1",
+      "event_id": "LOCAL-Q048-V153-20261023-BUDGET-RESERVATION-V1",
+      "run_id": "LOCAL-Q048-V153-20261023-PROOF-810-800-V1",
+      "created_at_utc": "2026-10-23T20:30:37.376527+00:00",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 18,
+      "parent_ledger_sha256": "9022d248ff3ceaae3f90ddc24abee017461824793a7d8b84830733c50391e27c",
+      "used_before_pts": 736,
+      "remaining_before_pts": 264,
+      "estimated_pts": 54,
+      "reserved_pts": 65,
+      "maximum_pts": 65,
+      "status": "FINALIZED",
+      "scope": "Repair the exposed V152 transitive import-path defect pre-freeze, then execute one fresh810->800 conditional source-real connected proof; no actual admission; recovery, gate, one chain, validation and delivery included",
+      "consumed_pts": 50,
+      "released_pts": 15,
+      "settled_at_utc": "2026-10-23T20:36:57.059748+00:00",
+      "settlement_ref": "Q048_V153_BUDGET_SETTLEMENT_V1.json"
+    },
+    {
+      "schema": "bubbleverse.q048.v153.ingestion_reservation.v1",
+      "event_id": "LOCAL-Q048-V153-INGESTION-20261023-V1-RESERVATION",
+      "run_id": "LOCAL-Q048-V153-INGESTION-20261023-V1",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 19,
+      "parent_ledger_sha256": "a84ec08075fe544b74358862063919c6481bdb0f883343bfb143b8b5c0c82fc0",
+      "created_at_utc": "2026-10-23T20:43:17.109851+00:00",
+      "used_before_pts": 786,
+      "remaining_before_pts": 214,
+      "estimated_pts": 26,
+      "reserved_pts": 32,
+      "maximum_pts": 32,
+      "status": "FINALIZED",
+      "scope": "Exactly-once V153 terminal technical failure ingestion, source classification, repository reconciliation and one material successor route; no proof/consumer or runtime repair execution.",
+      "consumed_pts": 26,
+      "released_pts": 6,
+      "settled_at_utc": "2026-10-23T20:50:08.539492+00:00"
+    },
+    {
+      "schema": "bubbleverse.q048.v154.reservation.v1",
+      "event_id": "LOCAL-Q048-V154-20261023-BUDGET-RESERVATION-V1",
+      "run_id": "LOCAL-Q048-V154-20261023-PROOF-810-800-V1",
+      "created_at_utc": "2026-10-23T20:58:05.736494+00:00",
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "parent_ledger_version": 20,
+      "parent_ledger_sha256": "4275475ed795fd2ee8f9eaf5cae521a7a6999e440d7f8a963248542bde2b5b15",
+      "used_before_pts": 812,
+      "remaining_before_pts": 188,
+      "estimated_pts": 56,
+      "reserved_pts": 65,
+      "maximum_pts": 65,
+      "status": "FINALIZED",
+      "scope": "Repair the V153 preflight failure-record schema binding and validate the complete no-science preflight/import closure; execute at most one fresh existing-method conditional source-real connected proof810->800, with zero actual admission.; includes finite tests/review and individual file delivery",
+      "consumed_pts": 62,
+      "released_pts": 3,
+      "settled_at_utc": "2026-10-23T21:20:18.849642+00:00",
+      "settlement_ref": "Q048_V154_BUDGET_SETTLEMENT_V1.json"
+    }
+  ],
+  "charges": [
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V144-INGESTION-20261021T170348496701Z",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "V144 technical-failure ingestion and V145 handoff",
+      "parent_ledger_version": 0,
+      "assessed_cost_pts": 40,
+      "breakdown": [
+        {
+          "component": "scope_and_state_recovery",
+          "pts": 8,
+          "basis": "Need-to-read recovery of exact Q, current checkpoint, recent history and supplied 14.8 MB journal; hashing is not a claim of full semantic reanalysis."
+        },
+        {
+          "component": "analytical_complexity",
+          "pts": 4,
+          "basis": "Technical versus scientific classification, exact-once integration, scope and narrow material continuation."
+        },
+        {
+          "component": "computation",
+          "pts": 1,
+          "basis": "Local hashes, strict JSON and AST inspection plus artifact assembly; no science or historical chain executed."
+        },
+        {
+          "component": "search_and_evidence_review",
+          "pts": 6,
+          "basis": "Read-only main ref, complete tree and specific pinned V144 files; two bounded ledger searches and verified existing engine prompt."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 6,
+          "basis": "Incoming and retrieved hash comparisons, five strict parse checks, source literal inspection and output contract checks."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 15,
+          "basis": "Byte-preserving cumulative journal successor, first activation/unique debit, task/handoff, memory proposal, manifest, archive and file delivery."
+        }
+      ],
+      "basis": "Whole-point operator work assessment, not measured tokens, money or FLOPs. One run covers all internal audit and delivery steps once.",
+      "created_at_utc": "2026-10-21T17:03:48.496701+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+      "run_id": "LOCAL-Q048-V145-20261021T173248427259Z-SERIALIZER-REPAIR-CONSUMER-V1",
+      "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+      "task": "V145 serializer-repair conditional consumer 840->830; terminal prefreeze control-logic failure",
+      "parent_ledger_version": 1,
+      "assessed_cost_pts": 48,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 9,
+          "basis": "Recovered and byte-verified V145 task/ledger/auth, V140 parent/references, all nine V142 proof artifacts, guard/prefix and V144 method references."
+        },
+        {
+          "component": "implementation_complexity",
+          "pts": 12,
+          "basis": "Built separately versioned V145 serializer repair contract plus consumer/validator/provisional/postaccept/publication/run programs and prefreeze preparation logic."
+        },
+        {
+          "component": "computation_execution",
+          "pts": 2,
+          "basis": "Local compilation, SHA-256 checks, serializer regression and prefreeze evaluation only; scientific consumer chain never started."
+        },
+        {
+          "component": "search_and_evidence",
+          "pts": 7,
+          "basis": "Bounded Library recovery, exact hash verification and GitHub concurrency/freshness check; no external physics research."
+        },
+        {
+          "component": "validation_and_diagnosis",
+          "pts": 8,
+          "basis": "Serializer regression PASS, 48-gate preflight evaluation, 46/48 failure isolation and read-only diagnosis of both failed assertions."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 10,
+          "basis": "Budget settlement, terminal technical failure records, cumulative journal successor, manifests/checksums and ingestion handoff."
+        }
+      ],
+      "basis": "Whole-point operator work assessment. Failed technical work is charged; unperformed chain work is not charged.",
+      "created_at_utc": "2026-10-21T17:35:00.988341+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V145-INGESTION-20261021T174504103597Z",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "Ingest V145 terminal pre-freeze failure exactly once and authorize bounded V146 two-assertion repair",
+      "parent_ledger_version": 2,
+      "assessed_cost_pts": 30,
+      "breakdown": [
+        {
+          "component": "scope_and_state_recovery",
+          "pts": 5,
+          "basis": "Read V145 result/handoff/diagnostic/preflight, authoritative ledger V2 and recent cumulative journal; reused already verified parent/proof evidence."
+        },
+        {
+          "component": "analytical_complexity",
+          "pts": 6,
+          "basis": "Separated technical versus scientific effect, applied materiality/no-repeat/anti-loop rules and bounded the exact two-defect repair scope."
+        },
+        {
+          "component": "computation",
+          "pts": 1,
+          "basis": "Local SHA-256/JSON/fingerprint and package integrity work only; no consumer/proof/science chain executed."
+        },
+        {
+          "component": "search_and_evidence_review",
+          "pts": 4,
+          "basis": "One bounded GitHub current-main/concurrency verification plus engine-prompt identity check; no external physics research."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 4,
+          "basis": "Cross-checked 46/48 failure, two diagnostic causes, zero scientific chain/delta, ledger arithmetic and route invariants."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 10,
+          "basis": "Append-only cumulative journal, ledger V3, ingestion state/audit, V146 task, memory/update/upload/manifest/checksum delivery package."
+        }
+      ],
+      "basis": "Whole-point operator work assessment. Existing V145 charge imported once and not rebilled; this charge covers only new ingestion/routing work.",
+      "created_at_utc": "2026-10-21T17:45:04.103597+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+      "run_id": "LOCAL-Q048-V146-20261021T175623712319Z-PREFREEZE-CONTROL-LOGIC-REPAIR-CONSUMER-V1",
+      "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+      "task": "V146 two-assertion pre-freeze repair + conditional consumer840->830; terminal final publication negative-control failure",
+      "parent_ledger_version": 3,
+      "assessed_cost_pts": 52,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 7,
+          "basis": "Reused V145 recovered parent/proof/guard/capture state, re-hashed all pinned inputs, verified ledger V3 and repository concurrency."
+        },
+        {
+          "component": "implementation_and_prefreeze_repair",
+          "pts": 12,
+          "basis": "Built separate V146 code and repaired exactly the two authorized pre-freeze assertions while retaining the real-LF serializer behavior."
+        },
+        {
+          "component": "execution_compute",
+          "pts": 5,
+          "basis": "Executed one bounded local five-stage chain attempt in 7.26 s; no theorem recomputation, paid compute or retry."
+        },
+        {
+          "component": "validation_and_semantic_controls",
+          "pts": 10,
+          "basis": "48/48 pre-freeze checks, 10/10 extras, 66/66 independent semantic controls, 62/62 raw-validator checks, 19/19 postaccept checks and 9/9 provisional mutation controls."
+        },
+        {
+          "component": "failure_diagnosis",
+          "pts": 5,
+          "basis": "Read-only isolation of terminal publication negative-control defect; verified no staging, accepted checkpoint or readback was written and all 42 frozen files remained unchanged."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 10,
+          "basis": "Terminal result state, ledger settlement, cumulative journal successor, ingestion handoff, manifest/checksums/file delivery package."
+        },
+        {
+          "component": "repository_freshness",
+          "pts": 3,
+          "basis": "Read-only GitHub preflight and post-run version guard against newer ledger/V146 state."
+        }
+      ],
+      "basis": "Whole-point operator work assessment. V146 technical failure is charged; candidate actual125 was never published/current and theorem consumption was not finalized.",
+      "created_at_utc": "2026-10-21T17:58:51.131320+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V146-INGESTION-20261021T181247296521Z",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "Ingest V146 terminal publication-control failure exactly once and authorize bounded V147 final budget-binding publication repair",
+      "parent_ledger_version": 4,
+      "assessed_cost_pts": 28,
+      "breakdown": [
+        {
+          "component": "scope_and_state_recovery",
+          "pts": 4,
+          "basis": "Recovered V146 result/handoff/diagnostic, ledger V4 and decisive preflight/validator/postaccept/publication evidence; reused already verified parent/theorem state."
+        },
+        {
+          "component": "analytical_complexity",
+          "pts": 5,
+          "basis": "Separated technical publication defect from scientific state; applied materiality, no-repeat, anti-loop and completion-gate rules."
+        },
+        {
+          "component": "computation",
+          "pts": 1,
+          "basis": "Local SHA-256/JSON/fingerprint and package integrity work only; no scientific producer/consumer/theorem execution."
+        },
+        {
+          "component": "search_and_evidence_review",
+          "pts": 3,
+          "basis": "Single bounded GitHub current-main concurrency/freshness check and exact source-code inspection of the failed checkpoint budget invariant."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 4,
+          "basis": "Cross-checked 48/48 prefreeze, 62/62 validator, 66/66 semantic controls, 19/19 postaccept, no accepted checkpoint, and ledger arithmetic."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 11,
+          "basis": "Append-only journal successor, ledger V5, evidence/state records, V147 bounded task, manifests/checksums and upload-ready handoff files."
+        }
+      ],
+      "basis": "Whole-point operator work assessment. V146 52-point charge is imported once and not rebilled; this charge covers only new ingestion/routing work.",
+      "created_at_utc": "2026-10-21T18:12:47.296521+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1",
+      "run_id": "LOCAL-Q048-V147-20261021T185152692691Z-FINAL-BUDGET-BINDING-PUBLICATION-REPAIR-CONSUMER-V1",
+      "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+      "task": "V147 final budget-binding publication repair conditional consumer 840->830; accepted actual125/frontier830",
+      "parent_ledger_version": 5,
+      "assessed_cost_pts": 50,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 6,
+          "basis": "Recovered and hash-verified V147 task/ledger/auth, V140 parent, V142 proof artifacts, guard/capture and V146 failure evidence."
+        },
+        {
+          "component": "implementation_complexity",
+          "pts": 10,
+          "basis": "Built separately versioned V147 final budget-binding repair while preserving prior serializer/prefreeze/scientific contracts."
+        },
+        {
+          "component": "computation_execution",
+          "pts": 7,
+          "basis": "Fresh local prefreeze/freeze plus exactly one five-stage consumer/validator/accept/postaccept/publication chain."
+        },
+        {
+          "component": "search_and_evidence",
+          "pts": 5,
+          "basis": "Bounded GitHub freshness/concurrency verification and local provenance checks; no new external physics research."
+        },
+        {
+          "component": "validation_and_diagnosis",
+          "pts": 12,
+          "basis": "67/67 prefreeze, 68/68 semantic controls, 59/59 independent checks, 20/20 postaccept and 23/23 publication checks including four new budget-identity negatives."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 10,
+          "basis": "Ledger settlement, accepted state/handoff, cumulative append-only journal, manifests/checksums and upload-ready delivery."
+        }
+      ],
+      "basis": "Whole-point operator work assessment. Full bounded chain executed once and succeeded; no retry and no unperformed work billed.",
+      "created_at_utc": "2026-10-21T18:53:23.104481+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V147-INGESTION-20261021T190125929265Z",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "Ingest V147 accepted actual125/frontier830 exactly once and route one fresh Mathematics proof830->820",
+      "parent_ledger_version": 6,
+      "assessed_cost_pts": 29,
+      "breakdown": [
+        {
+          "component": "scope_and_state_recovery",
+          "pts": 5,
+          "basis": "Recovered V147 accepted checkpoint, ledger V6, handoff, current cumulative journal, V142 method lineage and guard authority."
+        },
+        {
+          "component": "analytical_complexity",
+          "pts": 5,
+          "basis": "Separated accepted current-state advance from Q closure; applied materiality/no-repeat and selected fresh proof830→820 rather than another consumer."
+        },
+        {
+          "component": "computation",
+          "pts": 2,
+          "basis": "Exact JSON/SHA-256 row62 hashing, left-glue verification, task fingerprint and package integrity arithmetic; no new science chain."
+        },
+        {
+          "component": "search_and_evidence_review",
+          "pts": 3,
+          "basis": "Bounded journal/task retrieval plus current GitHub main and Mathematics prompt/blob verification."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 5,
+          "basis": "Cross-checked V147 accepted checkpoint/publication state, theorem consumption, guard row62 evaluator roles, budget arithmetic and route invariants."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 9,
+          "basis": "Append-only cumulative journal successor, ledger V7, state/audit/handoff, V148 task, manifest/checksums and upload instructions."
+        }
+      ],
+      "basis": "Whole-point operator work assessment. V147 50-point source run is imported once and not rebilled; this charge covers only new ingestion/routing work.",
+      "created_at_utc": "2026-10-21T19:01:25.929265+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V148-PROOF-830-820-V1",
+      "run_id": "LOCAL-Q048-V148-20261022-PROOF-830-820-V1",
+      "engine": "BUBBLEVERSE.MATHEMATICS2.2.0",
+      "task": "Fresh conditional connected proof830->820; +1proof/+0actual",
+      "parent_ledger_version": 7,
+      "assessed_cost_pts": 56,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 11,
+          "basis": "Recover exact V147 checkpoint, V142 method sources, guard/capture, 17 helper/source pins and full incoming journal."
+        },
+        {
+          "component": "implementation_complexity",
+          "pts": 12,
+          "basis": "Separately versioned V148 producer, independent reconstruction verifier, bounded runner and budget binding; static prefreeze fixture review."
+        },
+        {
+          "component": "computation_execution",
+          "pts": 4,
+          "basis": "One successful 4.07-second exact-rational proof and independent verification chain; no historical replay or native integration."
+        },
+        {
+          "component": "search_and_evidence",
+          "pts": 5,
+          "basis": "Bounded current-main/tree and pinned-file retrieval plus exact missing-input searches; no external physics campaign."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 12,
+          "basis": "33 input/preparation checks, 40 proof gates, 49 reconstruction checks, 55 real semantic controls and serialized/frozen readback."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 12,
+          "basis": "Cumulative immutable-history successor, ledger settlement, result/handoff, manifest, checksums and durable file delivery."
+        }
+      ],
+      "basis": "Assessed whole-point work allocation, not metered credits/tokens/money; includes this run and delivery once. No prior charge rebilled.",
+      "created_at_utc": "2026-10-22T04:40:02.965044+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V148-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V148-INGESTION-20261022-V1",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "Ingest accepted V148 proof830->820 once and prepare one V149 conditional actual consumer",
+      "parent_ledger_version": 8,
+      "assessed_cost_pts": 29,
+      "breakdown": [
+        {
+          "component": "scope_and_state_recovery",
+          "pts": 4,
+          "basis": "Reuse exact locally preserved V148 result/evidence, ledgerV8, current full journal and V147 parent."
+        },
+        {
+          "component": "analytical_complexity",
+          "pts": 6,
+          "basis": "Separate accepted conditional proof from actual admission and Q closure; evaluate materiality, no-repeat and next consumer contract."
+        },
+        {
+          "component": "computation",
+          "pts": 1,
+          "basis": "Hashes, JSON, exact row62 glue and ledger/task arithmetic only; zero scientific chains."
+        },
+        {
+          "component": "search_and_evidence_review",
+          "pts": 4,
+          "basis": "One current-main complete-tree check, V147 task contract and verified existing Builder2.3.0 document."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 4,
+          "basis": "15 receiver integrity/binding checks, existing serialized readback/rosters and budget/remote-blob identity review."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 10,
+          "basis": "Exactly-once event, cumulative journal successor, ledgerV9, V149 task and upload-ready individual files."
+        }
+      ],
+      "basis": "Only new ingestion work. Upstream V14856pts is inherited once and not rebilled; no theorem/consumer executed.",
+      "created_at_utc": "2026-10-22T04:53:21.554839+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V149-CONSUMER-830-820-V1",
+      "run_id": "LOCAL-Q048-V149-20261022-CONDITIONAL-CONSUMER-830-820-V1",
+      "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+      "task": "One accepted conditional actual consumer830->820; actual126/frontier820; V148 consumed once",
+      "parent_ledger_version": 9,
+      "assessed_cost_pts": 52,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 6,
+          "basis": "Reuse locally preserved V148 theorem package, current journal/ledgerV9 and V147 checkpoint; exact-byte staging and source binding."
+        },
+        {
+          "component": "implementation_complexity",
+          "pts": 14,
+          "basis": "New isolated V149 consumer and independent record reconstruction plus provisional/postaccept/final publication with strict JSON and budget identity."
+        },
+        {
+          "component": "computation_execution",
+          "pts": 2,
+          "basis": "One five-stage local chain in1.254s; no theorem arithmetic, native integration or historical main."
+        },
+        {
+          "component": "search_and_evidence",
+          "pts": 4,
+          "basis": "One current-main/tree freshness check, task/ledger remote-blob match and targeted review of existing contracts/prompt; no broad recovery campaign."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 14,
+          "basis": "96 input/preparation checks,89 validator checks,88 real candidate mutations,20 postaccept checks,14 publication checks and17 final mutations; serializer red/green before freeze."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 12,
+          "basis": "Ledger settlement, complete journal successor, result/state/handoff, manifest/checksums and individual source/evidence delivery."
+        }
+      ],
+      "basis": "Assessed whole-point work allocation. Prior proof/ingestion charges inherited once, not rebilled. Full bounded chain and delivery included.",
+      "created_at_utc": "2026-10-22T07:59:37.087623+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V149-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V149-INGESTION-20261022-V1",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "Register V149 actual126/frontier820 and V148 consumption once; prepare one fresh proof820->810",
+      "parent_ledger_version": 10,
+      "assessed_cost_pts": 26,
+      "breakdown": [
+        {
+          "component": "scope_and_state_recovery",
+          "pts": 4,
+          "basis": "Reuse locally preserved V149 accepted chain, current ledgerV10 and complete journal; no broad source recovery."
+        },
+        {
+          "component": "analytical_complexity",
+          "pts": 5,
+          "basis": "Separate accepted actual advance/consumption from Q closure; choose a new adjacent proof and preserve conditional scope."
+        },
+        {
+          "component": "computation",
+          "pts": 1,
+          "basis": "Exact hashes, row63 selection/glue and ledger/task arithmetic only; no scientific chain."
+        },
+        {
+          "component": "search_and_evidence_review",
+          "pts": 3,
+          "basis": "One current-main complete-tree check and verified Mathematics2.2.0 blob; cached prompt/method sources reused."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 4,
+          "basis": "25 receiver integrity/state/charge/remote-blob/next-glue checks; no theorem/consumer replay."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 9,
+          "basis": "Exactly-once registration, cumulative journal, ledgerV11, one V150 task, manifests and individual delivery."
+        }
+      ],
+      "basis": "Only new receiver work is charged. Source V14952pts and all earlier unique charges are inherited once, not rebilled. Cached prompt/code/input availability reduces recovery work.",
+      "created_at_utc": "2026-10-22T08:43:17.288662+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V149-REDELIVERY-AUDIT-20261023-V1",
+      "run_id": "LOCAL-Q048-V149-REDELIVERY-AUDIT-20261023-V1",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "Substantive V149 redelivery integrity audit and stale-base reconciliation; no new registration or scientific task",
+      "parent_ledger_version": 11,
+      "assessed_cost_pts": 44,
+      "breakdown": [
+        {
+          "component": "scope_and_state_recovery",
+          "pts": 9,
+          "basis": "Current-run recovery plus discovery/read of the previously completed ingestion, exact prior ledger/task/state and complete authoritative journal."
+        },
+        {
+          "component": "analytical_complexity",
+          "pts": 8,
+          "basis": "Original conditional interpretation plus stale-base authority resolution, duplicate semantics and unchanged-task/current-budget binding."
+        },
+        {
+          "component": "computation",
+          "pts": 2,
+          "basis": "Strict JSON, hashes, exact Fraction/row checks, content preservation and packaging only; zero scientific chains."
+        },
+        {
+          "component": "search_and_evidence_review",
+          "pts": 7,
+          "basis": "Original GitHub/current-main evidence work and bounded Library searches establishing earlier ingestion and no newer ledger found in the retrieved inventory."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 6,
+          "basis": "49 original receiver integrity checks plus prior-charge/prefix/task identity reconciliation and final output checks; no old scientific suite rerun."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 12,
+          "basis": "Original provisional package and corrective append-only journal/ledger, explicit invalidation of stale-base outputs, unchanged-task addendum and corrected individual delivery."
+        }
+      ],
+      "basis": "One charge covers ALL work actually performed in this current turn, including mistaken provisional staging and its correction. Source52 and previous ingestion26 are inherited once. The provisional36-point candidate is not another debit, refund or replacement for the original26. Points are assessed work allocation, not measured tokens/currency.",
+      "created_at_utc": "2026-10-23T06:54:14.226845+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V150-PROOF-820-810-V1",
+      "run_id": "LOCAL-Q048-V150-20261023-PROOF-820-810-V1",
+      "engine": "BUBBLEVERSE.MATHEMATICS2.2.0",
+      "task": "One fresh conditional connected820->810 proof; +1proof/+0actual, V150 unconsumed",
+      "parent_ledger_version": 12,
+      "assessed_cost_pts": 60,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 9,
+          "basis": "Recovered current task/V12 addendum/journal, verified parent/guard row63 and all17 exact helper/source pins plus4 original method artifacts; cached V149 evidence reused."
+        },
+        {
+          "component": "implementation_complexity",
+          "pts": 14,
+          "basis": "Separately versioned producer/verifier/runner and strict current-budget adapter; diagnostic-only naive beta, independent signed-rate/capture checks, frozen semantic roster, two reviewer-found prefreeze fixes."
+        },
+        {
+          "component": "computation_execution",
+          "pts": 3,
+          "basis": "One4.639732s fresh exact-rational producer/independent-verifier/acceptance-readback chain; no historical replay, native integration or retry."
+        },
+        {
+          "component": "search_and_evidence",
+          "pts": 6,
+          "basis": "Bounded prior-result/ledger/method retrieval, current-main complete tree and freshness, seven project primitives and four pinned external source files; no general physics research."
+        },
+        {
+          "component": "validation_and_review",
+          "pts": 16,
+          "basis": "Fresh read-only reviewer, targeted RED->GREEN fixes, new-unit suite11/11, preflight60/60, proof40/40, verifier52/52,60 non-noop semantic controls, serialized readback and45 frozen-file integrity."
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 12,
+          "basis": "Full immutable-prefix journal successor, exact-once ledger settlement, mathematical interpretation/handoff/state, source recovery map, manifests/checksums and individual durable deliverables."
+        }
+      ],
+      "basis": "Assessed whole-point work allocation, not metered tokens/currency/FLOPs and not fixed per-version fee. Includes prefreeze review/development and full current run/delivery once. All prior unique charges inherited unchanged.",
+      "created_at_utc": "2026-10-23T07:16:30.268633+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V150-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V150-INGESTION-20261023-V1",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "V150 accepted-proof intake, documentary label correction and one V151 conditional-consumer handoff",
+      "parent_ledger_version": 13,
+      "assessed_cost_pts": 28,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 5
+        },
+        {
+          "component": "routing_and_documentary_reconciliation",
+          "pts": 5
+        },
+        {
+          "component": "computation",
+          "pts": 1
+        },
+        {
+          "component": "bounded_source_search_and_recovery",
+          "pts": 5
+        },
+        {
+          "component": "integrity_validation",
+          "pts": 5
+        },
+        {
+          "component": "journal_ledger_handoff_delivery",
+          "pts": 7
+        }
+      ],
+      "basis": "Individually assessed whole-point operator work including all recovery, reconciliation, validation and required delivery; not measured money/tokens. Source60pts imported once without re-billing; no scientific chain executed.",
+      "created_at_utc": "2026-10-23T07:30:26.266253+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V151-CONSUMER-820-810-V1",
+      "run_id": "LOCAL-Q048-V151-20261023-CONDITIONAL-CONSUMER-820-810-V1",
+      "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+      "task": "V151 single820→810 conditional consumer, independent metadata validation, postaccept/publication/readback and required closeout",
+      "parent_ledger_version": 14,
+      "assessed_cost_pts": 58,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 9
+        },
+        {
+          "component": "implementation_and_adapters",
+          "pts": 12
+        },
+        {
+          "component": "record_chain_computation",
+          "pts": 2
+        },
+        {
+          "component": "bounded_source_retrieval",
+          "pts": 7
+        },
+        {
+          "component": "validation_and_fresh_review",
+          "pts": 16
+        },
+        {
+          "component": "journal_provenance_delivery",
+          "pts": 12
+        }
+      ],
+      "basis": "Individually assessed operator work, not measured money/tokens. Above52pt estimate due to exact source recovery and two reviewed prefreeze integrity fixes with17-test suite. Entire preparation/review/execution/delivery charged once; source proof60/intake28 inherited without duplicate debit.",
+      "created_at_utc": "2026-10-23T07:53:43.024093+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V151-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V151-INGESTION-20261023-V1",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "V151 accepted-consumer intake, uploaded-state verification and one V152 Mathematics proof810->800 handoff",
+      "parent_ledger_version": 15,
+      "assessed_cost_pts": 28,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 5
+        },
+        {
+          "component": "routing_and_materiality_analysis",
+          "pts": 5
+        },
+        {
+          "component": "computation_and_exact_hash_glue_checks",
+          "pts": 2
+        },
+        {
+          "component": "repository_and_source_reconciliation",
+          "pts": 4
+        },
+        {
+          "component": "integrity_validation",
+          "pts": 5
+        },
+        {
+          "component": "journal_ledger_handoff_delivery",
+          "pts": 7
+        }
+      ],
+      "basis": "Individually assessed operator work for this bounded ingestion. V151 source58pts is already finalized in ledgerV15 and is not rebilled. No new proof or consumer was executed.",
+      "created_at_utc": "2026-10-23T10:21:35+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V152-PRODUCER-IMPORT-PATH-FAILURE-V1",
+      "run_id": "LOCAL-Q048-V152-20261023-PROOF-810-800-V1",
+      "engine": "BUBBLEVERSE.MATHEMATICS2.2.0",
+      "task": "V152 fresh conditional proof810->800 attempt; terminal producer import-path failure before theorem arithmetic",
+      "parent_ledger_version": 16,
+      "assessed_cost_pts": 52,
+      "breakdown": [
+        {
+          "component": "analysis_and_state_recovery",
+          "pts": 10
+        },
+        {
+          "component": "implementation_and_freeze",
+          "pts": 13
+        },
+        {
+          "component": "computation_execution",
+          "pts": 1
+        },
+        {
+          "component": "search_and_dependency_recovery",
+          "pts": 8
+        },
+        {
+          "component": "validation_and_failure_diagnosis",
+          "pts": 10
+        },
+        {
+          "component": "journal_handoff_and_delivery",
+          "pts": 10
+        }
+      ],
+      "basis": "Full bounded V152 preparation, dependency recovery, freeze, one producer execution attempt, terminal failure diagnosis and required immutable closeout/delivery. No verifier or theorem calculation completed; failure remains chargeable.",
+      "created_at_utc": "2026-10-23T10:43:35.960323+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V152-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V152-INGESTION-20261023-V1",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "V152 terminal technical-failure intake, GitHub reconciliation and one V153 repaired Mathematics810->800 handoff",
+      "parent_ledger_version": 17,
+      "assessed_cost_pts": 26,
+      "breakdown": [
+        {
+          "component": "state_and_input_recovery",
+          "pts": 4,
+          "basis": "Recovered V152 failure/state/ledger/journal continuation and exact Q/actual127 checkpoint; reused already established scientific inputs."
+        },
+        {
+          "component": "routing_and_materiality_analysis",
+          "pts": 5,
+          "basis": "Separated technical failure from scientific effect; applied completion, no-repeat and same-engine anti-loop rules to the exposed import-path defect."
+        },
+        {
+          "component": "computation_and_hash_checks",
+          "pts": 1,
+          "basis": "Local JSON/SHA/fingerprint/package construction only; no theorem, simulation, native integration or historical suite executed."
+        },
+        {
+          "component": "repository_reconciliation",
+          "pts": 4,
+          "basis": "Verified latest GitHub commit642d81b includes V152 journal/ledger/failure/state and captured blob identities; source52 charge imported exactly once."
+        },
+        {
+          "component": "integrity_validation",
+          "pts": 5,
+          "basis": "Checked ledger arithmetic, unique source charge, unchanged actual127/frontier810, absent V152 proof acceptance and V153 bounded repair contract."
+        },
+        {
+          "component": "journal_ledger_handoff_delivery",
+          "pts": 7,
+          "basis": "Append-only full journal successor, ledgerV18, ingestion state/handoff, V153 task, checksums/manifest/upload instructions and delivery archive."
+        }
+      ],
+      "basis": "Individually assessed bounded ingestion work. V152 source52pts is already finalized in ledgerV17 and is not rebilled. No new scientific proof or consumer was executed.",
+      "created_at_utc": "2026-10-23T10:53:06.043894+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V153-PREFREEZE-FAILURE-RECORD-SCHEMA-V1",
+      "run_id": "LOCAL-Q048-V153-20261023-PROOF-810-800-V1",
+      "engine": "BUBBLEVERSE.MATHEMATICS2.2.0",
+      "task": "Repair the exposed V152 transitive import-path defect pre-freeze, then execute one fresh810->800 conditional source-real connected proof; no actual admission; stopped at failure-record-schema gate before freeze",
+      "parent_ledger_version": 18,
+      "assessed_cost_pts": 50,
+      "breakdown": [
+        {
+          "component": "analysis_and_state_recovery",
+          "pts": 8,
+          "basis": "Exact task/Q/scope, parent face, same-h beta and Riccati/first-exit method review; no new theorem arithmetic."
+        },
+        {
+          "component": "implementation",
+          "pts": 12,
+          "basis": "Versioned V153 programs/spec, exact alias repair, no-science closure gate and planned supervisor."
+        },
+        {
+          "component": "computation",
+          "pts": 1,
+          "basis": "Hashes,7 passing unit/regression tests and one failed real preflight; no scientific chain."
+        },
+        {
+          "component": "search",
+          "pts": 8,
+          "basis": "Pinned GitHub helper/original-source recovery, Library method/input recovery, current repo reconciliation."
+        },
+        {
+          "component": "validation_and_diagnosis",
+          "pts": 10,
+          "basis": "Exact byte pins, current Git blob identities, negative import controls,38 passed formal gate checks and read-only terminal schema diagnosis."
+        },
+        {
+          "component": "journal_handoff_delivery",
+          "pts": 11,
+          "basis": "One settlement, preserved full journal prefix, terminal records, source recovery, artifact validation and file delivery."
+        }
+      ],
+      "basis": "Whole-point work assessment; no charge for unexecuted producer/verifier/acceptance work. Earlier V15252 and ingestion26 inherited without rebilling.",
+      "created_at_utc": "2026-10-23T20:36:57.059748+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V153-INGESTION-V1",
+      "run_id": "LOCAL-Q048-V153-INGESTION-20261023-V1",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "task": "Ingest V153 terminal prefreeze failure exactly once; prepare one Builder schema/import-closure repair plus existing-method proof execution task",
+      "parent_ledger_version": 19,
+      "assessed_cost_pts": 26,
+      "breakdown": [
+        {
+          "component": "scope_and_state_recovery",
+          "pts": 3,
+          "basis": "Reuse verified V153 bundle/current journal and recover exact Q, source event and shared ledger19."
+        },
+        {
+          "component": "routing_and_materiality",
+          "pts": 5,
+          "basis": "Technical/scientific separation, completion gate, anti-loop decision and narrowly scoped Builder successor with fixed mathematics."
+        },
+        {
+          "component": "computation",
+          "pts": 2,
+          "basis": "Input/output hashes,59 manifest pins, Git blob identities, budget arithmetic and task fingerprint; no science."
+        },
+        {
+          "component": "repository_and_engine_recovery",
+          "pts": 5,
+          "basis": "Current GitHub main/tree reconciliation and exact Builder2.3.0 prompt recovery; older repository2.2.0 prompt not substituted."
+        },
+        {
+          "component": "validation",
+          "pts": 4,
+          "basis": "Exactly-once charge/event checks, failure-schema diagnosis, route boundaries and coherent handoff references."
+        },
+        {
+          "component": "journal_handoff_delivery",
+          "pts": 7,
+          "basis": "Full journal append, ledger20, one V154 task, ingestion state, memory instructions and individual-file delivery."
+        }
+      ],
+      "basis": "New intake/routing work only. Source50 is already finalized in ledger19 and is not rebilled. Whole-point operator work assessment, not measured money/tokens.",
+      "created_at_utc": "2026-10-23T20:50:08.539492+00:00"
+    },
+    {
+      "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V154-REPAIRED-PROOF-810-800-V1",
+      "run_id": "LOCAL-Q048-V154-20261023-PROOF-810-800-V1",
+      "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+      "task": "V154 preflight/schema/import repair and one fixed-method810→800 conditional source-real proof; no actual admission",
+      "parent_ledger_version": 20,
+      "assessed_cost_pts": 62,
+      "breakdown": [
+        {
+          "component": "scope_and_pinned_recovery",
+          "pts": 8,
+          "basis": "Current GitHub main/tree/five exact blobs, full journal/task/ledger20, immutable V153/V150/helper recovery and backend decision."
+        },
+        {
+          "component": "implementation",
+          "pts": 17,
+          "basis": "Exact V152 nested failure schema and complete preflight/import closure; separately versioned six-role fixed-method chain and final process gate."
+        },
+        {
+          "component": "fresh_review_and_one_fix_pass",
+          "pts": 10,
+          "basis": "One fresh static reviewer and four Important corrections in one bounded TDD pass; no re-review."
+        },
+        {
+          "component": "preparation_validation",
+          "pts": 10,
+          "basis": "34 meaningful fixture/regression tests, retained red/green evidence, harmless process-descendant and startup-contamination tests; no historical science."
+        },
+        {
+          "component": "single_actual_execution",
+          "pts": 3,
+          "basis": "One actual84-gate preflight,64-file freeze, one40/52/60 proof/verifier chain and final I/O/process checks in3.30s."
+        },
+        {
+          "component": "accounting_journal_handoff_delivery",
+          "pts": 14,
+          "basis": "Exactly-once ledger21 settlement, full journal append, machine handoff, hash/recovery/index/memory records and individual-file persistence/QA."
+        }
+      ],
+      "basis": "Individually assessed whole-point operator-work cost including review fixes and delivery; revised estimate62 within original reserved/max65. Not measured currency, tokens or elapsed science time. Earlier source50/intake26 and all other historical charges remain unchanged.",
+      "created_at_utc": "2026-10-23T21:20:18.849642+00:00"
+    }
+  ],
+  "used_before_this_run_pts": 812,
+  "used_pts": 874,
+  "remaining_pts": 126,
+  "overrun_pts": 0,
+  "outstanding_reservations": [],
+  "inherited_charge_ids": [
+    "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V148-PROOF-830-820-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V148-INGESTION-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V149-CONSUMER-830-820-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V149-INGESTION-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V149-REDELIVERY-AUDIT-20261023-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V150-PROOF-820-810-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V150-INGESTION-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V151-CONSUMER-820-810-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V151-INGESTION-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V152-PRODUCER-IMPORT-PATH-FAILURE-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V152-INGESTION-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V153-PREFREEZE-FAILURE-RECORD-SCHEMA-V1",
+    "LOCAL-Q048-BUDGET-CHARGE-V153-INGESTION-V1"
+  ],
+  "newly_applied_charge_ids": [
+    "LOCAL-Q048-BUDGET-CHARGE-V154-REPAIRED-PROOF-810-800-V1"
+  ],
+  "source_v144_run_charge": {
+    "run_id": "LOCAL-Q048-V144-20261021T164631926422Z-CONTRACT-REPAIRED-CONSUMER-V1",
+    "treatment": "NO_RETROACTIVE_CHARGE_AT_FIRST_ACTIVATION",
+    "cost": "NOT_ASSESSED_OUTSIDE_POLICY",
+    "warning": "This does not mean historical work cost zero."
+  },
+  "next_task_estimate": {
+    "status": "NOT_PROPOSED_BY_BUILDER_RETURN_TO_RESULT_INGESTION",
+    "reserved_pts": 0
+  },
+  "rules": [
+    "Carry this budget_id across every version/engine/branch; do not initialize another 1000 points.",
+    "Import unique charged events once. Bill new substantive receiver work separately.",
+    "Failure is chargeable; do not refund technical failure to keep trying.",
+    "At zero without valid resolution use UNRESOLVED — BUDGET EXHAUSTED, STOPPED_UNRESOLVED and terminal next-question handoff.",
+    "Reconcile concurrent or earlier discovered ledgers before spending; no deliberate overrun."
+  ],
+  "last_run": {
+    "run_id": "LOCAL-Q048-V154-20261023-PROOF-810-800-V1",
+    "event_id": "LOCAL-Q048-V154-ACCEPTED-UNCONSUMED-PROOF-810-800-V1",
+    "status": "ACCEPTED_UNCONSUMED_CONDITIONAL_PROOF_810_800",
+    "run_cost_pts": 62
+  },
+  "created_at_utc": "2026-10-23T21:20:18.849642+00:00",
+  "last_validated_state_ref": {
+    "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+    "V152_proof_state": "NOT_ACCEPTED_TECHNICAL_FAILURE",
+    "V152_failure_event": "LOCAL-Q048-V152-TERMINAL-TECHNICAL-FAILURE-810-800-V1",
+    "V153_proof_state": "NOT_ACCEPTED_PREFREEZE_TECHNICAL_FAILURE",
+    "V153_failure_event": "LOCAL-Q048-V153-TERMINAL-PREFREEZE-SCHEMA-FAILURE-810-800-V1",
+    "V153_ingestion_event": "LOCAL-Q048-V153-TECHNICAL-FAILURE-INGESTION-V1",
+    "V154_proof_state": "ACCEPTED_UNCONSUMED",
+    "V154_acceptance_ref": {
+      "file": "Q048_V154_ACCEPTANCE_V1.json",
+      "bytes": 10572,
+      "sha256": "8c164b57d2f39ff4f67e63d27fc99337411a1bc1aedd839dfca1b46bcab22717"
+    }
+  },
+  "reconciliation": {
+    "prior_authoritative_ledger": {
+      "library_file_id": "libfile_53dbf31afe048191a643ba7ea944d76f",
+      "sha256": "fff66ca08cf04fca700e48d6641199b641cf3dfcb820f35bfd5508ba1dcd5a48",
+      "used_pts": 440
+    },
+    "stale_supplied_ledger": "V10 used414",
+    "excluded_candidate_ledger": {
+      "library_file_id": "libfile_e8b0969da8248191906aab814f1028f6",
+      "sha256": "900fa6e83751ee1ebdf62f678c565b018a77822cb479a274b3894f8d283c70fb",
+      "reason": "Stale-base provisional V11 used450 collides with an already existing V11 used440; DO_NOT_APPLY. Its36-point proposed charge reuses the earlier26-point charge ID and is not authoritative."
+    },
+    "correction_policy": "No earlier valid charge changed or refunded. Current run audited once under new unique44-point charge.",
+    "v152_repository_registration": {
+      "repository": "Morfindien/Bubbleverse",
+      "commit_sha": "642d81b730bcf825bb542d5a713fcdc2737490fd",
+      "status": "VERIFIED_COMMIT_CONTAINS_V152_LEDGER_FAILURE_STATE_AND_FULL_JOURNAL_PATH",
+      "source_charge_treatment": "ALREADY_FINALIZED_EXACTLY_ONCE; DO_NOT_REBILL"
+    },
+    "v153_parent_registration": {
+      "repository": "Morfindien/Bubbleverse",
+      "commit_sha": "d9bfa08047bdf98f5297e8cd0c862ab1016aa591",
+      "five_uploaded_state_files_match_git_blob_ids": true,
+      "parent_ledger_sha256": "9022d248ff3ceaae3f90ddc24abee017461824793a7d8b84830733c50391e27c"
+    },
+    "v153_source_repository_registration": {
+      "repository": "Morfindien/Bubbleverse",
+      "commit_sha": "deb06ff35001385864742bd8f909f7c790742b44",
+      "verified_paths": [
+        "Q048_QUESTION_BUDGET_LEDGER_V19.json",
+        "Q047_SAMLET_JOURNAL_Q048_V153_PREFREEZE_FAILURE_APPENDED_V1.md",
+        "Q048_V153_RESULT_AND_HANDOFF_V1.md"
+      ],
+      "source50_treatment": "ALREADY_FINALIZED_ONCE_NO_REBILL",
+      "detail_evidence_recovery": "Current V153 Library delivery bundle; detailed files not asserted present on GitHub."
+    },
+    "v154_parent_registration": {
+      "repository": "Morfindien/Bubbleverse",
+      "commit_sha": "2946be282f9e99dd8896169fb08647f49e5d0457",
+      "five_exact_state_file_blob_matches": true,
+      "parent_ledger_sha256": "4275475ed795fd2ee8f9eaf5cae521a7a6999e440d7f8a963248542bde2b5b15",
+      "parent_used_pts": 812,
+      "source50_and_ingestion26": "CARRIED_FORWARD_UNCHANGED_NO_REBILL"
+    }
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "schema": "bubbleverse.q048.v154.result_handoff.v1",
+  "created_at_utc": "2026-10-23T21:20:18.849642+00:00",
+  "task_type": "TECHNICAL_REPAIR_AND_FIXED_SPEC_SCIENTIFIC_CASE_EXECUTION",
+  "handoff_id": "LOCAL-Q048-V154-ACCEPTED-UNCONSUMED-PROOF-810-800-V1",
+  "parent_handoff_id": "LOCAL-Q048-V153-TECHNICAL-FAILURE-INGESTION-V1",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_range": [
+    "Q001",
+    "Q048"
+  ],
+  "revision_id": "V154",
+  "case_id": "NOT_ASSIGNED",
+  "exact_scientific_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "run_id": "LOCAL-Q048-V154-20261023-PROOF-810-800-V1",
+  "PROGRAM_ID": "NOT_REGISTERED_NOT_NEEDED_FOR_DIRECT_EXECUTION",
+  "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+  "engine_prompt": {
+    "file": "inputs/Bubbleverse_Execution_HPC_Motor_Builder_v2.3.0.md",
+    "bytes": 100081,
+    "sha256": "2ee97f047d69e2e671e6fa560ec250b103807ba7f9417cc5965be965fd66976a"
+  },
+  "task": {
+    "file": "inputs/Q048_V154_NEXT_BUILDER_TASK_PREFLIGHT_REPAIR_PROOF_810_800_V1.json",
+    "bytes": 28312,
+    "sha256": "ca77e09f663af6d8c2ec77bdfa0f749e5ab028a5179297fe4fa5fc1c06341d2c"
+  },
+  "task_fingerprint": "4488d4cb6111e39719ddfb40a5a1528bddb8bca90b69cf19e4bb1580b3e44cd0",
+  "status": "ACCEPTED_UNCONSUMED_CONDITIONAL_SOURCE_REAL_PROOF",
+  "scientific_outcome": "Q048_ACTIVE_INCONCLUSIVE",
+  "proof_state": "ACCEPTED_UNCONSUMED",
+  "new_mathematical_proof_cells": 1,
+  "new_actual_cells": 0,
+  "actual": {
+    "count": 127,
+    "frontier": 810
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 810
+  },
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "native_error_certificate": false,
+  "exact_selector_existence_uniqueness": false,
+  "trajectory_identity_claim": false,
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "source_provenance": {
+    "file": "Q048_V154_INPUT_RECOVERY_MAP_V1.json",
+    "bytes": 9819,
+    "sha256": "8c2fda09a535493109ecc49c3bfb101b799974e2b8ea7a2296adf6181a6ca05a"
+  },
+  "parent_checkpoint": {
+    "file": "inputs/Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+    "bytes": 8071,
+    "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96"
+  },
+  "cell_z": [
+    810,
+    800
+  ],
+  "cell_a": [
+    "1/811",
+    "1/801"
+  ],
+  "accepted_bounds": {
+    "K_upper": "888913489381757586389/200000000000000000",
+    "connected_lower": "340187419017597/1000000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "beta_lower": {
+      "L": "17515263186523951275545298148007561495888953029550391710921765752820653314353655807341180396482859027752242185936046189444037788480724717271/216438746598345964128535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "R": "17463926993539588659620121055837078444739388330101519296037323727518134387080123396569290737315414999883844349064060445286197945480724717271/216438546598345964128535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "continuation": {
+      "initial_a": "1/811",
+      "endpoint_a": "1/801",
+      "initial_h_only": "346752030166741/1000000000000000000",
+      "h_upper": "99999/100000",
+      "w": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "background": "Admitted primary guard row64, exact inherited V151 E/Y/V_previous; E_input_left is conservative whole-cell energy cap; no scalar consumption.",
+      "selection": "conv(HMLA,SWIFT) for each fixed q branch",
+      "hypothesis": "Existing absolutely-continuous source-real solution under the admitted background and fixed-q two-operator inclusion; no assumed future domain membership. Bounds apply on its existing interval and at a1 whenever an admissible continuation reaches a1. Exact selector existence/uniqueness is not established.",
+      "proof": "Positive source/atomic/C premises hold. Fresh Riccati comparison excludes lower-h exit. Upper-h faces are inward. Thermal beta uses the monotone same-h ratio r_q(h), preserving numerator/denominator dependence; both thermal faces are inward on the unchanged domain. Closed-endpoint persistence follows for existing admissible continuations; convex combinations preserve derivative inequalities.",
+      "native_error_certificate": false,
+      "trajectory_identity_claim": false
+    }
+  },
+  "execution": {
+    "COMPUTE_BACKEND": "LOCAL_RUNTIME",
+    "GITHUB_WORTHWHILE": "NO",
+    "backend_estimates_and_decision": {
+      "file": "Q048_V154_BACKEND_AND_SETUP_V1.json",
+      "bytes": 2758,
+      "sha256": "636a853c2484849860a241420f85ee4f3f48d80d482b5e9d14ed8821e19425d7"
+    },
+    "chains_started": 1,
+    "retry_count": 0,
+    "postfreeze_edits": false,
+    "science_seconds_child": 3.037491677999242,
+    "seconds_after_supervisor_final_IO": 3.297515219000161,
+    "hard_limit_seconds": 300,
+    "memory_peak": "NOT_MEASURED; <512MiB was estimate only",
+    "producer_returncode": 0,
+    "verifier_returncode": 0,
+    "observed_supervisor_returncode": 0,
+    "final_audit_status": "PASS",
+    "terminal_marker_absent": true,
+    "admission_rule": "Observed supervisor process0 AND final auditPASS AND terminal marker absent; audit alone insufficient",
+    "frozen_pins_unchanged": true
+  },
+  "validation": {
+    "preflight_checks": [
+      84,
+      84
+    ],
+    "frozen_files": 64,
+    "preparation_tests": [
+      34,
+      34
+    ],
+    "proof_gates": [
+      40,
+      40
+    ],
+    "verifier_checks": [
+      52,
+      52
+    ],
+    "semantic_controls_rejected": [
+      60,
+      60
+    ],
+    "non_noop": true,
+    "review_important_findings": 4,
+    "important_fixed_in_one_prefreeze_TDD_pass": 4,
+    "rereview": false,
+    "deferred_minor": "Late audit publication may remain PASS on subsequent failure; conjunctive admission is mandatory",
+    "independence": "Does not import producer. Independently reconstructs task/source/guard binding, atomic/C, fresh connected lower, and same-h monotone beta ratio; explicitly rejects naive independent interval division as the repaired theorem."
+  },
+  "evidence": {
+    "SPEC": {
+      "file": "Q048_V154_SPEC_V1.json",
+      "bytes": 16882,
+      "sha256": "53ca0511047c347d1f1dc15c666746c9858c9c528955bd80f32fbbfc66f3d4e0"
+    },
+    "FREEZE": {
+      "file": "Q048_V154_FREEZE_V1.json",
+      "bytes": 7808,
+      "sha256": "6ef3e6b771d3a0dd13889cb86e38718e4973cf013571f5abb20c09d4b91f36ea"
+    },
+    "INPUT_PREFLIGHT": {
+      "file": "Q048_V154_INPUT_PREFLIGHT_V1.json",
+      "bytes": 7074,
+      "sha256": "983aea760f776eb7a880edabd6ab89e87b742e8ad04b1c0cc3de29f0fb935147"
+    },
+    "RAW": {
+      "file": "Q048_V154_RAW_V1.json",
+      "bytes": 54757,
+      "sha256": "7ea0fc709054b335e3a1357ed0a1e0c0ad7f960564793fadc8e1c9e7c38e2bbd"
+    },
+    "VERIFICATION": {
+      "file": "Q048_V154_VERIFICATION_V1.json",
+      "bytes": 11470,
+      "sha256": "87c87fa74008fbed4a8c5304a75f1522942bc3fea73de63487ae71b81f2859d0"
+    },
+    "ACCEPTANCE": {
+      "file": "Q048_V154_ACCEPTANCE_V1.json",
+      "bytes": 10572,
+      "sha256": "8c164b57d2f39ff4f67e63d27fc99337411a1bc1aedd839dfca1b46bcab22717"
+    },
+    "ACCEPTANCE_READBACK": {
+      "file": "Q048_V154_ACCEPTANCE_READBACK_V1.json",
+      "bytes": 5035,
+      "sha256": "21d84bcb5968243ec1919b496bb9d398ace0b2196d90c60d1030455153c29eac"
+    },
+    "EXECUTION": {
+      "file": "Q048_V154_EXECUTION_V1.json",
+      "bytes": 6125,
+      "sha256": "2d234309030b14b2eb81ad23b0a03bcae4214435b8fdca6739506bd2cf2de059"
+    },
+    "EXECUTION_FINAL_AUDIT": {
+      "file": "Q048_V154_EXECUTION_FINAL_AUDIT_V1.json",
+      "bytes": 2026,
+      "sha256": "0976fb08732c97de63dd8d130e9a217bf83ea6842cb6429cccfbdc0db04a25d6"
+    },
+    "OBSERVED_PROCESS_EXIT": {
+      "file": "Q048_V154_OBSERVED_PROCESS_EXIT_V1.json",
+      "bytes": 699,
+      "sha256": "0061b768d9edd9a7b8c86b1c0e53a3d7d96ff4fc391daf3500168c2e7d4f5bd7"
+    }
+  },
+  "question_budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "limit_pts": 1000,
+    "parent_ledger_version": 20,
+    "ledger_version": 21,
+    "used_before_pts": 812,
+    "remaining_before_pts": 188,
+    "run_cost_pts": 62,
+    "used_pts": 874,
+    "remaining_pts": 126,
+    "reserved_pts": 0,
+    "outstanding_reservations": [],
+    "released_pts": 3,
+    "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V154-REPAIRED-PROOF-810-800-V1",
+    "ledger": {
+      "file": "Q048_QUESTION_BUDGET_LEDGER_V21.json",
+      "bytes": 64701,
+      "sha256": "82baa61c83d5c859d8b0e8124a82cd6b76e4c3d7b84f8e26c3ed156dafb95ff4"
+    },
+    "settlement": {
+      "file": "Q048_V154_BUDGET_SETTLEMENT_V1.json",
+      "bytes": 4269,
+      "sha256": "75b6351540bb16f3df03d02e22c4161c19889e9391a9a27b844d9feacd0e73ce"
+    },
+    "historical_charges": "UNCHANGED; source50/intake26 not rebilled"
+  },
+  "journal": {
+    "reference": {
+      "file": "Q047_SAMLET_JOURNAL_Q048_V154_PROOF_APPENDED_V1.md",
+      "bytes": 14842551,
+      "sha256": "a20471412854213c28752b6feec060788803620a67f2637975d2aa2df910e84d"
+    },
+    "incoming_prefix": {
+      "file": "inputs/Q047_SAMLET_JOURNAL_Q048_V153_INGESTED_V1.md",
+      "bytes": 14839672,
+      "sha256": "ec9a0c00253fb91347c87cbf38eb93f054b3eaea33487aa67c2b51fa6ab85cf8"
+    },
+    "prefix_bytes_preserved": 14839672,
+    "journal_effect": "APPEND current accepted conditional proof; no historical alteration"
+  },
+  "prior_state": {
+    "V150_proof": "ACCEPTED_CONSUMED_ONCE",
+    "V151": "ACCEPTED_ACTUAL127_FRONTIER810",
+    "V152": "TERMINAL_TECHNICAL_IMPORT_PATH_FAILURE",
+    "V153": "TERMINAL_PREFREEZE_FAILURE_SCHEMA_MISMATCH",
+    "historical_science_reexecuted": false,
+    "discarded_routes": "No alias/hash weakening, no top-level failure_class, no naive independent interval beta division, no hosted compute workaround/retry"
+  },
+  "memory": {
+    "backend": "GITHUB",
+    "repository": "Morfindien/Bubbleverse",
+    "base_main": "2946be282f9e99dd8896169fb08647f49e5d0457",
+    "five_exact_state_matches": true,
+    "write_status": "FILES_READY_FOR_MANUAL_UPLOAD",
+    "integration_status": "USER_UPLOAD_PENDING",
+    "new_commit": null,
+    "registry_or_README_change": "NOT_NEEDED; no workflow/launcher deployment or registered program"
+  },
+  "unresolved": [
+    "NativeP6",
+    "Physical/native fidelity and trajectory identity",
+    "Exact selector existence/uniqueness",
+    "Complete x_e(z)/tau_T(z) histories for all four configurations",
+    "Independent foundation audit of inherited primitives and historical proofs",
+    "Result Ingestion registration and subsequent routing",
+    "Manual repository integration"
+  ],
+  "next_action": {
+    "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+    "action": "Ingest exactly this accepted-unconsumed event once; reconcile ledger21/journal/provenance/process0+auditPASS+no marker; decide next authorized route",
+    "expected_artifact": "Ingestion state/journal/ledger and routing decision",
+    "return_condition": "Exactly-once event and charge treatment; preserve actual127/frontier810 unless separately authorized consumer succeeds",
+    "dispatch_status": "NOT_DISPATCHED",
+    "consumer_authorization": "NOT_GRANTED_BY_BUILDER",
+    "science_continuation_authorized_here": false
+  },
+  "route_history": [
+    "V152 terminal import-path failure",
+    "V152 Result Ingestion",
+    "V153 terminal prefreeze schema failure",
+    "V153 Result Ingestion prepares V154 Builder",
+    "V154 proof accepted unconsumed",
+    "Return to Result Ingestion only"
+  ],
+  "termination_decision": "BOUNDED_BUILDER_TASK_COMPLETE; NO MORE SCIENCE"
+}
