@@ -1,0 +1,78 @@
+{
+  "schema": "bubbleverse.q048.v155.ingestion_budget_limited_checkpoint.v1",
+  "created_at_utc": "2026-10-23T22:28:16.409035+00:00",
+  "event_id": "LOCAL-Q048-V155-TERMINAL-PREFREEZE-FAILURE-INGESTION-V1",
+  "run_id": "LOCAL-Q048-V155-INGESTION-20261024-V1",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CHECKPOINT",
+  "epistemic_status": "INCONCLUSIVE",
+  "checkpoint_reason": "BUDGET_LIMITED_POSITIVE_RESIDUAL_NO_MATERIAL_STAGE_FITS",
+  "current_state": {
+    "actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 810
+    },
+    "V154_proof_state": "ACCEPTED_UNCONSUMED",
+    "V155_state": "TERMINAL_TECHNICAL_PREFREEZE_FAILURE_INGESTED_ONCE",
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false
+  },
+  "last_validated_state_ref": {
+    "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "V154_proof_state": "ACCEPTED_UNCONSUMED",
+    "V155_state": "TERMINAL_TECHNICAL_PREFREEZE_FAILURE_NO_STATE_ADVANCE"
+  },
+  "v155_failure": {
+    "classification": "NEW_V155_PREFLIGHT_HARNESS_SCHEMA_BINDING_DEFECT",
+    "phase": "GENUINE_FINAL_PREFLIGHT_SOURCE_ADMISSION",
+    "error": "KeyError:returncode",
+    "assumed_path": "returncode",
+    "actual_path": "result.exit_code",
+    "actual_exit_code": 0,
+    "scientific_effect": "NONE; failure occurred before freeze and consumer dispatch"
+  },
+  "question_budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_version": 24,
+    "used_pts": 962,
+    "remaining_pts": 38,
+    "status": "ACTIVE"
+  },
+  "material_successor_candidate": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+    "task_description": "Separately versioned V156: correct only the V155 observed-exit schema binding (returncode -> result.exit_code), then rerun complete prefreeze and at most one 810->800 conditional consumer/validation/publication chain; no theorem recomputation, no work below800, zero retries.",
+    "estimated_pts": 46,
+    "maximum_pts": 50,
+    "available_pts": 38,
+    "authorization": "NOT_AUTHORIZED_INSUFFICIENT_BALANCE",
+    "dispatch": "NOT_PREPARED_NOT_DISPATCHED",
+    "estimate_basis": [
+      "V147 repair+consumer finalized at 50 pts",
+      "V149 successful consumer finalized at 52 pts",
+      "V151 successful consumer finalized at 58 pts",
+      "V155 already consumed 40 pts before any consumer dispatch; V156 can reuse artifacts, so estimate is reduced but not assumed below38 without understating required full-chain validation/delivery"
+    ]
+  },
+  "rejected_smaller_stage": {
+    "task": "Patch or regression-test only the preflight key without executing the consumer chain",
+    "reason": "Fails materiality: it would spend Q048 points without consuming the accepted proof, advancing the validated checkpoint, or answering the exact Q, and would leave even less balance for the required material chain."
+  },
+  "policy_application": "Positive residual is preserved. Do not falsify cost upward, force exhaustion, or authorize a stage that does not fit.",
+  "next_engine_selected": null,
+  "operator_action_required": "No scientific approval is requested. Additional Q048 work requires either a documented budget-policy change/top-up by the operator or a materially cheaper complete stage supported by new evidence; neither is invented here."
+}
