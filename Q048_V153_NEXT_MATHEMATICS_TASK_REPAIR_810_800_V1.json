@@ -1,0 +1,267 @@
+{
+  "schema": "bubbleverse.q048.v153.repair_conditional_connected_proof.task.v1",
+  "created_at_utc": "2026-10-23T10:53:06.043894+00:00",
+  "task_id": "LOCAL-Q048-V153-REPAIRED-IMPORT-CLOSURE-CONDITIONAL-PROOF-810-800-V1",
+  "task_fingerprint": "6247478ac387030b22bf9f537b4aa24d7a3ecf4c695e5f1e767c5e055d30217d",
+  "task_fingerprint_basis": {
+    "task_id": "LOCAL-Q048-V153-REPAIRED-IMPORT-CLOSURE-CONDITIONAL-PROOF-810-800-V1",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "objective": "Repair the exposed V152 transitive import-path defect pre-freeze, then execute one fresh810->800 conditional source-real connected proof; no actual admission",
+    "parent_checkpoint_sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "cell_z": [
+      810,
+      800
+    ],
+    "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_sha256": "c3b8c594904bb8f37641be730311f502e5d51c284bcfd16041d152d25e7ffa2e",
+    "guard_control_sha256": "da57d19c9240bd2703d18cc063b3d6a0320dcf1a6bab00dbe39634866de1201b",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "method_reference_hashes": {
+      "q048_v150_proof.py": "c9b24232f353370e82719f107a21124ef4e0b45b4b1d4b642fabfa473960bf55",
+      "q048_v150_verify.py": "4b7e8e90e363da37fb3dfde194aff81b674eda1c99f9282a7f820127b0f9e6e6",
+      "q048_v150_run.py": "2bd9c96a301cb78d5c3ff7577eaf4ce25090423673d17dbdbcec0ec187ca74df",
+      "Q048_V150_ACCEPTANCE_V1.json": "d36f030b2463f8da2dd503d1af10a4dccd084170eaf60678e90170cb975c2351"
+    },
+    "engine_prompt_sha256": "1303901b6bacd0c3115e4a3e166699f161c56e9d87cd21b5ac67e9a6b1db8bd2",
+    "budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_version": 18,
+    "limits": {
+      "max_new_mathematical_proof_cells": 1,
+      "max_new_actual_cells": 0,
+      "no_actual128": true,
+      "no_below_z": 800,
+      "no_native_integration": true,
+      "no_reset_refit_recapture_tuning": true,
+      "no_historical_main_or_suite": true,
+      "no_model_newQ_or_closure": true,
+      "retry_count": 0,
+      "postfreeze_edits_allowed": false
+    },
+    "repair_basis": {
+      "source_event_id": "LOCAL-Q048-V152-TERMINAL-TECHNICAL-FAILURE-810-800-V1",
+      "failure_class": "FROZEN_TRANSITIVE_IMPORT_PATH_BINDING_OMISSION",
+      "missing_path": "proof_runtime/ref/prior_v127/inputs/source/q047_math_v1.py",
+      "available_same_bytes_path": "proof_runtime/ref/prior_v127/inputs/q047_math_v1.py",
+      "required_by": "q048_p3_scaled_kernel_v2.py dynamic import",
+      "repair_rule": "Before freeze, restore and hash-verify the required transitive source/ path and pass a no-science import-closure smoke test for the pinned helper chain."
+    }
+  },
+  "fingerprint_convention": "SHA256 UTF-8 sorted compact JSON ensure_ascii=False, no final newline",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_ASSIGNED",
+  "exact_full_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.MATHEMATICS2.2.0",
+  "engine_prompt": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "prompt_version": "2.2.0",
+    "repository": "Morfindien/Bubbleverse",
+    "path": "Bubbleverse_Matematikmotor_2.2.0.md",
+    "sha256": "1303901b6bacd0c3115e4a3e166699f161c56e9d87cd21b5ac67e9a6b1db8bd2",
+    "status": "VERIFIED_PREVIOUS_COMPATIBLE_ENGINE_IDENTITY"
+  },
+  "authorization": "PROSPECTIVE_ONE_REPAIRED_FRESH_CONDITIONAL_MATHEMATICAL_PROOF_CELL_810_TO_800_ZERO_ACTUAL",
+  "authorization_record": "Q048_V152_INGESTION_STATE_V1.json",
+  "authorization_event": "LOCAL-Q048-V152-TECHNICAL-FAILURE-INGESTION-V1",
+  "objective": "Repair the exposed V152 transitive import-path defect pre-freeze, then execute one fresh810->800 conditional source-real connected proof; no actual admission",
+  "materiality": "V152 produced no810->800 theorem because execution stopped during producer import. The exact missing theorem remains material, and the newly exposed path-binding defect gives a specific nonduplicate repair condition for one fresh attempt.",
+  "why_not_repeat": "V152 is not completed scientific work: it failed before theorem arithmetic, verifier or acceptance. The V153 route changes the pre-freeze configuration by requiring transitive import-closure validation while preserving the same scientific cell, parent, guard and proof contract.",
+  "parent_checkpoint": {
+    "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+    "bytes": 8071,
+    "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "access": "VERIFIED_LOCAL_BYTES_AND_CURRENT_ACCEPTED_STATE",
+    "accepted_actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 810
+    },
+    "endpoint": {
+      "a": "1/811",
+      "E": "87861503356118157/3125000000000000",
+      "Y": "22285530672339861267/1000000000000000000",
+      "Vbar": "5587227468217201099/1000000000000000000"
+    },
+    "retained_theorem_reference": {
+      "K_upper": "17511444796066234647/4000000000000000",
+      "connected_lower": "346752030166741/1000000000000000000",
+      "h_upper": "99999/100000",
+      "thermal_domain": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "operators": [
+        "HMLA",
+        "SWIFT"
+      ],
+      "q_branches": {
+        "L": "1/1000000",
+        "R": "0"
+      },
+      "beta_dependency_method": "same_h_monotone",
+      "beta_lower": {
+        "L": "5107976518883627459910383288603148205864461772618724047921886622451214296881306631449620448315530778671064808476164126834620591902587997103/60122238755715498035704175310456776060163974761962890625000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "R": "45839591631022608454240381547100435510754500320427083236771382534191423070545902852239967520741171364153840956940474562887942180123291973927/541099648801439482321337577794110984541475772857666015625000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS"
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "cell_z": [
+    810,
+    800
+  ],
+  "cell_a": [
+    "1/811",
+    "1/801"
+  ],
+  "guard": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "bytes": 1198030,
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "control_role": "secondary comparison only; never substitute its background or endpoint",
+    "row_index_reference_only": 64,
+    "selection": "Unique exact a/z cell within each enclosing evaluator control role before any row-index use",
+    "primary_row_sha256": "c3b8c594904bb8f37641be730311f502e5d51c284bcfd16041d152d25e7ffa2e",
+    "control_row_sha256": "da57d19c9240bd2703d18cc063b3d6a0320dcf1a6bab00dbe39634866de1201b",
+    "left_glue": {
+      "a0": "1/811",
+      "E_input_left": "87861503356118157/3125000000000000",
+      "Y_left": "22285530672339861267/1000000000000000000",
+      "V_previous": "5587227468217201099/1000000000000000000"
+    },
+    "expected_primary_endpoint_crosscheck_only": {
+      "a1": "1/801",
+      "E_right": "6742295226862717477/250000000000000000",
+      "Y_right": "5342729072289972639/250000000000000000",
+      "V_admitted": "1341250898132213803/250000000000000000"
+    },
+    "energy_cap_used": "87861503356118157/3125000000000000",
+    "E_safe_left_distinct": "27883795290630840619/1000000000000000000",
+    "metadata_qualification": "accepted/committed/whole_cell/domain flags verified; metadata is not a new theorem",
+    "source_state_reset": false
+  },
+  "method_reference": {
+    "role": "V150 METHOD_REFERENCE_ONLY. Do not execute its historical main/suite or reuse its820->810 conclusion as810->800 evidence.",
+    "artifacts": {
+      "q048_v150_proof.py": "c9b24232f353370e82719f107a21124ef4e0b45b4b1d4b642fabfa473960bf55",
+      "q048_v150_verify.py": "4b7e8e90e363da37fb3dfde194aff81b674eda1c99f9282a7f820127b0f9e6e6",
+      "q048_v150_run.py": "2bd9c96a301cb78d5c3ff7577eaf4ce25090423673d17dbdbcec0ec187ca74df",
+      "Q048_V150_ACCEPTANCE_V1.json": "d36f030b2463f8da2dd503d1af10a4dccd084170eaf60678e90170cb975c2351"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "availability": "Known exact hashes from the accepted V150 package; recover exact bytes by existing Library/GitHub identities before execution."
+  },
+  "proof_contract": {
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "selection": "conv(HMLA,SWIFT) for each fixed q branch",
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; endpoint claim only when an admissible continuation reaches it.",
+    "initial_face_only": true,
+    "no_assumed_future_domain_membership": true,
+    "exact_selector_existence_uniqueness": "NOT_ESTABLISHED",
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false,
+    "thermal_domain_target": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "h_upper_target": "99999/100000",
+    "beta_dependency_required": "same_h_monotone or separately proved stronger non-circular replacement; never cross-h independent numerator/denominator substitution.",
+    "required_new_work": [
+      "Fresh source/background/atomic/C premises for HMLA/SWIFT and both q branches on810->800 from the exact V151 left face.",
+      "Fresh conservative whole-cell energy cap; keep E_safe_left distinct and validate helper/interpolation domains and source constants.",
+      "Fresh K_upper and strictly positive connected lower; prior theorem values are reference only.",
+      "Fresh same-h monotone beta and derivative/domain proof; no future-domain membership assumption.",
+      "Strict upper-h and both thermal inward faces plus non-circular first-exit/closed-endpoint persistence.",
+      "Separate verifier reconstruction, frozen non-noop semantic controls and exact serialized acceptance/readback."
+    ]
+  },
+  "required_work": [
+    "Verify V151 accepted checkpoint and unique primary/control row64 exact left glue before any row-index use.",
+    "Recover the V152 failure record and prove the exact q047_math_v1.py bytes are present at the transitive runtime path proof_runtime/ref/prior_v127/inputs/source/q047_math_v1.py before freeze.",
+    "Perform a pre-freeze no-science import-closure smoke test of the pinned helper chain, including q048_p3_scaled_kernel_v2.py dynamic imports; any path/hash/import defect is terminal before freeze.",
+    "Create separately versioned V153 producer/verifier/runner/spec/control rosters and freeze only after the import-closure gate passes.",
+    "Use V150 repaired proof method only as source reference; never execute historical main/suite and never reuse the V150 or failed V152 conclusion as810->800 evidence.",
+    "Derive one fresh810->800 enclosure; keep actual127/frontier810 unchanged.",
+    "First exact pin/path/schema/domain/inequality/control/process/budget obstruction is terminal; no retry or postfreeze edit.",
+    "Return one terminal V153 result to Result Ingestion; no consumer, actual128, below800, native integration, newQ/model promotion or Q closure."
+  ],
+  "negative_controls_required": [
+    "Wrong Q/question/task/fingerprint/run/parent/source/capture/budget lineage",
+    "Missing or wrong-hash transitive source/q047_math_v1.py runtime path; helper import closure not proven before freeze",
+    "Wrong evaluator role, nonunique/wrong cell/row/hash or broken exact left glue",
+    "Unsafe E_safe_left substitution or omitted operator/q/channel",
+    "Old K/lower reused as new whole-cell theorem or nonpositive lower",
+    "Cross-h beta dependency substituted for same-h monotonicity",
+    "Failed upper-h or thermal inward face or circular continuation reasoning",
+    "Native/selector/trajectory/full-history/Q-closure promotion, actual128 or below800 work",
+    "Malformed/no-op controls, predecessor tampering or freeze drift"
+  ],
+  "budget": {
+    "backend": "LOCAL_RUNTIME",
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V18.json",
+    "ledger_version": 18,
+    "used_pts": 736,
+    "remaining_pts": 264,
+    "estimated_run_cost_pts": 54,
+    "prospective_max_run_cost_pts": 65,
+    "reservation_pts": 0,
+    "status": "ESTIMATE_ONLY_NOT_CHARGED_NOT_DISPATCHED",
+    "science_seconds_max": 300,
+    "scientific_chains_max": 1,
+    "retries": 0,
+    "postfreeze_edits_allowed": false,
+    "paid_compute_authorized": false,
+    "estimate_basis": "Same adjacent810->800 exact-rational proof target plus one explicit pre-freeze transitive import-closure repair/smoke gate; no consumer or native integration."
+  },
+  "limits": {
+    "max_new_mathematical_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "no_actual128": true,
+    "no_below_z": 800,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_model_newQ_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "success": "One fresh accepted conditional connected810->800 proof after repaired pre-freeze import closure; +1proof/+0actual. Current remains actual127/frontier810.",
+  "failure_or_falsification": "First material obstruction is terminal; retain accepted actual127/frontier810, preserve raw bytes and return to ingestion. Technical/mathematical obstruction is not automatic physical falsification.",
+  "stop": "One terminal V153 result then Result Ingestion. No actual consumer/actual128, below800/native work, newQ/model promotion or closure.",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V152_INGESTED_V1.md",
+  "recovery_map_ref": "Q048_V152_INGESTION_STATE_V1.json",
+  "repair_contract": {
+    "source_failure_event": "LOCAL-Q048-V152-TERMINAL-TECHNICAL-FAILURE-810-800-V1",
+    "source_failure_class": "FROZEN_TRANSITIVE_IMPORT_PATH_BINDING_OMISSION",
+    "required_exact_path": "proof_runtime/ref/prior_v127/inputs/source/q047_math_v1.py",
+    "required_sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+    "same_bytes_may_also_exist_at": "proof_runtime/ref/prior_v127/inputs/q047_math_v1.py",
+    "prefreeze_import_closure_required": true,
+    "prefreeze_smoke_test": "Load/import the pinned q048_p3_scaled_kernel_v2.py dependency chain from the intended runtime layout without executing theorem/science output; fail before freeze on any missing dynamic import/path/hash.",
+    "no_postfreeze_repair": true,
+    "no_v152_output_reuse_as_science": true
+  }
+}

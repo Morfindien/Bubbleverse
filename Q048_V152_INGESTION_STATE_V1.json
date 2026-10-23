@@ -1,0 +1,111 @@
+{
+  "schema": "bubbleverse.q048.v152.ingestion_state.v1",
+  "created_at_utc": "2026-10-23T10:53:06.043894+00:00",
+  "created_at_europe_copenhagen": "2026-10-23T12:53:06.043894+02:00",
+  "event_id": "LOCAL-Q048-V152-TECHNICAL-FAILURE-INGESTION-V1",
+  "run_id": "LOCAL-Q048-V152-INGESTION-20261023-V1",
+  "prompt_id": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+  "prompt_version": "2.2.0",
+  "prompt_sha256": "52ed8ffb921f7e2c7b7323deceff2b8046dc127144a1a245a43e4f33c111a97c",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_ASSIGNED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "WORKFLOW_STATE": "READY_FOR_HANDOFF",
+  "TECHNICAL_STATE": "V152_FAILURE_REGISTERED",
+  "SCIENTIFIC_STATE": "INCONCLUSIVE",
+  "case_lifecycle": "ACTIVE",
+  "ingestion_state": "NEW",
+  "source_event": "LOCAL-Q048-V152-TERMINAL-TECHNICAL-FAILURE-810-800-V1",
+  "source_run": "LOCAL-Q048-V152-20261023-PROOF-810-800-V1",
+  "source_charge_registered_once": true,
+  "source_charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V152-PRODUCER-IMPORT-PATH-FAILURE-V1",
+  "source_charge_rebilled": false,
+  "result_class": "RUN_FAILURE",
+  "status_axes": {
+    "execution": "FAILURE",
+    "technical_validity": "INVALID",
+    "reproducibility": "NOT_ASSESSED",
+    "robustness": "NOT_ASSESSED",
+    "scientific_effect": "NO_MATERIAL_CHANGE",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "direct_output": "Producer import failed before theorem arithmetic; no V152 RAW/verifier/acceptance/readback was produced.",
+  "technical_interpretation": "Frozen transitive import-path layout omitted source/q047_math_v1.py despite exact helper bytes existing elsewhere. This is a repairable execution-configuration defect exposed before new theorem arithmetic.",
+  "physical_interpretation": "No physical or mathematical falsification follows. Q048 evidence and accepted actual state are unchanged.",
+  "failure_class": "FROZEN_TRANSITIVE_IMPORT_PATH_BINDING_OMISSION",
+  "failure_root_cause": {
+    "class": "FROZEN_TRANSITIVE_IMPORT_PATH_BINDING_OMISSION",
+    "missing_path": "proof_runtime/ref/prior_v127/inputs/source/q047_math_v1.py",
+    "available_same_bytes_path": "proof_runtime/ref/prior_v127/inputs/q047_math_v1.py",
+    "required_by": "q048_p3_scaled_kernel_v2.py dynamic import",
+    "observed_exception": "FileNotFoundError: .../inputs/source/q047_math_v1.py",
+    "interpretation": "Required helper bytes existed, but preflight/freeze did not mirror the transitive source/ relative path required by the pinned kernel. Failure occurred during import before any new810->800 theorem arithmetic."
+  },
+  "actual": {
+    "count": 127,
+    "frontier": 810
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 810
+  },
+  "new_mathematical_proof_cells": 0,
+  "new_actual_cells": 0,
+  "V152_proof_state": "NOT_ACCEPTED_TECHNICAL_FAILURE",
+  "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "No accepted810->800 connected theorem exists; controlled complete four-case x_e(z)/tau_T(z) histories and native error certificate remain unestablished.",
+  "material_bottleneck": "Fresh conditional810->800 theorem or a genuine mathematical obstruction from the accepted V151 left face.",
+  "same_engine_route_justification": "V152 did not complete the scientific proof task; the new exposed transitive import-path failure mode is a material configuration change. V153 adds a pre-freeze import-closure gate before one fresh proof chain, so this is not duplicate completed work.",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS2.2.0",
+  "selected_next_engine_prompt": {
+    "id": "BUBBLEVERSE.MATHEMATICS",
+    "version": "2.2.0",
+    "sha256": "1303901b6bacd0c3115e4a3e166699f161c56e9d87cd21b5ac67e9a6b1db8bd2",
+    "verification": "EXISTING_ENGINE_ID_VERIFIED_IN_PROJECT_LEDGER/HANDOFF HISTORY"
+  },
+  "next_task_ref": "Q048_V153_NEXT_MATHEMATICS_TASK_REPAIR_810_800_V1.json",
+  "next_task_id": "LOCAL-Q048-V153-REPAIRED-IMPORT-CLOSURE-CONDITIONAL-PROOF-810-800-V1",
+  "next_task_fingerprint": "6247478ac387030b22bf9f537b4aa24d7a3ecf4c695e5f1e767c5e055d30217d",
+  "next_task_dispatch": "NOT_DISPATCHED",
+  "budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "parent_ledger": "Q048_QUESTION_BUDGET_LEDGER_V17.json",
+    "ledger_reference": "Q048_QUESTION_BUDGET_LEDGER_V18.json",
+    "ledger_version": 18,
+    "source52_already_charged": true,
+    "run_cost_points": 26,
+    "used_points": 736,
+    "remaining_points": 264,
+    "reserved_points": 0,
+    "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V152-INGESTION-V1",
+    "next_task_estimated_points": 54,
+    "next_task_maximum_points": 65
+  },
+  "repository": {
+    "repository": "Morfindien/Bubbleverse",
+    "verified_main_commit": "642d81b730bcf825bb542d5a713fcdc2737490fd",
+    "verified_v152_paths": [
+      "Q048_QUESTION_BUDGET_LEDGER_V17.json",
+      "Q048_V152_EXECUTION_TERMINAL_FAILURE_V1.json",
+      "Q048_V152_RESULT_STATE_AND_HANDOFF_V1.json",
+      "Q047_SAMLET_JOURNAL_Q048_V152_TECHNICAL_FAILURE_APPENDED_V1-2.md"
+    ],
+    "verified_blob_shas": {
+      "Q048_QUESTION_BUDGET_LEDGER_V17.json": "3df0bbac609d9a07ea2fe6674559ded571fba5e4",
+      "Q048_V152_EXECUTION_TERMINAL_FAILURE_V1.json": "bfc0b58c9f4f65f1a3bc1d15942292c59b3e1816",
+      "Q048_V152_RESULT_STATE_AND_HANDOFF_V1.json": "399e633aa4e5a307945cb8b3a280b4eb6c375dcb",
+      "Q047_SAMLET_JOURNAL_Q048_V152_TECHNICAL_FAILURE_APPENDED_V1-2.md": "0951ec3799f525c90536d37cfed2912e9c90223a"
+    },
+    "journal_remote_full_sha256": "NOT_RECOMPUTED_FROM_REMOTE_BYTES; local continuing copy SHA256 618d9b82b5c09d4702ae8764cf6d13e9569c9ba70cc28f20ff7779d89c2d3ad8",
+    "new_outputs_sync_status": "USER_UPLOAD_PENDING"
+  },
+  "return_route_after_v153": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0"
+}
