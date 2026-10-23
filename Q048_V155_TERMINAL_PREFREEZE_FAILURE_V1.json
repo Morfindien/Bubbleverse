@@ -1,0 +1,54 @@
+{
+  "schema": "bubbleverse.q048.v155.terminal_prefreeze_failure.v1",
+  "status": "TERMINAL_TECHNICAL_PREFREEZE_FAILURE",
+  "created_at_utc": "2026-10-23T22:13:25.966942+00:00",
+  "run_id": "LOCAL-Q048-V155-20261024-CONDITIONAL-CONSUMER-810-800-V1",
+  "task_id": "LOCAL-Q048-V155-CONDITIONAL-ACTUAL-CONSUMER-810-800-V1",
+  "task_fingerprint": "4ea824e47fd32e2c5a6ab78b36113c8aa146cc903dca0e2420ec8c98d5c0f8d5",
+  "q": "Q048",
+  "target_q": "Q048",
+  "phase": "GENUINE_FINAL_PREFLIGHT_SOURCE_ADMISSION",
+  "process_return_code": 1,
+  "error_type": "KeyError",
+  "error_key": "returncode",
+  "error_location": "q048_v155_preflight.py: proof_outer_exit_zero check",
+  "observed_source_schema": "bubbleverse.q048.v154.observed_supervisor_process.v1",
+  "observed_actual_exit_path": [
+    "result",
+    "exit_code"
+  ],
+  "observed_actual_exit_code": 0,
+  "failed_assumed_exit_path": [
+    "returncode"
+  ],
+  "classification": "NEW_V155_PREFLIGHT_HARNESS_SCHEMA_BINDING_DEFECT",
+  "scientific_interpretation": "No scientific/guard/proof falsification. Failure occurred before freeze and before consumer execution.",
+  "preflight_regression_status": "PASS_14_OF_14_BEFORE_GENUINE_PREFLIGHT",
+  "consumer_dispatched": false,
+  "chain_attempts": 0,
+  "new_actual_cells": 0,
+  "new_mathematical_proof_cells": 0,
+  "new_theorem_recomputations": 0,
+  "theorem_consumptions": 0,
+  "current_actual": {
+    "count": 127,
+    "frontier": 810
+  },
+  "current_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 810
+  },
+  "V154_proof_state": "ACCEPTED_UNCONSUMED",
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "retry_count": 0,
+  "postfreeze_edits": false,
+  "freeze_created": false,
+  "accepted_checkpoint_written": false,
+  "canonical_state_advanced": false,
+  "stop_rule": "FIRST_GENUINE_OBSTRUCTION_TERMINAL; NO_RETRY_OR_SAME_VERSION_REPAIR",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+  "process_log": "Q048_V155_PREFLIGHT_PROCESS_LOG_V1.txt"
+}
