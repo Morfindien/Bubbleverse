@@ -1,0 +1,350 @@
+{
+  "schema": "bubbleverse.q048.v151.conditional_consumer_task.v1",
+  "created_at_utc": "2026-10-23T07:30:26.266253+00:00",
+  "task_id": "LOCAL-Q048-V151-CONDITIONAL-ACTUAL-CONSUMER-820-810-V1",
+  "handoff_id": "LOCAL-Q048-V150-ACCEPTED-PROOF-INGESTION-V1-TO-V151",
+  "parent_handoff_id": "LOCAL-Q048-V150-ACCEPTED-CONDITIONAL-PROOF-820-810-V1",
+  "task_type": "BOUNDED_CONDITIONAL_ACTUAL_CONSUMER",
+  "engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+  "engine_prompt": {
+    "file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.3.0-5.md",
+    "path": "/workspace/scratch/e1760a1196bc/v150_ingestion/method_reference/Bubbleverse_Execution_HPC_Motor_Builder_v2.3.0-5.md",
+    "bytes": 100081,
+    "sha256": "2ee97f047d69e2e671e6fa560ec250b103807ba7f9417cc5965be965fd66976a",
+    "library_file_id": "libfile_5d5dedca71608191941e094d469c38bd"
+  },
+  "authorization": {
+    "event_id": "LOCAL-Q048-V150-ACCEPTED-PROOF-INGESTION-V1",
+    "state_file": "Q048_V150_INGESTION_STATE_V1.json",
+    "authorized_action": "Build and, after successful preflight/freeze, execute one new bounded820→810 conditional consumer chain; no dispatch performed by this ingestion.",
+    "exactly_once_key": "V150:d36f030b2463f8da2dd503d1af10a4dccd084170eaf60678e90170cb975c2351"
+  },
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_ASSIGNED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "case": "hillipop-ede_n3",
+  "cell_z": [
+    820,
+    810
+  ],
+  "cell_a": [
+    "1/821",
+    "1/811"
+  ],
+  "parent_authority": {
+    "file": "Q048_V149_ACCEPTED_CHECKPOINT_V1.json",
+    "path": "/workspace/scratch/e1760a1196bc/v150/inputs/Q048_V149_ACCEPTED_CHECKPOINT_V1.json",
+    "bytes": 7232,
+    "sha256": "191d65d8fec84a7acb886468e8a8f3aead692096185e5b44c08812f1de3264b4",
+    "actual": {
+      "count": 126,
+      "frontier": 820
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 820
+    },
+    "endpoint": {
+      "a": "1/821",
+      "E": "14648129855050665859/500000000000000000",
+      "Y": "23227518818235767667/1000000000000000000",
+      "Vbar": "1163175337607566443/200000000000000000"
+    },
+    "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS"
+  },
+  "theorem_authority": {
+    "run_id": "LOCAL-Q048-V150-20261023-PROOF-820-810-V1",
+    "event_id": "LOCAL-Q048-V150-ACCEPTED-CONDITIONAL-PROOF-820-810-V1",
+    "state": "ACCEPTED_UNCONSUMED",
+    "artifacts": {
+      "Q048_V150_ACCEPTANCE_V1.json": {
+        "file": "Q048_V150_ACCEPTANCE_V1.json",
+        "path": "/workspace/scratch/e1760a1196bc/v150/Q048_V150_ACCEPTANCE_V1.json",
+        "bytes": 10106,
+        "sha256": "d36f030b2463f8da2dd503d1af10a4dccd084170eaf60678e90170cb975c2351",
+        "library_file_id": "libfile_d2a419c6e64c8191beb44fc573f8a5ed"
+      },
+      "Q048_V150_RAW_V1.json": {
+        "file": "Q048_V150_RAW_V1.json",
+        "path": "/workspace/scratch/e1760a1196bc/v150/Q048_V150_RAW_V1.json",
+        "bytes": 51813,
+        "sha256": "9be1d52c726308f94a6192ebf0913e5726ece8898637586a2c090e554415e83d",
+        "library_file_id": "libfile_5a6e9468cc848191b100aa0a3db1a222"
+      },
+      "Q048_V150_VERIFICATION_V1.json": {
+        "file": "Q048_V150_VERIFICATION_V1.json",
+        "path": "/workspace/scratch/e1760a1196bc/v150/Q048_V150_VERIFICATION_V1.json",
+        "bytes": 8999,
+        "sha256": "198e850cd84b6a64411996edc4df5d510e1a1af8e4040928d47b4fe725e56d4c",
+        "library_file_id": "libfile_0be124f51c888191848bbe342da7acf0"
+      },
+      "Q048_V150_ACCEPTANCE_READBACK_V1.json": {
+        "file": "Q048_V150_ACCEPTANCE_READBACK_V1.json",
+        "path": "/workspace/scratch/e1760a1196bc/v150/Q048_V150_ACCEPTANCE_READBACK_V1.json",
+        "bytes": 5039,
+        "sha256": "f4c66d5fd03f1fea3a49227e94ba5fbe11bd7f91a943489f03070d1a7ab2875c",
+        "library_file_id": "libfile_2300c9e74ae08191a9bf8aabc689bd94"
+      },
+      "Q048_V150_EXECUTION_V1.json": {
+        "file": "Q048_V150_EXECUTION_V1.json",
+        "path": "/workspace/scratch/e1760a1196bc/v150/Q048_V150_EXECUTION_V1.json",
+        "bytes": 5650,
+        "sha256": "75cc9bad795216ec2a04e81b17f9904c82e1c36838c70a25ae12e3abc92c2368",
+        "library_file_id": "libfile_a953320136748191b048209ce34eb1d1"
+      },
+      "Q048_V150_FREEZE_V1.json": {
+        "file": "Q048_V150_FREEZE_V1.json",
+        "path": "/workspace/scratch/e1760a1196bc/v150/Q048_V150_FREEZE_V1.json",
+        "bytes": 5693,
+        "sha256": "a26b3a0ec7f24be9b1a4f4091756105ae75e0c2e2fdd67853610d264e7fee23a",
+        "library_file_id": "libfile_bf3bd6262e008191a68128aded0ad1a0"
+      },
+      "Q048_V150_SPEC_V1.json": {
+        "file": "Q048_V150_SPEC_V1.json",
+        "path": "/workspace/scratch/e1760a1196bc/v150/Q048_V150_SPEC_V1.json",
+        "bytes": 13706,
+        "sha256": "06eea16e53738fa4e7d600834ef10fee71eb7c9852eceddccee8e7c94dcd4784",
+        "library_file_id": "libfile_8351781e37a881918eac276cd60d48b2"
+      },
+      "Q048_V150_INPUT_RECOVERY_MAP_V1.json": {
+        "file": "Q048_V150_INPUT_RECOVERY_MAP_V1.json",
+        "path": "/workspace/scratch/e1760a1196bc/v150/Q048_V150_INPUT_RECOVERY_MAP_V1.json",
+        "bytes": 24691,
+        "sha256": "57c79273d0bc89d4c616a6075f50d11e359b125ad13de9bfa54ad6586c1a36e9",
+        "library_file_id": "libfile_fe1b6018b2208191847da1a1095abe0a"
+      },
+      "Q048_V150_RESULT_STATE_AND_HANDOFF_V1.json": {
+        "file": "Q048_V150_RESULT_STATE_AND_HANDOFF_V1.json",
+        "path": "/workspace/scratch/e1760a1196bc/v150/Q048_V150_RESULT_STATE_AND_HANDOFF_V1.json",
+        "bytes": 10003,
+        "sha256": "ea9cf55c4414d890204d37626ca6e9d3a117c986a9e612bddec13fab1801e839",
+        "library_file_id": "libfile_c4e364de9db88191b177f72768d4f6d5"
+      }
+    },
+    "copy_without_recomputation": true
+  },
+  "documentary_guard_label_addendum": {
+    "file": "Q048_V150_GUARD_LABEL_ADDENDUM_V1.json",
+    "path": "/workspace/scratch/e1760a1196bc/v150_ingestion/Q048_V150_GUARD_LABEL_ADDENDUM_V1.json",
+    "bytes": 2496,
+    "sha256": "af31a3b6c117c7e767dc58d88533d5ac0c0b1c06aa638e59b93252983dd20f08"
+  },
+  "guard_authority": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "path": "/workspace/scratch/e1760a1196bc/v149_evidence/q048_guard_local_v_result_v12.json",
+    "bytes": 1198030,
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_evaluator_control": false,
+    "control_evaluator_control": true,
+    "primary_index_crosscheck": 63,
+    "primary_row_sha256": "3d836dfe4a249fbad1c8e4626e24c290825791d1b05683b7310a3ec164ccd663",
+    "control_row_sha256": "16395382a476bf53b484610306614f23df466bb62445bea3cf11b5b9287b7f83",
+    "selection": "Independently select unique enclosing evaluator role and exact z/a cell in both consumer and validator; index/hash are crosschecks.",
+    "left_glue": {
+      "a0": "1/821",
+      "E_input_left": "14648129855050665859/500000000000000000",
+      "Y_left": "23227518818235767667/1000000000000000000",
+      "V_previous": "1163175337607566443/200000000000000000"
+    },
+    "E_safe_left_distinct": "181610432624085729/6250000000000000",
+    "expected_endpoint_crosscheck_only": {
+      "a": "1/811",
+      "E": "87861503356118157/3125000000000000",
+      "Y": "22285530672339861267/1000000000000000000",
+      "Vbar": "5587227468217201099/1000000000000000000"
+    },
+    "endpoint_derivation": "Primary exact row63 a1/E_right/Y_right/V_admitted, independently reconstructed; routed endpoint values are crosschecks only."
+  },
+  "retained_theorem_values": {
+    "K_upper": "17511444796066234647/4000000000000000",
+    "connected_lower": "346752030166741/1000000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "beta_lower": {
+      "L": "5107976518883627459910383288603148205864461772618724047921886622451214296881306631449620448315530778671064808476164126834620591902587997103/60122238755715498035704175310456776060163974761962890625000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "R": "45839591631022608454240381547100435510754500320427083236771382534191423070545902852239967520741171364153840956940474562887942180123291973927/541099648801439482321337577794110984541475772857666015625000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "source_cover_contract": {
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; bounds hold on their existing interval and at the new endpoint only whenever an admissible continuation reaches it",
+    "no_assumed_future_domain_membership": true,
+    "exact_selector_existence_uniqueness": false,
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false
+  },
+  "continuation_hypothesis": "Existing absolutely-continuous source-real solution under the admitted background and fixed-q two-operator inclusion; no assumed future domain membership. Bounds apply on its existing interval and at a1 whenever an admissible continuation reaches a1. Exact selector existence/uniqueness is not established.",
+  "scope_text_normalization": "New descriptive background may say row63 only with the linked addendum; preserve original acceptance bytes and original description as provenance.",
+  "current_state": {
+    "actual": {
+      "count": 126,
+      "frontier": 820
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 820
+    },
+    "V148_proof_state": "ACCEPTED_CONSUMED_ONCE",
+    "V150_proof_state": "ACCEPTED_UNCONSUMED",
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false,
+    "scientific_state": "INCONCLUSIVE"
+  },
+  "candidate_only_after_full_acceptance": {
+    "actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 810
+    },
+    "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+    "new_actual_cells": 1,
+    "new_mathematical_proof_cells": 0,
+    "new_theorem_recomputations": 0,
+    "theorem_consumptions": 1
+  },
+  "limits": {
+    "max_new_actual_cells": 1,
+    "max_accepted_actual_count": 127,
+    "no_actual128": true,
+    "no_below_z": 810,
+    "max_new_mathematical_proof_cells": 0,
+    "max_new_theorem_recomputations": 0,
+    "theorem_consumptions_max": 1,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_new_q_model_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false,
+    "science_seconds_max": 300
+  },
+  "execution_chain": [
+    "new_consumer",
+    "independent_validator",
+    "provisional_record",
+    "postaccept_checks",
+    "serialized_checkpoint_publication_and_file_readback"
+  ],
+  "required_gates": [
+    "Reconcile current journal/ledger/repository/Library for a completed or concurrent V151; replay produces no new cell or duplicate charge.",
+    "Reserve current shared budget before substantive execution. Freeze new sources/spec/input hashes and full exact ordered gate/control rosters.",
+    "At least inherited48 real preflight checks; preserve all applicable88 V149 candidate checks and88 non-noop semantic controls, adapting all version/cell/count/budget constants and adding addendum and row63 binding. Do not report labels as tests.",
+    "Independently derive row63 primary endpoint and exact left glue. Reject control-as-primary, silent cap swap, row62 label used as numerical selector or missing addendum.",
+    "Copy V150 theorem values, hypothesis, proof scope and acceptance hashes exactly; no producer/verifier imports or theorem arithmetic.",
+    "Provisional/postaccept objects cannot advance canonical state. Retain exact types, full schema checks, all applicable16 V149 final checkpoint mutation controls plus reordered inherited-charge-ID rejection; bind ledger14/current used572/remaining428 and actual reservation lineage in every stage.",
+    "One chain has a shared300s deadline including final publication, file readback and frozen-pin verification. Check final deadline before PASS; timeout/failure is terminal, no retry or postfreeze repair.",
+    "Only a completely accepted serialized checkpoint plus independently validated publication/readback/execution receipts may admit actual127/frontier810 and consume V150 once. All failure/partial results retain actual126/frontier820 and V150 unconsumed.",
+    "Original V150 frozen budget fields remain historical V12/reserve65; receiver current budget fields bind ledger14 or reconciled successor separately, with no rewrite.",
+    "Full cumulative journal, source register, evidence map, unique budget settlement, artifact hashes and all code/results/logs must be delivered before return."
+  ],
+  "method_reuse": {
+    "status": "ADAPT_PINNED_METHODS_DO_NOT_RUN_OLD_MAIN",
+    "materialized_verified_sources": [
+      {
+        "file": "q048_v149_consumer.py",
+        "path": "/workspace/scratch/e1760a1196bc/v150_ingestion/method_reference/q048_v149_consumer.py",
+        "bytes": 4027,
+        "sha256": "fb0f8989a26957ccf56d7ac18c60f9b8608fb5b34c4b6361dd67715f30720b37"
+      },
+      {
+        "file": "q048_v149_validate.py",
+        "path": "/workspace/scratch/e1760a1196bc/v150_ingestion/method_reference/q048_v149_validate.py",
+        "bytes": 7411,
+        "sha256": "b3bfd75aab7483a543d899cc426c7d16c5300e37b0760f03989f37272f98ef73"
+      },
+      {
+        "file": "q048_v149_publish.py",
+        "path": "/workspace/scratch/e1760a1196bc/v150_ingestion/method_reference/q048_v149_publish.py",
+        "bytes": 2919,
+        "sha256": "48fe26738c04249697166557e24ecace4f60696feac908ffe18e8995f4279a56"
+      },
+      {
+        "file": "q048_v149_run.py",
+        "path": "/workspace/scratch/e1760a1196bc/v150_ingestion/method_reference/q048_v149_run.py",
+        "bytes": 2363,
+        "sha256": "ff2ebbe1065910b77ead530ec74c71e6cb8d84bc8e2f0b05cb7d9ac9a681f8ce"
+      }
+    ],
+    "pinned_old_spec": {
+      "file": "Q048_V149_SPEC_V1.json",
+      "path": "/workspace/scratch/e1760a1196bc/v149_evidence/Q048_V149_SPEC_V1.json",
+      "bytes": 24340,
+      "sha256": "913150e40e825244db53cc748f7b4ef027b6e2af54bfa083f71a2af91bf48ebf"
+    },
+    "pinned_old_freeze": {
+      "file": "Q048_V149_FREEZE_V1.json",
+      "path": "/workspace/scratch/e1760a1196bc/v149_evidence/Q048_V149_FREEZE_V1.json",
+      "bytes": 4126,
+      "sha256": "919cd5c6b16d271b14c022a39446e7a4b846b061557911719ad7487e3100badb"
+    },
+    "remaining_helpers": "Recover only necessary exact I/O/provisional/postaccept helper source pins from V149 freeze/manifest before adapting; no broad rediscovery. V149 source methods are references, not current budget/state authority.",
+    "known_adaptation_requirements": [
+      "V149 hard-coded row62/830→820/count126 and budgetV9 values must become exact new task bindings throughout the new program family.",
+      "V149 run final deadline flag alone is insufficient; enforce fail-closed final deadline as required above."
+    ]
+  },
+  "question_budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "total_points": 1000,
+    "ledger_reference": "Q048_QUESTION_BUDGET_LEDGER_V14.json",
+    "ledger_version": 14,
+    "ledger_sha256": "157dfaa5eee0b49ff723e10351eacaa67913dd2d61b5b116a289f4673c58fe86",
+    "used_points": 572,
+    "remaining_points": 428,
+    "inherited_charge_ids": [
+      "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-PROOF-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-CONSUMER-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-REDELIVERY-AUDIT-20261023-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-PROOF-820-810-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-INGESTION-V1"
+    ],
+    "estimated_run_cost_points": 52,
+    "maximum_run_cost_points": 65,
+    "reserved_points": 0,
+    "budget_event_id": null,
+    "status": "PROSPECTIVE_NOT_RESERVED_OR_DEBITED",
+    "receiver_rule": "Reconcile any newer authorized ledger, reserve sufficient closeout-inclusive scope, debit actual new work once; never reset budget."
+  },
+  "compute_backend": "LOCAL_RUNTIME",
+  "github_worthwhile": "NO",
+  "estimate_basis": "Prior adjacent exact-record chain and V150 proof complete in seconds; new consumer is finite JSON/hash copying plus real controls. Local one-chain cap300s; no external HPC resource needed.",
+  "journal_reference": "Q047_SAMLET_JOURNAL_Q048_V150_INGESTED_V1.md",
+  "github_memory": "USER_UPLOAD_PENDING; no commit/PR/dispatch made",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+  "stop_condition": "One accepted complete consumer/publication chain OR first precise obstruction; no further cell, proof, repair loop or self-created route.",
+  "task_fingerprint": "eb708dce6f57c79f49b369a0f65aa5ece13e1dd99f20a8e8ec4d395dd5db1f20"
+}
