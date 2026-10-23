@@ -1,0 +1,79 @@
+{
+  "schema": "bubbleverse.question_work_budget.ledger.v1",
+  "policy_id": "bubbleverse.question_work_budget",
+  "policy_version": "1.1-operator-scope-extension",
+  "question_budget_id": "LOCAL-Q049-SHARED-1000PT-BUDGET-V1",
+  "current_q": "Q049",
+  "target_q": "Q049",
+  "q_id_status": "PROPOSED_REQUIRES_CANONICAL_REGISTRY_WRITEBACK",
+  "case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+  "parent_q_id": "Q048",
+  "parent_case_id": "NOT_ASSIGNED",
+  "root_q_id": "Q048",
+  "relation": "FOCUSED_SUBQUESTION",
+  "exact_question": "Under the frozen Q048 source/capture and fixed accepted z_reio, what rigorous upper bound can be placed on the remaining low-redshift contribution to |Δtau_T| over 0 <= z <= 810 for the hillipop-ede_n3 configuration between the event-resolved latch q=xHeII=10^-6 and the same-event reset q=0, using a correlation-preserving global stability/envelope analysis anchored at the validated z=810 frontier rather than reconstructing the full low-z x_e(z) trajectory cell by cell?",
+  "question_sha256": "56be0d72bb554c456221857e5ef29eb870455e6d48eeb244bd30f1ef33f003f3",
+  "limit_pts": 1000,
+  "ledger_version": 1,
+  "parent_ledger_version": null,
+  "status": "AUTHORIZED_NOT_STARTED",
+  "authorization": {
+    "selection": "AUTHORIZED_BY_OPERATOR_MOTOR14_RUN",
+    "adoption": "AUTHORIZED_BY_OPERATOR_SCOPE_AS_NEXT_TASK_SELECTION",
+    "scientific_execution": "NOT_REQUESTED_IN_THIS_MOTOR14_RUN",
+    "canonical_registry_writeback": "PENDING"
+  },
+  "activation": {
+    "event_id": "LOCAL-Q049-BUDGET-ACTIVATION-M14-V1",
+    "created_at_utc": "2026-10-23T22:40:33Z",
+    "mode": "NEW_FOCUSED_SUCCESSOR_OF_EXHAUSTED_Q048",
+    "used_at_activation_pts": 0,
+    "remaining_at_activation_pts": 1000,
+    "basis": "Motor 14 v7.2 successor review selected a genuinely narrower observable and a materially different global-envelope method; Q048 costs are not transferred."
+  },
+  "used_pts": 0,
+  "remaining_pts": 1000,
+  "overrun_pts": 0,
+  "outstanding_reservations": [],
+  "charges": [],
+  "reservation_history": [],
+  "inherited_charge_ids": [],
+  "newly_applied_charge_ids": [],
+  "prospective_first_run": {
+    "engine": "BUBBLEVERSE.MATHEMATICS2.2.0",
+    "task": "Derive and validate a correlation-preserving global stability/envelope bound for the remaining hillipop-ede_n3 low-z optical-depth tail from the validated z=810 frontier; do not replay the Q048 10-redshift cell chain.",
+    "estimated_pts": 140,
+    "maximum_pts": 180,
+    "reservation_status": "NOT_RESERVED_NOT_CHARGED"
+  },
+  "inherited_results_no_charge": [
+    {
+      "id": "Q048_V151_ACCEPTED_CHECKPOINT_V1",
+      "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+      "role": "validated actual127/frontier810 anchor"
+    },
+    {
+      "id": "Q048_V154_ACCEPTED_UNCONSUMED_PROOF_810_800",
+      "role": "mathematical evidence only; do not pretend it advanced actual state"
+    },
+    {
+      "id": "Q048 source/capture",
+      "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "role": "frozen input identity"
+    },
+    {
+      "id": "Q048_H_EVENT_PAYLOAD_REPORT_V1",
+      "role": "preserved earlier conditional three-case certificates and hillipop-ede_n3 scalar-wall obstruction; no four-case completion"
+    }
+  ],
+  "rules": [
+    "One 1000-point allowance belongs to Q049 and never resets across V-versions or scientific motors.",
+    "Q048 costs are historical context only and are not transferred into Q049.",
+    "Motor 14 global revision/task selection is outside the Q049 budget.",
+    "Production and publication motors are outside the Q049 budget.",
+    "Scientific investigation/execution/validation work and substantive scientific ingestion are chargeable when they belong to Q049.",
+    "Do not charge a run twice; preserve append-only accounting."
+  ],
+  "created_at_utc": "2026-10-23T22:40:33Z"
+}
