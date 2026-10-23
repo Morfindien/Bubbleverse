@@ -1,0 +1,323 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.2.0",
+  "prompt_id": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+  "prompt_version": "2.2.0",
+  "prompt_sha256": "52ed8ffb921f7e2c7b7323deceff2b8046dc127144a1a245a43e4f33c111a97c",
+  "handoff_id": "LOCAL-Q048-V153-TECHNICAL-FAILURE-INGESTION-V1",
+  "event_id": "LOCAL-Q048-V153-TECHNICAL-FAILURE-INGESTION-V1",
+  "run_id": "LOCAL-Q048-V153-INGESTION-20261023-V1",
+  "created_at_utc": "2026-10-23T20:50:08.539492+00:00",
+  "created_at_europe_copenhagen": "2026-10-23T22:50:08.539492+02:00",
+  "case_id": "NOT_ASSIGNED",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "evidence_cutoff": "Current authorized Q001-Q048 state and pinned historical source/capture; no additional external publication cutoff invented.",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "WORKFLOW_STATE": "READY_FOR_HANDOFF",
+  "TECHNICAL_STATE": "V153_PREFREEZE_FAILURE_REGISTERED",
+  "SCIENTIFIC_STATE": "INCONCLUSIVE",
+  "epistemic_status": "INCONCLUSIVE",
+  "terminal_status": null,
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-V153-TERMINAL-PREFREEZE-SCHEMA-FAILURE-810-800-V1"
+  ],
+  "source_state_version": "V153_TERMINAL_PREFREEZE_FAILURE",
+  "target_state_version": "V153_INGESTED_V1",
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+  "selected_next_engine_prompt": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+    "prompt_version": "2.3.0",
+    "file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.3.0-7.md",
+    "library_file_id": "libfile_00ede0e6bc188191a4fd66c9132c4380",
+    "bytes": 100081,
+    "sha256": "2ee97f047d69e2e671e6fa560ec250b103807ba7f9417cc5965be965fd66976a",
+    "identity_evidence": "Current exact prompt bytes/header plus existing same engine ID in inherited ledger charge history; no new registry/launcher deployment claimed.",
+    "repository_prompt_qualification": "Repository contains older Builder2.2.0 prompt only among inspected matching paths; that version is not substituted."
+  },
+  "engine_registry_ref": "Q048_V153_INGESTION_AUDIT_AND_MEMORY_V1.json#engine_reference; verified existing prompt/history, no registry deployment claimed",
+  "execution_profile_ref": "Q048_V153_INGESTION_AUDIT_AND_MEMORY_V1.json#execution_profile",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V153_INGESTED_V1.md",
+  "source_register_ref": "Full journal plus Q048_V153_INGESTION_AUDIT_AND_MEMORY_V1.json#source_recovery",
+  "claim_evidence_map_ref": "Q048_V153_INGESTION_AUDIT_AND_MEMORY_V1.json#claim_evidence_map",
+  "result_provenance_ref": "Q048_V153_INGESTION_AUDIT_AND_MEMORY_V1.json",
+  "anomaly_tension_registry_ref": "Preserved incoming journal; no new scientific anomaly",
+  "completed_task_ledger_ref": "Full journal plus source V153 terminal/preflight records; no scientific task marked completed",
+  "route_history_ref": "Full journal plus Q048_V153_INGESTION_AUDIT_AND_MEMORY_V1.json#materiality_and_route",
+  "integrity_manifest_ref": "Q048_V153_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "V153 terminal technical result registered once",
+    "New ingestion26-point charge; ledger19→20",
+    "One distinct V154 Builder2.3.0 repair/execution task prepared, not dispatched"
+  ],
+  "frozen_configuration_refs": [
+    {
+      "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+      "bytes": 8071,
+      "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+      "access": "VERIFIED_LOCAL_BYTES_AND_CURRENT_ACCEPTED_STATE",
+      "accepted_actual": {
+        "count": 127,
+        "frontier": 810
+      },
+      "frontiers": {
+        "camspec-lcdm": 1440,
+        "camspec-ede_n3": 1440,
+        "hillipop-lcdm": 1440,
+        "hillipop-ede_n3": 810
+      },
+      "endpoint": {
+        "a": "1/811",
+        "E": "87861503356118157/3125000000000000",
+        "Y": "22285530672339861267/1000000000000000000",
+        "Vbar": "5587227468217201099/1000000000000000000"
+      },
+      "retained_theorem_reference": {
+        "K_upper": "17511444796066234647/4000000000000000",
+        "connected_lower": "346752030166741/1000000000000000000",
+        "h_upper": "99999/100000",
+        "thermal_domain": [
+          "-1/1000000",
+          "1/50"
+        ],
+        "operators": [
+          "HMLA",
+          "SWIFT"
+        ],
+        "q_branches": {
+          "L": "1/1000000",
+          "R": "0"
+        },
+        "beta_dependency_method": "same_h_monotone",
+        "beta_lower": {
+          "L": "5107976518883627459910383288603148205864461772618724047921886622451214296881306631449620448315530778671064808476164126834620591902587997103/60122238755715498035704175310456776060163974761962890625000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "R": "45839591631022608454240381547100435510754500320427083236771382534191423070545902852239967520741171364153840956940474562887942180123291973927/541099648801439482321337577794110984541475772857666015625000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS"
+    },
+    {
+      "file": "q048_guard_local_v_result_v12.json",
+      "bytes": 1198030,
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+      "primary_control": false,
+      "control_role": "secondary comparison only; never substitute its background or endpoint",
+      "row_index_reference_only": 64,
+      "selection": "Unique exact a/z cell within each enclosing evaluator control role before any row-index use",
+      "primary_row_sha256": "c3b8c594904bb8f37641be730311f502e5d51c284bcfd16041d152d25e7ffa2e",
+      "control_row_sha256": "da57d19c9240bd2703d18cc063b3d6a0320dcf1a6bab00dbe39634866de1201b",
+      "left_glue": {
+        "a0": "1/811",
+        "E_input_left": "87861503356118157/3125000000000000",
+        "Y_left": "22285530672339861267/1000000000000000000",
+        "V_previous": "5587227468217201099/1000000000000000000"
+      },
+      "expected_primary_endpoint_crosscheck_only": {
+        "a1": "1/801",
+        "E_right": "6742295226862717477/250000000000000000",
+        "Y_right": "5342729072289972639/250000000000000000",
+        "V_admitted": "1341250898132213803/250000000000000000"
+      },
+      "energy_cap_used": "87861503356118157/3125000000000000",
+      "E_safe_left_distinct": "27883795290630840619/1000000000000000000",
+      "metadata_qualification": "accepted/committed/whole_cell/domain flags verified; metadata is not a new theorem",
+      "source_state_reset": false
+    },
+    {
+      "role": "V150 METHOD_REFERENCE_ONLY. Do not execute its historical main/suite or reuse its820->810 conclusion as810->800 evidence.",
+      "artifacts": {
+        "q048_v150_proof.py": "c9b24232f353370e82719f107a21124ef4e0b45b4b1d4b642fabfa473960bf55",
+        "q048_v150_verify.py": "4b7e8e90e363da37fb3dfde194aff81b674eda1c99f9282a7f820127b0f9e6e6",
+        "q048_v150_run.py": "2bd9c96a301cb78d5c3ff7577eaf4ce25090423673d17dbdbcec0ec187ca74df",
+        "Q048_V150_ACCEPTANCE_V1.json": "d36f030b2463f8da2dd503d1af10a4dccd084170eaf60678e90170cb975c2351"
+      },
+      "beta_dependency_method": "same_h_monotone",
+      "availability": "Known exact hashes from the accepted V150 package; recover exact bytes by existing Library/GitHub identities before execution."
+    }
+  ],
+  "open_material_uncertainties": [
+    "Missing accepted810→800 connected theorem",
+    "Complete four-case x_e(z)/tau_T(z) controlled history bounds and NativeP6 unresolved"
+  ],
+  "missing_information": [
+    "No missing identity/scope/decisive input for this routing task; historical global raw-link accessibility is not fully reverified."
+  ],
+  "next_task": {
+    "file": "Q048_V154_NEXT_BUILDER_TASK_PREFLIGHT_REPAIR_PROOF_810_800_V1.json",
+    "task_id": "LOCAL-Q048-V154-PREFLIGHT-SCHEMA-IMPORT-CLOSURE-REPAIR-PROOF-810-800-V1",
+    "task_fingerprint": "4488d4cb6111e39719ddfb40a5a1528bddb8bca90b69cf19e4bb1580b3e44cd0",
+    "dispatch_status": "PREPARED_NOT_EXECUTED"
+  },
+  "success_condition": "One new accepted conditional810->800 proof after the complete repaired preflight/import gate and frozen producer/verifier/acceptance/final audit; +1proof/+0actual maximum. actual127/frontier810 unchanged.",
+  "failure_or_falsification_condition": "First material real candidate obstruction is terminal; preserve all raw evidence and accepted state. Failed implementation or insufficient bound is not physical falsification.",
+  "stop_condition": "One terminal result then Result Ingestion. No consumer/actual128, below800/native work, historical mains/suites, reset/refit/recapture/tuning, model/newQ/closure, or automatic next route.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "No new accepted810->800 theorem; complete x_e(z)/tau_T(z) bounds/native error relation unestablished. Missing required work is not documented scientific closure.",
+  "handoff_completeness": "COMPLETE",
+  "handoff_limitations": "Complete for this current route; no proof execution by ingestion and no global re-verification of every historical source link.",
+  "writeback_status": "PENDING",
+  "delivery_status": "PREPARED",
+  "operator_gate": "No additional permission required for this bounded prepared route. No newQ, paid compute, publishing or model promotion authorized.",
+  "actual": {
+    "count": 127,
+    "frontier": 810
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 810
+  },
+  "new_mathematical_proof_cells": 0,
+  "new_actual_cells": 0,
+  "V153_proof_state": "NOT_ACCEPTED_PREFREEZE_TECHNICAL_FAILURE",
+  "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "source_charge_id": "LOCAL-Q048-BUDGET-CHARGE-V153-PREFREEZE-FAILURE-RECORD-SCHEMA-V1",
+  "source_charge_registered_once": true,
+  "source_charge_rebilled": false,
+  "status_axes": {
+    "execution": "FAILURE",
+    "technical_validity": "INVALID",
+    "reproducibility": "NOT_ASSESSED",
+    "robustness": "NOT_ASSESSED",
+    "scientific_effect": "NO_MATERIAL_CHANGE",
+    "anomaly": "NONE_IDENTIFIED"
+  },
+  "next_task_ref": "Q048_V154_NEXT_BUILDER_TASK_PREFLIGHT_REPAIR_PROOF_810_800_V1.json",
+  "next_task_fingerprint": "4488d4cb6111e39719ddfb40a5a1528bddb8bca90b69cf19e4bb1580b3e44cd0",
+  "next_task_dispatch": "NOT_DISPATCHED",
+  "question_budget": {
+    "policy_id": "bubbleverse.question_work_budget",
+    "policy_version": "1.0.0",
+    "limit_pts": 1000,
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "activation_ref": "Inherited ledger activation object preserved in ledger20",
+    "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V20.json",
+    "ledger_version": 20,
+    "parent_ledger_version": 19,
+    "run_id": "LOCAL-Q048-V153-INGESTION-20261023-V1",
+    "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V153-INGESTION-V1",
+    "parent_used_pts": 786,
+    "estimated_run_cost_pts": 26,
+    "reserved_pts": 0,
+    "reservation_finalized_pts": 32,
+    "assessed_run_cost_pts": 26,
+    "run_cost_breakdown": [
+      {
+        "component": "scope_and_state_recovery",
+        "pts": 3,
+        "basis": "Reuse verified V153 bundle/current journal and recover exact Q, source event and shared ledger19."
+      },
+      {
+        "component": "routing_and_materiality",
+        "pts": 5,
+        "basis": "Technical/scientific separation, completion gate, anti-loop decision and narrowly scoped Builder successor with fixed mathematics."
+      },
+      {
+        "component": "computation",
+        "pts": 2,
+        "basis": "Input/output hashes,59 manifest pins, Git blob identities, budget arithmetic and task fingerprint; no science."
+      },
+      {
+        "component": "repository_and_engine_recovery",
+        "pts": 5,
+        "basis": "Current GitHub main/tree reconciliation and exact Builder2.3.0 prompt recovery; older repository2.2.0 prompt not substituted."
+      },
+      {
+        "component": "validation",
+        "pts": 4,
+        "basis": "Exactly-once charge/event checks, failure-schema diagnosis, route boundaries and coherent handoff references."
+      },
+      {
+        "component": "journal_handoff_delivery",
+        "pts": 7,
+        "basis": "Full journal append, ledger20, one V154 task, ingestion state, memory instructions and individual-file delivery."
+      }
+    ],
+    "cost_basis": "New intake/routing work only. Source50 is already finalized in ledger19 and is not rebilled. Whole-point operator work assessment, not measured money/tokens.",
+    "inherited_charge_ids": [
+      "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-PROOF-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-CONSUMER-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-REDELIVERY-AUDIT-20261023-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-PROOF-820-810-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V151-CONSUMER-820-810-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V151-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V152-PRODUCER-IMPORT-PATH-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V152-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V153-PREFREEZE-FAILURE-RECORD-SCHEMA-V1"
+    ],
+    "newly_applied_charge_ids": [
+      "LOCAL-Q048-BUDGET-CHARGE-V153-INGESTION-V1"
+    ],
+    "used_pts": 812,
+    "remaining_pts": 188,
+    "overrun_pts": 0,
+    "status": "ACTIVE",
+    "last_validated_state_ref": {
+      "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+      "actual": {
+        "count": 127,
+        "frontier": 810
+      },
+      "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+      "V152_proof_state": "NOT_ACCEPTED_TECHNICAL_FAILURE",
+      "V152_failure_event": "LOCAL-Q048-V152-TERMINAL-TECHNICAL-FAILURE-810-800-V1",
+      "V153_proof_state": "NOT_ACCEPTED_PREFREEZE_TECHNICAL_FAILURE",
+      "V153_failure_event": "LOCAL-Q048-V153-TERMINAL-PREFREEZE-SCHEMA-FAILURE-810-800-V1",
+      "V153_ingestion_event": "LOCAL-Q048-V153-TECHNICAL-FAILURE-INGESTION-V1"
+    },
+    "terminal_handoff_ref": null
+  },
+  "next_question_transition": {
+    "required": false,
+    "reason": "Shared balance188 remains and Q is not closed",
+    "destination_engine_id": null,
+    "next_question_ref": null,
+    "status": "NOT_REQUIRED"
+  },
+  "output_file_refs": [
+    "Q047_SAMLET_JOURNAL_Q048_V153_INGESTED_V1.md",
+    "Q048_QUESTION_BUDGET_LEDGER_V20.json",
+    "Q048_V154_NEXT_BUILDER_TASK_PREFLIGHT_REPAIR_PROOF_810_800_V1.json",
+    "Q048_V153_INGESTION_RESULT_AND_HANDOFF_V1.md",
+    "Q048_V153_INGESTION_AUDIT_AND_MEMORY_V1.json"
+  ],
+  "output_manifest_ref": "Q048_V153_INGESTION_OUTPUT_MANIFEST_V1.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "Existing root; no new segment",
+    "base_commit_sha": "deb06ff35001385864742bd8f909f7c790742b44",
+    "source_freshness": "VERIFIED",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V153_INGESTED_V1.md",
+    "current_state_path": "NOT_ESTABLISHED; no competing global CURRENT_STATE created",
+    "index_refs": [],
+    "cross_reference_refs": [
+      "Q048_V153_INGESTION_AUDIT_AND_MEMORY_V1.json"
+    ],
+    "memory_update_ref": "Q048_V153_INGESTION_GITHUB_MEMORY_UPDATE_V1.md",
+    "target_paths_status": "PROPOSED_NEW_VERSIONED_FILES_IN_VERIFIED_REPOSITORY_ROOT",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V153_INGESTION_FILES_V1.md"
+  }
+}

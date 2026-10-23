@@ -1,0 +1,555 @@
+{
+  "schema": "bubbleverse.q048.v154.builder_prefreeze_repair_proof.task.v1",
+  "created_at_utc": "2026-10-23T20:50:08.539492+00:00",
+  "task_id": "LOCAL-Q048-V154-PREFLIGHT-SCHEMA-IMPORT-CLOSURE-REPAIR-PROOF-810-800-V1",
+  "task_fingerprint": "4488d4cb6111e39719ddfb40a5a1528bddb8bca90b69cf19e4bb1580b3e44cd0",
+  "task_fingerprint_basis": {
+    "task_id": "LOCAL-Q048-V154-PREFLIGHT-SCHEMA-IMPORT-CLOSURE-REPAIR-PROOF-810-800-V1",
+    "current_q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "objective": "Repair the V153 preflight failure-record schema binding and validate the complete no-science preflight/import closure; execute at most one fresh existing-method conditional source-real connected proof810->800, with zero actual admission.",
+    "engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+    "engine_prompt_sha256": "2ee97f047d69e2e671e6fa560ec250b103807ba7f9417cc5965be965fd66976a",
+    "source_event_id": "LOCAL-Q048-V153-TERMINAL-PREFREEZE-SCHEMA-FAILURE-810-800-V1",
+    "source_terminal_sha256": "586475f710b235776cedd12d55e6f463ee0eceb2d36c92e4df01d93c90cf0c9b",
+    "source_preflight_sha256": "9a2db58a1580aebf3c1bb1fdc6158883edfa383747d434aba14dd9a6b9f6a706",
+    "failing_preflight_code_sha256": "9ffddb36ef3916cf00d5e1997574eba7c035b79b2e9a78cb1b6275a09eeb9f60",
+    "parent_checkpoint_sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "guard_primary_sha256": "c3b8c594904bb8f37641be730311f502e5d51c284bcfd16041d152d25e7ffa2e",
+    "guard_control_sha256": "da57d19c9240bd2703d18cc063b3d6a0320dcf1a6bab00dbe39634866de1201b",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "cell_z": [
+      810,
+      800
+    ],
+    "method_reference_hashes": {
+      "q048_v150_proof.py": "c9b24232f353370e82719f107a21124ef4e0b45b4b1d4b642fabfa473960bf55",
+      "q048_v150_verify.py": "4b7e8e90e363da37fb3dfde194aff81b674eda1c99f9282a7f820127b0f9e6e6",
+      "q048_v150_run.py": "2bd9c96a301cb78d5c3ff7577eaf4ce25090423673d17dbdbcec0ec187ca74df",
+      "Q048_V150_ACCEPTANCE_V1.json": "d36f030b2463f8da2dd503d1af10a4dccd084170eaf60678e90170cb975c2351"
+    },
+    "budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_version": 20,
+    "ledger_sha256": "4275475ed795fd2ee8f9eaf5cae521a7a6999e440d7f8a963248542bde2b5b15",
+    "limits": {
+      "max_new_mathematical_proof_cells": 1,
+      "max_new_actual_cells": 0,
+      "no_actual128": true,
+      "no_below_z": 800,
+      "no_native_integration": true,
+      "no_reset_refit_recapture_tuning": true,
+      "no_historical_main_or_suite": true,
+      "no_model_newQ_or_closure": true,
+      "retry_count": 0,
+      "postfreeze_edits_allowed": false
+    },
+    "repair_contract_version": "V154_EXACT_FAILURE_RECORD_SCHEMA_AND_FULL_PREFLIGHT_V1"
+  },
+  "fingerprint_convention": "SHA256 UTF-8 sorted compact JSON ensure_ascii=False, no final newline",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_ASSIGNED",
+  "exact_full_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "engine": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+  "engine_prompt": {
+    "id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+    "prompt_version": "2.3.0",
+    "file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.3.0-7.md",
+    "library_file_id": "libfile_00ede0e6bc188191a4fd66c9132c4380",
+    "bytes": 100081,
+    "sha256": "2ee97f047d69e2e671e6fa560ec250b103807ba7f9417cc5965be965fd66976a",
+    "identity_evidence": "Current exact prompt bytes/header plus existing same engine ID in inherited ledger charge history; no new registry/launcher deployment claimed.",
+    "repository_prompt_qualification": "Repository contains older Builder2.2.0 prompt only among inspected matching paths; that version is not substituted."
+  },
+  "authorization": "PROSPECTIVE_ONE_TECHNICAL_REPAIR_AND_EXISTING_METHOD_PROOF_EXECUTION_810_TO_800_ZERO_ACTUAL",
+  "authorization_record": "Q048_V153_INGESTION_STATE_V1.json",
+  "authorization_event": "LOCAL-Q048-V153-TECHNICAL-FAILURE-INGESTION-V1",
+  "objective": "Repair the V153 preflight failure-record schema binding and validate the complete no-science preflight/import closure; execute at most one fresh existing-method conditional source-real connected proof810->800, with zero actual admission.",
+  "materiality": "The810->800 theorem remains missing. Two Mathematics attempts stopped on different execution/configuration defects, not failed theorem inequalities; the concrete schema defect and untested complete gate can be repaired by Builder without changing the scientific contract.",
+  "why_not_repeat": "V153 is terminal and not replayed. A separately versioned V154 configuration changes exact failure-record-schema handling and requires complete preflight regression against real pinned schemas; old results/mains are not used as new proof evidence.",
+  "parent_checkpoint": {
+    "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+    "bytes": 8071,
+    "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "access": "VERIFIED_LOCAL_BYTES_AND_CURRENT_ACCEPTED_STATE",
+    "accepted_actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 810
+    },
+    "endpoint": {
+      "a": "1/811",
+      "E": "87861503356118157/3125000000000000",
+      "Y": "22285530672339861267/1000000000000000000",
+      "Vbar": "5587227468217201099/1000000000000000000"
+    },
+    "retained_theorem_reference": {
+      "K_upper": "17511444796066234647/4000000000000000",
+      "connected_lower": "346752030166741/1000000000000000000",
+      "h_upper": "99999/100000",
+      "thermal_domain": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "operators": [
+        "HMLA",
+        "SWIFT"
+      ],
+      "q_branches": {
+        "L": "1/1000000",
+        "R": "0"
+      },
+      "beta_dependency_method": "same_h_monotone",
+      "beta_lower": {
+        "L": "5107976518883627459910383288603148205864461772618724047921886622451214296881306631449620448315530778671064808476164126834620591902587997103/60122238755715498035704175310456776060163974761962890625000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "R": "45839591631022608454240381547100435510754500320427083236771382534191423070545902852239967520741171364153840956940474562887942180123291973927/541099648801439482321337577794110984541475772857666015625000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS"
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "cell_z": [
+    810,
+    800
+  ],
+  "cell_a": [
+    "1/811",
+    "1/801"
+  ],
+  "guard": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "bytes": 1198030,
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_control": false,
+    "control_role": "secondary comparison only; never substitute its background or endpoint",
+    "row_index_reference_only": 64,
+    "selection": "Unique exact a/z cell within each enclosing evaluator control role before any row-index use",
+    "primary_row_sha256": "c3b8c594904bb8f37641be730311f502e5d51c284bcfd16041d152d25e7ffa2e",
+    "control_row_sha256": "da57d19c9240bd2703d18cc063b3d6a0320dcf1a6bab00dbe39634866de1201b",
+    "left_glue": {
+      "a0": "1/811",
+      "E_input_left": "87861503356118157/3125000000000000",
+      "Y_left": "22285530672339861267/1000000000000000000",
+      "V_previous": "5587227468217201099/1000000000000000000"
+    },
+    "expected_primary_endpoint_crosscheck_only": {
+      "a1": "1/801",
+      "E_right": "6742295226862717477/250000000000000000",
+      "Y_right": "5342729072289972639/250000000000000000",
+      "V_admitted": "1341250898132213803/250000000000000000"
+    },
+    "energy_cap_used": "87861503356118157/3125000000000000",
+    "E_safe_left_distinct": "27883795290630840619/1000000000000000000",
+    "metadata_qualification": "accepted/committed/whole_cell/domain flags verified; metadata is not a new theorem",
+    "source_state_reset": false
+  },
+  "method_reference": {
+    "role": "V150 METHOD_REFERENCE_ONLY. Do not execute its historical main/suite or reuse its820->810 conclusion as810->800 evidence.",
+    "artifacts": {
+      "q048_v150_proof.py": "c9b24232f353370e82719f107a21124ef4e0b45b4b1d4b642fabfa473960bf55",
+      "q048_v150_verify.py": "4b7e8e90e363da37fb3dfde194aff81b674eda1c99f9282a7f820127b0f9e6e6",
+      "q048_v150_run.py": "2bd9c96a301cb78d5c3ff7577eaf4ce25090423673d17dbdbcec0ec187ca74df",
+      "Q048_V150_ACCEPTANCE_V1.json": "d36f030b2463f8da2dd503d1af10a4dccd084170eaf60678e90170cb975c2351"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "availability": "Known exact hashes from the accepted V150 package; recover exact bytes by existing Library/GitHub identities before execution."
+  },
+  "proof_contract": {
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "selection": "conv(HMLA,SWIFT) for each fixed q branch",
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; endpoint claim only when an admissible continuation reaches it.",
+    "initial_face_only": true,
+    "no_assumed_future_domain_membership": true,
+    "exact_selector_existence_uniqueness": "NOT_ESTABLISHED",
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false,
+    "thermal_domain_target": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "h_upper_target": "99999/100000",
+    "beta_dependency_required": "same_h_monotone or separately proved stronger non-circular replacement; never cross-h independent numerator/denominator substitution.",
+    "required_new_work": [
+      "Fresh source/background/atomic/C premises for HMLA/SWIFT and both q branches on810->800 from the exact V151 left face.",
+      "Fresh conservative whole-cell energy cap; keep E_safe_left distinct and validate helper/interpolation domains and source constants.",
+      "Fresh K_upper and strictly positive connected lower; prior theorem values are reference only.",
+      "Fresh same-h monotone beta and derivative/domain proof; no future-domain membership assumption.",
+      "Strict upper-h and both thermal inward faces plus non-circular first-exit/closed-endpoint persistence.",
+      "Separate verifier reconstruction, frozen non-noop semantic controls and exact serialized acceptance/readback."
+    ]
+  },
+  "required_work": [
+    "Recover exact V153 terminal/preflight/code and the V150 fixed proof method via the supplied recovery map; verify bytes before use.",
+    "Maintain accepted actual127/frontier810 and the exact V151 initial face; select the exact810->800 guard cell within primary/control roles before using row64.",
+    "Perform only the bounded schema/import-closure/full-preflight repair and tests stated in repair_contract before freeze.",
+    "Execute one fresh810->800 source-real proof using the existing V150 equations/domain/source constants, with fresh source/background/atomic/C/K/lower/beta/inward-face arithmetic. No new mathematical method or scientifically tuned parameter/domain is authorized.",
+    "Use a separate verifier reconstruction and non-noop semantic controls. Preserve the reference40/52/60 named proof/verifier/semantic rosters or justify and freeze stronger specific controls before science; never lower required coverage.",
+    "On any real gate/mathematical/process failure return terminal raw diagnostics without retries or fixes; technical obstruction is not automatic physical falsification.",
+    "Return exactly one terminal V154 result to Result Ingestion; deliver individual files with full appended journal and same ledger. No consumer or next scientific task."
+  ],
+  "negative_controls_required": [
+    "Wrong Q/question/task/fingerprint/run/parent/source/capture/budget lineage",
+    "Missing or wrong-hash transitive source/q047_math_v1.py runtime path; helper import closure not proven before freeze",
+    "Wrong evaluator role, nonunique/wrong cell/row/hash or broken exact left glue",
+    "Unsafe E_safe_left substitution or omitted operator/q/channel",
+    "Old K/lower reused as new whole-cell theorem or nonpositive lower",
+    "Cross-h beta dependency substituted for same-h monotonicity",
+    "Failed upper-h or thermal inward face or circular continuation reasoning",
+    "Native/selector/trajectory/full-history/Q-closure promotion, actual128 or below800 work",
+    "Malformed/no-op controls, predecessor tampering or freeze drift",
+    "V152 terminal-failure schema confused with V152 ingestion-state schema; missing/incorrect root_cause.class.",
+    "Complete preflight not exercised on real pinned schemas before freeze; only helper-level green tests.",
+    "Final child I/O/deadline/freeze audit omitted, acceptance promoted after child/process failure or terminal marker."
+  ],
+  "budget": {
+    "backend": "LOCAL_RUNTIME_PREFERRED; no new paid compute",
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V20.json",
+    "ledger_sha256": "4275475ed795fd2ee8f9eaf5cae521a7a6999e440d7f8a963248542bde2b5b15",
+    "ledger_version": 20,
+    "used_pts": 812,
+    "remaining_pts": 188,
+    "estimated_run_cost_pts": 56,
+    "prospective_max_run_cost_pts": 65,
+    "reservation_pts": 0,
+    "status": "ESTIMATE_ONLY_NOT_RESERVED_NOT_CHARGED_NOT_DISPATCHED",
+    "science_seconds_max": 300,
+    "scientific_chains_max": 1,
+    "retries": 0,
+    "postfreeze_edits_allowed": false,
+    "paid_compute_authorized": false,
+    "estimate_basis": "Bounded exact schema/full-preflight technical repair plus one existing-method proof/verifier/acceptance chain, source recovery, finite controls and individual-file delivery."
+  },
+  "limits": {
+    "max_new_mathematical_proof_cells": 1,
+    "max_new_actual_cells": 0,
+    "no_actual128": true,
+    "no_below_z": 800,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_model_newQ_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false
+  },
+  "success": "One new accepted conditional810->800 proof after the complete repaired preflight/import gate and frozen producer/verifier/acceptance/final audit; +1proof/+0actual maximum. actual127/frontier810 unchanged.",
+  "failure_or_falsification": "First material real candidate obstruction is terminal; preserve all raw evidence and accepted state. Failed implementation or insufficient bound is not physical falsification.",
+  "stop": "One terminal result then Result Ingestion. No consumer/actual128, below800/native work, historical mains/suites, reset/refit/recapture/tuning, model/newQ/closure, or automatic next route.",
+  "dispatch_status": "PREPARED_NOT_EXECUTED",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+  "journal_ref": "Q047_SAMLET_JOURNAL_Q048_V153_INGESTED_V1.md",
+  "recovery_map_ref": "Q048_V153_INGESTION_AUDIT_AND_MEMORY_V1.json",
+  "repair_contract": {
+    "source_failure_event": "LOCAL-Q048-V153-TERMINAL-PREFREEZE-SCHEMA-FAILURE-810-800-V1",
+    "required_exact_path": "proof_runtime/ref/prior_v127/inputs/source/q047_math_v1.py",
+    "required_sha256": "d8a6e8bc7dfc08f53b92a58a8d2b4dec3aee88be2dfdedff5b3800eb2e61937d",
+    "schema_repair": "Validate the exact historical V152 terminal-failure schema and root_cause.class; do not use ingestion-state top-level failure_class for this different record. Preserve V152 and V153 originals.",
+    "full_prefreeze_regression_required": true,
+    "regression_scope": [
+      "Reproduce the exact KeyError in an isolated explicit negative fixture, without executing V153 as a science chain.",
+      "Prove a complete no-science preflight on the real pinned schemas, not only helper-level import tests.",
+      "Reject missing root_cause, missing class, incorrect schema/class and duplicate JSON keys with controlled named failure.",
+      "Reject absent/wrong-hash transitive source/q047_math_v1.py and unpinned local imports; inspect the dynamic kernel import target.",
+      "Check task/question/run/parent/source/capture/guard role+unique exact cell+left glue/budget lineage; separately frozen control names must not be no-ops.",
+      "Bound preparation within the shared reservation; no unrelated repairs, historical suite, model changes or scientific tuning."
+    ],
+    "before_freeze": "One separately versioned V154 spec, producer, verifier, IO, runner, supervisor and control rosters. The complete actual final preflight and no-science import-closure gate must PASS before freezing; the first real candidate pin/path/schema/domain/control/process/budget obstruction is terminal. Isolated explicit negative tests are preparation, not authorized scientific retries.",
+    "freeze_and_final_io": "Freeze all source/input/helper paths, gate evidence and finite control rosters. Invocation-pin the freeze digest. Final execution/acceptance/readback is valid only with supervisor PASS after child exit/final I/O and unchanged freeze, within300s and no terminal failure record.",
+    "no_postfreeze_repair": true,
+    "no_v153_output_reuse_as_science": true
+  },
+  "source_failure_basis": {
+    "source_run_id": "LOCAL-Q048-V153-20261023-PROOF-810-800-V1",
+    "source_event_id": "LOCAL-Q048-V153-TERMINAL-PREFREEZE-SCHEMA-FAILURE-810-800-V1",
+    "source_phase": "prefreeze_failure_record_schema_validation",
+    "source_error": "KeyError:'failure_class'",
+    "failure_class": "PREFREEZE_FAILURE_RECORD_SCHEMA_FIELD_MISMATCH",
+    "wrong_access": "V152_terminal_record['failure_class']",
+    "correct_access": "V152_terminal_record['root_cause']['class']",
+    "exact_historical_schema": "bubbleverse.q048.v152.execution_terminal_failure.v1",
+    "expected_root_cause_class": "FROZEN_TRANSITIVE_IMPORT_PATH_BINDING_OMISSION",
+    "formal_import_closure_in_v153": "NOT_REACHED",
+    "V153_freeze_created": false,
+    "V153_scientific_chains": 0
+  },
+  "reference_rosters": {
+    "baseline_gate_roster": [
+      "SOURCE:capture_MODEL4_no_error",
+      "SOURCE:fixed_flags",
+      "SOURCE:atomic_TR",
+      "SOURCE:atomic_ratio",
+      "SOURCE:SWIFT_fit_temperature",
+      "SOURCE:positive_background",
+      "SOURCE:operator_source",
+      "SOURCE:zero_injection_source",
+      "ATOMIC_TABLE_HASH",
+      "FIT_CAPTURE:T0",
+      "FIT_CAPTURE:nH0_SI",
+      "FIT_CAPTURE:fHe",
+      "FIT_CAPTURE:YHe",
+      "GLOBAL_FIT_REUSE_DOMAIN",
+      "POSITIVE_C:HMLA",
+      "POSITIVE_C:SWIFT",
+      "POSITIVE_ATOMIC_FIT",
+      "CONNECTED_LOWER",
+      "BRANCH:L:upper_h_0",
+      "BRANCH:L:upper_h_1",
+      "BRANCH:L:thermal_denominator",
+      "BRANCH:L:ratio_numerator_positive",
+      "BRANCH:L:ratio_h_derivative_positive",
+      "BRANCH:L:ratio_fHe_decreasing",
+      "BRANCH:L:ratio_lower_positive",
+      "BRANCH:L:dependency_tightening",
+      "BRANCH:L:beta_lower",
+      "BRANCH:L:lower_w_inward",
+      "BRANCH:L:upper_w_inward",
+      "BRANCH:R:upper_h_0",
+      "BRANCH:R:upper_h_1",
+      "BRANCH:R:thermal_denominator",
+      "BRANCH:R:ratio_numerator_positive",
+      "BRANCH:R:ratio_h_derivative_positive",
+      "BRANCH:R:ratio_fHe_decreasing",
+      "BRANCH:R:ratio_lower_positive",
+      "BRANCH:R:dependency_tightening",
+      "BRANCH:R:beta_lower",
+      "BRANCH:R:lower_w_inward",
+      "BRANCH:R:upper_w_inward"
+    ],
+    "verifier_check_roster": [
+      "question_budget",
+      "schema",
+      "identity_q",
+      "identity_task",
+      "identity_run",
+      "identity_question",
+      "parent_hash_pin",
+      "source_pin",
+      "capture_pin",
+      "cell",
+      "operators",
+      "parent_contract",
+      "guard_primary",
+      "guard_control",
+      "energy_cap",
+      "outer_domains",
+      "background",
+      "atomic",
+      "fit",
+      "source_checks_count",
+      "source_checks_true",
+      "source_formulas",
+      "zero_injection",
+      "fresh_enclosure",
+      "C_HMLA",
+      "C_SWIFT",
+      "K_cross_product",
+      "log_width",
+      "comparison_values",
+      "rational_lower_cross_product",
+      "rounding",
+      "connected_domains",
+      "dependency_method_L",
+      "dependency_math_L",
+      "dependency_consistency_L",
+      "branch_L_math",
+      "signed_rates_L",
+      "dependency_method_R",
+      "dependency_math_R",
+      "dependency_consistency_R",
+      "branch_R_math",
+      "signed_rates_R",
+      "captured_source_conditions",
+      "continuation_interval",
+      "continuation_scope",
+      "frozen_gate_names",
+      "frozen_gates_pass",
+      "no_state_advance",
+      "scope_limits",
+      "candidate_status",
+      "no_routing_crosscheck_import",
+      "repair_constraints"
+    ],
+    "semantic_control_roster": [
+      "wrong_budget_id",
+      "wrong_ledger",
+      "wrong_budget_used",
+      "wrong_budget_remaining",
+      "wrong_reservation",
+      "wrong_question",
+      "wrong_task_id",
+      "wrong_task_fingerprint",
+      "wrong_run",
+      "wrong_parent",
+      "source_drift",
+      "capture_drift",
+      "below800",
+      "wrong_cell_a",
+      "wrong_guard",
+      "control_as_primary",
+      "silent_cap_swap",
+      "drop_HMLA",
+      "drop_SWIFT",
+      "wrong_q",
+      "h_not_g",
+      "wrong_Saha",
+      "drop_channel",
+      "wrong_atomic",
+      "unqualified_fit",
+      "nonpositive_C",
+      "wrong_escape",
+      "omit_injection",
+      "understate_K",
+      "old_h0_wholecell",
+      "nonpositive_lower",
+      "wrong_log",
+      "wrong_rounding",
+      "reverse_upper_h",
+      "old_thermal_face",
+      "reverse_thermal",
+      "future_domain_assumption",
+      "native_promotion",
+      "selector_existence",
+      "trajectory_identity",
+      "actual128",
+      "proof_before_accept",
+      "Q_closure",
+      "old_cache",
+      "physical_reset",
+      "empty_gates",
+      "malformed_gate_pass",
+      "dependency_method_naive",
+      "ratio_lower_tamper",
+      "ratio_derivative_tamper",
+      "routing_crosscheck_import",
+      "domain_widening",
+      "cell_partition",
+      "dependency_beta_tamper",
+      "naive_promoted",
+      "wrong_task_identity",
+      "wrong_ledger_identity",
+      "wrong_reservation_identity",
+      "wrong_inherited_charge_order",
+      "signed_rate_tamper"
+    ]
+  },
+  "reference_recovery": {
+    "source_delivery_bundle": {
+      "file": "Q048_V153_PREFREEZE_FAILURE_DELIVERY_V1.zip",
+      "library_file_id": "libfile_32350e9d11588191beb3264e4f72880e",
+      "bytes": 9012833,
+      "sha256": "6c8823b854e270774ab5dd793d20d577d00451e43921a7bbc24a87f73a059200",
+      "role": "IMMUTABLE_ARCHIVAL_INPUT_ONLY; may extract for recovery, never execute V153; Builder output must be individual files"
+    },
+    "source_ledger": {
+      "file": "Q048_QUESTION_BUDGET_LEDGER_V19.json",
+      "library_file_id": "libfile_45ee8140722081919426321716789556",
+      "sha256": "a84ec08075fe544b74358862063919c6481bdb0f883343bfb143b8b5c0c82fc0"
+    },
+    "source_journal": {
+      "file": "Q047_SAMLET_JOURNAL_Q048_V153_PREFREEZE_FAILURE_APPENDED_V1.md",
+      "library_file_id": "libfile_5d84028f0e7c819188a117b1ee826c37",
+      "sha256": "4284e56f661bc67e5d3c5af4d10699ae9976a53aafdd0ac550785585e8512e32"
+    },
+    "source_state": {
+      "file": "Q048_V153_RESULT_STATE_AND_HANDOFF_V1.json",
+      "library_file_id": "libfile_1cbb9786c960819195819674ebe6b9ea",
+      "sha256": "47795ceeaf4b1017bbec5b20fc32a5db1094760d960a80df818d186d97776e82"
+    },
+    "source_terminal": {
+      "file": "Q048_V153_EXECUTION_TERMINAL_FAILURE_V1.json",
+      "library_file_id": "libfile_2e7401186a348191a761c807b5235a82",
+      "sha256": "586475f710b235776cedd12d55e6f463ee0eceb2d36c92e4df01d93c90cf0c9b"
+    },
+    "source_preflight": {
+      "file": "Q048_V153_INPUT_PREFLIGHT_V1.json",
+      "library_file_id": "libfile_123430d440708191ab40ea90f0b40a91",
+      "sha256": "9a2db58a1580aebf3c1bb1fdc6158883edfa383747d434aba14dd9a6b9f6a706"
+    },
+    "parent_checkpoint": {
+      "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+      "library_file_id": "libfile_28a4e36f5aac8191801ee0b81aabacc9",
+      "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96"
+    },
+    "guard": {
+      "file": "q048_guard_local_v_result_v12.json",
+      "library_file_id": "libfile_f8cfc5fd42988191ba68db41eb12641f",
+      "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5"
+    },
+    "method_references": {
+      "q048_v150_proof.py": "c9b24232f353370e82719f107a21124ef4e0b45b4b1d4b642fabfa473960bf55",
+      "q048_v150_verify.py": "4b7e8e90e363da37fb3dfde194aff81b674eda1c99f9282a7f820127b0f9e6e6",
+      "q048_v150_run.py": "2bd9c96a301cb78d5c3ff7577eaf4ce25090423673d17dbdbcec0ec187ca74df",
+      "Q048_V150_ACCEPTANCE_V1.json": "d36f030b2463f8da2dd503d1af10a4dccd084170eaf60678e90170cb975c2351"
+    },
+    "source_archive_code": {
+      "prefreeze_v153.py": {
+        "bytes": 5590,
+        "sha256": "9ffddb36ef3916cf00d5e1997574eba7c035b79b2e9a78cb1b6275a09eeb9f60",
+        "status": "IMMUTABLE_REFERENCE; V153 never passed full preflight or scientific execution"
+      },
+      "q048_v153_io.py": {
+        "bytes": 4599,
+        "sha256": "b088e37ac1909a261dd3e849d069b9cf27efd2eb95a8c97c2085f06c0ce8c00d",
+        "status": "IMMUTABLE_REFERENCE; V153 never passed full preflight or scientific execution"
+      },
+      "q048_v153_proof.py": {
+        "bytes": 15500,
+        "sha256": "4e883cafbe639fd4e2dbc2f5573a5b0e60ab190850d2339cca9267fa07a3a0c4",
+        "status": "IMMUTABLE_REFERENCE; V153 never passed full preflight or scientific execution"
+      },
+      "q048_v153_verify.py": {
+        "bytes": 20524,
+        "sha256": "c451ffb108fec0c0397dbe5e1f7b92e8dff1c760793c1b29ce0c4551516e9794",
+        "status": "IMMUTABLE_REFERENCE; V153 never passed full preflight or scientific execution"
+      },
+      "q048_v153_run.py": {
+        "bytes": 9570,
+        "sha256": "cc0bd4f806484bdd3e317a04f4fdc4416455c4223bc764d3e9bde9465b958039",
+        "status": "IMMUTABLE_REFERENCE; V153 never passed full preflight or scientific execution"
+      },
+      "q048_v153_launch.py": {
+        "bytes": 3231,
+        "sha256": "8649a926e612a519865f8d581703fa86a72219e7707898158fe38496b470cd33",
+        "status": "IMMUTABLE_REFERENCE; V153 never passed full preflight or scientific execution"
+      },
+      "Q048_V153_SPEC_V1.json": {
+        "bytes": 13424,
+        "sha256": "1f7701fd8a7bc4d4db7ffd86456ba53d4ff078ec850b2f5faaa2643e0eab10bf",
+        "status": "IMMUTABLE_REFERENCE; V153 never passed full preflight or scientific execution"
+      },
+      "Q048_V153_INPUT_RECOVERY_MAP_V1.json": {
+        "bytes": 5745,
+        "sha256": "72af3ea21966d86a57d24a6a18a955eb6f2988cd0a9862a66ff8ed69725d9de2",
+        "status": "IMMUTABLE_REFERENCE; V153 never passed full preflight or scientific execution"
+      },
+      "Q048_V153_MATHEMATICAL_REVIEW_V1.md": {
+        "bytes": 3108,
+        "sha256": "7ba41cd2119cef93c9756f6022b53243fefcadf3c5edd45bf6bb79c4671da035",
+        "status": "IMMUTABLE_REFERENCE; V153 never passed full preflight or scientific execution"
+      }
+    }
+  },
+  "delivery_contract": {
+    "individual_files_only": true,
+    "no_archives_in_builder_output": true,
+    "source_archive_allowed_for_recovery_only": true
+  }
+}
