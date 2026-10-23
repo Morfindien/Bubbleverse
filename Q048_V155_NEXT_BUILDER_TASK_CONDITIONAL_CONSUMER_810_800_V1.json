@@ -1,0 +1,526 @@
+{
+  "schema": "bubbleverse.q048.v155.conditional_consumer_task.v1",
+  "created_at_utc": "2026-10-23T21:37:43.839597+00:00",
+  "task_id": "LOCAL-Q048-V155-CONDITIONAL-ACTUAL-CONSUMER-810-800-V1",
+  "handoff_id": "LOCAL-Q048-V154-ACCEPTED-PROOF-INGESTION-V1-TO-V155",
+  "parent_handoff_id": "LOCAL-Q048-V154-ACCEPTED-PROOF-INGESTION-V1",
+  "task_type": "BOUNDED_CONDITIONAL_ACTUAL_CONSUMER",
+  "engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+  "engine_prompt": {
+    "file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.3.0-8.md",
+    "bytes": 100081,
+    "sha256": "2ee97f047d69e2e671e6fa560ec250b103807ba7f9417cc5965be965fd66976a",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/upload/Bubbleverse_Execution_HPC_Motor_Builder_v2.3.0-8.md",
+    "library_file_id": "libfile_b672b33013f081918a88f7c559e28f09",
+    "version": "2.3.0",
+    "registry_evidence": "Verified supplied exact prompt and actual V154 Builder identity; existing V151 conditional consumer contract, not an invented deployed registry"
+  },
+  "authorization": {
+    "event_id": "LOCAL-Q048-V154-ACCEPTED-PROOF-INGESTION-V1",
+    "state_file": "Q048_V154_INGESTION_STATE_V1.json",
+    "authorized_action": "After exact current-state reconciliation, complete no-science preflight and freeze, execute at most one new810→800 conditional consumer/publication chain. Ingestion only prepares; no dispatch performed.",
+    "exactly_once_key": "V154:8c164b57d2f39ff4f67e63d27fc99337411a1bc1aedd839dfca1b46bcab22717"
+  },
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "case_id": "NOT_ASSIGNED",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "case": "hillipop-ede_n3",
+  "cell_z": [
+    810,
+    800
+  ],
+  "cell_a": [
+    "1/811",
+    "1/801"
+  ],
+  "parent_authority": {
+    "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+    "bytes": 8071,
+    "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154/inputs/Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+    "actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 810
+    },
+    "endpoint": {
+      "a": "1/811",
+      "E": "87861503356118157/3125000000000000",
+      "Y": "22285530672339861267/1000000000000000000",
+      "Vbar": "5587227468217201099/1000000000000000000"
+    },
+    "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS",
+    "recovery": "Exact V151 checkpoint also pinned in V151 output manifest; source V154 input recovery map/V153 immutable input delivery retains bytes."
+  },
+  "theorem_authority": {
+    "run_id": "LOCAL-Q048-V154-20261023-PROOF-810-800-V1",
+    "event_id": "LOCAL-Q048-V154-ACCEPTED-UNCONSUMED-PROOF-810-800-V1",
+    "state": "ACCEPTED_UNCONSUMED",
+    "artifacts": {
+      "Q048_V154_ACCEPTANCE_V1.json": {
+        "file": "Q048_V154_ACCEPTANCE_V1.json",
+        "bytes": 10572,
+        "sha256": "8c164b57d2f39ff4f67e63d27fc99337411a1bc1aedd839dfca1b46bcab22717",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_ACCEPTANCE_V1.json",
+        "library_file_id": "libfile_e884a8e0ee448191aeb4e344aa142a30"
+      },
+      "Q048_V154_RAW_V1.json": {
+        "file": "Q048_V154_RAW_V1.json",
+        "bytes": 54757,
+        "sha256": "7ea0fc709054b335e3a1357ed0a1e0c0ad7f960564793fadc8e1c9e7c38e2bbd",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_RAW_V1.json",
+        "library_file_id": "libfile_2b9a3069b7e08191b81ea3e5620f22c4"
+      },
+      "Q048_V154_VERIFICATION_V1.json": {
+        "file": "Q048_V154_VERIFICATION_V1.json",
+        "bytes": 11470,
+        "sha256": "87c87fa74008fbed4a8c5304a75f1522942bc3fea73de63487ae71b81f2859d0",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_VERIFICATION_V1.json",
+        "library_file_id": "libfile_20c5d4e8083c81919953ed28b58a77d2"
+      },
+      "Q048_V154_ACCEPTANCE_READBACK_V1.json": {
+        "file": "Q048_V154_ACCEPTANCE_READBACK_V1.json",
+        "bytes": 5035,
+        "sha256": "21d84bcb5968243ec1919b496bb9d398ace0b2196d90c60d1030455153c29eac",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_ACCEPTANCE_READBACK_V1.json",
+        "library_file_id": "libfile_676d8bdb590881919e85f4e1880a2e43"
+      },
+      "Q048_V154_EXECUTION_V1.json": {
+        "file": "Q048_V154_EXECUTION_V1.json",
+        "bytes": 6125,
+        "sha256": "2d234309030b14b2eb81ad23b0a03bcae4214435b8fdca6739506bd2cf2de059",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_EXECUTION_V1.json",
+        "library_file_id": "libfile_7e9db5d76e28819187185eadfd432c5a"
+      },
+      "Q048_V154_EXECUTION_FINAL_AUDIT_V1.json": {
+        "file": "Q048_V154_EXECUTION_FINAL_AUDIT_V1.json",
+        "bytes": 2026,
+        "sha256": "0976fb08732c97de63dd8d130e9a217bf83ea6842cb6429cccfbdc0db04a25d6",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_EXECUTION_FINAL_AUDIT_V1.json",
+        "library_file_id": "libfile_7dad712301a481919ac3cb9b9af24859"
+      },
+      "Q048_V154_OBSERVED_PROCESS_EXIT_V1.json": {
+        "file": "Q048_V154_OBSERVED_PROCESS_EXIT_V1.json",
+        "bytes": 699,
+        "sha256": "0061b768d9edd9a7b8c86b1c0e53a3d7d96ff4fc391daf3500168c2e7d4f5bd7",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_OBSERVED_PROCESS_EXIT_V1.json",
+        "library_file_id": "libfile_e4176081601481918832ee17a1bb4518"
+      },
+      "Q048_V154_FREEZE_V1.json": {
+        "file": "Q048_V154_FREEZE_V1.json",
+        "bytes": 7808,
+        "sha256": "6ef3e6b771d3a0dd13889cb86e38718e4973cf013571f5abb20c09d4b91f36ea",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_FREEZE_V1.json",
+        "library_file_id": "libfile_1a71a3fc81748191bb1d3a8570ee64bd"
+      },
+      "Q048_V154_SPEC_V1.json": {
+        "file": "Q048_V154_SPEC_V1.json",
+        "bytes": 16882,
+        "sha256": "53ca0511047c347d1f1dc15c666746c9858c9c528955bd80f32fbbfc66f3d4e0",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_SPEC_V1.json",
+        "library_file_id": "libfile_c4a4e1a703b081918bfa16809406c66e"
+      },
+      "Q048_V154_INPUT_PREFLIGHT_V1.json": {
+        "file": "Q048_V154_INPUT_PREFLIGHT_V1.json",
+        "bytes": 7074,
+        "sha256": "983aea760f776eb7a880edabd6ab89e87b742e8ad04b1c0cc3de29f0fb935147",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_INPUT_PREFLIGHT_V1.json",
+        "library_file_id": "libfile_55b0717c97988191ade4cd3cff5b085b"
+      },
+      "Q048_V154_INPUT_RECOVERY_MAP_V1.json": {
+        "file": "Q048_V154_INPUT_RECOVERY_MAP_V1.json",
+        "bytes": 9819,
+        "sha256": "8c2fda09a535493109ecc49c3bfb101b799974e2b8ea7a2296adf6181a6ca05a",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_INPUT_RECOVERY_MAP_V1.json",
+        "library_file_id": "libfile_bb4f89b1a0cc8191bcfcd32cb8cd1f72"
+      },
+      "Q048_V154_RESULT_STATE_V1.json": {
+        "file": "Q048_V154_RESULT_STATE_V1.json",
+        "bytes": 12460,
+        "sha256": "78f82e6efe5d59fe95be74cbadc6f5c78a8cbd457b1744e2efdee6a78dd3ac9e",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_RESULT_STATE_V1.json",
+        "library_file_id": "libfile_c640ef3021048191a02a2105feb0521b"
+      }
+    },
+    "copy_without_recomputation": true,
+    "admission_conjunction": "Observed source supervisor process0 AND serialized source final auditPASS AND source terminal marker absent. Check frozen pins, RAW/SPEC verifier attestation, readback/output digests and one-chain/deadline receipts. Never admit audit alone.",
+    "proof_record_budget_is_historical": "Keep source ledger20 used812/remaining188/reserve65 fields unchanged; current consumer binds ledger22 separately."
+  },
+  "guard_scope_binding": {
+    "file": "Q048_V154_GUARD_SCOPE_BINDING_V1.json",
+    "bytes": 3371,
+    "sha256": "66032c866d5198004e818761054ac42b74a0b0a0764e1af21c3d135d8cc892ff",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_V154_GUARD_SCOPE_BINDING_V1.json"
+  },
+  "guard_authority": {
+    "file": "q048_guard_local_v_result_v12.json",
+    "bytes": 1198030,
+    "sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154/proof_runtime/ref/prior_v127/inputs/q048_guard_local_v_result_v12.json",
+    "source_input_recovery_map": {
+      "file": "Q048_V154_INPUT_RECOVERY_MAP_V1.json",
+      "bytes": 9819,
+      "sha256": "8c2fda09a535493109ecc49c3bfb101b799974e2b8ea7a2296adf6181a6ca05a",
+      "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_INPUT_RECOVERY_MAP_V1.json",
+      "library_file_id": "libfile_bb4f89b1a0cc8191bcfcd32cb8cd1f72"
+    },
+    "primary_evaluator_control": false,
+    "control_evaluator_control": true,
+    "primary_index_crosscheck": 64,
+    "primary_row_sha256": "c3b8c594904bb8f37641be730311f502e5d51c284bcfd16041d152d25e7ffa2e",
+    "control_row_sha256": "da57d19c9240bd2703d18cc063b3d6a0320dcf1a6bab00dbe39634866de1201b",
+    "selection": "Consumer and independent validator select unique role+exact z/a cell themselves; routed index/hash/endpoints are crosschecks only.",
+    "left_glue": {
+      "a0": "1/811",
+      "E_input_left": "87861503356118157/3125000000000000",
+      "Y_left": "22285530672339861267/1000000000000000000",
+      "V_previous": "5587227468217201099/1000000000000000000"
+    },
+    "E_safe_left_distinct": "27883795290630840619/1000000000000000000",
+    "expected_endpoint_crosscheck_only": {
+      "a": "1/801",
+      "E": "6742295226862717477/250000000000000000",
+      "Y": "5342729072289972639/250000000000000000",
+      "Vbar": "1341250898132213803/250000000000000000"
+    },
+    "endpoint_derivation": "Primary exact row64 a1/E_right/Y_right/V_admitted; independently select/derive in both consumer and validator; routing values crosschecks only."
+  },
+  "retained_theorem_values": {
+    "K_upper": "888913489381757586389/200000000000000000",
+    "connected_lower": "340187419017597/1000000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "beta_lower": {
+      "L": "17515263186523951275545298148007561495888953029550391710921765752820653314353655807341180396482859027752242185936046189444037788480724717271/216438746598345964128535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "R": "17463926993539588659620121055837078444739388330101519296037323727518134387080123396569290737315414999883844349064060445286197945480724717271/216438546598345964128535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "source_cover_contract": {
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; bounds hold on their existing interval and at the new endpoint only whenever an admissible continuation reaches it",
+    "no_assumed_future_domain_membership": true,
+    "exact_selector_existence_uniqueness": false,
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false
+  },
+  "continuation_hypothesis": "Existing absolutely-continuous source-real solution under the admitted background and fixed-q two-operator inclusion; no assumed future domain membership. Bounds apply on its existing interval and at a1 whenever an admissible continuation reaches a1. Exact selector existence/uniqueness is not established.",
+  "current_state": {
+    "actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 810
+    },
+    "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+    "V154_proof_state": "ACCEPTED_UNCONSUMED",
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false,
+    "scientific_state": "INCONCLUSIVE"
+  },
+  "candidate_only_after_full_acceptance": {
+    "actual": {
+      "count": 128,
+      "frontier": 800
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 800
+    },
+    "V154_proof_state": "ACCEPTED_CONSUMED_ONCE",
+    "new_actual_cells": 1,
+    "new_mathematical_proof_cells": 0,
+    "new_theorem_recomputations": 0,
+    "theorem_consumptions": 1
+  },
+  "limits": {
+    "max_new_actual_cells": 1,
+    "max_accepted_actual_count": 128,
+    "no_actual129": true,
+    "no_below_z": 800,
+    "max_new_mathematical_proof_cells": 0,
+    "max_new_theorem_recomputations": 0,
+    "theorem_consumptions_max": 1,
+    "no_native_integration": true,
+    "no_reset_refit_recapture_tuning": true,
+    "no_historical_main_or_suite": true,
+    "no_new_q_model_or_closure": true,
+    "retry_count": 0,
+    "postfreeze_edits_allowed": false,
+    "science_seconds_max": 300,
+    "chains_max": 1
+  },
+  "execution_chain": [
+    "new_consumer",
+    "independent_validator",
+    "provisional_record",
+    "postaccept_checks",
+    "serialized_checkpoint_publication_and_file_readback",
+    "outer_supervisor_final_process_gate"
+  ],
+  "required_rosters": {
+    "file": "Q048_V155_REQUIRED_CONTROL_ROSTERS_V1.json",
+    "bytes": 20162,
+    "sha256": "f894780316646adf0ef4ea71926db3e555731a63e22c61212c69101a325df3d4",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_V155_REQUIRED_CONTROL_ROSTERS_V1.json"
+  },
+  "required_gates": [
+    "Reconcile current journal/ledger/repository/source Library IDs for existing/concurrent V155 or prior V154 consumption. Duplicate/replay creates no extra cell and no duplicate originating charge; stop and reconcile newer state.",
+    "Reserve closeout-inclusive current budget before substantive execution. Freeze all new source/spec/input pins and exact ordered rosters. At least inherited48 real preflight checks plus source final-admission/import checks; exercise full check path on explicit fixtures before the one genuine final preflight. First genuine obstruction terminal.",
+    "Preserve every latest V15192 candidate checks,92 nonnoop semantic controls,19 final checkpoint controls and inherited-charge-order rejection via the explicit V155 roster mapping. Added final-process controls are required; freeze complete exact finite rosters; no labels counted as executed tests.",
+    "Independently select exact primary/control row64 by role and z/a in consumer AND validator. Derive exact left glue/endpoints. Reject control-as-primary, cap/safe swap, stale row63 label/selector, or scope-binding hash mismatch.",
+    "Copy V154 theorem values/hypothesis/domain/operators/q/continuation and acceptance digests exactly. No producer/verifier imports, theorem arithmetic or new proof. Historical V150 label correction is not current authority; current proof background already row64 and is copied unchanged.",
+    "Use strict JSON duplicate/nonfinite rejection and exact type/schema checks; actual128_created true, actual129_created false, below800_work false only in valid candidate. Final controls include reordered inherited charge IDs and exact current ledger22/reservation lineage in every stage.",
+    "Independent validator must attest the initially parsed candidate/spec bytes; reject later byte drift and enforce attestations in publication and final admission. Controlled isolated actual startup matches probe; verify actual loaded local module closure and any dynamic paths against freeze.",
+    "Provisional/postaccept/checkpoint files alone never advance canonical state. One shared300s deadline includes final file publication, all readbacks, output/frozen-pin checks and supervisor exit. Own/kill/reap complete process group on timeout or abnormal exit.",
+    "Admit actual128/frontier800 and consume V154 once ONLY with complete serialized checkpoint, independent validation/publication/readback/execution evidence, observed outer supervisor0, final auditPASS and terminal-marker absence. Very late auditPASS alone never suffices. Any obstruction/failure retains actual127/frontier810 and V154 unconsumed.",
+    "Preserve original V154 frozen budget and V151 parent budget as historical. Bind current consumer ledger22 used902/remaining98 plus actual reservation/new run ID separately. No source62 or intake28 rebill.",
+    "One chain OR first obstruction, zero science retry or postfreeze fix. Full journal, ledger settlement, raw and validated records, code/tests/control logs, manifest/recovery and all individual deliverables before one return to Result Ingestion. No archive delivery."
+  ],
+  "method_reuse": {
+    "status": "ADAPT_PINNED_LATEST_V151_METHODS_DO_NOT_RUN_OLD_MAIN",
+    "source_spec": {
+      "file": "Q048_V151_SPEC_V1.json",
+      "bytes": 32167,
+      "sha256": "d7162b64038afdf4dc34871ee2d23eda0baffff63e5c770ccbb76205991fa860",
+      "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/reference/library_v151/Q048_V151_SPEC_V1.json",
+      "library_file_id": "libfile_93a482aec130819185809ed9e1e2fb23"
+    },
+    "source_manifest": {
+      "file": "Q048_V151_OUTPUT_MANIFEST_V1.json",
+      "bytes": 10915,
+      "sha256": "2851489232fe90ba9232a3587097d72c69b0b1ceaa4950fed8b396ec7aee06e9",
+      "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/reference/library_v151/Q048_V151_OUTPUT_MANIFEST_V1.json",
+      "library_file_id": "libfile_6204cf23cbcc8191a3d8e02bf3c9249b"
+    },
+    "source_code_pins": [
+      {
+        "file": "q048_v151_accept.py",
+        "path": "/workspace/scratch/e1760a1196bc/v151/q048_v151_accept.py",
+        "bytes": 1428,
+        "sha256": "6e1b7bad1b1dc8b1822826760e5a42d30b0c8934e1c675f764a9414537bf7db3"
+      },
+      {
+        "file": "q048_v151_consumer.py",
+        "path": "/workspace/scratch/e1760a1196bc/v151/q048_v151_consumer.py",
+        "bytes": 4328,
+        "sha256": "8358992788c97bb8950f64b5fb1ad4914ea5c426da82f15c9bc6faefd89abfba"
+      },
+      {
+        "file": "q048_v151_io.py",
+        "path": "/workspace/scratch/e1760a1196bc/v151/q048_v151_io.py",
+        "bytes": 6849,
+        "sha256": "72459611b454cf5ba7269eaa2966b2aab6737535748b70ea740ac59fdd16dbb8"
+      },
+      {
+        "file": "q048_v151_postaccept.py",
+        "path": "/workspace/scratch/e1760a1196bc/v151/q048_v151_postaccept.py",
+        "bytes": 2383,
+        "sha256": "48eb9558c7551b9ce637b1525ac9ed514516a58a957a7c6ca061d96bd3184034"
+      },
+      {
+        "file": "q048_v151_preflight.py",
+        "path": "/workspace/scratch/e1760a1196bc/v151/q048_v151_preflight.py",
+        "bytes": 6692,
+        "sha256": "0cd45fc433c62cdbc519216e864fe463219a1f9a106b69681ca312282b7d02f3"
+      },
+      {
+        "file": "q048_v151_publish.py",
+        "path": "/workspace/scratch/e1760a1196bc/v151/q048_v151_publish.py",
+        "bytes": 2954,
+        "sha256": "80363a975235e4fbf883816b5e905adbe640694ba10433a46e41239eb7688baa"
+      },
+      {
+        "file": "q048_v151_run.py",
+        "path": "/workspace/scratch/e1760a1196bc/v151/q048_v151_run.py",
+        "bytes": 3899,
+        "sha256": "af55c8f582c9f7a2ceb9e06341fdb8022ed37a532575b55a8c3198648c399ba5"
+      },
+      {
+        "file": "q048_v151_validate.py",
+        "path": "/workspace/scratch/e1760a1196bc/v151/q048_v151_validate.py",
+        "bytes": 7715,
+        "sha256": "a2c4816a0ab00ae6c3e279b88888b5b2bb6ff1c1596d0c66b60bcd2199316a8a"
+      },
+      {
+        "file": "test_q048_v151_contract.py",
+        "path": "/workspace/scratch/e1760a1196bc/v151/test_q048_v151_contract.py",
+        "bytes": 5817,
+        "sha256": "ce418ce0aa94bb9b281cbd59085ddc5d0b0f081febf90ff711ea207436fea1be"
+      }
+    ],
+    "materialized_consumer": {
+      "file": "q048_v151_consumer.py",
+      "bytes": 4328,
+      "sha256": "8358992788c97bb8950f64b5fb1ad4914ea5c426da82f15c9bc6faefd89abfba",
+      "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/reference/library_v151/q048_v151_consumer.py",
+      "library_file_id": "libfile_b1c4fb4d2b6081918f738c0c81870b2b"
+    },
+    "remaining_source_recovery": "Exact title search only for necessary V151 source files listed above; recover bytes and verify latest manifest pins before adapting. Do not substitute earlier V14988/88/16 contract. No historical main/suite execution.",
+    "known_adaptation_requirements": [
+      "V151 actual127/820→810/row63/budget14 becomes new actual128/810→800/row64/current ledger22 consistently across all stages.",
+      "V151 documentary guard_label_addendum field becomes exact guard_scope_binding; old/current proof background retained, not rewritten.",
+      "Implement source/final process-admission/snapshot/import/deadline hardening in the new version, with meaningful prefreeze regressions; do not infer it from prior code success."
+    ]
+  },
+  "question_budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "total_points": 1000,
+    "ledger_reference": "Q048_QUESTION_BUDGET_LEDGER_V22.json",
+    "ledger_version": 22,
+    "ledger_sha256": "96e8edbae38eb382ca1b997decf01f2f760a798027da02be2b6cc8087f4e8e97",
+    "used_points": 902,
+    "remaining_points": 98,
+    "inherited_charge_ids": [
+      "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-PROOF-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-CONSUMER-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-REDELIVERY-AUDIT-20261023-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-PROOF-820-810-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V151-CONSUMER-820-810-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V151-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V152-PRODUCER-IMPORT-PATH-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V152-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V153-PREFREEZE-FAILURE-RECORD-SCHEMA-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V153-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V154-REPAIRED-PROOF-810-800-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V154-INGESTION-V1"
+    ],
+    "estimated_run_cost_points": 56,
+    "maximum_run_cost_points": 65,
+    "reserved_points": 0,
+    "budget_event_id": null,
+    "status": "PROSPECTIVE_NOT_RESERVED_OR_DEBITED",
+    "receiver_rule": "Reconcile newer legitimate state, reserve max65 only if affordable and debit actual new work once. Include all review/finalization/delivery. No fresh1000-point activation. Stop/reduce before an unaffordable stage."
+  },
+  "compute_backend": "LOCAL_RUNTIME",
+  "github_worthwhile": "NO",
+  "estimate_basis": "Latest successful V151 consumer cost58 incl tests/delivery; V154 science3.30s. Prospective56/max65 for bounded JSON/hash/copy/publication with strengthened final gates; no proof/HPC. No branded model switch required.",
+  "journal_reference": "Q047_SAMLET_JOURNAL_Q048_V154_INGESTED_V1.md",
+  "source_journal": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V154_PROOF_APPENDED_V1.md",
+    "bytes": 14842551,
+    "sha256": "a20471412854213c28752b6feec060788803620a67f2637975d2aa2df910e84d",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q047_SAMLET_JOURNAL_Q048_V154_PROOF_APPENDED_V1.md",
+    "library_file_id": "libfile_d7eb769bb244819187916aa55f2c7832"
+  },
+  "github_memory": "Current source state canonical at3773859a2bad401c2abfd114b5a04d36da166a06; new ingestion/task USER_UPLOAD_PENDING",
+  "dispatch": "NOT_DISPATCHED",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+  "stop_condition": "One fully admitted consumer/publication chain OR first precise genuine preflight/science/process obstruction; no extra cell, proof, retry, repair loop or self-created route.",
+  "budget_outlook": "After maximum65,33points remain for bounded intake/closeout. No follow-on proof campaign is authorized here; next intake must reassess materiality/affordability and may checkpoint with a positive residual rather than falsely claim exhaustion.",
+  "task_fingerprint_basis": {
+    "q": "Q048",
+    "target_q": "Q048",
+    "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+    "objective": "consume_exact_V154_proof_once_at_most_actual128_frontier800",
+    "source_acceptance_sha256": "8c164b57d2f39ff4f67e63d27fc99337411a1bc1aedd839dfca1b46bcab22717",
+    "parent_checkpoint_sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "source_event": "LOCAL-Q048-V154-ACCEPTED-UNCONSUMED-PROOF-810-800-V1",
+    "source_run": "LOCAL-Q048-V154-20261023-PROOF-810-800-V1",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+    "primary_row_sha256": "c3b8c594904bb8f37641be730311f502e5d51c284bcfd16041d152d25e7ffa2e",
+    "control_row_sha256": "da57d19c9240bd2703d18cc063b3d6a0320dcf1a6bab00dbe39634866de1201b",
+    "ledger22_sha256": "96e8edbae38eb382ca1b997decf01f2f760a798027da02be2b6cc8087f4e8e97",
+    "required_rosters_sha256": "f894780316646adf0ef4ea71926db3e555731a63e22c61212c69101a325df3d4",
+    "scope_binding_sha256": "66032c866d5198004e818761054ac42b74a0b0a0764e1af21c3d135d8cc892ff",
+    "method_spec_sha256": "d7162b64038afdf4dc34871ee2d23eda0baffff63e5c770ccbb76205991fa860",
+    "method_code_pins": {
+      "q048_v151_accept.py": "6e1b7bad1b1dc8b1822826760e5a42d30b0c8934e1c675f764a9414537bf7db3",
+      "q048_v151_consumer.py": "8358992788c97bb8950f64b5fb1ad4914ea5c426da82f15c9bc6faefd89abfba",
+      "q048_v151_io.py": "72459611b454cf5ba7269eaa2966b2aab6737535748b70ea740ac59fdd16dbb8",
+      "q048_v151_postaccept.py": "48eb9558c7551b9ce637b1525ac9ed514516a58a957a7c6ca061d96bd3184034",
+      "q048_v151_preflight.py": "0cd45fc433c62cdbc519216e864fe463219a1f9a106b69681ca312282b7d02f3",
+      "q048_v151_publish.py": "80363a975235e4fbf883816b5e905adbe640694ba10433a46e41239eb7688baa",
+      "q048_v151_run.py": "af55c8f582c9f7a2ceb9e06341fdb8022ed37a532575b55a8c3198648c399ba5",
+      "q048_v151_validate.py": "a2c4816a0ab00ae6c3e279b88888b5b2bb6ff1c1596d0c66b60bcd2199316a8a",
+      "test_q048_v151_contract.py": "ce418ce0aa94bb9b281cbd59085ddc5d0b0f081febf90ff711ea207436fea1be"
+    },
+    "engine_prompt_sha256": "2ee97f047d69e2e671e6fa560ec250b103807ba7f9417cc5965be965fd66976a",
+    "limits": {
+      "max_new_actual_cells": 1,
+      "max_accepted_actual_count": 128,
+      "no_actual129": true,
+      "no_below_z": 800,
+      "max_new_mathematical_proof_cells": 0,
+      "max_new_theorem_recomputations": 0,
+      "theorem_consumptions_max": 1,
+      "no_native_integration": true,
+      "no_reset_refit_recapture_tuning": true,
+      "no_historical_main_or_suite": true,
+      "no_new_q_model_or_closure": true,
+      "retry_count": 0,
+      "postfreeze_edits_allowed": false,
+      "science_seconds_max": 300,
+      "chains_max": 1
+    },
+    "retained_theorem_values": {
+      "K_upper": "888913489381757586389/200000000000000000",
+      "connected_lower": "340187419017597/1000000000000000000",
+      "h_upper": "99999/100000",
+      "thermal_domain": [
+        "-1/1000000",
+        "1/50"
+      ],
+      "operators": [
+        "HMLA",
+        "SWIFT"
+      ],
+      "q_branches": {
+        "L": "1/1000000",
+        "R": "0"
+      },
+      "beta_dependency_method": "same_h_monotone",
+      "beta_lower": {
+        "L": "17515263186523951275545298148007561495888953029550391710921765752820653314353655807341180396482859027752242185936046189444037788480724717271/216438746598345964128535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "R": "17463926993539588659620121055837078444739388330101519296037323727518134387080123396569290737315414999883844349064060445286197945480724717271/216438546598345964128535031117644393816590309143066406250000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+      }
+    },
+    "source_cover_contract": {
+      "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; bounds hold on their existing interval and at the new endpoint only whenever an admissible continuation reaches it",
+      "no_assumed_future_domain_membership": true,
+      "exact_selector_existence_uniqueness": false,
+      "native_error_certificate": false,
+      "trajectory_identity_claim": false
+    },
+    "new_execution_code": "NOT_YET_CREATED; must separately version and freeze before single-use execution"
+  },
+  "task_fingerprint": "4ea824e47fd32e2c5a6ab78b36113c8aa146cc903dca0e2420ec8c98d5c0f8d5"
+}

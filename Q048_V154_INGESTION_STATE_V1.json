@@ -1,0 +1,465 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "2.2.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.2.0",
+  "prompt": {
+    "file": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.2.0-22.md",
+    "bytes": 108018,
+    "sha256": "52ed8ffb921f7e2c7b7323deceff2b8046dc127144a1a245a43e4f33c111a97c",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/upload/Bubbleverse_Result_Ingestion_Routing_Engine_v2.2.0-22.md"
+  },
+  "handoff_id": "LOCAL-Q048-V154-ACCEPTED-PROOF-INGESTION-V1",
+  "created_at_utc": "2026-10-23T21:37:43.839597+00:00",
+  "created_at_local": "2026-10-23T23:37:43.839597+02:00",
+  "case_id": "NOT_ASSIGNED",
+  "current_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "target_q": "Q048",
+  "authorized_q_range": "Q001-Q048",
+  "evidence_cutoff": "No separate external-publication cutoff documented; captured source/inputs fixed; no later-Q evidence used",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "terminal_status": null,
+  "ingestion_state": "NEW",
+  "new_result_ids": [
+    "LOCAL-Q048-V154-ACCEPTED-UNCONSUMED-PROOF-810-800-V1"
+  ],
+  "source_state_version": "V154 accepted proof; ledger21",
+  "target_state_version": "V154 ingested; ledger22; V155 prepared",
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_MECHANISM_NUMERICAL_HPC_MOTOR_BUILDER2.3.0",
+  "engine_registry_ref": {
+    "file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.3.0-8.md",
+    "bytes": 100081,
+    "sha256": "2ee97f047d69e2e671e6fa560ec250b103807ba7f9417cc5965be965fd66976a",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/upload/Bubbleverse_Execution_HPC_Motor_Builder_v2.3.0-8.md",
+    "library_file_id": "libfile_b672b33013f081918a88f7c559e28f09",
+    "version": "2.3.0",
+    "registry_evidence": "Verified supplied exact prompt and actual V154 Builder identity; existing V151 conditional consumer contract, not an invented deployed registry"
+  },
+  "execution_profile_ref": {
+    "file": "Q048_V154_INGESTION_EXECUTION_PROFILE_V1.json",
+    "bytes": 2005,
+    "sha256": "136276b85c626bcae07c1de8999d0dbb6649e4e58d66bec19ebd343b37810aab",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_V154_INGESTION_EXECUTION_PROFILE_V1.json"
+  },
+  "journal_ref": {
+    "file": "Q047_SAMLET_JOURNAL_Q048_V154_INGESTED_V1.md",
+    "bytes": 14847551,
+    "sha256": "f4c132b93483dca7acac9548ffddf0fcbec6759a9254d2d7122c5218e4669b43",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q047_SAMLET_JOURNAL_Q048_V154_INGESTED_V1.md"
+  },
+  "source_register_ref": {
+    "complete": "Full journal source registers preserved",
+    "affected_subset": {
+      "file": "Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json",
+      "bytes": 13731,
+      "sha256": "7eb21bb1a08248f9a093ae399b58eb84ebe0d459773a84512ba090ea61dc6d8f",
+      "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json"
+    }
+  },
+  "claim_evidence_map_ref": {
+    "file": "Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json",
+    "bytes": 13731,
+    "sha256": "7eb21bb1a08248f9a093ae399b58eb84ebe0d459773a84512ba090ea61dc6d8f",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json"
+  },
+  "result_provenance_ref": {
+    "file": "Q048_V154_INGESTION_SOURCE_AUDIT_V1.json",
+    "bytes": 14375,
+    "sha256": "b33c674da49bb2bdd1b79d32b7a53406f91c681100fa636bd57888e4cb6b6f04",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_V154_INGESTION_SOURCE_AUDIT_V1.json"
+  },
+  "anomaly_tension_registry_ref": {
+    "source": "Complete preserved journal plus affected subset audit",
+    "status": "NONE_NEW_IDENTIFIED; no new physical inference"
+  },
+  "completed_task_ledger_ref": {
+    "file": "Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json",
+    "bytes": 13731,
+    "sha256": "7eb21bb1a08248f9a093ae399b58eb84ebe0d459773a84512ba090ea61dc6d8f",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json"
+  },
+  "route_history_ref": {
+    "file": "Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json",
+    "bytes": 13731,
+    "sha256": "7eb21bb1a08248f9a093ae399b58eb84ebe0d459773a84512ba090ea61dc6d8f",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json"
+  },
+  "integrity_manifest_ref": {
+    "file": "Q048_V154_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "status": "Created at final delivery after state; no circular selfhash"
+  },
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "V154 proof received/registered once in current derived assessment",
+    "Source62 charge carried once; new intake28 finalized",
+    "One V155 consumer task prepared; not dispatched"
+  ],
+  "actual": {
+    "count": 127,
+    "frontier": 810
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 810
+  },
+  "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+  "V154_proof_state": "ACCEPTED_UNCONSUMED",
+  "new_actual_cells": 0,
+  "new_mathematical_proof_cells": 0,
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "native_error_certificate": false,
+  "exact_selector_existence_uniqueness": false,
+  "trajectory_identity_claim": false,
+  "result_classification": [
+    "MATHEMATICAL_RESULT",
+    "RUN_SUCCESS"
+  ],
+  "status_axes": {
+    "execution": "SUCCESS (source); intake has no science run",
+    "technical_validity": "TECHNICALLY_VALIDATED_WITHIN_CONDITIONAL_CONTRACT",
+    "reproducibility": "NOT_ASSESSED_BY_INDEPENDENT_RERUN",
+    "robustness": "ROBUST_WITHIN_RECORDED_TESTED_DOMAIN_CONTROLS_ONLY",
+    "scientific_effect": "SUPPORTS_CONDITIONAL_ADJACENT_SOURCE_REAL_BOUNDS; FULL_Q_UNRESOLVED",
+    "anomaly": "NONE_NEW_IDENTIFIED"
+  },
+  "three_layers": {
+    "direct": "One accepted source proof810→800 and retained RAW/verification/acceptance/process evidence",
+    "technical": "Bounds for existing admissible absolutely-continuous continuations in fixed domains; exact source/input pins",
+    "physical": "No native/full-history/selector/trajectory conclusion; Q remains inconclusive"
+  },
+  "frozen_configuration_refs": [
+    {
+      "file": "Q048_V154_SPEC_V1.json",
+      "bytes": 16882,
+      "sha256": "53ca0511047c347d1f1dc15c666746c9858c9c528955bd80f32fbbfc66f3d4e0",
+      "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_SPEC_V1.json",
+      "library_file_id": "libfile_c4a4e1a703b081918bfa16809406c66e"
+    },
+    {
+      "file": "Q048_V154_FREEZE_V1.json",
+      "bytes": 7808,
+      "sha256": "6ef3e6b771d3a0dd13889cb86e38718e4973cf013571f5abb20c09d4b91f36ea",
+      "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_FREEZE_V1.json",
+      "library_file_id": "libfile_1a71a3fc81748191bb1d3a8570ee64bd"
+    },
+    {
+      "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+      "bytes": 8071,
+      "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+      "local_path": "/workspace/scratch/01ebc0d0dacf/v154/inputs/Q048_V151_ACCEPTED_CHECKPOINT_V1.json"
+    }
+  ],
+  "open_material_uncertainties": [
+    "Accepted proof not yet consumed into adjacent validated cover checkpoint",
+    "NativeP6 and complete controlled histories for all four configurations",
+    "Conditional existence/selector/trajectory/native obligations"
+  ],
+  "missing_information": [
+    "Global historical external-link availability not independently re-audited; current material records resolved"
+  ],
+  "next_task": {
+    "file": "Q048_V155_NEXT_BUILDER_TASK_CONDITIONAL_CONSUMER_810_800_V1.json",
+    "bytes": 29918,
+    "sha256": "eda5f877ff16da986e00054a8e9ab57dd36621f208899f56cbede2a1c8c8b9db",
+    "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_V155_NEXT_BUILDER_TASK_CONDITIONAL_CONSUMER_810_800_V1.json"
+  },
+  "next_task_fingerprint": "4ea824e47fd32e2c5a6ab78b36113c8aa146cc903dca0e2420ec8c98d5c0f8d5",
+  "success_condition": "V155 complete independent-validator/publication/readback/final process admission may create actual128/800 and consume exact V154 once; ingestion itself admits no actual",
+  "failure_or_falsification_condition": "First genuine consumer/preflight/process obstruction terminal; retain actual127/810 and V154 unconsumed. Technical failure does not automatically falsify physics.",
+  "stop_condition": "One fully admitted consumer/publication chain OR first precise genuine preflight/science/process obstruction; no extra cell, proof, retry, repair loop or self-created route.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Single conditional adjacent proof cannot answer four complete x_e/tau_T history differences; material NativeP6/full-history obligations remain.",
+  "materiality_reason": "New proof authority makes one distinct exact consumer/glue/publication task possible; supplies evidence required for defensible connected cover, not repeated proof.",
+  "handoff_completeness": "COMPLETE_FOR_BOUNDED_NEXT_TASK; full bytes and current material links recoverable; global historic-link audit not claimed",
+  "writeback_status": "PENDING_GITHUB_USER_UPLOAD",
+  "delivery_status": "PREPARED_NOT_DISPATCHED",
+  "operator_gate": "No additional approval for this scoped successor; model/newQ/destructive/published promotion not authorized",
+  "authorization_event": "LOCAL-Q048-V154-ACCEPTED-PROOF-INGESTION-V1",
+  "next_task_dispatch": "NOT_DISPATCHED",
+  "question_budget": {
+    "policy_id": "bubbleverse.question_work_budget",
+    "policy_version": "1.0.0",
+    "limit_pts": 1000,
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "activation_ref": {
+      "event_id": "LOCAL-Q048-BUDGET-ACTIVATION-AT-V144-INGESTION-V1",
+      "created_at_utc": "2026-10-21T17:03:48.496701+00:00",
+      "mode": "FIRST_DOCUMENTED_FROM_NOW_ADOPTION_FOR_EXISTING_QUESTION",
+      "checkpoint": "actual124/frontier840; V142 proof840→830 ACCEPTED_UNCONSUMED; V144 terminal technical FAIL",
+      "used_at_activation_pts": 0,
+      "remaining_at_activation_pts": 1000,
+      "historical_cost_before_activation": "NOT_ASSESSED_OUTSIDE_POLICY",
+      "basis": "No ledger in identified current full journal or incoming artifacts; complete pinned repository tree has no budget/ledger path; bounded Library title and content searches returned no results. This is not proof that no unindexed artifact exists. On discovery of an earlier applicable ledger: stop, reconcile; never reset.",
+      "namespace": "LOCAL; repository registration USER_UPLOAD_PENDING"
+    },
+    "ledger_ref": {
+      "file": "Q048_QUESTION_BUDGET_LEDGER_V22.json",
+      "bytes": 69065,
+      "sha256": "96e8edbae38eb382ca1b997decf01f2f760a798027da02be2b6cc8087f4e8e97",
+      "local_path": "/workspace/scratch/01ebc0d0dacf/v154_ingestion/Q048_QUESTION_BUDGET_LEDGER_V22.json"
+    },
+    "ledger_version": 22,
+    "parent_ledger_version": 21,
+    "run_id": "LOCAL-Q048-V154-INGESTION-20261023-V1",
+    "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V154-INGESTION-V1",
+    "parent_used_pts": 874,
+    "estimated_run_cost_pts": 26,
+    "revised_estimate_pts": 28,
+    "reserved_pts": 0,
+    "assessed_run_cost_pts": 28,
+    "run_cost_breakdown": [
+      {
+        "component": "scope_and_state_recovery",
+        "pts": 4,
+        "basis": "Recover exact Q/ledger21/source event, complete journal and scope; reuse immutable V154 records."
+      },
+      {
+        "component": "routing_and_materiality",
+        "pts": 5,
+        "basis": "Three-layer interpretation, Q completion, nonduplicate single consumer route and budget-limited outlook."
+      },
+      {
+        "component": "computation",
+        "pts": 2,
+        "basis": "JSON/hash/Git blob identities, exact guard record selection/glue/endpoint, unique-charge arithmetic; no theorem."
+      },
+      {
+        "component": "repository_and_method_recovery",
+        "pts": 5,
+        "basis": "Fresh main/tree/six exact state matches; latest V151 spec/consumer/manifest recovery and92/92/19 rosters; exact Builder prompt."
+      },
+      {
+        "component": "validation",
+        "pts": 5,
+        "basis": "36 source record checks, conjunctive supervisor admission, retained domains/assumptions and successor contract checks."
+      },
+      {
+        "component": "journal_handoff_delivery",
+        "pts": 7,
+        "basis": "Full append-only journal, ledger22/settlement/state/task/source-map/memory/index and individual-file delivery."
+      }
+    ],
+    "cost_basis": "New bounded intake/routing/recovery/delivery only; source62 already finalized in ledger21. Whole-point work assessment, not measured currency/tokens. Historical charges unchanged.",
+    "inherited_charge_ids": [
+      "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-PROOF-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-CONSUMER-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-REDELIVERY-AUDIT-20261023-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-PROOF-820-810-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V151-CONSUMER-820-810-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V151-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V152-PRODUCER-IMPORT-PATH-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V152-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V153-PREFREEZE-FAILURE-RECORD-SCHEMA-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V153-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V154-REPAIRED-PROOF-810-800-V1"
+    ],
+    "newly_applied_charge_ids": [
+      "LOCAL-Q048-BUDGET-CHARGE-V154-INGESTION-V1"
+    ],
+    "used_pts": 902,
+    "remaining_pts": 98,
+    "overrun_pts": 0,
+    "status": "ACTIVE",
+    "outstanding_reservations": [],
+    "source62_treatment": "ALREADY_FINALIZED_CARRIED_ONCE_NOT_REBILLED",
+    "last_validated_state_ref": {
+      "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+      "actual": {
+        "count": 127,
+        "frontier": 810
+      },
+      "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+      "V152_proof_state": "NOT_ACCEPTED_TECHNICAL_FAILURE",
+      "V152_failure_event": "LOCAL-Q048-V152-TERMINAL-TECHNICAL-FAILURE-810-800-V1",
+      "V153_proof_state": "NOT_ACCEPTED_PREFREEZE_TECHNICAL_FAILURE",
+      "V153_failure_event": "LOCAL-Q048-V153-TERMINAL-PREFREEZE-SCHEMA-FAILURE-810-800-V1",
+      "V153_ingestion_event": "LOCAL-Q048-V153-TECHNICAL-FAILURE-INGESTION-V1",
+      "V154_proof_state": "ACCEPTED_UNCONSUMED",
+      "V154_acceptance_ref": {
+        "file": "Q048_V154_ACCEPTANCE_V1.json",
+        "bytes": 10572,
+        "sha256": "8c164b57d2f39ff4f67e63d27fc99337411a1bc1aedd839dfca1b46bcab22717",
+        "local_path": "/workspace/scratch/01ebc0d0dacf/v154/Q048_V154_ACCEPTANCE_V1.json",
+        "library_file_id": "libfile_e884a8e0ee448191aeb4e344aa142a30"
+      },
+      "V154_ingestion_event": "LOCAL-Q048-V154-ACCEPTED-PROOF-INGESTION-V1"
+    },
+    "terminal_handoff_ref": null,
+    "next_task_estimate": {
+      "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+      "total_points": 1000,
+      "ledger_reference": "Q048_QUESTION_BUDGET_LEDGER_V22.json",
+      "ledger_version": 22,
+      "ledger_sha256": "96e8edbae38eb382ca1b997decf01f2f760a798027da02be2b6cc8087f4e8e97",
+      "used_points": 902,
+      "remaining_points": 98,
+      "inherited_charge_ids": [
+        "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V148-PROOF-830-820-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V148-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V149-CONSUMER-830-820-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V149-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V149-REDELIVERY-AUDIT-20261023-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V150-PROOF-820-810-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V150-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V151-CONSUMER-820-810-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V151-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V152-PRODUCER-IMPORT-PATH-FAILURE-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V152-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V153-PREFREEZE-FAILURE-RECORD-SCHEMA-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V153-INGESTION-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V154-REPAIRED-PROOF-810-800-V1",
+        "LOCAL-Q048-BUDGET-CHARGE-V154-INGESTION-V1"
+      ],
+      "estimated_run_cost_points": 56,
+      "maximum_run_cost_points": 65,
+      "reserved_points": 0,
+      "budget_event_id": null,
+      "status": "PROSPECTIVE_NOT_RESERVED_OR_DEBITED",
+      "receiver_rule": "Reconcile newer legitimate state, reserve max65 only if affordable and debit actual new work once. Include all review/finalization/delivery. No fresh1000-point activation. Stop/reduce before an unaffordable stage."
+    }
+  },
+  "next_question_transition": {
+    "required": false,
+    "reason": "Completion not satisfied;98points remain and bounded consumer max65 fits",
+    "destination_engine_id": null,
+    "next_question_ref": null,
+    "status": "NOT_REQUIRED"
+  },
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "Existing primary repository; no new segment",
+    "base_commit_sha": "3773859a2bad401c2abfd114b5a04d36da166a06",
+    "source_freshness": "VERIFIED_SIX_EXACT_STATE_BLOBS_AT_CURRENT_MAIN",
+    "journal_path": "Q047_SAMLET_JOURNAL_Q048_V154_INGESTED_V1.md",
+    "current_state_path": "Q048_V154_INGESTION_STATE_V1.json",
+    "index_refs": [
+      "Q048_V154_INGESTION_FILES_V1.md"
+    ],
+    "cross_reference_refs": [
+      "Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json",
+      "Q048_V155_NEXT_BUILDER_TASK_CONDITIONAL_CONSUMER_810_800_V1.json"
+    ],
+    "memory_update_ref": "Q048_V154_INGESTION_MEMORY_UPLOAD_V1.md",
+    "target_paths_status": "VERIFIED_ROOT_FOR_EXISTING_Q048_STATE_PATTERN; new names proposed additions",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q048_V154_INGESTION_MEMORY_UPLOAD_V1.md"
+  },
+  "output_file_refs": [
+    {
+      "file": "Q047_SAMLET_JOURNAL_Q048_V154_INGESTED_V1.md",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_QUESTION_BUDGET_LEDGER_V22.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_GUARD_SCOPE_BINDING_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_AUDIT_AND_MEMORY_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_BUDGET_RESERVATION_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_BUDGET_SCOPE_REVIEW_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_BUDGET_SETTLEMENT_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_EXECUTION_PROFILE_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_FILES_V1.md",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_MEMORY_UPLOAD_V1.md",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_OUTPUT_MANIFEST_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_QA_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_RESULT_AND_HANDOFF_V1.md",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_SOURCE_AUDIT_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V154_INGESTION_STATE_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V155_NEXT_BUILDER_TASK_CONDITIONAL_CONSUMER_810_800_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    },
+    {
+      "file": "Q048_V155_REQUIRED_CONTROL_ROSTERS_V1.json",
+      "scope": "Q048 V154 ingestion / prepared V155 task",
+      "access": "Created locally; individual persistence verified by final receipt"
+    }
+  ],
+  "output_manifest_ref": {
+    "file": "Q048_V154_INGESTION_OUTPUT_MANIFEST_V1.json",
+    "hash_policy": "Manifest created after state; contains exact state hash, no circular selfhash"
+  }
+}
