@@ -1,0 +1,56 @@
+{
+  "schema": "bubbleverse.q048.v152.execution_terminal_failure.v1",
+  "created_at_utc": "2026-10-23T10:43:35.960323+00:00",
+  "created_at_europe_copenhagen": "2026-10-23T12:43:35.960323+02:00",
+  "event_id": "LOCAL-Q048-V152-TERMINAL-TECHNICAL-FAILURE-810-800-V1",
+  "run_id": "LOCAL-Q048-V152-20261023-PROOF-810-800-V1",
+  "task_id": "LOCAL-Q048-V152-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-810-800-V1",
+  "task_fingerprint": "d2d4c368cc68dab0e6bb099c6948f71ce079addc7c19c00c7124f42c7435d345",
+  "status": "TERMINAL_TECHNICAL_FAILURE",
+  "TECHNICAL_STATE": "FAIL",
+  "SCIENTIFIC_STATE": "INCONCLUSIVE",
+  "WORKFLOW_STATE": "READY_FOR_HANDOFF",
+  "phase": "producer_import",
+  "runner_exit": 1,
+  "producer_returncode": 1,
+  "retry_count": 0,
+  "postfreeze_edits": false,
+  "frozen_pins_unchanged": true,
+  "science_seconds": 1.216390912999998,
+  "deadline_respected": true,
+  "error": "RuntimeError:PRODUCER_PROCESS_FAIL",
+  "root_cause": {
+    "class": "FROZEN_TRANSITIVE_IMPORT_PATH_BINDING_OMISSION",
+    "missing_path": "proof_runtime/ref/prior_v127/inputs/source/q047_math_v1.py",
+    "available_same_bytes_path": "proof_runtime/ref/prior_v127/inputs/q047_math_v1.py",
+    "required_by": "q048_p3_scaled_kernel_v2.py dynamic import",
+    "observed_exception": "FileNotFoundError: .../inputs/source/q047_math_v1.py",
+    "interpretation": "Required helper bytes existed, but preflight/freeze did not mirror the transitive source/ relative path required by the pinned kernel. Failure occurred during import before any new810->800 theorem arithmetic."
+  },
+  "science_effect": {
+    "new_mathematical_proof_cells": 0,
+    "new_actual_cells": 0,
+    "actual_unchanged": {
+      "count": 127,
+      "frontier": 810
+    },
+    "frontiers_unchanged": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 810
+    },
+    "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+    "NativeP6": "UNRESOLVED",
+    "q_complete": false,
+    "new_scientific_claim": false
+  },
+  "absent_outputs": [
+    "Q048_V152_RAW_V1.json",
+    "Q048_V152_VERIFICATION_V1.json",
+    "Q048_V152_ACCEPTANCE_V1.json",
+    "Q048_V152_ACCEPTANCE_READBACK_V1.json"
+  ],
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+  "repair_not_authorized_in_this_run": true
+}
