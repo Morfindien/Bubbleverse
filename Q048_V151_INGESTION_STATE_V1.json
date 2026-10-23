@@ -1,0 +1,95 @@
+{
+  "schema": "bubbleverse.q048.v151.ingestion_state.v1",
+  "created_at_utc": "2026-10-23T10:21:35+00:00",
+  "created_at_europe_copenhagen": "2026-10-23T12:21:35+02:00",
+  "event_id": "LOCAL-Q048-V151-ACCEPTED-CONSUMER-INGESTION-V1",
+  "run_id": "LOCAL-Q048-V151-INGESTION-20261023-V1",
+  "engine_id": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+  "current_q": "Q048",
+  "target_q": "Q048",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "ingestion_state": "NEW",
+  "source_result": {
+    "event_id": "LOCAL-Q048-V151-ACCEPTED-CONDITIONAL-CONSUMER-820-810-V1",
+    "run_id": "LOCAL-Q048-V151-20261023-CONDITIONAL-CONSUMER-820-810-V1",
+    "source_charge_id": "LOCAL-Q048-BUDGET-CHARGE-V151-CONSUMER-820-810-V1",
+    "source_charge_pts": 58,
+    "rebilled": false
+  },
+  "current_state": {
+    "actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "frontiers": {
+      "camspec-lcdm": 1440,
+      "camspec-ede_n3": 1440,
+      "hillipop-lcdm": 1440,
+      "hillipop-ede_n3": 810
+    },
+    "V150_proof_state": "ACCEPTED_CONSUMED_ONCE",
+    "NativeP6": "UNRESOLVED",
+    "scientific_state": "INCONCLUSIVE",
+    "case_lifecycle": "ACTIVE",
+    "q_complete": false
+  },
+  "completion_gate": {
+    "satisfied": false,
+    "reason": "Complete four-case x_e(z)/tau_T(z) bounds and native certificate remain unestablished."
+  },
+  "materiality": {
+    "single_bottleneck": "No accepted connected810->800 theorem exists from the current accepted frontier810.",
+    "next_route_adds_information": true,
+    "anti_repeat": "V150 proof820->810 and V151 consumer820->810 are complete and must not be rerun."
+  },
+  "next_engine_id": "BUBBLEVERSE.MATHEMATICS2.2.0",
+  "next_task_file": "Q048_V152_NEXT_MATHEMATICS_TASK_810_800_V1.json",
+  "next_task_id": "LOCAL-Q048-V152-TWO-OPERATOR-CONDITIONAL-CONNECTED-PROOF-810-800-V1",
+  "next_task_fingerprint": "d2d4c368cc68dab0e6bb099c6948f71ce079addc7c19c00c7124f42c7435d345",
+  "next_task_dispatch": "NOT_DISPATCHED",
+  "guard_next_cell": {
+    "cell_z": [
+      810,
+      800
+    ],
+    "cell_a": [
+      "1/811",
+      "1/801"
+    ],
+    "primary_row_index": 64,
+    "primary_row_sha256": "c3b8c594904bb8f37641be730311f502e5d51c284bcfd16041d152d25e7ffa2e",
+    "control_row_sha256": "da57d19c9240bd2703d18cc063b3d6a0320dcf1a6bab00dbe39634866de1201b",
+    "left_glue_verified": true,
+    "expected_endpoint_crosscheck_only": {
+      "a1": "1/801",
+      "E_right": "6742295226862717477/250000000000000000",
+      "Y_right": "5342729072289972639/250000000000000000",
+      "V_admitted": "1341250898132213803/250000000000000000"
+    }
+  },
+  "budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "parent_ledger": "Q048_QUESTION_BUDGET_LEDGER_V15.json",
+    "ledger_reference": "Q048_QUESTION_BUDGET_LEDGER_V16.json",
+    "ledger_version": 16,
+    "source58_already_charged": true,
+    "run_cost_points": 28,
+    "used_points": 658,
+    "remaining_points": 342,
+    "reserved_points": 0,
+    "charge_event_id": "LOCAL-Q048-BUDGET-CHARGE-V151-INGESTION-V1"
+  },
+  "repository": {
+    "repository": "Morfindien/Bubbleverse",
+    "verified_main_tree_sha": "51adf6cc451ce6428e98f8e76803df6d83466e6b",
+    "uploaded_inputs_verified": [
+      "Q047_SAMLET_JOURNAL_Q048_V151_ACCEPTED_APPENDED_V1.md",
+      "Q048_QUESTION_BUDGET_LEDGER_V15.json",
+      "Q048_V151_RESULT_AND_HANDOFF_V1-1.md",
+      "Q048_V151_RESULT_STATE_AND_HANDOFF_V1.json"
+    ],
+    "new_outputs_sync_status": "USER_UPLOAD_PENDING"
+  },
+  "return_route_after_v152": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0"
+}
