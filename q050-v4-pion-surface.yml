@@ -1,0 +1,37 @@
+name: Q050 V4 Pion surface certificate
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  q050-v4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Bubbleverse
+        uses: actions/checkout@v4
+        with:
+          path: bubbleverse
+      - name: Checkout pinned class_ede
+        uses: actions/checkout@v4
+        with:
+          repository: mwt5345/class_ede
+          ref: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+          path: class_ede
+      - name: Stage Q050 V4 package
+        shell: bash
+        run: |
+          cp bubbleverse/Q050_V4_PION_SURFACE_EXECUTION_SPEC.json .
+          cp bubbleverse/q050_v4_pion_surface_runner.py .
+      - name: Run fail-closed source-real preflight
+        env:
+          CLASS_EDE_ROOT: ${{ github.workspace }}/class_ede
+          BUBBLEVERSE_ROOT: ${{ github.workspace }}/bubbleverse
+        run: python q050_v4_pion_surface_runner.py
+        continue-on-error: true
+      - name: Require result artifact
+        run: test -f Q050_V4_PION_SURFACE_EXECUTION_RESULT.json
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: Q050_V4_PION_SURFACE_EXECUTION_RESULT
+          path: Q050_V4_PION_SURFACE_EXECUTION_RESULT.json
