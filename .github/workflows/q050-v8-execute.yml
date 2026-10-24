@@ -1,0 +1,70 @@
+name: Q050 V8 — execute and return result
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  q050-v8:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout Bubbleverse
+        uses: actions/checkout@v4
+        with:
+          path: Bubbleverse
+
+      - name: Checkout pinned class_ede
+        uses: actions/checkout@v4
+        with:
+          repository: mwt5345/class_ede
+          ref: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+          path: class_ede
+
+      - name: Prepare
+        run: |
+          set -euo pipefail
+          mkdir -p result
+          python3 --version
+          gcc --version | head -1
+          sha256sum Bubbleverse/q048_prefix_config_v1.json
+          git -C class_ede rev-parse HEAD
+
+      - name: Run V8 producer
+        id: science
+        continue-on-error: true
+        env:
+          BUBBLEVERSE_ROOT: ${{ github.workspace }}/Bubbleverse
+          CLASS_EDE_ROOT: ${{ github.workspace }}/class_ede
+          RESULT_DIR: ${{ github.workspace }}/result
+        run: |
+          set -o pipefail
+          python3 Bubbleverse/q050_v8_execute.py 2>&1 | tee result/Q050_V8_EXECUTION.log
+
+      - name: Verify V8 result
+        if: always()
+        env:
+          RESULT_DIR: ${{ github.workspace }}/result
+        run: |
+          set -euo pipefail
+          python3 Bubbleverse/q050_v8_verify.py \
+            result/Q050_V8_PION_NORMAL_CERTIFICATE_EXECUTION_RESULT.json \
+            | tee result/Q050_V8_VERIFICATION.log
+
+      - name: Show answer in Actions log
+        if: always()
+        run: |
+          echo "========== Q050 V8 ANSWER =========="
+          cat result/Q050_V8_PION_NORMAL_CERTIFICATE_EXECUTION_RESULT.json || true
+          echo "===================================="
+
+      - name: Upload answer
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Q050-V8-RESULT
+          if-no-files-found: error
+          retention-days: 30
+          path: result/
