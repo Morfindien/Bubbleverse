@@ -1,0 +1,38 @@
+{
+  "schema_version": "BV-BASELINE-1",
+  "base_sha": "b99a5c78058b624c8d5847bed582df4ea816358a",
+  "timestamp": null,
+  "timestamp_reason": "Initial checks were observed before mutation; no separate exact clock/log file was captured then. These rows preserve those observed outcomes without inventing timestamps.",
+  "checks": [
+    {
+      "command": "python -m unittest -v q048_inputcheck_tests_v1",
+      "exit_code": 0,
+      "status": "PASS",
+      "observed": "9 tests passed"
+    },
+    {
+      "command": "python q048_threshold_anchor_package_check_v9.py",
+      "exit_code": 0,
+      "status": "PASS",
+      "observed": "REPOSITORY_PATCH_GATE=PASS_ALREADY_INSTALLED; Q048_THRESHOLD_V9_PACKAGE_GATE=PASS"
+    },
+    {
+      "command": "python q048_package_check_v1.py",
+      "exit_code": 2,
+      "status": "FAIL",
+      "observed": "PACKAGE_GATE=FAIL PACKAGE_FILE bubbleverse_program_registry.json"
+    },
+    {
+      "command": "bash -n <each tracked shell file>",
+      "exit_code": 0,
+      "status": "PASS",
+      "observed": "146/146 syntax checks passed; SHELL_SYNTAX.json"
+    },
+    {
+      "command": "ast.parse / yaml.BaseLoader <each source/config>",
+      "exit_code": null,
+      "status": "PASS",
+      "observed": "All 713 Python and 333 YAML files parse; BASELINE_SYNTAX.json"
+    }
+  ]
+}

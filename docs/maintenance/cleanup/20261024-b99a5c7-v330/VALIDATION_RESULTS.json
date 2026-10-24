@@ -1,0 +1,194 @@
+{
+  "schema_version": "BV-VALIDATION-1",
+  "checks": [
+    {
+      "check_id": "syntax-comparison",
+      "status": "PASS",
+      "requirement": "No new Python/YAML syntax failures",
+      "command": [
+        "ast.parse",
+        "yaml.BaseLoader"
+      ],
+      "working_directory": "repository root",
+      "mode": "baseline/post-change",
+      "started_at": null,
+      "finished_at": "2026-10-24T03:10:01.067328Z",
+      "exit_code": null,
+      "log": "FINAL_SYNTAX.json",
+      "observed_scope": "1046 files; pre-existing failures retained in BASELINE_SYNTAX.json",
+      "limitations": "Static parse is not scientific execution"
+    },
+    {
+      "check_id": "maintenance-fixtures",
+      "requirement": "maintenance-fixtures",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/maintenance",
+        "-v"
+      ],
+      "working_directory": "repository root",
+      "mode": "post-change",
+      "started_at": "2026-10-24T03:10:01.067350Z",
+      "finished_at": "2026-10-24T03:10:01.127763Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "logs/maintenance-fixtures.log",
+      "expected_exit_code": 0,
+      "observed_scope": "Bounded local technical verification",
+      "limitations": "No scientific result, remote run or production environment qualification"
+    },
+    {
+      "check_id": "metadata-controls",
+      "requirement": "metadata-controls",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "-v",
+        "q048_inputcheck_tests_v1"
+      ],
+      "working_directory": "repository root",
+      "mode": "post-change",
+      "started_at": "2026-10-24T03:10:01.127821Z",
+      "finished_at": "2026-10-24T03:10:01.210639Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "logs/metadata-controls.log",
+      "expected_exit_code": 0,
+      "observed_scope": "Bounded local technical verification",
+      "limitations": "No scientific result, remote run or production environment qualification"
+    },
+    {
+      "check_id": "v9-package",
+      "requirement": "v9-package",
+      "command": [
+        "python",
+        "q048_threshold_anchor_package_check_v9.py"
+      ],
+      "working_directory": "repository root",
+      "mode": "post-change",
+      "started_at": "2026-10-24T03:10:01.210686Z",
+      "finished_at": "2026-10-24T03:10:01.360784Z",
+      "exit_code": 0,
+      "status": "PASS",
+      "log": "logs/v9-package.log",
+      "expected_exit_code": 0,
+      "observed_scope": "Bounded local technical verification",
+      "limitations": "No scientific result, remote run or production environment qualification"
+    },
+    {
+      "check_id": "v1-package-existing-failure",
+      "requirement": "Pre-existing expected PACKAGE_FILE bubbleverse_program_registry.json failure; unchanged historical gate, not a newly passing program",
+      "command": [
+        "python",
+        "q048_package_check_v1.py"
+      ],
+      "working_directory": "repository root",
+      "mode": "post-change",
+      "started_at": "2026-10-24T03:10:01.360831Z",
+      "finished_at": "2026-10-24T03:10:01.395272Z",
+      "exit_code": 2,
+      "status": "PASS",
+      "log": "logs/v1-package-existing-failure.log",
+      "expected_exit_code": 2,
+      "observed_scope": "Pre-existing expected PACKAGE_FILE bubbleverse_program_registry.json failure; unchanged historical gate, not a newly passing program",
+      "limitations": "No scientific result, remote run or production environment qualification",
+      "program_gate": "FAIL",
+      "comparison_to_baseline": "PASS; same known registry pin failure"
+    },
+    {
+      "check_id": "actual-launcher-resolver",
+      "status": "PASS",
+      "requirement": "Exact lookup/status and malformed-input rejection",
+      "command": [
+        "python",
+        "-c",
+        "original workflow resolver body"
+      ],
+      "working_directory": "repository root",
+      "mode": "post-change",
+      "exit_code": null,
+      "log": "LAUNCHER_RESOLVER_RESULTS.json",
+      "started_at": null,
+      "finished_at": "2026-10-24T03:10:03.245512Z",
+      "observed_scope": "71 isolated resolver cases",
+      "limitations": "Does not verify workflow availability, remote dispatch, datasets or scientific readiness"
+    },
+    {
+      "check_id": "protected-integrity",
+      "status": "PASS",
+      "requirement": "Unchanged bytes, paths, type, permissions and symlink targets for protected originals",
+      "command": [
+        "metadata",
+        "SHA-256"
+      ],
+      "working_directory": "repository root",
+      "mode": "baseline/post-change",
+      "exit_code": null,
+      "started_at": null,
+      "finished_at": "2026-10-24T03:10:10.360370Z",
+      "log": "PROTECTED_INVENTORY.json",
+      "observed_scope": "4378 protected paths and all placement destinations",
+      "limitations": "Hashes prove byte identity, not scientific acceptance"
+    },
+    {
+      "check_id": "navigation-links",
+      "status": "PASS",
+      "requirement": "Every maintained navigation link resolves",
+      "command": [
+        "local Markdown target resolution"
+      ],
+      "working_directory": "repository root",
+      "mode": "post-change",
+      "exit_code": null,
+      "started_at": null,
+      "finished_at": "2026-10-24T03:10:10.417474Z",
+      "log": "LINK_RESULTS.json",
+      "observed_scope": "5468 local links",
+      "limitations": "External URLs and frozen historical links not network-validated; REPORT/INSTALL existence checked at release"
+    },
+    {
+      "check_id": "maintenance-fixtures-final",
+      "status": "PASS",
+      "requirement": "Final review corrections and full contract validation",
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/maintenance",
+        "-v"
+      ],
+      "working_directory": "repository root",
+      "mode": "post-change",
+      "exit_code": 0,
+      "log": "logs/maintenance-fixtures-final.log",
+      "started_at": "2026-10-24T03:17:13.000560+00:00",
+      "finished_at": "2026-10-24T03:17:13.098919+00:00",
+      "observed_scope": "",
+      "limitations": "Local technical verification only"
+    },
+    {
+      "check_id": "cleanup-checker-final",
+      "status": "PASS",
+      "requirement": "Final review corrections and full contract validation",
+      "command": [
+        "python",
+        "tools/maintenance/check_cleanup_integrity.py"
+      ],
+      "working_directory": "repository root",
+      "mode": "post-change",
+      "exit_code": 0,
+      "log": "logs/cleanup-checker-final.log",
+      "started_at": "2026-10-24T03:17:13.098944+00:00",
+      "finished_at": "2026-10-24T03:17:21.342836+00:00",
+      "observed_scope": "{\n  \"status\": \"PASS\",\n  \"protected_files\": 4378,\n  \"placement_files\": 4380,\n  \"entrypoints\": 1306,\n  \"schemas\": 20,\n  \"scope\": \"Hashes, paths, metadata, placement, entry sources, supported schema subset and collisions; no scientific execution.\"\n}",
+      "limitations": "Local technical verification only"
+    }
+  ]
+}

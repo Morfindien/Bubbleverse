@@ -1,0 +1,562 @@
+{
+  "schema_version": "BV-RESOLVER-1",
+  "checks": [
+    {
+      "program_id": "Q036-GEOMETRY-V1",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q036-GEOMETRY-V1\nQ_IDENTITY_GATE=PASS q=Q-036\nLAUNCHER_GATE=PASS workflow_id=q036-endpoint-geometry-portability-v3.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q036-GEOMETRY-V2",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q036-GEOMETRY-V2\nQ_IDENTITY_GATE=PASS q=Q-036\nLAUNCHER_GATE=PASS workflow_id=q036-endpoint-geometry-portability-v3.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q036-GEOMETRY-V3",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q036-GEOMETRY-V3\nQ_IDENTITY_GATE=PASS q=Q-036\nLAUNCHER_GATE=PASS workflow_id=q036-endpoint-geometry-portability-v3.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q038-COORDLOC-V1",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q038-COORDLOC-V1\nQ_IDENTITY_GATE=PASS q=Q-038\nLAUNCHER_GATE=PASS workflow_id=q038-coordinate-localization-v1.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q039-FGPROFILE-V1",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q039-FGPROFILE-V1\nQ_IDENTITY_GATE=PASS q=Q-039\nLAUNCHER_GATE=PASS workflow_id=q039-native-foreground-profile-v1.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q039-IMPLBLOCK-V1",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q039-IMPLBLOCK-V1\nQ_IDENTITY_GATE=PASS q=Q-039\nLAUNCHER_GATE=PASS workflow_id=q039-implementation-block-intervention-v1.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q040-CMBSPACE-V1",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q040-CMBSPACE-V2\n"
+    },
+    {
+      "program_id": "Q040-CMBSPACE-V2",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q040-CMBSPACE-V3\n"
+    },
+    {
+      "program_id": "Q040-CMBSPACE-V3",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q040-CMBSPACE-V4\n"
+    },
+    {
+      "program_id": "Q040-CMBSPACE-V4",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q040-CMBSPACE-V5\n"
+    },
+    {
+      "program_id": "Q040-CMBSPACE-V5",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q040-RQMC-V1\n"
+    },
+    {
+      "program_id": "Q040-RQMC-V1",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q040-RQMC-V2\n"
+    },
+    {
+      "program_id": "Q040-RQMC-V2",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q040-RQMC-V3\n"
+    },
+    {
+      "program_id": "Q040-RQMC-V3",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q040-RQMC-V4\n"
+    },
+    {
+      "program_id": "Q040-RQMC-V4",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q040-RQMC-V4\nQ_IDENTITY_GATE=PASS q=Q-040\nLAUNCHER_GATE=PASS workflow_id=q040-defensive-rqmc-v4.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V1",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V2\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V10",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V11\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V11",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V12\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V12",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V13\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V13",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V14\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V14",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q041-PLANCKPORT-V15\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V15",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V16\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V16",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V17\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V17",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V18\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V18",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V19\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V19",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q041-PLANCKPORT-V19\nQ_IDENTITY_GATE=PASS q=Q-041\nLAUNCHER_GATE=PASS workflow_id=q041-planck-portability-v19.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V2",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V3\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V3",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V4\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V4",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V5\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V5",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V6\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V6",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V7\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V7",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V8\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V8",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V9\n"
+    },
+    {
+      "program_id": "Q041-PLANCKPORT-V9",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN superseded_by=Q041-PLANCKPORT-V10\n"
+    },
+    {
+      "program_id": "Q042-STOCKDIAG-V20",
+      "registry_status": "BROKEN",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=BROKEN\n"
+    },
+    {
+      "program_id": "Q042-STOCKDIAG-V21",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q042-DURABLE-V22\n"
+    },
+    {
+      "program_id": "Q042-DURABLE-V22",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q042-CLASSCAUSE-V23",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q042-CLASSORIGIN-V24",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q042-CLASSNAN-V25",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q042-REFACQ-V26",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q042-SWITCHPROBE-V27",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q042-EVENTCELL-V28",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q042-CONTEXT-V29",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q045-BASELINE-V1",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q045-BASELINE-V2\n"
+    },
+    {
+      "program_id": "Q045-BASELINE-V2",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q045-OPTICAL-AUDIT-V1",
+      "registry_status": "FAILED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=FAILED superseded_by=Q045-OPTICAL-AUDIT-V2\n"
+    },
+    {
+      "program_id": "Q045-OPTICAL-AUDIT-V2",
+      "registry_status": "FAILED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=FAILED superseded_by=Q045-OPTICAL-AUDIT-V3\n"
+    },
+    {
+      "program_id": "Q045-OPTICAL-AUDIT-V3",
+      "registry_status": "COMPLETED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED\n"
+    },
+    {
+      "program_id": "Q045-REFHIST-V1",
+      "registry_status": "COMPLETED_WITH_POSTPROCESSING_FAILURE",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED_WITH_POSTPROCESSING_FAILURE\n"
+    },
+    {
+      "program_id": "Q045-REFHIST-V2",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q045-REFHIST-V2\nQ_IDENTITY_GATE=PASS q=Q-045\nLAUNCHER_GATE=PASS workflow_id=q045-reference-history-v2.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q047-CERTCHECK-V1",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q047-CERTCHECK-V1\nQ_IDENTITY_GATE=PASS q=Q-047\nLAUNCHER_GATE=PASS workflow_id=q047-certificate-check-v1.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q047-PRECURSORCHECK-V1",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q047-PRECURSORCHECK-V1\nQ_IDENTITY_GATE=PASS q=Q-047\nLAUNCHER_GATE=PASS workflow_id=q047-precursor-check-v1.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q047-COLLECTION-PREFLIGHT-V1",
+      "registry_status": "COMPLETED_HISTORICAL",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=COMPLETED_HISTORICAL superseded_by=Q047-RECONSTRUCTION-V1\n"
+    },
+    {
+      "program_id": "Q047-RECONSTRUCTION-V1",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q047-RECONSTRUCTION-V1\nQ_IDENTITY_GATE=PASS q=Q-047\nLAUNCHER_GATE=PASS workflow_id=q047-reconstruction-v1.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q048-INPUTCHECK-V1",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q048-INPUTCHECK-V1\nQ_IDENTITY_GATE=PASS q=Q-048\nLAUNCHER_GATE=PASS workflow_id=q048-input-check-v1.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q048-PREFIX-V1",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q048-PREFIX-V1\nQ_IDENTITY_GATE=PASS q=Q-048\nLAUNCHER_GATE=PASS workflow_id=q048-prefix-v1.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q048-RESUME-V2",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q048-RESUME-V3\n"
+    },
+    {
+      "program_id": "Q048-RESUME-V3",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q048-RESUME-V4\n"
+    },
+    {
+      "program_id": "Q048-RESUME-V4",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q048-RESUME-V5\n"
+    },
+    {
+      "program_id": "Q048-RESUME-V5",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q048-STRUCTURAL-V6\n"
+    },
+    {
+      "program_id": "Q048-STRUCTURAL-V6",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q048-GUARDCONT-V7\n"
+    },
+    {
+      "program_id": "Q048-GUARDCONT-V7",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q048-PHASETURN-V8\n"
+    },
+    {
+      "program_id": "Q048-PHASETURN-V8",
+      "registry_status": "SUPERSEDED",
+      "exit_code": 1,
+      "status": "PASS",
+      "stdout": "",
+      "stderr": "PROGRAM_ID_GATE=FAIL status=SUPERSEDED superseded_by=Q048-THRESHOLD-V9\n"
+    },
+    {
+      "program_id": "Q048-THRESHOLD-V9",
+      "registry_status": "ACTIVE",
+      "exit_code": 0,
+      "status": "PASS",
+      "stdout": "PROGRAM_ID_GATE=PASS program_id=Q048-THRESHOLD-V9\nQ_IDENTITY_GATE=PASS q=Q-048\nLAUNCHER_GATE=PASS workflow_id=q048-threshold-anchor-v9.yml\n",
+      "stderr": ""
+    },
+    {
+      "program_id": "Q048-DOES-NOT-EXIST-V1",
+      "exit_code": 1,
+      "status": "PASS",
+      "scope": "Rejection only"
+    },
+    {
+      "program_id": "Q048-INPUTCHECK-V1;echo BAD",
+      "exit_code": 1,
+      "status": "PASS",
+      "scope": "Rejection only"
+    },
+    {
+      "program_id": "$(echo BAD)",
+      "exit_code": 1,
+      "status": "PASS",
+      "scope": "Rejection only"
+    },
+    {
+      "program_id": "../main",
+      "exit_code": 1,
+      "status": "PASS",
+      "scope": "Rejection only"
+    },
+    {
+      "program_id": "",
+      "exit_code": 1,
+      "status": "PASS",
+      "scope": "Rejection only"
+    },
+    {
+      "program_id": "Q049-FAKE-V1",
+      "exit_code": 1,
+      "status": "PASS",
+      "scope": "Rejection only"
+    }
+  ],
+  "remote_dispatch": "NOT_RUN"
+}

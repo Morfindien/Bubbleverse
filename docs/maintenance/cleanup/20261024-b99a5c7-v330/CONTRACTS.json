@@ -1,0 +1,830 @@
+{
+  "schema_version": "BV-CONTRACTS-1",
+  "scope": "JSON Schema subset supported fail-closed by check_cleanup_integrity.py; no unsupported keyword is ignored. Additional semantic path/hash/ID/coverage checks are in that checker.",
+  "contracts": {
+    "DOCUMENTED_COMMANDS.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "commands"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-DOCUMENTED-COMMANDS-1"
+          ]
+        },
+        "commands": {
+          "type": "array"
+        }
+      }
+    },
+    "PLAN_PREVIEW.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "base_sha",
+        "operations",
+        "deferred"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-CLEANUP-PLAN-1"
+          ]
+        },
+        "base_sha": {
+          "type": "string"
+        },
+        "operations": {
+          "type": "array"
+        },
+        "deferred": {
+          "type": "array"
+        }
+      }
+    },
+    "PROMPT_REGISTRY.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "entries"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-PROMPT-1"
+          ]
+        },
+        "entries": {
+          "type": "array"
+        }
+      }
+    },
+    "SHELL_SYNTAX.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "checks"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-SHELL-SYNTAX-1"
+          ]
+        },
+        "checks": {
+          "type": "array"
+        }
+      }
+    },
+    "VALIDATION_RESULTS.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "checks"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-VALIDATION-1"
+          ]
+        },
+        "checks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "check_id",
+              "status",
+              "command",
+              "working_directory",
+              "exit_code",
+              "log"
+            ],
+            "properties": {
+              "check_id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string",
+                "enum": [
+                  "PASS",
+                  "FAIL",
+                  "BLOCKED",
+                  "NOT_RUN"
+                ]
+              },
+              "exit_code": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "log": {
+                "type": "string",
+                "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "HANDOFF.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "task_id",
+        "handoff_id",
+        "engine",
+        "receiver",
+        "repository",
+        "base_sha",
+        "evidence_boundary",
+        "case_references",
+        "completed_work",
+        "unresolved_question",
+        "required_artifact",
+        "acceptance_criterion",
+        "known_failures",
+        "resource_limits",
+        "authorization",
+        "return_condition",
+        "fingerprint",
+        "route_history",
+        "discarded_routes"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-CLEANUP-HANDOFF-1"
+          ]
+        },
+        "task_id": {
+          "type": "string"
+        },
+        "handoff_id": {
+          "type": "string"
+        },
+        "engine": {
+          "type": "string"
+        },
+        "receiver": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "base_sha": {
+          "type": "string"
+        },
+        "evidence_boundary": {
+          "type": "string"
+        },
+        "case_references": {
+          "type": "string"
+        },
+        "completed_work": {
+          "type": "string"
+        },
+        "unresolved_question": {
+          "type": "string"
+        },
+        "required_artifact": {
+          "type": "string"
+        },
+        "acceptance_criterion": {
+          "type": "string"
+        },
+        "known_failures": {
+          "type": "string"
+        },
+        "resource_limits": {
+          "type": "string"
+        },
+        "authorization": {
+          "type": "string"
+        },
+        "return_condition": {
+          "type": "string"
+        },
+        "fingerprint": {
+          "type": "string"
+        },
+        "route_history": {
+          "type": "array"
+        },
+        "discarded_routes": {
+          "type": "array"
+        }
+      }
+    },
+    "LINK_RESULTS.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "count",
+        "unresolved"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-LINKS-1"
+          ]
+        },
+        "count": {
+          "type": "integer"
+        },
+        "unresolved": {
+          "type": "array"
+        }
+      }
+    },
+    "RUN_MANIFEST.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "run_id",
+        "prompt_id",
+        "prompt_version",
+        "prompt_sha256",
+        "core_sha256",
+        "repository",
+        "base_sha",
+        "result_commit",
+        "mode",
+        "target_q",
+        "evidence_boundary",
+        "started_at",
+        "finished_at",
+        "started_at_precision",
+        "dirty_tree",
+        "authorization",
+        "runtime",
+        "operation_manifest",
+        "protected_inventory",
+        "entrypoints",
+        "validation",
+        "existing_memory",
+        "maintenance_index",
+        "memory_update_state",
+        "outcome",
+        "delivery_state",
+        "budget",
+        "reuse",
+        "blockers",
+        "outputs"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-CLEANUP-RUN-1"
+          ]
+        },
+        "run_id": {
+          "type": "string"
+        },
+        "prompt_id": {
+          "type": "string"
+        },
+        "prompt_version": {
+          "type": "string"
+        },
+        "prompt_sha256": {
+          "type": "string"
+        },
+        "core_sha256": {
+          "type": "string"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "base_sha": {
+          "type": "string"
+        },
+        "result_commit": {
+          "type": "null"
+        },
+        "mode": {
+          "type": "string"
+        },
+        "target_q": {
+          "type": "string"
+        },
+        "evidence_boundary": {
+          "type": "string"
+        },
+        "started_at": {
+          "type": "string"
+        },
+        "finished_at": {
+          "type": "string"
+        },
+        "started_at_precision": {
+          "type": "string"
+        },
+        "dirty_tree": {
+          "type": "string"
+        },
+        "authorization": {
+          "type": "string"
+        },
+        "runtime": {
+          "type": "object"
+        },
+        "operation_manifest": {
+          "type": "string"
+        },
+        "protected_inventory": {
+          "type": "string"
+        },
+        "entrypoints": {
+          "type": "string"
+        },
+        "validation": {
+          "type": "string"
+        },
+        "existing_memory": {
+          "type": "array"
+        },
+        "maintenance_index": {
+          "type": "string"
+        },
+        "memory_update_state": {
+          "type": "string"
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "delivery_state": {
+          "type": "string"
+        },
+        "budget": {
+          "type": "object"
+        },
+        "reuse": {
+          "type": "object"
+        },
+        "blockers": {
+          "type": "array"
+        },
+        "outputs": {
+          "type": "string"
+        }
+      }
+    },
+    "PROTECTED_INVENTORY.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "base_sha",
+        "records"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-PROTECTED-1"
+          ]
+        },
+        "base_sha": {
+          "type": "string"
+        },
+        "records": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "record_id",
+              "path",
+              "sha256",
+              "size",
+              "permissions",
+              "file_type",
+              "integrity"
+            ],
+            "properties": {
+              "record_id": {
+                "type": "string",
+                "pattern": "^FILE-[0-9a-f]{16}$"
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "size": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "permissions": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "file_type": {
+                "type": "string",
+                "enum": [
+                  "regular",
+                  "symlink"
+                ]
+              },
+              "integrity": {
+                "type": "string",
+                "enum": [
+                  "PASS"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "BASELINE_SYNTAX.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "checks"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-SYNTAX-1"
+          ]
+        },
+        "checks": {
+          "type": "array"
+        }
+      }
+    },
+    "LAUNCHER_RESOLVER_RESULTS.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "checks",
+        "remote_dispatch"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-RESOLVER-1"
+          ]
+        },
+        "checks": {
+          "type": "array"
+        },
+        "remote_dispatch": {
+          "type": "string"
+        }
+      }
+    },
+    "WORKFLOW_COMMANDS.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "steps"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-WORKFLOW-COMMANDS-1"
+          ]
+        },
+        "steps": {
+          "type": "array"
+        }
+      }
+    },
+    "ENTRYPOINT_REGISTRY.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "base_sha",
+        "coverage",
+        "entries"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-ENTRYPOINT-1"
+          ]
+        },
+        "base_sha": {
+          "type": "string"
+        },
+        "coverage": {
+          "type": "string"
+        },
+        "entries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "entry_id",
+              "source",
+              "lifecycle",
+              "verification",
+              "commands",
+              "working_directory"
+            ],
+            "properties": {
+              "entry_id": {
+                "type": "string",
+                "pattern": "^ENTRY-[0-9a-f]{16}$"
+              },
+              "source": {
+                "type": "string",
+                "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
+              },
+              "lifecycle": {
+                "type": "string",
+                "enum": [
+                  "ACTIVE",
+                  "HISTORICAL",
+                  "DEPRECATED",
+                  "ARCHIVED",
+                  "BLOCKED"
+                ]
+              },
+              "verification": {
+                "type": "string",
+                "enum": [
+                  "PASS",
+                  "FAIL",
+                  "BLOCKED",
+                  "NOT_RUN"
+                ]
+              },
+              "commands": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "ROOT_LISTINGS.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "before",
+        "after",
+        "retained_root_reasons_ref",
+        "new_root_files"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-ROOT-1"
+          ]
+        },
+        "before": {
+          "type": "array"
+        },
+        "after": {
+          "type": "array"
+        },
+        "retained_root_reasons_ref": {
+          "type": "string"
+        },
+        "new_root_files": {
+          "type": "object"
+        }
+      }
+    },
+    "ARCHIVE_REVIEW.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "archived_bundles",
+        "candidates",
+        "other_candidates"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-ARCHIVE-REVIEW-1"
+          ]
+        },
+        "archived_bundles": {
+          "type": "integer"
+        },
+        "candidates": {
+          "type": "array"
+        },
+        "other_candidates": {
+          "type": "string"
+        }
+      }
+    },
+    "DEPENDENCIES.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "base_sha",
+        "method",
+        "incoming_references",
+        "move_closure"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-DEPENDENCIES-1"
+          ]
+        },
+        "base_sha": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "incoming_references": {
+          "type": "object"
+        },
+        "move_closure": {
+          "type": "array"
+        }
+      }
+    },
+    "RELOCATION_MANIFEST.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "base_sha",
+        "baseline_paths",
+        "files"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-PLACEMENT-1"
+          ]
+        },
+        "base_sha": {
+          "type": "string"
+        },
+        "baseline_paths": {
+          "type": "array"
+        },
+        "files": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": [
+              "operation_id",
+              "path",
+              "new_path",
+              "operation",
+              "placement_decision",
+              "source_hash",
+              "expected_destination_hash",
+              "verification_result"
+            ],
+            "properties": {
+              "operation_id": {
+                "type": "string",
+                "pattern": "^OP-[0-9a-f]{16}$"
+              },
+              "path": {
+                "type": "string",
+                "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
+              },
+              "new_path": {
+                "type": "string",
+                "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))(?!.*\\\\).+$"
+              },
+              "source_hash": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "expected_destination_hash": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "operation": {
+                "type": "string",
+                "enum": [
+                  "KEEP",
+                  "MOVE",
+                  "UPDATE"
+                ]
+              },
+              "placement_decision": {
+                "type": "string",
+                "enum": [
+                  "MOVE",
+                  "ARCHIVE_RETIRED",
+                  "KEEP_CORRECT_LOCATION",
+                  "KEEP_REQUIRED_ROOT",
+                  "KEEP_PROTECTED",
+                  "DEFER_BLOCKED"
+                ]
+              },
+              "verification_result": {
+                "type": "string",
+                "enum": [
+                  "PASS"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "FINAL_SYNTAX.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "checks",
+        "changed_status"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-SYNTAX-1"
+          ]
+        },
+        "checks": {
+          "type": "array"
+        },
+        "changed_status": {
+          "type": "array"
+        }
+      }
+    },
+    "UPGRADE_COVERAGE.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "items"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-UPGRADES-1"
+          ]
+        },
+        "items": {
+          "type": "array"
+        }
+      }
+    },
+    "BASELINE_RESULTS.json": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "base_sha",
+        "timestamp",
+        "timestamp_reason",
+        "checks"
+      ],
+      "properties": {
+        "schema_version": {
+          "type": "string",
+          "enum": [
+            "BV-BASELINE-1"
+          ]
+        },
+        "base_sha": {
+          "type": "string"
+        },
+        "timestamp": {
+          "type": "null"
+        },
+        "timestamp_reason": {
+          "type": "string"
+        },
+        "checks": {
+          "type": "array"
+        }
+      }
+    }
+  }
+}

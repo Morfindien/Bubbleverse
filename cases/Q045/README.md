@@ -1,0 +1,61 @@
+# Q045 original-file navigation
+
+Navigation only. Original journals and source/run records retain authority. Filename association is mechanical; it does not assign or close a case.
+
+| Original path | SHA-256 |
+| --- | --- |
+| [.github/workflows/q045-native-baseline-v1.yml](../../.github/workflows/q045-native-baseline-v1.yml) | `ab96a3d0844f78ed991f81298e40603932908746b290f2d707721d818fe6218b` |
+| [.github/workflows/q045-native-baseline-v2.yml](../../.github/workflows/q045-native-baseline-v2.yml) | `5c54d50bbf5fd2fbb445e8636152c099b88c1dd7844747121fdd2b0844a2f806` |
+| [.github/workflows/q045-optical-audit-v1.yml](../../.github/workflows/q045-optical-audit-v1.yml) | `da98452bf8706f6dcf3de8efe30693d5d81df3f44222e8033e364e74a3d661a7` |
+| [.github/workflows/q045-optical-audit-v2.yml](../../.github/workflows/q045-optical-audit-v2.yml) | `cf5916c29051c23e478a9cf527ee94c8d519cea4e7c484e89dfe22a68a564569` |
+| [.github/workflows/q045-optical-audit-v3.yml](../../.github/workflows/q045-optical-audit-v3.yml) | `467defe2f88685afda07a636698f9a8e7cfe90713b2c97d3d484efb7e1caa1fb` |
+| [.github/workflows/q045-reference-history-v1.yml](../../.github/workflows/q045-reference-history-v1.yml) | `843c50e096bcee4b52b2f67c67a132f62b7916f99e8b7512933ab33d08768b4f` |
+| [.github/workflows/q045-reference-history-v2.yml](../../.github/workflows/q045-reference-history-v2.yml) | `fc43cbeafe32cfc234243232149f8b55e3d7615fce5fd25b805e2950023eeedf` |
+| [Q045_EXECUTION_HANDOFF.md](../../Q045_EXECUTION_HANDOFF.md) | `4b0c84ef10730af629e4634fdb6bc6f645fb5c6de2bc38bc201e9337824eb375` |
+| [Q045_INGESTION_RESULT.json](../../Q045_INGESTION_RESULT.json) | `63a5e7ee2e1082e2ed692ccc36657faf8dbb3c6ac7d507cf78ee3c44b33329de` |
+| [Q045_OPTICAL_AUDIT_INGESTION_RESULT.json](../../Q045_OPTICAL_AUDIT_INGESTION_RESULT.json) | `d71dd4e9f4b7d082f0486b23cc9c35cb46f9ec69840b6d5e84f0755986cc851d` |
+| [Q045_OPTICAL_AUDIT_RAW_FILE_INDEX.md](../../Q045_OPTICAL_AUDIT_RAW_FILE_INDEX.md) | `840795b3ab97df601b28122cd1a3d523ba958a11baf0c1d9bfe20ca265063c4d` |
+| [Q045_OPTICAL_AUDIT_V1_FAILURE.json](../../Q045_OPTICAL_AUDIT_V1_FAILURE.json) | `3d62e9212cc2cb4e33778ab3023dcd295727b20a6bfa98e86d5ffec7b3522a50` |
+| [Q045_OPTICAL_AUDIT_V2_FAILURE.json](../../Q045_OPTICAL_AUDIT_V2_FAILURE.json) | `7fbea4d4112aa6057b57994ab0bb095000693d58c931226904202e2256e0e0d3` |
+| [Q045_PACKAGE_VALIDATION.json](../../Q045_PACKAGE_VALIDATION.json) | `1e31b5be0ade52f941f08d78958b7a263138d8067eaddfd85c40b0558c3b8063` |
+| [Q045_REFERENCE_HISTORY_LOCAL_VALIDATION.json](../../Q045_REFERENCE_HISTORY_LOCAL_VALIDATION.json) | `4311ffcb6d3927e3f5b11d50aca032e5e3f5f67d37b7c768d29ed6274da2d4d0` |
+| [Q045_REFERENCE_HISTORY_PRESERVED_RAW_MEMBERS.json](../../Q045_REFERENCE_HISTORY_PRESERVED_RAW_MEMBERS.json) | `1815c9418da136dc6d4ce282f1871eb8d314cc4e20ac6a7ebb7ff0ad99546a5b` |
+| [Q045_REFERENCE_HISTORY_RAW_FILE_INDEX.md](../../Q045_REFERENCE_HISTORY_RAW_FILE_INDEX.md) | `5f4bc713b556c4f57723ee4988327758e8cdec7fbb3026e32d2d1a5c90632756` |
+| [Q045_REFERENCE_HISTORY_RECOVERY_VALIDATION.json](../../Q045_REFERENCE_HISTORY_RECOVERY_VALIDATION.json) | `bd6f58e1c15f75bab5a964082bc6107d086623e251d863f87c181676528818be` |
+| [Q045_SAMLET_JOURNAL.md](../../Q045_SAMLET_JOURNAL.md) | `40ee6d04c8c4e1b2a19e1a8edda97a02827a94681433d1324478d7d6faa8d76e` |
+| [q045_native_baseline_contract_v1.json](../../q045_native_baseline_contract_v1.json) | `5306ef4d07144677ef45f566d8a71814914759f8b1de28553f4f0d188d50e362` |
+| [q045_native_baseline_contract_v2.json](../../q045_native_baseline_contract_v2.json) | `d1855120a2746e1b3838aa422cfe41cfd980f340301ea5c0fa6612b0cd29e6b8` |
+| [q045_native_baseline_manifest_v1.json](../../q045_native_baseline_manifest_v1.json) | `380e1743cdb4925c7fa0b79c071fb2b78037cce4c047d3ec4ab959ac1971d6f8` |
+| [q045_native_baseline_manifest_v2.json](../../q045_native_baseline_manifest_v2.json) | `db99756eedaa318600ed20dc7bfa386b8f9971edc125f997b35267623004d094` |
+| [q045_native_baseline_requirements_v1.txt](../../q045_native_baseline_requirements_v1.txt) | `01ce039efb380158ed51da01053156c95132244733eb84b2febc66c244f2de43` |
+| [q045_native_baseline_requirements_v2.txt](../../q045_native_baseline_requirements_v2.txt) | `0f14f7c39c055b040f483494bdeac2f7a99c86d5f54bb7249dd3ad261b44fdeb` |
+| [q045_native_baseline_tests_v1.py](../../q045_native_baseline_tests_v1.py) | `1b64715bd0ee588ff51c107cfc1372e3ff2e17aef3ba05530a4a19a861ff568e` |
+| [q045_native_baseline_tests_v2.py](../../q045_native_baseline_tests_v2.py) | `98ff54ec6cd277dd96d542683b552d331852fa9a0fb645c31e7dc022d0a61c6f` |
+| [q045_native_baseline_v1.py](../../q045_native_baseline_v1.py) | `ad896aeef9ab1b95d2d353deb9d689c5ac8ebc9f100c819527f489c1a2afc746` |
+| [q045_native_baseline_v2.py](../../q045_native_baseline_v2.py) | `02e15b11c5ba141861a02db105ad1f6aa4423d74c475beab6aee97aac57be9c7` |
+| [q045_optical_audit_contract_v1.json](../../q045_optical_audit_contract_v1.json) | `bc9b84389fbf80ceede12b6113bd399bb2153cac5a8d8e048760ddcd0a820032` |
+| [q045_optical_audit_contract_v2.json](../../q045_optical_audit_contract_v2.json) | `fcc5862820f507f83e9dccd3f45e8a0c4c7b8054156619146728b74a9e25277d` |
+| [q045_optical_audit_contract_v3.json](../../q045_optical_audit_contract_v3.json) | `b801912f8bb523f001ff5b0b4794274bc5dff1ef3e52219efe9ab804c2fdde08` |
+| [q045_optical_audit_manifest_v1.json](../../q045_optical_audit_manifest_v1.json) | `ae566e6028da0cebec456d07f767c1d4ff624c561586501f91f30852546a9f77` |
+| [q045_optical_audit_manifest_v2.json](../../q045_optical_audit_manifest_v2.json) | `1ad2c544f3fe389bf4ea5304a2609c78a18a15cd14a8875c65e7bf9ed385b25f` |
+| [q045_optical_audit_manifest_v3.json](../../q045_optical_audit_manifest_v3.json) | `894f7819568d4c8bf2381795beaccf26ac3c62943bd2f41ded582608e9c69da2` |
+| [q045_optical_audit_probe_v1.c](../../q045_optical_audit_probe_v1.c) | `da19a95885728d2982d84a117fe1629ae9a9af9754995481b95031ce76afc9ff` |
+| [q045_optical_audit_probe_v2.c](../../q045_optical_audit_probe_v2.c) | `da19a95885728d2982d84a117fe1629ae9a9af9754995481b95031ce76afc9ff` |
+| [q045_optical_audit_probe_v3.c](../../q045_optical_audit_probe_v3.c) | `da19a95885728d2982d84a117fe1629ae9a9af9754995481b95031ce76afc9ff` |
+| [q045_optical_audit_tests_v1.py](../../q045_optical_audit_tests_v1.py) | `cf537d7fd4514b52569ab0d9c7a38e491877f471b8cde23cf07cf73c1036dbda` |
+| [q045_optical_audit_tests_v2.py](../../q045_optical_audit_tests_v2.py) | `cec89eabb41118c4e7a2bf48b3c0ad0c97306fe835e7603b6466d476664bd437` |
+| [q045_optical_audit_tests_v3.py](../../q045_optical_audit_tests_v3.py) | `14622290cc237a6d1a620c490b7af8e21481dfdd1685d3ddf26bac689dcd1dac` |
+| [q045_optical_audit_v1.py](../../q045_optical_audit_v1.py) | `88cdfd63f385ece89313ad801c637430ae457d027b496da88603b9a6a87ccce1` |
+| [q045_optical_audit_v2.py](../../q045_optical_audit_v2.py) | `7d17381503458a361d0e5a0cc256d23cf9a4abe445e544794a08b741fe475d33` |
+| [q045_optical_audit_v3.py](../../q045_optical_audit_v3.py) | `89e35fd0621b33d3a8af87fbff0c92505eb666178720e5134239d826f86af0c4` |
+| [q045_reference_history_contract_v1.json](../../q045_reference_history_contract_v1.json) | `f54e3a908c35241530bd9db1eacbf95b5e201423f6d0fc9574e7274d2b532b08` |
+| [q045_reference_history_contract_v2.json](../../q045_reference_history_contract_v2.json) | `996a713e0bf17d7239a00f73e013617fbf4f014b6b6eaea1db24a37660da5d44` |
+| [q045_reference_history_manifest_v1.json](../../q045_reference_history_manifest_v1.json) | `451484b0a954af7a50bd06fdc982058f751d5930ee32381b4f4b6252275500c0` |
+| [q045_reference_history_manifest_v2.json](../../q045_reference_history_manifest_v2.json) | `e3cfa23b9cd63a168a98ccf6423f3a5ebcd0ed714ce841c497e293286fe01282` |
+| [q045_reference_history_probe_v1.c](../../q045_reference_history_probe_v1.c) | `b7b5302d304bc9071d2194324e7a9da182e5f962fbca66ba1352c59b05b63f13` |
+| [q045_reference_history_tests_v1.py](../../q045_reference_history_tests_v1.py) | `9bf66f634557914e14b8c749545df400aec6cc8c3f02ddf97377a17223b96907` |
+| [q045_reference_history_tests_v2.py](../../q045_reference_history_tests_v2.py) | `05a885f0b37903036421f7daaf8e492ee56fef3484d217ac151cda55efeca3db` |
+| [q045_reference_history_v1.py](../../q045_reference_history_v1.py) | `3d0ad07079049679041322c21a89c90ff5ec736d7f5f57419e01d7b6c5e9ff6a` |
+| [q045_reference_history_v2.py](../../q045_reference_history_v2.py) | `60c68566bf84af223003bc46419dc7b8aac95fa3022cdffedb538195228cc080` |
+| [q045_setup_baseline_v1.sh](../../q045_setup_baseline_v1.sh) | `0eda39a642649da8ccc2f31ffb759f083ddb2bdc804e6642ecd10ca9cfe24e9d` |
+| [q045_setup_baseline_v2.sh](../../q045_setup_baseline_v2.sh) | `58b878de6f787b1cf86a84df2e9b577c25a99c2f2967d0c8ab684c3e82e775bf` |

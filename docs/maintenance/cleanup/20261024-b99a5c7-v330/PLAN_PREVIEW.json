@@ -1,0 +1,30 @@
+{
+  "schema_version": "BV-CLEANUP-PLAN-1",
+  "base_sha": "b99a5c78058b624c8d5847bed582df4ea816358a",
+  "operations": [
+    {
+      "operation": "MOVE",
+      "old_path": "Bubbleverse_cleanup_24f380b.patch",
+      "new_path": "cleanup-installation/history/root-copy/Bubbleverse_cleanup_24f380b.patch",
+      "reason": "Root installation-patch copy with no active runtime consumer; retain distinct bytes and existing workflow-owned canonical copy.",
+      "dependency_closure": [
+        "Bubbleverse_cleanup_24f380b.patch"
+      ],
+      "protection": "MAINTENANCE_ONLY",
+      "recovery": "Inverse Git patch",
+      "verification": "Exact hash and canonical workflow patch unchanged"
+    },
+    {
+      "operation": "UPDATE",
+      "path": "cleanup-installation/README.md",
+      "reason": "Existing content is only fjjfj; no incoming reference or scientific provenance content.",
+      "verification": "New links resolve"
+    }
+  ],
+  "deferred": [
+    {
+      "path": "README.md",
+      "reason": "Passing V9 verifier binds complete README prefix/suffix and git blob; no safe edit without changing frozen runtime contract."
+    }
+  ]
+}
