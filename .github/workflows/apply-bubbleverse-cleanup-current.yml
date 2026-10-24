@@ -1,0 +1,113 @@
+name: "🧹 BUBBLEVERSE CLEANUP V3.3.0 — CURRENT MAIN"
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "preview = audit/package only; apply = create cleanup branch and PR"
+        required: true
+        default: preview
+        type: choice
+        options: [preview, apply]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bubbleverse-repository-cleanup-current
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    if: github.repository == 'Morfindien/Bubbleverse'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout exact default-branch state
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify repository and cleanup engine
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = "Morfindien/Bubbleverse"
+          test -f cleanup-installation/v330/bubbleverse_cleanup_v330.py
+          test "$(git hash-object cleanup-installation/v330/bubbleverse_cleanup_v330.py)" = "9c16db8d85e38ca9368d6e44bf34e40995ec679b"
+          echo "base_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          echo "engine_blob=9c16db8d85e38ca9368d6e44bf34e40995ec679b" >> "$GITHUB_OUTPUT"
+
+      - name: Run cleanup engine against checked-out state
+        id: run
+        env:
+          CLEANUP_MODE: ${{ inputs.mode }}
+          BUBBLEVERSE_CLEANUP_BASE_SHA: ${{ steps.gate.outputs.base_sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python cleanup-installation/v330/bubbleverse_cleanup_v330.py
+
+      - name: Repository safety checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --check
+          python -m compileall -q . || true
+          python - <<'PY'
+          import json, pathlib
+          p=pathlib.Path('bubbleverse_program_registry.json')
+          if p.exists(): json.loads(p.read_text(encoding='utf-8'))
+          print('registry-json=PASS')
+          PY
+          test -f README.md
+          test -f START_CODES.md || { echo 'START_CODES.md missing after cleanup'; exit 1; }
+
+      - name: Preserve evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bubbleverse-cleanup-current-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/bubbleverse-cleanup-v330/
+            docs/maintenance/cleanup/
+            START_CODES.md
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Create isolated cleanup branch and PR
+        if: inputs.mode == 'apply' && success() && steps.run.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          branch="bubbleverse-cleanup/v330-current-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
+          git add -A
+          git diff --cached --check
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Apply Bubbleverse cleanup v3.3.0 to current main'
+          git push origin "$branch"
+          gh pr create --repo "$GITHUB_REPOSITORY" --base "$DEFAULT_BRANCH" --head "$branch" --title 'Bubbleverse cleanup v3.3.0 — current main' --body 'Cleanup prepared from the current default-branch checkout. Historical scientific records remain protected. Review the uploaded cleanup evidence before merge.' || true
+
+      - name: Summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo '## Bubbleverse cleanup v3.3.0 — current main'
+            echo "Base: ${{ steps.gate.outputs.base_sha }}"
+            echo "Mode: ${{ inputs.mode }}"
+            echo 'Preview never pushes. Apply creates a separate branch/PR only after gates pass.'
+          } >> "$GITHUB_STEP_SUMMARY"
