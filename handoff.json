@@ -1,169 +1,355 @@
 {
-  "schema_version": "BV-HANDOFF-2.2.0",
-  "handoff_id": "LOCAL-M14-Q049-FOCUSED-LOWZ-TAUTAIL-HANDOFF-V1",
-  "revision_event_id": "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1",
+  "schema_version": "BV-HANDOFF-3.0.0",
+  "handoff_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1-HANDOFF",
+  "revision_event_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
   "status": "READY",
-  "created_at_utc": "2026-10-23T22:40:33Z",
+  "status_scope": "Proposed handoff only; no scientific execution/adoption implied",
+  "created_at_utc": "2026-10-24T20:48:29.237803+00:00",
   "prompt": {
     "id": "BV-M14-UNIVERSAL-REVISION",
-    "version": "7.2.0",
-    "sha256": "f3bc74a31f580faf8f684772f035be2d29a0577f29154d89997c8871330aa47c",
-    "core_version": null
+    "version": "8.0.0",
+    "sha256": "f7d0563ed87c23db2d39f8e60a1cedf4a23dd8847529679f243bbadb96f16423",
+    "core_version": null,
+    "selection_reason": "Incoming closed-case handoff explicitly requires v8.0.0 and activity-policy2.0.0. Current full prompt recovered; attached v7.2.0 retained unchanged as historical input."
   },
   "origin": {
-    "motor": "BUBBLEVERSE MOTOR 14 — THE AUTONOMOUS UNIVERSAL REVISION ENGINE",
-    "target_q": "Q048",
-    "closed_case_id": "NOT_ASSIGNED",
-    "run_id": "LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1"
+    "motor": "BV-M14-UNIVERSAL-REVISION",
+    "target_q": "Q049",
+    "case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+    "closed_case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+    "run_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1"
+  },
+  "run_mode": "CLOSED_CASE_REVISION",
+  "scientific_routing": {
+    "mode": "SELECT_NEXT_Q",
+    "active_q_id": null,
+    "active_case_id": null,
+    "next_decisive_action": "Recover the complete exact selector/call-chain and the z=810 domain certificate, then analyze one-sided vector fields on every potentially reachable switching surface under the inherited invariant barriers. Prove source-faithful continuation, or isolate the first interface and missing crossing/regularity premise. Do not run this analysis in Motor14.",
+    "reason": "Q049 closed on a valid finite-cap endpoint; proposed next scientific premise differs."
   },
   "boundary": {
-    "mode": "CURRENT_STATE_REVISION",
-    "target_q": "Q048",
-    "evidence_cutoff": "No separate external-publication cutoff documented; Q048 source/capture and current repository state used",
-    "permitted_later_evidence": [
-      "operator budget-scope clarification",
-      "current GitHub project-memory state through base commit f761a9ea5117b77ba2c5d52640d167652ad057ad"
-    ]
+    "mode": "BOUNDED_REVISION",
+    "target_q": "Q049",
+    "evidence_cutoff": "Completed Q049V2 intake; frozen source/config and inherited Q001-Q048. Current retrieval checks identities, not later science.",
+    "permitted_later_evidence": false
   },
   "authoritative_state": {
-    "master_journal_ref": "Q047_SAMLET_JOURNAL_Q048_M14_EXHAUSTED_Q049_SELECTED_V1.md",
-    "version": "M14_Q048_EXHAUSTED_Q049_SELECTED_V1",
-    "sha256": "5f690017280eed70f67c9931d358e79570c2aca718e301cf9752e3cb6e95e509",
-    "current_state_ref": "revision.md",
-    "coverage": "Q048 terminal current state + focused successor selection; inherited full journal preserved"
+    "master_journal_ref": "Q047_SAMLET_JOURNAL_Q049_M14_REVISED_Q050_PROPOSED_V1.md",
+    "version": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+    "sha256": "1bb181ac48a194355e7aa88cd7de60a59b7b486c53cf922389db52f1f4fb19f4",
+    "current_state_ref": null,
+    "coverage": "Affected Q049 claims and their Q041-Q048 forward-prediction dependencies, with inherited global scientific position and candidate backlog checked against all three supplied publication snapshots and targeted cumulative-journal sections. The full incoming journal is preserved; its entire 14 MB history, every source link and every downstream artifact were not re-audited."
   },
   "next_q": {
-    "q_id": "Q049",
-    "id_status": "PROPOSED_REQUIRES_CANONICAL_REGISTRY_WRITEBACK",
-    "question": "Under the frozen Q048 source/capture and fixed accepted z_reio, what rigorous upper bound can be placed on the remaining low-redshift contribution to |Δtau_T| over 0 <= z <= 810 for the hillipop-ede_n3 configuration between the event-resolved latch q=xHeII=10^-6 and the same-event reset q=0, using a correlation-preserving global stability/envelope analysis anchored at the validated z=810 frontier rather than reconstructing the full low-z x_e(z) trajectory cell by cell?",
+    "q_id": "Q050",
+    "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+    "id_status": "PROPOSED_REQUIRES_CANONICAL_REGISTRY_CHECK_AND_ADOPTION",
+    "question": "For the frozen hillipop-ede_n3 configuration and each fixed admitted common background on 0 <= z <= 810, do the exact source-real low-redshift hydrogen/temperature branch-selection rules admit an absolutely continuous continuation to z=0 from every state in the validated z=810 domain, separately for q=xHeII=10^-6 and q=0, without changing or convexifying the selector?",
     "priority": "HIGH",
-    "scientific_origin": "FOCUSED_SUBQUESTION of exhausted Q048 completion-sensitivity debt",
+    "scientific_origin": "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1",
     "firewall_pass": true,
-    "why_now": "Targets the unresolved integrated low-z optical-depth contribution with a distinct global-envelope method before expensive downstream inference.",
-    "alternative_outcomes": [
-      "tight rigorous upper bound",
-      "large/weak bound",
-      "precise mathematical obstruction",
-      "current evidence insufficient"
+    "firewall_tests": [
+      "Object: conclusion-critical validity of the recombination/temperature model used for an observable.",
+      "Reality constraint: exact-source mathematics can establish continuation or exhibit a precisely qualified obstruction.",
+      "Consequence: determines whether the Q049 admissible thermal solution class is nonempty for its admitted starts.",
+      "Answerability: existence, state-subset qualification, a counterexample, or an exact unresolved interface is reportable.",
+      "Neutrality: no assumption of existence, failure, smallness or cosmological falsification.",
+      "Non-administration: concerns the equations and their selected solutions, not repository or workflow repair."
     ],
-    "starting_motor": "BUBBLEVERSE.MATHEMATICS2.2.0"
+    "why_now": "Immediate explicit premise of the newly closed conditional bound; source-complete invariant domain offers reusable support. Existence precedes optimizing a sensitivity estimate.",
+    "alternative_outcomes": {
+      "yes": "Source-faithful low-z thermal continuation on admitted common background.",
+      "no": "Qualified failing state/interface; cosmological reachability assessed separately.",
+      "conditional": "Exact subdomain or missing interface premise recorded; no blanket realization claim."
+    },
+    "starting_motor": "BUBBLEVERSE.MATHEMATICS2.2.0",
+    "starting_motor_policy_override": "activity-policy2.0.0; newer verified compatible prompt preferred"
   },
   "completed_work": [
     {
-      "id": "Q048-V151",
-      "result": "validated actual127/frontier810 for hillipop-ede_n3"
+      "id": "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2",
+      "status": "INHERITED_NOT_RERUN",
+      "result": "Conditional finite cap46.67050453;46 producer/33 verifier checks, shared sources/analyst."
     },
     {
-      "id": "Q048-V154",
-      "result": "accepted-unconsumed conditional 810->800 proof"
-    },
-    {
-      "id": "Q048-V155",
-      "result": "technical prefreeze failure ingested; zero scientific advance"
-    },
-    {
-      "id": "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1",
-      "result": "Q048 terminalized under operator effective-exhaustion policy; Q049 selected"
+      "id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+      "status": "COMPLETED",
+      "result": "Bounded integration, policy/ledger reconciliation, targeted provenance and proposed next question."
     }
   ],
-  "unresolved_decision": "Can the remaining low-z latch/reset contribution to |Δtau_T| for hillipop-ede_n3 be rigorously bounded from the validated z=810 anchor without reconstructing the full low-z trajectory cell by cell?",
-  "next_decisive_step": "Run one bounded Mathematics2.2.0 derivation/validation of a correlation-preserving global envelope and its Thomson-depth integral bound.",
+  "unresolved_decision": "Literal low-z selected-field thermal continuation from the admitted anchor domain on an already admitted common background.",
+  "next_decisive_step": "Recover the complete exact selector/call-chain and the z=810 domain certificate, then analyze one-sided vector fields on every potentially reachable switching surface under the inherited invariant barriers. Prove source-faithful continuation, or isolate the first interface and missing crossing/regularity premise. Do not run this analysis in Motor14.",
   "scientific_contract": {
     "fixed_assumptions": [
-      "frozen Q048 source/capture",
-      "fixed accepted z_reio",
-      "same first cutoff event",
-      "latch q=1e-6 vs reset q=0",
-      "hillipop-ede_n3 configuration"
+      "Existing admitted regular common background only; no new global background existence claim.",
+      "Source-real target; deterministic literal low-z selectors, exact equality conventions, no relaxed/Filippov replacement.",
+      "Q049 hydrogen and positive-temperature invariants may be reused with their original assumptions.",
+      "All admissible z810 starts are the proposed theorem domain; a counterexample in the enlarged domain is not automatically a reachable cosmological counterexample."
     ],
     "fixed_datasets": [
-      "Q048 frozen capture 2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+      "No new observational data or likelihood evaluation.",
+      "mwt5345/class_ede@5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "q048_prefix_config_v1.json SHA2562514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "Q048_V151_ACCEPTED_CHECKPOINT_V1.json SHA25660dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96"
     ],
-    "fixed_parameters": [
-      "validated z=810 Q048 state",
-      "Q048 branch definitions"
-    ],
+    "fixed_parameters": {
+      "configuration": "hillipop-ede_n3",
+      "z_domain": [
+        0,
+        810
+      ],
+      "held_q_values": [
+        "1/1000000",
+        "0"
+      ],
+      "z_reio_hex": "0x1.dfec4p+2",
+      "anchor_h_lower": "346752030166741/1000000000000000000",
+      "anchor_h_upper": "99999/100000",
+      "anchor_v_interval": [
+        "0.98",
+        "1.000001"
+      ],
+      "anchor_status": "Inherited reported V151 domain; original checkpoint bytes must be verified before investigation-specific computations."
+    },
     "validation_gates": [
-      "prospective global-envelope theorem/spec",
-      "correlation preservation",
-      "independent reconstruction",
-      "frozen identity check",
-      "unit/finite-output checks"
+      "Exact source/capture/checkpoint identity before any computation.",
+      "Include PEEBLES, HMLA, SWIFT, thermal coupling, smoothing and all relevant switching surfaces; do not equate the two arms selectors.",
+      "An invariant region alone is not an existence proof for a discontinuous selected field.",
+      "State theorem quantifiers and solution concept explicitly; record reachable versus enlarged-state status.",
+      "Any new computation gets prospective acceptance criteria and independent algorithm checks where meaningful; no sampling-only existence claim.",
+      "No threshold for physical smallness is introduced."
     ],
-    "termination_condition": "Rigorous tail bound or precise mathematical obstruction; do not revert to Q048 cell-by-cell continuation."
+    "termination_condition": "Deliver one source-faithful continuation theorem over the declared domain, a qualified counterexample/subdomain result, or the first precise unresolved selector interface and minimal missing evidence. Do not repeat Q047 helium-cutoff theorem, Q049 cap calculation, Q048 10-redshift cells, native capture, fitting, likelihood or production. No point-based stop. Bound any later local calculation prospectively; inherited300s is a planning ceiling, not a claim that an experiment has run."
   },
-  "claim_ids": null,
+  "claim_ids": [
+    "LOCAL-M14-Q049-CAP-CURRENT-V1",
+    "LOCAL-Q049-OBS-001-SOURCE-MODE-COVERAGE",
+    "C-036-IMPL",
+    "CTR-H0-001"
+  ],
   "source_ids": [
-    "Q048-FROZEN-SOURCE",
-    "Q048-V151-CHECKPOINT"
+    "SRC-Q049-INGESTION",
+    "SRC-Q049-REPORT",
+    "SRC-Q049-RAW",
+    "SRC-Q049-VERIFY",
+    "SRC-Q048-CONFIG",
+    "K-PROPOSED-Q046-SOURCE-002",
+    "SRC-Q049-LEDGER5",
+    "SRC-M14-V8"
+  ],
+  "source_register": [
+    {
+      "id": "SRC-Q049-INGESTION",
+      "reference": "Q049_V2_INGESTION_RESULTAT_OG_OVERLEVERING.md",
+      "role": "Internal closure; no new independent evidence",
+      "verification": "Supplied local bytes read and hashed",
+      "tier": "S1 internal primary record"
+    },
+    {
+      "id": "SRC-Q049-REPORT",
+      "reference": "https://github.com/Morfindien/Bubbleverse/blob/d397732f65da2d1566089b9153a4145a605f8557/Q049_V2_MATEMATISK_RESULTAT-1.md",
+      "role": "Primary conditional derivation",
+      "verification": "Full report retrieved and reviewed",
+      "tier": "S1 internal primary derivation"
+    },
+    {
+      "id": "SRC-Q049-RAW",
+      "reference": "libfile_22e30122af8c81919f4cb0c8ee640545",
+      "role": "Stored outward cap and producer checks",
+      "sha256": "c7b32ce22a1b61063d6c5e936df15d0b8d97579037fd1bb167ca0ac62d5455e8",
+      "verification": "Complete content recovered; size and supplied hash match; not re-executed",
+      "tier": "S1 internal computational record"
+    },
+    {
+      "id": "SRC-Q049-VERIFY",
+      "reference": "libfile_117e492fb32c81918d7f1e3f4c859d27",
+      "role": "Stored separate algorithm verification",
+      "sha256": "830ba5beeec0693f3aa08ea7f441abf41777933a99f11f29be434cd8914cf9e1",
+      "verification": "Complete content recovered; size and supplied hash match; not re-executed",
+      "tier": "S1 internal computational record"
+    },
+    {
+      "id": "SRC-Q048-CONFIG",
+      "reference": "https://github.com/Morfindien/Bubbleverse/blob/d397732f65da2d1566089b9153a4145a605f8557/q048_prefix_config_v1.json",
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "role": "Frozen effective config, constants, reionization and capture lineage",
+      "verification": "Full repository bytes hash-match frozen config",
+      "tier": "S1 primary implementation input"
+    },
+    {
+      "id": "K-PROPOSED-Q046-SOURCE-002",
+      "reference": "https://github.com/mwt5345/class_ede/blob/5a131c91d657dd9a7c6364cc45b038710f8d0d97/external/HyRec2020/wrap_hyrec.c",
+      "role": "Literal selector conditions; source definition, not empirical evidence",
+      "verification": "Lines110-150 retrieved this run; broader source proof is inherited through primary report",
+      "tier": "S1 primary code"
+    },
+    {
+      "id": "SRC-Q049-LEDGER5",
+      "reference": "libfile_09a3bee7db5c81918e0db16275d2c896",
+      "sha256": "ccbc6021622c7f574e1c1cc7e9e5638934216005a97fbd5c23c25541cdcbd329",
+      "role": "Authoritative uncapped activity successor",
+      "verification": "All203 lines read; 4 unique events sum347",
+      "tier": "Operational, not scientific evidence"
+    },
+    {
+      "id": "SRC-M14-V8",
+      "reference": "libfile_909871316fc48191984d64abafd86d81",
+      "sha256": "f7d0563ed87c23db2d39f8e60a1cedf4a23dd8847529679f243bbadb96f16423",
+      "role": "Current full revision instructions and v3 handoff schema",
+      "verification": "All1716 lines read; reconstructed byte length104801 matches metadata",
+      "tier": "Operational"
+    }
   ],
   "artifact_ids": [
-    "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
-    "Q048_V154_RESULT_STATE_V1.json",
-    "Q048_V155_INGESTION_STATE_V1.json"
+    "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2",
+    "Q048_V151_ACCEPTED_CHECKPOINT_V1",
+    "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1"
   ],
   "dependencies": [
-    "Q048 frozen source/capture",
-    "Q048 V151 accepted state",
-    "Q048 definitions and tau_T mapping"
+    {
+      "from": "defined physical realization",
+      "to": "qualified reference",
+      "status": "UNCLEARED"
+    },
+    {
+      "from": "qualified reference",
+      "to": "opacity/spectra/likelihood/converged inference",
+      "status": "UNCLEARED"
+    },
+    {
+      "from": "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2",
+      "to": "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1",
+      "status": "Conditional premise explicitly unresolved"
+    }
   ],
   "blockers": [
-    "Permanent Q049 registry writeback pending",
-    "Global correlation-preserving envelope not yet proved"
+    "Canonical scientific-Q registry/adoption not verified; Q050 remains proposed.",
+    "Original checkpoint/operator evidence must be recovered and hash-verified before new investigation-specific calculations.",
+    "Complete exact switching surfaces and their one-sided vector-field premises need investigation."
   ],
   "scientific_debt": [
-    "Q048 broader all-four x_e/tau_T objective remains unresolved",
-    "NativeP6 unresolved",
-    "trajectory identity and selector uniqueness unresolved"
+    {
+      "id": "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1",
+      "root_q": "Q048",
+      "status": "ACTIVE",
+      "question": "For the frozen hillipop-ede_n3 configuration and each fixed admitted common background on 0 <= z <= 810, do the exact source-real low-redshift hydrogen/temperature branch-selection rules admit an absolutely continuous continuation to z=0 from every state in the validated z=810 domain, separately for q=xHeII=10^-6 and q=0, without changing or convexifying the selector?"
+    },
+    {
+      "id": "Q048-COMPLETE-FOUR-HISTORIES",
+      "status": "UNSOLVED"
+    },
+    {
+      "id": "NativeP6",
+      "status": "UNRESOLVED"
+    }
   ],
   "discarded_routes": [
-    "V156-style retry under Q048",
-    "same 810->800 consumer/proof loop",
-    "motor switch without scientific scope change",
-    "burning residual points",
-    "treating V155 as physical evidence"
+    {
+      "id": "Q049-TIGHT-SENSITIVITY-CANDIDATE",
+      "priority": "HIGH_DEFERRED",
+      "question": "Can a justified paired anchor and source-complete comparison yield a materially informative low-z optical-depth sensitivity bound?",
+      "decision": "DEFERRED",
+      "reason": "No epsilon-small paired initial radius is established. Tightening does not answer the unproved existence premise and must not reopen the satisfied Q049 endpoint."
+    },
+    {
+      "id": "PRED-EDE-PORTABILITY-001",
+      "priority": "HIGH_DEFERRED",
+      "question": "Does the CamSpec-HiLLiPoP difference materially change H0/EDE conclusions under the original matched-data contract?",
+      "decision": "DEFERRED",
+      "reason": "Complete reference, spectrum/likelihood qualification and convergence remain missing. Q049 clears none of those downstream gates."
+    },
+    {
+      "id": "PRED-Q039-COUPLED-001",
+      "priority": "HIGH_DEFERRED",
+      "question": "Does a justified coupled native-likelihood treatment explain residual matched-support geometry?",
+      "decision": "DEFERRED",
+      "reason": "Independent valuable branch; the present revision supplies no new qualified intervention and cannot manufacture one."
+    },
+    {
+      "id": "PRED-H0-INDEPENDENT-001",
+      "priority": "HIGH_DEFERRED",
+      "question": "Does an independent qualified H0 determination discriminate the inherited inference chains under its own assumptions?",
+      "decision": "DEFERRED",
+      "reason": "No new independent dataset supplied or assessed in this bounded revision."
+    },
+    {
+      "id": "FINITE-SEARCH-EDE-GLOBALITY-DEBT",
+      "priority": "MEDIUM_DEFERRED",
+      "question": "Do documented high-H0 basins remain competitive after finite-search limitations are addressed under original assumptions?",
+      "decision": "DEFERRED",
+      "reason": "Requires its own preserved data/prior/search contract; this cap supplies no inference endpoint."
+    },
+    {
+      "id": "REPO-SYNC-AS-Q",
+      "reason": "Administrative action fails scientific firewall."
+    },
+    {
+      "id": "Q049-REOPEN-FOR-TIGHTNESS",
+      "reason": "Changes accepted endpoint after completion; use a separately justified question."
+    }
   ],
   "route_history": [
     {
-      "motor": "Q048 physics motors",
-      "scientific_task": "cell-wise controlled continuation",
-      "new_information": "partial validated state through z=810",
-      "outcome": "parent unresolved"
+      "motor": "Q049 MathematicsV1",
+      "scientific_task": "Source-complete envelope",
+      "new_information": "Peebles source-coverage gap, broad anchor, adjoint design",
+      "outcome": "INCONCLUSIVE"
     },
     {
-      "motor": "Motor 14 v7.2.0",
-      "scientific_task": "current-state revision and successor selection",
-      "new_information": "operator scope policy + global successor review",
-      "outcome": "Q049 focused child selected"
+      "motor": "Q049 MathematicsV2",
+      "scientific_task": "One finite source-complete cap",
+      "new_information": "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2",
+      "outcome": "CLOSED_WITHIN_CONDITIONAL_SCOPE"
+    },
+    {
+      "motor": "Result Ingestion2.3.0",
+      "scientific_task": "Scoped closure review",
+      "new_information": "Closure accepted; uncapped activity migration",
+      "outcome": "Motor14 handoff"
+    },
+    {
+      "motor": "Motor14v8.0.0",
+      "scientific_task": "Affected-state revision and next proposal",
+      "new_information": "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1",
+      "outcome": "PROPOSED_Q050_NOT_EXECUTED"
     }
   ],
   "runtime": {
-    "capability_class": "focused deep-reasoning scientific mathematics with file/GitHub and exact/numerical support",
-    "verified_setup": "Current run verified GitHub/file/local-processing access; exact future selectable runtime name not required",
-    "reasoning_requirement": "HIGH",
+    "capability_class": "Strong mathematical reasoning; exact local computation/source access",
+    "verified_setup": "Local Python/files; GitHub read; persistent file retrieval. No model/setting switch.",
+    "reasoning_requirement": "Proof-critical high reasoning; selectable level unverified",
     "required_tools": [
       "files",
-      "GitHub",
-      "exact/local computation"
+      "exact arithmetic",
+      "primary source retrieval"
     ],
-    "fallback": "best available agentic runtime with equivalent scientific/file/code capability",
-    "escalation_trigger": "No rigorous correlation-preserving bound can be constructed without missing native/coupled state evidence."
+    "fallback": "Document precise interface obstruction with preserved completed results",
+    "escalation_trigger": "Source-faithful discontinuous-system theorem cannot be justified within demonstrated capabilities; do not blind-retry."
   },
   "authorization": {
-    "revision_adoption": "AUTHORIZED",
-    "next_q_adoption": "AUTHORIZED",
-    "next_q_execution": "NOT_REQUESTED"
+    "revision_adoption": "REQUIRED",
+    "next_q_adoption": "REQUIRED",
+    "next_q_execution": "REQUIRED"
   },
   "integrity": {
     "historical_records_modified": false,
     "historical_artifacts_deleted": false,
-    "hashes_verified": true,
+    "hashes_verified": [
+      "Incoming attachment hashes",
+      "Frozen config SHA256",
+      "Raw cap and separate-verifier SHA256",
+      "Exact pre-ingestion journal Git-blob prefix",
+      "New journal predecessor prefix"
+    ],
     "missing_provenance": [
-      "Permanent canonical Q049 registry record not yet written"
+      "Original V151 checkpoint not freshly downloaded",
+      "No fresh exhaustive source/table audit",
+      "No current canonical-Q registry or installed universal validator"
     ]
   },
   "successor_acceptance": {
     "schema_valid": true,
+    "validation_method": "Local required-field/type/semantic checks; not an installed shared validator",
     "scientific_target_preserved": true,
     "boundary_preserved": true,
     "blockers_explicit": true
@@ -178,11 +364,18 @@
   },
   "github_memory": {
     "repository": "Morfindien/Bubbleverse",
-    "repository_segment": "main",
-    "entrypoint_ref": "Q047_SAMLET_JOURNAL_Q048_V155_INGESTED_BUDGET_LIMITED_V1.md + Q048_QUESTION_BUDGET_LEDGER_V24.json",
-    "inspected_commit": "f761a9ea5117b77ba2c5d52640d167652ad057ad",
+    "repository_segment": "EXISTING_REPOSITORY",
+    "entrypoint_ref": "README.md (stale); current supplied journal/intake supersedes scoped active statements",
+    "inspected_commit": "d397732f65da2d1566089b9153a4145a605f8557",
     "intended_paths": [
-      "revisions/Q048/LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1/"
+      "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/revision.md",
+      "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/handoff.md",
+      "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/handoff.json",
+      "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/github_memory_update.json",
+      "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/Q047_SAMLET_JOURNAL_Q049_M14_REVISED_Q050_PROPOSED_V1.md",
+      "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/Q049_QUESTION_ACTIVITY_LEDGER_V6.json",
+      "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/validation.json",
+      "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/FILES.md"
     ],
     "write_status": "READY_FOR_MANUAL_UPLOAD",
     "committed_commit": null,
@@ -192,73 +385,68 @@
   "internet_plugins": {
     "permission": "PERMITTED",
     "used_capabilities": [
-      "GitHub connector",
-      "Files",
-      "local file/hash/JSON processing",
-      "runtime time source"
+      "GitHub repository/file/tree read",
+      "Library read of nonattached supporting state/current prompt",
+      "Local Python/files"
     ],
     "verification_gaps": [
-      "No external literature verification required or performed for this lifecycle/task-selection revision"
+      "GitHub write access not tested this run; predecessor403 not a current write test.",
+      "Other scientific search/runtime offerings not needed or verified."
     ]
   },
   "case_outcome": {
-    "originating_q_id": "Q048",
-    "originating_case_id": "NOT_ASSIGNED",
-    "scientific_status": "UNRESOLVED",
-    "operational_stop_reason": "BUDGET_EXHAUSTED_EFFECTIVE_UNSPENDABLE_RESIDUAL",
-    "public_status": "UNSOLVED"
+    "originating_q_id": "Q049",
+    "originating_case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+    "scientific_status": "CONDITIONALLY_SUPPORTED",
+    "research_state": "CLOSED_WITHIN_STATED_SCOPE",
+    "operational_stop_reason": "VALID_CONDITIONAL_ENDPOINT_REACHED",
+    "public_status": "CONDITIONALLY_SUPPORTED"
   },
-  "question_budget": {
-    "question_id": "Q048",
-    "limit_points": 1000,
-    "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V25.json",
-    "ledger_version": 25,
-    "run_charge_id": null,
-    "estimated_run_cost_points": 0,
-    "assessed_run_cost_points": 0,
-    "used_before": 962,
-    "used_after": 962,
-    "remaining_after": 38,
-    "overrun_points": 0,
-    "verification_status": "VERIFIED; 38 residual preserved, effective Q048 physics capacity 0 by operator policy"
+  "work_points": {
+    "question_id": "Q049",
+    "interval_points": 1000,
+    "counter_is_capped": false,
+    "ledger_ref": "Q049_QUESTION_ACTIVITY_LEDGER_V6.json",
+    "ledger_version": 6,
+    "counted_run_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+    "run_points": 40,
+    "point_basis": "Heuristic15 recovery+15 review+10 candidate/handoff; no calibrated resource measurement or advance estimate.",
+    "total_before": 347,
+    "total_after": 387,
+    "next_publication_at": 1000,
+    "milestone_thresholds_due": [],
+    "verification_status": "V5 recovered; 4 predecessor IDs retained plus one unique review entry; no double count."
   },
-  "successor_review": {
-    "new_angle_assessment": {
-      "status": "VIABLE_NOT_SELECTED",
-      "scope": "global correlation-preserving full low-z trajectory envelope for hillipop-ede_n3",
-      "prospective_estimate_pts": "180-260"
-    },
-    "focused_subquestion_assessment": {
-      "status": "VIABLE_SELECTED",
-      "scope": "remaining low-z |Delta tau_T| only, z<=810, hillipop-ede_n3, global envelope",
-      "prospective_estimate_pts": "140, max 180"
-    },
-    "other_candidates_assessment": "Inherited high-priority debts remain open; no new evidence overturns the prior dependency-first ranking.",
+  "scientific_scope_review": {
+    "review_required": true,
+    "scientific_reason": "Completed finite cap leaves a distinct solution-existence premise.",
+    "new_angle_assessment": "Full global tight-sensitivity/adjoint study deferred pending paired-anchor and realization premises.",
+    "focused_subquestion_assessment": "Literal low-z thermal continuation on common admitted background selected.",
     "selected_relation": "FOCUSED_SUBQUESTION",
     "parent_q_id": "Q048",
-    "parent_case_id": "NOT_ASSIGNED",
+    "parent_case_id": null,
     "root_q_id": "Q048",
-    "proposed_case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
-    "proposed_q_id": "Q049",
-    "distinct_scope": "one configuration + one integrated observable + global envelope rather than cell-by-cell full-history reconstruction",
+    "proposed_case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+    "proposed_q_id": "Q050",
+    "distinct_scope": "Post-latch/reset low-z selected-field existence only; not earlier literal helium cutoff, cap computation or native/global background existence.",
     "inherited_results": [
-      "Q048 V151 accepted z=810 anchor",
-      "Q048 frozen source/capture",
-      "Q048 conditional bounds/provenance"
-    ],
-    "marginal_information_value": "HIGH; provisional 10/12 ordinal rubric",
-    "prospective_cost_estimate": {
-      "estimated_pts": 140,
-      "maximum_pts": 180
-    },
-    "successor_ledger_ref": "Q049_QUESTION_BUDGET_LEDGER_V1.json",
-    "successor_allowance_status": "AUTHORIZED_NOT_STARTED_1000_POINTS"
+      "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2",
+      "actual127/frontier810",
+      "Q049V1 source-mode warning"
+    ]
   },
   "publication": {
-    "clean_handoff_file": "publication_handoff.md",
-    "public_status": "UNSOLVED",
-    "contains_operational_budget_details": false,
+    "package_interval_points": 1000,
+    "events": [],
+    "public_status": "CONDITIONALLY_SUPPORTED",
     "scientific_consistency_checked": true,
-    "filter_status": "PASS"
+    "filter_status": "NOT_APPLICABLE_NO_MILESTONE_DUE",
+    "external_posting_status": "NOT_REQUESTED_NOT_POSTED"
+  },
+  "q050_activation": {
+    "activated": false,
+    "counter_allocated": false,
+    "executed": false,
+    "ledger_ref": null
   }
 }

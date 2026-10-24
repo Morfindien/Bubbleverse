@@ -1,250 +1,348 @@
 {
-  "schema_version": "BV-GITHUB-MEMORY-UPDATE-1.1.0",
-  "package_id": "LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1",
-  "revision_event_id": "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1",
+  "schema_version": "BV-GITHUB-MEMORY-UPDATE-2.0.0",
+  "schema_note": "Local v8-compatible proposed typed memory-update record; no installed project schema asserted.",
+  "package_id": {
+    "value": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+    "status": "LOCAL_PROVISIONAL"
+  },
+  "revision_event_id": {
+    "value": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+    "status": "LOCAL_PROVISIONAL"
+  },
   "target_q": {
-    "value": "Q048",
-    "status": "VERIFIED"
+    "value": "Q049",
+    "status": "VERIFIED_LOCAL_CASE_BOUNDARY"
   },
   "repository": "Morfindien/Bubbleverse",
-  "repository_segment": "main",
-  "observed_base_commit": "f761a9ea5117b77ba2c5d52640d167652ad057ad",
-  "entrypoint_ref": "Q047_SAMLET_JOURNAL_Q048_V155_INGESTED_BUDGET_LIMITED_V1.md",
+  "repository_segment": "EXISTING_REPOSITORY",
+  "observed_base_commit": "d397732f65da2d1566089b9153a4145a605f8557",
+  "entrypoint_ref": "README.md",
   "inspected_memory_refs": [
-    "Q048_QUESTION_BUDGET_LEDGER_V24.json",
-    "Q048_V155_INGESTION_STATE_V1.json",
-    "Q048_V155_INGESTION_BUDGET_LIMITED_CHECKPOINT_V1.json",
-    "Q048_V151_RESULT_STATE_AND_HANDOFF_V1.json",
-    "Q048_V154_RESULT_STATE_V1.json",
-    "Q048_H_EVENT_PAYLOAD_REPORT_V1.md"
+    "README.md",
+    "repository main recursive tree",
+    "Q049_V2_MATEMATISK_RESULTAT-1.md",
+    "Q049_V2_RESULT_STATE_AND_HANDOFF.json",
+    "q048_prefix_config_v1.json",
+    "Q047_SAMLET_JOURNAL_Q049_V2_INGESTED_V1.md",
+    "Q049_QUESTION_ACTIVITY_LEDGER_V5.json"
   ],
   "write_status": "READY_FOR_MANUAL_UPLOAD",
-  "scientific_adoption_status": "Q048 terminalization and Q049 selection authorized by operator; Q049 execution not performed",
+  "scientific_adoption_status": "PREPARED_NOT_ADOPTED",
   "authorization": {
-    "revision_adoption": "AUTHORIZED",
-    "next_q_adoption": "AUTHORIZED",
-    "next_q_execution": "NOT_REQUESTED",
-    "repository_write": "NOT_REQUESTED_IN_THIS_RUN"
+    "revision_adoption": "REQUIRED",
+    "next_q_adoption": "REQUIRED",
+    "next_q_execution": "REQUIRED"
   },
   "artifacts": [
     {
-      "local_filename": "revision.md",
-      "intended_repository_path": "revisions/Q048/LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1/revision.md",
-      "role": "authoritative Motor 14 current-state revision and successor selection",
-      "sha256": "c1415706e87455c151ece1cd362446df42fa6aee4982a34fdd1e1be74ab33042",
-      "size_bytes": 22049,
-      "q_case_claim_result_ids": [
-        "Q048",
+      "filename": "revision.md",
+      "local_path": "/workspace/scratch/af71a0dc8c5a/output/Q049_Motor14_revision/revision.md",
+      "intended_repository_path": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/revision.md",
+      "role": "REVISION_TRANSFER_ARTIFACT",
+      "sha256": "14d5af282a212be7fc8d8ee67a419ad93b1506efbad39a6d9a5a1fd4560150d9",
+      "size_bytes": 19825,
+      "q_ids": [
         "Q049",
-        "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1"
+        "Q050_PROPOSED"
       ],
-      "source_references": [
-        "Morfindien/Bubbleverse@f761a9ea5117b77ba2c5d52640d167652ad057ad"
+      "case_ids": [
+        "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+        "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1"
+      ],
+      "claim_ids": [
+        "LOCAL-M14-Q049-CAP-CURRENT-V1",
+        "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1"
+      ],
+      "result_ids": [
+        "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2"
+      ],
+      "source_ids": [
+        "SRC-Q049-INGESTION",
+        "SRC-Q049-REPORT",
+        "SRC-Q049-RAW",
+        "SRC-Q049-VERIFY",
+        "SRC-Q048-CONFIG",
+        "K-PROPOSED-Q046-SOURCE-002",
+        "SRC-Q049-LEDGER5",
+        "SRC-M14-V8"
       ]
     },
     {
-      "local_filename": "handoff.md",
-      "intended_repository_path": "revisions/Q048/LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1/handoff.md",
-      "role": "readable Q049 handoff",
-      "sha256": "de81d954c6d948872bc98710d42f7904d7aab438bde8573f828dd346fc14a70e",
-      "size_bytes": 15993,
-      "q_case_claim_result_ids": [
-        "Q048",
+      "filename": "handoff.md",
+      "local_path": "/workspace/scratch/af71a0dc8c5a/output/Q049_Motor14_revision/handoff.md",
+      "intended_repository_path": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/handoff.md",
+      "role": "REVISION_TRANSFER_ARTIFACT",
+      "sha256": "1d9331467dfb7cb465ce7c236d9e836fc19d4ae971903c452dff8bc27f7cde6b",
+      "size_bytes": 10183,
+      "q_ids": [
         "Q049",
-        "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1"
+        "Q050_PROPOSED"
       ],
-      "source_references": [
-        "Morfindien/Bubbleverse@f761a9ea5117b77ba2c5d52640d167652ad057ad"
+      "case_ids": [
+        "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+        "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1"
+      ],
+      "claim_ids": [
+        "LOCAL-M14-Q049-CAP-CURRENT-V1",
+        "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1"
+      ],
+      "result_ids": [
+        "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2"
+      ],
+      "source_ids": [
+        "SRC-Q049-INGESTION",
+        "SRC-Q049-REPORT",
+        "SRC-Q049-RAW",
+        "SRC-Q049-VERIFY",
+        "SRC-Q048-CONFIG",
+        "K-PROPOSED-Q046-SOURCE-002",
+        "SRC-Q049-LEDGER5",
+        "SRC-M14-V8"
       ]
     },
     {
-      "local_filename": "handoff.json",
-      "intended_repository_path": "revisions/Q048/LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1/handoff.json",
-      "role": "machine-readable BV-HANDOFF-2.2.0 contract",
-      "sha256": "c0c75441dc3d480594b98999a8698e0b9e16dc770e1857cc5cae58a388b59f70",
-      "size_bytes": 10531,
-      "q_case_claim_result_ids": [
-        "Q048",
+      "filename": "handoff.json",
+      "local_path": "/workspace/scratch/af71a0dc8c5a/output/Q049_Motor14_revision/handoff.json",
+      "intended_repository_path": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/handoff.json",
+      "role": "REVISION_TRANSFER_ARTIFACT",
+      "sha256": "b5641855a164912c04e4e263be6fd198d288373516c45fde42acf32c4571a1b3",
+      "size_bytes": 22600,
+      "q_ids": [
         "Q049",
-        "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1"
+        "Q050_PROPOSED"
       ],
-      "source_references": [
-        "Morfindien/Bubbleverse@f761a9ea5117b77ba2c5d52640d167652ad057ad"
+      "case_ids": [
+        "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+        "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1"
+      ],
+      "claim_ids": [
+        "LOCAL-M14-Q049-CAP-CURRENT-V1",
+        "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1"
+      ],
+      "result_ids": [
+        "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2"
+      ],
+      "source_ids": [
+        "SRC-Q049-INGESTION",
+        "SRC-Q049-REPORT",
+        "SRC-Q049-RAW",
+        "SRC-Q049-VERIFY",
+        "SRC-Q048-CONFIG",
+        "K-PROPOSED-Q046-SOURCE-002",
+        "SRC-Q049-LEDGER5",
+        "SRC-M14-V8"
       ]
     },
     {
-      "local_filename": "publication_handoff.md",
-      "intended_repository_path": "revisions/Q048/LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1/publication_handoff.md",
-      "role": "clean UNSOLVED Q048 publication input",
-      "sha256": "a537c348a87f30bdd59f0389c22119b256e6db5f6a26ac96beda3383f216d1ae",
-      "size_bytes": 3152,
-      "q_case_claim_result_ids": [
-        "Q048",
+      "filename": "Q049_QUESTION_ACTIVITY_LEDGER_V6.json",
+      "local_path": "/workspace/scratch/af71a0dc8c5a/output/Q049_Motor14_revision/Q049_QUESTION_ACTIVITY_LEDGER_V6.json",
+      "intended_repository_path": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/Q049_QUESTION_ACTIVITY_LEDGER_V6.json",
+      "role": "REVISION_TRANSFER_ARTIFACT",
+      "sha256": "9701dcb5b00b5b22f8777ca06b8a08da5fe49703ca1153aa5ac256b81c565602",
+      "size_bytes": 11609,
+      "q_ids": [
         "Q049",
-        "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1"
+        "Q050_PROPOSED"
       ],
-      "source_references": [
-        "Morfindien/Bubbleverse@f761a9ea5117b77ba2c5d52640d167652ad057ad"
+      "case_ids": [
+        "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+        "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1"
+      ],
+      "claim_ids": [
+        "LOCAL-M14-Q049-CAP-CURRENT-V1",
+        "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1"
+      ],
+      "result_ids": [
+        "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2"
+      ],
+      "source_ids": [
+        "SRC-Q049-INGESTION",
+        "SRC-Q049-REPORT",
+        "SRC-Q049-RAW",
+        "SRC-Q049-VERIFY",
+        "SRC-Q048-CONFIG",
+        "K-PROPOSED-Q046-SOURCE-002",
+        "SRC-Q049-LEDGER5",
+        "SRC-M14-V8"
       ]
     },
     {
-      "local_filename": "Q048_QUESTION_BUDGET_LEDGER_V25.json",
-      "intended_repository_path": "revisions/Q048/LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1/Q048_QUESTION_BUDGET_LEDGER_V25.json",
-      "role": "status-only Q048 terminal accounting, no Motor14 charge",
-      "sha256": "3bc69327312e9803c2fa01adff8af9ab3b2e40f0537d17140376622f6642004e",
-      "size_bytes": 76143,
-      "q_case_claim_result_ids": [
-        "Q048",
+      "filename": "Q047_SAMLET_JOURNAL_Q049_M14_REVISED_Q050_PROPOSED_V1.md",
+      "local_path": "/workspace/scratch/af71a0dc8c5a/output/Q049_Motor14_revision/Q047_SAMLET_JOURNAL_Q049_M14_REVISED_Q050_PROPOSED_V1.md",
+      "intended_repository_path": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/Q047_SAMLET_JOURNAL_Q049_M14_REVISED_Q050_PROPOSED_V1.md",
+      "role": "AUTHORITATIVE_CUMULATIVE_JOURNAL_SUCCESSOR",
+      "sha256": "1bb181ac48a194355e7aa88cd7de60a59b7b486c53cf922389db52f1f4fb19f4",
+      "size_bytes": 14878770,
+      "q_ids": [
         "Q049",
-        "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1"
+        "Q050_PROPOSED"
       ],
-      "source_references": [
-        "Morfindien/Bubbleverse@f761a9ea5117b77ba2c5d52640d167652ad057ad"
+      "case_ids": [
+        "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+        "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1"
+      ],
+      "claim_ids": [
+        "LOCAL-M14-Q049-CAP-CURRENT-V1",
+        "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1"
+      ],
+      "result_ids": [
+        "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2"
+      ],
+      "source_ids": [
+        "SRC-Q049-INGESTION",
+        "SRC-Q049-REPORT",
+        "SRC-Q049-RAW",
+        "SRC-Q049-VERIFY",
+        "SRC-Q048-CONFIG",
+        "K-PROPOSED-Q046-SOURCE-002",
+        "SRC-Q049-LEDGER5",
+        "SRC-M14-V8"
       ]
     },
     {
-      "local_filename": "Q049_QUESTION_BUDGET_LEDGER_V1.json",
-      "intended_repository_path": "revisions/Q048/LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1/Q049_QUESTION_BUDGET_LEDGER_V1.json",
-      "role": "new successor allowance, zero used",
-      "sha256": "433fab75e72f739198b5be4876e453a75c4c553baa693aaa71f734e336284da2",
-      "size_bytes": 3953,
-      "q_case_claim_result_ids": [
-        "Q048",
+      "filename": "validation.json",
+      "local_path": "/workspace/scratch/af71a0dc8c5a/output/Q049_Motor14_revision/validation.json",
+      "intended_repository_path": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/validation.json",
+      "role": "REVISION_TRANSFER_ARTIFACT",
+      "sha256": "de25d93672c59a8ddebdb8701cab324b80bf147c52dbd643c2df8a310282b2cd",
+      "size_bytes": 2881,
+      "q_ids": [
         "Q049",
-        "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1"
+        "Q050_PROPOSED"
       ],
-      "source_references": [
-        "Morfindien/Bubbleverse@f761a9ea5117b77ba2c5d52640d167652ad057ad"
+      "case_ids": [
+        "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+        "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1"
+      ],
+      "claim_ids": [
+        "LOCAL-M14-Q049-CAP-CURRENT-V1",
+        "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1"
+      ],
+      "result_ids": [
+        "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2"
+      ],
+      "source_ids": [
+        "SRC-Q049-INGESTION",
+        "SRC-Q049-REPORT",
+        "SRC-Q049-RAW",
+        "SRC-Q049-VERIFY",
+        "SRC-Q048-CONFIG",
+        "K-PROPOSED-Q046-SOURCE-002",
+        "SRC-Q049-LEDGER5",
+        "SRC-M14-V8"
       ]
     },
     {
-      "local_filename": "Q047_SAMLET_JOURNAL_Q048_M14_EXHAUSTED_Q049_SELECTED_V1.md",
-      "intended_repository_path": "revisions/Q048/LOCAL-M14-Q048-EXHAUSTION-Q049-SELECTION-20261023T224033Z-V1/Q047_SAMLET_JOURNAL_Q048_M14_EXHAUSTED_Q049_SELECTED_V1.md",
-      "role": "complete cumulative journal with Motor14 append",
-      "sha256": "5f690017280eed70f67c9931d358e79570c2aca718e301cf9752e3cb6e95e509",
-      "size_bytes": 14856072,
-      "q_case_claim_result_ids": [
-        "Q048",
+      "filename": "FILES.md",
+      "local_path": "/workspace/scratch/af71a0dc8c5a/output/Q049_Motor14_revision/FILES.md",
+      "intended_repository_path": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/FILES.md",
+      "role": "REVISION_TRANSFER_ARTIFACT",
+      "sha256": "5729a3279e8fcddd50bc6d2d76066c126aad2c882befc4fc50825dd11b2e5d9b",
+      "size_bytes": 1411,
+      "q_ids": [
         "Q049",
-        "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1"
+        "Q050_PROPOSED"
       ],
-      "source_references": [
-        "Morfindien/Bubbleverse@f761a9ea5117b77ba2c5d52640d167652ad057ad"
+      "case_ids": [
+        "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+        "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1"
+      ],
+      "claim_ids": [
+        "LOCAL-M14-Q049-CAP-CURRENT-V1",
+        "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1"
+      ],
+      "result_ids": [
+        "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2"
+      ],
+      "source_ids": [
+        "SRC-Q049-INGESTION",
+        "SRC-Q049-REPORT",
+        "SRC-Q049-RAW",
+        "SRC-Q049-VERIFY",
+        "SRC-Q048-CONFIG",
+        "K-PROPOSED-Q046-SOURCE-002",
+        "SRC-Q049-LEDGER5",
+        "SRC-M14-V8"
       ]
     }
   ],
+  "self_manifest_policy": "No self-hash. This file is an additional eighth artifact at the same proposed package path.",
   "index_updates": [
     {
-      "target": "current Q048 status/index",
-      "operation": "APPEND_OR_UPDATE_CURRENT_VIEW_ONLY",
-      "stable_record_id": "LOCAL-M14-Q048-EXHAUSTION-REVISION-20261023T224033Z-V1",
-      "before_state_reference": "Q048_V155_INGESTION_STATE_V1.json",
+      "target": null,
+      "target_status": "NO_VERIFIED_SCIENTIFIC_INDEX_PATH",
+      "operation": "PROPOSE_APPEND_TYPED_RECORDS_AFTER_ADOPTION",
+      "stable_record_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+      "before_state_ref": "Q047_SAMLET_JOURNAL_Q049_V2_INGESTED_V1.md",
       "new_record_payload": {
-        "q_id": "Q048",
-        "scientific_status": "UNRESOLVED",
-        "internal_terminal_status": "UNRESOLVED — BUDGET EXHAUSTED",
-        "public_status": "UNSOLVED",
-        "used_pts": 962,
-        "remaining_pts": 38,
-        "effective_physics_capacity_pts": 0,
-        "historical_records_preserved": true
+        "revision_event_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+        "result_id": "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2",
+        "active_cap_claim": "LOCAL-M14-Q049-CAP-CURRENT-V1",
+        "debt_id": "LOCAL-M14-Q049-LOWZ-EXISTENCE-DEBT-V1",
+        "proposed_q_id": "Q050",
+        "proposed_case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+        "journal_ref": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/Q047_SAMLET_JOURNAL_Q049_M14_REVISED_Q050_PROPOSED_V1.md",
+        "handoff_ref": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/handoff.json",
+        "ledger_ref": "revisions/Q049/LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1/Q049_QUESTION_ACTIVITY_LEDGER_V6.json"
       },
-      "evidence_references": [
-        "Q048_QUESTION_BUDGET_LEDGER_V24.json",
-        "Q048_V155_INGESTION_STATE_V1.json"
+      "evidence_refs": [
+        "SRC-Q049-INGESTION",
+        "SRC-Q049-REPORT",
+        "SRC-Q049-RAW",
+        "SRC-Q049-VERIFY",
+        "SRC-Q048-CONFIG",
+        "K-PROPOSED-Q046-SOURCE-002",
+        "SRC-Q049-LEDGER5",
+        "SRC-M14-V8"
       ],
-      "dependency_cross_reference_changes": [
-        "link Q048 scientific debt to proposed Q049 focused child"
-      ]
-    },
-    {
-      "target": "active scientific question/backlog index",
-      "operation": "ADD_PROPOSED_SUCCESSOR",
-      "stable_record_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
-      "before_state_reference": "No active CURRENT_Q=Q049 found in targeted main search",
-      "new_record_payload": {
-        "q_id": "Q049",
-        "id_status": "PROPOSED_REQUIRES_CANONICAL_REGISTRY_WRITEBACK",
-        "case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
-        "parent_q_id": "Q048",
-        "root_q_id": "Q048",
-        "relation": "FOCUSED_SUBQUESTION",
-        "question": "Under the frozen Q048 source/capture and fixed accepted z_reio, what rigorous upper bound can be placed on the remaining low-redshift contribution to |Δtau_T| over 0 <= z <= 810 for the hillipop-ede_n3 configuration between the event-resolved latch q=xHeII=10^-6 and the same-event reset q=0, using a correlation-preserving global stability/envelope analysis anchored at the validated z=810 frontier rather than reconstructing the full low-z x_e(z) trajectory cell by cell?",
-        "priority": "HIGH",
-        "starting_motor": "BUBBLEVERSE.MATHEMATICS2.2.0"
-      },
-      "evidence_references": [
-        "revision.md",
-        "handoff.json"
-      ],
-      "dependency_cross_reference_changes": [
-        "inherit Q048 frozen source/capture and z=810 checkpoint without repeating them"
-      ]
+      "dependency_changes": "Conditional finite cap added to active synthesis; existence/native/full-history debts remain. No accepted physical-model changes."
     }
   ],
   "historical_record_policy": "PRESERVE_IMMUTABLE",
   "cross_repository_links": null,
   "write_receipts": [],
-  "question_budget_updates": [
-    {
-      "question_id": "Q048",
-      "ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V25.json",
-      "charge_id": null,
-      "before": {
-        "used": 962,
-        "remaining": 38,
-        "status": "ACTIVE"
-      },
-      "after": {
-        "used": 962,
-        "remaining": 38,
-        "effective_physics_capacity": 0,
-        "status": "UNRESOLVED_BUDGET_EXHAUSTED"
-      },
-      "operation": "STATUS_ONLY_NO_CHARGE"
-    },
-    {
-      "question_id": "Q049",
-      "ledger_ref": "Q049_QUESTION_BUDGET_LEDGER_V1.json",
-      "charge_id": null,
-      "before": null,
-      "after": {
-        "used": 0,
-        "remaining": 1000,
-        "status": "AUTHORIZED_NOT_STARTED"
-      },
-      "operation": "CREATE_SUCCESSOR_ALLOWANCE_NO_SPEND"
-    }
-  ],
-  "successor_case_links": [
-    {
-      "parent_q_id": "Q048",
-      "parent_case_id": "NOT_ASSIGNED",
-      "root_q_id": "Q048",
-      "successor_q_id": "Q049",
-      "successor_case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
-      "relation": "FOCUSED_SUBQUESTION",
-      "distinct_scope": "low-z |Delta tau_T| tail for hillipop-ede_n3 via global envelope",
-      "inherited_results": [
-        "V151 z=810 accepted checkpoint",
-        "frozen source/capture",
-        "conditional Q048 evidence"
-      ],
-      "parent_scientific_status": "UNRESOLVED",
-      "successor_status": "AUTHORIZED_NOT_STARTED",
-      "parent_ledger_ref": "Q048_QUESTION_BUDGET_LEDGER_V25.json",
-      "successor_ledger_ref": "Q049_QUESTION_BUDGET_LEDGER_V1.json"
-    }
-  ],
-  "publication_handoff_ref": "publication_handoff.md",
-  "public_status": "UNSOLVED",
-  "publication_filter_status": "PASS",
+  "work_point_updates": {
+    "old_ledger_ref": "Q049_QUESTION_ACTIVITY_LEDGER_V5.json",
+    "old_sha256": "ccbc6021622c7f574e1c1cc7e9e5638934216005a97fbd5c23c25541cdcbd329",
+    "new_ledger_ref": "Q049_QUESTION_ACTIVITY_LEDGER_V6.json",
+    "run_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+    "before": 347,
+    "after": 387,
+    "new_points": 40,
+    "policy": "UNCAPPED_RECURRING_SOME_1000",
+    "events_due": []
+  },
+  "publication_handoff_ref": null,
+  "public_status": "CONDITIONALLY_SUPPORTED",
+  "publication_filter_status": "NOT_APPLICABLE_NO_MILESTONE_DUE",
   "unresolved_updates": [
-    "Permanent Q049 registry canonicalization/writeback",
-    "Upload package to GitHub project memory"
+    "Upload missing original Q049 intake/activity/raw-evidence objects using their existing identities/aliases.",
+    "Reconcile newer main before adding current-state pointers.",
+    "Find actual canonical scientific registry before adopting proposedQ050.",
+    "PDF publication refresh is separate; no PDF authored or changed in this run."
   ],
   "blockers": [
-    "No repository write executed in this Motor 14 run"
+    "No new GitHub write authorization/capability verification in this run; no mutation attempted.",
+    "Current-state and canonical-Q registry paths unknown."
   ],
-  "recovery_step": "Upload package preserving paths/hashes, update current-view/index append-only, then execute Q049 Mathematics only when desired."
+  "recovery_step": "Upload these frozen new records under proposed scoped directory; reconcile missing prerequisites and current main, then adopt through the actual scientific registry without rewriting history.",
+  "scientific_case_links": {
+    "review_required": true,
+    "scientific_reason": "Completed finite cap leaves a distinct solution-existence premise.",
+    "new_angle_assessment": "Full global tight-sensitivity/adjoint study deferred pending paired-anchor and realization premises.",
+    "focused_subquestion_assessment": "Literal low-z thermal continuation on common admitted background selected.",
+    "selected_relation": "FOCUSED_SUBQUESTION",
+    "parent_q_id": "Q048",
+    "parent_case_id": null,
+    "root_q_id": "Q048",
+    "proposed_case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+    "proposed_q_id": "Q050",
+    "distinct_scope": "Post-latch/reset low-z selected-field existence only; not earlier literal helium cutoff, cap computation or native/global background existence.",
+    "inherited_results": [
+      "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2",
+      "actual127/frontier810",
+      "Q049V1 source-mode warning"
+    ]
+  },
+  "publication_event_updates": []
 }

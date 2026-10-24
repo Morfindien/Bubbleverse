@@ -1,0 +1,220 @@
+{
+  "schema_id": "bubbleverse.question_activity_some_ledger",
+  "schema_version": "2.0.0",
+  "policy_id": "bubbleverse.question_activity_some_milestones",
+  "policy_version": "2.0.0",
+  "question_id": "Q049",
+  "target_q": "Q049",
+  "case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+  "question_sha256": "56be0d72bb554c456221857e5ef29eb870455e6d48eeb244bd30f1ef33f003f3",
+  "exact_question": "Under the frozen Q048 source/capture and fixed accepted z_reio, what rigorous upper bound can be placed on the remaining low-redshift contribution to |Δtau_T| over 0 <= z <= 810 for the hillipop-ede_n3 configuration between the event-resolved latch q=xHeII=10^-6 and the same-event reset q=0, using a correlation-preserving global stability/envelope analysis anchored at the validated z=810 frontier rather than reconstructing the full low-z x_e(z) trajectory cell by cell?",
+  "ledger_id": "LOCAL-Q049-SHARED-1000PT-BUDGET-V1",
+  "ledger_id_note": "Stable legacy identifier retained for continuity; the wordBUDGET inside the ID has no active cap semantics.",
+  "ledger_revision": 6,
+  "parent_revision": 5,
+  "activation_or_migration_ref": "LOCAL-Q049-ACTIVITY-POLICY-MIGRATION-V1",
+  "migration": {
+    "event_id": "LOCAL-Q049-ACTIVITY-POLICY-MIGRATION-V1",
+    "created_at_utc": "2026-10-24T16:23:00.375840+00:00",
+    "origin_ledger": {
+      "filename": "Q049_QUESTION_BUDGET_LEDGER_V4.json",
+      "local_path": "/workspace/scratch/5696cf6119fd/q049_v2/output/Q049_QUESTION_BUDGET_LEDGER_V4.json",
+      "size_bytes": 9300,
+      "sha256": "26f11475e2d0da4daf27504a3ac1743770091113a944d36cdc0e6a68900d982e",
+      "access": "VERIFIED_LOCAL_BYTES"
+    },
+    "mapping": {
+      "used_pts": "total_work_points",
+      "charges[].event_id": "counted_activity_events[].event_id",
+      "limit_pts,remaining_pts,overrun_pts,reservation_history": "HISTORICAL_ONLY; no permission/stop rule"
+    },
+    "carried_total_points": 322,
+    "legacy_activation": {
+      "event_id": "LOCAL-Q049-BUDGET-ACTIVATION-M14-V1",
+      "created_at_utc": "2026-10-23T22:40:33Z",
+      "mode": "NEW_FOCUSED_SUCCESSOR_OF_EXHAUSTED_Q048",
+      "used_at_activation_pts": 0,
+      "remaining_at_activation_pts": 1000,
+      "basis": "Motor 14 v7.2 successor review selected a genuinely narrower observable and a materially different global-envelope method; Q048 costs are not transferred."
+    },
+    "old_entries_preserved": "Full legacy record retained below per event; original ledger bytes remain unchanged.",
+    "case_policy": "No historicalQ048 reopening; no rewrite of old administrative terminations; closureQ049 independent of points."
+  },
+  "assessment_type": "HEURISTIC_DOCUMENTED_ACTIVITY_INDEX",
+  "counted_activity_events": [
+    {
+      "event_id": "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-ENVELOPE-V1",
+      "run_id": "LOCAL-Q049-MATH-GLOBAL-ENVELOPE-20261024-V1",
+      "question_id": "Q049",
+      "assessed_points": 148,
+      "origin": "IMPORTED_LEGACY_HEURISTIC_ASSESSMENT",
+      "origin_ledger_ref": "Q049_QUESTION_BUDGET_LEDGER_V4.json",
+      "origin_ledger_sha256": "26f11475e2d0da4daf27504a3ac1743770091113a944d36cdc0e6a68900d982e",
+      "assessment_uncertainty": "Uncalibrated analyst estimates; inherited precision does not establish measured resources.",
+      "legacy_record": {
+        "event_id": "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-ENVELOPE-V1",
+        "run_id": "LOCAL-Q049-MATH-GLOBAL-ENVELOPE-20261024-V1",
+        "q_id": "Q049",
+        "budget_event": "RUN_DEBIT",
+        "previous_budget_entry": "Q049_QUESTION_BUDGET_LEDGER_V1.json",
+        "previous_budget_entry_sha256": "433fab75e72f739198b5be4876e453a75c4c553baa693aaa71f734e336284da2",
+        "used_before": 0,
+        "remaining_before": 1000,
+        "estimated_run_cost": 140,
+        "maximum_run_cost": 180,
+        "cost_breakdown": {
+          "ANALYSIS_POINTS": 60,
+          "COMPUTATION_POINTS": 12,
+          "SEARCH_POINTS": 28,
+          "VALIDATION_POINTS": 24,
+          "DELIVERY_POINTS": 24
+        },
+        "run_cost": 148,
+        "used_after": 148,
+        "remaining_after": 852,
+        "created_at_utc": "2026-10-24T14:39:53.672627+00:00",
+        "cost_basis": "Global direct-adjoint derivation, exact source-mode obstruction, original checkpoint recovery, source/provenance reconstruction, separate exact verifier, cumulative journal and delivery; assessed points, not credits/tokens/currency."
+      }
+    },
+    {
+      "event_id": "LOCAL-Q049-BUDGET-CHARGE-V1-INGESTION-V1",
+      "run_id": "LOCAL-Q049-V1-INGESTION-20261024-V1",
+      "question_id": "Q049",
+      "assessed_points": 28,
+      "origin": "IMPORTED_LEGACY_HEURISTIC_ASSESSMENT",
+      "origin_ledger_ref": "Q049_QUESTION_BUDGET_LEDGER_V4.json",
+      "origin_ledger_sha256": "26f11475e2d0da4daf27504a3ac1743770091113a944d36cdc0e6a68900d982e",
+      "assessment_uncertainty": "Uncalibrated analyst estimates; inherited precision does not establish measured resources.",
+      "legacy_record": {
+        "event_id": "LOCAL-Q049-BUDGET-CHARGE-V1-INGESTION-V1",
+        "run_id": "LOCAL-Q049-V1-INGESTION-20261024-V1",
+        "q_id": "Q049",
+        "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+        "budget_event": "RUN_DEBIT",
+        "previous_budget_entry": "Q049_QUESTION_BUDGET_LEDGER_V2.json",
+        "previous_budget_entry_sha256": "8f73faf6165c7a5ef1d65227a36f1f199afdd6d5da81ec3c8dc644f007910503",
+        "used_before": 148,
+        "remaining_before": 852,
+        "estimated_run_cost": 28,
+        "maximum_run_cost": 36,
+        "reserved_pts": 36,
+        "released_pts": 8,
+        "cost_breakdown": {
+          "state_recovery": 4,
+          "interpretation_and_routing": 7,
+          "computation": 1,
+          "search_and_evidence": 4,
+          "validation": 4,
+          "journal_provenance_delivery": 8
+        },
+        "run_cost": 28,
+        "used_after": 176,
+        "remaining_after": 824,
+        "created_at_utc": "2026-10-24T14:51:22.881348+00:00",
+        "cost_basis": "New documentary46-check intake, partial GitHub upload reconciliation, scoped interpretation, bounded next mathematics contract and complete journal/files; no rebilling of originating148pt mathematics and no specialist rerun."
+      }
+    },
+    {
+      "event_id": "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-INVARIANT-V2",
+      "run_id": "LOCAL-Q049-MATH-GLOBAL-INVARIANT-20261024-V2",
+      "question_id": "Q049",
+      "assessed_points": 146,
+      "origin": "IMPORTED_LEGACY_HEURISTIC_ASSESSMENT",
+      "origin_ledger_ref": "Q049_QUESTION_BUDGET_LEDGER_V4.json",
+      "origin_ledger_sha256": "26f11475e2d0da4daf27504a3ac1743770091113a944d36cdc0e6a68900d982e",
+      "assessment_uncertainty": "Uncalibrated analyst estimates; inherited precision does not establish measured resources.",
+      "legacy_record": {
+        "event_id": "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-INVARIANT-V2",
+        "run_id": "LOCAL-Q049-MATH-GLOBAL-INVARIANT-20261024-V2",
+        "q_id": "Q049",
+        "engine": "BUBBLEVERSE.MATHEMATICS2.2.0",
+        "budget_event": "RUN_DEBIT",
+        "previous_budget_entry": "Q049_QUESTION_BUDGET_LEDGER_V3.json",
+        "previous_budget_entry_sha256": "199eefec82477268b7fa15387575d318c60b1e7842990013c3aa71d66e346bc3",
+        "used_before": 176,
+        "remaining_before": 824,
+        "estimated_run_cost": 160,
+        "maximum_run_cost": 220,
+        "reserved_pts": 220,
+        "released_pts": 74,
+        "cost_breakdown": {
+          "ANALYSIS_POINTS": 62,
+          "COMPUTATION_POINTS": 16,
+          "SEARCH_POINTS": 18,
+          "VALIDATION_POINTS": 26,
+          "DELIVERY_POINTS": 24
+        },
+        "run_cost": 146,
+        "used_after": 322,
+        "remaining_after": 678,
+        "created_at_utc": "2026-10-24T15:17:35.750470+00:00",
+        "cost_basis": "New source-complete invariant proof, global positive H envelope, exact integrated cap, separate dyadic/polynomial/column verification, primary-source/table recovery, journal and delivery. No old source charge or proof-cell suite rebilled."
+      }
+    },
+    {
+      "event_id": "LOCAL-Q049-ACTIVITY-V2-INGESTION-V1",
+      "run_id": "LOCAL-Q049-V2-INGESTION-20261024-V1",
+      "question_id": "Q049",
+      "engine": "bubbleverse.result_ingestion_routing",
+      "prompt_version": "2.3.0",
+      "assessed_points": 25,
+      "estimated_points": 25,
+      "assessment_breakdown": {
+        "state_and_evidence_recovery": 10,
+        "scoped_scientific_intake_and_closure_review": 10,
+        "integrity_verification": 5
+      },
+      "assessment_basis": "Uncalibrated editorial activity index, rounded in units of five: state/evidence recovery10; scoped scientific intake10; integrity verification5. Routine migration/reprinting/package saving adds zero; no objective resource measurement.",
+      "assessment_confidence": "LOW; uncalibrated editorial estimate, not probability",
+      "observed_operations": "Commit/tree inspection;5 exact repository blob comparisons; review of existing proof/validation records; hash and ledger integrity checks. No new scientific computation.",
+      "raw_tokens_flops_or_monetary_cost": "NOT AVAILABLE",
+      "excluded_nonrecursive_work": "Policy-ledger reprinting, routine file packaging, saving and milestone bookkeeping add0 points."
+    },
+    {
+      "event_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+      "run_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+      "question_id": "Q049",
+      "engine": "BV-M14-UNIVERSAL-REVISION8.0.0",
+      "assessed_points": 40,
+      "estimated_points": null,
+      "assessment_breakdown": {
+        "state_source_policy_recovery": 15,
+        "claim_dependency_and_integrity_review": 15,
+        "backlog_comparison_and_handoff": 10
+      },
+      "assessment_basis": "Heuristic editorial activity index in units of five; no objective resource calibration. Inherited Motor14 exclusion concerned the retired capped research allowance, not this uncapped publication-cadence counter. No science run is rebilled; packaging, saving, copying and milestone bookkeeping add0.",
+      "assessment_confidence": "LOW_UNCALIBRATED",
+      "raw_tokens_flops_or_monetary_cost": null,
+      "prospective_estimate_status": "No advance estimate recorded; retrospective assessment disclosed rather than backdated."
+    }
+  ],
+  "inherited_event_ids": [
+    "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-ENVELOPE-V1",
+    "LOCAL-Q049-BUDGET-CHARGE-V1-INGESTION-V1",
+    "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-INVARIANT-V2"
+  ],
+  "newly_applied_event_ids": [
+    "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1"
+  ],
+  "parent_total_work_points": 347,
+  "assessed_run_points": 40,
+  "total_work_points": 387,
+  "milestone_interval_points": 1000,
+  "milestone_records": [],
+  "newly_crossed_threshold_points": [],
+  "highest_reached_threshold_points": 0,
+  "next_threshold_points": 1000,
+  "points_to_next_threshold": 613,
+  "some_package_status": "NOT_DUE",
+  "external_publication_status": "NOT_REQUESTED_NOT_POSTED",
+  "scientific_state_ref": "handoff.json",
+  "scientific_state_changed_by_points": false,
+  "scientific_state": "CLOSED_CONDITIONALLY_SUPPORTED_WITHIN_SCOPE",
+  "updated_at_utc": "2026-10-24T20:48:29.237803+00:00",
+  "concurrency_guard": {
+    "expected_parent_revision": 5,
+    "expected_parent_sha256": "ccbc6021622c7f574e1c1cc7e9e5638934216005a97fbd5c23c25541cdcbd329",
+    "unique_event_id": "LOCAL-M14-Q049-CLOSED-REVISION-20261024T204829Z-V1",
+    "on_conflict": "Reconcile unique activity events against current authoritative state; preserve concurrent successors and never count this event twice."
+  }
+}
