@@ -1,0 +1,51 @@
+{
+  "schema": "bubbleverse.q050.execution_result.v1",
+  "run_id": "LOCAL-Q050-V6-PION-SELECTOR-CONTRACT-20261025",
+  "q": "Q050",
+  "execution_status": "COMPLETE",
+  "result_validation_status": "VALIDATED",
+  "scientific_outcome": "INCONCLUSIVE",
+  "case_lifecycle": "OPEN",
+  "actual_computed_result": "SOURCE_SELECTOR_CONTRACT_VERIFIED",
+  "source": {
+    "repository": "mwt5345/class_ede",
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "hydrogen_c_blob_sha": "233f174bfb1758fa910866310340ae1bfad703db",
+    "hydrogen_h_constants": {
+      "PION_MAX": 0.01,
+      "L2s1s_s^-1": 8.2206,
+      "TR_MIN_eV": 0.004,
+      "T_RATIO_MIN": 0.1
+    },
+    "fit_swift_dat_blob_sha": "fd0cfa4f380d30640c4b2da47e4e35d6894b4dcb",
+    "swift_first_temperature_K": 1775.0
+  },
+  "frozen_case": {
+    "has_varconst": 0,
+    "T_cmb_K": 2.7255
+  },
+  "selector_contract": {
+    "if_Pion_lt_0.01": "HMLA",
+    "if_Pion_ge_0.01_and_Tfit_lt_1775K": "HMLA",
+    "if_Pion_ge_0.01_and_Tfit_ge_1775K": "SWIFT",
+    "equality_semantics": "Pion==0.01 bypasses the first HMLA test and proceeds to the SWIFT fit-temperature gate"
+  },
+  "derived": {
+    "fit_gate_z": 650.2566501559347,
+    "Pion_surface_below_fit_gate": "NO_HMLA_SWIFT_BRANCH_CHANGE",
+    "Pion_surface_at_or_above_fit_gate": "POTENTIAL_HMLA_SWIFT_BRANCH_CHANGE",
+    "surface_equation_at_Pion_0.01": "99*four_betaB = 3*RLya + L2s1s"
+  },
+  "normal_certificate": "NOT_YET_COMPUTED",
+  "normal_certificate_blocker": "Need source-faithful state/background evaluation on reachable Pion=0.01 cells for z >= fit_gate_z; contract mismatch itself is cleared.",
+  "next_engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "next_task": "Use the verified piecewise selector geometry to restrict the Pion normal analysis to z >= 650.2566501559347; below it the Pion surface causes no HMLA/SWIFT branch change. Decide whether the reduced reachable surface can be certified analytically or requires a newly frozen numerical state-domain evaluation.",
+  "points": {
+    "before": 430,
+    "run": 55,
+    "after": 485,
+    "next_milestone": 1000,
+    "points_to_next": 515
+  },
+  "publication_state": "NOT_DUE"
+}
