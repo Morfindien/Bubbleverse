@@ -1,0 +1,40 @@
+{
+  "schema": "bubbleverse.q050.mathematics.v7",
+  "run_id": "LOCAL-Q050-V7-PION-NORMAL-REDUCTION-20261025",
+  "q": "Q050",
+  "workflow_state": "READY_FOR_HANDOFF",
+  "scientific_state": "INCONCLUSIVE",
+  "technical_state": "PASS",
+  "completed_tests": [
+    "V6 selector contract reused without rerun",
+    "Pion=0.01 reduced to explicit state surface",
+    "normal derivative reduced to branch-dependent hydrogen derivative term"
+  ],
+  "new_information": {
+    "surface_equation": "F=99*B-3*R-L=0, B=four_betaB, R=RLya, L=L2s1s",
+    "explicit_surface": "1-x_HII = 3*A(z)/(99*B(z)-L), A(z)=LYA_FACT*H(z)/nH(z), requiring 99*B(z)>L",
+    "normal_formula": "dF/dz = 99*B'(z)-3*R(z)*(H'/H-3/(1+z)+x_HII'/(1-x_HII))",
+    "branch_difference": "(dF/dz)_SWIFT-(dF/dz)_HMLA = -3*R*(x'_SWIFT-x'_HMLA)/(1-x_HII)",
+    "genuine_interface_domain": [
+      650.2566501559347,
+      810.0
+    ],
+    "below_domain": "Pion surface is selector-inert because both sides resolve to HMLA"
+  },
+  "blocker_id": "LOCAL-Q050-PION-REACHABLE-NORMAL-NUMERICAL-V7",
+  "blocker_description": "A universal sign/compatibility certificate now requires evaluating the frozen background H(z), nH(z), the source rate tables and both HMLA/SWIFT x_HII derivatives on the reachable explicit Pion surface. Those numerical table/background values are not fixed by the symbolic source alone.",
+  "next_engine": "BUBBLEVERSE EXECUTION/HPC MOTOR BUILDER 2.4.0",
+  "next_task": "Implement and execute a source-faithful interval/grid certificate only on z in [650.2566501559347,810], restricted to points satisfying F=0 and the admitted Q050 state domain. Evaluate N_HMLA=dF/dz and N_SWIFT=dF/dz with the exact frozen source tables/background. Report min/max and sign classification for each branch, reachability exclusions, and any zero/ambiguous cells with refinement. Do not convexify selector.",
+  "acceptance_criteria": "Either prove surface unreachable in admitted domain, or certify compatible/crossing one-sided normals with no unresolved zero/ambiguous cells over all reachable cells.",
+  "rejection_criteria": "Find a validated reachable cell/interface segment with incompatible one-sided normal behavior sufficient to obstruct the requested classical/Caratheodory continuation.",
+  "inconclusive_criteria": "Any reachable cell remains sign-ambiguous after justified refinement or required frozen background/table input cannot be reproduced.",
+  "points": {
+    "previous": 485,
+    "run": 70,
+    "total": 555,
+    "cycle": 555,
+    "next_milestone": 1000,
+    "points_to_next": 445
+  },
+  "publication_state": "NOT_DUE"
+}
