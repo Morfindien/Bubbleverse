@@ -1,0 +1,205 @@
+{
+  "schema": "bubbleverse.question_work_budget.ledger.v1",
+  "policy_id": "bubbleverse.question_work_budget",
+  "policy_version": "1.1-operator-scope-extension",
+  "question_budget_id": "LOCAL-Q049-SHARED-1000PT-BUDGET-V1",
+  "current_q": "Q049",
+  "target_q": "Q049",
+  "q_id_status": "PROPOSED_REQUIRES_CANONICAL_REGISTRY_WRITEBACK",
+  "case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+  "parent_q_id": "Q048",
+  "parent_case_id": "NOT_ASSIGNED",
+  "root_q_id": "Q048",
+  "relation": "FOCUSED_SUBQUESTION",
+  "exact_question": "Under the frozen Q048 source/capture and fixed accepted z_reio, what rigorous upper bound can be placed on the remaining low-redshift contribution to |Δtau_T| over 0 <= z <= 810 for the hillipop-ede_n3 configuration between the event-resolved latch q=xHeII=10^-6 and the same-event reset q=0, using a correlation-preserving global stability/envelope analysis anchored at the validated z=810 frontier rather than reconstructing the full low-z x_e(z) trajectory cell by cell?",
+  "question_sha256": "56be0d72bb554c456221857e5ef29eb870455e6d48eeb244bd30f1ef33f003f3",
+  "limit_pts": 1000,
+  "ledger_version": 4,
+  "parent_ledger_version": 3,
+  "status": "ACTIVE",
+  "authorization": {
+    "selection": "AUTHORIZED_BY_OPERATOR_MOTOR14_RUN",
+    "adoption": "AUTHORIZED_BY_OPERATOR_SCOPE_AS_NEXT_TASK_SELECTION",
+    "scientific_execution": "NOT_REQUESTED_IN_THIS_MOTOR14_RUN",
+    "canonical_registry_writeback": "PENDING"
+  },
+  "activation": {
+    "event_id": "LOCAL-Q049-BUDGET-ACTIVATION-M14-V1",
+    "created_at_utc": "2026-10-23T22:40:33Z",
+    "mode": "NEW_FOCUSED_SUCCESSOR_OF_EXHAUSTED_Q048",
+    "used_at_activation_pts": 0,
+    "remaining_at_activation_pts": 1000,
+    "basis": "Motor 14 v7.2 successor review selected a genuinely narrower observable and a materially different global-envelope method; Q048 costs are not transferred."
+  },
+  "used_pts": 322,
+  "remaining_pts": 678,
+  "overrun_pts": 0,
+  "outstanding_reservations": [],
+  "charges": [
+    {
+      "event_id": "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-ENVELOPE-V1",
+      "run_id": "LOCAL-Q049-MATH-GLOBAL-ENVELOPE-20261024-V1",
+      "q_id": "Q049",
+      "budget_event": "RUN_DEBIT",
+      "previous_budget_entry": "Q049_QUESTION_BUDGET_LEDGER_V1.json",
+      "previous_budget_entry_sha256": "433fab75e72f739198b5be4876e453a75c4c553baa693aaa71f734e336284da2",
+      "used_before": 0,
+      "remaining_before": 1000,
+      "estimated_run_cost": 140,
+      "maximum_run_cost": 180,
+      "cost_breakdown": {
+        "ANALYSIS_POINTS": 60,
+        "COMPUTATION_POINTS": 12,
+        "SEARCH_POINTS": 28,
+        "VALIDATION_POINTS": 24,
+        "DELIVERY_POINTS": 24
+      },
+      "run_cost": 148,
+      "used_after": 148,
+      "remaining_after": 852,
+      "created_at_utc": "2026-10-24T14:39:53.672627+00:00",
+      "cost_basis": "Global direct-adjoint derivation, exact source-mode obstruction, original checkpoint recovery, source/provenance reconstruction, separate exact verifier, cumulative journal and delivery; assessed points, not credits/tokens/currency."
+    },
+    {
+      "event_id": "LOCAL-Q049-BUDGET-CHARGE-V1-INGESTION-V1",
+      "run_id": "LOCAL-Q049-V1-INGESTION-20261024-V1",
+      "q_id": "Q049",
+      "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+      "budget_event": "RUN_DEBIT",
+      "previous_budget_entry": "Q049_QUESTION_BUDGET_LEDGER_V2.json",
+      "previous_budget_entry_sha256": "8f73faf6165c7a5ef1d65227a36f1f199afdd6d5da81ec3c8dc644f007910503",
+      "used_before": 148,
+      "remaining_before": 852,
+      "estimated_run_cost": 28,
+      "maximum_run_cost": 36,
+      "reserved_pts": 36,
+      "released_pts": 8,
+      "cost_breakdown": {
+        "state_recovery": 4,
+        "interpretation_and_routing": 7,
+        "computation": 1,
+        "search_and_evidence": 4,
+        "validation": 4,
+        "journal_provenance_delivery": 8
+      },
+      "run_cost": 28,
+      "used_after": 176,
+      "remaining_after": 824,
+      "created_at_utc": "2026-10-24T14:51:22.881348+00:00",
+      "cost_basis": "New documentary46-check intake, partial GitHub upload reconciliation, scoped interpretation, bounded next mathematics contract and complete journal/files; no rebilling of originating148pt mathematics and no specialist rerun."
+    },
+    {
+      "event_id": "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-INVARIANT-V2",
+      "run_id": "LOCAL-Q049-MATH-GLOBAL-INVARIANT-20261024-V2",
+      "q_id": "Q049",
+      "engine": "BUBBLEVERSE.MATHEMATICS2.2.0",
+      "budget_event": "RUN_DEBIT",
+      "previous_budget_entry": "Q049_QUESTION_BUDGET_LEDGER_V3.json",
+      "previous_budget_entry_sha256": "199eefec82477268b7fa15387575d318c60b1e7842990013c3aa71d66e346bc3",
+      "used_before": 176,
+      "remaining_before": 824,
+      "estimated_run_cost": 160,
+      "maximum_run_cost": 220,
+      "reserved_pts": 220,
+      "released_pts": 74,
+      "cost_breakdown": {
+        "ANALYSIS_POINTS": 62,
+        "COMPUTATION_POINTS": 16,
+        "SEARCH_POINTS": 18,
+        "VALIDATION_POINTS": 26,
+        "DELIVERY_POINTS": 24
+      },
+      "run_cost": 146,
+      "used_after": 322,
+      "remaining_after": 678,
+      "created_at_utc": "2026-10-24T15:17:35.750470+00:00",
+      "cost_basis": "New source-complete invariant proof, global positive H envelope, exact integrated cap, separate dyadic/polynomial/column verification, primary-source/table recovery, journal and delivery. No old source charge or proof-cell suite rebilled."
+    }
+  ],
+  "reservation_history": [
+    {
+      "event_id": "LOCAL-Q049-V1-INGESTION-RESERVATION-V1",
+      "run_id": "LOCAL-Q049-V1-INGESTION-20261024-V1",
+      "parent_ledger_version": 2,
+      "reserved_pts": 36,
+      "finalized_pts": 28,
+      "released_pts": 8,
+      "state": "FINALIZED",
+      "prospective_ref": "Q049_V1_INGESTION_PROSPECTIVE.json"
+    },
+    {
+      "event_id": "LOCAL-Q049-MATH-V2-RESERVATION-220PTS",
+      "run_id": "LOCAL-Q049-MATH-GLOBAL-INVARIANT-20261024-V2",
+      "parent_ledger_version": 3,
+      "reserved_pts": 220,
+      "finalized_pts": 146,
+      "released_pts": 74,
+      "state": "FINALIZED",
+      "prospective_ref": "Q049_V2_PROSPECTIVE_RUN.json"
+    }
+  ],
+  "inherited_charge_ids": [
+    "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-ENVELOPE-V1",
+    "LOCAL-Q049-BUDGET-CHARGE-V1-INGESTION-V1"
+  ],
+  "newly_applied_charge_ids": [
+    "LOCAL-Q049-BUDGET-CHARGE-MATH-GLOBAL-INVARIANT-V2"
+  ],
+  "prospective_first_run": {
+    "engine": "BUBBLEVERSE.MATHEMATICS2.2.0",
+    "task": "Derive and validate a correlation-preserving global stability/envelope bound for the remaining hillipop-ede_n3 low-z optical-depth tail from the validated z=810 frontier; do not replay the Q048 10-redshift cell chain.",
+    "estimated_pts": 140,
+    "maximum_pts": 180,
+    "reservation_status": "NOT_RESERVED_NOT_CHARGED"
+  },
+  "inherited_results_no_charge": [
+    {
+      "id": "Q048_V151_ACCEPTED_CHECKPOINT_V1",
+      "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+      "role": "validated actual127/frontier810 anchor"
+    },
+    {
+      "id": "Q048_V154_ACCEPTED_UNCONSUMED_PROOF_810_800",
+      "role": "mathematical evidence only; do not pretend it advanced actual state"
+    },
+    {
+      "id": "Q048 source/capture",
+      "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "role": "frozen input identity"
+    },
+    {
+      "id": "Q048_H_EVENT_PAYLOAD_REPORT_V1",
+      "role": "preserved earlier conditional three-case certificates and hillipop-ede_n3 scalar-wall obstruction; no four-case completion"
+    }
+  ],
+  "rules": [
+    "One 1000-point allowance belongs to Q049 and never resets across V-versions or scientific motors.",
+    "Q048 costs are historical context only and are not transferred into Q049.",
+    "Motor 14 global revision/task selection is outside the Q049 budget.",
+    "Production and publication motors are outside the Q049 budget.",
+    "Scientific investigation/execution/validation work and substantive scientific ingestion are chargeable when they belong to Q049.",
+    "Do not charge a run twice; preserve append-only accounting."
+  ],
+  "created_at_utc": "2026-10-23T22:40:33Z",
+  "parent_ledger_sha256": "199eefec82477268b7fa15387575d318c60b1e7842990013c3aa71d66e346bc3",
+  "updated_at_utc": "2026-10-24T15:17:35.750470+00:00",
+  "scientific_execution_current_run": {
+    "run_id": "LOCAL-Q049-MATH-GLOBAL-ENVELOPE-20261024-V1",
+    "authority": "Current user supplied Mathematics2.2.0 and selected Q049 handoff; autonomous mathematical work and exact controls only. Historical Motor14 authorization fields retained unchanged.",
+    "state": "COMPLETED_BOUNDED_DERIVATION_AND_OBSTRUCTION",
+    "prospective_record": "Q049_V1_PROSPECTIVE_RUN.json",
+    "active_reservations": []
+  },
+  "last_validated_state_ref": "Q049_V2_GLOBAL_BOUND_RESULT.json",
+  "current_run": {
+    "run_id": "LOCAL-Q049-MATH-GLOBAL-INVARIANT-20261024-V2",
+    "status": "FINALIZED",
+    "used": 322,
+    "remaining": 678,
+    "no_new_research_ordered": true
+  },
+  "scientific_state": "RESOLVED_WITHIN_SCOPE_CONDITIONAL_SOURCE_REAL_BOUND",
+  "scientific_workflow_state": "CLOSED",
+  "closeout_record": "LOCAL-Q049-GLOBAL-INVARIANT-TAUTAIL-CAP-V2"
+}
