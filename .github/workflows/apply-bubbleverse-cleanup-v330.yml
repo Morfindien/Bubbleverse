@@ -1,0 +1,122 @@
+name: "🧹 BUBBLEVERSE CLEANUP V3.3.0 — UDEN ZIP"
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "preview = validate only; apply = publish a separate cleanup branch and attempt a PR"
+        required: true
+        default: preview
+        type: choice
+        options:
+          - preview
+          - apply
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bubbleverse-repository-cleanup
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    if: github.repository == 'Morfindien/Bubbleverse'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - name: Checkout default branch with original source history
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Use Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify package, prepare cleanup and run bounded checks
+        id: prepare
+        env:
+          CLEANUP_MODE: ${{ inputs.mode }}
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,subprocess,sys
+          p=Path('cleanup-installation/v330/bubbleverse_cleanup_v330.py')
+          if not p.is_file() or p.is_symlink():
+              raise SystemExit('PROGRAM_FILE_GATE=FAIL upload bubbleverse_cleanup_v330.py to cleanup-installation/v330/')
+          for parent in p.parents:
+              if parent.is_symlink(): raise SystemExit('PROGRAM_FILE_GATE=FAIL symlink parent')
+          if hashlib.sha256(p.read_bytes()).hexdigest() != '859e4672e3a711404399dd38292af80e07bd502d3209a5d8ce7fe22f8e7ec2fd':
+              raise SystemExit('PROGRAM_HASH_GATE=FAIL use the matching unmodified Python file')
+          subprocess.run([sys.executable,str(p)],check=True)
+          PY
+
+
+      - name: Preserve preview, patch and check evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bubbleverse-cleanup-v330-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/bubbleverse-cleanup-v330/
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Publish separate cleanup branch and attempt pull request
+        if: inputs.mode == 'apply' && steps.prepare.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          branch="bubbleverse-cleanup/v330-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
+          git -c user.name='github-actions[bot]' \
+            -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+            commit -m 'Apply verified Bubbleverse cleanup v3.3.0'
+          gh auth setup-git
+          git push origin "$branch"
+          body="$RUNNER_TEMP/bubbleverse-cleanup-v330/pr-body.md"
+          cat > "$body" <<'BODY'
+          Apply the checksum-pinned Bubbleverse cleanup prepared from b99a5c78058b624c8d5847bed582df4ea816358a.
+
+          One maintenance patch relocation, navigation/start catalogs and integrity tooling. Scientific originals, registry, README and active workflows retain their original bytes. The installer registers itself in mutable start navigation and records its receipt.
+
+          Validation: protected integrity and coverage; six maintenance fixtures; nine metadata controls; passing V9 package/installed-state check; staged whitespace check. No scientific production job or new native evaluation was started. The old V1 package's registry-pin failure remains documented.
+
+          Review the workflow artifact and docs/maintenance/cleanup/20261024-b99a5c7-v330/REPORT.md. Merge is a manual operator decision.
+          BODY
+          if pr_url="$(gh pr create --repo "$GITHUB_REPOSITORY" --base "$DEFAULT_BRANCH" \
+              --head "$branch" --title 'Bubbleverse cleanup v3.3.0' --body-file "$body" \
+              2> "$RUNNER_TEMP/bubbleverse-cleanup-v330/pr-error.log")"; then
+            printf 'Pull request: %s\n' "$pr_url" >> "$GITHUB_STEP_SUMMARY"
+          else
+            printf 'Cleanup branch published: `%s`. Automatic PR creation was unavailable; open the PR manually.\n' "$branch" >> "$GITHUB_STEP_SUMMARY"
+            cat "$RUNNER_TEMP/bubbleverse-cleanup-v330/pr-error.log"
+          fi
+
+      - name: Summarize local outcome
+        if: always()
+        env:
+          CLEANUP_MODE: ${{ inputs.mode }}
+          CHANGED: ${{ steps.prepare.outputs.changed }}
+        run: |
+          {
+            echo '## Bubbleverse cleanup v3.3.0'
+            printf 'Mode: `%s`. Prepared new cleanup: `%s`.\n' "$CLEANUP_MODE" "${CHANGED:-UNKNOWN}"
+            echo 'Preview publishes no branch. Apply publishes only after validation. No automatic merge or production workflow dispatch.'
+            if [[ -f "$RUNNER_TEMP/bubbleverse-cleanup-v330/result.json" ]]; then
+              echo '```json'
+              cat "$RUNNER_TEMP/bubbleverse-cleanup-v330/result.json"
+              echo '```'
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
