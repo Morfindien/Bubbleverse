@@ -1,0 +1,70 @@
+name: Q050 V8 — Pion literal-selector normal certificate
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  q050-v8:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout Bubbleverse
+        uses: actions/checkout@v4
+        with:
+          path: Bubbleverse
+
+      - name: Checkout frozen class_ede
+        uses: actions/checkout@v4
+        with:
+          repository: mwt5345/class_ede
+          ref: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+          path: class_ede
+
+      - name: Python version
+        run: python3 --version
+
+      - name: Verify required Bubbleverse files
+        run: |
+          set -euo pipefail
+          test -f Bubbleverse/q048_prefix_config_v1.json
+          test -f Bubbleverse/q050_v8_literal_normal_runner.py
+
+      - name: Run Q050 V8 certificate
+        id: certificate
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python3 Bubbleverse/q050_v8_literal_normal_runner.py \
+            --class-root class_ede \
+            --bubbleverse-root Bubbleverse \
+            --output Q050_V8_PION_NORMAL_CERTIFICATE_EXECUTION_RESULT.json \
+            2>&1 | tee Q050_V8_EXECUTION.log
+
+      - name: Require machine-readable result
+        if: always()
+        run: |
+          test -s Q050_V8_PION_NORMAL_CERTIFICATE_EXECUTION_RESULT.json
+          python3 - <<'PY'
+          import json
+          p="Q050_V8_PION_NORMAL_CERTIFICATE_EXECUTION_RESULT.json"
+          x=json.load(open(p))
+          print("execution_status =",x.get("execution_status"))
+          print("validation =",x.get("result_validation_status"))
+          print("scientific_outcome =",x.get("scientific_outcome"))
+          print("computed_result =",x.get("actual_computed_result"))
+          print("blocker =",x.get("blocker"))
+          PY
+
+      - name: Upload Q050 V8 artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Q050-V8-Pion-normal-certificate
+          if-no-files-found: error
+          path: |
+            Q050_V8_PION_NORMAL_CERTIFICATE_EXECUTION_RESULT.json
+            Q050_V8_EXECUTION.log
