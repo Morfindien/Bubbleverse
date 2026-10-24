@@ -1,0 +1,124 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q049-SOURCE-COMPLETE-GLOBAL-OBSERVABLE-ENVELOPE-V2",
+  "target_q": "Q049",
+  "exact_question": "Under the frozen Q048 source/capture and fixed accepted z_reio, what rigorous upper bound can be placed on the remaining low-redshift contribution to |Δtau_T| over 0 <= z <= 810 for the hillipop-ede_n3 configuration between the event-resolved latch q=xHeII=10^-6 and the same-event reset q=0, using a correlation-preserving global stability/envelope analysis anchored at the validated z=810 frontier rather than reconstructing the full low-z x_e(z) trajectory cell by cell?",
+  "question_sha256": "56be0d72bb554c456221857e5ef29eb870455e6d48eeb244bd30f1ef33f003f3",
+  "case_id": "LOCAL-Q049-FOCUSED-LOWZ-TAUTAIL-V1",
+  "engine_id": "BUBBLEVERSE.MATHEMATICS2.2.0",
+  "prompt_id": "BUBBLEVERSE.MATHEMATICS",
+  "prompt_version": "2.2.0",
+  "engine_evidence": {
+    "kind": "VERIFIED_SUPPLIED_AND_REPOSITORY_PROMPT; not a central installed engine-registry entry",
+    "repository": "Morfindien/Bubbleverse",
+    "commit": "6832445dc571a279cc5446c271dce93cdac54c15",
+    "path": "Bubbleverse_Matematikmotor_2.2.0.md",
+    "git_blob": "847f0c94f5ed96fc44807584a052456922e3e69b",
+    "inspected_lines": [
+      1,
+      18
+    ]
+  },
+  "authorization": "NEXT_BOUNDED_MATHEMATICS_TASK_PREPARED; no scientific execution in ingestion; operator runs next engine with this contract",
+  "objective": "Construct the cheapest rigorous finite upper bound for the whole remaining optical-depth tail using a source-complete global observable envelope; include Peebles where field-specific bounds are used, or prove an alternative invariant envelope that applies to the actual source without selecting the omitted field.",
+  "new_material_difference": [
+    "V1 only documented missing Peebles coverage and a conditional adjoint theorem; V2 must supply a usable source-complete global envelope or a new mathematical obstruction.",
+    "First assess a rigorous coarse invariant-based integrated cap; do not reject a valid finite cap solely because it is loose. Assess informativeness separately.",
+    "Only sharpen through a direct adjoint supersolution if the coarse bound and stated physical objective justify added work. No implicit demand for a full low-z trajectory."
+  ],
+  "frozen": {
+    "source_repo": "mwt5345/class_ede",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_config_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "config_filename": "q048_prefix_config_v1.json",
+    "checkpoint_file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+    "checkpoint_sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "checkpoint_status": "actual127/frontier810",
+    "q_latch": "1/1000000",
+    "q_reset": "0",
+    "z_reio_hex": "0x1.dfec4p+2",
+    "reio_settings": "same frozen SOURCE_DERIVED_NOT_DIRECTLY_CAPTURED config; linkage caveat survives",
+    "target_domain_z": [
+      0,
+      810
+    ],
+    "V154": "ACCEPTED_UNCONSUMED"
+  },
+  "input_refs": [
+    "Q047_SAMLET_JOURNAL_Q049_V1_INGESTED_V1.md",
+    "Q049_QUESTION_BUDGET_LEDGER_V3.json",
+    "Q049_V1_MATEMATISK_RESULTAT.md",
+    "Q049_V1_CERTIFICATE_RESULT.json",
+    "Q049_V1_INDEPENDENT_VERIFICATION.json",
+    "Q049_V1_INPUT_PROVENANCE.json",
+    "Q049_V1_VALIDATION_CONTRACT.json",
+    "Q049_V1_INGESTION_AUDIT_AND_MEMORY.json"
+  ],
+  "required_work": [
+    "Recover exact frozen fields and source formulas from existing hashes; do not repeat completed capture/threshold experiments.",
+    "Define target as continuum physical tau_T for the inherited conditional admissible continuations; explicitly distinguish any native table/spline target and qualify it if used.",
+    "Attempt a source-independent physical-domain/global-cap proof first if cheaper: prove any bounds on h,T,H and electron map used, rather than assume physicality. A correlation-preserving triangle/invariant cap is permissible even when not sharp.",
+    "Use the available broad projected z810 radii unless a smaller relational radius is independently justified. Do not require a narrow radius as an artificial prerequisite.",
+    "For coefficient/adjoint route derive Peebles field bounds and allowed state-dependent switches alongside HMLA/SWIFT; include selector mismatch unless proved absent. Do not extrapolate w<=.02 to z0 without proof.",
+    "Prove common positive kernel, global forward domain/continuation scope, source-map/smoothing coefficients and needed integral remainder bounds.",
+    "Freeze numeric tolerances/acceptance and computational caps before any new physical numerical run; arbitrary exact algebra controls are not a physical certificate.",
+    "Return a finite explicit bound and its domain/assumptions with separate informativeness assessment, or the first new precise obstacle that prevents the proposed bound."
+  ],
+  "equations_ref": "Q049_V1_MATEMATISK_RESULTAT.md: direct adjoint theorem and source-normalized Thomson kernel",
+  "allowed_variation": [
+    "new proof norms/envelopes",
+    "source-complete field covers",
+    "invariant-only analytical bound",
+    "prospective exact/outward verification tolerances"
+  ],
+  "forbidden": [
+    "Q048810->800 consumer/proof cycle",
+    "V154 consumption or actual128",
+    "refit/recapture/tau shooting",
+    "unbudgeted or paid production/HPC/likelihood runs",
+    "newQ or accepted-model promotion",
+    "repeat V1 branch threshold as new science",
+    "assumed equal selectors or epsilon-small z810 pair error",
+    "use physical-looking output as proof of invariant domain"
+  ],
+  "acceptance": [
+    "Exact identities and Q firewall preserved",
+    "Whole0<=z<=810 finite deterministic upper bound, including all conditional domain/kernel/output premises needed for stated target",
+    "No missing source-mode/selector error hidden in a claimed tight bound",
+    "Initial radii and shared-input dependence honest",
+    "Key numeric bound independently reconstructed with outward error control; if purely analytic, independent proof/limit check scoped appropriately",
+    "Explicit separate statement whether bound is informative; no threshold invented"
+  ],
+  "rejection": [
+    "Post-outcome threshold tuning",
+    "Incomplete-domain bound labelled whole-tail",
+    "Omitted mode changes justified only by common source",
+    "Unvalidated sampled/refinement result called rigorous",
+    "Numerical equality or technical PASS called native trajectory identity"
+  ],
+  "inconclusive": "First new precise domain/field/kernel/map/linkage obstruction; retain valid partial result and document cheapest changed next requirement. Missing full certificate is not intrinsic undecidability.",
+  "stop_condition": "One validated finite global bound OR first precise NEW mathematical obstruction OR prospective run cap; do not route back only to ask for more analysis.",
+  "materiality_test": "PASS: supplies missing global coefficient/invariant certificate necessary to answer the exact observable-bound question.",
+  "budget": {
+    "question_budget_id": "LOCAL-Q049-SHARED-1000PT-BUDGET-V1",
+    "limit_pts": 1000,
+    "ledger_ref": "Q049_QUESTION_BUDGET_LEDGER_V3.json",
+    "used_pts": 176,
+    "remaining_pts": 824,
+    "estimated_run_cost_pts": 160,
+    "maximum_run_cost_pts": 220,
+    "reserved_pts": 0,
+    "charge_state": "NOT_STARTED_NOT_CHARGED",
+    "must_recheck_current_ledger": true
+  },
+  "expected_output": [
+    "global bound or precise new obstruction",
+    "independent verification scope",
+    "full journal successor",
+    "same-Q budget successor",
+    "one result to Result Ingestion2.2.0"
+  ],
+  "dispatch_state": "PREPARED_NOT_DISPATCHED",
+  "task_fingerprint_sha256": "deb9bdc00a47d997d86982d03df42263c8dc1ae9b2164554bf76a9ea6e2d07b5",
+  "fingerprint_convention": "SHA256 sorted compact UTF8 JSON excluding task_fingerprint_sha256 and fingerprint_convention"
+}
