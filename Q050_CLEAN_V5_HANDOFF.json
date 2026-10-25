@@ -1,0 +1,38 @@
+{
+  "schema_version": "BV-Q050-CLEAN-HANDOFF-1.0.0",
+  "handoff_id": "LOCAL-Q050-CLEAN-V5-HPC-LITERAL-NORMAL-IMPLEMENTATION-AUDIT-20261025-HANDOFF",
+  "target_q": "Q050",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "lineage": "Q050_CLEAN_V1->Q050_CLEAN_V2->Q050_CLEAN_V3->Q050_CLEAN_V4_HPC->Q050_CLEAN_V5_HPC",
+  "pre_reset_q050_material": "REFERENCE_ONLY_NOT_STATE",
+  "scientific_state": "INCONCLUSIVE",
+  "execution_status": "IMPLEMENTATION_BLOCKED",
+  "workflow_state": "READY_FOR_IMPLEMENTATION",
+  "blocker_id": "LOCAL-Q050-CLEAN-V5-DEDICATED-LITERAL-NORMAL-EVALUATOR-MISSING",
+  "scientific_cells_certified": 0,
+  "new_evidence": {
+    "existing_workflow": ".github/workflows/q050-v4-pion-surface.yml",
+    "existing_runner": "q050_v4_pion_surface_runner.py",
+    "runner_terminal_blocker": "DEDICATED_LITERAL_SELECTOR_NORMAL_EVALUATOR_NOT_YET_IMPLEMENTED",
+    "historical_v8_role": "REFERENCE_ONLY"
+  },
+  "next_engine": "BUBBLEVERSE.EXECUTION_HPC_MOTOR_BUILDER 2.4.0",
+  "next_task": "Implement clean literal-normal cell producer using pinned CLASS/EDE background and HyRec source-real HMLA/SWIFT derivatives; emit complete interval cells/coverage/result.",
+  "return_engine_after_real_result": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "expected_outputs": [
+    "Q050_CLEAN_V5_LITERAL_NORMAL_CELLS.json",
+    "Q050_CLEAN_V5_PION_SURFACE_COVERAGE.json",
+    "Q050_CLEAN_V5_PION_SURFACE_EXECUTION_RESULT.json"
+  ],
+  "points": {
+    "previous": 350,
+    "run": 55,
+    "total": 405,
+    "next_some_milestone": 1000,
+    "points_to_next": 595,
+    "some_due": []
+  },
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "frozen_config_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "checkpoint_sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96"
+}
