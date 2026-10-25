@@ -1,0 +1,129 @@
+name: "🧹 BUBBLEVERSE CLEANUP — CURRENT STATE V2"
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "preview = build/verify only; apply = publish a separate cleanup branch and PR"
+        required: true
+        default: preview
+        type: choice
+        options:
+          - preview
+          - apply
+
+permissions:
+  contents: read
+
+concurrency:
+  group: bubbleverse-cleanup-current-v2
+  cancel-in-progress: false
+
+jobs:
+  cleanup:
+    if: github.repository == 'Morfindien/Bubbleverse'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout current default branch with history
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Use Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Repository gate
+        id: gate
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$GITHUB_REPOSITORY" = "Morfindien/Bubbleverse"
+          test -f tools/maintenance/bubbleverse_cleanup_current_v2.py
+          test -f bubbleverse_program_registry.json
+          git diff --exit-code
+          git diff --cached --exit-code
+          echo "base_sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Run current-state cleanup engine
+        id: cleanup
+        env:
+          CLEANUP_MODE: ${{ inputs.mode }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/maintenance/bubbleverse_cleanup_current_v2.py
+
+      - name: Preserve cleanup evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bubbleverse-cleanup-current-v2-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            docs/maintenance/cleanup/
+            docs/REPOSITORY_STRUCTURE.md
+            archive/programs/INDEX.md
+            START_CODES.md
+          if-no-files-found: warn
+          retention-days: 30
+
+      - name: Publish isolated cleanup branch and open PR
+        if: inputs.mode == 'apply' && success() && steps.cleanup.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          BASE_SHA: ${{ steps.cleanup.outputs.base_sha }}
+          RUN_ID: ${{ steps.cleanup.outputs.run_id }}
+          REPORT_PATH: ${{ steps.cleanup.outputs.report_path }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          branch="bubbleverse-cleanup/current-v2-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          git switch -c "$branch"
+          git diff --cached --check
+          git -c user.name='github-actions[bot]' \
+              -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+              commit -m "Apply Bubbleverse current-state cleanup V2"
+          git push origin "$branch"
+
+          body="$RUNNER_TEMP/bv-cleanup-pr.md"
+          {
+            echo "Current-state Bubbleverse repository cleanup."
+            echo
+            echo "- Source base: \`$BASE_SHA\`"
+            echo "- Cleanup run: \`$RUN_ID\`"
+            echo "- Report: \`$REPORT_PATH\`"
+            echo
+            echo "The engine archives only registry-proven retired program/workflow paths that pass active-reference and incoming-reference safety gates. Historical scientific journals/results remain protected."
+            echo
+            echo "This PR was created automatically, but merge remains a manual operator decision."
+          } > "$body"
+
+          gh pr create \
+            --repo "$GITHUB_REPOSITORY" \
+            --base "$DEFAULT_BRANCH" \
+            --head "$branch" \
+            --title "Bubbleverse cleanup — current state V2" \
+            --body-file "$body"
+
+      - name: Summary
+        if: always()
+        shell: bash
+        run: |
+          {
+            echo "## Bubbleverse cleanup — current state V2"
+            echo "Repository: \`$GITHUB_REPOSITORY\`"
+            echo "Checked-out base: \`${{ steps.gate.outputs.base_sha }}\`"
+            echo "Mode: \`${{ inputs.mode }}\`"
+            echo "Changed: \`${{ steps.cleanup.outputs.changed || 'UNKNOWN' }}\`"
+            echo "Run ID: \`${{ steps.cleanup.outputs.run_id || 'UNKNOWN' }}\`"
+            echo
+            echo "Preview never pushes. Apply creates a separate branch and pull request only after local gates pass. No automatic merge and no production scientific campaign dispatch."
+          } >> "$GITHUB_STEP_SUMMARY"
