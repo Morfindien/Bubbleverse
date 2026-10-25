@@ -1,0 +1,75 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "3.0.0",
+  "prompt_version": "2.3.0",
+  "handoff_id": "LOCAL-Q050-CLEAN-CORRELATED-NORMAL-INGESTION-20261025-V1-HANDOFF",
+  "verified_time_utc": "2026-10-25T04:30:03.209754+00:00",
+  "verified_time_europe_copenhagen": "2026-10-25T05:30:03.209754+01:00",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "current_q": "Q050",
+  "target_q": "Q050",
+  "exact_question": "For the frozen hillipop-ede_n3 configuration and each fixed admitted common background on 0 <= z <= 810, do the exact source-real low-redshift hydrogen/temperature branch-selection rules admit an absolutely continuous continuation to z=0 from every state in the validated z=810 domain, separately for q=xHeII=10^-6 and q=0, without changing or convexifying the selector?",
+  "question_sha256": "11af5cf58d6c94e34a050e9672a76e47d277c0fcaec14e9acbcf58e96eb22b01",
+  "case_lifecycle": "ACTIVE",
+  "scientific_status": "INCONCLUSIVE",
+  "disposition": "CONTINUE",
+  "source_result": {
+    "run_id": "LOCAL-Q050-CLEAN-CORRELATED-NORMAL-20261025-V1",
+    "result_file": "Q050_CORRELATED_NORMAL_RESULT_AND_HANDOFF_V1.md",
+    "result_sha256": "548626929bf9c4efaf687055f7f30f6a39d73d2f7aec1fba64ed383ab5e0dc42",
+    "journal_file": "Q047_SAMLET_JOURNAL_Q050_CLEAN_CORRELATED_NORMAL_V1.md",
+    "journal_sha256": "5f6a5497c8d2d51e4bb4a06011840998e43445da4c04a0626944fb2503073ec1",
+    "ledger_file": "Q050_QUESTION_ACTIVITY_LEDGER_CLEAN_CORRELATED_NORMAL_V1.json",
+    "ledger_sha256": "5f61706c2940fc483465d857354e9cfb1991129dbc5d493ef100e67eacefdad2"
+  },
+  "ingestion_decision": {
+    "registered_once": true,
+    "scientific_delta": "The correlated result conditionally excludes the first-order inward-attracting Pion interface pattern on the qualified feasible surface cover, but does not establish global AC continuation to z=0.",
+    "completion_gate": "NOT_SATISFIED",
+    "missing_justification": "Formal literal-selector local Caratheodory existence lemma plus completion audit of remaining selector/domain obligations, including whether a distinct SWIFT-fit lower-grid interface remains material.",
+    "no_repeat": "Do not rerun the normal grid, background binding recovery or runtime repair without a newly demonstrated material defect."
+  },
+  "selected_next_engine": {
+    "engine_id": "BUBBLEVERSE.MATHEMATICS",
+    "prompt_version": "2.3.0",
+    "verified_available_source": "ChatGPT Library",
+    "file_name": "Bubbleverse_Matematikmotor_2.3.0.md",
+    "file_id": "file_0000000024c081f4b3e27b326d0c7d95",
+    "github_main_status": "Prompt 2.3.0 not found in verified GitHub main tree; GitHub currently exposes Mathematics 2.2.0 with superseded capped-budget wording. Use the verified Library 2.3.0 prompt for this task."
+  },
+  "next_task_file": "Q050_NEXT_MATHEMATICS_TASK_LITERAL_SELECTOR_LOCAL_CONTINUATION_V1.json",
+  "activity_points": {
+    "run_cost": 25,
+    "total_work_points": 1245,
+    "some_interval": 1000,
+    "newly_crossed_some_milestones": [],
+    "next_some_milestone": 2000,
+    "points_to_next_some_milestone": 755,
+    "some_package_status": "READY_EXISTING_Q050-SOME-M001_NO_DUPLICATE",
+    "scientific_state_changed_by_points": false
+  },
+  "some": {
+    "milestone_id": "Q050-SOME-M001",
+    "state": "READY",
+    "external_publication_status": "NOT_REQUESTED_NOT_POSTED",
+    "action_this_ingestion": "PRESERVE_ONLY_NO_REGENERATION_NO_REBILLING"
+  },
+  "repository_memory": {
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "verified_base_commit": "26da1806fa3b31a33bff2c7f35bddcdbd6badc78",
+    "verified_tree": "95cdb1047036efcb92d8007a85737aa16a76a28f",
+    "core_input_blob_matches": {
+      "Q047_SAMLET_JOURNAL_Q050_CLEAN_CORRELATED_NORMAL_V1.md": "87f85f8db50373e43355c3f184fb90bc013c35c3",
+      "Q050_QUESTION_ACTIVITY_LEDGER_CLEAN_CORRELATED_NORMAL_V1.json": "26e364f33b9ff1c299b19c0132b03677c5e4d349",
+      "Q050_CORRELATED_NORMAL_RESULT_AND_HANDOFF_V1.md": "e6c6aabaad6f0b7b0d9ede2390f8196923dbc67d",
+      "Q050_SOME_M001_FILES-2.md": "89035079aaa2d5d5ae870266083802af9c5fa510"
+    },
+    "some_payload_sync": "PARTIAL_NOT_VERIFIED_IN_GITHUB_MAIN; the uploaded SoMe index is present, while the five package payload files were not found in the verified main tree.",
+    "write_status": "USER_UPLOAD_PENDING",
+    "write_performed": false
+  },
+  "delivery_status": "PREPARED_LOCAL_FILES",
+  "scientific_handoff": "PREPARED_COMPLETE",
+  "external_publication_status": "NOT_REQUESTED_NOT_POSTED"
+}
