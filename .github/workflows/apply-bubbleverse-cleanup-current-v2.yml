@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "preview = build/verify only; apply = publish a separate cleanup branch and PR"
+        description: "preview = build/verify only; apply = publish a separate cleanup branch and attempt PR creation"
         required: true
         default: preview
         type: choice
@@ -27,6 +27,8 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
 
     steps:
       - name: Checkout current default branch with history
@@ -61,6 +63,15 @@ jobs:
           set -euo pipefail
           python tools/maintenance/bubbleverse_cleanup_current_v2.py
 
+      - name: Remove generated Python bytecode from cleanup candidate
+        shell: bash
+        run: |
+          set -euo pipefail
+          find . -type d -name '__pycache__' -prune -exec rm -rf {} +
+          find . -type f \( -name '*.pyc' -o -name '*.pyo' \) -delete
+          git add -A
+          git diff --cached --check
+
       - name: Preserve cleanup evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -74,7 +85,7 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
 
-      - name: Publish isolated cleanup branch and open PR
+      - name: Publish isolated cleanup branch and attempt PR
         if: inputs.mode == 'apply' && success() && steps.cleanup.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
@@ -85,6 +96,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
+          if git diff --cached --quiet; then
+            echo "No repository changes remain after housekeeping; nothing to publish." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
           branch="bubbleverse-cleanup/current-v2-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           git switch -c "$branch"
           git diff --cached --check
@@ -94,6 +111,7 @@ jobs:
           git push origin "$branch"
 
           body="$RUNNER_TEMP/bv-cleanup-pr.md"
+          pr_error="$RUNNER_TEMP/bv-cleanup-pr-error.txt"
           {
             echo "Current-state Bubbleverse repository cleanup."
             echo
@@ -103,15 +121,28 @@ jobs:
             echo
             echo "The engine archives only registry-proven retired program/workflow paths that pass active-reference and incoming-reference safety gates. Historical scientific journals/results remain protected."
             echo
-            echo "This PR was created automatically, but merge remains a manual operator decision."
+            echo "Merge remains a manual operator decision."
           } > "$body"
 
-          gh pr create \
-            --repo "$GITHUB_REPOSITORY" \
-            --base "$DEFAULT_BRANCH" \
-            --head "$branch" \
-            --title "Bubbleverse cleanup — current state V2" \
-            --body-file "$body"
+          if pr_url="$(gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base "$DEFAULT_BRANCH" \
+              --head "$branch" \
+              --title "Bubbleverse cleanup — current state V2" \
+              --body-file "$body" \
+              2> "$pr_error")"; then
+            printf 'Pull request: %s\n' "$pr_url" >> "$GITHUB_STEP_SUMMARY"
+          else
+            {
+              echo "Cleanup branch was published successfully, but GitHub Actions could not create the PR."
+              echo
+              echo "Branch: \`$branch\`"
+              echo
+              echo "Open it manually:"
+              echo "https://github.com/${GITHUB_REPOSITORY}/compare/${DEFAULT_BRANCH}...${branch}?expand=1"
+            } >> "$GITHUB_STEP_SUMMARY"
+            cat "$pr_error"
+          fi
 
       - name: Summary
         if: always()
@@ -125,5 +156,6 @@ jobs:
             echo "Changed: \`${{ steps.cleanup.outputs.changed || 'UNKNOWN' }}\`"
             echo "Run ID: \`${{ steps.cleanup.outputs.run_id || 'UNKNOWN' }}\`"
             echo
-            echo "Preview never pushes. Apply creates a separate branch and pull request only after local gates pass. No automatic merge and no production scientific campaign dispatch."
+            echo "Preview never pushes. Apply creates a separate branch after local gates pass. PR creation is attempted, but a repository-level Actions restriction no longer makes the cleanup job fail."
+            echo "No automatic merge and no production scientific campaign dispatch."
           } >> "$GITHUB_STEP_SUMMARY"
