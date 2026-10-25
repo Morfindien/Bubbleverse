@@ -1008,3 +1008,14 @@ agreement.
 
 Before launch, read `Q047_RECONSTRUCTION_INSTALLATION_V1.md`. The prepared files
 have not been remotely installed or executed by the authoring agent.
+
+<!-- BV-CLEANUP-CURRENT-V2:START -->
+## Repository navigation
+
+- [START_CODES.md](START_CODES.md) — canonical launch registry.
+- [Repository structure](docs/REPOSITORY_STRUCTURE.md).
+- [Cleanup history](docs/maintenance/cleanup/INDEX.md).
+- [Retired program archive](archive/programs/INDEX.md).
+
+Historical scientific records remain authoritative at their preserved source locations unless a documented byte-preserving archive mapping says otherwise.
+<!-- BV-CLEANUP-CURRENT-V2:END -->
