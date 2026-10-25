@@ -1,0 +1,88 @@
+{
+  "schema_id": "bubbleverse.q050.peebles_t_ratio_tangency_certificate",
+  "schema_version": "1.0.0",
+  "run_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-HPC-20261025-V1",
+  "task_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-CERTIFICATE-V1",
+  "program_id": "Q050-PEEBLES-TANGENCY-CERT-V1-LOCAL-UNREGISTERED",
+  "created_at_utc": "2026-10-25T05:04:46+00:00",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "current_q": "Q050",
+  "target_q": "Q050",
+  "question_sha256": "11af5cf58d6c94e34a050e9672a76e47d277c0fcaec14e9acbcf58e96eb22b01",
+  "execution": {
+    "task_type": "SCIENTIFIC_CASE_EXECUTION",
+    "backend": "LOCAL_RUNTIME",
+    "github_worthwhile": "NO",
+    "paid_compute": false,
+    "workflow_dispatch": false,
+    "producer_seconds": 4.24161762499989,
+    "validator_seconds": 3.5278622689997974
+  },
+  "frozen_selector": {
+    "interface": "v=Tmat/Trad=1/10",
+    "equality_arm": "PEEBLES",
+    "tangent_condition": "A=rate_gamma_b/H=1/9",
+    "physical_time": "u=ln(a)"
+  },
+  "material_domain": {
+    "z_lower_open_approx": 16.0310108356,
+    "z_upper_exact": "4006/49",
+    "z_upper_decimal": 81.75510204081633,
+    "q_values": [
+      "1/1000000",
+      "0"
+    ],
+    "non_peebles_arm": "HMLA",
+    "reionization_inactive_reason": "material strip lies above frozen reionization start 753585/65536, hence x_reio=x_noreio=h+q"
+  },
+  "proof": {
+    "rate_factorization": "A=R(z)*x/(1+fHe+x)",
+    "background_premises": [
+      "H_CLASS >= H0*sqrt(Omega_g)*(1+z)^2 from the frozen positive flat source background",
+      "ell=dlnH/dlna >= -3 on the inherited admitted common-background class"
+    ],
+    "R_safe_upper": 11700,
+    "tangent_forces_xe_lower_exact": "1/105299",
+    "q_1e6_h_lower_exact": "894701/105299000000",
+    "q_1e6_xe_h_lower_exact": "894701/11087879401000000",
+    "saha_safe_upper": "1e-280",
+    "peebles_bracket": "alphaB(TM)*xe*h - alphaB(TR)*s*(1-h)",
+    "peebles_bracket_sign": "STRICTLY_POSITIVE for both q values",
+    "h_u_sign": "STRICTLY_NEGATIVE for the equality-assigned PEEBLES arm",
+    "A_derivative_identity": "A_u/A=-4-ell+(1+fHe)*x_u/[x*(1+fHe+x)]",
+    "A_u_at_tangent": "A_u < -1/9",
+    "v_second_derivative_identity": "at v=1/10, A=1/9, v_u=0: v_uu=(9/10)A_u",
+    "certified_strict_bound": "v_uu < -1/10",
+    "side_conclusion": "PEEBLES enters v<1/10, its own literal selector side, quadratically in forward u"
+  },
+  "acceptance_condition": "SATISFIED",
+  "hmla_tangent_derivative_status": "NOT_NEEDED_AFTER_UNIVERSAL_PEEBLES_SELF_SIDE_CERTIFICATE",
+  "scientific_conclusion": "PEEBLES_T_RATIO_TANGENCY_GATE_CLEARED",
+  "global_q050_status": "ACTIVE_INCONCLUSIVE_PENDING_RESULT_INGESTION_COMPLETION_AUDIT",
+  "claim_firewall": [
+    "No selector uniqueness is claimed.",
+    "No common-background existence is claimed.",
+    "No projected-state reachability is claimed.",
+    "No native/P6 equivalence is claimed.",
+    "No global Q050 closure is claimed by this HPC run.",
+    "No Pion result was rerun or strengthened beyond its existing conditional certificate."
+  ],
+  "source": {
+    "repository": "mwt5345/class_ede",
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "blobs": {
+      "external/HyRec2020/wrap_hyrec.c": "fa44c774cf1fc7dbf6185e01980764f7eb260204",
+      "external/HyRec2020/hydrogen.c": "233f174bfb1758fa910866310340ae1bfad703db",
+      "source/thermodynamics.c": "c1683f56b43e0f2ec24a8ba6120133f604cb947c",
+      "include/thermodynamics.h": "f02f2591077ee11f3bc9481a4491b0feb83cf26d",
+      "include/background.h": "742e4f19d738b1c60467a81aadc8db4b28eb001c",
+      "source/background.c": "5f6be0fc77c31bd81198d9f28a9d73690a2baabd"
+    }
+  },
+  "artifacts": {
+    "numeric_bounds": "Q050_PEEBLES_TANGENCY_NUMERIC_BOUNDS_V1.json",
+    "validation": "Q050_PEEBLES_TANGENCY_VALIDATION_V1.json",
+    "producer": "q050_peebles_tangency_certificate_v1.py",
+    "validator": "q050_peebles_tangency_validator_v1.py"
+  }
+}

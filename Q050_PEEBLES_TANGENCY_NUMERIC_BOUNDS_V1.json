@@ -1,0 +1,48 @@
+{
+  "schema_id": "bubbleverse.q050.peebles_tangency_numeric_certificate",
+  "schema_version": "1.0.0",
+  "status": "PASS_STRICT_PEEBLES_SELF_SIDE",
+  "z_material_strip": {
+    "lower_open_approx": "16.0310108356",
+    "upper_exact": "4006/49",
+    "upper_decimal": "81.7551020408163265306122448979591836734693877551020408163265306122448979591836734693877551"
+  },
+  "tangent": {
+    "v": "1/10",
+    "A": "1/9"
+  },
+  "electron_independent_rate_bound": {
+    "C_rate_decimal": "1014478.93390121696628636003473764583941068599537150906203165614481609933264281448868155436",
+    "R_direct_upper_decimal": "11524.5008994937375354780601071160649739131857273342364255953664715678615526611852817467914",
+    "R_safe_integer": 11700
+  },
+  "tangent_forced_lower_bounds": {
+    "x_e_exact": "1/105299",
+    "x_e_decimal": "0.00000949676635105746493319024872031073419500660025261398493812856722286061596026552958717556672",
+    "q_1e6_h_exact": "894701/105299000000",
+    "q_1e6_xe_times_h_exact": "894701/11087879401000000",
+    "q_1e6_xe_times_h_decimal": "8.06918047755198523555802877549714070884490854862247973687173403627823242411184302526668508E-11",
+    "q_0_h_exact": "1/105299",
+    "q_0_xe_times_h_exact": "1/11087879401",
+    "q_0_xe_times_h_decimal": "9.01885711265773172887705364752821412834556857388387823068459075856429402013839598398424175E-11"
+  },
+  "saha": {
+    "TR_max_eV": "0.0194363336010321428571428571428571428571428571428571428571428571428571428571428571428571429",
+    "nH_at_zmax_cm3": "0.106582603439558066853025663201557174306623940704978367856930360649049290686703669389455074",
+    "s_direct_max_decimal": "1.09206868748794415257184599084556955581698314333005054563558339705288832993589738183601356E-284",
+    "s_safe_upper": "1e-280",
+    "monotonicity": "dlns/dln(1+z)=-3/2+EI/TR>0 on strip"
+  },
+  "sign_chain": [
+    "source alphaB_PPB(T) is strictly decreasing; at v=0.1 alpha_TM>alpha_TR>0",
+    "xe*h > s >= s*(1-h) implies alpha_TM*xe*h-alpha_TR*s*(1-h)>0",
+    "injection=0 and Peebles C,nH,H are positive/finite on inherited h<=99999/100000 domain",
+    "therefore h_u<0 for q=1e-6 and q=0",
+    "z>reionization_start throughout material strip, so x_u=h_u<0",
+    "ell=dlnH/dlna>=-3 gives A_u/A<-1",
+    "at A=1/9, A_u<-1/9",
+    "at v=1/10 and v_u=0, v_uu=(9/10)A_u<-1/10"
+  ],
+  "v_uu_strict_upper": "-1/10",
+  "conclusion": "The source-real equality-assigned PEEBLES branch departs quadratically into v<1/10 at every admissible tangent state in the material strip, for both q branches."
+}

@@ -1,77 +1,110 @@
 {
   "schema_id": "bubbleverse.output_manifest",
   "schema_version": "1.0.0",
-  "created_at_utc": "2026-10-25T04:54:43+00:00",
+  "created_at_utc": "2026-10-25T05:04:46+00:00",
   "manifest_hash_convention": "OUTPUT_MANIFEST.json excludes its own hash to avoid recursion.",
   "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
   "current_q": "Q050",
+  "run_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-HPC-20261025-V1",
+  "task_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-CERTIFICATE-V1",
   "parent_journal": {
-    "name": "Q047_SAMLET_JOURNAL_Q050_CLEAN_LITERAL_SELECTOR_MATHEMATICS_V1-1.md",
-    "bytes": 14941079,
-    "sha256": "931fb2fbafc85ce48cb53abc0a9826eb951e8585f90322f53700ee86033500c8"
+    "name": "Q047_SAMLET_JOURNAL_Q050_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.md",
+    "bytes": 14945411,
+    "sha256": "4b4eb556b8156690e72a4dce0c9c6ff441a1e3ad5843639fdf42b45010160d73"
   },
-  "source_mathematics_result": {
-    "run_id": "LOCAL-Q050-CLEAN-LITERAL-SELECTOR-MATHEMATICS-20261025-V1",
-    "certificate_sha256": "892dcbc3543dd2c4fcb912f3b19fb79e399eec500e391011935a08e9b4075bff",
-    "validation_sha256": "2381deaa76a40c3d71a44469993432c88b8ee956b98934db2c0b99de92e06f9d",
-    "task_sha256": "4b8be8bb0e5b1abffe65ffbdc36f90c0b6f61638a2c0c0dd6e4d59e51ad96226"
+  "parent_ledger": {
+    "name": "Q050_QUESTION_ACTIVITY_LEDGER_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.json",
+    "bytes": 16758,
+    "sha256": "a8dd485d158ad64f294f7c19328f0927294775b1f2796561b10fa5859ec4bca7"
   },
   "files": [
     {
-      "name": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_RESULT_AND_HANDOFF_V1.md",
-      "role": "primary Result Ingestion & Routing continuation handoff",
-      "intended_repository_relative_path": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_RESULT_AND_HANDOFF_V1.md",
+      "name": "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1.md",
+      "role": "primary Q050 PEEBLES tangency result and return handoff",
+      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1.md",
       "status": "NEW",
-      "bytes": 5752,
-      "sha256": "46d488149edd5a5f8b2b8e51198e5960bde98a73992e3fb7b6590e5b4e0db83d"
+      "bytes": 7283,
+      "sha256": "04af53f76b15f475fae92c0eac5fcd8bb0979786b32493622206247434029012"
     },
     {
-      "name": "Q047_SAMLET_JOURNAL_Q050_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.md",
-      "role": "complete cumulative Q050 journal; Mathematics journal exact prefix plus ingestion append",
-      "intended_repository_relative_path": "Q047_SAMLET_JOURNAL_Q050_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.md",
+      "name": "Q050_PEEBLES_TANGENCY_CERTIFICATE_V1.json",
+      "role": "machine-readable exact tangency proof certificate",
+      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_CERTIFICATE_V1.json",
       "status": "NEW",
-      "bytes": 14945411,
-      "sha256": "4b4eb556b8156690e72a4dce0c9c6ff441a1e3ad5843639fdf42b45010160d73"
+      "bytes": 3919,
+      "sha256": "3c2383b916625ee681f94f25d952b69074c14ee697015b5e7c5a0fd8fb712711"
     },
     {
-      "name": "Q050_QUESTION_ACTIVITY_LEDGER_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.json",
+      "name": "Q050_PEEBLES_TANGENCY_NUMERIC_BOUNDS_V1.json",
+      "role": "deterministic high-precision numeric bound receipt",
+      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_NUMERIC_BOUNDS_V1.json",
+      "status": "NEW",
+      "bytes": 2524,
+      "sha256": "aea70a8992554f323415831245f6b0c59e5b25f4669e85029c37fa8a4296951f"
+    },
+    {
+      "name": "Q050_PEEBLES_TANGENCY_VALIDATION_V1.json",
+      "role": "independent conservative validation and mutation controls",
+      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_VALIDATION_V1.json",
+      "status": "NEW",
+      "bytes": 2727,
+      "sha256": "d3ae4cb1f801504e4cd8990f759a4697857a14bdc4afe5ab473acb4be6bf9dbd"
+    },
+    {
+      "name": "q050_peebles_tangency_certificate_v1.py",
+      "role": "reproducible local certificate producer source",
+      "intended_repository_relative_path": "q050_peebles_tangency_certificate_v1.py",
+      "status": "NEW",
+      "bytes": 5250,
+      "sha256": "08e4af07d8c521e004c1d938343e8d21a06757aea214a30ab756ca50a6020bca"
+    },
+    {
+      "name": "q050_peebles_tangency_validator_v1.py",
+      "role": "reproducible independent validator source",
+      "intended_repository_relative_path": "q050_peebles_tangency_validator_v1.py",
+      "status": "NEW",
+      "bytes": 3039,
+      "sha256": "3837dd66587a8ff5266c0a02751907ae4fb5419579936184c2f6c30f054c15cb"
+    },
+    {
+      "name": "Q050_QUESTION_ACTIVITY_LEDGER_PEEBLES_TANGENCY_V1.json",
       "role": "updated cumulative Q050 activity/SoMe ledger",
-      "intended_repository_relative_path": "Q050_QUESTION_ACTIVITY_LEDGER_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.json",
+      "intended_repository_relative_path": "Q050_QUESTION_ACTIVITY_LEDGER_PEEBLES_TANGENCY_V1.json",
       "status": "NEW",
-      "bytes": 16758,
-      "sha256": "a8dd485d158ad64f294f7c19328f0927294775b1f2796561b10fa5859ec4bca7"
+      "bytes": 18357,
+      "sha256": "83fb8f22d26a9850fc8cb05387f4db46f831c6d1fa137bcf73bdf806f0898dbf"
     },
     {
-      "name": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_AUDIT_V1.json",
-      "role": "one-time ingestion integrity/no-repeat/repository audit",
-      "intended_repository_relative_path": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_AUDIT_V1.json",
+      "name": "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1.md",
+      "role": "complete cumulative Q050 journal; incoming journal exact prefix plus HPC append",
+      "intended_repository_relative_path": "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1.md",
       "status": "NEW",
-      "bytes": 6195,
-      "sha256": "1d331a41c17fce7f47ac984d65ed94e59db5bacbf164ae08e27b226547465d19"
+      "bytes": 14950414,
+      "sha256": "83651b7f5ddcd348a8db5d22fd725c1f1c1bb7caf97cc24c29e8930c741495aa"
     },
     {
-      "name": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_HANDOFF_AND_MEMORY_V1.json",
-      "role": "structured result-ingestion handoff and memory state",
-      "intended_repository_relative_path": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_HANDOFF_AND_MEMORY_V1.json",
+      "name": "Q050_PEEBLES_TANGENCY_HANDOFF_AND_MEMORY_V1.json",
+      "role": "structured HPC result handoff and memory state",
+      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_HANDOFF_AND_MEMORY_V1.json",
       "status": "NEW",
-      "bytes": 4230,
-      "sha256": "252aab9ce436025f5770598674c397bf5b4b89237b1cf0685a0ce0ed6f95b94a"
+      "bytes": 4119,
+      "sha256": "e25dc607ada7bb72b29aeed549f980377e56cf9fa6d7c6313af450125f45ce08"
     },
     {
       "name": "github_memory_update.json",
       "role": "upload-ready GitHub memory update proposal",
       "intended_repository_relative_path": "github_memory_update.json",
       "status": "NEW",
-      "bytes": 2646,
-      "sha256": "6c6dba3fd78691e53fc2d5f0284df4988f18edeedd9b47d4cb14cb1d0384df12"
+      "bytes": 2037,
+      "sha256": "b2ee1827a06a99d1b1fba111fcb000a2ecd322f26a4939bc9aeccf973ccd1815"
     },
     {
       "name": "FILES.md",
-      "role": "delivery index and upload guidance",
+      "role": "delivery index",
       "intended_repository_relative_path": "FILES.md",
       "status": "NEW",
-      "bytes": 1826,
-      "sha256": "929adcc9f7ff0e7c5013727ef1d93ebd759fed6706040d3efa0950b6c5222883"
+      "bytes": 2045,
+      "sha256": "4e1249c90f16759637e8c12af659582a087850e83432d43b64ecb2446a53ac8c"
     }
   ]
 }

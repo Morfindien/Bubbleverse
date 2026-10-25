@@ -1,0 +1,91 @@
+{
+  "schema_id": "bubbleverse.q050.peebles_tangency_validation",
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "coarse_R_below_11700",
+      "status": "PASS",
+      "detail": "coarse R=11643.636242000000<11700"
+    },
+    {
+      "id": "q1e6_h_positive",
+      "status": "PASS",
+      "detail": "h_lower=8.4967663510574654e-06"
+    },
+    {
+      "id": "q1e6_xh_gt_8e_11",
+      "status": "PASS",
+      "detail": "xe*h=8.0691804775519851e-11"
+    },
+    {
+      "id": "q0_xh_gt_q1",
+      "status": "PASS",
+      "detail": "q=0 product is strictly larger than q=1e-6 lower product"
+    },
+    {
+      "id": "coarse_s_below_1e_280",
+      "status": "PASS",
+      "detail": "coarse s<8.463e-281"
+    },
+    {
+      "id": "peebles_bracket_margin_q1e6",
+      "status": "PASS",
+      "detail": "xe*h lower exceeds conservative s upper by >269 decades"
+    },
+    {
+      "id": "vuu_certificate_exact",
+      "status": "PASS",
+      "detail": "certificate records strict v_uu<-1/10"
+    },
+    {
+      "id": "status_pass",
+      "status": "PASS",
+      "detail": "producer status"
+    }
+  ],
+  "mutation_controls": [
+    {
+      "id": "R_safe_11000",
+      "status": "REJECTED"
+    },
+    {
+      "id": "q_1e5_positive_h",
+      "status": "REJECTED"
+    },
+    {
+      "id": "ell_lower_minus4_still_strict",
+      "status": "REJECTED"
+    },
+    {
+      "id": "h_upper_1_keeps_RLya_finite",
+      "status": "REJECTED"
+    },
+    {
+      "id": "s_upper_1e_10_still_below_xh",
+      "status": "REJECTED"
+    }
+  ],
+  "summary": {
+    "checks_passed": 8,
+    "checks_total": 8,
+    "mutations_rejected": 5,
+    "mutations_total": 5
+  },
+  "independence_note": "Validator uses coarse outward hand bounds and rational inequalities rather than producer high-precision transcendental values; both share the pinned physical constants and accepted background premises.",
+  "run_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-HPC-20261025-V1",
+  "task_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-CERTIFICATE-V1",
+  "producer_seconds_local": 4.24161762499989,
+  "validator_seconds_local": 3.5278622689997974,
+  "backend": "LOCAL_RUNTIME",
+  "github_worthwhile": false,
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "source_blobs": {
+    "external/HyRec2020/wrap_hyrec.c": "fa44c774cf1fc7dbf6185e01980764f7eb260204",
+    "external/HyRec2020/hydrogen.c": "233f174bfb1758fa910866310340ae1bfad703db",
+    "source/thermodynamics.c": "c1683f56b43e0f2ec24a8ba6120133f604cb947c",
+    "include/thermodynamics.h": "f02f2591077ee11f3bc9481a4491b0feb83cf26d",
+    "include/background.h": "742e4f19d738b1c60467a81aadc8db4b28eb001c",
+    "source/background.c": "5f6be0fc77c31bd81198d9f28a9d73690a2baabd"
+  }
+}
