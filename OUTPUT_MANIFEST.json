@@ -1,67 +1,77 @@
 {
   "schema_id": "bubbleverse.output_manifest",
   "schema_version": "1.0.0",
-  "created_at_utc": "2026-10-25T04:36:35.647031433+00:00",
+  "created_at_utc": "2026-10-25T04:54:43+00:00",
   "manifest_hash_convention": "OUTPUT_MANIFEST.json excludes its own hash to avoid recursion.",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "current_q": "Q050",
   "parent_journal": {
-    "name": "Q047_SAMLET_JOURNAL_Q050_CLEAN_CORRELATED_NORMAL_INGESTED_V1.md",
-    "bytes": 14936636,
-    "sha256": "9e8715ff3ffe02d90a0056888d72a2c5c7651abde91cb38e24d531894d646b0f"
+    "name": "Q047_SAMLET_JOURNAL_Q050_CLEAN_LITERAL_SELECTOR_MATHEMATICS_V1-1.md",
+    "bytes": 14941079,
+    "sha256": "931fb2fbafc85ce48cb53abc0a9826eb951e8585f90322f53700ee86033500c8"
+  },
+  "source_mathematics_result": {
+    "run_id": "LOCAL-Q050-CLEAN-LITERAL-SELECTOR-MATHEMATICS-20261025-V1",
+    "certificate_sha256": "892dcbc3543dd2c4fcb912f3b19fb79e399eec500e391011935a08e9b4075bff",
+    "validation_sha256": "2381deaa76a40c3d71a44469993432c88b8ee956b98934db2c0b99de92e06f9d",
+    "task_sha256": "4b8be8bb0e5b1abffe65ffbdc36f90c0b6f61638a2c0c0dd6e4d59e51ad96226"
   },
   "files": [
     {
-      "name": "Q050_MATHEMATICS_LITERAL_SELECTOR_CONTINUATION_V1.md",
-      "role": "primary BUBBLEVERSE OVERLEVERING Mathematics result",
-      "bytes": 9785,
-      "sha256": "e0efcd2cd9470c69b60c4201b6a25a1149d95a4969f0743fb7b2dc2a8d825e54"
+      "name": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_RESULT_AND_HANDOFF_V1.md",
+      "role": "primary Result Ingestion & Routing continuation handoff",
+      "intended_repository_relative_path": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_RESULT_AND_HANDOFF_V1.md",
+      "status": "NEW",
+      "bytes": 5752,
+      "sha256": "46d488149edd5a5f8b2b8e51198e5960bde98a73992e3fb7b6590e5b4e0db83d"
     },
     {
-      "name": "Q047_SAMLET_JOURNAL_Q050_CLEAN_LITERAL_SELECTOR_MATHEMATICS_V1.md",
-      "role": "complete cumulative journal; incoming bytes exact prefix plus Mathematics append",
-      "bytes": 14941079,
-      "sha256": "931fb2fbafc85ce48cb53abc0a9826eb951e8585f90322f53700ee86033500c8"
+      "name": "Q047_SAMLET_JOURNAL_Q050_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.md",
+      "role": "complete cumulative Q050 journal; Mathematics journal exact prefix plus ingestion append",
+      "intended_repository_relative_path": "Q047_SAMLET_JOURNAL_Q050_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.md",
+      "status": "NEW",
+      "bytes": 14945411,
+      "sha256": "4b4eb556b8156690e72a4dce0c9c6ff441a1e3ad5843639fdf42b45010160d73"
     },
     {
-      "name": "Q050_QUESTION_ACTIVITY_LEDGER_CLEAN_LITERAL_SELECTOR_MATHEMATICS_V1.json",
+      "name": "Q050_QUESTION_ACTIVITY_LEDGER_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.json",
       "role": "updated cumulative Q050 activity/SoMe ledger",
-      "bytes": 15084,
-      "sha256": "c948863f9b614cd26e10a952cb3ac65c281cf05ff7a05a4dc89b18e75b5c39eb"
+      "intended_repository_relative_path": "Q050_QUESTION_ACTIVITY_LEDGER_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.json",
+      "status": "NEW",
+      "bytes": 16758,
+      "sha256": "a8dd485d158ad64f294f7c19328f0927294775b1f2796561b10fa5859ec4bca7"
     },
     {
-      "name": "Q050_LITERAL_SELECTOR_MATHEMATICS_CERTIFICATE_V1.json",
-      "role": "machine-readable formal lemma, Pion application and remaining-gate certificate",
-      "bytes": 5254,
-      "sha256": "892dcbc3543dd2c4fcb912f3b19fb79e399eec500e391011935a08e9b4075bff"
+      "name": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_AUDIT_V1.json",
+      "role": "one-time ingestion integrity/no-repeat/repository audit",
+      "intended_repository_relative_path": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_AUDIT_V1.json",
+      "status": "NEW",
+      "bytes": 6195,
+      "sha256": "1d331a41c17fce7f47ac984d65ed94e59db5bacbf164ae08e27b226547465d19"
     },
     {
-      "name": "Q050_LITERAL_SELECTOR_MATHEMATICS_VALIDATION_V1.json",
-      "role": "Mathematics/source/no-repeat/repository validation",
-      "bytes": 3814,
-      "sha256": "2381deaa76a40c3d71a44469993432c88b8ee956b98934db2c0b99de92e06f9d"
-    },
-    {
-      "name": "Q050_NEXT_HPC_TASK_PEEBLES_RATIO_TANGENCY_V1.json",
-      "role": "prepared next PEEBLES tangency execution task",
-      "bytes": 4978,
-      "sha256": "4b8be8bb0e5b1abffe65ffbdc36f90c0b6f61638a2c0c0dd6e4d59e51ad96226"
-    },
-    {
-      "name": "Q050_MATHEMATICS_LITERAL_SELECTOR_HANDOFF_AND_MEMORY_V1.json",
-      "role": "structured Mathematics handoff/memory state",
-      "bytes": 5265,
-      "sha256": "f2173e30eb09f748b21126c1984059d54111fb353c87516b2443378425f389ac"
+      "name": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_HANDOFF_AND_MEMORY_V1.json",
+      "role": "structured result-ingestion handoff and memory state",
+      "intended_repository_relative_path": "Q050_LITERAL_SELECTOR_MATHEMATICS_INGESTION_HANDOFF_AND_MEMORY_V1.json",
+      "status": "NEW",
+      "bytes": 4230,
+      "sha256": "252aab9ce436025f5770598674c397bf5b4b89237b1cf0685a0ce0ed6f95b94a"
     },
     {
       "name": "github_memory_update.json",
       "role": "upload-ready GitHub memory update proposal",
-      "bytes": 2226,
-      "sha256": "acbbf65d62f2fdb3266012b3e2bd083c82dc8ddac4b4d4064420a04a298b89e4"
+      "intended_repository_relative_path": "github_memory_update.json",
+      "status": "NEW",
+      "bytes": 2646,
+      "sha256": "6c6dba3fd78691e53fc2d5f0284df4988f18edeedd9b47d4cb14cb1d0384df12"
     },
     {
       "name": "FILES.md",
-      "role": "delivery index",
-      "bytes": 1593,
-      "sha256": "4aec7d8d7264555533965bc9441952ee3749f666544c01af55bd0316db1523b3"
+      "role": "delivery index and upload guidance",
+      "intended_repository_relative_path": "FILES.md",
+      "status": "NEW",
+      "bytes": 1826,
+      "sha256": "929adcc9f7ff0e7c5013727ef1d93ebd759fed6706040d3efa0950b6c5222883"
     }
   ]
 }
