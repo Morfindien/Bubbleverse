@@ -1,0 +1,34 @@
+{
+  "schema": "bubbleverse.q050.clean.v6.builder.spec.v1",
+  "q": "Q050",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "engine": "BUBBLEVERSE.EXECUTION_HPC_MOTOR_BUILDER",
+  "engine_version": "2.4.0",
+  "revision": "CLEAN_V6",
+  "parent": "Q050_CLEAN_V5_HANDOFF.json",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "config_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "checkpoint_sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+  "domain": {
+    "z": [
+      650.2566501559347,
+      810.0
+    ],
+    "q": [
+      1e-06,
+      0.0
+    ]
+  },
+  "surface": "F=99*B-3*R-L=0",
+  "normal": "N=99*B'-3*R*(H'/H-3/(1+z)+xHII'/(1-xHII))",
+  "no_convexification": true,
+  "implementation_decision": "MODIFIED_MOTOR_PLUS_PROGRAM",
+  "new_concrete_interface_gate": "canonical Q050 low-z fixed admitted common-background binding, including EDE state/Hprime enclosure",
+  "forbidden_substitutions": [
+    "LCDM background",
+    "zero-EDE assumption",
+    "midpoint-only background",
+    "pre-reset Q050 scientific state"
+  ],
+  "expected_external_result": "Q050_CLEAN_V6_LITERAL_NORMAL_CELLS.json"
+}
