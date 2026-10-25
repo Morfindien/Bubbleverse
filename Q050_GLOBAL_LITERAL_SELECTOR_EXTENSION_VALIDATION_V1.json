@@ -1,0 +1,100 @@
+{
+  "schema_id": "bubbleverse.q050.global_extension_validation",
+  "schema_version": "1.0.0",
+  "status": "PASS",
+  "checks": [
+    {
+      "id": "identity",
+      "status": "PASS",
+      "detail": "task/question identity preserved"
+    },
+    {
+      "id": "answer_yes",
+      "status": "PASS",
+      "detail": "closure is YES within exact conditional scope"
+    },
+    {
+      "id": "all_five_components",
+      "status": "PASS",
+      "detail": "GLOBAL-1..GLOBAL-5 all PASS"
+    },
+    {
+      "id": "peebles_tangent",
+      "status": "PASS",
+      "detail": "strict tangent certificate inherited"
+    },
+    {
+      "id": "pion_gate",
+      "status": "PASS",
+      "detail": "Pion local gate inherited as cleared"
+    },
+    {
+      "id": "threshold_order",
+      "status": "PASS",
+      "detail": "fixed/state thresholds are strictly ordered"
+    },
+    {
+      "id": "positive_temperature",
+      "status": "PASS",
+      "detail": "global thermal lower barrier is positive"
+    },
+    {
+      "id": "z0_reached",
+      "status": "PASS",
+      "detail": "maximal extension reaches T=ln811 / z=0"
+    },
+    {
+      "id": "no_uniqueness",
+      "status": "PASS",
+      "detail": "uniqueness firewall retained"
+    },
+    {
+      "id": "no_selector_change",
+      "status": "PASS",
+      "detail": "literal selector firewall retained"
+    }
+  ],
+  "mutation_controls": [
+    {
+      "id": "drop_global1_regular",
+      "status": "REJECTED"
+    },
+    {
+      "id": "drop_pion_local_gate",
+      "status": "REJECTED"
+    },
+    {
+      "id": "drop_peebles_tangent",
+      "status": "REJECTED"
+    },
+    {
+      "id": "allow_unbounded_field_at_zeno",
+      "status": "REJECTED"
+    },
+    {
+      "id": "remove_endpoint_restart",
+      "status": "REJECTED"
+    },
+    {
+      "id": "allow_h_to_reach_native_singularity",
+      "status": "REJECTED"
+    },
+    {
+      "id": "convexify_selector",
+      "status": "REJECTED"
+    }
+  ],
+  "summary": {
+    "checks_passed": 10,
+    "checks_total": 10,
+    "mutations_rejected": 7,
+    "mutations_total": 7
+  },
+  "role_note": "This validator checks identity, proof-component coverage, threshold ordering and claim firewalls. It is not an independent general theorem prover.",
+  "run_id": "LOCAL-Q050-MATHEMATICS-GLOBAL-LITERAL-SELECTOR-CLOSURE-20261025-V1",
+  "task_id": "LOCAL-Q050-GLOBAL-LITERAL-SELECTOR-EXTENSION-CLOSURE-V1",
+  "created_at_utc": "2026-10-25T05:25:53+00:00",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "repository_commit": "84962f18ead6a43185b94401dc172a31a97fa7d2",
+  "independence": "STRUCTURAL_SEMANTIC_CHECKER_SAME_ANALYST_NOT_INDEPENDENT_THEOREM_PROOF"
+}
