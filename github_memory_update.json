@@ -5,37 +5,46 @@
   "write_performed": false,
   "repository": "Morfindien/Bubbleverse",
   "branch": "main",
-  "base_commit": "2bd8c5bb27cb3576c81508f58ba636521fbe0bb5",
-  "base_tree": "0bb7681912071f40ddc1bb9f38bb7dcfb3b22043",
-  "created_at_utc": "2026-10-25T05:04:46+00:00",
+  "base_commit": "5993e1ad847619d9576615d47d964e398bb44270",
+  "base_tree": "aaa9513e8b138977820ef2ef2d290329facea974",
+  "created_at_utc": "2026-10-25T05:15:42+00:00",
   "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
   "current_q": "Q050",
-  "purpose": "Register the completed PEEBLES T_RATIO exact-tangency certificate and return Q050 once to Result Ingestion 2.3.0 for completion audit.",
-  "canonical_state_notes": {
-    "whole_q_scientific_status": "ACTIVE/INCONCLUSIVE_PENDING_INGESTION",
-    "new_gate_result": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-V1 CLEARED",
-    "certified_bound": "v_uu<-1/10 on every admissible exact tangent state, both q branches",
-    "pion_gate": "PRESERVE_EXISTING_CLEARED_CONDITIONAL_RESULT_NO_RERUN",
-    "swift_1775K_gate": "PRESERVE_NON_MATERIAL_STATE_GATE_RESULT",
-    "next_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.3.0",
-    "activity_total": 1590,
+  "changes": {
+    "ingest_once": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-HPC-20261025-V1",
+    "scientific_state": "ACTIVE_INCONCLUSIVE",
+    "q_completion_gate": "NOT_SATISFIED",
+    "new_current_journal": "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_INGESTED_V1.md",
+    "new_activity_ledger": "Q050_QUESTION_ACTIVITY_LEDGER_PEEBLES_TANGENCY_INGESTED_V1.json",
+    "next_engine": "BUBBLEVERSE.MATHEMATICS2.3.0",
+    "next_task": "Q050_NEXT_MATHEMATICS_TASK_GLOBAL_LITERAL_SELECTOR_EXTENSION_V1.json",
+    "activity_total": 1620,
     "next_some_milestone": 2000,
-    "points_to_next": 410,
-    "some_m001": "READY/no duplicate"
+    "points_to_next": 380,
+    "some_m001": "READY_NO_DUPLICATE"
   },
-  "add_files": [
-    "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1.md",
-    "Q050_PEEBLES_TANGENCY_CERTIFICATE_V1.json",
-    "Q050_PEEBLES_TANGENCY_NUMERIC_BOUNDS_V1.json",
-    "Q050_PEEBLES_TANGENCY_VALIDATION_V1.json",
-    "q050_peebles_tangency_certificate_v1.py",
-    "q050_peebles_tangency_validator_v1.py",
-    "Q050_QUESTION_ACTIVITY_LEDGER_PEEBLES_TANGENCY_V1.json",
-    "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1.md",
-    "Q050_PEEBLES_TANGENCY_HANDOFF_AND_MEMORY_V1.json",
+  "claim_changes": {
+    "adds": "PEEBLES exact tangency gate accepted/ingested with v_uu<-1/10.",
+    "refines": "Q050 local selector gates are now cleared; remaining gate is formal global continuation/extension.",
+    "unchanged": [
+      "No uniqueness.",
+      "No common-background existence.",
+      "No native/P6 identity.",
+      "No Q051.",
+      "No accepted-model change."
+    ]
+  },
+  "upload_files": [
+    "Q050_PEEBLES_TANGENCY_INGESTION_RESULT_AND_HANDOFF_V1.md",
+    "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_INGESTED_V1.md",
+    "Q050_QUESTION_ACTIVITY_LEDGER_PEEBLES_TANGENCY_INGESTED_V1.json",
+    "Q050_NEXT_MATHEMATICS_TASK_GLOBAL_LITERAL_SELECTOR_EXTENSION_V1.json",
+    "Q050_PEEBLES_TANGENCY_INGESTION_AUDIT_V1.json",
+    "Q050_PEEBLES_TANGENCY_INGESTION_HANDOFF_AND_MEMORY_V1.json",
     "github_memory_update.json",
+    "UPLOAD_APPLY_INSTRUCTIONS.md",
     "OUTPUT_MANIFEST.json",
     "FILES.md"
   ],
-  "operator_apply": "Add new files without overwriting immutable historical artifacts. Reconcile any changed base before updating working-state pointers. Do not mark Q050 CLOSED until Result Ingestion completion audit says the exact Q gate is satisfied."
+  "operator_apply": "Add new versioned ingestion files; do not overwrite immutable historical artifacts. Reconcile base if main has moved. Update current working pointers only after all new files are coherently present."
 }

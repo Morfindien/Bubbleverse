@@ -1,110 +1,139 @@
 {
   "schema_id": "bubbleverse.output_manifest",
   "schema_version": "1.0.0",
-  "created_at_utc": "2026-10-25T05:04:46+00:00",
+  "created_at_utc": "2026-10-25T05:15:42+00:00",
   "manifest_hash_convention": "OUTPUT_MANIFEST.json excludes its own hash to avoid recursion.",
   "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
   "current_q": "Q050",
-  "run_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-HPC-20261025-V1",
-  "task_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-CERTIFICATE-V1",
+  "event_id": "LOCAL-Q050-PEEBLES-TANGENCY-INGESTION-20261025-V1",
+  "run_id": "LOCAL-Q050-PEEBLES-TANGENCY-INGESTION-20261025-V1-RUN",
   "parent_journal": {
-    "name": "Q047_SAMLET_JOURNAL_Q050_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.md",
-    "bytes": 14945411,
-    "sha256": "4b4eb556b8156690e72a4dce0c9c6ff441a1e3ad5843639fdf42b45010160d73"
+    "name": "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1-1.md",
+    "bytes": 14950414,
+    "sha256": "83651b7f5ddcd348a8db5d22fd725c1f1c1bb7caf97cc24c29e8930c741495aa",
+    "git_blob": "10a3bd5e586468e7da401d344b754651e7052237"
   },
-  "parent_ledger": {
-    "name": "Q050_QUESTION_ACTIVITY_LEDGER_CLEAN_LITERAL_SELECTOR_MATHEMATICS_INGESTED_V1.json",
-    "bytes": 16758,
-    "sha256": "a8dd485d158ad64f294f7c19328f0927294775b1f2796561b10fa5859ec4bca7"
+  "source_result": {
+    "name": "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1-1.md",
+    "bytes": 7283,
+    "sha256": "04af53f76b15f475fae92c0eac5fcd8bb0979786b32493622206247434029012",
+    "git_blob": "861d5f72f834da7f3160aa27545e45c43407e94d"
+  },
+  "repository_base": {
+    "repo": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "commit": "5993e1ad847619d9576615d47d964e398bb44270",
+    "tree": "aaa9513e8b138977820ef2ef2d290329facea974",
+    "entries": 4572
   },
   "files": [
     {
-      "name": "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1.md",
-      "role": "primary Q050 PEEBLES tangency result and return handoff",
-      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1.md",
+      "name": "Q050_PEEBLES_TANGENCY_INGESTION_RESULT_AND_HANDOFF_V1.md",
+      "role": "primary Result Ingestion 2.3.0 scientific disposition and handoff",
+      "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+      "question_id": "Q050",
+      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_INGESTION_RESULT_AND_HANDOFF_V1.md",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1-1.md",
+        "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1-1.md"
+      ],
       "status": "NEW",
-      "bytes": 7283,
-      "sha256": "04af53f76b15f475fae92c0eac5fcd8bb0979786b32493622206247434029012"
+      "bytes": 6092,
+      "sha256": "f368e388ff57c5cda23338e5d2016c48f53c285e78a6cddfd2c0e5e90275161e"
     },
     {
-      "name": "Q050_PEEBLES_TANGENCY_CERTIFICATE_V1.json",
-      "role": "machine-readable exact tangency proof certificate",
-      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_CERTIFICATE_V1.json",
+      "name": "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_INGESTED_V1.md",
+      "role": "complete cumulative Q050 journal; parent exact prefix plus ingestion append",
+      "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+      "question_id": "Q050",
+      "intended_repository_relative_path": "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_INGESTED_V1.md",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1-1.md",
+        "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1-1.md"
+      ],
       "status": "NEW",
-      "bytes": 3919,
-      "sha256": "3c2383b916625ee681f94f25d952b69074c14ee697015b5e7c5a0fd8fb712711"
+      "bytes": 14954572,
+      "sha256": "a8ad57488362fd4a1bba6577df8b61a4996b096c18cb78c66c85b1f3c44a2397"
     },
     {
-      "name": "Q050_PEEBLES_TANGENCY_NUMERIC_BOUNDS_V1.json",
-      "role": "deterministic high-precision numeric bound receipt",
-      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_NUMERIC_BOUNDS_V1.json",
-      "status": "NEW",
-      "bytes": 2524,
-      "sha256": "aea70a8992554f323415831245f6b0c59e5b25f4669e85029c37fa8a4296951f"
-    },
-    {
-      "name": "Q050_PEEBLES_TANGENCY_VALIDATION_V1.json",
-      "role": "independent conservative validation and mutation controls",
-      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_VALIDATION_V1.json",
-      "status": "NEW",
-      "bytes": 2727,
-      "sha256": "d3ae4cb1f801504e4cd8990f759a4697857a14bdc4afe5ab473acb4be6bf9dbd"
-    },
-    {
-      "name": "q050_peebles_tangency_certificate_v1.py",
-      "role": "reproducible local certificate producer source",
-      "intended_repository_relative_path": "q050_peebles_tangency_certificate_v1.py",
-      "status": "NEW",
-      "bytes": 5250,
-      "sha256": "08e4af07d8c521e004c1d938343e8d21a06757aea214a30ab756ca50a6020bca"
-    },
-    {
-      "name": "q050_peebles_tangency_validator_v1.py",
-      "role": "reproducible independent validator source",
-      "intended_repository_relative_path": "q050_peebles_tangency_validator_v1.py",
-      "status": "NEW",
-      "bytes": 3039,
-      "sha256": "3837dd66587a8ff5266c0a02751907ae4fb5419579936184c2f6c30f054c15cb"
-    },
-    {
-      "name": "Q050_QUESTION_ACTIVITY_LEDGER_PEEBLES_TANGENCY_V1.json",
+      "name": "Q050_QUESTION_ACTIVITY_LEDGER_PEEBLES_TANGENCY_INGESTED_V1.json",
       "role": "updated cumulative Q050 activity/SoMe ledger",
-      "intended_repository_relative_path": "Q050_QUESTION_ACTIVITY_LEDGER_PEEBLES_TANGENCY_V1.json",
+      "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+      "question_id": "Q050",
+      "intended_repository_relative_path": "Q050_QUESTION_ACTIVITY_LEDGER_PEEBLES_TANGENCY_INGESTED_V1.json",
+      "dependencies": [],
       "status": "NEW",
-      "bytes": 18357,
-      "sha256": "83fb8f22d26a9850fc8cb05387f4db46f831c6d1fa137bcf73bdf806f0898dbf"
+      "bytes": 19978,
+      "sha256": "ebe7098a4e5afa61a3ac0acca535c485fb45073e22d5ada44f24619df5515323"
     },
     {
-      "name": "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1.md",
-      "role": "complete cumulative Q050 journal; incoming journal exact prefix plus HPC append",
-      "intended_repository_relative_path": "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1.md",
+      "name": "Q050_NEXT_MATHEMATICS_TASK_GLOBAL_LITERAL_SELECTOR_EXTENSION_V1.json",
+      "role": "next Mathematics 2.3.0 global literal-selector extension task",
+      "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+      "question_id": "Q050",
+      "intended_repository_relative_path": "Q050_NEXT_MATHEMATICS_TASK_GLOBAL_LITERAL_SELECTOR_EXTENSION_V1.json",
+      "dependencies": [],
       "status": "NEW",
-      "bytes": 14950414,
-      "sha256": "83651b7f5ddcd348a8db5d22fd725c1f1c1bb7caf97cc24c29e8930c741495aa"
+      "bytes": 6813,
+      "sha256": "cdc17ee0e850a36e128c12fa52b68d13f038b57f52e8ce3835be61c8677b7dfd"
     },
     {
-      "name": "Q050_PEEBLES_TANGENCY_HANDOFF_AND_MEMORY_V1.json",
-      "role": "structured HPC result handoff and memory state",
-      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_HANDOFF_AND_MEMORY_V1.json",
+      "name": "Q050_PEEBLES_TANGENCY_INGESTION_AUDIT_V1.json",
+      "role": "result-ingestion, completion-gate, integrity and routing audit",
+      "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+      "question_id": "Q050",
+      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_INGESTION_AUDIT_V1.json",
+      "dependencies": [
+        "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1-1.md",
+        "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1-1.md"
+      ],
       "status": "NEW",
-      "bytes": 4119,
-      "sha256": "e25dc607ada7bb72b29aeed549f980377e56cf9fa6d7c6313af450125f45ce08"
+      "bytes": 4628,
+      "sha256": "b799a938c9bbaff7a9d50af379a1575e3118f48a30f845bf0a93ad68b66605ea"
+    },
+    {
+      "name": "Q050_PEEBLES_TANGENCY_INGESTION_HANDOFF_AND_MEMORY_V1.json",
+      "role": "structured continuation handoff and current working memory",
+      "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+      "question_id": "Q050",
+      "intended_repository_relative_path": "Q050_PEEBLES_TANGENCY_INGESTION_HANDOFF_AND_MEMORY_V1.json",
+      "dependencies": [],
+      "status": "NEW",
+      "bytes": 3084,
+      "sha256": "48dfa3eb8a59e4b1c97b7f82aa579f461b8c2430e3649f884a49c362daf75e62"
     },
     {
       "name": "github_memory_update.json",
-      "role": "upload-ready GitHub memory update proposal",
+      "role": "upload-ready GitHub project-memory update proposal",
+      "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+      "question_id": "Q050",
       "intended_repository_relative_path": "github_memory_update.json",
+      "dependencies": [],
       "status": "NEW",
-      "bytes": 2037,
-      "sha256": "b2ee1827a06a99d1b1fba111fcb000a2ecd322f26a4939bc9aeccf973ccd1815"
+      "bytes": 2232,
+      "sha256": "cc7ecf14abc09aec3795fecee6affd39769585adb30ee0b0d307e3b74437aed8"
+    },
+    {
+      "name": "UPLOAD_APPLY_INSTRUCTIONS.md",
+      "role": "operator upload/apply instructions",
+      "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+      "question_id": "Q050",
+      "intended_repository_relative_path": "UPLOAD_APPLY_INSTRUCTIONS.md",
+      "dependencies": [],
+      "status": "NEW",
+      "bytes": 1103,
+      "sha256": "765948c810faa393df52dbdf81b78f1cd565ead33600098415f95dcadb86e5e0"
     },
     {
       "name": "FILES.md",
       "role": "delivery index",
+      "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+      "question_id": "Q050",
       "intended_repository_relative_path": "FILES.md",
+      "dependencies": [],
       "status": "NEW",
-      "bytes": 2045,
-      "sha256": "4e1249c90f16759637e8c12af659582a087850e83432d43b64ecb2446a53ac8c"
+      "bytes": 1780,
+      "sha256": "7c6c9012b3a9c5955c7ea4c06be5417c13f7d61f618aca7d430b6ce89719009c"
     }
   ]
 }

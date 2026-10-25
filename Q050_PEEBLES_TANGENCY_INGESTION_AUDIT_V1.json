@@ -1,0 +1,87 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_audit",
+  "schema_version": "1.0.0",
+  "event_id": "LOCAL-Q050-PEEBLES-TANGENCY-INGESTION-20261025-V1",
+  "run_id": "LOCAL-Q050-PEEBLES-TANGENCY-INGESTION-20261025-V1-RUN",
+  "created_at_utc": "2026-10-25T05:15:42+00:00",
+  "created_at_europe_copenhagen": "2026-10-25T06:15:42+01:00",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "question_id": "Q050",
+  "question_sha256": "11af5cf58d6c94e34a050e9672a76e47d277c0fcaec14e9acbcf58e96eb22b01",
+  "source_result": {
+    "run_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-HPC-20261025-V1",
+    "result_file": "Q050_PEEBLES_TANGENCY_RESULT_AND_HANDOFF_V1-1.md",
+    "result_sha256": "04af53f76b15f475fae92c0eac5fcd8bb0979786b32493622206247434029012",
+    "result_git_blob": "861d5f72f834da7f3160aa27545e45c43407e94d",
+    "journal_file": "Q047_SAMLET_JOURNAL_Q050_PEEBLES_TANGENCY_HPC_V1-1.md",
+    "journal_sha256": "83651b7f5ddcd348a8db5d22fd725c1f1c1bb7caf97cc24c29e8930c741495aa",
+    "journal_git_blob": "10a3bd5e586468e7da401d344b754651e7052237",
+    "source_activity_points": 170,
+    "source_activity_imported_once_not_rebilled": true
+  },
+  "scientific_intake": {
+    "execution": "SUCCESS",
+    "technical_validity": "TECHNICALLY_VALIDATED",
+    "reproducibility": "PARTIAL_INDEPENDENT_CHECKS_RECORDED",
+    "robustness": "ROBUST_WITHIN_CERTIFIED_TANGENT_DOMAIN",
+    "scientific_effect": "STRENGTHENS_Q050_AND_CLEARS_FIRST_REMAINING_LOCAL_GATE",
+    "anomaly": "NONE_IDENTIFIED",
+    "accepted_claims": [
+      "PEEBLES exact tangent at v=1/10,A=1/9 is locally viable on the literal equality-assigned PEEBLES arm for both q values.",
+      "Uniform strict higher-order bound v_uu<-1/10 on the certified material tangent strip.",
+      "HMLA tangent derivative is not needed for this local existence gate."
+    ],
+    "retained_limits": [
+      "No uniqueness.",
+      "No common-background existence claim.",
+      "No native/P6 identity.",
+      "No global Q050 continuation theorem yet.",
+      "No external publication."
+    ]
+  },
+  "completion_gate": {
+    "status": "NOT_SATISFIED",
+    "single_material_missing_justification": "The record now contains local literal-selector existence at the material PEEBLES and Pion state interfaces and treats the SWIFT 1775 K boundary as fixed-time/background dispatch, but it has not yet documented the final global continuation theorem that concatenates those local solutions across the full finite interval to z=0. The missing formal step must control away-from-interface regularity/source-definedness, a-priori invariant-domain continuation, fixed-time reionization/dispatch boundaries and possible finite-time switch accumulation (Zeno).",
+    "why_not_close_now": "Ingestion may assess sufficiency but should not silently manufacture the new global ODE/discontinuous-selector theorem that the prior Mathematics completion audit explicitly left unresolved after the tangency gate."
+  },
+  "anti_loop": {
+    "material_change": "The PEEBLES tangency obstruction is now actually cleared with a strict source-real higher-order certificate.",
+    "next_task_not_duplicate": true,
+    "next_task_scope": "Formal global extension only; no new selector grid or background recovery.",
+    "forbidden_repeats": [
+      "Pion 64/896-cell campaigns",
+      "PEEBLES tangency execution",
+      "background binding/runtime recovery",
+      "HMLA tangent reassurance calculation",
+      "native/P6/refit/recapture"
+    ]
+  },
+  "repository": {
+    "repo": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "verified_commit": "5993e1ad847619d9576615d47d964e398bb44270",
+    "verified_tree": "aaa9513e8b138977820ef2ef2d290329facea974",
+    "entries": 4572,
+    "tree_truncated": false,
+    "parent_journal_blob_match": true,
+    "parent_result_blob_match": true,
+    "source_package_present_on_main": true,
+    "new_ingestion_sync": "USER_UPLOAD_PENDING"
+  },
+  "engine_selection": {
+    "selected_next_engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+    "availability": "VERIFIED_IN_CHATGPT_LIBRARY",
+    "reason": "The sole remaining uncertainty is a formal global Caratheodory continuation/extension theorem, not a numerical execution bottleneck.",
+    "task_file": "Q050_NEXT_MATHEMATICS_TASK_GLOBAL_LITERAL_SELECTOR_EXTENSION_V1.json",
+    "task_fingerprint_sha256": "31e6949121e85905e1f3f7709a6428301066b3975664334b5b70070ee0f3abd3"
+  },
+  "activity": {
+    "previous_total": 1590,
+    "ingestion_points": 30,
+    "new_total": 1620,
+    "newly_crossed_milestones": [],
+    "next_milestone": 2000,
+    "points_to_next": 380,
+    "q050_some_m001": "READY_PRESERVED_NO_DUPLICATE"
+  }
+}
