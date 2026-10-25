@@ -1,0 +1,80 @@
+{
+  "schema_id": "bubbleverse.mathematics.literal_selector_certificate",
+  "schema_version": "1.0.0",
+  "run_id": "LOCAL-Q050-CLEAN-LITERAL-SELECTOR-MATHEMATICS-20261025-V1",
+  "created_at_utc": "2026-10-25T04:36:35.647031433+00:00",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "current_q": "Q050",
+  "target_q": "Q050",
+  "question_sha256": "11af5cf58d6c94e34a050e9672a76e47d277c0fcaec14e9acbcf58e96eb22b01",
+  "status": "PARTIAL_PROOF_WITH_ONE_MATERIAL_GATE",
+  "proved": {
+    "abstract_literal_selector_local_existence_lemma": {
+      "status": "PROVED",
+      "selector": "f_minus on F<0; f_plus on F>=0",
+      "hypotheses": [
+        "F is C1 near the interface state (or sufficiently differentiable for the stated Lie derivatives).",
+        "Each branch field is continuous in time/state and locally Lipschitz in state on a one-sided neighborhood.",
+        "Branch expressions are finite/defined on the chosen neighborhood."
+      ],
+      "sufficient_condition": "L_minus F < 0 OR L_plus F > 0 at F=0",
+      "reason": "If L_plus F>0, the classical plus-branch IVP enters F>0 and satisfies the literal selector. Otherwise the disjunction supplies L_minus F<0; the minus-branch IVP enters F<0. The equality-assigned plus value at the single initial instant is measure-zero and does not violate the Caratheodory a.e. equation.",
+      "uniqueness": "NOT_CLAIMED; if both self-side inequalities hold, two local continuations may exist."
+    },
+    "pion_mapping": {
+      "status": "PROVED_CONDITIONAL_ON_EXISTING_CERTIFICATE_DOMAIN",
+      "surface": "F=Pion-1/100",
+      "literal_selector": "HMLA on F<0; SWIFT on F>=0 where the SWIFT fit is active",
+      "certificate_used": "N_HMLA,z>0 OR N_SWIFT,z<0, equivalently L_HMLA F<0 OR L_SWIFT F>0 in u=ln(a)",
+      "covered_z_lower_exact": "2859858991540483/4398046511104",
+      "covered_z_lower_decimal": 650.2566501559347,
+      "covered_z_upper": 810,
+      "conclusion": "The formal local existence implication required at the qualified Pion interface is satisfied."
+    },
+    "swift_fit_lower_boundary": {
+      "status": "NON_MATERIAL_AS_STATE_SELECTOR_GATE",
+      "source_rule": "Inside SWIFT mode, when Pion>=PION_MAX, TR below the first fit node routes to HMLA; at/above the first node routes to SWIFT.",
+      "first_fit_node_kelvin": 1775.0,
+      "nature": "fixed background/time threshold, not a state-dependent interface",
+      "conclusion": "It does not create a trapping/sliding state interface; ordinary piecewise-in-time Caratheodory continuation applies if each adjacent branch is locally defined."
+    }
+  },
+  "refined_unresolved_gate": {
+    "gate_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-V1",
+    "interface": "v=Tmat/Trad=1/10",
+    "equality_rule": "PEEBLES at v<=1/10",
+    "first_normal": "v_u = A(1-v)-v with A=rate_gamma_b/H; at v=1/10, tangency occurs at A=1/9.",
+    "why_old_first_order_clearance_is_insufficient": "The PEEBLES and non-PEEBLES arms share the same first thermal normal at a common state, but that normal may be exactly zero. Equality of a zero first normal does not in general imply literal-selector existence; tangential branch differences can determine the first nonzero higher-order departure.",
+    "exact_second_order_identity_at_tangency": "v_uu^(branch) = (9/10) * D_branch(A)",
+    "required_viability_test": "On the exact tangent set, certify PEEBLES has the first nonzero normal derivative toward v<1/10 or the non-PEEBLES arm has it toward v>1/10; if the second derivative can vanish, continue to the first nonzero order rather than assume clearance.",
+    "domain_reduction": {
+      "thermal_rail_excludes_v_0p1_above_z_exact": "4006/49",
+      "thermal_rail_excludes_v_0p1_above_z_decimal": 81.75510204081633,
+      "radiation_fallback_forces_PEEBLES_below_z_approx": 16.0310108356,
+      "therefore_material_tangent_strip_approx": "(16.0310108356, 81.75510204081633]",
+      "non_peebles_arm_in_this_strip": "HMLA, because the entire strip is far below the 1775 K SWIFT-fit lower boundary; therefore the Pion HMLA/SWIFT interface is not the active complication here."
+    }
+  },
+  "counterexample_check": {
+    "purpose": "Demonstrate why equal zero first normals are not a general existence theorem.",
+    "interface": "x=0; minus branch for x<=0, plus branch for x>0",
+    "minus_field": "(x_dot,y_dot)=(y,+1)",
+    "plus_field": "(x_dot,y_dot)=(y,-1)",
+    "initial_state": "(0,0)",
+    "first_normals": "both x_dot=0",
+    "branch_departures": [
+      "minus IVP gives x=t^2/2>0, contradicting minus-side validity",
+      "plus IVP gives x=-t^2/2<0, contradicting plus-side validity"
+    ],
+    "use": "logical validation only; not a Q050 physical counterexample"
+  },
+  "scientific_status": "ACTIVE/INCONCLUSIVE",
+  "completion_gate": "NOT_SATISFIED",
+  "next_material_obligation": "PEEBLES T_RATIO_MIN tangency viability certificate",
+  "no_repeat": [
+    "Do not rerun the Pion 64-parent/896-subcell correlated-normal campaign.",
+    "Do not repeat common-background binding recovery or runtime repair.",
+    "Do not treat the 1775 K SWIFT-fit boundary as a new state-space grid problem.",
+    "Do not import native/P6, reachability, background-existence or uniqueness claims into this conditional Q."
+  ]
+}

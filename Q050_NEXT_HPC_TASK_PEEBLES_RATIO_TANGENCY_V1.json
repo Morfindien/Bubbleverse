@@ -1,0 +1,79 @@
+{
+  "schema_id": "bubbleverse.next_scientific_task",
+  "schema_version": "1.0.0",
+  "task_id": "LOCAL-Q050-PEEBLES-T_RATIO-TANGENCY-CERTIFICATE-V1",
+  "prepared_by_run": "LOCAL-Q050-CLEAN-LITERAL-SELECTOR-MATHEMATICS-20261025-V1",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "current_q": "Q050",
+  "target_q": "Q050",
+  "question_sha256": "11af5cf58d6c94e34a050e9672a76e47d277c0fcaec14e9acbcf58e96eb22b01",
+  "route_via": {
+    "first_return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+    "prompt_version": "2.3.0",
+    "reason": "Register this Mathematics result once and preserve routing/ledger exact-once semantics before execution."
+  },
+  "proposed_execution_engine": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_MOTOR_BUILDER",
+    "prompt_version": "2.4.0",
+    "verified_available_source": "ChatGPT Library",
+    "note": "Use the smallest adequate direct/local mechanism first; GitHub execution is not assumed necessary."
+  },
+  "objective": "Certify or refute literal-selector viability at the only remaining first material interface: Tmat/Trad=1/10 when the common thermal normal is tangent (rate_gamma_b/H=1/9).",
+  "frozen_source": {
+    "repository": "mwt5345/class_ede",
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "files": {
+      "external/HyRec2020/wrap_hyrec.c": "fa44c774cf1fc7dbf6185e01980764f7eb260204",
+      "external/HyRec2020/hydrogen.c": "233f174bfb1758fa910866310340ae1bfad703db",
+      "external/HyRec2020/fit_swift.dat": "fd0cfa4f380d30640c4b2da47e4e35d6894b4dcb",
+      "source/thermodynamics.c": "c1683f56b43e0f2ec24a8ba6120133f604cb947c"
+    }
+  },
+  "frozen_scientific_inputs": [
+    "Q050 clean z=810 starting domain and exact fixed admitted common-background family.",
+    "q branches separately: q=1/1000000 and q=0.",
+    "PEEBLES equality rule from wrap_hyrec.c: PEEBLES when Trad_phys<=TR_MIN OR Tmat/Trad<=T_RATIO_MIN.",
+    "Existing Q049 source-domain positivity/invariant evidence may be reused only within its proved premises.",
+    "Existing Q050 Pion correlated-normal certificate is complete for its stated interface domain and must not be rerun."
+  ],
+  "derived_reduction": {
+    "variable": "v=Tmat/Trad",
+    "u_orientation": "u=ln(a), increasing toward z=0",
+    "thermal_equation": "v_u=A(1-v)-v, A=rate_gamma_b/H",
+    "tangent_conditions": [
+      "v=1/10",
+      "A=1/9"
+    ],
+    "second_order_identity": "v_uu^(branch)=(9/10)*D_branch(A) at tangency",
+    "material_z_strip": {
+      "upper_exact": "4006/49",
+      "upper_decimal": 81.75510204081633,
+      "lower_approx_from_existing_source_certificate": 16.0310108356,
+      "interpretation": "Above the upper value the inherited thermal lower rail excludes v=0.1; at/below the lower value the radiation-temperature fallback already forces PEEBLES."
+    },
+    "active_non_peebles_hydrogen_arm": "HMLA throughout the material tangent strip because it lies below the SWIFT fit lower temperature node."
+  },
+  "required_execution": [
+    "Build the exact source-real tangent manifold v=1/10 and A=1/9 under the fixed admitted backgrounds and q branch.",
+    "Evaluate/enclose D_PEEBLES(A) and D_HMLA(A) on identical tangent states, preserving the exact reionization/electron mapping used by thermodynamics.c.",
+    "Certify strict quadratic self-side viability if v_uu,PEEBLES<0 or v_uu,HMLA>0.",
+    "If either second derivative enclosure includes zero, subdivide only the unresolved tangent domain as needed.",
+    "If exact second-order zero cannot be excluded, derive/evaluate the next nonzero directional derivative rather than declaring PASS.",
+    "Return a complete coverage manifest, source/hash provenance, unresolved cells if any, and a literal-selector conclusion."
+  ],
+  "acceptance_condition": "Every admissible tangent state in the material strip is certified to have at least one literal branch with a first nonzero thermal normal derivative pointing into that branch's own selector side, with all source denominators/domain conditions valid.",
+  "rejection_condition": "Produce a Q050-admissible tangent state/box where both literal branches' first nonzero departures point into the opposite side or where the source field is undefined, establishing a genuine existence obstruction.",
+  "inconclusive_condition": "Finite unresolved tangent boxes remain after justified subdivision/higher-order analysis, or an exact source dependency needed for D_branch(A) is missing.",
+  "stop_conditions": [
+    "No Pion normal-grid rerun.",
+    "No background-binding rebuild unless a concrete new dependency defect is demonstrated.",
+    "No native/P6 run, model refit, selector smoothing, Filippov convexification or equality-rule change.",
+    "No Q051 and no point-based Q closure."
+  ],
+  "starting_activity_points": 1395,
+  "publication_interval": 1000,
+  "next_some_milestone": 2000,
+  "points_to_next_some_milestone": 605,
+  "prepared_not_dispatched": true,
+  "created_at_utc": "2026-10-25T04:36:35.647031433+00:00"
+}
