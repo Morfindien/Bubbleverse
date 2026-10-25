@@ -1,0 +1,132 @@
+{
+  "schema_id": "bubbleverse.q050.global_literal_selector_extension_certificate",
+  "schema_version": "1.0.0",
+  "created_at_utc": "2026-10-25T05:25:53+00:00",
+  "run_id": "LOCAL-Q050-MATHEMATICS-GLOBAL-LITERAL-SELECTOR-CLOSURE-20261025-V1",
+  "task_id": "LOCAL-Q050-GLOBAL-LITERAL-SELECTOR-EXTENSION-CLOSURE-V1",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "current_q": "Q050",
+  "target_q": "Q050",
+  "question_sha256": "11af5cf58d6c94e34a050e9672a76e47d277c0fcaec14e9acbcf58e96eb22b01",
+  "exact_question": "For the frozen hillipop-ede_n3 configuration and each fixed admitted common background on 0 <= z <= 810, do the exact source-real low-redshift hydrogen/temperature branch-selection rules admit an absolutely continuous continuation to z=0 from every state in the validated z=810 domain, separately for q=xHeII=10^-6 and q=0, without changing or convexifying the selector?",
+  "status": "PROVED_WITHIN_EXACT_CONDITIONAL_SCOPE",
+  "answer": "YES",
+  "time_variable": {
+    "definition": "t=ln(811/(1+z))",
+    "interval": "[0, ln(811)]",
+    "T_decimal": 6.698268054115413,
+    "orientation": "future direction; z decreases from 810 to 0"
+  },
+  "state": {
+    "variables": [
+      "h=xHII",
+      "v=Tmat/Trad"
+    ],
+    "q_values": [
+      "1/1000000",
+      "0"
+    ],
+    "initial_domain": {
+      "h_lower_positive": "346752030166741/10^18",
+      "h_upper": "99999/100000",
+      "v_lower": "0.98",
+      "v_upper": "1.000001"
+    }
+  },
+  "inherited_local_gates": {
+    "peebles_ratio_nontangent": "CLEARED",
+    "peebles_ratio_exact_tangent": {
+      "status": "CLEARED",
+      "certificate": "v_uu < -1/10 on the material tangent strip for both q branches",
+      "equality_arm": "PEEBLES"
+    },
+    "pion_hmla_swift": {
+      "status": "CLEARED_WITHIN_QUALIFIED_FEASIBLE_SURFACE_COVER",
+      "literal_local_lemma": "L_HMLA F<0 OR L_SWIFT F>0 implies local literal-selector Caratheodory existence"
+    },
+    "swift_1775K_boundary": "FIXED_TIME_BACKGROUND_DISPATCH_NOT_STATE_TRAPPING_INTERFACE"
+  },
+  "threshold_separation": {
+    "reionization_start_exact": "753585/65536",
+    "reionization_start_decimal": 11.498794555664062,
+    "TR_MIN_forced_peebles_decimal": 16.031010835587164,
+    "peebles_tangent_upper_exact": "4006/49",
+    "peebles_tangent_upper_decimal": 81.75510204081633,
+    "swift_fit_lower_1775K_decimal": 650.2566501559347,
+    "ordering": "z_reio_start < z_TR_MIN < z_tangent_max < z_SWIFT_fit < 810",
+    "consequence": "No unresolved simultaneous PEEBLES-ratio/Pion state-interface corner occurs."
+  },
+  "global_components": {
+    "GLOBAL_1_AWAY_FROM_INTERFACE": {
+      "status": "PASS",
+      "reason": "On the invariant safe tube each active PEEBLES/HMLA/SWIFT field is finite and locally Lipschitz in state away from state selectors. Atomic/SWIFT interpolation is finite piecewise cubic on in-range coordinates; H>0 and nH>0; SWIFT 1+DK has inherited positive lower bounds; generalized C-factor denominators are positive; thermal denominator 1+fHe+x_reio is positive."
+    },
+    "GLOBAL_2_ALL_LOCAL_GATES": {
+      "status": "PASS",
+      "reason": "Classical branch IVPs cover ordinary points; the existing Pion self-side disjunction plus literal-selector lemma covers Pion interface points; non-tangent PEEBLES ratio points have a common nonzero normal; exact tangency is covered by the strict PEEBLES v_uu<-1/10 certificate. Fixed-time selector/lookup transitions are concatenated because an isolated time value is measure-zero in the Caratheodory equation."
+    },
+    "GLOBAL_3_INVARIANT_CONTINUATION": {
+      "status": "PASS",
+      "reason": "The inherited branchwise hydrogen inward barriers and moving thermal barriers are used only as a-priori estimates on each already-existing local segment. They imply 0<=h<=Hstar<1 for a branch-uniform Hstar depending on the fixed background/domain, and 0.98*exp(-t)<=v<=1.000001. Hence the solution remains in a compact source-defined safe tube and cannot terminate by state blow-up or source-domain loss.",
+      "global_v_lower_exact": "49/40550",
+      "global_v_lower_decimal": 0.0012083847102342786
+    },
+    "GLOBAL_4_ZENO_ACCUMULATION": {
+      "status": "PASS",
+      "reason": "The finitely many source branch fields are uniformly bounded on the safe tube by some finite M. Therefore every literal solution is M-Lipschitz. If switching times accumulate at tau<T, the state is Cauchy and has a limit y(tau-). That limiting state remains admissible/source-defined; the already-proved local existence result restarts the literal solution at tau, contradicting maximality. Thus Zeno accumulation cannot be a finite-time existence obstruction."
+    },
+    "GLOBAL_5_REIONIZATION_FIXED_TIME": {
+      "status": "PASS",
+      "reason": "Hydrogen recombination continues to use x_noreio=h+q. The frozen reio_camb map used by the temperature equation is bounded and affine in xe_before=h+q with tanh time dependence below the fixed reionization start; above it x_reio=x_noreio. Its fixed-time switch may cause at most a bounded time discontinuity and preserves Caratheodory measurability/local state-Lipschitzness. Moreover reionization begins below the TR_MIN forced-PEEBLES threshold, so it does not create a new simultaneous hydrogen state-selector corner."
+    }
+  },
+  "maximal_extension_theorem": {
+    "statement": "For each fixed admitted common background and each q in {10^-6,0}, every state in the validated z=810 domain admits at least one absolutely continuous Caratheodory continuation of the exact literal source selector through the full interval to z=0.",
+    "proof_skeleton": [
+      "Local existence holds at every admissible point of the safe tube, including all material state interfaces and fixed-time transitions.",
+      "Take a maximal forward literal-selector solution from the given start (equivalently extend by the usual maximal-extension construction).",
+      "A-priori barriers keep every local segment inside a compact source-defined tube and all active fields are uniformly bounded there.",
+      "If the maximal endpoint tau* were less than T=ln811, uniform boundedness makes the solution Lipschitz and gives an endpoint limit y*.",
+      "The endpoint y* is admissible; local existence at (tau*,y*) extends the solution, contradicting maximality.",
+      "Therefore the maximal endpoint is T, and the endpoint value at T gives an AC continuation to z=0."
+    ],
+    "z0_reached": true
+  },
+  "q050_closure": {
+    "completion_gate": "SATISFIED",
+    "scientific_state": "RESOLVED_WITHIN_SCOPE",
+    "workflow_state": "CLOSED",
+    "answer": "YES_CONDITIONAL_ON_EACH_FIXED_ADMITTED_COMMON_BACKGROUND"
+  },
+  "claim_firewall": [
+    "Existence only; uniqueness is not claimed.",
+    "The common background is fixed and admitted by hypothesis; its existence is not proved here.",
+    "No cosmological reachability requirement is imposed on theorem-domain starting states.",
+    "No native/P6 trajectory identity is claimed.",
+    "No selector smoothing, convexification, Filippov replacement or equality-rule change is used.",
+    "No empirical confirmation/falsification of the cosmological model follows."
+  ],
+  "source_provenance": {
+    "repository": "mwt5345/class_ede",
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "blobs": {
+      "external/HyRec2020/hydrogen.c": "233f174bfb1758fa910866310340ae1bfad703db",
+      "external/HyRec2020/hydrogen.h": "088b34a699efe5d6d3aefb158229e9fb83d9a586",
+      "external/HyRec2020/hyrectools.c": "5e8ac170fe7839ef391de0b129113c4a7a71af1e",
+      "external/HyRec2020/wrap_hyrec.c": "fa44c774cf1fc7dbf6185e01980764f7eb260204",
+      "external/HyRec2020/fit_swift.dat": "fd0cfa4f380d30640c4b2da47e4e35d6894b4dcb",
+      "source/thermodynamics.c": "c1683f56b43e0f2ec24a8ba6120133f604cb947c",
+      "source/background.c": "5f6be0fc77c31bd81198d9f28a9d73690a2baabd",
+      "include/thermodynamics.h": "f02f2591077ee11f3bc9481a4491b0feb83cf26d",
+      "include/background.h": "742e4f19d738b1c60467a81aadc8db4b28eb001c"
+    }
+  },
+  "repository_state": {
+    "bubbleverse_repo": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "verified_commit": "84962f18ead6a43185b94401dc172a31a97fa7d2",
+    "verified_tree": "e71bb88cb1b50affa1e9051b452814f06e8757c8",
+    "entries": 4580,
+    "truncated": false
+  }
+}
