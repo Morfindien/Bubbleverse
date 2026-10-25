@@ -1,0 +1,44 @@
+name: Q050 CLEAN V6 — literal-normal producer implementation probe
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  q050-clean-v6:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout Bubbleverse
+        uses: actions/checkout@v4
+        with:
+          path: Bubbleverse
+      - name: Checkout pinned class_ede
+        uses: actions/checkout@v4
+        with:
+          repository: mwt5345/class_ede
+          ref: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+          path: class_ede
+      - name: Run CLEAN V6 producer
+        continue-on-error: true
+        run: |
+          python3 Bubbleverse/q050_clean_v6_literal_normal_producer.py \
+            --bubbleverse-root Bubbleverse \
+            --class-root class_ede \
+            --output Q050_CLEAN_V6_LITERAL_NORMAL_CELLS.json \
+            2>&1 | tee Q050_CLEAN_V6_EXECUTION.log
+      - name: Validate machine-readable result
+        run: |
+          test -s Q050_CLEAN_V6_LITERAL_NORMAL_CELLS.json
+          python3 Bubbleverse/q050_clean_v6_literal_normal_validator.py \
+            Q050_CLEAN_V6_LITERAL_NORMAL_CELLS.json \
+            | tee Q050_CLEAN_V6_VALIDATION.log
+      - name: Upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: Q050-CLEAN-V6-literal-normal-probe
+          if-no-files-found: error
+          path: |
+            Q050_CLEAN_V6_LITERAL_NORMAL_CELLS.json
+            Q050_CLEAN_V6_EXECUTION.log
+            Q050_CLEAN_V6_VALIDATION.log
