@@ -1,0 +1,41 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "prompt_id": "BUBBLEVERSE.MATHEMATICS",
+  "prompt_version": "2.3.0",
+  "target_q": "Q050",
+  "authorized_q_range": "Q001-Q050",
+  "case_id": "LOCAL-Q050-LOWZ-SELECTOR-EXISTENCE-V1",
+  "run_id": "LOCAL-Q050-MATH-RATIO-CLEAR-PION-REDUCTION-V2",
+  "workflow_state": "READY_FOR_HANDOFF",
+  "scientific_state": "INCONCLUSIVE",
+  "technical_state": "PASS",
+  "completed_tests": [
+    "ratio_surface_one_sided_normal_compatibility",
+    "pion_surface_exact_algebraic_reduction"
+  ],
+  "new_information_this_round": [
+    "ratio V1 blocker cleared locally",
+    "Pion=0.01 iff 396 beta_B = 3 R_Lya + Lambda_2s1s",
+    "normal observable reduced to d ln(B/A)/ds"
+  ],
+  "blocker_id": "LOCAL-Q050-PION-SURFACE-INTERVAL-CERTIFICATE-V2",
+  "next_engine": "EXECUTION-MECHANISM / NUMERICAL / HPC / MOTOR-BUILDER",
+  "next_task": "Execute source-faithful interval certificate for HMLA and SWIFT normal fields on reachable Pion=0.01 surface for q=1e-6 and q=0.",
+  "return_engine_after_execution": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "expected_output_artifact": "Q050_PION_SURFACE_INTERVAL_CERTIFICATE_V1",
+  "points": {
+    "previous_total": 95,
+    "run_points": 90,
+    "total": 185,
+    "cycle_progress": 185,
+    "next_milestone": 1000,
+    "to_next": 815
+  },
+  "forbidden": [
+    "convexification",
+    "Filippov replacement",
+    "sampling-only certificate",
+    "use of discarded prior Q050 history"
+  ],
+  "github_write_state": "READY_FOR_MANUAL_UPLOAD"
+}
