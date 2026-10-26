@@ -1,0 +1,155 @@
+name: Bubbleverse Q052 — exact-object native pair V2
+
+'on':
+  workflow_dispatch:
+    inputs:
+      program_id:
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q052-native-pair-v2
+  cancel-in-progress: false
+
+env:
+  CURRENT_Q: Q052
+  PROGRAM_ID: Q052-NATIVEPAIR-V2
+  OMP_NUM_THREADS: '1'
+  OPENBLAS_NUM_THREADS: '1'
+  MKL_NUM_THREADS: '1'
+  LC_ALL: C
+
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Exact identity and repair tests
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          test "$REQUESTED_PROGRAM_ID" = "Q052-NATIVEPAIR-V2"
+          python q052_native_pair_v2.py static
+          python -m unittest -v test_q052_native_pair_v2 test_q052_failure_delivery_v2 test_q052_recovery_v2 test_q052_install_v2
+  recover:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Recover preserved original binary or exact pinned Q047 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -o pipefail
+          mkdir -p recovered_native
+          python q052_recover_native_v2.py --out recovered_native 2>&1 | tee recovered_native/recovery.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q052-nativepair-v2-${{ github.run_id }}-environment
+          path: recovered_native/
+          if-no-files-found: error
+          retention-days: 30
+  native:
+    needs: [static, recover]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        arm: [L, R]
+        mode: [nominal, refined]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Checkout original source commit; never rebuild CLASS
+        uses: actions/checkout@v4
+        with:
+          repository: mwt5345/class_ede
+          ref: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+          path: external/class_ede
+      - uses: actions/download-artifact@v4
+        with:
+          name: q052-nativepair-v2-${{ github.run_id }}-environment
+          path: restored_environment
+      - name: Stage exact binary and execute one pinned branch
+        env:
+          ARM: ${{ matrix.arm }}
+          MODE: ${{ matrix.mode }}
+        run: |
+          set -o pipefail
+          mkdir -p external/class_ede/python/build/lib.linux-x86_64-cpython-311
+          cp restored_environment/classy.so external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so
+          python q052_native_pair_v2.py worker --arm "$ARM" --mode "$MODE" --directory "q052_native/$ARM-$MODE" 2>&1 | tee native-command.log
+      - name: Persist upstream setup failure with branch context
+        if: failure()
+        env:
+          ARM: ${{ matrix.arm }}
+          MODE: ${{ matrix.mode }}
+        run: |
+          python q052_native_pair_v2.py failure --output "q052_native/$ARM-$MODE/workflow_failure.json" --stage NATIVE_JOB --arm "$ARM" --mode "$MODE" --error "Native job failed; inspect retained controller failure and original job logs" --log native-command.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q052-nativepair-v2-${{ github.run_id }}-${{ matrix.arm }}-${{ matrix.mode }}
+          path: |
+            q052_native/
+            native-command.log
+          if-no-files-found: error
+          retention-days: 30
+  collect:
+    needs: [static, recover, native]
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          pattern: q052-nativepair-v2-${{ github.run_id }}-*
+          merge-multiple: true
+          path: collected
+      - name: Always preserve upstream job outcomes
+        env:
+          UPSTREAM_NEEDS: ${{ toJSON(needs) }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          Path('Q052_UPSTREAM_JOBS_V2.json').write_text(json.dumps(json.loads(os.environ['UPSTREAM_NEEDS']),indent=2)+'\n')
+          PY
+      - name: Collect immutable histories or persist exact missing-job failure
+        run: python q052_native_pair_v2.py collect --directory collected --output Q052_NATIVEPAIR_RESULT_V2.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q052-nativepair-v2-${{ github.run_id }}-final
+          path: |
+            Q052_NATIVEPAIR_RESULT_V2.json
+            Q052_NATIVEPAIR_CONTRACT_V2.json
+            Q052_UPSTREAM_JOBS_V2.json
+            collected/**/failure.json
+            collected/**/workflow_failure.json
+            collected/recovery.log
+            collected/recovery_receipt.json
+          if-no-files-found: error
+          retention-days: 30
