@@ -1,0 +1,139 @@
+{
+  "schema": "UNVALIDATED_LOCAL_CONTRACT",
+  "contract_id": "LOCAL-Q052-VALIDATED-NUMERICS-V8",
+  "q": "Q052",
+  "target_q": "Q052",
+  "created_at_utc": "2026-10-26T16:16:39.371183+00:00",
+  "status": "DESIGNED_NOT_IMPLEMENTED_NOT_EXECUTED",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "blocker_id": "LOCAL-Q052-FULLSTATE-RESIDUAL-AND-EVENT-CLOSURE-MISSING-V8",
+  "goal": "Provide finite source-real observable-error enclosures for one nominal L/R realization on the whole 0<=z<=810 domain, or first precise implementation/input obstruction.",
+  "frozen": {
+    "configuration": "hillipop-ede_n3",
+    "physics_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "class_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+    "execution_source_reference": "59631447fab9e4b67a8d599422c76f7c373199f2",
+    "q_endpoints": [
+      "0",
+      "exact 1/1000000 target versus captured binary64(1e-6); enclose the parameter conversion in residual/source uncertainty"
+    ],
+    "native_q_minus_exact_endpoint_rational": "-3339/73786976294838206464000000",
+    "z_event": "810",
+    "z_reio_hex": "0x1.dfec4p+2",
+    "tau_shooting": false,
+    "background": "same one fixed admitted member; parameter equality is not its validation receipt",
+    "initial_states": "captured nominal h,D_Tmat per original start hex; define target IVP and exact v conversion explicitly"
+  },
+  "mathematical_model": {
+    "coordinate": "u=log(811/(1+z)), increasing from0 tolog811",
+    "minimum_state": [
+      "h=x_HII",
+      "v=Tmat/Trad"
+    ],
+    "additional_state": "all other actually active variables in source; prove absent rather than drop silently",
+    "field": "y_prime=F_sigma(u,y;q,B), literal branch/equality and phase semantics",
+    "observable": "G_source(u,y;q,B), including original reionization/smoothing maps",
+    "optical_depth": "tau_T(0,Z)=integral_0^Z w_B(z) X(z) dz with shared positive kernel",
+    "units": {
+      "u": "dimensionless",
+      "h": "dimensionless",
+      "v": "dimensionless",
+      "D_Tmat": "K",
+      "eta": "Mpc",
+      "H_background": "1/Mpc (c=1)",
+      "H_HyRec": "1/s",
+      "opacity": "1/Mpc",
+      "opacity_eta_second": "1/Mpc^3",
+      "x_e": "dimensionless",
+      "tau_T": "dimensionless"
+    }
+  },
+  "required_evidence": [
+    {
+      "id": "STATE",
+      "requirement": "Full-state piecewise differentiable reconstruction with derivatives or finite coefficients and interval enclosures covering every segment, not only output-grid values.",
+      "minimal_capture": "One nominal L/R pair; accepted state/phase points and sufficient dense representation. Raw h,D_Tmat, helium coordinate/q, source output X, phase and flags. Record auxiliary states if actually active."
+    },
+    {
+      "id": "BACKGROUND",
+      "requirement": "Validated common B reconstruction/tube anchored to Q048/Q050 retained family, nH/H/eta and needed derivatives, or an existing checkable receipt covering this exact trajectory and interval."
+    },
+    {
+      "id": "EVENTS",
+      "requirement": "Evaluate or prove absent all relevant literal guards: Pion/PION_MAX, Tmat/Trad=T_RATIO_MIN, Trad_phys=TR_MIN, SWIFT lower-fit cutoff, v=1, phase/output transitions. One-sided states, equality flags and source expressions; validated brackets/tubes, not sampled event labels alone."
+    },
+    {
+      "id": "ENDPOINT",
+      "requirement": "Cover final saved z809.6825 to810; export straddling output cell and pre/post-intervention states, eta/kernel information, no unproved last-cell extrapolation."
+    },
+    {
+      "id": "ARITHMETIC",
+      "requirement": "Source constants, tables, floating-state interpretation, normalization, libm evaluations and residual evaluator need explicit enclosure error or validated interval evaluation."
+    },
+    {
+      "id": "INITIAL",
+      "requirement": "Separate exact target initial condition from its captured/converted approximation and bound E0. Do not conflate nominal/refined different starts."
+    }
+  ],
+  "finite_algorithm": [
+    "Verify immutable input/source/binary/config hashes; choose explicit target IVP and norm.",
+    "Build full-state reconstruction and admitted common-background enclosure over finite segments including terminal segment.",
+    "Prove each smooth-cell guard sign or isolate a validated event slab; retain possible event order/coincidence and exact equality semantics.",
+    "Enclose r=norm(yhat_prime-F_sigma(u,yhat;q,Bhat)), beta for background-field mismatch, and a for reconstruction/source arithmetic. All bounds must hold over whole tubes/cells.",
+    "Verify tube closure and propagate E by Gronwall/logarithmic-norm majorant on smooth pieces; handle event transition by separately validated map/flow bounds. No Lipschitz-across-discontinuity shortcut.",
+    "Enclose exact source output map and discrepancy to saved output interpolant; add L/R error budgets for Delta X.",
+    "Integrate positive same-background kernel error and quadrature/output-map errors for Delta tau. Include final interval; calculate continuous sup enclosures.",
+    "Check continuous upper bounds against Q051 envelopes only after all inherited premises validate. Report intervals at actual achieved accuracy; no invented negligibility target.",
+    "Return certificate receipts and source/state/event provenance or first finite exact failure."
+  ],
+  "propagation": {
+    "smooth": "E(t)<=exp(int_s^t L)E(s)+int_s^t exp(int_xi^t L)[r+beta+a] dxi",
+    "event": "Validated local transition bound; isolated transverse saltation only after hypotheses checked; endpoints/coincidences require appropriate finite-flow/tube analysis.",
+    "pair_output": "e_pair<=e_X_L+e_X_R, including mismatch of G(yhat) to saved interpolant.",
+    "sup_interval": "[max(0,Mhat_lower-e_pair),Mhat_upper+e_pair] on fully covered domain",
+    "tau": "int w_B*(e_X_L+e_X_R)+int abs(w_B-what)*abs(Delta Xhat)+e_quad+e_map",
+    "forbidden_shortcut": "Q051 q-sensitivity coefficient is not automatically a general residual propagator."
+  },
+  "tolerances": {
+    "physical_negligibility": "NOT_SPECIFIED_NOT_INVENTED",
+    "polynomial_enclosure_width_already_executed": "1e-16; applies only to serialized polynomial suprema",
+    "source_real_accuracy": "Report actual certified finite widths; requested no arbitrary new tolerance. Containment requires upper_x<=0.0023814 and upper_tau<0.0421 with all assumptions verified."
+  },
+  "execution_minimum": {
+    "new_native_runs": "No unchanged rerun. If full state cannot be recovered, at most one newly instrumented nominal pair at this stage; no automatic four-level campaign.",
+    "solver_internal_capture": "NDF15 history/Jacobian/accepted-step caches only if needed by chosen proof; not mandatory for every residual method.",
+    "new_trace_provenance": "New run ID; cannot backfill missing internal history of40350424272 from matching observables.",
+    "diagnostic_overhead": "UNMEASURED; no future runtime or cost guarantee"
+  },
+  "acceptance_criteria": [
+    "All0..810 covered with complete finite source-real residual/tube/event/background closure",
+    "Explicit state/output/initial/kernel/roundoff uncertainty and sup intervals",
+    "Checkable producer/checker artifacts and immutable input hashes; no changed model/selector",
+    "Historical trace and new reconstruction roles clearly distinguished"
+  ],
+  "rejection_criteria": [
+    "A false claimed certificate bound or wrong source/event semantics rejects that certificate; does not by itself falsify physical model"
+  ],
+  "inconclusive_criteria": [
+    "Any unbounded residual/event/background/output-map/terminal obligation returns exact first blocker"
+  ],
+  "no_repeat": [
+    "Q051 proof producers",
+    "unchanged native pair",
+    "general grid/refinement campaign",
+    "refit",
+    "tau shooting",
+    "selector smoothing",
+    "Filippov replacement",
+    "new Q",
+    "core rebuild"
+  ],
+  "expected_artifacts": [
+    "LOCAL_Q052_NATIVE_DIAGNOSTIC_RUN_RECEIPT.json",
+    "LOCAL_Q052_FULLSTATE_DENSE_TRACE.json or equivalent original format",
+    "LOCAL_Q052_BACKGROUND_EVENT_CLOSURE.json",
+    "LOCAL_Q052_SOURCE_REAL_ERROR_CERTIFICATE.json or precise first obstruction"
+  ],
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "dispatch_status": "NOT_DISPATCHED"
+}

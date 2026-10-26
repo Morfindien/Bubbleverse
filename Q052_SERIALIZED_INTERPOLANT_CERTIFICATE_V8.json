@@ -1,0 +1,136 @@
+{
+  "contract": "UNVALIDATED_LOCAL_CONTRACT_Q052_SERIALIZED_INTERPOLANTS_V8",
+  "q": "Q052",
+  "run_id": "LOCAL-Q052-MATHEMATICS-NATIVE-CERTIFICATE-V8",
+  "native_run_id": "40350424272",
+  "execution_kind": "POSTPROCESSING_ONLY",
+  "arithmetic": "binary64 round-trip tokens decoded to exact Fraction; exact rational thereafter",
+  "method": "whole-cell Bernstein convex-hull bound; rational midpoint de Casteljau refinement",
+  "requested_absolute_enclosure_width": "1e-16 for polynomial supremum only; no physical accuracy tolerance",
+  "python": "3.12.14",
+  "input_sha256": {
+    "Q052_L-nominal_history_40350424272.csv": "afd3a93e7685c8cd40ab9001e402643eff2f5c7da65e90880a301a86e22b7da4",
+    "Q052_R-nominal_history_40350424272.csv": "c367e9d264c5a8a3ac78733702912b76723c38f1e6515f1f38e14361feffa7e0",
+    "Q052_L-refined_history_40350424272.csv": "84fcf954b7eff6985cf715faf5412078efe2534fb245c40a5942097e62fa9a91",
+    "Q052_R-refined_history_40350424272.csv": "67ece7dc907e1421cc59999f484af746817002ceac3e5b8d188bf547a9737a92"
+  },
+  "results": {
+    "nominal": {
+      "rows_per_arm": 4861,
+      "z_domain_exact": [
+        "0",
+        "7122042588453929/8796093022208"
+      ],
+      "z_max_approx": 809.6825,
+      "uncovered_to_810_exact": "2792759534551/8796093022208",
+      "x_e_spline_pair_sup": {
+        "lower_decimal_outward": "0.00000110720467419025501068",
+        "upper_decimal_outward": "0.00000110720467425944621511",
+        "exact_lower_rational": "7116837254950803657510929557100844802650020338763543527/6427752177035961102167848369364650410088811975131171341205504",
+        "exact_upper_rational": "42701023532373285434345894860607960967390681872462201587/38566513062215766613007090216187902460532871850787028047233024",
+        "width_upper_decimal": "0.00000000000000006919120443",
+        "lower_bound_witness": {
+          "cell": 4859,
+          "normalized_t": "10189/16384",
+          "coordinate_rational": "116660436100583561681/144115188075855872",
+          "coordinate_approx": 809.494388885498
+        },
+        "subdivisions": 15,
+        "cells_covered": 4860
+      },
+      "tau_integrated_opacity_spline_pair_sup": {
+        "lower_decimal_outward": "0.00002420392909987223728202",
+        "upper_decimal_outward": "0.00002420392909987223728203",
+        "exact_lower_rational": "326268318834025454273588608846947298183871192493095204662576301/13479973333575319897333507543509815336818572211270286240551805124608",
+        "exact_upper_rational": "326268318834025454273588608846947298183871192493095204662576301/13479973333575319897333507543509815336818572211270286240551805124608",
+        "width_upper_decimal": "0.00000000000000000000000000",
+        "lower_bound_witness": {
+          "cell": 4859,
+          "normalized_t": "1",
+          "coordinate_rational": "1512416903960453/4398046511104",
+          "coordinate_approx": 343.8837902559619
+        },
+        "subdivisions": 0,
+        "cells_covered": 4860
+      },
+      "cumulative_serialization_and_arithmetic_discrepancy_at_nodes": {
+        "L": {
+          "upper_decimal": "0.00000000000000021762467914",
+          "exact_rational": "8800724614224345857765243944447096798350666996976133/40439920000725959692000522630529446010455716633810858721655415373824"
+        },
+        "R": {
+          "upper_decimal": "0.00000000000000013785894983",
+          "exact_rational": "2787502451243019209253208653864075308053196138523649/20219960000362979846000261315264723005227858316905429360827707686912"
+        },
+        "pair": {
+          "upper_decimal": "0.00000000000000028233634542",
+          "exact_rational": "11417659221766626001320961701268106970950940813467911/40439920000725959692000522630529446010455716633810858721655415373824"
+        }
+      },
+      "within_q051_envelopes_for_these_interpolants_on_saved_domain": true
+    },
+    "refined": {
+      "rows_per_arm": 4861,
+      "z_domain_exact": [
+        "0",
+        "7122042588453929/8796093022208"
+      ],
+      "z_max_approx": 809.6825,
+      "uncovered_to_810_exact": "2792759534551/8796093022208",
+      "x_e_spline_pair_sup": {
+        "lower_decimal_outward": "0.00000110291896012718997522",
+        "upper_decimal_outward": "0.00000110291896014694724668",
+        "exact_lower_rational": "226857271905657079730006810124084742694811068194846049987/205688069665150755269371147819668813122841983204197482918576128",
+        "exact_upper_rational": "28357158988715114344639819700885258483274270173736640025/25711008708143844408671393477458601640355247900524685364822016",
+        "width_upper_decimal": "0.00000000000000001975727146",
+        "lower_bound_witness": {
+          "cell": 4859,
+          "normalized_t": "40921/65536",
+          "coordinate_rational": "466642466451620207309/576460752303423488",
+          "coordinate_approx": 809.4956414413452
+        },
+        "subdivisions": 16,
+        "cells_covered": 4860
+      },
+      "tau_integrated_opacity_spline_pair_sup": {
+        "lower_decimal_outward": "0.00002433629693645924548139",
+        "upper_decimal_outward": "0.00002433629693645924548140",
+        "exact_lower_rational": "3936631604897296564625521725141839555356595139128032694776551443/161759680002903838768002090522117784041822866535243434886621661495296",
+        "exact_upper_rational": "3936631604897296564625521725141839555356595139128032694776551443/161759680002903838768002090522117784041822866535243434886621661495296",
+        "width_upper_decimal": "0.00000000000000000000000000",
+        "lower_bound_witness": {
+          "cell": 4859,
+          "normalized_t": "1",
+          "coordinate_rational": "1512416903960453/4398046511104",
+          "coordinate_approx": 343.8837902559619
+        },
+        "subdivisions": 0,
+        "cells_covered": 4860
+      },
+      "cumulative_serialization_and_arithmetic_discrepancy_at_nodes": {
+        "L": {
+          "upper_decimal": "0.00000000000000023384648114",
+          "exact_rational": "18913465979013401208381775221777991314314002253890949/80879840001451919384001045261058892020911433267621717443310830747648"
+        },
+        "R": {
+          "upper_decimal": "0.00000000000000015963803812",
+          "exact_rational": "25822997962071902473334371881623356107056406162349283/161759680002903838768002090522117784041822866535243434886621661495296"
+        },
+        "pair": {
+          "upper_decimal": "0.00000000000000038918574038",
+          "exact_rational": "20984853608414807258598267098287806659755477816773967/53919893334301279589334030174039261347274288845081144962207220498432"
+        }
+      },
+      "within_q051_envelopes_for_these_interpolants_on_saved_domain": true
+    }
+  },
+  "source_real_solution_error_certified": false,
+  "native_roundoff_or_truncation_certified": false,
+  "full_0_to_810_domain_certified": false,
+  "limits": [
+    "certificate applies to precisely defined exact-arithmetic interpolants of serialized binary64 data",
+    "does not bound integration/state/background/event error or rounding in arbitrary native interpolation evaluations",
+    "no opacity segment or native spline coefficients saved from final node to z810",
+    "exact cumulative integral differs from independently rounded native accumulated columns as bounded at nodes"
+  ]
+}
