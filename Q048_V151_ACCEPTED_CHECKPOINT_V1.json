@@ -1,0 +1,164 @@
+{
+  "schema": "bubbleverse.q048.v151.accepted_checkpoint.v1",
+  "status": "ACCEPTED_AFTER_POSTACCEPT",
+  "q": "Q048",
+  "target_q": "Q048",
+  "question_sha256": "c8d4ca366c84d235986b4413cbd436806be839198c4c6eaf85f8141ad3dc0436",
+  "exact_question": "For each of the four Q041 FULL/start0 configurations explicitly reconstructed in run 38140371059, what rigorously controlled bounds can be placed on the differences in the complete electron-fraction history x_e(z) and cumulative Thomson optical depth tau_T(z) between an event-resolved latch at q=xHeII=10^-6 and a reset to q=0 at the same first cutoff event, with identical captured effective inputs and fixed accepted z_reio?",
+  "task_id": "LOCAL-Q048-V151-CONDITIONAL-ACTUAL-CONSUMER-820-810-V1",
+  "task_fingerprint": "eb708dce6f57c79f49b369a0f65aa5ece13e1dd99f20a8e8ec4d395dd5db1f20",
+  "run_id": "LOCAL-Q048-V151-20261023-CONDITIONAL-CONSUMER-820-810-V1",
+  "parent_sha256": "191d65d8fec84a7acb886468e8a8f3aead692096185e5b44c08812f1de3264b4",
+  "theorem_acceptance_sha256": "d36f030b2463f8da2dd503d1af10a4dccd084170eaf60678e90170cb975c2351",
+  "proof_run_id": "LOCAL-Q048-V150-20261023-PROOF-820-810-V1",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "guard_sha256": "90c8d452e0a7e60e5ffea6dc40fe41570f1b3fa6ec195dc6495044f241bf21b5",
+  "guard_primary_sha256": "3d836dfe4a249fbad1c8e4626e24c290825791d1b05683b7310a3ec164ccd663",
+  "guard_control_sha256": "16395382a476bf53b484610306614f23df466bb62445bea3cf11b5b9287b7f83",
+  "guard_primary_control": false,
+  "guard_primary_index": 63,
+  "cell_z": [
+    820,
+    810
+  ],
+  "cell_a": [
+    "1/821",
+    "1/811"
+  ],
+  "case": "hillipop-ede_n3",
+  "parent_actual": {
+    "count": 126,
+    "frontier": 820
+  },
+  "parent_frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 820
+  },
+  "endpoint": {
+    "a": "1/811",
+    "E": "87861503356118157/3125000000000000",
+    "Y": "22285530672339861267/1000000000000000000",
+    "Vbar": "5587227468217201099/1000000000000000000"
+  },
+  "endpoint_derivation": "PRIMARY_EXACT_ROW63:a1,E_right,Y_right,V_admitted",
+  "left_glue": {
+    "a0": "1/821",
+    "E_input_left": "14648129855050665859/500000000000000000",
+    "Y_left": "23227518818235767667/1000000000000000000",
+    "V_previous": "1163175337607566443/200000000000000000"
+  },
+  "energy_cap_used": "14648129855050665859/500000000000000000",
+  "E_safe_left_distinct": "181610432624085729/6250000000000000",
+  "guard_admission": {
+    "accepted": true,
+    "committed": true,
+    "whole_cell_qualified": true,
+    "domain_admitted": true,
+    "source_state_reset": false
+  },
+  "retained_theorem_values": {
+    "K_upper": "17511444796066234647/4000000000000000",
+    "connected_lower": "346752030166741/1000000000000000000",
+    "h_upper": "99999/100000",
+    "thermal_domain": [
+      "-1/1000000",
+      "1/50"
+    ],
+    "operators": [
+      "HMLA",
+      "SWIFT"
+    ],
+    "q_branches": {
+      "L": "1/1000000",
+      "R": "0"
+    },
+    "beta_dependency_method": "same_h_monotone",
+    "beta_lower": {
+      "L": "5107976518883627459910383288603148205864461772618724047921886622451214296881306631449620448315530778671064808476164126834620591902587997103/60122238755715498035704175310456776060163974761962890625000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "R": "45839591631022608454240381547100435510754500320427083236771382534191423070545902852239967520741171364153840956940474562887942180123291973927/541099648801439482321337577794110984541475772857666015625000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  },
+  "scope": "CONDITIONAL_SOURCE_REAL_TWO_OPERATOR_COVER_REANALYSIS",
+  "source_cover_contract": {
+    "scope": "Conditional source-real bounds for existing admissible absolutely-continuous solutions; bounds hold on their existing interval and at the new endpoint only whenever an admissible continuation reaches it",
+    "no_assumed_future_domain_membership": true,
+    "exact_selector_existence_uniqueness": false,
+    "native_error_certificate": false,
+    "trajectory_identity_claim": false
+  },
+  "continuation_hypothesis": "Existing absolutely-continuous source-real solution under the admitted background and fixed-q two-operator inclusion; no assumed future domain membership. Bounds apply on its existing interval and at a1 whenever an admissible continuation reaches a1. Exact selector existence/uniqueness is not established.",
+  "proof_state_before": "ACCEPTED_UNCONSUMED",
+  "proof_state_if_finally_accepted": "ACCEPTED_CONSUMED_ONCE",
+  "proposed_delta": {
+    "new_actual_cells": 1,
+    "new_mathematical_proof_cells": 0,
+    "new_theorem_recomputations": 0,
+    "theorem_consumptions": 1
+  },
+  "actual127_created": true,
+  "NativeP6": "UNRESOLVED",
+  "q_complete": false,
+  "native_error_certificate": false,
+  "exact_selector_existence_uniqueness_established": false,
+  "trajectory_identity_claim": false,
+  "source_state_reset": false,
+  "reset_refit_recapture_tuning": false,
+  "historical_main_or_suite_executed": false,
+  "below810_work": false,
+  "actual128_created": false,
+  "question_budget": {
+    "question_budget_id": "LOCAL-Q048-SHARED-1000PT-BUDGET-V1",
+    "parent_ledger_version": 14,
+    "used_before_pts": 572,
+    "remaining_before_pts": 428,
+    "reserved_pts": 65,
+    "reservation_event_id": "LOCAL-Q048-V151-BUDGET-RESERVATION-V1",
+    "inherited_charge_ids": [
+      "LOCAL-Q048-BUDGET-CHARGE-V144-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-PREFREEZE-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V145-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-PUBLICATION-CONTROL-FAILURE-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V146-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-SUCCESS-840-830-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V147-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-PROOF-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V148-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-CONSUMER-830-820-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-INGESTION-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V149-REDELIVERY-AUDIT-20261023-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-PROOF-820-810-V1",
+      "LOCAL-Q048-BUDGET-CHARGE-V150-INGESTION-V1"
+    ],
+    "parent_ledger_sha256": "157dfaa5eee0b49ff723e10351eacaa67913dd2d61b5b116a289f4673c58fe86"
+  },
+  "authorization_event": "LOCAL-Q048-V150-ACCEPTED-PROOF-INGESTION-V1",
+  "baseline_roster_sha256": "a63d7ec8881aaa26dd4d71d8fee0ec07d519adf059d32de44638a6ecf6474ab9",
+  "semantic_roster_sha256": "b90689b57fef03efe0c5a5244f484469441f5582875068908c9429b675f8ac46",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.2.0",
+  "guard_label_addendum_sha256": "af31a3b6c117c7e767dc58d88533d5ac0c0b1c06aa638e59b93252983dd20f08",
+  "proof_background_original": "Admitted primary guard row62, exact inherited V149 E/Y/V_previous; E_input_left is conservative whole-cell energy cap; no scalar consumption.",
+  "proof_background_descriptive": "Admitted primary guard row63, exact inherited V149 E/Y/V_previous; E_input_left is conservative whole-cell energy cap; no scalar consumption.",
+  "actual": {
+    "count": 127,
+    "frontier": 810
+  },
+  "frontiers": {
+    "camspec-lcdm": 1440,
+    "camspec-ede_n3": 1440,
+    "hillipop-lcdm": 1440,
+    "hillipop-ede_n3": 810
+  },
+  "new_actual_cells": 1,
+  "new_mathematical_proof_cells": 0,
+  "new_theorem_recomputations": 0,
+  "theorem_consumptions": 1,
+  "v150_proof_state_after": "ACCEPTED_CONSUMED_ONCE",
+  "raw_sha256": "ae01d4b65c16b1e3a0eceb99258a15ded2ea0ab96a40668194bccdd21857f7e4",
+  "validation_sha256": "0a2af1c7b9f03f292effb5bf929801b7a7b28a08d0461a16a9fc266f40a60746",
+  "provisional_sha256": "a538f78bd66cb254206ea6aa18fb6094a15449cf38a6859d2212d4570a0b9e6f",
+  "postaccept_sha256": "8be249959a47fe0627e13a8ff28e9b7bf0d3093f81dd1a9c250448a2ee2620dc",
+  "freeze_sha256": "2612223bef0cfabc1ef945902fbf6be25f1c19b6f05b5ced0c6b579f80af20d3"
+}
