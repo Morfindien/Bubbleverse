@@ -1,3 +1,14 @@
+# Q052 native pair V2 — exact original object recovery
+
+Prepared successor: **Q052-NATIVEPAIR-V2**. Native Q052 results remain **NOT_YET_COMPUTED**.
+V2 recovers the exact Q047 original CLASS binary (SHA256 df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf), checks out the frozen source commit, and preserves failure JSON. It does not rebuild the CLASS core or change the scientific equations.
+
+Upload all files in `Q052_INSTALL_MANIFEST_V2.json`, placing both workflows in `.github/workflows/`. Then run **Install Q052 native pair V2** once. The installer checks exact files and guarded registry/README bases; it adds only the new registry entry and this README prefix. The permanent launcher is unchanged. Only after successful installation, use **🚀 BUBBLEVERSE START** with `Q052-NATIVEPAIR-V2`. Run once and return `Q052_NATIVEPAIR_RESULT_V2.json` plus raw branch artifacts to Result Ingestion & Routing 2.3.0.
+
+The scientific question remains Q052; `Q-052` is its explicit legacy launcher-registry spelling. Q051 bounds remain analytic references. Two-level refinement alone does not establish a rigorous native error certificate. Historical targets and journals below remain unchanged.
+
+---
+
 # Bubbleverse — Q048 correlation-preserving threshold anchor V9
 
 Current runnable successor: **Q048-THRESHOLD-V9**. Upload the individual V9 package files, run **🔧 INSTALL Q048 THRESHOLD V9** once (`.github/workflows/q048-install-threshold-v9.yml`), then use the permanent **🚀 BUBBLEVERSE START** normally. The installer may change only `bubbleverse_program_registry.json` and `README.md`; it refuses unrelated mutable-base changes. After installation, paste `Q048-THRESHOLD-V9` into **🚀 BUBBLEVERSE START** and press **Run workflow**. The permanent launcher remains `.github/workflows/00-bubbleverse-start.yml` and is not modified.
