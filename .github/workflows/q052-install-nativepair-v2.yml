@@ -21,17 +21,24 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.11.16'
+      - name: Recover the exact original binary before package validation
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          python q052_recover_native_v2.py --out q052_install_recovered
+          cp q052_install_recovered/classy.so Q052_ORIGINAL_CLASSY_PINNED.so
       - name: Guarded package, registry and README installation
         run: |
           python q052_install_nativepair_v2.py
           python q052_install_nativepair_v2.py --apply
           python q052_install_nativepair_v2.py
-      - name: Commit only the two active navigation files
+      - name: Commit exact recovered binary and the two active navigation files
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- bubbleverse_program_registry.json README.md
+          git add -- Q052_ORIGINAL_CLASSY_PINNED.so bubbleverse_program_registry.json README.md
           if git diff --cached --quiet; then exit 0; fi
           git commit -m 'Register Q052-NATIVEPAIR-V2; preserve historical targets'
           git push origin HEAD:main
