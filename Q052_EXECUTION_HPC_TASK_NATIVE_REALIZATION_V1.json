@@ -1,0 +1,109 @@
+{
+  "schema_version": "BV-SCIENTIFIC-TASK-1.1.0",
+  "task_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-TASK-V1-ADOPTED",
+  "q_id": "Q052",
+  "q_id_status": "ACTIVE_AUTHORIZED_BY_OPERATOR",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "parent_q_id": "Q051",
+  "root_q_id": "Q048",
+  "question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "question_change_from_proposal": "NONE",
+  "operational_clarification": "The phrase matched validated z=810 start state is implemented by native reproduction/observation from the frozen capture path. An arbitrary Q051 theorem-domain point is forbidden.",
+  "starting_engine": {
+    "engine_id": "BUBBLEVERSE.EXECUTION_HPC_MOTOR_BUILDER",
+    "prompt_version": "2.4.0"
+  },
+  "return_engine": {
+    "engine_id": "BUBBLEVERSE.RESULT_INGESTION_ROUTING",
+    "prompt_version": "2.3.0"
+  },
+  "execution_state": "ACTIVE_PREPARED_NOT_DISPATCHED",
+  "actual_computed_result": "NOT_YET_COMPUTED",
+  "draft_program_id": "Q052-NATIVEPAIR-V1",
+  "program_id_status": "DRAFT_UNREGISTERED",
+  "compute_backend": {
+    "selected": "GITHUB_ACTIONS",
+    "github_worthwhile": "YES",
+    "gate": "PASS",
+    "basis": "The current chat/container does not expose an executable pinned native class_ede checkout, while current Bubbleverse repository memory documents the permanent launcher, the exact source commit, runner paths for external/class_ede, and prior native-class execution lineage. Runtime remains subject to target preflight; no workflow has been created or dispatched by this package.",
+    "local_total_estimate": "UNAVAILABLE_IN_CURRENT_RUNTIME",
+    "github_total_estimate": "UNMEASURED_FOR_Q052; first bounded run must capture setup/compile/execution/validation timings",
+    "reassess_if": "A verified local pinned source tree/native binary becomes available or GitHub runner preflight cannot reproduce the frozen source/config."
+  },
+  "fixed_contract": {
+    "source_repository": "mwt5345/class_ede",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "configuration": "hillipop-ede_n3",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "background_dependency_id": "Q050-COMMON-BACKGROUND-92de319899bf911563aff4d1",
+    "z810_checkpoint_sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "start_state_rule": "NATIVE_REPRODUCTION_FROM_FROZEN_CAPTURE_THEN_EXACT_CLONE",
+    "selector_semantics": "EXACT_LITERAL",
+    "equality_semantics": "UNCHANGED_FROM_Q051",
+    "q_values": [
+      1e-06,
+      0.0
+    ],
+    "only_allowed_arm_difference": "q=xHeII endpoint value after the common z=810 native start state is frozen",
+    "forbidden_changes": [
+      "no refit",
+      "no tau shooting",
+      "no selector smoothing or Filippov replacement",
+      "no equality-rule change",
+      "no background substitution",
+      "no arbitrary theorem-domain start-state substitution",
+      "no downstream likelihood campaign",
+      "no first-run generalization to all four configurations"
+    ]
+  },
+  "preflight_gates": [
+    "verify current repository bytes/path for q048_prefix_config_v1.json match SHA256 2514e250...",
+    "verify Q048 V151 checkpoint SHA256 60dcd23... and Q050 binding SHA256 bfbe380...",
+    "verify pinned class_ede source identity/known native binary or rebuild provenance",
+    "reproduce/observe the native hillipop-ede_n3 thermodynamic state at z=810 from frozen capture; do not select a theorem-domain point",
+    "verify reproduced background at z=810 against the Q050/Q048 a,E,Y,Vbar anchor within exact representation/defined numeric tolerance",
+    "freeze one common z=810 state and fork only q",
+    "capture units/definitions for x_e and cumulative tau_T exactly"
+  ],
+  "required_outputs": [
+    "native x_e(z) histories for both q endpoints on a common grid or losslessly aligned event representation",
+    "native cumulative tau_T(0,Z) histories for both q endpoints",
+    "realized sup_abs_delta_x_e",
+    "realized sup_abs_delta_tau_T",
+    "numerical error/convergence certificate",
+    "input/source/config/background/start provenance",
+    "Q051 envelope comparison",
+    "raw timing/environment/source identity record"
+  ],
+  "validation_gates": [
+    "exact source/config/capture identity",
+    "same reproduced background in both arms",
+    "same exact reproduced z=810 thermodynamic start state in both arms",
+    "only q differs",
+    "finite outputs and unit/definition consistency",
+    "convergence/refinement check",
+    "independent serialized readback or second implementation-level check",
+    "Q051 envelope comparison under identical assumptions"
+  ],
+  "q051_validation_envelopes": {
+    "sup_abs_delta_x_e_max": 0.0023814,
+    "sup_abs_delta_tau_T_max_strict": 0.0421,
+    "sharper_tau_envelope": 0.04209103698658
+  },
+  "termination_condition": "Stop after one validated paired native result or the first exact conclusion-critical blocker.",
+  "no_repeat": [
+    "do not rerun Q049 cap",
+    "do not rerun Q050 existence work",
+    "do not rerun Q051 stability proof absent a documented defect",
+    "do not resume Q048 cell-by-cell continuation as a substitute for Q052 native realization",
+    "do not launch downstream likelihood/refit",
+    "do not generalize to all four configurations in the first run"
+  ],
+  "authorization": {
+    "q052_adoption": "AUTHORIZED_BY_USER_MESSAGE_2026-10-26",
+    "execution_build_and_preflight": "AUTHORIZED_BY_START_REQUEST",
+    "remote_repository_write": "NOT_PERFORMED",
+    "workflow_dispatch": "NOT_PERFORMED"
+  },
+  "return_condition": "Return to Result Ingestion & Routing 2.3.0 with either a validated paired native result or one exact blocker plus preserved raw/preflight artifacts."
+}

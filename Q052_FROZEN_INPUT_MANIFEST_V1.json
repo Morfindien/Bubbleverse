@@ -1,0 +1,117 @@
+{
+  "schema_version": "BV-Q052-FROZEN-INPUT-MANIFEST-1.0.0",
+  "q_id": "Q052",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "created_at_utc": "2026-10-26T10:52:20Z",
+  "adoption_status": "AUTHORIZED_BY_OPERATOR_IN_CHAT",
+  "repository": "Morfindien/Bubbleverse",
+  "observed_repository_commit": "256536fef86bb6400314e7c80c8596fe1ecdaca7",
+  "physics_source": {
+    "repository": "mwt5345/class_ede",
+    "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "configuration": "hillipop-ede_n3"
+  },
+  "frozen_capture": {
+    "file": "q048_prefix_config_v1.json",
+    "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "hillipop_source_input_hashes": {
+      "effective_background_hex.json": "a3625f8552efa84479e24b7eb0e5252859c5c57180225afa968f5db2461a1146",
+      "effective_precision.json": "d06895e1d0758b6e4a1334a94938ac6c7980f8733f2e4ecd7e776da0fd3fc0cc",
+      "thermal_starts_hex.jsonl": "7d4144e2615ccb36fa48867ee43b2ad342968469f1d1a2bc3f1088e1db2b884a"
+    },
+    "fixed_reionization": {
+      "parametrization": "reio_camb",
+      "accepted_z_reio_hex": "0x1.dfec4p+2",
+      "fixed_reio_start_exact": "753585/65536",
+      "new_comparison_must_use_fixed_z_not_tau_shooting": true
+    }
+  },
+  "common_background_binding": {
+    "file": "Q050_CLEAN_BG_BINDING_V1.json",
+    "sha256": "bfbe380364983b166658793514526986ae61e0c37a67a07774375ef49a4f7481",
+    "background_dependency_id": "Q050-COMMON-BACKGROUND-92de319899bf911563aff4d1",
+    "correlation_contract": "Both q arms must use the same fixed member of the retained connected scalar family; projection bounds are not independent restarts.",
+    "z810_anchor": {
+      "a": "1/811",
+      "E": "87861503356118157/3125000000000000",
+      "Y": "22285530672339861267/1000000000000000000",
+      "Vbar": "5587227468217201099/1000000000000000000",
+      "actual_count": 127,
+      "frontier": 810
+    }
+  },
+  "accepted_z810_checkpoint": {
+    "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+    "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "status": "ACCEPTED_AFTER_POSTACCEPT",
+    "actual": {
+      "count": 127,
+      "frontier": 810
+    },
+    "retained_start_domain": {
+      "h_upper": "99999/100000",
+      "thermal_domain": [
+        "-1/1000000",
+        "1/50"
+      ]
+    },
+    "native_error_certificate": false,
+    "exact_selector_existence_uniqueness_established": false,
+    "trajectory_identity_claim": false
+  },
+  "q051_envelopes": {
+    "sup_abs_delta_x_e_max": 0.0023814,
+    "sup_abs_delta_tau_T_max_strict": 0.0421,
+    "sharper_tau_envelope": 0.04209103698658
+  },
+  "q051_start_semantics_interpretation": {
+    "status": "CLARIFIED_FOR_NATIVE_EXECUTION",
+    "finding": "Q051 quantified uniformly over matched validated z=810 hydrogen/temperature starts; the accepted Q048 z=810 checkpoint pins a background anchor and admissible theorem domain, not one unique thermodynamic start vector.",
+    "mandatory_native_rule": "Do not choose an arbitrary point from the Q051 theorem domain. Reproduce/observe the concrete z=810 thermodynamic state from the frozen native hillipop-ede_n3 capture/source path, then clone that exact state into both arms and change only q.",
+    "science_change": false
+  },
+  "immutable_source_refs": {
+    "Q051_master_journal": {
+      "file": "Q051_SAMLET_JOURNAL_M14_REVISED_Q052_PROPOSED_V1.md",
+      "sha256": "50132be995f9ced617d978c533f7b209bb4d8f7059e8d6f57300a0f19724855e"
+    },
+    "Q051_M14_revision": {
+      "file": "revision.md",
+      "sha256": "adda04dff768f1fb8ae46775959652cdfc1a9c07ed425c2942b7af341c1e8c1f"
+    },
+    "Q051_M14_handoff": {
+      "file": "handoff.md",
+      "sha256": "efbfe92975394d0bd22657fdfed9da1539a773d61403d1f76ef33e26ac2f9f25"
+    },
+    "Q052_proposed_task": {
+      "file": "Q052_PROPOSED_EXECUTION_HPC_TASK_NATIVE_REALIZATION_V1.json",
+      "sha256": "84ef7daac20fdd78981dc31ab595e955f3634975db71f22e878c069244e63c8b"
+    },
+    "Q051_transfer_bundle_recovered_from_library": {
+      "file": "Q051_GLOBAL_TRANSFER_INPUT_BUNDLE_V7.json",
+      "sha256": "b7edfbf830163cdc31b5e3af1a11717551a2eab4076cdad0481781ea9eea128b"
+    },
+    "Q048_capture": {
+      "file": "q048_prefix_config_v1.json",
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    "Q050_background_binding": {
+      "file": "Q050_CLEAN_BG_BINDING_V1.json",
+      "sha256": "bfbe380364983b166658793514526986ae61e0c37a67a07774375ef49a4f7481"
+    },
+    "Q048_z810_checkpoint": {
+      "file": "Q048_V151_ACCEPTED_CHECKPOINT_V1.json",
+      "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96"
+    }
+  },
+  "forbidden_changes": [
+    "no refit",
+    "no tau shooting",
+    "no selector smoothing or Filippov replacement",
+    "no equality-rule change",
+    "no background substitution",
+    "no arbitrary theorem-domain start-state substitution",
+    "no downstream likelihood campaign",
+    "no first-run generalization to all four configurations"
+  ]
+}
