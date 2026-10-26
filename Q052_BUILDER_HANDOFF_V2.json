@@ -1,0 +1,52 @@
+{
+  "schema_version": "BV-HANDOFF-3.0.0",
+  "handoff_id": "LOCAL-Q052-BUILDER-NATIVEPAIR-HANDOFF-20261026-V2",
+  "created_at_utc": "2026-10-26T11:09:04Z",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "program_id": "Q052-NATIVEPAIR-V1",
+  "program_status": "GENERATED_UNREGISTERED",
+  "execution_status": "FILES_GENERATED_NOT_DISPATCHED",
+  "actual_computed_result": null,
+  "compute_backend": "GITHUB_ACTIONS",
+  "files": [
+    "q052_native_pair_v1.c",
+    "q052_native_pair_v1.py",
+    "q052_native_pair_tests_v1.py",
+    "Q052_NATIVEPAIR_CONTRACT_V1.json",
+    ".github/workflows/q052-native-pair-v1.yml",
+    "q052_program_registry_patch_v1.json",
+    "q052_apply_registry_patch_v1.py",
+    "README_Q052_NATIVEPAIR_V1.md",
+    "Q052_SAMLET_JOURNAL_V2.md",
+    "Q052_QUESTION_ACTIVITY_LEDGER_V2.json"
+  ],
+  "install": {
+    "copy_root": [
+      "q052_native_pair_v1.c",
+      "q052_native_pair_v1.py",
+      "q052_native_pair_tests_v1.py",
+      "Q052_NATIVEPAIR_CONTRACT_V1.json",
+      "q052_program_registry_patch_v1.json",
+      "q052_apply_registry_patch_v1.py",
+      "README_Q052_NATIVEPAIR_V1.md",
+      "Q052_SAMLET_JOURNAL_V2.md",
+      "Q052_QUESTION_ACTIVITY_LEDGER_V2.json"
+    ],
+    "workflow": ".github/workflows/q052-native-pair-v1.yml",
+    "registry_action": "Merge q052_program_registry_patch_v1.json add-only into current bubbleverse_program_registry.json.",
+    "launcher_action": "Keep .github/workflows/00-bubbleverse-start.yml unchanged."
+  },
+  "start_when_installed": {
+    "program_id": "Q052-NATIVEPAIR-V1",
+    "launcher": "\ud83d\ude80 BUBBLEVERSE START"
+  },
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "return_condition": "Return Q052_NATIVEPAIR_RESULT_V1.json plus raw worker artifacts after one run, success or first conclusion-critical failure.",
+  "remaining_pre_execution_blockers": [
+    "Registry/workflow not yet installed in GitHub.",
+    "No workflow dispatch was performed in this session."
+  ],
+  "scientific_caveat": "Two-level refinement is an observed numerical diagnostic, not by itself a rigorous truncation-error theorem."
+}

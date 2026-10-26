@@ -1,0 +1,126 @@
+{
+  "schema_version": "BV-Q052-NATIVEPAIR-CONTRACT-1.0.0",
+  "q": "Q052",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "program_id": "Q052-NATIVEPAIR-V1",
+  "status": "DRAFT_GENERATED_NOT_REGISTERED_NOT_EXECUTED",
+  "created_at_utc": "2026-10-26T11:09:04Z",
+  "repository": "Morfindien/Bubbleverse",
+  "repository_base_commit": "256536fef86bb6400314e7c80c8596fe1ecdaca7",
+  "source_repository": "mwt5345/class_ede",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "class_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+  "configuration": "hillipop-ede_n3",
+  "question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "frozen_lineage": {
+    "q048_capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "q050_background_binding_sha256": "bfbe380364983b166658793514526986ae61e0c37a67a07774375ef49a4f7481",
+    "q048_z810_checkpoint_sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96",
+    "q051_transfer_bundle_sha256": "b7edfbf830163cdc31b5e3af1a11717551a2eab4076cdad0481781ea9eea128b",
+    "q047_collection_lock_sha256": "4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a",
+    "q045_baseline_run_id": 38023210800
+  },
+  "source_hashes": {
+    "source/thermodynamics.c": "d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6",
+    "include/thermodynamics.h": "f000e372c0db60663cc49f4bb95ab9f1d63238201ee7b3b51ca791c0f45ba0f0",
+    "include/background.h": "b329b21bce11705eed64aa242a06272a7d9554ad1fe1de8eda870b6cfb3f2397",
+    "external/HyRec2020/wrap_hyrec.c": "4747baba37424f05f168bb68d4b9bccb2c0f003bdba95ccf56fe0a4c30cc01bd"
+  },
+  "native_intervention": {
+    "event_redshift": 810.0,
+    "event_coordinate_mz": -810.0,
+    "pre_event": "Run original pinned CLASS thermodynamics with original NDF15/source path to the exact z=810 integration boundary.",
+    "start_state": "Capture the pre-intervention frec vector at the exact z=810 boundary. L and R runs must match bitwise in D_Tmat and x_H before q is applied.",
+    "arm_L_q_xHeII": 1e-06,
+    "arm_R_q_xHeII": 0.0,
+    "class_x_He_mapping": "x_He = q / fHe_CLASS",
+    "post_event_helium_rule": "Keep xHeII=q exactly by setting require_He=false and forcing dy_He=0 while calling the original pinned thermodynamics_derivs for all active non-helium equations.",
+    "selector_semantics": "Original pinned HyRec hydrogen routine is called; PEEBLES/SWIFT literal dispatch and equality semantics remain source-defined.",
+    "frec_to_reio_boundary_z": 50.0,
+    "reionization": {
+      "input_mode": "fixed_z_reio",
+      "z_reio": 7.4987945556640625,
+      "z_reio_hex": "0x1.dfec4p+2",
+      "tau_shooting": false
+    }
+  },
+  "execution_levels": {
+    "nominal": {
+      "tol_scale": 1.0,
+      "stepsize_scale": 1.0,
+      "role": "primary native pair"
+    },
+    "refined": {
+      "tol_scale": 0.1,
+      "stepsize_scale": 0.5,
+      "role": "validation refinement only"
+    }
+  },
+  "required_jobs": [
+    "L-nominal",
+    "R-nominal",
+    "L-refined",
+    "R-refined"
+  ],
+  "q051_envelopes": {
+    "sup_abs_delta_x_e_max": 0.0023814,
+    "sup_abs_delta_tau_T_max_strict": 0.0421,
+    "sharper_tau_envelope": 0.04209103698658
+  },
+  "validation_policy": {
+    "background_identity": "Exact source commit/binary/source hashes plus exact effective-background C99-hex comparison to frozen Q048 capture.",
+    "start_pair_identity": "Bitwise-equal pre-intervention D_Tmat and x_H between L/R within each execution level.",
+    "arm_difference": "After z=810, only q=xHeII differs.",
+    "history_grid": "Both arms in one execution level must have identical z and conformal-time grids.",
+    "independent_readback": "Python collector recomputes pair differences from immutable CSV bytes; worker summaries are not trusted.",
+    "numerical_error_scope": "Nominal-vs-refined discrepancy is an observed refinement diagnostic. It is NOT automatically a rigorous truncation-error theorem.",
+    "final_result_rule": "A scientifically final Q052 answer requires the actual native pair plus a defensible numerical-error certificate. If refinement is the only error evidence, return the exact remaining certification blocker rather than overclaim."
+  },
+  "forbidden": [
+    "refit",
+    "tau_reio shooting",
+    "selector smoothing or convexification",
+    "Filippov replacement",
+    "equality-rule change",
+    "background substitution",
+    "arbitrary Q051 theorem-domain start",
+    "likelihood campaign",
+    "all-four-configuration expansion in V1"
+  ],
+  "compute": {
+    "backend": "GITHUB_ACTIONS",
+    "github_worthwhile": "YES",
+    "basis": "Exact source/binary/cache lineage and native C/Python build environment already exist in repository workflows; current chat runtime has no executable pinned class_ede checkout.",
+    "runtime_estimate": "UNMEASURED_FOR_Q052",
+    "worker_timeout_minutes": 25,
+    "static_timeout_minutes": 10,
+    "collect_timeout_minutes": 10,
+    "note": "Timeouts are hard safety caps inherited from nearby native workflows, not runtime predictions."
+  },
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "repository_reuse_requirements": {
+    "q048_prefix_config_v1.json": {
+      "decision": "REUSE",
+      "sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+    },
+    "Q050_CLEAN_BG_BINDING_V1.json": {
+      "decision": "REUSE",
+      "sha256": "bfbe380364983b166658793514526986ae61e0c37a67a07774375ef49a4f7481"
+    },
+    "Q048_V151_ACCEPTED_CHECKPOINT_V1.json": {
+      "decision": "REUSE",
+      "sha256": "60dcd23a315a28be2ef84c4c5353c783e88eb73c4199d43b7f5640a16db2eb96"
+    },
+    "Q047_COLLECTION_LOCK_V1.json": {
+      "decision": "REUSE",
+      "sha256": "4b64c2b4724ae5ee1fed8c099625a33653ef6ac8d3f3ada0cfa7fcdeec1f6b7a"
+    },
+    "q047_acquire_v1.py": {
+      "decision": "REUSE",
+      "role": "original binary identification helper"
+    },
+    ".github/workflows/00-bubbleverse-start.yml": {
+      "decision": "UNCHANGED"
+    }
+  }
+}
