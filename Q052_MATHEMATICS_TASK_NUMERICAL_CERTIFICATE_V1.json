@@ -1,0 +1,42 @@
+{
+  "task_id": "Q052-MATH-NATIVE-NUMERICAL-CERTIFICATE-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "selected_engine": "BUBBLEVERSE.MATHEMATICS",
+  "prompt_version": "2.3.0",
+  "engine_verification": "Established engine ID/version observed in Q051_MATHEMATICS_RESULT_AND_HANDOFF_V7.md; current prompt deployment not asserted.",
+  "objective": "Establish a source-faithful, checkable numerical-error certificate for the realized paired native histories, including continuous coverage, or identify the minimum mathematically necessary missing diagnostics.",
+  "frozen": [
+    "Same Q052 question and hillipop-ede_n3 configuration",
+    "Native source commit and original binary SHA256",
+    "Fixed admitted common background requirement and matched z810 starts",
+    "Exact helium endpoints and fixed z_reio; no tau shooting",
+    "Literal selector/equality semantics and Q051 conditional assumptions",
+    "All existing histories and historical statuses immutable"
+  ],
+  "required_analysis": [
+    "Separate errors of saved-grid values, interpolation, integration/truncation/roundoff, initial state, and background realization; do not equate refinement discrepancy with an error bound.",
+    "Cover z=0 through810, including the last saved grid point809.6825 to the captured810 start and all between-grid extrema for electron fraction and cumulative Thomson depth.",
+    "Assess actual literal-selector event behavior and whether source-real/backround admissibility is certified rather than inferred merely from parameter equality.",
+    "Derive a finite a posteriori residual/stability or other justified validated-numerics contract with explicit hypotheses and quantities. Distinguish exact bounds for a chosen numerical interpolant from bounds for the underlying source-real solution.",
+    "Inspect whether available outputs supply the needed internal hydrogen/temperature/event/solver diagnostics. Saved histories contain electron fraction, spline derivatives, opacity and cumulative optical depth; they do not contain a full thermodynamic state/event trace. Do not invent missing internal states.",
+    "State an explicit accuracy scope supported by the evidence; do not invent a physical negligibility tolerance or silently weaken the original certification requirement."
+  ],
+  "success_condition": "A checkable source-faithful certificate that bounds the errors and continuous paired observables under the original premises, with explicit finite computation if needed; alternatively one precise proven information/diagnostic obstruction and smallest resolving task.",
+  "failure_condition": "If essential residual/event/state information is not recoverable, return that exact limitation; do not certify from two-level agreement alone.",
+  "stop_condition": "Stop after the certificate or first precise material diagnostic/proof blocker. Do not repeat Q051 proof, generate a general grid campaign, refit, smooth selectors, activate a new Q, or repeat unchanged native integration.",
+  "expected_information_gain": "Determine the mathematical obligations and whether existing trajectories can be certified; supply the missing justification required by the exact question.",
+  "required_inputs": [
+    "Q052_NATIVEPAIR_RESULT_V2.json",
+    "Q052_NATIVEPAIR_CONTRACT_V2.json",
+    "Q052_WORKER_PROVENANCE_AND_REPRODUCTION_V7.json",
+    "Four Q052_*_history_40350424272.csv files",
+    "Full Q052_SAMLET_JOURNAL_V7.md",
+    "Pinned native controller/C source at59631447fab9e4b67a8d599422c76f7c373199f2",
+    "Verified Q051 V7 source/transfer bundle"
+  ],
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "dispatch_status": "PREPARED_NOT_DISPATCHED",
+  "publication_cadence": "Carry1090 cumulative points and delivered M001; next2000, no point-based stop."
+}

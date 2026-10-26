@@ -1,0 +1,32 @@
+{
+  "schema": "BV-Q052-NATIVEPAIR-RESULT-1.0.0",
+  "q": "Q052",
+  "program_id": "Q052-NATIVEPAIR-V2",
+  "execution_status": "COMPLETE",
+  "job_completeness_gate": "PASS",
+  "merge_compatibility_gate": "PASS",
+  "start_state_pair_gate": "PASS",
+  "background_identity_gate": "PASS",
+  "actual_computed_result": {
+    "representation": "native CLASS output grid plus exact z=810 intervention state",
+    "sup_abs_delta_x_e_on_native_grid": 1.0001128312991242e-06,
+    "sup_abs_delta_tau_T_on_native_grid": 2.420392909964486e-05,
+    "q051_envelope_comparison": {
+      "x_e_bound": 0.0023814,
+      "tau_bound": 0.0421,
+      "within_both_on_native_grid": true
+    }
+  },
+  "numerical_validation": {
+    "nominal_vs_refined_pair_discrepancy_x_e": 1.344094243196925e-08,
+    "nominal_vs_refined_pair_discrepancy_tau_T": 1.3326327517881875e-07,
+    "certificate_scope": "OBSERVED_REFINEMENT_DISCREPANCY_AND_INDEPENDENT_SERIALIZED_READBACK",
+    "rigorous_truncation_error_bound": false,
+    "status": "PROVISIONAL_NOT_A_RIGOROUS_ERROR_THEOREM"
+  },
+  "result_validation_status": "PROVISIONAL",
+  "scientific_outcome": "NOT_FINAL_UNTIL_NUMERICAL_ERROR_CERTIFICATE_SCOPE_IS_ACCEPTED_OR_STRENGTHENED",
+  "final_result_gate": "UNRESOLVED",
+  "first_remaining_blocker": "RIGOROUS_NATIVE_NUMERICAL_ERROR_CERTIFICATE_NOT_ESTABLISHED_BY_TWO_LEVEL_REFINEMENT_ALONE",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0"
+}
