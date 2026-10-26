@@ -1,0 +1,95 @@
+{
+  "schema_version": "BV-QUESTION-ACTIVITY-LEDGER-2.0.0",
+  "question_id": "Q052",
+  "counter_is_capped": false,
+  "publication_interval_points": 1000,
+  "previous_ledger_ref": "Q052_QUESTION_ACTIVITY_LEDGER_V4.json",
+  "previous_total_points": 800,
+  "entries": [
+    {
+      "run_id": "LOCAL-Q052-ADOPTION-AND-NATIVE-PREFLIGHT-20261026-V1-RUN",
+      "event_type": "QUESTION_ADOPTION_AND_EXECUTION_PREFLIGHT",
+      "run_points": 100,
+      "breakdown": {
+        "analysis": 40,
+        "search": 30,
+        "validation": 30
+      },
+      "basis": "Heuristic editorial estimate for Q052 adoption, Q048-Q051 provenance recovery, source/capture/background/start-semantics reconciliation, current GitHub-memory inspection, backend routing and frozen execution-contract validation. Copying, formatting and hashing are zero.",
+      "counted_once": true
+    },
+    {
+      "run_id": "LOCAL-Q052-BUILDER-NATIVEPAIR-20261026-V2",
+      "event_type": "EXECUTION_TARGET_BUILD_AND_STATIC_VALIDATION",
+      "run_points": 260,
+      "breakdown": {
+        "analysis": 70,
+        "search": 45,
+        "implementation": 100,
+        "validation": 45
+      },
+      "basis": "Native lineage/source inspection, exact z=810 intervention design around original NDF15/source routines, GitHub target/workflow/registry/test implementation and static contract validation. Formatting and hashing are zero.",
+      "counted_once": true
+    },
+    {
+      "run_id": "LOCAL-Q052-INGESTION-40330420102-20261026-V3",
+      "activity_event_id": "Q052-ACTIVITY-INGEST-40330420102-V3",
+      "event_type": "FAILED_NATIVE_RUN_INGESTION_AND_RECOVERY_ROUTING",
+      "run_points": 120,
+      "breakdown": {
+        "intake_archive_integrity": 25,
+        "repository_provenance_and_failure_diagnosis": 50,
+        "claim_and_state_validation": 30,
+        "bounded_routing": 15
+      },
+      "counted_once": true,
+      "basis": "New audit of uploaded archive, live run/jobs/artifact metadata, original native/collector logs, collector failure path, canonical V2 journal/ledger and current program registry. Prior build/static work is reused without recounting. No native integration was performed. Copying, formatting, saving and hashing overhead receive no additional points.",
+      "assessment_type": "HEURISTIC_DOCUMENTED_ACTIVITY_INDEX",
+      "uncertainty": "Subjective rounded activity estimate; not calibrated FLOPs, tokens, money or confidence. Workflow execution has no separate documented point event; no invented additional charge is added for skipped native jobs."
+    },
+    {
+      "run_id": "LOCAL-Q052-EXACT-OBJECT-RECOVERY-AND-V2-REPAIR-20261026-V4",
+      "activity_event_id": "Q052-ACTIVITY-EXACT-OBJECT-RECOVERY-V4",
+      "event_type": "EXACT_ORIGINAL_OBJECT_RECOVERY_AND_ORCHESTRATION_REPAIR",
+      "run_points": 320,
+      "breakdown": {
+        "targeted_provenance_and_recovery": 90,
+        "implementation": 140,
+        "validation": 70,
+        "state_and_routing": 20
+      },
+      "counted_once": true,
+      "basis": "New Q045/Q047 environment recovery, exact binary/checkpoint retrieval, V1 failure reproduction, versioned failure serialization/helper/registry/orchestration repairs, guarded installation and relevant local tests. No old native computation or static-build activity is recounted.",
+      "assessment_type": "HEURISTIC_DOCUMENTED_ACTIVITY_INDEX",
+      "uncertainty": "Rounded subjective workload estimate; no calibrated resource/money/confidence interpretation."
+    },
+    {
+      "run_id": "LOCAL-Q052-INSTALL-BINARY-RECOVERY-R1-20261026",
+      "activity_event_id": "Q052-ACTIVITY-INSTALL-BINARY-R1",
+      "event_type": "MISSING_BINARY_INSTALL_REPAIR",
+      "run_points": 50,
+      "breakdown": {
+        "repository_diagnosis": 10,
+        "workflow_repair": 15,
+        "validation": 20,
+        "state_record": 5
+      },
+      "counted_once": true,
+      "basis": "Current tree confirms no .so; reproduce missing-binary installer failure, recover exact Q047 bytes before installer checks, persist binary in guarded installation commit, and validate workflow pre-commit behavior plus existing suite. Heuristic estimate; no native scientific run."
+    }
+  ],
+  "total_points_after": 850,
+  "cycle_progress": 850,
+  "next_publication_at": 1000,
+  "points_to_next_publication": 150,
+  "new_milestones": [],
+  "pending_packages": [],
+  "delivered_milestone_ids": [],
+  "scientific_state": "ACTIVE_NATIVE_PAIR_NOT_YET_COMPUTED",
+  "workflow_state": "V2_LOCALLY_VALIDATED_NOT_INSTALLED_NOT_DISPATCHED",
+  "point_state": "CONTINUING_Q052",
+  "note": "Installation repair only; 850 cumulative points, no SoMe due. Native pair not yet run.",
+  "ledger_revision": "V5",
+  "parent_ledger_sha256": "d4a93105bebedcae23ec4240a394e778965fcc5dab8d53bd58c743123d82500e",
+  "last_updated_utc": "2026-10-26T14:44:35Z"
+}
