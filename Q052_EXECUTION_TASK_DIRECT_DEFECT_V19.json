@@ -1,0 +1,155 @@
+{
+  "schema": "LOCAL-Q052-BOUNDED-DIRECT-DEFECT-EXECUTION-TASK-V19",
+  "task_id": "LOCAL-Q052-EXECUTE-FIRST-CELL-DIRECT-DEFECT-V19",
+  "q": "Q052",
+  "target_q": "Q052",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "status": "PREPARED_NOT_EXECUTED",
+  "scope": "Only the first cell and the defined captured-state reconstruction. No native integration or whole-domain campaign.",
+  "owner_function": "BUBBLEVERSE execution-mechanism/numerical/HPC/motor-builder2.4.0",
+  "proof_ref": {
+    "bundle": "Q052_DIRECT_DEFECT_EXECUTION_BUNDLE_V19.json",
+    "member": "Q052_BACKGROUND_TRANSFER_PROOF_V18.md",
+    "sha256": "70a93fea8535bf71c59a0debe9b500b0f8cb6bccfe5d7ec6389b872727b57401"
+  },
+  "input_ref": {
+    "bundle": "Q052_DIRECT_DEFECT_EXECUTION_BUNDLE_V19.json",
+    "member": "Q052_BACKGROUND_TRANSFER_INPUTS_V18.json",
+    "sha256": "3817fe6bfe394c9b8a0482b691719653dcc98a41f35bc62abd805a075e1f6184",
+    "access": "Original UTF-8 bytes embedded with size/hash; no further native capture or operator file assembly required."
+  },
+  "branch_receipt_ref": {
+    "bundle": "Q052_DIRECT_DEFECT_EXECUTION_BUNDLE_V19.json",
+    "member": "Q052_BACKGROUND_CONTRACT_CHECKS_V18.json",
+    "sha256": "90cd2114f191dc06581afcbd615ed093d494f0ae7cbd2e5cf906bf69f3cb8545"
+  },
+  "coordinates": {
+    "u": "ln(811/(1+z))",
+    "x": "-z",
+    "state": [
+      "h",
+      "v=1+D/(Tcmb*(1+z))"
+    ],
+    "q_target_endpoints": [
+      "1/1000000",
+      "0"
+    ]
+  },
+  "target": "For each fixed B in the inherited admitted family, shared by L/R, with the exact captured h/v starts explicitly used as the matched target starts. No new cosmological background is selected.",
+  "initial_error": "E0=0 for this precise common coordinate anchoring; this is not a native pre810 error claim. A different target-start convention requires a validated E0 instead.",
+  "algorithm": [
+    "Parse and pin the original source/capture/qualification bytes. Preserve Q050 conditional applicability; do not call V16 member_admission_receipt gate as a universal prerequisite for this different theorem.",
+    "Use exact rational Bernstein reconstruction and derivative bounds. Evaluate the direct defect yhat_prime-F_target at exact q endpoints, rather than estimating an integration error from two solver tolerances.",
+    "Use whole-cell admitted H and analytic frozen photon density. The active phase5 equations require no H_prime. Enclose all atomic log-table initialization, interpolation/stencil closures, exp/pow and constants. Reuse only scalar arithmetic from the old z<=50 code.",
+    "Retain inherited positive-escape/C-factor applicability. The coarse 0<C_s,C_p<1 bounds and the derivative bounds in proof5.3 permit a conservative attempt without selecting unknown native fit parameters. Refine C-factor boxes only with qualified parameter/data enclosures, never sampled values.",
+    "On at most64 rational x-subcells evaluate full-vector defect d and full weighted infinity-Jacobian L for both arms. Use W=diag(1/rho_h,1/rho_v), with one of the two specified radius pairs, and certified outward coordinate/exponential evaluation.",
+    "First try rho_h=1e-5,rho_v=1e-4, which has the present conditional cold/SWIFT diagnostic receipt. If closure fails only from width, one alternate pair rho_h=2e-5,rho_v=5e-4 is allowed after independently checking all branch/domain inequalities on that enlarged tube.",
+    "Accept only a strict outward bound E0*exp(L*T)+d*phi_L(T)<1 with a complete norm/unit/input/proof receipt. A broad interval or failed bound is INCONCLUSIVE_METHOD_WIDTH, not physical FAIL.",
+    "Stop after this bounded attempt. Return an actual first-cell receipt or the first precise missing source/domain/evaluator object. Do not launch CLASS, rebuild, fetch the same historical qualification again, or request generic more validation."
+  ],
+  "success_condition": "Both arms have finite full-vector d,L, stated exact target starts, qualified domains and strict first-cell tube closure, with checkable proof data. This is still not a full Q052 certificate.",
+  "rejection_condition": "A demonstrated source/input mismatch or a failed mandatory interval/domain condition. Preserve its actual failure; do not repair the frozen physics.",
+  "inconclusive_condition": "Coarse enclosures do not close either allowed tube, or an exact decisive parameter/source qualification is unavailable. State the specific failed inequality/data requirement.",
+  "stop_condition": "At most64 time subcells and two predeclared norm/radius pairs on the first cell only. No automatic continuation to the full domain.",
+  "not_required_for_this_theorem": [
+    "Native H knot/second-derivative table membership proof.",
+    "Native H_prime derivative identity.",
+    "A separate native floating arithmetic budget already subsumed by exact saved-curve a posteriori defect."
+  ],
+  "still_required_for_full_Q052": [
+    "Defensible native/common-background applicability and provenance.",
+    "Whole-domain state/error/event closure.",
+    "Output-smoothing and xe/tau observable transfer, integration and suprema certificate."
+  ],
+  "no_repeat": [
+    "V14 full-state reconstruction campaign",
+    "V16 input gate and17 tests",
+    "Old Q048/Q050 qualification producers",
+    "Q051 epsilon-stability proof",
+    "Original native diagnostic pair"
+  ],
+  "compute": {
+    "backend": "LOCAL_RUNTIME",
+    "native_runs_allowed": 0,
+    "github_actions": false,
+    "paid_compute": false,
+    "registration": "LOCAL_CONTRACT_NOT_REGISTERED_LAUNCHER"
+  },
+  "materiality": "Supplies the first actual full-state error-tube calculation after a new theorem has removed an unnecessary native-membership prerequisite for reconstruction comparison.",
+  "parent_task_id": "LOCAL-Q052-FIRST-CELL-DIRECT-DEFECT-IMPLEMENTATION-CONTRACT-V18",
+  "selected_next_engine_id": "BUBBLEVERSE.EXECUTION_HPC_MOTOR_BUILDER",
+  "selected_next_engine_version": "2.4.0",
+  "dispatch_status": "PREPARED_NOT_SENT",
+  "new_native_runs_allowed": 0,
+  "engine_source": {
+    "file": "Bubbleverse_Execution_HPC_Motor_Builder_v2.4.0-16.md",
+    "sha256": "5e97deb69af1e16192c5130820a484fa7839378f9d5ada7d682ae5700c01b47d",
+    "library_file_id": "libfile_db7ee9fcb66c819184336e58c6d2239d",
+    "verification": "Actual supplied prompt version/function read; prior full prompt remains byte-identical. This task does not install a new engine."
+  },
+  "new_information_authorizing_return_to_builder": "V18 supplies a direct a posteriori comparison theorem and active first-cell branch/reciprocal/thermal checks. The old native-membership gate is unnecessary for this theorem; implementing d/L/strict closure is a different task from V16 evidence checking.",
+  "reuse_decision": {
+    "REUSE": [
+      "Original qualified source/capture/endpoint bytes",
+      "Unchanged scalar I MPFR arithmetic only"
+    ],
+    "REFERENCE_ONLY": [
+      "V18 coordinate/branch-check code",
+      "V16 input gate; do not use its member-receipt gate as a prerequisite for this theorem"
+    ],
+    "CREATE_OR_EXTEND_AFTER_REPO_REUSE_CHECK": [
+      "First-cell interval source/rate derivatives, full-vector direct defect, weighted L and strict closure receipt"
+    ],
+    "NOT_APPLICABLE": [
+      "Old physical z<=50/reio Evaluator",
+      "New CLASS launcher or native run",
+      "Q051 proof rerun"
+    ]
+  },
+  "receipt_requirements": {
+    "conditional_first_cell_status": "PASS only with qualified field/domain, full-vector d, weighted L, exact T/E0/norm and strict E(T)<1 for both arms; else precise failed inequality/input.",
+    "scope": "Conditional comparison of the defined reconstruction against every fixed admitted common target with the stated exact coordinate starts.",
+    "first_radius_pair": [
+      "1/100000",
+      "1/10000"
+    ],
+    "second_radius_pair": [
+      "1/50000",
+      "1/2000"
+    ],
+    "max_rational_time_subcells": 64,
+    "allowed_radius_pairs": 2,
+    "d_semantics": "Includes all state/parameter/coordinate and proof-evaluation uncertainty required by the direct theorem; do not add duplicated native errors.",
+    "L_semantics": "Weighted infinity matrix bound for the full active vector field on the whole proposed tube.",
+    "E0_semantics": "0 only for the explicitly identical exact captured-coordinate target/reconstruction starts; never native pre810-error=0.",
+    "full_Q052_gate": "UNRESOLVED even after conditional first-cell PASS",
+    "source_real_certificate": false,
+    "native_background_membership_certified": false,
+    "unknown_fields": "Retain unknown full-Q fields as null. A sound direct d budget need not fabricate separate r/beta/native-a entries."
+  },
+  "validation_requirements": [
+    "Meaningful tests of source signs/units, exact reconstruction derivatives, weighted norm and strict versus nonstrict closure; test the first actual failure path.",
+    "Verify domain/branch for each attempted radius pair, including the second pair; V18 qualifies only the first pair.",
+    "Pin interval/log-table initialization, atomic interpolation/stencils and all needed physical constants. Reuse historical admitted positive-escape assumptions explicitly; stop if applicability is not established.",
+    "Preserve failed attempts; a failed norm/closure bound is method-INCONCLUSIVE, not physical falsification."
+  ],
+  "compute_placement": {
+    "backend": "LOCAL_RUNTIME",
+    "github_worthwhile": "NO_FOR_THIS_BOUNDED_TASK",
+    "github_worthwhile_gate": "PASS_FOR_LOCAL_SELECTION",
+    "reason": "At most64 subcells,2arms,2radius pairs, using available local exact/interval tools and data. No workflow launch or native integration is needed.",
+    "walltime_estimate": "NOT_MEASURED; measure actual producer/tests; V18 0.0268s check is not a runtime estimate for this new evaluator.",
+    "setup_and_transfer_cost": "No new remote setup justified; exact setup/queue/price quantities not measured.",
+    "memory_repository": "GitHub remains project memory independently of compute placement.",
+    "paid_compute": false
+  },
+  "activity_parent": {
+    "total_points": 2670,
+    "ledger_ref": "Q052_QUESTION_ACTIVITY_LEDGER_V19.json",
+    "next_some_threshold": 3000,
+    "points_to_next": 330,
+    "no_cap": true
+  },
+  "return_destination": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.3.0, once with actual new receipt/failed obligation. Do not expand to a whole-domain campaign."
+}
