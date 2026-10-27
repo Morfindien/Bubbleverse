@@ -1,0 +1,19 @@
+{
+  "schema": "BV-Q052-ABI-CAPTURE-FEASIBILITY-1.0.0",
+  "q": "Q052",
+  "assessment": "FEASIBLE_FOR_DIAGNOSTIC_CAPTURE_NOT_YET_SUFFICIENT_FOR_FINAL_CERTIFICATE",
+  "repository_read_commit": "1f420951ecad7109fa59476d824bbcb2b8240680",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "verified_capture_map": [
+    {"obligation":"FROZEN_ABI","status":"FEASIBLE","evidence":"Existing V2 already interposes thermodynamics_solve, thermodynamics_derivs and thermodynamics_sources against the exact original shared object; source/binary identities remain pinned."},
+    {"obligation":"FULLSTATE","status":"FEASIBLE_FOR_CAPTURE","evidence":"thermodynamics_parameters_and_workspace exposes pba/ppr/pth/ptw/pvecback; thermo_diffeq_workspace exposes active phase, require flags, x_H/x_He/x_noreio/x_reio/Tmat and thermo_vector; thermo_vector exposes full y/dy and dynamic indices including T_idm when active."},
+    {"obligation":"EVENTS","status":"FEASIBLE_FOR_OBSERVED_DISPATCH_AND_INPUT_CAPTURE","evidence":"Historical Q042 diagnostics already interposed rec_dxHIIdlna/HMLA/TLA and inspected phase/context. Pinned HyRec source defines PION_MAX=1e-2, TR_MIN=0.004 eV, T_RATIO_MIN=0.1 and model SWIFT=4. New trace records actual model/input and child dispatch while leaving guard-value enclosure to the validator."},
+    {"obligation":"BACKGROUND","status":"FEASIBLE_FOR_RAW_CAPTURE_ONLY","evidence":"pvecback and background indices are accessible at native callbacks, but sampled native background values are not themselves a validated admitted-family tube."},
+    {"obligation":"TERMINAL","status":"FEASIBLE_FOR_BOUNDARY_CAPTURE","evidence":"V2 explicitly reaches mz=-810 before intervention; diagnostic records exact z=810 pre/post state in addition to the final native output node. No extrapolation is introduced."},
+    {"obligation":"RESIDUAL","status":"NOT_YET_IMPLEMENTED","evidence":"No current repository artifact supplies the complete validated whole-cell residual/background/libm/tube/event propagation engine demanded by the V8 contract. This is the first material remaining implementation gap after capture."}
+  ],
+  "first_absent_capability": "VALIDATED_WHOLE_CELL_RESIDUAL_BACKGROUND_ARITHMETIC_ENGINE",
+  "does_not_require_physics_core_change": true,
+  "recommended_mechanism": "versioned source-to-source instrumentation of immutable q052_native_pair_v2.c with fail-closed blob/hash/anchor gates",
+  "native_dispatch_in_this_run": false
+}

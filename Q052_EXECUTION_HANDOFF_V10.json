@@ -1,0 +1,79 @@
+{
+  "schema": "BV-Q052-EXECUTION-BUILDER-HANDOFF-1.0.0",
+  "handoff_id": "LOCAL-Q052-BUILDER-V10-VALIDATEDDIAG-V3",
+  "created_at_utc": "2026-10-26T17:02:16Z",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "case_lifecycle": "ACTIVE",
+  "scientific_state": "INCONCLUSIVE_SOURCE_REAL_CERTIFICATION_UNRESOLVED",
+  "builder_state": "TARGET_BUILT_STATICALLY_NOT_INSTALLED_NOT_DISPATCHED",
+  "program_id": "Q052-VALIDATEDDIAG-V3",
+  "technical_parent_program_id": "Q052-NATIVEPAIR-V2",
+  "repository_read_commit": "1f420951ecad7109fa59476d824bbcb2b8240680",
+  "compute_backend": "GITHUB_ACTIONS_AFTER_INSTALL_ONLY",
+  "github_worthwhile_gate": "PASS_REPRODUCIBILITY_AND_EXISTING_NATIVE_ENVIRONMENT",
+  "native_branch_cap": 2,
+  "execution_matrix": ["L-nominal", "R-nominal"],
+  "new_native_execution_performed": false,
+  "new_scientific_result": false,
+  "abi_capture_feasibility": "PASS_FOR_CAPTURE",
+  "implementation_files": [
+    "q052_build_validated_diag_v3.py",
+    "q052_validated_diag_v3.py",
+    "test_q052_validated_diag_v3.py",
+    "Q052_VALIDATED_DIAGNOSTICS_CONTRACT_V10.json",
+    "Q052_ABI_CAPTURE_FEASIBILITY_V10.json",
+    ".github/workflows/q052-validated-diagnostics-v3.yml",
+    "q052_program_registry_patch_validateddiag_v3.json",
+    "README_Q052_VALIDATEDDIAG_V3_SECTION.md",
+    "q052_install_validated_diag_v3.py",
+    ".github/workflows/q052-install-validated-diag-v3.yml",
+    "Q052_INSTALL_MANIFEST_VALIDATEDDIAG_V3.json"
+  ],
+  "static_validation": {
+    "status": "PASS",
+    "unit_tests": "6/6",
+    "python_compile": "PASS",
+    "json_parse": "PASS",
+    "yaml_parse": "PASS",
+    "generated_c_compile": "NOT_RUN_REQUIRES_PINNED_NATIVE_ENVIRONMENT"
+  },
+  "capture_success_status_rule": "PARTIAL_ONLY",
+  "first_remaining_blocker_after_capture": "LOCAL-Q052-VALIDATED-WHOLE-CELL-RESIDUAL-BACKGROUND-ARITHMETIC-ENGINE-MISSING-V10",
+  "remaining_certificate_obligations": [
+    "whole-cell validated state reconstruction including final segment to z=810",
+    "admitted-background interval tube/membership",
+    "Pion/PION_MAX, TR_MIN, T_RATIO_MIN and other active guard interval signs/slabs with exact equality semantics",
+    "source/table/libm/parameter-rounding enclosure",
+    "whole-cell residual and tube closure",
+    "stability/event propagation",
+    "observable-map and positive tau-kernel error transfer"
+  ],
+  "start_status": "NOT_READY",
+  "start_blocker": "PROGRAM_ID_NOT_YET_INTEGRATED_IN_CANONICAL_REGISTRY_README",
+  "install_action": "Upload individual execution-package files to declared paths and run .github/workflows/q052-install-validated-diag-v3.yml once. Installer must pass exact base/package gates.",
+  "post_install_start": {
+    "launcher": ".github/workflows/00-bubbleverse-start.yml",
+    "program_id": "Q052-VALIDATEDDIAG-V3",
+    "run_count": 1
+  },
+  "return_condition": "After the single target run completes or hits the first material blocker, return final/raw artifacts once.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "question_activity_points": {
+    "parent_total": 1395,
+    "run_points": 300,
+    "total_after": 1695,
+    "next_publication_at": 2000,
+    "points_to_next_publication": 305,
+    "new_milestones": [],
+    "ledger_ref": "Q052_QUESTION_ACTIVITY_LEDGER_V10.json"
+  },
+  "memory": {
+    "backend": "GITHUB",
+    "read_status": "VERIFIED",
+    "write_status": "FILES_READY_FOR_MANUAL_UPLOAD",
+    "write_performed": false,
+    "journal_ref": "Q052_SAMLET_JOURNAL_V10.md"
+  }
+}

@@ -1,0 +1,34 @@
+name: Install Q052 validated diagnostics V3
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: q052-validateddiag-v3-install
+  cancel-in-progress: false
+jobs:
+  install:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Fail-closed registry README and package installation
+        run: |
+          set -euo pipefail
+          python q052_install_validated_diag_v3.py
+          git diff --check
+          git diff -- bubbleverse_program_registry.json README.md
+      - name: Commit only guarded mutable-memory files
+        run: |
+          set -euo pipefail
+          git config user.name 'bubbleverse-actions'
+          git config user.email 'actions@users.noreply.github.com'
+          git add bubbleverse_program_registry.json README.md
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Register Q052 validated diagnostics V3; preserve Q052 history'
+          git push origin HEAD:main

@@ -1,0 +1,80 @@
+{
+  "schema": "BV-Q052-VALIDATED-DIAGNOSTICS-CONTRACT-1.0.0",
+  "q": "Q052",
+  "target_q": "Q052",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "program_id": "Q052-VALIDATEDDIAG-V3",
+  "status": "BUILT_STATICALLY_NOT_INSTALLED_NOT_DISPATCHED",
+  "created_at_utc": "2026-10-26T17:02:16Z",
+  "engine": "BUBBLEVERSE.EXECUTION_HPC_MOTOR_BUILDER 2.4.0",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "repository": "Morfindien/Bubbleverse",
+  "repository_read_commit": "1f420951ecad7109fa59476d824bbcb2b8240680",
+  "technical_parent_program": "Q052-NATIVEPAIR-V2",
+  "historical_parent_c_git_blob": "0539a22cb503af2030c4ca6cdbc7f0c41ba6e1f7",
+  "historical_parent_c_sha256": "d67bf8f8116c835864150d50fda258a0ec33258bfef258accd374dd395acbb4a",
+  "source_repository": "mwt5345/class_ede",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "class_binary_sha256": "df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf",
+  "frozen_v8_contract": {
+    "path": "Q052_VALIDATED_NUMERICS_CONTRACT_V8.json",
+    "sha256": "6c8b3db60d5df5b59087e2552021b2e9f183daccb3e5a00039d0c7ced36b940e"
+  },
+  "frozen_science": {
+    "configuration": "hillipop-ede_n3",
+    "z_event": 810.0,
+    "arm_L_q_xHeII": 0.000001,
+    "arm_R_q_xHeII": 0.0,
+    "z_reio_hex": "0x1.dfec4p+2",
+    "tau_shooting": false,
+    "solver_and_literal_selector_semantics": "unchanged from Q052-NATIVEPAIR-V2",
+    "physics_core_rebuild": false
+  },
+  "execution": {
+    "backend": "GITHUB_ACTIONS_AFTER_INSTALL_ONLY",
+    "backend_basis": "The exact binary recovery, Python 3.11.16 native wrapper environment and frozen source checkout already exist in repository memory. Reconstructing a second local native environment provides no practical benefit. No dispatch occurs in this builder run.",
+    "arms": ["L", "R"],
+    "modes": ["nominal"],
+    "new_native_branch_cap": 2,
+    "automatic_retry": false,
+    "unchanged_v2_rerun": false,
+    "refinement_campaign": false,
+    "worker_timeout_minutes": 25,
+    "static_timeout_minutes": 10,
+    "collect_timeout_minutes": 10
+  },
+  "diagnostic_capture": {
+    "fullstate_output_callbacks": "all active thermo-vector y and supplied dy components, vector indices, phase/require flags, workspace x_H/x_He/x_noreio/x_reio/Tmat, Tmat/Trad and normal pvecback snapshot",
+    "rhs_callbacks": "post-intervention source-real wrapper evaluations with full active y/dy and workspace/background snapshot; explicitly not labelled accepted NDF15 steps",
+    "events": "phase entries plus exact z=810 pre/post intervention state and literal phase limits; event-boundary derivative remains uncertified unless later source evaluation encloses it without perturbing the production state",
+    "hyrec_dispatch": "observed rec_dxHIIdlna model and inputs plus observed HMLA/TLA/SWIFT child call counts; Pion and threshold values are not invented and must be reconstructed/enclosed from the pinned source",
+    "terminal": "last native output node is retained together with exact z=810 boundary state so the missing terminal segment is explicit rather than extrapolated"
+  },
+  "abi_source_receipts": {
+    "Bubbleverse/q052_native_pair_v2.c_git_blob": "0539a22cb503af2030c4ca6cdbc7f0c41ba6e1f7",
+    "class_ede/source/thermodynamics.c_git_blob": "c1683f56b43e0f2ec24a8ba6120133f604cb947c",
+    "class_ede/include/thermodynamics.h_git_blob": "f02f2591077ee11f3bc9481a4491b0feb83cf26d",
+    "class_ede/external/HyRec2020/history.c_git_blob": "9710fb166de45ab392ee7984801d8dbdf610319a",
+    "class_ede/external/HyRec2020/hydrogen.c_git_blob": "233f174bfb1758fa910866310340ae1bfad703db",
+    "class_ede/external/HyRec2020/hydrogen.h_git_blob": "088b34a699efe5d6d3aefb158229e9fb83d9a586",
+    "reused_historical_capture_patterns": [
+      "q047_collect_state_v2.c",
+      "q042_context_native_v29.c",
+      "q042_event_native_v28.c"
+    ]
+  },
+  "scientific_result_gate": "FORCED_PARTIAL_UNTIL_VALIDATED_RESIDUAL_CERTIFICATE",
+  "capture_success_is_not_certificate": true,
+  "remaining_validation_obligations_after_capture": [
+    "validated whole-cell state reconstruction including z=809.6825..810",
+    "same admitted-background interval tube/membership rather than parameter equality",
+    "literal Pion/PION_MAX, TR_MIN, T_RATIO_MIN and other active guard interval signs/slabs with equality semantics",
+    "validated source/table/libm/parameter-rounding arithmetic",
+    "whole-cell residual, tube closure, stability and event propagation",
+    "source-output-map discrepancy and common positive tau-kernel transfer"
+  ],
+  "first_remaining_blocker_if_capture_succeeds": "LOCAL-Q052-VALIDATED-WHOLE-CELL-RESIDUAL-BACKGROUND-ARITHMETIC-ENGINE-MISSING-V10",
+  "success_condition": "Either the one nominal instrumented L/R pair produces checkable state/guard/background/terminal capture and returns PARTIAL with the exact bounded remaining certificate obligation, or the first material ABI/build/runtime blocker is serialized. This target cannot emit final Q052 PASS.",
+  "stop_condition": "Stop after the one nominal L/R pair or the first exact material blocker. No refined pair, unchanged V2 repeat, refit, tau shooting, selector smoothing, equality change, core rebuild or new Q.",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0"
+}

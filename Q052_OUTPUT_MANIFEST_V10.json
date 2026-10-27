@@ -1,0 +1,132 @@
+{
+  "schema": "BV-Q052-BUILDER-OUTPUT-MANIFEST-1.0.0",
+  "q": "Q052",
+  "run_id": "LOCAL-Q052-EXECUTION-BUILDER-VALIDATEDDIAG-V3-20261026-V10",
+  "repository_read_commit": "1f420951ecad7109fa59476d824bbcb2b8240680",
+  "integration_status": "FILES_READY_FOR_MANUAL_UPLOAD",
+  "native_execution_performed": false,
+  "files": [
+    {
+      "path": "Q052_BUILDER_REPORT_V10.md",
+      "role": "primary builder decision/report",
+      "bytes": 11863,
+      "sha256": "e44d34f928876834d3f5356ddb7d004737b43f2539f8ab5b51155bde98aff432",
+      "proposed_repository_path": "Q052_BUILDER_REPORT_V10.md"
+    },
+    {
+      "path": "Q052_SAMLET_JOURNAL_V10.md",
+      "role": "append-only Q052 journal successor",
+      "bytes": 64874,
+      "sha256": "c44d83a0d0c78528740c7c1931cb3cb59ec101db276ac26c48dbabee54cd81bf",
+      "proposed_repository_path": "Q052_SAMLET_JOURNAL_V10.md"
+    },
+    {
+      "path": "Q052_QUESTION_ACTIVITY_LEDGER_V10.json",
+      "role": "cumulative activity/publication cadence ledger",
+      "bytes": 10452,
+      "sha256": "a31abaee3457dbaa4fe79a50cf8c15765996879922925eefefbece3a63137780",
+      "proposed_repository_path": "Q052_QUESTION_ACTIVITY_LEDGER_V10.json"
+    },
+    {
+      "path": "Q052_EXECUTION_HANDOFF_V10.json",
+      "role": "install/run/return handoff",
+      "bytes": 3545,
+      "sha256": "c3a66d32eca131ddb75d5ddb32b5d463a904df030d51ff2d7955770e1f2a048d",
+      "proposed_repository_path": "Q052_EXECUTION_HANDOFF_V10.json"
+    },
+    {
+      "path": "Q052_STATIC_VALIDATION_V10.json",
+      "role": "local validation receipt",
+      "bytes": 1095,
+      "sha256": "249c1ef85632f76b0f912947170c04cb8b7834dbed16a862ecf6d0911e95b51e",
+      "proposed_repository_path": "Q052_STATIC_VALIDATION_V10.json"
+    },
+    {
+      "path": "Q052_LOCAL_STATIC_TEST_LOG_V10.txt",
+      "role": "six-test raw log",
+      "bytes": 1058,
+      "sha256": "9bb9f48505dc5b5af691703c57317f24dd464de2fb5a96cbb38b50932b536648",
+      "proposed_repository_path": "Q052_LOCAL_STATIC_TEST_LOG_V10.txt"
+    },
+    {
+      "path": "Q052_ABI_CAPTURE_FEASIBILITY_V10.json",
+      "role": "source/ABI obligation map",
+      "bytes": 2463,
+      "sha256": "2214b3d6c83ee823bd90e5acc6992b9cb26dbd8c93d9fce959fa6e0722050b7d",
+      "proposed_repository_path": "Q052_ABI_CAPTURE_FEASIBILITY_V10.json"
+    },
+    {
+      "path": "Q052_VALIDATED_DIAGNOSTICS_CONTRACT_V10.json",
+      "role": "frozen V3 diagnostic contract",
+      "bytes": 5792,
+      "sha256": "42dad7ffebf4e859a09e778e30ec7a9b4654b2e7ce12e43e92167e23017baee5",
+      "proposed_repository_path": "Q052_VALIDATED_DIAGNOSTICS_CONTRACT_V10.json"
+    },
+    {
+      "path": "q052_build_validated_diag_v3.py",
+      "role": "fail-closed V2-to-V3 source instrumentation generator",
+      "bytes": 11288,
+      "sha256": "adc431395c806f9c43fba20517a8387cb403fb1ce7208fa63b314c3fd0fd2256",
+      "proposed_repository_path": "q052_build_validated_diag_v3.py"
+    },
+    {
+      "path": "q052_validated_diag_v3.py",
+      "role": "V3 worker/validator/collector",
+      "bytes": 13617,
+      "sha256": "5fc39c6ce8047dfa888a2294c35e4264f1b1ccce320e6918c23b358f6a2d33b0",
+      "proposed_repository_path": "q052_validated_diag_v3.py"
+    },
+    {
+      "path": "test_q052_validated_diag_v3.py",
+      "role": "finite package tests",
+      "bytes": 3251,
+      "sha256": "4ce1758ebc4f77802110f261661556906114b5aaeee46f7353c93db9eee54220",
+      "proposed_repository_path": "test_q052_validated_diag_v3.py"
+    },
+    {
+      "path": ".github/workflows/q052-validated-diagnostics-v3.yml",
+      "role": "new execution workflow",
+      "bytes": 5901,
+      "sha256": "469a9a6980cff7451fb215561c7cb32fa65ea1ede71e4a81513977c963a9b9b6",
+      "proposed_repository_path": ".github/workflows/q052-validated-diagnostics-v3.yml"
+    },
+    {
+      "path": "q052_program_registry_patch_validateddiag_v3.json",
+      "role": "candidate registry addition",
+      "bytes": 1985,
+      "sha256": "b1ae65987de1fabfc866bb5393ee3b714d43b089d490ea32aa4be4dbb2cc385f",
+      "proposed_repository_path": "q052_program_registry_patch_validateddiag_v3.json"
+    },
+    {
+      "path": "README_Q052_VALIDATEDDIAG_V3_SECTION.md",
+      "role": "candidate current README prefix",
+      "bytes": 1355,
+      "sha256": "0e07955188c3c7c629b6f60f4f6b575730ea1218c417c9d5d8719cb59329a492",
+      "proposed_repository_path": "README_Q052_VALIDATEDDIAG_V3_SECTION.md"
+    },
+    {
+      "path": "q052_install_validated_diag_v3.py",
+      "role": "guarded registry/README installer",
+      "bytes": 1929,
+      "sha256": "86c8e26ed1bebe213f289036a0496b8014aeeef7a36aa3fa2734656fb3096c21",
+      "proposed_repository_path": "q052_install_validated_diag_v3.py"
+    },
+    {
+      "path": ".github/workflows/q052-install-validated-diag-v3.yml",
+      "role": "guarded install workflow",
+      "bytes": 1133,
+      "sha256": "a8d77d4d0ce95c2bfaaa801651a58fd0633d0d758b8800ad111672fc6bdbdb10",
+      "proposed_repository_path": ".github/workflows/q052-install-validated-diag-v3.yml"
+    },
+    {
+      "path": "Q052_INSTALL_MANIFEST_VALIDATEDDIAG_V3.json",
+      "role": "install/base/package identity manifest",
+      "bytes": 1978,
+      "sha256": "b02484c7d16607d104fbf3a129864075b2e4a45242c5852fbaf015603219db0e",
+      "proposed_repository_path": "Q052_INSTALL_MANIFEST_VALIDATEDDIAG_V3.json"
+    }
+  ],
+  "generated_runtime_only_not_delivered": [
+    "q052_validated_diag_v3.c — generated in installed static/worker environment only after historical-parent hash/blob/anchor gates pass"
+  ]
+}
