@@ -1,0 +1,163 @@
+name: Q052 validated diagnostics V3
+on:
+  workflow_dispatch:
+    inputs:
+      program_id:
+        description: Exact registered Bubbleverse program ID
+        required: true
+        default: Q052-VALIDATEDDIAG-V3
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q052-validateddiag-v3
+  cancel-in-progress: false
+env:
+  PROGRAM_ID: Q052-VALIDATEDDIAG-V3
+jobs:
+  static:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Exact program and static gates
+        env:
+          REQUESTED_PROGRAM_ID: ${{ inputs.program_id }}
+        run: |
+          set -euo pipefail
+          test "$REQUESTED_PROGRAM_ID" = "$PROGRAM_ID"
+          python -m unittest -v test_q052_validated_diag_v3.py
+          python q052_validated_diag_v3.py static > Q052_VALIDATEDDIAG_STATIC_V3.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q052-validateddiag-v3-${{ github.run_id }}-static
+          path: Q052_VALIDATEDDIAG_STATIC_V3.json
+          if-no-files-found: error
+          retention-days: 30
+
+  recover:
+    needs: static
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Recover preserved original binary or exact pinned Q047 artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p recovered_native
+          python q052_recover_native_v2.py --out recovered_native 2>&1 | tee recovered_native/recovery.log
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q052-validateddiag-v3-${{ github.run_id }}-environment
+          path: recovered_native/
+          if-no-files-found: error
+          retention-days: 30
+
+  native:
+    needs: [static, recover]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        arm: [L, R]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Checkout exact original source commit; never rebuild CLASS
+        uses: actions/checkout@v4
+        with:
+          repository: mwt5345/class_ede
+          ref: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+          path: external/class_ede
+      - uses: actions/download-artifact@v4
+        with:
+          name: q052-validateddiag-v3-${{ github.run_id }}-environment
+          path: restored_environment
+      - name: Stage exact binary and execute one instrumented nominal branch
+        env:
+          ARM: ${{ matrix.arm }}
+        run: |
+          set -euo pipefail
+          mkdir -p external/class_ede/python/build/lib.linux-x86_64-cpython-311
+          cp restored_environment/classy.so external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so
+          python q052_validated_diag_v3.py worker --arm "$ARM" --directory "q052_validated_diag/$ARM-nominal" 2>&1 | tee native-command.log
+      - name: Persist branch failure
+        if: failure()
+        env:
+          ARM: ${{ matrix.arm }}
+        run: |
+          mkdir -p "q052_validated_diag/$ARM-nominal"
+          python q052_validated_diag_v3.py failure --output "q052_validated_diag/$ARM-nominal/workflow_failure.json" --stage NATIVE_JOB --arm "$ARM" --error "Instrumented native branch failed; inspect original logs and retained failure" --log native-command.log || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q052-validateddiag-v3-${{ github.run_id }}-${{ matrix.arm }}-nominal
+          path: |
+            q052_validated_diag/
+            native-command.log
+          if-no-files-found: error
+          retention-days: 30
+
+  collect:
+    needs: native
+    if: always()
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: q052-validateddiag-v3-${{ github.run_id }}-*-nominal
+          path: collected
+      - name: Preserve upstream job states
+        env:
+          UPSTREAM_NEEDS: ${{ toJSON(needs) }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          Path('Q052_UPSTREAM_JOBS_VALIDATEDDIAG_V3.json').write_text(json.dumps(json.loads(os.environ['UPSTREAM_NEEDS']),indent=2)+'\n')
+          PY
+      - name: Collect only a complete two-arm nominal pair
+        run: |
+          set -euo pipefail
+          python q052_validated_diag_v3.py collect --directory collected --output Q052_VALIDATEDDIAG_RESULT_V3.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q052-validateddiag-v3-${{ github.run_id }}-final
+          path: |
+            Q052_VALIDATEDDIAG_RESULT_V3.json
+            Q052_UPSTREAM_JOBS_VALIDATEDDIAG_V3.json
+            LOCAL_Q052_NATIVE_DIAGNOSTIC_RUN_RECEIPT.json
+            LOCAL_Q052_FULLSTATE_TRACE_MANIFEST.json
+            LOCAL_Q052_BACKGROUND_EVENT_CLOSURE.json
+            LOCAL_Q052_SOURCE_REAL_ERROR_CERTIFICATE.json
+            Q052_VALIDATED_DIAGNOSTICS_CONTRACT_V10.json
+            collected/**/fullstate_trace.jsonl
+            collected/**/event_phase_trace.jsonl
+            collected/**/hyrec_guard_trace.jsonl
+            collected/**/diagnostic_manifest.json
+            collected/**/z810_start.json
+            collected/**/history.csv
+            collected/**/worker_result.json
+            collected/**/workflow_failure.json
+          if-no-files-found: warn
+          retention-days: 30
