@@ -1,0 +1,123 @@
+{
+  "schema": "LOCAL-Q052-FIRST-CELL-INPUT-GATE-RECEIPT-V16",
+  "q": "Q052",
+  "program_id": "Q052-FIRSTCELL-INPUTGATE-V1",
+  "program_registration": "LOCAL_UNREGISTERED",
+  "source_run_id": "40445054618",
+  "status": "PARTIAL_CONDITIONAL_INPUT_ONLY",
+  "technical_input_gate": "PASS",
+  "qualification": {
+    "conditional_binding_receipt": "PASS_REUSED",
+    "retained_guard_final_receipt": "PASS_REUSED",
+    "guard_original_marker": "PENDING_VALIDATION",
+    "old_guard_reexecuted": false,
+    "accepted_z810_checkpoint": "HASH_AND_GLUE_VERIFIED",
+    "family_scope": "every_fixed_admitted_background_in_retained_connected_frozen_capture_family",
+    "native_membership_established": false
+  },
+  "first_cell_projection": {
+    "cell_z_exact": [
+      "7122042588453929/8796093022208",
+      "810"
+    ],
+    "binding_source_cell_z": [
+      "810",
+      "800"
+    ],
+    "H_conditional_rational": [
+      "1580426358065720928530117/500000000000000000000000",
+      "4480552533941654713/1000000000000000000"
+    ],
+    "H_units": "1/Mpc(c=1)",
+    "common_dependency_id": "Q050-COMMON-BACKGROUND-92de319899bf911563aff4d1",
+    "delta_u_directed_binary64_hex": [
+      "0x1.9a96e7ec52a7dp-12",
+      "0x1.9a96e7ec53a7dp-12"
+    ],
+    "delta_u_decimal_display": [
+      0.0003915686381971496,
+      0.00039156863819737165
+    ],
+    "arms": {
+      "L": {
+        "sample_H_compatible": true,
+        "defined_H_curve_inside_projection": true,
+        "Hhat_Bernstein_rational": [
+          "3687090337356869/1125899906842624",
+          "27183588124536453479891942256813/8302589334700875807958616768512",
+          "162965216649384028707046786367699/49784307745480494469055439175680",
+          "7369557963207595/2251799813685248"
+        ],
+        "Hhat_conservative_range_rational": [
+          "7369557963207595/2251799813685248",
+          "3687090337356869/1125899906842624"
+        ],
+        "conditional_H_minus_Hhat_rational": [
+          "-7646474762035821104876818638949/67108864000000000000000000000000",
+          "10375020591465716928186110221/8589934592000000000000000000"
+        ],
+        "conditional_absolute_H_mismatch_upper_rational": "10375020591465716928186110221/8589934592000000000000000000",
+        "membership_inference": "NOT_PERMITTED_FROM_THIS_PROJECTION_TEST",
+        "state_norm_candidate": "max(abs(delta_h),abs(delta_v)); target initial-error receipt still unresolved"
+      },
+      "R": {
+        "sample_H_compatible": true,
+        "defined_H_curve_inside_projection": true,
+        "Hhat_Bernstein_rational": [
+          "3687090337356869/1125899906842624",
+          "27183588124536453479891942256813/8302589334700875807958616768512",
+          "162965216649384028707046786367699/49784307745480494469055439175680",
+          "7369557963207595/2251799813685248"
+        ],
+        "Hhat_conservative_range_rational": [
+          "7369557963207595/2251799813685248",
+          "3687090337356869/1125899906842624"
+        ],
+        "conditional_H_minus_Hhat_rational": [
+          "-7646474762035821104876818638949/67108864000000000000000000000000",
+          "10375020591465716928186110221/8589934592000000000000000000"
+        ],
+        "conditional_absolute_H_mismatch_upper_rational": "10375020591465716928186110221/8589934592000000000000000000",
+        "membership_inference": "NOT_PERMITTED_FROM_THIS_PROJECTION_TEST",
+        "state_norm_candidate": "max(abs(delta_h),abs(delta_v)); target initial-error receipt still unresolved"
+      }
+    },
+    "scope": "Conditional projection for existing admitted fixed family members and compatibility of a defined H curve only. Not a source-real membership/error certificate."
+  },
+  "arithmetic_backend": {
+    "reused": "q042_interval_v29.py scalar I only",
+    "MPFR": "4.2.1",
+    "precision_bits": 256,
+    "rounding": "MPFR_RNDD/RNDU plus directed binary64 export",
+    "physics_evaluator_reused": false,
+    "reason": "Original evaluator is restricted toz<=50/reio and lacks applicable z810 SWIFT context."
+  },
+  "first_remaining_blocker": "LOCAL-Q052-NATIVE-BACKGROUND-ADMISSION-ERROR-RECEIPT-MISSING-V16",
+  "blocker_detail": "Q050 proves conditional family projections and its retained-guard provenance is now recovered. It does not supply a checked enclosure that binds the exact background used by native run40445054618 to that admitted family or bounds that background representation error against the target IVP throughout the first cell. Sampled H/parameter agreement and a compatible Hhat curve do not discharge this prerequisite.",
+  "required_resume_evidence": {
+    "identity": [
+      "source_commit",
+      "capture_sha256",
+      "run40445054618 L/R common background identity",
+      "Q050-COMMON-BACKGROUND-92de319899bf911563aff4d1"
+    ],
+    "coverage": "entire first cell809.6825(binary64)..810 including boundaries",
+    "proof_obligations": [
+      "exact target background IVP and validated initial/parameter-conversion interval",
+      "source-faithful background reconstruction/error tube and membership receipt under retained family",
+      "checkable interval evaluation/proof data; a PASS label or sampled values alone do not qualify"
+    ]
+  },
+  "source_real_certificate": false,
+  "native_background_membership_certified": false,
+  "source_field_residual_r": null,
+  "background_field_beta": null,
+  "arithmetic_error_a": null,
+  "initial_error_E0": null,
+  "L_and_tube_closure": null,
+  "full_q052_gate": "UNRESOLVED",
+  "new_native_runs": 0,
+  "scientific_status": "INCONCLUSIVE",
+  "return_route": "BUBBLEVERSE.RESULT_INGESTION_ROUTING2.3.0",
+  "elapsed_seconds": 0.012736796999888611
+}
