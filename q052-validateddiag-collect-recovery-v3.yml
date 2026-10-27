@@ -1,0 +1,69 @@
+name: Q052 validated diagnostics V3 collector recovery
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_run_id:
+        description: "Completed Q052 V3 run whose L/R artifacts are reused"
+        required: true
+        default: "40445054618"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: q052-validateddiag-v3-collector-recovery
+  cancel-in-progress: false
+
+jobs:
+  recover-collect:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Download successful L artifact from original run
+        uses: actions/download-artifact@v4
+        with:
+          name: q052-validateddiag-v3-${{ inputs.source_run_id }}-L-nominal
+          run-id: ${{ inputs.source_run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: collected/L
+      - name: Download successful R artifact from original run
+        uses: actions/download-artifact@v4
+        with:
+          name: q052-validateddiag-v3-${{ inputs.source_run_id }}-R-nominal
+          run-id: ${{ inputs.source_run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path: collected/R
+      - name: Collector-only recovery; no native execution
+        run: |
+          set -euo pipefail
+          python q052_collect_recovery_v3.py \
+            --directory collected \
+            --outdir recovered_collect \
+            --source-run-id "${{ inputs.source_run_id }}" \
+            --artifact-manifest Q052_RUN40445054618_ARTIFACT_MANIFEST_V11.json
+      - name: Assert fail-closed scientific status
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('recovered_collect/Q052_VALIDATEDDIAG_RESULT_V3_RECOVERED.json')
+          x=json.loads(p.read_text())
+          assert x['execution_status']=='COMPLETE'
+          assert x['diagnostic_capture']=='PASS'
+          assert x['scientific_status']=='PARTIAL'
+          assert x['final_result_gate']=='UNRESOLVED'
+          assert x['recovered_after_collector_bug'] is True
+          print('Q052_COLLECTOR_RECOVERY_GATE=PASS')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q052-validateddiag-v3-${{ inputs.source_run_id }}-collector-recovered
+          path: recovered_collect/
+          if-no-files-found: error
+          retention-days: 30
