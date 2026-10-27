@@ -25,6 +25,10 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: '3.11.16'
+      - name: Lock recovery to the already completed native pair
+        run: |
+          set -euo pipefail
+          test "${{ inputs.source_run_id }}" = "40445054618"
       - name: Download successful L artifact from original run
         uses: actions/download-artifact@v4
         with:
@@ -39,14 +43,115 @@ jobs:
           run-id: ${{ inputs.source_run_id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           path: collected/R
-      - name: Collector-only recovery; no native execution
+      - name: Collector-only recovery; embedded code; no native execution
+        shell: bash
         run: |
           set -euo pipefail
-          python q052_collect_recovery_v3.py \
+          cat > /tmp/q052_collect_recovery_v3.py <<'PY'
+          #!/usr/bin/env python3
+          from __future__ import annotations
+          import argparse,csv,hashlib,json,math,os
+          from pathlib import Path
+          Q="Q052"; ID="Q052-VALIDATEDDIAG-V3"
+          SOURCE="5a131c91d657dd9a7c6364cc45b038710f8d0d97"
+          BINARY="df1e81831dae7e88b651342a3d72de7597cf2b1145586035c6226715dbca04cf"
+          BLOCKER="LOCAL-Q052-VALIDATED-WHOLE-CELL-RESIDUAL-BACKGROUND-ARITHMETIC-ENGINE-MISSING-V10"
+          
+          def sha(p):
+              h=hashlib.sha256()
+              with Path(p).open('rb') as f:
+                  for b in iter(lambda:f.read(1<<20),b''):h.update(b)
+              return h.hexdigest()
+          def read(p): return json.loads(Path(p).read_text())
+          def write(p,o): Path(p).write_text(json.dumps(o,indent=2,ensure_ascii=False,allow_nan=False)+"\n")
+          def need(x,msg):
+              if not x: raise ValueError(msg)
+          def jsonl(p):
+              rows=[]
+              with Path(p).open() as f:
+                  for i,line in enumerate(f,1):
+                      if line.strip():
+                          try: rows.append(json.loads(line))
+                          except Exception as e: raise ValueError(f"JSONL {p} line {i}: {e}")
+              return rows
+          def parse_history(p):
+              with Path(p).open(newline='') as f: rows=list(csv.DictReader(f))
+              need(rows,"EMPTY_HISTORY")
+              for r in rows:
+                  for k,v in r.items():
+                      if k: float(v)
+              return rows
+          def find_job(root,arm,source_run):
+              ms=list(Path(root).rglob(f"{arm}-nominal/worker_result.json"))
+              need(len(ms)==1,f"JOB_COUNT {arm} {len(ms)}")
+              d=ms[0].parent; wr=read(ms[0])
+              need(wr.get('schema')=='BV-Q052-VALIDATEDDIAG-WORKER-1.0.0',"WORKER_SCHEMA")
+              need(wr.get('q')==Q and wr.get('program_id')==ID and wr.get('arm')==arm and wr.get('mode')=='nominal',"WORKER_ID")
+              need(wr.get('execution_status')=='COMPLETE' and wr.get('scientific_status')=='RAW_DIAGNOSTIC_NOT_CERTIFICATE',"WORKER_STATUS")
+              need(wr.get('source_commit')==SOURCE and wr.get('binary_sha256')==BINARY,"SOURCE_BINARY")
+              need(wr.get('start',{}).get('run_id')==source_run,"RUN_ID")
+              for name,digest in wr.get('artifacts',{}).items():
+                  p=d/name; need(p.is_file(),"ARTIFACT_MISSING "+name); need(sha(p)==digest,"ARTIFACT_HASH "+name)
+              return d,wr
+          def validate_diag(d,arm,source_run):
+              man=read(d/'diagnostic_manifest.json')
+              need(man.get('program_id')==ID and man.get('run_id')==source_run and man.get('arm')==arm,"DIAG_ID")
+              need(man.get('rhs_records',0)>0 and man.get('output_records',0)>0 and man.get('guard_records',0)>0,"DIAG_COUNTS")
+              state=jsonl(d/'fullstate_trace.jsonl'); event=jsonl(d/'event_phase_trace.jsonl'); guard=jsonl(d/'hyrec_guard_trace.jsonl')
+              outputs=[r for r in state if r.get('tag')=='OUTPUT']
+              need(len(outputs)==man['output_records'],"OUTPUT_COUNT")
+              need(len(guard)==man['guard_records'],"GUARD_COUNT")
+              need(len(state)==man['rhs_records']+man['output_records'],"STATE_COUNT")
+              zs=[float.fromhex(r['z']) for r in outputs]
+              need(min(zs)<=1e-12 and max(zs)<810.0,"OUTPUT_DOMAIN")
+              pre=[r for r in event if r.get('tag')=='Z810_PRE_INTERVENTION']; post=[r for r in event if r.get('tag')=='Z810_POST_INTERVENTION']
+              need(len(pre)==1 and len(post)==1,"Z810_EVENT_COUNT")
+              need(float.fromhex(pre[0]['z'])==810.0 and float.fromhex(post[0]['z'])==810.0,"Z810_EVENT_Z")
+              need(any(r.get('model_observed') in (0,4) for r in guard),"HYREC_DISPATCH_NOT_OBSERVED")
+              for r in state:
+                  need(r.get('background_snapshot_kind')=='workspace_after_original_callback',"BACKGROUND_ROLE")
+                  need(len(r['y'])==r['ti_size'] and len(r['dy'])==r['ti_size'],"STATE_SIZE")
+              return {"manifest":man,"state_records":len(state),"output_records":len(outputs),"event_records":len(event),"guard_records":len(guard),"output_z_min":min(zs),"output_z_max":max(zs)}
+          def collect(directory,outdir,source_run,artifact_manifest=None):
+              outdir=Path(outdir); outdir.mkdir(parents=True,exist_ok=True)
+              jobs={}
+              for arm in ('L','R'):
+                  d,wr=find_job(directory,arm,source_run)
+                  start=read(d/'z810_start.json'); ident=read(d/'effective_identity.json'); hist=parse_history(d/'history.csv'); diag=validate_diag(d,arm,source_run)
+                  need(start.get('program_id')==ID and start.get('run_id')==source_run and start.get('arm')==arm,"START_ID")
+                  need(float.fromhex(start['z'])==810.0 and float.fromhex(start['mz'])==-810.0,"START_Z")
+                  need(ident.get('program_id')==ID and ident.get('arm')==arm and ident.get('mode')=='nominal',"IDENTITY")
+                  jobs[arm]=(d,wr,start,ident,hist,diag)
+              L,R=jobs['L'],jobs['R']
+              need(len(L[4])==len(R[4]),"GRID_LENGTH")
+              for a,b in zip(L[4],R[4]): need(a['z']==b['z'] and a['eta_Mpc']==b['eta_Mpc'],"GRID_IDENTITY")
+              for k in ('D_Tmat_K','x_H','Tgamma_K','Tmat_over_Trad'): need(L[2][k]==R[2][k],"START_PAIR "+k)
+              grid_x=max(abs(float(a['xe'])-float(b['xe'])) for a,b in zip(L[4],R[4]))
+              grid_tau=max(abs(float(a['cumulative_tau_T'])-float(b['cumulative_tau_T'])) for a,b in zip(L[4],R[4]))
+              receipt={"schema":"Q052_NATIVE_DIAGNOSTIC_RUN_RECEIPT_V3","q":Q,"program_id":ID,"run_id":source_run,"execution_status":"COMPLETE","pair":"ONE_NEW_INSTRUMENTED_NOMINAL_LR","source_commit":SOURCE,"class_binary_sha256":BINARY,"start_pair_gate":"PASS","background_parameter_identity_gate":"PASS_REUSED_V2_GATE_NOT_INTERVAL_MEMBERSHIP_CERTIFICATE","grid_sup_abs_delta_x_e":grid_x,"grid_sup_abs_delta_tau_T":grid_tau,"capture_gate":"PASS","scientific_result_gate":"PARTIAL","final_q052_gate":"UNRESOLVED"}
+              trace={"schema":"Q052_FULLSTATE_TRACE_MANIFEST_V3","q":Q,"run_id":source_run,"representation":"raw JSONL fullstate/output callback records plus exact z810 boundary states; no claim that RHS calls are accepted solver steps","arms":{}}
+              for arm,(d,wr,start,ident,hist,diag) in jobs.items():
+                  trace['arms'][arm]={"diagnostic":diag,"files":{n:sha(d/n) for n in ['fullstate_trace.jsonl','event_phase_trace.jsonl','hyrec_guard_trace.jsonl','diagnostic_manifest.json','z810_start.json','history.csv']}}
+              closure={"schema":"Q052_BACKGROUND_EVENT_CLOSURE_V3","q":Q,"run_id":source_run,"status":"PARTIAL_CAPTURE_ONLY","captured":["full active thermo vector at every original output callback","derivative vector supplied to each output callback","literal phase/require flags and phase limits","workspace x_H/x_He/x_noreio/x_reio/Tmat","normal background workspace vector at callbacks","exact z810 pre/post state","observed HyRec model/child-dispatch arguments"],"not_yet_certified":["whole-cell admitted-background tube/membership over every segment","Pion and threshold guard interval signs including equality slabs","validated source/table/libm arithmetic enclosure","event-boundary derivative/source evaluation without perturbing run state","whole-cell residual and tube closure","observable-map error and final tau kernel transfer"],"first_remaining_blocker":BLOCKER,"physical_falsification":False}
+              cert={"schema":"Q052_SOURCE_REAL_ERROR_CERTIFICATE_V3","q":Q,"run_id":source_run,"status":"UNRESOLVED_NOT_A_CERTIFICATE","reason":"Diagnostic capture supplies the missing raw state/dispatch/terminal-boundary evidence, but no validated interval residual/background/libm propagation has yet been executed. Capture success cannot be promoted to a source-real error theorem.","inherited_saved_interpolant_certificate":"Q052_SERIALIZED_INTERPOLANT_CERTIFICATE_V8.json","actual_grid_observation":{"sup_abs_delta_x_e":grid_x,"sup_abs_delta_tau_T":grid_tau},"full_0_to_810_source_real_certified":False,"within_q051_envelopes_source_real_certified":False,"next_exact_obligation":BLOCKER}
+              result={"schema":"BV-Q052-VALIDATEDDIAG-RESULT-1.0.0","q":Q,"program_id":ID,"source_run_id":source_run,"execution_status":"COMPLETE","diagnostic_capture":"PASS","scientific_status":"PARTIAL","final_result_gate":"UNRESOLVED","first_remaining_blocker":BLOCKER,"return_route":"BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0","recovered_after_collector_bug":True,"artifacts":["LOCAL_Q052_NATIVE_DIAGNOSTIC_RUN_RECEIPT.json","LOCAL_Q052_FULLSTATE_TRACE_MANIFEST.json","LOCAL_Q052_BACKGROUND_EVENT_CLOSURE.json","LOCAL_Q052_SOURCE_REAL_ERROR_CERTIFICATE.json"]}
+              objs=[('LOCAL_Q052_NATIVE_DIAGNOSTIC_RUN_RECEIPT.json',receipt),('LOCAL_Q052_FULLSTATE_TRACE_MANIFEST.json',trace),('LOCAL_Q052_BACKGROUND_EVENT_CLOSURE.json',closure),('LOCAL_Q052_SOURCE_REAL_ERROR_CERTIFICATE.json',cert),('Q052_VALIDATEDDIAG_RESULT_V3_RECOVERED.json',result)]
+              for n,o in objs: write(outdir/n,o)
+              provenance={"schema":"Q052_COLLECT_RECOVERY_RECEIPT_V11","q":Q,"program_id":ID,"source_run_id":source_run,"recovery_kind":"COLLECTOR_ONLY_NO_NATIVE_RERUN","original_collect_failure":"NameError: name 'false' is not defined","repair":"Python JSON-style booleans false -> False in collector objects","native_L_reused":True,"native_R_reused":True,"worker_artifact_hash_gates":"PASS","start_pair_gate":"PASS","common_grid_gate":"PASS","diagnostic_capture_gate":"PASS","grid_sup_abs_delta_x_e":grid_x,"grid_sup_abs_delta_tau_T":grid_tau,"scientific_status":"PARTIAL","final_q052_gate":"UNRESOLVED","first_remaining_blocker":BLOCKER}
+              if artifact_manifest: provenance['github_artifact_manifest']=artifact_manifest
+              write(outdir/'Q052_COLLECT_RECOVERY_RECEIPT_V11.json',provenance)
+              return result
+          
+          def main():
+              ap=argparse.ArgumentParser();ap.add_argument('--directory',required=True);ap.add_argument('--outdir',required=True);ap.add_argument('--source-run-id',default='40445054618');ap.add_argument('--artifact-manifest')
+              a=ap.parse_args(); am=read(a.artifact_manifest) if a.artifact_manifest else None
+              result=collect(a.directory,a.outdir,a.source_run_id,am);print(json.dumps(result,indent=2));return 0
+          if __name__=='__main__': raise SystemExit(main())
+          PY
+          python /tmp/q052_collect_recovery_v3.py \
             --directory collected \
             --outdir recovered_collect \
-            --source-run-id "${{ inputs.source_run_id }}" \
-            --artifact-manifest Q052_RUN40445054618_ARTIFACT_MANIFEST_V11.json
+            --source-run-id "${{ inputs.source_run_id }}"
       - name: Assert fail-closed scientific status
         run: |
           python - <<'PY'
@@ -54,6 +159,7 @@ jobs:
           from pathlib import Path
           p=Path('recovered_collect/Q052_VALIDATEDDIAG_RESULT_V3_RECOVERED.json')
           x=json.loads(p.read_text())
+          assert x['source_run_id']=='40445054618'
           assert x['execution_status']=='COMPLETE'
           assert x['diagnostic_capture']=='PASS'
           assert x['scientific_status']=='PARTIAL'
