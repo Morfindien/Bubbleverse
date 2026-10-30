@@ -1,0 +1,45 @@
+name: Q052 pinned background table dump V30
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: q052-background-dump-v30
+  cancel-in-progress: false
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.11.16'
+      - name: Recover exact original binary
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          mkdir -p recovered_native
+          python q052_recover_native_v2.py --out recovered_native
+      - uses: actions/checkout@v4
+        with:
+          repository: mwt5345/class_ede
+          ref: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+          path: external/class_ede
+      - name: Stage exact binary and capture one background
+        run: |
+          set -euo pipefail
+          mkdir -p external/class_ede/python/build/lib.linux-x86_64-cpython-311
+          cp recovered_native/classy.so external/class_ede/python/build/lib.linux-x86_64-cpython-311/classy.cpython-311-x86_64-linux-gnu.so
+          python q052_background_capture_runner_v30.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: q052-background-dump-v30-${{ github.run_id }}
+          path: |
+            q052_background_dump_v30/
+            recovered_native/recovery.log
+          if-no-files-found: warn
+          retention-days: 30
