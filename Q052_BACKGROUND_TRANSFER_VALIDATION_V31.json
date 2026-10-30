@@ -1,0 +1,29 @@
+{
+  "schema": "Q052_BACKGROUND_TRANSFER_VALIDATION_V31",
+  "status": "PASS",
+  "C_comparisons_against_exact_rational_reference": 2240,
+  "C_max_sampled_absolute_error_all_columns": {
+    "hex": [
+      "0x0.0p+0",
+      "0x1.0041d19379c66p-29"
+    ],
+    "display": [
+      0.0,
+      1.8645158279625304e-09
+    ]
+  },
+  "Decimal100_transcendental_and_photon_checks": 36,
+  "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "compile_flags": [
+    "-O2",
+    "-std=c99",
+    "-shared",
+    "-fPIC",
+    "-fno-fast-math",
+    "-ffp-contract=off"
+  ],
+  "C_source_sha256": "7e475bdb0f8cf76ce0ac36bf76c6f3e1efe1bb1956f509b5f975a022d063c6c5",
+  "receipt_sha256": "d3236a1925b2b5a30feaf6fa487bdbe7777bb85d5b012649b579563bd10f28b4",
+  "validation_program_sha256": "f5960c93648637e0b3918b4b78118c43821959d9434eaaa35a5ba988f8700350",
+  "scope": "Finite independent C/Decimal checks support implementation correctness; exact interval/rational derivation supplies whole-interval bounds. Not the historical classy.so execution."
+}
