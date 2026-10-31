@@ -1,0 +1,49 @@
+name: Q052 controlled nominal native pair V36
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: q052-native-pair-v36
+  cancel-in-progress: false
+jobs:
+  native_pair:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0
+        with:
+          python-version: '3.12.14'
+      - name: Check actual runner file before dependency work
+        run: |
+          set -euo pipefail
+          test -f q052_native_pair_v36.py
+          python -m py_compile q052_native_pair_v36.py
+      - name: Install explicit compiler and MPFR dependencies
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gcc make binutils libmpfr-dev libgmp-dev
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: mwt5345/class_ede
+          ref: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+          path: external/class_ede
+          persist-credentials: false
+      - name: Build and capture at most one nominal L/R pair
+        env:
+          Q052_EXECUTION_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          python q052_native_pair_v36.py --source external/class_ede --output q052_native_pair_v36_run --run-id "$Q052_EXECUTION_ID"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: q052-native-pair-v36-${{ github.run_id }}
+          path: |
+            q052_native_pair_v36_run/
+            !q052_native_pair_v36_run/source/**
+            !q052_native_pair_v36_run/source_download.tar.gz
+          if-no-files-found: warn
+          retention-days: 30
