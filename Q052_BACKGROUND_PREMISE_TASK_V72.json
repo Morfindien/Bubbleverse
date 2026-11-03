@@ -1,0 +1,46 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-ADMITTED-TARGET-WITNESS-V72",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "objective": "Afklar den første uopfyldte præmis for at anvende Q051 på ét fast fælles kildemål for den observerede V69-realisering. Giv et kontrollerbart target-admission-witness eller den første konkrete manglende størrelse.",
+  "changed_evidence": "V71 lukker de gemte observablers topcelle og hele intervallet til 810. V72 genfinder den allerede løste V40-start og V31/V38-overførslernes eksplicitte målantagelse.",
+  "inputs": [
+    "Q052_INGESTION_OG_SAMLET_JOURNAL_V72.md",
+    "Q052_STORED_CERTIFICATE_V71.zip",
+    "Q052_UPPER_CELL_RAW_V69.json",
+    "Q052_FULL_HISTORY_RAW_V60.json",
+    "Q052_BACKGROUND_TRANSFER_RECEIPT_V31.json",
+    "Q052_NATIVE_BACKGROUND_BRIDGE_V38.json",
+    "Q050_CLEAN_BG_BINDING_V1.json",
+    "Q050_CLEAN_BG_BINDING_RESULT_AND_HANDOFF_V1.md",
+    "Q051 proof in Q052_THOMSON_CERTIFICATE_V66.zip"
+  ],
+  "ordered_work": [
+    "Lav en eksplicit præmiskæde fra Q051 gennem Q050/Q049 til den faktisk nødvendige start-/baggrundsadmission. Genbrug eksisterende beviser og afsluttede tests. Angiv mål, kvantor og dækket domæne.",
+    "Afklar, om den accepterede fælles kildebaggrund allerede er et veldefineret admitted mål for dette Q052, når den gemte native baggrund behandles som en approksimation. V31/V38 har direkte fejloverførsler til ethvert fast admitted mål. Præcis identitet mellem den lagrede spline og en eksakt baggrundsbane må kun kræves, hvis den konkrete slutning kræver den.",
+    "Kontrollér den første manglende admission mod det eksisterende fastholdte anker, dets korrelerede skalartilstand og relevant indfanget V69/V37-baggrund. Angiv præcist forskellen mellem dokumenteret almindelig start (h,D), målvalgets eksistens/admission og fremadrettet fejl. Brug kildeafledte enheder for H og H-prime.",
+    "Hvis tilstrækkelig target-admission kan dokumenteres, angiv præcis hvilke af V71-kildesammenligningerne der dermed bliver anvendelige, og hvilke banefejl der fortsat er åbne. Hvis et anker, en korrelation eller et domænestykke mangler, stop med navngiven størrelse, krævet interval og hvorfor eksisterende punkt-/projektionstjek ikke leverer den."
+  ],
+  "frozen": [
+    "Pinned source 5a131c91d657dd9a7c6364cc45b038710f8d0d97 and V69 configuration",
+    "Same fixed common target throughout both arms and interval",
+    "V40 exact matched hydrogen/temperature start, inherited source-domain assumptions",
+    "Q052 only; historical states and raw bytes immutable"
+  ],
+  "success": "Et reproducerbart, kildehenført admission-witness for det definerede fælles mål, med dækningsdomæne og præcis konsekvens for Q052.",
+  "failure": "En faktisk inkompatibilitet, med vidne og scope, eller første konkrete manglende mål-/ankerstørrelse. Manglende bevis holdes adskilt fra modbevis.",
+  "inconclusive": "Hvis kun projektioner, lokale sammenligninger eller ubestemt eksistens foreligger, rapporteres den specifikke resterende præmis.",
+  "stop_condition": "Ét endeligt præmis-/admissionreceipt eller første præcise obstruction. Ingen ny native parkørsel, helhistorisk intervalintegration eller gentaget V71-ekstremum.",
+  "no_repeat": [
+    "Genbevis ikke V40-starten eller V42-førstecellebroen.",
+    "Genkør ikke V31/V38 eller V66/V71 på uændrede input.",
+    "Opstil ikke en ubetinget regel om, at native tabelmedlemskab skal være bevist før ethvert fremskridt. V35-korrektionen består."
+  ],
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "state": "PREPARED_NOT_EXECUTED",
+  "fingerprint_sha256": "9a9f19c2b6bbf93dc8a43bf4cc9db06e6c894cfbd520f2849d99b0f5fd68eaea"
+}
