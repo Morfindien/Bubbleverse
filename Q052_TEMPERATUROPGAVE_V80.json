@@ -1,0 +1,56 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-SOURCE-TEMPERATURE-AT-Z50-V80",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "engine_blob": "1fef42f8072b6289163a60e8d5b94f14268991cf",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "state": "PREPARED_NOT_EXECUTED",
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "focus": "Validated one-sided lower bounds for v_L(50) and v_R(50), each starting at the established matched z=810 state. v=Tm/Tgamma.",
+  "fixed": [
+    "Same underlying source-real B_star, not an arbitrary new cosmology or substitution of saved output.",
+    "Unchanged two helium terms q=1e-6 and zero, no exotic heating, same radiation-temperature switch and inherited background/source qualifications.",
+    "Preserve actual monotonicity, units, outward rounding and certified treatment of continuous interpolation."
+  ],
+  "data_in_certificate": {
+    "v62.json": "63480c24d61350c9913ed3072e09c91c097049791165fa964cfa096f7d0d4ca8",
+    "v64.json": "5ce7deba7580ab87b71340ca2d7aa4c8b042c068145f51f7833031a5bf98c813",
+    "v19.json": "3f3838394c1a85b2fa592dc2fb4c66d7c67e3d6c74a07873b9a060c22aebe89c",
+    "v20.py": "d0feecd36359005a55fb91c26aee2381f9ed1652177395acf7ec482ea0e880fa",
+    "v79_result.json": "4dbb97e575e4823c85f00473fd147f4742621c9c5d30400a3138f9d08fa56a91",
+    "v79_control.json": "13c3d86f41ef91def13cde44cd9fef2342b0150457c375289c8fcdd39285a876",
+    "guard80.json": "fcde21c4bcd840f48c9619560ddb0b27b144a4652ef57e5e1fe7af0a842014d8"
+  },
+  "inputs_in_journal": [
+    "V62 single-arm phase-5 tubes, background brackets, rates, positive heating and native reference",
+    "V73 qualification (in inherited complete journal), V75 and V77 accepted pair start/context",
+    "V79 proof and V80 scalar cooling diagnostic; both V64 seed boxes match V62 terminals"
+  ],
+  "analytic_route": "For each arm certify source v(50) from a sharper one-dimensional comparison, ideally bounding h-dependent Compton heating and H on archived blocks. An alternative is a one-sided defect bound native_saved_v50 - source_v50. Bound uncertainties jointly when possible. A source residual/validated reference is mandatory if using stored points.",
+  "criterion_exact_strict": {
+    "first_full_cell": "1685751053180883/15682325367398656",
+    "through_common_radiation_switch": "597541056095023571520445865946276624152840718575/1995436902169125726501067681978283733539509764096"
+  },
+  "simple_sufficient_full_bound": "v_L(50),v_R(50) >= 0.29946",
+  "alternative_sufficient": "For EACH arm, v_stored(50)-v_source(50) <=13/200. The two stored terminal values minus this tolerance exceed the global selector threshold.",
+  "success": "Both one-sided lower bounds exceed the stronger exact threshold, hence the v-trigger cannot split the arms before the common Trad switch. Return the two certified bounds with source, proof and independently checked numerical margins.",
+  "partial": "If only the first whole suspect cell can be excluded, certify the achieved interval explicitly by z_floor_i=51*theta/v_floor_i-1, and identify the first unclosed quantitative input. Report both arms.",
+  "failure_or_inconclusive": "If lower norms do not improve, give the first specific heating/background/hydrogen enclosure preventing closure, its interval, and best reachable v floor. A low lower bound cannot certify a low actual value. A genuine mixed source event requires a validated matched-start witness.",
+  "stop_condition": "One validated z50 estimate per arm (or first justified upstream obstruction). Stop after the strongest attainable selector determination within this bounded test. Do not initiate a whole-history campaign.",
+  "resource_limits": {
+    "new_native_pairs": 0,
+    "new_full_history_integrations": 0,
+    "first_bounded_prototype_wall_seconds": 300
+  },
+  "no_repeat": [
+    "V79 electron faces and late cap",
+    "V78 optical-depth transfer",
+    "V80 simple cooling inequality, saved-value comparison and sliver qualification"
+  ],
+  "outside_scope": "No inferred electron ceiling in the still-open middle interval solely from guard exclusion; remaining hydrogen/thermal face checks and global Thomson extremum are separate.",
+  "fingerprint_sha256": "bd634744b6fca780b25be6159b4645111fd1dd25f5a8bbce42a8b4e7781242d8"
+}
