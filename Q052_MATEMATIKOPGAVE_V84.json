@@ -1,0 +1,53 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-SIGNED-ELECTRON-OPTICAL-EXTREMUM-V84",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "state": "PREPARED_NOT_EXECUTED",
+  "objective": "Determine whether the signed source electron difference remains nonnegative on z in [0,810], and use the result to locate the global absolute Thomson-difference extremum under its literal source convention.",
+  "new_information": "V83 proves the absolute global source electron maximum. A signed lower face is a distinct obligation and may reduce the optical extremum to an endpoint.",
+  "definitions": {
+    "h": "h_R",
+    "d": "h_L-h_R",
+    "E": "d+q",
+    "public_electron_difference": "lambda(z)*E",
+    "candidate_region": "-q <= d <= 0 with the already proved phase-dependent thermal correlation; candidate only, not accepted by ingestion"
+  },
+  "inputs": [
+    "Q052_GLOBALT_ELEKTRONCERTIFIKAT_V83.zip",
+    "Q052_INGESTION_OG_SAMLET_JOURNAL_V84.md",
+    "nested V75/V77/V79/V81 and V78/V66 optical source records within the preserved cumulative lineage"
+  ],
+  "ordered_work": [
+    "Recover the exact signed Thomson definition, integration direction, endpoints, normalization and kernel from V66/V71/V78; do not infer it from the absolute bound. Record all boundary/constant offsets.",
+    "Test the new d=-q face with literal HMLA and Peebles equations. Existing d=-2q result alone does not establish it. Reuse proved elasticity/thermal bounds only on their documented domains.",
+    "Starting at the matched z810 state, propagate the stronger signed region through every archived phase, branch, common event and reionization map. Explicitly cover the late suffix: V79 absolute cap alone is insufficient to prove its sign. No new full trajectory integrations.",
+    "If a global sign certificate succeeds, prove the resulting monotonicity using the actual optical kernel and boundary convention; locate the absolute maximum by endpoint comparison, or show precisely why offsets prevent that conclusion.",
+    "Return the exact extremum functional and the existing validated value enclosure if relevant. If no improved value certificate follows without new integration, state that limitation and specify the single missing signed integral. Do not call the V78 upper bound the realized maximum."
+  ],
+  "success": "A full-domain signed certificate plus a valid extremum-location theorem, with explicit optical convention, and honest remaining value/error requirements.",
+  "failure_or_inconclusive": "First unsupported source face, missing thermal/domain premise, or sign-indeterminate interval with exact location and enclosure. A failed candidate bound is not a trajectory counterexample.",
+  "stop_condition": "Stop after one full sign/extremum-location certificate or first specific unclosed obligation. No blind refinement campaign.",
+  "execution_limits": {
+    "new_native_pairs": 0,
+    "new_full_history_interval_integrations": 0,
+    "first_prototype_wall_seconds": 300
+  },
+  "no_repeat": [
+    "V83 absolute electron maximum",
+    "V78 total-variation optical transfer",
+    "V81 temperature-floor proof",
+    "V71 saved interpolation extrema",
+    "previous SoMe packages"
+  ],
+  "frozen": "Same B_star, matched start, q pair, source/config and fixed reio_camb; no tau shooting or model promotion.",
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "activity_ledger_ref": "activity_ledger.json",
+  "total_points": 10950,
+  "milestone_policy": "Generate an actual SoMe package on next crossing of11000; points do not stop science.",
+  "fingerprint_sha256": "ffb42410f988283828501c84138a6d0e9705f0ee5cf0c77b77321e3239c34d4d"
+}
