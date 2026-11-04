@@ -1,0 +1,55 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-POST50-INVARIANT-FACES-V82",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "state": "PREPARED_NOT_EXECUTED",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "objective": "Check the remaining hydrogen/thermal invariant faces below z50 with V81 temperature floors; return the maximal contiguous certified extension or the first quantitative obstruction.",
+  "fixed": [
+    "Same B_star, matched z810 start and q=1e-6 versus zero.",
+    "Preserve literal source switches, units, reionization map and all inherited conditional qualifications.",
+    "Use source-real enclosures, not saved native thermal samples as truth."
+  ],
+  "starting_invariant": "Inherited V77/V79 cone at z50: -2q<d=h_L-h_R<0, |y|<0.99 with y=(h_R+q)(v_L-v_R)/(q v_L). Existing V79 coverage to z46.4596459646 is reused.",
+  "temperature_floors": {
+    "L": "327901/1000000",
+    "R": "327899/1000000",
+    "below50": "v_i(z)>=b_i*(1+z)/51 under the accepted positive-heating premises.",
+    "common_Trad_switch": "Use exact enclosure in V81 archive guard80.json; do not replace with rounded z16.03.",
+    "V79_mixed_v_witness": "Excluded along these source trajectories; do not recheck that already excluded state."
+  },
+  "first_target": "Extend the preserved cone through the previously open segment down to the lower common radiation-switch edge, checking all admissible one-sided fields and temperatures, including the switch enclosure itself.",
+  "optional_after_success": "If the same bounded analytic argument closes this first target, continue only to the previously certified late-cap upper edge near z5.59556. Stop at the first unclosed face, source-domain premise or resource limit.",
+  "required_output": [
+    "Explicit exact contiguous interval of validity and justified first-contact argument.",
+    "For each face: validated signed bound with the inherited state domain, actual branch and the new temperature restriction.",
+    "If unsuccessful: first offending cell/face, coefficient interval and whether a point is merely box-admitted or actually reachable from the matched start.",
+    "Keep actual global electron/Thomson maxima unresolved unless separately established by this exact task."
+  ],
+  "acceptance": "All required face signs hold for every allowed one-sided source field on the reported interval, with an independently checked numerical representation when consequential.",
+  "failure": "A validated matched-start counterexample violates the proposed cone; a box-admitted outward field alone is an obstruction to this proof, not a trajectory counterexample.",
+  "inconclusive": "Return the first rigorous quantitative obstruction without an inferred physical violation.",
+  "resource_limits": {
+    "new_native_pairs": 0,
+    "new_full_history_integrations": 0,
+    "first_bounded_prototype_wall_seconds": 300
+  },
+  "no_repeat": [
+    "V81 temperature comparison",
+    "V79 already closed intervals and excluded mixed witness",
+    "V78 optical-depth transfer",
+    "Prior publication packages"
+  ],
+  "inputs": {
+    "V81_certificate": "Q052_TEMPERATURCERTIFIKAT_V81.zip",
+    "V81_sha256": "4b1fe866e018f5ec91000e658a0fbba135635539c7754ec65793ed2db3e0a1b2",
+    "nested_inputs": "V81 contains V62, V77 and V80 dependency archives. V80 contains V64, V79 results/control and their source proof. Extract only needed members; all hashes must match."
+  },
+  "stop_condition": "One bounded face-check outcome with exact covered interval or first justified obstruction; return for result ingestion. No whole-history campaign.",
+  "fingerprint_sha256": "6bb2c2789a9f55f181e4f3ef72ea4217a48ac296662df68e725c8cd8b58e8d81"
+}
