@@ -1,0 +1,60 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-SELECTOR-CONDITIONED-SIGNED-FACE-CELL235-V86",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "state": "PREPARED_NOT_EXECUTED",
+  "domain_z_exact": [
+    "761161663339561/1099511627776",
+    "1523417340748759/2199023255552"
+  ],
+  "cell_zero_based": 234,
+  "objective": "Determine whether the signed lower face d=-q in V62 cell235 admits a strictly inward source field after enforcing the literal common SWIFT/HMLA selector constraints.",
+  "definitions": {
+    "h": "h_R",
+    "h_L": "h-q at E=0",
+    "q": "1/1000000",
+    "E": "h_L-h_R+q",
+    "temperature_order": "v_L>=v_R from V85 up to the first E contact",
+    "candidate_face": "E=0 with shared z,H,source constants and inherited paired/thermal constraints"
+  },
+  "frozen": "Same B_star, matched z810 start, q pair and literal source commit. No model or selector changes. No tau shooting.",
+  "inputs": [
+    "V85_Certifikat.zip result.json,PROOF_V85.md,pins.json",
+    "V85_Historisk_grundlag.zip nested V83/V77/V62 source and box certificates",
+    "Q052_INGESTION_OG_SAMLET_JOURNAL_V86.md"
+  ],
+  "ordered_work": [
+    "Recover the literal Pion/SWIFT dispatch equations, threshold and equality convention. Check their dependence on h, q, v and the common background against pinned source.",
+    "On E=0 intersect the archived cell with both arms' selector conditions, h_L=h-q, v_L>=v_R, proved phase5 thermal cap and shared constants. Treat all common and one-sided limiting branch fields. Do not give the two arms independently chosen H or fit parameters.",
+    "First determine whether L-SWIFT/R-HMLA is feasible on this face. If empty, prove exclusion. If nonempty, directly enclose the weighted paired source derivative dprime, or prove the sufficient C_SWIFT(h-q)/C_HMLA(h)<1/(1-q/h) uniformly on that feasible set. Keep useful rate/temperature compensation if a channelwise C bound is too coarse.",
+    "Use one bounded analytical/interval prototype. Return the first closed-cell certificate, a source-admissible face witness showing the proposed invariant fails, or the first precise unresolved inequality. A face witness is distinct from a witness on the matched trajectory."
+  ],
+  "success": "Rigorous inward lower-face certificate on all source-admissible branches of this entire cell, or rigorous exclusion of mixed dispatch with the remaining fields certified.",
+  "failure": "Certified admissible outward face witness falsifies this proposed barrier under the specified state constraints. It does not alone establish a trajectory sign reversal.",
+  "inconclusive": "Exact remaining nonempty feasible box, branch and inequality with input hashes; no blind full-history refinement.",
+  "stop_condition": "Stop after this one cell is classified, or after the first specific closure obstruction within the first bounded prototype. Return result to routing before continuing to later mixed cells.",
+  "execution_limits": {
+    "new_native_pairs": 0,
+    "new_full_history_interval_integrations": 0,
+    "first_prototype_wall_seconds": 300
+  },
+  "no_repeat": [
+    "V85234-cell prefix and coarse grenuafhængig C jump test",
+    "V83 global absolute electron maximum",
+    "V78 optical total-variation transfer",
+    "V81 temperature-floor proof",
+    "M011 SoMe package"
+  ],
+  "new_information": "V85 located the precise coarse-bound failure. V86 asks for a new joint selector-conditioned feasible-set analysis.",
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "total_points": 11190,
+  "next_milestone": 12000,
+  "points_to_next_publication": 810,
+  "milestone_policy": "Points continue across engines and do not cap research.",
+  "fingerprint_sha256": "1d9510fad04102f0c683335f7a1d51013fcc3910da91f2d98e9ca9d32c775d65"
+}
