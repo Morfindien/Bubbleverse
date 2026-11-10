@@ -1,0 +1,64 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-COMMON-HMLA-PHASE5-LOWER-FACE-V90",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "engine_prompt_sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "state": "PREPARED_NOT_EXECUTED",
+  "objective": "Extend the conditional positive electron difference from the accepted V89 endpoint through the remaining common-HMLA phase-5 cells.",
+  "domain_z_exact": [
+    "50",
+    "6045532743931003/8796093022208"
+  ],
+  "cells_one_based": [
+    246,
+    1526
+  ],
+  "cell_count": 1281,
+  "cell_inventory": "next_cells.json in Q052_INGESTION_CERTIFICATE_V90.zip",
+  "interface": {
+    "z": "6045532743931003/8796093022208",
+    "E": "hL-hR+q>0",
+    "temperature_order": "vL>=vR before first E=0 contact",
+    "q": "1/1000000"
+  },
+  "frozen": "Same admitted B_star, matched z=810 start, pinned source, source enclosures, config, common H and q. No fit or model changes.",
+  "inputs": [
+    "Q052_INGESTION_OG_SAMLET_JOURNAL_V90.md",
+    "Q052_INGESTION_CERTIFICATE_V90.zip containing unchanged Q052_GRENSKIFT_BLOK_CERTIFIKAT_V89.zip",
+    "V89 archive: PROOF_V85.md, PROOF_V89.md, result.json, control.json, v19.json, v20.py, v62.json, v77.json and pins.json"
+  ],
+  "ordered_work": [
+    "Verify pinned source, input identity and the exact continuous V89 entry. Check shared-H and both HMLA masks in decreasing z order.",
+    "Apply the common-branch lower-face lemma from V85 with h=h_R, E=h_L-h_R+q and u=ln(811/(1+z)). On E=0, establish h>q, 0<v<=1 with the required strict upper bound, and checked inclusion in the inherited V77 rate and thermal domains.",
+    "Use temperature order only up to first contact. Check U_R,i>0, U_L,i<=(1-q/h)U_R,i, and positive HMLA C_i monotone in raw escape with shared background. Check positivity of q/h_upper as a bound on E_prime/abs(f_R), or rigorously exclude an empty face.",
+    "Give exact per-cell coverage and a separate check of the critical domain predicates and the block margin or first obstruction. Confirm allowed one-sided fields at junctions. Distinguish relaxed face examples from actual trajectories.",
+    "Join only the contiguous proven prefix. On success stop at z=50 and record the interface for possible phase-6 work."
+  ],
+  "success": "All 1281 cells close with a continuous positive prefix to z=50 under the frozen premises.",
+  "failure_or_inconclusive": "Name first specific unclosed inequality with cell, feasible box and source branch. Keep the previously certified prefix; a loose interval bound is not evidence of sign reversal.",
+  "stop_condition": "First unresolved admissible cell, validated adverse witness, exact z=50 endpoint, or first prototype runtime limit.",
+  "execution_limits": {
+    "first_prototype_wall_seconds": 300,
+    "new_native_pairs": 0,
+    "new_full_history_interval_integrations": 0
+  },
+  "no_repeat": [
+    "V89 cells236-245",
+    "V87 cell235",
+    "V85 prefix",
+    "V83 global absolute electron maximum",
+    "V78 unsigned optical transfer",
+    "M011 package"
+  ],
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "total_points": 11720,
+  "next_milestone": 12000,
+  "points_to_next_publication": 280,
+  "milestone_policy": "Shared cumulative counter, no scientific cap.",
+  "fingerprint_sha256": "ad19f19916dfda8766a7d2c0d83f2d1ac51bde1de386b089599ab4c7e8bb8005"
+}
