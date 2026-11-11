@@ -1,0 +1,115 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-PEEBLES-CAMB-SIGNED-TAIL-TO-Z0-V94",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "engine_prompt_sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "state": "PREPARED_NOT_EXECUTED",
+  "objective": "Prove strict source E and public Delta_Xe positivity on the remaining 373 V64 phase-6 rows, joined to the V93 boundary.",
+  "domain": {
+    "z_exact": [
+      "0",
+      "787504997847845/140737488355328"
+    ],
+    "rows_zero_based": [
+      2963,
+      3335
+    ],
+    "original_source_indices": [
+      2960,
+      3332
+    ],
+    "cell_count": 373,
+    "whole_and_endpoint_lambda_floor": "6936925106346909/19342813113834066795298816"
+  },
+  "interface": {
+    "z": "787504997847845/140737488355328",
+    "E": "strictly positive",
+    "vL_minus_vR": "nonnegative",
+    "hR_lower": "95678651860268129004968677186530921058017578974340727177216/747467941908109314160928672337623141905731601657742566434871987",
+    "v_lower": [
+      "304371639468506629873/7177611906121728000000",
+      "304369782983534223527/7177611906121728000000"
+    ]
+  },
+  "end_source_boxes_V93": {
+    "L": [
+      [
+        "0x1.373454b8107a3p-16",
+        "0x1.55aec7c1a476dp-10"
+      ],
+      [
+        "0x1.d2bbbbae75855p-7",
+        "0x1.95071fad28400p-2"
+      ]
+    ],
+    "R": [
+      [
+        "0x1.47fb31a6dfae5p-16",
+        "0x1.55aec79b44eb2p-10"
+      ],
+      [
+        "0x1.d2bbb00e05a1fp-7",
+        "0x1.9502805c3ea48p-2"
+      ]
+    ]
+  },
+  "frozen": "Same B_star, matched z810 start, qL=1/1000000, qR=0, pinned physics and common CAMB map.",
+  "inputs": [
+    "Q052_INGESTION_OG_SAMLET_JOURNAL_V94.md",
+    "Q052_INGESTION_CERTIFICATE_V94.zip"
+  ],
+  "nested_V93_zip": "Q052_FASE6_FORTEGNSCERTIFIKAT_V93.zip",
+  "nested_V93_sha256": "9f618b35531d5c4e65bc648849d2a3666bbaf50ea2ee87a5138b5ac59af2bef8",
+  "V93_members": {
+    "V64": {
+      "path": "input92/v64.json",
+      "sha256": "5ce7deba7580ab87b71340ca2d7aa4c8b042c068145f51f7833031a5bf98c813"
+    },
+    "V83": {
+      "path": "input92/result83.json",
+      "sha256": "4d04234346e6ce34c003f1fe8ad90c1586c8862c57a58274acf8953cfc8534ae"
+    },
+    "source": "input91/v19.json plus sources93.json; archived V20 helpers in the nested input92/Q052_HMLA_FORTEGNSCERTIFIKAT_V91.zip",
+    "result": "result.json",
+    "proof": "PROOF_V93.md"
+  },
+  "ordered_work": [
+    "Bind both V93 ending boxes to V64 row 2963 initial states, retain relational E>0 and t>=0, and check contiguous exact rows to z=0. V64 original index differs from zero-based row by three.",
+    "Check both arms remain within physical h and v domains, and common Peebles and CAMB fields on every whole cell and endpoint, including z=0. Confirm lambda>0; validate additive b and A monotonicity against pinned source.",
+    "Verify decreasing PPB alpha analytically on 0<v<=1. Bound S/h_R^2 on the new interval. Candidate shortcut: verify fixed n_H=n_H0(1+z)^3 and T_R∝1+z; then d log S/d log(1+z)=-3/2+EI/T_R. If positive on [0,zB], bound S by S(zB), for which the inherited V83 PPB ratio times its squared minimum improved h floor supplies an upper enclosure. Divide by a newly verified tail h_R floor. If this transfer is insufficient, bound S directly on the tail with outward rounding. Optionally improve h_R using the existing V64 K*Delta_u recurrence seeded by V93, without reintegration.",
+    "Use t variation of constants, U_R>0 and positive increasing Peebles C on E=0, then Eprime/abs(f_R)>=q/h_R>0. Bind exact lower-face state boxes and check all joins with one-sided fields. Obtain a separate conservative grouped or analytic check of coverage, rates and positive margin.",
+    "Only if tail closes, record strict positivity through z=0, and infer source optical |F(Z)| has its unique maximum at 810 since F(0)=0 and w>0. Do not evaluate the global maximum value or certify native interpolation error in this task."
+  ],
+  "success": "Separate controls support positive E and Delta_Xe throughout [0,zB], joined to V93, with exact endpoints and margins.",
+  "failure_or_inconclusive": "First unclosed row, exact z, predicate and supported prefix, or validated adverse trajectory evidence. Distinguish archive-box possibility from an attained trajectory.",
+  "stop_condition": "First unresolved material predicate, adverse validated witness, z=0 or prototype runtime limit.",
+  "execution_limits": {
+    "first_prototype_wall_seconds": 300,
+    "new_native_pairs": 0,
+    "new_full_history_interval_integrations": 0
+  },
+  "no_repeat": [
+    "V91 cells246-1526",
+    "V89 cells236-245",
+    "V87 cell235",
+    "V85 prefix",
+    "V83 global absolute electron maximum",
+    "V78 unsigned optical transfer",
+    "M011 package",
+    "V79 absolute-prefix and tail ceilings",
+    "V81 temperature proof",
+    "V83 global electron maximum",
+    "V93 2963-cell signed block",
+    "M012 publication assets"
+  ],
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "total_points": 12225,
+  "next_milestone": 13000,
+  "points_to_next_publication": 775,
+  "fingerprint_sha256": "fd35d1d0929cdefce8aa10124008bcddf12faefdbd22c49010c0e00e630c73c3"
+}
