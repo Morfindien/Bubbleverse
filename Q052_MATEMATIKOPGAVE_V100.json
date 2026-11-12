@@ -1,0 +1,70 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-V100-SOURCE-REAL-SCALAR-ANCHOR-AT-800",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "engine_prompt_sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc",
+  "state": "PREPARED_NOT_EXECUTED",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "objective": "Obtain a validated tight scalar energy anchor for the V73 fixed B-star at z=800, then use monotone scalar energy over the already admitted pilot to test whether the optical weight can meet the existing method target.",
+  "archive_inputs": {
+    "history/Q052_OPTISK_VAEGTCERTIFIKAT_V99.zip": "22d91781bdeddff9612378756f3682e2ed9112ed32e154be7c4a8f5f81fa2026"
+  },
+  "frozen": "V73 source-real IVP and captured binary64 convention, fixed B-star for both q arms, matched z810 thermodynamic start, Q051 criteria, V97 electron bounds, V99 K and 105 exact subcells.",
+  "domain": {
+    "anchor_z": "800",
+    "pilot_z": [
+      "750",
+      "800"
+    ],
+    "guard_rows": [
+      65,
+      69
+    ]
+  },
+  "ordered_work": [
+    "Recover an authenticated source-real joint phi,X enclosure on the V73 trajectory, with exact time, capture hash and proof of inclusion of B-star. If none is available, use the exact early V73 source initialization after checking its source binding. Energy/virial projections alone cannot justify a narrow independent state box. Stored native spline values are ineligible as initial data.",
+    "Use a validated local Taylor/Picard or interval propagation of the V73 scalar-only IVP toward a=1/801. Preserve the fixed parameter dependency, show each step enclosure and exact endpoint connection, and certify e=X^2/2+A(1-cos(lambda*phi))^3 with directed rounding. Check the inherited source domain and guard identities. Return the last certified anchor if the target cannot be reached under the limit.",
+    "If z=800 is certified, use de/dln(a)=-3X^2 and intersect the new energy cap with each old cap on [750,800]. Use the V99 B0/K boxes and intersections for H and W. Require strict identity and coverage checks; compute the V97 width decomposition with the same electron bounds and cubic mass.",
+    "Check the state/energy anchor and propagated weight reduction independently. On a missing premise or empty intersection report the first exact witness and retain the last supported enclosure."
+  ],
+  "scope_and_units": "u=ln(a), X=phi_prime/a, H in Mpc^-1 and e in Mpc^-2. The validated IVP is only the scalar background up to z=800. Its monotonic-energy transfer is confined to [750,800].",
+  "success": "A validated B-star energy cap at z=800 and full 105-subcell weight contribution no greater than weight_width_ceiling. Report a technically valid anchor separately if the method screen fails.",
+  "failure": "A validated cap that still exceeds the projected weight-width criterion, an invalid enclosure, or a first unresolvable premise. None closes Q052.",
+  "weight_width_ceiling": "1846813355301509364584689207371935658065466221134738953720748176817201866373364115367023901942129830845755886646274197406925168481715540546242366649829048813595749612845201742040962176763564257860106607503881688590715263830852204350592060834100768565495100947845822266729372256283769180215999601365400575209905478882286179329482714049581547636444141865946649090452203592593494311252829987374274621753990520392484974369175202706781767367355489449526995518428969685109605491542719117560361880547445264603388094818261719377654536909053509828107436741/2814850501914715235308862676675636983018287630526114157503550344724368595762283257636592001252302840102993673696563231150747302306695403006628120752203069110263496776309715273360470116637129511285765974736710765872060390399182181265817152719767079554617166289559435890786073245856567906857462791192331563847874448635100127825384375937563017390059125526163676163279426019772022872776508153808003185457554121746787329357168512387812447064430761782557401419421237621114698210341647951028655308582917376722139898043004585517287467334117831475200000000000000",
+  "full_precision_goal_provisional": "1/250000000",
+  "execution_limits": {
+    "prototype_wall_seconds": 300,
+    "new_native_pairs": 0,
+    "new_full_history_integrations": 0
+  },
+  "stop_condition": "Stop after one bounded scalar-only prototype and at most one weight evaluation on [750,800], or at first missing premise/conflict or 300 seconds, whichever comes first.",
+  "no_repeat": [
+    "V91 cells246-1526",
+    "V89 cells236-245",
+    "V87 cell235",
+    "V85 prefix",
+    "V83 global absolute electron maximum",
+    "V78 unsigned optical transfer",
+    "M011 package",
+    "V79 absolute-prefix and tail ceilings",
+    "V81 temperature proof",
+    "V83 global electron maximum",
+    "V93 2963-cell signed block",
+    "M012 publication assets",
+    "V95 tail sign proof without specific validation reason",
+    "Global maximum-location search now settled for the defined source accumulation",
+    "V96 signed archive integration on unchanged V66 cells",
+    "V97 half-q SWIFT pilot on [750,800] and its independent algebra/quad control",
+    "V99 unchanged-input 101-cell/105-subcell weight screen; failure is already measured.",
+    "V99 point event or technical replay as new research credit."
+  ],
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "total_points": 12890,
+  "next_milestone": 13000,
+  "points_to_next_publication": 110,
+  "fingerprint_sha256": "f4fb837bbff354eb84bd44610a65e69071249d5476be5c6c127de291ed62efea"
+}
