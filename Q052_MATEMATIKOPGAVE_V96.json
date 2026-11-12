@@ -1,0 +1,85 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-OPTICAL-SIGNED-QUADRATURE-PILOT-V96",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "engine_prompt_sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "state": "PREPARED_NOT_EXECUTED",
+  "objective": "Certify a tighter signed contribution to F(810) on the largest-width 50-redshift bin [750,800] using archived source evidence. Assess if the improvement justifies expansion.",
+  "frozen": "Same B_star, matched z810 start, qL=1/1000000, qR=0, pinned physics and common CAMB map.",
+  "inputs_sha256": {
+    "Q052_GLOBALT_FORTEGNSCERTIFIKAT_V95.zip": "21e590e92dc23c7b6ce0f3f3c6fb4c1702ce2f05827cb8dc17f4407326be8322",
+    "Q052_INGESTION_CERTIFICATE_V78.zip": "0f3432e33da596ea7a5e56a2cab4fa7c4dccb522fba01b723b77dc2f7e48939a",
+    "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V95.md": "cc66429ed05a27be3e4b06bd0c3415d5d1ee54de6a2ed75578e74468570c1784"
+  },
+  "V78_bundled_path": "history/Q052_INGESTION_CERTIFICATE_V78.zip",
+  "source_data": {
+    "V66_rows_zero_based_inclusive": [
+      4743,
+      4843
+    ],
+    "rows": 101,
+    "origin": "V62",
+    "V62_repo_path": "Q052_PHASE5_CERTIFICATE_V62.zip",
+    "V62_repo_blob_sha1": "d278a09b66ce9c2b93b7bfb35135dbc484ff11d4",
+    "V62_zip_sha256": "7fb60289f13cfbb1721b6528bb4b57dfd369b8d1939e28fbb51923591878d137",
+    "V66_member": "V66_ROUTING_INPUT.json",
+    "required_context": "V62 arm boxes and verified background/rate primitives. Establish accepted initial or whole-cell relation from the pinned 810 start and archived certified flow. If the seed lacks paired correlation, retain the archived bound until a validated local relation is available."
+  },
+  "tolerances": {
+    "absolute_source_full_width_goal": "1/250000000",
+    "full_goal_basis": "Provisional reporting target below one tenth of the current certified positive lower endpoint. It is not a physical acceptance criterion or approval to perform full-history integration.",
+    "pilot_width_ceiling": "14923155313045116678303621/5070602400912917605986812821504",
+    "pilot_goal_basis": "Require at least 25% reduction on the dominant equal-width bin to justify continuing the method.",
+    "prior_pilot_interval": [
+      "0",
+      "4974385104348372226101207/1267650600228229401496703205376"
+    ],
+    "prior_full_interval": [
+      "58105502156671159684811/1267650600228229401496703205376",
+      "453693833026042785727887/9903520314283042199192993792"
+    ],
+    "native_optical_error_screening_goal": "1/250000000",
+    "native_goal_basis": "Use the same provisional scale for a uniform additive native/source optical discrepancy check. Recover an applicable frozen Q051 margin before using any error budget for Q052 closure."
+  },
+  "ordered_work": [
+    "Verify V62 ZIP and source/config/background identity. Split the 101 V66 cells exactly at 750, 800 and any pinned switch event. Use the same dimensionless w(z)=nH0*sigma_T*Mpc_m*(1+z)^2/H_B(z).",
+    "Try to tighten the pair difference with certified relational inequalities or directed interval flow on the bounded strip, using Delta_Xe directly or E and the actual public map. Intersect every result with its archived V66 and V95 bounds. Check seed alignment, event closure, positive weight and per-cell inclusion.",
+    "Integrate signed interval products against the exact (1+z)^2 mass, or use validated remainder bounds for any higher-order quadrature. Report separately the widths from the incoming state, flow/branch bounds, weight, quadrature remainder and outward rounding. If testing subdivision, require certified smaller state/weight boxes and preserve the unsplit bound as fallback.",
+    "Replace only this bin in the archived full sum using directed bounds, keep F(810) as the source maximum, and report the full residual width. Identify the first material missing bound if the pilot does not improve.",
+    "For native comparison, inventory the V71 ideal stored primitive, returned-cut coordinate and full signed error separately. Derive only a locally justified stored/source residual on this strip if conventions and coverage match. Leave global native/source error, interpolation/execution roundoff, identical-B membership and reproducibility open unless independently certified. A source-only result cannot close the native Q."
+  ],
+  "execution_limits": {
+    "first_prototype_wall_seconds": 300,
+    "new_native_pairs": 0,
+    "new_full_history_integrations": 0
+  },
+  "success": "Validated pilot enclosure of width at most pilot_width_ceiling with signed error accounting, exact coverage and a justified independent check. This is a method screen.",
+  "stop_condition": "Stop at completion of the [750,800] pilot, first missing seed/weight/branch premise or wall limit. Return exact first obstruction and retained enclosure. No extension to new strips in this task.",
+  "no_repeat": [
+    "V91 cells246-1526",
+    "V89 cells236-245",
+    "V87 cell235",
+    "V85 prefix",
+    "V83 global absolute electron maximum",
+    "V78 unsigned optical transfer",
+    "M011 package",
+    "V79 absolute-prefix and tail ceilings",
+    "V81 temperature proof",
+    "V83 global electron maximum",
+    "V93 2963-cell signed block",
+    "M012 publication assets",
+    "V95 tail sign proof without specific validation reason",
+    "Global maximum-location search now settled for the defined source accumulation",
+    "V96 signed archive integration on unchanged V66 cells"
+  ],
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "total_points": 12465,
+  "next_milestone": 13000,
+  "points_to_next_publication": 535,
+  "fingerprint_sha256": "29da2cafcc9f60d74f8b0001f62a580a2c5b6da0b8f0f8874e6fa28c13eb96cc"
+}
