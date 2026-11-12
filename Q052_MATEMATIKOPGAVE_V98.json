@@ -1,0 +1,76 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-V98-BSTAR-WEIGHT-750-800",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "engine_prompt_sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "state": "PREPARED_NOT_EXECUTED",
+  "objective": "Test a sharper certified optical weight for the V73 fixed B-star on the same 101 V97 cells of [750,800].",
+  "frozen": "Same B_star, matched z810 start, qL=1/1000000, qR=0, pinned physics and common CAMB map.",
+  "source_observable": "F(Z)=integral_0^Z [K/H_B(z)](1+z)^2 Delta_Xe(z) dz",
+  "archive_inputs": {
+    "history/Q052_THOMSON_PILOTCERTIFIKAT_V97.zip": "929694bb149545df18e52fd957a34619e3e9bd58a2112b143dcd12758d50b6c5",
+    "history/Q052_BAGGRUNDSCERTIFIKAT_V73.zip": "336f6e8ce948b8b2d7a5c84700a3430e00bdfb3fecfa20bb7e4e3bc141250f1b",
+    "Q050_CLEAN_BG_BINDING_V1.json": "bfbe380364983b166658793514526986ae61e0c37a67a07774375ef49a4f7481",
+    "audit98.json": "Exact V26 weight constants and diagnostic calculations. SHA-256 in V98 manifest."
+  },
+  "domain": {
+    "z": [
+      "750",
+      "800"
+    ],
+    "V66_rows": [
+      4743,
+      4843
+    ],
+    "V97_cells": 101,
+    "Q050_guard_rows": [
+      65,
+      69
+    ]
+  },
+  "old_weight_width": "1846813355301509364584689207371935658065466221134738953720748176817201866373364115367023901942129830845755886646274197406925168481715540546242366649829048813595749612845201742040962176763564257860106607503881688590715263830852204350592060834100768565495100947845822266729372256283769180215999601365400575209905478882286179329482714049581547636444141865946649090452203592593494311252829987374274621753990520392484974369175202706781767367355489449526995518428969685109605491542719117560361880547445264603388094818261719377654536909053509828107436741/2111137876436036426481647007506727737263715722894585618127662758543276446821712443227444000939227130077245255272422423363060476730021552254971090564152301832697622582232286455020352587477847133464324481052533074404045292799386635949362864539825309665962874717169576918089554934392425930143097093394248672885905836476325095869038281953172263042544344144622757122459569514829017154582381115356002389093165591310090497017876384290859335298323071336918051064565928215836023657756235963271491481437188032541604923532253439137965600500588373606400000000000000",
+  "weight_width_ceiling": "1846813355301509364584689207371935658065466221134738953720748176817201866373364115367023901942129830845755886646274197406925168481715540546242366649829048813595749612845201742040962176763564257860106607503881688590715263830852204350592060834100768565495100947845822266729372256283769180215999601365400575209905478882286179329482714049581547636444141865946649090452203592593494311252829987374274621753990520392484974369175202706781767367355489449526995518428969685109605491542719117560361880547445264603388094818261719377654536909053509828107436741/2814850501914715235308862676675636983018287630526114157503550344724368595762283257636592001252302840102993673696563231150747302306695403006628120752203069110263496776309715273360470116637129511285765974736710765872060390399182181265817152719767079554617166289559435890786073245856567906857462791192331563847874448635100127825384375937563017390059125526163676163279426019772022872776508153808003185457554121746787329357168512387812447064430761782557401419421237621114698210341647951028655308582917376722139898043004585517287467334117831475200000000000000",
+  "full_precision_goal_provisional": "1/250000000",
+  "target_rationale": "Require 25% reduction of the isolated pilot weight contribution as a method screen. Keep the V97 electron bounds fixed. The global precision goal still needs paired-state work and native evidence.",
+  "ordered_work": [
+    "Bind the captured configuration to V73, and guard rows 65 through 69 to Q050 and the V97 domain. Split only at exact cell and guard boundaries. Use the positive flat Friedmann expression H^2=B0+(e+f)/3 with H in inverse Mpc.",
+    "Enclose B0 using captured matter, radiation and every positive massive-neutrino node. Use directed square roots, physical monotonicity of densities and admitted scalar energy caps. Check the common background dependency. Keep safe inherited bounds for any unresolved cell. Do not initialize from a stored native spline.",
+    "Construct K=nH0*sigma_T*Mpc_m with the exact V26 intervals in audit98.json and intersect the new K/H boxes with V66. For an empty intersection, record the first exact conflicting cell and provenance. Carry the V97 electron bounds and exact cubic masses through directed interval summation. Report the weight width before and after, using the V97 symmetric product-width decomposition and separate rounding.",
+    "Check independently the units, node sum, interval endpoints, exact coverage, and improvement. Report global interval replacement only from the new pilot bound. Keep any family-uniform inference and the concrete B-star inference explicitly scoped. Return the measured limitation if the improvement target fails."
+  ],
+  "success": "Validated pilot weight width at or below weight_width_ceiling, with full coverage and consistent intervals.",
+  "stop_condition": "Stop after the first bounded evaluation of [750,800], at a missing premise or conflict, or at 300 seconds. Return exact supported bounds and the first limiting input.",
+  "execution_limits": {
+    "prototype_wall_seconds": 300,
+    "new_native_pairs": 0,
+    "new_full_history_integrations": 0
+  },
+  "no_repeat": [
+    "V91 cells246-1526",
+    "V89 cells236-245",
+    "V87 cell235",
+    "V85 prefix",
+    "V83 global absolute electron maximum",
+    "V78 unsigned optical transfer",
+    "M011 package",
+    "V79 absolute-prefix and tail ceilings",
+    "V81 temperature proof",
+    "V83 global electron maximum",
+    "V93 2963-cell signed block",
+    "M012 publication assets",
+    "V95 tail sign proof without specific validation reason",
+    "Global maximum-location search now settled for the defined source accumulation",
+    "V96 signed archive integration on unchanged V66 cells",
+    "V97 half-q SWIFT pilot on [750,800] and its independent algebra/quad control"
+  ],
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "total_points": 12690,
+  "next_milestone": 13000,
+  "points_to_next_publication": 310,
+  "fingerprint_sha256": "7bb1bb7c591f6beb4a1aeb02a14f7482179ea3d13cebf74c1a614f4c3bcbaa01"
+}
