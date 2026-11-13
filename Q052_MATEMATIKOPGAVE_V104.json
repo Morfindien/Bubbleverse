@@ -1,0 +1,105 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "frozen": "V73 literal source-real scalar IVP, exact captured binary64 parameters, all 11 massive-neutrino nodes, common B-star, matched z810 thermal start, all V99 subcells and weight and electron contracts.",
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "continue_same_q": true,
+  "task_id": "LOCAL-Q052-V104-TRIG-VALIDATED-SCALAR-CONTINUATION",
+  "engine_prompt_sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc",
+  "state": "PREPARED_NOT_EXECUTED",
+  "input_certificate": "Q052_SKALAR_FORTSAETTELSESCERTIFIKAT_V103.zip",
+  "input_certificate_sha256": "0ef72c12aa2f9bcc58c7963089454eac1b6c1f3512bbdaa5878e68545fb3b75c",
+  "input_result_sha256": "8775acffb79e0e0e39d6e84acea766ad90e74dd809c485e4685c50460470872f",
+  "input_checkpoint": {
+    "certified_end_a": "7577159747932866426535787013457/41538374868278621028243970633760768",
+    "certified_end_z": "41530797708530688161817434846747311/7577159747932866426535787013457",
+    "endpoint": [
+      [
+        "396174399449526406611507032167311854833788451798829/2993155353253689176481146537402947624255349848014848",
+        "49521800015641260647441308748283910107339530703665/374144419156711147060143317175368453031918731001856"
+      ],
+      [
+        "-441970013378394181924396892601135802560694121580451/11692013098647223345629478661730264157247460343808",
+        "-441970012507219230984099788317204597186706580271007/11692013098647223345629478661730264157247460343808"
+      ]
+    ],
+    "energy_endpoint": [
+      "376075861091849307855171415796101093509123351729041/365375409332725729550921208179070754913983135744",
+      "376075863015151727709870256350190673745672643117751/365375409332725729550921208179070754913983135744"
+    ]
+  },
+  "input_last_relative_step": "3119523220894019516456142351779/239349588712957706132689042078845",
+  "ingestion_certificate": "Q052_INGESTION_CERTIFICATE_V104.zip",
+  "objective": "Continue the fixed source-real scalar IVP from the last accepted V103 checkpoint toward exact z=800. Resolve the demonstrated trigonometric enclosure issue in the independent checker.",
+  "execution_limits": {
+    "max_new_prototypes": 1,
+    "validated_propagation_and_new_cell_checks_wall_seconds": 300,
+    "max_retries_per_cell": 12,
+    "new_native_pairs": 0,
+    "new_full_history_integrations": 0,
+    "max_new_weight_evaluations": 1
+  },
+  "coverage": {
+    "a_start": "7577159747932866426535787013457/41538374868278621028243970633760768",
+    "a_target": "1/801",
+    "z_target": "800",
+    "exact_connection_required": true
+  },
+  "method": {
+    "coordinates": "Use t=(a-a_left)/a_left for a single cell, retaining exact rational a. y=(phi,X). In u=ln(a), y'=(X/H,-3X-U_phi/H), with H²=B0+(X²/2+U+f)/3. Divide the field by 1+t for t.",
+    "center": "Start a degree-12 reference polynomial P at the exact midpoint of the two stored intervals. Coefficients are exact representations of selected numerical values. A polynomial is a reference curve, and every truncation and rounding error enters the validated defect.",
+    "tube_and_defect": "Certify a convex state box B containing the true trajectory by whole-cell Picard inclusion and containing P([0,h]). Certify H²>0 and the literal EDE guard over the whole cell. Use outward Taylor algebra with rigorous remainder to bound each component of F(t,P(t))-P'(t), preserving cancellation in the polynomial coefficients. Bound the absolute defect by r_i.",
+    "comparison": "On [0,h]×B bound J=∂_yF. Take constant M_ii≥sup J_ii, M_ij≥sup|J_ij| (i≠j), with exact/outward bounds. Do not replace a proven negative diagonal by its absolute value. From the initial componentwise radii, enclose w'=Mw+r and use |y-P|≤w. Use a positive shift of the augmented Metzler matrix and a certified exponential series/tail with directed rounding, or an equivalent separately justified enclosure of the same comparison. Intersect the endpoint box with B only after proving both inclusions. An empty intersection is a defect.",
+    "independent_trigonometric_enclosure": "Use directed rational interval evaluation. For each whole argument interval, retain a valid coarse enclosure and intersect with the universal range. When a certified sign of the derivative establishes monotonicity, enclose the range from outward endpoint evaluations. For f=sin or cos, f″=-f: when f>0 is certified throughout, use the minimum of endpoint lower bounds and upper bound 1; when f<0 is certified throughout, use lower bound -1 and the maximum of endpoint upper bounds. Intersect all justified enclosures. For remaining intervals keep the valid coarse bound, subdivide with a covering union, or use certified range reduction and critical-point inclusion. Uncertain signs never establish monotonicity. Respect the evaluator argument domain and use the same sound cosine enclosure for independent endpoint energy, including when monotonicity cannot be certified.",
+    "first_cell": "From the exact V103 checkpoint regenerate the stored failed proposal at its exact a1 if within the existing limits. Run every acceptance gate including fresh defect computation, independent checks and exact connection. A diagnostic pass on stored data does not grant acceptance. If inclusion remains unresolved, stop and record the precise witness. Ordinary producer rejections may halve under the existing retry cap.",
+    "controller": "After the first fresh accepted cell, retain the existing reuse/growth/halving controller and interior 2^-120 grid. Cap relative step at 1/16. Clip at exact target. No second V102 doubling gate. Retain componentwise per-unit-t defect ceilings of 1e-8."
+  },
+  "diagnostic_candidate": {
+    "a0": "7577159747932866426535787013457/41538374868278621028243970633760768",
+    "a1": "245629292943957020990106768934973/1329227995784915872903807060280344576",
+    "status": "NOT_ACCEPTED_IN_V103",
+    "reference": "Q052_SKALAR_FORTSAETTELSESCERTIFIKAT_V103.zip#last_unaccepted_candidate103.json"
+  },
+  "decision_gates": {
+    "anchor": "Exact a=1/801, certified source linkage, contiguous cells and validated finite endpoint energy. Record attained interval width and upper bound.",
+    "sufficient_screen_energy_cap_Mpc_minus_2": "68136898923612807351/4000000000000000000",
+    "screen": "Only at a certified z800 anchor, use de/dln(a)=-3X² and intersect the new upper cap with the old per-cell caps across [750,800]. Reuse the identical 105 subcells. Recompute and independently check the one weight screen against the frozen width ceiling. The stated sufficient energy cap is a conservative design diagnostic, not a necessary condition for running the screen. Record a certified anchor separately from the weight decision.",
+    "weight_width_ceiling": "1846813355301509364584689207371935658065466221134738953720748176817201866373364115367023901942129830845755886646274197406925168481715540546242366649829048813595749612845201742040962176763564257860106607503881688590715263830852204350592060834100768565495100947845822266729372256283769180215999601365400575209905478882286179329482714049581547636444141865946649090452203592593494311252829987374274621753990520392484974369175202706781767367355489449526995518428969685109605491542719117560361880547445264603388094818261719377654536909053509828107436741/2814850501914715235308862676675636983018287630526114157503550344724368595762283257636592001252302840102993673696563231150747302306695403006628120752203069110263496776309715273360470116637129511285765974736710765872060390399182181265817152719767079554617166289559435890786073245856567906857462791192331563847874448635100127825384375937563017390059125526163676163279426019772022872776508153808003185457554121746787329357168512387812447064430761782557401419421237621114698210341647951028655308582917376722139898043004585517287467334117831475200000000000000"
+  },
+  "verification": "On each accepted new cell check exact chain, reference-in-box, Picard, positive H², source guard, signed Jacobian domination, comparison tail and end enclosure. Recompute the defect/comparison at higher precision as in V103, documenting shared code. Use independent rational evaluation of field, Picard, guard, Jacobian, comparison and endpoint energy. Check the new trig branch against the stored witness and endpoint/turning-point/uncertain-sign cases before relying on it.",
+  "stop_condition": "Use one bounded prototype with a monotonic clock and at most 300 seconds for new propagation and checks. Stop on exact target, first unresolved validation premise, empty intersection, retry or runtime limit. Preserve the last verified checkpoint. Run at most one frozen weight screen, only after the validated exact target is reached.",
+  "no_repeat": [
+    "V91 cells246-1526",
+    "V89 cells236-245",
+    "V87 cell235",
+    "V85 prefix",
+    "V83 global absolute electron maximum",
+    "V78 unsigned optical transfer",
+    "M011 package",
+    "V79 absolute-prefix and tail ceilings",
+    "V81 temperature proof",
+    "V83 global electron maximum",
+    "V93 2963-cell signed block",
+    "M012 publication assets",
+    "V95 tail sign proof without specific validation reason",
+    "Global maximum-location search now settled for the defined source accumulation",
+    "V96 signed archive integration on unchanged V66 cells",
+    "V97 half-q SWIFT pilot on [750,800] and its independent algebra/quad control",
+    "V99 unchanged-input 101-cell/105-subcell weight screen; failure is already measured.",
+    "V99 point event or technical replay as new research credit.",
+    "V101 wall-clock prototype or its fixed-cell verification as new research credit without a new failure or changed premise.",
+    "Do not replay the V101 initial-to-checkpoint integration. The new calculation starts at its certified joint endpoint.",
+    "Do not rerun the 179 accepted V103 cells merely to continue. Reuse their exact verified endpoint.",
+    "Do not count the stored-candidate concavity diagnostic as an additional accepted cell."
+  ],
+  "total_points": 13360,
+  "next_milestone": 14000,
+  "points_to_next_publication": 640,
+  "fingerprint_sha256": "4a2c3d60c912e17a3fb3c65cfa8868b2b1fe41c56322dc8c7f934946e0d21a0f"
+}
