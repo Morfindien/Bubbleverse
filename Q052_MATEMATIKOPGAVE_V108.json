@@ -1,0 +1,165 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-V108-OPTICAL-RECOVERY-700-750",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "engine_prompt_sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc",
+  "state": "PREPARED_NOT_EXECUTED",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "objective": "Execute one corrected optical evaluation and independent numerical control on the exact 106-subcell partition of [700,750]. Reuse the admitted V107 half-q certificate.",
+  "input_certificate": "Q052_INGESTION_CERTIFICATE_V108.zip",
+  "parent_result_ref": "Q052_INGESTION_CERTIFICATE_V108.zip#history/Q052_DELCERTIFIKAT_OG_FEJLDIAGNOSE_V107.zip#result107.json",
+  "parent_result_sha256": "9211124b17660c42b8824bad9e597ae1658e963a3f868ded8b472fa3e1ea68ce",
+  "recoverable_input_archives": [
+    {
+      "member": "history/Q052_DELCERTIFIKAT_OG_FEJLDIAGNOSE_V107.zip",
+      "sha256": "db08cde056dc133dc1ebb2c0fe85047e4009bf4aca83b0173c3ef8594160b1f7",
+      "restore": "Read README.md and invoke prepare_recovery.py in the extracted V108 certificate."
+    }
+  ],
+  "source_data": {
+    "domain_z": [
+      "700",
+      "750"
+    ],
+    "V62_rows_zero_based_inclusive": [
+      118,
+      219
+    ],
+    "V66_rows_zero_based_inclusive": [
+      4642,
+      4743
+    ],
+    "source_rows": 102,
+    "guard_rows_zero_based_inclusive": [
+      70,
+      74
+    ],
+    "expected_subcells": 106,
+    "partition_ref": "Q052_INGESTION_CERTIFICATE_V108.zip#partition108.json",
+    "inherited_electron_seed": {
+      "z_exact": "750",
+      "delta_Xe_interval": [
+        "1/2000000",
+        "1/1000000"
+      ],
+      "strict_interior": true,
+      "evidence": "Q052_INGESTION_CERTIFICATE_V106.zip#history/Q052_THOMSON_PILOTCERTIFIKAT_V97.zip#result.json"
+    },
+    "scalar_anchor": {
+      "z_exact": "800",
+      "a_exact": "1/801",
+      "energy_upper": "469688019467396864836186151069903284354065167114051/2993155353253689176481146537402947624255349848014848",
+      "evidence": "Q052_INGESTION_CERTIFICATE_V106.zip#history/Q052_SKALARANKER_OG_VAEGTCERTIFIKAT_V105.zip#result105.json"
+    },
+    "admitted_barrier_sha256": "f9c7e79852097535ec48cbfcc3afa2a1824de9f8d9c4da097190c7ce173cd7b5"
+  },
+  "frozen": {
+    "background": "Same fixed admitted B-star and dependency identity as V105; one connected trajectory for both q arms and all cells",
+    "background_dependency_id": "Q050-COMMON-BACKGROUND-92de319899bf911563aff4d1",
+    "model": "hillipop-ede_n3; unchanged source/configuration, captured-real parameters and matched validated z810 start",
+    "q_pair": [
+      "1/1000000",
+      "0"
+    ],
+    "optical_definition": "F(Z)=integral_0^Z nH0*sigmaT*Mpc_m*(1+z)^2*Delta_Xe(z)/H_B(z) dz",
+    "global_maximum_location": "z=810 for the conditional source accumulation, inherited V95",
+    "untouched_pilot": "Retain V105 [750,800] interval and its 105 records exactly",
+    "untouched_other_domains": "All other V105 additive bins remain unchanged; no cell restart, background replacement or native-error promotion"
+  },
+  "method": {
+    "entrypoint": "python prepare_recovery.py, then python recovery_work/calc/run_recovery.py",
+    "inherited_method": {
+      "barrier": "Reuse the V97 algebraic first-contact proof at d=h_L-h_R=-q/2. Prove its premises for the clipped [700,750] domain, starting from the already certified strict seed at z750. Verify whole-cell h>q, 0<v<1, shared positive H and 1+DK, both branches exclusively SWIFT, V77 negative cold rate slopes and Saha domination, global E>0 and the induced temperature order. Preserve the common-background correlation and continuity across all clipped cell boundaries. If any premise fails, stop; never extend through the first mixed branch by assumption.",
+      "energy_transport": "Use de/dln(a)=-3X^2<=0 along the same admitted source-real trajectory. At z<=800 intersect the V105 anchor energy upper bound with each linked historical guard cap. Do not integrate the scalar field again.",
+      "weight": "After the barrier passes, perform exactly one evaluation on the 102 archived V66 rows clipped at 700 and 750, additionally split at guard boundaries 710,720,730,740, giving 106 subcells. Adapt V105 weights to guard rows70..74; preserve all 11 neutrino nodes, source constants, validated floor bounds and background binding. Use outward rational density/root/H/W enclosures and intersect inherited bounds. No guessed or interpolated weight samples.",
+      "optical_sum": "On each [a,b] use M=((1+b)^3-(1+a)^3)/3, E in [q/2,q] intersected with the inherited cell enclosure, and outward product integration. Separate electron, weight and outward-rounding contributions with the exact product-width identity. Zero quadrature remainder means exact integration of enclosing constant boxes, not a pointwise trajectory calculation.",
+      "global_update": "First verify that the inherited V96 bin [700,750] is still unchanged in V105 using width_budget106.json. Replace its lower and upper contribution separately: new_global_endpoint=V105_global_endpoint-old_block_endpoint+new_block_endpoint. Preserve all other bins; the boundary row shared with [750,800] is clipped so its interiors do not overlap.",
+      "independent_control": "A separate implementation must check row matching, exact partition, barrier applicability and endpoint inclusion. Check weight arithmetic by the separate a-coordinate density/hex parser/Decimal-root-bracket method used in V105 or an equally justified independent method. Exact squaring must certify every root bracket. Group masses independently and reconcile the full sum. Document inherited assumptions and any shared code."
+    },
+    "barrier": "Reuse hashed V107 source-row domains and strict electron enclosure. Do not recompute the barrier or its applicability proof.",
+    "ordering": "Gate the same exact unique subcells in ascending rational redshift before entering the optical loop. Check actual traversal against this partition.",
+    "persistence": "Reserve the working directory once. Record the attempt before the optical loop and persist the assembled, unvalidated candidate before post-loop gates. Preserve raw results and an independent control receipt."
+  },
+  "tolerances": {
+    "prior_block_interval": [
+      "0",
+      "4832741000970314471017955/1267650600228229401496703205376"
+    ],
+    "prior_block_width": "4832741000970314471017955/1267650600228229401496703205376",
+    "block_width_ceiling": "14498223002910943413053865/5070602400912917605986812821504",
+    "required_block_width_reduction_fraction": "1/4",
+    "V105_global_interval": [
+      "2469595759896902799425695/1267650600228229401496703205376",
+      "57939851854314174830402851/1267650600228229401496703205376"
+    ],
+    "V105_global_width": "13867564023604318007744289/316912650057057350374175801344",
+    "minimum_global_width_reduction_on_method_pass": "4832741000970314471017955/5070602400912917605986812821504",
+    "provisional_full_width_goal": "1/250000000",
+    "precision_goal_scope": "Provisional method target inherited from earlier tasks; not a substitute for all Q052 native-history completion criteria.",
+    "root_grid_bits_at_least": 160,
+    "increment_grid_bits_at_least": 100
+  },
+  "execution_limits": {
+    "first_prototype_wall_seconds": 300,
+    "clock_includes": "Fresh execution preflight, one optical evaluation and one independent control. Extraction excluded.",
+    "new_scalar_integrations": 0,
+    "new_native_pairs": 0,
+    "new_full_history_integrations": 0,
+    "new_domain_optical_evaluations_at_most": 1,
+    "additional_parameter_or_grid_searches": 0
+  },
+  "acceptance_criteria": "Exact 106-cell coverage and frozen inputs, valid contained block with independent agreement. Method PASS requires certified width <= 3/4 of frozen prior block width. A wider valid result is separately reported as method FAIL.",
+  "failure_or_falsification_condition": "Input/correlation or validation failure blocks certification. A valid enclosure wider than the frozen target is a failed method screen, not a falsification of Bubbleverse. A concrete source counterexample to a claimed barrier must be preserved separately from an inconclusive box bound.",
+  "stop_condition": "Stop at first corrected controlled result, first unresolved gate, or 300 seconds. Preserve attempted work and distinguish execution, independent control and the 25% method target.",
+  "expected_information_gain": "Tests whether the successful anchored barrier method transfers to the largest still-untreated complete 50-redshift bin in the homogeneous SWIFT region; on method pass it reduces the current global width by at least 0.0217807764973 fraction. It does not close the native-background or global-precision obligations.",
+  "no_repeat": [
+    "V91 cells246-1526",
+    "V89 cells236-245",
+    "V87 cell235",
+    "V85 prefix",
+    "V83 global absolute electron maximum",
+    "V78 unsigned optical transfer",
+    "M011 package",
+    "V79 absolute-prefix and tail ceilings",
+    "V81 temperature proof",
+    "V83 global electron maximum",
+    "V93 2963-cell signed block",
+    "M012 publication assets",
+    "V95 tail sign proof without specific validation reason",
+    "Global maximum-location search now settled for the defined source accumulation",
+    "V96 signed archive integration on unchanged V66 cells",
+    "V97 half-q SWIFT pilot on [750,800] and its independent algebra/quad control",
+    "V99 unchanged-input 101-cell/105-subcell weight screen; failure is already measured.",
+    "V99 point event or technical replay as new research credit.",
+    "V101 wall-clock prototype or its fixed-cell verification as new research credit without a new failure or changed premise.",
+    "Do not replay the V101 initial-to-checkpoint integration. The new calculation starts at its certified joint endpoint.",
+    "Do not rerun the 179 accepted V103 cells merely to continue. Reuse their exact verified endpoint.",
+    "Do not count the stored-candidate concavity diagnostic as an additional accepted cell.",
+    "V105 142-cell z800 continuation and passed 105-subcell weight screen on identical inputs. Reuse their certificates; rerun only for a documented validation issue or changed premise.",
+    "V106 archive/chain intake and width-budget reconciliation on unchanged inputs. The next task has a new domain [700,750]; it does not repeat the [750,800] pilot.",
+    "V107 [700,750] half-q barrier and its 102-row independent applicability check, unless a specific proof/identity defect is found.",
+    "V107 failed optical attempt must not be silently repeated or counted as a successful value. A new recorded task may recover it after the documented order/counter correction.",
+    "V108 order diagnosis and preparation. The next task is a single fresh corrected run, not a repeat of ingestion."
+  ],
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "continue_same_q": true,
+  "activity_policy": "Carry cumulative event and milestone ledger unchanged; assess only new work, no point cap or resets. Create any newly due SoMe package without changing scientific scope.",
+  "activity_ledger_ref": "Q052_INGESTION_CERTIFICATE_V108.zip#activity_ledger.json",
+  "total_points": 13755,
+  "next_milestone": 14000,
+  "points_to_next_publication": 245,
+  "fingerprint_sha256": "fa4128208dd3c35e8f84921a248c68f8e1a63f2c9e01ec4157a0a13b5d48870e",
+  "ingestion_certificate": "Q052_INGESTION_CERTIFICATE_V108.zip",
+  "task106_fingerprint": "1f29591164f0e218a647026eb0087c9df2d00ba8bfcaaddd28a8bb5641d07e2d",
+  "recovery_code_sha256": {
+    "compute_recovery.py": "cf46606cb395f0311115cf9e2decee9756e074dbac1770a95cf334d9165bd0a9",
+    "control_recovery.py": "1b8ae5b10326efbdabe74937280a69fb33a97b274e847302c125275663bc41da",
+    "run_recovery.py": "8b97da42a519ee74a71dc962fe1276015b22d82979456d4f7363bbd6ef86996a"
+  },
+  "canonical_partition_sha256": "14e32dc160e1f83b9e4b7a412a8322670293c60e7aaa783182bde07b9d0a2cf3"
+}
