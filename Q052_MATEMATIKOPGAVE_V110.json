@@ -1,0 +1,159 @@
+{
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+  "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "task_id": "LOCAL-Q052-V110-SWIFT-BRIDGE-TO-FIRST-MIXED-CELL",
+  "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "engine_prompt_sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc",
+  "state": "PREPARED_NOT_EXECUTED",
+  "input_certificate": "Q052_INGESTION_CERTIFICATE_V110.zip",
+  "objective": "Verify the inherited strict half-q first-contact premises on the fixed pure-SWIFT bridge from z=700 to the first mixed archived cell, then certify one positive lower endpoint improvement in the parent [650,700] optical bin using its frozen weights.",
+  "domain_z": [
+    "1523417340748759/2199023255552",
+    "700"
+  ],
+  "unresolved_complement_z": [
+    "650",
+    "1523417340748759/2199023255552"
+  ],
+  "source_rows_v62_zero_based": [
+    219,
+    233
+  ],
+  "source_rows_v66_zero_based": [
+    4628,
+    4642
+  ],
+  "first_obstruction": {
+    "row_v62": 234,
+    "upper": "1523417340748759/2199023255552",
+    "lower": "761161663339561/1099511627776",
+    "checks": {
+      "shared_H_z": true,
+      "L_SWIFT_only": false,
+      "L_whole_box": true,
+      "L_continuity": true,
+      "R_SWIFT_only": false,
+      "R_whole_box": true,
+      "R_continuity": true
+    },
+    "allowed_branches": [
+      [
+        "HMLA",
+        "SWIFT"
+      ],
+      [
+        "HMLA",
+        "SWIFT"
+      ]
+    ]
+  },
+  "partition_ref": "Q052_INGESTION_CERTIFICATE_V110.zip#frontier110.json",
+  "input_sha256": {
+    "v62.json": "63480c24d61350c9913ed3072e09c91c097049791165fa964cfa096f7d0d4ca8",
+    "v66.json": "9589668abd3d3570b93e9bd92634da5b418467c0f6182ae2994f87acf87338fd",
+    "v77.json": "d8eb109c9ea372dac4f4fde6e49afcb708da9075e6514fc973fda966ce670c74",
+    "v83.json": "4d04234346e6ce34c003f1fe8ad90c1586c8862c57a58274acf8953cfc8534ae",
+    "v95.json": "e0e0e32b4682d568c3f984b6580f6bbb1f44491d99565edbeb9acbdfd6e6ec61",
+    "capture.json": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "binding.json": "bfbe380364983b166658793514526986ae61e0c37a67a07774375ef49a4f7481",
+    "q048_prefix_config_v1.json": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "barrier107.json": "f9c7e79852097535ec48cbfcc3afa2a1824de9f8d9c4da097190c7ce173cd7b5",
+    "result_raw_recovery.json": "531bc4617f8361b2cdeaa091e8d0ff51a8cf0ac4e75da76f364a29d506f6b285"
+  },
+  "frozen": {
+    "q_pair": [
+      "1/1000000",
+      "0"
+    ],
+    "background_dependency_id": "Q050-COMMON-BACKGROUND-92de319899bf911563aff4d1",
+    "seed_ref": "Q052_INGESTION_CERTIFICATE_V110.zip#history/Q052_OPTISK_RECOVERYCERTIFIKAT_V109.zip#calc/barrier107.json",
+    "seed_z": "700",
+    "optical_definition": "F(Z)=integral_0^Z K*(1+z)^2*Delta_Xe(z)/H_B(z) dz",
+    "parent_bin": "650:700",
+    "prior_parent_bin": [
+      "0",
+      "4694970658217480052362703/1267650600228229401496703205376",
+      101
+    ],
+    "prior_global_interval": [
+      "4814229643866463105546607/1267650600228229401496703205376",
+      "28908876046131453968421139/633825300114114700748351602688"
+    ],
+    "current_bins_ref": "Q052_INGESTION_CERTIFICATE_V110.zip#history/Q052_OPTISK_RECOVERYCERTIFIKAT_V109.zip#width_budget109.json"
+  },
+  "method": [
+    "Restore hashed inputs via the archived V109 restore script and use the pinned V107/V97 first-contact proof. Independently verify connected V62 rows, both exclusive SWIFT branches, whole-cell h and v bounds, matching H and endpoints, V77 cold slopes and Saha domination, V95 positivity, fixed pre-reionization and shared background. Stop at any failed premise. Treat row 234 as an obstruction in the archived enclosures.",
+    "Bind the 15 clipped V66 rows to the 15 V62 rows by exact endpoints. Use inherited positive V66 K/H endpoints and q/2 as lower electron bound only on this domain. For each subcell take mass ((1+b)^3-(1+a)^3)/3 and round each product downward to the 2^-100 grid. The rest of the [650,700] bin retains zero lower bound from V95 positivity. Reconcile the existing parent upper from all 101 clipped rows using the existing q upper and upward rounding to 2^-100. Preserve that endpoint; do not replace other bins.",
+    "Perform one separate control traversing rows in reverse with integer-hex parsing, independently reconstructing row correspondence and masses via (b-a)*((1+b)^2+(1+b)*(1+a)+(1+a)^2)/3. Check the lower sums and old upper exactly, and recompute the global sum from all bins. No fresh K/H, density or scalar evaluation is required."
+  ],
+  "acceptance_criteria": "Complete 15-cell exact cover with independent agreement, strict V97 barrier premises inherited and verified on the new connected domain, conserved parent upper, strictly positive certified parent lower, exact global endpoint addition and unchanged remaining bins.",
+  "tolerances": {
+    "increment_grid_bits": 100,
+    "minimum_improvement": "strictly positive exact sum",
+    "domain_and_control_agreement": "exact rational equality",
+    "prior_provisional_global_width_goal": "1/250000000"
+  },
+  "execution_limits": {
+    "wall_seconds": 300,
+    "new_optical_evaluations_at_most": 1,
+    "independent_controls_at_most": 1,
+    "new_weight_evaluations": 0,
+    "new_scalar_integrations": 0,
+    "new_native_pairs": 0,
+    "new_full_history_integrations": 0,
+    "parameter_or_grid_searches": 0
+  },
+  "rejection_criteria": "Any conflict in identities, contiguity, barrier premises, bin reconciliation or independent control blocks promotion. Preserve original inputs and report first concrete mismatch.",
+  "stop_condition": "Stop after one checked result, at first failed gate or after 300 seconds. Do not extend into the HMLA/SWIFT mixed cell under the SWIFT-only proof.",
+  "expected_artifacts": [
+    "exact barrier/application record",
+    "15 rational increments",
+    "independent control receipt",
+    "updated parent interval and global width budget",
+    "execution log"
+  ],
+  "no_repeat": [
+    "V91 cells246-1526",
+    "V89 cells236-245",
+    "V87 cell235",
+    "V85 prefix",
+    "V83 global absolute electron maximum",
+    "V78 unsigned optical transfer",
+    "M011 package",
+    "V79 absolute-prefix and tail ceilings",
+    "V81 temperature proof",
+    "V83 global electron maximum",
+    "V93 2963-cell signed block",
+    "M012 publication assets",
+    "V95 tail sign proof without specific validation reason",
+    "Global maximum-location search now settled for the defined source accumulation",
+    "V96 signed archive integration on unchanged V66 cells",
+    "V97 half-q SWIFT pilot on [750,800] and its independent algebra/quad control",
+    "V99 unchanged-input 101-cell/105-subcell weight screen; failure is already measured.",
+    "V99 point event or technical replay as new research credit.",
+    "V101 wall-clock prototype or its fixed-cell verification as new research credit without a new failure or changed premise.",
+    "Do not replay the V101 initial-to-checkpoint integration. The new calculation starts at its certified joint endpoint.",
+    "Do not rerun the 179 accepted V103 cells merely to continue. Reuse their exact verified endpoint.",
+    "Do not count the stored-candidate concavity diagnostic as an additional accepted cell.",
+    "V105 142-cell z800 continuation and passed 105-subcell weight screen on identical inputs. Reuse their certificates; rerun only for a documented validation issue or changed premise.",
+    "V106 archive/chain intake and width-budget reconciliation on unchanged inputs. The next task has a new domain [700,750]; it does not repeat the [750,800] pilot.",
+    "V107 [700,750] half-q barrier and its 102-row independent applicability check, unless a specific proof/identity defect is found.",
+    "V107 failed optical attempt must not be silently repeated or counted as a successful value. A new recorded task may recover it after the documented order/counter correction.",
+    "V108 order diagnosis and preparation. The next task is a single fresh corrected run, not a repeat of ingestion.",
+    "V109 corrected 106-subcell optical result and independent numerical control on unchanged inputs.",
+    "V109 packaging and stored-arithmetic verification do not count as another scientific run.",
+    "V110 archived frontier screen is preparation, not an optical run. Reuse the verified V109 [700,750] and V105 [750,800] outputs."
+  ],
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "continue_same_q": true,
+  "total_points": 13880,
+  "next_milestone": 14000,
+  "points_to_next_publication": 120,
+  "activity_ledger_ref": "Q052_INGESTION_CERTIFICATE_V110.zip#activity_ledger.json",
+  "fingerprint_sha256": "eb9576c043e55398bd835a3cc9f00048a8d835ecdf1512f967beaf001bd07c01"
+}
