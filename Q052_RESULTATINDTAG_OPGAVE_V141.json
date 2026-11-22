@@ -1,0 +1,239 @@
+{
+  "schema_version": "Q052_EXECUTION_HPC_PREPARATION_HANDOFF_V1",
+  "handoff_id": "Q052-EXECUTION-HANDOFF-V141-PREPARED",
+  "parent_task_fingerprint_sha256": "a375f0a4f99fb021dffc9caf81c32cb9ddee120b159bfcc927a1cf6852bb5935",
+  "task_type": "TECHNICAL_PREPARATION_FOR_SCIENTIFIC_CASE_EXECUTION",
+  "task_id": "LOCAL-Q052-V141-PREPARE-FIRST-RHS-EFFECTIVE-INPUT-CAPTURE",
+  "parent_run_id": "LOCAL-Q052-V140-INGEST-HUBBLE-AND-AUDIT-STARTUP-COMPONENTS",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "state_version": "V141",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "bundle_prepared_utc": "2026-11-22T19:27:50Z",
+  "timezone": "Europe/Copenhagen",
+  "engine": "BUBBLEVERSE.EXECUTION_HPC 2.4.0",
+  "engine_prompt_sha256": "5e97deb69af1e16192c5130820a484fa7839378f9d5ada7d682ae5700c01b47d",
+  "return_engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "continue_same_q": true,
+  "repository": {
+    "memory_backend": "GITHUB",
+    "repository": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "inspected_commit": "6459e99d2889c87eebdf7fe5114b8f4decaa3926",
+    "read_status": "VERIFIED_RELEVANT_PINS",
+    "write_status": "FILES_READY_FOR_MANUAL_UPLOAD",
+    "memory_index_proposal": "V141 successors cross-link the task, runtime files, full journal and handoff; link the measured GitHub run after ingestion.",
+    "launch_route": "V141 dedicated manual workflow, as specified in V140",
+    "reused_parent_path": "Q052_STARTOBSERVATOER_V136.zip",
+    "historical_workflow": ".github/workflows/q052-scalar-start-v137.yml",
+    "historical_workflow_sha256": "070b9e1b154de6f7e4c02e8852e6b1367dc086a9f33c3fdd26f4891cad9245dd"
+  },
+  "journal": {
+    "parent_file": "Q052_INGESTION_OG_SAMLET_JOURNAL_V140_2026-11-22_R1.md",
+    "parent_sha256": "7a644c0b9f2d6b773a746c2952a77e0a33d3ad430d0045f63df50213d4502117",
+    "parent_bytes": 9748956,
+    "updated_file": "Q052_INGESTION_OG_SAMLET_JOURNAL_V141.md",
+    "prefix_preserved": true
+  },
+  "input_provenance": {
+    "v140_task_sha256": "8c1af31a9f375088af11eee77f803b143b18b91ccc5dcd15ad1df3009ac34311",
+    "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "background_dependency_id": "Q050-COMMON-BACKGROUND-92de319899bf911563aff4d1",
+    "v136_parent_sha256": "ac862efbf369fe2cb9fbc395694ca754db3144dc069771bbdefeaa8e8024c9c1",
+    "class_library_sha256": "8b90e21505337cb6696c4f6460616c7c92482f6c8eba7f3450d7da5cb040fae3",
+    "capture_source": "V136 archive → evidence/Q052_SKALARSTART_V135.zip → evidence/capture.json; authenticated against V140 task and V73 result.json",
+    "v140_archive_lookup": "Absent from main at the inspected revision. Required reference recovered by exact SHA-256 from V135 through V136.",
+    "qualified_run_id": 44998731473,
+    "qualified_job_id": 137135333394
+  },
+  "frozen_specification": {
+    "breakpoint": "0x67abe",
+    "rhs_caller": "evolver_ndf15",
+    "final_background_caller": "main",
+    "scalar_parameter_slots": {
+      "n": 0,
+      "f": 1,
+      "m": 2,
+      "B": 3
+    },
+    "species_index": 0,
+    "expected_species": 1,
+    "expected_nodes_per_vector": 11,
+    "safe_node_read_ceiling": 64,
+    "observed_fields": [
+      "n",
+      "f",
+      "m",
+      "B",
+      "N_ncdm",
+      "q_size_ncdm_bg[0]",
+      "M_ncdm[0]",
+      "factor_ncdm[0]",
+      "q_ncdm_bg[0][0:11]",
+      "w_ncdm_bg[0][0:11]"
+    ],
+    "encoding": "finite binary64 C99 hex plus exact integers for structural fields",
+    "scientific_scope": "The prospective pair at the first RHS only"
+  },
+  "execution": {
+    "backend_for_preparation": "LOCAL_RUNTIME",
+    "backend_for_measurement": "GITHUB_ACTIONS",
+    "github_worthwhile": "YES_FOR_MEASUREMENT",
+    "github_worthwhile_gate": "PASS",
+    "basis": "Same x86-64 Ubuntu 24.04 runner class, V137 qualified all four hardware breakpoints; local GDB absent and previous local ptrace check was denied.",
+    "estimated_measurement_job_minutes": [
+      4,
+      12
+    ],
+    "estimate_confidence": "LOW_TO_MEDIUM",
+    "max_job_minutes": 20,
+    "queue_time": "Variable",
+    "native_processes_preparation": 0,
+    "github_dispatches_preparation": 0,
+    "reference_integrations_preparation": 0,
+    "future_nominal_pairs_max": 1,
+    "rhs_captures_per_arm": 1,
+    "state": "PREPARED_NOT_EXECUTED"
+  },
+  "validation": {
+    "status": "PASS_PREPARATION_OFFLINE",
+    "native_runner_validation": "PENDING_MANUAL_DISPATCH",
+    "qualification_reuse": "PASS_V136_ARCHIVE_AND_V137_GITHUB_JOB",
+    "build": {
+      "source_blobs_verified": 315,
+      "point_files_sha256": {
+        "L": "12100006d1e164ce9b7605641e1321d4a6cf4b022bb196d04199e59ee76c237c",
+        "R": "12100006d1e164ce9b7605641e1321d4a6cf4b022bb196d04199e59ee76c237c"
+      },
+      "gcc": "14.2.0",
+      "wrapper_source_sha256": "eb9f1163a1b08c40a9e64886b3990cd111302f57b6f81f7943a6af33eeaa8219",
+      "local_wrapper_sha256": "c4f225bd4bb7d021b503ef8f7efdd14ce29930cbc46c131b9afe21b5579a0f85",
+      "flags": [
+        "-O2",
+        "-fno-fast-math",
+        "-ffp-contract=off",
+        "-frounding-math",
+        "-std=c99",
+        "-fopenmp",
+        "-rdynamic"
+      ],
+      "linked_dependencies": "PASS",
+      "native_processes": 0
+    },
+    "observer_preparation": {
+      "schema": "Q052_V141_PREPARATION_V1",
+      "parent_archive_sha256": "ac862efbf369fe2cb9fbc395694ca754db3144dc069771bbdefeaa8e8024c9c1",
+      "library_sha256": "8b90e21505337cb6696c4f6460616c7c92482f6c8eba7f3450d7da5cb040fae3",
+      "capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+      "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "site": "0x67abe",
+      "observer_source_sha256": "b31556c96731e4929027345c672c7fe9e6a70e5ee4800e812ed7818c55602809",
+      "launcher_source_sha256": "644ac1637f20d652e31ca973b8678e172e342af2c4424639ffecdf6f5fb4deaa",
+      "extension_source_sha256": "e57af85eecb8a3ce07c7ba38a882b08a9d7e051d3fcf90f843c9f3cac0f343c7",
+      "controls": {
+        "status": "PASS",
+        "single_field_mutations": 60,
+        "other_comparison_controls": 11,
+        "capture_controls": 13,
+        "native_processes": 0
+      }
+    },
+    "static_workflow": {
+      "actionlint": "1.7.7 PASS",
+      "bash_n": "PASS"
+    },
+    "cli_fixture_outcomes": 6,
+    "shell_artifact_fixtures": [
+      "early checkout failure",
+      "partial receipt collection",
+      "manifest and split"
+    ],
+    "raw_artifact_part_bytes": 18000000
+  },
+  "status": {
+    "science": "INCONCLUSIVE",
+    "technical": "PASS_PREPARATION_OFFLINE",
+    "workflow": "READY_FOR_MANUAL_DISPATCH_AFTER_UPLOAD"
+  },
+  "point_event": {
+    "event_id": "Q052-ACTIVITY-V141-PREPARE-FIRST-RHS-EFFECTIVE-INPUT-CAPTURE",
+    "status": "BOOKED_ONCE_IN_V141_JOURNAL",
+    "run_points": 80,
+    "breakdown": {
+      "analyse": 22,
+      "implementation": 28,
+      "source_verification": 8,
+      "validation": 22
+    },
+    "total_before": 16217,
+    "total_after": 16297,
+    "publication_interval": 1000,
+    "next_milestone": 17000,
+    "points_to_next_milestone": 703,
+    "due_milestones": [],
+    "delivered_milestone_ids": [
+      "M001",
+      "M002",
+      "M003",
+      "M004",
+      "M005",
+      "M006",
+      "M007",
+      "M008",
+      "M009",
+      "M010",
+      "M011",
+      "M012",
+      "M013",
+      "M014",
+      "M015",
+      "M016"
+    ]
+  },
+  "files": {
+    "q052_v141.py": {
+      "github_path": "q052_v141.py",
+      "sha256": "e57af85eecb8a3ce07c7ba38a882b08a9d7e051d3fcf90f843c9f3cac0f343c7",
+      "bytes": 21276,
+      "decision": "CREATE"
+    },
+    "q052-first-rhs-v141.yml": {
+      "github_path": ".github/workflows/q052-first-rhs-v141.yml",
+      "sha256": "e3f28ad0599fc11042a19b1d7480bd14214d307bf2fe442519cfd5feaf267d4d",
+      "bytes": 12168,
+      "decision": "CREATE"
+    },
+    "Q052_INGESTION_OG_SAMLET_JOURNAL_V141.md": {
+      "github_path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V141.md",
+      "sha256": "317c0a9f906e738470d28032ccd1e5595aeb2879623400fa8a18f3578dcce9c2",
+      "bytes": 9753167,
+      "decision": "CREATE"
+    },
+    "Q052_KORT_RESULTAT_V141.md": {
+      "github_path": "Q052_KORT_RESULTAT_V141.md",
+      "sha256": "da52f9511902dd98ec74b8aa64c1f0f2c50d33b6f28d30a2affabb0f251bfd6f",
+      "bytes": 4569,
+      "decision": "CREATE"
+    }
+  },
+  "handoff_file": {
+    "github_path": "Q052_RESULTATINDTAG_OPGAVE_V141.json",
+    "verification": "fingerprint_sha256 of the canonical JSON with that fingerprint field omitted"
+  },
+  "next_action": {
+    "dispatch": "One manual run after upload, on main",
+    "workflow_path": ".github/workflows/q052-first-rhs-v141.yml",
+    "workflow_title": "Q052 V141 - First RHS effective inputs",
+    "artifacts": [
+      "q052-v141-receipts-<run_id>-<attempt>",
+      "q052-v141-raw-<part>-<run_id>-<attempt> if present"
+    ],
+    "keep_both_receipts_on_mismatch": true,
+    "return_condition": "The measurement completes or stops with a concrete runner diagnostic; send the artifact, run URL and revision.",
+    "case_completion": "OPEN. Full trajectory and validated error enclosure for realized electron-fraction and optical-depth suprema remain unresolved."
+  },
+  "termination_decision": "STOP_PREPARATION_READY_FOR_MANUAL_DISPATCH",
+  "fingerprint_sha256": "cf6f4455bdd564a031075ba1c647140bd55802080daadb7b159854fe32be44cc"
+}
