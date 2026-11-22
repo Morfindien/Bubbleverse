@@ -1,0 +1,33 @@
+{
+  "run_id": "LOCAL-Q052-V137-OBSERVE-ONE-NOMINAL-SCALAR-START-PAIR",
+  "ticket_fingerprint": "c100efe1c1a9e0d0047120438dd4cbeeb92778615535b416f76364b27904e1a4",
+  "status": "BLOCKED_BEFORE_NATIVE_LAUNCH",
+  "blocker_id": "LOCAL-Q052-DEBUGGER-PTRACE-EPERM",
+  "checked_utc": "2026-11-22T07:16:58.682063+00:00",
+  "wall_seconds": 0.021579698999630637,
+  "platform": "x86_64",
+  "gdb_executable": null,
+  "process_preflight": {
+    "command": "python3 ptrace_preflight.py",
+    "exit_code": 1,
+    "stdout": "PTRACE_TRACEME failed: errno=1 Operation not permitted\n",
+    "stderr": ""
+  },
+  "library_loader_check": {
+    "no_missing_soname": true,
+    "observed": [
+      "\tlinux-vdso.so.1 (0x00007f3b204ae000)",
+      "\tlibmpfr.so.6 => /lib/x86_64-linux-gnu/libmpfr.so.6 (0x00007f3b20293000)",
+      "\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x00007f3b201a3000)",
+      "\tlibgomp.so.1 => /lib/x86_64-linux-gnu/libgomp.so.1 (0x00007f3b2014e000)",
+      "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f3b1ff5a000)",
+      "\tlibgmp.so.10 => /lib/x86_64-linux-gnu/libgmp.so.10 (0x00007f3b1fece000)",
+      "\t/lib64/ld-linux-x86-64.so.2 (0x00007f3b204b0000)"
+    ]
+  },
+  "executed_native_pairs": 0,
+  "executed_native_arms": 0,
+  "new_scalar_receipts": 0,
+  "new_integrations": 0,
+  "interpretation": "Current backend rejects ptrace on its own disposable child. No attribution to a particular security layer was measured."
+}
