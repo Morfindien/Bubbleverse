@@ -1,0 +1,261 @@
+name: Q052 V149 - Accepted background NDF15 steps
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: q052-accepted-background-v149
+  cancel-in-progress: false
+
+jobs:
+  observe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Initialize diagnostics before checkout
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/q052-v149/diagnostics"
+          printf '%s\n' "V149 started for ${GITHUB_RUN_ID}/${GITHUB_RUN_ATTEMPT}" > "$RUNNER_TEMP/q052-v149/diagnostics/bootstrap.txt"
+      - id: project_checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - id: class_checkout
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          repository: mwt5345/class_ede
+          ref: 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+          path: external/class_ede
+          persist-credentials: false
+      - name: Authenticate the V136 package and pinned CLASS checkout
+        id: authenticate
+        run: |
+          set -euo pipefail
+          mkdir -p diagnostics
+          printf '%s\n' 'ac862efbf369fe2cb9fbc395694ca754db3144dc069771bbdefeaa8e8024c9c1  Q052_STARTOBSERVATOER_V136.zip' | sha256sum -c -
+          python3 -m zipfile -e Q052_STARTOBSERVATOER_V136.zip capture-kit
+          python3 capture-kit/verify136.py | tee diagnostics/verify136.log
+          test "$(git -C external/class_ede rev-parse HEAD)" = 5a131c91d657dd9a7c6364cc45b038710f8d0d97
+      - name: Install dependencies and verify four hardware breakpoints
+        id: hardware
+        run: |
+          set -euo pipefail
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends gdb gcc libmpfr6 libgmp10 libgomp1
+          gdb --version | tee diagnostics/gdb-version.txt
+          gcc --version | tee diagnostics/gcc-version.txt
+          cat > capture-kit/hardware-check.c <<'C'
+          volatile int visited;
+          void a(void) { visited++; }
+          void b(void) { visited++; }
+          void c(void) { visited++; }
+          void d(void) { visited++; }
+          int main(void) { a(); b(); c(); d(); return visited != 4; }
+          C
+          gcc -g -O0 capture-kit/hardware-check.c -o capture-kit/hardware-check
+          gdb -nx -batch --return-child-result -ex 'set disable-randomization off' -ex start \
+            -ex 'hbreak a' -ex 'hbreak b' -ex 'hbreak c' -ex 'hbreak d' \
+            -ex 'python assert len(gdb.breakpoints()) == 4' \
+            -ex 'continue' -ex 'python assert gdb.selected_frame().name() == "a"; print("HIT_a")' \
+            -ex 'continue' -ex 'python assert gdb.selected_frame().name() == "b"; print("HIT_b")' \
+            -ex 'continue' -ex 'python assert gdb.selected_frame().name() == "c"; print("HIT_c")' \
+            -ex 'continue' -ex 'python assert gdb.selected_frame().name() == "d"; print("HIT_d")' \
+            -ex 'continue' \
+            --args capture-kit/hardware-check 2>&1 | tee diagnostics/hardware-check.log
+          test "$(grep -c '^HIT_[abcd]$' diagnostics/hardware-check.log)" -eq 4
+          grep -q 'exited normally' diagnostics/hardware-check.log
+      - name: Prepare the V141 observer and exercise its receipt contract
+        id: prepare
+        run: |
+          set -euo pipefail
+          printf '%s\n' 'e57af85eecb8a3ce07c7ba38a882b08a9d7e051d3fcf90f843c9f3cac0f343c7  q052_v141.py' | sha256sum -c -
+          python3 q052_v141.py prepare capture-kit Q052_STARTOBSERVATOER_V136.zip diagnostics/preparation141.json
+          cp q052_v141.py capture-kit/
+          objdump -d --disassemble=background_derivs capture-kit/evidence/libq052_class_v36.so > diagnostics/background-derivs.txt
+          grep -Eq '^ *67aaa:.*call.*<background_functions@plt>' diagnostics/background-derivs.txt
+          grep -Eq '^ *67abe:.*movsd' diagnostics/background-derivs.txt
+      - name: Rebuild only the wrapper against the authenticated library
+        id: build
+        run: |
+          set -euo pipefail
+          python3 -m zipfile -e capture-kit/evidence/Q052_SKALARSTART_V135.zip historical
+          python3 - <<'PY'
+          import hashlib
+          import ast
+          from pathlib import Path
+          source = Path('external/class_ede')
+          producer = Path('historical/evidence/producer36.py')
+          assignments=ast.parse(producer.read_text()).body
+          expected=next(ast.literal_eval(x.value) for x in assignments if isinstance(x, ast.Assign)
+                        and isinstance(x.targets[0], ast.Name) and x.targets[0].id=='SOURCE_BLOBS')
+          if len(expected) != 315:
+              raise ValueError('Unexpected source manifest')
+          for name, pin in expected.items():
+              b = (source/name).read_bytes()
+              blob = hashlib.sha1(b'blob '+str(len(b)).encode()+b'\0'+b).hexdigest()
+              if blob != pin:
+                  raise ValueError(name)
+          PY
+          legacy="$GITHUB_WORKSPACE/q052_native_pair_v36_run/source"
+          test "$legacy" = /home/runner/work/Bubbleverse/Bubbleverse/q052_native_pair_v36_run/source
+          mkdir -p "$(dirname "$legacy")"
+          ln -s "$GITHUB_WORKSPACE/external/class_ede" "$legacy"
+          test -r "$legacy/external/bbn/sBBN_2017.dat"
+          sha256sum "$legacy/external/bbn/sBBN_2017.dat" | tee diagnostics/bbn-sha256.txt
+          python3 - <<'PY'
+          import hashlib
+          import json
+          import subprocess
+          from pathlib import Path
+          archive = json.loads(Path('historical/evidence/raw69.json').read_bytes())
+          src = Path('external/class_ede').resolve()
+          lib = Path('capture-kit/evidence/libq052_class_v36.so').resolve()
+          wrapper_src = Path('historical/evidence/observer69.c')
+          executable = Path('capture-kit/observer69')
+          def sha(p):
+              return hashlib.sha256(p.read_bytes()).hexdigest()
+          if sha(lib) != archive['unchanged_native_library_sha256'] or sha(wrapper_src) != archive['observer_source_sha256']:
+              raise ValueError('Authentic library or wrapper source missing')
+          flags = archive['execution']['commands'][0][1:8]
+          relative_includes = ('include','external/HyRec2020','external/heating','external/RecfastCLASS')
+          cmd = ['gcc',*flags,*['-I'+str(src/n) for n in relative_includes],str(wrapper_src),str(lib),
+                 '-Wl,-rpath,'+str(lib.parent),'-Wl,-z,now','-ldl','-lm','-o',str(executable)]
+          Path('diagnostics/wrapper-command.json').write_text(json.dumps(cmd,indent=2)+'\n')
+          subprocess.run(cmd,check=True)
+          Path('diagnostics/wrapper-build.json').write_text(json.dumps({
+              'source_sha256':sha(wrapper_src),'wrapper_sha256':sha(executable),'library_sha256':sha(lib),
+              'flags':flags},indent=2)+'\n')
+          PY
+          ldd capture-kit/observer69 | tee diagnostics/ldd.txt
+          ! grep -q 'not found' diagnostics/ldd.txt
+      - name: Verify and install the V149 observer
+        id: extend149
+        run: |
+          set -euo pipefail
+          printf '%s\n' '5cb7db2d545830e1b801b95d41df178e286c316566a59ddd2595a2ce32cc487f  tools/q052_install_v149.py' | sha256sum -c -
+          printf '%s\n' '6de362144188c650db26692e1d5ed3896200619c70eb161f217d2aef897c334f  tools/q052_selftest_v149.py' | sha256sum -c -
+          printf '%s\n' 'dba0dc82591809ce1077ee49bdb3eff2c1b7a95efb8c61cff11917bcc83bfa4d  tools/q052_static_v149.py' | sha256sum -c -
+          printf '%s\n' '80d813bdfc1e991e847d871eacf99b68bb07e1856829ce98a2671ad06514f317  tools/q052_steps_v149.py' | sha256sum -c -
+          printf '%s\n' 'e3b883a6570f7015ae3a040f215d8d13525848ae9751fd61ced40970b15c98dc  tools/q052_validate_v149.py' | sha256sum -c -
+          printf '%s\n' '44ca52f0030fabef0c69484879f1dd1f3bfbb1cca23ec3c681131ebd941bc175  Q052_EVIDENS_V146.json' | sha256sum -c -
+          python3 tools/q052_static_v149.py external/class_ede capture-kit/evidence/libq052_class_v36.so diagnostics/static149.json
+          python3 tools/q052_selftest_v149.py external/class_ede | tee diagnostics/selftest149.txt
+          python3 tools/q052_install_v149.py capture-kit
+          python3 -m py_compile capture-kit/launch.py capture-kit/q052_steps_v149.py
+      - name: Run one nominal L/R pair
+        id: measure
+        run: |
+          set -euo pipefail
+          python3 capture-kit/launch.py capture-kit/evidence/libq052_class_v36.so capture-kit/observer69 measured \
+            --run-id "Q052-V149-GITHUB-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" \
+            --wrapper-build-receipt diagnostics/wrapper-build.json
+      - name: Validate startup, accepted steps, interpolation and output rows
+        id: compare
+        if: always() && steps.extend149.outcome == 'success' && steps.measure.outcome != 'skipped'
+        run: |
+          set -uo pipefail
+          run_id="Q052-V149-GITHUB-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          startup=0
+          observer=0
+          python3 q052_v141.py compare capture-kit measured diagnostics/comparison141.json --run-id "$run_id" || startup=$?
+          python3 tools/q052_validate_v149.py measured Q052_EVIDENS_V146.json diagnostics/comparison149.json --run-id "$run_id" || observer=$?
+          printf 'Startup exit %s\nObserver exit %s\n' "$startup" "$observer" | tee diagnostics/check-exit149.txt
+          test "$startup" -eq 0 && test "$observer" -eq 0
+      - name: Record step outcomes and preserve any measured receipts
+        if: always()
+        env:
+          PROJECT_CHECKOUT: ${{ steps.project_checkout.outcome }}
+          CLASS_CHECKOUT: ${{ steps.class_checkout.outcome }}
+          AUTHENTICATE: ${{ steps.authenticate.outcome }}
+          HARDWARE: ${{ steps.hardware.outcome }}
+          PREPARE: ${{ steps.prepare.outcome }}
+          BUILD: ${{ steps.build.outcome }}
+          EXTEND149: ${{ steps.extend149.outcome }}
+          MEASURE: ${{ steps.measure.outcome }}
+          COMPARE: ${{ steps.compare.outcome }}
+        run: |
+          set -euo pipefail
+          return_dir="$RUNNER_TEMP/q052-v149"
+          mkdir -p "$return_dir/diagnostics"
+          for step in PROJECT_CHECKOUT CLASS_CHECKOUT AUTHENTICATE HARDWARE PREPARE BUILD EXTEND149 MEASURE COMPARE; do
+            printf '%s=%s\n' "$step" "${!step}" >> "$return_dir/diagnostics/outcomes.txt"
+          done
+          if test -d diagnostics; then
+            cp -a diagnostics/. "$return_dir/diagnostics/"
+          fi
+          shopt -s nullglob
+          for item in measured/execution.json measured/result.json measured/*/scalar_start_receipt.json measured/*/ndf15_steps_v149.jsonl measured/*/debugger.log; do
+            if test -f "$item"; then
+              install -D "$item" "$return_dir/$item"
+            fi
+          done
+      - name: Preserve hashes and split the raw exports
+        if: always()
+        run: |
+          set -euo pipefail
+          if test -d measured; then
+            python3 - <<'PY'
+          import hashlib
+          import json
+          import os
+          from pathlib import Path
+          files=[]
+          for p in sorted(Path('measured').rglob('*')):
+              if p.is_file():
+                  files.append({'path':str(p),'size':p.stat().st_size,'sha256':hashlib.file_digest(p.open('rb'),'sha256').hexdigest()})
+          Path(os.environ['RUNNER_TEMP'], 'q052-v149/diagnostics/measured-manifest.json').write_text(json.dumps(files,indent=2)+'\n')
+          PY
+            mkdir -p evidence-parts
+            tar -czf - measured | split -b 18000000 -d -a 2 - evidence-parts/measured-
+            test ! -e evidence-parts/measured-06
+          fi
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: q052-v149-receipts-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/q052-v149/
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always() && hashFiles('evidence-parts/measured-00') != ''
+        with:
+          name: q052-v149-raw-00-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence-parts/measured-00
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always() && hashFiles('evidence-parts/measured-01') != ''
+        with:
+          name: q052-v149-raw-01-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence-parts/measured-01
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always() && hashFiles('evidence-parts/measured-02') != ''
+        with:
+          name: q052-v149-raw-02-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence-parts/measured-02
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always() && hashFiles('evidence-parts/measured-03') != ''
+        with:
+          name: q052-v149-raw-03-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence-parts/measured-03
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always() && hashFiles('evidence-parts/measured-04') != ''
+        with:
+          name: q052-v149-raw-04-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence-parts/measured-04
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always() && hashFiles('evidence-parts/measured-05') != ''
+        with:
+          name: q052-v149-raw-05-${{ github.run_id }}-${{ github.run_attempt }}
+          path: evidence-parts/measured-05
+          if-no-files-found: error
+          retention-days: 30
