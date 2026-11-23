@@ -1,0 +1,336 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "3.0.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.3.0",
+  "ingestion_prompt_sha256": "b75a691938076af695cbe67b00726732eb2d16edbedc9810f9a9c3bcc7dca9c8",
+  "handoff_id": "Q052-V146-ROW2-TO-32-CELL-MATH",
+  "created_at_utc": "2026-11-23T01:18:41+00:00",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "evidence_cutoff": "Q052 through V146, V141 measured pair and V145 verified second-cell result",
+  "case_lifecycle": "OPEN",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "VALIDATED",
+  "technical_status": "PASS_SECOND_CELL_REPLAY_AND_BATCH_INPUT_AUDIT",
+  "workflow_status": "READY_FOR_HANDOFF",
+  "new_result_ids": [
+    "Q052-V146-ROW2-TRANSFER-AND-BATCH-FEASIBILITY"
+  ],
+  "source_state_version": "V145",
+  "target_state_version": "V146",
+  "next_task_target_version": "V147",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "engine_registry_ref": {
+    "verified_engine_file": "Bubbleverse_Matematikmotor_2.3.0.md",
+    "revision": "d0807d9af724c3a2d4251a16fffeac2c7475f659",
+    "uri": "https://github.com/Morfindien/Bubbleverse/blob/d0807d9af724c3a2d4251a16fffeac2c7475f659/Bubbleverse_Matematikmotor_2.3.0.md",
+    "sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc"
+  },
+  "execution_profile_ref": {
+    "backend": "LOCAL_ARCHIVE",
+    "resources": "Python with rigorous outward interval bounds or exact rational arithmetic",
+    "native_process_limit": 0,
+    "new_github_dispatch_limit": 0
+  },
+  "journal_ref": {
+    "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md",
+    "sha256": "93e0e4da209639b02232104728f6f959115243d3423c1e90f9a7b532224225e8",
+    "size_bytes": 9790594
+  },
+  "source_register_ref": {
+    "file": {
+      "path": "Q052_EVIDENS_V146.json",
+      "sha256": "44ca52f0030fabef0c69484879f1dd1f3bfbb1cca23ec3c681131ebd941bc175",
+      "size_bytes": 193818
+    },
+    "sections": [
+      "origin",
+      "v73_capture",
+      "tables"
+    ]
+  },
+  "claim_evidence_map_ref": {
+    "journal": "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md",
+    "section": "Påstande og evidens",
+    "evidence_sections": [
+      "archive_replay",
+      "transfer",
+      "batch"
+    ]
+  },
+  "result_provenance_ref": {
+    "file": "Q052_EVIDENS_V146.json",
+    "sections": [
+      "verified_handoffs",
+      "verified_input_refs",
+      "origin",
+      "tables"
+    ]
+  },
+  "anomaly_tension_registry_ref": {
+    "file": "Q052_EVIDENS_V146.json",
+    "section": "batch.derivative_jump_diagnostic",
+    "open": [
+      "block numerical enclosures",
+      "native internal trajectory transfer",
+      "thermal and optical-depth suprema"
+    ]
+  },
+  "completed_task_ledger_ref": {
+    "journal": "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md",
+    "event_id": "Q052-ACTIVITY-V146-ROW2-REPLAY-AND-BATCH-ROUTING"
+  },
+  "route_history_ref": {
+    "journal": "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md",
+    "section": "Påstande og evidens"
+  },
+  "integrity_manifest_ref": {
+    "output_manifest": "output_file_refs",
+    "parent_handoff_file": {
+      "path": "Q052_RESULTATINDTAG_OPGAVE_V145.json",
+      "sha256": "ec7b58e9c97c9cc6cf72ab667a0e17304733a3d6d68b76c6f96a738ca9cbe990",
+      "size_bytes": 13317
+    },
+    "parent_handoff_fingerprint": "3c8d32e318c084199a7a9d9dc328c208802b229189aa3f0e39165adf679ada36",
+    "parent_journal": {
+      "path": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V145.md",
+      "sha256": "474c6adb1b25c5c5eac139aebe270b68219ba54c060db5afd2c214691867a2b1",
+      "size_bytes": 9783605
+    }
+  },
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "Reproduced V145 at both archived precision settings",
+    "Verified row 2 as an inherited state interface with separate high-precision stored-spline X check",
+    "Bounded source-real branch and identified exact spline derivative jumps at stored knots",
+    "Authenticated all 33 rows for a 32-cell batch"
+  ],
+  "frozen_configuration_refs": {
+    "v73_capture_sha256": "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b",
+    "class_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "source_code_sha256": {
+      "sources/background.c": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451",
+      "sources/arrays.c": "c38471b1395bc111817b2467db9af9795e1e1ab0ef2a441ecca801a82adc09c4"
+    },
+    "branch": "hillipop-ede_n3, nominal",
+    "origin_offset_ui_minus_u0": [
+      "1.26152118268945866486417960787574868900941403410539096798657604363536279036706077143201790E-15",
+      "1.26152118268945866486417960787574868900941403410539096798657604363536279036706077143201792E-15"
+    ]
+  },
+  "open_material_uncertainties": [
+    "32-cell transport and enclosure growth from row 2",
+    "Transfer to native internal solver trajectory",
+    "Certified whole-domain electron-fraction and optical-depth suprema"
+  ],
+  "missing_information": [],
+  "next_task": {
+    "task_id": "LOCAL-Q052-V147-VALIDATED-BLOCK-ROWS-2-34",
+    "engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+    "objective": "Certify signed spline-minus-V73 defects over the 32 consecutive stored cells [u_i,u_{i+1}], i=2 through 33, by propagating one inherited reference state.",
+    "new_information_gain": "Quantifies uncertainty growth and between-cell variation after 32 transfers. The existing V145 outcome is a one-cell certificate.",
+    "archive_inputs": [
+      {
+        "path": "Q052_EVIDENS_V146.json",
+        "sha256": "44ca52f0030fabef0c69484879f1dd1f3bfbb1cca23ec3c681131ebd941bc175",
+        "size_bytes": 193818
+      }
+    ],
+    "scope": {
+      "first_row": 2,
+      "last_row": 34,
+      "cells": 32,
+      "whole_log_width_exact": "907390804365/35184372088832",
+      "coordinates": "u=ln a, a=exp(u), both stored splines and reference evaluated at the same exact real u",
+      "raw_rows": "batch.common_rows with exact LF-terminated strings and digests, identical L and R",
+      "column_indices": {
+        "H": 1,
+        "phi": 9,
+        "pi": 10
+      },
+      "schedule": "left to right, one carried state box per knot",
+      "start_state": "transfer.reference_at_u2.phi and X, with H as a derived check",
+      "start_displacement": "transfer.phi_initial_minus_phi_at_u2",
+      "reference_capture": "v73_capture.original_utf8 verified against its stored SHA-256"
+    },
+    "required_steps": [
+      "Verify the handoff and evidence fingerprints, all 33 common raw rows, the V73 capture hash and constant-phi premise.",
+      "Start from the unrounded V145 phi and X intervals and recompute the positive Friedmann H interval for the seam check.",
+      "Establish positivity, existence and branch admission on the closed block or each used piece. Propagate phi and X with validated source-real bounds, carrying both uncertainties through all shared knots. A verified closed-form enclosure or a bounded interval solver is sufficient.",
+      "Construct each cubic independently using saved end values and end second derivatives. Compare phi, X=S_pi/exp(u) and H at equal u. Use either one-sided derivative wherever needed.",
+      "Yield a signed enclosure per cell and the combined block enclosure. Show zero-containing or sign-definite intervals as found. Give a positive H denominator, a global upper bound on sup|Delta H/H_ref| and a directly bounded nonzero point witness when one is found.",
+      "Check the transport and enclosures with a second validated calculation or local independent recomputation, including seam and final state checks. Record per-cell state-box widths and both final-state intervals with a portable evidence trail."
+    ],
+    "fixed": {
+      "class_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "frozen_case": "hillipop-ede_n3 nominal L/R pair",
+      "cell_indices": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "definition_of_defect": "stored spline minus V73 source-real solution at identical u",
+      "new_CLASS_runs": 0
+    },
+    "allowed_changes": [
+      "Arithmetic precision",
+      "Finite subdivision",
+      "Validated propagator or proof method"
+    ],
+    "limits": {
+      "new_cells": 32,
+      "native_process_limit": 0,
+      "new_github_dispatch_limit": 0
+    },
+    "no_repeat": [
+      "Use the existing row 2 enclosure without resetting the reference state.",
+      "Use the previous cells only for seam consistency.",
+      "Use per-cell polynomial semantics for the serialized table."
+    ]
+  },
+  "success_condition": "A reproducible set of continuous signed defect enclosures for all 32 cells, a whole-block relative H bound and point witness if supported, verified knot propagation and a portable final reference state.",
+  "failure_or_falsification_condition": "Report the first cell with a source, branch, continuity-of-values or numerical enclosure failure. Preserve all verified preceding cells. An indeterminate sign with a finite interval is a valid outcome.",
+  "stop_condition": "Stop at row 34, or the first cell where an auditable source, branch or enclosure condition fails. Preserve the exact input boundary and the last verified state.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "The full trajectory and the electron-fraction and optical-depth error certificates remain open.",
+  "handoff_completeness": "COMPLETE_FOR_NEXT_BOUNDED_TASK",
+  "writeback_status": "USER_UPLOAD_PENDING",
+  "delivery_status": "FILES_CREATED",
+  "operator_gate": null,
+  "output_file_refs": [
+    {
+      "path": "Q052_KORT_RESULTAT_V146.md",
+      "sha256": "9185e32581df5ce66967f08f13f862997b5f1793745245f8a30fbc97d838dc45",
+      "size_bytes": 3691
+    },
+    {
+      "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md",
+      "sha256": "93e0e4da209639b02232104728f6f959115243d3423c1e90f9a7b532224225e8",
+      "size_bytes": 9790594
+    },
+    {
+      "path": "Q052_EVIDENS_V146.json",
+      "sha256": "44ca52f0030fabef0c69484879f1dd1f3bfbb1cca23ec3c681131ebd941bc175",
+      "size_bytes": 193818
+    },
+    {
+      "path": "Q052_MATEMATIKOPGAVE_V146.json",
+      "fingerprint_field": "fingerprint_sha256"
+    }
+  ],
+  "output_manifest_ref": {
+    "path": "Q052_MATEMATIKOPGAVE_V146.json",
+    "section": "output_file_refs",
+    "self_hash_policy": "Omit fingerprint_sha256 and hash sorted compact UTF-8 JSON with ensure_ascii=false."
+  },
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "Morfindien/Bubbleverse",
+    "base_commit_sha": "d0807d9af724c3a2d4251a16fffeac2c7475f659",
+    "actual_write": false,
+    "sync_status": "USER_UPLOAD_PENDING",
+    "target_directory": "repository root",
+    "canonical_paths": [
+      "Q052_KORT_RESULTAT_V146.md",
+      "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md",
+      "Q052_EVIDENS_V146.json",
+      "Q052_MATEMATIKOPGAVE_V146.json"
+    ],
+    "verified_V145_paths": [],
+    "upload_instructions_ref": "Q052_KORT_RESULTAT_V146.md"
+  },
+  "question_activity_points": {
+    "policy_id": "bubbleverse.question_activity_some_milestones",
+    "policy_version": "2.0.0",
+    "ledger_id": "Q052 cumulative activity",
+    "ledger_ref": "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md",
+    "ledger_version": "V146",
+    "parent_ledger_version": "V145",
+    "run_id": "LOCAL-Q052-V146-INGEST-SECOND-CELL-AND-ROUTE",
+    "activity_event_id": "Q052-ACTIVITY-V146-ROW2-REPLAY-AND-BATCH-ROUTING",
+    "parent_total_pts": 16633,
+    "estimated_run_points": 72,
+    "assessed_run_points": 72,
+    "assessment_breakdown": {
+      "analysis_and_route_selection": 19,
+      "raw_data_extraction_and_reproduction": 15,
+      "source_identity": 8,
+      "independent_validation": 30
+    },
+    "assessment_confidence": "HEURISTIC",
+    "inherited_event_ids": [
+      "Q052-ACTIVITY-V145-SECOND-CELL-INHERITED-STATE-PROPAGATION"
+    ],
+    "newly_applied_event_ids": [
+      "Q052-ACTIVITY-V146-ROW2-REPLAY-AND-BATCH-ROUTING"
+    ],
+    "total_pts": 16705,
+    "status": "BOOKED_ONCE_IN_V146_JOURNAL",
+    "assessment_basis": "V145 replay verification, authenticated batch staging and independently computed seam, derivative and a priori source bounds. Estimate. Inherited V145 calculation credited only once in V145."
+  },
+  "some_milestones": {
+    "interval_pts": 1000,
+    "highest_threshold_reached_pts": 16000,
+    "crossed_this_run": [],
+    "ready_package_ids": [
+      "M001",
+      "M002",
+      "M003",
+      "M004",
+      "M005",
+      "M006",
+      "M007",
+      "M008",
+      "M009",
+      "M010",
+      "M011",
+      "M012",
+      "M013",
+      "M014",
+      "M015",
+      "M016"
+    ],
+    "pending_milestones": [],
+    "next_threshold_pts": 17000,
+    "points_to_next_threshold": 295,
+    "milestone_ledger_ref": "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md",
+    "package_file_refs": [],
+    "package_creation_status": "NOT_DUE",
+    "external_publication_status": "NO_NEW_POST",
+    "scientific_route_changed_by_points": false
+  },
+  "fingerprint_sha256": "97abb05035dffc5269c117d8c87b71bb36f60332f65945f31cc99be393572222"
+}
