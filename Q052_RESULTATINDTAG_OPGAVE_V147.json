@@ -1,0 +1,341 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "contract_id": "Q052_MATH_RESULT_TO_INGESTION_V1",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "continue_same_q": true,
+  "source_state_version": "V147",
+  "target_state_version": "V148",
+  "origin_task_id": "LOCAL-Q052-V147-VALIDATED-BLOCK-ROWS-2-34",
+  "parent_task_fingerprint_sha256": "97abb05035dffc5269c117d8c87b71bb36f60332f65945f31cc99be393572222",
+  "handoff_id": "Q052-V147-32-CELL-BLOCK-TO-INGESTION",
+  "created_at_utc": "2026-11-23T02:28:17+00:00",
+  "task_id": "LOCAL-Q052-V148-INGEST-BLOCK-ROWS-2-34",
+  "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "origin_engine": "BUBBLEVERSE.MATHEMATICS 2.3.0",
+  "source_cutoff": "Q052 through V147, attached V146 task and inputs plus its frozen earlier references",
+  "scientific_status": "INCONCLUSIVE",
+  "technical_status": "PASS_BLOCK_ROWS_2_TO_34",
+  "workflow_status": "READY_FOR_HANDOFF",
+  "delivery_state": "PREPARED_FOR_OPERATOR",
+  "scope": "V141 L/R serialized background splines minus V73 source-real solution at identical u = ln(a)",
+  "journal_ref": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V147.md",
+  "parent_journal_ref": {
+    "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md",
+    "sha256": "93e0e4da209639b02232104728f6f959115243d3423c1e90f9a7b532224225e8",
+    "size_bytes": 9790594
+  },
+  "result_ref": "Q052_BLOKCERTIFIKAT_V147.json",
+  "report_ref": "Q052_KORT_RESULTAT_V147.md",
+  "replay_ref": "Q052_REPRODUKTION_V147.zip",
+  "verified_input_refs": {
+    "repo": "Morfindien/Bubbleverse",
+    "branch": "main",
+    "commit": "43a9e891f4ab44b5f75b08938e2fd244e5817c5d",
+    "verified_input_files": {
+      "Q052_KORT_RESULTAT_V146.md": {
+        "sha256": "9185e32581df5ce66967f08f13f862997b5f1793745245f8a30fbc97d838dc45",
+        "bytes": 3691,
+        "git_blob": "408e2d06a510cdb3c3392b28cc0a076079e472c8"
+      },
+      "Q052_INGESTION_OG_SAMLET_JOURNAL_V146.md": {
+        "sha256": "93e0e4da209639b02232104728f6f959115243d3423c1e90f9a7b532224225e8",
+        "bytes": 9790594,
+        "git_blob": "d1232dcee986c14c7ca6f0117ddd6bff122963c1"
+      },
+      "Q052_EVIDENS_V146.json": {
+        "sha256": "44ca52f0030fabef0c69484879f1dd1f3bfbb1cca23ec3c681131ebd941bc175",
+        "bytes": 193818,
+        "git_blob": "422fd44d3813650dbe24c75c405e7ecd5e1103b3"
+      },
+      "Q052_MATEMATIKOPGAVE_V146.json": {
+        "sha256": "dd829e6649effdd66c8e76f1b331398af5e29c34bd6f01538a1c8619bf9e247b",
+        "bytes": 13996,
+        "git_blob": "5ff64bde71221c98328af3c9bb0957de8aafcfc7"
+      },
+      "Bubbleverse_Matematikmotor_2.3.0.md": {
+        "sha256": "e2208bf1addc384fa9f8736584433038b568e20fefb775a1b61caa5a52e36ebc",
+        "bytes": 77273,
+        "git_blob": "1fef42f8072b6289163a60e8d5b94f14268991cf"
+      },
+      "Bubbleverse_Result_Ingestion_Routing_Engine_v2.3.0.md": {
+        "sha256": "b75a691938076af695cbe67b00726732eb2d16edbedc9810f9a9c3bcc7dca9c8",
+        "bytes": 107636,
+        "git_blob": "d4502f796fb5f8bfaa478c3dfa59adfc2b02c1cb"
+      }
+    },
+    "V146_fingerprint": "97abb05035dffc5269c117d8c87b71bb36f60332f65945f31cc99be393572222",
+    "V145_fingerprint": "3c8d32e318c084199a7a9d9dc328c208802b229189aa3f0e39165adf679ada36",
+    "V145_row2_state_verified": true,
+    "V146_journal_includes_V145_as_byte_prefix": true,
+    "class_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+    "class_sources": {
+      "sources/background.c": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451",
+      "sources/arrays.c": "c38471b1395bc111817b2467db9af9795e1e1ab0ef2a441ecca801a82adc09c4"
+    }
+  },
+  "result": {
+    "cell_count": 32,
+    "row_range": [
+      2,
+      34
+    ],
+    "signed_uniform_block": {
+      "phi": [
+        "1.92567038252537760059532586556239562152100655875538811896326692647983943451072495193321217327541350065905626E-47",
+        "5.71308277877126397728142726556702530656565997437375315037496081563614999686890816668896382992167362342141518E-45"
+      ],
+      "X": [
+        "-9.57534312371558426149321158718748789035724867415206882956617522688114772153755537862476392617504167831738850E-28",
+        "-2.21778045744279857129656460146113634402044379896057037150920621415617132317444162541254555835668322601654398E-28"
+      ],
+      "H": [
+        "-98764449684.5700809369672623744879042999618110426302725905831933182719184105823263507210016856661525933036344",
+        "366992280908.919732380538193928239719227774771138092794485546582339124733944512783731242245775356830939598789"
+      ]
+    },
+    "standard_relative_H_sup": [
+      "1.70701825231358466858542523527319382522328125000915852599226913761766239161963062652282980117588204045580426E-11",
+      "1.70921612309669905874922423838521866367881824836746823572358319133670460755213731984841755261001369481779869E-11"
+    ],
+    "refined_relative_H_sup": [
+      "1.7070182523135846685854252352731938252232812500091585259922691376176623916196306265228298011758860629777428514872641509255465107E-11",
+      "1.7090467522334587193680517176289077679101349622072922688894234662053406860039255686087860374861337228136913894844181396266360265E-11"
+    ],
+    "display_relative_H_sup_strict": [
+      "1.7070e-11",
+      "1.7093e-11"
+    ],
+    "strongest_witness": {
+      "rows": [
+        2,
+        3
+      ],
+      "t": "12/32",
+      "signed_H": [
+        "366889788655.9904216154667456903204986288415862907747235607625078111156362453583004092102574997182",
+        "366889788655.9904216154667456903204986288415862907747235607625078111156439799581119701499637639994"
+      ],
+      "relative_H": [
+        "1.70701825231358466858542523527319382522328125000915852599226913761766239161963062652282980117588204045580426E-11",
+        "1.70701825231358466858542523527319382522328125000915852599226913761766242760619515116496661470482508112847863E-11"
+      ]
+    },
+    "all_subsequent_31_relative_H_sup_strict_upper": "4.608e-12",
+    "cell_containing_global_maximum": [
+      2,
+      3
+    ],
+    "classification_by_left_row": {
+      "+": [
+        4
+      ],
+      "-": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        26,
+        29,
+        32,
+        33
+      ],
+      "both": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        24,
+        25,
+        27,
+        28,
+        30,
+        31
+      ],
+      "undetermined": []
+    },
+    "end_loga_c99": "-0x1.01ab9a03debdcp+5",
+    "end_state": {
+      "reference": {
+        "phi": [
+          "0.235527250207276855897831069341918919235467905053518783728736022718572734432974693434340025626246849625039103",
+          "0.235527250207276855897831069341918919235467905053518783728898686846369124733061244331529592399960152278982055"
+        ],
+        "X": [
+          "-8.63744067495341347989398930789485663999639716522294046356091526420798978646437933199998221529498179178501324E-21",
+          "-8.63744067495329049345328880980654972798604255256801327018821352038739896194260892780266182553655498011996264E-21"
+        ],
+        "H": [
+          "20424874949922840475297.4484551179638167992191215067705684996089806344802287237566464276513593409460783636998",
+          "20424874949922840475297.4484551179638167992191215067705684996089806344802287237566545667423119651056079277543"
+        ]
+      },
+      "spline": {
+        "phi": [
+          "0.2355272502072768558978310693419189192354679107666015625",
+          "0.2355272502072768558978310693419189192354679107666015625"
+        ],
+        "X": [
+          "-8.63744157108073699260078301209000797015758298018562124527920392502615121868185482225323914368730664774027774E-21",
+          "-8.63744157108073699260078301209000797015758298018562124527920392502615121868185482225323914368730664774027755E-21"
+        ],
+        "H": [
+          "20424874949922839855104",
+          "20424874949922839855104"
+        ]
+      },
+      "defects": {
+        "phi": [
+          "5.71308277877110131315363087526693875566847040760003984772101799747905310856783205078096209033077920452141482E-45",
+          "5.71308277877126397728142726556702530656565997437375315037496081563614999686890816668896382992167362342141518E-45"
+        ],
+        "X": [
+          "-8.9612744649914749420228345824217154042761760797509099040463875225673924589445057731815075166762031510E-28",
+          "-8.9612732351270679370419515133016118581496268078171828866081816143221747549025325692839232485595526431E-28"
+        ],
+        "H": [
+          "-620193.4484551179638167992191215067705684996089806344802287237566545667423119651056079277543",
+          "-620193.4484551179638167992191215067705684996089806344802287237566464276513593409460783636998"
+        ]
+      },
+      "displacement": [
+        "5.71308277877110131315363087526693875566847040760003984772101799747905310856783205078096209033077920452141482E-45",
+        "5.71308277877126397728142726556702530656565997437375315037496081563614999686890816668896382992167362342141518E-45"
+      ]
+    },
+    "end_widths": {
+      "phi": "1.62664127796390300086550897189566773713302653942952E-58",
+      "X": "1.2298644070049808830691201035461265492719337270174382059082452177040419732038975842681166505060E-34",
+      "H": "8.1390909526241595295640545E-60"
+    },
+    "original_offset": [
+      "1.26152118268945866486417960787574868900941403410539096798657604363536279036706077143201790E-15",
+      "1.26152118268945866486417960787574868900941403410539096798657604363536279036706077143201792E-15"
+    ]
+  },
+  "validation": {
+    "standard": {
+      "precision": 108,
+      "primary_slabs": 256,
+      "control_slabs": 128
+    },
+    "refined": {
+      "precision": 128,
+      "primary_slabs": 512,
+      "control_slabs": 256
+    },
+    "per_cell_spline_and_reference_checks": 32,
+    "rational_H_knots_checked": 33,
+    "one_span_right_end_checks": 32,
+    "rational_relative_H_witness": [
+      "1.707018252313584668585425235273191900629334335648204579556182121199907248882956327853847E-11",
+      "1.707018252313584668585425235273262667244924020161624853855795815539041916443072908644119E-11"
+    ],
+    "uses_inherited_V146_guard_in_one_span_check": true,
+    "new_CLASS_runs": 0,
+    "new_dispatches": 0,
+    "shared_arithmetic_in_main_and_control": "directed Decimal, independent Fraction audit of point witnesses and states"
+  },
+  "next_task": {
+    "objective": "Ingest V147 and select one distinct finite continuation for Q052 using the validated row-34 state and measured uncertainty growth.",
+    "checks": [
+      "Verify the V146 prefix, handoff fingerprints, all manifest payloads, standard and refined replay plus independent rational audit.",
+      "Check row 34 in the source tables, its inherited phi and X intervals, displacement relative to original initial value, exp(u) convention, and positivity of the derived Friedmann H.",
+      "Assess whether another validated block or a separate transfer to the native evolution has greater value for the two case-level observables. Verify archive coverage before selecting one engine and exact stopping criterion."
+    ],
+    "no_repeat": [
+      "Do not re-credit the 32-cell certificate.",
+      "Preserve V73 initial conditions and all carried state widths."
+    ],
+    "success": "Record one ingested result with confirmed endpoint and exactly one feasible nonduplicate next task or a concrete scientific or provenance obstruction.",
+    "stop": "After ingestion and selection of one route."
+  },
+  "completion_gate": {
+    "satisfied": false,
+    "remaining": "Native-to-source trajectory transfer and certified global suprema of electron fraction and Thomson optical depth."
+  },
+  "setup_assessment": "Local Python 3.10+ and standard library suffice for the evidence and replay. Original V141 tables required for independent raw row-34 lookup.",
+  "point_event": {
+    "id": "Q052-ACTIVITY-V147-BLOCK-ROWS-2-34",
+    "inherited_event": "Q052-ACTIVITY-V146-ROW2-REPLAY-AND-BATCH-ROUTING",
+    "total_before": 16705,
+    "run_points": 126,
+    "total_after": 16831,
+    "components": {
+      "analysis_points": 34,
+      "computation_points": 44,
+      "search_points": 6,
+      "validation_points": 42
+    },
+    "basis": "Heuristic estimate assessed once for V147.",
+    "next_threshold": 17000,
+    "remaining": 169,
+    "milestone_status": "NOT_DUE",
+    "delivered": [
+      "M001",
+      "M002",
+      "M003",
+      "M004",
+      "M005",
+      "M006",
+      "M007",
+      "M008",
+      "M009",
+      "M010",
+      "M011",
+      "M012",
+      "M013",
+      "M014",
+      "M015",
+      "M016"
+    ],
+    "pending": []
+  },
+  "memory_update": {
+    "repository": "Morfindien/Bubbleverse",
+    "base_commit": "43a9e891f4ab44b5f75b08938e2fd244e5817c5d",
+    "target_directory": "repository root",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "performed_write": false,
+    "report_has_upload_instruction": true
+  },
+  "output_refs": {
+    "Q052_KORT_RESULTAT_V147.md": {
+      "github_path": "Q052_KORT_RESULTAT_V147.md",
+      "sha256": "48e852aa2aee4dc4ed987567d08469e6b1b03c5b396edb97a70617d378d76ea5",
+      "size_bytes": 6269
+    },
+    "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V147.md": {
+      "github_path": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V147.md",
+      "sha256": "7c74a2d1b741e8dce164b1dd28002a40f8a27fbc04f46575438732fe65017a4a",
+      "size_bytes": 9799264
+    },
+    "Q052_BLOKCERTIFIKAT_V147.json": {
+      "github_path": "Q052_BLOKCERTIFIKAT_V147.json",
+      "sha256": "277931bf9f490e081bd7ab53f777d52fde32e21cb940d81de9d3e99c47d7bcdd",
+      "size_bytes": 386851
+    },
+    "Q052_REPRODUKTION_V147.zip": {
+      "github_path": "Q052_REPRODUKTION_V147.zip",
+      "sha256": "3a7731b21a573531e4f22870154d349f86a3b6c982ede0d1886c414f0d43751e",
+      "size_bytes": 291359
+    }
+  },
+  "self_fingerprint_convention": "Sorted compact UTF-8 JSON without fingerprint_sha256, ensure_ascii=false.",
+  "fingerprint_sha256": "1bc38725af1c4b35975da3fd1e845271dfbbcd71984c46fd85738d61d4270b07"
+}
