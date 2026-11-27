@@ -1,0 +1,617 @@
+{
+  "schema": "Q052_EVIDENCE_V152",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "version": "V152",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "result_id": "LOCAL-Q052-V152-INGEST-DENSE-BLOCK-ROWS-2-34",
+  "ingestion_key": "1d4c996611234fa3fa078b72b1abf198b8c93a7c48836e6fc90c20f7d21e3e6e",
+  "new_result_ids": [
+    "Q052-V152-C1-V151-INTAKE",
+    "Q052-V152-C2-THERMO-H-TRACE",
+    "Q052-V152-C3-ETA-TRACE"
+  ],
+  "sources": [
+    {
+      "kind": "internal_v151_result",
+      "v151_certificate": {
+        "path": "Q052_CERTIFIKAT_V151.json",
+        "size_bytes": 97116,
+        "sha256": "2f46fd95aeadcfb1932e23e8cdf1ccb0ab4f749cbd79315736a489c2a8a2b5e2"
+      },
+      "v151_reproduction": {
+        "path": "Q052_REPRODUKTION_V151.zip",
+        "size_bytes": 465412,
+        "sha256": "60edff90d667aa7e02698964472e0e82ea169a037eb4ec7c95e277ed3a44c35b"
+      },
+      "v151_task": {
+        "path": "Q052_RESULTATINDTAG_OPGAVE_V151.json",
+        "size_bytes": 10101,
+        "sha256": "99934f3c18713d20747469c7d49836b68876b106bfb732ca6231f70fc034a265"
+      },
+      "v151_journal": {
+        "path": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V151.md",
+        "size_bytes": 9856552,
+        "sha256": "4756f4c1fabd7b37397cde4348f2a6d48f8a2e9ecb9e54d779aa49aae48c48bb"
+      }
+    },
+    {
+      "kind": "pinned_CLASS_sources",
+      "commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+      "thermodynamics_c_sha256": "d17657c1cbd9fd4b70d62d1c6eb102a128ee1ed4cbc5dae439254af91bc45fb6",
+      "thermodynamics_c_blob": "c1683f56b43e0f2ec24a8ba6120133f604cb947c",
+      "background_c": {
+        "path": "background.c",
+        "size_bytes": 122355,
+        "sha256": "84871d25c0a29391edf8d08b4826bd3ca3b33c638dae306375c0a681bb87d451",
+        "blob": "5f6be0fc77c31bd81198d9f28a9d73690a2baabd"
+      },
+      "arrays_c": {
+        "path": "arrays.c",
+        "size_bytes": 92841,
+        "sha256": "c38471b1395bc111817b2467db9af9795e1e1ab0ef2a441ecca801a82adc09c4",
+        "blob": "89837f3161cbf2d8b3485a6772bd16e0a484c93f"
+      }
+    },
+    {
+      "kind": "native_archive",
+      "run": {
+        "github_run_id": 45109440243,
+        "run_attempt": 1,
+        "repository": "Morfindien/Bubbleverse",
+        "head_sha": "4e6c13ed874d9ffc2418faed018fce6796f94e31",
+        "workflow": ".github/workflows/q052-accepted-background-v149.yml",
+        "job_id": 137478176624,
+        "conclusion": "success",
+        "html_url": "https://github.com/Morfindien/Bubbleverse/actions/runs/45109440243",
+        "run_tag": "Q052-V149-GITHUB-45109440243-1",
+        "github_artifacts": [
+          {
+            "name": "q052-v149-raw-01-45109440243-1",
+            "id": 14789270369,
+            "size_in_bytes": 17974816,
+            "digest": "sha256:1c63a61681e832011e515e1ac844a4103fb73caf44c5bdbbc2e3d07c7569531d"
+          },
+          {
+            "name": "q052-v149-raw-00-45109440243-1",
+            "id": 14789150920,
+            "size_in_bytes": 18005502,
+            "digest": "sha256:f61ccb03ec8dd6c2b3c4f32dd869daf6aafe9a752b35df13e91b36c67ecb0326"
+          },
+          {
+            "name": "q052-v149-receipts-45109440243-1",
+            "id": 14788328669,
+            "size_in_bytes": 25395,
+            "digest": "sha256:8e6eb905749c4ec6c7753b533635a53c640dd0477b09a24b3ca45bae3766949e"
+          },
+          {
+            "name": "q052-v149-raw-02-45109440243-1",
+            "id": 14788293923,
+            "size_in_bytes": 15799465,
+            "digest": "sha256:7c20d89cbca1304d02eb428c0f5bc891533594b9d23ab1b2aa6d09be3a0809ee"
+          }
+        ],
+        "inner_files_verified": 38,
+        "source_commit": "5a131c91d657dd9a7c6364cc45b038710f8d0d97",
+        "library_sha256": "8b90e21505337cb6696c4f6460616c7c92482f6c8eba7f3450d7da5cb040fae3"
+      },
+      "runner_manifest": {
+        "path": "measured-manifest.json",
+        "size_bytes": 5883,
+        "sha256": "ed585b7f4918e8363805b5c276b69dba118275ce51c3b1047dc1cec849735124"
+      },
+      "files": [
+        {
+          "path": "measured/L/background_table_hex.jsonl",
+          "size": 64942263,
+          "sha256": "a309f37e92da30547d8ad207ab8f14bf9fae7c88fbf1d7a472a5d65abdd92dfa"
+        },
+        {
+          "path": "measured/L/coordinate_contract.json",
+          "size": 284,
+          "sha256": "b7580ea1c218cf771cdaf7613aab080d91eaef41f4deb7a121c9ec51ed39c32b"
+        },
+        {
+          "path": "measured/L/coordinate_trace.jsonl",
+          "size": 3421,
+          "sha256": "d765707995d24d05ced21de2cd94c36e7775e24e8930251bd7ec0b05af84474f"
+        },
+        {
+          "path": "measured/L/debugger.log",
+          "size": 632,
+          "sha256": "294b6b6320b5bfa23d3c087e4ed29671877517acd3d511ddc0ee7b4642fe0fb2"
+        },
+        {
+          "path": "measured/L/diagnostic_manifest.json",
+          "size": 394,
+          "sha256": "90eb298f770e4b5893ca71db4fcbd7f18912d03a72cfdeae08d0d1ee2fd5bff2"
+        },
+        {
+          "path": "measured/L/effective_identity.json",
+          "size": 489,
+          "sha256": "7d7d4105d6eb23c52e9ee643176128c461716879df63f9094f0ffd1c663a924b"
+        },
+        {
+          "path": "measured/L/event_phase_trace.jsonl",
+          "size": 10134,
+          "sha256": "fa0e257f4b576d51d94f547c1aeadafd8e84f9b5ac4abf36550a4ec8ba150aa6"
+        },
+        {
+          "path": "measured/L/fullstate_trace.jsonl",
+          "size": 14274129,
+          "sha256": "f19fcdf8fb9b71cd985ef201a7d4abb08973ab4a8a6a74e7cd696744dc6ae929"
+        },
+        {
+          "path": "measured/L/history.csv",
+          "size": 726881,
+          "sha256": "afd3a93e7685c8cd40ab9001e402643eff2f5c7da65e90880a301a86e22b7da4"
+        },
+        {
+          "path": "measured/L/hyrec_guard_trace.jsonl",
+          "size": 2989131,
+          "sha256": "89a5be7c33cb872eeeaffe888d969d0ee04590f89b436d92a3a786983e3f6357"
+        },
+        {
+          "path": "measured/L/ndf15_steps_v149.jsonl",
+          "size": 25601,
+          "sha256": "417201bbbebfb7735a0195285822a22191c942fa6623cd4d84420f9acf955464"
+        },
+        {
+          "path": "measured/L/point.ini",
+          "size": 556,
+          "sha256": "12100006d1e164ce9b7605641e1321d4a6cf4b022bb196d04199e59ee76c237c"
+        },
+        {
+          "path": "measured/L/process_maps.txt",
+          "size": 5593,
+          "sha256": "c6b123de1a5fa0b5fb0d53119a6b7ed121b6639d4db4fd71a8433ccf84afcf25"
+        },
+        {
+          "path": "measured/L/public_table_hex.jsonl",
+          "size": 3704554,
+          "sha256": "e4c94c93cf05a143c6c5285ae3fe194bdefa23199386d50d12a522d11cc4684b"
+        },
+        {
+          "path": "measured/L/runtime_result.json",
+          "size": 277,
+          "sha256": "960bad1837a89a949f2821480bd50e0027c435afdd3531027e780d6f407cf110"
+        },
+        {
+          "path": "measured/L/scalar_start_receipt.json",
+          "size": 2442,
+          "sha256": "d8569567de62f50742f7baa888b74ea5fae05a49472860e45f907e2607c441a3"
+        },
+        {
+          "path": "measured/L/upper_cell69.json",
+          "size": 3697,
+          "sha256": "16fe4d0653276784cbc7a7aab3aa08b936441ec1fbc7bcb213d5fffefc4c51b8"
+        },
+        {
+          "path": "measured/L/z810_start.json",
+          "size": 568,
+          "sha256": "a6494afb09dd6edbd21821f0a8cca155fd3dec6f4adc88de75cd02d27c510e02"
+        },
+        {
+          "path": "measured/R/background_table_hex.jsonl",
+          "size": 64942263,
+          "sha256": "43e08b2483f15a5225510d9a75a6d5930255ae07047e8fdff5c91d155631bd3f"
+        },
+        {
+          "path": "measured/R/coordinate_contract.json",
+          "size": 284,
+          "sha256": "6a5ec99e2b54edf521a4215b0c1aae0301b897e2b5e723b5082769ed4c0eaef0"
+        },
+        {
+          "path": "measured/R/coordinate_trace.jsonl",
+          "size": 3984,
+          "sha256": "ea098d4c740a28d43638956bfc7adb3204d312db0c9d59d7ad37a57447783414"
+        },
+        {
+          "path": "measured/R/debugger.log",
+          "size": 632,
+          "sha256": "8ac5cce66d3a9d35d8e57270323027858ca5d025d6856e437a92d8dc8c5bc85f"
+        },
+        {
+          "path": "measured/R/diagnostic_manifest.json",
+          "size": 394,
+          "sha256": "ba0553a465779c45811070eb77408c008025a33fdd9553c1070b6bc4e36f39b2"
+        },
+        {
+          "path": "measured/R/effective_identity.json",
+          "size": 489,
+          "sha256": "af8e558a44641d9d341c5e8fcecf2d4a374747b64278fa9a4029556f7db44bf7"
+        },
+        {
+          "path": "measured/R/event_phase_trace.jsonl",
+          "size": 10104,
+          "sha256": "166cc445ded78fe137a328ef578cd52823c50e8503065d9d267c1a789c35b9ba"
+        },
+        {
+          "path": "measured/R/fullstate_trace.jsonl",
+          "size": 13942470,
+          "sha256": "8aac07a78b83586271e0003205390a02fc30cef19e0254cad966adfb09efbc8d"
+        },
+        {
+          "path": "measured/R/history.csv",
+          "size": 726876,
+          "sha256": "c367e9d264c5a8a3ac78733702912b76723c38f1e6515f1f38e14361feffa7e0"
+        },
+        {
+          "path": "measured/R/hyrec_guard_trace.jsonl",
+          "size": 2978640,
+          "sha256": "458952d3cc2d88d1ad2b4a0b5ee44260b26aab3ebabbba066a13af74d1e91951"
+        },
+        {
+          "path": "measured/R/ndf15_steps_v149.jsonl",
+          "size": 25601,
+          "sha256": "f1e5fca58f7d6d4c949394958b257886e050178a2897d972f2743648f35616b7"
+        },
+        {
+          "path": "measured/R/point.ini",
+          "size": 556,
+          "sha256": "12100006d1e164ce9b7605641e1321d4a6cf4b022bb196d04199e59ee76c237c"
+        },
+        {
+          "path": "measured/R/process_maps.txt",
+          "size": 5544,
+          "sha256": "a76b0edda57ae38692f0029c033f6958faddbf23e31179f5229f76618c4a4699"
+        },
+        {
+          "path": "measured/R/public_table_hex.jsonl",
+          "size": 3704522,
+          "sha256": "aa0f2fa3819d134a790e9d37dfb501b7389cbbd771962d753cccc947cb305518"
+        },
+        {
+          "path": "measured/R/runtime_result.json",
+          "size": 277,
+          "sha256": "a3b5a0746ed89de711b8b36937b88e959d93b93f97f63b258d6f8311fa3af65a"
+        },
+        {
+          "path": "measured/R/scalar_start_receipt.json",
+          "size": 2442,
+          "sha256": "5724ac301801bb67b6b6c54e4cd710162e803e321b14d0ff11aa0f9de37fb2f6"
+        },
+        {
+          "path": "measured/R/upper_cell69.json",
+          "size": 3707,
+          "sha256": "67219e96c87bb47df0291e44c7ffe2917ff19deffa7009b2c9611c003bf0734b"
+        },
+        {
+          "path": "measured/R/z810_start.json",
+          "size": 553,
+          "sha256": "f2354a7a29d21d3eb933a2e75074c53239e14deee3001f16d0dfec2b5c4c6c3d"
+        },
+        {
+          "path": "measured/execution.json",
+          "size": 248,
+          "sha256": "9f05be72af50cf8cb75d43f0d7535c0150bf9f1e02df5cd29abc8794b8c98f0c"
+        },
+        {
+          "path": "measured/result.json",
+          "size": 1264,
+          "sha256": "2650cad276cc00208d54c66275776f499cc5ce85bbbfdb916bccd6b4d9d978ca"
+        }
+      ]
+    },
+    {
+      "kind": "project_memory",
+      "main_base": "b16e58cc4d4c2e35f190707f1e69a904ac3c6ff7",
+      "v151_verified_git_blobs": {
+        "Q052_CERTIFIKAT_V151.json": "41b43b1252d7684a06d05faa08aa96b0a2e39cc3",
+        "Q052_KORT_RESULTAT_V151.md": "0c325b19b235eced18b5a6e5c7fae7f04a28d883",
+        "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V151.md": "2653aed131143526946bbc519e15b6fa248373c1",
+        "Q052_RESULTATINDTAG_OPGAVE_V151.json": "fdac320b735e9e63423df25958c655d3133809ec"
+      }
+    }
+  ],
+  "archive_audit": {
+    "archive_members_verified": 38,
+    "arms": {
+      "L": {
+        "archive_counts": {
+          "RHS": 5435,
+          "HYREC_JOIN": 5435,
+          "OUTPUT": 4862,
+          "PUBLIC_HISTORY_ETA_OPACITY_JOIN": 4861
+        },
+        "H_exact_binary64_replay_mismatch_count": 0,
+        "H_first_mismatch": null,
+        "observed": {
+          "first_RHS": {
+            "line": 1,
+            "z": "0x1.95p+9",
+            "phase": 5,
+            "loga": "-0x1.acb06c7e111acp+2",
+            "H_Mpc_inverse": "0x1.a32c73ba0388ap+1",
+            "H_per_s_HyRec": "0x1.1e9426533631cp-45",
+            "H_Mpc_inverse_decimal": "3.2747940691252255",
+            "observed_HyRec_branch": {
+              "HMLA": 0,
+              "TLA": 0,
+              "SWIFT": 1
+            },
+            "exact_native_minus_stored_H_at_used_u": "54928031225744926452208579839290717/231576817974477950867596098108913791052194414329856",
+            "exact_native_minus_stored_H_display": "2.3719140674866053e-16",
+            "background_bracket": [
+              {
+                "i": 31687,
+                "z": "0x1.953c39132ae82p+9",
+                "loga": "-0x1.acb9ed0fb54acp+2",
+                "H": "0x1.a3902b0496653p+1",
+                "H_d2_du2": "0x1.171217f965dddp+3"
+              },
+              {
+                "i": 31688,
+                "z": "0x1.94e88bf34dbd3p+9",
+                "loga": "-0x1.acacb8c46731cp+2",
+                "H": "0x1.a305a0fcc7e27p+1",
+                "H_d2_du2": "0x1.16aefea23d916p+3"
+              }
+            ],
+            "source_trajectory_comparison": "No applicable V151 bound at this coordinate"
+          },
+          "event_workspace_H_at_z810": {
+            "Z810_PRE_INTERVENTION": "0x1.a32c73ba0388ap+1",
+            "Z810_POST_INTERVENTION": "0x1.a32c73ba0388ap+1"
+          },
+          "eta_810": {
+            "eta_hex": "0x1.57c96c3235bd9p+8",
+            "eta_Mpc": "343.7868071919634",
+            "bracket": [
+              {
+                "i": 4860,
+                "z": "0x1.94d75c28f5c29p+9",
+                "eta": "0x1.57e2401405e14p+8"
+              },
+              {
+                "i": 4861,
+                "z": "0x1.95170a3d70a3dp+9",
+                "eta": "0x1.57bb5aa18d9d7p+8"
+              }
+            ],
+            "table_low": {
+              "i": 0,
+              "z": "0x0p+0",
+              "eta": "0x1.b472102f91966p+13"
+            }
+          }
+        }
+      },
+      "R": {
+        "archive_counts": {
+          "RHS": 5416,
+          "HYREC_JOIN": 5416,
+          "OUTPUT": 4862,
+          "PUBLIC_HISTORY_ETA_OPACITY_JOIN": 4861
+        },
+        "H_exact_binary64_replay_mismatch_count": 0,
+        "H_first_mismatch": null,
+        "observed": {
+          "first_RHS": {
+            "line": 1,
+            "z": "0x1.95p+9",
+            "phase": 5,
+            "loga": "-0x1.acb06c7e111acp+2",
+            "H_Mpc_inverse": "0x1.a32c73ba0388ap+1",
+            "H_per_s_HyRec": "0x1.1e9426533631cp-45",
+            "H_Mpc_inverse_decimal": "3.2747940691252255",
+            "observed_HyRec_branch": {
+              "HMLA": 0,
+              "TLA": 0,
+              "SWIFT": 1
+            },
+            "exact_native_minus_stored_H_at_used_u": "54928031225744926452208579839290717/231576817974477950867596098108913791052194414329856",
+            "exact_native_minus_stored_H_display": "2.3719140674866053e-16",
+            "background_bracket": [
+              {
+                "i": 31687,
+                "z": "0x1.953c39132ae82p+9",
+                "loga": "-0x1.acb9ed0fb54acp+2",
+                "H": "0x1.a3902b0496653p+1",
+                "H_d2_du2": "0x1.171217f965dddp+3"
+              },
+              {
+                "i": 31688,
+                "z": "0x1.94e88bf34dbd3p+9",
+                "loga": "-0x1.acacb8c46731cp+2",
+                "H": "0x1.a305a0fcc7e27p+1",
+                "H_d2_du2": "0x1.16aefea23d916p+3"
+              }
+            ],
+            "source_trajectory_comparison": "No applicable V151 bound at this coordinate"
+          },
+          "event_workspace_H_at_z810": {
+            "Z810_PRE_INTERVENTION": "0x1.a32c73ba0388ap+1",
+            "Z810_POST_INTERVENTION": "0x1.a32c73ba0388ap+1"
+          },
+          "eta_810": {
+            "eta_hex": "0x1.57c96c3235bd9p+8",
+            "eta_Mpc": "343.7868071919634",
+            "bracket": [
+              {
+                "i": 4860,
+                "z": "0x1.94d75c28f5c29p+9",
+                "eta": "0x1.57e2401405e14p+8"
+              },
+              {
+                "i": 4861,
+                "z": "0x1.95170a3d70a3dp+9",
+                "eta": "0x1.57bb5aa18d9d7p+8"
+              }
+            ],
+            "table_low": {
+              "i": 0,
+              "z": "0x0p+0",
+              "eta": "0x1.b472102f91966p+13"
+            }
+          }
+        }
+      }
+    },
+    "body_identical": {
+      "both_40000_background_rows": true,
+      "sha256": "2469640b6119b5b4b960828aa50b7db83bdc8706ef1d8c1d827c95d06f840eb9"
+    },
+    "physical_optical_depth_tau_T_and_conformal_time_eta_are_distinct": true
+  },
+  "replay": {
+    "byte_identical": true,
+    "local_run_is_exec_not_native": true,
+    "cert_sha256": "2f46fd95aeadcfb1932e23e8cdf1ccb0ab4f749cbd79315736a489c2a8a2b5e2",
+    "witnesses": {
+      "phi": {
+        "row": 34,
+        "only_step_that_can_set_supremum": 25,
+        "upper_on_all_other_steps": "6.0263567276946472977908958834377299020218282590686730397563725206E-45",
+        "outer_bounds_for_sup_abs": [
+          "7.5606069959608800475039516407581150007033776338774483250764003789E-45",
+          "7.5829277296923023125591585433673993838489038279278935219016840168E-45"
+        ]
+      },
+      "X": {
+        "row": 27,
+        "only_step_that_can_set_supremum": 23,
+        "upper_on_all_other_steps": "9.5235906304876702754240384595940426935466666239712733471907446457E-28",
+        "outer_bounds_for_sup_abs": [
+          "9.5734780136319537493467468394245279263048148462175433717460796997E-28",
+          "9.5773106834640144918336381131802882246764735570698477502680706765E-28"
+        ]
+      }
+    }
+  },
+  "inherited_hypotheses": [
+    "V73/B★ is the fixed source-real reference. V142 supplies effective startup identity for the matched archived realization.",
+    "V24/V62 bounds and later weight calculations are conditional source evidence.",
+    "V105 z=800 energy anchor and V71 stored opacity primitive have distinct domains and roles."
+  ],
+  "claim_evidence_map": {
+    "Q052-V152-C1-V151-INTAKE": [
+      "V151 replay bytes",
+      "V151 exact witness/enclosure check"
+    ],
+    "Q052-V152-C2-THERMO-H-TRACE": [
+      "thermodynamics.c:2578–2588,2663–2670,2938–2947",
+      "both fullstate and HyRec traces",
+      "both background tables",
+      "archive_audit.arms.*.observed.first_RHS"
+    ],
+    "Q052-V152-C3-ETA-TRACE": [
+      "thermodynamics.c:1142–1146,3365–3396",
+      "background.c:268–302",
+      "both history and public table files",
+      "both upper_cell69 eta810 values"
+    ]
+  },
+  "first_open_binding": {
+    "id": "Q052-V152-OPEN-NATIVE-H-MINUS-BSTAR-810",
+    "classification": "first low-z dynamics consumer after matched intervention",
+    "z": 810,
+    "u_physical": "-ln(811)",
+    "u_observed_hex": "-0x1.acb06c7e111acp+2",
+    "native_h_Mpc_inverse_hex": "0x1.a32c73ba0388ap+1",
+    "table_bracket_indices": [
+      31687,
+      31688
+    ],
+    "inherited_early_block": [
+      "-283538359392033/8796093022208",
+      "-1133246046763767/35184372088832"
+    ],
+    "missing": "Direct outward enclosure for H_native(810)-H_Bstar(810) with exact physical z alignment",
+    "decomposition": [
+      "H_native(u_native)-S_H(u_native)",
+      "S_H(u_native)-S_H(-ln(811))",
+      "S_H(-ln(811))-H_Bstar(810)"
+    ],
+    "note": "First with respect to post-intervention dynamics. Earlier initialization constructs eta knots and is not ordered by this criterion."
+  },
+  "eta_separate": {
+    "ordinary_low_z_dynamics_RHS_uses_H": true,
+    "optical_spline_input": "background_tau_of_z -> pth->tau_table",
+    "eta_reference_error_certified": false,
+    "native_d2tau_dz2_table_separately_exported_in_V149": false,
+    "reference_note": "An H-point defect alone does not bound native conformal-time transport or the accumulated Thomson depth."
+  },
+  "assessments": {
+    "ingestion_state": "ACCEPTED_SCOPED",
+    "execution": "PASS",
+    "numerical_reproduction": "PASS_FINITE_ARCHIVE",
+    "literally_source_real_whole_history": "INCONCLUSIVE",
+    "new_native_processes": 0,
+    "new_dispatches": 0
+  },
+  "activity": {
+    "ledger_id": "Q052",
+    "ledger_version": "V152",
+    "parent_ledger_version": "V151",
+    "run_id": "LOCAL-Q052-V152-INGEST-DENSE-BLOCK-ROWS-2-34",
+    "activity_event_id": "Q052-ACTIVITY-V152-THERMO-H-ARCHIVE-INGEST",
+    "parent_total_pts": 17225,
+    "estimated_run_points": 86,
+    "assessed_run_points": 86,
+    "assessment_breakdown": {
+      "analysis": 23,
+      "calculation": 28,
+      "research": 11,
+      "validation": 24
+    },
+    "assessment_basis": "Estimated new ingestion, archive research, runtime witness alignment and independent checks. Excludes earlier computation, packaging and publication.",
+    "assessment_confidence": "HEURISTIC",
+    "inherited_event_ids": [
+      "Q052-ACTIVITY-V151-DENSE-CERTIFICATE"
+    ],
+    "newly_applied_event_ids": [
+      "Q052-ACTIVITY-V152-THERMO-H-ARCHIVE-INGEST"
+    ],
+    "total_pts": 17311,
+    "status": "STAGED_ON_VERIFIED_V151"
+  },
+  "publication_learning": {
+    "scientific_milestone_ids": [
+      "Q052-SCI-V152-THERMO-H-TRACE"
+    ],
+    "point_milestone_ids": [],
+    "package_id": "Q052-V152-THERMO-H-PUBLIC-R1",
+    "some_engine_ref": {
+      "social_engine": {
+        "name": "Bubbleverse_SoMe_Prompt_Facebook_LinkedIn_X_v1.1 (2).md",
+        "version": "1.1",
+        "id": "libfile_648ec86f8ebc8191ae6894834ea99e02"
+      },
+      "video_engine": {
+        "name": "Bubbleverse_SoMe_Shortfilm_ToonBee_Prompt_v1.1 (2).md",
+        "version": "1.1",
+        "id": "libfile_e5a0eb13fa588191986bf18ecd54caa1"
+      }
+    },
+    "some_engine_execution_status": "TEXT_PRODUCTION_COMPLETE",
+    "relevant_platforms": [
+      "Facebook",
+      "LinkedIn",
+      "X",
+      "YouTube Shorts",
+      "TikTok",
+      "Facebook Reels"
+    ],
+    "package_ref": "Q052_SOME_V152.txt",
+    "image_video_prompt_refs": [
+      "Q052_SOME_V152.txt#Billedprompt",
+      "Q052_SOME_V152.txt#VIDEO A"
+    ],
+    "publication_status": "Klargjort",
+    "publication_evidence_ref": null,
+    "learning_language": "da",
+    "learning_target_words": 150,
+    "learning_word_count": 145,
+    "canonical_learning_ref": "Q052_SOME_V152.txt#Din læringsforklaring",
+    "learning_text_sha256": "f9232752e519db94fc8edc7caeb5ccdf6eff90ee1238cd941c0af191a2818982",
+    "journal_learning_section_ref": "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md#Din læringsforklaring",
+    "journal_entry_ref": "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md#Q052 V152",
+    "journal_save_status": "LOCAL_JOURNAL_VERIFIED",
+    "journal_save_evidence_ref": "Q052_OUTPUT_MANIFEST_V152.json",
+    "full_package_in_journal": true,
+    "same_learning_text_in_chat_and_journal": "CANONICAL_TEXT_ASSEMBLED_FOR_CHAT",
+    "complete_package_displayed_in_chat": "READY_TO_DELIVER",
+    "learning_displayed_in_chat": "READY_TO_DELIVER"
+  }
+}

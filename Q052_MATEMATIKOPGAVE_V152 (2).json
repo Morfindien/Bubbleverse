@@ -1,0 +1,239 @@
+{
+  "schema_id": "bubbleverse.result_ingestion_handoff",
+  "schema_version": "3.1.0",
+  "prompt_id": "bubbleverse.result_ingestion_routing",
+  "prompt_version": "2.4.0",
+  "handoff_id": "BV-Q052-V152-TO-V153-H810-R1",
+  "created_at_utc": "2026-11-27T09:02:03Z",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "target_q": "Q052",
+  "evidence_cutoff": "Current Q052 through V152. Native archive 45109440243 attempt 1.",
+  "case_lifecycle": "ACTIVE",
+  "disposition": "CONTINUE",
+  "epistemic_status": "INCONCLUSIVE",
+  "ingestion_state": "ACCEPTED_SCOPED",
+  "new_result_ids": [
+    "Q052-V152-C1-V151-INTAKE",
+    "Q052-V152-C2-THERMO-H-TRACE",
+    "Q052-V152-C3-ETA-TRACE"
+  ],
+  "source_state_version": "V152",
+  "target_state_version": "V153",
+  "selected_next_engine_id": "BUBBLEVERSE.MATHEMATICS 2.4.0",
+  "engine_registry_ref": {
+    "path": "Bubbleverse_Matematikmotor_2.4.0.md",
+    "size_bytes": 88593,
+    "sha256": "d7ca683f5c87514655eb46c67a720b0029fcd078ef05ee4a389b1bfc5dfa704b"
+  },
+  "execution_profile_ref": "Local auditable interval arithmetic on archived inputs. No native rerun in this task.",
+  "journal_ref": {
+    "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md",
+    "size_bytes": 9872828,
+    "sha256": "d2d8e5ff85c10c70eaea7813e0cd4168bf1526fc3747a64ccee93e5c8f1a252b"
+  },
+  "source_register_ref": "Q052_EVIDENS_V152.json#sources",
+  "claim_evidence_map_ref": "Q052_EVIDENS_V152.json#claim_evidence_map",
+  "result_provenance_ref": "Q052_EVIDENS_V152.json",
+  "anomaly_tension_registry_ref": "Q052_EVIDENS_V152.json#first_open_binding",
+  "completed_task_ledger_ref": "Q052_EVIDENS_V152.json#ingestion_key",
+  "route_history_ref": "Q052_KORT_RESULTAT_V152.md",
+  "integrity_manifest_ref": "Q052_OUTPUT_MANIFEST_V152.json",
+  "closure_snapshot_ref": null,
+  "what_changed": [
+    "V151 accepted once with verified witnesses",
+    "First H consumer bound to the archived spline and HyRec handoff",
+    "Conformal-time table use separately linked to stored opacity history"
+  ],
+  "frozen_configuration_refs": [
+    "Q052 through V150 plus W48 integration, native measurement 45109440243 attempt 1",
+    "4e6c13ed874d9ffc2418faed018fce6796f94e31",
+    "2514e250d20c456530be63e790a079176293a87a82c927b1e748d1eec405da9b"
+  ],
+  "open_material_uncertainties": [
+    "direct H_native vs source-real H at z=810",
+    "native eta and downstream numerical error",
+    "full Q052 completion gate"
+  ],
+  "missing_information": [
+    "Direct outward enclosure for H_native(810)-H_Bstar(810) with exact physical z alignment"
+  ],
+  "next_task": {
+    "task_id": "LOCAL-Q052-V153-FIRST-THERMO-H-BSTAR-Z810",
+    "objective": "Construct one outward signed point interval for H_native(810) minus H_Bstar(810) at the same exact physical redshift.",
+    "inputs": [
+      "Q052_EVIDENS_V152.json",
+      "Q052_KORT_RESULTAT_V152.md",
+      "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md",
+      "V73/B★ reference and Q048 z810 verified checkpoint",
+      "V142 effective startup provenance",
+      "Bubbleverse_Matematikmotor_2.4.0.md"
+    ],
+    "fixed": [
+      "same pinned CLASS source",
+      "same exact Q and TARGET_Q",
+      "same two archived helium arms",
+      "a=1/811 and u=-ln(811)",
+      "observed-native H and coordinate from Q052 V152"
+    ],
+    "procedure": [
+      "Recover a version-pinned admitted source-real z810 state or equivalent H box.",
+      "Check state/capture identity before substituting into the positive Friedmann root.",
+      "Evaluate each of the rounding, coordinate and representation contributions with an independent arithmetic check.",
+      "Keep the local H comparison distinct from conformal time and downstream propagation."
+    ],
+    "scope": "One point, archival inputs and local interval arithmetic. At most 180 seconds of analytical verification after inputs are recovered as a suggested compute fidelity. No new native pair or workflow dispatch.",
+    "result_file": "Q052_PUNKTCERTIFIKAT_V153.json"
+  },
+  "success_condition": "Source-bound outward H point interval with independently cross-checked component contributions.",
+  "failure_or_falsification_condition": "Identify the first inconsistent state, coordinate, convention, expected enclosure or missing provenance. Preserve exact witness.",
+  "stop_condition": "Stop at a checked point interval or the first unresolved material prerequisite. Scope ends at z=810.",
+  "completion_gate_satisfied": false,
+  "completion_gate_reason": "Whole-history native accuracy and source-real comparison for electron fraction and Thomson optical depth remain unresolved.",
+  "handoff_completeness": "COMPLETE_SCOPED_FALLBACK_MANUAL_CONTRACT_CHECK",
+  "writeback_status": "USER_UPLOAD_PENDING",
+  "delivery_status": "LOCAL_FILES_VERIFIED",
+  "operator_gate": null,
+  "output_file_refs": [
+    {
+      "path": "Q052_KORT_RESULTAT_V152.md",
+      "size_bytes": 8608,
+      "sha256": "8f86ca85ac2235a342604b55ae6091cd664dda9f0b03031437f4842c4807d878"
+    },
+    {
+      "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md",
+      "size_bytes": 9872828,
+      "sha256": "d2d8e5ff85c10c70eaea7813e0cd4168bf1526fc3747a64ccee93e5c8f1a252b"
+    },
+    {
+      "path": "Q052_EVIDENS_V152.json",
+      "size_bytes": 23467,
+      "sha256": "318dc6d39680fc9443f1de8567096cd8cd2adefb738592310d4179a13278f4a4"
+    },
+    {
+      "path": "Q052_SOME_V152.txt",
+      "size_bytes": 7627,
+      "sha256": "596908c47ad0fba00fd6a4be32b2fd6bf2454ec6c5c2a429a1403f994e7f92c1"
+    },
+    {
+      "path": "q052_audit_v152.py",
+      "size_bytes": 7129,
+      "sha256": "0e9ae85817f922112b044053263cdd2925a41fe3aaccc064b29139f746e610d5"
+    }
+  ],
+  "output_manifest_ref": "Q052_OUTPUT_MANIFEST_V152.json",
+  "repository_memory": {
+    "repository_url": "https://github.com/Morfindien/Bubbleverse",
+    "repository_segment_id": "Morfindien/Bubbleverse",
+    "base_commit_sha": "b16e58cc4d4c2e35f190707f1e69a904ac3c6ff7",
+    "source_freshness": "VERIFIED_PINNED_MAIN",
+    "journal_path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md",
+    "current_state_path": null,
+    "index_refs": [],
+    "cross_reference_refs": [
+      "Q052_RESULTATINDTAG_OPGAVE_V151.json",
+      "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V151.md"
+    ],
+    "memory_update_ref": "Q052_KORT_RESULTAT_V152.md",
+    "target_paths_status": "NEW_VERSIONED_FILES_PROPOSED_AT_ROOT",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "commit_sha": null,
+    "pull_request_url": null,
+    "upload_instructions_ref": "Q052_KORT_RESULTAT_V152.md"
+  },
+  "question_activity_points": {
+    "ledger_id": "Q052",
+    "ledger_version": "V152",
+    "parent_ledger_version": "V151",
+    "run_id": "LOCAL-Q052-V152-INGEST-DENSE-BLOCK-ROWS-2-34",
+    "activity_event_id": "Q052-ACTIVITY-V152-THERMO-H-ARCHIVE-INGEST",
+    "parent_total_pts": 17225,
+    "estimated_run_points": 86,
+    "assessed_run_points": 86,
+    "assessment_breakdown": {
+      "analysis": 23,
+      "calculation": 28,
+      "research": 11,
+      "validation": 24
+    },
+    "assessment_basis": "Estimated new ingestion, archive research, runtime witness alignment and independent checks. Excludes earlier computation, packaging and publication.",
+    "assessment_confidence": "HEURISTIC",
+    "inherited_event_ids": [
+      "Q052-ACTIVITY-V151-DENSE-CERTIFICATE"
+    ],
+    "newly_applied_event_ids": [
+      "Q052-ACTIVITY-V152-THERMO-H-ARCHIVE-INGEST"
+    ],
+    "total_pts": 17311,
+    "status": "STAGED_ON_VERIFIED_V151"
+  },
+  "some_milestones": {
+    "interval_pts": 1000,
+    "highest_threshold_reached_pts": 17000,
+    "crossed_this_run": [],
+    "ready_package_ids": [
+      "Q052-V152-THERMO-H-PUBLIC-R1"
+    ],
+    "pending_milestones": [],
+    "next_threshold_pts": 18000,
+    "points_to_next_threshold": 689,
+    "milestone_ledger_ref": "Q052_EVIDENS_V152.json#publication_learning",
+    "package_file_refs": [
+      "Q052_SOME_V152.txt"
+    ],
+    "package_creation_status": "COMPLETE",
+    "external_publication_status": "NOT_POSTED",
+    "scientific_route_changed_by_points": false
+  },
+  "publication_learning": {
+    "module_id": "bubbleverse.some_journal_learning",
+    "module_version": "1.1",
+    "scientific_milestone_ids": [
+      "Q052-SCI-V152-THERMO-H-TRACE"
+    ],
+    "point_milestone_ids": [],
+    "package_id": "Q052-V152-THERMO-H-PUBLIC-R1",
+    "some_engine_ref": {
+      "social_engine": {
+        "name": "Bubbleverse_SoMe_Prompt_Facebook_LinkedIn_X_v1.1 (2).md",
+        "version": "1.1",
+        "id": "libfile_648ec86f8ebc8191ae6894834ea99e02"
+      },
+      "video_engine": {
+        "name": "Bubbleverse_SoMe_Shortfilm_ToonBee_Prompt_v1.1 (2).md",
+        "version": "1.1",
+        "id": "libfile_e5a0eb13fa588191986bf18ecd54caa1"
+      }
+    },
+    "some_engine_execution_status": "TEXT_PRODUCTION_COMPLETE",
+    "relevant_platforms": [
+      "Facebook",
+      "LinkedIn",
+      "X",
+      "YouTube Shorts",
+      "TikTok",
+      "Facebook Reels"
+    ],
+    "package_ref": "Q052_SOME_V152.txt",
+    "image_video_prompt_refs": [
+      "Q052_SOME_V152.txt#Billedprompt",
+      "Q052_SOME_V152.txt#VIDEO A"
+    ],
+    "publication_status": "Klargjort",
+    "publication_evidence_ref": null,
+    "learning_language": "da",
+    "learning_target_words": 150,
+    "learning_word_count": 145,
+    "canonical_learning_ref": "Q052_SOME_V152.txt#Din læringsforklaring",
+    "learning_text_sha256": "f9232752e519db94fc8edc7caeb5ccdf6eff90ee1238cd941c0af191a2818982",
+    "journal_learning_section_ref": "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md#Din læringsforklaring",
+    "journal_entry_ref": "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md#Q052 V152",
+    "journal_save_status": "LOCAL_JOURNAL_VERIFIED",
+    "journal_save_evidence_ref": "Q052_OUTPUT_MANIFEST_V152.json",
+    "full_package_in_journal": true,
+    "same_learning_text_in_chat_and_journal": "CANONICAL_TEXT_ASSEMBLED_FOR_CHAT",
+    "complete_package_displayed_in_chat": "READY_TO_DELIVER",
+    "learning_displayed_in_chat": "READY_TO_DELIVER"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "current_q": "Q052",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "version": "V152",
+  "base_commit": "b16e58cc4d4c2e35f190707f1e69a904ac3c6ff7",
+  "self_entry": {
+    "path": "Q052_OUTPUT_MANIFEST_V152.json",
+    "role": "output_manifest",
+    "content_hash": "Manifest omits its own digest."
+  },
+  "entries": [
+    {
+      "path": "Q052_KORT_RESULTAT_V152.md",
+      "size_bytes": 8608,
+      "sha256": "8f86ca85ac2235a342604b55ae6091cd664dda9f0b03031437f4842c4807d878",
+      "role": "report",
+      "repository_relative_path": "Q052_KORT_RESULTAT_V152.md",
+      "new_versioned_file": true,
+      "dependencies": [
+        "Q052_EVIDENS_V152.json",
+        "Q052_MATEMATIKOPGAVE_V152.json"
+      ]
+    },
+    {
+      "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md",
+      "size_bytes": 9872828,
+      "sha256": "d2d8e5ff85c10c70eaea7813e0cd4168bf1526fc3747a64ccee93e5c8f1a252b",
+      "role": "journal",
+      "repository_relative_path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V152.md",
+      "new_versioned_file": true,
+      "dependencies": [
+        "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V151.md",
+        "Q052_KORT_RESULTAT_V152.md",
+        "Q052_SOME_V152.txt"
+      ]
+    },
+    {
+      "path": "Q052_EVIDENS_V152.json",
+      "size_bytes": 23467,
+      "sha256": "318dc6d39680fc9443f1de8567096cd8cd2adefb738592310d4179a13278f4a4",
+      "role": "evidence",
+      "repository_relative_path": "Q052_EVIDENS_V152.json",
+      "new_versioned_file": true,
+      "dependencies": [
+        "Q052_CERTIFIKAT_V151.json",
+        "Q052_REPRODUKTION_V151.zip",
+        "GitHub run 45109440243 attempt 1"
+      ]
+    },
+    {
+      "path": "Q052_MATEMATIKOPGAVE_V152.json",
+      "size_bytes": 10528,
+      "sha256": "30fbc01ba4212850ed89095b348e45b454d2a83eb345abdc20cf1944edc762d7",
+      "role": "task",
+      "repository_relative_path": "Q052_MATEMATIKOPGAVE_V152.json",
+      "new_versioned_file": true,
+      "dependencies": [
+        "Q052_EVIDENS_V152.json",
+        "Bubbleverse_Matematikmotor_2.4.0.md"
+      ]
+    },
+    {
+      "path": "Q052_SOME_V152.txt",
+      "size_bytes": 7627,
+      "sha256": "596908c47ad0fba00fd6a4be32b2fd6bf2454ec6c5c2a429a1403f994e7f92c1",
+      "role": "social",
+      "repository_relative_path": "Q052_SOME_V152.txt",
+      "new_versioned_file": true,
+      "dependencies": [
+        "Q052_EVIDENS_V152.json"
+      ]
+    },
+    {
+      "path": "q052_audit_v152.py",
+      "size_bytes": 7129,
+      "sha256": "0e9ae85817f922112b044053263cdd2925a41fe3aaccc064b29139f746e610d5",
+      "role": "audit",
+      "repository_relative_path": "q052_audit_v152.py",
+      "new_versioned_file": true,
+      "dependencies": [
+        "GitHub run 45109440243 attempt 1"
+      ]
+    }
+  ]
+}
