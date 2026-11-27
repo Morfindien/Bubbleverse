@@ -1,0 +1,200 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "contract_id": "Q052_MATH_RESULT_TO_INGESTION_V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "continue_same_q": true,
+  "source_state_version": "V151",
+  "target_state_version": "V152",
+  "origin_task_id": "LOCAL-Q052-V151-VALIDATE-NDF15-DENSE-BLOCK-ROWS-2-34",
+  "parent_task_fingerprint_sha256": "c329d7d752555fd699e07e86b7a9c5d1b4d8be3df3fcaf2bba8d98aa74bc6ccf",
+  "handoff_id": "Q052-V151-DENSE-BLOCK-TO-INGESTION",
+  "created_at_utc": "2026-11-26T12:34:55+00:00",
+  "task_id": "LOCAL-Q052-V152-INGEST-DENSE-BLOCK-ROWS-2-34",
+  "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.3.0",
+  "origin_engine": "BUBBLEVERSE.MATHEMATICS 2.4.0",
+  "source_cutoff": "Q052 through V150 plus W48 integration, native measurement 45109440243 attempt 1",
+  "scientific_status": "INCONCLUSIVE",
+  "technical_status": "PASS",
+  "workflow_status": "READY_FOR_HANDOFF",
+  "delivery_state": "PREPARED_FOR_OPERATOR",
+  "scope": "NDF15 minus V73 at identical u=ln(a); phi in CLASS field units, X=pi/exp(u) in CLASS field units/Mpc; rows 2–34 only",
+  "journal_ref": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V151.md",
+  "parent_journal_ref": {
+    "container": "Q052_JOURNAL_UPDATED.pdf",
+    "embedded": "Q052_FORSKNINGSJOURNAL_W48_FULD.md",
+    "size_bytes": 9842368,
+    "sha256": "91e86fea65450048159920c2c267f869d42196272c6de27dfa7d539050d549ac",
+    "V150_sha256": "089491a1a5533bde6512742d90d6e3cb9160d8e87d6ab622d3d0aa6dc8b8b101"
+  },
+  "result_ref": "Q052_CERTIFIKAT_V151.json",
+  "report_ref": "Q052_KORT_RESULTAT_V151.md",
+  "replay_ref": "Q052_REPRODUKTION_V151.zip",
+  "verified_input_refs": {
+    "Q052_EVIDENS_V146.json": "44ca52f0030fabef0c69484879f1dd1f3bfbb1cca23ec3c681131ebd941bc175",
+    "Q052_BLOKCERTIFIKAT_V147.json": "277931bf9f490e081bd7ab53f777d52fde32e21cb940d81de9d3e99c47d7bcdd",
+    "Q052_EVIDENS_V148.json": "3b908e51a7c9a42198c3ecab9aaad62bd89620c75f7f13ace813b9a6e8310518",
+    "Q052_EVIDENS_V150.json": "464cbf373cb106876a3cec6822c1437ae986a8825e73eb7b8bc0ab78c0f468ce",
+    "Bubbleverse_Matematikmotor_2.4.0.md": "d7ca683f5c87514655eb46c67a720b0029fcd078ef05ee4a389b1bfc5dfa704b",
+    "Q052_WEEKLY_RESEARCH_ASSESSMENT.md": "000e1c190e804d96bcc3a4433df65bb7f9c3e20d05345bd9d72250ed8d0ee948",
+    "Q052_MATEMATIKOPGAVE_V150.json": "589799ccb780e05c4e6aa607b016389da5391b6df9a758728471f8ca257ca3d2",
+    "Q052_REPRODUKTION_V147.zip": "3a7731b21a573531e4f22870154d349f86a3b6c982ede0d1886c414f0d43751e"
+  },
+  "result": {
+    "claim_ids": [
+      "Q052-V151-SIGNED-DENSE",
+      "Q052-V151-ACCEPTED-KNOTS",
+      "Q052-V151-SUP-LOCATION"
+    ],
+    "signed_uniform": {
+      "phi": [
+        "1.9256703825253776005953258655623956215210065587553881189632669264E-47",
+        "7.5829277296923023125591585433673993838489038279278935219016840168E-45"
+      ],
+      "X": [
+        "-9.5773106834640144918336381131802882246764735570698477502680706765E-28",
+        "-1.9584810723327350945377607200032336553534578052500976430142071201E-28"
+      ]
+    },
+    "accepted_uniform": {
+      "phi": [
+        "1.9256703825253776005953258655623956215210065587553881189632669264E-47",
+        "5.7130827787712639772814272655670253065656599743737531503749608157E-45"
+      ],
+      "X": [
+        "-9.519164064773729740786968129212139831055352793422977067724322167E-28",
+        "-1.9586331624444538715634946105649998373192232116698845038092973587E-28"
+      ]
+    },
+    "suprema": {
+      "phi": {
+        "row": 34,
+        "only_step_that_can_set_supremum": 25,
+        "upper_on_all_other_steps": "6.0263567276946472977908958834377299020218282590686730397563725206E-45",
+        "outer_bounds_for_sup_abs": [
+          "7.5606069959608800475039516407581150007033776338774483250764003789E-45",
+          "7.5829277296923023125591585433673993838489038279278935219016840168E-45"
+        ]
+      },
+      "X": {
+        "row": 27,
+        "only_step_that_can_set_supremum": 23,
+        "upper_on_all_other_steps": "9.5235906304876702754240384595940426935466666239712733471907446457E-28",
+        "outer_bounds_for_sup_abs": [
+          "9.5734780136319537493467468394245279263048148462175433717460796997E-28",
+          "9.5773106834640144918336381131802882246764735570698477502680706765E-28"
+        ]
+      }
+    },
+    "units": "NDF15 minus V73 at identical u=ln(a); phi in CLASS field units, X=pi/exp(u) in CLASS field units/Mpc"
+  },
+  "validation": {
+    "segments": 44,
+    "steps": 13,
+    "interior_knots": 12,
+    "direct_output_nodes": 33,
+    "V147_standard_and_rational_replay_byte_match": true,
+    "V151_clean_replay_byte_match": true,
+    "new_native_processes": 0
+  },
+  "next_task": {
+    "objective": "Genkør V151-certifikatet fra reproduktionspakken, kontrollér placeringen af de to lokale maksima og indtag resultatet i samme Q-ledger én gang. Undersøg derefter, hvilke arkiverede baggrundsopslag der faktisk føder termodynamikberegningen i z-intervallet 0–810, og identificér det første opslag, hvor en fejlgrænse stadig mangler. Brug dette til at prioritere næste certifikat.",
+    "inputs": [
+      "Q052_CERTIFIKAT_V151.json",
+      "Q052_REPRODUKTION_V151.zip",
+      "Q052_KORT_RESULTAT_V151.md",
+      "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V151.md"
+    ],
+    "acceptance": "Byte-exact replay, identical parent and bounds, identify relevant thermodynamic consumer or first missing provenance",
+    "rejection": "First reproducible numerical, provenance, or contract conflict",
+    "inconclusive": "No downstream bound without a matched consumer and uncertainty transport",
+    "no_repeat": "No new CLASS pair or unbounded continuation beyond row 34",
+    "resume": "Read the present files in Result Ingestion",
+    "expected": "Q052 V152 ingestion record and a single routed task"
+  },
+  "blocker_id": null,
+  "completion_gate": {
+    "closed": false,
+    "reason": "Full matched electron-fraction and optical-depth suprema with validated error remain open"
+  },
+  "setup_assessment": "Aktuelt setup er Codex med Python 3.12, eksakte brøker, styret decimalafrunding, filadgang og læst GitHub-reference. Klasse C/H. Samme lokale miljø er anbefalet til V152-indtag. Et særskilt reasoning-niveau er ikke verificeret. Ved forskellig bytehash identificeres første afvigelse. Alternativ kontrol kan bruge en anden intervalimplementation. Et korrekt replay kan indtages med en enklere sammenligningskørsel.",
+  "point_event": {
+    "run_id": "LOCAL-Q052-V151-VALIDATE-NDF15-DENSE-BLOCK-ROWS-2-34",
+    "activity_event_id": "Q052-ACTIVITY-V151-DENSE-CERTIFICATE",
+    "previous": "Q052-ACTIVITY-V150-AUTHENTICATE-ACCEPTED-NDF15-STEPS",
+    "parent": 17127,
+    "breakdown": {
+      "analysis": 24,
+      "compute": 35,
+      "search": 8,
+      "validation": 31
+    },
+    "estimated": 98,
+    "total": 17225,
+    "next_milestone": 18000,
+    "remaining": 775,
+    "cycle_progress": 225,
+    "point_thresholds_crossed": [],
+    "scientific_milestones": [
+      "Q052-SCI-V151-DENSE-BLOCK"
+    ],
+    "publication_ids": [
+      "Q052-V151-DENSE-BLOCK-PUBLIC-R1"
+    ],
+    "pending": [],
+    "publication_state": "PACKAGE_PREPARED",
+    "stage": "Klargjort",
+    "journal_entry_state": "INTEGRATED",
+    "learning_ref": "Q052_SOME_V151.txt",
+    "basis": "RUN POINTS 98 estimeret: analyse 24 for koordineret fejltransfer og supremumkriterium, beregning 35 for 44 delintervaller og knuderekonstruktion, søgning 8 for versionsbundet evidens, validering 31 for genkørsler, punkt- og ODE-kontroller. Forrige total 17.127, ny total 17.225, cyklus 225/1000, næste tærskel M018 ved 18.000, 775 tilbage. Tidligere M001–M017 er videreført. Den nye videnskabelige milepæl udløser én SoMe-pakke. Status Klargjort for alle fem platforme. Journal og læring er integreret. Ingen bekræftet ekstern publicering."
+  },
+  "memory_update": {
+    "repo": "Morfindien/Bubbleverse",
+    "read_state": "PARTIAL",
+    "read_commit": "5098ad25dd894baed26c04d85af80ddcc0efec8a",
+    "write_state": "READY_FOR_MANUAL_UPLOAD",
+    "actual_write": false,
+    "proposed_upload_root": "/",
+    "index_change": "Index the V151 results and V152 handoff; append point event once and cross-reference W48.",
+    "publication_files": [
+      "Q052_SOME_V151.txt",
+      "Q052_SOME_V151.zip"
+    ]
+  },
+  "output_refs": [
+    {
+      "path": "Q052_KORT_RESULTAT_V151.md",
+      "size_bytes": 8728,
+      "sha256": "98f912e6956d8b8c16f7e9a84e49b5052736f9bb1769541573299b589d8400f3"
+    },
+    {
+      "path": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V151.md",
+      "size_bytes": 9856552,
+      "sha256": "4756f4c1fabd7b37397cde4348f2a6d48f8a2e9ecb9e54d779aa49aae48c48bb"
+    },
+    {
+      "path": "Q052_CERTIFIKAT_V151.json",
+      "size_bytes": 97116,
+      "sha256": "2f46fd95aeadcfb1932e23e8cdf1ccb0ab4f749cbd79315736a489c2a8a2b5e2"
+    },
+    {
+      "path": "Q052_REPRODUKTION_V151.zip",
+      "size_bytes": 465412,
+      "sha256": "60edff90d667aa7e02698964472e0e82ea169a037eb4ec7c95e277ed3a44c35b"
+    },
+    {
+      "path": "Q052_SOME_V151.txt",
+      "size_bytes": 5404,
+      "sha256": "85827c3db0407a787b4d7c86790c2c6d46b535a5e6ccc8e61aa1bb5e7b7e6cd9"
+    },
+    {
+      "path": "Q052_SOME_V151.zip",
+      "size_bytes": 9769,
+      "sha256": "f970e057f64e769c64fbd24b263e7327b10490b36ab641e3f724a3d3a7512af3"
+    }
+  ],
+  "self_fingerprint_convention": "SHA-256 of compact UTF-8 key-sorted JSON without fingerprint_sha256",
+  "fingerprint_sha256": "1d4c996611234fa3fa078b72b1abf198b8c93a7c48836e6fc90c20f7d21e3e6e"
+}
