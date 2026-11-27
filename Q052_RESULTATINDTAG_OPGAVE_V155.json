@@ -1,0 +1,201 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "contract_id": "Q052_MATH_RESULT_TO_INGESTION_V1",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "continue_same_q": true,
+  "source_state_version": "V155",
+  "target_state_version": "V156",
+  "origin_task_id": "LOCAL-Q052-V155-FIRST-THERMO-H-SEGMENT",
+  "parent_task_file_sha256": "a4dbaad06ded0d75e0242ee35cce92734427d06e5ef86d46be35649afb90ba24",
+  "handoff_id": "Q052-V155-H-FIRST-SEGMENT-TO-INGESTION",
+  "created_at_utc": "2026-11-27T12:44:28+00:00",
+  "task_id": "LOCAL-Q052-V156-INGEST-FIRST-H-SEGMENT",
+  "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.4.0",
+  "engine_ref": {
+    "path": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.4.0 (1).md",
+    "sha256": "2247e2929c8049618debff9c81b10f15a8b49c2eb06786d3119bf26c434196be",
+    "size_bytes": 129719
+  },
+  "origin_engine": "BUBBLEVERSE.MATHEMATICS 2.4.0",
+  "scientific_status": "INCONCLUSIVE",
+  "technical_status": "PASS_CONDITIONAL_SCOPED",
+  "workflow_status": "READY_FOR_HANDOFF",
+  "journal_ref": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V155.md",
+  "parent_journal_ref": {
+    "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V154 (1).md",
+    "sha256": "ec6877d4e523bf8145b96ed892477dde2d7681dff80f6e2fa0968efc19f1ce6f",
+    "size_bytes": 9889712
+  },
+  "result_ref": "Q052_SEGMENTCERTIFIKAT_V155.json",
+  "report_ref": "Q052_KORT_RESULTAT_V155.md",
+  "replay_ref": "Q052_REPRODUKTION_V155.zip",
+  "verified_input_refs": [
+    {
+      "path": "Q052_MATEMATIKOPGAVE_V154 (3).json",
+      "sha256": "a4dbaad06ded0d75e0242ee35cce92734427d06e5ef86d46be35649afb90ba24",
+      "size_bytes": 8616
+    },
+    {
+      "path": "Bubbleverse_Matematikmotor_2.4.0 (4).md",
+      "sha256": "d7ca683f5c87514655eb46c67a720b0029fcd078ef05ee4a389b1bfc5dfa704b",
+      "size_bytes": 88593
+    },
+    {
+      "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V154 (1).md",
+      "sha256": "ec6877d4e523bf8145b96ed892477dde2d7681dff80f6e2fa0968efc19f1ce6f",
+      "size_bytes": 9889712
+    },
+    {
+      "path": "Q052_PUNKTCERTIFIKAT_V153.json",
+      "sha256": "619c5cbc8da51444910d8ef2bbfa76a1176808ca7b7c6bf5a12abe57bff524ab",
+      "size_bytes": 11135
+    },
+    {
+      "path": "Q052_EVIDENS_V154.json",
+      "sha256": "81b3c280ed5a505da65387d078fbb90c1c0b14da4312bb815482b8103abe4371",
+      "size_bytes": 10159
+    }
+  ],
+  "result": {
+    "signed_uniform": [
+      "-144271111765365101942701669346739916905704264086281562682560484582581/883423532389192164791648750371459257913741948437809479060803100646309888",
+      "132983051498118923654070686191219627375873731296475563050383768560357/883423532389192164791648750371459257913741948437809479060803100646309888"
+    ],
+    "signed_relative": [
+      "-88145849888896144043010672317948587732758512159813382580242971904793/1766847064778384329583297500742918515827483896875618958121606201292619776",
+      "40609932033619817470108542115018569124376846206661568113689196033827/883423532389192164791648750371459257913741948437809479060803100646309888"
+    ],
+    "domain_z": [
+      "7123223648197587/8796093022208",
+      "810"
+    ],
+    "native_input_extension": "RN64(z), exact binary64 one_plus_z, correctly rounded log via pinned MPFR wrapper, archived source cubic operation graph; both legal adjacent choices allowed at a knot",
+    "assumptions": [
+      "V153 energy enclosure and pinned V105 validation",
+      "binary64 RN operations, no reassociation or FMA replacing archived expression",
+      "fixed model parameters, same admitted Bstar reference",
+      "correctly rounded log coordinate wrapper as in measured archive"
+    ],
+    "completion_gate_satisfied": false
+  },
+  "validation": {
+    "closed_domain_covered": true,
+    "rational_bins": 256,
+    "archived_RHS_witnesses": 19,
+    "fresh_replay_byte_identical": true,
+    "point_V153_contained": true,
+    "new_native_runs": 0,
+    "new_workflow_dispatches": 0
+  },
+  "next_task": {
+    "objective": "Genkør og indtag det første uniformt afgrænsede H-segment én gang. Afstem forudsætningerne og identificér næste nødvendige H-dækning eller første nødvendige fejloverførsel til elektronberegningen. Vælg præcis én næste afgrænset opgave.",
+    "inputs": [
+      "Q052_SEGMENTCERTIFIKAT_V155.json",
+      "Q052_REPRODUKTION_V155.zip",
+      "Q052_KORT_RESULTAT_V155.md",
+      "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V155.md"
+    ],
+    "acceptance": "Identical replay and consistent point/segment conventions, then one documented route.",
+    "rejection": "First evidence-backed identity, arithmetic or proof conflict.",
+    "inconclusive": "Uniform H on this segment leaves full Q052 open.",
+    "stop": "At a scoped ingestion decision and one next task."
+  },
+  "completion_gate": {
+    "closed": false,
+    "reason": "Uniform error on remaining H trajectory, conformal-time error and electron-fraction/optical-depth numerical certification remain open."
+  },
+  "setup_assessment": {
+    "model": "gpt-6.1-sol",
+    "reasoning_level": "NOT_VERIFIED",
+    "runtime": "Python 3.12, exact fractions, directed 240-bit dyadic arithmetic, mpmath.iv 1.3.0",
+    "class": [
+      "H",
+      "C"
+    ],
+    "recommended": "Same available setup for replay and ingestion",
+    "upgrade_trigger": "Failure to enclose a required downstream term",
+    "fallback": "Keep archived evidence and expose first failing obligation"
+  },
+  "point_event": {
+    "ledger_version": "V155",
+    "parent_ledger_version": "V154",
+    "activity_event_id": "Q052-ACTIVITY-V155-H-FIRST-SEGMENT",
+    "parent_total_pts": 17442,
+    "estimated_run_points": 96,
+    "assessed_run_points": 96,
+    "assessment_breakdown": {
+      "analysis": 25,
+      "calculation": 31,
+      "research": 10,
+      "validation": 30
+    },
+    "assessment_confidence": "HEURISTIC",
+    "total_pts": 17538,
+    "next_threshold_pts": 18000,
+    "points_to_next_threshold": 462,
+    "crossed_this_run": [],
+    "newly_applied_event_ids": [
+      "Q052-ACTIVITY-V155-H-FIRST-SEGMENT"
+    ]
+  },
+  "publication_learning": {
+    "package_id": "Q052-V155-H-FIRST-SEGMENT-PUBLIC-R1",
+    "scientific_milestone_ids": [
+      "Q052-SCI-V155-H-FIRST-SEGMENT"
+    ],
+    "point_milestone_ids": [],
+    "status": "Klargjort",
+    "package_ref": "Q052_SOME_V155.txt",
+    "full_files_ref": "Q052_SOME_V155.zip",
+    "full_package_in_journal": true,
+    "learning_sha256": "d11ec9d66e55ce720cff029bb71952dfe91b22ee8d44557ffdf3577a028b093f",
+    "learning_words": 149,
+    "external_publication": false,
+    "tool_specific_video_format": "UNVERIFIED_GENERAL_BRIEF"
+  },
+  "memory_update": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "341a45b8806354178b3508de3378ebd65c6d9591",
+    "freshness": "PINNED_PRIOR_CHECK",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "actual_write": false,
+    "proposed_upload_root": "/"
+  },
+  "output_refs": [
+    {
+      "path": "Q052_SEGMENTCERTIFIKAT_V155.json",
+      "sha256": "9caac03d96dc612b5c30bf769ea3285b35375a4dd40f48acac591b98dd20a234",
+      "size_bytes": 383922
+    },
+    {
+      "path": "Q052_KORT_RESULTAT_V155.md",
+      "sha256": "8da9648122d7e5d4cd143bc533ee12d43588114a952d7c3aabdf41a9c1907563",
+      "size_bytes": 5299
+    },
+    {
+      "path": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V155.md",
+      "sha256": "cb168fdbc896e370481baf3d6cd353dce9eae142ea7f40451b04023a3bd9513e",
+      "size_bytes": 9902694
+    },
+    {
+      "path": "Q052_REPRODUKTION_V155.zip",
+      "sha256": "3384b75a0fa7a19138c2791e14034ec4966507200b78513dc3fb14d06db03295",
+      "size_bytes": 3247500
+    },
+    {
+      "path": "Q052_SOME_V155.txt",
+      "sha256": "7f85cbc0a4ff1a16ba4366b37ebbc1f00a68fd8c2773370ad1129fc493d34d22",
+      "size_bytes": 7532
+    },
+    {
+      "path": "Q052_SOME_V155.zip",
+      "sha256": "27a105ddb2b5c9db10b99ac3b5daddb4161ec996805a455c7dfdae8970397d81",
+      "size_bytes": 11070
+    }
+  ],
+  "self_fingerprint_convention": "SHA-256 compact UTF-8 key-sorted JSON without fingerprint_sha256",
+  "fingerprint_sha256": "66be6fd938f8b19d22d238e50a25904e7d942136b55b3aa7cdfccf57bc1b5b1b"
+}
