@@ -1,0 +1,224 @@
+{
+  "schema_version": "UNVALIDATED_LOCAL_CONTRACT",
+  "contract_id": "Q052_MATH_RESULT_TO_INGESTION_V1",
+  "case_id": "LOCAL-Q052-NATIVE-REALIZATION-CERTIFICATION-V1",
+  "current_q": "Q052",
+  "target_q": "Q052",
+  "exact_question": "Under the pinned hillipop-ede_n3 source/configuration, the same fixed admitted common background and matched validated z=810 start state used by Q051, does the actual native CLASS/P6 low-z implementation produce q=xHeII=10^-6 versus q=0 electron-fraction and Thomson-optical-depth histories that are reproducible, trajectory-consistent with the literal source-real dynamics, and contained within Q051's uniform analytic bounds; and what are the realized sup|Delta x_e| and sup|Delta tau_T| with a validated numerical error certificate?",
+  "continue_same_q": true,
+  "source_state_version": "V157",
+  "target_state_version": "V158",
+  "origin_task_id": "LOCAL-Q052-V157-H800-NATIVE-REFERENCE-BLOCK",
+  "parent_task_file_sha256": "309c88bd8145fb9403ed11b75c2366143fb24d64490e663f5056c2476c571543",
+  "handoff_id": "Q052-V157-H800-BLOCK-TO-INGESTION",
+  "created_at_utc": "2026-11-28T06:48:51+00:00",
+  "task_id": "LOCAL-Q052-V158-INGEST-H800-BLOCK",
+  "engine": "BUBBLEVERSE.RESULT_INGESTION_ROUTING 2.4.0",
+  "engine_ref": {
+    "path": "Bubbleverse_Result_Ingestion_Routing_Engine_v2.4.0 (2).md",
+    "sha256": "2247e2929c8049618debff9c81b10f15a8b49c2eb06786d3119bf26c434196be",
+    "size_bytes": 129719
+  },
+  "origin_engine": "BUBBLEVERSE.MATHEMATICS 2.4.0",
+  "scientific_status": "INCONCLUSIVE",
+  "technical_status": "PASS_CONDITIONAL_SCOPED",
+  "workflow_status": "READY_FOR_HANDOFF",
+  "journal_ref": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V157.md",
+  "parent_journal_ref": {
+    "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V156.md",
+    "size_bytes": 9908484,
+    "sha256": "b1b7b63b956425dcbdf1223f4f280e05055ff7ab4564b8724da4081245f33044"
+  },
+  "result_ref": "Q052_BLOKCERTIFIKAT_V157.json",
+  "report_ref": "Q052_KORT_RESULTAT_V157.md",
+  "replay_ref": "Q052_REPRODUKTION_V157.zip",
+  "verified_input_refs": [
+    {
+      "path": "Q052_MATEMATIKOPGAVE_V156 (1).json",
+      "sha256": "309c88bd8145fb9403ed11b75c2366143fb24d64490e663f5056c2476c571543",
+      "size_bytes": 8930
+    },
+    {
+      "path": "Q052_INGESTION_OG_SAMLET_JOURNAL_V156 (1).md",
+      "sha256": "b1b7b63b956425dcbdf1223f4f280e05055ff7ab4564b8724da4081245f33044",
+      "size_bytes": 9908484
+    },
+    {
+      "path": "Bubbleverse_Matematikmotor_2.4.0 (5).md",
+      "sha256": "d7ca683f5c87514655eb46c67a720b0029fcd078ef05ee4a389b1bfc5dfa704b",
+      "size_bytes": 88593
+    },
+    {
+      "path": "Q052_EVIDENS_V156.json",
+      "sha256": "161cf64fae50d1a3b94f5a02e2e4e862d3d599c4e08bb7242939416612262555",
+      "size_bytes": 30399
+    },
+    {
+      "path": "Q052_SEGMENTCERTIFIKAT_V155.json",
+      "sha256": "9caac03d96dc612b5c30bf769ea3285b35375a4dd40f48acac591b98dd20a234",
+      "size_bytes": 383922
+    },
+    {
+      "path": "Q052_PUNKTCERTIFIKAT_V153.json",
+      "sha256": "619c5cbc8da51444910d8ef2bbfa76a1176808ca7b7c6bf5a12abe57bff524ab",
+      "size_bytes": 11135
+    }
+  ],
+  "result": {
+    "signed_uniform": [
+      "-186810266485999803946365297723227219498226795753521062145777167985025/883423532389192164791648750371459257913741948437809479060803100646309888",
+      "367046677616298996604158695412108754171378161906135251552231090881285/1766847064778384329583297500742918515827483896875618958121606201292619776"
+    ],
+    "signed_relative": [
+      "-28534578528733735993786542697155859774809327213491956961475321862301/441711766194596082395824375185729628956870974218904739530401550323154944",
+      "28032512460812800860573927582263714586530549360399660940079437516909/441711766194596082395824375185729628956870974218904739530401550323154944"
+    ],
+    "domain_z": [
+      "800",
+      "7123223648197587/8796093022208"
+    ],
+    "signed_width": [
+      "0.0004192027852060",
+      "0.0004192027852061"
+    ],
+    "combined_relative_800_to_810": {
+      "exact": [
+        "-28534578528733735993786542697155859774809327213491956961475321862301/441711766194596082395824375185729628956870974218904739530401550323154944",
+        "28032512460812800860573927582263714586530549360399660940079437516909/441711766194596082395824375185729628956870974218904739530401550323154944"
+      ],
+      "outward": [
+        "-0.0000645999964515",
+        "0.0000634633591546"
+      ],
+      "width_outward": [
+        "0.0001280633556060",
+        "0.0001280633556061"
+      ]
+    },
+    "native_input_extension": "RN64(z), exact binary64 one_plus_z, correctly rounded log via pinned MPFR wrapper, archived source cubic operation graph; both legal adjacent choices allowed at a knot",
+    "assumptions": [
+      "V153 energy enclosure and pinned V105 validation",
+      "binary64 RN operations, no reassociation or FMA replacing archived expression",
+      "fixed model parameters, same admitted Bstar reference",
+      "correctly rounded log coordinate wrapper as in measured archive"
+    ],
+    "completion_gate_satisfied": false
+  },
+  "validation": {
+    "closed_domain_covered": true,
+    "rational_bins": 1024,
+    "archived_witnesses": {
+      "L_RHS": 40,
+      "L_OUTPUT": 20,
+      "R_RHS": 43,
+      "R_OUTPUT": 20
+    },
+    "parent_V156_raw_audit_identical": true,
+    "fresh_replay_byte_identical": true,
+    "V155_seam_contained": true,
+    "V105_energy800_endpoint_checked": true,
+    "new_native_runs": 0,
+    "new_workflow_dispatches": 0
+  },
+  "next_task": {
+    "task_id": "LOCAL-Q052-V158-INGEST-H800-BLOCK",
+    "objective": "Genkør V157 og indtag dækningen 800–810 én gang. Afstem sammenføjningen. Identificér den første udækkede afhængighed for Q052 og vælg én afgrænset efterfølgende opgave.",
+    "inputs": [
+      "Q052_BLOKCERTIFIKAT_V157.json",
+      "Q052_REPRODUKTION_V157.zip",
+      "Q052_KORT_RESULTAT_V157.md",
+      "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V157.md"
+    ],
+    "acceptance": "Byte-identical certificate, consistent endpoints and one justified next task.",
+    "rejection": "Document the first reproducible mismatch with evidence.",
+    "inconclusive": "Local H error alone does not settle Q052.",
+    "stop": "At the ingestion decision and selection of a single next task."
+  },
+  "completion_gate": {
+    "closed": false,
+    "reason": "Remaining background coverage and propagation through the electron and optical-depth histories are unresolved."
+  },
+  "setup_assessment": {
+    "runtime": "Python 3.12.14, mpmath 1.3.0, 240-bit directed dyadic arithmetic",
+    "model": "NOT_INDEPENDENTLY_VERIFIED",
+    "reasoning_level": "NOT_INDEPENDENTLY_VERIFIED",
+    "recommended": "Replay with the supplied pinned evidence and one scoped ingestion task."
+  },
+  "point_event": {
+    "ledger_version": "V157",
+    "parent_ledger_version": "V156",
+    "activity_event_id": "Q052-ACTIVITY-V157-H800-BLOCK",
+    "parent_total_pts": 17586,
+    "estimated_run_points": 95,
+    "assessed_run_points": 95,
+    "assessment_breakdown": {
+      "analysis": 23,
+      "calculation": 30,
+      "research": 8,
+      "validation": 34
+    },
+    "assessment_confidence": "HEURISTIC",
+    "total_pts": 17681,
+    "next_threshold_pts": 18000,
+    "points_to_next_threshold": 319,
+    "crossed_this_run": [],
+    "newly_applied_event_ids": [
+      "Q052-ACTIVITY-V157-H800-BLOCK"
+    ]
+  },
+  "publication_learning": {
+    "package_id": "Q052-V157-H800-BLOCK-PUBLIC-R1",
+    "scientific_milestone_ids": [
+      "Q052-SCI-V157-H800-BLOCK"
+    ],
+    "point_milestone_ids": [],
+    "status": "Klargjort",
+    "package_ref": "Q052_SOME_V157.txt",
+    "full_files_ref": "Q052_SOME_V157.zip",
+    "journal_entry_state": "INTEGRATED",
+    "full_package_in_journal": true,
+    "learning_sha256": "a825b86d7e257b5b1a8c15c980cef2143ed7d898497842eac56504db1895ac34",
+    "learning_words": 151,
+    "external_publication": false
+  },
+  "memory_update": {
+    "repo": "Morfindien/Bubbleverse",
+    "base_commit": "1a47e7b9a34080282692211645ebe65bcb9fed7b",
+    "sync_status": "USER_UPLOAD_PENDING",
+    "actual_write": false
+  },
+  "output_refs": [
+    {
+      "path": "Q052_BLOKCERTIFIKAT_V157.json",
+      "sha256": "71e7288963e4bd3867da09a3b7786adfc83f86da66b5c92636d4e4aaa1a73dd6",
+      "size_bytes": 824368
+    },
+    {
+      "path": "Q052_KORT_RESULTAT_V157.md",
+      "sha256": "1da75f032e4584dd5670fb3e513838dbb110f1f6b06829de84c64ab6935bec72",
+      "size_bytes": 5163
+    },
+    {
+      "path": "Q052_MATEMATIK_OG_SAMLET_JOURNAL_V157.md",
+      "sha256": "4dbe8a51cc6b2a5223b0040e835d0eb4ef777948954e7440388abe2b4e3337a1",
+      "size_bytes": 9921004
+    },
+    {
+      "path": "Q052_REPRODUKTION_V157.zip",
+      "sha256": "6deded72050ae495380029c39a06b2e43406bb0239fc493148a661283c565257",
+      "size_bytes": 3435589
+    },
+    {
+      "path": "Q052_SOME_V157.txt",
+      "sha256": "8de901ad35d4ec6ebb9cd904f6dfd167ee98a90ee3524df5c2a80736ca5271e0",
+      "size_bytes": 4954
+    },
+    {
+      "path": "Q052_SOME_V157.zip",
+      "sha256": "7638e5d62a36367b422de2b1fca76c0fde6a88c1b3a6dcdf6c27ab0ba1fe3549",
+      "size_bytes": 10854
+    }
+  ],
+  "self_fingerprint_convention": "SHA-256 compact UTF-8 key-sorted JSON without fingerprint_sha256",
+  "fingerprint_sha256": "7b36b32248a682bf4258ae13ea28888e1d138b785083024153c32681ed9e86a6"
+}
